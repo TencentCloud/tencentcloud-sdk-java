@@ -734,6 +734,29 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBInstanceHAConfig）用于查询实例HA配置信息。其中HA配置信息包括：
+<li>允许备节点切换为主节点的条件配置
+<li>半同步实例使用同步复制或异步复制的条件配置
+     * @param req DescribeDBInstanceHAConfigRequest
+     * @return DescribeDBInstanceHAConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceHAConfigResponse DescribeDBInstanceHAConfig(DescribeDBInstanceHAConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceHAConfigResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceHAConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstanceHAConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDBInstanceAttribute）用于查询实例的参数信息。
      * @param req DescribeDBInstanceParametersRequest
      * @return DescribeDBInstanceParametersResponse
@@ -1448,6 +1471,29 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBInstanceHAConfig）用于修改实例HA配置信息。其中HA配置信息包括：
+<li>允许备节点切换为主节点的条件配置
+<li>半同步实例使用同步复制或异步复制的条件配置
+     * @param req ModifyDBInstanceHAConfigRequest
+     * @return ModifyDBInstanceHAConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceHAConfigResponse ModifyDBInstanceHAConfig(ModifyDBInstanceHAConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceHAConfigResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceHAConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceHAConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstanceName）用于修改postgresql实例名字。
      * @param req ModifyDBInstanceNameRequest
      * @return ModifyDBInstanceNameResponse
@@ -1797,6 +1843,30 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetAutoRenewFlagResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetAutoRenewFlag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（SwitchDBInstancePrimary）用于切换实例主备关系。
+<li>通过主动发起切换，可以验证业务能否正确处理实例主备切换的场景
+<li>通过使用强制切换，可以在备节点延迟不满足切换条件时，强制发起主从切换
+<li>只有主实例可以执行该操作
+     * @param req SwitchDBInstancePrimaryRequest
+     * @return SwitchDBInstancePrimaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDBInstancePrimaryResponse SwitchDBInstancePrimary(SwitchDBInstancePrimaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDBInstancePrimaryResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDBInstancePrimaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDBInstancePrimary");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

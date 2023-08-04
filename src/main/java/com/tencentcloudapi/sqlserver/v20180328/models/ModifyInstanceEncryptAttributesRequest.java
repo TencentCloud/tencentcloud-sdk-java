@@ -30,7 +30,7 @@ public class ModifyInstanceEncryptAttributesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
+    * 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
     */
     @SerializedName("CertificateAttribution")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyInstanceEncryptAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。 
-     * @return CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
+     * Get 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。 
+     * @return CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
      */
     public String getCertificateAttribution() {
         return this.CertificateAttribution;
     }
 
     /**
-     * Set 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
-     * @param CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
+     * Set 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
+     * @param CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
      */
     public void setCertificateAttribution(String CertificateAttribution) {
         this.CertificateAttribution = CertificateAttribution;

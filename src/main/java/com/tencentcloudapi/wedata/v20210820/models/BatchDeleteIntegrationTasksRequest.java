@@ -44,6 +44,13 @@ public class BatchDeleteIntegrationTasksRequest extends AbstractModel{
     private String ProjectId;
 
     /**
+    * 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
+    */
+    @SerializedName("DeleteKFFlag")
+    @Expose
+    private Long DeleteKFFlag;
+
+    /**
      * Get 任务id 
      * @return TaskIds 任务id
      */
@@ -91,6 +98,22 @@ public class BatchDeleteIntegrationTasksRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除 
+     * @return DeleteKFFlag 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
+     */
+    public Long getDeleteKFFlag() {
+        return this.DeleteKFFlag;
+    }
+
+    /**
+     * Set 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
+     * @param DeleteKFFlag 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
+     */
+    public void setDeleteKFFlag(Long DeleteKFFlag) {
+        this.DeleteKFFlag = DeleteKFFlag;
+    }
+
     public BatchDeleteIntegrationTasksRequest() {
     }
 
@@ -111,6 +134,9 @@ public class BatchDeleteIntegrationTasksRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.DeleteKFFlag != null) {
+            this.DeleteKFFlag = new Long(source.DeleteKFFlag);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class BatchDeleteIntegrationTasksRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DeleteKFFlag", this.DeleteKFFlag);
 
     }
 }

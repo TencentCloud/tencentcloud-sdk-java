@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class Filter extends AbstractModel{
 
     /**
-    * 一个或者多个过滤值。
-    */
-    @SerializedName("Values")
-    @Expose
-    private String [] Values;
-
-    /**
     * 过滤键的名称。
     */
     @SerializedName("Name")
@@ -37,20 +30,11 @@ public class Filter extends AbstractModel{
     private String Name;
 
     /**
-     * Get 一个或者多个过滤值。 
-     * @return Values 一个或者多个过滤值。
-     */
-    public String [] getValues() {
-        return this.Values;
-    }
-
-    /**
-     * Set 一个或者多个过滤值。
-     * @param Values 一个或者多个过滤值。
-     */
-    public void setValues(String [] Values) {
-        this.Values = Values;
-    }
+    * 一个或者多个过滤值。
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
 
     /**
      * Get 过滤键的名称。 
@@ -68,6 +52,22 @@ public class Filter extends AbstractModel{
         this.Name = Name;
     }
 
+    /**
+     * Get 一个或者多个过滤值。 
+     * @return Values 一个或者多个过滤值。
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set 一个或者多个过滤值。
+     * @param Values 一个或者多个过滤值。
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
+    }
+
     public Filter() {
     }
 
@@ -76,14 +76,14 @@ public class Filter extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Filter(Filter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
         if (source.Values != null) {
             this.Values = new String[source.Values.length];
             for (int i = 0; i < source.Values.length; i++) {
                 this.Values[i] = new String(source.Values[i]);
             }
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
         }
     }
 
@@ -92,8 +92,8 @@ public class Filter extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

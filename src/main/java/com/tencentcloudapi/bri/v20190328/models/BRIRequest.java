@@ -80,7 +80,6 @@ public class BRIRequest extends AbstractModel{
 
     /**
     * 电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneNumber")
     @Expose
@@ -120,6 +119,13 @@ public class BRIRequest extends AbstractModel{
     @SerializedName("WechatTag")
     @Expose
     private String WechatTag;
+
+    /**
+    * 子客户ID
+    */
+    @SerializedName("SubAppid")
+    @Expose
+    private String SubAppid;
 
     /**
      * Get 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social) 
@@ -250,10 +256,8 @@ public class BRIRequest extends AbstractModel{
     }
 
     /**
-     * Get 电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 电话号码 (业务名为bri_num时必填) 
      * @return PhoneNumber 电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
@@ -261,9 +265,7 @@ public class BRIRequest extends AbstractModel{
 
     /**
      * Set 电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhoneNumber 电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
@@ -349,6 +351,22 @@ public class BRIRequest extends AbstractModel{
         this.WechatTag = WechatTag;
     }
 
+    /**
+     * Get 子客户ID 
+     * @return SubAppid 子客户ID
+     */
+    public String getSubAppid() {
+        return this.SubAppid;
+    }
+
+    /**
+     * Set 子客户ID
+     * @param SubAppid 子客户ID
+     */
+    public void setSubAppid(String SubAppid) {
+        this.SubAppid = SubAppid;
+    }
+
     public BRIRequest() {
     }
 
@@ -399,6 +417,9 @@ public class BRIRequest extends AbstractModel{
         if (source.WechatTag != null) {
             this.WechatTag = new String(source.WechatTag);
         }
+        if (source.SubAppid != null) {
+            this.SubAppid = new String(source.SubAppid);
+        }
     }
 
 
@@ -420,6 +441,7 @@ public class BRIRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Imei", this.Imei);
         this.setParamSimple(map, prefix + "Wechat", this.Wechat);
         this.setParamSimple(map, prefix + "WechatTag", this.WechatTag);
+        this.setParamSimple(map, prefix + "SubAppid", this.SubAppid);
 
     }
 }

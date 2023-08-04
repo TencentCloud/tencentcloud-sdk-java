@@ -37,14 +37,14 @@ public class DescribeXEventsRequest extends AbstractModel{
     private String EventType;
 
     /**
-    * 扩展文件生成开始时间
+    * 扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 扩展文件生成结束时间
+    * 扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
     */
     @SerializedName("EndTime")
     @Expose
@@ -97,32 +97,32 @@ public class DescribeXEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get 扩展文件生成开始时间 
-     * @return StartTime 扩展文件生成开始时间
+     * Get 扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss) 
+     * @return StartTime 扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 扩展文件生成开始时间
-     * @param StartTime 扩展文件生成开始时间
+     * Set 扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
+     * @param StartTime 扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 扩展文件生成结束时间 
-     * @return EndTime 扩展文件生成结束时间
+     * Get 扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss) 
+     * @return EndTime 扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 扩展文件生成结束时间
-     * @param EndTime 扩展文件生成结束时间
+     * Set 扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
+     * @param EndTime 扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

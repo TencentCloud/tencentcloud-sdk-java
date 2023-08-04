@@ -30,6 +30,25 @@ public class DeleteIntegrationTaskResponse extends AbstractModel{
     private Boolean Data;
 
     /**
+    * 任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeleteFlag")
+    @Expose
+    private Long DeleteFlag;
+
+    /**
+    * 删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeleteErrInfo")
+    @Expose
+    private String DeleteErrInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +69,58 @@ public class DeleteIntegrationTaskResponse extends AbstractModel{
      */
     public void setData(Boolean Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeleteFlag 任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeleteFlag() {
+        return this.DeleteFlag;
+    }
+
+    /**
+     * Set 任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeleteFlag 任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleteFlag(Long DeleteFlag) {
+        this.DeleteFlag = DeleteFlag;
+    }
+
+    /**
+     * Get 删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeleteErrInfo 删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeleteErrInfo() {
+        return this.DeleteErrInfo;
+    }
+
+    /**
+     * Set 删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeleteErrInfo 删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleteErrInfo(String DeleteErrInfo) {
+        this.DeleteErrInfo = DeleteErrInfo;
     }
 
     /**
@@ -79,6 +150,12 @@ public class DeleteIntegrationTaskResponse extends AbstractModel{
         if (source.Data != null) {
             this.Data = new Boolean(source.Data);
         }
+        if (source.DeleteFlag != null) {
+            this.DeleteFlag = new Long(source.DeleteFlag);
+        }
+        if (source.DeleteErrInfo != null) {
+            this.DeleteErrInfo = new String(source.DeleteErrInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +167,8 @@ public class DeleteIntegrationTaskResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "DeleteFlag", this.DeleteFlag);
+        this.setParamSimple(map, prefix + "DeleteErrInfo", this.DeleteErrInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

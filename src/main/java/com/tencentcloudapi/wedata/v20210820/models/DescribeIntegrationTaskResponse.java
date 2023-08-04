@@ -31,6 +31,22 @@ public class DescribeIntegrationTaskResponse extends AbstractModel{
     private IntegrationTaskInfo TaskInfo;
 
     /**
+    * 采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentStatus")
+    @Expose
+    private AgentStatus AgentStatus;
+
+    /**
+    * 任务版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskVersion")
+    @Expose
+    private TaskVersionInstance TaskVersion;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -55,6 +71,46 @@ public class DescribeIntegrationTaskResponse extends AbstractModel{
      */
     public void setTaskInfo(IntegrationTaskInfo TaskInfo) {
         this.TaskInfo = TaskInfo;
+    }
+
+    /**
+     * Get 采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentStatus 采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AgentStatus getAgentStatus() {
+        return this.AgentStatus;
+    }
+
+    /**
+     * Set 采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentStatus 采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentStatus(AgentStatus AgentStatus) {
+        this.AgentStatus = AgentStatus;
+    }
+
+    /**
+     * Get 任务版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskVersion 任务版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskVersionInstance getTaskVersion() {
+        return this.TaskVersion;
+    }
+
+    /**
+     * Set 任务版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskVersion 任务版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskVersion(TaskVersionInstance TaskVersion) {
+        this.TaskVersion = TaskVersion;
     }
 
     /**
@@ -84,6 +140,12 @@ public class DescribeIntegrationTaskResponse extends AbstractModel{
         if (source.TaskInfo != null) {
             this.TaskInfo = new IntegrationTaskInfo(source.TaskInfo);
         }
+        if (source.AgentStatus != null) {
+            this.AgentStatus = new AgentStatus(source.AgentStatus);
+        }
+        if (source.TaskVersion != null) {
+            this.TaskVersion = new TaskVersionInstance(source.TaskVersion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +157,8 @@ public class DescribeIntegrationTaskResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
+        this.setParamObj(map, prefix + "AgentStatus.", this.AgentStatus);
+        this.setParamObj(map, prefix + "TaskVersion.", this.TaskVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -76,6 +76,17 @@ public class NamespaceResourceEnvTKE extends AbstractModel{
     private Long Port;
 
     /**
+    * yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodTemplatePatch")
+    @Expose
+    private String PodTemplatePatch;
+
+    /**
      * Get 集群ID 
      * @return ClusterID 集群ID
      */
@@ -203,6 +214,38 @@ public class NamespaceResourceEnvTKE extends AbstractModel{
         this.Port = Port;
     }
 
+    /**
+     * Get yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodTemplatePatch yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPodTemplatePatch() {
+        return this.PodTemplatePatch;
+    }
+
+    /**
+     * Set yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodTemplatePatch yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodTemplatePatch(String PodTemplatePatch) {
+        this.PodTemplatePatch = PodTemplatePatch;
+    }
+
     public NamespaceResourceEnvTKE() {
     }
 
@@ -238,6 +281,9 @@ public class NamespaceResourceEnvTKE extends AbstractModel{
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.PodTemplatePatch != null) {
+            this.PodTemplatePatch = new String(source.PodTemplatePatch);
+        }
     }
 
 
@@ -252,6 +298,7 @@ public class NamespaceResourceEnvTKE extends AbstractModel{
         this.setParamArrayObj(map, prefix + "NodeSelector.", this.NodeSelector);
         this.setParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "PodTemplatePatch", this.PodTemplatePatch);
 
     }
 }

@@ -37,28 +37,28 @@ public class DownloadL4LogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 站点集合，不填默认选择全部站点。
+    * 站点集合，此参数必填，不填默认查询为空。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 四层实例ID集合。
+    * 四层实例 ID 集合。
     */
     @SerializedName("ProxyIds")
     @Expose
     private String [] ProxyIds;
 
     /**
-    * 分页查询的限制数目，默认值为20，最大查询条目为1000。
+    * 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页的偏移量，默认值为0。
+    * 分页的偏移量，默认值为 0。
     */
     @SerializedName("Offset")
     @Expose
@@ -97,64 +97,64 @@ public class DownloadL4LogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 站点集合，不填默认选择全部站点。 
-     * @return ZoneIds 站点集合，不填默认选择全部站点。
+     * Get 站点集合，此参数必填，不填默认查询为空。 
+     * @return ZoneIds 站点集合，此参数必填，不填默认查询为空。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合，不填默认选择全部站点。
-     * @param ZoneIds 站点集合，不填默认选择全部站点。
+     * Set 站点集合，此参数必填，不填默认查询为空。
+     * @param ZoneIds 站点集合，此参数必填，不填默认查询为空。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 四层实例ID集合。 
-     * @return ProxyIds 四层实例ID集合。
+     * Get 四层实例 ID 集合。 
+     * @return ProxyIds 四层实例 ID 集合。
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set 四层实例ID集合。
-     * @param ProxyIds 四层实例ID集合。
+     * Set 四层实例 ID 集合。
+     * @param ProxyIds 四层实例 ID 集合。
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;
     }
 
     /**
-     * Get 分页查询的限制数目，默认值为20，最大查询条目为1000。 
-     * @return Limit 分页查询的限制数目，默认值为20，最大查询条目为1000。
+     * Get 分页查询的限制数目，默认值为 20，最大查询条目为 1000。 
+     * @return Limit 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询的限制数目，默认值为20，最大查询条目为1000。
-     * @param Limit 分页查询的限制数目，默认值为20，最大查询条目为1000。
+     * Set 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
+     * @param Limit 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页的偏移量，默认值为0。 
-     * @return Offset 分页的偏移量，默认值为0。
+     * Get 分页的偏移量，默认值为 0。 
+     * @return Offset 分页的偏移量，默认值为 0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页的偏移量，默认值为0。
-     * @param Offset 分页的偏移量，默认值为0。
+     * Set 分页的偏移量，默认值为 0。
+     * @param Offset 分页的偏移量，默认值为 0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

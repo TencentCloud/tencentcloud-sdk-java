@@ -40,7 +40,8 @@ public class AclCondition extends AbstractModel{
 <li>idcid：IDC 规则，仅bot自定义规则可用；</li>
 <li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
 <li>portrait：画像分析，仅bot自定义规则可用；</li>
-<li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
+<li>header_seq：请求头顺序，仅bot自定义规则可用；</li>
+<li>hdr：请求正文，仅Web防护自定义规则可用。</li>
     */
     @SerializedName("MatchFrom")
     @Expose
@@ -101,7 +102,8 @@ public class AclCondition extends AbstractModel{
 <li>idcid：IDC 规则，仅bot自定义规则可用；</li>
 <li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
 <li>portrait：画像分析，仅bot自定义规则可用；</li>
-<li>header_seq：请求头顺序，仅bot自定义规则可用。</li> 
+<li>header_seq：请求头顺序，仅bot自定义规则可用；</li>
+<li>hdr：请求正文，仅Web防护自定义规则可用。</li> 
      * @return MatchFrom 匹配字段，取值有：
 <li>host：请求域名；</li>
 <li>sip：客户端IP；</li>
@@ -119,7 +121,8 @@ public class AclCondition extends AbstractModel{
 <li>idcid：IDC 规则，仅bot自定义规则可用；</li>
 <li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
 <li>portrait：画像分析，仅bot自定义规则可用；</li>
-<li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
+<li>header_seq：请求头顺序，仅bot自定义规则可用；</li>
+<li>hdr：请求正文，仅Web防护自定义规则可用。</li>
      */
     public String getMatchFrom() {
         return this.MatchFrom;
@@ -143,7 +146,8 @@ public class AclCondition extends AbstractModel{
 <li>idcid：IDC 规则，仅bot自定义规则可用；</li>
 <li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
 <li>portrait：画像分析，仅bot自定义规则可用；</li>
-<li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
+<li>header_seq：请求头顺序，仅bot自定义规则可用；</li>
+<li>hdr：请求正文，仅Web防护自定义规则可用。</li>
      * @param MatchFrom 匹配字段，取值有：
 <li>host：请求域名；</li>
 <li>sip：客户端IP；</li>
@@ -161,7 +165,8 @@ public class AclCondition extends AbstractModel{
 <li>idcid：IDC 规则，仅bot自定义规则可用；</li>
 <li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
 <li>portrait：画像分析，仅bot自定义规则可用；</li>
-<li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
+<li>header_seq：请求头顺序，仅bot自定义规则可用；</li>
+<li>hdr：请求正文，仅Web防护自定义规则可用。</li>
      */
     public void setMatchFrom(String MatchFrom) {
         this.MatchFrom = MatchFrom;

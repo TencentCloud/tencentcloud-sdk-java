@@ -44,6 +44,13 @@ public class DescribeIntegrationTaskRequest extends AbstractModel{
     private Long TaskType;
 
     /**
+    * 提交版本号
+    */
+    @SerializedName("InstanceVersion")
+    @Expose
+    private Long InstanceVersion;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -91,6 +98,22 @@ public class DescribeIntegrationTaskRequest extends AbstractModel{
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get 提交版本号 
+     * @return InstanceVersion 提交版本号
+     */
+    public Long getInstanceVersion() {
+        return this.InstanceVersion;
+    }
+
+    /**
+     * Set 提交版本号
+     * @param InstanceVersion 提交版本号
+     */
+    public void setInstanceVersion(Long InstanceVersion) {
+        this.InstanceVersion = InstanceVersion;
+    }
+
     public DescribeIntegrationTaskRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeIntegrationTaskRequest extends AbstractModel{
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
+        if (source.InstanceVersion != null) {
+            this.InstanceVersion = new Long(source.InstanceVersion);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeIntegrationTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
 
     }
 }

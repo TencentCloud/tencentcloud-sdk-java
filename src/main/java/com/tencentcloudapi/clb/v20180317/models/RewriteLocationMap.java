@@ -30,7 +30,7 @@ public class RewriteLocationMap extends AbstractModel{
     private String SourceLocationId;
 
     /**
-    * 重定向至的目标转发规则ID
+    * 重定向目标转发规则的ID
     */
     @SerializedName("TargetLocationId")
     @Expose
@@ -74,16 +74,16 @@ public class RewriteLocationMap extends AbstractModel{
     }
 
     /**
-     * Get 重定向至的目标转发规则ID 
-     * @return TargetLocationId 重定向至的目标转发规则ID
+     * Get 重定向目标转发规则的ID 
+     * @return TargetLocationId 重定向目标转发规则的ID
      */
     public String getTargetLocationId() {
         return this.TargetLocationId;
     }
 
     /**
-     * Set 重定向至的目标转发规则ID
-     * @param TargetLocationId 重定向至的目标转发规则ID
+     * Set 重定向目标转发规则的ID
+     * @param TargetLocationId 重定向目标转发规则的ID
      */
     public void setTargetLocationId(String TargetLocationId) {
         this.TargetLocationId = TargetLocationId;

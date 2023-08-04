@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class AddResourceTagRequest extends AbstractModel{
 
     /**
-    * 标签键
+    * 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 标签值
+    * 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-    * [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+    * 待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-     * Get 标签键 
-     * @return TagKey 标签键
+     * Get 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354 
+     * @return TagKey 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 标签键
-     * @param TagKey 标签键
+     * Set 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+     * @param TagKey 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 标签值 
-     * @return TagValue 标签值
+     * Get 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354 
+     * @return TagValue 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set 标签值
-     * @param TagValue 标签值
+     * Set 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+     * @param TagValue 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
     }
 
     /**
-     * Get [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606) 
-     * @return Resource [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+     * Get 待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122 
+     * @return Resource 待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
-     * @param Resource [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+     * Set 待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
+     * @param Resource 待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

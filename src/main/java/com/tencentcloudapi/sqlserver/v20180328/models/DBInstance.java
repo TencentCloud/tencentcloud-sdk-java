@@ -395,7 +395,7 @@ public class DBInstance extends AbstractModel{
     private SlaveZones SlaveZones;
 
     /**
-    * 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+    * 架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Architecture")
@@ -1275,9 +1275,9 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+     * Get 架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+     * @return Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArchitecture() {
@@ -1285,9 +1285,9 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Set 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+     * Set 架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+     * @param Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchitecture(String Architecture) {

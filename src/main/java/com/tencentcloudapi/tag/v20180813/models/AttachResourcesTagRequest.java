@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AttachResourcesTagRequest extends AbstractModel{
 
     /**
-    * 资源所属业务名称（资源六段式中的第三段）
+    * 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
     */
     @SerializedName("ServiceType")
     @Expose
@@ -37,21 +37,21 @@ public class AttachResourcesTagRequest extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-    * 标签键
+    * 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 标签值
+    * 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-    * 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+    * 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -65,16 +65,16 @@ public class AttachResourcesTagRequest extends AbstractModel{
     private String ResourcePrefix;
 
     /**
-     * Get 资源所属业务名称（资源六段式中的第三段） 
-     * @return ServiceType 资源所属业务名称（资源六段式中的第三段）
+     * Get 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122 
+     * @return ServiceType 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 资源所属业务名称（资源六段式中的第三段）
-     * @param ServiceType 资源所属业务名称（资源六段式中的第三段）
+     * Set 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
+     * @param ServiceType 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -97,48 +97,48 @@ public class AttachResourcesTagRequest extends AbstractModel{
     }
 
     /**
-     * Get 标签键 
-     * @return TagKey 标签键
+     * Get 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354 
+     * @return TagKey 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 标签键
-     * @param TagKey 标签键
+     * Set 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+     * @param TagKey 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 标签值 
-     * @return TagValue 标签值
+     * Get 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354 
+     * @return TagValue 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set 标签值
-     * @param TagValue 标签值
+     * Set 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+     * @param TagValue 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
     }
 
     /**
-     * Get 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填 
-     * @return ResourceRegion 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * Get 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域 
+     * @return ResourceRegion 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
-     * @param ResourceRegion 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * Set 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
+     * @param ResourceRegion 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;

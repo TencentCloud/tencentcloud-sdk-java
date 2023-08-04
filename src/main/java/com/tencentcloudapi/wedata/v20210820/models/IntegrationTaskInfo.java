@@ -372,6 +372,30 @@ public class IntegrationTaskInfo extends AbstractModel{
     private String [] TaskAlarmRegularList;
 
     /**
+    * 资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SwitchResource")
+    @Expose
+    private Long SwitchResource;
+
+    /**
+    * 读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadPhase")
+    @Expose
+    private Long ReadPhase;
+
+    /**
+    * 版本号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceVersion")
+    @Expose
+    private Long InstanceVersion;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -1239,6 +1263,66 @@ public class IntegrationTaskInfo extends AbstractModel{
         this.TaskAlarmRegularList = TaskAlarmRegularList;
     }
 
+    /**
+     * Get 资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SwitchResource 资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSwitchResource() {
+        return this.SwitchResource;
+    }
+
+    /**
+     * Set 资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SwitchResource 资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSwitchResource(Long SwitchResource) {
+        this.SwitchResource = SwitchResource;
+    }
+
+    /**
+     * Get 读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReadPhase 读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReadPhase() {
+        return this.ReadPhase;
+    }
+
+    /**
+     * Set 读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadPhase 读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadPhase(Long ReadPhase) {
+        this.ReadPhase = ReadPhase;
+    }
+
+    /**
+     * Get 版本号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceVersion 版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceVersion() {
+        return this.InstanceVersion;
+    }
+
+    /**
+     * Set 版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceVersion 版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceVersion(Long InstanceVersion) {
+        this.InstanceVersion = InstanceVersion;
+    }
+
     public IntegrationTaskInfo() {
     }
 
@@ -1400,6 +1484,15 @@ public class IntegrationTaskInfo extends AbstractModel{
                 this.TaskAlarmRegularList[i] = new String(source.TaskAlarmRegularList[i]);
             }
         }
+        if (source.SwitchResource != null) {
+            this.SwitchResource = new Long(source.SwitchResource);
+        }
+        if (source.ReadPhase != null) {
+            this.ReadPhase = new Long(source.ReadPhase);
+        }
+        if (source.InstanceVersion != null) {
+            this.InstanceVersion = new Long(source.InstanceVersion);
+        }
     }
 
 
@@ -1451,6 +1544,9 @@ public class IntegrationTaskInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Locker", this.Locker);
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
         this.setParamArraySimple(map, prefix + "TaskAlarmRegularList.", this.TaskAlarmRegularList);
+        this.setParamSimple(map, prefix + "SwitchResource", this.SwitchResource);
+        this.setParamSimple(map, prefix + "ReadPhase", this.ReadPhase);
+        this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
 
     }
 }

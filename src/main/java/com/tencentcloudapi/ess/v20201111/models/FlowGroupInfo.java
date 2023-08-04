@@ -93,7 +93,7 @@ public class FlowGroupInfo extends AbstractModel{
     private Boolean Unordered;
 
     /**
-    * 合同（流程）发起方的填写控件，用户
+    * 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
     */
     @SerializedName("Components")
     @Expose
@@ -274,16 +274,16 @@ public class FlowGroupInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同（流程）发起方的填写控件，用户 
-     * @return Components 合同（流程）发起方的填写控件，用户
+     * Get 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充 
+     * @return Components 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
      */
     public Component [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 合同（流程）发起方的填写控件，用户
-     * @param Components 合同（流程）发起方的填写控件，用户
+     * Set 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
+     * @param Components 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;

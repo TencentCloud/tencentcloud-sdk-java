@@ -37,7 +37,7 @@ public class RenewDBInstanceRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * 是否自动使用代金券，0-不使用；1-使用；默认不实用
+    * 是否自动使用代金券，0-不使用；1-使用；默认不使用
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -90,16 +90,16 @@ public class RenewDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否自动使用代金券，0-不使用；1-使用；默认不实用 
-     * @return AutoVoucher 是否自动使用代金券，0-不使用；1-使用；默认不实用
+     * Get 是否自动使用代金券，0-不使用；1-使用；默认不使用 
+     * @return AutoVoucher 是否自动使用代金券，0-不使用；1-使用；默认不使用
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券，0-不使用；1-使用；默认不实用
-     * @param AutoVoucher 是否自动使用代金券，0-不使用；1-使用；默认不实用
+     * Set 是否自动使用代金券，0-不使用；1-使用；默认不使用
+     * @param AutoVoucher 是否自动使用代金券，0-不使用；1-使用；默认不使用
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;

@@ -44,10 +44,7 @@ public class RateLimitUserRule extends AbstractModel{
     private String RuleName;
 
     /**
-    * 处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li>
+    * 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
     */
     @SerializedName("Action")
     @Expose
@@ -94,7 +91,7 @@ public class RateLimitUserRule extends AbstractModel{
     private Long RulePriority;
 
     /**
-    * 规则id。仅出参使用。
+    * 规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleID")
@@ -119,7 +116,7 @@ public class RateLimitUserRule extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * 统计范围，字段为null时，代表source_to_eo。取值有：
+    * 统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -177,28 +174,16 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Get 处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li> 
-     * @return Action 处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li>
+     * Get 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	 
+     * @return Action 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li>
-     * @param Action 处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li>
+     * Set 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
+     * @param Action 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -305,9 +290,9 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Get 规则id。仅出参使用。
+     * Get 规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleID 规则id。仅出参使用。
+     * @return RuleID 规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleID() {
@@ -315,9 +300,9 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Set 规则id。仅出参使用。
+     * Set 规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleID 规则id。仅出参使用。
+     * @param RuleID 规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleID(Long RuleID) {
@@ -369,11 +354,11 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Get 统计范围，字段为null时，代表source_to_eo。取值有：
+     * Get 统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FreqScope 统计范围，字段为null时，代表source_to_eo。取值有：
+     * @return FreqScope 统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -383,11 +368,11 @@ public class RateLimitUserRule extends AbstractModel{
     }
 
     /**
-     * Set 统计范围，字段为null时，代表source_to_eo。取值有：
+     * Set 统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FreqScope 统计范围，字段为null时，代表source_to_eo。取值有：
+     * @param FreqScope 统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。

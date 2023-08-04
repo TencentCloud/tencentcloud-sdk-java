@@ -30,14 +30,14 @@ public class DescribeSlowlogsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 查询开始时间
+    * 开始时间(yyyy-MM-dd HH:mm:ss)
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间
+    * 结束时间(yyyy-MM-dd HH:mm:ss)
     */
     @SerializedName("EndTime")
     @Expose
@@ -74,32 +74,32 @@ public class DescribeSlowlogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询开始时间 
-     * @return StartTime 查询开始时间
+     * Get 开始时间(yyyy-MM-dd HH:mm:ss) 
+     * @return StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间
-     * @param StartTime 查询开始时间
+     * Set 开始时间(yyyy-MM-dd HH:mm:ss)
+     * @param StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get 结束时间(yyyy-MM-dd HH:mm:ss) 
+     * @return EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set 结束时间(yyyy-MM-dd HH:mm:ss)
+     * @param EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

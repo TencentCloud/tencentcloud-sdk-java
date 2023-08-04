@@ -23,14 +23,6 @@ import java.util.HashMap;
 public class DownloadL4LogsResponse extends AbstractModel{
 
     /**
-    * 四层离线日志数据列表。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Data")
-    @Expose
-    private L4OfflineLog [] Data;
-
-    /**
     * 查询结果的总条数。
     */
     @SerializedName("TotalCount")
@@ -38,31 +30,18 @@ public class DownloadL4LogsResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * 四层离线日志数据列表。
+    */
+    @SerializedName("Data")
+    @Expose
+    private L4OfflineLog [] Data;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 四层离线日志数据列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 四层离线日志数据列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public L4OfflineLog [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 四层离线日志数据列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 四层离线日志数据列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setData(L4OfflineLog [] Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get 查询结果的总条数。 
@@ -78,6 +57,22 @@ public class DownloadL4LogsResponse extends AbstractModel{
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 四层离线日志数据列表。 
+     * @return Data 四层离线日志数据列表。
+     */
+    public L4OfflineLog [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 四层离线日志数据列表。
+     * @param Data 四层离线日志数据列表。
+     */
+    public void setData(L4OfflineLog [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -104,14 +99,14 @@ public class DownloadL4LogsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DownloadL4LogsResponse(DownloadL4LogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.Data != null) {
             this.Data = new L4OfflineLog[source.Data.length];
             for (int i = 0; i < source.Data.length; i++) {
                 this.Data[i] = new L4OfflineLog(source.Data[i]);
             }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ public class DownloadL4LogsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -79,7 +79,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String HAType;
 
     /**
-    * 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+    * 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
     */
     @SerializedName("MultiZones")
     @Expose
@@ -221,16 +221,16 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区 
-     * @return MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+     * Get 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区 
+     * @return MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
      */
     public String getMultiZones() {
         return this.MultiZones;
     }
 
     /**
-     * Set 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
-     * @param MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+     * Set 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
+     * @param MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
      */
     public void setMultiZones(String MultiZones) {
         this.MultiZones = MultiZones;
