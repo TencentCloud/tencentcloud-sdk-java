@@ -421,9 +421,20 @@ Credential cred = new STSCredential("secretId", "secretKey", "roleArn", "roleSes
 Credential cred = new CvmRoleCredential();
 ```
 
-5. 凭证提供链
+5. TKE OIDC凭证
 
-腾讯云 Java SDK 提供了凭证提供链，它会默认以环境变量->配置文件->实例角色的顺序尝试获取凭证，并返回第一个获取到的凭证。相关代码如下：
+有关 TKE OIDC 凭证的相关示例请参阅：[Pod 使用 CAM 对数据库身份验证](https://cloud.tencent.com/document/product/457/81989)
+
+```java
+OIDCRoleArnProvider provider = new OIDCRoleArnProvider();
+Credential credential = provider.getCredentials();
+```
+
+
+
+6.凭证提供链
+
+腾讯云 Java SDK 提供了凭证提供链，它会默认以环境变量->配置文件->实例角色->TKE OIDC凭证的顺序尝试获取凭证，并返回第一个获取到的凭证。相关代码如下：
 
 ```java
 Credential cred = new DefaultCredentialsProvider().getCredentials();
