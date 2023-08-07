@@ -71,6 +71,14 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
     private Boolean QGPUShareEnable;
 
     /**
+    * 集群属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterProperty")
+    @Expose
+    private ClusterProperty ClusterProperty;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -198,6 +206,26 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
     }
 
     /**
+     * Get 集群属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterProperty 集群属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClusterProperty getClusterProperty() {
+        return this.ClusterProperty;
+    }
+
+    /**
+     * Set 集群属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterProperty 集群属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterProperty(ClusterProperty ClusterProperty) {
+        this.ClusterProperty = ClusterProperty;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -239,6 +267,9 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
         if (source.QGPUShareEnable != null) {
             this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
         }
+        if (source.ClusterProperty != null) {
+            this.ClusterProperty = new ClusterProperty(source.ClusterProperty);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -255,6 +286,7 @@ public class ModifyClusterAttributeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
+        this.setParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

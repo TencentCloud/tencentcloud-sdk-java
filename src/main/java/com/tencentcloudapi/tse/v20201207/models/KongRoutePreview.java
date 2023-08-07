@@ -347,7 +347,9 @@ public class KongRoutePreview extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ForceHttps 是否开启了强制HTTPS
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getForceHttps() {
         return this.ForceHttps;
     }
@@ -357,7 +359,9 @@ public class KongRoutePreview extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ForceHttps 是否开启了强制HTTPS
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setForceHttps(Boolean ForceHttps) {
         this.ForceHttps = ForceHttps;
     }

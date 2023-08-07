@@ -1467,6 +1467,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *列举用户角色信息
+     * @param req DescribeUserRolesRequest
+     * @return DescribeUserRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserRolesResponse DescribeUserRoles(DescribeUserRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserRolesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取用户列表信息
      * @param req DescribeUsersRequest
      * @return DescribeUsersResponse

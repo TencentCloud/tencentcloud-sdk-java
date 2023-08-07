@@ -1175,6 +1175,27 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *通过该 API 可以查询实例的 CPU 弹性扩容策略
+     * @param req DescribeCpuExpandStrategyRequest
+     * @return DescribeCpuExpandStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategy(DescribeCpuExpandStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCpuExpandStrategyResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCpuExpandStrategyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCpuExpandStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
      * @param req DescribeDBFeaturesRequest
      * @return DescribeDBFeaturesResponse
@@ -2884,6 +2905,27 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *通过该API，可以开启CPU弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
+     * @param req StartCpuExpandRequest
+     * @return StartCpuExpandResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartCpuExpandResponse StartCpuExpand(StartCpuExpandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartCpuExpandResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartCpuExpandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartCpuExpand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *开启 RO 复制，从主实例同步数据。
      * @param req StartReplicationRequest
      * @return StartReplicationResponse
@@ -2897,6 +2939,27 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StartReplicationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StartReplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过该API，可以关闭 CPU 弹性扩容。
+     * @param req StopCpuExpandRequest
+     * @return StopCpuExpandResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCpuExpandResponse StopCpuExpand(StopCpuExpandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopCpuExpandResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopCpuExpandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopCpuExpand");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

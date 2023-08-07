@@ -60,6 +60,27 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（AcceptVpcPeeringConnection）用于接受对等连接请求。
+     * @param req AcceptVpcPeeringConnectionRequest
+     * @return AcceptVpcPeeringConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public AcceptVpcPeeringConnectionResponse AcceptVpcPeeringConnection(AcceptVpcPeeringConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AcceptVpcPeeringConnectionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AcceptVpcPeeringConnectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AcceptVpcPeeringConnection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口用于添加带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
      * @param req AddBandwidthPackageResourcesRequest
      * @return AddBandwidthPackageResourcesResponse
@@ -1507,6 +1528,27 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateVpcPeeringConnection）用于创建私有网络对等连接。
+     * @param req CreateVpcPeeringConnectionRequest
+     * @return CreateVpcPeeringConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcPeeringConnectionResponse CreateVpcPeeringConnection(CreateVpcPeeringConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcPeeringConnectionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcPeeringConnectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpcPeeringConnection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateVpnConnection）用于创建VPN通道。
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
@@ -2341,6 +2383,27 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteVpcEndPointServiceWhiteList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteVpcPeeringConnection）用于删除私有网络对等连接。
+     * @param req DeleteVpcPeeringConnectionRequest
+     * @return DeleteVpcPeeringConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcPeeringConnectionResponse DeleteVpcPeeringConnection(DeleteVpcPeeringConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcPeeringConnectionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcPeeringConnectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpcPeeringConnection");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4023,6 +4086,27 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcLimitsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVpcLimits");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询私有网络对等连接。
+     * @param req DescribeVpcPeeringConnectionsRequest
+     * @return DescribeVpcPeeringConnectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcPeeringConnectionsResponse DescribeVpcPeeringConnections(DescribeVpcPeeringConnectionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcPeeringConnectionsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcPeeringConnectionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcPeeringConnections");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -5992,6 +6076,27 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ModifyVpcPeeringConnection）用于修改私有网络对等连接属性。
+     * @param req ModifyVpcPeeringConnectionRequest
+     * @return ModifyVpcPeeringConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcPeeringConnectionResponse ModifyVpcPeeringConnection(ModifyVpcPeeringConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcPeeringConnectionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcPeeringConnectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcPeeringConnection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyVpnConnectionAttribute）用于修改VPN通道。
      * @param req ModifyVpnConnectionAttributeRequest
      * @return ModifyVpnConnectionAttributeResponse
@@ -6132,6 +6237,27 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<RejectAttachCcnInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RejectAttachCcnInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（RejectVpcPeeringConnection）用于驳回对等连接请求。
+     * @param req RejectVpcPeeringConnectionRequest
+     * @return RejectVpcPeeringConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public RejectVpcPeeringConnectionResponse RejectVpcPeeringConnection(RejectVpcPeeringConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RejectVpcPeeringConnectionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RejectVpcPeeringConnectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RejectVpcPeeringConnection");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
