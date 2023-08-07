@@ -23,31 +23,49 @@ import java.util.HashMap;
 public class DescribeGatewayVersionResponse extends AbstractModel{
 
     /**
-    * 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("Services")
+    @SerializedName("Data")
     @Expose
-    private DescribeGatewayVersion [] Services;
+    private DescribeGatewayVersionData Data;
 
     /**
-     * Get 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Services 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public DescribeGatewayVersion [] getServices() {
-        return this.Services;
+    public DescribeGatewayVersionData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Services 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setServices(DescribeGatewayVersion [] Services) {
-        this.Services = Services;
+    public void setData(DescribeGatewayVersionData Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeGatewayVersionResponse() {
@@ -58,11 +76,11 @@ public class DescribeGatewayVersionResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeGatewayVersionResponse(DescribeGatewayVersionResponse source) {
-        if (source.Services != null) {
-            this.Services = new DescribeGatewayVersion[source.Services.length];
-            for (int i = 0; i < source.Services.length; i++) {
-                this.Services[i] = new DescribeGatewayVersion(source.Services[i]);
-            }
+        if (source.Data != null) {
+            this.Data = new DescribeGatewayVersionData(source.Data);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -71,7 +89,8 @@ public class DescribeGatewayVersionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Services.", this.Services);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -27,7 +27,7 @@ public class AddRecordPlanResponse extends AbstractModel{
     */
     @SerializedName("Data")
     @Expose
-    private RecordPlanOptResponse Data;
+    private RecordPlanOptData Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class AddRecordPlanResponse extends AbstractModel{
      * Get 返回结果 
      * @return Data 返回结果
      */
-    public RecordPlanOptResponse getData() {
+    public RecordPlanOptData getData() {
         return this.Data;
     }
 
@@ -48,7 +48,7 @@ public class AddRecordPlanResponse extends AbstractModel{
      * Set 返回结果
      * @param Data 返回结果
      */
-    public void setData(RecordPlanOptResponse Data) {
+    public void setData(RecordPlanOptData Data) {
         this.Data = Data;
     }
 
@@ -77,7 +77,7 @@ public class AddRecordPlanResponse extends AbstractModel{
      */
     public AddRecordPlanResponse(AddRecordPlanResponse source) {
         if (source.Data != null) {
-            this.Data = new RecordPlanOptResponse(source.Data);
+            this.Data = new RecordPlanOptData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddDeviceResponse extends AbstractModel{
+public class AddDeviceData extends AbstractModel{
 
     /**
     * 设备iD
@@ -531,14 +531,14 @@ public class AddDeviceResponse extends AbstractModel{
         this.AppId = AppId;
     }
 
-    public AddDeviceResponse() {
+    public AddDeviceData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddDeviceResponse(AddDeviceResponse source) {
+    public AddDeviceData(AddDeviceData source) {
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceResponse extends AbstractModel{
+public class UpdateDeviceData extends AbstractModel{
 
     /**
     * 设备ID
@@ -63,7 +63,7 @@ public class DescribeDeviceResponse extends AbstractModel{
     private Long Type;
 
     /**
-    * 设备接入服务节点id
+    * 设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
@@ -104,46 +104,6 @@ public class DescribeDeviceResponse extends AbstractModel{
     private String Description;
 
     /**
-    * sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SipId")
-    @Expose
-    private String SipId;
-
-    /**
-    * sip服务域
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SipDomain")
-    @Expose
-    private String SipDomain;
-
-    /**
-    * sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SipIp")
-    @Expose
-    private String SipIp;
-
-    /**
-    * sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SipPort")
-    @Expose
-    private Long SipPort;
-
-    /**
-    * Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PushStreamUrl")
-    @Expose
-    private String PushStreamUrl;
-
-    /**
     * 设备状态，0:未注册,1:在线,2:离线,3:禁用
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -157,7 +117,7 @@ public class DescribeDeviceResponse extends AbstractModel{
     */
     @SerializedName("OrganizationId")
     @Expose
-    private String OrganizationId;
+    private Long OrganizationId;
 
     /**
     * 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
@@ -166,22 +126,6 @@ public class DescribeDeviceResponse extends AbstractModel{
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
-
-    /**
-    * 设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("GatewayName")
-    @Expose
-    private String GatewayName;
-
-    /**
-    * 设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ProtocolTypeName")
-    @Expose
-    private String ProtocolTypeName;
 
     /**
     * 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
@@ -216,20 +160,12 @@ public class DescribeDeviceResponse extends AbstractModel{
     private String Username;
 
     /**
-    * 设备地域
+    * 用户Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Region")
+    @SerializedName("AppId")
     @Expose
-    private String Region;
-
-    /**
-    * 设备厂商
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Manufacturer")
-    @Expose
-    private String Manufacturer;
+    private Long AppId;
 
     /**
      * Get 设备ID
@@ -332,9 +268,9 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
-     * Get 设备接入服务节点id
+     * Get 设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 设备接入服务节点id
+     * @return ClusterId 设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
@@ -342,9 +278,9 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
-     * Set 设备接入服务节点id
+     * Set 设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 设备接入服务节点id
+     * @param ClusterId 设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
@@ -436,106 +372,6 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
-     * Get sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SipId sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getSipId() {
-        return this.SipId;
-    }
-
-    /**
-     * Set sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SipId sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSipId(String SipId) {
-        this.SipId = SipId;
-    }
-
-    /**
-     * Get sip服务域
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SipDomain sip服务域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getSipDomain() {
-        return this.SipDomain;
-    }
-
-    /**
-     * Set sip服务域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SipDomain sip服务域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSipDomain(String SipDomain) {
-        this.SipDomain = SipDomain;
-    }
-
-    /**
-     * Get sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SipIp sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getSipIp() {
-        return this.SipIp;
-    }
-
-    /**
-     * Set sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SipIp sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSipIp(String SipIp) {
-        this.SipIp = SipIp;
-    }
-
-    /**
-     * Get sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SipPort sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getSipPort() {
-        return this.SipPort;
-    }
-
-    /**
-     * Set sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SipPort sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSipPort(Long SipPort) {
-        this.SipPort = SipPort;
-    }
-
-    /**
-     * Get Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PushStreamUrl Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getPushStreamUrl() {
-        return this.PushStreamUrl;
-    }
-
-    /**
-     * Set Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PushStreamUrl Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPushStreamUrl(String PushStreamUrl) {
-        this.PushStreamUrl = PushStreamUrl;
-    }
-
-    /**
      * Get 设备状态，0:未注册,1:在线,2:离线,3:禁用
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 设备状态，0:未注册,1:在线,2:离线,3:禁用
@@ -561,7 +397,7 @@ public class DescribeDeviceResponse extends AbstractModel{
      * @return OrganizationId 设备所属组织ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getOrganizationId() {
+    public Long getOrganizationId() {
         return this.OrganizationId;
     }
 
@@ -571,7 +407,7 @@ public class DescribeDeviceResponse extends AbstractModel{
      * @param OrganizationId 设备所属组织ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setOrganizationId(String OrganizationId) {
+    public void setOrganizationId(Long OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
@@ -593,46 +429,6 @@ public class DescribeDeviceResponse extends AbstractModel{
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
-    }
-
-    /**
-     * Get 设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GatewayName 设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getGatewayName() {
-        return this.GatewayName;
-    }
-
-    /**
-     * Set 设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param GatewayName 设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setGatewayName(String GatewayName) {
-        this.GatewayName = GatewayName;
-    }
-
-    /**
-     * Get 设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProtocolTypeName 设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getProtocolTypeName() {
-        return this.ProtocolTypeName;
-    }
-
-    /**
-     * Set 设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProtocolTypeName 设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setProtocolTypeName(String ProtocolTypeName) {
-        this.ProtocolTypeName = ProtocolTypeName;
     }
 
     /**
@@ -716,53 +512,33 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
-     * Get 设备地域
+     * Get 用户Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 设备地域
+     * @return AppId 用户Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRegion() {
-        return this.Region;
+    public Long getAppId() {
+        return this.AppId;
     }
 
     /**
-     * Set 设备地域
+     * Set 用户Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 设备地域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRegion(String Region) {
-        this.Region = Region;
-    }
-
-    /**
-     * Get 设备厂商
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Manufacturer 设备厂商
+     * @param AppId 用户Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getManufacturer() {
-        return this.Manufacturer;
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
     }
 
-    /**
-     * Set 设备厂商
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Manufacturer 设备厂商
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setManufacturer(String Manufacturer) {
-        this.Manufacturer = Manufacturer;
-    }
-
-    public DescribeDeviceResponse() {
+    public UpdateDeviceData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeviceResponse(DescribeDeviceResponse source) {
+    public UpdateDeviceData(UpdateDeviceData source) {
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }
@@ -793,35 +569,14 @@ public class DescribeDeviceResponse extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
-        if (source.SipId != null) {
-            this.SipId = new String(source.SipId);
-        }
-        if (source.SipDomain != null) {
-            this.SipDomain = new String(source.SipDomain);
-        }
-        if (source.SipIp != null) {
-            this.SipIp = new String(source.SipIp);
-        }
-        if (source.SipPort != null) {
-            this.SipPort = new Long(source.SipPort);
-        }
-        if (source.PushStreamUrl != null) {
-            this.PushStreamUrl = new String(source.PushStreamUrl);
-        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
         if (source.OrganizationId != null) {
-            this.OrganizationId = new String(source.OrganizationId);
+            this.OrganizationId = new Long(source.OrganizationId);
         }
         if (source.GatewayId != null) {
             this.GatewayId = new String(source.GatewayId);
-        }
-        if (source.GatewayName != null) {
-            this.GatewayName = new String(source.GatewayName);
-        }
-        if (source.ProtocolTypeName != null) {
-            this.ProtocolTypeName = new String(source.ProtocolTypeName);
         }
         if (source.ProtocolType != null) {
             this.ProtocolType = new Long(source.ProtocolType);
@@ -835,11 +590,8 @@ public class DescribeDeviceResponse extends AbstractModel{
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
-        if (source.Region != null) {
-            this.Region = new String(source.Region);
-        }
-        if (source.Manufacturer != null) {
-            this.Manufacturer = new String(source.Manufacturer);
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
         }
     }
 
@@ -858,22 +610,14 @@ public class DescribeDeviceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TransportProtocol", this.TransportProtocol);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "SipId", this.SipId);
-        this.setParamSimple(map, prefix + "SipDomain", this.SipDomain);
-        this.setParamSimple(map, prefix + "SipIp", this.SipIp);
-        this.setParamSimple(map, prefix + "SipPort", this.SipPort);
-        this.setParamSimple(map, prefix + "PushStreamUrl", this.PushStreamUrl);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
-        this.setParamSimple(map, prefix + "GatewayName", this.GatewayName);
-        this.setParamSimple(map, prefix + "ProtocolTypeName", this.ProtocolTypeName);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Username", this.Username);
-        this.setParamSimple(map, prefix + "Region", this.Region);
-        this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

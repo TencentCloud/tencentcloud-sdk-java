@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddOrgResponse extends AbstractModel{
+public class UpdateOrgData extends AbstractModel{
 
     /**
     * 组织 ID
@@ -246,14 +246,14 @@ public class AddOrgResponse extends AbstractModel{
         this.Online = Online;
     }
 
-    public AddOrgResponse() {
+    public UpdateOrgData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddOrgResponse(AddOrgResponse source) {
+    public UpdateOrgData(UpdateOrgData source) {
         if (source.OrganizationId != null) {
             this.OrganizationId = new String(source.OrganizationId);
         }

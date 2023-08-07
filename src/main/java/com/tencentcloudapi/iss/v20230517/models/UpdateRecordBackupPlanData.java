@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListRecordBackupPlanResponse extends AbstractModel{
+public class UpdateRecordBackupPlanData extends AbstractModel{
 
     /**
     * 录像上云计划ID
@@ -229,14 +229,14 @@ public class ListRecordBackupPlanResponse extends AbstractModel{
         this.UpdateAt = UpdateAt;
     }
 
-    public ListRecordBackupPlanResponse() {
+    public UpdateRecordBackupPlanData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ListRecordBackupPlanResponse(ListRecordBackupPlanResponse source) {
+    public UpdateRecordBackupPlanData(UpdateRecordBackupPlanData source) {
         if (source.PlanId != null) {
             this.PlanId = new String(source.PlanId);
         }

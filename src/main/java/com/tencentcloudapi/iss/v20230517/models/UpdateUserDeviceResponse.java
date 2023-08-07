@@ -27,7 +27,7 @@ public class UpdateUserDeviceResponse extends AbstractModel{
     */
     @SerializedName("Data")
     @Expose
-    private UpdateDeviceResponse Data;
+    private UpdateDeviceData Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class UpdateUserDeviceResponse extends AbstractModel{
      * Get 返回数据 
      * @return Data 返回数据
      */
-    public UpdateDeviceResponse getData() {
+    public UpdateDeviceData getData() {
         return this.Data;
     }
 
@@ -48,7 +48,7 @@ public class UpdateUserDeviceResponse extends AbstractModel{
      * Set 返回数据
      * @param Data 返回数据
      */
-    public void setData(UpdateDeviceResponse Data) {
+    public void setData(UpdateDeviceData Data) {
         this.Data = Data;
     }
 
@@ -77,7 +77,7 @@ public class UpdateUserDeviceResponse extends AbstractModel{
      */
     public UpdateUserDeviceResponse(UpdateUserDeviceResponse source) {
         if (source.Data != null) {
-            this.Data = new UpdateDeviceResponse(source.Data);
+            this.Data = new UpdateDeviceData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

@@ -27,7 +27,7 @@ public class ListRecordBackupPlansResponse extends AbstractModel{
     */
     @SerializedName("Data")
     @Expose
-    private ListRecordBackupPlanResponse [] Data;
+    private ListRecordBackupPlanData [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class ListRecordBackupPlansResponse extends AbstractModel{
      * Get 返回数据 
      * @return Data 返回数据
      */
-    public ListRecordBackupPlanResponse [] getData() {
+    public ListRecordBackupPlanData [] getData() {
         return this.Data;
     }
 
@@ -48,7 +48,7 @@ public class ListRecordBackupPlansResponse extends AbstractModel{
      * Set 返回数据
      * @param Data 返回数据
      */
-    public void setData(ListRecordBackupPlanResponse [] Data) {
+    public void setData(ListRecordBackupPlanData [] Data) {
         this.Data = Data;
     }
 
@@ -77,9 +77,9 @@ public class ListRecordBackupPlansResponse extends AbstractModel{
      */
     public ListRecordBackupPlansResponse(ListRecordBackupPlansResponse source) {
         if (source.Data != null) {
-            this.Data = new ListRecordBackupPlanResponse[source.Data.length];
+            this.Data = new ListRecordBackupPlanData[source.Data.length];
             for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new ListRecordBackupPlanResponse(source.Data[i]);
+                this.Data[i] = new ListRecordBackupPlanData(source.Data[i]);
             }
         }
         if (source.RequestId != null) {

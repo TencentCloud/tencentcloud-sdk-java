@@ -23,102 +23,49 @@ import java.util.HashMap;
 public class DescribeVideoDownloadUrlResponse extends AbstractModel{
 
     /**
-    * 录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType} 
+    * 返回的数据结构
     */
-    @SerializedName("Url")
+    @SerializedName("Data")
     @Expose
-    private String Url;
+    private DescribeVideoDownloadUrlData Data;
 
     /**
-    * 实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("ActualBeginTime")
+    @SerializedName("RequestId")
     @Expose
-    private String ActualBeginTime;
+    private String RequestId;
 
     /**
-    * 实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
-    */
-    @SerializedName("ActualEndTime")
-    @Expose
-    private String ActualEndTime;
-
-    /**
-     * Get 录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType}  
-     * @return Url 录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType} 
+     * Get 返回的数据结构 
+     * @return Data 返回的数据结构
      */
-    public String getUrl() {
-        return this.Url;
+    public DescribeVideoDownloadUrlData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType} 
-     * @param Url 录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType} 
+     * Set 返回的数据结构
+     * @param Data 返回的数据结构
      */
-    public void setUrl(String Url) {
-        this.Url = Url;
+    public void setData(DescribeVideoDownloadUrlData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段 
-     * @return ActualBeginTime 实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getActualBeginTime() {
-        return this.ActualBeginTime;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
-     * @param ActualBeginTime 实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setActualBeginTime(String ActualBeginTime) {
-        this.ActualBeginTime = ActualBeginTime;
-    }
-
-    /**
-     * Get 实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段 
-     * @return ActualEndTime 实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
-     */
-    public String getActualEndTime() {
-        return this.ActualEndTime;
-    }
-
-    /**
-     * Set 实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
-     * @param ActualEndTime 实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
-     */
-    public void setActualEndTime(String ActualEndTime) {
-        this.ActualEndTime = ActualEndTime;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeVideoDownloadUrlResponse() {
@@ -129,14 +76,11 @@ URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获�
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeVideoDownloadUrlResponse(DescribeVideoDownloadUrlResponse source) {
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
+        if (source.Data != null) {
+            this.Data = new DescribeVideoDownloadUrlData(source.Data);
         }
-        if (source.ActualBeginTime != null) {
-            this.ActualBeginTime = new String(source.ActualBeginTime);
-        }
-        if (source.ActualEndTime != null) {
-            this.ActualEndTime = new String(source.ActualEndTime);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -145,9 +89,8 @@ URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获�
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamSimple(map, prefix + "ActualBeginTime", this.ActualBeginTime);
-        this.setParamSimple(map, prefix + "ActualEndTime", this.ActualEndTime);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

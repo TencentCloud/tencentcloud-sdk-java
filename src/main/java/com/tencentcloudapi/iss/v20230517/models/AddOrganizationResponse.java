@@ -27,7 +27,7 @@ public class AddOrganizationResponse extends AbstractModel{
     */
     @SerializedName("Data")
     @Expose
-    private AddOrgResponse Data;
+    private AddOrgData Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class AddOrganizationResponse extends AbstractModel{
      * Get 增加组织接口返回数据 
      * @return Data 增加组织接口返回数据
      */
-    public AddOrgResponse getData() {
+    public AddOrgData getData() {
         return this.Data;
     }
 
@@ -48,7 +48,7 @@ public class AddOrganizationResponse extends AbstractModel{
      * Set 增加组织接口返回数据
      * @param Data 增加组织接口返回数据
      */
-    public void setData(AddOrgResponse Data) {
+    public void setData(AddOrgData Data) {
         this.Data = Data;
     }
 
@@ -77,7 +77,7 @@ public class AddOrganizationResponse extends AbstractModel{
      */
     public AddOrganizationResponse(AddOrganizationResponse source) {
         if (source.Data != null) {
-            this.Data = new AddOrgResponse(source.Data);
+            this.Data = new AddOrgData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

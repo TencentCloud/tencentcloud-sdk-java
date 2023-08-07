@@ -23,100 +23,49 @@ import java.util.HashMap;
 public class ListRecordPlanDevicesResponse extends AbstractModel{
 
     /**
-    * 第几页
+    * 返回结果
     */
-    @SerializedName("PageNumber")
+    @SerializedName("Data")
     @Expose
-    private Long PageNumber;
+    private ListRecordPlanDevicesData Data;
 
     /**
-    * 当前页的设备数量
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("PageSize")
+    @SerializedName("RequestId")
     @Expose
-    private Long PageSize;
+    private String RequestId;
 
     /**
-    * 本次查询的设备通道总数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("List")
-    @Expose
-    private RecordPlanChannelInfo [] List;
-
-    /**
-     * Get 第几页 
-     * @return PageNumber 第几页
+     * Get 返回结果 
+     * @return Data 返回结果
      */
-    public Long getPageNumber() {
-        return this.PageNumber;
+    public ListRecordPlanDevicesData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 第几页
-     * @param PageNumber 第几页
+     * Set 返回结果
+     * @param Data 返回结果
      */
-    public void setPageNumber(Long PageNumber) {
-        this.PageNumber = PageNumber;
+    public void setData(ListRecordPlanDevicesData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 当前页的设备数量 
-     * @return PageSize 当前页的设备数量
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long getPageSize() {
-        return this.PageSize;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 当前页的设备数量
-     * @param PageSize 当前页的设备数量
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setPageSize(Long PageSize) {
-        this.PageSize = PageSize;
-    }
-
-    /**
-     * Get 本次查询的设备通道总数 
-     * @return TotalCount 本次查询的设备通道总数
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 本次查询的设备通道总数
-     * @param TotalCount 本次查询的设备通道总数
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public RecordPlanChannelInfo [] getList() {
-        return this.List;
-    }
-
-    /**
-     * Set 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setList(RecordPlanChannelInfo [] List) {
-        this.List = List;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public ListRecordPlanDevicesResponse() {
@@ -127,20 +76,11 @@ public class ListRecordPlanDevicesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListRecordPlanDevicesResponse(ListRecordPlanDevicesResponse source) {
-        if (source.PageNumber != null) {
-            this.PageNumber = new Long(source.PageNumber);
+        if (source.Data != null) {
+            this.Data = new ListRecordPlanDevicesData(source.Data);
         }
-        if (source.PageSize != null) {
-            this.PageSize = new Long(source.PageSize);
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.List != null) {
-            this.List = new RecordPlanChannelInfo[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new RecordPlanChannelInfo(source.List[i]);
-            }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -149,10 +89,8 @@ public class ListRecordPlanDevicesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
-        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

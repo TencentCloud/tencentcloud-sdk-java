@@ -23,31 +23,49 @@ import java.util.HashMap;
 public class ListRecordPlanChannelsResponse extends AbstractModel{
 
     /**
-    * 用户所有计划下通道id，存在通道是为数组格式，不存在时，字段数据为空 
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回结果
     */
-    @SerializedName("List")
+    @SerializedName("Data")
     @Expose
-    private String [] List;
+    private ListRecordPlanChannelsData Data;
 
     /**
-     * Get 用户所有计划下通道id，存在通道是为数组格式，不存在时，字段数据为空 
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 用户所有计划下通道id，存在通道是为数组格式，不存在时，字段数据为空 
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get 返回结果 
+     * @return Data 返回结果
      */
-    public String [] getList() {
-        return this.List;
+    public ListRecordPlanChannelsData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 用户所有计划下通道id，存在通道是为数组格式，不存在时，字段数据为空 
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 用户所有计划下通道id，存在通道是为数组格式，不存在时，字段数据为空 
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回结果
+     * @param Data 返回结果
      */
-    public void setList(String [] List) {
-        this.List = List;
+    public void setData(ListRecordPlanChannelsData Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public ListRecordPlanChannelsResponse() {
@@ -58,11 +76,11 @@ public class ListRecordPlanChannelsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListRecordPlanChannelsResponse(ListRecordPlanChannelsResponse source) {
-        if (source.List != null) {
-            this.List = new String[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new String(source.List[i]);
-            }
+        if (source.Data != null) {
+            this.Data = new ListRecordPlanChannelsData(source.Data);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -71,7 +89,8 @@ public class ListRecordPlanChannelsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "List.", this.List);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

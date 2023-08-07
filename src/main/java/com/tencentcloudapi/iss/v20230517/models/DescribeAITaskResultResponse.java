@@ -28,7 +28,7 @@ public class DescribeAITaskResultResponse extends AbstractModel{
     */
     @SerializedName("Data")
     @Expose
-    private AITaskResultResponse Data;
+    private AITaskResultData Data;
 
     /**
     * AI识别结果数量
@@ -50,7 +50,7 @@ public class DescribeAITaskResultResponse extends AbstractModel{
      * @return Data AI识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AITaskResultResponse getData() {
+    public AITaskResultData getData() {
         return this.Data;
     }
 
@@ -60,7 +60,7 @@ public class DescribeAITaskResultResponse extends AbstractModel{
      * @param Data AI识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(AITaskResultResponse Data) {
+    public void setData(AITaskResultData Data) {
         this.Data = Data;
     }
 
@@ -105,7 +105,7 @@ public class DescribeAITaskResultResponse extends AbstractModel{
      */
     public DescribeAITaskResultResponse(DescribeAITaskResultResponse source) {
         if (source.Data != null) {
-            this.Data = new AITaskResultResponse(source.Data);
+            this.Data = new AITaskResultData(source.Data);
         }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);

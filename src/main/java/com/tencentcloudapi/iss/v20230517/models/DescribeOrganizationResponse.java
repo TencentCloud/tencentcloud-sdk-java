@@ -23,227 +23,49 @@ import java.util.HashMap;
 public class DescribeOrganizationResponse extends AbstractModel{
 
     /**
-    * 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("OrganizationId")
+    @SerializedName("Data")
     @Expose
-    private String OrganizationId;
+    private DescribeOrganizationData [] Data;
 
     /**
-    * 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Name")
+    @SerializedName("RequestId")
     @Expose
-    private String Name;
+    private String RequestId;
 
     /**
-    * 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ParentId")
-    @Expose
-    private String ParentId;
-
-    /**
-    * 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Level")
-    @Expose
-    private Long Level;
-
-    /**
-    * 用户id
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("AppId")
-    @Expose
-    private Long AppId;
-
-    /**
-    * 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ParentIds")
-    @Expose
-    private String ParentIds;
-
-    /**
-    * 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
-
-    /**
-    * 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Online")
-    @Expose
-    private Long Online;
-
-    /**
-     * Get 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrganizationId 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public String getOrganizationId() {
-        return this.OrganizationId;
+    public DescribeOrganizationData [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrganizationId 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setOrganizationId(String OrganizationId) {
-        this.OrganizationId = OrganizationId;
+    public void setData(DescribeOrganizationData [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 组织名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getName() {
-        return this.Name;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentId 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getParentId() {
-        return this.ParentId;
-    }
-
-    /**
-     * Set 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentId 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setParentId(String ParentId) {
-        this.ParentId = ParentId;
-    }
-
-    /**
-     * Get 组织层级
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Level 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getLevel() {
-        return this.Level;
-    }
-
-    /**
-     * Set 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Level 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLevel(Long Level) {
-        this.Level = Level;
-    }
-
-    /**
-     * Get 用户id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getAppId() {
-        return this.AppId;
-    }
-
-    /**
-     * Set 用户id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAppId(Long AppId) {
-        this.AppId = AppId;
-    }
-
-    /**
-     * Get 组织结构
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentIds 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getParentIds() {
-        return this.ParentIds;
-    }
-
-    /**
-     * Set 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentIds 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setParentIds(String ParentIds) {
-        this.ParentIds = ParentIds;
-    }
-
-    /**
-     * Get 设备总数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Online 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getOnline() {
-        return this.Online;
-    }
-
-    /**
-     * Set 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Online 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setOnline(Long Online) {
-        this.Online = Online;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeOrganizationResponse() {
@@ -254,29 +76,14 @@ public class DescribeOrganizationResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeOrganizationResponse(DescribeOrganizationResponse source) {
-        if (source.OrganizationId != null) {
-            this.OrganizationId = new String(source.OrganizationId);
+        if (source.Data != null) {
+            this.Data = new DescribeOrganizationData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new DescribeOrganizationData(source.Data[i]);
+            }
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.ParentId != null) {
-            this.ParentId = new String(source.ParentId);
-        }
-        if (source.Level != null) {
-            this.Level = new Long(source.Level);
-        }
-        if (source.AppId != null) {
-            this.AppId = new Long(source.AppId);
-        }
-        if (source.ParentIds != null) {
-            this.ParentIds = new String(source.ParentIds);
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.Online != null) {
-            this.Online = new Long(source.Online);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -285,14 +92,8 @@ public class DescribeOrganizationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "ParentId", this.ParentId);
-        this.setParamSimple(map, prefix + "Level", this.Level);
-        this.setParamSimple(map, prefix + "AppId", this.AppId);
-        this.setParamSimple(map, prefix + "ParentIds", this.ParentIds);
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamSimple(map, prefix + "Online", this.Online);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -23,115 +23,49 @@ import java.util.HashMap;
 public class ListRecordBackupPlanDevicesResponse extends AbstractModel{
 
     /**
-    * 第几页
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("PageNumber")
+    @SerializedName("Data")
     @Expose
-    private Long PageNumber;
+    private ListRecordBackupPlanDevicesData Data;
 
     /**
-    * 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("PageSize")
+    @SerializedName("RequestId")
     @Expose
-    private Long PageSize;
+    private String RequestId;
 
     /**
-    * 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("List")
-    @Expose
-    private RecordPlanChannelInfo List;
-
-    /**
-     * Get 第几页
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public Long getPageNumber() {
-        return this.PageNumber;
+    public ListRecordBackupPlanDevicesData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 第几页
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setPageNumber(Long PageNumber) {
-        this.PageNumber = PageNumber;
+    public void setData(ListRecordBackupPlanDevicesData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageSize 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long getPageSize() {
-        return this.PageSize;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageSize 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setPageSize(Long PageSize) {
-        this.PageSize = PageSize;
-    }
-
-    /**
-     * Get 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public RecordPlanChannelInfo getList() {
-        return this.List;
-    }
-
-    /**
-     * Set 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setList(RecordPlanChannelInfo List) {
-        this.List = List;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public ListRecordBackupPlanDevicesResponse() {
@@ -142,17 +76,11 @@ public class ListRecordBackupPlanDevicesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListRecordBackupPlanDevicesResponse(ListRecordBackupPlanDevicesResponse source) {
-        if (source.PageNumber != null) {
-            this.PageNumber = new Long(source.PageNumber);
+        if (source.Data != null) {
+            this.Data = new ListRecordBackupPlanDevicesData(source.Data);
         }
-        if (source.PageSize != null) {
-            this.PageSize = new Long(source.PageSize);
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.List != null) {
-            this.List = new RecordPlanChannelInfo(source.List);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -161,10 +89,8 @@ public class ListRecordBackupPlanDevicesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
-        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "List.", this.List);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

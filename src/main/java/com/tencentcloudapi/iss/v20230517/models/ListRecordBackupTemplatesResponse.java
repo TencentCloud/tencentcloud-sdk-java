@@ -23,199 +23,49 @@ import java.util.HashMap;
 public class ListRecordBackupTemplatesResponse extends AbstractModel{
 
     /**
-    * 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("TemplateId")
+    @SerializedName("Data")
     @Expose
-    private String TemplateId;
+    private ListRecordBackupTemplatesData [] Data;
 
     /**
-    * 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("TemplateName")
+    @SerializedName("RequestId")
     @Expose
-    private String TemplateName;
+    private String RequestId;
 
     /**
-    * 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TimeSections")
-    @Expose
-    private RecordTemplateTimeSections [] TimeSections;
-
-    /**
-    * 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("DevTimeSections")
-    @Expose
-    private RecordTemplateTimeSections [] DevTimeSections;
-
-    /**
-    * 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Scale")
-    @Expose
-    private Long Scale;
-
-    /**
-    * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CreateAt")
-    @Expose
-    private String CreateAt;
-
-    /**
-    * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("UpdateAt")
-    @Expose
-    private String UpdateAt;
-
-    /**
-     * Get 模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateId 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public String getTemplateId() {
-        return this.TemplateId;
+    public ListRecordBackupTemplatesData [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateId 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setData(ListRecordBackupTemplatesData [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getTemplateName() {
-        return this.TemplateName;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setTemplateName(String TemplateName) {
-        this.TemplateName = TemplateName;
-    }
-
-    /**
-     * Get 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public RecordTemplateTimeSections [] getTimeSections() {
-        return this.TimeSections;
-    }
-
-    /**
-     * Set 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTimeSections(RecordTemplateTimeSections [] TimeSections) {
-        this.TimeSections = TimeSections;
-    }
-
-    /**
-     * Get 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public RecordTemplateTimeSections [] getDevTimeSections() {
-        return this.DevTimeSections;
-    }
-
-    /**
-     * Set 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setDevTimeSections(RecordTemplateTimeSections [] DevTimeSections) {
-        this.DevTimeSections = DevTimeSections;
-    }
-
-    /**
-     * Get 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scale 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getScale() {
-        return this.Scale;
-    }
-
-    /**
-     * Set 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scale 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setScale(Long Scale) {
-        this.Scale = Scale;
-    }
-
-    /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getCreateAt() {
-        return this.CreateAt;
-    }
-
-    /**
-     * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCreateAt(String CreateAt) {
-        this.CreateAt = CreateAt;
-    }
-
-    /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getUpdateAt() {
-        return this.UpdateAt;
-    }
-
-    /**
-     * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setUpdateAt(String UpdateAt) {
-        this.UpdateAt = UpdateAt;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public ListRecordBackupTemplatesResponse() {
@@ -226,32 +76,14 @@ public class ListRecordBackupTemplatesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListRecordBackupTemplatesResponse(ListRecordBackupTemplatesResponse source) {
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
-        }
-        if (source.TemplateName != null) {
-            this.TemplateName = new String(source.TemplateName);
-        }
-        if (source.TimeSections != null) {
-            this.TimeSections = new RecordTemplateTimeSections[source.TimeSections.length];
-            for (int i = 0; i < source.TimeSections.length; i++) {
-                this.TimeSections[i] = new RecordTemplateTimeSections(source.TimeSections[i]);
+        if (source.Data != null) {
+            this.Data = new ListRecordBackupTemplatesData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ListRecordBackupTemplatesData(source.Data[i]);
             }
         }
-        if (source.DevTimeSections != null) {
-            this.DevTimeSections = new RecordTemplateTimeSections[source.DevTimeSections.length];
-            for (int i = 0; i < source.DevTimeSections.length; i++) {
-                this.DevTimeSections[i] = new RecordTemplateTimeSections(source.DevTimeSections[i]);
-            }
-        }
-        if (source.Scale != null) {
-            this.Scale = new Long(source.Scale);
-        }
-        if (source.CreateAt != null) {
-            this.CreateAt = new String(source.CreateAt);
-        }
-        if (source.UpdateAt != null) {
-            this.UpdateAt = new String(source.UpdateAt);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -260,13 +92,8 @@ public class ListRecordBackupTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
-        this.setParamArrayObj(map, prefix + "TimeSections.", this.TimeSections);
-        this.setParamArrayObj(map, prefix + "DevTimeSections.", this.DevTimeSections);
-        this.setParamSimple(map, prefix + "Scale", this.Scale);
-        this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
-        this.setParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

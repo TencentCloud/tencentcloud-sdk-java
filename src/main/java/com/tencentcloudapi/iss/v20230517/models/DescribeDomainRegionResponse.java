@@ -23,87 +23,49 @@ import java.util.HashMap;
 public class DescribeDomainRegionResponse extends AbstractModel{
 
     /**
-    * 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("Label")
+    @SerializedName("Data")
     @Expose
-    private String Label;
+    private DescribeDomainRegionData [] Data;
 
     /**
-    * 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Value")
+    @SerializedName("RequestId")
     @Expose
-    private String Value;
+    private String RequestId;
 
     /**
-    * 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Region")
-    @Expose
-    private String Region;
-
-    /**
-     * Get 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public String getLabel() {
-        return this.Label;
+    public DescribeDomainRegionData [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setLabel(String Label) {
-        this.Label = Label;
+    public void setData(DescribeDomainRegionData [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getValue() {
-        return this.Value;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    /**
-     * Get 地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getRegion() {
-        return this.Region;
-    }
-
-    /**
-     * Set 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRegion(String Region) {
-        this.Region = Region;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeDomainRegionResponse() {
@@ -114,14 +76,14 @@ public class DescribeDomainRegionResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDomainRegionResponse(DescribeDomainRegionResponse source) {
-        if (source.Label != null) {
-            this.Label = new String(source.Label);
+        if (source.Data != null) {
+            this.Data = new DescribeDomainRegionData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new DescribeDomainRegionData(source.Data[i]);
+            }
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
-        }
-        if (source.Region != null) {
-            this.Region = new String(source.Region);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -130,9 +92,8 @@ public class DescribeDomainRegionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Label", this.Label);
-        this.setParamSimple(map, prefix + "Value", this.Value);
-        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateOrgResponse extends AbstractModel{
+public class DescribeOrganizationData extends AbstractModel{
 
     /**
     * 组织 ID
@@ -55,7 +55,7 @@ public class UpdateOrgResponse extends AbstractModel{
     private Long Level;
 
     /**
-    * 用户ID
+    * 用户id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -167,9 +167,9 @@ public class UpdateOrgResponse extends AbstractModel{
     }
 
     /**
-     * Get 用户ID
+     * Get 用户id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 用户ID
+     * @return AppId 用户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
@@ -177,9 +177,9 @@ public class UpdateOrgResponse extends AbstractModel{
     }
 
     /**
-     * Set 用户ID
+     * Set 用户id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 用户ID
+     * @param AppId 用户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
@@ -246,14 +246,14 @@ public class UpdateOrgResponse extends AbstractModel{
         this.Online = Online;
     }
 
-    public UpdateOrgResponse() {
+    public DescribeOrganizationData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateOrgResponse(UpdateOrgResponse source) {
+    public DescribeOrganizationData(DescribeOrganizationData source) {
         if (source.OrganizationId != null) {
             this.OrganizationId = new String(source.OrganizationId);
         }

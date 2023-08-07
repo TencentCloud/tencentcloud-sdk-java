@@ -23,87 +23,49 @@ import java.util.HashMap;
 public class ControlDeviceStreamResponse extends AbstractModel{
 
     /**
-    * flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("Flv")
+    @SerializedName("Data")
     @Expose
-    private String Flv;
+    private ControlDeviceStreamData Data;
 
     /**
-    * hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Hls")
+    @SerializedName("RequestId")
     @Expose
-    private String Hls;
+    private String RequestId;
 
     /**
-    * rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Rtmp")
-    @Expose
-    private String Rtmp;
-
-    /**
-     * Get flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Flv flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public String getFlv() {
-        return this.Flv;
+    public ControlDeviceStreamData getData() {
+        return this.Data;
     }
 
     /**
-     * Set flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Flv flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setFlv(String Flv) {
-        this.Flv = Flv;
+    public void setData(ControlDeviceStreamData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Hls hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getHls() {
-        return this.Hls;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Hls hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setHls(String Hls) {
-        this.Hls = Hls;
-    }
-
-    /**
-     * Get rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Rtmp rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getRtmp() {
-        return this.Rtmp;
-    }
-
-    /**
-     * Set rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Rtmp rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRtmp(String Rtmp) {
-        this.Rtmp = Rtmp;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public ControlDeviceStreamResponse() {
@@ -114,14 +76,11 @@ public class ControlDeviceStreamResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ControlDeviceStreamResponse(ControlDeviceStreamResponse source) {
-        if (source.Flv != null) {
-            this.Flv = new String(source.Flv);
+        if (source.Data != null) {
+            this.Data = new ControlDeviceStreamData(source.Data);
         }
-        if (source.Hls != null) {
-            this.Hls = new String(source.Hls);
-        }
-        if (source.Rtmp != null) {
-            this.Rtmp = new String(source.Rtmp);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -130,9 +89,8 @@ public class ControlDeviceStreamResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Flv", this.Flv);
-        this.setParamSimple(map, prefix + "Hls", this.Hls);
-        this.setParamSimple(map, prefix + "Rtmp", this.Rtmp);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

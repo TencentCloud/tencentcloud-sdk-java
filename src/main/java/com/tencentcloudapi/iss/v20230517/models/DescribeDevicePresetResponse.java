@@ -23,59 +23,49 @@ import java.util.HashMap;
 public class DescribeDevicePresetResponse extends AbstractModel{
 
     /**
-    * 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("Index")
+    @SerializedName("Data")
     @Expose
-    private Long Index;
+    private DescribeDevicePresetData [] Data;
 
     /**
-    * 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Name")
+    @SerializedName("RequestId")
     @Expose
-    private String Name;
+    private String RequestId;
 
     /**
-     * Get 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Index 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public Long getIndex() {
-        return this.Index;
+    public DescribeDevicePresetData [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Index 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setIndex(Long Index) {
-        this.Index = Index;
+    public void setData(DescribeDevicePresetData [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getName() {
-        return this.Name;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeDevicePresetResponse() {
@@ -86,11 +76,14 @@ public class DescribeDevicePresetResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDevicePresetResponse(DescribeDevicePresetResponse source) {
-        if (source.Index != null) {
-            this.Index = new Long(source.Index);
+        if (source.Data != null) {
+            this.Data = new DescribeDevicePresetData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new DescribeDevicePresetData(source.Data[i]);
+            }
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -99,8 +92,8 @@ public class DescribeDevicePresetResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Index", this.Index);
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

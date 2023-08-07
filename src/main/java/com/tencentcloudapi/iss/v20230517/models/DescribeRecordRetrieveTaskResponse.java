@@ -23,261 +23,49 @@ import java.util.HashMap;
 public class DescribeRecordRetrieveTaskResponse extends AbstractModel{
 
     /**
-    * 取回任务ID
+    * 返回结果
     */
-    @SerializedName("TaskId")
+    @SerializedName("Data")
     @Expose
-    private String TaskId;
+    private DescribeRecordRetrieveTaskData Data;
 
     /**
-    * 取回任务名称
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("TaskName")
+    @SerializedName("RequestId")
     @Expose
-    private String TaskName;
+    private String RequestId;
 
     /**
-    * 取回录像的开始时间
-    */
-    @SerializedName("StartTime")
-    @Expose
-    private Long StartTime;
-
-    /**
-    * 取回录像的结束时间
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private Long EndTime;
-
-    /**
-    * 取回模式，1:极速模式，其他暂不支持
-    */
-    @SerializedName("Mode")
-    @Expose
-    private Long Mode;
-
-    /**
-    * 副本有效期
-    */
-    @SerializedName("Expiration")
-    @Expose
-    private Long Expiration;
-
-    /**
-    * 任务状态，0:已取回，1:取回中，2:待取回
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
-
-    /**
-    * 取回容量，单位MB
-    */
-    @SerializedName("Capacity")
-    @Expose
-    private Float Capacity;
-
-    /**
-    * 任务的设备通道id
-    */
-    @SerializedName("Channels")
-    @Expose
-    private RecordRetrieveTaskChannelInfo [] Channels;
-
-    /**
-    * 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Describe")
-    @Expose
-    private String Describe;
-
-    /**
-    * 任务通道数量
-    */
-    @SerializedName("ChannelCount")
-    @Expose
-    private Long ChannelCount;
-
-    /**
-     * Get 取回任务ID 
-     * @return TaskId 取回任务ID
+     * Get 返回结果 
+     * @return Data 返回结果
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public DescribeRecordRetrieveTaskData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 取回任务ID
-     * @param TaskId 取回任务ID
+     * Set 返回结果
+     * @param Data 返回结果
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setData(DescribeRecordRetrieveTaskData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 取回任务名称 
-     * @return TaskName 取回任务名称
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getTaskName() {
-        return this.TaskName;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 取回任务名称
-     * @param TaskName 取回任务名称
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setTaskName(String TaskName) {
-        this.TaskName = TaskName;
-    }
-
-    /**
-     * Get 取回录像的开始时间 
-     * @return StartTime 取回录像的开始时间
-     */
-    public Long getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set 取回录像的开始时间
-     * @param StartTime 取回录像的开始时间
-     */
-    public void setStartTime(Long StartTime) {
-        this.StartTime = StartTime;
-    }
-
-    /**
-     * Get 取回录像的结束时间 
-     * @return EndTime 取回录像的结束时间
-     */
-    public Long getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set 取回录像的结束时间
-     * @param EndTime 取回录像的结束时间
-     */
-    public void setEndTime(Long EndTime) {
-        this.EndTime = EndTime;
-    }
-
-    /**
-     * Get 取回模式，1:极速模式，其他暂不支持 
-     * @return Mode 取回模式，1:极速模式，其他暂不支持
-     */
-    public Long getMode() {
-        return this.Mode;
-    }
-
-    /**
-     * Set 取回模式，1:极速模式，其他暂不支持
-     * @param Mode 取回模式，1:极速模式，其他暂不支持
-     */
-    public void setMode(Long Mode) {
-        this.Mode = Mode;
-    }
-
-    /**
-     * Get 副本有效期 
-     * @return Expiration 副本有效期
-     */
-    public Long getExpiration() {
-        return this.Expiration;
-    }
-
-    /**
-     * Set 副本有效期
-     * @param Expiration 副本有效期
-     */
-    public void setExpiration(Long Expiration) {
-        this.Expiration = Expiration;
-    }
-
-    /**
-     * Get 任务状态，0:已取回，1:取回中，2:待取回 
-     * @return Status 任务状态，0:已取回，1:取回中，2:待取回
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 任务状态，0:已取回，1:取回中，2:待取回
-     * @param Status 任务状态，0:已取回，1:取回中，2:待取回
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get 取回容量，单位MB 
-     * @return Capacity 取回容量，单位MB
-     */
-    public Float getCapacity() {
-        return this.Capacity;
-    }
-
-    /**
-     * Set 取回容量，单位MB
-     * @param Capacity 取回容量，单位MB
-     */
-    public void setCapacity(Float Capacity) {
-        this.Capacity = Capacity;
-    }
-
-    /**
-     * Get 任务的设备通道id 
-     * @return Channels 任务的设备通道id
-     */
-    public RecordRetrieveTaskChannelInfo [] getChannels() {
-        return this.Channels;
-    }
-
-    /**
-     * Set 任务的设备通道id
-     * @param Channels 任务的设备通道id
-     */
-    public void setChannels(RecordRetrieveTaskChannelInfo [] Channels) {
-        this.Channels = Channels;
-    }
-
-    /**
-     * Get 任务描述
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Describe 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getDescribe() {
-        return this.Describe;
-    }
-
-    /**
-     * Set 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Describe 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setDescribe(String Describe) {
-        this.Describe = Describe;
-    }
-
-    /**
-     * Get 任务通道数量 
-     * @return ChannelCount 任务通道数量
-     */
-    public Long getChannelCount() {
-        return this.ChannelCount;
-    }
-
-    /**
-     * Set 任务通道数量
-     * @param ChannelCount 任务通道数量
-     */
-    public void setChannelCount(Long ChannelCount) {
-        this.ChannelCount = ChannelCount;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeRecordRetrieveTaskResponse() {
@@ -288,41 +76,11 @@ public class DescribeRecordRetrieveTaskResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRecordRetrieveTaskResponse(DescribeRecordRetrieveTaskResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+        if (source.Data != null) {
+            this.Data = new DescribeRecordRetrieveTaskData(source.Data);
         }
-        if (source.TaskName != null) {
-            this.TaskName = new String(source.TaskName);
-        }
-        if (source.StartTime != null) {
-            this.StartTime = new Long(source.StartTime);
-        }
-        if (source.EndTime != null) {
-            this.EndTime = new Long(source.EndTime);
-        }
-        if (source.Mode != null) {
-            this.Mode = new Long(source.Mode);
-        }
-        if (source.Expiration != null) {
-            this.Expiration = new Long(source.Expiration);
-        }
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
-        }
-        if (source.Capacity != null) {
-            this.Capacity = new Float(source.Capacity);
-        }
-        if (source.Channels != null) {
-            this.Channels = new RecordRetrieveTaskChannelInfo[source.Channels.length];
-            for (int i = 0; i < source.Channels.length; i++) {
-                this.Channels[i] = new RecordRetrieveTaskChannelInfo(source.Channels[i]);
-            }
-        }
-        if (source.Describe != null) {
-            this.Describe = new String(source.Describe);
-        }
-        if (source.ChannelCount != null) {
-            this.ChannelCount = new Long(source.ChannelCount);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -331,17 +89,8 @@ public class DescribeRecordRetrieveTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "TaskName", this.TaskName);
-        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
-        this.setParamSimple(map, prefix + "Mode", this.Mode);
-        this.setParamSimple(map, prefix + "Expiration", this.Expiration);
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Capacity", this.Capacity);
-        this.setParamArrayObj(map, prefix + "Channels.", this.Channels);
-        this.setParamSimple(map, prefix + "Describe", this.Describe);
-        this.setParamSimple(map, prefix + "ChannelCount", this.ChannelCount);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

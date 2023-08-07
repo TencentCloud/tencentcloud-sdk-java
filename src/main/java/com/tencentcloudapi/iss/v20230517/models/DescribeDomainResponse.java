@@ -23,199 +23,49 @@ import java.util.HashMap;
 public class DescribeDomainResponse extends AbstractModel{
 
     /**
-    * 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("Id")
+    @SerializedName("Data")
     @Expose
-    private String Id;
+    private DescribeDomainData [] Data;
 
     /**
-    * 播放域名
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("PlayDomain")
+    @SerializedName("RequestId")
     @Expose
-    private String PlayDomain;
+    private String RequestId;
 
     /**
-    * CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("InternalDomain")
-    @Expose
-    private String InternalDomain;
-
-    /**
-    * 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("HaveCert")
-    @Expose
-    private Long HaveCert;
-
-    /**
-    * 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
-    * 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ClusterName")
-    @Expose
-    private String ClusterName;
-
-    /**
-    * 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("AppId")
-    @Expose
-    private Long AppId;
-
-    /**
-     * Get 域名ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public String getId() {
-        return this.Id;
+    public DescribeDomainData [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setId(String Id) {
-        this.Id = Id;
+    public void setData(DescribeDomainData [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 播放域名
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PlayDomain 播放域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getPlayDomain() {
-        return this.PlayDomain;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 播放域名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PlayDomain 播放域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setPlayDomain(String PlayDomain) {
-        this.PlayDomain = PlayDomain;
-    }
-
-    /**
-     * Get CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InternalDomain CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getInternalDomain() {
-        return this.InternalDomain;
-    }
-
-    /**
-     * Set CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InternalDomain CNAME 记录值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setInternalDomain(String InternalDomain) {
-        this.InternalDomain = InternalDomain;
-    }
-
-    /**
-     * Get 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HaveCert 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getHaveCert() {
-        return this.HaveCert;
-    }
-
-    /**
-     * Set 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HaveCert 是否上传证书（0：否，1：是）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHaveCert(Long HaveCert) {
-        this.HaveCert = HaveCert;
-    }
-
-    /**
-     * Get 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterId 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterId 服务节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    /**
-     * Get 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterName 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getClusterName() {
-        return this.ClusterName;
-    }
-
-    /**
-     * Set 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterName 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setClusterName(String ClusterName) {
-        this.ClusterName = ClusterName;
-    }
-
-    /**
-     * Get 用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getAppId() {
-        return this.AppId;
-    }
-
-    /**
-     * Set 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAppId(Long AppId) {
-        this.AppId = AppId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeDomainResponse() {
@@ -226,26 +76,14 @@ public class DescribeDomainResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDomainResponse(DescribeDomainResponse source) {
-        if (source.Id != null) {
-            this.Id = new String(source.Id);
+        if (source.Data != null) {
+            this.Data = new DescribeDomainData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new DescribeDomainData(source.Data[i]);
+            }
         }
-        if (source.PlayDomain != null) {
-            this.PlayDomain = new String(source.PlayDomain);
-        }
-        if (source.InternalDomain != null) {
-            this.InternalDomain = new String(source.InternalDomain);
-        }
-        if (source.HaveCert != null) {
-            this.HaveCert = new Long(source.HaveCert);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
-        }
-        if (source.ClusterName != null) {
-            this.ClusterName = new String(source.ClusterName);
-        }
-        if (source.AppId != null) {
-            this.AppId = new Long(source.AppId);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -254,13 +92,8 @@ public class DescribeDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
-        this.setParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
-        this.setParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
-        this.setParamSimple(map, prefix + "HaveCert", this.HaveCert);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
-        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

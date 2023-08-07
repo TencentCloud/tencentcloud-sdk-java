@@ -23,87 +23,49 @@ import java.util.HashMap;
 public class DescribeGatewayProtocolResponse extends AbstractModel{
 
     /**
-    * 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("TypeCode")
+    @SerializedName("Data")
     @Expose
-    private String TypeCode;
+    private DescribeGatewayProtocolData [] Data;
 
     /**
-    * 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Value")
+    @SerializedName("RequestId")
     @Expose
-    private Long Value;
+    private String RequestId;
 
     /**
-    * 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Label")
-    @Expose
-    private String Label;
-
-    /**
-     * Get 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TypeCode 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public String getTypeCode() {
-        return this.TypeCode;
+    public DescribeGatewayProtocolData [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TypeCode 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setTypeCode(String TypeCode) {
-        this.TypeCode = TypeCode;
+    public void setData(DescribeGatewayProtocolData [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long getValue() {
-        return this.Value;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setValue(Long Value) {
-        this.Value = Value;
-    }
-
-    /**
-     * Get 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getLabel() {
-        return this.Label;
-    }
-
-    /**
-     * Set 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLabel(String Label) {
-        this.Label = Label;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeGatewayProtocolResponse() {
@@ -114,14 +76,14 @@ public class DescribeGatewayProtocolResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeGatewayProtocolResponse(DescribeGatewayProtocolResponse source) {
-        if (source.TypeCode != null) {
-            this.TypeCode = new String(source.TypeCode);
+        if (source.Data != null) {
+            this.Data = new DescribeGatewayProtocolData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new DescribeGatewayProtocolData(source.Data[i]);
+            }
         }
-        if (source.Value != null) {
-            this.Value = new Long(source.Value);
-        }
-        if (source.Label != null) {
-            this.Label = new String(source.Label);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -130,9 +92,8 @@ public class DescribeGatewayProtocolResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TypeCode", this.TypeCode);
-        this.setParamSimple(map, prefix + "Value", this.Value);
-        this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

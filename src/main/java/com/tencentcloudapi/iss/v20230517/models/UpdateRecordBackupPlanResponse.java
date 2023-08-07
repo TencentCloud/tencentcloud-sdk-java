@@ -23,210 +23,49 @@ import java.util.HashMap;
 public class UpdateRecordBackupPlanResponse extends AbstractModel{
 
     /**
-    * 录像上云计划ID
+    * 返回数据
     */
-    @SerializedName("PlanId")
+    @SerializedName("Data")
     @Expose
-    private String PlanId;
+    private UpdateRecordBackupPlanData Data;
 
     /**
-    * 录像上云计划名称
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("PlanName")
+    @SerializedName("RequestId")
     @Expose
-    private String PlanName;
+    private String RequestId;
 
     /**
-    * 录像上云模板ID
-    */
-    @SerializedName("TemplateId")
-    @Expose
-    private String TemplateId;
-
-    /**
-    * 录像上云计划描述
-    */
-    @SerializedName("Describe")
-    @Expose
-    private String Describe;
-
-    /**
-    * 云文件生命周期
-    */
-    @SerializedName("LifeCycle")
-    @Expose
-    private LifeCycleData LifeCycle;
-
-    /**
-    * 录像上云计划状态，1:正常使用中，0:删除中，无法使用
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
-
-    /**
-    * 通道数量
-    */
-    @SerializedName("ChannelCount")
-    @Expose
-    private Long ChannelCount;
-
-    /**
-    * 创建时间
-    */
-    @SerializedName("CreateAt")
-    @Expose
-    private String CreateAt;
-
-    /**
-    * 修改时间
-    */
-    @SerializedName("UpdateAt")
-    @Expose
-    private String UpdateAt;
-
-    /**
-     * Get 录像上云计划ID 
-     * @return PlanId 录像上云计划ID
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public String getPlanId() {
-        return this.PlanId;
+    public UpdateRecordBackupPlanData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 录像上云计划ID
-     * @param PlanId 录像上云计划ID
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setPlanId(String PlanId) {
-        this.PlanId = PlanId;
+    public void setData(UpdateRecordBackupPlanData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 录像上云计划名称 
-     * @return PlanName 录像上云计划名称
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getPlanName() {
-        return this.PlanName;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 录像上云计划名称
-     * @param PlanName 录像上云计划名称
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setPlanName(String PlanName) {
-        this.PlanName = PlanName;
-    }
-
-    /**
-     * Get 录像上云模板ID 
-     * @return TemplateId 录像上云模板ID
-     */
-    public String getTemplateId() {
-        return this.TemplateId;
-    }
-
-    /**
-     * Set 录像上云模板ID
-     * @param TemplateId 录像上云模板ID
-     */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
-    }
-
-    /**
-     * Get 录像上云计划描述 
-     * @return Describe 录像上云计划描述
-     */
-    public String getDescribe() {
-        return this.Describe;
-    }
-
-    /**
-     * Set 录像上云计划描述
-     * @param Describe 录像上云计划描述
-     */
-    public void setDescribe(String Describe) {
-        this.Describe = Describe;
-    }
-
-    /**
-     * Get 云文件生命周期 
-     * @return LifeCycle 云文件生命周期
-     */
-    public LifeCycleData getLifeCycle() {
-        return this.LifeCycle;
-    }
-
-    /**
-     * Set 云文件生命周期
-     * @param LifeCycle 云文件生命周期
-     */
-    public void setLifeCycle(LifeCycleData LifeCycle) {
-        this.LifeCycle = LifeCycle;
-    }
-
-    /**
-     * Get 录像上云计划状态，1:正常使用中，0:删除中，无法使用 
-     * @return Status 录像上云计划状态，1:正常使用中，0:删除中，无法使用
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 录像上云计划状态，1:正常使用中，0:删除中，无法使用
-     * @param Status 录像上云计划状态，1:正常使用中，0:删除中，无法使用
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get 通道数量 
-     * @return ChannelCount 通道数量
-     */
-    public Long getChannelCount() {
-        return this.ChannelCount;
-    }
-
-    /**
-     * Set 通道数量
-     * @param ChannelCount 通道数量
-     */
-    public void setChannelCount(Long ChannelCount) {
-        this.ChannelCount = ChannelCount;
-    }
-
-    /**
-     * Get 创建时间 
-     * @return CreateAt 创建时间
-     */
-    public String getCreateAt() {
-        return this.CreateAt;
-    }
-
-    /**
-     * Set 创建时间
-     * @param CreateAt 创建时间
-     */
-    public void setCreateAt(String CreateAt) {
-        this.CreateAt = CreateAt;
-    }
-
-    /**
-     * Get 修改时间 
-     * @return UpdateAt 修改时间
-     */
-    public String getUpdateAt() {
-        return this.UpdateAt;
-    }
-
-    /**
-     * Set 修改时间
-     * @param UpdateAt 修改时间
-     */
-    public void setUpdateAt(String UpdateAt) {
-        this.UpdateAt = UpdateAt;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public UpdateRecordBackupPlanResponse() {
@@ -237,32 +76,11 @@ public class UpdateRecordBackupPlanResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateRecordBackupPlanResponse(UpdateRecordBackupPlanResponse source) {
-        if (source.PlanId != null) {
-            this.PlanId = new String(source.PlanId);
+        if (source.Data != null) {
+            this.Data = new UpdateRecordBackupPlanData(source.Data);
         }
-        if (source.PlanName != null) {
-            this.PlanName = new String(source.PlanName);
-        }
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
-        }
-        if (source.Describe != null) {
-            this.Describe = new String(source.Describe);
-        }
-        if (source.LifeCycle != null) {
-            this.LifeCycle = new LifeCycleData(source.LifeCycle);
-        }
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
-        }
-        if (source.ChannelCount != null) {
-            this.ChannelCount = new Long(source.ChannelCount);
-        }
-        if (source.CreateAt != null) {
-            this.CreateAt = new String(source.CreateAt);
-        }
-        if (source.UpdateAt != null) {
-            this.UpdateAt = new String(source.UpdateAt);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -271,15 +89,8 @@ public class UpdateRecordBackupPlanResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PlanId", this.PlanId);
-        this.setParamSimple(map, prefix + "PlanName", this.PlanName);
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamSimple(map, prefix + "Describe", this.Describe);
-        this.setParamObj(map, prefix + "LifeCycle.", this.LifeCycle);
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "ChannelCount", this.ChannelCount);
-        this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
-        this.setParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

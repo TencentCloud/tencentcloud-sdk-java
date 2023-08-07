@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class ListOrganizationChannelNumbersResponse extends AbstractModel{
 
     /**
-    * 组织下通道总数
+    * 返回结果
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Data")
     @Expose
-    private Long TotalCount;
+    private ListOrganizationChannelNumbersData Data;
 
     /**
-    * 组织下未添加到计划的通道总数
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("NotInPlanCount")
+    @SerializedName("RequestId")
     @Expose
-    private Long NotInPlanCount;
+    private String RequestId;
 
     /**
-     * Get 组织下通道总数 
-     * @return TotalCount 组织下通道总数
+     * Get 返回结果 
+     * @return Data 返回结果
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public ListOrganizationChannelNumbersData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 组织下通道总数
-     * @param TotalCount 组织下通道总数
+     * Set 返回结果
+     * @param Data 返回结果
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setData(ListOrganizationChannelNumbersData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 组织下未添加到计划的通道总数 
-     * @return NotInPlanCount 组织下未添加到计划的通道总数
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long getNotInPlanCount() {
-        return this.NotInPlanCount;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 组织下未添加到计划的通道总数
-     * @param NotInPlanCount 组织下未添加到计划的通道总数
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setNotInPlanCount(Long NotInPlanCount) {
-        this.NotInPlanCount = NotInPlanCount;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public ListOrganizationChannelNumbersResponse() {
@@ -76,11 +76,11 @@ public class ListOrganizationChannelNumbersResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListOrganizationChannelNumbersResponse(ListOrganizationChannelNumbersResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.Data != null) {
+            this.Data = new ListOrganizationChannelNumbersData(source.Data);
         }
-        if (source.NotInPlanCount != null) {
-            this.NotInPlanCount = new Long(source.NotInPlanCount);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -89,8 +89,8 @@ public class ListOrganizationChannelNumbersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamSimple(map, prefix + "NotInPlanCount", this.NotInPlanCount);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

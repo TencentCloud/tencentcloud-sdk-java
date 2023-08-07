@@ -23,59 +23,49 @@ import java.util.HashMap;
 public class ListGatewaysResponse extends AbstractModel{
 
     /**
-    * 网关列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回数据
     */
-    @SerializedName("List")
+    @SerializedName("Data")
     @Expose
-    private GatewaysData [] List;
+    private ListGatewaysData Data;
 
     /**
-    * 网关数量
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("RequestId")
     @Expose
-    private Long TotalCount;
+    private String RequestId;
 
     /**
-     * Get 网关列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 网关列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回数据 
+     * @return Data 返回数据
      */
-    public GatewaysData [] getList() {
-        return this.List;
+    public ListGatewaysData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 网关列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 网关列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回数据
+     * @param Data 返回数据
      */
-    public void setList(GatewaysData [] List) {
-        this.List = List;
+    public void setData(ListGatewaysData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 网关数量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 网关数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 网关数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 网关数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public ListGatewaysResponse() {
@@ -86,14 +76,11 @@ public class ListGatewaysResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListGatewaysResponse(ListGatewaysResponse source) {
-        if (source.List != null) {
-            this.List = new GatewaysData[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new GatewaysData(source.List[i]);
-            }
+        if (source.Data != null) {
+            this.Data = new ListGatewaysData(source.Data);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -102,8 +89,8 @@ public class ListGatewaysResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "List.", this.List);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

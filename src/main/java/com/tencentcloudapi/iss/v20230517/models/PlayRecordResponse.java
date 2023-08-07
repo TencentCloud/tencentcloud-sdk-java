@@ -23,31 +23,49 @@ import java.util.HashMap;
 public class PlayRecordResponse extends AbstractModel{
 
     /**
-    * 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回结果
     */
-    @SerializedName("Flv")
+    @SerializedName("Data")
     @Expose
-    private String Flv;
+    private PlayRecordData Data;
 
     /**
-     * Get 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Flv 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get 返回结果 
+     * @return Data 返回结果
      */
-    public String getFlv() {
-        return this.Flv;
+    public PlayRecordData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Flv 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回结果
+     * @param Data 返回结果
      */
-    public void setFlv(String Flv) {
-        this.Flv = Flv;
+    public void setData(PlayRecordData Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public PlayRecordResponse() {
@@ -58,8 +76,11 @@ public class PlayRecordResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PlayRecordResponse(PlayRecordResponse source) {
-        if (source.Flv != null) {
-            this.Flv = new String(source.Flv);
+        if (source.Data != null) {
+            this.Data = new PlayRecordData(source.Data);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -68,7 +89,8 @@ public class PlayRecordResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Flv", this.Flv);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

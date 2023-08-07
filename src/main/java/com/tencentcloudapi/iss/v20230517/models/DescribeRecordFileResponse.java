@@ -23,54 +23,49 @@ import java.util.HashMap;
 public class DescribeRecordFileResponse extends AbstractModel{
 
     /**
-    * 提示类型，0:时间段内无归档录像，1:时间段内有归档录像
+    * 返回结果
     */
-    @SerializedName("Tips")
+    @SerializedName("Data")
     @Expose
-    private Long Tips;
+    private DescribeRecordFileData Data;
 
     /**
-    * 存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("List")
+    @SerializedName("RequestId")
     @Expose
-    private RecordTimeLine [] List;
+    private String RequestId;
 
     /**
-     * Get 提示类型，0:时间段内无归档录像，1:时间段内有归档录像 
-     * @return Tips 提示类型，0:时间段内无归档录像，1:时间段内有归档录像
+     * Get 返回结果 
+     * @return Data 返回结果
      */
-    public Long getTips() {
-        return this.Tips;
+    public DescribeRecordFileData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 提示类型，0:时间段内无归档录像，1:时间段内有归档录像
-     * @param Tips 提示类型，0:时间段内无归档录像，1:时间段内有归档录像
+     * Set 返回结果
+     * @param Data 返回结果
      */
-    public void setTips(Long Tips) {
-        this.Tips = Tips;
+    public void setData(DescribeRecordFileData Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public RecordTimeLine [] getList() {
-        return this.List;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setList(RecordTimeLine [] List) {
-        this.List = List;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     public DescribeRecordFileResponse() {
@@ -81,14 +76,11 @@ public class DescribeRecordFileResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRecordFileResponse(DescribeRecordFileResponse source) {
-        if (source.Tips != null) {
-            this.Tips = new Long(source.Tips);
+        if (source.Data != null) {
+            this.Data = new DescribeRecordFileData(source.Data);
         }
-        if (source.List != null) {
-            this.List = new RecordTimeLine[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new RecordTimeLine(source.List[i]);
-            }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -97,8 +89,8 @@ public class DescribeRecordFileResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Tips", this.Tips);
-        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

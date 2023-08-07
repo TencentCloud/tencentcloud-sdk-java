@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AITaskResultResponse extends AbstractModel{
+public class AITaskResultData extends AbstractModel{
 
     /**
     * AI 任务 ID
@@ -96,14 +96,14 @@ public class AITaskResultResponse extends AbstractModel{
         this.AIResults = AIResults;
     }
 
-    public AITaskResultResponse() {
+    public AITaskResultData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AITaskResultResponse(AITaskResultResponse source) {
+    public AITaskResultData(AITaskResultData source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
