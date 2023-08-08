@@ -1,5 +1,8 @@
 package com.tencentcloudapi.tds.v20220801;
 public enum TdsErrorCode {
+    // 操作失败。
+     FAILEDOPERATION("FailedOperation"),
+     
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient");
      

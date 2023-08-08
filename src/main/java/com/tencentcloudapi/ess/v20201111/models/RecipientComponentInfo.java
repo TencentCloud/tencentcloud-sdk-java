@@ -32,6 +32,8 @@ public class RecipientComponentInfo extends AbstractModel{
 
     /**
     * 参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientFillStatus")
@@ -39,7 +41,7 @@ public class RecipientComponentInfo extends AbstractModel{
     private String RecipientFillStatus;
 
     /**
-    * 是否发起方
+    * 是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPromoter")
@@ -47,7 +49,7 @@ public class RecipientComponentInfo extends AbstractModel{
     private Boolean IsPromoter;
 
     /**
-    * 填写控件内容
+    * 填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Components")
@@ -76,8 +78,12 @@ public class RecipientComponentInfo extends AbstractModel{
 
     /**
      * Get 参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecipientFillStatus 参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientFillStatus() {
@@ -86,8 +92,12 @@ public class RecipientComponentInfo extends AbstractModel{
 
     /**
      * Set 参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientFillStatus 参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientFillStatus(String RecipientFillStatus) {
@@ -95,9 +105,9 @@ public class RecipientComponentInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否发起方
+     * Get 是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsPromoter 是否发起方
+     * @return IsPromoter 是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPromoter() {
@@ -105,9 +115,9 @@ public class RecipientComponentInfo extends AbstractModel{
     }
 
     /**
-     * Set 是否发起方
+     * Set 是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsPromoter 是否发起方
+     * @param IsPromoter 是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPromoter(Boolean IsPromoter) {
@@ -115,9 +125,9 @@ public class RecipientComponentInfo extends AbstractModel{
     }
 
     /**
-     * Get 填写控件内容
+     * Get 填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Components 填写控件内容
+     * @return Components 填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilledComponent [] getComponents() {
@@ -125,9 +135,9 @@ public class RecipientComponentInfo extends AbstractModel{
     }
 
     /**
-     * Set 填写控件内容
+     * Set 填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Components 填写控件内容
+     * @param Components 填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponents(FilledComponent [] Components) {

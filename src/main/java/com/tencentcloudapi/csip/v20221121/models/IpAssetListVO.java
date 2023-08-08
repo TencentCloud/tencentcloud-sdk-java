@@ -287,6 +287,22 @@ public class IpAssetListVO extends AbstractModel{
     private Long RiskExposure;
 
     /**
+    * 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNewAsset")
+    @Expose
+    private Long IsNewAsset;
+
+    /**
+    * 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VerifyStatus")
+    @Expose
+    private Long VerifyStatus;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -946,6 +962,46 @@ public class IpAssetListVO extends AbstractModel{
         this.RiskExposure = RiskExposure;
     }
 
+    /**
+     * Get 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNewAsset() {
+        return this.IsNewAsset;
+    }
+
+    /**
+     * Set 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNewAsset(Long IsNewAsset) {
+        this.IsNewAsset = IsNewAsset;
+    }
+
+    /**
+     * Get 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VerifyStatus 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVerifyStatus() {
+        return this.VerifyStatus;
+    }
+
+    /**
+     * Set 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VerifyStatus 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerifyStatus(Long VerifyStatus) {
+        this.VerifyStatus = VerifyStatus;
+    }
+
     public IpAssetListVO() {
     }
 
@@ -1056,6 +1112,12 @@ public class IpAssetListVO extends AbstractModel{
         if (source.RiskExposure != null) {
             this.RiskExposure = new Long(source.RiskExposure);
         }
+        if (source.IsNewAsset != null) {
+            this.IsNewAsset = new Long(source.IsNewAsset);
+        }
+        if (source.VerifyStatus != null) {
+            this.VerifyStatus = new Long(source.VerifyStatus);
+        }
     }
 
 
@@ -1096,6 +1158,8 @@ public class IpAssetListVO extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressId", this.AddressId);
         this.setParamSimple(map, prefix + "MemberId", this.MemberId);
         this.setParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
+        this.setParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+        this.setParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
 
     }
 }

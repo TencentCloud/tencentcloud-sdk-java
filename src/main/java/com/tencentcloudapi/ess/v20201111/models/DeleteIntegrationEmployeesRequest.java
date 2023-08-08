@@ -30,7 +30,7 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 待移除员工的信息，userId和openId二选一，必填一个
+    * 待移除员工的信息，userId和openId二选一，必填一个，如果需要指定交接人的话，ReceiveUserId或者ReceiveOpenId字段二选一
     */
     @SerializedName("Employees")
     @Expose
@@ -60,16 +60,16 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Get 待移除员工的信息，userId和openId二选一，必填一个 
-     * @return Employees 待移除员工的信息，userId和openId二选一，必填一个
+     * Get 待移除员工的信息，userId和openId二选一，必填一个，如果需要指定交接人的话，ReceiveUserId或者ReceiveOpenId字段二选一 
+     * @return Employees 待移除员工的信息，userId和openId二选一，必填一个，如果需要指定交接人的话，ReceiveUserId或者ReceiveOpenId字段二选一
      */
     public Staff [] getEmployees() {
         return this.Employees;
     }
 
     /**
-     * Set 待移除员工的信息，userId和openId二选一，必填一个
-     * @param Employees 待移除员工的信息，userId和openId二选一，必填一个
+     * Set 待移除员工的信息，userId和openId二选一，必填一个，如果需要指定交接人的话，ReceiveUserId或者ReceiveOpenId字段二选一
+     * @param Employees 待移除员工的信息，userId和openId二选一，必填一个，如果需要指定交接人的话，ReceiveUserId或者ReceiveOpenId字段二选一
      */
     public void setEmployees(Staff [] Employees) {
         this.Employees = Employees;

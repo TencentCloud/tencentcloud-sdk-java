@@ -13,74 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Addr extends AbstractModel{
+public class VoicePrintCountData extends AbstractModel{
 
     /**
-    * IP地址
+    * 总数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("IP")
+    @SerializedName("Total")
     @Expose
-    private String IP;
+    private Long Total;
 
     /**
-    * 端口
-    */
-    @SerializedName("Port")
-    @Expose
-    private Long Port;
-
-    /**
-     * Get IP地址 
-     * @return IP IP地址
+     * Get 总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getIP() {
-        return this.IP;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set IP地址
-     * @param IP IP地址
+     * Set 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIP(String IP) {
-        this.IP = IP;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
-    /**
-     * Get 端口 
-     * @return Port 端口
-     */
-    public Long getPort() {
-        return this.Port;
-    }
-
-    /**
-     * Set 端口
-     * @param Port 端口
-     */
-    public void setPort(Long Port) {
-        this.Port = Port;
-    }
-
-    public Addr() {
+    public VoicePrintCountData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Addr(Addr source) {
-        if (source.IP != null) {
-            this.IP = new String(source.IP);
-        }
-        if (source.Port != null) {
-            this.Port = new Long(source.Port);
+    public VoicePrintCountData(VoicePrintCountData source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
     }
 
@@ -89,8 +68,7 @@ public class Addr extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IP", this.IP);
-        this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "Total", this.Total);
 
     }
 }

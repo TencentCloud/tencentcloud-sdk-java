@@ -76,7 +76,7 @@ public class CreateClustersRequest extends AbstractModel{
 
     /**
     * 当DbMode为NORMAL或不填时必选
-普通实例内存,单位G
+普通实例内存,单位GB
     */
     @SerializedName("Memory")
     @Expose
@@ -84,7 +84,7 @@ public class CreateClustersRequest extends AbstractModel{
 
     /**
     * 该参数无实际意义，已废弃。
-存储大小，单位G。
+存储大小，单位GB。
     */
     @SerializedName("Storage")
     @Expose
@@ -456,9 +456,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
     /**
      * Get 当DbMode为NORMAL或不填时必选
-普通实例内存,单位G 
+普通实例内存,单位GB 
      * @return Memory 当DbMode为NORMAL或不填时必选
-普通实例内存,单位G
+普通实例内存,单位GB
      */
     public Long getMemory() {
         return this.Memory;
@@ -466,9 +466,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
     /**
      * Set 当DbMode为NORMAL或不填时必选
-普通实例内存,单位G
+普通实例内存,单位GB
      * @param Memory 当DbMode为NORMAL或不填时必选
-普通实例内存,单位G
+普通实例内存,单位GB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
@@ -476,9 +476,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
     /**
      * Get 该参数无实际意义，已废弃。
-存储大小，单位G。 
+存储大小，单位GB。 
      * @return Storage 该参数无实际意义，已废弃。
-存储大小，单位G。
+存储大小，单位GB。
      */
     public Long getStorage() {
         return this.Storage;
@@ -486,9 +486,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
     /**
      * Set 该参数无实际意义，已废弃。
-存储大小，单位G。
+存储大小，单位GB。
      * @param Storage 该参数无实际意义，已废弃。
-存储大小，单位G。
+存储大小，单位GB。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;

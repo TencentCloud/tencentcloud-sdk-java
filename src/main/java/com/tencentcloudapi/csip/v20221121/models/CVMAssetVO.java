@@ -423,6 +423,14 @@ public class CVMAssetVO extends AbstractModel{
     private Long BASAgentStatus;
 
     /**
+    * 1新资产；0 非新资产
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNewAsset")
+    @Expose
+    private Long IsNewAsset;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -1422,6 +1430,26 @@ public class CVMAssetVO extends AbstractModel{
         this.BASAgentStatus = BASAgentStatus;
     }
 
+    /**
+     * Get 1新资产；0 非新资产
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNewAsset 1新资产；0 非新资产
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNewAsset() {
+        return this.IsNewAsset;
+    }
+
+    /**
+     * Set 1新资产；0 非新资产
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNewAsset 1新资产；0 非新资产
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNewAsset(Long IsNewAsset) {
+        this.IsNewAsset = IsNewAsset;
+    }
+
     public CVMAssetVO() {
     }
 
@@ -1583,6 +1611,9 @@ public class CVMAssetVO extends AbstractModel{
         if (source.BASAgentStatus != null) {
             this.BASAgentStatus = new Long(source.BASAgentStatus);
         }
+        if (source.IsNewAsset != null) {
+            this.IsNewAsset = new Long(source.IsNewAsset);
+        }
     }
 
 
@@ -1640,6 +1671,7 @@ public class CVMAssetVO extends AbstractModel{
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
         this.setParamSimple(map, prefix + "BASAgentStatus", this.BASAgentStatus);
+        this.setParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
 
     }
 }

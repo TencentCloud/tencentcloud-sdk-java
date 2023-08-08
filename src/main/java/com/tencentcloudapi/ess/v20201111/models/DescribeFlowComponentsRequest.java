@@ -30,14 +30,14 @@ public class DescribeFlowComponentsRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 电子签流程的Id
+    * 流程(合同)的编号
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 应用相关信息
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeFlowComponentsRequest extends AbstractModel{
     }
 
     /**
-     * Get 电子签流程的Id 
-     * @return FlowId 电子签流程的Id
+     * Get 流程(合同)的编号 
+     * @return FlowId 流程(合同)的编号
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 电子签流程的Id
-     * @param FlowId 电子签流程的Id
+     * Set 流程(合同)的编号
+     * @param FlowId 流程(合同)的编号
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

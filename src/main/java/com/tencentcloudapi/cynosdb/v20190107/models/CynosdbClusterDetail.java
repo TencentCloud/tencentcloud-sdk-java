@@ -217,7 +217,7 @@ pausing
     private Long Vport;
 
     /**
-    * 读写分离Vport
+    * 集群只读实例的vip地址和vport端口
     */
     @SerializedName("RoAddr")
     @Expose
@@ -851,16 +851,16 @@ pausing
     }
 
     /**
-     * Get 读写分离Vport 
-     * @return RoAddr 读写分离Vport
+     * Get 集群只读实例的vip地址和vport端口 
+     * @return RoAddr 集群只读实例的vip地址和vport端口
      */
     public Addr [] getRoAddr() {
         return this.RoAddr;
     }
 
     /**
-     * Set 读写分离Vport
-     * @param RoAddr 读写分离Vport
+     * Set 集群只读实例的vip地址和vport端口
+     * @param RoAddr 集群只读实例的vip地址和vport端口
      */
     public void setRoAddr(Addr [] RoAddr) {
         this.RoAddr = RoAddr;

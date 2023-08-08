@@ -30,21 +30,21 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 绑定角色的角色id列表
+    * 绑定角色的角色id列表，最多 100 个
     */
     @SerializedName("RoleIds")
     @Expose
     private String [] RoleIds;
 
     /**
-    * 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+    * 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-    * 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+    * 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
     */
     @SerializedName("OpenIds")
     @Expose
@@ -74,48 +74,48 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     }
 
     /**
-     * Get 绑定角色的角色id列表 
-     * @return RoleIds 绑定角色的角色id列表
+     * Get 绑定角色的角色id列表，最多 100 个 
+     * @return RoleIds 绑定角色的角色id列表，最多 100 个
      */
     public String [] getRoleIds() {
         return this.RoleIds;
     }
 
     /**
-     * Set 绑定角色的角色id列表
-     * @param RoleIds 绑定角色的角色id列表
+     * Set 绑定角色的角色id列表，最多 100 个
+     * @param RoleIds 绑定角色的角色id列表，最多 100 个
      */
     public void setRoleIds(String [] RoleIds) {
         this.RoleIds = RoleIds;
     }
 
     /**
-     * Get 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数 
-     * @return UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * Get 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个 
+     * @return UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
-     * @param UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * Set 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
+     * @param UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数 
-     * @return OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * Get 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个 
+     * @return OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
      */
     public String [] getOpenIds() {
         return this.OpenIds;
     }
 
     /**
-     * Set 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
-     * @param OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * Set 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
+     * @param OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
      */
     public void setOpenIds(String [] OpenIds) {
         this.OpenIds = OpenIds;

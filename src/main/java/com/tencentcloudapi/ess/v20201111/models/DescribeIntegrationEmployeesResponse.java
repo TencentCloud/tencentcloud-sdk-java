@@ -31,7 +31,7 @@ public class DescribeIntegrationEmployeesResponse extends AbstractModel{
     private Staff [] Employees;
 
     /**
-    * 偏移量，默认为0，最大为20000
+    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
@@ -39,7 +39,7 @@ public class DescribeIntegrationEmployeesResponse extends AbstractModel{
     private Long Offset;
 
     /**
-    * 返回最大数量，最大为20
+    * 指定每页多少条数据，单页最大20
     */
     @SerializedName("Limit")
     @Expose
@@ -80,9 +80,9 @@ public class DescribeIntegrationEmployeesResponse extends AbstractModel{
     }
 
     /**
-     * Get 偏移量，默认为0，最大为20000
+     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Offset 偏移量，默认为0，最大为20000
+     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
@@ -90,9 +90,9 @@ public class DescribeIntegrationEmployeesResponse extends AbstractModel{
     }
 
     /**
-     * Set 偏移量，默认为0，最大为20000
+     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Offset 偏移量，默认为0，最大为20000
+     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {
@@ -100,16 +100,16 @@ public class DescribeIntegrationEmployeesResponse extends AbstractModel{
     }
 
     /**
-     * Get 返回最大数量，最大为20 
-     * @return Limit 返回最大数量，最大为20
+     * Get 指定每页多少条数据，单页最大20 
+     * @return Limit 指定每页多少条数据，单页最大20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回最大数量，最大为20
-     * @param Limit 返回最大数量，最大为20
+     * Set 指定每页多少条数据，单页最大20
+     * @param Limit 指定每页多少条数据，单页最大20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

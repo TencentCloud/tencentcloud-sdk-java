@@ -94,6 +94,14 @@ public class AbstractRuntimeMC extends AbstractModel{
     private Boolean Deployed;
 
     /**
+    * 环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchExtensions")
+    @Expose
+    private String MatchExtensions;
+
+    /**
      * Get 环境id 
      * @return RuntimeId 环境id
      */
@@ -257,6 +265,26 @@ public class AbstractRuntimeMC extends AbstractModel{
         this.Deployed = Deployed;
     }
 
+    /**
+     * Get 环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchExtensions 环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchExtensions() {
+        return this.MatchExtensions;
+    }
+
+    /**
+     * Set 环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchExtensions 环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchExtensions(String MatchExtensions) {
+        this.MatchExtensions = MatchExtensions;
+    }
+
     public AbstractRuntimeMC() {
     }
 
@@ -295,6 +323,9 @@ public class AbstractRuntimeMC extends AbstractModel{
         if (source.Deployed != null) {
             this.Deployed = new Boolean(source.Deployed);
         }
+        if (source.MatchExtensions != null) {
+            this.MatchExtensions = new String(source.MatchExtensions);
+        }
     }
 
 
@@ -312,6 +343,7 @@ public class AbstractRuntimeMC extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
         this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
         this.setParamSimple(map, prefix + "Deployed", this.Deployed);
+        this.setParamSimple(map, prefix + "MatchExtensions", this.MatchExtensions);
 
     }
 }

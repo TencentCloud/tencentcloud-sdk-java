@@ -81,6 +81,27 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建管理端访问链接
+     * @param req CreateAdminURLRequest
+     * @return CreateAdminURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAdminURLResponse CreateAdminURL(CreateAdminURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAdminURLResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAdminURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAdminURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建自动外呼任务
      * @param req CreateAutoCalloutTaskRequest
      * @return CreateAutoCalloutTaskResponse

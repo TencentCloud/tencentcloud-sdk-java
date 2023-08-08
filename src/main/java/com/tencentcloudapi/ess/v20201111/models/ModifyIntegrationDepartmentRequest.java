@@ -30,14 +30,14 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 电子签部门ID
+    * 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
     */
     @SerializedName("DeptId")
     @Expose
     private String DeptId;
 
     /**
-    * 电子签父部门ID
+    * 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
     */
     @SerializedName("ParentDeptId")
     @Expose
@@ -81,32 +81,32 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 电子签部门ID 
-     * @return DeptId 电子签部门ID
+     * Get 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取 
+     * @return DeptId 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
      */
     public String getDeptId() {
         return this.DeptId;
     }
 
     /**
-     * Set 电子签部门ID
-     * @param DeptId 电子签部门ID
+     * Set 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+     * @param DeptId 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
      */
     public void setDeptId(String DeptId) {
         this.DeptId = DeptId;
     }
 
     /**
-     * Get 电子签父部门ID 
-     * @return ParentDeptId 电子签父部门ID
+     * Get 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取 
+     * @return ParentDeptId 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
      */
     public String getParentDeptId() {
         return this.ParentDeptId;
     }
 
     /**
-     * Set 电子签父部门ID
-     * @param ParentDeptId 电子签父部门ID
+     * Set 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
+     * @param ParentDeptId 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
      */
     public void setParentDeptId(String ParentDeptId) {
         this.ParentDeptId = ParentDeptId;

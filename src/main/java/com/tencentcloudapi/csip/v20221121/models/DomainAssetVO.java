@@ -295,6 +295,38 @@ public class DomainAssetVO extends AbstractModel{
     private Long ServiceRisk;
 
     /**
+    * 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNewAsset")
+    @Expose
+    private Long IsNewAsset;
+
+    /**
+    * 待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VerifyDomain")
+    @Expose
+    private String VerifyDomain;
+
+    /**
+    * 待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VerifyTXTRecord")
+    @Expose
+    private String VerifyTXTRecord;
+
+    /**
+    * 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VerifyStatus")
+    @Expose
+    private Long VerifyStatus;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -974,6 +1006,86 @@ public class DomainAssetVO extends AbstractModel{
         this.ServiceRisk = ServiceRisk;
     }
 
+    /**
+     * Get 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNewAsset() {
+        return this.IsNewAsset;
+    }
+
+    /**
+     * Set 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNewAsset(Long IsNewAsset) {
+        this.IsNewAsset = IsNewAsset;
+    }
+
+    /**
+     * Get 待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VerifyDomain 待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVerifyDomain() {
+        return this.VerifyDomain;
+    }
+
+    /**
+     * Set 待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VerifyDomain 待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerifyDomain(String VerifyDomain) {
+        this.VerifyDomain = VerifyDomain;
+    }
+
+    /**
+     * Get 待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VerifyTXTRecord 待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVerifyTXTRecord() {
+        return this.VerifyTXTRecord;
+    }
+
+    /**
+     * Set 待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VerifyTXTRecord 待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerifyTXTRecord(String VerifyTXTRecord) {
+        this.VerifyTXTRecord = VerifyTXTRecord;
+    }
+
+    /**
+     * Get 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VerifyStatus 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVerifyStatus() {
+        return this.VerifyStatus;
+    }
+
+    /**
+     * Set 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VerifyStatus 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerifyStatus(Long VerifyStatus) {
+        this.VerifyStatus = VerifyStatus;
+    }
+
     public DomainAssetVO() {
     }
 
@@ -1102,6 +1214,18 @@ public class DomainAssetVO extends AbstractModel{
         if (source.ServiceRisk != null) {
             this.ServiceRisk = new Long(source.ServiceRisk);
         }
+        if (source.IsNewAsset != null) {
+            this.IsNewAsset = new Long(source.IsNewAsset);
+        }
+        if (source.VerifyDomain != null) {
+            this.VerifyDomain = new String(source.VerifyDomain);
+        }
+        if (source.VerifyTXTRecord != null) {
+            this.VerifyTXTRecord = new String(source.VerifyTXTRecord);
+        }
+        if (source.VerifyStatus != null) {
+            this.VerifyStatus = new Long(source.VerifyStatus);
+        }
     }
 
 
@@ -1143,6 +1267,10 @@ public class DomainAssetVO extends AbstractModel{
         this.setParamSimple(map, prefix + "CCAttack", this.CCAttack);
         this.setParamSimple(map, prefix + "WebAttack", this.WebAttack);
         this.setParamSimple(map, prefix + "ServiceRisk", this.ServiceRisk);
+        this.setParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+        this.setParamSimple(map, prefix + "VerifyDomain", this.VerifyDomain);
+        this.setParamSimple(map, prefix + "VerifyTXTRecord", this.VerifyTXTRecord);
+        this.setParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
 
     }
 }

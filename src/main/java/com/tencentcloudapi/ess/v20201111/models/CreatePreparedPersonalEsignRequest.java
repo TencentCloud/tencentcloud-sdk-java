@@ -124,6 +124,13 @@ true：做透明化处理和颜色增强。
     private String FileId;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 个人用户姓名 
      * @return UserName 个人用户姓名
      */
@@ -387,6 +394,22 @@ true：做透明化处理和颜色增强。
         this.FileId = FileId;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreatePreparedPersonalEsignRequest() {
     }
 
@@ -431,6 +454,9 @@ true：做透明化处理和颜色增强。
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -450,6 +476,7 @@ true：做透明化处理和颜色增强。
         this.setParamSimple(map, prefix + "SealColor", this.SealColor);
         this.setParamSimple(map, prefix + "ProcessSeal", this.ProcessSeal);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

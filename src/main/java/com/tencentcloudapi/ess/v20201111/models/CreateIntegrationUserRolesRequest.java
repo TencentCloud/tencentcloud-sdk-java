@@ -30,14 +30,14 @@ public class CreateIntegrationUserRolesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 绑定角色的用户id列表
+    * 绑定角色的用户id列表，不能重复，不能大于 100 个
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-    * 绑定角色的角色id列表
+    * 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
     */
     @SerializedName("RoleIds")
     @Expose
@@ -67,32 +67,32 @@ public class CreateIntegrationUserRolesRequest extends AbstractModel{
     }
 
     /**
-     * Get 绑定角色的用户id列表 
-     * @return UserIds 绑定角色的用户id列表
+     * Get 绑定角色的用户id列表，不能重复，不能大于 100 个 
+     * @return UserIds 绑定角色的用户id列表，不能重复，不能大于 100 个
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 绑定角色的用户id列表
-     * @param UserIds 绑定角色的用户id列表
+     * Set 绑定角色的用户id列表，不能重复，不能大于 100 个
+     * @param UserIds 绑定角色的用户id列表，不能重复，不能大于 100 个
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 绑定角色的角色id列表 
-     * @return RoleIds 绑定角色的角色id列表
+     * Get 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取 
+     * @return RoleIds 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
      */
     public String [] getRoleIds() {
         return this.RoleIds;
     }
 
     /**
-     * Set 绑定角色的角色id列表
-     * @param RoleIds 绑定角色的角色id列表
+     * Set 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
+     * @param RoleIds 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
      */
     public void setRoleIds(String [] RoleIds) {
         this.RoleIds = RoleIds;

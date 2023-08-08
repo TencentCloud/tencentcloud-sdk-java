@@ -37,7 +37,7 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     private String RoleId;
 
     /**
-    * 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+    * 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
     */
     @SerializedName("UserIds")
     @Expose
@@ -51,7 +51,7 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+    * 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
     */
     @SerializedName("OpenIds")
     @Expose
@@ -90,16 +90,16 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数 
-     * @return UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * Get 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百 
+     * @return UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
-     * @param UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * Set 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
+     * @param UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
@@ -126,16 +126,16 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数 
-     * @return OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * Get 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百 
+     * @return OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
      */
     public String [] getOpenIds() {
         return this.OpenIds;
     }
 
     /**
-     * Set 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
-     * @param OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * Set 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
+     * @param OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
      */
     public void setOpenIds(String [] OpenIds) {
         this.OpenIds = OpenIds;

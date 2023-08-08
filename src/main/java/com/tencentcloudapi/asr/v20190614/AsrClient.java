@@ -485,6 +485,27 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *统计并返回注册的说话人id总数
+     * @param req VoicePrintCountRequest
+     * @return VoicePrintCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public VoicePrintCountResponse VoicePrintCount(VoicePrintCountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VoicePrintCountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<VoicePrintCountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VoicePrintCount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于以删除已经注册的说话人信息（删除之后，原有的说话人ID和说话人音频数据都会失效）
      * @param req VoicePrintDeleteRequest
      * @return VoicePrintDeleteResponse

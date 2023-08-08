@@ -44,6 +44,13 @@ public class ListDeployableRuntimesMCRequest extends AbstractModel{
     private Long PlanType;
 
     /**
+    * 0：应用集成，1：API，2：ETL
+    */
+    @SerializedName("RuntimeClass")
+    @Expose
+    private Long RuntimeClass;
+
+    /**
      * Get 应用id 
      * @return ProjectId 应用id
      */
@@ -91,6 +98,22 @@ public class ListDeployableRuntimesMCRequest extends AbstractModel{
         this.PlanType = PlanType;
     }
 
+    /**
+     * Get 0：应用集成，1：API，2：ETL 
+     * @return RuntimeClass 0：应用集成，1：API，2：ETL
+     */
+    public Long getRuntimeClass() {
+        return this.RuntimeClass;
+    }
+
+    /**
+     * Set 0：应用集成，1：API，2：ETL
+     * @param RuntimeClass 0：应用集成，1：API，2：ETL
+     */
+    public void setRuntimeClass(Long RuntimeClass) {
+        this.RuntimeClass = RuntimeClass;
+    }
+
     public ListDeployableRuntimesMCRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ListDeployableRuntimesMCRequest extends AbstractModel{
         if (source.PlanType != null) {
             this.PlanType = new Long(source.PlanType);
         }
+        if (source.RuntimeClass != null) {
+            this.RuntimeClass = new Long(source.RuntimeClass);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ListDeployableRuntimesMCRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "PlanType", this.PlanType);
+        this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
 
     }
 }

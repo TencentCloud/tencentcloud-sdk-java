@@ -30,7 +30,7 @@ public class DeleteIntegrationDepartmentRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 电子签中的部门id
+    * 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
     */
     @SerializedName("DeptId")
     @Expose
@@ -60,16 +60,16 @@ public class DeleteIntegrationDepartmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 电子签中的部门id 
-     * @return DeptId 电子签中的部门id
+     * Get 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得 
+     * @return DeptId 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
      */
     public String getDeptId() {
         return this.DeptId;
     }
 
     /**
-     * Set 电子签中的部门id
-     * @param DeptId 电子签中的部门id
+     * Set 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+     * @param DeptId 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
      */
     public void setDeptId(String DeptId) {
         this.DeptId = DeptId;

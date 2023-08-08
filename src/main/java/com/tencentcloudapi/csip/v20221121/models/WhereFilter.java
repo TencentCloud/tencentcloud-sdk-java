@@ -37,7 +37,10 @@ public class WhereFilter extends AbstractModel{
     private String [] Values;
 
     /**
-    * 精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构
+    * 中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+
     */
     @SerializedName("OperatorType")
     @Expose
@@ -76,16 +79,28 @@ public class WhereFilter extends AbstractModel{
     }
 
     /**
-     * Get 精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构 
-     * @return OperatorType 精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构
+     * Get 中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+ 
+     * @return OperatorType 中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+
      */
     public Long getOperatorType() {
         return this.OperatorType;
     }
 
     /**
-     * Set 精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构
-     * @param OperatorType 精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构
+     * Set 中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+
+     * @param OperatorType 中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+
      */
     public void setOperatorType(Long OperatorType) {
         this.OperatorType = OperatorType;

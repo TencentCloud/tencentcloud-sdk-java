@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelDescribeFlowComponentsResponse extends AbstractModel{
+public class VoicePrintCountResponse extends AbstractModel{
 
     /**
-    * 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 统计数据
     */
-    @SerializedName("RecipientComponentInfos")
+    @SerializedName("Data")
     @Expose
-    private RecipientComponentInfo [] RecipientComponentInfos;
+    private VoicePrintCountData Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class ChannelDescribeFlowComponentsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecipientComponentInfos 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 统计数据 
+     * @return Data 统计数据
      */
-    public RecipientComponentInfo [] getRecipientComponentInfos() {
-        return this.RecipientComponentInfos;
+    public VoicePrintCountData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecipientComponentInfos 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 统计数据
+     * @param Data 统计数据
      */
-    public void setRecipientComponentInfos(RecipientComponentInfo [] RecipientComponentInfos) {
-        this.RecipientComponentInfos = RecipientComponentInfos;
+    public void setData(VoicePrintCountData Data) {
+        this.Data = Data;
     }
 
     /**
@@ -73,19 +68,16 @@ public class ChannelDescribeFlowComponentsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ChannelDescribeFlowComponentsResponse() {
+    public VoicePrintCountResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChannelDescribeFlowComponentsResponse(ChannelDescribeFlowComponentsResponse source) {
-        if (source.RecipientComponentInfos != null) {
-            this.RecipientComponentInfos = new RecipientComponentInfo[source.RecipientComponentInfos.length];
-            for (int i = 0; i < source.RecipientComponentInfos.length; i++) {
-                this.RecipientComponentInfos[i] = new RecipientComponentInfo(source.RecipientComponentInfos[i]);
-            }
+    public VoicePrintCountResponse(VoicePrintCountResponse source) {
+        if (source.Data != null) {
+            this.Data = new VoicePrintCountData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -97,7 +89,7 @@ public class ChannelDescribeFlowComponentsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RecipientComponentInfos.", this.RecipientComponentInfos);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -170,6 +170,13 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     private MetaTagInfo [] MetaTags;
 
     /**
+    * windows事件日志采集
+    */
+    @SerializedName("EventLogRules")
+    @Expose
+    private EventLog [] EventLogRules;
+
+    /**
      * Get 时间字段的key名字，time_key和time_format必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeKey 时间字段的key名字，time_key和time_format必须成对出现
@@ -541,6 +548,22 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
         this.MetaTags = MetaTags;
     }
 
+    /**
+     * Get windows事件日志采集 
+     * @return EventLogRules windows事件日志采集
+     */
+    public EventLog [] getEventLogRules() {
+        return this.EventLogRules;
+    }
+
+    /**
+     * Set windows事件日志采集
+     * @param EventLogRules windows事件日志采集
+     */
+    public void setEventLogRules(EventLog [] EventLogRules) {
+        this.EventLogRules = EventLogRules;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -612,6 +635,12 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
                 this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
             }
         }
+        if (source.EventLogRules != null) {
+            this.EventLogRules = new EventLog[source.EventLogRules.length];
+            for (int i = 0; i < source.EventLogRules.length; i++) {
+                this.EventLogRules[i] = new EventLog(source.EventLogRules[i]);
+            }
+        }
     }
 
 
@@ -637,6 +666,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
         this.setParamSimple(map, prefix + "MetadataType", this.MetadataType);
         this.setParamSimple(map, prefix + "PathRegex", this.PathRegex);
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+        this.setParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
 
     }
 }

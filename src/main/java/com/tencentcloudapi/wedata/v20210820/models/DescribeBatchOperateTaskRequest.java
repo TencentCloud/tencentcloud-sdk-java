@@ -153,6 +153,34 @@ presto
     private String TenantId;
 
     /**
+    * 数据源ID列表
+    */
+    @SerializedName("DatasourceIdList")
+    @Expose
+    private String [] DatasourceIdList;
+
+    /**
+    * 数据源类型列表
+    */
+    @SerializedName("DatasourceTypeList")
+    @Expose
+    private String [] DatasourceTypeList;
+
+    /**
+    * 调度单位类型列表
+    */
+    @SerializedName("CycleUnitList")
+    @Expose
+    private String [] CycleUnitList;
+
+    /**
+    * 是否筛选出可提交的任务
+    */
+    @SerializedName("CanSubmit")
+    @Expose
+    private Boolean CanSubmit;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -468,6 +496,70 @@ presto
         this.TenantId = TenantId;
     }
 
+    /**
+     * Get 数据源ID列表 
+     * @return DatasourceIdList 数据源ID列表
+     */
+    public String [] getDatasourceIdList() {
+        return this.DatasourceIdList;
+    }
+
+    /**
+     * Set 数据源ID列表
+     * @param DatasourceIdList 数据源ID列表
+     */
+    public void setDatasourceIdList(String [] DatasourceIdList) {
+        this.DatasourceIdList = DatasourceIdList;
+    }
+
+    /**
+     * Get 数据源类型列表 
+     * @return DatasourceTypeList 数据源类型列表
+     */
+    public String [] getDatasourceTypeList() {
+        return this.DatasourceTypeList;
+    }
+
+    /**
+     * Set 数据源类型列表
+     * @param DatasourceTypeList 数据源类型列表
+     */
+    public void setDatasourceTypeList(String [] DatasourceTypeList) {
+        this.DatasourceTypeList = DatasourceTypeList;
+    }
+
+    /**
+     * Get 调度单位类型列表 
+     * @return CycleUnitList 调度单位类型列表
+     */
+    public String [] getCycleUnitList() {
+        return this.CycleUnitList;
+    }
+
+    /**
+     * Set 调度单位类型列表
+     * @param CycleUnitList 调度单位类型列表
+     */
+    public void setCycleUnitList(String [] CycleUnitList) {
+        this.CycleUnitList = CycleUnitList;
+    }
+
+    /**
+     * Get 是否筛选出可提交的任务 
+     * @return CanSubmit 是否筛选出可提交的任务
+     */
+    public Boolean getCanSubmit() {
+        return this.CanSubmit;
+    }
+
+    /**
+     * Set 是否筛选出可提交的任务
+     * @param CanSubmit 是否筛选出可提交的任务
+     */
+    public void setCanSubmit(Boolean CanSubmit) {
+        this.CanSubmit = CanSubmit;
+    }
+
     public DescribeBatchOperateTaskRequest() {
     }
 
@@ -545,6 +637,27 @@ presto
         if (source.TenantId != null) {
             this.TenantId = new String(source.TenantId);
         }
+        if (source.DatasourceIdList != null) {
+            this.DatasourceIdList = new String[source.DatasourceIdList.length];
+            for (int i = 0; i < source.DatasourceIdList.length; i++) {
+                this.DatasourceIdList[i] = new String(source.DatasourceIdList[i]);
+            }
+        }
+        if (source.DatasourceTypeList != null) {
+            this.DatasourceTypeList = new String[source.DatasourceTypeList.length];
+            for (int i = 0; i < source.DatasourceTypeList.length; i++) {
+                this.DatasourceTypeList[i] = new String(source.DatasourceTypeList[i]);
+            }
+        }
+        if (source.CycleUnitList != null) {
+            this.CycleUnitList = new String[source.CycleUnitList.length];
+            for (int i = 0; i < source.CycleUnitList.length; i++) {
+                this.CycleUnitList[i] = new String(source.CycleUnitList[i]);
+            }
+        }
+        if (source.CanSubmit != null) {
+            this.CanSubmit = new Boolean(source.CanSubmit);
+        }
     }
 
 
@@ -569,6 +682,10 @@ presto
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "OwnerId", this.OwnerId);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
+        this.setParamArraySimple(map, prefix + "DatasourceIdList.", this.DatasourceIdList);
+        this.setParamArraySimple(map, prefix + "DatasourceTypeList.", this.DatasourceTypeList);
+        this.setParamArraySimple(map, prefix + "CycleUnitList.", this.CycleUnitList);
+        this.setParamSimple(map, prefix + "CanSubmit", this.CanSubmit);
 
     }
 }

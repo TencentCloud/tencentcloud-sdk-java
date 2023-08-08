@@ -30,14 +30,14 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     private UserInfo Operator;
 
     /**
-    * 单次查询成员企业最大返回数量
+    * 指定每页多少条数据，单页最大1000
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 页面偏移量
+    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
     */
     @SerializedName("Offset")
     @Expose
@@ -65,7 +65,7 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     private Boolean Export;
 
     /**
-    * 成员企业id
+    * 成员企业机构 ID，在PC控制台 集团管理可获取
     */
     @SerializedName("Id")
     @Expose
@@ -88,32 +88,32 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     }
 
     /**
-     * Get 单次查询成员企业最大返回数量 
-     * @return Limit 单次查询成员企业最大返回数量
+     * Get 指定每页多少条数据，单页最大1000 
+     * @return Limit 指定每页多少条数据，单页最大1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询成员企业最大返回数量
-     * @param Limit 单次查询成员企业最大返回数量
+     * Set 指定每页多少条数据，单页最大1000
+     * @param Limit 指定每页多少条数据，单页最大1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 页面偏移量 
-     * @return Offset 页面偏移量
+     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0 
+     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页面偏移量
-     * @param Offset 页面偏移量
+     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
+     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -168,16 +168,16 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     }
 
     /**
-     * Get 成员企业id 
-     * @return Id 成员企业id
+     * Get 成员企业机构 ID，在PC控制台 集团管理可获取 
+     * @return Id 成员企业机构 ID，在PC控制台 集团管理可获取
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 成员企业id
-     * @param Id 成员企业id
+     * Set 成员企业机构 ID，在PC控制台 集团管理可获取
+     * @param Id 成员企业机构 ID，在PC控制台 集团管理可获取
      */
     public void setId(String Id) {
         this.Id = Id;

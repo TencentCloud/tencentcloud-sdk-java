@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeFlowComponentsResponse extends AbstractModel{
 
     /**
-    * 流程关联的填写控件信息
+    * 流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientComponentInfos")
@@ -38,9 +38,9 @@ public class DescribeFlowComponentsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流程关联的填写控件信息
+     * Get 流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecipientComponentInfos 流程关联的填写控件信息
+     * @return RecipientComponentInfos 流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecipientComponentInfo [] getRecipientComponentInfos() {
@@ -48,9 +48,9 @@ public class DescribeFlowComponentsResponse extends AbstractModel{
     }
 
     /**
-     * Set 流程关联的填写控件信息
+     * Set 流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecipientComponentInfos 流程关联的填写控件信息
+     * @param RecipientComponentInfos 流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientComponentInfos(RecipientComponentInfo [] RecipientComponentInfos) {

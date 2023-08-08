@@ -79,6 +79,13 @@ public class CreateMachineGroupRequest extends AbstractModel{
     private MetaTagInfo [] MetaTags;
 
     /**
+    * 系统类型，默认0，0：Linux，1: windows
+    */
+    @SerializedName("OSType")
+    @Expose
+    private Long OSType;
+
+    /**
      * Get 机器组名字，不能重复 
      * @return GroupName 机器组名字，不能重复
      */
@@ -206,6 +213,22 @@ public class CreateMachineGroupRequest extends AbstractModel{
         this.MetaTags = MetaTags;
     }
 
+    /**
+     * Get 系统类型，默认0，0：Linux，1: windows 
+     * @return OSType 系统类型，默认0，0：Linux，1: windows
+     */
+    public Long getOSType() {
+        return this.OSType;
+    }
+
+    /**
+     * Set 系统类型，默认0，0：Linux，1: windows
+     * @param OSType 系统类型，默认0，0：Linux，1: windows
+     */
+    public void setOSType(Long OSType) {
+        this.OSType = OSType;
+    }
+
     public CreateMachineGroupRequest() {
     }
 
@@ -244,6 +267,9 @@ public class CreateMachineGroupRequest extends AbstractModel{
                 this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
             }
         }
+        if (source.OSType != null) {
+            this.OSType = new Long(source.OSType);
+        }
     }
 
 
@@ -259,6 +285,7 @@ public class CreateMachineGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
         this.setParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+        this.setParamSimple(map, prefix + "OSType", this.OSType);
 
     }
 }

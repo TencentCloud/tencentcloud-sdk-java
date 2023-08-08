@@ -37,7 +37,7 @@ public class DeleteIntegrationRoleUsersRequest extends AbstractModel{
     private String RoleId;
 
     /**
-    * 用户信息
+    * 用户信息,最多 200 个用户，并且 UserId 和 OpenId 二选一，其他字段不需要传
     */
     @SerializedName("Users")
     @Expose
@@ -83,16 +83,16 @@ public class DeleteIntegrationRoleUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户信息 
-     * @return Users 用户信息
+     * Get 用户信息,最多 200 个用户，并且 UserId 和 OpenId 二选一，其他字段不需要传 
+     * @return Users 用户信息,最多 200 个用户，并且 UserId 和 OpenId 二选一，其他字段不需要传
      */
     public UserInfo [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set 用户信息
-     * @param Users 用户信息
+     * Set 用户信息,最多 200 个用户，并且 UserId 和 OpenId 二选一，其他字段不需要传
+     * @param Users 用户信息,最多 200 个用户，并且 UserId 和 OpenId 二选一，其他字段不需要传
      */
     public void setUsers(UserInfo [] Users) {
         this.Users = Users;

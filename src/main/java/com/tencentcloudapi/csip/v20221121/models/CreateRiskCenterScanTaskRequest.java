@@ -37,7 +37,7 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel{
     private Long ScanAssetType;
 
     /**
-    * 扫描项目；port/poc/weakpass/webcontent/configrisk
+    * 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
     */
     @SerializedName("ScanItem")
     @Expose
@@ -118,16 +118,16 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 扫描项目；port/poc/weakpass/webcontent/configrisk 
-     * @return ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk
+     * Get 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver 
+     * @return ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
      */
     public String [] getScanItem() {
         return this.ScanItem;
     }
 
     /**
-     * Set 扫描项目；port/poc/weakpass/webcontent/configrisk
-     * @param ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk
+     * Set 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
+     * @param ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
      */
     public void setScanItem(String [] ScanItem) {
         this.ScanItem = ScanItem;

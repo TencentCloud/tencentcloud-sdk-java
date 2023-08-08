@@ -861,6 +861,9 @@ public enum ScfErrorCode {
     // Cdn不支持。
      UNSUPPORTEDOPERATION_CDN("UnsupportedOperation.Cdn"),
      
+    // 该函数无法复制。
+     UNSUPPORTEDOPERATION_COPYFUNCTION("UnsupportedOperation.CopyFunction"),
+     
     // Cos操作不支持。
      UNSUPPORTEDOPERATION_COS("UnsupportedOperation.Cos"),
      

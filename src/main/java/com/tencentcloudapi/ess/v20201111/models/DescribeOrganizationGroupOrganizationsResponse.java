@@ -47,7 +47,7 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     private Long ActivedTotal;
 
     /**
-    * 导出文件的url
+    * 如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExportUrl")
@@ -142,9 +142,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Get 导出文件的url
+     * Get 如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExportUrl 导出文件的url
+     * @return ExportUrl 如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExportUrl() {
@@ -152,9 +152,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Set 导出文件的url
+     * Set 如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExportUrl 导出文件的url
+     * @param ExportUrl 如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExportUrl(String ExportUrl) {

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ChannelDescribeRolesResponse extends AbstractModel{
 
     /**
-    * 页面偏移量，最大2000
+    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询数量，最大200
+    * 指定每页多少条数据，单页最大200
     */
     @SerializedName("Limit")
     @Expose
@@ -59,32 +59,32 @@ public class ChannelDescribeRolesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 页面偏移量，最大2000 
-     * @return Offset 页面偏移量，最大2000
+     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000 
+     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页面偏移量，最大2000
-     * @param Offset 页面偏移量，最大2000
+     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询数量，最大200 
-     * @return Limit 查询数量，最大200
+     * Get 指定每页多少条数据，单页最大200 
+     * @return Limit 指定每页多少条数据，单页最大200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询数量，最大200
-     * @param Limit 查询数量，最大200
+     * Set 指定每页多少条数据，单页最大200
+     * @param Limit 指定每页多少条数据，单页最大200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

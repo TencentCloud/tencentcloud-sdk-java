@@ -13,75 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Addr extends AbstractModel{
+public class VoicePrintCountRequest extends AbstractModel{
 
-    /**
-    * IP地址
-    */
-    @SerializedName("IP")
-    @Expose
-    private String IP;
-
-    /**
-    * 端口
-    */
-    @SerializedName("Port")
-    @Expose
-    private Long Port;
-
-    /**
-     * Get IP地址 
-     * @return IP IP地址
-     */
-    public String getIP() {
-        return this.IP;
-    }
-
-    /**
-     * Set IP地址
-     * @param IP IP地址
-     */
-    public void setIP(String IP) {
-        this.IP = IP;
-    }
-
-    /**
-     * Get 端口 
-     * @return Port 端口
-     */
-    public Long getPort() {
-        return this.Port;
-    }
-
-    /**
-     * Set 端口
-     * @param Port 端口
-     */
-    public void setPort(Long Port) {
-        this.Port = Port;
-    }
-
-    public Addr() {
+    public VoicePrintCountRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Addr(Addr source) {
-        if (source.IP != null) {
-            this.IP = new String(source.IP);
-        }
-        if (source.Port != null) {
-            this.Port = new Long(source.Port);
-        }
+    public VoicePrintCountRequest(VoicePrintCountRequest source) {
     }
 
 
@@ -89,8 +37,6 @@ public class Addr extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IP", this.IP);
-        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

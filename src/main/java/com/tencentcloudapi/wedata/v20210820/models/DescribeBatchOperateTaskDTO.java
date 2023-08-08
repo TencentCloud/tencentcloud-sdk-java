@@ -136,6 +136,38 @@ presto\SparkJob\SparkSql
     private String CreateTime;
 
     /**
+    * 周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CycleUnit")
+    @Expose
+    private String CycleUnit;
+
+    /**
+    * 调度计划
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleDesc")
+    @Expose
+    private String ScheduleDesc;
+
+    /**
+    * 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceId")
+    @Expose
+    private String DatasourceId;
+
+    /**
+    * 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceType")
+    @Expose
+    private String DatasourceType;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -419,6 +451,86 @@ presto\SparkJob\SparkSql
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 周期类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CycleUnit 周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCycleUnit() {
+        return this.CycleUnit;
+    }
+
+    /**
+     * Set 周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CycleUnit 周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCycleUnit(String CycleUnit) {
+        this.CycleUnit = CycleUnit;
+    }
+
+    /**
+     * Get 调度计划
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleDesc 调度计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleDesc() {
+        return this.ScheduleDesc;
+    }
+
+    /**
+     * Set 调度计划
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleDesc 调度计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleDesc(String ScheduleDesc) {
+        this.ScheduleDesc = ScheduleDesc;
+    }
+
+    /**
+     * Get 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceId() {
+        return this.DatasourceId;
+    }
+
+    /**
+     * Set 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceId(String DatasourceId) {
+        this.DatasourceId = DatasourceId;
+    }
+
+    /**
+     * Get 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceType() {
+        return this.DatasourceType;
+    }
+
+    /**
+     * Set 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceType(String DatasourceType) {
+        this.DatasourceType = DatasourceType;
+    }
+
     public DescribeBatchOperateTaskDTO() {
     }
 
@@ -469,6 +581,18 @@ presto\SparkJob\SparkSql
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.CycleUnit != null) {
+            this.CycleUnit = new String(source.CycleUnit);
+        }
+        if (source.ScheduleDesc != null) {
+            this.ScheduleDesc = new String(source.ScheduleDesc);
+        }
+        if (source.DatasourceId != null) {
+            this.DatasourceId = new String(source.DatasourceId);
+        }
+        if (source.DatasourceType != null) {
+            this.DatasourceType = new String(source.DatasourceType);
+        }
     }
 
 
@@ -490,6 +614,10 @@ presto\SparkJob\SparkSql
         this.setParamSimple(map, prefix + "DataEngine", this.DataEngine);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "CycleUnit", this.CycleUnit);
+        this.setParamSimple(map, prefix + "ScheduleDesc", this.ScheduleDesc);
+        this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
 
     }
 }

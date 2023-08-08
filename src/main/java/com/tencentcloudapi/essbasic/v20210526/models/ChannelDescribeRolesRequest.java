@@ -30,14 +30,14 @@ public class ChannelDescribeRolesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 查询起始偏移，最大2000
+    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询数量，最大200
+    * 指定每页多少条数据，单页最大200
     */
     @SerializedName("Limit")
     @Expose
@@ -76,32 +76,32 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     }
 
     /**
-     * Get 查询起始偏移，最大2000 
-     * @return Offset 查询起始偏移，最大2000
+     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000 
+     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始偏移，最大2000
-     * @param Offset 查询起始偏移，最大2000
+     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询数量，最大200 
-     * @return Limit 查询数量，最大200
+     * Get 指定每页多少条数据，单页最大200 
+     * @return Limit 指定每页多少条数据，单页最大200
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询数量，最大200
-     * @param Limit 查询数量，最大200
+     * Set 指定每页多少条数据，单页最大200
+     * @param Limit 指定每页多少条数据，单页最大200
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

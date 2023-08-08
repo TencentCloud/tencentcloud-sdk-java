@@ -98,6 +98,13 @@ public class MachineGroupInfo extends AbstractModel{
     private MetaTagInfo [] MetaTags;
 
     /**
+    * 操作系统类型，0: Linux，1: windows
+    */
+    @SerializedName("OSType")
+    @Expose
+    private Long OSType;
+
+    /**
      * Get 机器组ID 
      * @return GroupId 机器组ID
      */
@@ -277,6 +284,22 @@ public class MachineGroupInfo extends AbstractModel{
         this.MetaTags = MetaTags;
     }
 
+    /**
+     * Get 操作系统类型，0: Linux，1: windows 
+     * @return OSType 操作系统类型，0: Linux，1: windows
+     */
+    public Long getOSType() {
+        return this.OSType;
+    }
+
+    /**
+     * Set 操作系统类型，0: Linux，1: windows
+     * @param OSType 操作系统类型，0: Linux，1: windows
+     */
+    public void setOSType(Long OSType) {
+        this.OSType = OSType;
+    }
+
     public MachineGroupInfo() {
     }
 
@@ -321,6 +344,9 @@ public class MachineGroupInfo extends AbstractModel{
                 this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
             }
         }
+        if (source.OSType != null) {
+            this.OSType = new Long(source.OSType);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class MachineGroupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
         this.setParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
+        this.setParamSimple(map, prefix + "OSType", this.OSType);
 
     }
 }

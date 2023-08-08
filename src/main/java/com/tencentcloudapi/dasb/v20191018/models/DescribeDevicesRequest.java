@@ -93,6 +93,13 @@ public class DescribeDevicesRequest extends AbstractModel{
     private Long [] KindSet;
 
     /**
+    * 资产是否包含托管账号。1，包含；0，不包含
+    */
+    @SerializedName("ManagedAccount")
+    @Expose
+    private String ManagedAccount;
+
+    /**
     * 过滤条件，可按照部门ID进行过滤
     */
     @SerializedName("DepartmentId")
@@ -275,6 +282,22 @@ BindingStatus 绑定状态
     }
 
     /**
+     * Get 资产是否包含托管账号。1，包含；0，不包含 
+     * @return ManagedAccount 资产是否包含托管账号。1，包含；0，不包含
+     */
+    public String getManagedAccount() {
+        return this.ManagedAccount;
+    }
+
+    /**
+     * Set 资产是否包含托管账号。1，包含；0，不包含
+     * @param ManagedAccount 资产是否包含托管账号。1，包含；0，不包含
+     */
+    public void setManagedAccount(String ManagedAccount) {
+        this.ManagedAccount = ManagedAccount;
+    }
+
+    /**
      * Get 过滤条件，可按照部门ID进行过滤 
      * @return DepartmentId 过滤条件，可按照部门ID进行过滤
      */
@@ -379,6 +402,9 @@ BindingStatus 绑定状态
                 this.KindSet[i] = new Long(source.KindSet[i]);
             }
         }
+        if (source.ManagedAccount != null) {
+            this.ManagedAccount = new String(source.ManagedAccount);
+        }
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
@@ -411,6 +437,7 @@ BindingStatus 绑定状态
         this.setParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
         this.setParamArraySimple(map, prefix + "ResourceIdSet.", this.ResourceIdSet);
         this.setParamArraySimple(map, prefix + "KindSet.", this.KindSet);
+        this.setParamSimple(map, prefix + "ManagedAccount", this.ManagedAccount);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

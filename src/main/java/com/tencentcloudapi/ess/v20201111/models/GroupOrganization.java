@@ -111,7 +111,7 @@ public class GroupOrganization extends AbstractModel{
     private Long JoinTime;
 
     /**
-    * 是否使用审批流引擎，true-是，false-否
+    * 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowEngineEnable")
@@ -339,9 +339,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Get 是否使用审批流引擎，true-是，false-否
+     * Get 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowEngineEnable 是否使用审批流引擎，true-是，false-否
+     * @return FlowEngineEnable 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFlowEngineEnable() {
@@ -349,9 +349,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Set 是否使用审批流引擎，true-是，false-否
+     * Set 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowEngineEnable 是否使用审批流引擎，true-是，false-否
+     * @param FlowEngineEnable 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowEngineEnable(Boolean FlowEngineEnable) {

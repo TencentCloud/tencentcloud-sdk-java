@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RuntimeExtensionMC extends AbstractModel{
 
     /**
-    * 扩展组件类型：0:cdc
+    * 扩展组件类型：0:cdc 1:dataway-java
     */
     @SerializedName("Type")
     @Expose
@@ -72,16 +72,16 @@ public class RuntimeExtensionMC extends AbstractModel{
     private Long UpdatedAt;
 
     /**
-     * Get 扩展组件类型：0:cdc 
-     * @return Type 扩展组件类型：0:cdc
+     * Get 扩展组件类型：0:cdc 1:dataway-java 
+     * @return Type 扩展组件类型：0:cdc 1:dataway-java
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 扩展组件类型：0:cdc
-     * @param Type 扩展组件类型：0:cdc
+     * Set 扩展组件类型：0:cdc 1:dataway-java
+     * @param Type 扩展组件类型：0:cdc 1:dataway-java
      */
     public void setType(Long Type) {
         this.Type = Type;

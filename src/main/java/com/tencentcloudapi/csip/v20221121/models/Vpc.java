@@ -116,6 +116,22 @@ public class Vpc extends AbstractModel{
     private String Nick;
 
     /**
+    * 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNewAsset")
+    @Expose
+    private Long IsNewAsset;
+
+    /**
+    * 是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsCore")
+    @Expose
+    private Long IsCore;
+
+    /**
      * Get 子网(只支持32位) 
      * @return Subnet 子网(只支持32位)
      */
@@ -331,6 +347,46 @@ public class Vpc extends AbstractModel{
         this.Nick = Nick;
     }
 
+    /**
+     * Get 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNewAsset() {
+        return this.IsNewAsset;
+    }
+
+    /**
+     * Set 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNewAsset(Long IsNewAsset) {
+        this.IsNewAsset = IsNewAsset;
+    }
+
+    /**
+     * Get 是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsCore 是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsCore() {
+        return this.IsCore;
+    }
+
+    /**
+     * Set 是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsCore 是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsCore(Long IsCore) {
+        this.IsCore = IsCore;
+    }
+
     public Vpc() {
     }
 
@@ -384,6 +440,12 @@ public class Vpc extends AbstractModel{
         if (source.Nick != null) {
             this.Nick = new String(source.Nick);
         }
+        if (source.IsNewAsset != null) {
+            this.IsNewAsset = new Long(source.IsNewAsset);
+        }
+        if (source.IsCore != null) {
+            this.IsCore = new Long(source.IsCore);
+        }
     }
 
 
@@ -404,6 +466,8 @@ public class Vpc extends AbstractModel{
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
+        this.setParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+        this.setParamSimple(map, prefix + "IsCore", this.IsCore);
 
     }
 }

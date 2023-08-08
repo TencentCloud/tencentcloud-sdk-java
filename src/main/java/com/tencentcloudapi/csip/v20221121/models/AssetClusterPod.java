@@ -170,6 +170,14 @@ public class AssetClusterPod extends AbstractModel{
     private Long IsCore;
 
     /**
+    * 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNewAsset")
+    @Expose
+    private Long IsNewAsset;
+
+    /**
      * Get 租户id 
      * @return AppId 租户id
      */
@@ -529,6 +537,26 @@ public class AssetClusterPod extends AbstractModel{
         this.IsCore = IsCore;
     }
 
+    /**
+     * Get 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNewAsset() {
+        return this.IsNewAsset;
+    }
+
+    /**
+     * Set 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNewAsset(Long IsNewAsset) {
+        this.IsNewAsset = IsNewAsset;
+    }
+
     public AssetClusterPod() {
     }
 
@@ -594,6 +622,9 @@ public class AssetClusterPod extends AbstractModel{
         if (source.IsCore != null) {
             this.IsCore = new Long(source.IsCore);
         }
+        if (source.IsNewAsset != null) {
+            this.IsNewAsset = new Long(source.IsNewAsset);
+        }
     }
 
 
@@ -620,6 +651,7 @@ public class AssetClusterPod extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
         this.setParamSimple(map, prefix + "IsCore", this.IsCore);
+        this.setParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
 
     }
 }

@@ -176,7 +176,7 @@ public class RuntimeMC extends AbstractModel{
     private Long RuntimeType;
 
     /**
-    * 环境运行类型：0:运行时类型、1:api类型
+    * 环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeClass")
@@ -560,9 +560,9 @@ public class RuntimeMC extends AbstractModel{
     }
 
     /**
-     * Get 环境运行类型：0:运行时类型、1:api类型
+     * Get 环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     * @return RuntimeClass 环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuntimeClass() {
@@ -570,9 +570,9 @@ public class RuntimeMC extends AbstractModel{
     }
 
     /**
-     * Set 环境运行类型：0:运行时类型、1:api类型
+     * Set 环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     * @param RuntimeClass 环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeClass(Long RuntimeClass) {
