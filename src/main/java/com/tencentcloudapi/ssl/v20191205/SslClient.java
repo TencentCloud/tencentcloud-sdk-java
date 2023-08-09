@@ -984,7 +984,7 @@ public class SslClient extends AbstractClient{
     }
 
     /**
-     *一键更新旧证书资源
+     *一键更新旧证书资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
      * @param req UpdateCertificateInstanceRequest
      * @return UpdateCertificateInstanceResponse
      * @throws TencentCloudSDKException

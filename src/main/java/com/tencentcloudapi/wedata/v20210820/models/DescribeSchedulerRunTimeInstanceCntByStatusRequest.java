@@ -58,6 +58,20 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
     private String EndTime;
 
     /**
+    * 1
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+    * 1
+    */
+    @SerializedName("InCharge")
+    @Expose
+    private String InCharge;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -137,6 +151,38 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 1 
+     * @return TaskType 1
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 1
+     * @param TaskType 1
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 1 
+     * @return InCharge 1
+     */
+    public String getInCharge() {
+        return this.InCharge;
+    }
+
+    /**
+     * Set 1
+     * @param InCharge 1
+     */
+    public void setInCharge(String InCharge) {
+        this.InCharge = InCharge;
+    }
+
     public DescribeSchedulerRunTimeInstanceCntByStatusRequest() {
     }
 
@@ -160,6 +206,12 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.InCharge != null) {
+            this.InCharge = new String(source.InCharge);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "InCharge", this.InCharge);
 
     }
 }

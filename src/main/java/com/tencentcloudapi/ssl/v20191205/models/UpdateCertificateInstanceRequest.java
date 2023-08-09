@@ -37,7 +37,7 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
     private String OldCertificateId;
 
     /**
-    * 需要部署的资源类型
+    * 需要部署的资源类型，参数值可选：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb
     */
     @SerializedName("ResourceTypes")
     @Expose
@@ -90,16 +90,16 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要部署的资源类型 
-     * @return ResourceTypes 需要部署的资源类型
+     * Get 需要部署的资源类型，参数值可选：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb 
+     * @return ResourceTypes 需要部署的资源类型，参数值可选：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set 需要部署的资源类型
-     * @param ResourceTypes 需要部署的资源类型
+     * Set 需要部署的资源类型，参数值可选：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb
+     * @param ResourceTypes 需要部署的资源类型，参数值可选：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
@@ -108,7 +108,9 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
     /**
      * Get 需要部署的地域列表（废弃） 
      * @return Regions 需要部署的地域列表（废弃）
+     * @deprecated
      */
+    @Deprecated
     public String [] getRegions() {
         return this.Regions;
     }
@@ -116,7 +118,9 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
     /**
      * Set 需要部署的地域列表（废弃）
      * @param Regions 需要部署的地域列表（废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setRegions(String [] Regions) {
         this.Regions = Regions;
     }

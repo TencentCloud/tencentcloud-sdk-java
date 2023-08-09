@@ -30,6 +30,13 @@ public class MediaCastOutputMediaSetting extends AbstractModel{
     private MediaCastVideoSetting VideoSetting;
 
     /**
+    * 视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
+    */
+    @SerializedName("FollowSourceInfo")
+    @Expose
+    private Boolean FollowSourceInfo;
+
+    /**
      * Get 视频配置。 
      * @return VideoSetting 视频配置。
      */
@@ -45,6 +52,22 @@ public class MediaCastOutputMediaSetting extends AbstractModel{
         this.VideoSetting = VideoSetting;
     }
 
+    /**
+     * Get 视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。 
+     * @return FollowSourceInfo 视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
+     */
+    public Boolean getFollowSourceInfo() {
+        return this.FollowSourceInfo;
+    }
+
+    /**
+     * Set 视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
+     * @param FollowSourceInfo 视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
+     */
+    public void setFollowSourceInfo(Boolean FollowSourceInfo) {
+        this.FollowSourceInfo = FollowSourceInfo;
+    }
+
     public MediaCastOutputMediaSetting() {
     }
 
@@ -56,6 +79,9 @@ public class MediaCastOutputMediaSetting extends AbstractModel{
         if (source.VideoSetting != null) {
             this.VideoSetting = new MediaCastVideoSetting(source.VideoSetting);
         }
+        if (source.FollowSourceInfo != null) {
+            this.FollowSourceInfo = new Boolean(source.FollowSourceInfo);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class MediaCastOutputMediaSetting extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "VideoSetting.", this.VideoSetting);
+        this.setParamSimple(map, prefix + "FollowSourceInfo", this.FollowSourceInfo);
 
     }
 }

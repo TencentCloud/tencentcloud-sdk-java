@@ -131,6 +131,13 @@ public class CreateNotebookSessionRequest extends AbstractModel{
     private String SparkImage;
 
     /**
+    * 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+    */
+    @SerializedName("IsInherit")
+    @Expose
+    private Long IsInherit;
+
+    /**
      * Get Session名称 
      * @return Name Session名称
      */
@@ -382,6 +389,22 @@ public class CreateNotebookSessionRequest extends AbstractModel{
         this.SparkImage = SparkImage;
     }
 
+    /**
+     * Get 是否继承集群的资源类配置：0：自定义（默认），1：继承集群； 
+     * @return IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     */
+    public Long getIsInherit() {
+        return this.IsInherit;
+    }
+
+    /**
+     * Set 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     * @param IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     */
+    public void setIsInherit(Long IsInherit) {
+        this.IsInherit = IsInherit;
+    }
+
     public CreateNotebookSessionRequest() {
     }
 
@@ -450,6 +473,9 @@ public class CreateNotebookSessionRequest extends AbstractModel{
         if (source.SparkImage != null) {
             this.SparkImage = new String(source.SparkImage);
         }
+        if (source.IsInherit != null) {
+            this.IsInherit = new Long(source.IsInherit);
+        }
     }
 
 
@@ -472,6 +498,7 @@ public class CreateNotebookSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeoutInSecond", this.TimeoutInSecond);
         this.setParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
         this.setParamSimple(map, prefix + "SparkImage", this.SparkImage);
+        this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
 
     }
 }

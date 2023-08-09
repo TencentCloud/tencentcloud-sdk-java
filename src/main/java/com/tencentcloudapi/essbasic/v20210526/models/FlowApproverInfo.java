@@ -30,17 +30,18 @@ public class FlowApproverInfo extends AbstractModel{
     private String Name;
 
     /**
-    * 签署人身份证件类型
+    * 签署人的证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     */
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
 
     /**
-    * 签署人证件号
+    * 签署人证件号（长度不超过18位）
     */
     @SerializedName("IdCardNumber")
     @Expose
@@ -211,44 +212,48 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     }
 
     /**
-     * Get 签署人身份证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证 
-     * @return IdCardType 签署人身份证件类型
+     * Get 签署人的证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理） 
+     * @return IdCardType 签署人的证件类型
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set 签署人身份证件类型
+     * Set 签署人的证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-     * @param IdCardType 签署人身份证件类型
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+     * @param IdCardType 签署人的证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
     }
 
     /**
-     * Get 签署人证件号 
-     * @return IdCardNumber 签署人证件号
+     * Get 签署人证件号（长度不超过18位） 
+     * @return IdCardNumber 签署人证件号（长度不超过18位）
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 签署人证件号
-     * @param IdCardNumber 签署人证件号
+     * Set 签署人证件号（长度不超过18位）
+     * @param IdCardNumber 签署人证件号（长度不超过18位）
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;

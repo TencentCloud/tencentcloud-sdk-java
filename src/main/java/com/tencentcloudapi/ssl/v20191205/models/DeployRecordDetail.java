@@ -157,6 +157,30 @@ public class DeployRecordDetail extends AbstractModel{
     private Long Port;
 
     /**
+    * TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
+    * 部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TCBType")
+    @Expose
+    private String TCBType;
+
+    /**
+    * 部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 部署记录详情ID 
      * @return Id 部署记录详情ID
      */
@@ -476,6 +500,66 @@ public class DeployRecordDetail extends AbstractModel{
         this.Port = Port;
     }
 
+    /**
+     * Get TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvId TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvId TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
+    /**
+     * Get 部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TCBType 部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTCBType() {
+        return this.TCBType;
+    }
+
+    /**
+     * Set 部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TCBType 部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTCBType(String TCBType) {
+        this.TCBType = TCBType;
+    }
+
+    /**
+     * Get 部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
     public DeployRecordDetail() {
     }
 
@@ -541,6 +625,15 @@ public class DeployRecordDetail extends AbstractModel{
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.TCBType != null) {
+            this.TCBType = new String(source.TCBType);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -566,6 +659,9 @@ public class DeployRecordDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "TCBType", this.TCBType);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

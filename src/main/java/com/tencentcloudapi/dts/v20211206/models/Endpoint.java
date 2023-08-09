@@ -231,6 +231,14 @@ public class Endpoint extends AbstractModel{
     private String DatabaseNetEnv;
 
     /**
+    * 数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CcnOwnerUin")
+    @Expose
+    private String CcnOwnerUin;
+
+    /**
      * Get 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 地域英文名，如：ap-guangzhou
@@ -750,6 +758,26 @@ public class Endpoint extends AbstractModel{
         this.DatabaseNetEnv = DatabaseNetEnv;
     }
 
+    /**
+     * Get 数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CcnOwnerUin 数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCcnOwnerUin() {
+        return this.CcnOwnerUin;
+    }
+
+    /**
+     * Set 数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CcnOwnerUin 数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCcnOwnerUin(String CcnOwnerUin) {
+        this.CcnOwnerUin = CcnOwnerUin;
+    }
+
     public Endpoint() {
     }
 
@@ -836,6 +864,9 @@ public class Endpoint extends AbstractModel{
         if (source.DatabaseNetEnv != null) {
             this.DatabaseNetEnv = new String(source.DatabaseNetEnv);
         }
+        if (source.CcnOwnerUin != null) {
+            this.CcnOwnerUin = new String(source.CcnOwnerUin);
+        }
     }
 
 
@@ -869,6 +900,7 @@ public class Endpoint extends AbstractModel{
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
         this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
         this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
+        this.setParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
 
     }
 }

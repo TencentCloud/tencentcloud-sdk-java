@@ -47,7 +47,7 @@ public class SyncDetailInfo extends AbstractModel{
     private Long Progress;
 
     /**
-    * 当前步骤进度
+    * 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentStepProgress")
@@ -93,6 +93,14 @@ public class SyncDetailInfo extends AbstractModel{
     @SerializedName("CauseOfCompareDisable")
     @Expose
     private String CauseOfCompareDisable;
+
+    /**
+    * 任务的错误和解决方案信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrInfo")
+    @Expose
+    private ErrInfo ErrInfo;
 
     /**
      * Get 总步骤数
@@ -155,9 +163,9 @@ public class SyncDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 当前步骤进度
+     * Get 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentStepProgress 当前步骤进度
+     * @return CurrentStepProgress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentStepProgress() {
@@ -165,9 +173,9 @@ public class SyncDetailInfo extends AbstractModel{
     }
 
     /**
-     * Set 当前步骤进度
+     * Set 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentStepProgress 当前步骤进度
+     * @param CurrentStepProgress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentStepProgress(Long CurrentStepProgress) {
@@ -274,6 +282,26 @@ public class SyncDetailInfo extends AbstractModel{
         this.CauseOfCompareDisable = CauseOfCompareDisable;
     }
 
+    /**
+     * Get 任务的错误和解决方案信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrInfo 任务的错误和解决方案信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ErrInfo getErrInfo() {
+        return this.ErrInfo;
+    }
+
+    /**
+     * Set 任务的错误和解决方案信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrInfo 任务的错误和解决方案信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrInfo(ErrInfo ErrInfo) {
+        this.ErrInfo = ErrInfo;
+    }
+
     public SyncDetailInfo() {
     }
 
@@ -312,6 +340,9 @@ public class SyncDetailInfo extends AbstractModel{
         if (source.CauseOfCompareDisable != null) {
             this.CauseOfCompareDisable = new String(source.CauseOfCompareDisable);
         }
+        if (source.ErrInfo != null) {
+            this.ErrInfo = new ErrInfo(source.ErrInfo);
+        }
     }
 
 
@@ -328,6 +359,7 @@ public class SyncDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArrayObj(map, prefix + "StepInfos.", this.StepInfos);
         this.setParamSimple(map, prefix + "CauseOfCompareDisable", this.CauseOfCompareDisable);
+        this.setParamObj(map, prefix + "ErrInfo.", this.ErrInfo);
 
     }
 }

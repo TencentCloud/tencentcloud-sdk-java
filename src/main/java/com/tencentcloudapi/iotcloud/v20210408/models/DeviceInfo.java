@@ -208,6 +208,13 @@ public class DeviceInfo extends AbstractModel{
     private Long CreateUserId;
 
     /**
+    * NB IOT运营商处的DeviceID
+    */
+    @SerializedName("NBIoTDeviceID")
+    @Expose
+    private String NBIoTDeviceID;
+
+    /**
      * Get 设备名 
      * @return DeviceName 设备名
      */
@@ -370,7 +377,9 @@ public class DeviceInfo extends AbstractModel{
     /**
      * Get NB IOT运营商处的DeviceID 
      * @return NbiotDeviceID NB IOT运营商处的DeviceID
+     * @deprecated
      */
+    @Deprecated
     public String getNbiotDeviceID() {
         return this.NbiotDeviceID;
     }
@@ -378,7 +387,9 @@ public class DeviceInfo extends AbstractModel{
     /**
      * Set NB IOT运营商处的DeviceID
      * @param NbiotDeviceID NB IOT运营商处的DeviceID
+     * @deprecated
      */
+    @Deprecated
     public void setNbiotDeviceID(String NbiotDeviceID) {
         this.NbiotDeviceID = NbiotDeviceID;
     }
@@ -647,6 +658,22 @@ public class DeviceInfo extends AbstractModel{
         this.CreateUserId = CreateUserId;
     }
 
+    /**
+     * Get NB IOT运营商处的DeviceID 
+     * @return NBIoTDeviceID NB IOT运营商处的DeviceID
+     */
+    public String getNBIoTDeviceID() {
+        return this.NBIoTDeviceID;
+    }
+
+    /**
+     * Set NB IOT运营商处的DeviceID
+     * @param NBIoTDeviceID NB IOT运营商处的DeviceID
+     */
+    public void setNBIoTDeviceID(String NBIoTDeviceID) {
+        this.NBIoTDeviceID = NBIoTDeviceID;
+    }
+
     public DeviceInfo() {
     }
 
@@ -736,6 +763,9 @@ public class DeviceInfo extends AbstractModel{
         if (source.CreateUserId != null) {
             this.CreateUserId = new Long(source.CreateUserId);
         }
+        if (source.NBIoTDeviceID != null) {
+            this.NBIoTDeviceID = new String(source.NBIoTDeviceID);
+        }
     }
 
 
@@ -768,6 +798,7 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
         this.setParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
         this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+        this.setParamSimple(map, prefix + "NBIoTDeviceID", this.NBIoTDeviceID);
 
     }
 }

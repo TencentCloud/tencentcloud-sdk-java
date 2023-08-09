@@ -176,6 +176,22 @@ public class UpdateRecordDetail extends AbstractModel{
     private String SecretName;
 
     /**
+    * 环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
+    * TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TCBType")
+    @Expose
+    private String TCBType;
+
+    /**
      * Get 详情记录id 
      * @return Id 详情记录id
      */
@@ -547,6 +563,46 @@ public class UpdateRecordDetail extends AbstractModel{
         this.SecretName = SecretName;
     }
 
+    /**
+     * Get 环境ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvId 环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvId 环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
+    /**
+     * Get TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TCBType TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTCBType() {
+        return this.TCBType;
+    }
+
+    /**
+     * Set TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TCBType TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTCBType(String TCBType) {
+        this.TCBType = TCBType;
+    }
+
     public UpdateRecordDetail() {
     }
 
@@ -618,6 +674,12 @@ public class UpdateRecordDetail extends AbstractModel{
         if (source.SecretName != null) {
             this.SecretName = new String(source.SecretName);
         }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.TCBType != null) {
+            this.TCBType = new String(source.TCBType);
+        }
     }
 
 
@@ -645,6 +707,8 @@ public class UpdateRecordDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "TCBType", this.TCBType);
 
     }
 }

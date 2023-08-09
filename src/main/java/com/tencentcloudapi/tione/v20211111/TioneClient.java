@@ -39,6 +39,27 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *与大模型聊天
+     * @param req ChatCompletionRequest
+     * @return ChatCompletionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChatCompletionResponse ChatCompletion(ChatCompletionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChatCompletionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChatCompletionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChatCompletion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量创建模型加速任务
      * @param req CreateBatchModelAccTasksRequest
      * @return CreateBatchModelAccTasksResponse

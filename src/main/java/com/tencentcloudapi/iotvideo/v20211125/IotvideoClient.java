@@ -1950,6 +1950,27 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *重置云存事件
+     * @param req ResetCloudStorageEventRequest
+     * @return ResetCloudStorageEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetCloudStorageEventResponse ResetCloudStorageEvent(ResetCloudStorageEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetCloudStorageEventResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetCloudStorageEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetCloudStorageEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于重试设备升级任务
      * @param req RetryDeviceFirmwareTaskRequest
      * @return RetryDeviceFirmwareTaskResponse

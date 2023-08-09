@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeHostDeployRecordDetailRequest extends AbstractModel{
 
     /**
-    * 待部署的证书ID
+    * 部署记录ID
     */
     @SerializedName("DeployRecordId")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeHostDeployRecordDetailRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 待部署的证书ID 
-     * @return DeployRecordId 待部署的证书ID
+     * Get 部署记录ID 
+     * @return DeployRecordId 部署记录ID
      */
     public String getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set 待部署的证书ID
-     * @param DeployRecordId 待部署的证书ID
+     * Set 部署记录ID
+     * @param DeployRecordId 部署记录ID
      */
     public void setDeployRecordId(String DeployRecordId) {
         this.DeployRecordId = DeployRecordId;

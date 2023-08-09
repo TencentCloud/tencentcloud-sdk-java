@@ -30,6 +30,13 @@ public class DescribeSchedulerTaskTypeCntRequest extends AbstractModel{
     private String ProjectId;
 
     /**
+    * 1
+    */
+    @SerializedName("InCharge")
+    @Expose
+    private String InCharge;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -45,6 +52,22 @@ public class DescribeSchedulerTaskTypeCntRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 1 
+     * @return InCharge 1
+     */
+    public String getInCharge() {
+        return this.InCharge;
+    }
+
+    /**
+     * Set 1
+     * @param InCharge 1
+     */
+    public void setInCharge(String InCharge) {
+        this.InCharge = InCharge;
+    }
+
     public DescribeSchedulerTaskTypeCntRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeSchedulerTaskTypeCntRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.InCharge != null) {
+            this.InCharge = new String(source.InCharge);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeSchedulerTaskTypeCntRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "InCharge", this.InCharge);
 
     }
 }

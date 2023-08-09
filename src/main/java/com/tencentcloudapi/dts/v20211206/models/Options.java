@@ -87,6 +87,22 @@ public class Options extends AbstractModel{
     private KafkaOption KafkaOption;
 
     /**
+    * 任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RateLimitOption")
+    @Expose
+    private RateLimitOption RateLimitOption;
+
+    /**
+    * 自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
+
+    /**
      * Get 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
@@ -246,6 +262,46 @@ public class Options extends AbstractModel{
         this.KafkaOption = KafkaOption;
     }
 
+    /**
+     * Get 任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RateLimitOption 任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RateLimitOption getRateLimitOption() {
+        return this.RateLimitOption;
+    }
+
+    /**
+     * Set 任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RateLimitOption 任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRateLimitOption(RateLimitOption RateLimitOption) {
+        this.RateLimitOption = RateLimitOption;
+    }
+
+    /**
+     * Get 自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set 自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public Options() {
     }
 
@@ -284,6 +340,12 @@ public class Options extends AbstractModel{
         if (source.KafkaOption != null) {
             this.KafkaOption = new KafkaOption(source.KafkaOption);
         }
+        if (source.RateLimitOption != null) {
+            this.RateLimitOption = new RateLimitOption(source.RateLimitOption);
+        }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
+        }
     }
 
 
@@ -299,6 +361,8 @@ public class Options extends AbstractModel{
         this.setParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
         this.setParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
         this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
+        this.setParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }

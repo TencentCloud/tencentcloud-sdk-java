@@ -145,6 +145,27 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *添加组织成员访问授权
+     * @param req CreateOrganizationMemberAuthIdentityRequest
+     * @return CreateOrganizationMemberAuthIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationMemberAuthIdentityResponse CreateOrganizationMemberAuthIdentity(CreateOrganizationMemberAuthIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOrganizationMemberAuthIdentityResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOrganizationMemberAuthIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOrganizationMemberAuthIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建组织成员访问授权策略
      * @param req CreateOrganizationMemberPolicyRequest
      * @return CreateOrganizationMemberPolicyResponse
@@ -179,6 +200,27 @@ public class OrganizationClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteOrganizationMembersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteOrganizationMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除组织成员访问策略
+     * @param req DeleteOrganizationMembersPolicyRequest
+     * @return DeleteOrganizationMembersPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationMembersPolicyResponse DeleteOrganizationMembersPolicy(DeleteOrganizationMembersPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteOrganizationMembersPolicyResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteOrganizationMembersPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteOrganizationMembersPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

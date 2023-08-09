@@ -185,6 +185,21 @@ manualPaused(已暂停)
     private ErrorInfoItem [] ErrorInfo;
 
     /**
+    * 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+    */
+    @SerializedName("DumperResumeCtrl")
+    @Expose
+    private String DumperResumeCtrl;
+
+    /**
+    * 任务的限速信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RateLimitOption")
+    @Expose
+    private RateLimitOption RateLimitOption;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -600,6 +615,42 @@ manualPaused(已暂停)
     }
 
     /**
+     * Get 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传 
+     * @return DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+     */
+    public String getDumperResumeCtrl() {
+        return this.DumperResumeCtrl;
+    }
+
+    /**
+     * Set 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+     * @param DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+     */
+    public void setDumperResumeCtrl(String DumperResumeCtrl) {
+        this.DumperResumeCtrl = DumperResumeCtrl;
+    }
+
+    /**
+     * Get 任务的限速信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RateLimitOption 任务的限速信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RateLimitOption getRateLimitOption() {
+        return this.RateLimitOption;
+    }
+
+    /**
+     * Set 任务的限速信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RateLimitOption 任务的限速信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRateLimitOption(RateLimitOption RateLimitOption) {
+        this.RateLimitOption = RateLimitOption;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -689,6 +740,12 @@ manualPaused(已暂停)
                 this.ErrorInfo[i] = new ErrorInfoItem(source.ErrorInfo[i]);
             }
         }
+        if (source.DumperResumeCtrl != null) {
+            this.DumperResumeCtrl = new String(source.DumperResumeCtrl);
+        }
+        if (source.RateLimitOption != null) {
+            this.RateLimitOption = new RateLimitOption(source.RateLimitOption);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -719,6 +776,8 @@ manualPaused(已暂停)
         this.setParamObj(map, prefix + "CheckStepInfo.", this.CheckStepInfo);
         this.setParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
         this.setParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+        this.setParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
+        this.setParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

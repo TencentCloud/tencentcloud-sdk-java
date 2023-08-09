@@ -61,6 +61,22 @@ public class InstanceStatisticInfo extends AbstractModel{
     private String ShowTime;
 
     /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportTime")
+    @Expose
+    private String ReportTime;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get 实例状态趋势状态统计
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CountList 实例状态趋势状态统计
@@ -152,6 +168,46 @@ public class InstanceStatisticInfo extends AbstractModel{
         this.ShowTime = ShowTime;
     }
 
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportTime 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReportTime() {
+        return this.ReportTime;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportTime 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportTime(String ReportTime) {
+        this.ReportTime = ReportTime;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Count 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Count 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public InstanceStatisticInfo() {
     }
 
@@ -181,6 +237,12 @@ public class InstanceStatisticInfo extends AbstractModel{
         if (source.ShowTime != null) {
             this.ShowTime = new String(source.ShowTime);
         }
+        if (source.ReportTime != null) {
+            this.ReportTime = new String(source.ReportTime);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -193,6 +255,8 @@ public class InstanceStatisticInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "ShowTime", this.ShowTime);
+        this.setParamSimple(map, prefix + "ReportTime", this.ReportTime);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

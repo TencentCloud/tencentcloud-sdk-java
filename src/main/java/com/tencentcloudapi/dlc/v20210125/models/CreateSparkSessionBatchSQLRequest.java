@@ -95,6 +95,13 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     private KVPair [] Arguments;
 
     /**
+    * 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+    */
+    @SerializedName("IsInherit")
+    @Expose
+    private Long IsInherit;
+
+    /**
      * Get DLC Spark作业引擎名称 
      * @return DataEngineName DLC Spark作业引擎名称
      */
@@ -262,6 +269,22 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
         this.Arguments = Arguments;
     }
 
+    /**
+     * Get 是否继承集群的资源类配置：0：自定义（默认），1：继承集群； 
+     * @return IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     */
+    public Long getIsInherit() {
+        return this.IsInherit;
+    }
+
+    /**
+     * Set 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     * @param IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     */
+    public void setIsInherit(Long IsInherit) {
+        this.IsInherit = IsInherit;
+    }
+
     public CreateSparkSessionBatchSQLRequest() {
     }
 
@@ -303,6 +326,9 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
                 this.Arguments[i] = new KVPair(source.Arguments[i]);
             }
         }
+        if (source.IsInherit != null) {
+            this.IsInherit = new Long(source.IsInherit);
+        }
     }
 
 
@@ -320,6 +346,7 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionName", this.SessionName);
         this.setParamArrayObj(map, prefix + "Arguments.", this.Arguments);
+        this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
 
     }
 }

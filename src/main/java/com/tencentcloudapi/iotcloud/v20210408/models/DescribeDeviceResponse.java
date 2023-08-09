@@ -30,7 +30,7 @@ public class DescribeDeviceResponse extends AbstractModel{
     private String DeviceName;
 
     /**
-    * 设备是否在线，0不在线，1在线
+    * 设备是否在线，0不在线，1在线，3未激活
     */
     @SerializedName("Online")
     @Expose
@@ -208,6 +208,13 @@ public class DescribeDeviceResponse extends AbstractModel{
     private Long CreateUserId;
 
     /**
+    * NB IoT运营商处的DeviceID
+    */
+    @SerializedName("NBIoTDeviceID")
+    @Expose
+    private String NBIoTDeviceID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -231,16 +238,16 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
-     * Get 设备是否在线，0不在线，1在线 
-     * @return Online 设备是否在线，0不在线，1在线
+     * Get 设备是否在线，0不在线，1在线，3未激活 
+     * @return Online 设备是否在线，0不在线，1在线，3未激活
      */
     public Long getOnline() {
         return this.Online;
     }
 
     /**
-     * Set 设备是否在线，0不在线，1在线
-     * @param Online 设备是否在线，0不在线，1在线
+     * Set 设备是否在线，0不在线，1在线，3未激活
+     * @param Online 设备是否在线，0不在线，1在线，3未激活
      */
     public void setOnline(Long Online) {
         this.Online = Online;
@@ -409,7 +416,9 @@ public class DescribeDeviceResponse extends AbstractModel{
     /**
      * Get NB IoT运营商处的DeviceID 
      * @return NbiotDeviceID NB IoT运营商处的DeviceID
+     * @deprecated
      */
+    @Deprecated
     public String getNbiotDeviceID() {
         return this.NbiotDeviceID;
     }
@@ -417,7 +426,9 @@ public class DescribeDeviceResponse extends AbstractModel{
     /**
      * Set NB IoT运营商处的DeviceID
      * @param NbiotDeviceID NB IoT运营商处的DeviceID
+     * @deprecated
      */
+    @Deprecated
     public void setNbiotDeviceID(String NbiotDeviceID) {
         this.NbiotDeviceID = NbiotDeviceID;
     }
@@ -655,6 +666,22 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
+     * Get NB IoT运营商处的DeviceID 
+     * @return NBIoTDeviceID NB IoT运营商处的DeviceID
+     */
+    public String getNBIoTDeviceID() {
+        return this.NBIoTDeviceID;
+    }
+
+    /**
+     * Set NB IoT运营商处的DeviceID
+     * @param NBIoTDeviceID NB IoT运营商处的DeviceID
+     */
+    public void setNBIoTDeviceID(String NBIoTDeviceID) {
+        this.NBIoTDeviceID = NBIoTDeviceID;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -759,6 +786,9 @@ public class DescribeDeviceResponse extends AbstractModel{
         if (source.CreateUserId != null) {
             this.CreateUserId = new Long(source.CreateUserId);
         }
+        if (source.NBIoTDeviceID != null) {
+            this.NBIoTDeviceID = new String(source.NBIoTDeviceID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -794,6 +824,7 @@ public class DescribeDeviceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
         this.setParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
         this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+        this.setParamSimple(map, prefix + "NBIoTDeviceID", this.NBIoTDeviceID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -9,9 +9,6 @@ public enum OcrErrorCode {
     // 今日次数达到限制。
      FAILEDOPERATION_COUNTLIMITERROR("FailedOperation.CountLimitError"),
      
-    // 数据源查询失败。
-     FAILEDOPERATION_DATASOURCEQUERYFAILED("FailedOperation.DataSourceQueryFailed"),
-     
     // 数据库异常。
      FAILEDOPERATION_DBERROR("FailedOperation.DbError"),
      
@@ -83,9 +80,6 @@ public enum OcrErrorCode {
      
     // OCR识别失败。
      FAILEDOPERATION_OCRFAILED("FailedOperation.OcrFailed"),
-     
-    // 查询无记录。
-     FAILEDOPERATION_QUERYNORECORD("FailedOperation.QueryNoRecord"),
      
     // 未知错误。
      FAILEDOPERATION_UNKNOWERROR("FailedOperation.UnKnowError"),

@@ -228,6 +228,27 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询clb监听器列表
+     * @param req DescribeListenerListRequest
+     * @return DescribeListenerListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeListenerListResponse DescribeListenerList(DescribeListenerListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeListenerListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeListenerListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeListenerList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ip公网列表
      * @param req DescribePublicIpAssetsRequest
      * @return DescribePublicIpAssetsResponse

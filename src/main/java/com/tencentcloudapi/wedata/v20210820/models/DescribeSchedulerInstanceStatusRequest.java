@@ -51,6 +51,27 @@ public class DescribeSchedulerInstanceStatusRequest extends AbstractModel{
     private String ExecutionGroupName;
 
     /**
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 责任人
+    */
+    @SerializedName("InCharge")
+    @Expose
+    private String InCharge;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -114,6 +135,54 @@ public class DescribeSchedulerInstanceStatusRequest extends AbstractModel{
         this.ExecutionGroupName = ExecutionGroupName;
     }
 
+    /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间 
+     * @return EndTime 结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 责任人 
+     * @return InCharge 责任人
+     */
+    public String getInCharge() {
+        return this.InCharge;
+    }
+
+    /**
+     * Set 责任人
+     * @param InCharge 责任人
+     */
+    public void setInCharge(String InCharge) {
+        this.InCharge = InCharge;
+    }
+
     public DescribeSchedulerInstanceStatusRequest() {
     }
 
@@ -134,6 +203,15 @@ public class DescribeSchedulerInstanceStatusRequest extends AbstractModel{
         if (source.ExecutionGroupName != null) {
             this.ExecutionGroupName = new String(source.ExecutionGroupName);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.InCharge != null) {
+            this.InCharge = new String(source.InCharge);
+        }
     }
 
 
@@ -145,6 +223,9 @@ public class DescribeSchedulerInstanceStatusRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskTypeId", this.TaskTypeId);
         this.setParamSimple(map, prefix + "ExecutionGroupId", this.ExecutionGroupId);
         this.setParamSimple(map, prefix + "ExecutionGroupName", this.ExecutionGroupName);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "InCharge", this.InCharge);
 
     }
 }

@@ -150,6 +150,13 @@ public class ProductProperties extends AbstractModel{
     private Long ForbiddenStatus;
 
     /**
+    * LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+    */
+    @SerializedName("AppEUI")
+    @Expose
+    private String AppEUI;
+
+    /**
      * Get 产品描述 
      * @return ProductDescription 产品描述
      */
@@ -252,7 +259,9 @@ public class ProductProperties extends AbstractModel{
     /**
      * Get LoRa产品运营侧APPEUI，只有LoRa产品需要填写 
      * @return Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     * @deprecated
      */
+    @Deprecated
     public String getAppeui() {
         return this.Appeui;
     }
@@ -260,7 +269,9 @@ public class ProductProperties extends AbstractModel{
     /**
      * Set LoRa产品运营侧APPEUI，只有LoRa产品需要填写
      * @param Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     * @deprecated
      */
+    @Deprecated
     public void setAppeui(String Appeui) {
         this.Appeui = Appeui;
     }
@@ -441,6 +452,22 @@ public class ProductProperties extends AbstractModel{
         this.ForbiddenStatus = ForbiddenStatus;
     }
 
+    /**
+     * Get LoRa产品运营侧APPEUI，只有LoRa产品需要填写 
+     * @return AppEUI LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     */
+    public String getAppEUI() {
+        return this.AppEUI;
+    }
+
+    /**
+     * Set LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     * @param AppEUI LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     */
+    public void setAppEUI(String AppEUI) {
+        this.AppEUI = AppEUI;
+    }
+
     public ProductProperties() {
     }
 
@@ -503,6 +530,9 @@ public class ProductProperties extends AbstractModel{
         if (source.ForbiddenStatus != null) {
             this.ForbiddenStatus = new Long(source.ForbiddenStatus);
         }
+        if (source.AppEUI != null) {
+            this.AppEUI = new String(source.AppEUI);
+        }
     }
 
 
@@ -528,6 +558,7 @@ public class ProductProperties extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginUserId", this.OriginUserId);
         this.setParamSimple(map, prefix + "DeviceLimit", this.DeviceLimit);
         this.setParamSimple(map, prefix + "ForbiddenStatus", this.ForbiddenStatus);
+        this.setParamSimple(map, prefix + "AppEUI", this.AppEUI);
 
     }
 }

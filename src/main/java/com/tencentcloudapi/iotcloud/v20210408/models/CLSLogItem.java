@@ -79,6 +79,13 @@ public class CLSLogItem extends AbstractModel{
     private String Userid;
 
     /**
+    * 腾讯云账号
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 日志内容 
      * @return Content 日志内容
      */
@@ -193,7 +200,9 @@ public class CLSLogItem extends AbstractModel{
     /**
      * Get 腾讯云账号 
      * @return Userid 腾讯云账号
+     * @deprecated
      */
+    @Deprecated
     public String getUserid() {
         return this.Userid;
     }
@@ -201,9 +210,27 @@ public class CLSLogItem extends AbstractModel{
     /**
      * Set 腾讯云账号
      * @param Userid 腾讯云账号
+     * @deprecated
      */
+    @Deprecated
     public void setUserid(String Userid) {
         this.Userid = Userid;
+    }
+
+    /**
+     * Get 腾讯云账号 
+     * @return UserId 腾讯云账号
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 腾讯云账号
+     * @param UserId 腾讯云账号
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
     }
 
     public CLSLogItem() {
@@ -238,6 +265,9 @@ public class CLSLogItem extends AbstractModel{
         if (source.Userid != null) {
             this.Userid = new String(source.Userid);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -253,6 +283,7 @@ public class CLSLogItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Scene", this.Scene);
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Userid", this.Userid);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

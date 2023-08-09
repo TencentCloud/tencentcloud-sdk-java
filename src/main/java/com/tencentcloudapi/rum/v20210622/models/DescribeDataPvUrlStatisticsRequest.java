@@ -170,6 +170,14 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
     private String Env;
 
     /**
+    * group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d
+    */
+    @SerializedName("GroupByType")
+    @Expose
+    private Long GroupByType;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -505,6 +513,26 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
         this.Env = Env;
     }
 
+    /**
+     * Get group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d 
+     * @return GroupByType group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d
+     */
+    public Long getGroupByType() {
+        return this.GroupByType;
+    }
+
+    /**
+     * Set group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d
+     * @param GroupByType group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d
+     */
+    public void setGroupByType(Long GroupByType) {
+        this.GroupByType = GroupByType;
+    }
+
     public DescribeDataPvUrlStatisticsRequest() {
     }
 
@@ -576,6 +604,9 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
         if (source.Env != null) {
             this.Env = new String(source.Env);
         }
+        if (source.GroupByType != null) {
+            this.GroupByType = new Long(source.GroupByType);
+        }
     }
 
 
@@ -604,6 +635,7 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "Browser", this.Browser);
         this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "GroupByType", this.GroupByType);
 
     }
 }

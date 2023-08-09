@@ -77,6 +77,38 @@ public class RabbitMQVirtualHostInfo extends AbstractModel{
     private RabbitMQVirtualHostStatistics VirtualHostStatistics;
 
     /**
+    * vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MessageHeapCount")
+    @Expose
+    private Long MessageHeapCount;
+
+    /**
+    * 输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MessageRateIn")
+    @Expose
+    private Float MessageRateIn;
+
+    /**
+    * 输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MessageRateOut")
+    @Expose
+    private Float MessageRateOut;
+
+    /**
      * Get 集群实例Id 
      * @return InstanceId 集群实例Id
      */
@@ -208,6 +240,86 @@ public class RabbitMQVirtualHostInfo extends AbstractModel{
         this.VirtualHostStatistics = VirtualHostStatistics;
     }
 
+    /**
+     * Get vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MessageHeapCount 消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMessageHeapCount() {
+        return this.MessageHeapCount;
+    }
+
+    /**
+     * Set 消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MessageHeapCount 消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessageHeapCount(Long MessageHeapCount) {
+        this.MessageHeapCount = MessageHeapCount;
+    }
+
+    /**
+     * Get 输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MessageRateIn 输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getMessageRateIn() {
+        return this.MessageRateIn;
+    }
+
+    /**
+     * Set 输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MessageRateIn 输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessageRateIn(Float MessageRateIn) {
+        this.MessageRateIn = MessageRateIn;
+    }
+
+    /**
+     * Get 输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MessageRateOut 输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getMessageRateOut() {
+        return this.MessageRateOut;
+    }
+
+    /**
+     * Set 输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MessageRateOut 输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessageRateOut(Float MessageRateOut) {
+        this.MessageRateOut = MessageRateOut;
+    }
+
     public RabbitMQVirtualHostInfo() {
     }
 
@@ -240,6 +352,18 @@ public class RabbitMQVirtualHostInfo extends AbstractModel{
         if (source.VirtualHostStatistics != null) {
             this.VirtualHostStatistics = new RabbitMQVirtualHostStatistics(source.VirtualHostStatistics);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.MessageHeapCount != null) {
+            this.MessageHeapCount = new Long(source.MessageHeapCount);
+        }
+        if (source.MessageRateIn != null) {
+            this.MessageRateIn = new Float(source.MessageRateIn);
+        }
+        if (source.MessageRateOut != null) {
+            this.MessageRateOut = new Float(source.MessageRateOut);
+        }
     }
 
 
@@ -254,6 +378,10 @@ public class RabbitMQVirtualHostInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamObj(map, prefix + "VirtualHostStatistics.", this.VirtualHostStatistics);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
+        this.setParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
+        this.setParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
 
     }
 }

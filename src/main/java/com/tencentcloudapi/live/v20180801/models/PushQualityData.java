@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class PushQualityData extends AbstractModel{
 
     /**
-    * 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+    * 数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("Time")
     @Expose
@@ -185,16 +187,24 @@ public class PushQualityData extends AbstractModel{
     private String ServerIp;
 
     /**
-     * Get 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。 
-     * @return Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * Get 数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return Time 数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
-     * @param Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * Set 数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param Time 数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setTime(String Time) {
         this.Time = Time;

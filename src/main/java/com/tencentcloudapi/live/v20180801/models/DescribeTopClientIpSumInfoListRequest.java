@@ -23,14 +23,20 @@ import java.util.HashMap;
 public class DescribeTopClientIpSumInfoListRequest extends AbstractModel{
 
     /**
-    * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+    * 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间点，格式为yyyy-mm-dd HH:MM:SS
+    * 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 时间跨度在[0,4小时]，支持最近1天数据查询。
     */
     @SerializedName("EndTime")
@@ -80,25 +86,43 @@ public class DescribeTopClientIpSumInfoListRequest extends AbstractModel{
     private String OutLanguage;
 
     /**
-     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
-     * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return StartTime 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param StartTime 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS
+     * Get 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 时间跨度在[0,4小时]，支持最近1天数据查询。 
-     * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
+     * @return EndTime 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 时间跨度在[0,4小时]，支持最近1天数据查询。
      */
     public String getEndTime() {
@@ -106,9 +130,15 @@ public class DescribeTopClientIpSumInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS
+     * Set 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 时间跨度在[0,4小时]，支持最近1天数据查询。
-     * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
+     * @param EndTime 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 时间跨度在[0,4小时]，支持最近1天数据查询。
      */
     public void setEndTime(String EndTime) {

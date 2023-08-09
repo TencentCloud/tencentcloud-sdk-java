@@ -65,6 +65,34 @@ public class DescribeTaskByStatusReportRequest extends AbstractModel{
     private String EndTime;
 
     /**
+    * 无
+    */
+    @SerializedName("AggregationUnit")
+    @Expose
+    private String AggregationUnit;
+
+    /**
+    * 无
+    */
+    @SerializedName("CycleUnit")
+    @Expose
+    private String CycleUnit;
+
+    /**
+    * 无
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 无
+    */
+    @SerializedName("InCharge")
+    @Expose
+    private String InCharge;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -160,6 +188,70 @@ public class DescribeTaskByStatusReportRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 无 
+     * @return AggregationUnit 无
+     */
+    public String getAggregationUnit() {
+        return this.AggregationUnit;
+    }
+
+    /**
+     * Set 无
+     * @param AggregationUnit 无
+     */
+    public void setAggregationUnit(String AggregationUnit) {
+        this.AggregationUnit = AggregationUnit;
+    }
+
+    /**
+     * Get 无 
+     * @return CycleUnit 无
+     */
+    public String getCycleUnit() {
+        return this.CycleUnit;
+    }
+
+    /**
+     * Set 无
+     * @param CycleUnit 无
+     */
+    public void setCycleUnit(String CycleUnit) {
+        this.CycleUnit = CycleUnit;
+    }
+
+    /**
+     * Get 无 
+     * @return Status 无
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 无
+     * @param Status 无
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 无 
+     * @return InCharge 无
+     */
+    public String getInCharge() {
+        return this.InCharge;
+    }
+
+    /**
+     * Set 无
+     * @param InCharge 无
+     */
+    public void setInCharge(String InCharge) {
+        this.InCharge = InCharge;
+    }
+
     public DescribeTaskByStatusReportRequest() {
     }
 
@@ -186,6 +278,18 @@ public class DescribeTaskByStatusReportRequest extends AbstractModel{
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.AggregationUnit != null) {
+            this.AggregationUnit = new String(source.AggregationUnit);
+        }
+        if (source.CycleUnit != null) {
+            this.CycleUnit = new String(source.CycleUnit);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.InCharge != null) {
+            this.InCharge = new String(source.InCharge);
+        }
     }
 
 
@@ -199,6 +303,10 @@ public class DescribeTaskByStatusReportRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TypeName", this.TypeName);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "AggregationUnit", this.AggregationUnit);
+        this.setParamSimple(map, prefix + "CycleUnit", this.CycleUnit);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "InCharge", this.InCharge);
 
     }
 }

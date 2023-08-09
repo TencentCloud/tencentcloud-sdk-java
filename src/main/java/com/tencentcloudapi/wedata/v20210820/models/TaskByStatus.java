@@ -55,6 +55,20 @@ public class TaskByStatus extends AbstractModel{
     private String CycleUnit;
 
     /**
+    * 1
+    */
+    @SerializedName("ReportTime")
+    @Expose
+    private String ReportTime;
+
+    /**
+    * 1
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get 统计值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CountGroup 统计值
@@ -134,6 +148,38 @@ public class TaskByStatus extends AbstractModel{
         this.CycleUnit = CycleUnit;
     }
 
+    /**
+     * Get 1 
+     * @return ReportTime 1
+     */
+    public String getReportTime() {
+        return this.ReportTime;
+    }
+
+    /**
+     * Set 1
+     * @param ReportTime 1
+     */
+    public void setReportTime(String ReportTime) {
+        this.ReportTime = ReportTime;
+    }
+
+    /**
+     * Get 1 
+     * @return Count 1
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 1
+     * @param Count 1
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public TaskByStatus() {
     }
 
@@ -154,6 +200,12 @@ public class TaskByStatus extends AbstractModel{
         if (source.CycleUnit != null) {
             this.CycleUnit = new String(source.CycleUnit);
         }
+        if (source.ReportTime != null) {
+            this.ReportTime = new String(source.ReportTime);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -165,6 +217,8 @@ public class TaskByStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "ShowTimeGroup", this.ShowTimeGroup);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CycleUnit", this.CycleUnit);
+        this.setParamSimple(map, prefix + "ReportTime", this.ReportTime);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

@@ -121,7 +121,7 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private String DstNodeType;
 
     /**
-    * 同步任务选项
+    * 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
     */
     @SerializedName("Options")
     @Expose
@@ -359,16 +359,16 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 同步任务选项 
-     * @return Options 同步任务选项
+     * Get 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速 
+     * @return Options 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
      */
     public Options getOptions() {
         return this.Options;
     }
 
     /**
-     * Set 同步任务选项
-     * @param Options 同步任务选项
+     * Set 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
+     * @param Options 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
      */
     public void setOptions(Options Options) {
         this.Options = Options;

@@ -58,6 +58,24 @@ public class DescribeRabbitMQVirtualHostRequest extends AbstractModel{
     private Filter Filters;
 
     /**
+    * 排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率；
+    */
+    @SerializedName("SortElement")
+    @Expose
+    private String SortElement;
+
+    /**
+    * 排序顺序，ascend 或 descend
+    */
+    @SerializedName("SortOrder")
+    @Expose
+    private String SortOrder;
+
+    /**
      * Get 集群实例Id 
      * @return InstanceId 集群实例Id
      */
@@ -137,6 +155,54 @@ public class DescribeRabbitMQVirtualHostRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率； 
+     * @return SortElement 排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率；
+     */
+    public String getSortElement() {
+        return this.SortElement;
+    }
+
+    /**
+     * Set 排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率；
+     * @param SortElement 排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率；
+     */
+    public void setSortElement(String SortElement) {
+        this.SortElement = SortElement;
+    }
+
+    /**
+     * Get 排序顺序，ascend 或 descend 
+     * @return SortOrder 排序顺序，ascend 或 descend
+     */
+    public String getSortOrder() {
+        return this.SortOrder;
+    }
+
+    /**
+     * Set 排序顺序，ascend 或 descend
+     * @param SortOrder 排序顺序，ascend 或 descend
+     */
+    public void setSortOrder(String SortOrder) {
+        this.SortOrder = SortOrder;
+    }
+
     public DescribeRabbitMQVirtualHostRequest() {
     }
 
@@ -160,6 +226,12 @@ public class DescribeRabbitMQVirtualHostRequest extends AbstractModel{
         if (source.Filters != null) {
             this.Filters = new Filter(source.Filters);
         }
+        if (source.SortElement != null) {
+            this.SortElement = new String(source.SortElement);
+        }
+        if (source.SortOrder != null) {
+            this.SortOrder = new String(source.SortOrder);
+        }
     }
 
 
@@ -172,6 +244,8 @@ public class DescribeRabbitMQVirtualHostRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "SortElement", this.SortElement);
+        this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
 
     }
 }

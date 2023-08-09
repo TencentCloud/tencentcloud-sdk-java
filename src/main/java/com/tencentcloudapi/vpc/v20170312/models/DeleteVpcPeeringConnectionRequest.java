@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DeleteVpcPeeringConnectionRequest extends AbstractModel{
 
+    /**
+    * 对等连接唯一ID。
+    */
+    @SerializedName("PeeringConnectionId")
+    @Expose
+    private String PeeringConnectionId;
+
+    /**
+     * Get 对等连接唯一ID。 
+     * @return PeeringConnectionId 对等连接唯一ID。
+     */
+    public String getPeeringConnectionId() {
+        return this.PeeringConnectionId;
+    }
+
+    /**
+     * Set 对等连接唯一ID。
+     * @param PeeringConnectionId 对等连接唯一ID。
+     */
+    public void setPeeringConnectionId(String PeeringConnectionId) {
+        this.PeeringConnectionId = PeeringConnectionId;
+    }
+
     public DeleteVpcPeeringConnectionRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DeleteVpcPeeringConnectionRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteVpcPeeringConnectionRequest(DeleteVpcPeeringConnectionRequest source) {
+        if (source.PeeringConnectionId != null) {
+            this.PeeringConnectionId = new String(source.PeeringConnectionId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DeleteVpcPeeringConnectionRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PeeringConnectionId", this.PeeringConnectionId);
 
     }
 }

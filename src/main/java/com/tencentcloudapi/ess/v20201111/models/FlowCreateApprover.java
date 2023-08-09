@@ -64,16 +64,18 @@ public class FlowCreateApprover extends AbstractModel{
     private String ApproverMobile;
 
     /**
-    * 签署方经办人证件类型ID_CARD 身份证
+    * 签署人的证件类型
+ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     */
     @SerializedName("ApproverIdCardType")
     @Expose
     private String ApproverIdCardType;
 
     /**
-    * 签署方经办人证件号码
+    * 签署人证件号（长度不超过18位）	
     */
     @SerializedName("ApproverIdCardNumber")
     @Expose
@@ -353,40 +355,48 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署方经办人证件类型ID_CARD 身份证
-HONGKONG_AND_MACAO 港澳居民来往内地通行证
-HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证) 
-     * @return ApproverIdCardType 签署方经办人证件类型ID_CARD 身份证
+     * Get 签署人的证件类型
+ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理） 
+     * @return ApproverIdCardType 签署人的证件类型
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
      */
     public String getApproverIdCardType() {
         return this.ApproverIdCardType;
     }
 
     /**
-     * Set 签署方经办人证件类型ID_CARD 身份证
+     * Set 签署人的证件类型
+ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-     * @param ApproverIdCardType 签署方经办人证件类型ID_CARD 身份证
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+     * @param ApproverIdCardType 签署人的证件类型
+ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
      */
     public void setApproverIdCardType(String ApproverIdCardType) {
         this.ApproverIdCardType = ApproverIdCardType;
     }
 
     /**
-     * Get 签署方经办人证件号码 
-     * @return ApproverIdCardNumber 签署方经办人证件号码
+     * Get 签署人证件号（长度不超过18位）	 
+     * @return ApproverIdCardNumber 签署人证件号（长度不超过18位）	
      */
     public String getApproverIdCardNumber() {
         return this.ApproverIdCardNumber;
     }
 
     /**
-     * Set 签署方经办人证件号码
-     * @param ApproverIdCardNumber 签署方经办人证件号码
+     * Set 签署人证件号（长度不超过18位）	
+     * @param ApproverIdCardNumber 签署人证件号（长度不超过18位）	
      */
     public void setApproverIdCardNumber(String ApproverIdCardNumber) {
         this.ApproverIdCardNumber = ApproverIdCardNumber;

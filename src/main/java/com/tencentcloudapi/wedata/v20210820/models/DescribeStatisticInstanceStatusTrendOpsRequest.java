@@ -79,6 +79,41 @@ public class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractMode
     private String ExecutionGroupName;
 
     /**
+    * 1
+    */
+    @SerializedName("InCharge")
+    @Expose
+    private String InCharge;
+
+    /**
+    * 1
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+    * 1
+    */
+    @SerializedName("StateList")
+    @Expose
+    private Long [] StateList;
+
+    /**
+    * D代表天，H代表小时
+    */
+    @SerializedName("AggregationUnit")
+    @Expose
+    private String AggregationUnit;
+
+    /**
+    * 1
+    */
+    @SerializedName("AverageWindowSize")
+    @Expose
+    private Long AverageWindowSize;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -206,6 +241,86 @@ public class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractMode
         this.ExecutionGroupName = ExecutionGroupName;
     }
 
+    /**
+     * Get 1 
+     * @return InCharge 1
+     */
+    public String getInCharge() {
+        return this.InCharge;
+    }
+
+    /**
+     * Set 1
+     * @param InCharge 1
+     */
+    public void setInCharge(String InCharge) {
+        this.InCharge = InCharge;
+    }
+
+    /**
+     * Get 1 
+     * @return TaskType 1
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 1
+     * @param TaskType 1
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 1 
+     * @return StateList 1
+     */
+    public Long [] getStateList() {
+        return this.StateList;
+    }
+
+    /**
+     * Set 1
+     * @param StateList 1
+     */
+    public void setStateList(Long [] StateList) {
+        this.StateList = StateList;
+    }
+
+    /**
+     * Get D代表天，H代表小时 
+     * @return AggregationUnit D代表天，H代表小时
+     */
+    public String getAggregationUnit() {
+        return this.AggregationUnit;
+    }
+
+    /**
+     * Set D代表天，H代表小时
+     * @param AggregationUnit D代表天，H代表小时
+     */
+    public void setAggregationUnit(String AggregationUnit) {
+        this.AggregationUnit = AggregationUnit;
+    }
+
+    /**
+     * Get 1 
+     * @return AverageWindowSize 1
+     */
+    public Long getAverageWindowSize() {
+        return this.AverageWindowSize;
+    }
+
+    /**
+     * Set 1
+     * @param AverageWindowSize 1
+     */
+    public void setAverageWindowSize(Long AverageWindowSize) {
+        this.AverageWindowSize = AverageWindowSize;
+    }
+
     public DescribeStatisticInstanceStatusTrendOpsRequest() {
     }
 
@@ -238,6 +353,24 @@ public class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractMode
         if (source.ExecutionGroupName != null) {
             this.ExecutionGroupName = new String(source.ExecutionGroupName);
         }
+        if (source.InCharge != null) {
+            this.InCharge = new String(source.InCharge);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.StateList != null) {
+            this.StateList = new Long[source.StateList.length];
+            for (int i = 0; i < source.StateList.length; i++) {
+                this.StateList[i] = new Long(source.StateList[i]);
+            }
+        }
+        if (source.AggregationUnit != null) {
+            this.AggregationUnit = new String(source.AggregationUnit);
+        }
+        if (source.AverageWindowSize != null) {
+            this.AverageWindowSize = new Long(source.AverageWindowSize);
+        }
     }
 
 
@@ -253,6 +386,11 @@ public class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractMode
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ExecutionGroupId", this.ExecutionGroupId);
         this.setParamSimple(map, prefix + "ExecutionGroupName", this.ExecutionGroupName);
+        this.setParamSimple(map, prefix + "InCharge", this.InCharge);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamArraySimple(map, prefix + "StateList.", this.StateList);
+        this.setParamSimple(map, prefix + "AggregationUnit", this.AggregationUnit);
+        this.setParamSimple(map, prefix + "AverageWindowSize", this.AverageWindowSize);
 
     }
 }

@@ -23,16 +23,20 @@ import java.util.HashMap;
 public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
 
     /**
-    * 起始时间点，当前使用北京时间，
-例：2019-02-21 10:00:00。
+    * 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间点，当前使用北京时间，
-例：2019-02-21 12:00:00。
+    * 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
     */
     @SerializedName("EndTime")
@@ -97,31 +101,43 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
     private String IpType;
 
     /**
-     * Get 起始时间点，当前使用北京时间，
-例：2019-02-21 10:00:00。 
-     * @return StartTime 起始时间点，当前使用北京时间，
-例：2019-02-21 10:00:00。
+     * Get 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return StartTime 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间点，当前使用北京时间，
-例：2019-02-21 10:00:00。
-     * @param StartTime 起始时间点，当前使用北京时间，
-例：2019-02-21 10:00:00。
+     * Set 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param StartTime 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间点，当前使用北京时间，
-例：2019-02-21 12:00:00。
+     * Get 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。 
-     * @return EndTime 结束时间点，当前使用北京时间，
-例：2019-02-21 12:00:00。
+     * @return EndTime 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
      */
     public String getEndTime() {
@@ -129,11 +145,15 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Set 结束时间点，当前使用北京时间，
-例：2019-02-21 12:00:00。
+     * Set 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
-     * @param EndTime 结束时间点，当前使用北京时间，
-例：2019-02-21 12:00:00。
+     * @param EndTime 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
      */
     public void setEndTime(String EndTime) {

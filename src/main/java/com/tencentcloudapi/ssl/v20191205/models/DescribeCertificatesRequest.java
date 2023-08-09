@@ -114,6 +114,13 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long FilterExpiring;
 
     /**
+    * 是否可托管，可选值：1 = 可托管，0 =  不可托管。
+    */
+    @SerializedName("Hostable")
+    @Expose
+    private Long Hostable;
+
+    /**
      * Get 分页偏移量，从0开始。 
      * @return Offset 分页偏移量，从0开始。
      */
@@ -321,6 +328,22 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.FilterExpiring = FilterExpiring;
     }
 
+    /**
+     * Get 是否可托管，可选值：1 = 可托管，0 =  不可托管。 
+     * @return Hostable 是否可托管，可选值：1 = 可托管，0 =  不可托管。
+     */
+    public Long getHostable() {
+        return this.Hostable;
+    }
+
+    /**
+     * Set 是否可托管，可选值：1 = 可托管，0 =  不可托管。
+     * @param Hostable 是否可托管，可选值：1 = 可托管，0 =  不可托管。
+     */
+    public void setHostable(Long Hostable) {
+        this.Hostable = Hostable;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -371,6 +394,9 @@ public class DescribeCertificatesRequest extends AbstractModel{
         if (source.FilterExpiring != null) {
             this.FilterExpiring = new Long(source.FilterExpiring);
         }
+        if (source.Hostable != null) {
+            this.Hostable = new Long(source.Hostable);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterSource", this.FilterSource);
         this.setParamSimple(map, prefix + "IsSM", this.IsSM);
         this.setParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
+        this.setParamSimple(map, prefix + "Hostable", this.Hostable);
 
     }
 }
