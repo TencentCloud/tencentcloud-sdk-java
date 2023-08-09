@@ -1,18 +1,17 @@
 package com.tencentcloudapi.common.provider;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.reflect.TypeToken;
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.CommonClient;
 import com.tencentcloudapi.common.Credential;
+import com.tencentcloudapi.common.JsonResponseModel;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
-import com.tencentcloudapi.sts.v20180813.StsClient;
-import com.tencentcloudapi.sts.v20180813.models.AssumeRoleWithWebIdentityRequest;
-import com.tencentcloudapi.sts.v20180813.models.AssumeRoleWithWebIdentityResponse;
-import com.tencentcloudapi.sts.v20180813.models.Credentials;
-import org.ini4j.Reg;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.Duration;
+import java.util.HashMap;
 
 public class OIDCRoleArnProvider implements CredentialsProvider {
     public String Region;
@@ -22,8 +21,48 @@ public class OIDCRoleArnProvider implements CredentialsProvider {
     public String RoleSessionName;
     public long DurationSeconds;
 
+    private static final String Service = "sts";
+    private static final String Version = "2018-08-13";
+    private static final String Action = "AssumeRoleWithWebIdentity";
     private static final String DefaultSessionName = "tencentcloud-java-sdk-";
     private static final long DefaultDurationSeconds = 7200;
+
+    private static class Request extends AbstractModel {
+        @Expose
+        public String ProviderId;
+        @Expose
+        public String WebIdentityToken;
+        @Expose
+        public String RoleArn;
+        @Expose
+        public String RoleSessionName;
+        @Expose
+        public Long DurationSeconds;
+
+        @Override
+        protected void toMap(HashMap<String, String> map, String prefix) {
+        }
+    }
+
+    private static class Response {
+        private static class Credentials {
+            @Expose
+            public String Token;
+            @Expose
+            public String TmpSecretId;
+            @Expose
+            public String TmpSecretKey;
+        }
+
+        @Expose
+        public Long ExpiredTime;
+        @Expose
+        public String Expiration;
+        @Expose
+        public Credentials Credentials;
+        @Expose
+        public String RequestId;
+    }
 
     public OIDCRoleArnProvider(String region, String providerId, String webIdentityToken,
                                String roleArn, String roleSessionName, long durationSeconds) {
@@ -65,17 +104,21 @@ public class OIDCRoleArnProvider implements CredentialsProvider {
 
     @Override
     public Credential getCredentials() throws TencentCloudSDKException {
-        StsClient client = new StsClient(new Credential("", ""), Region);
+        // can not use sts package here, because it will cause circular dependency
+        CommonClient client = new CommonClient(Service, Version, new Credential("", ""), Region);
 
-        AssumeRoleWithWebIdentityRequest req = new AssumeRoleWithWebIdentityRequest();
-        req.setProviderId(ProviderId);
-        req.setWebIdentityToken(WebIdentityToken);
-        req.setRoleArn(RoleArn);
-        req.setRoleSessionName(RoleSessionName);
-        req.setDurationSeconds(DurationSeconds);
-        AssumeRoleWithWebIdentityResponse rep = client.AssumeRoleWithWebIdentity(req);
+        Request request = new Request();
+        request.ProviderId = ProviderId;
+        request.WebIdentityToken = WebIdentityToken;
+        request.RoleArn = RoleArn;
+        request.RoleSessionName = RoleSessionName;
+        request.DurationSeconds = DurationSeconds;
+        request.setSkipSign(true);
 
-        Credentials credentials = rep.getCredentials();
-        return new Credential(credentials.getTmpSecretId(), credentials.getTmpSecretKey(), credentials.getToken());
+        String respStr = client.commonRequest(request, Action);
+
+        JsonResponseModel<Response> response = client.gson.fromJson(respStr, new TypeToken<JsonResponseModel<Response>>(){}.getType());
+        Response resp = response.response;
+        return new Credential(resp.Credentials.TmpSecretId, resp.Credentials.TmpSecretKey, resp.Credentials.Token);
     }
 }
