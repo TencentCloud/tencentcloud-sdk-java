@@ -13,27 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartFlowResponse extends AbstractModel{
-
-    /**
-    * 发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务
-    */
-    @SerializedName("Status")
-    @Expose
-    private String Status;
+public class ChannelCancelUserAutoSignEnableUrlResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,46 +28,6 @@ EXECUTING-已提交发起任务
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务 
-     * @return Status 发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务
-     * @param Status 发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -98,17 +45,14 @@ EXECUTING-已提交发起任务
         this.RequestId = RequestId;
     }
 
-    public StartFlowResponse() {
+    public ChannelCancelUserAutoSignEnableUrlResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StartFlowResponse(StartFlowResponse source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
+    public ChannelCancelUserAutoSignEnableUrlResponse(ChannelCancelUserAutoSignEnableUrlResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -119,7 +63,6 @@ EXECUTING-已提交发起任务
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

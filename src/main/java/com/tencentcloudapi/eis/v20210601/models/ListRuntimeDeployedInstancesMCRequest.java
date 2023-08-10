@@ -89,6 +89,15 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
     private Long Status;
 
     /**
+    * 0: 应用集成
+1: API管理
+2: ETL
+    */
+    @SerializedName("RuntimeClass")
+    @Expose
+    private Long RuntimeClass;
+
+    /**
      * Get 运行时id 
      * @return RuntimeId 运行时id
      */
@@ -244,6 +253,30 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 0: 应用集成
+1: API管理
+2: ETL 
+     * @return RuntimeClass 0: 应用集成
+1: API管理
+2: ETL
+     */
+    public Long getRuntimeClass() {
+        return this.RuntimeClass;
+    }
+
+    /**
+     * Set 0: 应用集成
+1: API管理
+2: ETL
+     * @param RuntimeClass 0: 应用集成
+1: API管理
+2: ETL
+     */
+    public void setRuntimeClass(Long RuntimeClass) {
+        this.RuntimeClass = RuntimeClass;
+    }
+
     public ListRuntimeDeployedInstancesMCRequest() {
     }
 
@@ -279,6 +312,9 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.RuntimeClass != null) {
+            this.RuntimeClass = new Long(source.RuntimeClass);
+        }
     }
 
 
@@ -295,6 +331,7 @@ public class ListRuntimeDeployedInstancesMCRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ApiVersion", this.ApiVersion);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
 
     }
 }

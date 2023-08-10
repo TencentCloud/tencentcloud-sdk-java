@@ -375,7 +375,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于创建ScheduledSql任务
+     *本接口用于创建定时SQL分析任务
      * @param req CreateScheduledSqlRequest
      * @return CreateScheduledSqlResponse
      * @throws TencentCloudSDKException
@@ -711,7 +711,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于删除ScheduledSql任务
+     *本接口用于删除定时SQL分析任务
      * @param req DeleteScheduledSqlRequest
      * @return DeleteScheduledSqlResponse
      * @throws TencentCloudSDKException
@@ -1236,7 +1236,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于获取ScheduledSql任务列表
+     *本接口用于获取定时SQL分析任务列表
      * @param req DescribeScheduledSqlInfoRequest
      * @return DescribeScheduledSqlInfoResponse
      * @throws TencentCloudSDKException
@@ -1615,7 +1615,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于修改ScheduledSql任务
+     *本接口用于修改定时SQL分析任务
      * @param req ModifyScheduledSqlRequest
      * @return ModifyScheduledSqlResponse
      * @throws TencentCloudSDKException

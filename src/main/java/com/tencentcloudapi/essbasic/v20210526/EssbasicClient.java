@@ -115,6 +115,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *此接口（ChannelCancelUserAutoSignEnableUrl）用来撤销发送给个人用户的自动签开通链接，撤销后对应的个人用户开通链接失效。若个人用户已经完成开通，将无法撤销。（处方单场景专用，使用此接口请与客户经理确认）
+     * @param req ChannelCancelUserAutoSignEnableUrlRequest
+     * @return ChannelCancelUserAutoSignEnableUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCancelUserAutoSignEnableUrlResponse ChannelCancelUserAutoSignEnableUrl(ChannelCancelUserAutoSignEnableUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCancelUserAutoSignEnableUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCancelUserAutoSignEnableUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCancelUserAutoSignEnableUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *指定需要批量撤销的签署流程Id，获取批量撤销链接 - 不建议使用此接口，可使用ChannelBatchCancelFlows
 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
 接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
@@ -464,6 +485,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *企业方可以通过此接口获取个人用户开启自动签的跳转链接
+     * @param req ChannelCreateUserAutoSignEnableUrlRequest
+     * @return ChannelCreateUserAutoSignEnableUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateUserAutoSignEnableUrlResponse ChannelCreateUserAutoSignEnableUrl(ChannelCreateUserAutoSignEnableUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateUserAutoSignEnableUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateUserAutoSignEnableUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateUserAutoSignEnableUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过此接口，绑定员工角色，支持以电子签userId、客户系统userId两种方式调用。
      * @param req ChannelCreateUserRolesRequest
      * @return ChannelCreateUserRolesResponse
@@ -625,6 +667,48 @@ public class EssbasicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ChannelDescribeRolesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ChannelDescribeRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *企业方可以通过此接口查询个人用户自动签开启状态
+     * @param req ChannelDescribeUserAutoSignStatusRequest
+     * @return ChannelDescribeUserAutoSignStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelDescribeUserAutoSignStatusResponse ChannelDescribeUserAutoSignStatus(ChannelDescribeUserAutoSignStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelDescribeUserAutoSignStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelDescribeUserAutoSignStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelDescribeUserAutoSignStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *企业方可以通过此接口关闭个人的自动签功能
+     * @param req ChannelDisableUserAutoSignRequest
+     * @return ChannelDisableUserAutoSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelDisableUserAutoSignResponse ChannelDisableUserAutoSign(ChannelDisableUserAutoSignRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelDisableUserAutoSignResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelDisableUserAutoSignResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelDisableUserAutoSign");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

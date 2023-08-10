@@ -51,7 +51,11 @@ public class StartFlowRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+    * 给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知
     */
     @SerializedName("CcNotifyType")
     @Expose
@@ -122,16 +126,32 @@ public class StartFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知 
-     * @return CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * Get 给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知 
+     * @return CcNotifyType 给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知
      */
     public Long getCcNotifyType() {
         return this.CcNotifyType;
     }
 
     /**
-     * Set 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
-     * @param CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * Set 给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知
+     * @param CcNotifyType 给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知
      */
     public void setCcNotifyType(Long CcNotifyType) {
         this.CcNotifyType = CcNotifyType;

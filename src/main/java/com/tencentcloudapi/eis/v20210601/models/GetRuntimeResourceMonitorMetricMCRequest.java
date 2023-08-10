@@ -72,6 +72,13 @@ public class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel{
     private Long RuntimeClass;
 
     /**
+    * 资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
+    */
+    @SerializedName("AggregationType")
+    @Expose
+    private Long AggregationType;
+
+    /**
      * Get 运行时id 
      * @return RuntimeId 运行时id
      */
@@ -183,6 +190,22 @@ public class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel{
         this.RuntimeClass = RuntimeClass;
     }
 
+    /**
+     * Get 资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度 
+     * @return AggregationType 资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
+     */
+    public Long getAggregationType() {
+        return this.AggregationType;
+    }
+
+    /**
+     * Set 资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
+     * @param AggregationType 资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
+     */
+    public void setAggregationType(Long AggregationType) {
+        this.AggregationType = AggregationType;
+    }
+
     public GetRuntimeResourceMonitorMetricMCRequest() {
     }
 
@@ -212,6 +235,9 @@ public class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel{
         if (source.RuntimeClass != null) {
             this.RuntimeClass = new Long(source.RuntimeClass);
         }
+        if (source.AggregationType != null) {
+            this.AggregationType = new Long(source.AggregationType);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RateType", this.RateType);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
+        this.setParamSimple(map, prefix + "AggregationType", this.AggregationType);
 
     }
 }

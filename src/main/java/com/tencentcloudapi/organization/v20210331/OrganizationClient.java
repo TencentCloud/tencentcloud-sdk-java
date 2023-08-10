@@ -187,6 +187,27 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *删除组织成员访问授权
+     * @param req DeleteOrganizationMemberAuthIdentityRequest
+     * @return DeleteOrganizationMemberAuthIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationMemberAuthIdentityResponse DeleteOrganizationMemberAuthIdentity(DeleteOrganizationMemberAuthIdentityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteOrganizationMemberAuthIdentityResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteOrganizationMemberAuthIdentityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteOrganizationMemberAuthIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量删除企业组织成员
      * @param req DeleteOrganizationMembersRequest
      * @return DeleteOrganizationMembersResponse

@@ -37,7 +37,7 @@ public class CreateHiveTableRequest extends AbstractModel{
     private String Database;
 
     /**
-    * 建hive表ddl
+    * base64转码之后的建表语句
     */
     @SerializedName("DDLSql")
     @Expose
@@ -97,16 +97,16 @@ public class CreateHiveTableRequest extends AbstractModel{
     }
 
     /**
-     * Get 建hive表ddl 
-     * @return DDLSql 建hive表ddl
+     * Get base64转码之后的建表语句 
+     * @return DDLSql base64转码之后的建表语句
      */
     public String getDDLSql() {
         return this.DDLSql;
     }
 
     /**
-     * Set 建hive表ddl
-     * @param DDLSql 建hive表ddl
+     * Set base64转码之后的建表语句
+     * @param DDLSql base64转码之后的建表语句
      */
     public void setDDLSql(String DDLSql) {
         this.DDLSql = DDLSql;

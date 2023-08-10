@@ -75,7 +75,7 @@ public class DescribeAuditLogsRequest extends AbstractModel{
     private String OrderBy;
 
     /**
-    * 过滤条件。可按设置的过滤条件过滤日志。
+    * 过滤条件。多个值之前是且的关系。
     */
     @SerializedName("LogFilter")
     @Expose
@@ -206,16 +206,16 @@ public class DescribeAuditLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件。可按设置的过滤条件过滤日志。 
-     * @return LogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     * Get 过滤条件。多个值之前是且的关系。 
+     * @return LogFilter 过滤条件。多个值之前是且的关系。
      */
     public InstanceAuditLogFilters [] getLogFilter() {
         return this.LogFilter;
     }
 
     /**
-     * Set 过滤条件。可按设置的过滤条件过滤日志。
-     * @param LogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     * Set 过滤条件。多个值之前是且的关系。
+     * @param LogFilter 过滤条件。多个值之前是且的关系。
      */
     public void setLogFilter(InstanceAuditLogFilters [] LogFilter) {
         this.LogFilter = LogFilter;

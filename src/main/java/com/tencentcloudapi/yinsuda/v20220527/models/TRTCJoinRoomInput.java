@@ -51,6 +51,18 @@ public class TRTCJoinRoomInput extends AbstractModel{
     private String UserId;
 
     /**
+    * TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RoomIdType")
+    @Expose
+    private String RoomIdType;
+
+    /**
      * Get 签名。 
      * @return Sign 签名。
      */
@@ -114,6 +126,42 @@ public class TRTCJoinRoomInput extends AbstractModel{
         this.UserId = UserId;
     }
 
+    /**
+     * Get TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RoomIdType TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRoomIdType() {
+        return this.RoomIdType;
+    }
+
+    /**
+     * Set TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RoomIdType TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRoomIdType(String RoomIdType) {
+        this.RoomIdType = RoomIdType;
+    }
+
     public TRTCJoinRoomInput() {
     }
 
@@ -134,6 +182,9 @@ public class TRTCJoinRoomInput extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.RoomIdType != null) {
+            this.RoomIdType = new String(source.RoomIdType);
+        }
     }
 
 
@@ -145,6 +196,7 @@ public class TRTCJoinRoomInput extends AbstractModel{
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
 
     }
 }

@@ -37,6 +37,13 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private String FlowName;
 
     /**
+    * 签署流程的描述，长度不超过1000个字符
+    */
+    @SerializedName("FlowDescription")
+    @Expose
+    private String FlowDescription;
+
+    /**
     * 签署流程签约方列表，最多不超过50个参与方
     */
     @SerializedName("FlowApprovers")
@@ -58,7 +65,9 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private Component [] Components;
 
     /**
-    * 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+    * 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+不能早于当前时间
     */
     @SerializedName("Deadline")
     @Expose
@@ -66,13 +75,18 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
 
     /**
     * 签署流程回调地址，长度不超过255个字符
+如果不传递回调地址， 则默认是配置应用号时候使用的回调地址
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
 
     /**
-    * 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
+    * 合同签署顺序类型
+true - 无序签,
+false - 顺序签，
+默认为false，即有序签署。
+有序签署时以传入FlowApprovers数组的顺序作为签署顺序
     */
     @SerializedName("Unordered")
     @Expose
@@ -84,13 +98,6 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     @SerializedName("FlowType")
     @Expose
     private String FlowType;
-
-    /**
-    * 签署流程的描述，长度不超过1000个字符
-    */
-    @SerializedName("FlowDescription")
-    @Expose
-    private String FlowDescription;
 
     /**
     * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
@@ -124,7 +131,10 @@ MobileCheck：手机号验证
     private String ApproverVerifyType;
 
     /**
-    * 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+    * 标识是否允许发起后添加控件。
+0为不允许
+1为允许。
+如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
     */
     @SerializedName("SignBeanTag")
     @Expose
@@ -138,7 +148,9 @@ MobileCheck：手机号验证
     private CcInfo [] CcInfos;
 
     /**
-    * 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+    * 给关注人发送短信通知的类型，
+0-合同发起时通知 
+1-签署完成后通知
     */
     @SerializedName("CcNotifyType")
     @Expose
@@ -191,6 +203,22 @@ MobileCheck：手机号验证
     }
 
     /**
+     * Get 签署流程的描述，长度不超过1000个字符 
+     * @return FlowDescription 签署流程的描述，长度不超过1000个字符
+     */
+    public String getFlowDescription() {
+        return this.FlowDescription;
+    }
+
+    /**
+     * Set 签署流程的描述，长度不超过1000个字符
+     * @param FlowDescription 签署流程的描述，长度不超过1000个字符
+     */
+    public void setFlowDescription(String FlowDescription) {
+        this.FlowDescription = FlowDescription;
+    }
+
+    /**
      * Get 签署流程签约方列表，最多不超过50个参与方 
      * @return FlowApprovers 签署流程签约方列表，最多不超过50个参与方
      */
@@ -239,24 +267,34 @@ MobileCheck：手机号验证
     }
 
     /**
-     * Get 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年 
-     * @return Deadline 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+     * Get 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+不能早于当前时间 
+     * @return Deadline 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+不能早于当前时间
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
-     * @param Deadline 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+     * Set 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+不能早于当前时间
+     * @param Deadline 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+不能早于当前时间
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 签署流程回调地址，长度不超过255个字符 
+     * Get 签署流程回调地址，长度不超过255个字符
+如果不传递回调地址， 则默认是配置应用号时候使用的回调地址 
      * @return CallbackUrl 签署流程回调地址，长度不超过255个字符
+如果不传递回调地址， 则默认是配置应用号时候使用的回调地址
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
@@ -264,23 +302,41 @@ MobileCheck：手机号验证
 
     /**
      * Set 签署流程回调地址，长度不超过255个字符
+如果不传递回调地址， 则默认是配置应用号时候使用的回调地址
      * @param CallbackUrl 签署流程回调地址，长度不超过255个字符
+如果不传递回调地址， 则默认是配置应用号时候使用的回调地址
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
 
     /**
-     * Get 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序 
-     * @return Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
+     * Get 合同签署顺序类型
+true - 无序签,
+false - 顺序签，
+默认为false，即有序签署。
+有序签署时以传入FlowApprovers数组的顺序作为签署顺序 
+     * @return Unordered 合同签署顺序类型
+true - 无序签,
+false - 顺序签，
+默认为false，即有序签署。
+有序签署时以传入FlowApprovers数组的顺序作为签署顺序
      */
     public Boolean getUnordered() {
         return this.Unordered;
     }
 
     /**
-     * Set 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
-     * @param Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
+     * Set 合同签署顺序类型
+true - 无序签,
+false - 顺序签，
+默认为false，即有序签署。
+有序签署时以传入FlowApprovers数组的顺序作为签署顺序
+     * @param Unordered 合同签署顺序类型
+true - 无序签,
+false - 顺序签，
+默认为false，即有序签署。
+有序签署时以传入FlowApprovers数组的顺序作为签署顺序
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;
@@ -300,22 +356,6 @@ MobileCheck：手机号验证
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;
-    }
-
-    /**
-     * Get 签署流程的描述，长度不超过1000个字符 
-     * @return FlowDescription 签署流程的描述，长度不超过1000个字符
-     */
-    public String getFlowDescription() {
-        return this.FlowDescription;
-    }
-
-    /**
-     * Set 签署流程的描述，长度不超过1000个字符
-     * @param FlowDescription 签署流程的描述，长度不超过1000个字符
-     */
-    public void setFlowDescription(String FlowDescription) {
-        this.FlowDescription = FlowDescription;
     }
 
     /**
@@ -395,16 +435,28 @@ MobileCheck：手机号验证
     }
 
     /**
-     * Get 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件 
-     * @return SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     * Get 标识是否允许发起后添加控件。
+0为不允许
+1为允许。
+如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件 
+     * @return SignBeanTag 标识是否允许发起后添加控件。
+0为不允许
+1为允许。
+如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
      */
     public Long getSignBeanTag() {
         return this.SignBeanTag;
     }
 
     /**
-     * Set 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
-     * @param SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     * Set 标识是否允许发起后添加控件。
+0为不允许
+1为允许。
+如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     * @param SignBeanTag 标识是否允许发起后添加控件。
+0为不允许
+1为允许。
+如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
      */
     public void setSignBeanTag(Long SignBeanTag) {
         this.SignBeanTag = SignBeanTag;
@@ -427,16 +479,24 @@ MobileCheck：手机号验证
     }
 
     /**
-     * Get 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知 
-     * @return CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * Get 给关注人发送短信通知的类型，
+0-合同发起时通知 
+1-签署完成后通知 
+     * @return CcNotifyType 给关注人发送短信通知的类型，
+0-合同发起时通知 
+1-签署完成后通知
      */
     public Long getCcNotifyType() {
         return this.CcNotifyType;
     }
 
     /**
-     * Set 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
-     * @param CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * Set 给关注人发送短信通知的类型，
+0-合同发起时通知 
+1-签署完成后通知
+     * @param CcNotifyType 给关注人发送短信通知的类型，
+0-合同发起时通知 
+1-签署完成后通知
      */
     public void setCcNotifyType(Long CcNotifyType) {
         this.CcNotifyType = CcNotifyType;
@@ -492,6 +552,9 @@ MobileCheck：手机号验证
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }
+        if (source.FlowDescription != null) {
+            this.FlowDescription = new String(source.FlowDescription);
+        }
         if (source.FlowApprovers != null) {
             this.FlowApprovers = new FlowApproverInfo[source.FlowApprovers.length];
             for (int i = 0; i < source.FlowApprovers.length; i++) {
@@ -521,9 +584,6 @@ MobileCheck：手机号验证
         }
         if (source.FlowType != null) {
             this.FlowType = new String(source.FlowType);
-        }
-        if (source.FlowDescription != null) {
-            this.FlowDescription = new String(source.FlowDescription);
         }
         if (source.CustomShowMap != null) {
             this.CustomShowMap = new String(source.CustomShowMap);
@@ -564,6 +624,7 @@ MobileCheck：手机号验证
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
+        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamArrayObj(map, prefix + "FlowApprovers.", this.FlowApprovers);
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
@@ -571,7 +632,6 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
-        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "CustomerData", this.CustomerData);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
