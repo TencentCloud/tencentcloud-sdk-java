@@ -44,7 +44,7 @@ public class ResetInstancesRequest extends AbstractModel{
     private String Password;
 
     /**
-    * 是否开启云监控和云镜服务，未指定时默认开启。
+    * 是否开启腾讯云可观测平台和主机安全服务，未指定时默认开启。
     */
     @SerializedName("EnhancedService")
     @Expose
@@ -118,16 +118,16 @@ FALSE：表示不保持镜像的登录设置
     }
 
     /**
-     * Get 是否开启云监控和云镜服务，未指定时默认开启。 
-     * @return EnhancedService 是否开启云监控和云镜服务，未指定时默认开启。
+     * Get 是否开启腾讯云可观测平台和主机安全服务，未指定时默认开启。 
+     * @return EnhancedService 是否开启腾讯云可观测平台和主机安全服务，未指定时默认开启。
      */
     public EnhancedService getEnhancedService() {
         return this.EnhancedService;
     }
 
     /**
-     * Set 是否开启云监控和云镜服务，未指定时默认开启。
-     * @param EnhancedService 是否开启云监控和云镜服务，未指定时默认开启。
+     * Set 是否开启腾讯云可观测平台和主机安全服务，未指定时默认开启。
+     * @param EnhancedService 是否开启腾讯云可观测平台和主机安全服务，未指定时默认开启。
      */
     public void setEnhancedService(EnhancedService EnhancedService) {
         this.EnhancedService = EnhancedService;

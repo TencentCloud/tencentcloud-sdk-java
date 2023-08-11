@@ -29,6 +29,7 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
 <li>Review：音视频审核转码资源包。</li>
+<li>MediaProcess：媒体处理时长资源包。</li>
     */
     @SerializedName("ResourceType")
     @Expose
@@ -41,6 +42,7 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
 <li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li>
     */
     @SerializedName("Amount")
     @Expose
@@ -53,6 +55,7 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
 <li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li>
     */
     @SerializedName("Left")
     @Expose
@@ -64,13 +67,15 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>Traffic：流量资源包。</li>
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
-<li>Review：音视频审核转码资源包。</li> 
+<li>Review：音视频审核转码资源包。</li>
+<li>MediaProcess：媒体处理时长资源包。</li> 
      * @return ResourceType 资源类型。
 <li>Storage：存储资源包。</li>
 <li>Traffic：流量资源包。</li>
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
 <li>Review：音视频审核转码资源包。</li>
+<li>MediaProcess：媒体处理时长资源包。</li>
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -83,12 +88,14 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
 <li>Review：音视频审核转码资源包。</li>
+<li>MediaProcess：媒体处理时长资源包。</li>
      * @param ResourceType 资源类型。
 <li>Storage：存储资源包。</li>
 <li>Traffic：流量资源包。</li>
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
 <li>Review：音视频审核转码资源包。</li>
+<li>MediaProcess：媒体处理时长资源包。</li>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -100,13 +107,15 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>音视频转码资源包，单位为秒。</li>
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
-<li>音视频加速资源包，单位为字节。</li> 
+<li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li> 
      * @return Amount 资源包额度。
 <li>音视频存储资源包，单位为字节。</li>
 <li>音视频转码资源包，单位为秒。</li>
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
 <li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li>
      */
     public Long getAmount() {
         return this.Amount;
@@ -119,12 +128,14 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
 <li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li>
      * @param Amount 资源包额度。
 <li>音视频存储资源包，单位为字节。</li>
 <li>音视频转码资源包，单位为秒。</li>
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
 <li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li>
      */
     public void setAmount(Long Amount) {
         this.Amount = Amount;
@@ -136,13 +147,15 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>音视频转码资源包，单位为秒。</li>
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
-<li>音视频加速资源包，单位为字节。</li> 
+<li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li> 
      * @return Left 资源包余量。
 <li>音视频存储资源包，单位为字节。</li>
 <li>音视频转码资源包，单位为秒。</li>
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
 <li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li>
      */
     public Long getLeft() {
         return this.Left;
@@ -155,12 +168,14 @@ public class ProductInstanceRecource extends AbstractModel{
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
 <li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li>
      * @param Left 资源包余量。
 <li>音视频存储资源包，单位为字节。</li>
 <li>音视频转码资源包，单位为秒。</li>
 <li>音视频审核资源包，单位为秒。</li>
 <li>音视频极速高清资源包，单位为秒。</li>
 <li>音视频加速资源包，单位为字节。</li>
+<li>媒体处理时长资源包，单位为秒。</li>
      */
     public void setLeft(Long Left) {
         this.Left = Left;

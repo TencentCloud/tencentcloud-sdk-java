@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ckafka.v20190819.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RenewCkafkaInstanceResponse extends AbstractModel{
-
-    /**
-    * 返回值
-    */
-    @SerializedName("Result")
-    @Expose
-    private RenewCkafkaInstanceResp Result;
+public class CreateMessageReceiverResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class RenewCkafkaInstanceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 返回值 
-     * @return Result 返回值
-     */
-    public RenewCkafkaInstanceResp getResult() {
-        return this.Result;
-    }
-
-    /**
-     * Set 返回值
-     * @param Result 返回值
-     */
-    public void setResult(RenewCkafkaInstanceResp Result) {
-        this.Result = Result;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,17 +45,14 @@ public class RenewCkafkaInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public RenewCkafkaInstanceResponse() {
+    public CreateMessageReceiverResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RenewCkafkaInstanceResponse(RenewCkafkaInstanceResponse source) {
-        if (source.Result != null) {
-            this.Result = new RenewCkafkaInstanceResp(source.Result);
-        }
+    public CreateMessageReceiverResponse(CreateMessageReceiverResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class RenewCkafkaInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

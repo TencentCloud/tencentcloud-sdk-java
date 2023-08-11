@@ -28,6 +28,8 @@ public class ApproverInfo extends AbstractModel{
 1：个人
 3：企业静默签署
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
     */
     @SerializedName("ApproverType")
     @Expose
@@ -48,7 +50,9 @@ public class ApproverInfo extends AbstractModel{
     private String ApproverMobile;
 
     /**
-    * 如果签署方是企业签署方，则为企业名
+    * 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+
+则企业名称必填
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -108,14 +112,18 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     private Long PreReadTime;
 
     /**
-    * 签署人userId，传此字段则不用传姓名、手机号
+    * 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
+
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 签署人用户来源，企微侧用户请传入：WEWORKAPP
+    * 签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP
     */
     @SerializedName("ApproverSource")
     @Expose
@@ -167,12 +175,16 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。 
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。 
      * @return ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
      */
     public Long getApproverType() {
         return this.ApproverType;
@@ -184,11 +196,15 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 1：个人
 3：企业静默签署
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
      * @param ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;
@@ -227,16 +243,24 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     }
 
     /**
-     * Get 如果签署方是企业签署方，则为企业名 
-     * @return OrganizationName 如果签署方是企业签署方，则为企业名
+     * Get 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+
+则企业名称必填 
+     * @return OrganizationName 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+
+则企业名称必填
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 如果签署方是企业签署方，则为企业名
-     * @param OrganizationName 如果签署方是企业签署方，则为企业名
+     * Set 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+
+则企业名称必填
+     * @param OrganizationName 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+
+则企业名称必填
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
@@ -371,32 +395,48 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     }
 
     /**
-     * Get 签署人userId，传此字段则不用传姓名、手机号 
-     * @return UserId 签署人userId，传此字段则不用传姓名、手机号
+     * Get 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
+
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息 
+     * @return UserId 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
+
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 签署人userId，传此字段则不用传姓名、手机号
-     * @param UserId 签署人userId，传此字段则不用传姓名、手机号
+     * Set 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
+
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
+     * @param UserId 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
+
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 签署人用户来源，企微侧用户请传入：WEWORKAPP 
-     * @return ApproverSource 签署人用户来源，企微侧用户请传入：WEWORKAPP
+     * Get 签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP 
+     * @return ApproverSource 签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP
      */
     public String getApproverSource() {
         return this.ApproverSource;
     }
 
     /**
-     * Set 签署人用户来源，企微侧用户请传入：WEWORKAPP
-     * @param ApproverSource 签署人用户来源，企微侧用户请传入：WEWORKAPP
+     * Set 签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP
+     * @param ApproverSource 签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP
      */
     public void setApproverSource(String ApproverSource) {
         this.ApproverSource = ApproverSource;

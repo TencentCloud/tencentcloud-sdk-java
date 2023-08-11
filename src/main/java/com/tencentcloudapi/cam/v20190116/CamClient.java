@@ -207,6 +207,27 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *创建消息接收人接口：仅允许已完成实名认证的用户访问消息接收人接口，并对每个用户限制每天最多请求10次。
+     * @param req CreateMessageReceiverRequest
+     * @return CreateMessageReceiverResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMessageReceiverResponse CreateMessageReceiver(CreateMessageReceiverRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMessageReceiverResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMessageReceiverResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMessageReceiver");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建角色OIDC配置
      * @param req CreateOIDCConfigRequest
      * @return CreateOIDCConfigResponse

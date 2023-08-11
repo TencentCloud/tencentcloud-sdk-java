@@ -188,6 +188,13 @@ video 纯视频
     private Long RoomType;
 
     /**
+    * 录制时长
+    */
+    @SerializedName("VideoDuration")
+    @Expose
+    private Long VideoDuration;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -603,6 +610,22 @@ video 纯视频
     }
 
     /**
+     * Get 录制时长 
+     * @return VideoDuration 录制时长
+     */
+    public Long getVideoDuration() {
+        return this.VideoDuration;
+    }
+
+    /**
+     * Set 录制时长
+     * @param VideoDuration 录制时长
+     */
+    public void setVideoDuration(Long VideoDuration) {
+        this.VideoDuration = VideoDuration;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -692,6 +715,9 @@ video 纯视频
         if (source.RoomType != null) {
             this.RoomType = new Long(source.RoomType);
         }
+        if (source.VideoDuration != null) {
+            this.VideoDuration = new Long(source.VideoDuration);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -723,6 +749,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
+        this.setParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

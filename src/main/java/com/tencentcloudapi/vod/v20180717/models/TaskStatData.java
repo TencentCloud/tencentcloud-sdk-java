@@ -35,6 +35,7 @@ public class TaskStatData extends AbstractModel{
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
 <li> RebuildMedia: 音画质重生</li>
+<li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
     */
     @SerializedName("TaskType")
@@ -120,6 +121,7 @@ public class TaskStatData extends AbstractModel{
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
 <li> RebuildMedia: 音画质重生</li>
+<li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li> 
      * @return TaskType 任务类型。
 <li> Transcoding: 普通转码</li>
@@ -133,6 +135,7 @@ public class TaskStatData extends AbstractModel{
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
 <li> RebuildMedia: 音画质重生</li>
+<li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public String getTaskType() {
@@ -152,6 +155,7 @@ public class TaskStatData extends AbstractModel{
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
 <li> RebuildMedia: 音画质重生</li>
+<li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      * @param TaskType 任务类型。
 <li> Transcoding: 普通转码</li>
@@ -165,6 +169,7 @@ public class TaskStatData extends AbstractModel{
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
 <li> RebuildMedia: 音画质重生</li>
+<li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public void setTaskType(String TaskType) {

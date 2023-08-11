@@ -283,6 +283,14 @@ public class InstanceAttributesResponse extends AbstractModel{
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
+    * 实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -902,6 +910,26 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.DynamicDiskConfig = DynamicDiskConfig;
     }
 
+    /**
+     * Get 实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceChargeType 实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set 实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceChargeType 实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -1027,6 +1055,9 @@ public class InstanceAttributesResponse extends AbstractModel{
         if (source.DynamicDiskConfig != null) {
             this.DynamicDiskConfig = new DynamicDiskConfig(source.DynamicDiskConfig);
         }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
     }
 
 
@@ -1069,6 +1100,7 @@ public class InstanceAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
         this.setParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
 
     }
 }

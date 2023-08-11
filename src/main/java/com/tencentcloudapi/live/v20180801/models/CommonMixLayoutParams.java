@@ -94,9 +94,9 @@ public class CommonMixLayoutParams extends AbstractModel{
     /**
     * 当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。
@@ -320,18 +320,18 @@ public class CommonMixLayoutParams extends AbstractModel{
     /**
      * Get 当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。
 灰色：0x999999。 
      * @return Color 当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。
@@ -344,18 +344,18 @@ public class CommonMixLayoutParams extends AbstractModel{
     /**
      * Set 当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。
 灰色：0x999999。
      * @param Color 当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。

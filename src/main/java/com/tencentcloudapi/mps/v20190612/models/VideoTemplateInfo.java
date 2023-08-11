@@ -35,7 +35,7 @@ public class VideoTemplateInfo extends AbstractModel{
     private String Codec;
 
     /**
-    * 视频帧率，取值范围：[0, 100]，单位：Hz。
+    * 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
 注意：自适应码率时取值范围是 [0, 60]
     */
@@ -153,10 +153,10 @@ public class VideoTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * Get 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
 注意：自适应码率时取值范围是 [0, 60] 
-     * @return Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * @return Fps 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
 注意：自适应码率时取值范围是 [0, 60]
      */
@@ -165,10 +165,10 @@ public class VideoTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * Set 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
 注意：自适应码率时取值范围是 [0, 60]
-     * @param Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * @param Fps 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
 注意：自适应码率时取值范围是 [0, 60]
      */

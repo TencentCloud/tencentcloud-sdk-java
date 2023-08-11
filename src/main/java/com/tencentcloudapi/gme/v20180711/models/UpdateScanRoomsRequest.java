@@ -37,7 +37,7 @@ public class UpdateScanRoomsRequest extends AbstractModel{
     private String RoomIdString;
 
     /**
-    * 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
+    * 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
     */
     @SerializedName("RoomIdRegex")
     @Expose
@@ -76,16 +76,16 @@ public class UpdateScanRoomsRequest extends AbstractModel{
     }
 
     /**
-     * Get 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检 
-     * @return RoomIdRegex 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
+     * Get 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检） 
+     * @return RoomIdRegex 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      */
     public String [] getRoomIdRegex() {
         return this.RoomIdRegex;
     }
 
     /**
-     * Set 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
-     * @param RoomIdRegex 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
+     * Set 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
+     * @param RoomIdRegex 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      */
     public void setRoomIdRegex(String [] RoomIdRegex) {
         this.RoomIdRegex = RoomIdRegex;

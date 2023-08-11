@@ -140,7 +140,7 @@ public class KongRoutePreview extends AbstractModel{
     */
     @SerializedName("Headers")
     @Expose
-    private KVMapping Headers;
+    private KVMapping [] Headers;
 
     /**
      * Get 服务ID
@@ -432,7 +432,7 @@ public class KongRoutePreview extends AbstractModel{
      * @return Headers 路由的Headers
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public KVMapping getHeaders() {
+    public KVMapping [] getHeaders() {
         return this.Headers;
     }
 
@@ -442,7 +442,7 @@ public class KongRoutePreview extends AbstractModel{
      * @param Headers 路由的Headers
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHeaders(KVMapping Headers) {
+    public void setHeaders(KVMapping [] Headers) {
         this.Headers = Headers;
     }
 
@@ -512,7 +512,10 @@ public class KongRoutePreview extends AbstractModel{
             }
         }
         if (source.Headers != null) {
-            this.Headers = new KVMapping(source.Headers);
+            this.Headers = new KVMapping[source.Headers.length];
+            for (int i = 0; i < source.Headers.length; i++) {
+                this.Headers[i] = new KVMapping(source.Headers[i]);
+            }
         }
     }
 
@@ -535,7 +538,7 @@ public class KongRoutePreview extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "ServiceID", this.ServiceID);
         this.setParamArraySimple(map, prefix + "DestinationPorts.", this.DestinationPorts);
-        this.setParamObj(map, prefix + "Headers.", this.Headers);
+        this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
 
     }
 }

@@ -156,6 +156,13 @@ public class EsParam extends AbstractModel{
     private String DateField;
 
     /**
+    * 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+    */
+    @SerializedName("RecordMappingMode")
+    @Expose
+    private String RecordMappingMode;
+
+    /**
      * Get 实例资源 
      * @return Resource 实例资源
      */
@@ -459,6 +466,22 @@ public class EsParam extends AbstractModel{
         this.DateField = DateField;
     }
 
+    /**
+     * Get 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引 
+     * @return RecordMappingMode 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+     */
+    public String getRecordMappingMode() {
+        return this.RecordMappingMode;
+    }
+
+    /**
+     * Set 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+     * @param RecordMappingMode 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+     */
+    public void setRecordMappingMode(String RecordMappingMode) {
+        this.RecordMappingMode = RecordMappingMode;
+    }
+
     public EsParam() {
     }
 
@@ -527,6 +550,9 @@ public class EsParam extends AbstractModel{
         if (source.DateField != null) {
             this.DateField = new String(source.DateField);
         }
+        if (source.RecordMappingMode != null) {
+            this.RecordMappingMode = new String(source.RecordMappingMode);
+        }
     }
 
 
@@ -553,6 +579,7 @@ public class EsParam extends AbstractModel{
         this.setParamObj(map, prefix + "DropDlq.", this.DropDlq);
         this.setParamArrayObj(map, prefix + "RecordMappingList.", this.RecordMappingList);
         this.setParamSimple(map, prefix + "DateField", this.DateField);
+        this.setParamSimple(map, prefix + "RecordMappingMode", this.RecordMappingMode);
 
     }
 }

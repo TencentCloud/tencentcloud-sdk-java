@@ -142,7 +142,7 @@ video 纯视频
     private Long AudienceType;
 
     /**
-    * 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+    * 录制模板。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
     */
     @SerializedName("RecordLayout")
     @Expose
@@ -491,16 +491,16 @@ video 纯视频
     }
 
     /**
-     * Get 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744 
-     * @return RecordLayout 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * Get 录制模板。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744 
+     * @return RecordLayout 录制模板。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      */
     public Long getRecordLayout() {
         return this.RecordLayout;
     }
 
     /**
-     * Set 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
-     * @param RecordLayout 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * Set 录制模板。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * @param RecordLayout 录制模板。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      */
     public void setRecordLayout(Long RecordLayout) {
         this.RecordLayout = RecordLayout;
