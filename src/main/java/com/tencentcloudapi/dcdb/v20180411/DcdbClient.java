@@ -798,6 +798,27 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
+     * @param req DescribeLogFileRetentionPeriodRequest
+     * @return DescribeLogFileRetentionPeriodResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogFileRetentionPeriod");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeOrders）用于查询分布式数据库订单信息。传入订单ID来查询订单关联的分布式数据库实例，和对应的任务流程ID。
      * @param req DescribeOrdersRequest
      * @return DescribeOrdersResponse

@@ -4431,6 +4431,48 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *查询恶意请求事件详情
+     * @param req DescribeRiskDnsEventDetailRequest
+     * @return DescribeRiskDnsEventDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskDnsEventDetailResponse DescribeRiskDnsEventDetail(DescribeRiskDnsEventDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskDnsEventDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskDnsEventDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskDnsEventDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询恶意请求事件列表
+     * @param req DescribeRiskDnsListRequest
+     * @return DescribeRiskDnsListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskDnsListResponse DescribeRiskDnsList(DescribeRiskDnsListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskDnsListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskDnsListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskDnsList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询最近一次任务发现的风险项的信息列表，支持根据特殊字段进行过滤
      * @param req DescribeRiskListRequest
      * @return DescribeRiskListResponse

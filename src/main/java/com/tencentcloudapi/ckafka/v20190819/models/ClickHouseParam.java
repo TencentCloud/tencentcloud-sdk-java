@@ -24,6 +24,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse的集群
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cluster")
     @Expose
@@ -31,6 +32,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse的数据库名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -38,6 +40,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse的数据表名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -45,6 +48,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse的schema
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Schema")
     @Expose
@@ -52,6 +56,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * 实例资源
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -59,6 +64,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse的连接ip
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -66,6 +72,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse的连接port
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -73,6 +80,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse的用户名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -80,6 +88,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse的密码
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -87,6 +96,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * 实例vip
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceVip")
     @Expose
@@ -94,6 +104,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * 实例的vpcId
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -101,6 +112,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfBuilt")
     @Expose
@@ -108,6 +120,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropInvalidMessage")
     @Expose
@@ -115,6 +128,7 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * ClickHouse 类型，emr-clickhouse : "emr";cdw-clickhouse : "cdwch";自建 : ""
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -122,14 +136,44 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
     * 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropCls")
     @Expose
     private DropCls DropCls;
 
     /**
-     * Get ClickHouse的集群 
+    * 每批次投递到 ClickHouse 表消息数量，默认为 1000 条。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BatchSize")
+    @Expose
+    private Long BatchSize;
+
+    /**
+    * 每次从 topic 中拉取消息大小，默认为 1MB，即至少要从 topic 中批量拉取 1MB 消息，才进行数据投递到 ClickHouse 操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsumerFetchMinBytes")
+    @Expose
+    private Long ConsumerFetchMinBytes;
+
+    /**
+    * 每次从 topic 拉取消息最大等待时间，当超过当前最大等待时间时，即使没有拉取到 ConsumerFetchMinBytes 大小，也将进行 ClickHouse 投递操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsumerFetchMaxWaitMs")
+    @Expose
+    private Long ConsumerFetchMaxWaitMs;
+
+    /**
+     * Get ClickHouse的集群
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cluster ClickHouse的集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCluster() {
         return this.Cluster;
@@ -137,15 +181,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse的集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Cluster ClickHouse的集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCluster(String Cluster) {
         this.Cluster = Cluster;
     }
 
     /**
-     * Get ClickHouse的数据库名 
+     * Get ClickHouse的数据库名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Database ClickHouse的数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -153,15 +201,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse的数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Database ClickHouse的数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get ClickHouse的数据表名 
+     * Get ClickHouse的数据表名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Table ClickHouse的数据表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -169,15 +221,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse的数据表名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Table ClickHouse的数据表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get ClickHouse的schema 
+     * Get ClickHouse的schema
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Schema ClickHouse的schema
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClickHouseSchema [] getSchema() {
         return this.Schema;
@@ -185,15 +241,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse的schema
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Schema ClickHouse的schema
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchema(ClickHouseSchema [] Schema) {
         this.Schema = Schema;
     }
 
     /**
-     * Get 实例资源 
+     * Get 实例资源
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Resource 实例资源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -201,15 +261,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set 实例资源
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 实例资源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get ClickHouse的连接ip 
+     * Get ClickHouse的连接ip
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ip ClickHouse的连接ip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -217,15 +281,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse的连接ip
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip ClickHouse的连接ip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get ClickHouse的连接port 
+     * Get ClickHouse的连接port
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Port ClickHouse的连接port
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -233,15 +301,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse的连接port
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Port ClickHouse的连接port
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get ClickHouse的用户名 
+     * Get ClickHouse的用户名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserName ClickHouse的用户名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -249,15 +321,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse的用户名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName ClickHouse的用户名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get ClickHouse的密码 
+     * Get ClickHouse的密码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Password ClickHouse的密码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -265,15 +341,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse的密码
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Password ClickHouse的密码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 实例vip 
+     * Get 实例vip
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceVip 实例vip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceVip() {
         return this.ServiceVip;
@@ -281,15 +361,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set 实例vip
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceVip 实例vip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get 实例的vpcId 
+     * Get 实例的vpcId
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UniqVpcId 实例的vpcId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -297,15 +381,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set 实例的vpcId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId 实例的vpcId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 是否为自建集群 
+     * Get 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SelfBuilt 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
@@ -313,15 +401,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfBuilt 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
     }
 
     /**
-     * Get ClickHouse是否抛弃解析失败的消息，默认为true 
+     * Get ClickHouse是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DropInvalidMessage ClickHouse是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDropInvalidMessage() {
         return this.DropInvalidMessage;
@@ -329,15 +421,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DropInvalidMessage ClickHouse是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropInvalidMessage(Boolean DropInvalidMessage) {
         this.DropInvalidMessage = DropInvalidMessage;
     }
 
     /**
-     * Get ClickHouse 类型，emr-clickhouse : "emr";cdw-clickhouse : "cdwch";自建 : "" 
+     * Get ClickHouse 类型，emr-clickhouse : "emr";cdw-clickhouse : "cdwch";自建 : ""
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type ClickHouse 类型，emr-clickhouse : "emr";cdw-clickhouse : "cdwch";自建 : ""
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -345,15 +441,19 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set ClickHouse 类型，emr-clickhouse : "emr";cdw-clickhouse : "cdwch";自建 : ""
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type ClickHouse 类型，emr-clickhouse : "emr";cdw-clickhouse : "cdwch";自建 : ""
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效 
+     * Get 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DropCls getDropCls() {
         return this.DropCls;
@@ -361,10 +461,84 @@ public class ClickHouseParam extends AbstractModel{
 
     /**
      * Set 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropCls(DropCls DropCls) {
         this.DropCls = DropCls;
+    }
+
+    /**
+     * Get 每批次投递到 ClickHouse 表消息数量，默认为 1000 条。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BatchSize 每批次投递到 ClickHouse 表消息数量，默认为 1000 条。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBatchSize() {
+        return this.BatchSize;
+    }
+
+    /**
+     * Set 每批次投递到 ClickHouse 表消息数量，默认为 1000 条。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BatchSize 每批次投递到 ClickHouse 表消息数量，默认为 1000 条。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBatchSize(Long BatchSize) {
+        this.BatchSize = BatchSize;
+    }
+
+    /**
+     * Get 每次从 topic 中拉取消息大小，默认为 1MB，即至少要从 topic 中批量拉取 1MB 消息，才进行数据投递到 ClickHouse 操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsumerFetchMinBytes 每次从 topic 中拉取消息大小，默认为 1MB，即至少要从 topic 中批量拉取 1MB 消息，才进行数据投递到 ClickHouse 操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConsumerFetchMinBytes() {
+        return this.ConsumerFetchMinBytes;
+    }
+
+    /**
+     * Set 每次从 topic 中拉取消息大小，默认为 1MB，即至少要从 topic 中批量拉取 1MB 消息，才进行数据投递到 ClickHouse 操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsumerFetchMinBytes 每次从 topic 中拉取消息大小，默认为 1MB，即至少要从 topic 中批量拉取 1MB 消息，才进行数据投递到 ClickHouse 操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsumerFetchMinBytes(Long ConsumerFetchMinBytes) {
+        this.ConsumerFetchMinBytes = ConsumerFetchMinBytes;
+    }
+
+    /**
+     * Get 每次从 topic 拉取消息最大等待时间，当超过当前最大等待时间时，即使没有拉取到 ConsumerFetchMinBytes 大小，也将进行 ClickHouse 投递操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsumerFetchMaxWaitMs 每次从 topic 拉取消息最大等待时间，当超过当前最大等待时间时，即使没有拉取到 ConsumerFetchMinBytes 大小，也将进行 ClickHouse 投递操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConsumerFetchMaxWaitMs() {
+        return this.ConsumerFetchMaxWaitMs;
+    }
+
+    /**
+     * Set 每次从 topic 拉取消息最大等待时间，当超过当前最大等待时间时，即使没有拉取到 ConsumerFetchMinBytes 大小，也将进行 ClickHouse 投递操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsumerFetchMaxWaitMs 每次从 topic 拉取消息最大等待时间，当超过当前最大等待时间时，即使没有拉取到 ConsumerFetchMinBytes 大小，也将进行 ClickHouse 投递操作。
+提高该参数值，有利于减少往  ClickHouse 投递的次数，但在错误消息过多及网络不稳定等极端情况下时，可能导致频繁重试影响效率。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsumerFetchMaxWaitMs(Long ConsumerFetchMaxWaitMs) {
+        this.ConsumerFetchMaxWaitMs = ConsumerFetchMaxWaitMs;
     }
 
     public ClickHouseParam() {
@@ -423,6 +597,15 @@ public class ClickHouseParam extends AbstractModel{
         if (source.DropCls != null) {
             this.DropCls = new DropCls(source.DropCls);
         }
+        if (source.BatchSize != null) {
+            this.BatchSize = new Long(source.BatchSize);
+        }
+        if (source.ConsumerFetchMinBytes != null) {
+            this.ConsumerFetchMinBytes = new Long(source.ConsumerFetchMinBytes);
+        }
+        if (source.ConsumerFetchMaxWaitMs != null) {
+            this.ConsumerFetchMaxWaitMs = new Long(source.ConsumerFetchMaxWaitMs);
+        }
     }
 
 
@@ -445,6 +628,9 @@ public class ClickHouseParam extends AbstractModel{
         this.setParamSimple(map, prefix + "DropInvalidMessage", this.DropInvalidMessage);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "DropCls.", this.DropCls);
+        this.setParamSimple(map, prefix + "BatchSize", this.BatchSize);
+        this.setParamSimple(map, prefix + "ConsumerFetchMinBytes", this.ConsumerFetchMinBytes);
+        this.setParamSimple(map, prefix + "ConsumerFetchMaxWaitMs", this.ConsumerFetchMaxWaitMs);
 
     }
 }

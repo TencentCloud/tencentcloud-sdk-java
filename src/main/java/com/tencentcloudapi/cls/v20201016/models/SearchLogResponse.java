@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel{
 
     /**
-    * 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+    * 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
     */
     @SerializedName("Context")
     @Expose
@@ -97,6 +99,14 @@ public class SearchLogResponse extends AbstractModel{
     private Float SamplingRate;
 
     /**
+    * 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Topics")
+    @Expose
+    private SearchLogTopics Topics;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -104,16 +114,24 @@ public class SearchLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时 
-     * @return Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * Get 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context 
+     * @return Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
-     * @param Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * Set 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
+     * @param Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
      */
     public void setContext(String Context) {
         this.Context = Context;
@@ -292,6 +310,26 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
+     * Get 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Topics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SearchLogTopics getTopics() {
+        return this.Topics;
+    }
+
+    /**
+     * Set 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Topics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopics(SearchLogTopics Topics) {
+        this.Topics = Topics;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -357,6 +395,9 @@ public class SearchLogResponse extends AbstractModel{
         if (source.SamplingRate != null) {
             this.SamplingRate = new Float(source.SamplingRate);
         }
+        if (source.Topics != null) {
+            this.Topics = new SearchLogTopics(source.Topics);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -376,6 +417,7 @@ public class SearchLogResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+        this.setParamObj(map, prefix + "Topics.", this.Topics);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

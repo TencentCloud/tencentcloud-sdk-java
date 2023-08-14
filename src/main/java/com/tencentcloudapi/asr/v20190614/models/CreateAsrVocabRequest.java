@@ -37,7 +37,7 @@ public class CreateAsrVocabRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10，权重为[1,10]之间整数，数组长度不大于128
+    * 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10个汉字或30个英文字符，权重为[1,10]之间整数，数组长度不大于128
     */
     @SerializedName("WordWeights")
     @Expose
@@ -84,16 +84,16 @@ public class CreateAsrVocabRequest extends AbstractModel{
     }
 
     /**
-     * Get 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10，权重为[1,10]之间整数，数组长度不大于128 
-     * @return WordWeights 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10，权重为[1,10]之间整数，数组长度不大于128
+     * Get 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10个汉字或30个英文字符，权重为[1,10]之间整数，数组长度不大于128 
+     * @return WordWeights 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10个汉字或30个英文字符，权重为[1,10]之间整数，数组长度不大于128
      */
     public HotWord [] getWordWeights() {
         return this.WordWeights;
     }
 
     /**
-     * Set 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10，权重为[1,10]之间整数，数组长度不大于128
-     * @param WordWeights 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10，权重为[1,10]之间整数，数组长度不大于128
+     * Set 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10个汉字或30个英文字符，权重为[1,10]之间整数，数组长度不大于128
+     * @param WordWeights 词权重数组，包含全部的热词和对应的权重。每个热词的长度不大于10个汉字或30个英文字符，权重为[1,10]之间整数，数组长度不大于128
      */
     public void setWordWeights(HotWord [] WordWeights) {
         this.WordWeights = WordWeights;

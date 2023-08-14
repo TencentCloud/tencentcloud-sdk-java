@@ -442,6 +442,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章
+     * @param req ChannelCreatePreparedPersonalEsignRequest
+     * @return ChannelCreatePreparedPersonalEsignResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreatePreparedPersonalEsignResponse ChannelCreatePreparedPersonalEsign(ChannelCreatePreparedPersonalEsignRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreatePreparedPersonalEsignResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreatePreparedPersonalEsignResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreatePreparedPersonalEsign");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
 合同发起人必须在电子签已经进行实名。
      * @param req ChannelCreateReleaseFlowRequest
