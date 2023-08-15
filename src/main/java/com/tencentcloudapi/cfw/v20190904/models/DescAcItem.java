@@ -221,6 +221,22 @@ public class DescAcItem extends AbstractModel{
     private BetaInfoByACL [] BetaList;
 
     /**
+    * 生效范围：serial，串行；side，旁路；all，全局
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Scope")
+    @Expose
+    private String Scope;
+
+    /**
+    * 互联网边界防火墙使用的内部规则id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternetBorderUuid")
+    @Expose
+    private String InternetBorderUuid;
+
+    /**
      * Get 访问源
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceContent 访问源
@@ -712,6 +728,46 @@ public class DescAcItem extends AbstractModel{
         this.BetaList = BetaList;
     }
 
+    /**
+     * Get 生效范围：serial，串行；side，旁路；all，全局
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Scope 生效范围：serial，串行；side，旁路；all，全局
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set 生效范围：serial，串行；side，旁路；all，全局
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Scope 生效范围：serial，串行；side，旁路；all，全局
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScope(String Scope) {
+        this.Scope = Scope;
+    }
+
+    /**
+     * Get 互联网边界防火墙使用的内部规则id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternetBorderUuid 互联网边界防火墙使用的内部规则id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInternetBorderUuid() {
+        return this.InternetBorderUuid;
+    }
+
+    /**
+     * Set 互联网边界防火墙使用的内部规则id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternetBorderUuid 互联网边界防火墙使用的内部规则id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternetBorderUuid(String InternetBorderUuid) {
+        this.InternetBorderUuid = InternetBorderUuid;
+    }
+
     public DescAcItem() {
     }
 
@@ -798,6 +854,12 @@ public class DescAcItem extends AbstractModel{
                 this.BetaList[i] = new BetaInfoByACL(source.BetaList[i]);
             }
         }
+        if (source.Scope != null) {
+            this.Scope = new String(source.Scope);
+        }
+        if (source.InternetBorderUuid != null) {
+            this.InternetBorderUuid = new String(source.InternetBorderUuid);
+        }
     }
 
 
@@ -830,6 +892,8 @@ public class DescAcItem extends AbstractModel{
         this.setParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "BetaList.", this.BetaList);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
+        this.setParamSimple(map, prefix + "InternetBorderUuid", this.InternetBorderUuid);
 
     }
 }

@@ -37,6 +37,14 @@ public class CreateClusterCheckTaskResponse extends AbstractModel{
     private String CreateResult;
 
     /**
+    * 返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewTaskID")
+    @Expose
+    private String NewTaskID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class CreateClusterCheckTaskResponse extends AbstractModel{
     }
 
     /**
+     * Get 返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewTaskID 返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNewTaskID() {
+        return this.NewTaskID;
+    }
+
+    /**
+     * Set 返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewTaskID 返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewTaskID(String NewTaskID) {
+        this.NewTaskID = NewTaskID;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +133,9 @@ public class CreateClusterCheckTaskResponse extends AbstractModel{
         if (source.CreateResult != null) {
             this.CreateResult = new String(source.CreateResult);
         }
+        if (source.NewTaskID != null) {
+            this.NewTaskID = new String(source.NewTaskID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +148,7 @@ public class CreateClusterCheckTaskResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "CreateResult", this.CreateResult);
+        this.setParamSimple(map, prefix + "NewTaskID", this.NewTaskID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

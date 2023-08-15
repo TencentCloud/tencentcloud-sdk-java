@@ -37,6 +37,14 @@ public class DescribeUnfinishRefreshTaskResponse extends AbstractModel{
     private String TaskStatus;
 
     /**
+    * 新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewTaskID")
+    @Expose
+    private String NewTaskID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeUnfinishRefreshTaskResponse extends AbstractModel{
     }
 
     /**
+     * Get 新任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewTaskID 新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNewTaskID() {
+        return this.NewTaskID;
+    }
+
+    /**
+     * Set 新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewTaskID 新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewTaskID(String NewTaskID) {
+        this.NewTaskID = NewTaskID;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +133,9 @@ public class DescribeUnfinishRefreshTaskResponse extends AbstractModel{
         if (source.TaskStatus != null) {
             this.TaskStatus = new String(source.TaskStatus);
         }
+        if (source.NewTaskID != null) {
+            this.NewTaskID = new String(source.NewTaskID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +148,7 @@ public class DescribeUnfinishRefreshTaskResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamSimple(map, prefix + "NewTaskID", this.NewTaskID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

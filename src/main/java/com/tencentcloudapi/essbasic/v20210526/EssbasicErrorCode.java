@@ -348,6 +348,9 @@ public enum EssbasicErrorCode {
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
      
+    // 参与人信息有重复
+     OPERATIONDENIED_APPROVERREPEAT("OperationDenied.ApproverRepeat"),
+     
     // 不支持的可见性标识。
      OPERATIONDENIED_AUTHTAG("OperationDenied.AuthTag"),
      

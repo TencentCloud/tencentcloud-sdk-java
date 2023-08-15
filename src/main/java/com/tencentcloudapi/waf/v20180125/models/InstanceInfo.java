@@ -196,7 +196,7 @@ public class InstanceInfo extends AbstractModel{
     private Long AttackLogPost;
 
     /**
-    * 带宽峰值
+    * 带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxBandwidth")
@@ -241,6 +241,14 @@ public class InstanceInfo extends AbstractModel{
     @SerializedName("SandboxQps")
     @Expose
     private Long SandboxQps;
+
+    /**
+    * 是否api 安全试用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAPISecurityTrial")
+    @Expose
+    private Long IsAPISecurityTrial;
 
     /**
      * Get id 
@@ -647,9 +655,9 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 带宽峰值
+     * Get 带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxBandwidth 带宽峰值
+     * @return MaxBandwidth 带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxBandwidth() {
@@ -657,9 +665,9 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Set 带宽峰值
+     * Set 带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxBandwidth 带宽峰值
+     * @param MaxBandwidth 带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
@@ -762,6 +770,26 @@ public class InstanceInfo extends AbstractModel{
         this.SandboxQps = SandboxQps;
     }
 
+    /**
+     * Get 是否api 安全试用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAPISecurityTrial 是否api 安全试用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsAPISecurityTrial() {
+        return this.IsAPISecurityTrial;
+    }
+
+    /**
+     * Set 是否api 安全试用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAPISecurityTrial 是否api 安全试用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAPISecurityTrial(Long IsAPISecurityTrial) {
+        this.IsAPISecurityTrial = IsAPISecurityTrial;
+    }
+
     public InstanceInfo() {
     }
 
@@ -860,6 +888,9 @@ public class InstanceInfo extends AbstractModel{
         if (source.SandboxQps != null) {
             this.SandboxQps = new Long(source.SandboxQps);
         }
+        if (source.IsAPISecurityTrial != null) {
+            this.IsAPISecurityTrial = new Long(source.IsAPISecurityTrial);
+        }
     }
 
 
@@ -897,6 +928,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BandwidthStandard", this.BandwidthStandard);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SandboxQps", this.SandboxQps);
+        this.setParamSimple(map, prefix + "IsAPISecurityTrial", this.IsAPISecurityTrial);
 
     }
 }

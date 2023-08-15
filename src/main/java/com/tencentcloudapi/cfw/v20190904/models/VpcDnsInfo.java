@@ -81,6 +81,22 @@ public class VpcDnsInfo extends AbstractModel{
     private Long SwitchStatus;
 
     /**
+    * 0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtectedStatus")
+    @Expose
+    private Long ProtectedStatus;
+
+    /**
+    * 是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportDNSFW")
+    @Expose
+    private Long SupportDNSFW;
+
+    /**
      * Get vpc id 
      * @return VpcId vpc id
      */
@@ -216,6 +232,46 @@ public class VpcDnsInfo extends AbstractModel{
         this.SwitchStatus = SwitchStatus;
     }
 
+    /**
+     * Get 0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtectedStatus 0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProtectedStatus() {
+        return this.ProtectedStatus;
+    }
+
+    /**
+     * Set 0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtectedStatus 0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtectedStatus(Long ProtectedStatus) {
+        this.ProtectedStatus = ProtectedStatus;
+    }
+
+    /**
+     * Get 是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportDNSFW 是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSupportDNSFW() {
+        return this.SupportDNSFW;
+    }
+
+    /**
+     * Set 是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportDNSFW 是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportDNSFW(Long SupportDNSFW) {
+        this.SupportDNSFW = SupportDNSFW;
+    }
+
     public VpcDnsInfo() {
     }
 
@@ -248,6 +304,12 @@ public class VpcDnsInfo extends AbstractModel{
         if (source.SwitchStatus != null) {
             this.SwitchStatus = new Long(source.SwitchStatus);
         }
+        if (source.ProtectedStatus != null) {
+            this.ProtectedStatus = new Long(source.ProtectedStatus);
+        }
+        if (source.SupportDNSFW != null) {
+            this.SupportDNSFW = new Long(source.SupportDNSFW);
+        }
     }
 
 
@@ -263,6 +325,8 @@ public class VpcDnsInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NatInsId", this.NatInsId);
         this.setParamSimple(map, prefix + "NatInsName", this.NatInsName);
         this.setParamSimple(map, prefix + "SwitchStatus", this.SwitchStatus);
+        this.setParamSimple(map, prefix + "ProtectedStatus", this.ProtectedStatus);
+        this.setParamSimple(map, prefix + "SupportDNSFW", this.SupportDNSFW);
 
     }
 }

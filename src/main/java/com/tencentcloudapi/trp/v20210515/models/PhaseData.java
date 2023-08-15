@@ -24,6 +24,7 @@ public class PhaseData extends AbstractModel{
 
     /**
     * 启用头
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadEnabled")
     @Expose
@@ -31,6 +32,7 @@ public class PhaseData extends AbstractModel{
 
     /**
     * 标题
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadTitle")
     @Expose
@@ -38,6 +40,7 @@ public class PhaseData extends AbstractModel{
 
     /**
     * 标识符
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -45,6 +48,7 @@ public class PhaseData extends AbstractModel{
 
     /**
     * 小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -52,6 +56,7 @@ public class PhaseData extends AbstractModel{
 
     /**
     * 小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppPath")
     @Expose
@@ -59,14 +64,17 @@ public class PhaseData extends AbstractModel{
 
     /**
     * 小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-     * Get 启用头 
+     * Get 启用头
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HeadEnabled 启用头
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHeadEnabled() {
         return this.HeadEnabled;
@@ -74,15 +82,19 @@ public class PhaseData extends AbstractModel{
 
     /**
      * Set 启用头
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadEnabled 启用头
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadEnabled(Boolean HeadEnabled) {
         this.HeadEnabled = HeadEnabled;
     }
 
     /**
-     * Get 标题 
+     * Get 标题
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HeadTitle 标题
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHeadTitle() {
         return this.HeadTitle;
@@ -90,15 +102,19 @@ public class PhaseData extends AbstractModel{
 
     /**
      * Set 标题
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadTitle 标题
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadTitle(String HeadTitle) {
         this.HeadTitle = HeadTitle;
     }
 
     /**
-     * Get 标识符 
+     * Get 标识符
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Key 标识符
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -106,15 +122,19 @@ public class PhaseData extends AbstractModel{
 
     /**
      * Set 标识符
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 标识符
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 小程序AppId 
+     * Get 小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -122,15 +142,19 @@ public class PhaseData extends AbstractModel{
 
     /**
      * Set 小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 小程序AppPath 
+     * Get 小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppPath 小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppPath() {
         return this.AppPath;
@@ -138,15 +162,19 @@ public class PhaseData extends AbstractModel{
 
     /**
      * Set 小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AppPath 小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppPath(String AppPath) {
         this.AppPath = AppPath;
     }
 
     /**
-     * Get 小程序名称AppName 
+     * Get 小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppName 小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppName() {
         return this.AppName;
@@ -154,7 +182,9 @@ public class PhaseData extends AbstractModel{
 
     /**
      * Set 小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AppName 小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

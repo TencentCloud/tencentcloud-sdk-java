@@ -1931,6 +1931,27 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *用于在企业版镜像仓库中复制镜像版本
+     * @param req DuplicateImageRequest
+     * @return DuplicateImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DuplicateImageResponse DuplicateImage(DuplicateImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DuplicateImageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DuplicateImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DuplicateImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于在个人版镜像仓库中复制镜像版本
      * @param req DuplicateImagePersonalRequest
      * @return DuplicateImagePersonalResponse

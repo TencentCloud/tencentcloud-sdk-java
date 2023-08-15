@@ -24,7 +24,7 @@ public class DayStreamPlayInfo extends AbstractModel{
 
     /**
     * 数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。
     */
@@ -62,11 +62,11 @@ public class DayStreamPlayInfo extends AbstractModel{
 
     /**
      * Get 数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。 
      * @return Time 数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。
      */
@@ -76,11 +76,11 @@ public class DayStreamPlayInfo extends AbstractModel{
 
     /**
      * Set 数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。
      * @param Time 数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。
      */

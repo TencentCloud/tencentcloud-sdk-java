@@ -151,6 +151,20 @@ public class HostInfo extends AbstractModel{
     private String ClusterID;
 
     /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 集群接入状态
+    */
+    @SerializedName("ClusterAccessedStatus")
+    @Expose
+    private String ClusterAccessedStatus;
+
+    /**
      * Get 主机id 
      * @return HostID 主机id
      */
@@ -446,6 +460,38 @@ public class HostInfo extends AbstractModel{
         this.ClusterID = ClusterID;
     }
 
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get 集群接入状态 
+     * @return ClusterAccessedStatus 集群接入状态
+     */
+    public String getClusterAccessedStatus() {
+        return this.ClusterAccessedStatus;
+    }
+
+    /**
+     * Set 集群接入状态
+     * @param ClusterAccessedStatus 集群接入状态
+     */
+    public void setClusterAccessedStatus(String ClusterAccessedStatus) {
+        this.ClusterAccessedStatus = ClusterAccessedStatus;
+    }
+
     public HostInfo() {
     }
 
@@ -511,6 +557,12 @@ public class HostInfo extends AbstractModel{
         if (source.ClusterID != null) {
             this.ClusterID = new String(source.ClusterID);
         }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterAccessedStatus != null) {
+            this.ClusterAccessedStatus = new String(source.ClusterAccessedStatus);
+        }
     }
 
 
@@ -536,6 +588,8 @@ public class HostInfo extends AbstractModel{
         this.setParamObj(map, prefix + "Project.", this.Project);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
 
     }
 }

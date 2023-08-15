@@ -1341,6 +1341,27 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *LLM模型的对话请求发送接口
+     * @param req SendChatMessageRequest
+     * @return SendChatMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendChatMessageResponse SendChatMessage(SendChatMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendChatMessageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendChatMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendChatMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *启动Notebook
      * @param req StartNotebookRequest
      * @return StartNotebookResponse

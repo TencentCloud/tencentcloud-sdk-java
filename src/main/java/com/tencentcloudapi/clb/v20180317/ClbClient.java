@@ -1444,6 +1444,27 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *修改一个或多个负载均衡实例所属项目。
+     * @param req ModifyLoadBalancersProjectRequest
+     * @return ModifyLoadBalancersProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancersProjectResponse ModifyLoadBalancersProject(ModifyLoadBalancersProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancersProjectResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancersProjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoadBalancersProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ModifyRule 接口用来修改负载均衡七层监听器下的转发规则的各项属性，包括转发路径、健康检查属性、转发策略等。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req ModifyRuleRequest

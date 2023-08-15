@@ -236,6 +236,14 @@ public class DomainsPartInfo extends AbstractModel{
     private String [] IpHeaders;
 
     /**
+    * 0:关闭xff重置；1:开启xff重置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("XFFReset")
+    @Expose
+    private Long XFFReset;
+
+    /**
      * Get 是否开启httpRewrite 
      * @return HttpsRewrite 是否开启httpRewrite
      */
@@ -739,6 +747,26 @@ public class DomainsPartInfo extends AbstractModel{
         this.IpHeaders = IpHeaders;
     }
 
+    /**
+     * Get 0:关闭xff重置；1:开启xff重置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return XFFReset 0:关闭xff重置；1:开启xff重置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getXFFReset() {
+        return this.XFFReset;
+    }
+
+    /**
+     * Set 0:关闭xff重置；1:开启xff重置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param XFFReset 0:关闭xff重置；1:开启xff重置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setXFFReset(Long XFFReset) {
+        this.XFFReset = XFFReset;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -849,6 +877,9 @@ public class DomainsPartInfo extends AbstractModel{
                 this.IpHeaders[i] = new String(source.IpHeaders[i]);
             }
         }
+        if (source.XFFReset != null) {
+            this.XFFReset = new Long(source.XFFReset);
+        }
     }
 
 
@@ -885,6 +916,7 @@ public class DomainsPartInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SniHost", this.SniHost);
         this.setParamArraySimple(map, prefix + "Weights.", this.Weights);
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+        this.setParamSimple(map, prefix + "XFFReset", this.XFFReset);
 
     }
 }

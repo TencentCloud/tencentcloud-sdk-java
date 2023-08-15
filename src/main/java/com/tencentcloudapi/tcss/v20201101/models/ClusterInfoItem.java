@@ -163,6 +163,46 @@ public class ClusterInfoItem extends AbstractModel{
     private String TaskCreateTime;
 
     /**
+    * 接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessedStatus")
+    @Expose
+    private String AccessedStatus;
+
+    /**
+    * 接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessedSubStatus")
+    @Expose
+    private String AccessedSubStatus;
+
+    /**
+    * 节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Long NodeCount;
+
+    /**
+    * 离线节点数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OffLineNodeCount")
+    @Expose
+    private Long OffLineNodeCount;
+
+    /**
+    * 未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnInstallAgentNodeCount")
+    @Expose
+    private Long UnInstallAgentNodeCount;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -482,6 +522,106 @@ public class ClusterInfoItem extends AbstractModel{
         this.TaskCreateTime = TaskCreateTime;
     }
 
+    /**
+     * Get 接入状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessedStatus 接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessedStatus() {
+        return this.AccessedStatus;
+    }
+
+    /**
+     * Set 接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessedStatus 接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessedStatus(String AccessedStatus) {
+        this.AccessedStatus = AccessedStatus;
+    }
+
+    /**
+     * Get 接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessedSubStatus 接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessedSubStatus() {
+        return this.AccessedSubStatus;
+    }
+
+    /**
+     * Set 接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessedSubStatus 接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessedSubStatus(String AccessedSubStatus) {
+        this.AccessedSubStatus = AccessedSubStatus;
+    }
+
+    /**
+     * Get 节点总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeCount 节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * Set 节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeCount 节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeCount(Long NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * Get 离线节点数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OffLineNodeCount 离线节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOffLineNodeCount() {
+        return this.OffLineNodeCount;
+    }
+
+    /**
+     * Set 离线节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OffLineNodeCount 离线节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOffLineNodeCount(Long OffLineNodeCount) {
+        this.OffLineNodeCount = OffLineNodeCount;
+    }
+
+    /**
+     * Get 未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnInstallAgentNodeCount 未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUnInstallAgentNodeCount() {
+        return this.UnInstallAgentNodeCount;
+    }
+
+    /**
+     * Set 未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnInstallAgentNodeCount 未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnInstallAgentNodeCount(Long UnInstallAgentNodeCount) {
+        this.UnInstallAgentNodeCount = UnInstallAgentNodeCount;
+    }
+
     public ClusterInfoItem() {
     }
 
@@ -550,6 +690,21 @@ public class ClusterInfoItem extends AbstractModel{
         if (source.TaskCreateTime != null) {
             this.TaskCreateTime = new String(source.TaskCreateTime);
         }
+        if (source.AccessedStatus != null) {
+            this.AccessedStatus = new String(source.AccessedStatus);
+        }
+        if (source.AccessedSubStatus != null) {
+            this.AccessedSubStatus = new String(source.AccessedSubStatus);
+        }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
+        if (source.OffLineNodeCount != null) {
+            this.OffLineNodeCount = new Long(source.OffLineNodeCount);
+        }
+        if (source.UnInstallAgentNodeCount != null) {
+            this.UnInstallAgentNodeCount = new Long(source.UnInstallAgentNodeCount);
+        }
     }
 
 
@@ -577,6 +732,11 @@ public class ClusterInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "CheckFailReason", this.CheckFailReason);
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         this.setParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
+        this.setParamSimple(map, prefix + "AccessedStatus", this.AccessedStatus);
+        this.setParamSimple(map, prefix + "AccessedSubStatus", this.AccessedSubStatus);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
+        this.setParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);
 
     }
 }

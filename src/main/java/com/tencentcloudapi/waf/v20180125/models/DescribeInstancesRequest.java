@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * 偏移
+    * 偏移量
     */
     @SerializedName("Offset")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     private FiltersItemNew [] Filters;
 
     /**
-     * Get 偏移 
-     * @return Offset 偏移
+     * Get 偏移量 
+     * @return Offset 偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移
-     * @param Offset 偏移
+     * Set 偏移量
+     * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

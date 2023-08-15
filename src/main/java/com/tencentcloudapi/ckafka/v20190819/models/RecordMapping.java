@@ -24,6 +24,7 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 消息的 key 名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonKey")
     @Expose
@@ -31,6 +32,7 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 消息类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -38,6 +40,7 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 消息是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowNull")
     @Expose
@@ -45,6 +48,7 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 对应映射列名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColumnName")
     @Expose
@@ -52,6 +56,7 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 数据库表额外字段
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -59,6 +64,7 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 当前列大小
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColumnSize")
     @Expose
@@ -66,6 +72,7 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 当前列精度
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DecimalDigits")
     @Expose
@@ -73,6 +80,7 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 是否为自增列
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoIncrement")
     @Expose
@@ -80,14 +88,17 @@ public class RecordMapping extends AbstractModel{
 
     /**
     * 数据库表默认参数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-     * Get 消息的 key 名称 
+     * Get 消息的 key 名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return JsonKey 消息的 key 名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJsonKey() {
         return this.JsonKey;
@@ -95,15 +106,19 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 消息的 key 名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonKey 消息的 key 名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonKey(String JsonKey) {
         this.JsonKey = JsonKey;
     }
 
     /**
-     * Get 消息类型 
+     * Get 消息类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 消息类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -111,15 +126,19 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 消息类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 消息类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 消息是否允许为空 
+     * Get 消息是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AllowNull 消息是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAllowNull() {
         return this.AllowNull;
@@ -127,15 +146,19 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 消息是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AllowNull 消息是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowNull(Boolean AllowNull) {
         this.AllowNull = AllowNull;
     }
 
     /**
-     * Get 对应映射列名称 
+     * Get 对应映射列名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ColumnName 对应映射列名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColumnName() {
         return this.ColumnName;
@@ -143,15 +166,19 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 对应映射列名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ColumnName 对应映射列名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumnName(String ColumnName) {
         this.ColumnName = ColumnName;
     }
 
     /**
-     * Get 数据库表额外字段 
+     * Get 数据库表额外字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExtraInfo 数据库表额外字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtraInfo() {
         return this.ExtraInfo;
@@ -159,15 +186,19 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 数据库表额外字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo 数据库表额外字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInfo(String ExtraInfo) {
         this.ExtraInfo = ExtraInfo;
     }
 
     /**
-     * Get 当前列大小 
+     * Get 当前列大小
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ColumnSize 当前列大小
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColumnSize() {
         return this.ColumnSize;
@@ -175,15 +206,19 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 当前列大小
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ColumnSize 当前列大小
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumnSize(String ColumnSize) {
         this.ColumnSize = ColumnSize;
     }
 
     /**
-     * Get 当前列精度 
+     * Get 当前列精度
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DecimalDigits 当前列精度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDecimalDigits() {
         return this.DecimalDigits;
@@ -191,15 +226,19 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 当前列精度
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DecimalDigits 当前列精度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDecimalDigits(String DecimalDigits) {
         this.DecimalDigits = DecimalDigits;
     }
 
     /**
-     * Get 是否为自增列 
+     * Get 是否为自增列
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AutoIncrement 是否为自增列
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoIncrement() {
         return this.AutoIncrement;
@@ -207,15 +246,19 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 是否为自增列
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoIncrement 是否为自增列
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoIncrement(Boolean AutoIncrement) {
         this.AutoIncrement = AutoIncrement;
     }
 
     /**
-     * Get 数据库表默认参数 
+     * Get 数据库表默认参数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DefaultValue 数据库表默认参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultValue() {
         return this.DefaultValue;
@@ -223,7 +266,9 @@ public class RecordMapping extends AbstractModel{
 
     /**
      * Set 数据库表默认参数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultValue 数据库表默认参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;

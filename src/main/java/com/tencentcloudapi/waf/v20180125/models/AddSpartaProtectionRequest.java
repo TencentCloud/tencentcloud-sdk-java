@@ -58,14 +58,14 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     private Long IsWebsocket;
 
     /**
-    * 负载均衡策略，0表示轮徇，1表示IP hash
+    * 负载均衡策略，0表示轮询，1表示IP hash
     */
     @SerializedName("LoadBalance")
     @Expose
     private String LoadBalance;
 
     /**
-    * CertType=1时，需要填次参数，表示证书内容
+    * 值为1时，需要填次参数，表示证书内容
     */
     @SerializedName("Cert")
     @Expose
@@ -254,6 +254,13 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     private String [] IpHeaders;
 
     /**
+    * 0:关闭xff重置；1:开启xff重置
+    */
+    @SerializedName("XFFReset")
+    @Expose
+    private Long XFFReset;
+
+    /**
      * Get 需要防御的域名 
      * @return Domain 需要防御的域名
      */
@@ -334,32 +341,32 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get 负载均衡策略，0表示轮徇，1表示IP hash 
-     * @return LoadBalance 负载均衡策略，0表示轮徇，1表示IP hash
+     * Get 负载均衡策略，0表示轮询，1表示IP hash 
+     * @return LoadBalance 负载均衡策略，0表示轮询，1表示IP hash
      */
     public String getLoadBalance() {
         return this.LoadBalance;
     }
 
     /**
-     * Set 负载均衡策略，0表示轮徇，1表示IP hash
-     * @param LoadBalance 负载均衡策略，0表示轮徇，1表示IP hash
+     * Set 负载均衡策略，0表示轮询，1表示IP hash
+     * @param LoadBalance 负载均衡策略，0表示轮询，1表示IP hash
      */
     public void setLoadBalance(String LoadBalance) {
         this.LoadBalance = LoadBalance;
     }
 
     /**
-     * Get CertType=1时，需要填次参数，表示证书内容 
-     * @return Cert CertType=1时，需要填次参数，表示证书内容
+     * Get 值为1时，需要填次参数，表示证书内容 
+     * @return Cert 值为1时，需要填次参数，表示证书内容
      */
     public String getCert() {
         return this.Cert;
     }
 
     /**
-     * Set CertType=1时，需要填次参数，表示证书内容
-     * @param Cert CertType=1时，需要填次参数，表示证书内容
+     * Set 值为1时，需要填次参数，表示证书内容
+     * @param Cert 值为1时，需要填次参数，表示证书内容
      */
     public void setCert(String Cert) {
         this.Cert = Cert;
@@ -781,6 +788,22 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.IpHeaders = IpHeaders;
     }
 
+    /**
+     * Get 0:关闭xff重置；1:开启xff重置 
+     * @return XFFReset 0:关闭xff重置；1:开启xff重置
+     */
+    public Long getXFFReset() {
+        return this.XFFReset;
+    }
+
+    /**
+     * Set 0:关闭xff重置；1:开启xff重置
+     * @param XFFReset 0:关闭xff重置；1:开启xff重置
+     */
+    public void setXFFReset(Long XFFReset) {
+        this.XFFReset = XFFReset;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -906,6 +929,9 @@ public class AddSpartaProtectionRequest extends AbstractModel{
                 this.IpHeaders[i] = new String(source.IpHeaders[i]);
             }
         }
+        if (source.XFFReset != null) {
+            this.XFFReset = new Long(source.XFFReset);
+        }
     }
 
 
@@ -946,6 +972,7 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SniType", this.SniType);
         this.setParamSimple(map, prefix + "SniHost", this.SniHost);
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+        this.setParamSimple(map, prefix + "XFFReset", this.XFFReset);
 
     }
 }

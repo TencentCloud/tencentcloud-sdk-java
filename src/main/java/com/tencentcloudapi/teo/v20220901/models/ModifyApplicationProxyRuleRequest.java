@@ -118,6 +118,13 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel{
     private String OriginPort;
 
     /**
+    * 规则标签。不填保持原有值。
+    */
+    @SerializedName("RuleTag")
+    @Expose
+    private String RuleTag;
+
+    /**
      * Get 站点ID。 
      * @return ZoneId 站点ID。
      */
@@ -365,6 +372,22 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel{
         this.OriginPort = OriginPort;
     }
 
+    /**
+     * Get 规则标签。不填保持原有值。 
+     * @return RuleTag 规则标签。不填保持原有值。
+     */
+    public String getRuleTag() {
+        return this.RuleTag;
+    }
+
+    /**
+     * Set 规则标签。不填保持原有值。
+     * @param RuleTag 规则标签。不填保持原有值。
+     */
+    public void setRuleTag(String RuleTag) {
+        this.RuleTag = RuleTag;
+    }
+
     public ModifyApplicationProxyRuleRequest() {
     }
 
@@ -412,6 +435,9 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel{
         if (source.OriginPort != null) {
             this.OriginPort = new String(source.OriginPort);
         }
+        if (source.RuleTag != null) {
+            this.RuleTag = new String(source.RuleTag);
+        }
     }
 
 
@@ -430,6 +456,7 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
+        this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
 
     }
 }

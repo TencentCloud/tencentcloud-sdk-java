@@ -65,7 +65,7 @@ public class CreateDataTransformRequest extends AbstractModel{
     private Long EnableFlag;
 
     /**
-    * 加工任务目的topic_id以及别名
+    * 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
     */
     @SerializedName("DstResources")
     @Expose
@@ -175,16 +175,16 @@ public class CreateDataTransformRequest extends AbstractModel{
     }
 
     /**
-     * Get 加工任务目的topic_id以及别名 
-     * @return DstResources 加工任务目的topic_id以及别名
+     * Get 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写 
+     * @return DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
      */
     public DataTransformResouceInfo [] getDstResources() {
         return this.DstResources;
     }
 
     /**
-     * Set 加工任务目的topic_id以及别名
-     * @param DstResources 加工任务目的topic_id以及别名
+     * Set 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
+     * @param DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
      */
     public void setDstResources(DataTransformResouceInfo [] DstResources) {
         this.DstResources = DstResources;

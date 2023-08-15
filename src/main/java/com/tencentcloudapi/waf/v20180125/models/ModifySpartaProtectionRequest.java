@@ -205,7 +205,7 @@ public class ModifySpartaProtectionRequest extends AbstractModel{
     private Long [] Ciphers;
 
     /**
-    * 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+    * 0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
     */
     @SerializedName("CipherTemplate")
     @Expose
@@ -245,6 +245,13 @@ public class ModifySpartaProtectionRequest extends AbstractModel{
     @SerializedName("IpHeaders")
     @Expose
     private String [] IpHeaders;
+
+    /**
+    * 0:关闭xff重置；1:开启xff重置
+    */
+    @SerializedName("XFFReset")
+    @Expose
+    private Long XFFReset;
 
     /**
      * Get 域名 
@@ -663,16 +670,16 @@ public class ModifySpartaProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版 
-     * @return CipherTemplate 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     * Get 0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板 
+     * @return CipherTemplate 0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
      */
     public Long getCipherTemplate() {
         return this.CipherTemplate;
     }
 
     /**
-     * Set 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
-     * @param CipherTemplate 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     * Set 0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
+     * @param CipherTemplate 0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
      */
     public void setCipherTemplate(Long CipherTemplate) {
         this.CipherTemplate = CipherTemplate;
@@ -756,6 +763,22 @@ public class ModifySpartaProtectionRequest extends AbstractModel{
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
+    }
+
+    /**
+     * Get 0:关闭xff重置；1:开启xff重置 
+     * @return XFFReset 0:关闭xff重置；1:开启xff重置
+     */
+    public Long getXFFReset() {
+        return this.XFFReset;
+    }
+
+    /**
+     * Set 0:关闭xff重置；1:开启xff重置
+     * @param XFFReset 0:关闭xff重置；1:开启xff重置
+     */
+    public void setXFFReset(Long XFFReset) {
+        this.XFFReset = XFFReset;
     }
 
     public ModifySpartaProtectionRequest() {
@@ -877,6 +900,9 @@ public class ModifySpartaProtectionRequest extends AbstractModel{
                 this.IpHeaders[i] = new String(source.IpHeaders[i]);
             }
         }
+        if (source.XFFReset != null) {
+            this.XFFReset = new Long(source.XFFReset);
+        }
     }
 
 
@@ -916,6 +942,7 @@ public class ModifySpartaProtectionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SniType", this.SniType);
         this.setParamSimple(map, prefix + "SniHost", this.SniHost);
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+        this.setParamSimple(map, prefix + "XFFReset", this.XFFReset);
 
     }
 }

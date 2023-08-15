@@ -30,6 +30,13 @@ public class DescribeRefreshTaskRequest extends AbstractModel{
     private Long TaskId;
 
     /**
+    * 新任务ID
+    */
+    @SerializedName("NewTaskID")
+    @Expose
+    private String NewTaskID;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -45,6 +52,22 @@ public class DescribeRefreshTaskRequest extends AbstractModel{
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 新任务ID 
+     * @return NewTaskID 新任务ID
+     */
+    public String getNewTaskID() {
+        return this.NewTaskID;
+    }
+
+    /**
+     * Set 新任务ID
+     * @param NewTaskID 新任务ID
+     */
+    public void setNewTaskID(String NewTaskID) {
+        this.NewTaskID = NewTaskID;
+    }
+
     public DescribeRefreshTaskRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeRefreshTaskRequest extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.NewTaskID != null) {
+            this.NewTaskID = new String(source.NewTaskID);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeRefreshTaskRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "NewTaskID", this.NewTaskID);
 
     }
 }

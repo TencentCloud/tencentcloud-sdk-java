@@ -45,6 +45,9 @@ public enum EisErrorCode {
     // 不支持的Zone。
      INVALIDPARAMETERVALUE_PILOTZONENOTSUPPORTED("InvalidParameterValue.PilotZoneNotSupported"),
      
+    // 应用和实例不匹配。
+     INVALIDPARAMETERVALUE_PROJECTANDINSTANCENOTMATCH("InvalidParameterValue.ProjectAndInstanceNotMatch"),
+     
     // 运行时已删除。
      INVALIDPARAMETERVALUE_RUNTIMEALREADYDELETED("InvalidParameterValue.RuntimeAlreadyDeleted"),
      
