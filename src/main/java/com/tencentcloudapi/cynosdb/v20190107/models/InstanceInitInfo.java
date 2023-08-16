@@ -51,6 +51,34 @@ public class InstanceInitInfo extends AbstractModel{
     private Long InstanceCount;
 
     /**
+    * Serverless实例个数最小值，范围[1,15]
+    */
+    @SerializedName("MinRoCount")
+    @Expose
+    private Long MinRoCount;
+
+    /**
+    * Serverless实例个数最大值，范围[1,15]
+    */
+    @SerializedName("MaxRoCount")
+    @Expose
+    private Long MaxRoCount;
+
+    /**
+    * Serverless实例最小规格
+    */
+    @SerializedName("MinRoCpu")
+    @Expose
+    private Float MinRoCpu;
+
+    /**
+    * Serverless实例最大规格
+    */
+    @SerializedName("MaxRoCpu")
+    @Expose
+    private Float MaxRoCpu;
+
+    /**
      * Get 实例cpu 
      * @return Cpu 实例cpu
      */
@@ -114,6 +142,70 @@ public class InstanceInitInfo extends AbstractModel{
         this.InstanceCount = InstanceCount;
     }
 
+    /**
+     * Get Serverless实例个数最小值，范围[1,15] 
+     * @return MinRoCount Serverless实例个数最小值，范围[1,15]
+     */
+    public Long getMinRoCount() {
+        return this.MinRoCount;
+    }
+
+    /**
+     * Set Serverless实例个数最小值，范围[1,15]
+     * @param MinRoCount Serverless实例个数最小值，范围[1,15]
+     */
+    public void setMinRoCount(Long MinRoCount) {
+        this.MinRoCount = MinRoCount;
+    }
+
+    /**
+     * Get Serverless实例个数最大值，范围[1,15] 
+     * @return MaxRoCount Serverless实例个数最大值，范围[1,15]
+     */
+    public Long getMaxRoCount() {
+        return this.MaxRoCount;
+    }
+
+    /**
+     * Set Serverless实例个数最大值，范围[1,15]
+     * @param MaxRoCount Serverless实例个数最大值，范围[1,15]
+     */
+    public void setMaxRoCount(Long MaxRoCount) {
+        this.MaxRoCount = MaxRoCount;
+    }
+
+    /**
+     * Get Serverless实例最小规格 
+     * @return MinRoCpu Serverless实例最小规格
+     */
+    public Float getMinRoCpu() {
+        return this.MinRoCpu;
+    }
+
+    /**
+     * Set Serverless实例最小规格
+     * @param MinRoCpu Serverless实例最小规格
+     */
+    public void setMinRoCpu(Float MinRoCpu) {
+        this.MinRoCpu = MinRoCpu;
+    }
+
+    /**
+     * Get Serverless实例最大规格 
+     * @return MaxRoCpu Serverless实例最大规格
+     */
+    public Float getMaxRoCpu() {
+        return this.MaxRoCpu;
+    }
+
+    /**
+     * Set Serverless实例最大规格
+     * @param MaxRoCpu Serverless实例最大规格
+     */
+    public void setMaxRoCpu(Float MaxRoCpu) {
+        this.MaxRoCpu = MaxRoCpu;
+    }
+
     public InstanceInitInfo() {
     }
 
@@ -134,6 +226,18 @@ public class InstanceInitInfo extends AbstractModel{
         if (source.InstanceCount != null) {
             this.InstanceCount = new Long(source.InstanceCount);
         }
+        if (source.MinRoCount != null) {
+            this.MinRoCount = new Long(source.MinRoCount);
+        }
+        if (source.MaxRoCount != null) {
+            this.MaxRoCount = new Long(source.MaxRoCount);
+        }
+        if (source.MinRoCpu != null) {
+            this.MinRoCpu = new Float(source.MinRoCpu);
+        }
+        if (source.MaxRoCpu != null) {
+            this.MaxRoCpu = new Float(source.MaxRoCpu);
+        }
     }
 
 
@@ -145,6 +249,10 @@ public class InstanceInitInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+        this.setParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
+        this.setParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
+        this.setParamSimple(map, prefix + "MinRoCpu", this.MinRoCpu);
+        this.setParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
 
     }
 }

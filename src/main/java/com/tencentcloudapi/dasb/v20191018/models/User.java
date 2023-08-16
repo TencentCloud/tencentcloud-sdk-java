@@ -111,6 +111,30 @@ public class User extends AbstractModel{
     private String DepartmentId;
 
     /**
+    * 激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ActiveStatus")
+    @Expose
+    private Long ActiveStatus;
+
+    /**
+    * 锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LockStatus")
+    @Expose
+    private Long LockStatus;
+
+    /**
+    * 状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符 
      * @return UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      */
@@ -318,6 +342,66 @@ public class User extends AbstractModel{
         this.DepartmentId = DepartmentId;
     }
 
+    /**
+     * Get 激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ActiveStatus 激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getActiveStatus() {
+        return this.ActiveStatus;
+    }
+
+    /**
+     * Set 激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ActiveStatus 激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setActiveStatus(Long ActiveStatus) {
+        this.ActiveStatus = ActiveStatus;
+    }
+
+    /**
+     * Get 锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LockStatus 锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLockStatus() {
+        return this.LockStatus;
+    }
+
+    /**
+     * Set 锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LockStatus 锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLockStatus(Long LockStatus) {
+        this.LockStatus = LockStatus;
+    }
+
+    /**
+     * Get 状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public User() {
     }
 
@@ -365,6 +449,15 @@ public class User extends AbstractModel{
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.ActiveStatus != null) {
+            this.ActiveStatus = new Long(source.ActiveStatus);
+        }
+        if (source.LockStatus != null) {
+            this.LockStatus = new Long(source.LockStatus);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -384,6 +477,9 @@ public class User extends AbstractModel{
         this.setParamSimple(map, prefix + "ValidateTime", this.ValidateTime);
         this.setParamObj(map, prefix + "Department.", this.Department);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+        this.setParamSimple(map, prefix + "LockStatus", this.LockStatus);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

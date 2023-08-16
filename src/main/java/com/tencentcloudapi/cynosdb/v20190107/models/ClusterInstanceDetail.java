@@ -110,6 +110,14 @@ public class ClusterInstanceDetail extends AbstractModel{
     private String [] MaintainWeekDays;
 
     /**
+    * serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -313,6 +321,26 @@ public class ClusterInstanceDetail extends AbstractModel{
         this.MaintainWeekDays = MaintainWeekDays;
     }
 
+    /**
+     * Get serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServerlessStatus serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServerlessStatus serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
+    }
+
     public ClusterInstanceDetail() {
     }
 
@@ -360,6 +388,9 @@ public class ClusterInstanceDetail extends AbstractModel{
                 this.MaintainWeekDays[i] = new String(source.MaintainWeekDays[i]);
             }
         }
+        if (source.ServerlessStatus != null) {
+            this.ServerlessStatus = new String(source.ServerlessStatus);
+        }
     }
 
 
@@ -379,6 +410,7 @@ public class ClusterInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "MaintainStartTime", this.MaintainStartTime);
         this.setParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
         this.setParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
 
     }
 }

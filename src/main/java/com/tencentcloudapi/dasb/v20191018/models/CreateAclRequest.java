@@ -207,6 +207,13 @@ public class CreateAclRequest extends AbstractModel{
     private String DepartmentId;
 
     /**
+    * 是否允许使用访问串，默认允许
+    */
+    @SerializedName("AllowAccessCredential")
+    @Expose
+    private Boolean AllowAccessCredential;
+
+    /**
      * Get 权限名称，最大32字符，不能包含空白字符 
      * @return Name 权限名称，最大32字符，不能包含空白字符
      */
@@ -630,6 +637,22 @@ public class CreateAclRequest extends AbstractModel{
         this.DepartmentId = DepartmentId;
     }
 
+    /**
+     * Get 是否允许使用访问串，默认允许 
+     * @return AllowAccessCredential 是否允许使用访问串，默认允许
+     */
+    public Boolean getAllowAccessCredential() {
+        return this.AllowAccessCredential;
+    }
+
+    /**
+     * Set 是否允许使用访问串，默认允许
+     * @param AllowAccessCredential 是否允许使用访问串，默认允许
+     */
+    public void setAllowAccessCredential(Boolean AllowAccessCredential) {
+        this.AllowAccessCredential = AllowAccessCredential;
+    }
+
     public CreateAclRequest() {
     }
 
@@ -737,6 +760,9 @@ public class CreateAclRequest extends AbstractModel{
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.AllowAccessCredential != null) {
+            this.AllowAccessCredential = new Boolean(source.AllowAccessCredential);
+        }
     }
 
 
@@ -770,6 +796,7 @@ public class CreateAclRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ValidateFrom", this.ValidateFrom);
         this.setParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
 
     }
 }

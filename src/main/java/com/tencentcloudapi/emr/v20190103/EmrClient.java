@@ -545,6 +545,27 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *强制修改标签
+     * @param req ModifyResourcesTagsRequest
+     * @return ModifyResourcesTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourcesTagsResponse ModifyResourcesTags(ModifyResourcesTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourcesTagsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourcesTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyResourcesTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建流程作业
      * @param req RunJobFlowRequest
      * @return RunJobFlowResponse

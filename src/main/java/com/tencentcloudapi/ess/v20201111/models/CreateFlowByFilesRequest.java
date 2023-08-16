@@ -23,553 +23,848 @@ import java.util.HashMap;
 public class CreateFlowByFilesRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
+    * 执行本接口操作的员工信息。
+使用此接口时，必须填写userId。
+在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+支持填入集团子公司经办人 userId 代发合同。
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 签署流程名称,最大长度200个字符
+    * 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 签署参与者信息，最大限制50方
+    * 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
     */
     @SerializedName("Approvers")
     @Expose
     private ApproverInfo [] Approvers;
 
     /**
-    * 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
+    * 本合同流程需包含的PDF文件资源编号列表，通过UploadFiles接口获取PDF文件资源编号。目前，此接口仅支持单个文件发起。
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-    */
-    @SerializedName("FlowType")
-    @Expose
-    private String FlowType;
-
-    /**
-    * 经办人内容控件配置
-    */
-    @SerializedName("Components")
-    @Expose
-    private Component [] Components;
-
-    /**
-    * 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-    */
-    @SerializedName("CcInfos")
-    @Expose
-    private CcInfo [] CcInfos;
-
-    /**
-    * 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-
-注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
-    */
-    @SerializedName("NeedPreview")
-    @Expose
-    private Boolean NeedPreview;
-
-    /**
-    * 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
-    */
-    @SerializedName("PreviewType")
-    @Expose
-    private Long PreviewType;
-
-    /**
-    * 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
-    */
-    @SerializedName("Deadline")
-    @Expose
-    private Long Deadline;
-
-    /**
-    * 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
-    */
-    @SerializedName("RemindedOn")
-    @Expose
-    private Long RemindedOn;
-
-    /**
-    * 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签）
-    */
-    @SerializedName("Unordered")
-    @Expose
-    private Boolean Unordered;
-
-    /**
-    * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
-    */
-    @SerializedName("CustomShowMap")
-    @Expose
-    private String CustomShowMap;
-
-    /**
-    * 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
-若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
-
-注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
-    */
-    @SerializedName("NeedSignReview")
-    @Expose
-    private Boolean NeedSignReview;
-
-    /**
-    * 用户自定义字段，回调的时候会进行透传，长度需要小于20480
-    */
-    @SerializedName("UserData")
-    @Expose
-    private String UserData;
-
-    /**
-    * 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
-    */
-    @SerializedName("ApproverVerifyType")
-    @Expose
-    private String ApproverVerifyType;
-
-    /**
-    * 签署流程描述,最大长度1000个字符
+    * 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
     */
     @SerializedName("FlowDescription")
     @Expose
     private String FlowDescription;
 
     /**
-    * 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+    * 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
     */
-    @SerializedName("SignBeanTag")
+    @SerializedName("FlowType")
     @Expose
-    private Long SignBeanTag;
+    private String FlowType;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+- 单行文本控件
+- 多行文本控件
+- 勾选框控件
+- 数字控件
+- 图片控件
+- 动态表格等填写控件
     */
-    @SerializedName("Agent")
+    @SerializedName("Components")
     @Expose
-    private Agent Agent;
+    private Component [] Components;
 
     /**
-    * 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+    * 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+注:此功能为白名单功能，使用前请联系对接的客户经理沟通。
+    */
+    @SerializedName("CcInfos")
+    @Expose
+    private CcInfo [] CcInfos;
+
+    /**
+    * 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
+
+- 0：合同发起时通知（默认值）
+- 1：签署完成后通知
     */
     @SerializedName("CcNotifyType")
     @Expose
     private Long CcNotifyType;
 
     /**
-    * 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+    * 是否为预览模式，取值如下：
+
+false：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。
+
+true：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。
+    */
+    @SerializedName("NeedPreview")
+    @Expose
+    private Boolean NeedPreview;
+
+    /**
+    * 
+预览模式下产生的预览链接类型 
+
+- 0 :(默认) 文件流 ,点开后后下载预览的合同PDF文件 
+
+- 1 :H5链接 ,点开后在浏览器中展示合同的样子
+
+注意: 此参数在NeedPreview 为true时有效
+    */
+    @SerializedName("PreviewType")
+    @Expose
+    private Long PreviewType;
+
+    /**
+    * 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
+    * 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
+到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
+    */
+    @SerializedName("RemindedOn")
+    @Expose
+    private Long RemindedOn;
+
+    /**
+    * 
+合同流程的签署顺序类型：
+- false：(默认)有序签署, 本合同多个参与人需要依次签署
+- true：无序签署, 本合同多个参与人没有先后签署限制
+    */
+    @SerializedName("Unordered")
+    @Expose
+    private Boolean Unordered;
+
+    /**
+    * 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+
+- {合同名称}
+- {发起方企业}
+- {发起方姓名}
+- {签署方N企业}
+- {签署方N姓名}
+
+其中，N表示签署方的编号，从1开始，不能超过签署人的数量。
+
+例如，如果是腾讯公司张三发给李四名称为“租房合同”的合同，您可以将此字段设置为：
+合同名称:`合同名称:{合同名称};发起方: {发起方企业}({发起方姓名});签署方:{签署方1姓名}`
+
+则小程序中列表页展示此合同为以下样子
+```
+合同名称：租房合同 
+发起方：腾讯公司(张三) 
+签署方：李四
+```
+    */
+    @SerializedName("CustomShowMap")
+    @Expose
+    private String CustomShowMap;
+
+    /**
+    * 
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
+    */
+    @SerializedName("NeedSignReview")
+    @Expose
+    private Boolean NeedSignReview;
+
+    /**
+    * 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的"回调通知"模块。
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
+    * 指定个人签署方查看合同的校验方式
+
+- VerifyCheck :（默认）人脸识别,人脸识别后才能合同内容
+- MobileCheck:  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
+    */
+    @SerializedName("ApproverVerifyType")
+    @Expose
+    private String ApproverVerifyType;
+
+    /**
+    * 签署方签署控件（印章/签名等）的生成方式：
+
+- 0：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。
+- 1：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。
+    */
+    @SerializedName("SignBeanTag")
+    @Expose
+    private Long SignBeanTag;
+
+    /**
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+    * 个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
+
+- E_PRESCRIPTION_AUTO_SIGN：处方单（医疗自动签） 
+
+注: 个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。
     */
     @SerializedName("AutoSignScene")
     @Expose
     private String AutoSignScene;
 
     /**
-     * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同 
-     * @return Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
+     * Get 执行本接口操作的员工信息。
+使用此接口时，必须填写userId。
+在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+支持填入集团子公司经办人 userId 代发合同。 
+     * @return Operator 执行本接口操作的员工信息。
+使用此接口时，必须填写userId。
+在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+支持填入集团子公司经办人 userId 代发合同。
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
-     * @param Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
+     * Set 执行本接口操作的员工信息。
+使用此接口时，必须填写userId。
+在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+支持填入集团子公司经办人 userId 代发合同。
+     * @param Operator 执行本接口操作的员工信息。
+使用此接口时，必须填写userId。
+在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+支持填入集团子公司经办人 userId 代发合同。
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 签署流程名称,最大长度200个字符 
-     * @return FlowName 签署流程名称,最大长度200个字符
+     * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。 
+     * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 签署流程名称,最大长度200个字符
-     * @param FlowName 签署流程名称,最大长度200个字符
+     * Set 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
+     * @param FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 签署参与者信息，最大限制50方 
-     * @return Approvers 签署参与者信息，最大限制50方
+     * Get 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。 
+     * @return Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
      */
     public ApproverInfo [] getApprovers() {
         return this.Approvers;
     }
 
     /**
-     * Set 签署参与者信息，最大限制50方
-     * @param Approvers 签署参与者信息，最大限制50方
+     * Set 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+     * @param Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
      */
     public void setApprovers(ApproverInfo [] Approvers) {
         this.Approvers = Approvers;
     }
 
     /**
-     * Get 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起 
-     * @return FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
+     * Get 本合同流程需包含的PDF文件资源编号列表，通过UploadFiles接口获取PDF文件资源编号。目前，此接口仅支持单个文件发起。 
+     * @return FileIds 本合同流程需包含的PDF文件资源编号列表，通过UploadFiles接口获取PDF文件资源编号。目前，此接口仅支持单个文件发起。
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
-     * @param FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
+     * Set 本合同流程需包含的PDF文件资源编号列表，通过UploadFiles接口获取PDF文件资源编号。目前，此接口仅支持单个文件发起。
+     * @param FileIds 本合同流程需包含的PDF文件资源编号列表，通过UploadFiles接口获取PDF文件资源编号。目前，此接口仅支持单个文件发起。
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
-     * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     */
-    public String getFlowType() {
-        return this.FlowType;
-    }
-
-    /**
-     * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     */
-    public void setFlowType(String FlowType) {
-        this.FlowType = FlowType;
-    }
-
-    /**
-     * Get 经办人内容控件配置 
-     * @return Components 经办人内容控件配置
-     */
-    public Component [] getComponents() {
-        return this.Components;
-    }
-
-    /**
-     * Set 经办人内容控件配置
-     * @param Components 经办人内容控件配置
-     */
-    public void setComponents(Component [] Components) {
-        this.Components = Components;
-    }
-
-    /**
-     * Get 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用 
-     * @return CcInfos 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-     */
-    public CcInfo [] getCcInfos() {
-        return this.CcInfos;
-    }
-
-    /**
-     * Set 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-     * @param CcInfos 被抄送人的信息列表。
-注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-     */
-    public void setCcInfos(CcInfo [] CcInfos) {
-        this.CcInfos = CcInfos;
-    }
-
-    /**
-     * Get 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-
-注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。 
-     * @return NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-
-注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
-     */
-    public Boolean getNeedPreview() {
-        return this.NeedPreview;
-    }
-
-    /**
-     * Set 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-
-注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
-     * @param NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；
-预览链接有效期300秒；
-
-注：如果使用“预览模式”，出参会返回合同预览链接 PreviewUrl，不会正式发起合同，且出参不会返回签署流程编号 FlowId；如果使用“非预览”，则会正常返回签署流程编号 FlowId，不会生成合同预览链接 PreviewUrl。
-     */
-    public void setNeedPreview(Boolean NeedPreview) {
-        this.NeedPreview = NeedPreview;
-    }
-
-    /**
-     * Get 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效, 
-     * @return PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
-     */
-    public Long getPreviewType() {
-        return this.PreviewType;
-    }
-
-    /**
-     * Set 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
-     * @param PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
-     */
-    public void setPreviewType(Long PreviewType) {
-        this.PreviewType = PreviewType;
-    }
-
-    /**
-     * Get 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后 
-     * @return Deadline 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
-     */
-    public Long getDeadline() {
-        return this.Deadline;
-    }
-
-    /**
-     * Set 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
-     * @param Deadline 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
-     */
-    public void setDeadline(Long Deadline) {
-        this.Deadline = Deadline;
-    }
-
-    /**
-     * Get 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。 
-     * @return RemindedOn 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
-     */
-    public Long getRemindedOn() {
-        return this.RemindedOn;
-    }
-
-    /**
-     * Set 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
-     * @param RemindedOn 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
-     */
-    public void setRemindedOn(Long RemindedOn) {
-        this.RemindedOn = RemindedOn;
-    }
-
-    /**
-     * Get 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签） 
-     * @return Unordered 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签）
-     */
-    public Boolean getUnordered() {
-        return this.Unordered;
-    }
-
-    /**
-     * Set 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签）
-     * @param Unordered 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签）
-     */
-    public void setUnordered(Boolean Unordered) {
-        this.Unordered = Unordered;
-    }
-
-    /**
-     * Get 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始 
-     * @return CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
-     */
-    public String getCustomShowMap() {
-        return this.CustomShowMap;
-    }
-
-    /**
-     * Set 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
-     * @param CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
-     */
-    public void setCustomShowMap(String CustomShowMap) {
-        this.CustomShowMap = CustomShowMap;
-    }
-
-    /**
-     * Get 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
-若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
-
-注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。 
-     * @return NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
-若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
-
-注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
-     */
-    public Boolean getNeedSignReview() {
-        return this.NeedSignReview;
-    }
-
-    /**
-     * Set 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
-若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
-
-注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
-     * @param NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
-若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
-
-注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
-     */
-    public void setNeedSignReview(Boolean NeedSignReview) {
-        this.NeedSignReview = NeedSignReview;
-    }
-
-    /**
-     * Get 用户自定义字段，回调的时候会进行透传，长度需要小于20480 
-     * @return UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
-     */
-    public String getUserData() {
-        return this.UserData;
-    }
-
-    /**
-     * Set 用户自定义字段，回调的时候会进行透传，长度需要小于20480
-     * @param UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
-     */
-    public void setUserData(String UserData) {
-        this.UserData = UserData;
-    }
-
-    /**
-     * Get 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。 
-     * @return ApproverVerifyType 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
-     */
-    public String getApproverVerifyType() {
-        return this.ApproverVerifyType;
-    }
-
-    /**
-     * Set 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
-     * @param ApproverVerifyType 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
-     */
-    public void setApproverVerifyType(String ApproverVerifyType) {
-        this.ApproverVerifyType = ApproverVerifyType;
-    }
-
-    /**
-     * Get 签署流程描述,最大长度1000个字符 
-     * @return FlowDescription 签署流程描述,最大长度1000个字符
+     * Get 合同流程描述信息(可自定义此描述)，最大长度1000个字符。 
+     * @return FlowDescription 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
      */
     public String getFlowDescription() {
         return this.FlowDescription;
     }
 
     /**
-     * Set 签署流程描述,最大长度1000个字符
-     * @param FlowDescription 签署流程描述,最大长度1000个字符
+     * Set 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
+     * @param FlowDescription 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
      */
     public void setFlowDescription(String FlowDescription) {
         this.FlowDescription = FlowDescription;
     }
 
     /**
-     * Get 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件 
-     * @return SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     * Get 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。 
+     * @return FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
      */
-    public Long getSignBeanTag() {
-        return this.SignBeanTag;
+    public String getFlowType() {
+        return this.FlowType;
     }
 
     /**
-     * Set 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
-     * @param SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     * Set 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
+     * @param FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
      */
-    public void setSignBeanTag(Long SignBeanTag) {
-        this.SignBeanTag = SignBeanTag;
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+- 单行文本控件
+- 多行文本控件
+- 勾选框控件
+- 数字控件
+- 图片控件
+- 动态表格等填写控件 
+     * @return Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+- 单行文本控件
+- 多行文本控件
+- 勾选框控件
+- 数字控件
+- 图片控件
+- 动态表格等填写控件
      */
-    public Agent getAgent() {
-        return this.Agent;
+    public Component [] getComponents() {
+        return this.Components;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+- 单行文本控件
+- 多行文本控件
+- 勾选框控件
+- 数字控件
+- 图片控件
+- 动态表格等填写控件
+     * @param Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+- 单行文本控件
+- 多行文本控件
+- 勾选框控件
+- 数字控件
+- 图片控件
+- 动态表格等填写控件
      */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
     }
 
     /**
-     * Get 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知 
-     * @return CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * Get 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+注:此功能为白名单功能，使用前请联系对接的客户经理沟通。 
+     * @return CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+注:此功能为白名单功能，使用前请联系对接的客户经理沟通。
+     */
+    public CcInfo [] getCcInfos() {
+        return this.CcInfos;
+    }
+
+    /**
+     * Set 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+注:此功能为白名单功能，使用前请联系对接的客户经理沟通。
+     * @param CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+注:此功能为白名单功能，使用前请联系对接的客户经理沟通。
+     */
+    public void setCcInfos(CcInfo [] CcInfos) {
+        this.CcInfos = CcInfos;
+    }
+
+    /**
+     * Get 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
+
+- 0：合同发起时通知（默认值）
+- 1：签署完成后通知 
+     * @return CcNotifyType 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
+
+- 0：合同发起时通知（默认值）
+- 1：签署完成后通知
      */
     public Long getCcNotifyType() {
         return this.CcNotifyType;
     }
 
     /**
-     * Set 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
-     * @param CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * Set 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
+
+- 0：合同发起时通知（默认值）
+- 1：签署完成后通知
+     * @param CcNotifyType 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
+
+- 0：合同发起时通知（默认值）
+- 1：签署完成后通知
      */
     public void setCcNotifyType(Long CcNotifyType) {
         this.CcNotifyType = CcNotifyType;
     }
 
     /**
-     * Get 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
-     * @return AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * Get 是否为预览模式，取值如下：
+
+false：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。
+
+true：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。 
+     * @return NeedPreview 是否为预览模式，取值如下：
+
+false：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。
+
+true：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。
+     */
+    public Boolean getNeedPreview() {
+        return this.NeedPreview;
+    }
+
+    /**
+     * Set 是否为预览模式，取值如下：
+
+false：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。
+
+true：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。
+     * @param NeedPreview 是否为预览模式，取值如下：
+
+false：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。
+
+true：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。
+     */
+    public void setNeedPreview(Boolean NeedPreview) {
+        this.NeedPreview = NeedPreview;
+    }
+
+    /**
+     * Get 
+预览模式下产生的预览链接类型 
+
+- 0 :(默认) 文件流 ,点开后后下载预览的合同PDF文件 
+
+- 1 :H5链接 ,点开后在浏览器中展示合同的样子
+
+注意: 此参数在NeedPreview 为true时有效 
+     * @return PreviewType 
+预览模式下产生的预览链接类型 
+
+- 0 :(默认) 文件流 ,点开后后下载预览的合同PDF文件 
+
+- 1 :H5链接 ,点开后在浏览器中展示合同的样子
+
+注意: 此参数在NeedPreview 为true时有效
+     */
+    public Long getPreviewType() {
+        return this.PreviewType;
+    }
+
+    /**
+     * Set 
+预览模式下产生的预览链接类型 
+
+- 0 :(默认) 文件流 ,点开后后下载预览的合同PDF文件 
+
+- 1 :H5链接 ,点开后在浏览器中展示合同的样子
+
+注意: 此参数在NeedPreview 为true时有效
+     * @param PreviewType 
+预览模式下产生的预览链接类型 
+
+- 0 :(默认) 文件流 ,点开后后下载预览的合同PDF文件 
+
+- 1 :H5链接 ,点开后在浏览器中展示合同的样子
+
+注意: 此参数在NeedPreview 为true时有效
+     */
+    public void setPreviewType(Long PreviewType) {
+        this.PreviewType = PreviewType;
+    }
+
+    /**
+     * Get 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。 
+     * @return Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     * @param Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
+    /**
+     * Get 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
+到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。 
+     * @return RemindedOn 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
+到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
+     */
+    public Long getRemindedOn() {
+        return this.RemindedOn;
+    }
+
+    /**
+     * Set 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
+到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
+     * @param RemindedOn 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
+到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
+     */
+    public void setRemindedOn(Long RemindedOn) {
+        this.RemindedOn = RemindedOn;
+    }
+
+    /**
+     * Get 
+合同流程的签署顺序类型：
+- false：(默认)有序签署, 本合同多个参与人需要依次签署
+- true：无序签署, 本合同多个参与人没有先后签署限制 
+     * @return Unordered 
+合同流程的签署顺序类型：
+- false：(默认)有序签署, 本合同多个参与人需要依次签署
+- true：无序签署, 本合同多个参与人没有先后签署限制
+     */
+    public Boolean getUnordered() {
+        return this.Unordered;
+    }
+
+    /**
+     * Set 
+合同流程的签署顺序类型：
+- false：(默认)有序签署, 本合同多个参与人需要依次签署
+- true：无序签署, 本合同多个参与人没有先后签署限制
+     * @param Unordered 
+合同流程的签署顺序类型：
+- false：(默认)有序签署, 本合同多个参与人需要依次签署
+- true：无序签署, 本合同多个参与人没有先后签署限制
+     */
+    public void setUnordered(Boolean Unordered) {
+        this.Unordered = Unordered;
+    }
+
+    /**
+     * Get 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+
+- {合同名称}
+- {发起方企业}
+- {发起方姓名}
+- {签署方N企业}
+- {签署方N姓名}
+
+其中，N表示签署方的编号，从1开始，不能超过签署人的数量。
+
+例如，如果是腾讯公司张三发给李四名称为“租房合同”的合同，您可以将此字段设置为：
+合同名称:`合同名称:{合同名称};发起方: {发起方企业}({发起方姓名});签署方:{签署方1姓名}`
+
+则小程序中列表页展示此合同为以下样子
+```
+合同名称：租房合同 
+发起方：腾讯公司(张三) 
+签署方：李四
+``` 
+     * @return CustomShowMap 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+
+- {合同名称}
+- {发起方企业}
+- {发起方姓名}
+- {签署方N企业}
+- {签署方N姓名}
+
+其中，N表示签署方的编号，从1开始，不能超过签署人的数量。
+
+例如，如果是腾讯公司张三发给李四名称为“租房合同”的合同，您可以将此字段设置为：
+合同名称:`合同名称:{合同名称};发起方: {发起方企业}({发起方姓名});签署方:{签署方1姓名}`
+
+则小程序中列表页展示此合同为以下样子
+```
+合同名称：租房合同 
+发起方：腾讯公司(张三) 
+签署方：李四
+```
+     */
+    public String getCustomShowMap() {
+        return this.CustomShowMap;
+    }
+
+    /**
+     * Set 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+
+- {合同名称}
+- {发起方企业}
+- {发起方姓名}
+- {签署方N企业}
+- {签署方N姓名}
+
+其中，N表示签署方的编号，从1开始，不能超过签署人的数量。
+
+例如，如果是腾讯公司张三发给李四名称为“租房合同”的合同，您可以将此字段设置为：
+合同名称:`合同名称:{合同名称};发起方: {发起方企业}({发起方姓名});签署方:{签署方1姓名}`
+
+则小程序中列表页展示此合同为以下样子
+```
+合同名称：租房合同 
+发起方：腾讯公司(张三) 
+签署方：李四
+```
+     * @param CustomShowMap 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+
+- {合同名称}
+- {发起方企业}
+- {发起方姓名}
+- {签署方N企业}
+- {签署方N姓名}
+
+其中，N表示签署方的编号，从1开始，不能超过签署人的数量。
+
+例如，如果是腾讯公司张三发给李四名称为“租房合同”的合同，您可以将此字段设置为：
+合同名称:`合同名称:{合同名称};发起方: {发起方企业}({发起方姓名});签署方:{签署方1姓名}`
+
+则小程序中列表页展示此合同为以下样子
+```
+合同名称：租房合同 
+发起方：腾讯公司(张三) 
+签署方：李四
+```
+     */
+    public void setCustomShowMap(String CustomShowMap) {
+        this.CustomShowMap = CustomShowMap;
+    }
+
+    /**
+     * Get 
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同 
+     * @return NeedSignReview 
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
+     */
+    public Boolean getNeedSignReview() {
+        return this.NeedSignReview;
+    }
+
+    /**
+     * Set 
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
+     * @param NeedSignReview 
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
+     */
+    public void setNeedSignReview(Boolean NeedSignReview) {
+        this.NeedSignReview = NeedSignReview;
+    }
+
+    /**
+     * Get 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的"回调通知"模块。 
+     * @return UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的"回调通知"模块。
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的"回调通知"模块。
+     * @param UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的"回调通知"模块。
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
+     * Get 指定个人签署方查看合同的校验方式
+
+- VerifyCheck :（默认）人脸识别,人脸识别后才能合同内容
+- MobileCheck:  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容 
+     * @return ApproverVerifyType 指定个人签署方查看合同的校验方式
+
+- VerifyCheck :（默认）人脸识别,人脸识别后才能合同内容
+- MobileCheck:  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
+     */
+    public String getApproverVerifyType() {
+        return this.ApproverVerifyType;
+    }
+
+    /**
+     * Set 指定个人签署方查看合同的校验方式
+
+- VerifyCheck :（默认）人脸识别,人脸识别后才能合同内容
+- MobileCheck:  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
+     * @param ApproverVerifyType 指定个人签署方查看合同的校验方式
+
+- VerifyCheck :（默认）人脸识别,人脸识别后才能合同内容
+- MobileCheck:  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
+     */
+    public void setApproverVerifyType(String ApproverVerifyType) {
+        this.ApproverVerifyType = ApproverVerifyType;
+    }
+
+    /**
+     * Get 签署方签署控件（印章/签名等）的生成方式：
+
+- 0：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。
+- 1：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。 
+     * @return SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
+
+- 0：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。
+- 1：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。
+     */
+    public Long getSignBeanTag() {
+        return this.SignBeanTag;
+    }
+
+    /**
+     * Set 签署方签署控件（印章/签名等）的生成方式：
+
+- 0：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。
+- 1：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。
+     * @param SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
+
+- 0：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。
+- 1：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。
+     */
+    public void setSignBeanTag(Long SignBeanTag) {
+        this.SignBeanTag = SignBeanTag;
+    }
+
+    /**
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
+    /**
+     * Get 个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
+
+- E_PRESCRIPTION_AUTO_SIGN：处方单（医疗自动签） 
+
+注: 个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。 
+     * @return AutoSignScene 个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
+
+- E_PRESCRIPTION_AUTO_SIGN：处方单（医疗自动签） 
+
+注: 个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。
      */
     public String getAutoSignScene() {
         return this.AutoSignScene;
     }
 
     /**
-     * Set 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-     * @param AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * Set 个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
+
+- E_PRESCRIPTION_AUTO_SIGN：处方单（医疗自动签） 
+
+注: 个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。
+     * @param AutoSignScene 个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
+
+- E_PRESCRIPTION_AUTO_SIGN：处方单（医疗自动签） 
+
+注: 个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。
      */
     public void setAutoSignScene(String AutoSignScene) {
         this.AutoSignScene = AutoSignScene;
@@ -601,6 +896,9 @@ MobileCheck：手机号验证
                 this.FileIds[i] = new String(source.FileIds[i]);
             }
         }
+        if (source.FlowDescription != null) {
+            this.FlowDescription = new String(source.FlowDescription);
+        }
         if (source.FlowType != null) {
             this.FlowType = new String(source.FlowType);
         }
@@ -615,6 +913,9 @@ MobileCheck：手机号验证
             for (int i = 0; i < source.CcInfos.length; i++) {
                 this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
             }
+        }
+        if (source.CcNotifyType != null) {
+            this.CcNotifyType = new Long(source.CcNotifyType);
         }
         if (source.NeedPreview != null) {
             this.NeedPreview = new Boolean(source.NeedPreview);
@@ -643,17 +944,11 @@ MobileCheck：手机号验证
         if (source.ApproverVerifyType != null) {
             this.ApproverVerifyType = new String(source.ApproverVerifyType);
         }
-        if (source.FlowDescription != null) {
-            this.FlowDescription = new String(source.FlowDescription);
-        }
         if (source.SignBeanTag != null) {
             this.SignBeanTag = new Long(source.SignBeanTag);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
-        }
-        if (source.CcNotifyType != null) {
-            this.CcNotifyType = new Long(source.CcNotifyType);
         }
         if (source.AutoSignScene != null) {
             this.AutoSignScene = new String(source.AutoSignScene);
@@ -669,9 +964,11 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         this.setParamSimple(map, prefix + "PreviewType", this.PreviewType);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
@@ -681,10 +978,8 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
-        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
         this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
 
     }

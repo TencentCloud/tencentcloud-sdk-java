@@ -30,7 +30,7 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
     private String PackageId;
 
     /**
-    * 实例ID
+    * 集群ID
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -65,6 +65,13 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
     private String Limit;
 
     /**
+    * 实例D
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
      * Get 资源包唯一ID 
      * @return PackageId 资源包唯一ID
      */
@@ -81,16 +88,16 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例ID 
-     * @return ClusterIds 实例ID
+     * Get 集群ID 
+     * @return ClusterIds 集群ID
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set 实例ID
-     * @param ClusterIds 实例ID
+     * Set 集群ID
+     * @param ClusterIds 集群ID
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
@@ -160,6 +167,22 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 实例D 
+     * @return InstanceIds 实例D
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 实例D
+     * @param InstanceIds 实例D
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
     public DescribeResourcePackageDetailRequest() {
     }
 
@@ -189,6 +212,12 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
     }
 
 
@@ -202,6 +231,7 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

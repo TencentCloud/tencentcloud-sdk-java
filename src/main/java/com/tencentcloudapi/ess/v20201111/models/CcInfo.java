@@ -23,135 +23,170 @@ import java.util.HashMap;
 public class CcInfo extends AbstractModel{
 
     /**
-    * 被抄送人手机号，11位数字
+    * 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此业务通知方。
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 被抄送人姓名
+    * 被抄送方姓名。
+抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 被抄送人类型,
-0--个人
-1--员工
+    * 被抄送方类型, 可设置以下类型:
+
+- 0:个人抄送方
+- 1:企业员工抄送方
     */
     @SerializedName("CcType")
     @Expose
     private Long CcType;
 
     /**
-    * 被抄送人权限
-0--可查看
-1--可查看也可下载
+    * 被抄送方权限, 可设置如下权限:
+
+- 0:可查看合同内容
+- 1:可查看合同内容也可下载原文
     */
     @SerializedName("CcPermission")
     @Expose
     private Long CcPermission;
 
     /**
-    * 关注方通知类型：sms--短信，none--不通知
+    * 通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知
     */
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
 
     /**
-     * Get 被抄送人手机号，11位数字 
-     * @return Mobile 被抄送人手机号，11位数字
+     * Get 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此业务通知方。 
+     * @return Mobile 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此业务通知方。
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 被抄送人手机号，11位数字
-     * @param Mobile 被抄送人手机号，11位数字
+     * Set 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此业务通知方。
+     * @param Mobile 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此业务通知方。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 被抄送人姓名 
-     * @return Name 被抄送人姓名
+     * Get 被抄送方姓名。
+抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。 
+     * @return Name 被抄送方姓名。
+抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 被抄送人姓名
-     * @param Name 被抄送人姓名
+     * Set 被抄送方姓名。
+抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
+     * @param Name 被抄送方姓名。
+抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 被抄送人类型,
-0--个人
-1--员工 
-     * @return CcType 被抄送人类型,
-0--个人
-1--员工
+     * Get 被抄送方类型, 可设置以下类型:
+
+- 0:个人抄送方
+- 1:企业员工抄送方 
+     * @return CcType 被抄送方类型, 可设置以下类型:
+
+- 0:个人抄送方
+- 1:企业员工抄送方
      */
     public Long getCcType() {
         return this.CcType;
     }
 
     /**
-     * Set 被抄送人类型,
-0--个人
-1--员工
-     * @param CcType 被抄送人类型,
-0--个人
-1--员工
+     * Set 被抄送方类型, 可设置以下类型:
+
+- 0:个人抄送方
+- 1:企业员工抄送方
+     * @param CcType 被抄送方类型, 可设置以下类型:
+
+- 0:个人抄送方
+- 1:企业员工抄送方
      */
     public void setCcType(Long CcType) {
         this.CcType = CcType;
     }
 
     /**
-     * Get 被抄送人权限
-0--可查看
-1--可查看也可下载 
-     * @return CcPermission 被抄送人权限
-0--可查看
-1--可查看也可下载
+     * Get 被抄送方权限, 可设置如下权限:
+
+- 0:可查看合同内容
+- 1:可查看合同内容也可下载原文 
+     * @return CcPermission 被抄送方权限, 可设置如下权限:
+
+- 0:可查看合同内容
+- 1:可查看合同内容也可下载原文
      */
     public Long getCcPermission() {
         return this.CcPermission;
     }
 
     /**
-     * Set 被抄送人权限
-0--可查看
-1--可查看也可下载
-     * @param CcPermission 被抄送人权限
-0--可查看
-1--可查看也可下载
+     * Set 被抄送方权限, 可设置如下权限:
+
+- 0:可查看合同内容
+- 1:可查看合同内容也可下载原文
+     * @param CcPermission 被抄送方权限, 可设置如下权限:
+
+- 0:可查看合同内容
+- 1:可查看合同内容也可下载原文
      */
     public void setCcPermission(Long CcPermission) {
         this.CcPermission = CcPermission;
     }
 
     /**
-     * Get 关注方通知类型：sms--短信，none--不通知 
-     * @return NotifyType 关注方通知类型：sms--短信，none--不通知
+     * Get 通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知 
+     * @return NotifyType 通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 关注方通知类型：sms--短信，none--不通知
-     * @param NotifyType 关注方通知类型：sms--短信，none--不通知
+     * Set 通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知
+     * @param NotifyType 通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;

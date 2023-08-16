@@ -94,6 +94,14 @@ public class DescribeUsersRequest extends AbstractModel{
     private String DepartmentId;
 
     /**
+    * 参数过滤数组
+
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 如果IdSet不为空，则忽略其他参数 
      * @return IdSet 如果IdSet不为空，则忽略其他参数
      */
@@ -257,6 +265,26 @@ public class DescribeUsersRequest extends AbstractModel{
         this.DepartmentId = DepartmentId;
     }
 
+    /**
+     * Get 参数过滤数组
+ 
+     * @return Filters 参数过滤数组
+
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 参数过滤数组
+
+     * @param Filters 参数过滤数组
+
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeUsersRequest() {
     }
 
@@ -304,6 +332,12 @@ public class DescribeUsersRequest extends AbstractModel{
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -321,6 +355,7 @@ public class DescribeUsersRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
         this.setParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

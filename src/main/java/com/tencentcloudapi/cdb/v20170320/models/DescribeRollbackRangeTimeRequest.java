@@ -30,7 +30,7 @@ public class DescribeRollbackRangeTimeRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
+    * 克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
     */
     @SerializedName("IsRemoteZone")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeRollbackRangeTimeRequest extends AbstractModel{
     }
 
     /**
-     * Get 克隆实例与源实例是否在同一可用区，是:"false"，否:"true" 
-     * @return IsRemoteZone 克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
+     * Get 克隆实例与源实例是否在异地可用区，是:"true"，否:"false" 
+     * @return IsRemoteZone 克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
      */
     public String getIsRemoteZone() {
         return this.IsRemoteZone;
     }
 
     /**
-     * Set 克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
-     * @param IsRemoteZone 克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
+     * Set 克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
+     * @param IsRemoteZone 克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
      */
     public void setIsRemoteZone(String IsRemoteZone) {
         this.IsRemoteZone = IsRemoteZone;

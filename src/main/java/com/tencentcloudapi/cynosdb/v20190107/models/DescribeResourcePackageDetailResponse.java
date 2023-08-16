@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeResourcePackageDetailResponse extends AbstractModel{
 
     /**
-    * 总使用明细数
+    * 资源包抵扣总数
     */
     @SerializedName("Total")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeResourcePackageDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 总使用明细数 
-     * @return Total 总使用明细数
+     * Get 资源包抵扣总数 
+     * @return Total 资源包抵扣总数
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总使用明细数
-     * @param Total 总使用明细数
+     * Set 资源包抵扣总数
+     * @param Total 资源包抵扣总数
      */
     public void setTotal(Long Total) {
         this.Total = Total;

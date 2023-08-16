@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BindInstanceInfo extends AbstractModel{
 
     /**
-    * 绑定的实例ID
+    * 绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -47,9 +47,17 @@ public class BindInstanceInfo extends AbstractModel{
     private String InstanceType;
 
     /**
-     * Get 绑定的实例ID
+    * 绑定集群下的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtendIds")
+    @Expose
+    private String [] ExtendIds;
+
+    /**
+     * Get 绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 绑定的实例ID
+     * @return InstanceId 绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -57,9 +65,9 @@ public class BindInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Set 绑定的实例ID
+     * Set 绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 绑定的实例ID
+     * @param InstanceId 绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -106,6 +114,26 @@ public class BindInstanceInfo extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 绑定集群下的实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtendIds 绑定集群下的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getExtendIds() {
+        return this.ExtendIds;
+    }
+
+    /**
+     * Set 绑定集群下的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtendIds 绑定集群下的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtendIds(String [] ExtendIds) {
+        this.ExtendIds = ExtendIds;
+    }
+
     public BindInstanceInfo() {
     }
 
@@ -123,6 +151,12 @@ public class BindInstanceInfo extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.ExtendIds != null) {
+            this.ExtendIds = new String[source.ExtendIds.length];
+            for (int i = 0; i < source.ExtendIds.length; i++) {
+                this.ExtendIds[i] = new String(source.ExtendIds[i]);
+            }
+        }
     }
 
 
@@ -133,6 +167,7 @@ public class BindInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArraySimple(map, prefix + "ExtendIds.", this.ExtendIds);
 
     }
 }

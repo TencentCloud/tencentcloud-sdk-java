@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeClusterKubeconfigResponse extends AbstractModel{
 
     /**
-    * 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
+    * 子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理）
     */
     @SerializedName("Kubeconfig")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeClusterKubeconfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 子账户kubeconfig文件，可用于直接访问集群kube-apiserver 
-     * @return Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
+     * Get 子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理） 
+     * @return Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理）
      */
     public String getKubeconfig() {
         return this.Kubeconfig;
     }
 
     /**
-     * Set 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
-     * @param Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
+     * Set 子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理）
+     * @param Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理）
      */
     public void setKubeconfig(String Kubeconfig) {
         this.Kubeconfig = Kubeconfig;

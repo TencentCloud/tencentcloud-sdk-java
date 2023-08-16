@@ -49,7 +49,7 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
     /**
     * WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
     */
     @SerializedName("BusinessId")
@@ -152,11 +152,11 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
     /**
      * Get WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id 
      * @return BusinessId WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
      */
     public String getBusinessId() {
@@ -166,11 +166,11 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
     /**
      * Set WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
      * @param BusinessId WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
      */
     public void setBusinessId(String BusinessId) {

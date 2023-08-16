@@ -65,6 +65,21 @@ public class ReplaceCertificateRequest extends AbstractModel{
     private String Reason;
 
     /**
+    * CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA
+    */
+    @SerializedName("CertCSREncryptAlgo")
+    @Expose
+    private String CertCSREncryptAlgo;
+
+    /**
+    * CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+    */
+    @SerializedName("CertCSRKeyParameter")
+    @Expose
+    private String CertCSRKeyParameter;
+
+    /**
      * Get 证书 ID。 
      * @return CertificateId 证书 ID。
      */
@@ -160,6 +175,42 @@ public class ReplaceCertificateRequest extends AbstractModel{
         this.Reason = Reason;
     }
 
+    /**
+     * Get CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA 
+     * @return CertCSREncryptAlgo CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA
+     */
+    public String getCertCSREncryptAlgo() {
+        return this.CertCSREncryptAlgo;
+    }
+
+    /**
+     * Set CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA
+     * @param CertCSREncryptAlgo CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA
+     */
+    public void setCertCSREncryptAlgo(String CertCSREncryptAlgo) {
+        this.CertCSREncryptAlgo = CertCSREncryptAlgo;
+    }
+
+    /**
+     * Get CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1;  
+     * @return CertCSRKeyParameter CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+     */
+    public String getCertCSRKeyParameter() {
+        return this.CertCSRKeyParameter;
+    }
+
+    /**
+     * Set CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+     * @param CertCSRKeyParameter CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+     */
+    public void setCertCSRKeyParameter(String CertCSRKeyParameter) {
+        this.CertCSRKeyParameter = CertCSRKeyParameter;
+    }
+
     public ReplaceCertificateRequest() {
     }
 
@@ -186,6 +237,12 @@ public class ReplaceCertificateRequest extends AbstractModel{
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
         }
+        if (source.CertCSREncryptAlgo != null) {
+            this.CertCSREncryptAlgo = new String(source.CertCSREncryptAlgo);
+        }
+        if (source.CertCSRKeyParameter != null) {
+            this.CertCSRKeyParameter = new String(source.CertCSRKeyParameter);
+        }
     }
 
 
@@ -199,6 +256,8 @@ public class ReplaceCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CsrContent", this.CsrContent);
         this.setParamSimple(map, prefix + "CsrkeyPassword", this.CsrkeyPassword);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "CertCSREncryptAlgo", this.CertCSREncryptAlgo);
+        this.setParamSimple(map, prefix + "CertCSRKeyParameter", this.CertCSRKeyParameter);
 
     }
 }

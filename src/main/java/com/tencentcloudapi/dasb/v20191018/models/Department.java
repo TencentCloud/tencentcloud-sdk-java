@@ -45,6 +45,14 @@ public class Department extends AbstractModel{
     private String [] Managers;
 
     /**
+    * 管理员用户
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ManagerUsers")
+    @Expose
+    private DepartmentManagerUser [] ManagerUsers;
+
+    /**
      * Get 部门ID 
      * @return Id 部门ID
      */
@@ -96,6 +104,26 @@ public class Department extends AbstractModel{
         this.Managers = Managers;
     }
 
+    /**
+     * Get 管理员用户
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ManagerUsers 管理员用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DepartmentManagerUser [] getManagerUsers() {
+        return this.ManagerUsers;
+    }
+
+    /**
+     * Set 管理员用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ManagerUsers 管理员用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setManagerUsers(DepartmentManagerUser [] ManagerUsers) {
+        this.ManagerUsers = ManagerUsers;
+    }
+
     public Department() {
     }
 
@@ -116,6 +144,12 @@ public class Department extends AbstractModel{
                 this.Managers[i] = new String(source.Managers[i]);
             }
         }
+        if (source.ManagerUsers != null) {
+            this.ManagerUsers = new DepartmentManagerUser[source.ManagerUsers.length];
+            for (int i = 0; i < source.ManagerUsers.length; i++) {
+                this.ManagerUsers[i] = new DepartmentManagerUser(source.ManagerUsers[i]);
+            }
+        }
     }
 
 
@@ -126,6 +160,7 @@ public class Department extends AbstractModel{
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "Managers.", this.Managers);
+        this.setParamArrayObj(map, prefix + "ManagerUsers.", this.ManagerUsers);
 
     }
 }

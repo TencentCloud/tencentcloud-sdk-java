@@ -215,6 +215,22 @@ public class Acl extends AbstractModel{
     private Department Department;
 
     /**
+    * 是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowAccessCredential")
+    @Expose
+    private Boolean AllowAccessCredential;
+
+    /**
+    * 关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ACTemplateSet")
+    @Expose
+    private ACTemplate [] ACTemplateSet;
+
+    /**
      * Get 访问权限ID 
      * @return Id 访问权限ID
      */
@@ -658,6 +674,46 @@ public class Acl extends AbstractModel{
         this.Department = Department;
     }
 
+    /**
+     * Get 是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowAccessCredential 是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllowAccessCredential() {
+        return this.AllowAccessCredential;
+    }
+
+    /**
+     * Set 是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowAccessCredential 是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowAccessCredential(Boolean AllowAccessCredential) {
+        this.AllowAccessCredential = AllowAccessCredential;
+    }
+
+    /**
+     * Get 关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ACTemplateSet 关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ACTemplate [] getACTemplateSet() {
+        return this.ACTemplateSet;
+    }
+
+    /**
+     * Set 关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ACTemplateSet 关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setACTemplateSet(ACTemplate [] ACTemplateSet) {
+        this.ACTemplateSet = ACTemplateSet;
+    }
+
     public Acl() {
     }
 
@@ -765,6 +821,15 @@ public class Acl extends AbstractModel{
         if (source.Department != null) {
             this.Department = new Department(source.Department);
         }
+        if (source.AllowAccessCredential != null) {
+            this.AllowAccessCredential = new Boolean(source.AllowAccessCredential);
+        }
+        if (source.ACTemplateSet != null) {
+            this.ACTemplateSet = new ACTemplate[source.ACTemplateSet.length];
+            for (int i = 0; i < source.ACTemplateSet.length; i++) {
+                this.ACTemplateSet[i] = new ACTemplate(source.ACTemplateSet[i]);
+            }
+        }
     }
 
 
@@ -799,6 +864,8 @@ public class Acl extends AbstractModel{
         this.setParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Department.", this.Department);
+        this.setParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
+        this.setParamArrayObj(map, prefix + "ACTemplateSet.", this.ACTemplateSet);
 
     }
 }
