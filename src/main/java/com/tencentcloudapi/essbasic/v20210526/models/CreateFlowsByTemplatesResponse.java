@@ -30,7 +30,7 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     private String [] FlowIds;
 
     /**
-    * 业务信息，限制1024字符
+    * 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
     */
     @SerializedName("CustomerData")
     @Expose
@@ -83,16 +83,16 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get 业务信息，限制1024字符 
-     * @return CustomerData 业务信息，限制1024字符
+     * Get 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应 
+     * @return CustomerData 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
      */
     public String [] getCustomerData() {
         return this.CustomerData;
     }
 
     /**
-     * Set 业务信息，限制1024字符
-     * @param CustomerData 业务信息，限制1024字符
+     * Set 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
+     * @param CustomerData 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
      */
     public void setCustomerData(String [] CustomerData) {
         this.CustomerData = CustomerData;

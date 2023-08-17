@@ -78,6 +78,13 @@ lye1y30d：低功耗事件30天年套餐。
     private String PackageQueue;
 
     /**
+    * 订单id
+    */
+    @SerializedName("OrderId")
+    @Expose
+    private String OrderId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -237,6 +244,22 @@ lye1y30d：低功耗事件30天年套餐。
         this.PackageQueue = PackageQueue;
     }
 
+    /**
+     * Get 订单id 
+     * @return OrderId 订单id
+     */
+    public String getOrderId() {
+        return this.OrderId;
+    }
+
+    /**
+     * Set 订单id
+     * @param OrderId 订单id
+     */
+    public void setOrderId(String OrderId) {
+        this.OrderId = OrderId;
+    }
+
     public CreateCloudStorageRequest() {
     }
 
@@ -260,6 +283,9 @@ lye1y30d：低功耗事件30天年套餐。
         if (source.PackageQueue != null) {
             this.PackageQueue = new String(source.PackageQueue);
         }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
     }
 
 
@@ -272,6 +298,7 @@ lye1y30d：低功耗事件30天年套餐。
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "Override", this.Override);
         this.setParamSimple(map, prefix + "PackageQueue", this.PackageQueue);
+        this.setParamSimple(map, prefix + "OrderId", this.OrderId);
 
     }
 }

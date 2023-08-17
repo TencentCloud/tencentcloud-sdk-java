@@ -88,7 +88,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     private String IntentionVerifyText;
 
     /**
-    * 意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
+    * 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
     */
     @SerializedName("IntentionQuestions")
     @Expose
@@ -100,6 +100,13 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     @SerializedName("Config")
     @Expose
     private RuleIdConfig Config;
+
+    /**
+    * 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+    */
+    @SerializedName("IntentionActions")
+    @Expose
+    private IntentionActionConfig [] IntentionActions;
 
     /**
      * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。 
@@ -254,16 +261,16 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     }
 
     /**
-     * Get 意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。 
-     * @return IntentionQuestions 意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
+     * Get 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。 
+     * @return IntentionQuestions 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
      */
     public IntentionQuestion [] getIntentionQuestions() {
         return this.IntentionQuestions;
     }
 
     /**
-     * Set 意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
-     * @param IntentionQuestions 意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
+     * Set 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
+     * @param IntentionQuestions 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
      */
     public void setIntentionQuestions(IntentionQuestion [] IntentionQuestions) {
         this.IntentionQuestions = IntentionQuestions;
@@ -283,6 +290,22 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
      */
     public void setConfig(RuleIdConfig Config) {
         this.Config = Config;
+    }
+
+    /**
+     * Get 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。 
+     * @return IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+     */
+    public IntentionActionConfig [] getIntentionActions() {
+        return this.IntentionActions;
+    }
+
+    /**
+     * Set 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+     * @param IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+     */
+    public void setIntentionActions(IntentionActionConfig [] IntentionActions) {
+        this.IntentionActions = IntentionActions;
     }
 
     public DetectAuthRequest() {
@@ -329,6 +352,12 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         if (source.Config != null) {
             this.Config = new RuleIdConfig(source.Config);
         }
+        if (source.IntentionActions != null) {
+            this.IntentionActions = new IntentionActionConfig[source.IntentionActions.length];
+            for (int i = 0; i < source.IntentionActions.length; i++) {
+                this.IntentionActions[i] = new IntentionActionConfig(source.IntentionActions[i]);
+            }
+        }
     }
 
 
@@ -347,6 +376,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
         this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
         this.setParamObj(map, prefix + "Config.", this.Config);
+        this.setParamArrayObj(map, prefix + "IntentionActions.", this.IntentionActions);
 
     }
 }

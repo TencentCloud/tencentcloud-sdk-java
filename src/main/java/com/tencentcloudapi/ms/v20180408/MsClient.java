@@ -445,4 +445,67 @@ public class MsClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *client任务请求地址
+     * @param req RequestLocalTaskRequest
+     * @return RequestLocalTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RequestLocalTaskResponse RequestLocalTask(RequestLocalTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RequestLocalTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RequestLocalTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RequestLocalTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新client状态
+     * @param req UpdateClientStateRequest
+     * @return UpdateClientStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateClientStateResponse UpdateClientState(UpdateClientStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateClientStateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateClientStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateClientState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新本地任务结果
+     * @param req UpdateLocalTaskResultRequest
+     * @return UpdateLocalTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateLocalTaskResultResponse UpdateLocalTaskResult(UpdateLocalTaskResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateLocalTaskResultResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateLocalTaskResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateLocalTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

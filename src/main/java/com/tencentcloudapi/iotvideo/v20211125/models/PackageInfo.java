@@ -68,6 +68,22 @@ public class PackageInfo extends AbstractModel{
     private Long UpdatedAt;
 
     /**
+    * 套餐id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PackageId")
+    @Expose
+    private String PackageId;
+
+    /**
+    * 订单id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrderId")
+    @Expose
+    private String OrderId;
+
+    /**
      * Get 云存开启状态，0为未开启，2为正在生效，1为已过期
 注：这里只返回状态为0的数据 
      * @return Status 云存开启状态，0为未开启，2为正在生效，1为已过期
@@ -175,6 +191,46 @@ public class PackageInfo extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    /**
+     * Get 套餐id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PackageId 套餐id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPackageId() {
+        return this.PackageId;
+    }
+
+    /**
+     * Set 套餐id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PackageId 套餐id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPackageId(String PackageId) {
+        this.PackageId = PackageId;
+    }
+
+    /**
+     * Get 订单id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrderId 订单id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrderId() {
+        return this.OrderId;
+    }
+
+    /**
+     * Set 订单id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrderId 订单id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrderId(String OrderId) {
+        this.OrderId = OrderId;
+    }
+
     public PackageInfo() {
     }
 
@@ -201,6 +257,12 @@ public class PackageInfo extends AbstractModel{
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new Long(source.UpdatedAt);
         }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
     }
 
 
@@ -214,6 +276,8 @@ public class PackageInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CSExpiredTime", this.CSExpiredTime);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "PackageId", this.PackageId);
+        this.setParamSimple(map, prefix + "OrderId", this.OrderId);
 
     }
 }

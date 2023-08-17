@@ -30,7 +30,7 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 个人用户名称
+    * 个人用户姓名
     */
     @SerializedName("UserName")
     @Expose
@@ -44,18 +44,18 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
     private String IdCardNumber;
 
     /**
-    * 印章图片的base64
-    */
-    @SerializedName("SealImage")
-    @Expose
-    private String SealImage;
-
-    /**
     * 印章名称
     */
     @SerializedName("SealName")
     @Expose
     private String SealName;
+
+    /**
+    * 印章图片的base64，最大不超过 8M
+    */
+    @SerializedName("SealImage")
+    @Expose
+    private String SealImage;
 
     /**
     * 操作者信息
@@ -70,6 +70,13 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
+
+    /**
+    * 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+    */
+    @SerializedName("SealImageCompress")
+    @Expose
+    private Boolean SealImageCompress;
 
     /**
     * 手机号码；当需要开通自动签时，该参数必传
@@ -102,16 +109,16 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
     }
 
     /**
-     * Get 个人用户名称 
-     * @return UserName 个人用户名称
+     * Get 个人用户姓名 
+     * @return UserName 个人用户姓名
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 个人用户名称
-     * @param UserName 个人用户名称
+     * Set 个人用户姓名
+     * @param UserName 个人用户姓名
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -134,22 +141,6 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
     }
 
     /**
-     * Get 印章图片的base64 
-     * @return SealImage 印章图片的base64
-     */
-    public String getSealImage() {
-        return this.SealImage;
-    }
-
-    /**
-     * Set 印章图片的base64
-     * @param SealImage 印章图片的base64
-     */
-    public void setSealImage(String SealImage) {
-        this.SealImage = SealImage;
-    }
-
-    /**
      * Get 印章名称 
      * @return SealName 印章名称
      */
@@ -163,6 +154,22 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;
+    }
+
+    /**
+     * Get 印章图片的base64，最大不超过 8M 
+     * @return SealImage 印章图片的base64，最大不超过 8M
+     */
+    public String getSealImage() {
+        return this.SealImage;
+    }
+
+    /**
+     * Set 印章图片的base64，最大不超过 8M
+     * @param SealImage 印章图片的base64，最大不超过 8M
+     */
+    public void setSealImage(String SealImage) {
+        this.SealImage = SealImage;
     }
 
     /**
@@ -195,6 +202,22 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
+    }
+
+    /**
+     * Get 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。 
+     * @return SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     */
+    public Boolean getSealImageCompress() {
+        return this.SealImageCompress;
+    }
+
+    /**
+     * Set 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     * @param SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     */
+    public void setSealImageCompress(Boolean SealImageCompress) {
+        this.SealImageCompress = SealImageCompress;
     }
 
     /**
@@ -246,17 +269,20 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
         if (source.IdCardNumber != null) {
             this.IdCardNumber = new String(source.IdCardNumber);
         }
-        if (source.SealImage != null) {
-            this.SealImage = new String(source.SealImage);
-        }
         if (source.SealName != null) {
             this.SealName = new String(source.SealName);
+        }
+        if (source.SealImage != null) {
+            this.SealImage = new String(source.SealImage);
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
         if (source.IdCardType != null) {
             this.IdCardType = new String(source.IdCardType);
+        }
+        if (source.SealImageCompress != null) {
+            this.SealImageCompress = new Boolean(source.SealImageCompress);
         }
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
@@ -274,10 +300,11 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
-        this.setParamSimple(map, prefix + "SealImage", this.SealImage);
         this.setParamSimple(map, prefix + "SealName", this.SealName);
+        this.setParamSimple(map, prefix + "SealImage", this.SealImage);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
+        this.setParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
 

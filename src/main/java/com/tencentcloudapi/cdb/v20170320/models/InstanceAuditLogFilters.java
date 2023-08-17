@@ -38,7 +38,7 @@ sqlType - SQL类型；
 errCode - 错误码；
 threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
+范围搜索（时间类型统一为微秒）：
 execTime - 执行时间；
 lockWaitTime - 执行时间；
 ioWaitTime - IO等待时间；
@@ -89,7 +89,7 @@ sqlType - SQL类型；
 errCode - 错误码；
 threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
+范围搜索（时间类型统一为微秒）：
 execTime - 执行时间；
 lockWaitTime - 执行时间；
 ioWaitTime - IO等待时间；
@@ -113,7 +113,7 @@ sqlType - SQL类型；
 errCode - 错误码；
 threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
+范围搜索（时间类型统一为微秒）：
 execTime - 执行时间；
 lockWaitTime - 执行时间；
 ioWaitTime - IO等待时间；
@@ -143,7 +143,7 @@ sqlType - SQL类型；
 errCode - 错误码；
 threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
+范围搜索（时间类型统一为微秒）：
 execTime - 执行时间；
 lockWaitTime - 执行时间；
 ioWaitTime - IO等待时间；
@@ -167,7 +167,7 @@ sqlType - SQL类型；
 errCode - 错误码；
 threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
+范围搜索（时间类型统一为微秒）：
 execTime - 执行时间；
 lockWaitTime - 执行时间；
 ioWaitTime - IO等待时间；

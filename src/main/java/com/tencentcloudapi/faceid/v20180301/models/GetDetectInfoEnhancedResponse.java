@@ -79,6 +79,14 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel{
     private IntentionQuestionResult IntentionQuestionResult;
 
     /**
+    * 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntentionActionResult")
+    @Expose
+    private IntentionActionResult IntentionActionResult;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -226,6 +234,26 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel{
     }
 
     /**
+     * Get 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntentionActionResult 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IntentionActionResult getIntentionActionResult() {
+        return this.IntentionActionResult;
+    }
+
+    /**
+     * Set 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntentionActionResult 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntentionActionResult(IntentionActionResult IntentionActionResult) {
+        this.IntentionActionResult = IntentionActionResult;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -270,6 +298,9 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel{
         if (source.IntentionQuestionResult != null) {
             this.IntentionQuestionResult = new IntentionQuestionResult(source.IntentionQuestionResult);
         }
+        if (source.IntentionActionResult != null) {
+            this.IntentionActionResult = new IntentionActionResult(source.IntentionActionResult);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -287,6 +318,7 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel{
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
         this.setParamObj(map, prefix + "IntentionVerifyData.", this.IntentionVerifyData);
         this.setParamObj(map, prefix + "IntentionQuestionResult.", this.IntentionQuestionResult);
+        this.setParamObj(map, prefix + "IntentionActionResult.", this.IntentionActionResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

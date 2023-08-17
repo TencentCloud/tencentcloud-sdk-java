@@ -30,7 +30,7 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 多个合同（签署流程）信息，最多支持20个
+    * 要创建的合同信息列表，最多支持一次创建20个合同
     */
     @SerializedName("FlowInfos")
     @Expose
@@ -76,16 +76,16 @@ public class CreateFlowsByTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 多个合同（签署流程）信息，最多支持20个 
-     * @return FlowInfos 多个合同（签署流程）信息，最多支持20个
+     * Get 要创建的合同信息列表，最多支持一次创建20个合同 
+     * @return FlowInfos 要创建的合同信息列表，最多支持一次创建20个合同
      */
     public FlowInfo [] getFlowInfos() {
         return this.FlowInfos;
     }
 
     /**
-     * Set 多个合同（签署流程）信息，最多支持20个
-     * @param FlowInfos 多个合同（签署流程）信息，最多支持20个
+     * Set 要创建的合同信息列表，最多支持一次创建20个合同
+     * @param FlowInfos 要创建的合同信息列表，最多支持一次创建20个合同
      */
     public void setFlowInfos(FlowInfo [] FlowInfos) {
         this.FlowInfos = FlowInfos;

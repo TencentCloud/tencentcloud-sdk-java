@@ -65,6 +65,13 @@ public class DescribeTableLineageRequest extends AbstractModel{
     private Boolean IgnoreTemp;
 
     /**
+    * 是否递归查询二级节点数目，默认为true
+    */
+    @SerializedName("RecursiveSecond")
+    @Expose
+    private Boolean RecursiveSecond;
+
+    /**
      * Get 查询方向，INPUT,OUTPUT,BOTH枚举值 
      * @return Direction 查询方向，INPUT,OUTPUT,BOTH枚举值
      */
@@ -160,6 +167,22 @@ public class DescribeTableLineageRequest extends AbstractModel{
         this.IgnoreTemp = IgnoreTemp;
     }
 
+    /**
+     * Get 是否递归查询二级节点数目，默认为true 
+     * @return RecursiveSecond 是否递归查询二级节点数目，默认为true
+     */
+    public Boolean getRecursiveSecond() {
+        return this.RecursiveSecond;
+    }
+
+    /**
+     * Set 是否递归查询二级节点数目，默认为true
+     * @param RecursiveSecond 是否递归查询二级节点数目，默认为true
+     */
+    public void setRecursiveSecond(Boolean RecursiveSecond) {
+        this.RecursiveSecond = RecursiveSecond;
+    }
+
     public DescribeTableLineageRequest() {
     }
 
@@ -189,6 +212,9 @@ public class DescribeTableLineageRequest extends AbstractModel{
         if (source.IgnoreTemp != null) {
             this.IgnoreTemp = new Boolean(source.IgnoreTemp);
         }
+        if (source.RecursiveSecond != null) {
+            this.RecursiveSecond = new Boolean(source.RecursiveSecond);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class DescribeTableLineageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputDepth", this.OutputDepth);
         this.setParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
         this.setParamSimple(map, prefix + "IgnoreTemp", this.IgnoreTemp);
+        this.setParamSimple(map, prefix + "RecursiveSecond", this.RecursiveSecond);
 
     }
 }

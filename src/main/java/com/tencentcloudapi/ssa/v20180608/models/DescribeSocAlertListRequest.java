@@ -58,7 +58,7 @@ public class DescribeSocAlertListRequest extends AbstractModel{
     private QuerySort [] Sorter;
 
     /**
-    * 是否导出
+    * 是否导出；默认为否，如量级超过1000，则使用单独的导出接口
     */
     @SerializedName("ExportFlag")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeSocAlertListRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否导出 
-     * @return ExportFlag 是否导出
+     * Get 是否导出；默认为否，如量级超过1000，则使用单独的导出接口 
+     * @return ExportFlag 是否导出；默认为否，如量级超过1000，则使用单独的导出接口
      */
     public Boolean getExportFlag() {
         return this.ExportFlag;
     }
 
     /**
-     * Set 是否导出
-     * @param ExportFlag 是否导出
+     * Set 是否导出；默认为否，如量级超过1000，则使用单独的导出接口
+     * @param ExportFlag 是否导出；默认为否，如量级超过1000，则使用单独的导出接口
      */
     public void setExportFlag(Boolean ExportFlag) {
         this.ExportFlag = ExportFlag;

@@ -585,7 +585,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeBillingSpecsPrice)用于查询计费项价格。
+     *本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
      * @param req DescribeBillingSpecsPriceRequest
      * @return DescribeBillingSpecsPriceResponse
      * @throws TencentCloudSDKException

@@ -30,6 +30,15 @@ public class RuleIdConfig extends AbstractModel{
     private Boolean IntentionRecognition;
 
     /**
+    * 意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段；
+    */
+    @SerializedName("IntentionType")
+    @Expose
+    private Long IntentionType;
+
+    /**
      * Get 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。 
      * @return IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
      */
@@ -45,6 +54,30 @@ public class RuleIdConfig extends AbstractModel{
         this.IntentionRecognition = IntentionRecognition;
     }
 
+    /**
+     * Get 意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段； 
+     * @return IntentionType 意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段；
+     */
+    public Long getIntentionType() {
+        return this.IntentionType;
+    }
+
+    /**
+     * Set 意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段；
+     * @param IntentionType 意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段；
+     */
+    public void setIntentionType(Long IntentionType) {
+        this.IntentionType = IntentionType;
+    }
+
     public RuleIdConfig() {
     }
 
@@ -56,6 +89,9 @@ public class RuleIdConfig extends AbstractModel{
         if (source.IntentionRecognition != null) {
             this.IntentionRecognition = new Boolean(source.IntentionRecognition);
         }
+        if (source.IntentionType != null) {
+            this.IntentionType = new Long(source.IntentionType);
+        }
     }
 
 
@@ -64,6 +100,7 @@ public class RuleIdConfig extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
+        this.setParamSimple(map, prefix + "IntentionType", this.IntentionType);
 
     }
 }
