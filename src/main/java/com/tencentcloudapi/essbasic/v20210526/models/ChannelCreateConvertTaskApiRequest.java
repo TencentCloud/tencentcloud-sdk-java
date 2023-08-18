@@ -44,7 +44,7 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel{
     private String ResourceName;
 
     /**
-    * 资源Id，通过UploadFiles获取
+    * 文件Id，通过UploadFiles获取
     */
     @SerializedName("ResourceId")
     @Expose
@@ -113,16 +113,16 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源Id，通过UploadFiles获取 
-     * @return ResourceId 资源Id，通过UploadFiles获取
+     * Get 文件Id，通过UploadFiles获取 
+     * @return ResourceId 文件Id，通过UploadFiles获取
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id，通过UploadFiles获取
-     * @param ResourceId 资源Id，通过UploadFiles获取
+     * Set 文件Id，通过UploadFiles获取
+     * @param ResourceId 文件Id，通过UploadFiles获取
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

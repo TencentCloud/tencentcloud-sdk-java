@@ -919,31 +919,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *接口已废弃，需要下线
-
-本接口(DescribeBackupDatabases)用于查询备份文件包含的库 (已废弃)。
-旧版本支持全量备份后，用户如果分库表下载逻辑备份文件，需要用到此接口。
-新版本支持(CreateBackup)创建逻辑备份的时候，直接发起指定库表备份，用户直接下载该备份文件即可。
-     * @param req DescribeBackupDatabasesRequest
-     * @return DescribeBackupDatabasesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBackupDatabasesResponse DescribeBackupDatabases(DescribeBackupDatabasesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupDatabasesResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupDatabasesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBackupDatabases");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口(DescribeBackupDecryptionKey)用于查询备份文件解密密钥。
      * @param req DescribeBackupDecryptionKeyRequest
      * @return DescribeBackupDecryptionKeyResponse

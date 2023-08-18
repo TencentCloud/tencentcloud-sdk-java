@@ -25,8 +25,8 @@ public class ApproverOption extends AbstractModel{
     /**
     * 签署方是否可以拒签
 
-- false: ( 默认)可以拒签 
-- true:不可以拒签
+<ul><li> **false** : ( 默认)可以拒签</li>
+<li> **true** :不可以拒签</li></ul>
     */
     @SerializedName("NoRefuse")
     @Expose
@@ -35,8 +35,8 @@ public class ApproverOption extends AbstractModel{
     /**
     * 签署方是否可以转他人处理
 
-- false: ( 默认)可以转他人处理
-- true:不可以转他人处理
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
     */
     @SerializedName("NoTransfer")
     @Expose
@@ -45,12 +45,12 @@ public class ApproverOption extends AbstractModel{
     /**
      * Get 签署方是否可以拒签
 
-- false: ( 默认)可以拒签 
-- true:不可以拒签 
+<ul><li> **false** : ( 默认)可以拒签</li>
+<li> **true** :不可以拒签</li></ul> 
      * @return NoRefuse 签署方是否可以拒签
 
-- false: ( 默认)可以拒签 
-- true:不可以拒签
+<ul><li> **false** : ( 默认)可以拒签</li>
+<li> **true** :不可以拒签</li></ul>
      */
     public Boolean getNoRefuse() {
         return this.NoRefuse;
@@ -59,12 +59,12 @@ public class ApproverOption extends AbstractModel{
     /**
      * Set 签署方是否可以拒签
 
-- false: ( 默认)可以拒签 
-- true:不可以拒签
+<ul><li> **false** : ( 默认)可以拒签</li>
+<li> **true** :不可以拒签</li></ul>
      * @param NoRefuse 签署方是否可以拒签
 
-- false: ( 默认)可以拒签 
-- true:不可以拒签
+<ul><li> **false** : ( 默认)可以拒签</li>
+<li> **true** :不可以拒签</li></ul>
      */
     public void setNoRefuse(Boolean NoRefuse) {
         this.NoRefuse = NoRefuse;
@@ -73,12 +73,12 @@ public class ApproverOption extends AbstractModel{
     /**
      * Get 签署方是否可以转他人处理
 
-- false: ( 默认)可以转他人处理
-- true:不可以转他人处理 
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul> 
      * @return NoTransfer 签署方是否可以转他人处理
 
-- false: ( 默认)可以转他人处理
-- true:不可以转他人处理
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
      */
     public Boolean getNoTransfer() {
         return this.NoTransfer;
@@ -87,12 +87,12 @@ public class ApproverOption extends AbstractModel{
     /**
      * Set 签署方是否可以转他人处理
 
-- false: ( 默认)可以转他人处理
-- true:不可以转他人处理
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
      * @param NoTransfer 签署方是否可以转他人处理
 
-- false: ( 默认)可以转他人处理
-- true:不可以转他人处理
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
      */
     public void setNoTransfer(Boolean NoTransfer) {
         this.NoTransfer = NoTransfer;

@@ -54,6 +54,13 @@ MobileCheck：手机号验证
     private String ApproverVerifyType;
 
     /**
+    * 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+    */
+    @SerializedName("FlowGroupOptions")
+    @Expose
+    private FlowGroupOptions FlowGroupOptions;
+
+    /**
     * 操作者的信息，此参数不用传
     */
     @SerializedName("Operator")
@@ -137,6 +144,22 @@ MobileCheck：手机号验证
     }
 
     /**
+     * Get 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。 
+     * @return FlowGroupOptions 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+     */
+    public FlowGroupOptions getFlowGroupOptions() {
+        return this.FlowGroupOptions;
+    }
+
+    /**
+     * Set 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+     * @param FlowGroupOptions 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+     */
+    public void setFlowGroupOptions(FlowGroupOptions FlowGroupOptions) {
+        this.FlowGroupOptions = FlowGroupOptions;
+    }
+
+    /**
      * Get 操作者的信息，此参数不用传 
      * @return Operator 操作者的信息，此参数不用传
      * @deprecated
@@ -179,6 +202,9 @@ MobileCheck：手机号验证
         if (source.ApproverVerifyType != null) {
             this.ApproverVerifyType = new String(source.ApproverVerifyType);
         }
+        if (source.FlowGroupOptions != null) {
+            this.FlowGroupOptions = new FlowGroupOptions(source.FlowGroupOptions);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -193,6 +219,7 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
+        this.setParamObj(map, prefix + "FlowGroupOptions.", this.FlowGroupOptions);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

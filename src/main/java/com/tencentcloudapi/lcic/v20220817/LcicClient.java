@@ -480,6 +480,27 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *删除已注册用户。注：如果该成员已被添加到群组，请先在群组中删除该成员。
+     * @param req DeleteUserRequest
+     * @return DeleteUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUserResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取房间答题详情
      * @param req DescribeAnswerListRequest
      * @return DescribeAnswerListResponse

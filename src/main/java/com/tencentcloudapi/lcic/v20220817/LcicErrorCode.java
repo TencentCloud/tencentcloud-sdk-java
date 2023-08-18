@@ -33,6 +33,9 @@ public enum LcicErrorCode {
     // 房间暂未结束。
      FAILEDOPERATION_ROOMNOTEND("FailedOperation.RoomNotEnd"),
      
+    // 该成员已被添加到群组，请先在群组中删除该成员。
+     FAILEDOPERATION_USERISALREADYINGROUP("FailedOperation.UserIsAlreadyInGroup"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
@@ -80,6 +83,9 @@ public enum LcicErrorCode {
      
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
+     
+    // 地域错误
+     REGIONERROR("RegionError"),
      
     // 请求的次数超过了频率限制。
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),

@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupDatabasesResponse extends AbstractModel{
-
-    /**
-    * 返回的数据个数。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 符合查询条件的数据库数组。
-    */
-    @SerializedName("Items")
-    @Expose
-    private DatabaseName [] Items;
+public class DeleteUserResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeBackupDatabasesResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 返回的数据个数。 
-     * @return TotalCount 返回的数据个数。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 返回的数据个数。
-     * @param TotalCount 返回的数据个数。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 符合查询条件的数据库数组。 
-     * @return Items 符合查询条件的数据库数组。
-     */
-    public DatabaseName [] getItems() {
-        return this.Items;
-    }
-
-    /**
-     * Set 符合查询条件的数据库数组。
-     * @param Items 符合查询条件的数据库数组。
-     */
-    public void setItems(DatabaseName [] Items) {
-        this.Items = Items;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeBackupDatabasesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeBackupDatabasesResponse() {
+    public DeleteUserResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBackupDatabasesResponse(DescribeBackupDatabasesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Items != null) {
-            this.Items = new DatabaseName[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new DatabaseName(source.Items[i]);
-            }
-        }
+    public DeleteUserResponse(DeleteUserResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeBackupDatabasesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

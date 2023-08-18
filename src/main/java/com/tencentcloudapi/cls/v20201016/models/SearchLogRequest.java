@@ -54,7 +54,7 @@ public class SearchLogRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+    * 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
@@ -199,11 +199,11 @@ public class SearchLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+     * Get 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a> 
-     * @return Limit 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+     * @return Limit 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
@@ -213,11 +213,11 @@ public class SearchLogRequest extends AbstractModel{
     }
 
     /**
-     * Set 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+     * Set 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
-     * @param Limit 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+     * @param Limit 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>

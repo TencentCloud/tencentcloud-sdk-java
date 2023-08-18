@@ -66,6 +66,14 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     private String SegmentObjectName;
 
     /**
+    * 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddOnSubtitles")
+    @Expose
+    private AddOnSubtitle [] AddOnSubtitles;
+
+    /**
      * Get 转自适应码流模板 ID。 
      * @return Definition 转自适应码流模板 ID。
      */
@@ -165,6 +173,26 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
         this.SegmentObjectName = SegmentObjectName;
     }
 
+    /**
+     * Get 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddOnSubtitles 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AddOnSubtitle [] getAddOnSubtitles() {
+        return this.AddOnSubtitles;
+    }
+
+    /**
+     * Set 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddOnSubtitles 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
+        this.AddOnSubtitles = AddOnSubtitles;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -194,6 +222,12 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
         if (source.SegmentObjectName != null) {
             this.SegmentObjectName = new String(source.SegmentObjectName);
         }
+        if (source.AddOnSubtitles != null) {
+            this.AddOnSubtitles = new AddOnSubtitle[source.AddOnSubtitles.length];
+            for (int i = 0; i < source.AddOnSubtitles.length; i++) {
+                this.AddOnSubtitles[i] = new AddOnSubtitle(source.AddOnSubtitles[i]);
+            }
+        }
     }
 
 
@@ -207,6 +241,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
+        this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
 
     }
 }

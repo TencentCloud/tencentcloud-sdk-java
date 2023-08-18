@@ -24,6 +24,7 @@ public class S3OutputStorage extends AbstractModel{
 
     /**
     * S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3Bucket")
     @Expose
@@ -31,6 +32,7 @@ public class S3OutputStorage extends AbstractModel{
 
     /**
     * S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3Region")
     @Expose
@@ -38,6 +40,7 @@ public class S3OutputStorage extends AbstractModel{
 
     /**
     * AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3SecretId")
     @Expose
@@ -45,14 +48,17 @@ public class S3OutputStorage extends AbstractModel{
 
     /**
     * AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-     * Get S3 bucket。 
+     * Get S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3Bucket S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3Bucket() {
         return this.S3Bucket;
@@ -60,15 +66,19 @@ public class S3OutputStorage extends AbstractModel{
 
     /**
      * Set S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3Bucket S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3Bucket(String S3Bucket) {
         this.S3Bucket = S3Bucket;
     }
 
     /**
-     * Get S3 bucket 对应的区域。 
+     * Get S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3Region S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3Region() {
         return this.S3Region;
@@ -76,15 +86,19 @@ public class S3OutputStorage extends AbstractModel{
 
     /**
      * Set S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3Region S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;
     }
 
     /**
-     * Get AWS 内网上传 媒体资源的秘钥id。 
+     * Get AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3SecretId AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3SecretId() {
         return this.S3SecretId;
@@ -92,15 +106,19 @@ public class S3OutputStorage extends AbstractModel{
 
     /**
      * Set AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3SecretId AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get AWS 内网上传 媒体资源的秘钥key。 
+     * Get AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3SecretKey AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
@@ -108,7 +126,9 @@ public class S3OutputStorage extends AbstractModel{
 
     /**
      * Set AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3SecretKey AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;

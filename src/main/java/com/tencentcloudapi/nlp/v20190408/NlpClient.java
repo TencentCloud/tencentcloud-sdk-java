@@ -249,6 +249,27 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *基于腾讯大模型能力，用户可以通过传入不同的参数控制生成内容的类型，并通过自然语言给模型以内容生成的指令，可以满足多种场景的文本生成需求，包括但不限于文章写作、营销文案、视频脚本、电商文案、纪要整理等（注意：当前接口为内测体验专用接口，非正式服务接口，内测期结束接口会下线或停服，届时请接入正式服务接口）
+     * @param req TestingTextGenerationRequest
+     * @return TestingTextGenerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public TestingTextGenerationResponse TestingTextGeneration(TestingTextGenerationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TestingTextGenerationResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<TestingTextGenerationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TestingTextGeneration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *运用先进的自然语言处理技术，对原始文本进行优化润色，提升文本的通顺性、表达力和语言质量。
      * @param req TextEmbellishRequest
      * @return TextEmbellishResponse

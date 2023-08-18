@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel{
 
     /**
-    * 白名单对象数组。
+    * 白名单对象数组。已废弃
     */
     @SerializedName("VpcEndpointServiceUserSet")
     @Expose
     private VpcEndPointServiceUser [] VpcEndpointServiceUserSet;
+
+    /**
+    * 白名单对象数组。
+    */
+    @SerializedName("VpcEndPointServiceUserSet")
+    @Expose
+    private VpcEndPointServiceUser [] VpcEndPointServiceUserSet;
 
     /**
     * 符合条件的白名单个数。
@@ -44,19 +51,35 @@ public class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 白名单对象数组。 
-     * @return VpcEndpointServiceUserSet 白名单对象数组。
+     * Get 白名单对象数组。已废弃 
+     * @return VpcEndpointServiceUserSet 白名单对象数组。已废弃
      */
     public VpcEndPointServiceUser [] getVpcEndpointServiceUserSet() {
         return this.VpcEndpointServiceUserSet;
     }
 
     /**
-     * Set 白名单对象数组。
-     * @param VpcEndpointServiceUserSet 白名单对象数组。
+     * Set 白名单对象数组。已废弃
+     * @param VpcEndpointServiceUserSet 白名单对象数组。已废弃
      */
     public void setVpcEndpointServiceUserSet(VpcEndPointServiceUser [] VpcEndpointServiceUserSet) {
         this.VpcEndpointServiceUserSet = VpcEndpointServiceUserSet;
+    }
+
+    /**
+     * Get 白名单对象数组。 
+     * @return VpcEndPointServiceUserSet 白名单对象数组。
+     */
+    public VpcEndPointServiceUser [] getVpcEndPointServiceUserSet() {
+        return this.VpcEndPointServiceUserSet;
+    }
+
+    /**
+     * Set 白名单对象数组。
+     * @param VpcEndPointServiceUserSet 白名单对象数组。
+     */
+    public void setVpcEndPointServiceUserSet(VpcEndPointServiceUser [] VpcEndPointServiceUserSet) {
+        this.VpcEndPointServiceUserSet = VpcEndPointServiceUserSet;
     }
 
     /**
@@ -105,6 +128,12 @@ public class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel{
                 this.VpcEndpointServiceUserSet[i] = new VpcEndPointServiceUser(source.VpcEndpointServiceUserSet[i]);
             }
         }
+        if (source.VpcEndPointServiceUserSet != null) {
+            this.VpcEndPointServiceUserSet = new VpcEndPointServiceUser[source.VpcEndPointServiceUserSet.length];
+            for (int i = 0; i < source.VpcEndPointServiceUserSet.length; i++) {
+                this.VpcEndPointServiceUserSet[i] = new VpcEndPointServiceUser(source.VpcEndPointServiceUserSet[i]);
+            }
+        }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
@@ -119,6 +148,7 @@ public class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VpcEndpointServiceUserSet.", this.VpcEndpointServiceUserSet);
+        this.setParamArrayObj(map, prefix + "VpcEndPointServiceUserSet.", this.VpcEndPointServiceUserSet);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -94,6 +94,14 @@ public class OverrideTranscodeParameter extends AbstractModel{
     private String StdExtInfo;
 
     /**
+    * 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddOnSubtitles")
+    @Expose
+    private AddOnSubtitle [] AddOnSubtitles;
+
+    /**
      * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -269,6 +277,26 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.StdExtInfo = StdExtInfo;
     }
 
+    /**
+     * Get 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddOnSubtitles 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AddOnSubtitle [] getAddOnSubtitles() {
+        return this.AddOnSubtitles;
+    }
+
+    /**
+     * Set 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddOnSubtitles 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
+        this.AddOnSubtitles = AddOnSubtitles;
+    }
+
     public OverrideTranscodeParameter() {
     }
 
@@ -307,6 +335,12 @@ public class OverrideTranscodeParameter extends AbstractModel{
         if (source.StdExtInfo != null) {
             this.StdExtInfo = new String(source.StdExtInfo);
         }
+        if (source.AddOnSubtitles != null) {
+            this.AddOnSubtitles = new AddOnSubtitle[source.AddOnSubtitles.length];
+            for (int i = 0; i < source.AddOnSubtitles.length; i++) {
+                this.AddOnSubtitles[i] = new AddOnSubtitle(source.AddOnSubtitles[i]);
+            }
+        }
     }
 
 
@@ -323,6 +357,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         this.setParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
         this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+        this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
 
     }
 }

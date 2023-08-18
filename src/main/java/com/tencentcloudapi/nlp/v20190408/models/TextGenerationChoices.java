@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatabaseName extends AbstractModel{
+public class TextGenerationChoices extends AbstractModel{
 
     /**
-    * 数据库表名
+    * 内容
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DatabaseName")
+    @SerializedName("Message")
     @Expose
-    private String DatabaseName;
+    private TextGenerationMessage Message;
 
     /**
-     * Get 数据库表名 
-     * @return DatabaseName 数据库表名
+     * Get 内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Message 内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDatabaseName() {
-        return this.DatabaseName;
+    public TextGenerationMessage getMessage() {
+        return this.Message;
     }
 
     /**
-     * Set 数据库表名
-     * @param DatabaseName 数据库表名
+     * Set 内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDatabaseName(String DatabaseName) {
-        this.DatabaseName = DatabaseName;
+    public void setMessage(TextGenerationMessage Message) {
+        this.Message = Message;
     }
 
-    public DatabaseName() {
+    public TextGenerationChoices() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DatabaseName(DatabaseName source) {
-        if (source.DatabaseName != null) {
-            this.DatabaseName = new String(source.DatabaseName);
+    public TextGenerationChoices(TextGenerationChoices source) {
+        if (source.Message != null) {
+            this.Message = new TextGenerationMessage(source.Message);
         }
     }
 
@@ -63,7 +68,7 @@ public class DatabaseName extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamObj(map, prefix + "Message.", this.Message);
 
     }
 }

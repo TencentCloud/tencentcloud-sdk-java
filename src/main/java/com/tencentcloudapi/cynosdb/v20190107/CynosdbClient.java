@@ -1278,7 +1278,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeProxyNodes）用于查询代理接口列表。
+     *本接口（DescribeProxyNodes）用于查询代理节点列表。
      * @param req DescribeProxyNodesRequest
      * @return DescribeProxyNodesResponse
      * @throws TencentCloudSDKException

@@ -79,6 +79,13 @@ public class CreateVpcRequest extends AbstractModel{
     private String Description;
 
     /**
+    * 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+    */
+    @SerializedName("ISPTypes")
+    @Expose
+    private ISPTypeItem [] ISPTypes;
+
+    /**
      * Get vpc名称，最大长度不能超过60个字节。 
      * @return VpcName vpc名称，最大长度不能超过60个字节。
      */
@@ -206,6 +213,22 @@ public class CreateVpcRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	 
+     * @return ISPTypes 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+     */
+    public ISPTypeItem [] getISPTypes() {
+        return this.ISPTypes;
+    }
+
+    /**
+     * Set 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+     * @param ISPTypes 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+     */
+    public void setISPTypes(ISPTypeItem [] ISPTypes) {
+        this.ISPTypes = ISPTypes;
+    }
+
     public CreateVpcRequest() {
     }
 
@@ -244,6 +267,12 @@ public class CreateVpcRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ISPTypes != null) {
+            this.ISPTypes = new ISPTypeItem[source.ISPTypes.length];
+            for (int i = 0; i < source.ISPTypes.length; i++) {
+                this.ISPTypes[i] = new ISPTypeItem(source.ISPTypes[i]);
+            }
+        }
     }
 
 
@@ -259,6 +288,7 @@ public class CreateVpcRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "ISPTypes.", this.ISPTypes);
 
     }
 }

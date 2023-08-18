@@ -1742,6 +1742,8 @@ public class ClsClient extends AbstractClient{
 
     /**
      *本接口用于检索分析日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
+
+API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
      * @param req SearchLogRequest
      * @return SearchLogResponse
      * @throws TencentCloudSDKException

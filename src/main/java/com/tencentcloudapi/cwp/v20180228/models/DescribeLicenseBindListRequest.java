@@ -44,7 +44,9 @@ public class DescribeLicenseBindListRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * <li>Keywords 机器别名/公私IP 模糊查询</li>
+    * <li>InstanceID、IP、
+
+MachineName 模糊查询</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -113,16 +115,24 @@ public class DescribeLicenseBindListRequest extends AbstractModel{
     }
 
     /**
-     * Get <li>Keywords 机器别名/公私IP 模糊查询</li> 
-     * @return Filters <li>Keywords 机器别名/公私IP 模糊查询</li>
+     * Get <li>InstanceID、IP、
+
+MachineName 模糊查询</li> 
+     * @return Filters <li>InstanceID、IP、
+
+MachineName 模糊查询</li>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>Keywords 机器别名/公私IP 模糊查询</li>
-     * @param Filters <li>Keywords 机器别名/公私IP 模糊查询</li>
+     * Set <li>InstanceID、IP、
+
+MachineName 模糊查询</li>
+     * @param Filters <li>InstanceID、IP、
+
+MachineName 模糊查询</li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
