@@ -137,6 +137,14 @@ public class WxGatewayRountItem extends AbstractModel{
     private String GatewayRouteEnvId;
 
     /**
+    * 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayRoutePathMatchType")
+    @Expose
+    private String GatewayRoutePathMatchType;
+
+    /**
      * Get 安全网关路由名称 
      * @return GatewayRouteName 安全网关路由名称
      */
@@ -412,6 +420,26 @@ public class WxGatewayRountItem extends AbstractModel{
         this.GatewayRouteEnvId = GatewayRouteEnvId;
     }
 
+    /**
+     * Get 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayRoutePathMatchType 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewayRoutePathMatchType() {
+        return this.GatewayRoutePathMatchType;
+    }
+
+    /**
+     * Set 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayRoutePathMatchType 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayRoutePathMatchType(String GatewayRoutePathMatchType) {
+        this.GatewayRoutePathMatchType = GatewayRoutePathMatchType;
+    }
+
     public WxGatewayRountItem() {
     }
 
@@ -468,6 +496,9 @@ public class WxGatewayRountItem extends AbstractModel{
         if (source.GatewayRouteEnvId != null) {
             this.GatewayRouteEnvId = new String(source.GatewayRouteEnvId);
         }
+        if (source.GatewayRoutePathMatchType != null) {
+            this.GatewayRoutePathMatchType = new String(source.GatewayRoutePathMatchType);
+        }
     }
 
 
@@ -490,6 +521,7 @@ public class WxGatewayRountItem extends AbstractModel{
         this.setParamSimple(map, prefix + "GatewayRouteMethod", this.GatewayRouteMethod);
         this.setParamSimple(map, prefix + "GatewayRoutePort", this.GatewayRoutePort);
         this.setParamSimple(map, prefix + "GatewayRouteEnvId", this.GatewayRouteEnvId);
+        this.setParamSimple(map, prefix + "GatewayRoutePathMatchType", this.GatewayRoutePathMatchType);
 
     }
 }

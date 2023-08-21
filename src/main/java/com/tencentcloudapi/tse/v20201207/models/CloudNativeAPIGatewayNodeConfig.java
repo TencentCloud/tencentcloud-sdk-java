@@ -13,94 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HeuristicCache extends AbstractModel{
+public class CloudNativeAPIGatewayNodeConfig extends AbstractModel{
 
     /**
-    * 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+    * 节点配置, 1c2g|2c4g|4c8g|8c16g。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Switch")
+    @SerializedName("Specification")
     @Expose
-    private String Switch;
+    private String Specification;
 
     /**
-    * 自定义启发式缓存时间配置
+    * 节点数量，2-9。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CacheConfig")
+    @SerializedName("Number")
     @Expose
-    private CacheConfig CacheConfig;
+    private Long Number;
 
     /**
-     * Get 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * Get 节点配置, 1c2g|2c4g|4c8g|8c16g。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @return Specification 节点配置, 1c2g|2c4g|4c8g|8c16g。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getSwitch() {
-        return this.Switch;
+    public String getSpecification() {
+        return this.Specification;
     }
 
     /**
-     * Set 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * Set 节点配置, 1c2g|2c4g|4c8g|8c16g。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @param Specification 节点配置, 1c2g|2c4g|4c8g|8c16g。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setSpecification(String Specification) {
+        this.Specification = Specification;
     }
 
     /**
-     * Get 自定义启发式缓存时间配置
+     * Get 节点数量，2-9。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheConfig 自定义启发式缓存时间配置
+     * @return Number 节点数量，2-9。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public CacheConfig getCacheConfig() {
-        return this.CacheConfig;
+    public Long getNumber() {
+        return this.Number;
     }
 
     /**
-     * Set 自定义启发式缓存时间配置
+     * Set 节点数量，2-9。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheConfig 自定义启发式缓存时间配置
+     * @param Number 节点数量，2-9。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCacheConfig(CacheConfig CacheConfig) {
-        this.CacheConfig = CacheConfig;
+    public void setNumber(Long Number) {
+        this.Number = Number;
     }
 
-    public HeuristicCache() {
+    public CloudNativeAPIGatewayNodeConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HeuristicCache(HeuristicCache source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+    public CloudNativeAPIGatewayNodeConfig(CloudNativeAPIGatewayNodeConfig source) {
+        if (source.Specification != null) {
+            this.Specification = new String(source.Specification);
         }
-        if (source.CacheConfig != null) {
-            this.CacheConfig = new CacheConfig(source.CacheConfig);
+        if (source.Number != null) {
+            this.Number = new Long(source.Number);
         }
     }
 
@@ -109,8 +99,8 @@ off：关闭
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamObj(map, prefix + "CacheConfig.", this.CacheConfig);
+        this.setParamSimple(map, prefix + "Specification", this.Specification);
+        this.setParamSimple(map, prefix + "Number", this.Number);
 
     }
 }

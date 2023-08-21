@@ -635,6 +635,27 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *用户在发现迁移任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+     * @param req ModifyMigrateRateLimitRequest
+     * @return ModifyMigrateRateLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMigrateRateLimitResponse ModifyMigrateRateLimit(ModifyMigrateRateLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMigrateRateLimitResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMigrateRateLimitResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMigrateRateLimit");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *配置迁移服务，配置成功后可通过`CreateMigrationCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
      * @param req ModifyMigrationJobRequest
      * @return ModifyMigrationJobResponse
@@ -670,6 +691,27 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySyncJobConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySyncJobConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户在发现同步任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+     * @param req ModifySyncRateLimitRequest
+     * @return ModifySyncRateLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySyncRateLimitResponse ModifySyncRateLimit(ModifySyncRateLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySyncRateLimitResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySyncRateLimitResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySyncRateLimit");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

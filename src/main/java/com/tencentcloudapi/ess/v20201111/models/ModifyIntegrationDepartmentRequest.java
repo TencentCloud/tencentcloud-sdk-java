@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class ModifyIntegrationDepartmentRequest extends AbstractModel{
 
     /**
-    * 操作人信息，UserId必填且需拥有组织架构管理权限
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
@@ -35,6 +36,14 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     @SerializedName("DeptId")
     @Expose
     private String DeptId;
+
+    /**
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
 
     /**
     * 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
@@ -65,16 +74,20 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     private Long OrderNo;
 
     /**
-     * Get 操作人信息，UserId必填且需拥有组织架构管理权限 
-     * @return Operator 操作人信息，UserId必填且需拥有组织架构管理权限
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息，UserId必填且需拥有组织架构管理权限
-     * @param Operator 操作人信息，UserId必填且需拥有组织架构管理权限
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
@@ -94,6 +107,26 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
      */
     public void setDeptId(String DeptId) {
         this.DeptId = DeptId;
+    }
+
+    /**
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     /**
@@ -174,6 +207,9 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
         if (source.DeptId != null) {
             this.DeptId = new String(source.DeptId);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
         if (source.ParentDeptId != null) {
             this.ParentDeptId = new String(source.ParentDeptId);
         }
@@ -195,6 +231,7 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "DeptId", this.DeptId);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ParentDeptId", this.ParentDeptId);
         this.setParamSimple(map, prefix + "DeptName", this.DeptName);
         this.setParamSimple(map, prefix + "DeptOpenId", this.DeptOpenId);

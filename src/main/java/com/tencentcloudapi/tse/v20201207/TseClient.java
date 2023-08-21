@@ -39,6 +39,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建云原生API网关实例
+     * @param req CreateCloudNativeAPIGatewayRequest
+     * @return CreateCloudNativeAPIGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayResponse CreateCloudNativeAPIGateway(CreateCloudNativeAPIGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudNativeAPIGatewayResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudNativeAPIGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudNativeAPIGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建云原生网关的灰度规则
      * @param req CreateCloudNativeAPIGatewayCanaryRuleRequest
      * @return CreateCloudNativeAPIGatewayCanaryRuleResponse
@@ -165,6 +186,48 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建云原生网关引擎分组
+     * @param req CreateNativeGatewayServerGroupRequest
+     * @return CreateNativeGatewayServerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroup(CreateNativeGatewayServerGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNativeGatewayServerGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNativeGatewayServerGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNativeGatewayServerGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除云原生API网关实例
+     * @param req DeleteCloudNativeAPIGatewayRequest
+     * @return DeleteCloudNativeAPIGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayResponse DeleteCloudNativeAPIGateway(DeleteCloudNativeAPIGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCloudNativeAPIGatewayResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCloudNativeAPIGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCloudNativeAPIGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除云原生网关的灰度规则
      * @param req DeleteCloudNativeAPIGatewayCanaryRuleRequest
      * @return DeleteCloudNativeAPIGatewayCanaryRuleResponse
@@ -283,6 +346,48 @@ public class TseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteEngineResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除网关实例分组
+     * @param req DeleteNativeGatewayServerGroupRequest
+     * @return DeleteNativeGatewayServerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroup(DeleteNativeGatewayServerGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNativeGatewayServerGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNativeGatewayServerGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNativeGatewayServerGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取云原生API网关实例信息
+     * @param req DescribeCloudNativeAPIGatewayRequest
+     * @return DescribeCloudNativeAPIGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayResponse DescribeCloudNativeAPIGateway(DescribeCloudNativeAPIGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudNativeAPIGatewayResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudNativeAPIGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudNativeAPIGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -438,6 +543,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *获取云原生API网关实例列表
+     * @param req DescribeCloudNativeAPIGatewaysRequest
+     * @return DescribeCloudNativeAPIGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGateways(DescribeCloudNativeAPIGatewaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudNativeAPIGatewaysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudNativeAPIGateways");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询Nacos类型引擎实例副本信息
      * @param req DescribeNacosReplicasRequest
      * @return DescribeNacosReplicasResponse
@@ -585,6 +711,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *修改云原生API网关实例基础信息
+     * @param req ModifyCloudNativeAPIGatewayRequest
+     * @return ModifyCloudNativeAPIGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayResponse ModifyCloudNativeAPIGateway(ModifyCloudNativeAPIGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCloudNativeAPIGatewayResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCloudNativeAPIGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCloudNativeAPIGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改云原生网关的灰度规则
      * @param req ModifyCloudNativeAPIGatewayCanaryRuleRequest
      * @return ModifyCloudNativeAPIGatewayCanaryRuleResponse
@@ -682,6 +829,48 @@ public class TseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCloudNativeAPIGatewayServiceRateLimitResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCloudNativeAPIGatewayServiceRateLimit");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改云原生API网关实例分组基础信息
+     * @param req ModifyNativeGatewayServerGroupRequest
+     * @return ModifyNativeGatewayServerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(ModifyNativeGatewayServerGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNativeGatewayServerGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNativeGatewayServerGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNativeGatewayServerGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改云原生API网关实例的节点规格信息，比如节点扩缩容或者升降配
+     * @param req UpdateCloudNativeAPIGatewaySpecRequest
+     * @return UpdateCloudNativeAPIGatewaySpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpec(UpdateCloudNativeAPIGatewaySpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateCloudNativeAPIGatewaySpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateCloudNativeAPIGatewaySpec");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

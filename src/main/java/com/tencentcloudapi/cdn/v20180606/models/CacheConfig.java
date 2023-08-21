@@ -26,6 +26,7 @@ public class CacheConfig extends AbstractModel{
     * 启发式自定义时间缓存配置开关，取值有：
 on：开启
 off：关闭
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeuristicCacheTimeSwitch")
     @Expose
@@ -33,6 +34,7 @@ off：关闭
 
     /**
     * 单位 秒.
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeuristicCacheTime")
     @Expose
@@ -41,10 +43,12 @@ off：关闭
     /**
      * Get 启发式自定义时间缓存配置开关，取值有：
 on：开启
-off：关闭 
+off：关闭
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HeuristicCacheTimeSwitch 启发式自定义时间缓存配置开关，取值有：
 on：开启
 off：关闭
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHeuristicCacheTimeSwitch() {
         return this.HeuristicCacheTimeSwitch;
@@ -54,17 +58,21 @@ off：关闭
      * Set 启发式自定义时间缓存配置开关，取值有：
 on：开启
 off：关闭
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HeuristicCacheTimeSwitch 启发式自定义时间缓存配置开关，取值有：
 on：开启
 off：关闭
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeuristicCacheTimeSwitch(String HeuristicCacheTimeSwitch) {
         this.HeuristicCacheTimeSwitch = HeuristicCacheTimeSwitch;
     }
 
     /**
-     * Get 单位 秒. 
+     * Get 单位 秒.
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HeuristicCacheTime 单位 秒.
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeuristicCacheTime() {
         return this.HeuristicCacheTime;
@@ -72,7 +80,9 @@ off：关闭
 
     /**
      * Set 单位 秒.
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HeuristicCacheTime 单位 秒.
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeuristicCacheTime(Long HeuristicCacheTime) {
         this.HeuristicCacheTime = HeuristicCacheTime;

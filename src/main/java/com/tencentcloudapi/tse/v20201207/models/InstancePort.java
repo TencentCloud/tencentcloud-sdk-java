@@ -13,94 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HeuristicCache extends AbstractModel{
+public class InstancePort extends AbstractModel{
 
     /**
-    * 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+    * 监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Switch")
+    @SerializedName("HttpPort")
     @Expose
-    private String Switch;
+    private String HttpPort;
 
     /**
-    * 自定义启发式缓存时间配置
+    * 监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CacheConfig")
+    @SerializedName("HttpsPort")
     @Expose
-    private CacheConfig CacheConfig;
+    private String HttpsPort;
 
     /**
-     * Get 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * Get 监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @return HttpPort 监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getSwitch() {
-        return this.Switch;
+    public String getHttpPort() {
+        return this.HttpPort;
     }
 
     /**
-     * Set 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * Set 监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @param HttpPort 监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setHttpPort(String HttpPort) {
+        this.HttpPort = HttpPort;
     }
 
     /**
-     * Get 自定义启发式缓存时间配置
+     * Get 监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheConfig 自定义启发式缓存时间配置
+     * @return HttpsPort 监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public CacheConfig getCacheConfig() {
-        return this.CacheConfig;
+    public String getHttpsPort() {
+        return this.HttpsPort;
     }
 
     /**
-     * Set 自定义启发式缓存时间配置
+     * Set 监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheConfig 自定义启发式缓存时间配置
+     * @param HttpsPort 监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCacheConfig(CacheConfig CacheConfig) {
-        this.CacheConfig = CacheConfig;
+    public void setHttpsPort(String HttpsPort) {
+        this.HttpsPort = HttpsPort;
     }
 
-    public HeuristicCache() {
+    public InstancePort() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HeuristicCache(HeuristicCache source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+    public InstancePort(InstancePort source) {
+        if (source.HttpPort != null) {
+            this.HttpPort = new String(source.HttpPort);
         }
-        if (source.CacheConfig != null) {
-            this.CacheConfig = new CacheConfig(source.CacheConfig);
+        if (source.HttpsPort != null) {
+            this.HttpsPort = new String(source.HttpsPort);
         }
     }
 
@@ -109,8 +99,8 @@ off：关闭
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamObj(map, prefix + "CacheConfig.", this.CacheConfig);
+        this.setParamSimple(map, prefix + "HttpPort", this.HttpPort);
+        this.setParamSimple(map, prefix + "HttpsPort", this.HttpsPort);
 
     }
 }

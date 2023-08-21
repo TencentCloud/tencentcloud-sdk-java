@@ -67,7 +67,7 @@ public class ApproverInfo extends AbstractModel{
     * 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul>
+<li> 骑缝章等签署控件</li></ul>
     */
     @SerializedName("SignComponents")
     @Expose
@@ -330,11 +330,11 @@ public class ApproverInfo extends AbstractModel{
      * Get 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul> 
+<li> 骑缝章等签署控件</li></ul> 
      * @return SignComponents 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul>
+<li> 骑缝章等签署控件</li></ul>
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
@@ -344,11 +344,11 @@ public class ApproverInfo extends AbstractModel{
      * Set 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul>
+<li> 骑缝章等签署控件</li></ul>
      * @param SignComponents 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul>
+<li> 骑缝章等签署控件</li></ul>
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;

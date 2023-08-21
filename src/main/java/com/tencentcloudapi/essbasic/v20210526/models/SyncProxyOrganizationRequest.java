@@ -66,6 +66,20 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+    */
+    @SerializedName("ProxyLegalIdCardType")
+    @Expose
+    private String ProxyLegalIdCardType;
+
+    /**
+    * 第三方平台子客企业法人/负责人证件号
+    */
+    @SerializedName("ProxyLegalIdCardNumber")
+    @Expose
+    private String ProxyLegalIdCardNumber;
+
+    /**
      * Get 应用信息
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填 
      * @return Agent 应用信息
@@ -169,6 +183,38 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型 
+     * @return ProxyLegalIdCardType 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+     */
+    public String getProxyLegalIdCardType() {
+        return this.ProxyLegalIdCardType;
+    }
+
+    /**
+     * Set 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+     * @param ProxyLegalIdCardType 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+     */
+    public void setProxyLegalIdCardType(String ProxyLegalIdCardType) {
+        this.ProxyLegalIdCardType = ProxyLegalIdCardType;
+    }
+
+    /**
+     * Get 第三方平台子客企业法人/负责人证件号 
+     * @return ProxyLegalIdCardNumber 第三方平台子客企业法人/负责人证件号
+     */
+    public String getProxyLegalIdCardNumber() {
+        return this.ProxyLegalIdCardNumber;
+    }
+
+    /**
+     * Set 第三方平台子客企业法人/负责人证件号
+     * @param ProxyLegalIdCardNumber 第三方平台子客企业法人/负责人证件号
+     */
+    public void setProxyLegalIdCardNumber(String ProxyLegalIdCardNumber) {
+        this.ProxyLegalIdCardNumber = ProxyLegalIdCardNumber;
+    }
+
     public SyncProxyOrganizationRequest() {
     }
 
@@ -195,6 +241,12 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.ProxyLegalIdCardType != null) {
+            this.ProxyLegalIdCardType = new String(source.ProxyLegalIdCardType);
+        }
+        if (source.ProxyLegalIdCardNumber != null) {
+            this.ProxyLegalIdCardNumber = new String(source.ProxyLegalIdCardNumber);
+        }
     }
 
 
@@ -208,6 +260,8 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamSimple(map, prefix + "ProxyLegalName", this.ProxyLegalName);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "ProxyLegalIdCardType", this.ProxyLegalIdCardType);
+        this.setParamSimple(map, prefix + "ProxyLegalIdCardNumber", this.ProxyLegalIdCardNumber);
 
     }
 }

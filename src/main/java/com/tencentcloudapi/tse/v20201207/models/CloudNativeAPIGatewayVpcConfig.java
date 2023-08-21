@@ -13,94 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HeuristicCache extends AbstractModel{
+public class CloudNativeAPIGatewayVpcConfig extends AbstractModel{
 
     /**
-    * 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+    * 私有网络ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Switch")
+    @SerializedName("VpcId")
     @Expose
-    private String Switch;
+    private String VpcId;
 
     /**
-    * 自定义启发式缓存时间配置
+    * 子网ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CacheConfig")
+    @SerializedName("SubnetId")
     @Expose
-    private CacheConfig CacheConfig;
+    private String SubnetId;
 
     /**
-     * Get 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * Get 私有网络ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @return VpcId 私有网络ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getSwitch() {
-        return this.Switch;
+    public String getVpcId() {
+        return this.VpcId;
     }
 
     /**
-     * Set 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * Set 私有网络ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 启发式缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @param VpcId 私有网络ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     /**
-     * Get 自定义启发式缓存时间配置
+     * Get 子网ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CacheConfig 自定义启发式缓存时间配置
+     * @return SubnetId 子网ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public CacheConfig getCacheConfig() {
-        return this.CacheConfig;
+    public String getSubnetId() {
+        return this.SubnetId;
     }
 
     /**
-     * Set 自定义启发式缓存时间配置
+     * Set 子网ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheConfig 自定义启发式缓存时间配置
+     * @param SubnetId 子网ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCacheConfig(CacheConfig CacheConfig) {
-        this.CacheConfig = CacheConfig;
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
-    public HeuristicCache() {
+    public CloudNativeAPIGatewayVpcConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HeuristicCache(HeuristicCache source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+    public CloudNativeAPIGatewayVpcConfig(CloudNativeAPIGatewayVpcConfig source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
-        if (source.CacheConfig != null) {
-            this.CacheConfig = new CacheConfig(source.CacheConfig);
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
         }
     }
 
@@ -109,8 +99,8 @@ off：关闭
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamObj(map, prefix + "CacheConfig.", this.CacheConfig);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }
