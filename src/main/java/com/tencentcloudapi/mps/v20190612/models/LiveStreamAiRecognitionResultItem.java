@@ -30,6 +30,7 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel{
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>TagRecognition：精彩打点。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -83,13 +84,22 @@ OcrFullTextRecognition 时有效。
     private LiveStreamTransTextRecognitionResult [] TransTextRecognitionResultSet;
 
     /**
+    * 打点结果，当Type 为 TagRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagRecognitionResultSet")
+    @Expose
+    private LiveStreamTagRecognitionResult [] TagRecognitionResultSet;
+
+    /**
      * Get 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
-<li>TransTextRecognition：语音翻译。</li> 
+<li>TransTextRecognition：语音翻译。</li>
+<li>TagRecognition：精彩打点。</li> 
      * @return Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
@@ -97,6 +107,7 @@ OcrFullTextRecognition 时有效。
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>TagRecognition：精彩打点。</li>
      */
     public String getType() {
         return this.Type;
@@ -110,6 +121,7 @@ OcrFullTextRecognition 时有效。
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>TagRecognition：精彩打点。</li>
      * @param Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
@@ -117,6 +129,7 @@ OcrFullTextRecognition 时有效。
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>TagRecognition：精彩打点。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -238,6 +251,26 @@ OcrFullTextRecognition 时有效。
         this.TransTextRecognitionResultSet = TransTextRecognitionResultSet;
     }
 
+    /**
+     * Get 打点结果，当Type 为 TagRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagRecognitionResultSet 打点结果，当Type 为 TagRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LiveStreamTagRecognitionResult [] getTagRecognitionResultSet() {
+        return this.TagRecognitionResultSet;
+    }
+
+    /**
+     * Set 打点结果，当Type 为 TagRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagRecognitionResultSet 打点结果，当Type 为 TagRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagRecognitionResultSet(LiveStreamTagRecognitionResult [] TagRecognitionResultSet) {
+        this.TagRecognitionResultSet = TagRecognitionResultSet;
+    }
+
     public LiveStreamAiRecognitionResultItem() {
     }
 
@@ -285,6 +318,12 @@ OcrFullTextRecognition 时有效。
                 this.TransTextRecognitionResultSet[i] = new LiveStreamTransTextRecognitionResult(source.TransTextRecognitionResultSet[i]);
             }
         }
+        if (source.TagRecognitionResultSet != null) {
+            this.TagRecognitionResultSet = new LiveStreamTagRecognitionResult[source.TagRecognitionResultSet.length];
+            for (int i = 0; i < source.TagRecognitionResultSet.length; i++) {
+                this.TagRecognitionResultSet[i] = new LiveStreamTagRecognitionResult(source.TagRecognitionResultSet[i]);
+            }
+        }
     }
 
 
@@ -299,6 +338,7 @@ OcrFullTextRecognition 时有效。
         this.setParamArrayObj(map, prefix + "AsrFullTextRecognitionResultSet.", this.AsrFullTextRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "OcrFullTextRecognitionResultSet.", this.OcrFullTextRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "TransTextRecognitionResultSet.", this.TransTextRecognitionResultSet);
+        this.setParamArrayObj(map, prefix + "TagRecognitionResultSet.", this.TagRecognitionResultSet);
 
     }
 }

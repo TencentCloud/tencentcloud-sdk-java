@@ -58,6 +58,14 @@ public class ModifyTopicRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+
+    */
+    @SerializedName("MsgTTL")
+    @Expose
+    private Long MsgTTL;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -137,6 +145,26 @@ public class ModifyTopicRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+ 
+     * @return MsgTTL 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+
+     */
+    public Long getMsgTTL() {
+        return this.MsgTTL;
+    }
+
+    /**
+     * Set 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+
+     * @param MsgTTL 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+
+     */
+    public void setMsgTTL(Long MsgTTL) {
+        this.MsgTTL = MsgTTL;
+    }
+
     public ModifyTopicRequest() {
     }
 
@@ -160,6 +188,9 @@ public class ModifyTopicRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class ModifyTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Partitions", this.Partitions);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
 
     }
 }

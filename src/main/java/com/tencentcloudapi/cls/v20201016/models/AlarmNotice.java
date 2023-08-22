@@ -80,6 +80,14 @@ public class AlarmNotice extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 通知规则。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NoticeRules")
+    @Expose
+    private NoticeRule [] NoticeRules;
+
+    /**
      * Get 告警通知模板名称。 
      * @return Name 告警通知模板名称。
      */
@@ -223,6 +231,26 @@ public class AlarmNotice extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 通知规则。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NoticeRules 通知规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NoticeRule [] getNoticeRules() {
+        return this.NoticeRules;
+    }
+
+    /**
+     * Set 通知规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NoticeRules 通知规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNoticeRules(NoticeRule [] NoticeRules) {
+        this.NoticeRules = NoticeRules;
+    }
+
     public AlarmNotice() {
     }
 
@@ -258,6 +286,12 @@ public class AlarmNotice extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.NoticeRules != null) {
+            this.NoticeRules = new NoticeRule[source.NoticeRules.length];
+            for (int i = 0; i < source.NoticeRules.length; i++) {
+                this.NoticeRules[i] = new NoticeRule(source.NoticeRules[i]);
+            }
+        }
     }
 
 
@@ -272,6 +306,7 @@ public class AlarmNotice extends AbstractModel{
         this.setParamSimple(map, prefix + "AlarmNoticeId", this.AlarmNoticeId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
 
     }
 }

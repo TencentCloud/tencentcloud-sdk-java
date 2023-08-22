@@ -13,25 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlarmAnalysisConfig extends AbstractModel{
+public class BillDetailComponentConfig extends AbstractModel{
 
     /**
-    * 键
+    * 配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Key")
+    @SerializedName("Name")
     @Expose
-    private String Key;
+    private String Name;
 
     /**
-    * 值
+    * 配置描述值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
@@ -39,29 +39,29 @@ public class AlarmAnalysisConfig extends AbstractModel{
     private String Value;
 
     /**
-     * Get 键
+     * Get 配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 键
+     * @return Name 配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getKey() {
-        return this.Key;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 键
+     * Set 配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 键
+     * @param Name 配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 值
+     * Get 配置描述值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 值
+     * @return Value 配置描述值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
@@ -69,25 +69,25 @@ public class AlarmAnalysisConfig extends AbstractModel{
     }
 
     /**
-     * Set 值
+     * Set 配置描述值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 值
+     * @param Value 配置描述值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
-    public AlarmAnalysisConfig() {
+    public BillDetailComponentConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AlarmAnalysisConfig(AlarmAnalysisConfig source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
+    public BillDetailComponentConfig(BillDetailComponentConfig source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.Value != null) {
             this.Value = new String(source.Value);
@@ -99,7 +99,7 @@ public class AlarmAnalysisConfig extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
 
     }

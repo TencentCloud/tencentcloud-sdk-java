@@ -20,77 +20,82 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlarmAnalysisConfig extends AbstractModel{
+public class MultiCondition extends AbstractModel{
 
     /**
-    * 键
+    * 触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Key")
+    @SerializedName("Condition")
     @Expose
-    private String Key;
+    private String Condition;
 
     /**
-    * 值
+    * 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Value")
+    @SerializedName("AlarmLevel")
     @Expose
-    private String Value;
+    private Long AlarmLevel;
 
     /**
-     * Get 键
+     * Get 触发条件。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 键
+     * @return Condition 触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getKey() {
-        return this.Key;
+    public String getCondition() {
+        return this.Condition;
     }
 
     /**
-     * Set 键
+     * Set 触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 键
+     * @param Condition 触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setCondition(String Condition) {
+        this.Condition = Condition;
     }
 
     /**
-     * Get 值
+     * Get 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 值
+     * @return AlarmLevel 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getValue() {
-        return this.Value;
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
     }
 
     /**
-     * Set 值
+     * Set 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 值
+     * @param AlarmLevel 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
     }
 
-    public AlarmAnalysisConfig() {
+    public MultiCondition() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AlarmAnalysisConfig(AlarmAnalysisConfig source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
+    public MultiCondition(MultiCondition source) {
+        if (source.Condition != null) {
+            this.Condition = new String(source.Condition);
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
         }
     }
 
@@ -99,8 +104,8 @@ public class AlarmAnalysisConfig extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Condition", this.Condition);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
 
     }
 }

@@ -46,6 +46,13 @@ public class CreateWebThemeConfigRequest extends AbstractModel{
     private WebThemeConfig WebThemeConfig;
 
     /**
+    * 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -101,6 +108,22 @@ public class CreateWebThemeConfigRequest extends AbstractModel{
         this.WebThemeConfig = WebThemeConfig;
     }
 
+    /**
+     * Get 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	 
+     * @return Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+     * @param Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateWebThemeConfigRequest() {
     }
 
@@ -118,6 +141,9 @@ public class CreateWebThemeConfigRequest extends AbstractModel{
         if (source.WebThemeConfig != null) {
             this.WebThemeConfig = new WebThemeConfig(source.WebThemeConfig);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -128,6 +154,7 @@ public class CreateWebThemeConfigRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ThemeType", this.ThemeType);
         this.setParamObj(map, prefix + "WebThemeConfig.", this.WebThemeConfig);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

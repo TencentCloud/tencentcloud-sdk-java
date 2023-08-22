@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSchemeUrlResponse extends AbstractModel{
+public class GetAttackTotalCountResponse extends AbstractModel{
 
     /**
-    * 小程序链接地址，有效期90天。如果EndPoint是App，得到的链接Path如’weixin://dl/business/?t= *TICKET*‘，用于客户APP、小程序直接拉起电子签小程序；其他EndPoint得到的https链接如'https://essurl.cn/xxx'，点击链接会打开一个H5页面，然后拉起电子签小程序。
+    * 攻击总次数
     */
-    @SerializedName("SchemeUrl")
+    @SerializedName("TotalCount")
     @Expose
-    private String SchemeUrl;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateSchemeUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 小程序链接地址，有效期90天。如果EndPoint是App，得到的链接Path如’weixin://dl/business/?t= *TICKET*‘，用于客户APP、小程序直接拉起电子签小程序；其他EndPoint得到的https链接如'https://essurl.cn/xxx'，点击链接会打开一个H5页面，然后拉起电子签小程序。 
-     * @return SchemeUrl 小程序链接地址，有效期90天。如果EndPoint是App，得到的链接Path如’weixin://dl/business/?t= *TICKET*‘，用于客户APP、小程序直接拉起电子签小程序；其他EndPoint得到的https链接如'https://essurl.cn/xxx'，点击链接会打开一个H5页面，然后拉起电子签小程序。
+     * Get 攻击总次数 
+     * @return TotalCount 攻击总次数
      */
-    public String getSchemeUrl() {
-        return this.SchemeUrl;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 小程序链接地址，有效期90天。如果EndPoint是App，得到的链接Path如’weixin://dl/business/?t= *TICKET*‘，用于客户APP、小程序直接拉起电子签小程序；其他EndPoint得到的https链接如'https://essurl.cn/xxx'，点击链接会打开一个H5页面，然后拉起电子签小程序。
-     * @param SchemeUrl 小程序链接地址，有效期90天。如果EndPoint是App，得到的链接Path如’weixin://dl/business/?t= *TICKET*‘，用于客户APP、小程序直接拉起电子签小程序；其他EndPoint得到的https链接如'https://essurl.cn/xxx'，点击链接会打开一个H5页面，然后拉起电子签小程序。
+     * Set 攻击总次数
+     * @param TotalCount 攻击总次数
      */
-    public void setSchemeUrl(String SchemeUrl) {
-        this.SchemeUrl = SchemeUrl;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -68,16 +68,16 @@ public class CreateSchemeUrlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateSchemeUrlResponse() {
+    public GetAttackTotalCountResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSchemeUrlResponse(CreateSchemeUrlResponse source) {
-        if (source.SchemeUrl != null) {
-            this.SchemeUrl = new String(source.SchemeUrl);
+    public GetAttackTotalCountResponse(GetAttackTotalCountResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class CreateSchemeUrlResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SchemeUrl", this.SchemeUrl);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -53,6 +53,22 @@ public class ImageInfo extends AbstractModel{
     private String RegistryId;
 
     /**
+    * 是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowSaveAllContent")
+    @Expose
+    private Boolean AllowSaveAllContent;
+
+    /**
+    * 镜像名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageName")
+    @Expose
+    private String ImageName;
+
+    /**
      * Get 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像 
      * @return ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
      */
@@ -124,6 +140,46 @@ public class ImageInfo extends AbstractModel{
         this.RegistryId = RegistryId;
     }
 
+    /**
+     * Get 是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowSaveAllContent 是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllowSaveAllContent() {
+        return this.AllowSaveAllContent;
+    }
+
+    /**
+     * Set 是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowSaveAllContent 是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowSaveAllContent(Boolean AllowSaveAllContent) {
+        this.AllowSaveAllContent = AllowSaveAllContent;
+    }
+
+    /**
+     * Get 镜像名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageName 镜像名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageName() {
+        return this.ImageName;
+    }
+
+    /**
+     * Set 镜像名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageName 镜像名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageName(String ImageName) {
+        this.ImageName = ImageName;
+    }
+
     public ImageInfo() {
     }
 
@@ -144,6 +200,12 @@ public class ImageInfo extends AbstractModel{
         if (source.RegistryId != null) {
             this.RegistryId = new String(source.RegistryId);
         }
+        if (source.AllowSaveAllContent != null) {
+            this.AllowSaveAllContent = new Boolean(source.AllowSaveAllContent);
+        }
+        if (source.ImageName != null) {
+            this.ImageName = new String(source.ImageName);
+        }
     }
 
 
@@ -155,6 +217,8 @@ public class ImageInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
+        this.setParamSimple(map, prefix + "ImageName", this.ImageName);
 
     }
 }

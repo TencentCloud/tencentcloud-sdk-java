@@ -239,6 +239,14 @@ public class BillDetailComponent extends AbstractModel{
     private String BlendedDiscount;
 
     /**
+    * 配置描述：资源配置规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComponentConfig")
+    @Expose
+    private BillDetailComponentConfig [] ComponentConfig;
+
+    /**
      * Get 组件类型：用户购买的产品或服务对应的组件大类，例如：云服务器 CVM 的组件：CPU、内存等 
      * @return ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类，例如：云服务器 CVM 的组件：CPU、内存等
      */
@@ -762,6 +770,26 @@ public class BillDetailComponent extends AbstractModel{
         this.BlendedDiscount = BlendedDiscount;
     }
 
+    /**
+     * Get 配置描述：资源配置规格信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ComponentConfig 配置描述：资源配置规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BillDetailComponentConfig [] getComponentConfig() {
+        return this.ComponentConfig;
+    }
+
+    /**
+     * Set 配置描述：资源配置规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComponentConfig 配置描述：资源配置规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComponentConfig(BillDetailComponentConfig [] ComponentConfig) {
+        this.ComponentConfig = ComponentConfig;
+    }
+
     public BillDetailComponent() {
     }
 
@@ -857,6 +885,12 @@ public class BillDetailComponent extends AbstractModel{
         if (source.BlendedDiscount != null) {
             this.BlendedDiscount = new String(source.BlendedDiscount);
         }
+        if (source.ComponentConfig != null) {
+            this.ComponentConfig = new BillDetailComponentConfig[source.ComponentConfig.length];
+            for (int i = 0; i < source.ComponentConfig.length; i++) {
+                this.ComponentConfig[i] = new BillDetailComponentConfig(source.ComponentConfig[i]);
+            }
+        }
     }
 
 
@@ -893,6 +927,7 @@ public class BillDetailComponent extends AbstractModel{
         this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
         this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
         this.setParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
+        this.setParamArrayObj(map, prefix + "ComponentConfig.", this.ComponentConfig);
 
     }
 }

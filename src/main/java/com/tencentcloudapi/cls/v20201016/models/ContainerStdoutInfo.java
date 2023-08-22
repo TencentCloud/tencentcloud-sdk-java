@@ -78,6 +78,14 @@ public class ContainerStdoutInfo extends AbstractModel{
     private String [] ExcludeLabels;
 
     /**
+    * metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomLabels")
+    @Expose
+    private String [] CustomLabels;
+
+    /**
      * Get 是否所有容器 
      * @return AllContainers 是否所有容器
      */
@@ -213,6 +221,26 @@ public class ContainerStdoutInfo extends AbstractModel{
         this.ExcludeLabels = ExcludeLabels;
     }
 
+    /**
+     * Get metadata信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomLabels metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCustomLabels() {
+        return this.CustomLabels;
+    }
+
+    /**
+     * Set metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomLabels metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomLabels(String [] CustomLabels) {
+        this.CustomLabels = CustomLabels;
+    }
+
     public ContainerStdoutInfo() {
     }
 
@@ -251,6 +279,12 @@ public class ContainerStdoutInfo extends AbstractModel{
                 this.ExcludeLabels[i] = new String(source.ExcludeLabels[i]);
             }
         }
+        if (source.CustomLabels != null) {
+            this.CustomLabels = new String[source.CustomLabels.length];
+            for (int i = 0; i < source.CustomLabels.length; i++) {
+                this.CustomLabels[i] = new String(source.CustomLabels[i]);
+            }
+        }
     }
 
 
@@ -265,6 +299,7 @@ public class ContainerStdoutInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "WorkLoads.", this.WorkLoads);
         this.setParamSimple(map, prefix + "ExcludeNamespace", this.ExcludeNamespace);
         this.setParamArraySimple(map, prefix + "ExcludeLabels.", this.ExcludeLabels);
+        this.setParamArraySimple(map, prefix + "CustomLabels.", this.CustomLabels);
 
     }
 }

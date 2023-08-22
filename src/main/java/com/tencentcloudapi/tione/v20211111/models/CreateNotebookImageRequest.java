@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateNotebookImageRequest extends AbstractModel{
 
     /**
-    * 要保存的kernel数组
-    */
-    @SerializedName("Kernels")
-    @Expose
-    private String [] Kernels;
-
-    /**
     * 镜像信息
     */
     @SerializedName("ImageInfo")
@@ -44,20 +37,11 @@ public class CreateNotebookImageRequest extends AbstractModel{
     private String NotebookId;
 
     /**
-     * Get 要保存的kernel数组 
-     * @return Kernels 要保存的kernel数组
-     */
-    public String [] getKernels() {
-        return this.Kernels;
-    }
-
-    /**
-     * Set 要保存的kernel数组
-     * @param Kernels 要保存的kernel数组
-     */
-    public void setKernels(String [] Kernels) {
-        this.Kernels = Kernels;
-    }
+    * 要保存的kernel数组
+    */
+    @SerializedName("Kernels")
+    @Expose
+    private String [] Kernels;
 
     /**
      * Get 镜像信息 
@@ -91,6 +75,22 @@ public class CreateNotebookImageRequest extends AbstractModel{
         this.NotebookId = NotebookId;
     }
 
+    /**
+     * Get 要保存的kernel数组 
+     * @return Kernels 要保存的kernel数组
+     */
+    public String [] getKernels() {
+        return this.Kernels;
+    }
+
+    /**
+     * Set 要保存的kernel数组
+     * @param Kernels 要保存的kernel数组
+     */
+    public void setKernels(String [] Kernels) {
+        this.Kernels = Kernels;
+    }
+
     public CreateNotebookImageRequest() {
     }
 
@@ -99,17 +99,17 @@ public class CreateNotebookImageRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateNotebookImageRequest(CreateNotebookImageRequest source) {
-        if (source.Kernels != null) {
-            this.Kernels = new String[source.Kernels.length];
-            for (int i = 0; i < source.Kernels.length; i++) {
-                this.Kernels[i] = new String(source.Kernels[i]);
-            }
-        }
         if (source.ImageInfo != null) {
             this.ImageInfo = new ImageInfo(source.ImageInfo);
         }
         if (source.NotebookId != null) {
             this.NotebookId = new String(source.NotebookId);
+        }
+        if (source.Kernels != null) {
+            this.Kernels = new String[source.Kernels.length];
+            for (int i = 0; i < source.Kernels.length; i++) {
+                this.Kernels[i] = new String(source.Kernels[i]);
+            }
         }
     }
 
@@ -118,9 +118,9 @@ public class CreateNotebookImageRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Kernels.", this.Kernels);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamSimple(map, prefix + "NotebookId", this.NotebookId);
+        this.setParamArraySimple(map, prefix + "Kernels.", this.Kernels);
 
     }
 }

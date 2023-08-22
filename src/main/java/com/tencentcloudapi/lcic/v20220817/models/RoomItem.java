@@ -113,7 +113,7 @@ public class RoomItem extends AbstractModel{
     private String RecordUrl;
 
     /**
-    * 最高房间内人数（包括老师），0表示不限制，默认为0
+    * 最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMicNumber")
@@ -389,9 +389,9 @@ public class RoomItem extends AbstractModel{
     }
 
     /**
-     * Get 最高房间内人数（包括老师），0表示不限制，默认为0
+     * Get 最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxMicNumber 最高房间内人数（包括老师），0表示不限制，默认为0
+     * @return MaxMicNumber 最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMicNumber() {
@@ -399,9 +399,9 @@ public class RoomItem extends AbstractModel{
     }
 
     /**
-     * Set 最高房间内人数（包括老师），0表示不限制，默认为0
+     * Set 最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxMicNumber 最高房间内人数（包括老师），0表示不限制，默认为0
+     * @param MaxMicNumber 最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMicNumber(Long MaxMicNumber) {

@@ -127,6 +127,14 @@ public class ConfigRelease extends AbstractModel{
     private String ApplicationId;
 
     /**
+    * 配置中心发布情况
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigCenters")
+    @Expose
+    private TsfConfigCenter [] ConfigCenters;
+
+    /**
      * Get 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigReleaseId 配置项发布ID
@@ -386,6 +394,26 @@ public class ConfigRelease extends AbstractModel{
         this.ApplicationId = ApplicationId;
     }
 
+    /**
+     * Get 配置中心发布情况
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigCenters 配置中心发布情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TsfConfigCenter [] getConfigCenters() {
+        return this.ConfigCenters;
+    }
+
+    /**
+     * Set 配置中心发布情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigCenters 配置中心发布情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigCenters(TsfConfigCenter [] ConfigCenters) {
+        this.ConfigCenters = ConfigCenters;
+    }
+
     public ConfigRelease() {
     }
 
@@ -433,6 +461,12 @@ public class ConfigRelease extends AbstractModel{
         if (source.ApplicationId != null) {
             this.ApplicationId = new String(source.ApplicationId);
         }
+        if (source.ConfigCenters != null) {
+            this.ConfigCenters = new TsfConfigCenter[source.ConfigCenters.length];
+            for (int i = 0; i < source.ConfigCenters.length; i++) {
+                this.ConfigCenters[i] = new TsfConfigCenter(source.ConfigCenters[i]);
+            }
+        }
     }
 
 
@@ -453,6 +487,7 @@ public class ConfigRelease extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ReleaseDesc", this.ReleaseDesc);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamArrayObj(map, prefix + "ConfigCenters.", this.ConfigCenters);
 
     }
 }

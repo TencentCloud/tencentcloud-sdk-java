@@ -81,6 +81,9 @@ public enum ThpcErrorCode {
     // 无法找到镜像ID。
      RESOURCENOTFOUND_IMAGEID("ResourceNotFound.ImageId"),
      
+    // 无法找到本地挂载路径。
+     RESOURCENOTFOUND_LOCALPATH("ResourceNotFound.LocalPath"),
+     
     // 无法找到ID对应节点。
      RESOURCENOTFOUND_NODEID("ResourceNotFound.NodeId"),
      

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssa.v20180608.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulListRequest extends AbstractModel{
+public class UpdateTriggerResponse extends AbstractModel{
 
     /**
-    * 查询过滤参数:(json序列化的结果）
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Params")
+    @SerializedName("RequestId")
     @Expose
-    private String Params;
+    private String RequestId;
 
     /**
-     * Get 查询过滤参数:(json序列化的结果） 
-     * @return Params 查询过滤参数:(json序列化的结果）
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getParams() {
-        return this.Params;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 查询过滤参数:(json序列化的结果）
-     * @param Params 查询过滤参数:(json序列化的结果）
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setParams(String Params) {
-        this.Params = Params;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeVulListRequest() {
+    public UpdateTriggerResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVulListRequest(DescribeVulListRequest source) {
-        if (source.Params != null) {
-            this.Params = new String(source.Params);
+    public UpdateTriggerResponse(UpdateTriggerResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeVulListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Params", this.Params);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

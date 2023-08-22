@@ -159,6 +159,17 @@ public class ConfigReleaseLog extends AbstractModel{
     private Boolean RollbackFlag;
 
     /**
+    * 发布成功的配置中心
+ ALL/EXCLUSIVE/SHARE/NONE
+
+全部发布成功，独占发布成功，共享发布成功，全部发布失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReleasedConfigCenter")
+    @Expose
+    private String ReleasedConfigCenter;
+
+    /**
      * Get 配置项发布日志ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigReleaseLogId 配置项发布日志ID
@@ -498,6 +509,38 @@ public class ConfigReleaseLog extends AbstractModel{
         this.RollbackFlag = RollbackFlag;
     }
 
+    /**
+     * Get 发布成功的配置中心
+ ALL/EXCLUSIVE/SHARE/NONE
+
+全部发布成功，独占发布成功，共享发布成功，全部发布失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReleasedConfigCenter 发布成功的配置中心
+ ALL/EXCLUSIVE/SHARE/NONE
+
+全部发布成功，独占发布成功，共享发布成功，全部发布失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReleasedConfigCenter() {
+        return this.ReleasedConfigCenter;
+    }
+
+    /**
+     * Set 发布成功的配置中心
+ ALL/EXCLUSIVE/SHARE/NONE
+
+全部发布成功，独占发布成功，共享发布成功，全部发布失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReleasedConfigCenter 发布成功的配置中心
+ ALL/EXCLUSIVE/SHARE/NONE
+
+全部发布成功，独占发布成功，共享发布成功，全部发布失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReleasedConfigCenter(String ReleasedConfigCenter) {
+        this.ReleasedConfigCenter = ReleasedConfigCenter;
+    }
+
     public ConfigReleaseLog() {
     }
 
@@ -557,6 +600,9 @@ public class ConfigReleaseLog extends AbstractModel{
         if (source.RollbackFlag != null) {
             this.RollbackFlag = new Boolean(source.RollbackFlag);
         }
+        if (source.ReleasedConfigCenter != null) {
+            this.ReleasedConfigCenter = new String(source.ReleasedConfigCenter);
+        }
     }
 
 
@@ -581,6 +627,7 @@ public class ConfigReleaseLog extends AbstractModel{
         this.setParamSimple(map, prefix + "LastConfigName", this.LastConfigName);
         this.setParamSimple(map, prefix + "LastConfigVersion", this.LastConfigVersion);
         this.setParamSimple(map, prefix + "RollbackFlag", this.RollbackFlag);
+        this.setParamSimple(map, prefix + "ReleasedConfigCenter", this.ReleasedConfigCenter);
 
     }
 }

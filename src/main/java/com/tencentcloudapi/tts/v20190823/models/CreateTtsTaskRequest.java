@@ -93,6 +93,13 @@ public class CreateTtsTaskRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
+    * 是否开启时间戳功能，默认为false。
+    */
+    @SerializedName("EnableSubtitle")
+    @Expose
+    private Boolean EnableSubtitle;
+
+    /**
     * 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
     */
     @SerializedName("VoiceoverDialogueSplit")
@@ -260,6 +267,22 @@ public class CreateTtsTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启时间戳功能，默认为false。 
+     * @return EnableSubtitle 是否开启时间戳功能，默认为false。
+     */
+    public Boolean getEnableSubtitle() {
+        return this.EnableSubtitle;
+    }
+
+    /**
+     * Set 是否开启时间戳功能，默认为false。
+     * @param EnableSubtitle 是否开启时间戳功能，默认为false。
+     */
+    public void setEnableSubtitle(Boolean EnableSubtitle) {
+        this.EnableSubtitle = EnableSubtitle;
+    }
+
+    /**
      * Get 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false 
      * @return VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
      */
@@ -313,6 +336,9 @@ public class CreateTtsTaskRequest extends AbstractModel{
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.EnableSubtitle != null) {
+            this.EnableSubtitle = new Boolean(source.EnableSubtitle);
+        }
         if (source.VoiceoverDialogueSplit != null) {
             this.VoiceoverDialogueSplit = new Boolean(source.VoiceoverDialogueSplit);
         }
@@ -333,6 +359,7 @@ public class CreateTtsTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
         this.setParamSimple(map, prefix + "VoiceoverDialogueSplit", this.VoiceoverDialogueSplit);
 
     }

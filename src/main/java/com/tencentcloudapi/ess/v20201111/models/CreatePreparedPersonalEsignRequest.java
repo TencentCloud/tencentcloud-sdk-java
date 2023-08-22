@@ -131,6 +131,13 @@ true：做透明化处理和颜色增强。
     private Agent Agent;
 
     /**
+    * 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private Long LicenseType;
+
+    /**
      * Get 个人用户姓名 
      * @return UserName 个人用户姓名
      */
@@ -410,6 +417,22 @@ true：做透明化处理和颜色增强。
         this.Agent = Agent;
     }
 
+    /**
+     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	 
+     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     */
+    public Long getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     */
+    public void setLicenseType(Long LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public CreatePreparedPersonalEsignRequest() {
     }
 
@@ -457,6 +480,9 @@ true：做透明化处理和颜色增强。
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new Long(source.LicenseType);
+        }
     }
 
 
@@ -477,6 +503,7 @@ true：做透明化处理和颜色增强。
         this.setParamSimple(map, prefix + "ProcessSeal", this.ProcessSeal);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

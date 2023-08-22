@@ -61,6 +61,18 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
     private WebCallback [] WebCallbacks;
 
     /**
+    * 通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。
+    */
+    @SerializedName("NoticeRules")
+    @Expose
+    private NoticeRule [] NoticeRules;
+
+    /**
      * Get 通知渠道组ID。 
      * @return AlarmNoticeId 通知渠道组ID。
      */
@@ -152,6 +164,42 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
         this.WebCallbacks = WebCallbacks;
     }
 
+    /**
+     * Get 通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。 
+     * @return NoticeRules 通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。
+     */
+    public NoticeRule [] getNoticeRules() {
+        return this.NoticeRules;
+    }
+
+    /**
+     * Set 通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。
+     * @param NoticeRules 通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。
+     */
+    public void setNoticeRules(NoticeRule [] NoticeRules) {
+        this.NoticeRules = NoticeRules;
+    }
+
     public ModifyAlarmNoticeRequest() {
     }
 
@@ -181,6 +229,12 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
                 this.WebCallbacks[i] = new WebCallback(source.WebCallbacks[i]);
             }
         }
+        if (source.NoticeRules != null) {
+            this.NoticeRules = new NoticeRule[source.NoticeRules.length];
+            for (int i = 0; i < source.NoticeRules.length; i++) {
+                this.NoticeRules[i] = new NoticeRule(source.NoticeRules[i]);
+            }
+        }
     }
 
 
@@ -193,6 +247,7 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
         this.setParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
+        this.setParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
 
     }
 }

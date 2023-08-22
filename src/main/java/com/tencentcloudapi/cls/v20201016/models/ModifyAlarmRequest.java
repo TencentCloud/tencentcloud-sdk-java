@@ -45,10 +45,35 @@ public class ModifyAlarmRequest extends AbstractModel{
 
     /**
     * 触发条件。
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
+
+    /**
+    * 告警级别。
+
+0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
+    * 多触发条件。 
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+    */
+    @SerializedName("MultiConditions")
+    @Expose
+    private MultiCondition [] MultiConditions;
 
     /**
     * 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
@@ -155,8 +180,14 @@ public class ModifyAlarmRequest extends AbstractModel{
     }
 
     /**
-     * Get 触发条件。 
+     * Get 触发条件。
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。 
      * @return Condition 触发条件。
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
      */
     public String getCondition() {
         return this.Condition;
@@ -164,10 +195,80 @@ public class ModifyAlarmRequest extends AbstractModel{
 
     /**
      * Set 触发条件。
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
      * @param Condition 触发条件。
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
+    }
+
+    /**
+     * Get 告警级别。
+
+0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。 
+     * @return AlarmLevel 告警级别。
+
+0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set 告警级别。
+
+0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * @param AlarmLevel 告警级别。
+
+0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
+     * Get 多触发条件。 
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。 
+     * @return MultiConditions 多触发条件。 
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     */
+    public MultiCondition [] getMultiConditions() {
+        return this.MultiConditions;
+    }
+
+    /**
+     * Set 多触发条件。 
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * @param MultiConditions 多触发条件。 
+
+注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     */
+    public void setMultiConditions(MultiCondition [] MultiConditions) {
+        this.MultiConditions = MultiConditions;
     }
 
     /**
@@ -318,6 +419,15 @@ public class ModifyAlarmRequest extends AbstractModel{
         if (source.Condition != null) {
             this.Condition = new String(source.Condition);
         }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
+        if (source.MultiConditions != null) {
+            this.MultiConditions = new MultiCondition[source.MultiConditions.length];
+            for (int i = 0; i < source.MultiConditions.length; i++) {
+                this.MultiConditions[i] = new MultiCondition(source.MultiConditions[i]);
+            }
+        }
         if (source.TriggerCount != null) {
             this.TriggerCount = new Long(source.TriggerCount);
         }
@@ -362,6 +472,8 @@ public class ModifyAlarmRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "MonitorTime.", this.MonitorTime);
         this.setParamSimple(map, prefix + "Condition", this.Condition);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         this.setParamSimple(map, prefix + "TriggerCount", this.TriggerCount);
         this.setParamSimple(map, prefix + "AlarmPeriod", this.AlarmPeriod);
         this.setParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);

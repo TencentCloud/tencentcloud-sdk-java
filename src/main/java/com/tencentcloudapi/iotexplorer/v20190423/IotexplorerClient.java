@@ -900,6 +900,27 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *公共实例过期时间 0001-01-01T00:00:00Z，公共实例是永久有效
+     * @param req DescribeInstanceRequest
+     * @return DescribeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提供查询LoRa自定义频点详情的能力
      * @param req DescribeLoRaFrequencyRequest
      * @return DescribeLoRaFrequencyResponse

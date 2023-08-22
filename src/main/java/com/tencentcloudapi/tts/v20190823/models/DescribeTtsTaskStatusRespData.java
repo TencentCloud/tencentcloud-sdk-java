@@ -51,6 +51,13 @@ public class DescribeTtsTaskStatusRespData extends AbstractModel{
     private String ResultUrl;
 
     /**
+    * 时间戳信息，若未开启时间戳，则返回空数组。
+    */
+    @SerializedName("Subtitles")
+    @Expose
+    private Subtitle [] Subtitles;
+
+    /**
     * 失败原因说明。
     */
     @SerializedName("ErrorMsg")
@@ -122,6 +129,22 @@ public class DescribeTtsTaskStatusRespData extends AbstractModel{
     }
 
     /**
+     * Get 时间戳信息，若未开启时间戳，则返回空数组。 
+     * @return Subtitles 时间戳信息，若未开启时间戳，则返回空数组。
+     */
+    public Subtitle [] getSubtitles() {
+        return this.Subtitles;
+    }
+
+    /**
+     * Set 时间戳信息，若未开启时间戳，则返回空数组。
+     * @param Subtitles 时间戳信息，若未开启时间戳，则返回空数组。
+     */
+    public void setSubtitles(Subtitle [] Subtitles) {
+        this.Subtitles = Subtitles;
+    }
+
+    /**
      * Get 失败原因说明。 
      * @return ErrorMsg 失败原因说明。
      */
@@ -157,6 +180,12 @@ public class DescribeTtsTaskStatusRespData extends AbstractModel{
         if (source.ResultUrl != null) {
             this.ResultUrl = new String(source.ResultUrl);
         }
+        if (source.Subtitles != null) {
+            this.Subtitles = new Subtitle[source.Subtitles.length];
+            for (int i = 0; i < source.Subtitles.length; i++) {
+                this.Subtitles[i] = new Subtitle(source.Subtitles[i]);
+            }
+        }
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
@@ -171,6 +200,7 @@ public class DescribeTtsTaskStatusRespData extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusStr", this.StatusStr);
         this.setParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
+        this.setParamArrayObj(map, prefix + "Subtitles.", this.Subtitles);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
 
     }

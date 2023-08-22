@@ -196,12 +196,36 @@ public class BillDetail extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 价格属性
+    * 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceInfo")
     @Expose
     private String [] PriceInfo;
+
+    /**
+    * 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssociatedOrder")
+    @Expose
+    private BillDetailAssociatedOrder AssociatedOrder;
+
+    /**
+    * 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Formula")
+    @Expose
+    private String Formula;
+
+    /**
+    * 计费规则：各产品详细的计费规则官网说明链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FormulaUrl")
+    @Expose
+    private String FormulaUrl;
 
     /**
      * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
@@ -608,9 +632,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 价格属性
+     * Get 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PriceInfo 价格属性
+     * @return PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPriceInfo() {
@@ -618,13 +642,73 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set 价格属性
+     * Set 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PriceInfo 价格属性
+     * @param PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceInfo(String [] PriceInfo) {
         this.PriceInfo = PriceInfo;
+    }
+
+    /**
+     * Get 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BillDetailAssociatedOrder getAssociatedOrder() {
+        return this.AssociatedOrder;
+    }
+
+    /**
+     * Set 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssociatedOrder(BillDetailAssociatedOrder AssociatedOrder) {
+        this.AssociatedOrder = AssociatedOrder;
+    }
+
+    /**
+     * Get 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFormula() {
+        return this.Formula;
+    }
+
+    /**
+     * Set 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFormula(String Formula) {
+        this.Formula = Formula;
+    }
+
+    /**
+     * Get 计费规则：各产品详细的计费规则官网说明链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFormulaUrl() {
+        return this.FormulaUrl;
+    }
+
+    /**
+     * Set 计费规则：各产品详细的计费规则官网说明链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFormulaUrl(String FormulaUrl) {
+        this.FormulaUrl = FormulaUrl;
     }
 
     public BillDetail() {
@@ -719,6 +803,15 @@ public class BillDetail extends AbstractModel{
                 this.PriceInfo[i] = new String(source.PriceInfo[i]);
             }
         }
+        if (source.AssociatedOrder != null) {
+            this.AssociatedOrder = new BillDetailAssociatedOrder(source.AssociatedOrder);
+        }
+        if (source.Formula != null) {
+            this.Formula = new String(source.Formula);
+        }
+        if (source.FormulaUrl != null) {
+            this.FormulaUrl = new String(source.FormulaUrl);
+        }
     }
 
 
@@ -751,6 +844,9 @@ public class BillDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "PriceInfo.", this.PriceInfo);
+        this.setParamObj(map, prefix + "AssociatedOrder.", this.AssociatedOrder);
+        this.setParamSimple(map, prefix + "Formula", this.Formula);
+        this.setParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
 
     }
 }

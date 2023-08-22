@@ -44,13 +44,6 @@ public class CreateAlarmRequest extends AbstractModel{
     private MonitorTime MonitorTime;
 
     /**
-    * 触发条件。
-    */
-    @SerializedName("Condition")
-    @Expose
-    private String Condition;
-
-    /**
     * 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
     */
     @SerializedName("TriggerCount")
@@ -70,6 +63,31 @@ public class CreateAlarmRequest extends AbstractModel{
     @SerializedName("AlarmNoticeIds")
     @Expose
     private String [] AlarmNoticeIds;
+
+    /**
+    * 触发条件。
+
+ 注意:  
+
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+
+    */
+    @SerializedName("Condition")
+    @Expose
+    private String Condition;
+
+    /**
+    * 多触发条件。
+
+ 注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li>
+
+
+
+    */
+    @SerializedName("MultiConditions")
+    @Expose
+    private MultiCondition [] MultiConditions;
 
     /**
     * 是否开启告警策略。默认值为true
@@ -148,22 +166,6 @@ public class CreateAlarmRequest extends AbstractModel{
     }
 
     /**
-     * Get 触发条件。 
-     * @return Condition 触发条件。
-     */
-    public String getCondition() {
-        return this.Condition;
-    }
-
-    /**
-     * Set 触发条件。
-     * @param Condition 触发条件。
-     */
-    public void setCondition(String Condition) {
-        this.Condition = Condition;
-    }
-
-    /**
      * Get 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。 
      * @return TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
      */
@@ -209,6 +211,82 @@ public class CreateAlarmRequest extends AbstractModel{
      */
     public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
         this.AlarmNoticeIds = AlarmNoticeIds;
+    }
+
+    /**
+     * Get 触发条件。
+
+ 注意:  
+
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+ 
+     * @return Condition 触发条件。
+
+ 注意:  
+
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+
+     */
+    public String getCondition() {
+        return this.Condition;
+    }
+
+    /**
+     * Set 触发条件。
+
+ 注意:  
+
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+
+     * @param Condition 触发条件。
+
+ 注意:  
+
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+
+     */
+    public void setCondition(String Condition) {
+        this.Condition = Condition;
+    }
+
+    /**
+     * Get 多触发条件。
+
+ 注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li>
+
+
+ 
+     * @return MultiConditions 多触发条件。
+
+ 注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li>
+
+
+
+     */
+    public MultiCondition [] getMultiConditions() {
+        return this.MultiConditions;
+    }
+
+    /**
+     * Set 多触发条件。
+
+ 注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li>
+
+
+
+     * @param MultiConditions 多触发条件。
+
+ 注意:  
+- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li>
+
+
+
+     */
+    public void setMultiConditions(MultiCondition [] MultiConditions) {
+        this.MultiConditions = MultiConditions;
     }
 
     /**
@@ -295,9 +373,6 @@ public class CreateAlarmRequest extends AbstractModel{
         if (source.MonitorTime != null) {
             this.MonitorTime = new MonitorTime(source.MonitorTime);
         }
-        if (source.Condition != null) {
-            this.Condition = new String(source.Condition);
-        }
         if (source.TriggerCount != null) {
             this.TriggerCount = new Long(source.TriggerCount);
         }
@@ -308,6 +383,15 @@ public class CreateAlarmRequest extends AbstractModel{
             this.AlarmNoticeIds = new String[source.AlarmNoticeIds.length];
             for (int i = 0; i < source.AlarmNoticeIds.length; i++) {
                 this.AlarmNoticeIds[i] = new String(source.AlarmNoticeIds[i]);
+            }
+        }
+        if (source.Condition != null) {
+            this.Condition = new String(source.Condition);
+        }
+        if (source.MultiConditions != null) {
+            this.MultiConditions = new MultiCondition[source.MultiConditions.length];
+            for (int i = 0; i < source.MultiConditions.length; i++) {
+                this.MultiConditions[i] = new MultiCondition(source.MultiConditions[i]);
             }
         }
         if (source.Status != null) {
@@ -335,10 +419,11 @@ public class CreateAlarmRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "AlarmTargets.", this.AlarmTargets);
         this.setParamObj(map, prefix + "MonitorTime.", this.MonitorTime);
-        this.setParamSimple(map, prefix + "Condition", this.Condition);
         this.setParamSimple(map, prefix + "TriggerCount", this.TriggerCount);
         this.setParamSimple(map, prefix + "AlarmPeriod", this.AlarmPeriod);
         this.setParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
+        this.setParamSimple(map, prefix + "Condition", this.Condition);
+        this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
         this.setParamObj(map, prefix + "CallBack.", this.CallBack);

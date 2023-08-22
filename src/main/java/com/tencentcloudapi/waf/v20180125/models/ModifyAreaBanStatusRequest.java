@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAreaBanStatusRequest extends AbstractModel{
 
     /**
-    * 修要修改的域名
+    * 需要修改的域名
     */
     @SerializedName("Domain")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyAreaBanStatusRequest extends AbstractModel{
     private Long Status;
 
     /**
-     * Get 修要修改的域名 
-     * @return Domain 修要修改的域名
+     * Get 需要修改的域名 
+     * @return Domain 需要修改的域名
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 修要修改的域名
-     * @param Domain 修要修改的域名
+     * Set 需要修改的域名
+     * @param Domain 需要修改的域名
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

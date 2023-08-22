@@ -180,7 +180,7 @@ public class DomainsPartInfo extends AbstractModel{
     private Long [] Ciphers;
 
     /**
-    * 模版
+    * 模板
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CipherTemplate")
@@ -608,9 +608,9 @@ public class DomainsPartInfo extends AbstractModel{
     }
 
     /**
-     * Get 模版
+     * Get 模板
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CipherTemplate 模版
+     * @return CipherTemplate 模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCipherTemplate() {
@@ -618,9 +618,9 @@ public class DomainsPartInfo extends AbstractModel{
     }
 
     /**
-     * Set 模版
+     * Set 模板
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CipherTemplate 模版
+     * @param CipherTemplate 模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCipherTemplate(Long CipherTemplate) {

@@ -860,6 +860,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *按照条件查询展示攻击总次数
+     * @param req GetAttackTotalCountRequest
+     * @return GetAttackTotalCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAttackTotalCountResponse GetAttackTotalCount(GetAttackTotalCountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAttackTotalCountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAttackTotalCountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAttackTotalCount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于修改访问日志保存期限及大字段是否存储
      * @param req ModifyAccessPeriodRequest
      * @return ModifyAccessPeriodResponse

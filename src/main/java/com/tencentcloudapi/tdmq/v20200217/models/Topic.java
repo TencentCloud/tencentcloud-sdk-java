@@ -208,6 +208,15 @@ public class Topic extends AbstractModel{
     private Long PulsarTopicType;
 
     /**
+    * 未消费消息过期时间，单位：秒
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MsgTTL")
+    @Expose
+    private Long MsgTTL;
+
+    /**
      * Get 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
@@ -683,6 +692,30 @@ public class Topic extends AbstractModel{
         this.PulsarTopicType = PulsarTopicType;
     }
 
+    /**
+     * Get 未消费消息过期时间，单位：秒
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MsgTTL 未消费消息过期时间，单位：秒
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMsgTTL() {
+        return this.MsgTTL;
+    }
+
+    /**
+     * Set 未消费消息过期时间，单位：秒
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MsgTTL 未消费消息过期时间，单位：秒
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMsgTTL(Long MsgTTL) {
+        this.MsgTTL = MsgTTL;
+    }
+
     public Topic() {
     }
 
@@ -760,6 +793,9 @@ public class Topic extends AbstractModel{
         if (source.PulsarTopicType != null) {
             this.PulsarTopicType = new Long(source.PulsarTopicType);
         }
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
     }
 
 
@@ -789,6 +825,7 @@ public class Topic extends AbstractModel{
         this.setParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
         this.setParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
         this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
+        this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
 
     }
 }

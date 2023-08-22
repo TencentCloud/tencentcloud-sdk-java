@@ -124,6 +124,15 @@ public class AlarmInfo extends AbstractModel{
     private AnalysisDimensional [] Analysis;
 
     /**
+    * 多触发条件。
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MultiConditions")
+    @Expose
+    private MultiCondition [] MultiConditions;
+
+    /**
      * Get 告警策略名称。 
      * @return Name 告警策略名称。
      */
@@ -359,6 +368,30 @@ public class AlarmInfo extends AbstractModel{
         this.Analysis = Analysis;
     }
 
+    /**
+     * Get 多触发条件。
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MultiConditions 多触发条件。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MultiCondition [] getMultiConditions() {
+        return this.MultiConditions;
+    }
+
+    /**
+     * Set 多触发条件。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MultiConditions 多触发条件。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMultiConditions(MultiCondition [] MultiConditions) {
+        this.MultiConditions = MultiConditions;
+    }
+
     public AlarmInfo() {
     }
 
@@ -418,6 +451,12 @@ public class AlarmInfo extends AbstractModel{
                 this.Analysis[i] = new AnalysisDimensional(source.Analysis[i]);
             }
         }
+        if (source.MultiConditions != null) {
+            this.MultiConditions = new MultiCondition[source.MultiConditions.length];
+            for (int i = 0; i < source.MultiConditions.length; i++) {
+                this.MultiConditions[i] = new MultiCondition(source.MultiConditions[i]);
+            }
+        }
     }
 
 
@@ -439,6 +478,7 @@ public class AlarmInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
         this.setParamObj(map, prefix + "CallBack.", this.CallBack);
         this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+        this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
 
     }
 }

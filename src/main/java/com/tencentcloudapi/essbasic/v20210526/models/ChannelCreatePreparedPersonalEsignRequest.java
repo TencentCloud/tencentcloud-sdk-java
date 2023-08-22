@@ -93,6 +93,13 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
     private Boolean EnableAutoSign;
 
     /**
+    * 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private Long LicenseType;
+
+    /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。 
      * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      */
@@ -252,6 +259,22 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
         this.EnableAutoSign = EnableAutoSign;
     }
 
+    /**
+     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	 
+     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     */
+    public Long getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     */
+    public void setLicenseType(Long LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public ChannelCreatePreparedPersonalEsignRequest() {
     }
 
@@ -290,6 +313,9 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
         if (source.EnableAutoSign != null) {
             this.EnableAutoSign = new Boolean(source.EnableAutoSign);
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new Long(source.LicenseType);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

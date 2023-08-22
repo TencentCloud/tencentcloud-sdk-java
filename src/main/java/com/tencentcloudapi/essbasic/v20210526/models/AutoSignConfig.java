@@ -65,6 +65,13 @@ public class AutoSignConfig extends AbstractModel{
     private String [] VerifyChannels;
 
     /**
+    * 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private Long LicenseType;
+
+    /**
      * Get 自动签开通个人用户的三要素 
      * @return UserInfo 自动签开通个人用户的三要素
      */
@@ -160,6 +167,22 @@ public class AutoSignConfig extends AbstractModel{
         this.VerifyChannels = VerifyChannels;
     }
 
+    /**
+     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	 
+     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     */
+    public Long getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     */
+    public void setLicenseType(Long LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public AutoSignConfig() {
     }
 
@@ -189,6 +212,9 @@ public class AutoSignConfig extends AbstractModel{
                 this.VerifyChannels[i] = new String(source.VerifyChannels[i]);
             }
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new Long(source.LicenseType);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class AutoSignConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "SealImgCallback", this.SealImgCallback);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamArraySimple(map, prefix + "VerifyChannels.", this.VerifyChannels);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

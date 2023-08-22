@@ -24,6 +24,7 @@ public class AlarmTarget extends AbstractModel{
 
     /**
     * 日志主题ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -31,6 +32,7 @@ public class AlarmTarget extends AbstractModel{
 
     /**
     * 查询语句。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Query")
     @Expose
@@ -38,6 +40,7 @@ public class AlarmTarget extends AbstractModel{
 
     /**
     * 告警对象序号；从1开始递增。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Number")
     @Expose
@@ -45,6 +48,7 @@ public class AlarmTarget extends AbstractModel{
 
     /**
     * 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -52,6 +56,7 @@ public class AlarmTarget extends AbstractModel{
 
     /**
     * 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -59,6 +64,7 @@ public class AlarmTarget extends AbstractModel{
 
     /**
     * 日志集ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogsetId")
     @Expose
@@ -68,14 +74,17 @@ public class AlarmTarget extends AbstractModel{
     * 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-     * Get 日志主题ID。 
+     * Get 日志主题ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicId 日志主题ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -83,15 +92,19 @@ public class AlarmTarget extends AbstractModel{
 
     /**
      * Set 日志主题ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 日志主题ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 查询语句。 
+     * Get 查询语句。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Query 查询语句。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuery() {
         return this.Query;
@@ -99,15 +112,19 @@ public class AlarmTarget extends AbstractModel{
 
     /**
      * Set 查询语句。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Query 查询语句。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 告警对象序号；从1开始递增。 
+     * Get 告警对象序号；从1开始递增。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Number 告警对象序号；从1开始递增。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumber() {
         return this.Number;
@@ -115,15 +132,19 @@ public class AlarmTarget extends AbstractModel{
 
     /**
      * Set 告警对象序号；从1开始递增。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Number 告警对象序号；从1开始递增。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumber(Long Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。 
+     * Get 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTimeOffset 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTimeOffset() {
         return this.StartTimeOffset;
@@ -131,15 +152,19 @@ public class AlarmTarget extends AbstractModel{
 
     /**
      * Set 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimeOffset(Long StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。 
+     * Get 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTimeOffset 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTimeOffset() {
         return this.EndTimeOffset;
@@ -147,15 +172,19 @@ public class AlarmTarget extends AbstractModel{
 
     /**
      * Set 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTimeOffset(Long EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get 日志集ID。 
+     * Get 日志集ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogsetId 日志集ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -163,7 +192,9 @@ public class AlarmTarget extends AbstractModel{
 
     /**
      * Set 日志集ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LogsetId 日志集ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
@@ -172,10 +203,12 @@ public class AlarmTarget extends AbstractModel{
     /**
      * Get 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
-详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a> 
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
@@ -185,9 +218,11 @@ public class AlarmTarget extends AbstractModel{
      * Set 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;

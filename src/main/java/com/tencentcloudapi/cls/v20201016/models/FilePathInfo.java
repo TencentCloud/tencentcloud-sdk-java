@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.eb.v20210416.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckRuleRequest extends AbstractModel{
+public class FilePathInfo extends AbstractModel{
 
     /**
-    * Event信息
+    * 文件路径
     */
-    @SerializedName("Event")
+    @SerializedName("Path")
     @Expose
-    private String Event;
+    private String Path;
 
     /**
-    * EventPattern信息
+    * 文件名称
     */
-    @SerializedName("EventPattern")
+    @SerializedName("File")
     @Expose
-    private String EventPattern;
+    private String File;
 
     /**
-     * Get Event信息 
-     * @return Event Event信息
+     * Get 文件路径 
+     * @return Path 文件路径
      */
-    public String getEvent() {
-        return this.Event;
+    public String getPath() {
+        return this.Path;
     }
 
     /**
-     * Set Event信息
-     * @param Event Event信息
+     * Set 文件路径
+     * @param Path 文件路径
      */
-    public void setEvent(String Event) {
-        this.Event = Event;
+    public void setPath(String Path) {
+        this.Path = Path;
     }
 
     /**
-     * Get EventPattern信息 
-     * @return EventPattern EventPattern信息
+     * Get 文件名称 
+     * @return File 文件名称
      */
-    public String getEventPattern() {
-        return this.EventPattern;
+    public String getFile() {
+        return this.File;
     }
 
     /**
-     * Set EventPattern信息
-     * @param EventPattern EventPattern信息
+     * Set 文件名称
+     * @param File 文件名称
      */
-    public void setEventPattern(String EventPattern) {
-        this.EventPattern = EventPattern;
+    public void setFile(String File) {
+        this.File = File;
     }
 
-    public CheckRuleRequest() {
+    public FilePathInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CheckRuleRequest(CheckRuleRequest source) {
-        if (source.Event != null) {
-            this.Event = new String(source.Event);
+    public FilePathInfo(FilePathInfo source) {
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
         }
-        if (source.EventPattern != null) {
-            this.EventPattern = new String(source.EventPattern);
+        if (source.File != null) {
+            this.File = new String(source.File);
         }
     }
 
@@ -89,8 +89,8 @@ public class CheckRuleRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Event", this.Event);
-        this.setParamSimple(map, prefix + "EventPattern", this.EventPattern);
+        this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "File", this.File);
 
     }
 }
