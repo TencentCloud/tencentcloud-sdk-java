@@ -903,29 +903,6 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *已废弃接口
-
-本接口（DescribeSqlLogs）用于获取实例SQL日志。
-     * @param req DescribeSqlLogsRequest
-     * @return DescribeSqlLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSqlLogsResponse DescribeSqlLogs(DescribeSqlLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSqlLogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSqlLogs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（DescribeUserTasks）用于拉取用户任务列表
      * @param req DescribeUserTasksRequest
      * @return DescribeUserTasksResponse

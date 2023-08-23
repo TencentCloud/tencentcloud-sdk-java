@@ -66,6 +66,27 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ApplyFirewallTemplate) 用于应用防火墙模板到多个实例。
+     * @param req ApplyFirewallTemplateRequest
+     * @return ApplyFirewallTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyFirewallTemplateResponse ApplyFirewallTemplate(ApplyFirewallTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyFirewallTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyFirewallTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyFirewallTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
 <li>仅支持回滚到原系统盘。</li>
 <li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
@@ -253,6 +274,48 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口 (CreateFirewallTemplate) 用于创建防火墙模板。
+     * @param req CreateFirewallTemplateRequest
+     * @return CreateFirewallTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFirewallTemplateResponse CreateFirewallTemplate(CreateFirewallTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFirewallTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFirewallTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFirewallTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (CreateFirewallTemplateRules) 用于创建防火墙模板规则。
+     * @param req CreateFirewallTemplateRulesRequest
+     * @return CreateFirewallTemplateRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFirewallTemplateRulesResponse CreateFirewallTemplateRules(CreateFirewallTemplateRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFirewallTemplateRulesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFirewallTemplateRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFirewallTemplateRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateInstanceSnapshot）用于创建指定实例的系统盘快照。
      * @param req CreateInstanceSnapshotRequest
      * @return CreateInstanceSnapshotResponse
@@ -381,6 +444,48 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteFirewallRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteFirewallRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DeleteFirewallTemplate) 用于删除防火墙模板。
+     * @param req DeleteFirewallTemplateRequest
+     * @return DeleteFirewallTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFirewallTemplateResponse DeleteFirewallTemplate(DeleteFirewallTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFirewallTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFirewallTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteFirewallTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DeleteFirewallTemplateRules) 用于删除防火墙模板规则。
+     * @param req DeleteFirewallTemplateRulesRequest
+     * @return DeleteFirewallTemplateRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFirewallTemplateRulesResponse DeleteFirewallTemplateRules(DeleteFirewallTemplateRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFirewallTemplateRulesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFirewallTemplateRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteFirewallTemplateRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -823,6 +928,111 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFirewallRulesTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFirewallRulesTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeFirewallTemplateApplyRecords) 用于查询防火墙模板应用记录列表。
+     * @param req DescribeFirewallTemplateApplyRecordsRequest
+     * @return DescribeFirewallTemplateApplyRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirewallTemplateApplyRecordsResponse DescribeFirewallTemplateApplyRecords(DescribeFirewallTemplateApplyRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirewallTemplateApplyRecordsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirewallTemplateApplyRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFirewallTemplateApplyRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeFirewallTemplateQuota) 用于查询防火墙模板配额。
+     * @param req DescribeFirewallTemplateQuotaRequest
+     * @return DescribeFirewallTemplateQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirewallTemplateQuotaResponse DescribeFirewallTemplateQuota(DescribeFirewallTemplateQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirewallTemplateQuotaResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirewallTemplateQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFirewallTemplateQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeFirewallTemplateRuleQuota) 用于查询防火墙模板规则配额。
+     * @param req DescribeFirewallTemplateRuleQuotaRequest
+     * @return DescribeFirewallTemplateRuleQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirewallTemplateRuleQuotaResponse DescribeFirewallTemplateRuleQuota(DescribeFirewallTemplateRuleQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirewallTemplateRuleQuotaResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirewallTemplateRuleQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFirewallTemplateRuleQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeFirewallTemplateRules) 用于查询防火墙模板规则列表。
+     * @param req DescribeFirewallTemplateRulesRequest
+     * @return DescribeFirewallTemplateRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirewallTemplateRulesResponse DescribeFirewallTemplateRules(DescribeFirewallTemplateRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirewallTemplateRulesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirewallTemplateRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFirewallTemplateRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeFirewallTemplates) 用于查询防火墙模板列表。
+     * @param req DescribeFirewallTemplatesRequest
+     * @return DescribeFirewallTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirewallTemplatesResponse DescribeFirewallTemplates(DescribeFirewallTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFirewallTemplatesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFirewallTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFirewallTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1599,6 +1809,27 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口 (ModifyFirewallTemplate) 用于修改防火墙模板。
+     * @param req ModifyFirewallTemplateRequest
+     * @return ModifyFirewallTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFirewallTemplateResponse ModifyFirewallTemplate(ModifyFirewallTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyFirewallTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyFirewallTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyFirewallTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyInstancesAttribute）用于修改实例的属性。
 * “实例名称”仅为方便用户自己管理之用。
 * 支持批量操作。每次请求批量实例的上限为 100。
@@ -1832,6 +2063,27 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口 (ReplaceFirewallTemplateRules) 用于替换防火墙模板规则。
+     * @param req ReplaceFirewallTemplateRuleRequest
+     * @return ReplaceFirewallTemplateRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceFirewallTemplateRuleResponse ReplaceFirewallTemplateRule(ReplaceFirewallTemplateRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceFirewallTemplateRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceFirewallTemplateRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReplaceFirewallTemplateRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
      * @param req RerunDockerContainerRequest
      * @return RerunDockerContainerResponse
@@ -1866,6 +2118,27 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ResetAttachCcnResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetAttachCcn");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (ResetFirewallTemplateRules) 用于重置防火墙模板下所有规则。
+     * @param req ResetFirewallTemplateRulesRequest
+     * @return ResetFirewallTemplateRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetFirewallTemplateRulesResponse ResetFirewallTemplateRules(ResetFirewallTemplateRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetFirewallTemplateRulesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetFirewallTemplateRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetFirewallTemplateRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

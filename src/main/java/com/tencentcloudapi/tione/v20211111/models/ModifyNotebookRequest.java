@@ -190,6 +190,13 @@ POSTPAID_BY_HOUR：按小时后付费
     private String ImageType;
 
     /**
+    * SSH配置
+    */
+    @SerializedName("SSHConfig")
+    @Expose
+    private SSHConfig SSHConfig;
+
+    /**
      * Get notebook id 
      * @return Id notebook id
      */
@@ -581,6 +588,22 @@ POSTPAID_BY_HOUR：按小时后付费
         this.ImageType = ImageType;
     }
 
+    /**
+     * Get SSH配置 
+     * @return SSHConfig SSH配置
+     */
+    public SSHConfig getSSHConfig() {
+        return this.SSHConfig;
+    }
+
+    /**
+     * Set SSH配置
+     * @param SSHConfig SSH配置
+     */
+    public void setSSHConfig(SSHConfig SSHConfig) {
+        this.SSHConfig = SSHConfig;
+    }
+
     public ModifyNotebookRequest() {
     }
 
@@ -667,6 +690,9 @@ POSTPAID_BY_HOUR：按小时后付费
         if (source.ImageType != null) {
             this.ImageType = new String(source.ImageType);
         }
+        if (source.SSHConfig != null) {
+            this.SSHConfig = new SSHConfig(source.SSHConfig);
+        }
     }
 
 
@@ -697,6 +723,7 @@ POSTPAID_BY_HOUR：按小时后付费
         this.setParamArrayObj(map, prefix + "DataConfigs.", this.DataConfigs);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamSimple(map, prefix + "ImageType", this.ImageType);
+        this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
 
     }
 }

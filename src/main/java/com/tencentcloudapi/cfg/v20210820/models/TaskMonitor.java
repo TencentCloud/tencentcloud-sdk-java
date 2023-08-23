@@ -23,11 +23,19 @@ import java.util.HashMap;
 public class TaskMonitor extends AbstractModel{
 
     /**
-    * 监控指标ID
+    * 演练监控指标ID
     */
     @SerializedName("TaskMonitorId")
     @Expose
     private Long TaskMonitorId;
+
+    /**
+    * 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricId")
+    @Expose
+    private Long MetricId;
 
     /**
     * 监控指标对象类型ID
@@ -67,19 +75,39 @@ public class TaskMonitor extends AbstractModel{
     private String Unit;
 
     /**
-     * Get 监控指标ID 
-     * @return TaskMonitorId 监控指标ID
+     * Get 演练监控指标ID 
+     * @return TaskMonitorId 演练监控指标ID
      */
     public Long getTaskMonitorId() {
         return this.TaskMonitorId;
     }
 
     /**
-     * Set 监控指标ID
-     * @param TaskMonitorId 监控指标ID
+     * Set 演练监控指标ID
+     * @param TaskMonitorId 演练监控指标ID
      */
     public void setTaskMonitorId(Long TaskMonitorId) {
         this.TaskMonitorId = TaskMonitorId;
+    }
+
+    /**
+     * Get 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricId 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMetricId() {
+        return this.MetricId;
+    }
+
+    /**
+     * Set 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricId 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricId(Long MetricId) {
+        this.MetricId = MetricId;
     }
 
     /**
@@ -181,6 +209,9 @@ public class TaskMonitor extends AbstractModel{
         if (source.TaskMonitorId != null) {
             this.TaskMonitorId = new Long(source.TaskMonitorId);
         }
+        if (source.MetricId != null) {
+            this.MetricId = new Long(source.MetricId);
+        }
         if (source.TaskMonitorObjectTypeId != null) {
             this.TaskMonitorObjectTypeId = new Long(source.TaskMonitorObjectTypeId);
         }
@@ -207,6 +238,7 @@ public class TaskMonitor extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskMonitorId", this.TaskMonitorId);
+        this.setParamSimple(map, prefix + "MetricId", this.MetricId);
         this.setParamSimple(map, prefix + "TaskMonitorObjectTypeId", this.TaskMonitorObjectTypeId);
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
         this.setParamArraySimple(map, prefix + "InstancesIds.", this.InstancesIds);

@@ -39,6 +39,14 @@ public class PodInfo extends AbstractModel{
     private String IP;
 
     /**
+    * pod状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get pod名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name pod名
@@ -78,6 +86,26 @@ public class PodInfo extends AbstractModel{
         this.IP = IP;
     }
 
+    /**
+     * Get pod状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status pod状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set pod状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status pod状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public PodInfo() {
     }
 
@@ -92,6 +120,9 @@ public class PodInfo extends AbstractModel{
         if (source.IP != null) {
             this.IP = new String(source.IP);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -101,6 +132,7 @@ public class PodInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "IP", this.IP);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

@@ -104,6 +104,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Boolean AutoVoucher;
 
     /**
+    * 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+    */
+    @SerializedName("FirewallTemplateId")
+    @Expose
+    private String FirewallTemplateId;
+
+    /**
      * Get 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。 
      * @return BundleId 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
      */
@@ -295,6 +302,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.AutoVoucher = AutoVoucher;
     }
 
+    /**
+     * Get 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。 
+     * @return FirewallTemplateId 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+     */
+    public String getFirewallTemplateId() {
+        return this.FirewallTemplateId;
+    }
+
+    /**
+     * Set 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+     * @param FirewallTemplateId 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+     */
+    public void setFirewallTemplateId(String FirewallTemplateId) {
+        this.FirewallTemplateId = FirewallTemplateId;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -342,6 +365,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.AutoVoucher != null) {
             this.AutoVoucher = new Boolean(source.AutoVoucher);
         }
+        if (source.FirewallTemplateId != null) {
+            this.FirewallTemplateId = new String(source.FirewallTemplateId);
+        }
     }
 
 
@@ -360,6 +386,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+        this.setParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
 
     }
 }

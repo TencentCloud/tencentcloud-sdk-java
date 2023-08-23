@@ -63,20 +63,20 @@ public class UserFileDTO extends AbstractModel{
     private String Md5Value;
 
     /**
-    * 创建时间，秒级别的时间戳
+    * 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
-    private Long CreateTime;
+    private String CreateTime;
 
     /**
-    * 更新时间，秒级别的时间戳
+    * 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
-    private Long UpdateTime;
+    private String UpdateTime;
 
     /**
     * 文件大小，单位为字节
@@ -275,42 +275,42 @@ public class UserFileDTO extends AbstractModel{
     }
 
     /**
-     * Get 创建时间，秒级别的时间戳
+     * Get 创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间，秒级别的时间戳
+     * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCreateTime() {
+    public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，秒级别的时间戳
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间，秒级别的时间戳
+     * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCreateTime(Long CreateTime) {
+    public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间，秒级别的时间戳
+     * Get 更新时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间，秒级别的时间戳
+     * @return UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getUpdateTime() {
+    public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间，秒级别的时间戳
+     * Set 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间，秒级别的时间戳
+     * @param UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUpdateTime(Long UpdateTime) {
+    public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
@@ -578,10 +578,10 @@ public class UserFileDTO extends AbstractModel{
             this.Md5Value = new String(source.Md5Value);
         }
         if (source.CreateTime != null) {
-            this.CreateTime = new Long(source.CreateTime);
+            this.CreateTime = new String(source.CreateTime);
         }
         if (source.UpdateTime != null) {
-            this.UpdateTime = new Long(source.UpdateTime);
+            this.UpdateTime = new String(source.UpdateTime);
         }
         if (source.Size != null) {
             this.Size = new Long(source.Size);

@@ -39,7 +39,7 @@ public class CarClient extends AbstractClient{
     }
 
     /**
-     *申请并发
+     *本接口用于申请并发。接口超时时间：20秒。
      * @param req ApplyConcurrentRequest
      * @return ApplyConcurrentResponse
      * @throws TencentCloudSDKException
@@ -60,7 +60,7 @@ public class CarClient extends AbstractClient{
     }
 
     /**
-     *创建会话
+     *本接口用于创建会话。接口超时时间：5秒。
      * @param req CreateSessionRequest
      * @return CreateSessionResponse
      * @throws TencentCloudSDKException

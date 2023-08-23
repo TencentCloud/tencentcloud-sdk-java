@@ -175,6 +175,13 @@ video 纯视频
     private Long RoomType;
 
     /**
+    * 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+    */
+    @SerializedName("RecordLayout")
+    @Expose
+    private Long RecordLayout;
+
+    /**
      * Get 房间ID。 
      * @return RoomId 房间ID。
      */
@@ -554,6 +561,22 @@ video 纯视频
         this.RoomType = RoomType;
     }
 
+    /**
+     * Get 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744 
+     * @return RecordLayout 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     */
+    public Long getRecordLayout() {
+        return this.RecordLayout;
+    }
+
+    /**
+     * Set 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * @param RecordLayout 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     */
+    public void setRecordLayout(Long RecordLayout) {
+        this.RecordLayout = RecordLayout;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -622,6 +645,9 @@ video 纯视频
         if (source.RoomType != null) {
             this.RoomType = new Long(source.RoomType);
         }
+        if (source.RecordLayout != null) {
+            this.RecordLayout = new Long(source.RecordLayout);
+        }
     }
 
 
@@ -648,6 +674,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
+        this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
 
     }
 }

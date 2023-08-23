@@ -219,6 +219,14 @@ public class NotebookSetItem extends AbstractModel{
     private String [] UserTypes;
 
     /**
+    * SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SSHConfig")
+    @Expose
+    private SSHConfig SSHConfig;
+
+    /**
      * Get notebook ID 
      * @return Id notebook ID
      */
@@ -702,6 +710,26 @@ public class NotebookSetItem extends AbstractModel{
         this.UserTypes = UserTypes;
     }
 
+    /**
+     * Get SSH配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SSHConfig SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SSHConfig getSSHConfig() {
+        return this.SSHConfig;
+    }
+
+    /**
+     * Set SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SSHConfig SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSSHConfig(SSHConfig SSHConfig) {
+        this.SSHConfig = SSHConfig;
+    }
+
     public NotebookSetItem() {
     }
 
@@ -794,6 +822,9 @@ public class NotebookSetItem extends AbstractModel{
                 this.UserTypes[i] = new String(source.UserTypes[i]);
             }
         }
+        if (source.SSHConfig != null) {
+            this.SSHConfig = new SSHConfig(source.SSHConfig);
+        }
     }
 
 
@@ -826,6 +857,7 @@ public class NotebookSetItem extends AbstractModel{
         this.setParamObj(map, prefix + "VolumeSourceCFS.", this.VolumeSourceCFS);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArraySimple(map, prefix + "UserTypes.", this.UserTypes);
+        this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
 
     }
 }

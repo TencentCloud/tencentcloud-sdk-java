@@ -170,6 +170,13 @@ public class UpdateScenarioRequest extends AbstractModel{
     private String Owner;
 
     /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
      * Get 场景ID 
      * @return ScenarioId 场景ID
      */
@@ -505,6 +512,22 @@ public class UpdateScenarioRequest extends AbstractModel{
         this.Owner = Owner;
     }
 
+    /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
     public UpdateScenarioRequest() {
     }
 
@@ -600,6 +623,9 @@ public class UpdateScenarioRequest extends AbstractModel{
         if (source.Owner != null) {
             this.Owner = new String(source.Owner);
         }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
     }
 
 
@@ -628,6 +654,7 @@ public class UpdateScenarioRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
         this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
 
     }
 }

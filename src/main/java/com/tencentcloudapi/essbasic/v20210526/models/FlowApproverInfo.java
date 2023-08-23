@@ -166,6 +166,7 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     /**
     * 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
 查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
     */
     @SerializedName("ApproverVerifyTypes")
     @Expose
@@ -550,9 +551,11 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
 
     /**
      * Get 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的 
+查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证） 
      * @return ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
 查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
      */
     public Long [] getApproverVerifyTypes() {
         return this.ApproverVerifyTypes;
@@ -561,8 +564,10 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     /**
      * Set 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
 查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
      * @param ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
 查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
      */
     public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
         this.ApproverVerifyTypes = ApproverVerifyTypes;

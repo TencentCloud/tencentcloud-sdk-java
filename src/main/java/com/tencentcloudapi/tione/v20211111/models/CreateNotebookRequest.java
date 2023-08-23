@@ -183,6 +183,13 @@ POSTPAID_BY_HOUR：按小时后付费
     private String ImageType;
 
     /**
+    * SSH配置信息
+    */
+    @SerializedName("SSHConfig")
+    @Expose
+    private SSHConfig SSHConfig;
+
+    /**
      * Get 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
      * @return Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
@@ -558,6 +565,22 @@ POSTPAID_BY_HOUR：按小时后付费
         this.ImageType = ImageType;
     }
 
+    /**
+     * Get SSH配置信息 
+     * @return SSHConfig SSH配置信息
+     */
+    public SSHConfig getSSHConfig() {
+        return this.SSHConfig;
+    }
+
+    /**
+     * Set SSH配置信息
+     * @param SSHConfig SSH配置信息
+     */
+    public void setSSHConfig(SSHConfig SSHConfig) {
+        this.SSHConfig = SSHConfig;
+    }
+
     public CreateNotebookRequest() {
     }
 
@@ -641,6 +664,9 @@ POSTPAID_BY_HOUR：按小时后付费
         if (source.ImageType != null) {
             this.ImageType = new String(source.ImageType);
         }
+        if (source.SSHConfig != null) {
+            this.SSHConfig = new SSHConfig(source.SSHConfig);
+        }
     }
 
 
@@ -670,6 +696,7 @@ POSTPAID_BY_HOUR：按小时后付费
         this.setParamArrayObj(map, prefix + "DataConfigs.", this.DataConfigs);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamSimple(map, prefix + "ImageType", this.ImageType);
+        this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
 
     }
 }

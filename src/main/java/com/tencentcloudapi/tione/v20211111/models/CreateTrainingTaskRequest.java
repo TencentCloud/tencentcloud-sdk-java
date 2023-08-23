@@ -45,34 +45,6 @@ POSTPAID_BY_HOUR 按量计费
     private ResourceConfigInfo [] ResourceConfigInfos;
 
     /**
-    * COS代码包路径
-    */
-    @SerializedName("CodePackagePath")
-    @Expose
-    private CosPathInfo CodePackagePath;
-
-    /**
-    * 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-    */
-    @SerializedName("TrainingMode")
-    @Expose
-    private String TrainingMode;
-
-    /**
-    * COS训练输出路径
-    */
-    @SerializedName("Output")
-    @Expose
-    private CosPathInfo Output;
-
-    /**
-    * 是否上报日志
-    */
-    @SerializedName("LogEnable")
-    @Expose
-    private Boolean LogEnable;
-
-    /**
     * 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
     */
     @SerializedName("FrameworkName")
@@ -115,11 +87,25 @@ POSTPAID_BY_HOUR 按量计费
     private ImageInfo ImageInfo;
 
     /**
+    * COS代码包路径
+    */
+    @SerializedName("CodePackagePath")
+    @Expose
+    private CosPathInfo CodePackagePath;
+
+    /**
     * 启动命令信息，默认为sh start.sh
     */
     @SerializedName("StartCmdInfo")
     @Expose
     private StartCmdInfo StartCmdInfo;
+
+    /**
+    * 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+    */
+    @SerializedName("TrainingMode")
+    @Expose
+    private String TrainingMode;
 
     /**
     * 数据配置，依赖DataSource字段
@@ -143,6 +129,13 @@ POSTPAID_BY_HOUR 按量计费
     private String SubnetId;
 
     /**
+    * COS训练输出路径
+    */
+    @SerializedName("Output")
+    @Expose
+    private CosPathInfo Output;
+
+    /**
     * CLS日志配置
     */
     @SerializedName("LogConfig")
@@ -155,6 +148,13 @@ POSTPAID_BY_HOUR 按量计费
     @SerializedName("TuningParameters")
     @Expose
     private String TuningParameters;
+
+    /**
+    * 是否上报日志
+    */
+    @SerializedName("LogEnable")
+    @Expose
+    private Boolean LogEnable;
 
     /**
     * 备注，最多500个字
@@ -227,70 +227,6 @@ POSTPAID_BY_HOUR 按量计费
      */
     public void setResourceConfigInfos(ResourceConfigInfo [] ResourceConfigInfos) {
         this.ResourceConfigInfos = ResourceConfigInfos;
-    }
-
-    /**
-     * Get COS代码包路径 
-     * @return CodePackagePath COS代码包路径
-     */
-    public CosPathInfo getCodePackagePath() {
-        return this.CodePackagePath;
-    }
-
-    /**
-     * Set COS代码包路径
-     * @param CodePackagePath COS代码包路径
-     */
-    public void setCodePackagePath(CosPathInfo CodePackagePath) {
-        this.CodePackagePath = CodePackagePath;
-    }
-
-    /**
-     * Get 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD 
-     * @return TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     */
-    public String getTrainingMode() {
-        return this.TrainingMode;
-    }
-
-    /**
-     * Set 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     * @param TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     */
-    public void setTrainingMode(String TrainingMode) {
-        this.TrainingMode = TrainingMode;
-    }
-
-    /**
-     * Get COS训练输出路径 
-     * @return Output COS训练输出路径
-     */
-    public CosPathInfo getOutput() {
-        return this.Output;
-    }
-
-    /**
-     * Set COS训练输出路径
-     * @param Output COS训练输出路径
-     */
-    public void setOutput(CosPathInfo Output) {
-        this.Output = Output;
-    }
-
-    /**
-     * Get 是否上报日志 
-     * @return LogEnable 是否上报日志
-     */
-    public Boolean getLogEnable() {
-        return this.LogEnable;
-    }
-
-    /**
-     * Set 是否上报日志
-     * @param LogEnable 是否上报日志
-     */
-    public void setLogEnable(Boolean LogEnable) {
-        this.LogEnable = LogEnable;
     }
 
     /**
@@ -390,6 +326,22 @@ POSTPAID_BY_HOUR 按量计费
     }
 
     /**
+     * Get COS代码包路径 
+     * @return CodePackagePath COS代码包路径
+     */
+    public CosPathInfo getCodePackagePath() {
+        return this.CodePackagePath;
+    }
+
+    /**
+     * Set COS代码包路径
+     * @param CodePackagePath COS代码包路径
+     */
+    public void setCodePackagePath(CosPathInfo CodePackagePath) {
+        this.CodePackagePath = CodePackagePath;
+    }
+
+    /**
      * Get 启动命令信息，默认为sh start.sh 
      * @return StartCmdInfo 启动命令信息，默认为sh start.sh
      */
@@ -403,6 +355,22 @@ POSTPAID_BY_HOUR 按量计费
      */
     public void setStartCmdInfo(StartCmdInfo StartCmdInfo) {
         this.StartCmdInfo = StartCmdInfo;
+    }
+
+    /**
+     * Get 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD 
+     * @return TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     */
+    public String getTrainingMode() {
+        return this.TrainingMode;
+    }
+
+    /**
+     * Set 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @param TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     */
+    public void setTrainingMode(String TrainingMode) {
+        this.TrainingMode = TrainingMode;
     }
 
     /**
@@ -454,6 +422,22 @@ POSTPAID_BY_HOUR 按量计费
     }
 
     /**
+     * Get COS训练输出路径 
+     * @return Output COS训练输出路径
+     */
+    public CosPathInfo getOutput() {
+        return this.Output;
+    }
+
+    /**
+     * Set COS训练输出路径
+     * @param Output COS训练输出路径
+     */
+    public void setOutput(CosPathInfo Output) {
+        this.Output = Output;
+    }
+
+    /**
      * Get CLS日志配置 
      * @return LogConfig CLS日志配置
      */
@@ -483,6 +467,22 @@ POSTPAID_BY_HOUR 按量计费
      */
     public void setTuningParameters(String TuningParameters) {
         this.TuningParameters = TuningParameters;
+    }
+
+    /**
+     * Get 是否上报日志 
+     * @return LogEnable 是否上报日志
+     */
+    public Boolean getLogEnable() {
+        return this.LogEnable;
+    }
+
+    /**
+     * Set 是否上报日志
+     * @param LogEnable 是否上报日志
+     */
+    public void setLogEnable(Boolean LogEnable) {
+        this.LogEnable = LogEnable;
     }
 
     /**
@@ -553,18 +553,6 @@ POSTPAID_BY_HOUR 按量计费
                 this.ResourceConfigInfos[i] = new ResourceConfigInfo(source.ResourceConfigInfos[i]);
             }
         }
-        if (source.CodePackagePath != null) {
-            this.CodePackagePath = new CosPathInfo(source.CodePackagePath);
-        }
-        if (source.TrainingMode != null) {
-            this.TrainingMode = new String(source.TrainingMode);
-        }
-        if (source.Output != null) {
-            this.Output = new CosPathInfo(source.Output);
-        }
-        if (source.LogEnable != null) {
-            this.LogEnable = new Boolean(source.LogEnable);
-        }
         if (source.FrameworkName != null) {
             this.FrameworkName = new String(source.FrameworkName);
         }
@@ -586,8 +574,14 @@ POSTPAID_BY_HOUR 按量计费
         if (source.ImageInfo != null) {
             this.ImageInfo = new ImageInfo(source.ImageInfo);
         }
+        if (source.CodePackagePath != null) {
+            this.CodePackagePath = new CosPathInfo(source.CodePackagePath);
+        }
         if (source.StartCmdInfo != null) {
             this.StartCmdInfo = new StartCmdInfo(source.StartCmdInfo);
+        }
+        if (source.TrainingMode != null) {
+            this.TrainingMode = new String(source.TrainingMode);
         }
         if (source.DataConfigs != null) {
             this.DataConfigs = new DataConfig[source.DataConfigs.length];
@@ -601,11 +595,17 @@ POSTPAID_BY_HOUR 按量计费
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Output != null) {
+            this.Output = new CosPathInfo(source.Output);
+        }
         if (source.LogConfig != null) {
             this.LogConfig = new LogConfig(source.LogConfig);
         }
         if (source.TuningParameters != null) {
             this.TuningParameters = new String(source.TuningParameters);
+        }
+        if (source.LogEnable != null) {
+            this.LogEnable = new Boolean(source.LogEnable);
         }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
@@ -626,22 +626,22 @@ POSTPAID_BY_HOUR 按量计费
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamArrayObj(map, prefix + "ResourceConfigInfos.", this.ResourceConfigInfos);
-        this.setParamObj(map, prefix + "CodePackagePath.", this.CodePackagePath);
-        this.setParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
-        this.setParamObj(map, prefix + "Output.", this.Output);
-        this.setParamSimple(map, prefix + "LogEnable", this.LogEnable);
         this.setParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
         this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
         this.setParamSimple(map, prefix + "FrameworkEnvironment", this.FrameworkEnvironment);
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
+        this.setParamObj(map, prefix + "CodePackagePath.", this.CodePackagePath);
         this.setParamObj(map, prefix + "StartCmdInfo.", this.StartCmdInfo);
+        this.setParamSimple(map, prefix + "TrainingMode", this.TrainingMode);
         this.setParamArrayObj(map, prefix + "DataConfigs.", this.DataConfigs);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
         this.setParamSimple(map, prefix + "TuningParameters", this.TuningParameters);
+        this.setParamSimple(map, prefix + "LogEnable", this.LogEnable);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
