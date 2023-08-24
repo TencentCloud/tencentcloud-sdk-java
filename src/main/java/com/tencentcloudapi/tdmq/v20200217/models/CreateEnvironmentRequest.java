@@ -37,18 +37,18 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private Long MsgTTL;
 
     /**
-    * 说明，128个字符以内。
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
     * Pulsar 集群的ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
+
+    /**
+    * 说明，128个字符以内。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
 
     /**
     * 消息保留策略
@@ -97,22 +97,6 @@ public class CreateEnvironmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 说明，128个字符以内。 
-     * @return Remark 说明，128个字符以内。
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 说明，128个字符以内。
-     * @param Remark 说明，128个字符以内。
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
      * Get Pulsar 集群的ID 
      * @return ClusterId Pulsar 集群的ID
      */
@@ -126,6 +110,22 @@ public class CreateEnvironmentRequest extends AbstractModel{
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 说明，128个字符以内。 
+     * @return Remark 说明，128个字符以内。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 说明，128个字符以内。
+     * @param Remark 说明，128个字符以内。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
     }
 
     /**
@@ -174,11 +174,11 @@ public class CreateEnvironmentRequest extends AbstractModel{
         if (source.MsgTTL != null) {
             this.MsgTTL = new Long(source.MsgTTL);
         }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
-        }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
         }
         if (source.RetentionPolicy != null) {
             this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
@@ -195,8 +195,8 @@ public class CreateEnvironmentRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
         this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
 

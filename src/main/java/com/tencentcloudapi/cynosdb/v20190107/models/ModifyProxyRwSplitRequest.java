@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyProxyRwSplitRequest extends AbstractModel{
 
     /**
-    * 集群ID
+    * 集群ID，例如cynosdbmysql-asd123
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 数据库代理组ID
+    * 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -132,32 +132,32 @@ SessionConnectionPool
     private Long ConnectionPoolTimeOut;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，例如cynosdbmysql-asd123 
+     * @return ClusterId 集群ID，例如cynosdbmysql-asd123
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，例如cynosdbmysql-asd123
+     * @param ClusterId 集群ID，例如cynosdbmysql-asd123
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 数据库代理组ID 
-     * @return ProxyGroupId 数据库代理组ID
+     * Get 数据库代理组ID，例如cynosdbmysql-proxy-qwe123 
+     * @return ProxyGroupId 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 数据库代理组ID
-     * @param ProxyGroupId 数据库代理组ID
+     * Set 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
+     * @param ProxyGroupId 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

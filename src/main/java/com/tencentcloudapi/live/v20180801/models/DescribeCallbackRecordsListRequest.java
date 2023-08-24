@@ -24,7 +24,7 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
 
     /**
     * 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
     */
     @SerializedName("StartTime")
@@ -33,7 +33,7 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
 
     /**
     * 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 
 查询的起始和结束时间跨度不支持超过1天。仅支持查询最近14天的数据。
@@ -84,10 +84,10 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
 
     /**
      * Get 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。 
      * @return StartTime 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public String getStartTime() {
@@ -96,10 +96,10 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
 
     /**
      * Set 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      * @param StartTime 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public void setStartTime(String StartTime) {
@@ -108,12 +108,12 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
 
     /**
      * Get 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 
 查询的起始和结束时间跨度不支持超过1天。仅支持查询最近14天的数据。 
      * @return EndTime 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 
 查询的起始和结束时间跨度不支持超过1天。仅支持查询最近14天的数据。
@@ -124,12 +124,12 @@ public class DescribeCallbackRecordsListRequest extends AbstractModel{
 
     /**
      * Set 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 
 查询的起始和结束时间跨度不支持超过1天。仅支持查询最近14天的数据。
      * @param EndTime 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 
 查询的起始和结束时间跨度不支持超过1天。仅支持查询最近14天的数据。

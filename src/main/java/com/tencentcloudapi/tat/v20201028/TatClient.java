@@ -105,6 +105,27 @@ public class TatClient extends AbstractClient{
     }
 
     /**
+     *接口用于创建注册码。
+     * @param req CreateRegisterCodeRequest
+     * @return CreateRegisterCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRegisterCodeResponse CreateRegisterCode(CreateRegisterCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRegisterCodeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRegisterCodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRegisterCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于删除命令。
 如果命令与执行器关联，则无法被删除。
      * @param req DeleteCommandRequest
@@ -140,6 +161,48 @@ public class TatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteInvokerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteInvoker");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于批量删除注册码。
+     * @param req DeleteRegisterCodesRequest
+     * @return DeleteRegisterCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRegisterCodesResponse DeleteRegisterCodes(DeleteRegisterCodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRegisterCodesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRegisterCodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRegisterCodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口用于删除托管实例。
+     * @param req DeleteRegisterInstanceRequest
+     * @return DeleteRegisterInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRegisterInstanceResponse DeleteRegisterInstance(DeleteRegisterInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRegisterInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRegisterInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRegisterInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -296,6 +359,48 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     }
 
     /**
+     *接口用于查询注册码信息。
+     * @param req DescribeRegisterCodesRequest
+     * @return DescribeRegisterCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegisterCodesResponse DescribeRegisterCodes(DescribeRegisterCodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegisterCodesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegisterCodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRegisterCodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口用于查询被托管的实例信息。
+     * @param req DescribeRegisterInstancesRequest
+     * @return DescribeRegisterInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegisterInstancesResponse DescribeRegisterInstances(DescribeRegisterInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegisterInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegisterInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRegisterInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于停止执行器。
      * @param req DisableInvokerRequest
      * @return DisableInvokerResponse
@@ -309,6 +414,27 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
                 Type type = new TypeToken<JsonResponseModel<DisableInvokerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisableInvoker");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于批量禁用注册码。
+     * @param req DisableRegisterCodesRequest
+     * @return DisableRegisterCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableRegisterCodesResponse DisableRegisterCodes(DisableRegisterCodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableRegisterCodesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableRegisterCodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableRegisterCodes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -399,6 +525,27 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
                 Type type = new TypeToken<JsonResponseModel<ModifyInvokerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyInvoker");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口用于修改托管实例信息。
+     * @param req ModifyRegisterInstanceRequest
+     * @return ModifyRegisterInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRegisterInstanceResponse ModifyRegisterInstance(ModifyRegisterInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRegisterInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRegisterInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRegisterInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

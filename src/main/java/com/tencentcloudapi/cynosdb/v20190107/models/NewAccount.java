@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class NewAccount extends AbstractModel{
 
     /**
-    * 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+    * 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
     */
     @SerializedName("AccountName")
     @Expose
@@ -37,7 +37,7 @@ public class NewAccount extends AbstractModel{
     private String AccountPassword;
 
     /**
-    * 主机
+    * 主机(%或ipv4地址)
     */
     @SerializedName("Host")
     @Expose
@@ -58,16 +58,16 @@ public class NewAccount extends AbstractModel{
     private Long MaxUserConnections;
 
     /**
-     * Get 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16 
-     * @return AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+     * Get 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30 
+     * @return AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
-     * @param AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+     * Set 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
+     * @param AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
@@ -90,16 +90,16 @@ public class NewAccount extends AbstractModel{
     }
 
     /**
-     * Get 主机 
-     * @return Host 主机
+     * Get 主机(%或ipv4地址) 
+     * @return Host 主机(%或ipv4地址)
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 主机
-     * @param Host 主机
+     * Set 主机(%或ipv4地址)
+     * @param Host 主机(%或ipv4地址)
      */
     public void setHost(String Host) {
         this.Host = Host;

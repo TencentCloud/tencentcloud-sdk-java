@@ -23,42 +23,50 @@ import java.util.HashMap;
 public class CreateSealRequest extends AbstractModel{
 
     /**
-    * 操作人信息
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 电子印章名字
+    * 电子印章名字，1-50个中文字符。
     */
     @SerializedName("SealName")
     @Expose
     private String SealName;
 
     /**
-    * 应用相关信息
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+    * 本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image
     */
     @SerializedName("GenerateSource")
     @Expose
     private String GenerateSource;
 
     /**
-    * 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
+    * 电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章.
     */
     @SerializedName("SealType")
     @Expose
     private String SealType;
 
     /**
-    * 电子印章图片文件名称
+    * 电子印章图片文件名称，1-50个中文字符。
     */
     @SerializedName("FileName")
     @Expose
@@ -98,7 +106,7 @@ public class CreateSealRequest extends AbstractModel{
     private String Color;
 
     /**
-    * 暂时不支持横向文字设置
+    * 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
     */
     @SerializedName("SealHorizontalText")
     @Expose
@@ -127,96 +135,149 @@ public class CreateSealRequest extends AbstractModel{
     private String FileToken;
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+    * 印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章
+    */
+    @SerializedName("SealStyle")
+    @Expose
+    private String SealStyle;
+
+    /**
+    * 印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm;
+    */
+    @SerializedName("SealSize")
+    @Expose
+    private String SealSize;
+
+    /**
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 电子印章名字 
-     * @return SealName 电子印章名字
+     * Get 电子印章名字，1-50个中文字符。 
+     * @return SealName 电子印章名字，1-50个中文字符。
      */
     public String getSealName() {
         return this.SealName;
     }
 
     /**
-     * Set 电子印章名字
-     * @param SealName 电子印章名字
+     * Set 电子印章名字，1-50个中文字符。
+     * @param SealName 电子印章名字，1-50个中文字符。
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;
     }
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image 
-     * @return GenerateSource 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+     * Get 本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image 
+     * @return GenerateSource 本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image
      */
     public String getGenerateSource() {
         return this.GenerateSource;
     }
 
     /**
-     * Set 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
-     * @param GenerateSource 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+     * Set 本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image
+     * @param GenerateSource 本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image
      */
     public void setGenerateSource(String GenerateSource) {
         this.GenerateSource = GenerateSource;
     }
 
     /**
-     * Get 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章 
-     * @return SealType 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
+     * Get 电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章. 
+     * @return SealType 电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章.
      */
     public String getSealType() {
         return this.SealType;
     }
 
     /**
-     * Set 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
-     * @param SealType 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
+     * Set 电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章.
+     * @param SealType 电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章.
      */
     public void setSealType(String SealType) {
         this.SealType = SealType;
     }
 
     /**
-     * Get 电子印章图片文件名称 
-     * @return FileName 电子印章图片文件名称
+     * Get 电子印章图片文件名称，1-50个中文字符。 
+     * @return FileName 电子印章图片文件名称，1-50个中文字符。
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 电子印章图片文件名称
-     * @param FileName 电子印章图片文件名称
+     * Set 电子印章图片文件名称，1-50个中文字符。
+     * @param FileName 电子印章图片文件名称，1-50个中文字符。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -307,16 +368,16 @@ public class CreateSealRequest extends AbstractModel{
     }
 
     /**
-     * Get 暂时不支持横向文字设置 
-     * @return SealHorizontalText 暂时不支持横向文字设置
+     * Get 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号） 
+     * @return SealHorizontalText 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
      */
     public String getSealHorizontalText() {
         return this.SealHorizontalText;
     }
 
     /**
-     * Set 暂时不支持横向文字设置
-     * @param SealHorizontalText 暂时不支持横向文字设置
+     * Set 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
+     * @param SealHorizontalText 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
      */
     public void setSealHorizontalText(String SealHorizontalText) {
         this.SealHorizontalText = SealHorizontalText;
@@ -374,6 +435,66 @@ public class CreateSealRequest extends AbstractModel{
         this.FileToken = FileToken;
     }
 
+    /**
+     * Get 印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章 
+     * @return SealStyle 印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章
+     */
+    public String getSealStyle() {
+        return this.SealStyle;
+    }
+
+    /**
+     * Set 印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章
+     * @param SealStyle 印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章
+     */
+    public void setSealStyle(String SealStyle) {
+        this.SealStyle = SealStyle;
+    }
+
+    /**
+     * Get 印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm; 
+     * @return SealSize 印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm;
+     */
+    public String getSealSize() {
+        return this.SealSize;
+    }
+
+    /**
+     * Set 印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm;
+     * @param SealSize 印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm;
+     */
+    public void setSealSize(String SealSize) {
+        this.SealSize = SealSize;
+    }
+
     public CreateSealRequest() {
     }
 
@@ -424,6 +545,12 @@ public class CreateSealRequest extends AbstractModel{
         if (source.FileToken != null) {
             this.FileToken = new String(source.FileToken);
         }
+        if (source.SealStyle != null) {
+            this.SealStyle = new String(source.SealStyle);
+        }
+        if (source.SealSize != null) {
+            this.SealSize = new String(source.SealSize);
+        }
     }
 
 
@@ -445,6 +572,8 @@ public class CreateSealRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SealChordText", this.SealChordText);
         this.setParamSimple(map, prefix + "SealCentralType", this.SealCentralType);
         this.setParamSimple(map, prefix + "FileToken", this.FileToken);
+        this.setParamSimple(map, prefix + "SealStyle", this.SealStyle);
+        this.setParamSimple(map, prefix + "SealSize", this.SealSize);
 
     }
 }

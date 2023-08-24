@@ -31,10 +31,28 @@ public class CreateScanUserRequest extends AbstractModel{
 
     /**
     * 需要新增送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
     */
     @SerializedName("UserId")
     @Expose
     private Long UserId;
+
+    /**
+    * 需要新增送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+    */
+    @SerializedName("UserIdString")
+    @Expose
+    private String UserIdString;
+
+    /**
+    * 当前用户送检过期时间，单位：秒。
+若参数不为0，则在过期时间之后，用户不会被送检。
+若参数为0，则送检配置不会自动失效。 
+    */
+    @SerializedName("ExpirationTime")
+    @Expose
+    private Long ExpirationTime;
 
     /**
      * Get 应用ID，登录控制台 - 服务管理创建应用得到的AppID 
@@ -53,8 +71,10 @@ public class CreateScanUserRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要新增送检的用户号。示例：1234 
+     * Get 需要新增送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准) 
      * @return UserId 需要新增送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
      */
     public Long getUserId() {
         return this.UserId;
@@ -62,10 +82,56 @@ public class CreateScanUserRequest extends AbstractModel{
 
     /**
      * Set 需要新增送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
      * @param UserId 需要新增送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
      */
     public void setUserId(Long UserId) {
         this.UserId = UserId;
+    }
+
+    /**
+     * Get 需要新增送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准) 
+     * @return UserIdString 需要新增送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     */
+    public String getUserIdString() {
+        return this.UserIdString;
+    }
+
+    /**
+     * Set 需要新增送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     * @param UserIdString 需要新增送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     */
+    public void setUserIdString(String UserIdString) {
+        this.UserIdString = UserIdString;
+    }
+
+    /**
+     * Get 当前用户送检过期时间，单位：秒。
+若参数不为0，则在过期时间之后，用户不会被送检。
+若参数为0，则送检配置不会自动失效。  
+     * @return ExpirationTime 当前用户送检过期时间，单位：秒。
+若参数不为0，则在过期时间之后，用户不会被送检。
+若参数为0，则送检配置不会自动失效。 
+     */
+    public Long getExpirationTime() {
+        return this.ExpirationTime;
+    }
+
+    /**
+     * Set 当前用户送检过期时间，单位：秒。
+若参数不为0，则在过期时间之后，用户不会被送检。
+若参数为0，则送检配置不会自动失效。 
+     * @param ExpirationTime 当前用户送检过期时间，单位：秒。
+若参数不为0，则在过期时间之后，用户不会被送检。
+若参数为0，则送检配置不会自动失效。 
+     */
+    public void setExpirationTime(Long ExpirationTime) {
+        this.ExpirationTime = ExpirationTime;
     }
 
     public CreateScanUserRequest() {
@@ -82,6 +148,12 @@ public class CreateScanUserRequest extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new Long(source.UserId);
         }
+        if (source.UserIdString != null) {
+            this.UserIdString = new String(source.UserIdString);
+        }
+        if (source.ExpirationTime != null) {
+            this.ExpirationTime = new Long(source.ExpirationTime);
+        }
     }
 
 
@@ -91,6 +163,8 @@ public class CreateScanUserRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "UserIdString", this.UserIdString);
+        this.setParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
 
     }
 }

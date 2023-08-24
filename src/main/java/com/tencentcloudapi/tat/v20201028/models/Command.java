@@ -100,6 +100,14 @@ public class Command extends AbstractModel{
     private String DefaultParameters;
 
     /**
+    * 自定义参数的默认取值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultParameterConfs")
+    @Expose
+    private DefaultParameterConf [] DefaultParameterConfs;
+
+    /**
     * 命令的结构化描述。公共命令有值，用户命令为空字符串。
     */
     @SerializedName("FormattedDescription")
@@ -318,6 +326,26 @@ public class Command extends AbstractModel{
     }
 
     /**
+     * Get 自定义参数的默认取值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultParameterConfs 自定义参数的默认取值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DefaultParameterConf [] getDefaultParameterConfs() {
+        return this.DefaultParameterConfs;
+    }
+
+    /**
+     * Set 自定义参数的默认取值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultParameterConfs 自定义参数的默认取值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
+        this.DefaultParameterConfs = DefaultParameterConfs;
+    }
+
+    /**
      * Get 命令的结构化描述。公共命令有值，用户命令为空字符串。 
      * @return FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
      */
@@ -454,6 +482,12 @@ public class Command extends AbstractModel{
         if (source.DefaultParameters != null) {
             this.DefaultParameters = new String(source.DefaultParameters);
         }
+        if (source.DefaultParameterConfs != null) {
+            this.DefaultParameterConfs = new DefaultParameterConf[source.DefaultParameterConfs.length];
+            for (int i = 0; i < source.DefaultParameterConfs.length; i++) {
+                this.DefaultParameterConfs[i] = new DefaultParameterConf(source.DefaultParameterConfs[i]);
+            }
+        }
         if (source.FormattedDescription != null) {
             this.FormattedDescription = new String(source.FormattedDescription);
         }
@@ -493,6 +527,7 @@ public class Command extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
         this.setParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
         this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

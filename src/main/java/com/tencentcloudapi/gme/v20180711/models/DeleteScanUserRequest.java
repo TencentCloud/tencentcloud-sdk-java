@@ -31,10 +31,19 @@ public class DeleteScanUserRequest extends AbstractModel{
 
     /**
     * 需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
     */
     @SerializedName("UserId")
     @Expose
     private Long UserId;
+
+    /**
+    * 需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+    */
+    @SerializedName("UserIdString")
+    @Expose
+    private String UserIdString;
 
     /**
      * Get 应用ID，登录控制台 - 服务管理创建应用得到的AppID 
@@ -53,8 +62,10 @@ public class DeleteScanUserRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要删除送检的用户号。示例：1234 
+     * Get 需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准) 
      * @return UserId 需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
      */
     public Long getUserId() {
         return this.UserId;
@@ -62,10 +73,32 @@ public class DeleteScanUserRequest extends AbstractModel{
 
     /**
      * Set 需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
      * @param UserId 需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
      */
     public void setUserId(Long UserId) {
         this.UserId = UserId;
+    }
+
+    /**
+     * Get 需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准) 
+     * @return UserIdString 需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     */
+    public String getUserIdString() {
+        return this.UserIdString;
+    }
+
+    /**
+     * Set 需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     * @param UserIdString 需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     */
+    public void setUserIdString(String UserIdString) {
+        this.UserIdString = UserIdString;
     }
 
     public DeleteScanUserRequest() {
@@ -82,6 +115,9 @@ public class DeleteScanUserRequest extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new Long(source.UserId);
         }
+        if (source.UserIdString != null) {
+            this.UserIdString = new String(source.UserIdString);
+        }
     }
 
 
@@ -91,6 +127,7 @@ public class DeleteScanUserRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "UserIdString", this.UserIdString);
 
     }
 }

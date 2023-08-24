@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CopyClusterPasswordComplexityRequest extends AbstractModel{
 
     /**
-    * 复制集群ID数组
+    * 复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-    * 集群id
+    * 集群id，例如"cynosdbmysql-bzxxrmtq"
     */
     @SerializedName("SourceClusterId")
     @Expose
     private String SourceClusterId;
 
     /**
-     * Get 复制集群ID数组 
-     * @return ClusterIds 复制集群ID数组
+     * Get 复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"] 
+     * @return ClusterIds 复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set 复制集群ID数组
-     * @param ClusterIds 复制集群ID数组
+     * Set 复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+     * @param ClusterIds 复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
     }
 
     /**
-     * Get 集群id 
-     * @return SourceClusterId 集群id
+     * Get 集群id，例如"cynosdbmysql-bzxxrmtq" 
+     * @return SourceClusterId 集群id，例如"cynosdbmysql-bzxxrmtq"
      */
     public String getSourceClusterId() {
         return this.SourceClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param SourceClusterId 集群id
+     * Set 集群id，例如"cynosdbmysql-bzxxrmtq"
+     * @param SourceClusterId 集群id，例如"cynosdbmysql-bzxxrmtq"
      */
     public void setSourceClusterId(String SourceClusterId) {
         this.SourceClusterId = SourceClusterId;

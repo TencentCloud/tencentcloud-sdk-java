@@ -55,9 +55,10 @@ public class ApproverInfo extends AbstractModel{
 
     /**
     * 组织机构名称。
-如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
 
-注: `请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。`
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -301,13 +302,15 @@ public class ApproverInfo extends AbstractModel{
 
     /**
      * Get 组织机构名称。
-如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
-
-注: `请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。` 
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
+ 
      * @return OrganizationName 组织机构名称。
-如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
 
-注: `请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。`
      */
     public String getOrganizationName() {
         return this.OrganizationName;
@@ -315,13 +318,15 @@ public class ApproverInfo extends AbstractModel{
 
     /**
      * Set 组织机构名称。
-如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
 
-注: `请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。`
      * @param OrganizationName 组织机构名称。
-如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
 
-注: `请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。`
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;

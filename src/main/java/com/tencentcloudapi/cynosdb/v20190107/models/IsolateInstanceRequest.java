@@ -30,7 +30,7 @@ public class IsolateInstanceRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 实例ID数组
+    * 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
     */
     @SerializedName("InstanceIdList")
     @Expose
@@ -60,16 +60,16 @@ public class IsolateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例ID数组 
-     * @return InstanceIdList 实例ID数组
+     * Get 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"] 
+     * @return InstanceIdList 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set 实例ID数组
-     * @param InstanceIdList 实例ID数组
+     * Set 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+     * @param InstanceIdList 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;
