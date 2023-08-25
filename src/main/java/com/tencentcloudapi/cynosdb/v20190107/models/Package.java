@@ -95,7 +95,7 @@ refund-已退费。
     private Float PackageUsedSpec;
 
     /**
-    * 资源包已使用量
+    * 是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasQuota")
@@ -319,9 +319,9 @@ refund-已退费。
     }
 
     /**
-     * Get 资源包已使用量
+     * Get 是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HasQuota 资源包已使用量
+     * @return HasQuota 是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasQuota() {
@@ -329,9 +329,9 @@ refund-已退费。
     }
 
     /**
-     * Set 资源包已使用量
+     * Set 是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HasQuota 资源包已使用量
+     * @param HasQuota 是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasQuota(Boolean HasQuota) {

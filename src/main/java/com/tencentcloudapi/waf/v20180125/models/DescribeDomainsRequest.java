@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDomainsRequest extends AbstractModel{
 
     /**
-    * 数据偏移量，从1开始。
+    * 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
     */
     @SerializedName("Offset")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeDomainsRequest extends AbstractModel{
     private FiltersItemNew [] Filters;
 
     /**
-     * Get 数据偏移量，从1开始。 
-     * @return Offset 数据偏移量，从1开始。
+     * Get 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整 
+     * @return Offset 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据偏移量，从1开始。
-     * @param Offset 数据偏移量，从1开始。
+     * Set 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+     * @param Offset 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

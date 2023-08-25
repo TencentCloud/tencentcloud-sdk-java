@@ -606,6 +606,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询云原生网关分组信息
+     * @param req DescribeNativeGatewayServerGroupsRequest
+     * @return DescribeNativeGatewayServerGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNativeGatewayServerGroupsResponse DescribeNativeGatewayServerGroups(DescribeNativeGatewayServerGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNativeGatewayServerGroupsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNativeGatewayServerGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNativeGatewayServerGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取云原生网关服务详情
      * @param req DescribeOneCloudNativeAPIGatewayServiceRequest
      * @return DescribeOneCloudNativeAPIGatewayServiceResponse

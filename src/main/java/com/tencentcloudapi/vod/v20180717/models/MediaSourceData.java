@@ -27,6 +27,7 @@ public class MediaSourceData extends AbstractModel{
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
+<li>TrtcRecord：来自TRTC 伴生录制。</li>
 <li>WebPageRecord：来自全景录制。</li>
 <li>Unknown：未知来源。</li>
     */
@@ -35,14 +36,22 @@ public class MediaSourceData extends AbstractModel{
     private String SourceType;
 
     /**
-    * 用户创建文件时透传的字段
+    * 用户创建文件时透传的字段。
     */
     @SerializedName("SourceContext")
     @Expose
     private String SourceContext;
 
     /**
-    * TRTC 伴生录制信息。
+    * 直播录制信息，当文件来源为 Record 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LiveRecordInfo")
+    @Expose
+    private LiveRecordInfo LiveRecordInfo;
+
+    /**
+    * TRTC 伴生录制信息，当文件来源为 TrtcRecord 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrtcRecordInfo")
@@ -50,16 +59,26 @@ public class MediaSourceData extends AbstractModel{
     private TrtcRecordInfo TrtcRecordInfo;
 
     /**
+    * 全景录制信息，当文件来源为 WebPageRecord 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebPageRecordInfo")
+    @Expose
+    private WebPageRecordInfo WebPageRecordInfo;
+
+    /**
      * Get 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
+<li>TrtcRecord：来自TRTC 伴生录制。</li>
 <li>WebPageRecord：来自全景录制。</li>
 <li>Unknown：未知来源。</li> 
      * @return SourceType 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
+<li>TrtcRecord：来自TRTC 伴生录制。</li>
 <li>WebPageRecord：来自全景录制。</li>
 <li>Unknown：未知来源。</li>
      */
@@ -72,12 +91,14 @@ public class MediaSourceData extends AbstractModel{
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
+<li>TrtcRecord：来自TRTC 伴生录制。</li>
 <li>WebPageRecord：来自全景录制。</li>
 <li>Unknown：未知来源。</li>
      * @param SourceType 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
+<li>TrtcRecord：来自TRTC 伴生录制。</li>
 <li>WebPageRecord：来自全景录制。</li>
 <li>Unknown：未知来源。</li>
      */
@@ -86,25 +107,45 @@ public class MediaSourceData extends AbstractModel{
     }
 
     /**
-     * Get 用户创建文件时透传的字段 
-     * @return SourceContext 用户创建文件时透传的字段
+     * Get 用户创建文件时透传的字段。 
+     * @return SourceContext 用户创建文件时透传的字段。
      */
     public String getSourceContext() {
         return this.SourceContext;
     }
 
     /**
-     * Set 用户创建文件时透传的字段
-     * @param SourceContext 用户创建文件时透传的字段
+     * Set 用户创建文件时透传的字段。
+     * @param SourceContext 用户创建文件时透传的字段。
      */
     public void setSourceContext(String SourceContext) {
         this.SourceContext = SourceContext;
     }
 
     /**
-     * Get TRTC 伴生录制信息。
+     * Get 直播录制信息，当文件来源为 Record 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrtcRecordInfo TRTC 伴生录制信息。
+     * @return LiveRecordInfo 直播录制信息，当文件来源为 Record 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LiveRecordInfo getLiveRecordInfo() {
+        return this.LiveRecordInfo;
+    }
+
+    /**
+     * Set 直播录制信息，当文件来源为 Record 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveRecordInfo 直播录制信息，当文件来源为 Record 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLiveRecordInfo(LiveRecordInfo LiveRecordInfo) {
+        this.LiveRecordInfo = LiveRecordInfo;
+    }
+
+    /**
+     * Get TRTC 伴生录制信息，当文件来源为 TrtcRecord 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrtcRecordInfo TRTC 伴生录制信息，当文件来源为 TrtcRecord 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TrtcRecordInfo getTrtcRecordInfo() {
@@ -112,13 +153,33 @@ public class MediaSourceData extends AbstractModel{
     }
 
     /**
-     * Set TRTC 伴生录制信息。
+     * Set TRTC 伴生录制信息，当文件来源为 TrtcRecord 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrtcRecordInfo TRTC 伴生录制信息。
+     * @param TrtcRecordInfo TRTC 伴生录制信息，当文件来源为 TrtcRecord 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrtcRecordInfo(TrtcRecordInfo TrtcRecordInfo) {
         this.TrtcRecordInfo = TrtcRecordInfo;
+    }
+
+    /**
+     * Get 全景录制信息，当文件来源为 WebPageRecord 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebPageRecordInfo 全景录制信息，当文件来源为 WebPageRecord 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WebPageRecordInfo getWebPageRecordInfo() {
+        return this.WebPageRecordInfo;
+    }
+
+    /**
+     * Set 全景录制信息，当文件来源为 WebPageRecord 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebPageRecordInfo 全景录制信息，当文件来源为 WebPageRecord 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebPageRecordInfo(WebPageRecordInfo WebPageRecordInfo) {
+        this.WebPageRecordInfo = WebPageRecordInfo;
     }
 
     public MediaSourceData() {
@@ -135,8 +196,14 @@ public class MediaSourceData extends AbstractModel{
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
         }
+        if (source.LiveRecordInfo != null) {
+            this.LiveRecordInfo = new LiveRecordInfo(source.LiveRecordInfo);
+        }
         if (source.TrtcRecordInfo != null) {
             this.TrtcRecordInfo = new TrtcRecordInfo(source.TrtcRecordInfo);
+        }
+        if (source.WebPageRecordInfo != null) {
+            this.WebPageRecordInfo = new WebPageRecordInfo(source.WebPageRecordInfo);
         }
     }
 
@@ -147,7 +214,9 @@ public class MediaSourceData extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamObj(map, prefix + "LiveRecordInfo.", this.LiveRecordInfo);
         this.setParamObj(map, prefix + "TrtcRecordInfo.", this.TrtcRecordInfo);
+        this.setParamObj(map, prefix + "WebPageRecordInfo.", this.WebPageRecordInfo);
 
     }
 }

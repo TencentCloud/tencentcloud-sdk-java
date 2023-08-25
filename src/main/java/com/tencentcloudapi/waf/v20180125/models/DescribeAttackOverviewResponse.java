@@ -65,6 +65,14 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
     private Long ApiAssetsCount;
 
     /**
+    * api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiRiskEventCount")
+    @Expose
+    private Long ApiRiskEventCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +176,26 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiRiskEventCount api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getApiRiskEventCount() {
+        return this.ApiRiskEventCount;
+    }
+
+    /**
+     * Set api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiRiskEventCount api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiRiskEventCount(Long ApiRiskEventCount) {
+        this.ApiRiskEventCount = ApiRiskEventCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -209,6 +237,9 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
         if (source.ApiAssetsCount != null) {
             this.ApiAssetsCount = new Long(source.ApiAssetsCount);
         }
+        if (source.ApiRiskEventCount != null) {
+            this.ApiRiskEventCount = new Long(source.ApiRiskEventCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +256,7 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CCCount", this.CCCount);
         this.setParamSimple(map, prefix + "BotCount", this.BotCount);
         this.setParamSimple(map, prefix + "ApiAssetsCount", this.ApiAssetsCount);
+        this.setParamSimple(map, prefix + "ApiRiskEventCount", this.ApiRiskEventCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

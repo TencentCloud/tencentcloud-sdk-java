@@ -1200,6 +1200,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *api分析页面开关
+     * @param req ModifyApiAnalyzeStatusRequest
+     * @return ModifyApiAnalyzeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiAnalyzeStatusResponse ModifyApiAnalyzeStatus(ModifyApiAnalyzeStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApiAnalyzeStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApiAnalyzeStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApiAnalyzeStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改防护域名的地域封禁状态
      * @param req ModifyAreaBanStatusRequest
      * @return ModifyAreaBanStatusResponse
@@ -1213,6 +1234,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAreaBanStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAreaBanStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Bot_V2 bot总开关更新
+     * @param req ModifyBotStatusRequest
+     * @return ModifyBotStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBotStatusResponse ModifyBotStatus(ModifyBotStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBotStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBotStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBotStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

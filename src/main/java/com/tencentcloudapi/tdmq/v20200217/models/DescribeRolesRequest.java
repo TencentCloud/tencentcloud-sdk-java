@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeRolesRequest extends AbstractModel{
 
     /**
+    * 必填字段，集群Id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * 角色名称，模糊查询
     */
     @SerializedName("RoleName")
@@ -44,13 +51,6 @@ public class DescribeRolesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 必填字段，集群Id
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
     * * RoleName
 按照角色名进行过滤，精确查询。
 类型：String
@@ -59,6 +59,22 @@ public class DescribeRolesRequest extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+     * Get 必填字段，集群Id 
+     * @return ClusterId 必填字段，集群Id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 必填字段，集群Id
+     * @param ClusterId 必填字段，集群Id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
 
     /**
      * Get 角色名称，模糊查询 
@@ -109,22 +125,6 @@ public class DescribeRolesRequest extends AbstractModel{
     }
 
     /**
-     * Get 必填字段，集群Id 
-     * @return ClusterId 必填字段，集群Id
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set 必填字段，集群Id
-     * @param ClusterId 必填字段，集群Id
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    /**
      * Get * RoleName
 按照角色名进行过滤，精确查询。
 类型：String
@@ -160,6 +160,9 @@ public class DescribeRolesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRolesRequest(DescribeRolesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
@@ -168,9 +171,6 @@ public class DescribeRolesRequest extends AbstractModel{
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -185,10 +185,10 @@ public class DescribeRolesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

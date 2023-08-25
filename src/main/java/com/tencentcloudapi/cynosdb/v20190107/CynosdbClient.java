@@ -354,7 +354,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *创建集群
+     *购买新集群
      * @param req CreateClustersRequest
      * @return CreateClustersResponse
      * @throws TencentCloudSDKException
@@ -1950,7 +1950,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *升级预付费存储
+     *调整包年包月存储容量
      * @param req ModifyClusterStorageRequest
      * @return ModifyClusterStorageResponse
      * @throws TencentCloudSDKException
@@ -2181,7 +2181,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *下线集群
+     *销毁集群
      * @param req OfflineClusterRequest
      * @return OfflineClusterResponse
      * @throws TencentCloudSDKException
@@ -2202,7 +2202,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *下线实例
+     *销毁实例
      * @param req OfflineInstanceRequest
      * @return OfflineInstanceResponse
      * @throws TencentCloudSDKException
@@ -2244,7 +2244,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（OpenClusterPasswordComplexity）用于开启集群密码复杂度
+     *本接口（OpenClusterPasswordComplexity）用于开启自定义密码复杂度功能
      * @param req OpenClusterPasswordComplexityRequest
      * @return OpenClusterPasswordComplexityResponse
      * @throws TencentCloudSDKException
@@ -2664,7 +2664,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *更新集群Cynos内核版本
+     *更新内核小版本
      * @param req UpgradeClusterVersionRequest
      * @return UpgradeClusterVersionResponse
      * @throws TencentCloudSDKException
@@ -2685,7 +2685,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *升级实例
+     *实例变配
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse
      * @throws TencentCloudSDKException

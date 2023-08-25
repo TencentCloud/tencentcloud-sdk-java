@@ -30,6 +30,13 @@ public class ModifyRoleRequest extends AbstractModel{
     private String RoleName;
 
     /**
+    * 必填字段，集群Id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * 备注说明，长度必须大等于0且小等于128。
     */
     @SerializedName("Remark")
@@ -37,11 +44,18 @@ public class ModifyRoleRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * 必填字段，集群Id
+    * 批量绑定名字空间信息
     */
-    @SerializedName("ClusterId")
+    @SerializedName("EnvironmentRoleSets")
     @Expose
-    private String ClusterId;
+    private EnvironmentRoleSet [] EnvironmentRoleSets;
+
+    /**
+    * 全部解绑名字空间，设置为 true
+    */
+    @SerializedName("UnbindAllEnvironment")
+    @Expose
+    private Boolean UnbindAllEnvironment;
 
     /**
      * Get 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。 
@@ -57,6 +71,22 @@ public class ModifyRoleRequest extends AbstractModel{
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
+    }
+
+    /**
+     * Get 必填字段，集群Id 
+     * @return ClusterId 必填字段，集群Id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 必填字段，集群Id
+     * @param ClusterId 必填字段，集群Id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -76,19 +106,35 @@ public class ModifyRoleRequest extends AbstractModel{
     }
 
     /**
-     * Get 必填字段，集群Id 
-     * @return ClusterId 必填字段，集群Id
+     * Get 批量绑定名字空间信息 
+     * @return EnvironmentRoleSets 批量绑定名字空间信息
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public EnvironmentRoleSet [] getEnvironmentRoleSets() {
+        return this.EnvironmentRoleSets;
     }
 
     /**
-     * Set 必填字段，集群Id
-     * @param ClusterId 必填字段，集群Id
+     * Set 批量绑定名字空间信息
+     * @param EnvironmentRoleSets 批量绑定名字空间信息
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setEnvironmentRoleSets(EnvironmentRoleSet [] EnvironmentRoleSets) {
+        this.EnvironmentRoleSets = EnvironmentRoleSets;
+    }
+
+    /**
+     * Get 全部解绑名字空间，设置为 true 
+     * @return UnbindAllEnvironment 全部解绑名字空间，设置为 true
+     */
+    public Boolean getUnbindAllEnvironment() {
+        return this.UnbindAllEnvironment;
+    }
+
+    /**
+     * Set 全部解绑名字空间，设置为 true
+     * @param UnbindAllEnvironment 全部解绑名字空间，设置为 true
+     */
+    public void setUnbindAllEnvironment(Boolean UnbindAllEnvironment) {
+        this.UnbindAllEnvironment = UnbindAllEnvironment;
     }
 
     public ModifyRoleRequest() {
@@ -102,11 +148,20 @@ public class ModifyRoleRequest extends AbstractModel{
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+        if (source.EnvironmentRoleSets != null) {
+            this.EnvironmentRoleSets = new EnvironmentRoleSet[source.EnvironmentRoleSets.length];
+            for (int i = 0; i < source.EnvironmentRoleSets.length; i++) {
+                this.EnvironmentRoleSets[i] = new EnvironmentRoleSet(source.EnvironmentRoleSets[i]);
+            }
+        }
+        if (source.UnbindAllEnvironment != null) {
+            this.UnbindAllEnvironment = new Boolean(source.UnbindAllEnvironment);
         }
     }
 
@@ -116,8 +171,10 @@ public class ModifyRoleRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "EnvironmentRoleSets.", this.EnvironmentRoleSets);
+        this.setParamSimple(map, prefix + "UnbindAllEnvironment", this.UnbindAllEnvironment);
 
     }
 }

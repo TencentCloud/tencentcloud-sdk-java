@@ -44,6 +44,13 @@ public class CreateTopicRequest extends AbstractModel{
     private Long Partitions;
 
     /**
+    * Pulsar 集群的ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * 备注，128字符以内。
     */
     @SerializedName("Remark")
@@ -61,13 +68,6 @@ public class CreateTopicRequest extends AbstractModel{
     @SerializedName("TopicType")
     @Expose
     private Long TopicType;
-
-    /**
-    * Pulsar 集群的ID
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
 
     /**
     * Pulsar 主题类型
@@ -136,6 +136,22 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
      * Get 备注，128字符以内。 
      * @return Remark 备注，128字符以内。
      */
@@ -185,22 +201,6 @@ public class CreateTopicRequest extends AbstractModel{
      */
     public void setTopicType(Long TopicType) {
         this.TopicType = TopicType;
-    }
-
-    /**
-     * Get Pulsar 集群的ID 
-     * @return ClusterId Pulsar 集群的ID
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set Pulsar 集群的ID
-     * @param ClusterId Pulsar 集群的ID
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
     }
 
     /**
@@ -268,14 +268,14 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.Partitions != null) {
             this.Partitions = new Long(source.Partitions);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
         if (source.TopicType != null) {
             this.TopicType = new Long(source.TopicType);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.PulsarTopicType != null) {
             this.PulsarTopicType = new Long(source.PulsarTopicType);
@@ -293,9 +293,9 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Partitions", this.Partitions);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
 

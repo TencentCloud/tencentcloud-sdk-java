@@ -68,6 +68,14 @@ public class IntegrationNodeSchema extends AbstractModel{
     private String Alias;
 
     /**
+    * 字段备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
      * Get schema id 
      * @return Id schema id
      */
@@ -175,6 +183,26 @@ public class IntegrationNodeSchema extends AbstractModel{
         this.Alias = Alias;
     }
 
+    /**
+     * Get 字段备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Comment 字段备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 字段备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Comment 字段备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
     public IntegrationNodeSchema() {
     }
 
@@ -204,6 +232,9 @@ public class IntegrationNodeSchema extends AbstractModel{
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
     }
 
 
@@ -217,6 +248,7 @@ public class IntegrationNodeSchema extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }

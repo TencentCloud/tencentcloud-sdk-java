@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeProxiesRequest extends AbstractModel{
 
     /**
-    * 集群ID
+    * 集群ID（该参数必传，例如cynosdbmysql-xxxxxx）
     */
     @SerializedName("ClusterId")
     @Expose
@@ -69,16 +69,16 @@ public class DescribeProxiesRequest extends AbstractModel{
     private QueryParamFilter [] Filters;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID（该参数必传，例如cynosdbmysql-xxxxxx） 
+     * @return ClusterId 集群ID（该参数必传，例如cynosdbmysql-xxxxxx）
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID（该参数必传，例如cynosdbmysql-xxxxxx）
+     * @param ClusterId 集群ID（该参数必传，例如cynosdbmysql-xxxxxx）
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

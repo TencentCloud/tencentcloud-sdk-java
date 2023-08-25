@@ -1092,6 +1092,27 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *用于查询网关下挂载的设备列表。
+     * @param req ListGatewayDevicesRequest
+     * @return ListGatewayDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListGatewayDevicesResponse ListGatewayDevices(ListGatewayDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListGatewayDevicesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListGatewayDevicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListGatewayDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于获取网关列表。
      * @param req ListGatewaysRequest
      * @return ListGatewaysResponse

@@ -44,18 +44,18 @@ public class ModifyTopicRequest extends AbstractModel{
     private Long Partitions;
 
     /**
-    * 备注，128字符以内。
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
     * Pulsar 集群的ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
+
+    /**
+    * 备注，128字符以内。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
 
     /**
     * 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
@@ -114,22 +114,6 @@ public class ModifyTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 备注，128字符以内。 
-     * @return Remark 备注，128字符以内。
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 备注，128字符以内。
-     * @param Remark 备注，128字符以内。
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
      * Get Pulsar 集群的ID 
      * @return ClusterId Pulsar 集群的ID
      */
@@ -143,6 +127,22 @@ public class ModifyTopicRequest extends AbstractModel{
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 备注，128字符以内。 
+     * @return Remark 备注，128字符以内。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注，128字符以内。
+     * @param Remark 备注，128字符以内。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
     }
 
     /**
@@ -182,11 +182,11 @@ public class ModifyTopicRequest extends AbstractModel{
         if (source.Partitions != null) {
             this.Partitions = new Long(source.Partitions);
         }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
-        }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
         }
         if (source.MsgTTL != null) {
             this.MsgTTL = new Long(source.MsgTTL);
@@ -201,8 +201,8 @@ public class ModifyTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Partitions", this.Partitions);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
 
     }

@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeEnvironmentsRequest extends AbstractModel{
 
     /**
+    * Pulsar 集群的ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * 命名空间名称，模糊搜索。
     */
     @SerializedName("EnvironmentId")
@@ -44,13 +51,6 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Pulsar 集群的ID
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
     * * EnvironmentId
 按照名称空间进行过滤，精确查询。
 类型：String
@@ -59,6 +59,22 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
 
     /**
      * Get 命名空间名称，模糊搜索。 
@@ -109,22 +125,6 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     }
 
     /**
-     * Get Pulsar 集群的ID 
-     * @return ClusterId Pulsar 集群的ID
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set Pulsar 集群的ID
-     * @param ClusterId Pulsar 集群的ID
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    /**
      * Get * EnvironmentId
 按照名称空间进行过滤，精确查询。
 类型：String
@@ -160,6 +160,9 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeEnvironmentsRequest(DescribeEnvironmentsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
@@ -168,9 +171,6 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -185,10 +185,10 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

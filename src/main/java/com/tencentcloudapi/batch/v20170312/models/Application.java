@@ -55,6 +55,14 @@ public class Application extends AbstractModel{
     private Docker Docker;
 
     /**
+    * 任务执行命令信息。与Command不能同时指定。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Commands")
+    @Expose
+    private CommandLine [] Commands;
+
+    /**
      * Get 应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeliveryForm 应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
@@ -134,6 +142,26 @@ public class Application extends AbstractModel{
         this.Docker = Docker;
     }
 
+    /**
+     * Get 任务执行命令信息。与Command不能同时指定。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Commands 任务执行命令信息。与Command不能同时指定。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CommandLine [] getCommands() {
+        return this.Commands;
+    }
+
+    /**
+     * Set 任务执行命令信息。与Command不能同时指定。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Commands 任务执行命令信息。与Command不能同时指定。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCommands(CommandLine [] Commands) {
+        this.Commands = Commands;
+    }
+
     public Application() {
     }
 
@@ -154,6 +182,12 @@ public class Application extends AbstractModel{
         if (source.Docker != null) {
             this.Docker = new Docker(source.Docker);
         }
+        if (source.Commands != null) {
+            this.Commands = new CommandLine[source.Commands.length];
+            for (int i = 0; i < source.Commands.length; i++) {
+                this.Commands[i] = new CommandLine(source.Commands[i]);
+            }
+        }
     }
 
 
@@ -165,6 +199,7 @@ public class Application extends AbstractModel{
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "PackagePath", this.PackagePath);
         this.setParamObj(map, prefix + "Docker.", this.Docker);
+        this.setParamArrayObj(map, prefix + "Commands.", this.Commands);
 
     }
 }
