@@ -239,6 +239,30 @@ HYBRID_PAID:
     private Boolean ModelTurboEnable;
 
     /**
+    * 挂载
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VolumeMount")
+    @Expose
+    private VolumeMount VolumeMount;
+
+    /**
+    * 推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InferCodeInfo")
+    @Expose
+    private InferCodeInfo InferCodeInfo;
+
+    /**
+    * 服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Command")
+    @Expose
+    private String Command;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -790,6 +814,66 @@ HYBRID_PAID:
         this.ModelTurboEnable = ModelTurboEnable;
     }
 
+    /**
+     * Get 挂载
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VolumeMount 挂载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VolumeMount getVolumeMount() {
+        return this.VolumeMount;
+    }
+
+    /**
+     * Set 挂载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeMount 挂载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumeMount(VolumeMount VolumeMount) {
+        this.VolumeMount = VolumeMount;
+    }
+
+    /**
+     * Get 推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InferCodeInfo 推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InferCodeInfo getInferCodeInfo() {
+        return this.InferCodeInfo;
+    }
+
+    /**
+     * Set 推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InferCodeInfo 推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInferCodeInfo(InferCodeInfo InferCodeInfo) {
+        this.InferCodeInfo = InferCodeInfo;
+    }
+
+    /**
+     * Get 服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Command 服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCommand() {
+        return this.Command;
+    }
+
+    /**
+     * Set 服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Command 服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCommand(String Command) {
+        this.Command = Command;
+    }
+
     public ServiceInfo() {
     }
 
@@ -888,6 +972,15 @@ HYBRID_PAID:
         if (source.ModelTurboEnable != null) {
             this.ModelTurboEnable = new Boolean(source.ModelTurboEnable);
         }
+        if (source.VolumeMount != null) {
+            this.VolumeMount = new VolumeMount(source.VolumeMount);
+        }
+        if (source.InferCodeInfo != null) {
+            this.InferCodeInfo = new InferCodeInfo(source.InferCodeInfo);
+        }
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
     }
 
 
@@ -921,6 +1014,9 @@ HYBRID_PAID:
         this.setParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
         this.setParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
+        this.setParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
+        this.setParamObj(map, prefix + "InferCodeInfo.", this.InferCodeInfo);
+        this.setParamSimple(map, prefix + "Command", this.Command);
 
     }
 }

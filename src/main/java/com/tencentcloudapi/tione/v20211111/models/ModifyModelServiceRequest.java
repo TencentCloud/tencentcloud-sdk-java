@@ -193,6 +193,13 @@ HYBRID_PAID:
     private Boolean ModelTurboEnable;
 
     /**
+    * 服务的启动命令
+    */
+    @SerializedName("Command")
+    @Expose
+    private String Command;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -620,6 +627,22 @@ HYBRID_PAID:
         this.ModelTurboEnable = ModelTurboEnable;
     }
 
+    /**
+     * Get 服务的启动命令 
+     * @return Command 服务的启动命令
+     */
+    public String getCommand() {
+        return this.Command;
+    }
+
+    /**
+     * Set 服务的启动命令
+     * @param Command 服务的启动命令
+     */
+    public void setCommand(String Command) {
+        this.Command = Command;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -697,6 +720,9 @@ HYBRID_PAID:
         if (source.ModelTurboEnable != null) {
             this.ModelTurboEnable = new Boolean(source.ModelTurboEnable);
         }
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
     }
 
 
@@ -725,6 +751,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
         this.setParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
         this.setParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
+        this.setParamSimple(map, prefix + "Command", this.Command);
 
     }
 }

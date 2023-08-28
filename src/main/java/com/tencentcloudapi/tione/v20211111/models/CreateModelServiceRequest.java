@@ -249,6 +249,13 @@ HYBRID_PAID:
     private String ServiceCategory;
 
     /**
+    * 服务的启动命令
+    */
+    @SerializedName("Command")
+    @Expose
+    private String Command;
+
+    /**
      * Get 新增版本时需要填写 
      * @return ServiceGroupId 新增版本时需要填写
      */
@@ -804,6 +811,22 @@ HYBRID_PAID:
         this.ServiceCategory = ServiceCategory;
     }
 
+    /**
+     * Get 服务的启动命令 
+     * @return Command 服务的启动命令
+     */
+    public String getCommand() {
+        return this.Command;
+    }
+
+    /**
+     * Set 服务的启动命令
+     * @param Command 服务的启动命令
+     */
+    public void setCommand(String Command) {
+        this.Command = Command;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -908,6 +931,9 @@ HYBRID_PAID:
         if (source.ServiceCategory != null) {
             this.ServiceCategory = new String(source.ServiceCategory);
         }
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
     }
 
 
@@ -944,6 +970,7 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
         this.setParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
+        this.setParamSimple(map, prefix + "Command", this.Command);
 
     }
 }

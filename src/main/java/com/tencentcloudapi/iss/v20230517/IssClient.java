@@ -231,6 +231,27 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *用于批量操作（启用，禁用，删除）设备
+     * @param req BatchOperateDeviceRequest
+     * @return BatchOperateDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchOperateDeviceResponse BatchOperateDevice(BatchOperateDeviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchOperateDeviceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchOperateDeviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchOperateDevice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于检测域名是否备案。
      * @param req CheckDomainRequest
      * @return CheckDomainResponse
@@ -1008,6 +1029,27 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *用于查询任务详情
+     * @param req DescribeTaskRequest
+     * @return DescribeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询设备的详细信息。
      * @param req DescribeUserDeviceRequest
      * @return DescribeUserDeviceResponse
@@ -1336,6 +1378,48 @@ public class IssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListRecordTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ListRecordTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询任务的子任务列表
+     * @param req ListSubTasksRequest
+     * @return ListSubTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSubTasksResponse ListSubTasks(ListSubTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListSubTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListSubTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListSubTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询批量任务和简单任务列表
+     * @param req ListTasksRequest
+     * @return ListTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTasksResponse ListTasks(ListTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

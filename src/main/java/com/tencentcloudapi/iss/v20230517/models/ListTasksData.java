@@ -13,87 +13,87 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatabasePrivileges extends AbstractModel{
+public class ListTasksData extends AbstractModel{
 
     /**
-    * 数据库
+    * 任务列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Db")
+    @SerializedName("List")
     @Expose
-    private String Db;
+    private TaskData [] List;
 
     /**
-    * 权限列表
+    * 任务数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Privileges")
+    @SerializedName("TotalCount")
     @Expose
-    private String [] Privileges;
+    private Long TotalCount;
 
     /**
-     * Get 数据库
+     * Get 任务列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Db 数据库
+     * @return List 任务列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDb() {
-        return this.Db;
+    public TaskData [] getList() {
+        return this.List;
     }
 
     /**
-     * Set 数据库
+     * Set 任务列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Db 数据库
+     * @param List 任务列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDb(String Db) {
-        this.Db = Db;
+    public void setList(TaskData [] List) {
+        this.List = List;
     }
 
     /**
-     * Get 权限列表
+     * Get 任务数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Privileges 权限列表
+     * @return TotalCount 任务数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getPrivileges() {
-        return this.Privileges;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 权限列表
+     * Set 任务数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Privileges 权限列表
+     * @param TotalCount 任务数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPrivileges(String [] Privileges) {
-        this.Privileges = Privileges;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
-    public DatabasePrivileges() {
+    public ListTasksData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DatabasePrivileges(DatabasePrivileges source) {
-        if (source.Db != null) {
-            this.Db = new String(source.Db);
-        }
-        if (source.Privileges != null) {
-            this.Privileges = new String[source.Privileges.length];
-            for (int i = 0; i < source.Privileges.length; i++) {
-                this.Privileges[i] = new String(source.Privileges[i]);
+    public ListTasksData(ListTasksData source) {
+        if (source.List != null) {
+            this.List = new TaskData[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new TaskData(source.List[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
     }
 
@@ -102,8 +102,8 @@ public class DatabasePrivileges extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Db", this.Db);
-        this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
 
     }
 }

@@ -210,7 +210,9 @@ Stopping 停止中
     /**
      * Get 工作负载的状况信息 
      * @return StatefulSetCondition 工作负载的状况信息
+     * @deprecated
      */
+    @Deprecated
     public StatefulSetCondition [] getStatefulSetCondition() {
         return this.StatefulSetCondition;
     }
@@ -218,7 +220,9 @@ Stopping 停止中
     /**
      * Set 工作负载的状况信息
      * @param StatefulSetCondition 工作负载的状况信息
+     * @deprecated
      */
+    @Deprecated
     public void setStatefulSetCondition(StatefulSetCondition [] StatefulSetCondition) {
         this.StatefulSetCondition = StatefulSetCondition;
     }

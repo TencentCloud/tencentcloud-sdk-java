@@ -20,93 +20,119 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListGatewayDevicesRequest extends AbstractModel{
+public class ListSubTasksRequest extends AbstractModel{
 
     /**
-    * 网关索引ID（从获取网关列表接口ListGateways中获取）
+    * 复杂任务ID
     */
-    @SerializedName("GatewayId")
+    @SerializedName("TaskId")
     @Expose
-    private String GatewayId;
+    private String TaskId;
 
     /**
-    * 分页页数
+    * 页码，默认为1
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页大小
+    * 每页数量，默认为10
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 网关索引ID（从获取网关列表接口ListGateways中获取） 
-     * @return GatewayId 网关索引ID（从获取网关列表接口ListGateways中获取）
+    * 默认不对该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+     * Get 复杂任务ID 
+     * @return TaskId 复杂任务ID
      */
-    public String getGatewayId() {
-        return this.GatewayId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 网关索引ID（从获取网关列表接口ListGateways中获取）
-     * @param GatewayId 网关索引ID（从获取网关列表接口ListGateways中获取）
+     * Set 复杂任务ID
+     * @param TaskId 复杂任务ID
      */
-    public void setGatewayId(String GatewayId) {
-        this.GatewayId = GatewayId;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
-     * Get 分页页数 
-     * @return PageNumber 分页页数
+     * Get 页码，默认为1 
+     * @return PageNumber 页码，默认为1
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页页数
-     * @param PageNumber 分页页数
+     * Set 页码，默认为1
+     * @param PageNumber 页码，默认为1
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get 每页数量，默认为10 
+     * @return PageSize 每页数量，默认为10
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set 每页数量，默认为10
+     * @param PageSize 每页数量，默认为10
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
-    public ListGatewayDevicesRequest() {
+    /**
+     * Get 默认不对该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED 
+     * @return Status 默认不对该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 默认不对该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+     * @param Status 默认不对该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    public ListSubTasksRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ListGatewayDevicesRequest(ListGatewayDevicesRequest source) {
-        if (source.GatewayId != null) {
-            this.GatewayId = new String(source.GatewayId);
+    public ListSubTasksRequest(ListSubTasksRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
         }
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
     }
 
@@ -115,9 +141,10 @@ public class ListGatewayDevicesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

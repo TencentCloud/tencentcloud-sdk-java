@@ -13,118 +13,118 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TablePrivileges extends AbstractModel{
+public class TRTCDataResult extends AbstractModel{
 
     /**
-    * 数据库名
+    * StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Db")
+    @SerializedName("StatementID")
     @Expose
-    private String Db;
+    private Long StatementID;
 
     /**
-    * 表名
+    * 查询结果数据，以Columns-Values形式返回。	
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TableName")
+    @SerializedName("Series")
     @Expose
-    private String TableName;
+    private SeriesInfos [] Series;
 
     /**
-    * 权限列表
+    * Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Privileges")
+    @SerializedName("Total")
     @Expose
-    private String [] Privileges;
+    private Long Total;
 
     /**
-     * Get 数据库名
+     * Get StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Db 数据库名
+     * @return StatementID StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDb() {
-        return this.Db;
+    public Long getStatementID() {
+        return this.StatementID;
     }
 
     /**
-     * Set 数据库名
+     * Set StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Db 数据库名
+     * @param StatementID StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDb(String Db) {
-        this.Db = Db;
+    public void setStatementID(Long StatementID) {
+        this.StatementID = StatementID;
     }
 
     /**
-     * Get 表名
+     * Get 查询结果数据，以Columns-Values形式返回。	
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableName 表名
+     * @return Series 查询结果数据，以Columns-Values形式返回。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTableName() {
-        return this.TableName;
+    public SeriesInfos [] getSeries() {
+        return this.Series;
     }
 
     /**
-     * Set 表名
+     * Set 查询结果数据，以Columns-Values形式返回。	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableName 表名
+     * @param Series 查询结果数据，以Columns-Values形式返回。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTableName(String TableName) {
-        this.TableName = TableName;
+    public void setSeries(SeriesInfos [] Series) {
+        this.Series = Series;
     }
 
     /**
-     * Get 权限列表
+     * Get Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Privileges 权限列表
+     * @return Total Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getPrivileges() {
-        return this.Privileges;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 权限列表
+     * Set Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Privileges 权限列表
+     * @param Total Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPrivileges(String [] Privileges) {
-        this.Privileges = Privileges;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
-    public TablePrivileges() {
+    public TRTCDataResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TablePrivileges(TablePrivileges source) {
-        if (source.Db != null) {
-            this.Db = new String(source.Db);
+    public TRTCDataResult(TRTCDataResult source) {
+        if (source.StatementID != null) {
+            this.StatementID = new Long(source.StatementID);
         }
-        if (source.TableName != null) {
-            this.TableName = new String(source.TableName);
-        }
-        if (source.Privileges != null) {
-            this.Privileges = new String[source.Privileges.length];
-            for (int i = 0; i < source.Privileges.length; i++) {
-                this.Privileges[i] = new String(source.Privileges[i]);
+        if (source.Series != null) {
+            this.Series = new SeriesInfos[source.Series.length];
+            for (int i = 0; i < source.Series.length; i++) {
+                this.Series[i] = new SeriesInfos(source.Series[i]);
             }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
     }
 
@@ -133,9 +133,9 @@ public class TablePrivileges extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Db", this.Db);
-        this.setParamSimple(map, prefix + "TableName", this.TableName);
-        this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
+        this.setParamSimple(map, prefix + "StatementID", this.StatementID);
+        this.setParamArrayObj(map, prefix + "Series.", this.Series);
+        this.setParamSimple(map, prefix + "Total", this.Total);
 
     }
 }

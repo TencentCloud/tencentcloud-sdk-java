@@ -13,86 +13,89 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatabasePrivileges extends AbstractModel{
+public class SeriesInfos extends AbstractModel{
 
     /**
-    * 数据库
+    * 数据列
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Db")
+    @SerializedName("Columns")
     @Expose
-    private String Db;
+    private String [] Columns;
 
     /**
-    * 权限列表
+    * 数据值
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Privileges")
+    @SerializedName("Values")
     @Expose
-    private String [] Privileges;
+    private RowValues [] Values;
 
     /**
-     * Get 数据库
+     * Get 数据列
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Db 数据库
+     * @return Columns 数据列
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDb() {
-        return this.Db;
+    public String [] getColumns() {
+        return this.Columns;
     }
 
     /**
-     * Set 数据库
+     * Set 数据列
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Db 数据库
+     * @param Columns 数据列
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDb(String Db) {
-        this.Db = Db;
+    public void setColumns(String [] Columns) {
+        this.Columns = Columns;
     }
 
     /**
-     * Get 权限列表
+     * Get 数据值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Privileges 权限列表
+     * @return Values 数据值
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getPrivileges() {
-        return this.Privileges;
+    public RowValues [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set 权限列表
+     * Set 数据值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Privileges 权限列表
+     * @param Values 数据值
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPrivileges(String [] Privileges) {
-        this.Privileges = Privileges;
+    public void setValues(RowValues [] Values) {
+        this.Values = Values;
     }
 
-    public DatabasePrivileges() {
+    public SeriesInfos() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DatabasePrivileges(DatabasePrivileges source) {
-        if (source.Db != null) {
-            this.Db = new String(source.Db);
+    public SeriesInfos(SeriesInfos source) {
+        if (source.Columns != null) {
+            this.Columns = new String[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new String(source.Columns[i]);
+            }
         }
-        if (source.Privileges != null) {
-            this.Privileges = new String[source.Privileges.length];
-            for (int i = 0; i < source.Privileges.length; i++) {
-                this.Privileges[i] = new String(source.Privileges[i]);
+        if (source.Values != null) {
+            this.Values = new RowValues[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new RowValues(source.Values[i]);
             }
         }
     }
@@ -102,8 +105,8 @@ public class DatabasePrivileges extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Db", this.Db);
-        this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
+        this.setParamArraySimple(map, prefix + "Columns.", this.Columns);
+        this.setParamArrayObj(map, prefix + "Values.", this.Values);
 
     }
 }
