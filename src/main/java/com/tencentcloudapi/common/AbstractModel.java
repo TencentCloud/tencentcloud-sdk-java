@@ -162,4 +162,15 @@ public abstract class AbstractModel {
   public void setSkipSign(boolean skipSign) {
     this.skipSign = skipSign;
   }
+
+  
+  public Map<String, String> header = new HashMap<String, String>();
+
+  public Map<String, String> getHeader() {
+    return header;
+  }
+
+  public void setHeader(Map<String, String> header) {
+    this.header = header;
+  }
 }
