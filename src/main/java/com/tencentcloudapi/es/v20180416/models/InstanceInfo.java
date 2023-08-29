@@ -640,6 +640,22 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaAlteringPublicAccess;
 
     /**
+    * 本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasKernelUpgrade")
+    @Expose
+    private Boolean HasKernelUpgrade;
+
+    /**
+    * cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -2135,6 +2151,46 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.KibanaAlteringPublicAccess = KibanaAlteringPublicAccess;
     }
 
+    /**
+     * Get 本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasKernelUpgrade 本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHasKernelUpgrade() {
+        return this.HasKernelUpgrade;
+    }
+
+    /**
+     * Set 本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasKernelUpgrade 本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasKernelUpgrade(Boolean HasKernelUpgrade) {
+        this.HasKernelUpgrade = HasKernelUpgrade;
+    }
+
+    /**
+     * Get cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2404,6 +2460,12 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.KibanaAlteringPublicAccess != null) {
             this.KibanaAlteringPublicAccess = new String(source.KibanaAlteringPublicAccess);
         }
+        if (source.HasKernelUpgrade != null) {
+            this.HasKernelUpgrade = new Boolean(source.HasKernelUpgrade);
+        }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -2492,6 +2554,8 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         this.setParamSimple(map, prefix + "ProcessPercent", this.ProcessPercent);
         this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
+        this.setParamSimple(map, prefix + "HasKernelUpgrade", this.HasKernelUpgrade);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

@@ -122,6 +122,13 @@ public class CommonFlowApprover extends AbstractModel{
     private CommonApproverOption ApproverOption;
 
     /**
+    * 签署控件：文件发起使用
+    */
+    @SerializedName("SignComponents")
+    @Expose
+    private Component [] SignComponents;
+
+    /**
      * Get 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户 
      * @return NotChannelOrganization 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
      */
@@ -353,6 +360,22 @@ public class CommonFlowApprover extends AbstractModel{
         this.ApproverOption = ApproverOption;
     }
 
+    /**
+     * Get 签署控件：文件发起使用 
+     * @return SignComponents 签署控件：文件发起使用
+     */
+    public Component [] getSignComponents() {
+        return this.SignComponents;
+    }
+
+    /**
+     * Set 签署控件：文件发起使用
+     * @param SignComponents 签署控件：文件发起使用
+     */
+    public void setSignComponents(Component [] SignComponents) {
+        this.SignComponents = SignComponents;
+    }
+
     public CommonFlowApprover() {
     }
 
@@ -403,6 +426,12 @@ public class CommonFlowApprover extends AbstractModel{
         if (source.ApproverOption != null) {
             this.ApproverOption = new CommonApproverOption(source.ApproverOption);
         }
+        if (source.SignComponents != null) {
+            this.SignComponents = new Component[source.SignComponents.length];
+            for (int i = 0; i < source.SignComponents.length; i++) {
+                this.SignComponents[i] = new Component(source.SignComponents[i]);
+            }
+        }
     }
 
 
@@ -424,6 +453,7 @@ public class CommonFlowApprover extends AbstractModel{
         this.setParamSimple(map, prefix + "IsFullText", this.IsFullText);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
+        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
 
     }
 }

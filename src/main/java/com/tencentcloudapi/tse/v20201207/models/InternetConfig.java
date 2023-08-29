@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InternetConfig extends AbstractModel{
 
     /**
-    * 公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
+    * 公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
     */
     @SerializedName("InternetAddressVersion")
     @Expose
@@ -79,16 +79,16 @@ public class InternetConfig extends AbstractModel{
     private String SlaveZoneId;
 
     /**
-     * Get 公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。 
-     * @return InternetAddressVersion 公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
+     * Get 公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。 
+     * @return InternetAddressVersion 公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
      */
     public String getInternetAddressVersion() {
         return this.InternetAddressVersion;
     }
 
     /**
-     * Set 公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
-     * @param InternetAddressVersion 公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
+     * Set 公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
+     * @param InternetAddressVersion 公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
      */
     public void setInternetAddressVersion(String InternetAddressVersion) {
         this.InternetAddressVersion = InternetAddressVersion;

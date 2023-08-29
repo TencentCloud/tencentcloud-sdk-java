@@ -18,6 +18,9 @@ public enum EisErrorCode {
     // 检查运行时失败。
      INTERNALERROR_CHECKRUNTIMEFAILED("InternalError.CheckRuntimeFailed"),
      
+    // connector不存在。
+     INTERNALERROR_CONNECTORNOTEXIST("InternalError.ConnectorNotExist"),
+     
     // 获取运行时应用数量失败。
      INTERNALERROR_COUNTRUNTIMEINSTANCESFAILED("InternalError.CountRuntimeInstancesFailed"),
      

@@ -63,6 +63,14 @@ public class IntegrateRole extends AbstractModel{
     private String [] SubOrgIdList;
 
     /**
+    * 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PermissionGroups")
+    @Expose
+    private PermissionGroup [] PermissionGroups;
+
+    /**
      * Get 角色id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RoleId 角色id
@@ -162,6 +170,26 @@ public class IntegrateRole extends AbstractModel{
         this.SubOrgIdList = SubOrgIdList;
     }
 
+    /**
+     * Get 权限树
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PermissionGroups 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PermissionGroup [] getPermissionGroups() {
+        return this.PermissionGroups;
+    }
+
+    /**
+     * Set 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PermissionGroups 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPermissionGroups(PermissionGroup [] PermissionGroups) {
+        this.PermissionGroups = PermissionGroups;
+    }
+
     public IntegrateRole() {
     }
 
@@ -188,6 +216,12 @@ public class IntegrateRole extends AbstractModel{
                 this.SubOrgIdList[i] = new String(source.SubOrgIdList[i]);
             }
         }
+        if (source.PermissionGroups != null) {
+            this.PermissionGroups = new PermissionGroup[source.PermissionGroups.length];
+            for (int i = 0; i < source.PermissionGroups.length; i++) {
+                this.PermissionGroups[i] = new PermissionGroup(source.PermissionGroups[i]);
+            }
+        }
     }
 
 
@@ -200,6 +234,7 @@ public class IntegrateRole extends AbstractModel{
         this.setParamSimple(map, prefix + "RoleStatus", this.RoleStatus);
         this.setParamSimple(map, prefix + "IsGroupRole", this.IsGroupRole);
         this.setParamArraySimple(map, prefix + "SubOrgIdList.", this.SubOrgIdList);
+        this.setParamArrayObj(map, prefix + "PermissionGroups.", this.PermissionGroups);
 
     }
 }

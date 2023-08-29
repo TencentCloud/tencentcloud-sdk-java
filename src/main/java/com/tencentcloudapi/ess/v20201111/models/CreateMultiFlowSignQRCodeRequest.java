@@ -84,15 +84,17 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private String UserData;
 
     /**
-    * 回调地址,最大长度1000字符串
-<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
+    * 已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
+
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
 
     /**
-    * 应用信息
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
     @Expose
@@ -254,41 +256,49 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 回调地址,最大长度1000字符串
-<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败 
-     * @return CallbackUrl 回调地址,最大长度1000字符串
-<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
+     * Get 已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
+ 
+     * @return CallbackUrl 已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
+
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调地址,最大长度1000字符串
-<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
-     * @param CallbackUrl 回调地址,最大长度1000字符串
-<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
+     * Set 已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
+
+     * @param CallbackUrl 已废弃，回调配置统一使用企业应用管理-应用集成-企业版应用中的配置 
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/company/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
+
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
 
     /**
-     * Get 应用信息 
-     * @return Agent 应用信息
-     * @deprecated
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
-    @Deprecated
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用信息
-     * @param Agent 应用信息
-     * @deprecated
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
-    @Deprecated
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }

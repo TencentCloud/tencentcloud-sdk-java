@@ -31,7 +31,7 @@ public class RateLimitResponse extends AbstractModel{
     private String Body;
 
     /**
-    * headrs
+    * Headers
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
@@ -67,9 +67,9 @@ public class RateLimitResponse extends AbstractModel{
     }
 
     /**
-     * Get headrs
+     * Get Headers
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Headers headrs
+     * @return Headers Headers
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public KVMapping [] getHeaders() {
@@ -77,9 +77,9 @@ public class RateLimitResponse extends AbstractModel{
     }
 
     /**
-     * Set headrs
+     * Set Headers
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Headers headrs
+     * @param Headers Headers
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(KVMapping [] Headers) {

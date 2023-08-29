@@ -55,6 +55,14 @@ public class UserInfo extends AbstractModel{
     private String Avatar;
 
     /**
+    * 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginId")
+    @Expose
+    private String OriginId;
+
+    /**
      * Get 应用Id。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SdkAppId 应用Id。
@@ -134,6 +142,26 @@ public class UserInfo extends AbstractModel{
         this.Avatar = Avatar;
     }
 
+    /**
+     * Get 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginId 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginId() {
+        return this.OriginId;
+    }
+
+    /**
+     * Set 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginId 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginId(String OriginId) {
+        this.OriginId = OriginId;
+    }
+
     public UserInfo() {
     }
 
@@ -154,6 +182,9 @@ public class UserInfo extends AbstractModel{
         if (source.Avatar != null) {
             this.Avatar = new String(source.Avatar);
         }
+        if (source.OriginId != null) {
+            this.OriginId = new String(source.OriginId);
+        }
     }
 
 
@@ -165,6 +196,7 @@ public class UserInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
+        this.setParamSimple(map, prefix + "OriginId", this.OriginId);
 
     }
 }

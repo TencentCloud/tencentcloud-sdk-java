@@ -588,6 +588,9 @@ public enum CvmErrorCode {
     // 特定实例包含的某个ENI的EIP数量已超过目标实例类型的EIP允许的最大值，请删除部分EIP后重试。
      LIMITEXCEEDED_EIPNUMLIMIT("LimitExceeded.EipNumLimit"),
      
+    // 网卡数量超过实例上限。
+     LIMITEXCEEDED_ENILIMITINSTANCETYPE("LimitExceeded.EniLimitInstanceType"),
+     
     // 特定实例当前ENI数量已超过目标实例类型的ENI允许的最大值，需删除部分ENI后重试。
      LIMITEXCEEDED_ENINUMLIMIT("LimitExceeded.EniNumLimit"),
      

@@ -103,7 +103,7 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
     * 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
     */
     @SerializedName("DiskType")
     @Expose
@@ -267,6 +267,13 @@ public class CreateInstanceRequest extends AbstractModel{
     @SerializedName("EnableDiagnose")
     @Expose
     private Boolean EnableDiagnose;
+
+    /**
+    * cdcId，使用cdc子网时传递
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
 
     /**
      * Get 可用区 
@@ -454,9 +461,9 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
      * Get 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD 
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD 
      * @return DiskType 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
      */
     public String getDiskType() {
         return this.DiskType;
@@ -464,9 +471,9 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
      * Set 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
      * @param DiskType 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -844,6 +851,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.EnableDiagnose = EnableDiagnose;
     }
 
+    /**
+     * Get cdcId，使用cdc子网时传递 
+     * @return CdcId cdcId，使用cdc子网时传递
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set cdcId，使用cdc子网时传递
+     * @param CdcId cdcId，使用cdc子网时传递
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -966,6 +989,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.EnableDiagnose != null) {
             this.EnableDiagnose = new Boolean(source.EnableDiagnose);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -1007,6 +1033,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
         this.setParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

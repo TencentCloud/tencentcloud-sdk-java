@@ -78,6 +78,23 @@ LEGAL_PERSON_SEAL：法定代表人章
     private Agent Agent;
 
     /**
+    * 查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
+
+    */
+    @SerializedName("SealStatuses")
+    @Expose
+    private String [] SealStatuses;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -213,6 +230,62 @@ LEGAL_PERSON_SEAL：法定代表人章
         this.Agent = Agent;
     }
 
+    /**
+     * Get 查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
+ 
+     * @return SealStatuses 查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
+
+     */
+    public String [] getSealStatuses() {
+        return this.SealStatuses;
+    }
+
+    /**
+     * Set 查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
+
+     * @param SealStatuses 查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
+
+     */
+    public void setSealStatuses(String [] SealStatuses) {
+        this.SealStatuses = SealStatuses;
+    }
+
     public DescribeOrganizationSealsRequest() {
     }
 
@@ -245,6 +318,12 @@ LEGAL_PERSON_SEAL：法定代表人章
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.SealStatuses != null) {
+            this.SealStatuses = new String[source.SealStatuses.length];
+            for (int i = 0; i < source.SealStatuses.length; i++) {
+                this.SealStatuses[i] = new String(source.SealStatuses[i]);
+            }
+        }
     }
 
 
@@ -259,6 +338,7 @@ LEGAL_PERSON_SEAL：法定代表人章
         this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamArraySimple(map, prefix + "SealStatuses.", this.SealStatuses);
 
     }
 }

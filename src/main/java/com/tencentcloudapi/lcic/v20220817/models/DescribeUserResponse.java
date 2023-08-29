@@ -51,6 +51,14 @@ public class DescribeUserResponse extends AbstractModel{
     private String Avatar;
 
     /**
+    * 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginId")
+    @Expose
+    private String OriginId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +130,26 @@ public class DescribeUserResponse extends AbstractModel{
     }
 
     /**
+     * Get 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginId 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginId() {
+        return this.OriginId;
+    }
+
+    /**
+     * Set 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginId 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginId(String OriginId) {
+        this.OriginId = OriginId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -157,6 +185,9 @@ public class DescribeUserResponse extends AbstractModel{
         if (source.Avatar != null) {
             this.Avatar = new String(source.Avatar);
         }
+        if (source.OriginId != null) {
+            this.OriginId = new String(source.OriginId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +202,7 @@ public class DescribeUserResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
+        this.setParamSimple(map, prefix + "OriginId", this.OriginId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

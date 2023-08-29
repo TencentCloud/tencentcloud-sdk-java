@@ -108,6 +108,13 @@ public class BaseFlowInfo extends AbstractModel{
     private Boolean NeedCreateReview;
 
     /**
+    * 填写控件：文件发起使用
+    */
+    @SerializedName("Components")
+    @Expose
+    private Component [] Components;
+
+    /**
      * Get 合同流程名称 
      * @return FlowName 合同流程名称
      */
@@ -315,6 +322,22 @@ public class BaseFlowInfo extends AbstractModel{
         this.NeedCreateReview = NeedCreateReview;
     }
 
+    /**
+     * Get 填写控件：文件发起使用 
+     * @return Components 填写控件：文件发起使用
+     */
+    public Component [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 填写控件：文件发起使用
+     * @param Components 填写控件：文件发起使用
+     */
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
+    }
+
     public BaseFlowInfo() {
     }
 
@@ -362,6 +385,12 @@ public class BaseFlowInfo extends AbstractModel{
         if (source.NeedCreateReview != null) {
             this.NeedCreateReview = new Boolean(source.NeedCreateReview);
         }
+        if (source.Components != null) {
+            this.Components = new Component[source.Components.length];
+            for (int i = 0; i < source.Components.length; i++) {
+                this.Components[i] = new Component(source.Components[i]);
+            }
+        }
     }
 
 
@@ -380,6 +409,7 @@ public class BaseFlowInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
+        this.setParamArrayObj(map, prefix + "Components.", this.Components);
 
     }
 }

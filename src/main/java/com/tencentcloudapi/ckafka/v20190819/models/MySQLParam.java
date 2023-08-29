@@ -198,6 +198,13 @@ public class MySQLParam extends AbstractModel{
     private Boolean IsTableRegular;
 
     /**
+    * 信号表
+    */
+    @SerializedName("SignalTable")
+    @Expose
+    private String SignalTable;
+
+    /**
      * Get MySQL的数据库名称，"*"为全数据库 
      * @return Database MySQL的数据库名称，"*"为全数据库
      */
@@ -597,6 +604,22 @@ public class MySQLParam extends AbstractModel{
         this.IsTableRegular = IsTableRegular;
     }
 
+    /**
+     * Get 信号表 
+     * @return SignalTable 信号表
+     */
+    public String getSignalTable() {
+        return this.SignalTable;
+    }
+
+    /**
+     * Set 信号表
+     * @param SignalTable 信号表
+     */
+    public void setSignalTable(String SignalTable) {
+        this.SignalTable = SignalTable;
+    }
+
     public MySQLParam() {
     }
 
@@ -683,6 +706,9 @@ public class MySQLParam extends AbstractModel{
         if (source.IsTableRegular != null) {
             this.IsTableRegular = new Boolean(source.IsTableRegular);
         }
+        if (source.SignalTable != null) {
+            this.SignalTable = new String(source.SignalTable);
+        }
     }
 
 
@@ -715,6 +741,7 @@ public class MySQLParam extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
         this.setParamSimple(map, prefix + "SignalDatabase", this.SignalDatabase);
         this.setParamSimple(map, prefix + "IsTableRegular", this.IsTableRegular);
+        this.setParamSimple(map, prefix + "SignalTable", this.SignalTable);
 
     }
 }

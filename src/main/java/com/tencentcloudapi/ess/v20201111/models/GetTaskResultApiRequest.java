@@ -37,7 +37,7 @@ public class GetTaskResultApiRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 应用号信息
+    * 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
@@ -83,21 +83,17 @@ public class GetTaskResultApiRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用号信息 
-     * @return Agent 应用号信息
-     * @deprecated
+     * Get 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
-    @Deprecated
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用号信息
-     * @param Agent 应用号信息
-     * @deprecated
+     * Set 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
-    @Deprecated
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }

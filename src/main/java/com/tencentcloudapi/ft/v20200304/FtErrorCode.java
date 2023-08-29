@@ -57,6 +57,9 @@ public enum FtErrorCode {
     // 任务已停止处理，请重新提交任务。
      FAILEDOPERATION_JOBSTOPPROCESSING("FailedOperation.JobStopProcessing"),
      
+    // FailedOperation.ParameterValueError
+     FAILEDOPERATION_PARAMETERVALUEERROR("FailedOperation.ParameterValueError"),
+     
     // 整个请求体太大（通常主要是图片）。
      FAILEDOPERATION_REQUESTENTITYTOOLARGE("FailedOperation.RequestEntityTooLarge"),
      

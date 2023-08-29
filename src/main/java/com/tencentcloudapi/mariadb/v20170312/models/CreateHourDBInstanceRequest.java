@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateHourDBInstanceRequest extends AbstractModel{
 
     /**
-    * 节点可用区分布，最多可填两个可用区。
+    * 节点可用区分布，可填写多个可用区。
     */
     @SerializedName("Zones")
     @Expose
@@ -151,16 +151,23 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
     private String RollbackTime;
 
     /**
-     * Get 节点可用区分布，最多可填两个可用区。 
-     * @return Zones 节点可用区分布，最多可填两个可用区。
+    * DCN同步模式，0：普通DCN同步，1：一致性同步
+    */
+    @SerializedName("DcnSyncMode")
+    @Expose
+    private Long DcnSyncMode;
+
+    /**
+     * Get 节点可用区分布，可填写多个可用区。 
+     * @return Zones 节点可用区分布，可填写多个可用区。
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 节点可用区分布，最多可填两个可用区。
-     * @param Zones 节点可用区分布，最多可填两个可用区。
+     * Set 节点可用区分布，可填写多个可用区。
+     * @param Zones 节点可用区分布，可填写多个可用区。
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
@@ -446,6 +453,22 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
         this.RollbackTime = RollbackTime;
     }
 
+    /**
+     * Get DCN同步模式，0：普通DCN同步，1：一致性同步 
+     * @return DcnSyncMode DCN同步模式，0：普通DCN同步，1：一致性同步
+     */
+    public Long getDcnSyncMode() {
+        return this.DcnSyncMode;
+    }
+
+    /**
+     * Set DCN同步模式，0：普通DCN同步，1：一致性同步
+     * @param DcnSyncMode DCN同步模式，0：普通DCN同步，1：一致性同步
+     */
+    public void setDcnSyncMode(Long DcnSyncMode) {
+        this.DcnSyncMode = DcnSyncMode;
+    }
+
     public CreateHourDBInstanceRequest() {
     }
 
@@ -520,6 +543,9 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
         if (source.RollbackTime != null) {
             this.RollbackTime = new String(source.RollbackTime);
         }
+        if (source.DcnSyncMode != null) {
+            this.DcnSyncMode = new Long(source.DcnSyncMode);
+        }
     }
 
 
@@ -545,6 +571,7 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
         this.setParamArrayObj(map, prefix + "InitParams.", this.InitParams);
         this.setParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
         this.setParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
+        this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
 
     }
 }
