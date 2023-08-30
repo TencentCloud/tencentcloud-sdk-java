@@ -449,6 +449,26 @@ cpf.getHttpProfile().setSslSocketFactory(new MySSLSocketFactoryImpl());
 cpf.getHttpProfile().setX509TrustManager(new MyX509TrustManagerImpl());
 ```
 
+# 自定义 Header
+
+## DescribeInstancesRequest示例
+
+```java
+DescribeInstancesRequest request = new DescribeInstancesRequest();
+Map<String, String> header = new HashMap<String, String>();
+header.put("X-TC-TraceId","ffe0c072-8a5d-4e17-8887-a8a60252abca");
+request.setHeader(header);
+```
+
+## CommonClientRequest示例
+
+```java
+CommonClientRequest request = new CommonClientRequest();
+Map<String, String> header = new HashMap<String, String>();
+header.put("X-TC-TraceId","ffe0c072-8a5d-4e17-8887-a8a60252abca");
+request.setHeader(header);
+```
+
 # 其他问题
 
 ## 版本升级

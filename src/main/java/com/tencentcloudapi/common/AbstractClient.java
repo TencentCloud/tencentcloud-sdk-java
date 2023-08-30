@@ -558,6 +558,11 @@ public abstract class AbstractClient {
         .add("X-TC-Timestamp", timestamp)
         .add("X-TC-Version", this.apiVersion)
         .add("X-TC-RequestClient", SDK_VERSION);
+    if(null != request.getHeader()){
+      for (Map.Entry<String, String> entry : request.getHeader().entrySet()) {
+        hb.add(entry.getKey(), entry.getValue());
+      }
+    }
     if (null != this.getRegion()) {
       hb.add("X-TC-Region", this.getRegion());
     }
