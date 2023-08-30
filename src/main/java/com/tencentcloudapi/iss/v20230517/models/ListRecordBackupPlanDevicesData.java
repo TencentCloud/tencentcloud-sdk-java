@@ -52,7 +52,7 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel{
     */
     @SerializedName("List")
     @Expose
-    private RecordPlanChannelInfo List;
+    private RecordPlanChannelInfo [] List;
 
     /**
      * Get 第几页
@@ -120,7 +120,7 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel{
      * @return List 设备通道信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public RecordPlanChannelInfo getList() {
+    public RecordPlanChannelInfo [] getList() {
         return this.List;
     }
 
@@ -130,7 +130,7 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel{
      * @param List 设备通道信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setList(RecordPlanChannelInfo List) {
+    public void setList(RecordPlanChannelInfo [] List) {
         this.List = List;
     }
 
@@ -152,7 +152,10 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel{
             this.TotalCount = new Long(source.TotalCount);
         }
         if (source.List != null) {
-            this.List = new RecordPlanChannelInfo(source.List);
+            this.List = new RecordPlanChannelInfo[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new RecordPlanChannelInfo(source.List[i]);
+            }
         }
     }
 
@@ -164,7 +167,7 @@ public class ListRecordBackupPlanDevicesData extends AbstractModel{
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "List.", this.List);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
 
     }
 }

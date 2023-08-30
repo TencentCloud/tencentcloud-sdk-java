@@ -37,7 +37,7 @@ public class RestartApplicationRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
-    * 环境ID
+    * 环境ID/命名空间ID
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -76,16 +76,16 @@ public class RestartApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get 环境ID 
-     * @return EnvironmentId 环境ID
+     * Get 环境ID/命名空间ID 
+     * @return EnvironmentId 环境ID/命名空间ID
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 环境ID
-     * @param EnvironmentId 环境ID
+     * Set 环境ID/命名空间ID
+     * @param EnvironmentId 环境ID/命名空间ID
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;

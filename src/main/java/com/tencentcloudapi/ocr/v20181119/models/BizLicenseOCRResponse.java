@@ -95,6 +95,7 @@ public class BizLicenseOCRResponse extends AbstractModel{
     /**
     * Code 告警码列表和释义：
 -9102 黑白复印件告警
+-9104 翻拍件告警
     */
     @SerializedName("RecognizeWarnCode")
     @Expose
@@ -103,6 +104,7 @@ public class BizLicenseOCRResponse extends AbstractModel{
     /**
     * 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警
     */
     @SerializedName("RecognizeWarnMsg")
     @Expose
@@ -291,9 +293,11 @@ WARN_COPY_CARD 黑白复印件告警
 
     /**
      * Get Code 告警码列表和释义：
--9102 黑白复印件告警 
+-9102 黑白复印件告警
+-9104 翻拍件告警 
      * @return RecognizeWarnCode Code 告警码列表和释义：
 -9102 黑白复印件告警
+-9104 翻拍件告警
      */
     public Long [] getRecognizeWarnCode() {
         return this.RecognizeWarnCode;
@@ -302,8 +306,10 @@ WARN_COPY_CARD 黑白复印件告警
     /**
      * Set Code 告警码列表和释义：
 -9102 黑白复印件告警
+-9104 翻拍件告警
      * @param RecognizeWarnCode Code 告警码列表和释义：
 -9102 黑白复印件告警
+-9104 翻拍件告警
      */
     public void setRecognizeWarnCode(Long [] RecognizeWarnCode) {
         this.RecognizeWarnCode = RecognizeWarnCode;
@@ -311,9 +317,11 @@ WARN_COPY_CARD 黑白复印件告警
 
     /**
      * Get 告警码说明：
-WARN_COPY_CARD 黑白复印件告警 
+WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警 
      * @return RecognizeWarnMsg 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警
      */
     public String [] getRecognizeWarnMsg() {
         return this.RecognizeWarnMsg;
@@ -322,8 +330,10 @@ WARN_COPY_CARD 黑白复印件告警
     /**
      * Set 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警
      * @param RecognizeWarnMsg 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警
      */
     public void setRecognizeWarnMsg(String [] RecognizeWarnMsg) {
         this.RecognizeWarnMsg = RecognizeWarnMsg;

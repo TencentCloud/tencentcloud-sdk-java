@@ -86,6 +86,14 @@ public class HostResource extends AbstractModel{
     private Long GpuAvailable;
 
     /**
+    * CDH owner
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExclusiveOwner")
+    @Expose
+    private String ExclusiveOwner;
+
+    /**
      * Get 专用宿主机实例总CPU核数 
      * @return CpuTotal 专用宿主机实例总CPU核数
      */
@@ -229,6 +237,26 @@ public class HostResource extends AbstractModel{
         this.GpuAvailable = GpuAvailable;
     }
 
+    /**
+     * Get CDH owner
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExclusiveOwner CDH owner
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExclusiveOwner() {
+        return this.ExclusiveOwner;
+    }
+
+    /**
+     * Set CDH owner
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExclusiveOwner CDH owner
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusiveOwner(String ExclusiveOwner) {
+        this.ExclusiveOwner = ExclusiveOwner;
+    }
+
     public HostResource() {
     }
 
@@ -264,6 +292,9 @@ public class HostResource extends AbstractModel{
         if (source.GpuAvailable != null) {
             this.GpuAvailable = new Long(source.GpuAvailable);
         }
+        if (source.ExclusiveOwner != null) {
+            this.ExclusiveOwner = new String(source.ExclusiveOwner);
+        }
     }
 
 
@@ -280,6 +311,7 @@ public class HostResource extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "GpuTotal", this.GpuTotal);
         this.setParamSimple(map, prefix + "GpuAvailable", this.GpuAvailable);
+        this.setParamSimple(map, prefix + "ExclusiveOwner", this.ExclusiveOwner);
 
     }
 }

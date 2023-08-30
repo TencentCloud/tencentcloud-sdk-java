@@ -40,7 +40,7 @@ public class FlowCreateApprover extends AbstractModel{
 
     /**
     * 签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
 
     */
@@ -229,6 +229,8 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 
     /**
     * 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
     */
     @SerializedName("ApproverVerifyTypes")
     @Expose
@@ -236,6 +238,8 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 
     /**
     * 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
     */
     @SerializedName("ApproverSignTypes")
     @Expose
@@ -295,11 +299,11 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 
     /**
      * Get 签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
  
      * @return OrganizationName 签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
 
      */
@@ -309,11 +313,11 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 
     /**
      * Set 签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
 
      * @param OrganizationName 签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
 
      */
@@ -790,8 +794,12 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     }
 
     /**
-     * Get 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式) 
+     * Get 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主. 
      * @return ApproverVerifyTypes 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      */
     public Long [] getApproverVerifyTypes() {
         return this.ApproverVerifyTypes;
@@ -799,15 +807,23 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 
     /**
      * Set 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      * @param ApproverVerifyTypes 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      */
     public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
         this.ApproverVerifyTypes = ApproverVerifyTypes;
     }
 
     /**
-     * Get 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素 
+     * Get 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主. 
      * @return ApproverSignTypes 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      */
     public Long [] getApproverSignTypes() {
         return this.ApproverSignTypes;
@@ -815,7 +831,11 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 
     /**
      * Set 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      * @param ApproverSignTypes 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      */
     public void setApproverSignTypes(Long [] ApproverSignTypes) {
         this.ApproverSignTypes = ApproverSignTypes;

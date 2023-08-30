@@ -37,6 +37,22 @@ public class Certificate extends AbstractModel{
     private String [] DnsNames;
 
     /**
+    * 根证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertCaId")
+    @Expose
+    private String CertCaId;
+
+    /**
+    * 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SSLMode")
+    @Expose
+    private String SSLMode;
+
+    /**
      * Get 证书ID 
      * @return CertId 证书ID
      */
@@ -68,6 +84,46 @@ public class Certificate extends AbstractModel{
         this.DnsNames = DnsNames;
     }
 
+    /**
+     * Get 根证书ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertCaId 根证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCertCaId() {
+        return this.CertCaId;
+    }
+
+    /**
+     * Set 根证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertCaId 根证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertCaId(String CertCaId) {
+        this.CertCaId = CertCaId;
+    }
+
+    /**
+     * Get 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SSLMode 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSSLMode() {
+        return this.SSLMode;
+    }
+
+    /**
+     * Set 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SSLMode 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSSLMode(String SSLMode) {
+        this.SSLMode = SSLMode;
+    }
+
     public Certificate() {
     }
 
@@ -85,6 +141,12 @@ public class Certificate extends AbstractModel{
                 this.DnsNames[i] = new String(source.DnsNames[i]);
             }
         }
+        if (source.CertCaId != null) {
+            this.CertCaId = new String(source.CertCaId);
+        }
+        if (source.SSLMode != null) {
+            this.SSLMode = new String(source.SSLMode);
+        }
     }
 
 
@@ -94,6 +156,8 @@ public class Certificate extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamArraySimple(map, prefix + "DnsNames.", this.DnsNames);
+        this.setParamSimple(map, prefix + "CertCaId", this.CertCaId);
+        this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);
 
     }
 }

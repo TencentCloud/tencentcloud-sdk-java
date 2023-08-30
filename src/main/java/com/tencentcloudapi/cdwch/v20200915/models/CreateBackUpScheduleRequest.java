@@ -23,6 +23,34 @@ import java.util.HashMap;
 public class CreateBackUpScheduleRequest extends AbstractModel{
 
     /**
+    * 集群id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 策略类型 meta(元数据)  data (表数据)
+    */
+    @SerializedName("ScheduleType")
+    @Expose
+    private String ScheduleType;
+
+    /**
+    * 操作类型 create(创建) update(编辑修改)
+    */
+    @SerializedName("OperationType")
+    @Expose
+    private String OperationType;
+
+    /**
+    * 保留天数 例如7
+    */
+    @SerializedName("RetainDays")
+    @Expose
+    private Long RetainDays;
+
+    /**
     * 编辑时需要传
     */
     @SerializedName("ScheduleId")
@@ -49,6 +77,70 @@ public class CreateBackUpScheduleRequest extends AbstractModel{
     @SerializedName("BackUpTables")
     @Expose
     private BackupTableContent [] BackUpTables;
+
+    /**
+     * Get 集群id 
+     * @return InstanceId 集群id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 集群id
+     * @param InstanceId 集群id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 策略类型 meta(元数据)  data (表数据) 
+     * @return ScheduleType 策略类型 meta(元数据)  data (表数据)
+     */
+    public String getScheduleType() {
+        return this.ScheduleType;
+    }
+
+    /**
+     * Set 策略类型 meta(元数据)  data (表数据)
+     * @param ScheduleType 策略类型 meta(元数据)  data (表数据)
+     */
+    public void setScheduleType(String ScheduleType) {
+        this.ScheduleType = ScheduleType;
+    }
+
+    /**
+     * Get 操作类型 create(创建) update(编辑修改) 
+     * @return OperationType 操作类型 create(创建) update(编辑修改)
+     */
+    public String getOperationType() {
+        return this.OperationType;
+    }
+
+    /**
+     * Set 操作类型 create(创建) update(编辑修改)
+     * @param OperationType 操作类型 create(创建) update(编辑修改)
+     */
+    public void setOperationType(String OperationType) {
+        this.OperationType = OperationType;
+    }
+
+    /**
+     * Get 保留天数 例如7 
+     * @return RetainDays 保留天数 例如7
+     */
+    public Long getRetainDays() {
+        return this.RetainDays;
+    }
+
+    /**
+     * Set 保留天数 例如7
+     * @param RetainDays 保留天数 例如7
+     */
+    public void setRetainDays(Long RetainDays) {
+        this.RetainDays = RetainDays;
+    }
 
     /**
      * Get 编辑时需要传 
@@ -122,6 +214,18 @@ public class CreateBackUpScheduleRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateBackUpScheduleRequest(CreateBackUpScheduleRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ScheduleType != null) {
+            this.ScheduleType = new String(source.ScheduleType);
+        }
+        if (source.OperationType != null) {
+            this.OperationType = new String(source.OperationType);
+        }
+        if (source.RetainDays != null) {
+            this.RetainDays = new Long(source.RetainDays);
+        }
         if (source.ScheduleId != null) {
             this.ScheduleId = new Long(source.ScheduleId);
         }
@@ -144,6 +248,10 @@ public class CreateBackUpScheduleRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
+        this.setParamSimple(map, prefix + "OperationType", this.OperationType);
+        this.setParamSimple(map, prefix + "RetainDays", this.RetainDays);
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         this.setParamSimple(map, prefix + "WeekDays", this.WeekDays);
         this.setParamSimple(map, prefix + "ExecuteHour", this.ExecuteHour);

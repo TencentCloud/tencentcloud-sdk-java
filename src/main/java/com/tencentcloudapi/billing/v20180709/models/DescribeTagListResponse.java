@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdwch.v20200915.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBackUpScheduleResponse extends AbstractModel{
+public class DescribeTagListResponse extends AbstractModel{
 
     /**
-    * 错误描述
+    * 总记录数
     */
-    @SerializedName("ErrorMsg")
+    @SerializedName("RecordNum")
     @Expose
-    private String ErrorMsg;
+    private Long RecordNum;
+
+    /**
+    * 标签信息
+    */
+    @SerializedName("Data")
+    @Expose
+    private TagDataInfo [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateBackUpScheduleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 错误描述 
-     * @return ErrorMsg 错误描述
+     * Get 总记录数 
+     * @return RecordNum 总记录数
      */
-    public String getErrorMsg() {
-        return this.ErrorMsg;
+    public Long getRecordNum() {
+        return this.RecordNum;
     }
 
     /**
-     * Set 错误描述
-     * @param ErrorMsg 错误描述
+     * Set 总记录数
+     * @param RecordNum 总记录数
      */
-    public void setErrorMsg(String ErrorMsg) {
-        this.ErrorMsg = ErrorMsg;
+    public void setRecordNum(Long RecordNum) {
+        this.RecordNum = RecordNum;
+    }
+
+    /**
+     * Get 标签信息 
+     * @return Data 标签信息
+     */
+    public TagDataInfo [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 标签信息
+     * @param Data 标签信息
+     */
+    public void setData(TagDataInfo [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -68,16 +91,22 @@ public class CreateBackUpScheduleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBackUpScheduleResponse() {
+    public DescribeTagListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBackUpScheduleResponse(CreateBackUpScheduleResponse source) {
-        if (source.ErrorMsg != null) {
-            this.ErrorMsg = new String(source.ErrorMsg);
+    public DescribeTagListResponse(DescribeTagListResponse source) {
+        if (source.RecordNum != null) {
+            this.RecordNum = new Long(source.RecordNum);
+        }
+        if (source.Data != null) {
+            this.Data = new TagDataInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new TagDataInfo(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class CreateBackUpScheduleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "RecordNum", this.RecordNum);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

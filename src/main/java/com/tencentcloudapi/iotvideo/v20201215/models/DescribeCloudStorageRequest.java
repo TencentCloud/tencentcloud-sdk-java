@@ -44,6 +44,13 @@ public class DescribeCloudStorageRequest extends AbstractModel{
     private String UserId;
 
     /**
+    * 通道ID 非NVR设备不填 NVR设备必填 默认为无
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -91,6 +98,22 @@ public class DescribeCloudStorageRequest extends AbstractModel{
         this.UserId = UserId;
     }
 
+    /**
+     * Get 通道ID 非NVR设备不填 NVR设备必填 默认为无 
+     * @return ChannelId 通道ID 非NVR设备不填 NVR设备必填 默认为无
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID 非NVR设备不填 NVR设备必填 默认为无
+     * @param ChannelId 通道ID 非NVR设备不填 NVR设备必填 默认为无
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public DescribeCloudStorageRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeCloudStorageRequest extends AbstractModel{
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeCloudStorageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

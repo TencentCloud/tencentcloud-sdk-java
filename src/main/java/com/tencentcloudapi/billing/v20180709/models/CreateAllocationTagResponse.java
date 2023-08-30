@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdwch.v20200915.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBackUpScheduleResponse extends AbstractModel{
-
-    /**
-    * 错误描述
-    */
-    @SerializedName("ErrorMsg")
-    @Expose
-    private String ErrorMsg;
+public class CreateAllocationTagResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateBackUpScheduleResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 错误描述 
-     * @return ErrorMsg 错误描述
-     */
-    public String getErrorMsg() {
-        return this.ErrorMsg;
-    }
-
-    /**
-     * Set 错误描述
-     * @param ErrorMsg 错误描述
-     */
-    public void setErrorMsg(String ErrorMsg) {
-        this.ErrorMsg = ErrorMsg;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,17 +45,14 @@ public class CreateBackUpScheduleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBackUpScheduleResponse() {
+    public CreateAllocationTagResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBackUpScheduleResponse(CreateBackUpScheduleResponse source) {
-        if (source.ErrorMsg != null) {
-            this.ErrorMsg = new String(source.ErrorMsg);
-        }
+    public CreateAllocationTagResponse(CreateAllocationTagResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class CreateBackUpScheduleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -30,6 +30,38 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     private String AuthCertUrl;
 
     /**
+    * 证书图片上的证书编号，20位数字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageCertId")
+    @Expose
+    private String ImageCertId;
+
+    /**
+    * 图片证明对应的CA证书序列号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SerialNumber")
+    @Expose
+    private String SerialNumber;
+
+    /**
+    * CA证书颁发时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValidFrom")
+    @Expose
+    private Long ValidFrom;
+
+    /**
+    * CA证书有效截止时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValidTo")
+    @Expose
+    private Long ValidTo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +82,86 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
      */
     public void setAuthCertUrl(String AuthCertUrl) {
         this.AuthCertUrl = AuthCertUrl;
+    }
+
+    /**
+     * Get 证书图片上的证书编号，20位数字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageCertId 证书图片上的证书编号，20位数字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageCertId() {
+        return this.ImageCertId;
+    }
+
+    /**
+     * Set 证书图片上的证书编号，20位数字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageCertId 证书图片上的证书编号，20位数字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageCertId(String ImageCertId) {
+        this.ImageCertId = ImageCertId;
+    }
+
+    /**
+     * Get 图片证明对应的CA证书序列号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SerialNumber 图片证明对应的CA证书序列号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSerialNumber() {
+        return this.SerialNumber;
+    }
+
+    /**
+     * Set 图片证明对应的CA证书序列号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SerialNumber 图片证明对应的CA证书序列号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSerialNumber(String SerialNumber) {
+        this.SerialNumber = SerialNumber;
+    }
+
+    /**
+     * Get CA证书颁发时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValidFrom CA证书颁发时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getValidFrom() {
+        return this.ValidFrom;
+    }
+
+    /**
+     * Set CA证书颁发时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValidFrom CA证书颁发时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValidFrom(Long ValidFrom) {
+        this.ValidFrom = ValidFrom;
+    }
+
+    /**
+     * Get CA证书有效截止时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValidTo CA证书有效截止时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getValidTo() {
+        return this.ValidTo;
+    }
+
+    /**
+     * Set CA证书有效截止时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValidTo CA证书有效截止时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValidTo(Long ValidTo) {
+        this.ValidTo = ValidTo;
     }
 
     /**
@@ -79,6 +191,18 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
         if (source.AuthCertUrl != null) {
             this.AuthCertUrl = new String(source.AuthCertUrl);
         }
+        if (source.ImageCertId != null) {
+            this.ImageCertId = new String(source.ImageCertId);
+        }
+        if (source.SerialNumber != null) {
+            this.SerialNumber = new String(source.SerialNumber);
+        }
+        if (source.ValidFrom != null) {
+            this.ValidFrom = new Long(source.ValidFrom);
+        }
+        if (source.ValidTo != null) {
+            this.ValidTo = new Long(source.ValidTo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +214,10 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AuthCertUrl", this.AuthCertUrl);
+        this.setParamSimple(map, prefix + "ImageCertId", this.ImageCertId);
+        this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
+        this.setParamSimple(map, prefix + "ValidFrom", this.ValidFrom);
+        this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

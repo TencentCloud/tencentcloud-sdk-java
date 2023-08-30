@@ -55,14 +55,14 @@ public class ListRecordBackupPlanDevicesRequest extends AbstractModel{
     */
     @SerializedName("PageSize")
     @Expose
-    private String PageSize;
+    private Long PageSize;
 
     /**
-    * 第几页
+    * 分页页数
     */
     @SerializedName("PageNumber")
     @Expose
-    private String PageNumber;
+    private Long PageNumber;
 
     /**
      * Get 录像计划ID（从查询录像上云计划列表接口ListRecordBackupPlans中获取） 
@@ -132,7 +132,7 @@ public class ListRecordBackupPlanDevicesRequest extends AbstractModel{
      * Get 每页最大数量 
      * @return PageSize 每页最大数量
      */
-    public String getPageSize() {
+    public Long getPageSize() {
         return this.PageSize;
     }
 
@@ -140,23 +140,23 @@ public class ListRecordBackupPlanDevicesRequest extends AbstractModel{
      * Set 每页最大数量
      * @param PageSize 每页最大数量
      */
-    public void setPageSize(String PageSize) {
+    public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 第几页 
-     * @return PageNumber 第几页
+     * Get 分页页数 
+     * @return PageNumber 分页页数
      */
-    public String getPageNumber() {
+    public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 第几页
-     * @param PageNumber 第几页
+     * Set 分页页数
+     * @param PageNumber 分页页数
      */
-    public void setPageNumber(String PageNumber) {
+    public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
@@ -181,10 +181,10 @@ public class ListRecordBackupPlanDevicesRequest extends AbstractModel{
             this.OrganizationName = new String(source.OrganizationName);
         }
         if (source.PageSize != null) {
-            this.PageSize = new String(source.PageSize);
+            this.PageSize = new Long(source.PageSize);
         }
         if (source.PageNumber != null) {
-            this.PageNumber = new String(source.PageNumber);
+            this.PageNumber = new Long(source.PageNumber);
         }
     }
 

@@ -44,6 +44,13 @@ public class CdnInstanceDetail extends AbstractModel{
     private String Status;
 
     /**
+    * 域名计费状态
+    */
+    @SerializedName("HttpsBillingSwitch")
+    @Expose
+    private String HttpsBillingSwitch;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -91,6 +98,22 @@ public class CdnInstanceDetail extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 域名计费状态 
+     * @return HttpsBillingSwitch 域名计费状态
+     */
+    public String getHttpsBillingSwitch() {
+        return this.HttpsBillingSwitch;
+    }
+
+    /**
+     * Set 域名计费状态
+     * @param HttpsBillingSwitch 域名计费状态
+     */
+    public void setHttpsBillingSwitch(String HttpsBillingSwitch) {
+        this.HttpsBillingSwitch = HttpsBillingSwitch;
+    }
+
     public CdnInstanceDetail() {
     }
 
@@ -108,6 +131,9 @@ public class CdnInstanceDetail extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.HttpsBillingSwitch != null) {
+            this.HttpsBillingSwitch = new String(source.HttpsBillingSwitch);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CdnInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "HttpsBillingSwitch", this.HttpsBillingSwitch);
 
     }
 }

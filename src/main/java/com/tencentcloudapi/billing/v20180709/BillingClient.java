@@ -39,6 +39,48 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *批量设置分账标签
+     * @param req CreateAllocationTagRequest
+     * @return CreateAllocationTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAllocationTagResponse CreateAllocationTag(CreateAllocationTagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAllocationTagResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAllocationTagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAllocationTag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量取消设置分账标签
+     * @param req DeleteAllocationTagRequest
+     * @return DeleteAllocationTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAllocationTagResponse DeleteAllocationTag(DeleteAllocationTagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAllocationTagResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAllocationTagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAllocationTag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取云账户余额信息。
      * @param req DescribeAccountBalanceRequest
      * @return DescribeAccountBalanceResponse
@@ -412,6 +454,27 @@ public class BillingClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDosageDetailByDateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDosageDetailByDate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取分账标签
+     * @param req DescribeTagListRequest
+     * @return DescribeTagListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTagListResponse DescribeTagList(DescribeTagListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTagListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTagListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTagList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

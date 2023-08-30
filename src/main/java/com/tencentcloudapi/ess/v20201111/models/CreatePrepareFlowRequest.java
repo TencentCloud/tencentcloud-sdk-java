@@ -30,7 +30,7 @@ public class CreatePrepareFlowRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 资源Id，通过多文件上传（UploadFiles）接口获得
+    * 资源id，与ResourceType对应
     */
     @SerializedName("ResourceId")
     @Expose
@@ -63,11 +63,22 @@ false:顺序签
 
     /**
     * 用户自定义合同类型Id
-该id为电子签企业内的合同类型id
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
     */
     @SerializedName("UserFlowTypeId")
     @Expose
     private String UserFlowTypeId;
+
+    /**
+    * 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
+    */
+    @SerializedName("FlowType")
+    @Expose
+    private String FlowType;
 
     /**
     * 签署流程参与者信息，最大限制50方
@@ -78,7 +89,7 @@ false:顺序签
 
     /**
     * 打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE"
     */
     @SerializedName("IntelligentStatus")
@@ -87,10 +98,9 @@ false:顺序签
 
     /**
     * 资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件
+1：模板
+2：文件，
+不传默认为2：文件
     */
     @SerializedName("ResourceType")
     @Expose
@@ -148,15 +158,6 @@ false:不开启发起方发起合同审核
     private String FlowId;
 
     /**
-    * 合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看
-    */
-    @SerializedName("FlowType")
-    @Expose
-    private String FlowType;
-
-    /**
     * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
     */
     @SerializedName("Agent")
@@ -180,16 +181,16 @@ false:不开启发起方发起合同审核
     }
 
     /**
-     * Get 资源Id，通过多文件上传（UploadFiles）接口获得 
-     * @return ResourceId 资源Id，通过多文件上传（UploadFiles）接口获得
+     * Get 资源id，与ResourceType对应 
+     * @return ResourceId 资源id，与ResourceType对应
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id，通过多文件上传（UploadFiles）接口获得
-     * @param ResourceId 资源Id，通过多文件上传（UploadFiles）接口获得
+     * Set 资源id，与ResourceType对应
+     * @param ResourceId 资源id，与ResourceType对应
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -261,9 +262,11 @@ false:顺序签
 
     /**
      * Get 用户自定义合同类型Id
-该id为电子签企业内的合同类型id 
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取 
      * @return UserFlowTypeId 用户自定义合同类型Id
-该id为电子签企业内的合同类型id
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
      */
     public String getUserFlowTypeId() {
         return this.UserFlowTypeId;
@@ -271,12 +274,42 @@ false:顺序签
 
     /**
      * Set 用户自定义合同类型Id
-该id为电子签企业内的合同类型id
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
      * @param UserFlowTypeId 用户自定义合同类型Id
-该id为电子签企业内的合同类型id
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
      */
     public void setUserFlowTypeId(String UserFlowTypeId) {
         this.UserFlowTypeId = UserFlowTypeId;
+    }
+
+    /**
+     * Get 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型 
+     * @return FlowType 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
+     */
+    public String getFlowType() {
+        return this.FlowType;
+    }
+
+    /**
+     * Set 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
+     * @param FlowType 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
+     */
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
     }
 
     /**
@@ -297,10 +330,10 @@ false:顺序签
 
     /**
      * Get 打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE" 
      * @return IntelligentStatus 打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE"
      */
     public String getIntelligentStatus() {
@@ -309,10 +342,10 @@ false:顺序签
 
     /**
      * Set 打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE"
      * @param IntelligentStatus 打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE"
      */
     public void setIntelligentStatus(String IntelligentStatus) {
@@ -321,15 +354,13 @@ false:顺序签
 
     /**
      * Get 资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件 
+1：模板
+2：文件，
+不传默认为2：文件 
      * @return ResourceType 资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件
+1：模板
+2：文件，
+不传默认为2：文件
      */
     public Long getResourceType() {
         return this.ResourceType;
@@ -337,15 +368,13 @@ false:顺序签
 
     /**
      * Set 资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件
+1：模板
+2：文件，
+不传默认为2：文件
      * @param ResourceType 资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件
+1：模板
+2：文件，
+不传默认为2：文件
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
@@ -484,30 +513,6 @@ false:不开启发起方发起合同审核
     }
 
     /**
-     * Get 合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看 
-     * @return FlowType 合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看
-     */
-    public String getFlowType() {
-        return this.FlowType;
-    }
-
-    /**
-     * Set 合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看
-     * @param FlowType 合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看
-     */
-    public void setFlowType(String FlowType) {
-        this.FlowType = FlowType;
-    }
-
-    /**
      * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	 
      * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
      */
@@ -549,6 +554,9 @@ false:不开启发起方发起合同审核
         if (source.UserFlowTypeId != null) {
             this.UserFlowTypeId = new String(source.UserFlowTypeId);
         }
+        if (source.FlowType != null) {
+            this.FlowType = new String(source.FlowType);
+        }
         if (source.Approvers != null) {
             this.Approvers = new FlowCreateApprover[source.Approvers.length];
             for (int i = 0; i < source.Approvers.length; i++) {
@@ -579,9 +587,6 @@ false:不开启发起方发起合同审核
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
-        if (source.FlowType != null) {
-            this.FlowType = new String(source.FlowType);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
@@ -598,6 +603,7 @@ false:不开启发起方发起合同审核
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
+        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
@@ -607,7 +613,6 @@ false:不开启发起方发起合同审核
         this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }

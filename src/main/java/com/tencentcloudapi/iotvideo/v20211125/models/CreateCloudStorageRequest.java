@@ -85,6 +85,13 @@ lye1y30d：低功耗事件30天年套餐。
     private String OrderId;
 
     /**
+    * 通道ID
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -260,6 +267,22 @@ lye1y30d：低功耗事件30天年套餐。
         this.OrderId = OrderId;
     }
 
+    /**
+     * Get 通道ID 
+     * @return ChannelId 通道ID
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID
+     * @param ChannelId 通道ID
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public CreateCloudStorageRequest() {
     }
 
@@ -286,6 +309,9 @@ lye1y30d：低功耗事件30天年套餐。
         if (source.OrderId != null) {
             this.OrderId = new String(source.OrderId);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
     }
 
 
@@ -299,6 +325,7 @@ lye1y30d：低功耗事件30天年套餐。
         this.setParamSimple(map, prefix + "Override", this.Override);
         this.setParamSimple(map, prefix + "PackageQueue", this.PackageQueue);
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

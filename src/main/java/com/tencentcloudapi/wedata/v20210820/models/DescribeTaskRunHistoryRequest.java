@@ -48,7 +48,7 @@ public class DescribeTaskRunHistoryRequest extends AbstractModel{
     */
     @SerializedName("PageNumber")
     @Expose
-    private String PageNumber;
+    private Long PageNumber;
 
     /**
      * Get 项目id 
@@ -102,7 +102,7 @@ public class DescribeTaskRunHistoryRequest extends AbstractModel{
      * Get 分页页码 
      * @return PageNumber 分页页码
      */
-    public String getPageNumber() {
+    public Long getPageNumber() {
         return this.PageNumber;
     }
 
@@ -110,7 +110,7 @@ public class DescribeTaskRunHistoryRequest extends AbstractModel{
      * Set 分页页码
      * @param PageNumber 分页页码
      */
-    public void setPageNumber(String PageNumber) {
+    public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
@@ -132,7 +132,7 @@ public class DescribeTaskRunHistoryRequest extends AbstractModel{
             this.PageSize = new Long(source.PageSize);
         }
         if (source.PageNumber != null) {
-            this.PageNumber = new String(source.PageNumber);
+            this.PageNumber = new Long(source.PageNumber);
         }
     }
 
