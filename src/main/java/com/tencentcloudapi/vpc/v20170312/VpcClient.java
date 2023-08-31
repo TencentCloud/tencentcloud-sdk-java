@@ -1115,6 +1115,27 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateNetworkAclEntries）用于增量添加网络ACL三元组的入站规则和出站规则。
+     * @param req CreateNetworkAclEntriesRequest
+     * @return CreateNetworkAclEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetworkAclEntriesResponse CreateNetworkAclEntries(CreateNetworkAclEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNetworkAclEntriesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNetworkAclEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNetworkAclEntries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateNetworkAclQuintupleEntries）用于增量网络ACL五元组的入站规则和出站规则。
      * @param req CreateNetworkAclQuintupleEntriesRequest
      * @return CreateNetworkAclQuintupleEntriesResponse
@@ -2036,6 +2057,29 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteNetworkAcl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteNetworkAclEntries）用于删除三元组网络ACL的入站规则和出站规则。在NetworkAclEntrySet参数中：
+* 删除IPv4规则，需要传入NetworkAclIpv4EntryId。
+* 删除IPv6规则，需要传入NetworkAclIpv6EntryId。
+     * @param req DeleteNetworkAclEntriesRequest
+     * @return DeleteNetworkAclEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetworkAclEntriesResponse DeleteNetworkAclEntries(DeleteNetworkAclEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNetworkAclEntriesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNetworkAclEntries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
