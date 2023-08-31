@@ -62,6 +62,13 @@ GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
     private String UserName;
 
     /**
+    * 账户的类型
+    */
+    @SerializedName("UserType")
+    @Expose
+    private String UserType;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -169,6 +176,22 @@ GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
         this.UserName = UserName;
     }
 
+    /**
+     * Get 账户的类型 
+     * @return UserType 账户的类型
+     */
+    public String getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 账户的类型
+     * @param UserType 账户的类型
+     */
+    public void setUserType(String UserType) {
+        this.UserType = UserType;
+    }
+
     public DescribeCkSqlApisRequest() {
     }
 
@@ -189,6 +212,9 @@ GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
         this.setParamSimple(map, prefix + "ApiType", this.ApiType);
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
 
     }
 }

@@ -1225,6 +1225,48 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
+     *风险评估概览页，查询风险面的分布
+     * @param req DescribeDSPAAssessmentRiskSideDistributedRequest
+     * @return DescribeDSPAAssessmentRiskSideDistributedResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDSPAAssessmentRiskSideDistributedResponse DescribeDSPAAssessmentRiskSideDistributed(DescribeDSPAAssessmentRiskSideDistributedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDSPAAssessmentRiskSideDistributedResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDSPAAssessmentRiskSideDistributedResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDSPAAssessmentRiskSideDistributed");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *风险评估概览页，查询风险面的分布
+     * @param req DescribeDSPAAssessmentRiskSideListRequest
+     * @return DescribeDSPAAssessmentRiskSideListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDSPAAssessmentRiskSideListResponse DescribeDSPAAssessmentRiskSideList(DescribeDSPAAssessmentRiskSideListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDSPAAssessmentRiskSideListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDSPAAssessmentRiskSideListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDSPAAssessmentRiskSideList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *风险项页面--查看评估模版详情
      * @param req DescribeDSPAAssessmentRiskTemplateDetailRequest
      * @return DescribeDSPAAssessmentRiskTemplateDetailResponse

@@ -77,6 +77,13 @@ public class ProductInstance extends AbstractModel{
     private ProductInstanceRecource [] ProductInstanceResourceSet;
 
     /**
+    * 预付费资源包实例中包含的资源包列表。
+    */
+    @SerializedName("ResourceSet")
+    @Expose
+    private ProductInstanceResource [] ResourceSet;
+
+    /**
     * 资源包实例的状态，取值有：
 <li>Effective：生效，可用于计费抵扣。</li>
 <li>Isolated：隔离，不可用于计费抵扣。</li>
@@ -224,7 +231,9 @@ public class ProductInstance extends AbstractModel{
     /**
      * Get 预付费资源包实例中包含的资源包列表。 
      * @return ProductInstanceResourceSet 预付费资源包实例中包含的资源包列表。
+     * @deprecated
      */
+    @Deprecated
     public ProductInstanceRecource [] getProductInstanceResourceSet() {
         return this.ProductInstanceResourceSet;
     }
@@ -232,9 +241,27 @@ public class ProductInstance extends AbstractModel{
     /**
      * Set 预付费资源包实例中包含的资源包列表。
      * @param ProductInstanceResourceSet 预付费资源包实例中包含的资源包列表。
+     * @deprecated
      */
+    @Deprecated
     public void setProductInstanceResourceSet(ProductInstanceRecource [] ProductInstanceResourceSet) {
         this.ProductInstanceResourceSet = ProductInstanceResourceSet;
+    }
+
+    /**
+     * Get 预付费资源包实例中包含的资源包列表。 
+     * @return ResourceSet 预付费资源包实例中包含的资源包列表。
+     */
+    public ProductInstanceResource [] getResourceSet() {
+        return this.ResourceSet;
+    }
+
+    /**
+     * Set 预付费资源包实例中包含的资源包列表。
+     * @param ResourceSet 预付费资源包实例中包含的资源包列表。
+     */
+    public void setResourceSet(ProductInstanceResource [] ResourceSet) {
+        this.ResourceSet = ResourceSet;
     }
 
     /**
@@ -349,6 +376,12 @@ public class ProductInstance extends AbstractModel{
                 this.ProductInstanceResourceSet[i] = new ProductInstanceRecource(source.ProductInstanceResourceSet[i]);
             }
         }
+        if (source.ResourceSet != null) {
+            this.ResourceSet = new ProductInstanceResource[source.ResourceSet.length];
+            for (int i = 0; i < source.ResourceSet.length; i++) {
+                this.ResourceSet[i] = new ProductInstanceResource(source.ResourceSet[i]);
+            }
+        }
         if (source.ProductInstanceStatus != null) {
             this.ProductInstanceStatus = new String(source.ProductInstanceStatus);
         }
@@ -372,6 +405,7 @@ public class ProductInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "LastConsumeDate", this.LastConsumeDate);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamArrayObj(map, prefix + "ProductInstanceResourceSet.", this.ProductInstanceResourceSet);
+        this.setParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
         this.setParamSimple(map, prefix + "ProductInstanceStatus", this.ProductInstanceStatus);
         this.setParamSimple(map, prefix + "RefundStatus", this.RefundStatus);
         this.setParamSimple(map, prefix + "RenewStatus", this.RenewStatus);

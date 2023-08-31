@@ -294,6 +294,30 @@ public class Cluster extends AbstractModel{
     private ClusterSession [] ClusterSessions;
 
     /**
+    * V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArchGeneration")
+    @Expose
+    private Long ArchGeneration;
+
+    /**
+    * 0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
+    * 订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Orders")
+    @Expose
+    private Order [] Orders;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -945,6 +969,66 @@ public class Cluster extends AbstractModel{
         this.ClusterSessions = ClusterSessions;
     }
 
+    /**
+     * Get V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArchGeneration V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getArchGeneration() {
+        return this.ArchGeneration;
+    }
+
+    /**
+     * Set V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArchGeneration V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArchGeneration(Long ArchGeneration) {
+        this.ArchGeneration = ArchGeneration;
+    }
+
+    /**
+     * Get 0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterType 0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterType 0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get 订单信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Orders 订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Order [] getOrders() {
+        return this.Orders;
+    }
+
+    /**
+     * Set 订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Orders 订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrders(Order [] Orders) {
+        this.Orders = Orders;
+    }
+
     public Cluster() {
     }
 
@@ -1073,6 +1157,18 @@ public class Cluster extends AbstractModel{
                 this.ClusterSessions[i] = new ClusterSession(source.ClusterSessions[i]);
             }
         }
+        if (source.ArchGeneration != null) {
+            this.ArchGeneration = new Long(source.ArchGeneration);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
+        if (source.Orders != null) {
+            this.Orders = new Order[source.Orders.length];
+            for (int i = 0; i < source.Orders.length; i++) {
+                this.Orders[i] = new Order(source.Orders[i]);
+            }
+        }
     }
 
 
@@ -1116,6 +1212,9 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "IsNeedManageNode", this.IsNeedManageNode);
         this.setParamArrayObj(map, prefix + "ClusterSessions.", this.ClusterSessions);
+        this.setParamSimple(map, prefix + "ArchGeneration", this.ArchGeneration);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamArrayObj(map, prefix + "Orders.", this.Orders);
 
     }
 }

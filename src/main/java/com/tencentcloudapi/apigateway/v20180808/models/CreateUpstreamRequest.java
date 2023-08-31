@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateUpstreamRequest extends AbstractModel{
 
     /**
-    * 后端协议，取值范围：HTTP, HTTPS
+    * 后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
     */
     @SerializedName("Scheme")
     @Expose
@@ -107,16 +107,16 @@ public class CreateUpstreamRequest extends AbstractModel{
     private K8sService [] K8sService;
 
     /**
-     * Get 后端协议，取值范围：HTTP, HTTPS 
-     * @return Scheme 后端协议，取值范围：HTTP, HTTPS
+     * Get 后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs 
+     * @return Scheme 后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 后端协议，取值范围：HTTP, HTTPS
-     * @param Scheme 后端协议，取值范围：HTTP, HTTPS
+     * Set 后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
+     * @param Scheme 后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;

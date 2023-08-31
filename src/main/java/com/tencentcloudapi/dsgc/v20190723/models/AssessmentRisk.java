@@ -155,6 +155,14 @@ public class AssessmentRisk extends AbstractModel{
     private String RiskType;
 
     /**
+    * 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskSide")
+    @Expose
+    private String RiskSide;
+
+    /**
      * Get 风险项Id 
      * @return RiskId 风险项Id
      */
@@ -466,6 +474,26 @@ public class AssessmentRisk extends AbstractModel{
         this.RiskType = RiskType;
     }
 
+    /**
+     * Get 风险面
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskSide() {
+        return this.RiskSide;
+    }
+
+    /**
+     * Set 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskSide(String RiskSide) {
+        this.RiskSide = RiskSide;
+    }
+
     public AssessmentRisk() {
     }
 
@@ -531,6 +559,9 @@ public class AssessmentRisk extends AbstractModel{
         if (source.RiskType != null) {
             this.RiskType = new String(source.RiskType);
         }
+        if (source.RiskSide != null) {
+            this.RiskSide = new String(source.RiskSide);
+        }
     }
 
 
@@ -556,6 +587,7 @@ public class AssessmentRisk extends AbstractModel{
         this.setParamSimple(map, prefix + "AssetName", this.AssetName);
         this.setParamArrayObj(map, prefix + "SecurityProduct.", this.SecurityProduct);
         this.setParamSimple(map, prefix + "RiskType", this.RiskType);
+        this.setParamSimple(map, prefix + "RiskSide", this.RiskSide);
 
     }
 }

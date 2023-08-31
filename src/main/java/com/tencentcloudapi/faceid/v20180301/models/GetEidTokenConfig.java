@@ -43,7 +43,7 @@ public class GetEidTokenConfig extends AbstractModel{
     private Boolean UseIntentionVerify;
 
     /**
-    * 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+    * 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
     */
     @SerializedName("IntentionMode")
     @Expose
@@ -62,6 +62,13 @@ public class GetEidTokenConfig extends AbstractModel{
     @SerializedName("IntentionQuestions")
     @Expose
     private IntentionQuestion [] IntentionQuestions;
+
+    /**
+    * 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
+    */
+    @SerializedName("IntentionActions")
+    @Expose
+    private IntentionActionConfig [] IntentionActions;
 
     /**
     * 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
@@ -134,16 +141,16 @@ public class GetEidTokenConfig extends AbstractModel{
     }
 
     /**
-     * Get 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1 
-     * @return IntentionMode 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+     * Get 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。 
+     * @return IntentionMode 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
      */
     public String getIntentionMode() {
         return this.IntentionMode;
     }
 
     /**
-     * Set 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
-     * @param IntentionMode 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+     * Set 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
+     * @param IntentionMode 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
      */
     public void setIntentionMode(String IntentionMode) {
         this.IntentionMode = IntentionMode;
@@ -179,6 +186,22 @@ public class GetEidTokenConfig extends AbstractModel{
      */
     public void setIntentionQuestions(IntentionQuestion [] IntentionQuestions) {
         this.IntentionQuestions = IntentionQuestions;
+    }
+
+    /**
+     * Get 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。 
+     * @return IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
+     */
+    public IntentionActionConfig [] getIntentionActions() {
+        return this.IntentionActions;
+    }
+
+    /**
+     * Set 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
+     * @param IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
+     */
+    public void setIntentionActions(IntentionActionConfig [] IntentionActions) {
+        this.IntentionActions = IntentionActions;
     }
 
     /**
@@ -239,6 +262,12 @@ public class GetEidTokenConfig extends AbstractModel{
                 this.IntentionQuestions[i] = new IntentionQuestion(source.IntentionQuestions[i]);
             }
         }
+        if (source.IntentionActions != null) {
+            this.IntentionActions = new IntentionActionConfig[source.IntentionActions.length];
+            for (int i = 0; i < source.IntentionActions.length; i++) {
+                this.IntentionActions[i] = new IntentionActionConfig(source.IntentionActions[i]);
+            }
+        }
         if (source.IntentionRecognition != null) {
             this.IntentionRecognition = new Boolean(source.IntentionRecognition);
         }
@@ -257,6 +286,7 @@ public class GetEidTokenConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "IntentionMode", this.IntentionMode);
         this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
         this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
+        this.setParamArrayObj(map, prefix + "IntentionActions.", this.IntentionActions);
         this.setParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
         this.setParamSimple(map, prefix + "IsSupportHMTResidentPermitOCR", this.IsSupportHMTResidentPermitOCR);
 

@@ -86,7 +86,7 @@ public class CreateServiceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * vpc属性
+    * vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -237,16 +237,16 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get vpc属性 
-     * @return UniqVpcId vpc属性
+     * Get vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源 
+     * @return UniqVpcId vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set vpc属性
-     * @param UniqVpcId vpc属性
+     * Set vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
+     * @param UniqVpcId vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;

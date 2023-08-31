@@ -87,7 +87,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
 
     */
     @SerializedName("SealStatuses")
@@ -240,7 +240,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
  
      * @return SealStatuses 查询的印章状态列表。
 取值为空，只查询启用状态的印章；
@@ -251,7 +251,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
 
      */
     public String [] getSealStatuses() {
@@ -268,7 +268,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
 
      * @param SealStatuses 查询的印章状态列表。
 取值为空，只查询启用状态的印章；
@@ -279,7 +279,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
 
      */
     public void setSealStatuses(String [] SealStatuses) {

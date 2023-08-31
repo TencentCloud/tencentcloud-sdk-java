@@ -58,6 +58,13 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel{
     private String ProcessPeople;
 
     /**
+    * 批量处理的列表
+    */
+    @SerializedName("BathRiskIdList")
+    @Expose
+    private Long [] BathRiskIdList;
+
+    /**
      * Get dspa实例id 
      * @return DspaId dspa实例id
      */
@@ -76,7 +83,9 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel{
     /**
      * Get 最新风险项Id 
      * @return RiskLatestTableId 最新风险项Id
+     * @deprecated
      */
+    @Deprecated
     public Long getRiskLatestTableId() {
         return this.RiskLatestTableId;
     }
@@ -84,7 +93,9 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel{
     /**
      * Set 最新风险项Id
      * @param RiskLatestTableId 最新风险项Id
+     * @deprecated
      */
+    @Deprecated
     public void setRiskLatestTableId(Long RiskLatestTableId) {
         this.RiskLatestTableId = RiskLatestTableId;
     }
@@ -137,6 +148,22 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel{
         this.ProcessPeople = ProcessPeople;
     }
 
+    /**
+     * Get 批量处理的列表 
+     * @return BathRiskIdList 批量处理的列表
+     */
+    public Long [] getBathRiskIdList() {
+        return this.BathRiskIdList;
+    }
+
+    /**
+     * Set 批量处理的列表
+     * @param BathRiskIdList 批量处理的列表
+     */
+    public void setBathRiskIdList(Long [] BathRiskIdList) {
+        this.BathRiskIdList = BathRiskIdList;
+    }
+
     public ModifyDSPAAssessmentRiskLatestRequest() {
     }
 
@@ -160,6 +187,12 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel{
         if (source.ProcessPeople != null) {
             this.ProcessPeople = new String(source.ProcessPeople);
         }
+        if (source.BathRiskIdList != null) {
+            this.BathRiskIdList = new Long[source.BathRiskIdList.length];
+            for (int i = 0; i < source.BathRiskIdList.length; i++) {
+                this.BathRiskIdList[i] = new Long(source.BathRiskIdList[i]);
+            }
+        }
     }
 
 
@@ -172,6 +205,7 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "ProcessPeople", this.ProcessPeople);
+        this.setParamArraySimple(map, prefix + "BathRiskIdList.", this.BathRiskIdList);
 
     }
 }

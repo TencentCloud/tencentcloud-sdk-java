@@ -44,13 +44,6 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel{
     private String TemplateId;
 
     /**
-    * 敏感数据扫描数据源条件。
-    */
-    @SerializedName("DiscoveryCondition")
-    @Expose
-    private DiscoveryCondition DiscoveryCondition;
-
-    /**
     * 评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
     */
     @SerializedName("BusinessName")
@@ -77,6 +70,13 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel{
     @SerializedName("ComplianceId")
     @Expose
     private Long ComplianceId;
+
+    /**
+    * 敏感数据扫描数据源条件。
+    */
+    @SerializedName("DiscoveryCondition")
+    @Expose
+    private DiscoveryCondition DiscoveryCondition;
 
     /**
     * 说明
@@ -131,22 +131,6 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel{
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
-    }
-
-    /**
-     * Get 敏感数据扫描数据源条件。 
-     * @return DiscoveryCondition 敏感数据扫描数据源条件。
-     */
-    public DiscoveryCondition getDiscoveryCondition() {
-        return this.DiscoveryCondition;
-    }
-
-    /**
-     * Set 敏感数据扫描数据源条件。
-     * @param DiscoveryCondition 敏感数据扫描数据源条件。
-     */
-    public void setDiscoveryCondition(DiscoveryCondition DiscoveryCondition) {
-        this.DiscoveryCondition = DiscoveryCondition;
     }
 
     /**
@@ -226,6 +210,22 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 敏感数据扫描数据源条件。 
+     * @return DiscoveryCondition 敏感数据扫描数据源条件。
+     */
+    public DiscoveryCondition getDiscoveryCondition() {
+        return this.DiscoveryCondition;
+    }
+
+    /**
+     * Set 敏感数据扫描数据源条件。
+     * @param DiscoveryCondition 敏感数据扫描数据源条件。
+     */
+    public void setDiscoveryCondition(DiscoveryCondition DiscoveryCondition) {
+        this.DiscoveryCondition = DiscoveryCondition;
+    }
+
+    /**
      * Get 说明 
      * @return Description 说明
      */
@@ -258,9 +258,6 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel{
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
-        if (source.DiscoveryCondition != null) {
-            this.DiscoveryCondition = new DiscoveryCondition(source.DiscoveryCondition);
-        }
         if (source.BusinessName != null) {
             this.BusinessName = new String(source.BusinessName);
         }
@@ -272,6 +269,9 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel{
         }
         if (source.ComplianceId != null) {
             this.ComplianceId = new Long(source.ComplianceId);
+        }
+        if (source.DiscoveryCondition != null) {
+            this.DiscoveryCondition = new DiscoveryCondition(source.DiscoveryCondition);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -286,11 +286,11 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamObj(map, prefix + "DiscoveryCondition.", this.DiscoveryCondition);
         this.setParamSimple(map, prefix + "BusinessName", this.BusinessName);
         this.setParamSimple(map, prefix + "BusinessDept", this.BusinessDept);
         this.setParamSimple(map, prefix + "BusinessOwner", this.BusinessOwner);
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+        this.setParamObj(map, prefix + "DiscoveryCondition.", this.DiscoveryCondition);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

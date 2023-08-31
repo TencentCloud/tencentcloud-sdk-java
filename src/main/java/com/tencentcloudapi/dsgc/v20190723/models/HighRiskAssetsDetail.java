@@ -31,6 +31,22 @@ public class HighRiskAssetsDetail extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataSourceType")
+    @Expose
+    private String DataSourceType;
+
+    /**
+    * 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataSourceName")
+    @Expose
+    private String DataSourceName;
+
+    /**
     * 资产对象名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -63,6 +79,22 @@ public class HighRiskAssetsDetail extends AbstractModel{
     private Long TotalRiskCount;
 
     /**
+    * 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskSide")
+    @Expose
+    private String RiskSide;
+
+    /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceRegion")
+    @Expose
+    private String ResourceRegion;
+
+    /**
      * Get 实例id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例id
@@ -80,6 +112,46 @@ public class HighRiskAssetsDetail extends AbstractModel{
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataSourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataSourceType() {
+        return this.DataSourceType;
+    }
+
+    /**
+     * Set 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataSourceType(String DataSourceType) {
+        this.DataSourceType = DataSourceType;
+    }
+
+    /**
+     * Get 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataSourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataSourceName() {
+        return this.DataSourceName;
+    }
+
+    /**
+     * Set 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataSourceName(String DataSourceName) {
+        this.DataSourceName = DataSourceName;
     }
 
     /**
@@ -162,6 +234,46 @@ public class HighRiskAssetsDetail extends AbstractModel{
         this.TotalRiskCount = TotalRiskCount;
     }
 
+    /**
+     * Get 风险面
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskSide() {
+        return this.RiskSide;
+    }
+
+    /**
+     * Set 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskSide(String RiskSide) {
+        this.RiskSide = RiskSide;
+    }
+
+    /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceRegion 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceRegion() {
+        return this.ResourceRegion;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceRegion 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceRegion(String ResourceRegion) {
+        this.ResourceRegion = ResourceRegion;
+    }
+
     public HighRiskAssetsDetail() {
     }
 
@@ -172,6 +284,12 @@ public class HighRiskAssetsDetail extends AbstractModel{
     public HighRiskAssetsDetail(HighRiskAssetsDetail source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DataSourceType != null) {
+            this.DataSourceType = new String(source.DataSourceType);
+        }
+        if (source.DataSourceName != null) {
+            this.DataSourceName = new String(source.DataSourceName);
         }
         if (source.AssetsName != null) {
             this.AssetsName = new String(source.AssetsName);
@@ -185,6 +303,12 @@ public class HighRiskAssetsDetail extends AbstractModel{
         if (source.TotalRiskCount != null) {
             this.TotalRiskCount = new Long(source.TotalRiskCount);
         }
+        if (source.RiskSide != null) {
+            this.RiskSide = new String(source.RiskSide);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
     }
 
 
@@ -193,10 +317,14 @@ public class HighRiskAssetsDetail extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
+        this.setParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
         this.setParamSimple(map, prefix + "AssetsName", this.AssetsName);
         this.setParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
         this.setParamSimple(map, prefix + "RiskType", this.RiskType);
         this.setParamSimple(map, prefix + "TotalRiskCount", this.TotalRiskCount);
+        this.setParamSimple(map, prefix + "RiskSide", this.RiskSide);
+        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
 
     }
 }

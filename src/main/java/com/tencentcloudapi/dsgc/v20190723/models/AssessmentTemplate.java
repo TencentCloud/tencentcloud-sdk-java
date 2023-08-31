@@ -103,6 +103,14 @@ public class AssessmentTemplate extends AbstractModel{
     private String [] SupportDataSource;
 
     /**
+    * 是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsASMTemplate")
+    @Expose
+    private Boolean IsASMTemplate;
+
+    /**
      * Get id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id id
@@ -290,6 +298,26 @@ public class AssessmentTemplate extends AbstractModel{
         this.SupportDataSource = SupportDataSource;
     }
 
+    /**
+     * Get 是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsASMTemplate 是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsASMTemplate() {
+        return this.IsASMTemplate;
+    }
+
+    /**
+     * Set 是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsASMTemplate 是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsASMTemplate(Boolean IsASMTemplate) {
+        this.IsASMTemplate = IsASMTemplate;
+    }
+
     public AssessmentTemplate() {
     }
 
@@ -334,6 +362,9 @@ public class AssessmentTemplate extends AbstractModel{
                 this.SupportDataSource[i] = new String(source.SupportDataSource[i]);
             }
         }
+        if (source.IsASMTemplate != null) {
+            this.IsASMTemplate = new Boolean(source.IsASMTemplate);
+        }
     }
 
 
@@ -352,6 +383,7 @@ public class AssessmentTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "AppliedItemCount", this.AppliedItemCount);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "SupportDataSource.", this.SupportDataSource);
+        this.setParamSimple(map, prefix + "IsASMTemplate", this.IsASMTemplate);
 
     }
 }

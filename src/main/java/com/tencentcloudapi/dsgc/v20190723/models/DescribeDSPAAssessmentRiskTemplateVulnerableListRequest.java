@@ -58,6 +58,13 @@ public class DescribeDSPAAssessmentRiskTemplateVulnerableListRequest extends Abs
     private String RiskName;
 
     /**
+    * 风险面
+    */
+    @SerializedName("RiskSide")
+    @Expose
+    private String RiskSide;
+
+    /**
      * Get dspa实例id 
      * @return DspaId dspa实例id
      */
@@ -137,6 +144,22 @@ public class DescribeDSPAAssessmentRiskTemplateVulnerableListRequest extends Abs
         this.RiskName = RiskName;
     }
 
+    /**
+     * Get 风险面 
+     * @return RiskSide 风险面
+     */
+    public String getRiskSide() {
+        return this.RiskSide;
+    }
+
+    /**
+     * Set 风险面
+     * @param RiskSide 风险面
+     */
+    public void setRiskSide(String RiskSide) {
+        this.RiskSide = RiskSide;
+    }
+
     public DescribeDSPAAssessmentRiskTemplateVulnerableListRequest() {
     }
 
@@ -160,6 +183,9 @@ public class DescribeDSPAAssessmentRiskTemplateVulnerableListRequest extends Abs
         if (source.RiskName != null) {
             this.RiskName = new String(source.RiskName);
         }
+        if (source.RiskSide != null) {
+            this.RiskSide = new String(source.RiskSide);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class DescribeDSPAAssessmentRiskTemplateVulnerableListRequest extends Abs
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "RiskType", this.RiskType);
         this.setParamSimple(map, prefix + "RiskName", this.RiskName);
+        this.setParamSimple(map, prefix + "RiskSide", this.RiskSide);
 
     }
 }

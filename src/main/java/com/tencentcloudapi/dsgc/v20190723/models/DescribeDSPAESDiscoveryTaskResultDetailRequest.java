@@ -72,6 +72,13 @@ public class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractMode
     private Long LevelId;
 
     /**
+    * 索引名称
+    */
+    @SerializedName("DbName")
+    @Expose
+    private String DbName;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -183,6 +190,22 @@ public class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractMode
         this.LevelId = LevelId;
     }
 
+    /**
+     * Get 索引名称 
+     * @return DbName 索引名称
+     */
+    public String getDbName() {
+        return this.DbName;
+    }
+
+    /**
+     * Set 索引名称
+     * @param DbName 索引名称
+     */
+    public void setDbName(String DbName) {
+        this.DbName = DbName;
+    }
+
     public DescribeDSPAESDiscoveryTaskResultDetailRequest() {
     }
 
@@ -215,6 +238,9 @@ public class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractMode
         if (source.LevelId != null) {
             this.LevelId = new Long(source.LevelId);
         }
+        if (source.DbName != null) {
+            this.DbName = new String(source.DbName);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractMode
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "CategoryIdList.", this.CategoryIdList);
         this.setParamSimple(map, prefix + "LevelId", this.LevelId);
+        this.setParamSimple(map, prefix + "DbName", this.DbName);
 
     }
 }

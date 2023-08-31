@@ -102,6 +102,69 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *删除备份数据
+     * @param req DeleteBackUpDataRequest
+     * @return DeleteBackUpDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackUpDataResponse DeleteBackUpData(DeleteBackUpDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackUpDataResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackUpDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackUpData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询备份任务列表
+     * @param req DescribeBackUpJobRequest
+     * @return DescribeBackUpJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpJobResponse DescribeBackUpJob(DescribeBackUpJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackUpJobResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackUpJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackUpJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询备份任务详情
+     * @param req DescribeBackUpJobDetailRequest
+     * @return DescribeBackUpJobDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpJobDetailResponse DescribeBackUpJobDetail(DescribeBackUpJobDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackUpJobDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackUpJobDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackUpJobDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询备份策略信息
      * @param req DescribeBackUpScheduleRequest
      * @return DescribeBackUpScheduleResponse
@@ -409,6 +472,27 @@ public class CdwchClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenBackUpResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OpenBackUp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *备份恢复
+     * @param req RecoverBackUpJobRequest
+     * @return RecoverBackUpJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecoverBackUpJobResponse RecoverBackUpJob(RecoverBackUpJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecoverBackUpJobResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecoverBackUpJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecoverBackUpJob");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

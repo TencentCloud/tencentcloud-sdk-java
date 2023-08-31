@@ -44,6 +44,13 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
     private NetworkAclQuintupleEntries NetworkAclQuintupleSet;
 
     /**
+    * 三元组的增量更新。该接口的默认语义为全量覆盖。当需要实现增量更新语义时，设置该参数为True。
+    */
+    @SerializedName("EnableUpdateAclEntries")
+    @Expose
+    private Boolean EnableUpdateAclEntries;
+
+    /**
      * Get 网络ACL实例ID。例如：acl-12345678。 
      * @return NetworkAclId 网络ACL实例ID。例如：acl-12345678。
      */
@@ -91,6 +98,22 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
         this.NetworkAclQuintupleSet = NetworkAclQuintupleSet;
     }
 
+    /**
+     * Get 三元组的增量更新。该接口的默认语义为全量覆盖。当需要实现增量更新语义时，设置该参数为True。 
+     * @return EnableUpdateAclEntries 三元组的增量更新。该接口的默认语义为全量覆盖。当需要实现增量更新语义时，设置该参数为True。
+     */
+    public Boolean getEnableUpdateAclEntries() {
+        return this.EnableUpdateAclEntries;
+    }
+
+    /**
+     * Set 三元组的增量更新。该接口的默认语义为全量覆盖。当需要实现增量更新语义时，设置该参数为True。
+     * @param EnableUpdateAclEntries 三元组的增量更新。该接口的默认语义为全量覆盖。当需要实现增量更新语义时，设置该参数为True。
+     */
+    public void setEnableUpdateAclEntries(Boolean EnableUpdateAclEntries) {
+        this.EnableUpdateAclEntries = EnableUpdateAclEntries;
+    }
+
     public ModifyNetworkAclEntriesRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
         if (source.NetworkAclQuintupleSet != null) {
             this.NetworkAclQuintupleSet = new NetworkAclQuintupleEntries(source.NetworkAclQuintupleSet);
         }
+        if (source.EnableUpdateAclEntries != null) {
+            this.EnableUpdateAclEntries = new Boolean(source.EnableUpdateAclEntries);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
         this.setParamObj(map, prefix + "NetworkAclEntrySet.", this.NetworkAclEntrySet);
         this.setParamObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
+        this.setParamSimple(map, prefix + "EnableUpdateAclEntries", this.EnableUpdateAclEntries);
 
     }
 }

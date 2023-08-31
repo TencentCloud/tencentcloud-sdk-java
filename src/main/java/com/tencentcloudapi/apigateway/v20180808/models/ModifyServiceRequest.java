@@ -58,6 +58,13 @@ public class ModifyServiceRequest extends AbstractModel{
     private String [] NetTypes;
 
     /**
+    * vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
      * Get 待修改服务的唯一 Id。 
      * @return ServiceId 待修改服务的唯一 Id。
      */
@@ -137,6 +144,22 @@ public class ModifyServiceRequest extends AbstractModel{
         this.NetTypes = NetTypes;
     }
 
+    /**
+     * Get vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源 
+     * @return UniqVpcId vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
+     * @param UniqVpcId vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
     public ModifyServiceRequest() {
     }
 
@@ -163,6 +186,9 @@ public class ModifyServiceRequest extends AbstractModel{
                 this.NetTypes[i] = new String(source.NetTypes[i]);
             }
         }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class ModifyServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceDesc", this.ServiceDesc);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
 
     }
 }

@@ -100,6 +100,13 @@ public class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel{
     private String RiskLevel;
 
     /**
+    * 风险面筛选
+    */
+    @SerializedName("RiskSide")
+    @Expose
+    private String [] RiskSide;
+
+    /**
      * Get dspa实例Id 
      * @return DspaId dspa实例Id
      */
@@ -275,6 +282,22 @@ public class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel{
         this.RiskLevel = RiskLevel;
     }
 
+    /**
+     * Get 风险面筛选 
+     * @return RiskSide 风险面筛选
+     */
+    public String [] getRiskSide() {
+        return this.RiskSide;
+    }
+
+    /**
+     * Set 风险面筛选
+     * @param RiskSide 风险面筛选
+     */
+    public void setRiskSide(String [] RiskSide) {
+        this.RiskSide = RiskSide;
+    }
+
     public DescribeDSPAAssessmentLatestRiskListRequest() {
     }
 
@@ -316,6 +339,12 @@ public class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel{
         if (source.RiskLevel != null) {
             this.RiskLevel = new String(source.RiskLevel);
         }
+        if (source.RiskSide != null) {
+            this.RiskSide = new String[source.RiskSide.length];
+            for (int i = 0; i < source.RiskSide.length; i++) {
+                this.RiskSide[i] = new String(source.RiskSide[i]);
+            }
+        }
     }
 
 
@@ -334,6 +363,7 @@ public class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+        this.setParamArraySimple(map, prefix + "RiskSide.", this.RiskSide);
 
     }
 }

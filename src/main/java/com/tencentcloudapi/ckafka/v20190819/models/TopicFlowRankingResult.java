@@ -61,6 +61,13 @@ public class TopicFlowRankingResult extends AbstractModel{
     private BrokerTopicData [] BrokerTopicData;
 
     /**
+    * 单个Broker 节点Topic 流量的大小(单位MB)
+    */
+    @SerializedName("BrokerTopicFlowData")
+    @Expose
+    private BrokerTopicFlowData [] BrokerTopicFlowData;
+
+    /**
      * Get Topic 流量数组 
      * @return TopicFlow Topic 流量数组
      */
@@ -152,6 +159,22 @@ public class TopicFlowRankingResult extends AbstractModel{
         this.BrokerTopicData = BrokerTopicData;
     }
 
+    /**
+     * Get 单个Broker 节点Topic 流量的大小(单位MB) 
+     * @return BrokerTopicFlowData 单个Broker 节点Topic 流量的大小(单位MB)
+     */
+    public BrokerTopicFlowData [] getBrokerTopicFlowData() {
+        return this.BrokerTopicFlowData;
+    }
+
+    /**
+     * Set 单个Broker 节点Topic 流量的大小(单位MB)
+     * @param BrokerTopicFlowData 单个Broker 节点Topic 流量的大小(单位MB)
+     */
+    public void setBrokerTopicFlowData(BrokerTopicFlowData [] BrokerTopicFlowData) {
+        this.BrokerTopicFlowData = BrokerTopicFlowData;
+    }
+
     public TopicFlowRankingResult() {
     }
 
@@ -190,6 +213,12 @@ public class TopicFlowRankingResult extends AbstractModel{
                 this.BrokerTopicData[i] = new BrokerTopicData(source.BrokerTopicData[i]);
             }
         }
+        if (source.BrokerTopicFlowData != null) {
+            this.BrokerTopicFlowData = new BrokerTopicFlowData[source.BrokerTopicFlowData.length];
+            for (int i = 0; i < source.BrokerTopicFlowData.length; i++) {
+                this.BrokerTopicFlowData[i] = new BrokerTopicFlowData(source.BrokerTopicFlowData[i]);
+            }
+        }
     }
 
 
@@ -202,6 +231,7 @@ public class TopicFlowRankingResult extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TopicMessageHeap.", this.TopicMessageHeap);
         this.setParamArraySimple(map, prefix + "BrokerIp.", this.BrokerIp);
         this.setParamArrayObj(map, prefix + "BrokerTopicData.", this.BrokerTopicData);
+        this.setParamArrayObj(map, prefix + "BrokerTopicFlowData.", this.BrokerTopicFlowData);
 
     }
 }

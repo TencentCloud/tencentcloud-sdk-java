@@ -163,6 +163,13 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Long InstanceNum;
 
     /**
+    * 是否自动选择代金券:1-是;0否。默认为0
+    */
+    @SerializedName("AutoVoucher")
+    @Expose
+    private Long AutoVoucher;
+
+    /**
      * Get 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
      * @return InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
@@ -482,6 +489,22 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.InstanceNum = InstanceNum;
     }
 
+    /**
+     * Get 是否自动选择代金券:1-是;0否。默认为0 
+     * @return AutoVoucher 是否自动选择代金券:1-是;0否。默认为0
+     */
+    public Long getAutoVoucher() {
+        return this.AutoVoucher;
+    }
+
+    /**
+     * Set 是否自动选择代金券:1-是;0否。默认为0
+     * @param AutoVoucher 是否自动选择代金券:1-是;0否。默认为0
+     */
+    public void setAutoVoucher(Long AutoVoucher) {
+        this.AutoVoucher = AutoVoucher;
+    }
+
     public CreateInstancePreRequest() {
     }
 
@@ -556,6 +579,9 @@ public class CreateInstancePreRequest extends AbstractModel{
         if (source.InstanceNum != null) {
             this.InstanceNum = new Long(source.InstanceNum);
         }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Long(source.AutoVoucher);
+        }
     }
 
 
@@ -583,6 +609,7 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
         this.setParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
+        this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
 
     }
 }

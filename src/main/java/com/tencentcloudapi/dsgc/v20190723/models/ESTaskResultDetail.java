@@ -103,6 +103,14 @@ public class ESTaskResultDetail extends AbstractModel{
     private String LevelName;
 
     /**
+    * 分级分数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LevelRiskScore")
+    @Expose
+    private Long LevelRiskScore;
+
+    /**
      * Get id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id id
@@ -302,6 +310,26 @@ public class ESTaskResultDetail extends AbstractModel{
         this.LevelName = LevelName;
     }
 
+    /**
+     * Get 分级分数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LevelRiskScore 分级分数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLevelRiskScore() {
+        return this.LevelRiskScore;
+    }
+
+    /**
+     * Set 分级分数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LevelRiskScore 分级分数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLevelRiskScore(Long LevelRiskScore) {
+        this.LevelRiskScore = LevelRiskScore;
+    }
+
     public ESTaskResultDetail() {
     }
 
@@ -343,6 +371,9 @@ public class ESTaskResultDetail extends AbstractModel{
         if (source.LevelName != null) {
             this.LevelName = new String(source.LevelName);
         }
+        if (source.LevelRiskScore != null) {
+            this.LevelRiskScore = new Long(source.LevelRiskScore);
+        }
     }
 
 
@@ -360,6 +391,7 @@ public class ESTaskResultDetail extends AbstractModel{
         this.setParamArraySimple(map, prefix + "CategoryArr.", this.CategoryArr);
         this.setParamSimple(map, prefix + "LevelId", this.LevelId);
         this.setParamSimple(map, prefix + "LevelName", this.LevelName);
+        this.setParamSimple(map, prefix + "LevelRiskScore", this.LevelRiskScore);
 
     }
 }

@@ -54,6 +54,14 @@ public class RiskItemInfo extends AbstractModel{
     private String DataSourceType;
 
     /**
+    * 资源地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceRegion")
+    @Expose
+    private String ResourceRegion;
+
+    /**
     * 资产名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -150,6 +158,14 @@ public class RiskItemInfo extends AbstractModel{
     private String ItemSubType;
 
     /**
+    * 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskSide")
+    @Expose
+    private String RiskSide;
+
+    /**
      * Get 最新风险项id 
      * @return Id 最新风险项id
      */
@@ -223,6 +239,26 @@ public class RiskItemInfo extends AbstractModel{
      */
     public void setDataSourceType(String DataSourceType) {
         this.DataSourceType = DataSourceType;
+    }
+
+    /**
+     * Get 资源地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceRegion 资源地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceRegion() {
+        return this.ResourceRegion;
+    }
+
+    /**
+     * Set 资源地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceRegion 资源地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceRegion(String ResourceRegion) {
+        this.ResourceRegion = ResourceRegion;
     }
 
     /**
@@ -465,6 +501,26 @@ public class RiskItemInfo extends AbstractModel{
         this.ItemSubType = ItemSubType;
     }
 
+    /**
+     * Get 风险面
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskSide() {
+        return this.RiskSide;
+    }
+
+    /**
+     * Set 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskSide(String RiskSide) {
+        this.RiskSide = RiskSide;
+    }
+
     public RiskItemInfo() {
     }
 
@@ -484,6 +540,9 @@ public class RiskItemInfo extends AbstractModel{
         }
         if (source.DataSourceType != null) {
             this.DataSourceType = new String(source.DataSourceType);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
         }
         if (source.AssetName != null) {
             this.AssetName = new String(source.AssetName);
@@ -524,6 +583,9 @@ public class RiskItemInfo extends AbstractModel{
         if (source.ItemSubType != null) {
             this.ItemSubType = new String(source.ItemSubType);
         }
+        if (source.RiskSide != null) {
+            this.RiskSide = new String(source.RiskSide);
+        }
     }
 
 
@@ -535,6 +597,7 @@ public class RiskItemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
         this.setParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
         this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
+        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "AssetName", this.AssetName);
         this.setParamSimple(map, prefix + "RiskType", this.RiskType);
         this.setParamSimple(map, prefix + "RiskName", this.RiskName);
@@ -547,6 +610,7 @@ public class RiskItemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LastProcessTime", this.LastProcessTime);
         this.setParamSimple(map, prefix + "IdentifyComplianceId", this.IdentifyComplianceId);
         this.setParamSimple(map, prefix + "ItemSubType", this.ItemSubType);
+        this.setParamSimple(map, prefix + "RiskSide", this.RiskSide);
 
     }
 }

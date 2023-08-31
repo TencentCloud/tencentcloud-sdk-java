@@ -37,14 +37,14 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 集群参数列表
+    * 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
     */
     @SerializedName("ClusterParamList")
     @Expose
     private ModifyParamItem [] ClusterParamList;
 
     /**
-    * 实例参数列表
+    * 实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
     */
     @SerializedName("InstanceParamList")
     @Expose
@@ -90,32 +90,32 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     }
 
     /**
-     * Get 集群参数列表 
-     * @return ClusterParamList 集群参数列表
+     * Get 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}] 
+     * @return ClusterParamList 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public ModifyParamItem [] getClusterParamList() {
         return this.ClusterParamList;
     }
 
     /**
-     * Set 集群参数列表
-     * @param ClusterParamList 集群参数列表
+     * Set 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+     * @param ClusterParamList 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public void setClusterParamList(ModifyParamItem [] ClusterParamList) {
         this.ClusterParamList = ClusterParamList;
     }
 
     /**
-     * Get 实例参数列表 
-     * @return InstanceParamList 实例参数列表
+     * Get 实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}] 
+     * @return InstanceParamList 实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public ModifyParamItem [] getInstanceParamList() {
         return this.InstanceParamList;
     }
 
     /**
-     * Set 实例参数列表
-     * @param InstanceParamList 实例参数列表
+     * Set 实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+     * @param InstanceParamList 实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public void setInstanceParamList(ModifyParamItem [] InstanceParamList) {
         this.InstanceParamList = InstanceParamList;

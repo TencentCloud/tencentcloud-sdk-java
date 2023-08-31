@@ -20,98 +20,77 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDSPAAssessmentHighRiskTop10OverviewRequest extends AbstractModel{
+public class TemplateInfo extends AbstractModel{
 
     /**
-    * dspa实例Id
-    */
-    @SerializedName("DspaId")
-    @Expose
-    private String DspaId;
-
-    /**
-    * 评估模版id
+    * 模版id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 过滤条件， rdb（数据库）cos（对象存储）
-不传就是全部
+    * 模版名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Filter")
+    @SerializedName("TemplateName")
     @Expose
-    private String Filter;
+    private String TemplateName;
 
     /**
-     * Get dspa实例Id 
-     * @return DspaId dspa实例Id
-     */
-    public String getDspaId() {
-        return this.DspaId;
-    }
-
-    /**
-     * Set dspa实例Id
-     * @param DspaId dspa实例Id
-     */
-    public void setDspaId(String DspaId) {
-        this.DspaId = DspaId;
-    }
-
-    /**
-     * Get 评估模版id 
-     * @return TemplateId 评估模版id
+     * Get 模版id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateId 模版id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 评估模版id
-     * @param TemplateId 评估模版id
+     * Set 模版id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateId 模版id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 过滤条件， rdb（数据库）cos（对象存储）
-不传就是全部 
-     * @return Filter 过滤条件， rdb（数据库）cos（对象存储）
-不传就是全部
+     * Get 模版名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateName 模版名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getFilter() {
-        return this.Filter;
+    public String getTemplateName() {
+        return this.TemplateName;
     }
 
     /**
-     * Set 过滤条件， rdb（数据库）cos（对象存储）
-不传就是全部
-     * @param Filter 过滤条件， rdb（数据库）cos（对象存储）
-不传就是全部
+     * Set 模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateName 模版名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFilter(String Filter) {
-        this.Filter = Filter;
+    public void setTemplateName(String TemplateName) {
+        this.TemplateName = TemplateName;
     }
 
-    public DescribeDSPAAssessmentHighRiskTop10OverviewRequest() {
+    public TemplateInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDSPAAssessmentHighRiskTop10OverviewRequest(DescribeDSPAAssessmentHighRiskTop10OverviewRequest source) {
-        if (source.DspaId != null) {
-            this.DspaId = new String(source.DspaId);
-        }
+    public TemplateInfo(TemplateInfo source) {
         if (source.TemplateId != null) {
             this.TemplateId = new Long(source.TemplateId);
         }
-        if (source.Filter != null) {
-            this.Filter = new String(source.Filter);
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
         }
     }
 
@@ -120,9 +99,8 @@ public class DescribeDSPAAssessmentHighRiskTop10OverviewRequest extends Abstract
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamSimple(map, prefix + "Filter", this.Filter);
+        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
 
     }
 }

@@ -87,6 +87,13 @@ public class ZoneInfo extends AbstractModel{
     private SaleInfo [] SalesInfo;
 
     /**
+    * 额外标识
+    */
+    @SerializedName("ExtraFlag")
+    @Expose
+    private String ExtraFlag;
+
+    /**
      * Get zone的id 
      * @return ZoneId zone的id
      */
@@ -185,7 +192,9 @@ public class ZoneInfo extends AbstractModel{
     /**
      * Get 额外标识 
      * @return Exflag 额外标识
+     * @deprecated
      */
+    @Deprecated
     public String getExflag() {
         return this.Exflag;
     }
@@ -193,7 +202,9 @@ public class ZoneInfo extends AbstractModel{
     /**
      * Set 额外标识
      * @param Exflag 额外标识
+     * @deprecated
      */
+    @Deprecated
     public void setExflag(String Exflag) {
         this.Exflag = Exflag;
     }
@@ -234,6 +245,22 @@ public class ZoneInfo extends AbstractModel{
         this.SalesInfo = SalesInfo;
     }
 
+    /**
+     * Get 额外标识 
+     * @return ExtraFlag 额外标识
+     */
+    public String getExtraFlag() {
+        return this.ExtraFlag;
+    }
+
+    /**
+     * Set 额外标识
+     * @param ExtraFlag 额外标识
+     */
+    public void setExtraFlag(String ExtraFlag) {
+        this.ExtraFlag = ExtraFlag;
+    }
+
     public ZoneInfo() {
     }
 
@@ -272,6 +299,9 @@ public class ZoneInfo extends AbstractModel{
                 this.SalesInfo[i] = new SaleInfo(source.SalesInfo[i]);
             }
         }
+        if (source.ExtraFlag != null) {
+            this.ExtraFlag = new String(source.ExtraFlag);
+        }
     }
 
 
@@ -288,6 +318,7 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Exflag", this.Exflag);
         this.setParamSimple(map, prefix + "SoldOut", this.SoldOut);
         this.setParamArrayObj(map, prefix + "SalesInfo.", this.SalesInfo);
+        this.setParamSimple(map, prefix + "ExtraFlag", this.ExtraFlag);
 
     }
 }

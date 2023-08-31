@@ -79,6 +79,22 @@ public class AssessmentRiskItem extends AbstractModel{
     private String [] SupportDataSource;
 
     /**
+    * 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskSide")
+    @Expose
+    private String RiskSide;
+
+    /**
+    * 关联模版列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReferTemplateList")
+    @Expose
+    private TemplateInfo [] ReferTemplateList;
+
+    /**
      * Get 脆弱项id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 脆弱项id
@@ -218,6 +234,46 @@ public class AssessmentRiskItem extends AbstractModel{
         this.SupportDataSource = SupportDataSource;
     }
 
+    /**
+     * Get 风险面
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskSide() {
+        return this.RiskSide;
+    }
+
+    /**
+     * Set 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskSide(String RiskSide) {
+        this.RiskSide = RiskSide;
+    }
+
+    /**
+     * Get 关联模版列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReferTemplateList 关联模版列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TemplateInfo [] getReferTemplateList() {
+        return this.ReferTemplateList;
+    }
+
+    /**
+     * Set 关联模版列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReferTemplateList 关联模版列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReferTemplateList(TemplateInfo [] ReferTemplateList) {
+        this.ReferTemplateList = ReferTemplateList;
+    }
+
     public AssessmentRiskItem() {
     }
 
@@ -250,6 +306,15 @@ public class AssessmentRiskItem extends AbstractModel{
                 this.SupportDataSource[i] = new String(source.SupportDataSource[i]);
             }
         }
+        if (source.RiskSide != null) {
+            this.RiskSide = new String(source.RiskSide);
+        }
+        if (source.ReferTemplateList != null) {
+            this.ReferTemplateList = new TemplateInfo[source.ReferTemplateList.length];
+            for (int i = 0; i < source.ReferTemplateList.length; i++) {
+                this.ReferTemplateList[i] = new TemplateInfo(source.ReferTemplateList[i]);
+            }
+        }
     }
 
 
@@ -264,6 +329,8 @@ public class AssessmentRiskItem extends AbstractModel{
         this.setParamSimple(map, prefix + "RiskType", this.RiskType);
         this.setParamSimple(map, prefix + "ReferTemplateCount", this.ReferTemplateCount);
         this.setParamArraySimple(map, prefix + "SupportDataSource.", this.SupportDataSource);
+        this.setParamSimple(map, prefix + "RiskSide", this.RiskSide);
+        this.setParamArrayObj(map, prefix + "ReferTemplateList.", this.ReferTemplateList);
 
     }
 }

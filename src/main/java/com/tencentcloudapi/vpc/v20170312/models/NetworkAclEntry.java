@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class NetworkAclEntry extends AbstractModel{
 
     /**
-    * 修改时间。
-    */
-    @SerializedName("ModifyTime")
-    @Expose
-    private String ModifyTime;
-
-    /**
     * 协议, 取值: TCP,UDP, ICMP, ALL。
     */
     @SerializedName("Protocol")
@@ -44,7 +37,7 @@ public class NetworkAclEntry extends AbstractModel{
     private String Port;
 
     /**
-    * 网段或IP(互斥)。
+    * 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -72,20 +65,34 @@ public class NetworkAclEntry extends AbstractModel{
     private String Description;
 
     /**
-     * Get 修改时间。 
-     * @return ModifyTime 修改时间。
-     */
-    public String getModifyTime() {
-        return this.ModifyTime;
-    }
+    * 修改时间。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
 
     /**
-     * Set 修改时间。
-     * @param ModifyTime 修改时间。
-     */
-    public void setModifyTime(String ModifyTime) {
-        this.ModifyTime = ModifyTime;
-    }
+    * 优先级，从1开始。	
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Long Priority;
+
+    /**
+    * IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkAclIpv4EntryId")
+    @Expose
+    private String NetworkAclIpv4EntryId;
+
+    /**
+    * IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkAclIpv6EntryId")
+    @Expose
+    private String NetworkAclIpv6EntryId;
 
     /**
      * Get 协议, 取值: TCP,UDP, ICMP, ALL。 
@@ -120,16 +127,16 @@ public class NetworkAclEntry extends AbstractModel{
     }
 
     /**
-     * Get 网段或IP(互斥)。 
-     * @return CidrBlock 网段或IP(互斥)。
+     * Get 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。 
+     * @return CidrBlock 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 网段或IP(互斥)。
-     * @param CidrBlock 网段或IP(互斥)。
+     * Set 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
+     * @param CidrBlock 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
@@ -183,6 +190,78 @@ public class NetworkAclEntry extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 修改时间。 
+     * @return ModifyTime 修改时间。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间。
+     * @param ModifyTime 修改时间。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * Get 优先级，从1开始。	 
+     * @return Priority 优先级，从1开始。	
+     */
+    public Long getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set 优先级，从1开始。	
+     * @param Priority 优先级，从1开始。	
+     */
+    public void setPriority(Long Priority) {
+        this.Priority = Priority;
+    }
+
+    /**
+     * Get IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkAclIpv4EntryId IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetworkAclIpv4EntryId() {
+        return this.NetworkAclIpv4EntryId;
+    }
+
+    /**
+     * Set IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkAclIpv4EntryId IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkAclIpv4EntryId(String NetworkAclIpv4EntryId) {
+        this.NetworkAclIpv4EntryId = NetworkAclIpv4EntryId;
+    }
+
+    /**
+     * Get IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkAclIpv6EntryId IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetworkAclIpv6EntryId() {
+        return this.NetworkAclIpv6EntryId;
+    }
+
+    /**
+     * Set IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkAclIpv6EntryId IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkAclIpv6EntryId(String NetworkAclIpv6EntryId) {
+        this.NetworkAclIpv6EntryId = NetworkAclIpv6EntryId;
+    }
+
     public NetworkAclEntry() {
     }
 
@@ -191,9 +270,6 @@ public class NetworkAclEntry extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public NetworkAclEntry(NetworkAclEntry source) {
-        if (source.ModifyTime != null) {
-            this.ModifyTime = new String(source.ModifyTime);
-        }
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
@@ -212,6 +288,18 @@ public class NetworkAclEntry extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.NetworkAclIpv4EntryId != null) {
+            this.NetworkAclIpv4EntryId = new String(source.NetworkAclIpv4EntryId);
+        }
+        if (source.NetworkAclIpv6EntryId != null) {
+            this.NetworkAclIpv6EntryId = new String(source.NetworkAclIpv6EntryId);
+        }
     }
 
 
@@ -219,13 +307,16 @@ public class NetworkAclEntry extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "NetworkAclIpv4EntryId", this.NetworkAclIpv4EntryId);
+        this.setParamSimple(map, prefix + "NetworkAclIpv6EntryId", this.NetworkAclIpv6EntryId);
 
     }
 }

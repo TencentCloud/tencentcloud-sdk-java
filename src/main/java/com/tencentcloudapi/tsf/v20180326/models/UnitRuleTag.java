@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UnitRuleTag extends AbstractModel{
 
     /**
-    * 标签类型 : U(用户标签)
+    * 标签类型 : U(用户标签)/S(系统标签)
     */
     @SerializedName("TagType")
     @Expose
@@ -67,16 +67,16 @@ public class UnitRuleTag extends AbstractModel{
     private String Id;
 
     /**
-     * Get 标签类型 : U(用户标签) 
-     * @return TagType 标签类型 : U(用户标签)
+     * Get 标签类型 : U(用户标签)/S(系统标签) 
+     * @return TagType 标签类型 : U(用户标签)/S(系统标签)
      */
     public String getTagType() {
         return this.TagType;
     }
 
     /**
-     * Set 标签类型 : U(用户标签)
-     * @param TagType 标签类型 : U(用户标签)
+     * Set 标签类型 : U(用户标签)/S(系统标签)
+     * @param TagType 标签类型 : U(用户标签)/S(系统标签)
      */
     public void setTagType(String TagType) {
         this.TagType = TagType;

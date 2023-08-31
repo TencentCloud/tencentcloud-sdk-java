@@ -263,6 +263,14 @@ public class DataSourceInfo extends AbstractModel{
     private Long ModifiedTime;
 
     /**
+    * 数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShowType")
+    @Expose
+    private String ShowType;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 若数据源列表为绑定数据库，则为db名称
@@ -862,6 +870,26 @@ public class DataSourceInfo extends AbstractModel{
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get 数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShowType 数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getShowType() {
+        return this.ShowType;
+    }
+
+    /**
+     * Set 数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShowType 数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShowType(String ShowType) {
+        this.ShowType = ShowType;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -960,6 +988,9 @@ public class DataSourceInfo extends AbstractModel{
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new Long(source.ModifiedTime);
         }
+        if (source.ShowType != null) {
+            this.ShowType = new String(source.ShowType);
+        }
     }
 
 
@@ -997,6 +1028,7 @@ public class DataSourceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ParamsString", this.ParamsString);
         this.setParamSimple(map, prefix + "BizParamsString", this.BizParamsString);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "ShowType", this.ShowType);
 
     }
 }

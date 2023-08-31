@@ -44,6 +44,13 @@ public class CreateBPWhiteListRequest extends AbstractModel{
     private String [] WhiteLists;
 
     /**
+    * 白名单备注
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 企业Id 
      * @return CompanyId 企业Id
      */
@@ -91,6 +98,22 @@ public class CreateBPWhiteListRequest extends AbstractModel{
         this.WhiteLists = WhiteLists;
     }
 
+    /**
+     * Get 白名单备注 
+     * @return Remark 白名单备注
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 白名单备注
+     * @param Remark 白名单备注
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public CreateBPWhiteListRequest() {
     }
 
@@ -111,6 +134,9 @@ public class CreateBPWhiteListRequest extends AbstractModel{
                 this.WhiteLists[i] = new String(source.WhiteLists[i]);
             }
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class CreateBPWhiteListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
         this.setParamSimple(map, prefix + "WhiteListType", this.WhiteListType);
         this.setParamArraySimple(map, prefix + "WhiteLists.", this.WhiteLists);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

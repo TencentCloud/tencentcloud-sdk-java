@@ -37,6 +37,14 @@ public class RiskCountInfo extends AbstractModel{
     private Long Count;
 
     /**
+    * 风险等级名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskLevelName")
+    @Expose
+    private String RiskLevelName;
+
+    /**
      * Get 风险等级 
      * @return RiskLevel 风险等级
      */
@@ -68,6 +76,26 @@ public class RiskCountInfo extends AbstractModel{
         this.Count = Count;
     }
 
+    /**
+     * Get 风险等级名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskLevelName 风险等级名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskLevelName() {
+        return this.RiskLevelName;
+    }
+
+    /**
+     * Set 风险等级名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskLevelName 风险等级名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskLevelName(String RiskLevelName) {
+        this.RiskLevelName = RiskLevelName;
+    }
+
     public RiskCountInfo() {
     }
 
@@ -82,6 +110,9 @@ public class RiskCountInfo extends AbstractModel{
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
+        if (source.RiskLevelName != null) {
+            this.RiskLevelName = new String(source.RiskLevelName);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class RiskCountInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "RiskLevelName", this.RiskLevelName);
 
     }
 }

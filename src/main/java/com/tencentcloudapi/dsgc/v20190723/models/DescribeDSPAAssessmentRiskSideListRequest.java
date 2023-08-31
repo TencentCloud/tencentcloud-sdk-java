@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDSPAAssessmentRiskDistributionOverviewRequest extends AbstractModel{
+public class DescribeDSPAAssessmentRiskSideListRequest extends AbstractModel{
 
     /**
-    * dspa实例Id
+    * DSPA实例ID
     */
     @SerializedName("DspaId")
     @Expose
@@ -37,24 +37,16 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewRequest extends Abstr
     private Long TemplateId;
 
     /**
-    * 风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部）
-    */
-    @SerializedName("Filter")
-    @Expose
-    private String Filter;
-
-    /**
-     * Get dspa实例Id 
-     * @return DspaId dspa实例Id
+     * Get DSPA实例ID 
+     * @return DspaId DSPA实例ID
      */
     public String getDspaId() {
         return this.DspaId;
     }
 
     /**
-     * Set dspa实例Id
-     * @param DspaId dspa实例Id
+     * Set DSPA实例ID
+     * @param DspaId DSPA实例ID
      */
     public void setDspaId(String DspaId) {
         this.DspaId = DspaId;
@@ -76,42 +68,19 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewRequest extends Abstr
         this.TemplateId = TemplateId;
     }
 
-    /**
-     * Get 风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部） 
-     * @return Filter 风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部）
-     */
-    public String getFilter() {
-        return this.Filter;
-    }
-
-    /**
-     * Set 风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部）
-     * @param Filter 风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部）
-     */
-    public void setFilter(String Filter) {
-        this.Filter = Filter;
-    }
-
-    public DescribeDSPAAssessmentRiskDistributionOverviewRequest() {
+    public DescribeDSPAAssessmentRiskSideListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDSPAAssessmentRiskDistributionOverviewRequest(DescribeDSPAAssessmentRiskDistributionOverviewRequest source) {
+    public DescribeDSPAAssessmentRiskSideListRequest(DescribeDSPAAssessmentRiskSideListRequest source) {
         if (source.DspaId != null) {
             this.DspaId = new String(source.DspaId);
         }
         if (source.TemplateId != null) {
             this.TemplateId = new Long(source.TemplateId);
-        }
-        if (source.Filter != null) {
-            this.Filter = new String(source.Filter);
         }
     }
 
@@ -122,7 +91,6 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewRequest extends Abstr
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamSimple(map, prefix + "Filter", this.Filter);
 
     }
 }

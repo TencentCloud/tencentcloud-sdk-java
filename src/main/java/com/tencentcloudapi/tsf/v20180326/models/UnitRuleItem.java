@@ -91,7 +91,7 @@ public class UnitRuleItem extends AbstractModel{
     private UnitRuleTag [] UnitRuleTagList;
 
     /**
-    * 项目id
+    * 规则项索引
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemIndex")
@@ -279,9 +279,9 @@ public class UnitRuleItem extends AbstractModel{
     }
 
     /**
-     * Get 项目id
+     * Get 规则项索引
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ItemIndex 项目id
+     * @return ItemIndex 规则项索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getItemIndex() {
@@ -289,9 +289,9 @@ public class UnitRuleItem extends AbstractModel{
     }
 
     /**
-     * Set 项目id
+     * Set 规则项索引
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ItemIndex 项目id
+     * @param ItemIndex 规则项索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemIndex(Long ItemIndex) {

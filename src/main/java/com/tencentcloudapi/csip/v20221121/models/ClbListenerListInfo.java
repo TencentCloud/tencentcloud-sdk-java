@@ -119,6 +119,14 @@ public class ClbListenerListInfo extends AbstractModel{
     private String Domain;
 
     /**
+    * 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerDomain")
+    @Expose
+    private String LoadBalancerDomain;
+
+    /**
      * Get 监听器id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListenerId 监听器id
@@ -358,6 +366,26 @@ public class ClbListenerListInfo extends AbstractModel{
         this.Domain = Domain;
     }
 
+    /**
+     * Get 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerDomain 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancerDomain() {
+        return this.LoadBalancerDomain;
+    }
+
+    /**
+     * Set 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerDomain 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerDomain(String LoadBalancerDomain) {
+        this.LoadBalancerDomain = LoadBalancerDomain;
+    }
+
     public ClbListenerListInfo() {
     }
 
@@ -402,6 +430,9 @@ public class ClbListenerListInfo extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.LoadBalancerDomain != null) {
+            this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
+        }
     }
 
 
@@ -421,6 +452,7 @@ public class ClbListenerListInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
 
     }
 }
