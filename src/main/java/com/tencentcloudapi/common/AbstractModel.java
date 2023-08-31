@@ -166,11 +166,11 @@ public abstract class AbstractModel {
   
   public Map<String, String> header = new HashMap<String, String>();
 
-  public Map<String, String> getHeader() {
+  public Map<String, String> GetHeader() {
     return header;
   }
 
-  public void setHeader(Map<String, String> header) {
+  public void SetHeader(Map<String, String> header) {
     this.header = header;
   }
 }

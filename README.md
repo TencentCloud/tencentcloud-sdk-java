@@ -457,7 +457,7 @@ cpf.getHttpProfile().setX509TrustManager(new MyX509TrustManagerImpl());
 DescribeInstancesRequest request = new DescribeInstancesRequest();
 Map<String, String> header = new HashMap<String, String>();
 header.put("X-TC-TraceId","ffe0c072-8a5d-4e17-8887-a8a60252abca");
-request.setHeader(header);
+request.SetHeader(header);
 ```
 
 ## CommonClientRequest示例
@@ -466,7 +466,7 @@ request.setHeader(header);
 CommonClientRequest request = new CommonClientRequest();
 Map<String, String> header = new HashMap<String, String>();
 header.put("X-TC-TraceId","ffe0c072-8a5d-4e17-8887-a8a60252abca");
-request.setHeader(header);
+request.SetHeader(header);
 ```
 
 # 其他问题
