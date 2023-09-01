@@ -79,6 +79,14 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
     private String AutoScalerId;
 
     /**
+    * 指标伸缩行为配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Behavior")
+    @Expose
+    private AutoScalerBehavior Behavior;
+
+    /**
      * Get 最大副本数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxReplicas 最大副本数
@@ -143,7 +151,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getCreateTime() {
         return this.CreateTime;
     }
@@ -153,7 +163,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
@@ -163,7 +175,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getModifyTime() {
         return this.ModifyTime;
     }
@@ -173,7 +187,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
@@ -183,7 +199,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StrategyId 弹性策略ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getStrategyId() {
         return this.StrategyId;
     }
@@ -193,7 +211,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 弹性策略ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setStrategyId(String StrategyId) {
         this.StrategyId = StrategyId;
     }
@@ -203,7 +223,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AutoScalerId 指标配置ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getAutoScalerId() {
         return this.AutoScalerId;
     }
@@ -213,9 +235,31 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoScalerId 指标配置ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setAutoScalerId(String AutoScalerId) {
         this.AutoScalerId = AutoScalerId;
+    }
+
+    /**
+     * Get 指标伸缩行为配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Behavior 指标伸缩行为配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AutoScalerBehavior getBehavior() {
+        return this.Behavior;
+    }
+
+    /**
+     * Set 指标伸缩行为配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Behavior 指标伸缩行为配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBehavior(AutoScalerBehavior Behavior) {
+        this.Behavior = Behavior;
     }
 
     public CloudNativeAPIGatewayStrategyAutoScalerConfig() {
@@ -250,6 +294,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
         if (source.AutoScalerId != null) {
             this.AutoScalerId = new String(source.AutoScalerId);
         }
+        if (source.Behavior != null) {
+            this.Behavior = new AutoScalerBehavior(source.Behavior);
+        }
     }
 
 
@@ -264,6 +311,7 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "StrategyId", this.StrategyId);
         this.setParamSimple(map, prefix + "AutoScalerId", this.AutoScalerId);
+        this.setParamObj(map, prefix + "Behavior.", this.Behavior);
 
     }
 }

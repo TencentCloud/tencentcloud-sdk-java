@@ -333,6 +333,48 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取扫描任务列表
+     * @param req DescribeScanTaskListRequest
+     * @return DescribeScanTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanTaskListResponse DescribeScanTaskList(DescribeScanTaskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScanTaskListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScanTaskListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScanTaskList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *立体防护中心查询漏洞信息
+     * @param req DescribeSearchBugInfoRequest
+     * @return DescribeSearchBugInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSearchBugInfoResponse DescribeSearchBugInfo(DescribeSearchBugInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSearchBugInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSearchBugInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSearchBugInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取子网列表
      * @param req DescribeSubnetAssetsRequest
      * @return DescribeSubnetAssetsResponse
@@ -346,6 +388,48 @@ public class CsipClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSubnetAssetsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSubnetAssets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取任务扫描报告列表
+     * @param req DescribeTaskLogListRequest
+     * @return DescribeTaskLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskLogListResponse DescribeTaskLogList(DescribeTaskLogListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskLogListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskLogListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskLogList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取报告下载的临时链接
+     * @param req DescribeTaskLogURLRequest
+     * @return DescribeTaskLogURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskLogURLResponse DescribeTaskLogURL(DescribeTaskLogURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskLogURLResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskLogURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskLogURL");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

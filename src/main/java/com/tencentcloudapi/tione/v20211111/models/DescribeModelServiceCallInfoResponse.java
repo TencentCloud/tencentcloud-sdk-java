@@ -47,6 +47,22 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel{
     private DefaultNginxGatewayCallInfo DefaultNginxGatewayCallInfo;
 
     /**
+    * 太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TJCallInfo")
+    @Expose
+    private TJCallInfo TJCallInfo;
+
+    /**
+    * 内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntranetCallInfo")
+    @Expose
+    private IntranetCallInfo IntranetCallInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -114,6 +130,46 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TJCallInfo 太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TJCallInfo getTJCallInfo() {
+        return this.TJCallInfo;
+    }
+
+    /**
+     * Set 太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TJCallInfo 太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTJCallInfo(TJCallInfo TJCallInfo) {
+        this.TJCallInfo = TJCallInfo;
+    }
+
+    /**
+     * Get 内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntranetCallInfo 内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IntranetCallInfo getIntranetCallInfo() {
+        return this.IntranetCallInfo;
+    }
+
+    /**
+     * Set 内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntranetCallInfo 内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntranetCallInfo(IntranetCallInfo IntranetCallInfo) {
+        this.IntranetCallInfo = IntranetCallInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -146,6 +202,12 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel{
         if (source.DefaultNginxGatewayCallInfo != null) {
             this.DefaultNginxGatewayCallInfo = new DefaultNginxGatewayCallInfo(source.DefaultNginxGatewayCallInfo);
         }
+        if (source.TJCallInfo != null) {
+            this.TJCallInfo = new TJCallInfo(source.TJCallInfo);
+        }
+        if (source.IntranetCallInfo != null) {
+            this.IntranetCallInfo = new IntranetCallInfo(source.IntranetCallInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -159,6 +221,8 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ServiceCallInfo.", this.ServiceCallInfo);
         this.setParamObj(map, prefix + "InferGatewayCallInfo.", this.InferGatewayCallInfo);
         this.setParamObj(map, prefix + "DefaultNginxGatewayCallInfo.", this.DefaultNginxGatewayCallInfo);
+        this.setParamObj(map, prefix + "TJCallInfo.", this.TJCallInfo);
+        this.setParamObj(map, prefix + "IntranetCallInfo.", this.IntranetCallInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -30,6 +30,13 @@ public class DeleteModelServiceRequest extends AbstractModel{
     private String ServiceId;
 
     /**
+    * 服务分类
+    */
+    @SerializedName("ServiceCategory")
+    @Expose
+    private String ServiceCategory;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -45,6 +52,22 @@ public class DeleteModelServiceRequest extends AbstractModel{
         this.ServiceId = ServiceId;
     }
 
+    /**
+     * Get 服务分类 
+     * @return ServiceCategory 服务分类
+     */
+    public String getServiceCategory() {
+        return this.ServiceCategory;
+    }
+
+    /**
+     * Set 服务分类
+     * @param ServiceCategory 服务分类
+     */
+    public void setServiceCategory(String ServiceCategory) {
+        this.ServiceCategory = ServiceCategory;
+    }
+
     public DeleteModelServiceRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DeleteModelServiceRequest extends AbstractModel{
         if (source.ServiceId != null) {
             this.ServiceId = new String(source.ServiceId);
         }
+        if (source.ServiceCategory != null) {
+            this.ServiceCategory = new String(source.ServiceCategory);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DeleteModelServiceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
 
     }
 }

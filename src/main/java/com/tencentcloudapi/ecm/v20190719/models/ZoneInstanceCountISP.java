@@ -69,11 +69,18 @@ CMCC：中国移动
     private String [] PrivateIpAddresses;
 
     /**
-    * 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+    * 为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
     private Long Ipv6AddressCount;
+
+    /**
+    * 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+    */
+    @SerializedName("Ipv6SubnetIds")
+    @Expose
+    private String [] Ipv6SubnetIds;
 
     /**
      * Get 创建实例的可用区。 
@@ -188,19 +195,35 @@ CMCC：中国移动
     }
 
     /**
-     * Get 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。 
-     * @return Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+     * Get 为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3 
+     * @return Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
      */
     public Long getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
     /**
-     * Set 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
-     * @param Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+     * Set 为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
+     * @param Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
      */
     public void setIpv6AddressCount(Long Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;
+    }
+
+    /**
+     * Get 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段 
+     * @return Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+     */
+    public String [] getIpv6SubnetIds() {
+        return this.Ipv6SubnetIds;
+    }
+
+    /**
+     * Set 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+     * @param Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+     */
+    public void setIpv6SubnetIds(String [] Ipv6SubnetIds) {
+        this.Ipv6SubnetIds = Ipv6SubnetIds;
     }
 
     public ZoneInstanceCountISP() {
@@ -235,6 +258,12 @@ CMCC：中国移动
         if (source.Ipv6AddressCount != null) {
             this.Ipv6AddressCount = new Long(source.Ipv6AddressCount);
         }
+        if (source.Ipv6SubnetIds != null) {
+            this.Ipv6SubnetIds = new String[source.Ipv6SubnetIds.length];
+            for (int i = 0; i < source.Ipv6SubnetIds.length; i++) {
+                this.Ipv6SubnetIds[i] = new String(source.Ipv6SubnetIds[i]);
+            }
+        }
     }
 
 
@@ -249,6 +278,7 @@ CMCC：中国移动
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+        this.setParamArraySimple(map, prefix + "Ipv6SubnetIds.", this.Ipv6SubnetIds);
 
     }
 }

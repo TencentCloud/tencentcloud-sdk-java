@@ -263,6 +263,14 @@ HYBRID_PAID:
     private String Command;
 
     /**
+    * 开启TIONE内网访问外部设置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceEIP")
+    @Expose
+    private ServiceEIP ServiceEIP;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -874,6 +882,26 @@ HYBRID_PAID:
         this.Command = Command;
     }
 
+    /**
+     * Get 开启TIONE内网访问外部设置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceEIP 开启TIONE内网访问外部设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceEIP getServiceEIP() {
+        return this.ServiceEIP;
+    }
+
+    /**
+     * Set 开启TIONE内网访问外部设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceEIP 开启TIONE内网访问外部设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceEIP(ServiceEIP ServiceEIP) {
+        this.ServiceEIP = ServiceEIP;
+    }
+
     public ServiceInfo() {
     }
 
@@ -981,6 +1009,9 @@ HYBRID_PAID:
         if (source.Command != null) {
             this.Command = new String(source.Command);
         }
+        if (source.ServiceEIP != null) {
+            this.ServiceEIP = new ServiceEIP(source.ServiceEIP);
+        }
     }
 
 
@@ -1017,6 +1048,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
         this.setParamObj(map, prefix + "InferCodeInfo.", this.InferCodeInfo);
         this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
 
     }
 }

@@ -37,22 +37,28 @@ public class SendChatMessageRequest extends AbstractModel{
     private String Question;
 
     /**
-    * 会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1
+    * 会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * 使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
+    * 使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
+    * 搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。
     */
     @SerializedName("SearchSource")
     @Expose
@@ -91,52 +97,76 @@ public class SendChatMessageRequest extends AbstractModel{
     }
 
     /**
-     * Get 会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1 
-     * @return ModelVersion 会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1
+     * Get 会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。 
+     * @return ModelVersion 会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set 会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1
-     * @param ModelVersion 会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1
+     * Set 会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。
+     * @param ModelVersion 会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get 使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答 
-     * @return Mode 使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
+     * Get 使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。 
+     * @return Mode 使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
-     * @param Mode 使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
+     * Set 使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
+     * @param Mode 使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。 
-     * @return SearchSource 搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
+     * Get 搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。 
+     * @return SearchSource 搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。
      */
     public String getSearchSource() {
         return this.SearchSource;
     }
 
     /**
-     * Set 搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
-     * @param SearchSource 搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
+     * Set 搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。
+     * @param SearchSource 搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。
      */
     public void setSearchSource(String SearchSource) {
         this.SearchSource = SearchSource;

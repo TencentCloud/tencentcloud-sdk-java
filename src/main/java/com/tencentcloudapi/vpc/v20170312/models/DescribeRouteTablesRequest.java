@@ -64,7 +64,7 @@ LOCAL_GATEWAY：本地网关。
     private String Offset;
 
     /**
-    * 请求对象个数。
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -199,16 +199,16 @@ LOCAL_GATEWAY：本地网关。
     }
 
     /**
-     * Get 请求对象个数。 
-     * @return Limit 请求对象个数。
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 请求对象个数。
-     * @param Limit 请求对象个数。
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

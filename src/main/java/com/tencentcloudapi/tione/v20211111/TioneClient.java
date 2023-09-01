@@ -39,7 +39,9 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *与大模型聊天
+     *该接口支持与两种类型大模型的聊天。
+1. 与多行业多场景大模型的在线体验聊天
+2. 与自行部署的开源大模型的聊天
      * @param req ChatCompletionRequest
      * @return ChatCompletionResponse
      * @throws TencentCloudSDKException
@@ -711,7 +713,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *获取训练、推理、Notebook服务的日志
+     *获取训练、推理、Notebook服务的日志 API
      * @param req DescribeLogsRequest
      * @return DescribeLogsResponse
      * @throws TencentCloudSDKException
@@ -1341,7 +1343,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *LLM模型的对话请求发送接口
+     *这是一个供您体验大模型聊天的接口。
      * @param req SendChatMessageRequest
      * @return SendChatMessageResponse
      * @throws TencentCloudSDKException

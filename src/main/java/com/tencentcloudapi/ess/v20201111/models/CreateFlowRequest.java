@@ -45,6 +45,13 @@ public class CreateFlowRequest extends AbstractModel{
     private FlowCreateApprover [] Approvers;
 
     /**
+    * 签署流程描述,最大长度1000个字符
+    */
+    @SerializedName("FlowDescription")
+    @Expose
+    private String FlowDescription;
+
+    /**
     * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
     */
     @SerializedName("FlowType")
@@ -60,6 +67,7 @@ public class CreateFlowRequest extends AbstractModel{
 
     /**
     * 签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
     */
     @SerializedName("DeadLine")
@@ -79,13 +87,6 @@ public class CreateFlowRequest extends AbstractModel{
     @SerializedName("UserData")
     @Expose
     private String UserData;
-
-    /**
-    * 签署流程描述,最大长度1000个字符
-    */
-    @SerializedName("FlowDescription")
-    @Expose
-    private String FlowDescription;
 
     /**
     * 发送类型：
@@ -203,6 +204,22 @@ false：有序签
     }
 
     /**
+     * Get 签署流程描述,最大长度1000个字符 
+     * @return FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public String getFlowDescription() {
+        return this.FlowDescription;
+    }
+
+    /**
+     * Set 签署流程描述,最大长度1000个字符
+     * @param FlowDescription 签署流程描述,最大长度1000个字符
+     */
+    public void setFlowDescription(String FlowDescription) {
+        this.FlowDescription = FlowDescription;
+    }
+
+    /**
      * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符 
      * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      */
@@ -236,8 +253,10 @@ false：有序签
 
     /**
      * Get 签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后 
      * @return DeadLine 签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      */
     public Long getDeadLine() {
@@ -246,8 +265,10 @@ false：有序签
 
     /**
      * Set 签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      * @param DeadLine 签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      */
     public void setDeadLine(Long DeadLine) {
@@ -284,22 +305,6 @@ false：有序签
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
-    }
-
-    /**
-     * Get 签署流程描述,最大长度1000个字符 
-     * @return FlowDescription 签署流程描述,最大长度1000个字符
-     */
-    public String getFlowDescription() {
-        return this.FlowDescription;
-    }
-
-    /**
-     * Set 签署流程描述,最大长度1000个字符
-     * @param FlowDescription 签署流程描述,最大长度1000个字符
-     */
-    public void setFlowDescription(String FlowDescription) {
-        this.FlowDescription = FlowDescription;
     }
 
     /**
@@ -486,6 +491,9 @@ false：有序签
                 this.Approvers[i] = new FlowCreateApprover(source.Approvers[i]);
             }
         }
+        if (source.FlowDescription != null) {
+            this.FlowDescription = new String(source.FlowDescription);
+        }
         if (source.FlowType != null) {
             this.FlowType = new String(source.FlowType);
         }
@@ -500,9 +508,6 @@ false：有序签
         }
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
-        }
-        if (source.FlowDescription != null) {
-            this.FlowDescription = new String(source.FlowDescription);
         }
         if (source.Unordered != null) {
             this.Unordered = new Boolean(source.Unordered);
@@ -541,12 +546,12 @@ false：有序签
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "DeadLine", this.DeadLine);
         this.setParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
-        this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);

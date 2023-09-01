@@ -31,6 +31,22 @@ public class CompareTableItem extends AbstractModel{
     private String TableName;
 
     /**
+    * column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColumnMode")
+    @Expose
+    private String ColumnMode;
+
+    /**
+    * 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Columns")
+    @Expose
+    private CompareColumnItem [] Columns;
+
+    /**
      * Get 表名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableName 表名称
@@ -50,6 +66,46 @@ public class CompareTableItem extends AbstractModel{
         this.TableName = TableName;
     }
 
+    /**
+     * Get column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColumnMode column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getColumnMode() {
+        return this.ColumnMode;
+    }
+
+    /**
+     * Set column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColumnMode column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumnMode(String ColumnMode) {
+        this.ColumnMode = ColumnMode;
+    }
+
+    /**
+     * Get 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Columns 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CompareColumnItem [] getColumns() {
+        return this.Columns;
+    }
+
+    /**
+     * Set 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Columns 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumns(CompareColumnItem [] Columns) {
+        this.Columns = Columns;
+    }
+
     public CompareTableItem() {
     }
 
@@ -61,6 +117,15 @@ public class CompareTableItem extends AbstractModel{
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.ColumnMode != null) {
+            this.ColumnMode = new String(source.ColumnMode);
+        }
+        if (source.Columns != null) {
+            this.Columns = new CompareColumnItem[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new CompareColumnItem(source.Columns[i]);
+            }
+        }
     }
 
 
@@ -69,6 +134,8 @@ public class CompareTableItem extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "ColumnMode", this.ColumnMode);
+        this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
 
     }
 }

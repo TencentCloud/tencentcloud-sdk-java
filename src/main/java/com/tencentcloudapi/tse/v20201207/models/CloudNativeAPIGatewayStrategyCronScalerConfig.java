@@ -107,7 +107,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getCreateTime() {
         return this.CreateTime;
     }
@@ -117,7 +119,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
@@ -127,7 +131,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getModifyTime() {
         return this.ModifyTime;
     }
@@ -137,7 +143,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
@@ -147,7 +155,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StrategyId 弹性策略ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getStrategyId() {
         return this.StrategyId;
     }
@@ -157,7 +167,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 弹性策略ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setStrategyId(String StrategyId) {
         this.StrategyId = StrategyId;
     }

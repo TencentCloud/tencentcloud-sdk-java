@@ -30,13 +30,6 @@ public class DescribeLogsRequest extends AbstractModel{
     private String Service;
 
     /**
-    * 查询哪个Pod的日志（支持结尾通配符*)
-    */
-    @SerializedName("PodName")
-    @Expose
-    private String PodName;
-
-    /**
     * 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
     */
     @SerializedName("StartTime")
@@ -56,6 +49,13 @@ public class DescribeLogsRequest extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 查询哪个Pod的日志（支持结尾通配符*)
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
 
     /**
     * 排序方向（可选值为ASC, DESC ），默认为DESC
@@ -106,22 +106,6 @@ public class DescribeLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询哪个Pod的日志（支持结尾通配符*) 
-     * @return PodName 查询哪个Pod的日志（支持结尾通配符*)
-     */
-    public String getPodName() {
-        return this.PodName;
-    }
-
-    /**
-     * Set 查询哪个Pod的日志（支持结尾通配符*)
-     * @param PodName 查询哪个Pod的日志（支持结尾通配符*)
-     */
-    public void setPodName(String PodName) {
-        this.PodName = PodName;
-    }
-
-    /**
      * Get 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时 
      * @return StartTime 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
      */
@@ -167,6 +151,22 @@ public class DescribeLogsRequest extends AbstractModel{
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get 查询哪个Pod的日志（支持结尾通配符*) 
+     * @return PodName 查询哪个Pod的日志（支持结尾通配符*)
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set 查询哪个Pod的日志（支持结尾通配符*)
+     * @param PodName 查询哪个Pod的日志（支持结尾通配符*)
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
     }
 
     /**
@@ -260,9 +260,6 @@ public class DescribeLogsRequest extends AbstractModel{
         if (source.Service != null) {
             this.Service = new String(source.Service);
         }
-        if (source.PodName != null) {
-            this.PodName = new String(source.PodName);
-        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -271,6 +268,9 @@ public class DescribeLogsRequest extends AbstractModel{
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
         }
         if (source.Order != null) {
             this.Order = new String(source.Order);
@@ -295,10 +295,10 @@ public class DescribeLogsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);
-        this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "Context", this.Context);

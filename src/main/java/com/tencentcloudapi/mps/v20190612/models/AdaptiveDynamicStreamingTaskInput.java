@@ -74,6 +74,14 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     private AddOnSubtitle [] AddOnSubtitles;
 
     /**
+    * Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DrmInfo")
+    @Expose
+    private DrmInfo DrmInfo;
+
+    /**
      * Get 转自适应码流模板 ID。 
      * @return Definition 转自适应码流模板 ID。
      */
@@ -193,6 +201,26 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
         this.AddOnSubtitles = AddOnSubtitles;
     }
 
+    /**
+     * Get Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DrmInfo Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DrmInfo getDrmInfo() {
+        return this.DrmInfo;
+    }
+
+    /**
+     * Set Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DrmInfo Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDrmInfo(DrmInfo DrmInfo) {
+        this.DrmInfo = DrmInfo;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -228,6 +256,9 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
                 this.AddOnSubtitles[i] = new AddOnSubtitle(source.AddOnSubtitles[i]);
             }
         }
+        if (source.DrmInfo != null) {
+            this.DrmInfo = new DrmInfo(source.DrmInfo);
+        }
     }
 
 
@@ -242,6 +273,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
         this.setParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
         this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
+        this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
 
     }
 }

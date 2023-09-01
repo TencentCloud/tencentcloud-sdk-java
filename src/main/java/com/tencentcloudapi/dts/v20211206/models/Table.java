@@ -47,6 +47,22 @@ public class Table extends AbstractModel{
     private String FilterCondition;
 
     /**
+    * 是否同步表中所有列，All：当前表下的所有列,Partial(ModifySyncJobConfig接口里的对应字段ColumnMode暂不支持Partial)：当前表下的部分列，通过填充Columns字段详细表信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColumnMode")
+    @Expose
+    private String ColumnMode;
+
+    /**
+    * 同步的的列信息，当ColumnMode为Partial时，必填
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Columns")
+    @Expose
+    private Column [] Columns;
+
+    /**
     * 同步临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在同步过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -123,6 +139,46 @@ public class Table extends AbstractModel{
     }
 
     /**
+     * Get 是否同步表中所有列，All：当前表下的所有列,Partial(ModifySyncJobConfig接口里的对应字段ColumnMode暂不支持Partial)：当前表下的部分列，通过填充Columns字段详细表信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColumnMode 是否同步表中所有列，All：当前表下的所有列,Partial(ModifySyncJobConfig接口里的对应字段ColumnMode暂不支持Partial)：当前表下的部分列，通过填充Columns字段详细表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getColumnMode() {
+        return this.ColumnMode;
+    }
+
+    /**
+     * Set 是否同步表中所有列，All：当前表下的所有列,Partial(ModifySyncJobConfig接口里的对应字段ColumnMode暂不支持Partial)：当前表下的部分列，通过填充Columns字段详细表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColumnMode 是否同步表中所有列，All：当前表下的所有列,Partial(ModifySyncJobConfig接口里的对应字段ColumnMode暂不支持Partial)：当前表下的部分列，通过填充Columns字段详细表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumnMode(String ColumnMode) {
+        this.ColumnMode = ColumnMode;
+    }
+
+    /**
+     * Get 同步的的列信息，当ColumnMode为Partial时，必填
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Columns 同步的的列信息，当ColumnMode为Partial时，必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Column [] getColumns() {
+        return this.Columns;
+    }
+
+    /**
+     * Set 同步的的列信息，当ColumnMode为Partial时，必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Columns 同步的的列信息，当ColumnMode为Partial时，必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumns(Column [] Columns) {
+        this.Columns = Columns;
+    }
+
+    /**
      * Get 同步临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在同步过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TmpTables 同步临时表，注意此配置与NewTableName互斥，只能使用其中一种。当配置的同步对象为表级别且TableEditMode为pt时此项有意义，针对pt-osc等工具在同步过程中产生的临时表进行同步，需要提前将可能的临时表配置在这里，否则不会同步任何临时表。示例，如要对t1进行pt-osc操作，此项配置应该为["\_t1\_new","\_t1\_old"]；如要对t1进行gh-ost操作，此项配置应该为["\_t1\_ghc","\_t1\_gho","\_t1\_del"]，pt-osc与gh-ost产生的临时表可同时配置。
@@ -179,6 +235,15 @@ public class Table extends AbstractModel{
         if (source.FilterCondition != null) {
             this.FilterCondition = new String(source.FilterCondition);
         }
+        if (source.ColumnMode != null) {
+            this.ColumnMode = new String(source.ColumnMode);
+        }
+        if (source.Columns != null) {
+            this.Columns = new Column[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new Column(source.Columns[i]);
+            }
+        }
         if (source.TmpTables != null) {
             this.TmpTables = new String[source.TmpTables.length];
             for (int i = 0; i < source.TmpTables.length; i++) {
@@ -198,6 +263,8 @@ public class Table extends AbstractModel{
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "NewTableName", this.NewTableName);
         this.setParamSimple(map, prefix + "FilterCondition", this.FilterCondition);
+        this.setParamSimple(map, prefix + "ColumnMode", this.ColumnMode);
+        this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
         this.setParamArraySimple(map, prefix + "TmpTables.", this.TmpTables);
         this.setParamSimple(map, prefix + "TableEditMode", this.TableEditMode);
 

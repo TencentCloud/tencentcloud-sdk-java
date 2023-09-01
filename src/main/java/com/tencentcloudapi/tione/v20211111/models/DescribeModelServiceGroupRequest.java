@@ -30,6 +30,13 @@ public class DescribeModelServiceGroupRequest extends AbstractModel{
     private String ServiceGroupId;
 
     /**
+    * 服务分类
+    */
+    @SerializedName("ServiceCategory")
+    @Expose
+    private String ServiceCategory;
+
+    /**
      * Get 服务组ID 
      * @return ServiceGroupId 服务组ID
      */
@@ -45,6 +52,22 @@ public class DescribeModelServiceGroupRequest extends AbstractModel{
         this.ServiceGroupId = ServiceGroupId;
     }
 
+    /**
+     * Get 服务分类 
+     * @return ServiceCategory 服务分类
+     */
+    public String getServiceCategory() {
+        return this.ServiceCategory;
+    }
+
+    /**
+     * Set 服务分类
+     * @param ServiceCategory 服务分类
+     */
+    public void setServiceCategory(String ServiceCategory) {
+        this.ServiceCategory = ServiceCategory;
+    }
+
     public DescribeModelServiceGroupRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeModelServiceGroupRequest extends AbstractModel{
         if (source.ServiceGroupId != null) {
             this.ServiceGroupId = new String(source.ServiceGroupId);
         }
+        if (source.ServiceCategory != null) {
+            this.ServiceCategory = new String(source.ServiceCategory);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeModelServiceGroupRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceGroupId", this.ServiceGroupId);
+        this.setParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
 
     }
 }

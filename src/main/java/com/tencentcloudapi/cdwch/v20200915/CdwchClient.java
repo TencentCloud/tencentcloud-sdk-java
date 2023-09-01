@@ -438,7 +438,7 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
-     *针对ck账号的权限做管控（新版）
+     *针对集群账号的权限做管控（新版）
      * @param req ModifyUserNewPrivilegeRequest
      * @return ModifyUserNewPrivilegeResponse
      * @throws TencentCloudSDKException

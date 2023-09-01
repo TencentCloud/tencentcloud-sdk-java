@@ -63,7 +63,7 @@ public class CompareObjectItem extends AbstractModel{
     private CompareTableItem [] Tables;
 
     /**
-    * 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+    * 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewMode")
@@ -71,7 +71,7 @@ public class CompareObjectItem extends AbstractModel{
     private String ViewMode;
 
     /**
-    * 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+    * 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Views")
@@ -179,9 +179,9 @@ public class CompareObjectItem extends AbstractModel{
     }
 
     /**
-     * Get 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * Get 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * @return ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewMode() {
@@ -189,9 +189,9 @@ public class CompareObjectItem extends AbstractModel{
     }
 
     /**
-     * Set 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * Set 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * @param ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewMode(String ViewMode) {
@@ -199,9 +199,9 @@ public class CompareObjectItem extends AbstractModel{
     }
 
     /**
-     * Get 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+     * Get 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+     * @return Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareViewItem [] getViews() {
@@ -209,9 +209,9 @@ public class CompareObjectItem extends AbstractModel{
     }
 
     /**
-     * Set 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+     * Set 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+     * @param Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViews(CompareViewItem [] Views) {

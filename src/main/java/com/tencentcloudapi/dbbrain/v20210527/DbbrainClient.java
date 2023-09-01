@@ -1152,6 +1152,48 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *更新agent状态（停止或重连Agent）
+     * @param req UpdateAgentSwitchRequest
+     * @return UpdateAgentSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAgentSwitchResponse UpdateAgentSwitch(UpdateAgentSwitchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAgentSwitchResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAgentSwitchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateAgentSwitch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新Agent实例状态（停止或重连实例）
+     * @param req UpdateMonitorSwitchRequest
+     * @return UpdateMonitorSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateMonitorSwitchResponse UpdateMonitorSwitch(UpdateMonitorSwitchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateMonitorSwitchResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateMonitorSwitchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateMonitorSwitch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *验证用户数据库账号权限，获取会话token。
      * @param req VerifyUserAccountRequest
      * @return VerifyUserAccountResponse

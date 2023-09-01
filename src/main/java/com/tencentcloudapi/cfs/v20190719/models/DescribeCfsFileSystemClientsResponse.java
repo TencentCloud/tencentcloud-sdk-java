@@ -30,6 +30,13 @@ public class DescribeCfsFileSystemClientsResponse extends AbstractModel{
     private FileSystemClient [] ClientList;
 
     /**
+    * 文件系统总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeCfsFileSystemClientsResponse extends AbstractModel{
      */
     public void setClientList(FileSystemClient [] ClientList) {
         this.ClientList = ClientList;
+    }
+
+    /**
+     * Get 文件系统总数 
+     * @return TotalCount 文件系统总数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 文件系统总数
+     * @param TotalCount 文件系统总数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -82,6 +105,9 @@ public class DescribeCfsFileSystemClientsResponse extends AbstractModel{
                 this.ClientList[i] = new FileSystemClient(source.ClientList[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +119,7 @@ public class DescribeCfsFileSystemClientsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ClientList.", this.ClientList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

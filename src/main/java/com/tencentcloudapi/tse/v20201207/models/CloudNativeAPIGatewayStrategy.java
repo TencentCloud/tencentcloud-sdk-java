@@ -254,7 +254,9 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxReplicas 最大节点数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getMaxReplicas() {
         return this.MaxReplicas;
     }
@@ -264,7 +266,9 @@ public class CloudNativeAPIGatewayStrategy extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxReplicas 最大节点数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setMaxReplicas(Long MaxReplicas) {
         this.MaxReplicas = MaxReplicas;
     }

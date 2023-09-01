@@ -23,7 +23,11 @@ import java.util.HashMap;
 public class CreateFlowResponse extends AbstractModel{
 
     /**
-    * 签署流程编号
+    * 签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
     */
     @SerializedName("FlowId")
     @Expose
@@ -37,16 +41,32 @@ public class CreateFlowResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 签署流程编号 
-     * @return FlowId 签署流程编号
+     * Get 签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功 
+     * @return FlowId 签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 签署流程编号
-     * @param FlowId 签署流程编号
+     * Set 签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
+     * @param FlowId 签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

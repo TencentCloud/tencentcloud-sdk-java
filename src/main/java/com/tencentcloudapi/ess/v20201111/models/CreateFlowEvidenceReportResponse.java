@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateFlowEvidenceReportResponse extends AbstractModel{
 
     /**
-    * 出证报告 ID，用于查询出证报告DescribeFlowEvidenceReport接口时用到
+    * 出证报告 ID，可用于DescribeFlowEvidenceReport接口查询出证PDF的下载地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportId")
@@ -31,16 +31,19 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel{
     private String ReportId;
 
     /**
-    * 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+    * 出证任务执行的状态, 可能会有以下状态：
+
+<ul><li>EvidenceStatusExecuting：  出证任务在执行中</li>
+<li>EvidenceStatusSuccess：  出证任务执行成功</li>
+<li>EvidenceStatusFailed ： 出征任务执行失败</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 废除，字段无效
+    * 此字段已经废除,不再使用.
+出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportUrl")
@@ -55,9 +58,9 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 出证报告 ID，用于查询出证报告DescribeFlowEvidenceReport接口时用到
+     * Get 出证报告 ID，可用于DescribeFlowEvidenceReport接口查询出证PDF的下载地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReportId 出证报告 ID，用于查询出证报告DescribeFlowEvidenceReport接口时用到
+     * @return ReportId 出证报告 ID，可用于DescribeFlowEvidenceReport接口查询出证PDF的下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportId() {
@@ -65,9 +68,9 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel{
     }
 
     /**
-     * Set 出证报告 ID，用于查询出证报告DescribeFlowEvidenceReport接口时用到
+     * Set 出证报告 ID，可用于DescribeFlowEvidenceReport接口查询出证PDF的下载地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReportId 出证报告 ID，用于查询出证报告DescribeFlowEvidenceReport接口时用到
+     * @param ReportId 出证报告 ID，可用于DescribeFlowEvidenceReport接口查询出证PDF的下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportId(String ReportId) {
@@ -75,45 +78,61 @@ public class CreateFlowEvidenceReportResponse extends AbstractModel{
     }
 
     /**
-     * Get 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed 
-     * @return Status 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * Get 出证任务执行的状态, 可能会有以下状态：
+
+<ul><li>EvidenceStatusExecuting：  出证任务在执行中</li>
+<li>EvidenceStatusSuccess：  出证任务执行成功</li>
+<li>EvidenceStatusFailed ： 出征任务执行失败</li></ul> 
+     * @return Status 出证任务执行的状态, 可能会有以下状态：
+
+<ul><li>EvidenceStatusExecuting：  出证任务在执行中</li>
+<li>EvidenceStatusSuccess：  出证任务执行成功</li>
+<li>EvidenceStatusFailed ： 出征任务执行失败</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
-     * @param Status 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * Set 出证任务执行的状态, 可能会有以下状态：
+
+<ul><li>EvidenceStatusExecuting：  出证任务在执行中</li>
+<li>EvidenceStatusSuccess：  出证任务执行成功</li>
+<li>EvidenceStatusFailed ： 出征任务执行失败</li></ul>
+     * @param Status 出证任务执行的状态, 可能会有以下状态：
+
+<ul><li>EvidenceStatusExecuting：  出证任务在执行中</li>
+<li>EvidenceStatusSuccess：  出证任务执行成功</li>
+<li>EvidenceStatusFailed ： 出征任务执行失败</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 废除，字段无效
+     * Get 此字段已经废除,不再使用.
+出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReportUrl 废除，字段无效
+     * @return ReportUrl 此字段已经废除,不再使用.
+出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getReportUrl() {
         return this.ReportUrl;
     }
 
     /**
-     * Set 废除，字段无效
+     * Set 此字段已经废除,不再使用.
+出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReportUrl 废除，字段无效
+     * @param ReportUrl 此字段已经废除,不再使用.
+出证的PDF下载地址请调用DescribeChannelFlowEvidenceReport接口获取
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setReportUrl(String ReportUrl) {
         this.ReportUrl = ReportUrl;
     }

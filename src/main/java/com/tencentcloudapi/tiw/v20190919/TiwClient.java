@@ -81,7 +81,9 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *创建课后录制任务
+     *课后录制服务已下线
+
+创建课后录制任务
      * @param req CreateOfflineRecordRequest
      * @return CreateOfflineRecordResponse
      * @throws TencentCloudSDKException
@@ -291,7 +293,9 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *查询课后录制任务的进度与录制结果等相关信息
+     *课后录制服务已下线
+
+查询课后录制任务的进度与录制结果等相关信息
      * @param req DescribeOfflineRecordRequest
      * @return DescribeOfflineRecordResponse
      * @throws TencentCloudSDKException
@@ -312,7 +316,9 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *查询课后录制回调地址
+     *课后录制服务已下线
+
+查询课后录制回调地址
      * @param req DescribeOfflineRecordCallbackRequest
      * @return DescribeOfflineRecordCallbackResponse
      * @throws TencentCloudSDKException
@@ -1054,7 +1060,9 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *设置课后录制回调地址
+     *课后录制服务已下线
+
+设置课后录制回调地址
      * @param req SetOfflineRecordCallbackRequest
      * @return SetOfflineRecordCallbackResponse
      * @throws TencentCloudSDKException
