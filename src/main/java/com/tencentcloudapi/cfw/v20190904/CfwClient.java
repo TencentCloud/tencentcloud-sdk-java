@@ -144,6 +144,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *批量添加入侵防御封禁列表、放通列表规则
+     * @param req CreateBlockIgnoreRuleListRequest
+     * @return CreateBlockIgnoreRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBlockIgnoreRuleListResponse CreateBlockIgnoreRuleList(CreateBlockIgnoreRuleListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBlockIgnoreRuleListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBlockIgnoreRuleListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBlockIgnoreRuleList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建、选择vpc
      * @param req CreateChooseVpcsRequest
      * @return CreateChooseVpcsResponse
@@ -1153,6 +1174,28 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyBlockTopResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyBlockTop");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用停用VPC间规则或Nat边界规则
+VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction。
+     * @param req ModifyEWRuleStatusRequest
+     * @return ModifyEWRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEWRuleStatusResponse ModifyEWRuleStatus(ModifyEWRuleStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEWRuleStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEWRuleStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyEWRuleStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

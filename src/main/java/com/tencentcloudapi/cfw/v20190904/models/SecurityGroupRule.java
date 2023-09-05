@@ -25,10 +25,10 @@ public class SecurityGroupRule extends AbstractModel{
     /**
     * 访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
     */
     @SerializedName("SourceContent")
@@ -45,10 +45,10 @@ region：地域(ap-gaungzhou)
     /**
     * 访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
     */
     @SerializedName("DestContent")
@@ -79,7 +79,7 @@ drop：拒绝
     private String Description;
 
     /**
-    * 规则顺序，-1表示最低，1表示最高
+    * 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
     */
     @SerializedName("OrderIndex")
     @Expose
@@ -112,14 +112,15 @@ drop：拒绝
     private String ServiceTemplateId;
 
     /**
-    * 规则对应的唯一id
+    * （入参时无需填写，自动生成）规则对应的唯一id
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 规则状态，true表示启用，false表示禁用
+    * （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用
     */
     @SerializedName("Enable")
     @Expose
@@ -128,17 +129,17 @@ drop：拒绝
     /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou) 
      * @return SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      */
     public String getSourceContent() {
@@ -148,17 +149,17 @@ region：地域(ap-gaungzhou)
     /**
      * Set 访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      * @param SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      */
     public void setSourceContent(String SourceContent) {
@@ -184,17 +185,17 @@ region：地域(ap-gaungzhou)
     /**
      * Get 访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou) 
      * @return DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      */
     public String getDestContent() {
@@ -204,17 +205,17 @@ region：地域(ap-gaungzhou)
     /**
      * Set 访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      * @param DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      */
     public void setDestContent(String DestContent) {
@@ -278,16 +279,16 @@ drop：拒绝
     }
 
     /**
-     * Get 规则顺序，-1表示最低，1表示最高 
-     * @return OrderIndex 规则顺序，-1表示最低，1表示最高
+     * Get 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置） 
+     * @return OrderIndex 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
      */
     public String getOrderIndex() {
         return this.OrderIndex;
     }
 
     /**
-     * Set 规则顺序，-1表示最低，1表示最高
-     * @param OrderIndex 规则顺序，-1表示最低，1表示最高
+     * Set 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
+     * @param OrderIndex 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
      */
     public void setOrderIndex(String OrderIndex) {
         this.OrderIndex = OrderIndex;
@@ -362,32 +363,36 @@ drop：拒绝
     }
 
     /**
-     * Get 规则对应的唯一id 
-     * @return Id 规则对应的唯一id
+     * Get （入参时无需填写，自动生成）规则对应的唯一id 
+     * @return Id （入参时无需填写，自动生成）规则对应的唯一id
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 规则对应的唯一id
-     * @param Id 规则对应的唯一id
+     * Set （入参时无需填写，自动生成）规则对应的唯一id
+     * @param Id （入参时无需填写，自动生成）规则对应的唯一id
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 规则状态，true表示启用，false表示禁用 
-     * @return Enable 规则状态，true表示启用，false表示禁用
+     * Get （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用 
+     * @return Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用
      */
     public String getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 规则状态，true表示启用，false表示禁用
-     * @param Enable 规则状态，true表示启用，false表示禁用
+     * Set （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用
+     * @param Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用
      */
     public void setEnable(String Enable) {
         this.Enable = Enable;

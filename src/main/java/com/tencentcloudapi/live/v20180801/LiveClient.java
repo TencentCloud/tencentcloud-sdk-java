@@ -1194,6 +1194,27 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *批量获取转推日志的URL。
+     * @param req DescribeDeliverLogDownListRequest
+     * @return DescribeDeliverLogDownListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeliverLogDownListResponse DescribeDeliverLogDownList(DescribeDeliverLogDownListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeliverLogDownListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeliverLogDownListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDeliverLogDownList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 查询按省份和运营商分组的下行播放数据。
      * @param req DescribeGroupProIspPlayInfoListRequest

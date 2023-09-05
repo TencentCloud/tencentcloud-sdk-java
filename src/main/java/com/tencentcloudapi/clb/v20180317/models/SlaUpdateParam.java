@@ -30,8 +30,15 @@ public class SlaUpdateParam extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 升级为性能容量型，固定取值为SLA。SLA表示超强型1规格。
-当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。
+    * 性能容量型规格，取值范围：
+<li> SLA：超强型1规格。当您开通了超大型规格的性能容量型时，SLA对应超强型4规格 </li>
+<li> clb.c2.medium：标准型规格 </li>
+<li> clb.c3.small：高阶型1规格 </li>
+<li> clb.c3.medium：高阶型2规格 </li>
+<li> clb.c4.small：超强型1规格 </li>
+<li> clb.c4.medium：超强型2规格 </li>
+<li> clb.c4.large：超强型3规格 </li>
+<li> clb.c4.xlarge：超强型4规格 </li>如需超大型规格（超强型2及以上），请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。如需了解规格详情，请参见[实例规格对比](https://cloud.tencent.com/document/product/214/84689)
     */
     @SerializedName("SlaType")
     @Expose
@@ -54,20 +61,48 @@ public class SlaUpdateParam extends AbstractModel{
     }
 
     /**
-     * Get 升级为性能容量型，固定取值为SLA。SLA表示超强型1规格。
-当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。 
-     * @return SlaType 升级为性能容量型，固定取值为SLA。SLA表示超强型1规格。
-当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。
+     * Get 性能容量型规格，取值范围：
+<li> SLA：超强型1规格。当您开通了超大型规格的性能容量型时，SLA对应超强型4规格 </li>
+<li> clb.c2.medium：标准型规格 </li>
+<li> clb.c3.small：高阶型1规格 </li>
+<li> clb.c3.medium：高阶型2规格 </li>
+<li> clb.c4.small：超强型1规格 </li>
+<li> clb.c4.medium：超强型2规格 </li>
+<li> clb.c4.large：超强型3规格 </li>
+<li> clb.c4.xlarge：超强型4规格 </li>如需超大型规格（超强型2及以上），请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。如需了解规格详情，请参见[实例规格对比](https://cloud.tencent.com/document/product/214/84689) 
+     * @return SlaType 性能容量型规格，取值范围：
+<li> SLA：超强型1规格。当您开通了超大型规格的性能容量型时，SLA对应超强型4规格 </li>
+<li> clb.c2.medium：标准型规格 </li>
+<li> clb.c3.small：高阶型1规格 </li>
+<li> clb.c3.medium：高阶型2规格 </li>
+<li> clb.c4.small：超强型1规格 </li>
+<li> clb.c4.medium：超强型2规格 </li>
+<li> clb.c4.large：超强型3规格 </li>
+<li> clb.c4.xlarge：超强型4规格 </li>如需超大型规格（超强型2及以上），请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。如需了解规格详情，请参见[实例规格对比](https://cloud.tencent.com/document/product/214/84689)
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set 升级为性能容量型，固定取值为SLA。SLA表示超强型1规格。
-当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。
-     * @param SlaType 升级为性能容量型，固定取值为SLA。SLA表示超强型1规格。
-当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。
+     * Set 性能容量型规格，取值范围：
+<li> SLA：超强型1规格。当您开通了超大型规格的性能容量型时，SLA对应超强型4规格 </li>
+<li> clb.c2.medium：标准型规格 </li>
+<li> clb.c3.small：高阶型1规格 </li>
+<li> clb.c3.medium：高阶型2规格 </li>
+<li> clb.c4.small：超强型1规格 </li>
+<li> clb.c4.medium：超强型2规格 </li>
+<li> clb.c4.large：超强型3规格 </li>
+<li> clb.c4.xlarge：超强型4规格 </li>如需超大型规格（超强型2及以上），请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。如需了解规格详情，请参见[实例规格对比](https://cloud.tencent.com/document/product/214/84689)
+     * @param SlaType 性能容量型规格，取值范围：
+<li> SLA：超强型1规格。当您开通了超大型规格的性能容量型时，SLA对应超强型4规格 </li>
+<li> clb.c2.medium：标准型规格 </li>
+<li> clb.c3.small：高阶型1规格 </li>
+<li> clb.c3.medium：高阶型2规格 </li>
+<li> clb.c4.small：超强型1规格 </li>
+<li> clb.c4.medium：超强型2规格 </li>
+<li> clb.c4.large：超强型3规格 </li>
+<li> clb.c4.xlarge：超强型4规格 </li>如需超大型规格（超强型2及以上），请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。如需了解规格详情，请参见[实例规格对比](https://cloud.tencent.com/document/product/214/84689)
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

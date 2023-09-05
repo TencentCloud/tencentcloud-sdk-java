@@ -251,6 +251,13 @@ public class DomainInfo extends AbstractModel{
     private TagItem [] TagList;
 
     /**
+    * 是否启用搜索引擎推送
+    */
+    @SerializedName("SearchEnginePush")
+    @Expose
+    private String SearchEnginePush;
+
+    /**
      * Get 域名ID 
      * @return DomainId 域名ID
      */
@@ -790,6 +797,22 @@ public class DomainInfo extends AbstractModel{
         this.TagList = TagList;
     }
 
+    /**
+     * Get 是否启用搜索引擎推送 
+     * @return SearchEnginePush 是否启用搜索引擎推送
+     */
+    public String getSearchEnginePush() {
+        return this.SearchEnginePush;
+    }
+
+    /**
+     * Set 是否启用搜索引擎推送
+     * @param SearchEnginePush 是否启用搜索引擎推送
+     */
+    public void setSearchEnginePush(String SearchEnginePush) {
+        this.SearchEnginePush = SearchEnginePush;
+    }
+
     public DomainInfo() {
     }
 
@@ -900,6 +923,9 @@ public class DomainInfo extends AbstractModel{
                 this.TagList[i] = new TagItem(source.TagList[i]);
             }
         }
+        if (source.SearchEnginePush != null) {
+            this.SearchEnginePush = new String(source.SearchEnginePush);
+        }
     }
 
 
@@ -938,6 +964,7 @@ public class DomainInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "VipResourceId", this.VipResourceId);
         this.setParamSimple(map, prefix + "IsSubDomain", this.IsSubDomain);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "SearchEnginePush", this.SearchEnginePush);
 
     }
 }

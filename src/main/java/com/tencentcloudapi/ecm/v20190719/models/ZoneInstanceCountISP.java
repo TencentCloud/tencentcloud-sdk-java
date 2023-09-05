@@ -41,7 +41,7 @@ public class ZoneInstanceCountISP extends AbstractModel{
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。
     */
     @SerializedName("ISP")
     @Expose
@@ -76,7 +76,8 @@ CMCC：中国移动
     private Long Ipv6AddressCount;
 
     /**
-    * 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+    * 指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段
     */
     @SerializedName("Ipv6SubnetIds")
     @Expose
@@ -119,12 +120,12 @@ CMCC：中国移动
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。 
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。 
      * @return ISP 运营商如下：
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。
      */
     public String getISP() {
         return this.ISP;
@@ -135,12 +136,12 @@ CMCC：中国移动
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。
      * @param ISP 运营商如下：
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。
      */
     public void setISP(String ISP) {
         this.ISP = ISP;
@@ -211,16 +212,20 @@ CMCC：中国移动
     }
 
     /**
-     * Get 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段 
-     * @return Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+     * Get 指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段 
+     * @return Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段
      */
     public String [] getIpv6SubnetIds() {
         return this.Ipv6SubnetIds;
     }
 
     /**
-     * Set 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
-     * @param Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+     * Set 指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段
+     * @param Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段
      */
     public void setIpv6SubnetIds(String [] Ipv6SubnetIds) {
         this.Ipv6SubnetIds = Ipv6SubnetIds;

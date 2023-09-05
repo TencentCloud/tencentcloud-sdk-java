@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExecuteTaskRequest extends AbstractModel{
+public class CreateBlockIgnoreRuleListResponse extends AbstractModel{
 
     /**
-    * 任务 ID
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("TaskId")
+    @SerializedName("RequestId")
     @Expose
-    private String TaskId;
+    private String RequestId;
 
     /**
-     * Get 任务 ID 
-     * @return TaskId 任务 ID
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 任务 ID
-     * @param TaskId 任务 ID
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public ExecuteTaskRequest() {
+    public CreateBlockIgnoreRuleListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ExecuteTaskRequest(ExecuteTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public CreateBlockIgnoreRuleListResponse(CreateBlockIgnoreRuleListResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class ExecuteTaskRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

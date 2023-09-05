@@ -13,48 +13,63 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExecuteTaskRequest extends AbstractModel{
+public class AudioDenoiseConfig extends AbstractModel{
 
     /**
-    * 任务 ID
+    * 能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。
     */
-    @SerializedName("TaskId")
+    @SerializedName("Switch")
     @Expose
-    private String TaskId;
+    private String Switch;
 
     /**
-     * Get 任务 ID 
-     * @return TaskId 任务 ID
+     * Get 能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。 
+     * @return Switch 能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set 任务 ID
-     * @param TaskId 任务 ID
+     * Set 能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。
+     * @param Switch 能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
-    public ExecuteTaskRequest() {
+    public AudioDenoiseConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ExecuteTaskRequest(ExecuteTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public AudioDenoiseConfig(AudioDenoiseConfig source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
         }
     }
 
@@ -63,7 +78,7 @@ public class ExecuteTaskRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

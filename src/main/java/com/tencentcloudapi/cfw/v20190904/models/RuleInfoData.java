@@ -149,6 +149,13 @@ public class RuleInfoData extends AbstractModel{
     private String CountryName;
 
     /**
+    * 国家二位iso代码或者省份缩写代码
+    */
+    @SerializedName("RegionIso")
+    @Expose
+    private String RegionIso;
+
+    /**
      * Get 执行顺序 
      * @return OrderIndex 执行顺序
      */
@@ -436,6 +443,22 @@ public class RuleInfoData extends AbstractModel{
         this.CountryName = CountryName;
     }
 
+    /**
+     * Get 国家二位iso代码或者省份缩写代码 
+     * @return RegionIso 国家二位iso代码或者省份缩写代码
+     */
+    public String getRegionIso() {
+        return this.RegionIso;
+    }
+
+    /**
+     * Set 国家二位iso代码或者省份缩写代码
+     * @param RegionIso 国家二位iso代码或者省份缩写代码
+     */
+    public void setRegionIso(String RegionIso) {
+        this.RegionIso = RegionIso;
+    }
+
     public RuleInfoData() {
     }
 
@@ -498,6 +521,9 @@ public class RuleInfoData extends AbstractModel{
         if (source.CountryName != null) {
             this.CountryName = new String(source.CountryName);
         }
+        if (source.RegionIso != null) {
+            this.RegionIso = new String(source.RegionIso);
+        }
     }
 
 
@@ -523,6 +549,7 @@ public class RuleInfoData extends AbstractModel{
         this.setParamSimple(map, prefix + "IsRegion", this.IsRegion);
         this.setParamSimple(map, prefix + "CityName", this.CityName);
         this.setParamSimple(map, prefix + "CountryName", this.CountryName);
+        this.setParamSimple(map, prefix + "RegionIso", this.RegionIso);
 
     }
 }

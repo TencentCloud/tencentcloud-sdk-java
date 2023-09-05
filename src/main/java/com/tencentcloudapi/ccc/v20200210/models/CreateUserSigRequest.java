@@ -30,7 +30,7 @@ public class CreateUserSigRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 用户 ID
+    * 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
     */
     @SerializedName("Uid")
     @Expose
@@ -44,7 +44,7 @@ public class CreateUserSigRequest extends AbstractModel{
     private Long ExpiredTime;
 
     /**
-    * 用户签名数据
+    * 用户签名数据，必填字段，为标准 JSON 格式
     */
     @SerializedName("ClientData")
     @Expose
@@ -67,16 +67,16 @@ public class CreateUserSigRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户 ID 
-     * @return Uid 用户 ID
+     * Get 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致 
+     * @return Uid 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
      */
     public String getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 用户 ID
-     * @param Uid 用户 ID
+     * Set 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
+     * @param Uid 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
      */
     public void setUid(String Uid) {
         this.Uid = Uid;
@@ -99,16 +99,16 @@ public class CreateUserSigRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户签名数据 
-     * @return ClientData 用户签名数据
+     * Get 用户签名数据，必填字段，为标准 JSON 格式 
+     * @return ClientData 用户签名数据，必填字段，为标准 JSON 格式
      */
     public String getClientData() {
         return this.ClientData;
     }
 
     /**
-     * Set 用户签名数据
-     * @param ClientData 用户签名数据
+     * Set 用户签名数据，必填字段，为标准 JSON 格式
+     * @param ClientData 用户签名数据，必填字段，为标准 JSON 格式
      */
     public void setClientData(String ClientData) {
         this.ClientData = ClientData;

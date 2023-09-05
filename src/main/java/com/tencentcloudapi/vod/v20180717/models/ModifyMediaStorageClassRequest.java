@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyMediaStorageClassRequest extends AbstractModel{
 
     /**
-    * 媒体文件唯一标识列表。
+    * 媒体文件唯一标识列表，最大长度：100。
     */
     @SerializedName("FileIds")
     @Expose
@@ -62,16 +62,16 @@ public class ModifyMediaStorageClassRequest extends AbstractModel{
     private String RestoreTier;
 
     /**
-     * Get 媒体文件唯一标识列表。 
-     * @return FileIds 媒体文件唯一标识列表。
+     * Get 媒体文件唯一标识列表，最大长度：100。 
+     * @return FileIds 媒体文件唯一标识列表，最大长度：100。
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 媒体文件唯一标识列表。
-     * @param FileIds 媒体文件唯一标识列表。
+     * Set 媒体文件唯一标识列表，最大长度：100。
+     * @param FileIds 媒体文件唯一标识列表，最大长度：100。
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;

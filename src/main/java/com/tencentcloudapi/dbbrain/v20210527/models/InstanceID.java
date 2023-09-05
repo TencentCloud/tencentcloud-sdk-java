@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tsf.v20180326.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExecuteTaskRequest extends AbstractModel{
+public class InstanceID extends AbstractModel{
 
     /**
-    * 任务 ID
+    * 实例id
     */
-    @SerializedName("TaskId")
+    @SerializedName("InstanceId")
     @Expose
-    private String TaskId;
+    private String InstanceId;
 
     /**
-     * Get 任务 ID 
-     * @return TaskId 任务 ID
+     * Get 实例id 
+     * @return InstanceId 实例id
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 任务 ID
-     * @param TaskId 任务 ID
+     * Set 实例id
+     * @param InstanceId 实例id
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public ExecuteTaskRequest() {
+    public InstanceID() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ExecuteTaskRequest(ExecuteTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public InstanceID(InstanceID source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -63,7 +63,7 @@ public class ExecuteTaskRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

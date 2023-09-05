@@ -396,6 +396,27 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *通知模板查询
+     * @param req DescribeAlarmTemplateRequest
+     * @return DescribeAlarmTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmTemplateResponse DescribeAlarmTemplate(DescribeAlarmTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取邮件发送中联系人的相关信息。
      * @param req DescribeAllUserContactRequest
      * @return DescribeAllUserContactResponse
@@ -1060,6 +1081,27 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<KillMySqlThreadsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "KillMySqlThreads");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改告警策略
+     * @param req ModifyAlarmPolicyRequest
+     * @return ModifyAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyResponse ModifyAlarmPolicy(ModifyAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

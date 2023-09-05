@@ -13,84 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mps.v20190612.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnhanceConfig extends AbstractModel{
+public class ReceiveUin extends AbstractModel{
 
     /**
-    * 视频增强配置。
+    * 用户名
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("VideoEnhance")
+    @SerializedName("UinName")
     @Expose
-    private VideoEnhanceConfig VideoEnhance;
+    private String UinName;
 
     /**
-    * 音频增强配置。
+    * 用户id
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AudioEnhance")
+    @SerializedName("Uin")
     @Expose
-    private AudioEnhanceConfig AudioEnhance;
+    private String Uin;
 
     /**
-     * Get 视频增强配置。
+     * Get 用户名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoEnhance 视频增强配置。
+     * @return UinName 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public VideoEnhanceConfig getVideoEnhance() {
-        return this.VideoEnhance;
+    public String getUinName() {
+        return this.UinName;
     }
 
     /**
-     * Set 视频增强配置。
+     * Set 用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoEnhance 视频增强配置。
+     * @param UinName 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setVideoEnhance(VideoEnhanceConfig VideoEnhance) {
-        this.VideoEnhance = VideoEnhance;
+    public void setUinName(String UinName) {
+        this.UinName = UinName;
     }
 
     /**
-     * Get 音频增强配置。
+     * Get 用户id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioEnhance 音频增强配置。
+     * @return Uin 用户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AudioEnhanceConfig getAudioEnhance() {
-        return this.AudioEnhance;
+    public String getUin() {
+        return this.Uin;
     }
 
     /**
-     * Set 音频增强配置。
+     * Set 用户id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioEnhance 音频增强配置。
+     * @param Uin 用户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAudioEnhance(AudioEnhanceConfig AudioEnhance) {
-        this.AudioEnhance = AudioEnhance;
+    public void setUin(String Uin) {
+        this.Uin = Uin;
     }
 
-    public EnhanceConfig() {
+    public ReceiveUin() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EnhanceConfig(EnhanceConfig source) {
-        if (source.VideoEnhance != null) {
-            this.VideoEnhance = new VideoEnhanceConfig(source.VideoEnhance);
+    public ReceiveUin(ReceiveUin source) {
+        if (source.UinName != null) {
+            this.UinName = new String(source.UinName);
         }
-        if (source.AudioEnhance != null) {
-            this.AudioEnhance = new AudioEnhanceConfig(source.AudioEnhance);
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
         }
     }
 
@@ -99,8 +99,8 @@ public class EnhanceConfig extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "VideoEnhance.", this.VideoEnhance);
-        this.setParamObj(map, prefix + "AudioEnhance.", this.AudioEnhance);
+        this.setParamSimple(map, prefix + "UinName", this.UinName);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }
 }
