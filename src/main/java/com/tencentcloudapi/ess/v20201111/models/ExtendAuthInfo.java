@@ -23,26 +23,27 @@ import java.util.HashMap;
 public class ExtendAuthInfo extends AbstractModel{
 
     /**
-    * 授权服务类型
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署
+    * 扩展服务的类型，可能是以下值：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 授权服务名称
+    * 扩展服务的名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 授权服务状态，ENABLE：开通
+    * 扩展服务的开通状态：
+ENABLE：开通
 DISABLE：未开通
     */
     @SerializedName("Status")
@@ -50,7 +51,7 @@ DISABLE：未开通
     private String Status;
 
     /**
-    * 授权人用户id
+    * 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorUserId")
@@ -58,7 +59,7 @@ DISABLE：未开通
     private String OperatorUserId;
 
     /**
-    * 授权时间戳，单位秒
+    * 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateOn")
@@ -66,7 +67,7 @@ DISABLE：未开通
     private Long OperateOn;
 
     /**
-    * 被授权用户列表
+    * 该扩展服务若可以授权，此参数对应授权人员的列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasAuthUserList")
@@ -74,61 +75,63 @@ DISABLE：未开通
     private HasAuthUser [] HasAuthUserList;
 
     /**
-     * Get 授权服务类型
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署 
-     * @return Type 授权服务类型
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署
+     * Get 扩展服务的类型，可能是以下值：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul> 
+     * @return Type 扩展服务的类型，可能是以下值：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 授权服务类型
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署
-     * @param Type 授权服务类型
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署
+     * Set 扩展服务的类型，可能是以下值：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul>
+     * @param Type 扩展服务的类型，可能是以下值：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 授权服务名称 
-     * @return Name 授权服务名称
+     * Get 扩展服务的名称 
+     * @return Name 扩展服务的名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 授权服务名称
-     * @param Name 授权服务名称
+     * Set 扩展服务的名称
+     * @param Name 扩展服务的名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 授权服务状态，ENABLE：开通
+     * Get 扩展服务的开通状态：
+ENABLE：开通
 DISABLE：未开通 
-     * @return Status 授权服务状态，ENABLE：开通
+     * @return Status 扩展服务的开通状态：
+ENABLE：开通
 DISABLE：未开通
      */
     public String getStatus() {
@@ -136,9 +139,11 @@ DISABLE：未开通
     }
 
     /**
-     * Set 授权服务状态，ENABLE：开通
+     * Set 扩展服务的开通状态：
+ENABLE：开通
 DISABLE：未开通
-     * @param Status 授权服务状态，ENABLE：开通
+     * @param Status 扩展服务的开通状态：
+ENABLE：开通
 DISABLE：未开通
      */
     public void setStatus(String Status) {
@@ -146,9 +151,9 @@ DISABLE：未开通
     }
 
     /**
-     * Get 授权人用户id
+     * Get 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorUserId 授权人用户id
+     * @return OperatorUserId 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorUserId() {
@@ -156,9 +161,9 @@ DISABLE：未开通
     }
 
     /**
-     * Set 授权人用户id
+     * Set 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorUserId 授权人用户id
+     * @param OperatorUserId 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorUserId(String OperatorUserId) {
@@ -166,9 +171,9 @@ DISABLE：未开通
     }
 
     /**
-     * Get 授权时间戳，单位秒
+     * Get 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperateOn 授权时间戳，单位秒
+     * @return OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperateOn() {
@@ -176,9 +181,9 @@ DISABLE：未开通
     }
 
     /**
-     * Set 授权时间戳，单位秒
+     * Set 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperateOn 授权时间戳，单位秒
+     * @param OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateOn(Long OperateOn) {
@@ -186,9 +191,9 @@ DISABLE：未开通
     }
 
     /**
-     * Get 被授权用户列表
+     * Get 该扩展服务若可以授权，此参数对应授权人员的列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HasAuthUserList 被授权用户列表
+     * @return HasAuthUserList 该扩展服务若可以授权，此参数对应授权人员的列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HasAuthUser [] getHasAuthUserList() {
@@ -196,9 +201,9 @@ DISABLE：未开通
     }
 
     /**
-     * Set 被授权用户列表
+     * Set 该扩展服务若可以授权，此参数对应授权人员的列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HasAuthUserList 被授权用户列表
+     * @param HasAuthUserList 该扩展服务若可以授权，此参数对应授权人员的列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasAuthUserList(HasAuthUser [] HasAuthUserList) {

@@ -201,6 +201,14 @@ public class Cluster extends AbstractModel{
     private String DisasterRecoveryType;
 
     /**
+    * 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get 集群唯一ID 
      * @return ClusterId 集群唯一ID
      */
@@ -636,6 +644,26 @@ public class Cluster extends AbstractModel{
         this.DisasterRecoveryType = DisasterRecoveryType;
     }
 
+    /**
+     * Get 网络出口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public Cluster() {
     }
 
@@ -713,6 +741,9 @@ public class Cluster extends AbstractModel{
         if (source.DisasterRecoveryType != null) {
             this.DisasterRecoveryType = new String(source.DisasterRecoveryType);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -743,6 +774,7 @@ public class Cluster extends AbstractModel{
         this.setParamObj(map, prefix + "ClustersZone.", this.ClustersZone);
         this.setParamSimple(map, prefix + "ClustersVersion", this.ClustersVersion);
         this.setParamSimple(map, prefix + "DisasterRecoveryType", this.DisasterRecoveryType);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

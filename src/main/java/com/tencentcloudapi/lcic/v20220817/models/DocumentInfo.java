@@ -167,6 +167,14 @@ public class DocumentInfo extends AbstractModel{
     private String Cover;
 
     /**
+    * 课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Preview")
+    @Expose
+    private String Preview;
+
+    /**
      * Get 文档Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocumentId 文档Id
@@ -526,6 +534,26 @@ public class DocumentInfo extends AbstractModel{
         this.Cover = Cover;
     }
 
+    /**
+     * Get 课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Preview 课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreview() {
+        return this.Preview;
+    }
+
+    /**
+     * Set 课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Preview 课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreview(String Preview) {
+        this.Preview = Preview;
+    }
+
     public DocumentInfo() {
     }
 
@@ -588,6 +616,9 @@ public class DocumentInfo extends AbstractModel{
         if (source.Cover != null) {
             this.Cover = new String(source.Cover);
         }
+        if (source.Preview != null) {
+            this.Preview = new String(source.Preview);
+        }
     }
 
 
@@ -613,6 +644,7 @@ public class DocumentInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Cover", this.Cover);
+        this.setParamSimple(map, prefix + "Preview", this.Preview);
 
     }
 }

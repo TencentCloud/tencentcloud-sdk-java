@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel{
 
     /**
-    * 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
+    * 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -58,16 +58,16 @@ public class CreateClusterRequest extends AbstractModel{
     private Boolean PublicAccessEnabled;
 
     /**
-     * Get 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。 
-     * @return ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
+     * Get 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。 
+     * @return ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
-     * @param ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
+     * Set 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+     * @param ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;

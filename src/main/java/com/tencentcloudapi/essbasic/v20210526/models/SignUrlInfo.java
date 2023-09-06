@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SignUrlInfo extends AbstractModel{
 
     /**
-    * 签署链接，过期时间为30天
+    * 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignUrl")
@@ -129,9 +129,9 @@ PERSON 自然人
     private String FlowGroupId;
 
     /**
-     * Get 签署链接，过期时间为30天
+     * Get 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SignUrl 签署链接，过期时间为30天
+     * @return SignUrl 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignUrl() {
@@ -139,9 +139,9 @@ PERSON 自然人
     }
 
     /**
-     * Set 签署链接，过期时间为30天
+     * Set 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SignUrl 签署链接，过期时间为30天
+     * @param SignUrl 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignUrl(String SignUrl) {

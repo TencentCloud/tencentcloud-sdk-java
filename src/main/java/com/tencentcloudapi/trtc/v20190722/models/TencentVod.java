@@ -73,7 +73,8 @@ public class TencentVod extends AbstractModel{
     private String SourceContext;
 
     /**
-    * 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
+    * 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效),
+3: hls+mp4, 4: hls+aac(StreamType=1纯音频录制时有效)。
     */
     @SerializedName("MediaType")
     @Expose
@@ -203,16 +204,20 @@ public class TencentVod extends AbstractModel{
     }
 
     /**
-     * Get 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。 
-     * @return MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
+     * Get 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效),
+3: hls+mp4, 4: hls+aac(StreamType=1纯音频录制时有效)。 
+     * @return MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效),
+3: hls+mp4, 4: hls+aac(StreamType=1纯音频录制时有效)。
      */
     public Long getMediaType() {
         return this.MediaType;
     }
 
     /**
-     * Set 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
-     * @param MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
+     * Set 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效),
+3: hls+mp4, 4: hls+aac(StreamType=1纯音频录制时有效)。
+     * @param MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效),
+3: hls+mp4, 4: hls+aac(StreamType=1纯音频录制时有效)。
      */
     public void setMediaType(Long MediaType) {
         this.MediaType = MediaType;

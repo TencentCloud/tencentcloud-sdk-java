@@ -44,7 +44,7 @@ public class AddInstancesRequest extends AbstractModel{
     private Long Memory;
 
     /**
-    * 新增只读实例数，取值范围为[0,4]
+    * 新增只读实例数，取值范围为(0,15]
     */
     @SerializedName("ReadOnlyCount")
     @Expose
@@ -184,16 +184,16 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 新增只读实例数，取值范围为[0,4] 
-     * @return ReadOnlyCount 新增只读实例数，取值范围为[0,4]
+     * Get 新增只读实例数，取值范围为(0,15] 
+     * @return ReadOnlyCount 新增只读实例数，取值范围为(0,15]
      */
     public Long getReadOnlyCount() {
         return this.ReadOnlyCount;
     }
 
     /**
-     * Set 新增只读实例数，取值范围为[0,4]
-     * @param ReadOnlyCount 新增只读实例数，取值范围为[0,4]
+     * Set 新增只读实例数，取值范围为(0,15]
+     * @param ReadOnlyCount 新增只读实例数，取值范围为(0,15]
      */
     public void setReadOnlyCount(Long ReadOnlyCount) {
         this.ReadOnlyCount = ReadOnlyCount;

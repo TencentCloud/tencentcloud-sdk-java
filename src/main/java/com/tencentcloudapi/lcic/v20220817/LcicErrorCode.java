@@ -66,6 +66,9 @@ public enum LcicErrorCode {
     // 群组类型错误
      INVALIDPARAMETER_GROUPTYPEINVALID("InvalidParameter.GroupTypeInvalid"),
      
+    // room类型错误
+     INVALIDPARAMETER_ROOMTYPEINVALID("InvalidParameter.RoomTypeInvalid"),
+     
     // SdkAppId参数错误。
      INVALIDPARAMETER_SDKAPPID("InvalidParameter.SdkAppId"),
      

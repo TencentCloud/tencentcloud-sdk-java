@@ -37,7 +37,8 @@ public class RunJobDescription extends AbstractModel{
     private Long RunType;
 
     /**
-    * 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+    * 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
     */
     @SerializedName("StartMode")
     @Expose
@@ -45,6 +46,7 @@ public class RunJobDescription extends AbstractModel{
 
     /**
     * 当前作业的某个版本
+（不传默认为非草稿的作业版本）
     */
     @SerializedName("JobConfigVersion")
     @Expose
@@ -70,6 +72,13 @@ public class RunJobDescription extends AbstractModel{
     @SerializedName("UseOldSystemConnector")
     @Expose
     private Boolean UseOldSystemConnector;
+
+    /**
+    * 自定义时间戳
+    */
+    @SerializedName("CustomTimestamp")
+    @Expose
+    private Long CustomTimestamp;
 
     /**
      * Get 作业Id 
@@ -104,24 +113,30 @@ public class RunJobDescription extends AbstractModel{
     }
 
     /**
-     * Get 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000） 
-     * @return StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+     * Get 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000） 
+     * @return StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
      */
     public String getStartMode() {
         return this.StartMode;
     }
 
     /**
-     * Set 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
-     * @param StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+     * Set 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
+     * @param StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
      */
     public void setStartMode(String StartMode) {
         this.StartMode = StartMode;
     }
 
     /**
-     * Get 当前作业的某个版本 
+     * Get 当前作业的某个版本
+（不传默认为非草稿的作业版本） 
      * @return JobConfigVersion 当前作业的某个版本
+（不传默认为非草稿的作业版本）
      */
     public Long getJobConfigVersion() {
         return this.JobConfigVersion;
@@ -129,7 +144,9 @@ public class RunJobDescription extends AbstractModel{
 
     /**
      * Set 当前作业的某个版本
+（不传默认为非草稿的作业版本）
      * @param JobConfigVersion 当前作业的某个版本
+（不传默认为非草稿的作业版本）
      */
     public void setJobConfigVersion(Long JobConfigVersion) {
         this.JobConfigVersion = JobConfigVersion;
@@ -183,6 +200,22 @@ public class RunJobDescription extends AbstractModel{
         this.UseOldSystemConnector = UseOldSystemConnector;
     }
 
+    /**
+     * Get 自定义时间戳 
+     * @return CustomTimestamp 自定义时间戳
+     */
+    public Long getCustomTimestamp() {
+        return this.CustomTimestamp;
+    }
+
+    /**
+     * Set 自定义时间戳
+     * @param CustomTimestamp 自定义时间戳
+     */
+    public void setCustomTimestamp(Long CustomTimestamp) {
+        this.CustomTimestamp = CustomTimestamp;
+    }
+
     public RunJobDescription() {
     }
 
@@ -212,6 +245,9 @@ public class RunJobDescription extends AbstractModel{
         if (source.UseOldSystemConnector != null) {
             this.UseOldSystemConnector = new Boolean(source.UseOldSystemConnector);
         }
+        if (source.CustomTimestamp != null) {
+            this.CustomTimestamp = new Long(source.CustomTimestamp);
+        }
     }
 
 
@@ -226,6 +262,7 @@ public class RunJobDescription extends AbstractModel{
         this.setParamSimple(map, prefix + "SavepointPath", this.SavepointPath);
         this.setParamSimple(map, prefix + "SavepointId", this.SavepointId);
         this.setParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);
+        this.setParamSimple(map, prefix + "CustomTimestamp", this.CustomTimestamp);
 
     }
 }

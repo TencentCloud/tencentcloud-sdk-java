@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BatchCreateAclResponse extends AbstractModel{
 
     /**
-    * 状态码
+    * 状态码：0-修改成功，否则修改失败
     */
     @SerializedName("Result")
     @Expose
@@ -37,16 +37,16 @@ public class BatchCreateAclResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 状态码 
-     * @return Result 状态码
+     * Get 状态码：0-修改成功，否则修改失败 
+     * @return Result 状态码：0-修改成功，否则修改失败
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set 状态码
-     * @param Result 状态码
+     * Set 状态码：0-修改成功，否则修改失败
+     * @param Result 状态码：0-修改成功，否则修改失败
      */
     public void setResult(Long Result) {
         this.Result = Result;

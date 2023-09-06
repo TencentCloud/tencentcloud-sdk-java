@@ -23,69 +23,74 @@ import java.util.HashMap;
 public class SignQrCode extends AbstractModel{
 
     /**
-    * 二维码id
+    * 二维码ID，为32位字符串。
     */
     @SerializedName("QrCodeId")
     @Expose
     private String QrCodeId;
 
     /**
-    * 二维码url
+    * 二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。
     */
     @SerializedName("QrCodeUrl")
     @Expose
     private String QrCodeUrl;
 
     /**
-    * 二维码过期时间戳，单位秒
+    * 二维码的有截止时间，格式为Unix标准时间戳（秒）。
+一旦超过二维码的有效期限，该二维码将自动失效。
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-     * Get 二维码id 
-     * @return QrCodeId 二维码id
+     * Get 二维码ID，为32位字符串。 
+     * @return QrCodeId 二维码ID，为32位字符串。
      */
     public String getQrCodeId() {
         return this.QrCodeId;
     }
 
     /**
-     * Set 二维码id
-     * @param QrCodeId 二维码id
+     * Set 二维码ID，为32位字符串。
+     * @param QrCodeId 二维码ID，为32位字符串。
      */
     public void setQrCodeId(String QrCodeId) {
         this.QrCodeId = QrCodeId;
     }
 
     /**
-     * Get 二维码url 
-     * @return QrCodeUrl 二维码url
+     * Get 二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。 
+     * @return QrCodeUrl 二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。
      */
     public String getQrCodeUrl() {
         return this.QrCodeUrl;
     }
 
     /**
-     * Set 二维码url
-     * @param QrCodeUrl 二维码url
+     * Set 二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。
+     * @param QrCodeUrl 二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。
      */
     public void setQrCodeUrl(String QrCodeUrl) {
         this.QrCodeUrl = QrCodeUrl;
     }
 
     /**
-     * Get 二维码过期时间戳，单位秒 
-     * @return ExpiredTime 二维码过期时间戳，单位秒
+     * Get 二维码的有截止时间，格式为Unix标准时间戳（秒）。
+一旦超过二维码的有效期限，该二维码将自动失效。 
+     * @return ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒）。
+一旦超过二维码的有效期限，该二维码将自动失效。
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 二维码过期时间戳，单位秒
-     * @param ExpiredTime 二维码过期时间戳，单位秒
+     * Set 二维码的有截止时间，格式为Unix标准时间戳（秒）。
+一旦超过二维码的有效期限，该二维码将自动失效。
+     * @param ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒）。
+一旦超过二维码的有效期限，该二维码将自动失效。
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

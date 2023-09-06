@@ -293,6 +293,27 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *创建共享 CNAME
+     * @param req CreateSharedCNAMERequest
+     * @return CreateSharedCNAMEResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSharedCNAMEResponse CreateSharedCNAME(CreateSharedCNAMERequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSharedCNAMEResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSharedCNAMEResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSharedCNAME");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于用户接入新的站点。
      * @param req CreateZoneRequest
      * @return CreateZoneResponse

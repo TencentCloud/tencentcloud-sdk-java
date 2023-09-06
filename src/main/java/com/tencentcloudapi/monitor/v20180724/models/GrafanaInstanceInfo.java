@@ -58,14 +58,14 @@ public class GrafanaInstanceInfo extends AbstractModel{
     private String [] SubnetIds;
 
     /**
-    * Grafana 内网地址
+    * Grafana 公网地址
     */
     @SerializedName("InternetUrl")
     @Expose
     private String InternetUrl;
 
     /**
-    * Grafana 公网地址
+    * Grafana 内网地址
     */
     @SerializedName("InternalUrl")
     @Expose
@@ -237,32 +237,32 @@ public class GrafanaInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get Grafana 内网地址 
-     * @return InternetUrl Grafana 内网地址
+     * Get Grafana 公网地址 
+     * @return InternetUrl Grafana 公网地址
      */
     public String getInternetUrl() {
         return this.InternetUrl;
     }
 
     /**
-     * Set Grafana 内网地址
-     * @param InternetUrl Grafana 内网地址
+     * Set Grafana 公网地址
+     * @param InternetUrl Grafana 公网地址
      */
     public void setInternetUrl(String InternetUrl) {
         this.InternetUrl = InternetUrl;
     }
 
     /**
-     * Get Grafana 公网地址 
-     * @return InternalUrl Grafana 公网地址
+     * Get Grafana 内网地址 
+     * @return InternalUrl Grafana 内网地址
      */
     public String getInternalUrl() {
         return this.InternalUrl;
     }
 
     /**
-     * Set Grafana 公网地址
-     * @param InternalUrl Grafana 公网地址
+     * Set Grafana 内网地址
+     * @param InternalUrl Grafana 内网地址
      */
     public void setInternalUrl(String InternalUrl) {
         this.InternalUrl = InternalUrl;

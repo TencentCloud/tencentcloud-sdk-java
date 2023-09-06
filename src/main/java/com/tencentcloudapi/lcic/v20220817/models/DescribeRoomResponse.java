@@ -195,6 +195,13 @@ video 纯视频
     private Long VideoDuration;
 
     /**
+    * 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+    */
+    @SerializedName("EndDelayTime")
+    @Expose
+    private Long EndDelayTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -626,6 +633,22 @@ video 纯视频
     }
 
     /**
+     * Get 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟 
+     * @return EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     */
+    public Long getEndDelayTime() {
+        return this.EndDelayTime;
+    }
+
+    /**
+     * Set 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     * @param EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     */
+    public void setEndDelayTime(Long EndDelayTime) {
+        this.EndDelayTime = EndDelayTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -718,6 +741,9 @@ video 纯视频
         if (source.VideoDuration != null) {
             this.VideoDuration = new Long(source.VideoDuration);
         }
+        if (source.EndDelayTime != null) {
+            this.EndDelayTime = new Long(source.EndDelayTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -750,6 +776,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
         this.setParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
+        this.setParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

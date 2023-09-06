@@ -30,7 +30,7 @@ public class UpdateHealthCheckSettingsRequest extends AbstractModel{
     private String GroupId;
 
     /**
-    * 是否能使健康检查
+    * 是否开启健康检查
     */
     @SerializedName("EnableHealthCheck")
     @Expose
@@ -60,16 +60,16 @@ public class UpdateHealthCheckSettingsRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否能使健康检查 
-     * @return EnableHealthCheck 是否能使健康检查
+     * Get 是否开启健康检查 
+     * @return EnableHealthCheck 是否开启健康检查
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set 是否能使健康检查
-     * @param EnableHealthCheck 是否能使健康检查
+     * Set 是否开启健康检查
+     * @param EnableHealthCheck 是否开启健康检查
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;

@@ -23,61 +23,66 @@ import java.util.HashMap;
 public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
-    * 用户信息，其中UserId为必填参数
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 模板ID
+    * 合同模板ID，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 签署流程名称，最大长度不超过200字符
+    * 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 最大可发起签署流程份数，默认5份 
-<br/>发起流程数量超过此上限后二维码自动失效
+    * 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
+一旦发起流程数超越该限制，该二维码将自动失效。
     */
     @SerializedName("MaxFlowNum")
     @Expose
     private Long MaxFlowNum;
 
     /**
-    * 签署流程有效天数 
-<br/>默认7天 
-<br/>最高设置不超过30天
-    */
-    @SerializedName("FlowEffectiveDay")
-    @Expose
-    private Long FlowEffectiveDay;
-
-    /**
-    * 二维码有效天数 默认7天 最高设置不超过90天
+    * 二维码的有效期限，默认为7天，最高设定不得超过90天。
+一旦超过二维码的有效期限，该二维码将自动失效。
     */
     @SerializedName("QrEffectiveDay")
     @Expose
     private Long QrEffectiveDay;
 
     /**
-    * 指定的签署人信息
-<br/>指定后，则只允许指定的签署人扫码签署
+    * 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
+若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
+最长设定期限不得超过30天。
+    */
+    @SerializedName("FlowEffectiveDay")
+    @Expose
+    private Long FlowEffectiveDay;
+
+    /**
+    * 指定签署人信息。
+在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
     */
     @SerializedName("Restrictions")
     @Expose
     private ApproverRestriction [] Restrictions;
 
     /**
-    * 用户自定义字段
-<br/>回调的时候会进行透传，长度需要小于20480
+    * 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
     */
     @SerializedName("UserData")
     @Expose
@@ -94,7 +99,8 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
@@ -108,148 +114,168 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private ApproverRestriction ApproverRestrictions;
 
     /**
-     * Get 用户信息，其中UserId为必填参数 
-     * @return Operator 用户信息，其中UserId为必填参数
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 用户信息，其中UserId为必填参数
-     * @param Operator 用户信息，其中UserId为必填参数
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 模板ID 
-     * @return TemplateId 模板ID
+     * Get 合同模板ID，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。 
+     * @return TemplateId 合同模板ID，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID
-     * @param TemplateId 模板ID
+     * Set 合同模板ID，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
+     * @param TemplateId 合同模板ID，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 签署流程名称，最大长度不超过200字符 
-     * @return FlowName 签署流程名称，最大长度不超过200字符
+     * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。 
+     * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 签署流程名称，最大长度不超过200字符
-     * @param FlowName 签署流程名称，最大长度不超过200字符
+     * Set 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
+     * @param FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 最大可发起签署流程份数，默认5份 
-<br/>发起流程数量超过此上限后二维码自动失效 
-     * @return MaxFlowNum 最大可发起签署流程份数，默认5份 
-<br/>发起流程数量超过此上限后二维码自动失效
+     * Get 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
+一旦发起流程数超越该限制，该二维码将自动失效。 
+     * @return MaxFlowNum 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
+一旦发起流程数超越该限制，该二维码将自动失效。
      */
     public Long getMaxFlowNum() {
         return this.MaxFlowNum;
     }
 
     /**
-     * Set 最大可发起签署流程份数，默认5份 
-<br/>发起流程数量超过此上限后二维码自动失效
-     * @param MaxFlowNum 最大可发起签署流程份数，默认5份 
-<br/>发起流程数量超过此上限后二维码自动失效
+     * Set 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
+一旦发起流程数超越该限制，该二维码将自动失效。
+     * @param MaxFlowNum 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。
+一旦发起流程数超越该限制，该二维码将自动失效。
      */
     public void setMaxFlowNum(Long MaxFlowNum) {
         this.MaxFlowNum = MaxFlowNum;
     }
 
     /**
-     * Get 签署流程有效天数 
-<br/>默认7天 
-<br/>最高设置不超过30天 
-     * @return FlowEffectiveDay 签署流程有效天数 
-<br/>默认7天 
-<br/>最高设置不超过30天
-     */
-    public Long getFlowEffectiveDay() {
-        return this.FlowEffectiveDay;
-    }
-
-    /**
-     * Set 签署流程有效天数 
-<br/>默认7天 
-<br/>最高设置不超过30天
-     * @param FlowEffectiveDay 签署流程有效天数 
-<br/>默认7天 
-<br/>最高设置不超过30天
-     */
-    public void setFlowEffectiveDay(Long FlowEffectiveDay) {
-        this.FlowEffectiveDay = FlowEffectiveDay;
-    }
-
-    /**
-     * Get 二维码有效天数 默认7天 最高设置不超过90天 
-     * @return QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
+     * Get 二维码的有效期限，默认为7天，最高设定不得超过90天。
+一旦超过二维码的有效期限，该二维码将自动失效。 
+     * @return QrEffectiveDay 二维码的有效期限，默认为7天，最高设定不得超过90天。
+一旦超过二维码的有效期限，该二维码将自动失效。
      */
     public Long getQrEffectiveDay() {
         return this.QrEffectiveDay;
     }
 
     /**
-     * Set 二维码有效天数 默认7天 最高设置不超过90天
-     * @param QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
+     * Set 二维码的有效期限，默认为7天，最高设定不得超过90天。
+一旦超过二维码的有效期限，该二维码将自动失效。
+     * @param QrEffectiveDay 二维码的有效期限，默认为7天，最高设定不得超过90天。
+一旦超过二维码的有效期限，该二维码将自动失效。
      */
     public void setQrEffectiveDay(Long QrEffectiveDay) {
         this.QrEffectiveDay = QrEffectiveDay;
     }
 
     /**
-     * Get 指定的签署人信息
-<br/>指定后，则只允许指定的签署人扫码签署 
-     * @return Restrictions 指定的签署人信息
-<br/>指定后，则只允许指定的签署人扫码签署
+     * Get 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
+若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
+最长设定期限不得超过30天。 
+     * @return FlowEffectiveDay 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
+若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
+最长设定期限不得超过30天。
+     */
+    public Long getFlowEffectiveDay() {
+        return this.FlowEffectiveDay;
+    }
+
+    /**
+     * Set 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
+若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
+最长设定期限不得超过30天。
+     * @param FlowEffectiveDay 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。
+若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。
+最长设定期限不得超过30天。
+     */
+    public void setFlowEffectiveDay(Long FlowEffectiveDay) {
+        this.FlowEffectiveDay = FlowEffectiveDay;
+    }
+
+    /**
+     * Get 指定签署人信息。
+在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。 
+     * @return Restrictions 指定签署人信息。
+在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
      */
     public ApproverRestriction [] getRestrictions() {
         return this.Restrictions;
     }
 
     /**
-     * Set 指定的签署人信息
-<br/>指定后，则只允许指定的签署人扫码签署
-     * @param Restrictions 指定的签署人信息
-<br/>指定后，则只允许指定的签署人扫码签署
+     * Set 指定签署人信息。
+在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
+     * @param Restrictions 指定签署人信息。
+在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。
      */
     public void setRestrictions(ApproverRestriction [] Restrictions) {
         this.Restrictions = Restrictions;
     }
 
     /**
-     * Get 用户自定义字段
-<br/>回调的时候会进行透传，长度需要小于20480 
-     * @return UserData 用户自定义字段
-<br/>回调的时候会进行透传，长度需要小于20480
+     * Get 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。 
+     * @return UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set 用户自定义字段
-<br/>回调的时候会进行透传，长度需要小于20480
-     * @param UserData 用户自定义字段
-<br/>回调的时候会进行透传，长度需要小于20480
+     * Set 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     * @param UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
@@ -288,16 +314,20 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -343,11 +373,11 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         if (source.MaxFlowNum != null) {
             this.MaxFlowNum = new Long(source.MaxFlowNum);
         }
-        if (source.FlowEffectiveDay != null) {
-            this.FlowEffectiveDay = new Long(source.FlowEffectiveDay);
-        }
         if (source.QrEffectiveDay != null) {
             this.QrEffectiveDay = new Long(source.QrEffectiveDay);
+        }
+        if (source.FlowEffectiveDay != null) {
+            this.FlowEffectiveDay = new Long(source.FlowEffectiveDay);
         }
         if (source.Restrictions != null) {
             this.Restrictions = new ApproverRestriction[source.Restrictions.length];
@@ -378,8 +408,8 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
-        this.setParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
         this.setParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
+        this.setParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
         this.setParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);

@@ -79,6 +79,14 @@ public class KongServicePreview extends AbstractModel{
     private Boolean Editable;
 
     /**
+    * 请求路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
      * Get 服务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ID 服务ID
@@ -218,6 +226,26 @@ public class KongServicePreview extends AbstractModel{
         this.Editable = Editable;
     }
 
+    /**
+     * Get 请求路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Path 请求路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set 请求路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Path 请求路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
     public KongServicePreview() {
     }
 
@@ -250,6 +278,9 @@ public class KongServicePreview extends AbstractModel{
         if (source.Editable != null) {
             this.Editable = new Boolean(source.Editable);
         }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
     }
 
 
@@ -264,6 +295,7 @@ public class KongServicePreview extends AbstractModel{
         this.setParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "Editable", this.Editable);
+        this.setParamSimple(map, prefix + "Path", this.Path);
 
     }
 }

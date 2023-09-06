@@ -30,7 +30,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
+    * 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
     */
     @SerializedName("FlowIds")
     @Expose
@@ -44,19 +44,25 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String FlowGroupId;
 
     /**
-    * 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+    * 签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序
     */
     @SerializedName("Endpoint")
     @Expose
     private String Endpoint;
 
     /**
-    * 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方；
+    * 签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方
     */
     @SerializedName("GenerateType")
     @Expose
@@ -70,14 +76,15 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String OrganizationName;
 
     /**
-    * 参与人姓名，GenerateType为"PERSON"时必填
+    * 参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 参与人手机号；
+    * 参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填
     */
     @SerializedName("Mobile")
@@ -122,10 +129,10 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     /**
     * 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮
     */
     @SerializedName("Hides")
     @Expose
@@ -148,16 +155,16 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Get 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一) 
-     * @return FlowIds 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
+     * Get 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一) 
+     * @return FlowIds 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
-     * @param FlowIds 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
+     * Set 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
+     * @param FlowIds 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
@@ -180,52 +187,76 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Get 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序； 
-     * @return Endpoint 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+     * Get 签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序 
+     * @return Endpoint 签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
-     * @param Endpoint 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+     * Set 签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序
+     * @param Endpoint 签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
     }
 
     /**
-     * Get 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方； 
-     * @return GenerateType 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方；
+     * Get 签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方 
+     * @return GenerateType 签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方
      */
     public String getGenerateType() {
         return this.GenerateType;
     }
 
     /**
-     * Set 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方；
-     * @param GenerateType 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方；
+     * Set 签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方
+     * @param GenerateType 签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
@@ -248,25 +279,29 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Get 参与人姓名，GenerateType为"PERSON"时必填 
-     * @return Name 参与人姓名，GenerateType为"PERSON"时必填
+     * Get 参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填 
+     * @return Name 参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 参与人姓名，GenerateType为"PERSON"时必填
-     * @param Name 参与人姓名，GenerateType为"PERSON"时必填
+     * Set 参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填
+     * @param Name 参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参与人手机号；
+     * Get 参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填 
-     * @return Mobile 参与人手机号；
+     * @return Mobile 参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填
      */
     public String getMobile() {
@@ -274,9 +309,9 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Set 参与人手机号；
+     * Set 参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填
-     * @param Mobile 参与人手机号；
+     * @param Mobile 参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填
      */
     public void setMobile(String Mobile) {
@@ -370,16 +405,16 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     /**
      * Get 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮 
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮 
      * @return Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮
      */
     public Long [] getHides() {
         return this.Hides;
@@ -388,16 +423,16 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     /**
      * Set 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮
      * @param Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮
      */
     public void setHides(Long [] Hides) {
         this.Hides = Hides;

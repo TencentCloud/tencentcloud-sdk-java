@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CallbackInfo extends AbstractModel{
 
     /**
-    * 回调url
+    * 回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -37,30 +37,30 @@ public class CallbackInfo extends AbstractModel{
     private String Token;
 
     /**
-    * 回调加密key
+    * 回调加密key，用于回调消息加解密。
     */
     @SerializedName("CallbackKey")
     @Expose
     private String CallbackKey;
 
     /**
-    * 回调验签token
+    * 回调验签token，用于回调通知校验。
     */
     @SerializedName("CallbackToken")
     @Expose
     private String CallbackToken;
 
     /**
-     * Get 回调url 
-     * @return CallbackUrl 回调url
+     * Get 回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。 
+     * @return CallbackUrl 回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调url
-     * @param CallbackUrl 回调url
+     * Set 回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
+     * @param CallbackUrl 回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
@@ -87,32 +87,32 @@ public class CallbackInfo extends AbstractModel{
     }
 
     /**
-     * Get 回调加密key 
-     * @return CallbackKey 回调加密key
+     * Get 回调加密key，用于回调消息加解密。 
+     * @return CallbackKey 回调加密key，用于回调消息加解密。
      */
     public String getCallbackKey() {
         return this.CallbackKey;
     }
 
     /**
-     * Set 回调加密key
-     * @param CallbackKey 回调加密key
+     * Set 回调加密key，用于回调消息加解密。
+     * @param CallbackKey 回调加密key，用于回调消息加解密。
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;
     }
 
     /**
-     * Get 回调验签token 
-     * @return CallbackToken 回调验签token
+     * Get 回调验签token，用于回调通知校验。 
+     * @return CallbackToken 回调验签token，用于回调通知校验。
      */
     public String getCallbackToken() {
         return this.CallbackToken;
     }
 
     /**
-     * Set 回调验签token
-     * @param CallbackToken 回调验签token
+     * Set 回调验签token，用于回调通知校验。
+     * @param CallbackToken 回调验签token，用于回调通知校验。
      */
     public void setCallbackToken(String CallbackToken) {
         this.CallbackToken = CallbackToken;

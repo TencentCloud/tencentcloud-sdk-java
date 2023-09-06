@@ -114,6 +114,14 @@ public class ExportInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
      * Get 日志主题ID 
      * @return TopicId 日志主题ID
      */
@@ -321,6 +329,26 @@ public class ExportInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。 
+     * @return SyntaxRule 语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set 语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。
+     * @param SyntaxRule 语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
     public ExportInfo() {
     }
 
@@ -368,6 +396,9 @@ public class ExportInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -388,6 +419,7 @@ public class ExportInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "CosPath", this.CosPath);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

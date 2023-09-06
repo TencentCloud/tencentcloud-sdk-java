@@ -37,7 +37,7 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+    * 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
     */
     @SerializedName("ClusterParamList")
     @Expose
@@ -90,16 +90,16 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     }
 
     /**
-     * Get 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}] 
-     * @return ClusterParamList 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+     * Get 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}] 
+     * @return ClusterParamList 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
      */
     public ModifyParamItem [] getClusterParamList() {
         return this.ClusterParamList;
     }
 
     /**
-     * Set 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
-     * @param ClusterParamList 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+     * Set 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
+     * @param ClusterParamList 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
      */
     public void setClusterParamList(ModifyParamItem [] ClusterParamList) {
         this.ClusterParamList = ClusterParamList;

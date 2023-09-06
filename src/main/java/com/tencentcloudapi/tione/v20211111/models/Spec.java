@@ -58,6 +58,38 @@ public class Spec extends AbstractModel{
     private String [] AvailableRegion;
 
     /**
+    * 当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecFeatures")
+    @Expose
+    private String [] SpecFeatures;
+
+    /**
+    * 计费项类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecType")
+    @Expose
+    private String SpecType;
+
+    /**
+    * GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GpuType")
+    @Expose
+    private String GpuType;
+
+    /**
+    * 计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CategoryId")
+    @Expose
+    private String CategoryId;
+
+    /**
      * Get 计费项标签 
      * @return SpecId 计费项标签
      */
@@ -137,6 +169,86 @@ public class Spec extends AbstractModel{
         this.AvailableRegion = AvailableRegion;
     }
 
+    /**
+     * Get 当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecFeatures 当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSpecFeatures() {
+        return this.SpecFeatures;
+    }
+
+    /**
+     * Set 当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecFeatures 当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecFeatures(String [] SpecFeatures) {
+        this.SpecFeatures = SpecFeatures;
+    }
+
+    /**
+     * Get 计费项类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecType 计费项类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSpecType() {
+        return this.SpecType;
+    }
+
+    /**
+     * Set 计费项类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecType 计费项类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecType(String SpecType) {
+        this.SpecType = SpecType;
+    }
+
+    /**
+     * Get GPU类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GpuType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGpuType() {
+        return this.GpuType;
+    }
+
+    /**
+     * Set GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GpuType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGpuType(String GpuType) {
+        this.GpuType = GpuType;
+    }
+
+    /**
+     * Get 计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CategoryId 计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCategoryId() {
+        return this.CategoryId;
+    }
+
+    /**
+     * Set 计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CategoryId 计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCategoryId(String CategoryId) {
+        this.CategoryId = CategoryId;
+    }
+
     public Spec() {
     }
 
@@ -163,6 +275,21 @@ public class Spec extends AbstractModel{
                 this.AvailableRegion[i] = new String(source.AvailableRegion[i]);
             }
         }
+        if (source.SpecFeatures != null) {
+            this.SpecFeatures = new String[source.SpecFeatures.length];
+            for (int i = 0; i < source.SpecFeatures.length; i++) {
+                this.SpecFeatures[i] = new String(source.SpecFeatures[i]);
+            }
+        }
+        if (source.SpecType != null) {
+            this.SpecType = new String(source.SpecType);
+        }
+        if (source.GpuType != null) {
+            this.GpuType = new String(source.GpuType);
+        }
+        if (source.CategoryId != null) {
+            this.CategoryId = new String(source.CategoryId);
+        }
     }
 
 
@@ -175,6 +302,10 @@ public class Spec extends AbstractModel{
         this.setParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
         this.setParamSimple(map, prefix + "Available", this.Available);
         this.setParamArraySimple(map, prefix + "AvailableRegion.", this.AvailableRegion);
+        this.setParamArraySimple(map, prefix + "SpecFeatures.", this.SpecFeatures);
+        this.setParamSimple(map, prefix + "SpecType", this.SpecType);
+        this.setParamSimple(map, prefix + "GpuType", this.GpuType);
+        this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
 
     }
 }

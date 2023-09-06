@@ -182,6 +182,13 @@ video 纯视频
     private Long RecordLayout;
 
     /**
+    * 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+    */
+    @SerializedName("EndDelayTime")
+    @Expose
+    private Long EndDelayTime;
+
+    /**
      * Get 房间ID。 
      * @return RoomId 房间ID。
      */
@@ -577,6 +584,22 @@ video 纯视频
         this.RecordLayout = RecordLayout;
     }
 
+    /**
+     * Get 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟 
+     * @return EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     */
+    public Long getEndDelayTime() {
+        return this.EndDelayTime;
+    }
+
+    /**
+     * Set 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     * @param EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     */
+    public void setEndDelayTime(Long EndDelayTime) {
+        this.EndDelayTime = EndDelayTime;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -648,6 +671,9 @@ video 纯视频
         if (source.RecordLayout != null) {
             this.RecordLayout = new Long(source.RecordLayout);
         }
+        if (source.EndDelayTime != null) {
+            this.EndDelayTime = new Long(source.EndDelayTime);
+        }
     }
 
 
@@ -675,6 +701,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
+        this.setParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
 
     }
 }

@@ -39,6 +39,13 @@ public class ChargeDetail extends AbstractModel{
     /**
     * 一比一时使用的、脱敏后的身份证号。
     */
+    @SerializedName("IdCard")
+    @Expose
+    private String IdCard;
+
+    /**
+    * 已废弃。请使用“IdCard”字段
+    */
     @SerializedName("Idcard")
     @Expose
     private String Idcard;
@@ -119,16 +126,36 @@ public class ChargeDetail extends AbstractModel{
 
     /**
      * Get 一比一时使用的、脱敏后的身份证号。 
-     * @return Idcard 一比一时使用的、脱敏后的身份证号。
+     * @return IdCard 一比一时使用的、脱敏后的身份证号。
      */
+    public String getIdCard() {
+        return this.IdCard;
+    }
+
+    /**
+     * Set 一比一时使用的、脱敏后的身份证号。
+     * @param IdCard 一比一时使用的、脱敏后的身份证号。
+     */
+    public void setIdCard(String IdCard) {
+        this.IdCard = IdCard;
+    }
+
+    /**
+     * Get 已废弃。请使用“IdCard”字段 
+     * @return Idcard 已废弃。请使用“IdCard”字段
+     * @deprecated
+     */
+    @Deprecated
     public String getIdcard() {
         return this.Idcard;
     }
 
     /**
-     * Set 一比一时使用的、脱敏后的身份证号。
-     * @param Idcard 一比一时使用的、脱敏后的身份证号。
+     * Set 已废弃。请使用“IdCard”字段
+     * @param Idcard 已废弃。请使用“IdCard”字段
+     * @deprecated
      */
+    @Deprecated
     public void setIdcard(String Idcard) {
         this.Idcard = Idcard;
     }
@@ -243,6 +270,9 @@ public class ChargeDetail extends AbstractModel{
         if (source.Seq != null) {
             this.Seq = new String(source.Seq);
         }
+        if (source.IdCard != null) {
+            this.IdCard = new String(source.IdCard);
+        }
         if (source.Idcard != null) {
             this.Idcard = new String(source.Idcard);
         }
@@ -273,6 +303,7 @@ public class ChargeDetail extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReqTime", this.ReqTime);
         this.setParamSimple(map, prefix + "Seq", this.Seq);
+        this.setParamSimple(map, prefix + "IdCard", this.IdCard);
         this.setParamSimple(map, prefix + "Idcard", this.Idcard);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Sim", this.Sim);

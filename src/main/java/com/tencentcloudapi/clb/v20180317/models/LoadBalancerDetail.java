@@ -327,6 +327,14 @@ Public：公网属性， Private：内网属性。
     private String LoadBalancerDomain;
 
     /**
+    * 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1086,6 +1094,26 @@ Public：公网属性， Private：内网属性。
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
+    /**
+     * Get 网络出口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1220,6 +1248,9 @@ Public：公网属性， Private：内网属性。
         if (source.LoadBalancerDomain != null) {
             this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -1265,6 +1296,7 @@ Public：公网属性， Private：内网属性。
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

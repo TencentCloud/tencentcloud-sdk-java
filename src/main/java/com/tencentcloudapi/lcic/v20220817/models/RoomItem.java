@@ -161,6 +161,14 @@ public class RoomItem extends AbstractModel{
     private Long RoomType;
 
     /**
+    * 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndDelayTime")
+    @Expose
+    private Long EndDelayTime;
+
+    /**
      * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 名称
@@ -508,6 +516,26 @@ public class RoomItem extends AbstractModel{
         this.RoomType = RoomType;
     }
 
+    /**
+     * Get 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEndDelayTime() {
+        return this.EndDelayTime;
+    }
+
+    /**
+     * Set 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndDelayTime(Long EndDelayTime) {
+        this.EndDelayTime = EndDelayTime;
+    }
+
     public RoomItem() {
     }
 
@@ -567,6 +595,9 @@ public class RoomItem extends AbstractModel{
         if (source.RoomType != null) {
             this.RoomType = new Long(source.RoomType);
         }
+        if (source.EndDelayTime != null) {
+            this.EndDelayTime = new Long(source.EndDelayTime);
+        }
     }
 
 
@@ -591,6 +622,7 @@ public class RoomItem extends AbstractModel{
         this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
+        this.setParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
 
     }
 }

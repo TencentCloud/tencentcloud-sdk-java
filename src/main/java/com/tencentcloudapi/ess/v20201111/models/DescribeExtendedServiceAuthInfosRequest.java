@@ -23,97 +23,117 @@ import java.util.HashMap;
 public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel{
 
     /**
-    * 操作人信息
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
-    * 扩展服务类型，默认为空，查询目前支持的所有扩展服务信息，单个指定则查询单个扩展服务开通信息，取值：
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署
+    * 要查询的扩展服务类型。
+默认为空，即查询当前支持的所有扩展服务信息。
+若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul>
     */
     @SerializedName("ExtendServiceType")
     @Expose
     private String ExtendServiceType;
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
-     * Get 扩展服务类型，默认为空，查询目前支持的所有扩展服务信息，单个指定则查询单个扩展服务开通信息，取值：
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署 
-     * @return ExtendServiceType 扩展服务类型，默认为空，查询目前支持的所有扩展服务信息，单个指定则查询单个扩展服务开通信息，取值：
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署
+     * Get 要查询的扩展服务类型。
+默认为空，即查询当前支持的所有扩展服务信息。
+若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul> 
+     * @return ExtendServiceType 要查询的扩展服务类型。
+默认为空，即查询当前支持的所有扩展服务信息。
+若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul>
      */
     public String getExtendServiceType() {
         return this.ExtendServiceType;
     }
 
     /**
-     * Set 扩展服务类型，默认为空，查询目前支持的所有扩展服务信息，单个指定则查询单个扩展服务开通信息，取值：
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署
-     * @param ExtendServiceType 扩展服务类型，默认为空，查询目前支持的所有扩展服务信息，单个指定则查询单个扩展服务开通信息，取值：
-OPEN_SERVER_SIGN：开通企业静默签署
-OVERSEA_SIGN：企业与港澳台居民签署合同
-MOBILE_CHECK_APPROVER：使用手机号验证签署方身份
-PAGING_SEAL：骑缝章
-BATCH_SIGN：批量签署
+     * Set 要查询的扩展服务类型。
+默认为空，即查询当前支持的所有扩展服务信息。
+若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul>
+     * @param ExtendServiceType 要查询的扩展服务类型。
+默认为空，即查询当前支持的所有扩展服务信息。
+若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
+<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>PAGING_SEAL：骑缝章</li>
+<li>BATCH_SIGN：批量签署</li></ul>
      */
     public void setExtendServiceType(String ExtendServiceType) {
         this.ExtendServiceType = ExtendServiceType;
+    }
+
+    /**
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     public DescribeExtendedServiceAuthInfosRequest() {
@@ -127,11 +147,11 @@ BATCH_SIGN：批量签署
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
         if (source.ExtendServiceType != null) {
             this.ExtendServiceType = new String(source.ExtendServiceType);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -141,8 +161,8 @@ BATCH_SIGN：批量签署
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ExtendServiceType", this.ExtendServiceType);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

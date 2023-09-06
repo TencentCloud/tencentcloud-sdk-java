@@ -65,6 +65,13 @@ public class CreateSubnetRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * IPv6 CIDR
+    */
+    @SerializedName("IPv6CidrBlock")
+    @Expose
+    private String IPv6CidrBlock;
+
+    /**
      * Get 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
@@ -160,6 +167,22 @@ public class CreateSubnetRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get IPv6 CIDR 
+     * @return IPv6CidrBlock IPv6 CIDR
+     */
+    public String getIPv6CidrBlock() {
+        return this.IPv6CidrBlock;
+    }
+
+    /**
+     * Set IPv6 CIDR
+     * @param IPv6CidrBlock IPv6 CIDR
+     */
+    public void setIPv6CidrBlock(String IPv6CidrBlock) {
+        this.IPv6CidrBlock = IPv6CidrBlock;
+    }
+
     public CreateSubnetRequest() {
     }
 
@@ -189,6 +212,9 @@ public class CreateSubnetRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IPv6CidrBlock != null) {
+            this.IPv6CidrBlock = new String(source.IPv6CidrBlock);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateSubnetRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IPv6CidrBlock", this.IPv6CidrBlock);
 
     }
 }

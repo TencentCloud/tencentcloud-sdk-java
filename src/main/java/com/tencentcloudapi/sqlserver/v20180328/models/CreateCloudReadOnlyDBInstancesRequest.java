@@ -121,7 +121,7 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel{
     private String InstanceChargeType;
 
     /**
-    * 本次购买几个只读实例，默认值为2。
+    * 本次即将购买的实例数量，默认取值2。
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -415,16 +415,16 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 本次购买几个只读实例，默认值为2。 
-     * @return GoodsNum 本次购买几个只读实例，默认值为2。
+     * Get 本次即将购买的实例数量，默认取值2。 
+     * @return GoodsNum 本次即将购买的实例数量，默认取值2。
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 本次购买几个只读实例，默认值为2。
-     * @param GoodsNum 本次购买几个只读实例，默认值为2。
+     * Set 本次即将购买的实例数量，默认取值2。
+     * @param GoodsNum 本次即将购买的实例数量，默认取值2。
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;

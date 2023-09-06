@@ -1467,6 +1467,27 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *查询消息轨迹
+     * @param req DescribeRocketMQMsgTraceRequest
+     * @return DescribeRocketMQMsgTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQMsgTraceResponse DescribeRocketMQMsgTrace(DescribeRocketMQMsgTraceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQMsgTraceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQMsgTraceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQMsgTrace");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取RocketMQ命名空间列表
      * @param req DescribeRocketMQNamespacesRequest
      * @return DescribeRocketMQNamespacesResponse
@@ -1480,6 +1501,27 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQNamespacesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRocketMQNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *rocketmq 消息查询
+     * @param req DescribeRocketMQTopicMsgsRequest
+     * @return DescribeRocketMQTopicMsgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicMsgsResponse DescribeRocketMQTopicMsgs(DescribeRocketMQTopicMsgsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQTopicMsgsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQTopicMsgsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQTopicMsgs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

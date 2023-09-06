@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HasAuthUser extends AbstractModel{
 
     /**
-    * 用户id
+    * 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
@@ -31,9 +31,9 @@ public class HasAuthUser extends AbstractModel{
     private String UserId;
 
     /**
-    * 用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+    * 当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BelongTo")
@@ -41,9 +41,9 @@ CurrentOrg：当前企业
     private String BelongTo;
 
     /**
-     * Get 用户id
+     * Get 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserId 用户id
+     * @return UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
@@ -51,9 +51,9 @@ CurrentOrg：当前企业
     }
 
     /**
-     * Set 用户id
+     * Set 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserId 用户id
+     * @param UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
@@ -61,13 +61,13 @@ CurrentOrg：当前企业
     }
 
     /**
-     * Get 用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+     * Get 当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BelongTo 用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+     * @return BelongTo 当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBelongTo() {
@@ -75,13 +75,13 @@ CurrentOrg：当前企业
     }
 
     /**
-     * Set 用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+     * Set 当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BelongTo 用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+     * @param BelongTo 当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBelongTo(String BelongTo) {

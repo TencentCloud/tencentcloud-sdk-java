@@ -165,6 +165,27 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
+     * @param req CreateCertificateBindResourceSyncTaskRequest
+     * @return CreateCertificateBindResourceSyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCertificateBindResourceSyncTaskResponse CreateCertificateBindResourceSyncTask(CreateCertificateBindResourceSyncTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCertificateBindResourceSyncTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCertificateBindResourceSyncTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *使用权益点创建证书
      * @param req CreateCertificateByPackageRequest
      * @return CreateCertificateByPackageResponse
@@ -304,6 +325,48 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+     * @param req DescribeCertificateBindResourceTaskDetailRequest
+     * @return DescribeCertificateBindResourceTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCertificateBindResourceTaskDetailResponse DescribeCertificateBindResourceTaskDetail(DescribeCertificateBindResourceTaskDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCertificateBindResourceTaskDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCertificateBindResourceTaskDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+     * @param req DescribeCertificateBindResourceTaskResultRequest
+     * @return DescribeCertificateBindResourceTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCertificateBindResourceTaskResultResponse DescribeCertificateBindResourceTaskResult(DescribeCertificateBindResourceTaskResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCertificateBindResourceTaskResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCertificateBindResourceTaskResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

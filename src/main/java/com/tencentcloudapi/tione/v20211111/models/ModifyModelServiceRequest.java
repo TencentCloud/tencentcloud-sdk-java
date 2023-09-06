@@ -200,6 +200,13 @@ HYBRID_PAID:
     private String Command;
 
     /**
+    * 是否开启TIONE内网访问外部
+    */
+    @SerializedName("ServiceEIP")
+    @Expose
+    private ServiceEIP ServiceEIP;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -643,6 +650,22 @@ HYBRID_PAID:
         this.Command = Command;
     }
 
+    /**
+     * Get 是否开启TIONE内网访问外部 
+     * @return ServiceEIP 是否开启TIONE内网访问外部
+     */
+    public ServiceEIP getServiceEIP() {
+        return this.ServiceEIP;
+    }
+
+    /**
+     * Set 是否开启TIONE内网访问外部
+     * @param ServiceEIP 是否开启TIONE内网访问外部
+     */
+    public void setServiceEIP(ServiceEIP ServiceEIP) {
+        this.ServiceEIP = ServiceEIP;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -723,6 +746,9 @@ HYBRID_PAID:
         if (source.Command != null) {
             this.Command = new String(source.Command);
         }
+        if (source.ServiceEIP != null) {
+            this.ServiceEIP = new ServiceEIP(source.ServiceEIP);
+        }
     }
 
 
@@ -752,6 +778,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
         this.setParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
         this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
 
     }
 }

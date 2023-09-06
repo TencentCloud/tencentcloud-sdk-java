@@ -44,13 +44,6 @@ public class Placement extends AbstractModel{
     private String [] HostIds;
 
     /**
-    * 指定母机IP生产子机
-    */
-    @SerializedName("HostIps")
-    @Expose
-    private String [] HostIps;
-
-    /**
     * 实例所属的专用宿主机ID，仅用于出参。
     */
     @SerializedName("HostId")
@@ -106,22 +99,6 @@ public class Placement extends AbstractModel{
     }
 
     /**
-     * Get 指定母机IP生产子机 
-     * @return HostIps 指定母机IP生产子机
-     */
-    public String [] getHostIps() {
-        return this.HostIps;
-    }
-
-    /**
-     * Set 指定母机IP生产子机
-     * @param HostIps 指定母机IP生产子机
-     */
-    public void setHostIps(String [] HostIps) {
-        this.HostIps = HostIps;
-    }
-
-    /**
      * Get 实例所属的专用宿主机ID，仅用于出参。 
      * @return HostId 实例所属的专用宿主机ID，仅用于出参。
      */
@@ -157,12 +134,6 @@ public class Placement extends AbstractModel{
                 this.HostIds[i] = new String(source.HostIds[i]);
             }
         }
-        if (source.HostIps != null) {
-            this.HostIps = new String[source.HostIps.length];
-            for (int i = 0; i < source.HostIps.length; i++) {
-                this.HostIps[i] = new String(source.HostIps[i]);
-            }
-        }
         if (source.HostId != null) {
             this.HostId = new String(source.HostId);
         }
@@ -176,7 +147,6 @@ public class Placement extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "HostIds.", this.HostIds);
-        this.setParamArraySimple(map, prefix + "HostIps.", this.HostIps);
         this.setParamSimple(map, prefix + "HostId", this.HostId);
 
     }

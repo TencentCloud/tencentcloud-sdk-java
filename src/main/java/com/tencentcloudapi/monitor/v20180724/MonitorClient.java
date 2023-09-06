@@ -1941,6 +1941,27 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *列出 Prometheus 服务所有可用的地域
+     * @param req DescribePrometheusRegionsRequest
+     * @return DescribePrometheusRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusRegionsResponse DescribePrometheusRegions(DescribePrometheusRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusRegionsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *列出 Prometheus 抓取任务
      * @param req DescribePrometheusScrapeJobsRequest
      * @return DescribePrometheusScrapeJobsResponse

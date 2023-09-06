@@ -134,6 +134,14 @@ public class FlowApproverDetail extends AbstractModel{
     private String OrganizationName;
 
     /**
+    * 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SignId")
+    @Expose
+    private String SignId;
+
+    /**
      * Get 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApproveMessage 签署时的相关信息
@@ -421,6 +429,26 @@ public class FlowApproverDetail extends AbstractModel{
         this.OrganizationName = OrganizationName;
     }
 
+    /**
+     * Get 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSignId() {
+        return this.SignId;
+    }
+
+    /**
+     * Set 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignId(String SignId) {
+        this.SignId = SignId;
+    }
+
     public FlowApproverDetail() {
     }
 
@@ -468,6 +496,9 @@ public class FlowApproverDetail extends AbstractModel{
         if (source.OrganizationName != null) {
             this.OrganizationName = new String(source.OrganizationName);
         }
+        if (source.SignId != null) {
+            this.SignId = new String(source.SignId);
+        }
     }
 
 
@@ -488,6 +519,7 @@ public class FlowApproverDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+        this.setParamSimple(map, prefix + "SignId", this.SignId);
 
     }
 }

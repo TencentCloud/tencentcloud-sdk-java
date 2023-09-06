@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class StartFlowRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 签署流程编号，由CreateFlow接口返回
+    * 合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
     */
     @SerializedName("FlowId")
     @Expose
@@ -44,50 +46,57 @@ public class StartFlowRequest extends AbstractModel{
     private String ClientToken;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知
+    * 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知
     */
     @SerializedName("CcNotifyType")
     @Expose
     private Long CcNotifyType;
 
     /**
-     * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。 
-     * @return Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
-     * @param Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 签署流程编号，由CreateFlow接口返回 
-     * @return FlowId 签署流程编号，由CreateFlow接口返回
+     * Get 合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。 
+     * @return FlowId 合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 签署流程编号，由CreateFlow接口返回
-     * @param FlowId 签署流程编号，由CreateFlow接口返回
+     * Set 合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
+     * @param FlowId 合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
@@ -96,7 +105,9 @@ public class StartFlowRequest extends AbstractModel{
     /**
      * Get 客户端Token，保持接口幂等性,最大长度64个字符 
      * @return ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * @deprecated
      */
+    @Deprecated
     public String getClientToken() {
         return this.ClientToken;
     }
@@ -104,54 +115,52 @@ public class StartFlowRequest extends AbstractModel{
     /**
      * Set 客户端Token，保持接口幂等性,最大长度64个字符
      * @param ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * @deprecated
      */
+    @Deprecated
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知 
-     * @return CcNotifyType 给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知
+     * Get 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知 
+     * @return CcNotifyType 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知
      */
     public Long getCcNotifyType() {
         return this.CcNotifyType;
     }
 
     /**
-     * Set 给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知
-     * @param CcNotifyType 给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知
+     * Set 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知
+     * @param CcNotifyType 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知
      */
     public void setCcNotifyType(Long CcNotifyType) {
         this.CcNotifyType = CcNotifyType;

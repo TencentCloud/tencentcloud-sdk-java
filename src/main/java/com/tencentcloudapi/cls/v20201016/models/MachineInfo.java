@@ -30,6 +30,14 @@ public class MachineInfo extends AbstractModel{
     private String Ip;
 
     /**
+    * 机器实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
     * 机器状态，0:异常，1:正常
     */
     @SerializedName("Status")
@@ -92,6 +100,26 @@ public class MachineInfo extends AbstractModel{
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
+    }
+
+    /**
+     * Get 机器实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceID 机器实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set 机器实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceID 机器实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
     }
 
     /**
@@ -217,6 +245,9 @@ public class MachineInfo extends AbstractModel{
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
         }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
@@ -246,6 +277,7 @@ public class MachineInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         this.setParamSimple(map, prefix + "AutoUpdate", this.AutoUpdate);

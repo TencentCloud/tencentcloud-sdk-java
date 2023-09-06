@@ -51,6 +51,9 @@ public enum EisErrorCode {
     // 应用和实例不匹配。
      INVALIDPARAMETERVALUE_PROJECTANDINSTANCENOTMATCH("InvalidParameterValue.ProjectAndInstanceNotMatch"),
      
+    // 应用实例ID不存在。
+     INVALIDPARAMETERVALUE_PROJECTINSTANCENOTFOUND("InvalidParameterValue.ProjectInstanceNotFound"),
+     
     // 运行时已删除。
      INVALIDPARAMETERVALUE_RUNTIMEALREADYDELETED("InvalidParameterValue.RuntimeAlreadyDeleted"),
      

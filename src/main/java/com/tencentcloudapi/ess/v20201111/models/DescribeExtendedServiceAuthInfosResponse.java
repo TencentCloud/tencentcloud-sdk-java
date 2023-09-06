@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeExtendedServiceAuthInfosResponse extends AbstractModel{
 
     /**
-    * 授权服务信息列表
+    * 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
     */
     @SerializedName("AuthInfoList")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeExtendedServiceAuthInfosResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 授权服务信息列表 
-     * @return AuthInfoList 授权服务信息列表
+     * Get 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。 
+     * @return AuthInfoList 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
      */
     public ExtendAuthInfo [] getAuthInfoList() {
         return this.AuthInfoList;
     }
 
     /**
-     * Set 授权服务信息列表
-     * @param AuthInfoList 授权服务信息列表
+     * Set 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
+     * @param AuthInfoList 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
      */
     public void setAuthInfoList(ExtendAuthInfo [] AuthInfoList) {
         this.AuthInfoList = AuthInfoList;
