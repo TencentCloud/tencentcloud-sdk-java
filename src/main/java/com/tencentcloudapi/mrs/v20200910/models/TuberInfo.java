@@ -383,6 +383,14 @@ public class TuberInfo extends AbstractModel{
     private Coord [] Coords;
 
     /**
+    * 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsthmusThickness")
+    @Expose
+    private Size IsthmusThickness;
+
+    /**
      * Get 类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 类型
@@ -1007,7 +1015,9 @@ public class TuberInfo extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Size getIsthmusThicknese() {
         return this.IsthmusThicknese;
     }
@@ -1017,7 +1027,9 @@ public class TuberInfo extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setIsthmusThicknese(Size IsthmusThicknese) {
         this.IsthmusThicknese = IsthmusThicknese;
     }
@@ -1282,6 +1294,26 @@ public class TuberInfo extends AbstractModel{
         this.Coords = Coords;
     }
 
+    /**
+     * Get 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsthmusThickness 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Size getIsthmusThickness() {
+        return this.IsthmusThickness;
+    }
+
+    /**
+     * Set 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsthmusThickness 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsthmusThickness(Size IsthmusThickness) {
+        this.IsthmusThickness = IsthmusThickness;
+    }
+
     public TuberInfo() {
     }
 
@@ -1437,6 +1469,9 @@ public class TuberInfo extends AbstractModel{
                 this.Coords[i] = new Coord(source.Coords[i]);
             }
         }
+        if (source.IsthmusThickness != null) {
+            this.IsthmusThickness = new Size(source.IsthmusThickness);
+        }
     }
 
 
@@ -1489,6 +1524,7 @@ public class TuberInfo extends AbstractModel{
         this.setParamObj(map, prefix + "SymDesc.", this.SymDesc);
         this.setParamObj(map, prefix + "ImageFeature.", this.ImageFeature);
         this.setParamArrayObj(map, prefix + "Coords.", this.Coords);
+        this.setParamObj(map, prefix + "IsthmusThickness.", this.IsthmusThickness);
 
     }
 }

@@ -31,11 +31,12 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     private String ReportUrl;
 
     /**
-    * 出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败
+    * 签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul>
     */
     @SerializedName("Status")
     @Expose
@@ -69,32 +70,36 @@ EvidenceStatusFailed  出证任务执行失败
     }
 
     /**
-     * Get 出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败 
-     * @return Status 出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败
+     * Get 签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul> 
+     * @return Status 签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败
-     * @param Status 出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败
+     * Set 签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul>
+     * @param Status 签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

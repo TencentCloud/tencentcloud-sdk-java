@@ -23,151 +23,209 @@ import java.util.HashMap;
 public class CreateReleaseFlowRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，userId 必填
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 待解除的签署流程编号（即原签署流程的编号）
+    * 待解除的签署流程编号（即原签署流程的编号）。
     */
     @SerializedName("NeedRelievedFlowId")
     @Expose
     private String NeedRelievedFlowId;
 
     /**
-    * 解除协议内容
+    * 解除协议内容。
     */
     @SerializedName("ReliveInfo")
     @Expose
     private RelieveInfo ReliveInfo;
 
     /**
-    * 非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量
-    */
-    @SerializedName("ReleasedApprovers")
-    @Expose
-    private ReleasedApprover [] ReleasedApprovers;
-
-    /**
-    * 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
-    */
-    @SerializedName("Deadline")
-    @Expose
-    private Long Deadline;
-
-    /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 调用方用户信息，userId 必填 
-     * @return Operator 调用方用户信息，userId 必填
+    * 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/>
+    */
+    @SerializedName("ReleasedApprovers")
+    @Expose
+    private ReleasedApprover [] ReleasedApprovers;
+
+    /**
+    * 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
+    * 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填
-     * @param Operator 调用方用户信息，userId 必填
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 待解除的签署流程编号（即原签署流程的编号） 
-     * @return NeedRelievedFlowId 待解除的签署流程编号（即原签署流程的编号）
+     * Get 待解除的签署流程编号（即原签署流程的编号）。 
+     * @return NeedRelievedFlowId 待解除的签署流程编号（即原签署流程的编号）。
      */
     public String getNeedRelievedFlowId() {
         return this.NeedRelievedFlowId;
     }
 
     /**
-     * Set 待解除的签署流程编号（即原签署流程的编号）
-     * @param NeedRelievedFlowId 待解除的签署流程编号（即原签署流程的编号）
+     * Set 待解除的签署流程编号（即原签署流程的编号）。
+     * @param NeedRelievedFlowId 待解除的签署流程编号（即原签署流程的编号）。
      */
     public void setNeedRelievedFlowId(String NeedRelievedFlowId) {
         this.NeedRelievedFlowId = NeedRelievedFlowId;
     }
 
     /**
-     * Get 解除协议内容 
-     * @return ReliveInfo 解除协议内容
+     * Get 解除协议内容。 
+     * @return ReliveInfo 解除协议内容。
      */
     public RelieveInfo getReliveInfo() {
         return this.ReliveInfo;
     }
 
     /**
-     * Set 解除协议内容
-     * @param ReliveInfo 解除协议内容
+     * Set 解除协议内容。
+     * @param ReliveInfo 解除协议内容。
      */
     public void setReliveInfo(RelieveInfo ReliveInfo) {
         this.ReliveInfo = ReliveInfo;
     }
 
     /**
-     * Get 非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量 
-     * @return ReleasedApprovers 非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量
-     */
-    public ReleasedApprover [] getReleasedApprovers() {
-        return this.ReleasedApprovers;
-    }
-
-    /**
-     * Set 非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量
-     * @param ReleasedApprovers 非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量
-     */
-    public void setReleasedApprovers(ReleasedApprover [] ReleasedApprovers) {
-        this.ReleasedApprovers = ReleasedApprovers;
-    }
-
-    /**
-     * Get 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后 
-     * @return Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
-     */
-    public Long getDeadline() {
-        return this.Deadline;
-    }
-
-    /**
-     * Set 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
-     * @param Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
-     */
-    public void setDeadline(Long Deadline) {
-        this.Deadline = Deadline;
-    }
-
-    /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
+     * @return Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
+    }
+
+    /**
+     * Get 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/> 
+     * @return ReleasedApprovers 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/>
+     */
+    public ReleasedApprover [] getReleasedApprovers() {
+        return this.ReleasedApprovers;
+    }
+
+    /**
+     * Set 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/>
+     * @param ReleasedApprovers 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/>
+     */
+    public void setReleasedApprovers(ReleasedApprover [] ReleasedApprovers) {
+        this.ReleasedApprovers = ReleasedApprovers;
+    }
+
+    /**
+     * Get 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。 
+     * @return Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     * @param Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
+    /**
+     * Get 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。 
+     * @return UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     * @param UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
     }
 
     public CreateReleaseFlowRequest() {
@@ -187,6 +245,9 @@ public class CreateReleaseFlowRequest extends AbstractModel{
         if (source.ReliveInfo != null) {
             this.ReliveInfo = new RelieveInfo(source.ReliveInfo);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
         if (source.ReleasedApprovers != null) {
             this.ReleasedApprovers = new ReleasedApprover[source.ReleasedApprovers.length];
             for (int i = 0; i < source.ReleasedApprovers.length; i++) {
@@ -196,8 +257,8 @@ public class CreateReleaseFlowRequest extends AbstractModel{
         if (source.Deadline != null) {
             this.Deadline = new Long(source.Deadline);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
         }
     }
 
@@ -209,9 +270,10 @@ public class CreateReleaseFlowRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "NeedRelievedFlowId", this.NeedRelievedFlowId);
         this.setParamObj(map, prefix + "ReliveInfo.", this.ReliveInfo);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "ReleasedApprovers.", this.ReleasedApprovers);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

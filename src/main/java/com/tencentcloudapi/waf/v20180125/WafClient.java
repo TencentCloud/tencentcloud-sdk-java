@@ -1433,6 +1433,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *刷新防篡改url
+     * @param req FreshAntiFakeUrlRequest
+     * @return FreshAntiFakeUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public FreshAntiFakeUrlResponse FreshAntiFakeUrl(FreshAntiFakeUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FreshAntiFakeUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<FreshAntiFakeUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FreshAntiFakeUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询下载攻击日志任务记录列表
      * @param req GetAttackDownloadRecordsRequest
      * @return GetAttackDownloadRecordsResponse

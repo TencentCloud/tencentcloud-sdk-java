@@ -30,7 +30,7 @@ public class AttributeItem extends AbstractModel{
     private Long Type;
 
     /**
-    * Type识别概率值，【0,1】,代表判断正确的概率。
+    * Type识别概率值,[0,1],代表判断正确的概率。
     */
     @SerializedName("Probability")
     @Expose
@@ -53,16 +53,16 @@ public class AttributeItem extends AbstractModel{
     }
 
     /**
-     * Get Type识别概率值，【0,1】,代表判断正确的概率。 
-     * @return Probability Type识别概率值，【0,1】,代表判断正确的概率。
+     * Get Type识别概率值,[0,1],代表判断正确的概率。 
+     * @return Probability Type识别概率值,[0,1],代表判断正确的概率。
      */
     public Float getProbability() {
         return this.Probability;
     }
 
     /**
-     * Set Type识别概率值，【0,1】,代表判断正确的概率。
-     * @param Probability Type识别概率值，【0,1】,代表判断正确的概率。
+     * Set Type识别概率值,[0,1],代表判断正确的概率。
+     * @param Probability Type识别概率值,[0,1],代表判断正确的概率。
      */
     public void setProbability(Float Probability) {
         this.Probability = Probability;

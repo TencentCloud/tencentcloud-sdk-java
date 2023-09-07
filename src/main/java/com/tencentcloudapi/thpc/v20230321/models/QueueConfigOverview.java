@@ -100,6 +100,18 @@ public class QueueConfigOverview extends AbstractModel{
     private Long MaxNodesPerCycle;
 
     /**
+    * 扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScaleUpMemRatio")
+    @Expose
+    private Long ScaleUpMemRatio;
+
+    /**
      * Get 队列名称。 
      * @return QueueName 队列名称。
      */
@@ -287,6 +299,42 @@ public class QueueConfigOverview extends AbstractModel{
         this.MaxNodesPerCycle = MaxNodesPerCycle;
     }
 
+    /**
+     * Get 扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScaleUpMemRatio 扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScaleUpMemRatio() {
+        return this.ScaleUpMemRatio;
+    }
+
+    /**
+     * Set 扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScaleUpMemRatio 扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScaleUpMemRatio(Long ScaleUpMemRatio) {
+        this.ScaleUpMemRatio = ScaleUpMemRatio;
+    }
+
     public QueueConfigOverview() {
     }
 
@@ -328,6 +376,9 @@ public class QueueConfigOverview extends AbstractModel{
         if (source.MaxNodesPerCycle != null) {
             this.MaxNodesPerCycle = new Long(source.MaxNodesPerCycle);
         }
+        if (source.ScaleUpMemRatio != null) {
+            this.ScaleUpMemRatio = new Long(source.ScaleUpMemRatio);
+        }
     }
 
 
@@ -345,6 +396,7 @@ public class QueueConfigOverview extends AbstractModel{
         this.setParamSimple(map, prefix + "ScaleOutRatio", this.ScaleOutRatio);
         this.setParamSimple(map, prefix + "ScaleOutNodeThreshold", this.ScaleOutNodeThreshold);
         this.setParamSimple(map, prefix + "MaxNodesPerCycle", this.MaxNodesPerCycle);
+        this.setParamSimple(map, prefix + "ScaleUpMemRatio", this.ScaleUpMemRatio);
 
     }
 }

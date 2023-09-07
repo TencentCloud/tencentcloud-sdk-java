@@ -30,7 +30,7 @@ public class BindStaffSkillGroupListRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 坐席邮箱
+    * 座席邮箱
     */
     @SerializedName("StaffEmail")
     @Expose
@@ -42,6 +42,13 @@ public class BindStaffSkillGroupListRequest extends AbstractModel{
     @SerializedName("SkillGroupList")
     @Expose
     private Long [] SkillGroupList;
+
+    /**
+    * 绑定技能组列表(必填)
+    */
+    @SerializedName("StaffSkillGroupList")
+    @Expose
+    private StaffSkillGroupList [] StaffSkillGroupList;
 
     /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
@@ -60,16 +67,16 @@ public class BindStaffSkillGroupListRequest extends AbstractModel{
     }
 
     /**
-     * Get 坐席邮箱 
-     * @return StaffEmail 坐席邮箱
+     * Get 座席邮箱 
+     * @return StaffEmail 座席邮箱
      */
     public String getStaffEmail() {
         return this.StaffEmail;
     }
 
     /**
-     * Set 坐席邮箱
-     * @param StaffEmail 坐席邮箱
+     * Set 座席邮箱
+     * @param StaffEmail 座席邮箱
      */
     public void setStaffEmail(String StaffEmail) {
         this.StaffEmail = StaffEmail;
@@ -78,7 +85,9 @@ public class BindStaffSkillGroupListRequest extends AbstractModel{
     /**
      * Get 绑定技能组列表 
      * @return SkillGroupList 绑定技能组列表
+     * @deprecated
      */
+    @Deprecated
     public Long [] getSkillGroupList() {
         return this.SkillGroupList;
     }
@@ -86,9 +95,27 @@ public class BindStaffSkillGroupListRequest extends AbstractModel{
     /**
      * Set 绑定技能组列表
      * @param SkillGroupList 绑定技能组列表
+     * @deprecated
      */
+    @Deprecated
     public void setSkillGroupList(Long [] SkillGroupList) {
         this.SkillGroupList = SkillGroupList;
+    }
+
+    /**
+     * Get 绑定技能组列表(必填) 
+     * @return StaffSkillGroupList 绑定技能组列表(必填)
+     */
+    public StaffSkillGroupList [] getStaffSkillGroupList() {
+        return this.StaffSkillGroupList;
+    }
+
+    /**
+     * Set 绑定技能组列表(必填)
+     * @param StaffSkillGroupList 绑定技能组列表(必填)
+     */
+    public void setStaffSkillGroupList(StaffSkillGroupList [] StaffSkillGroupList) {
+        this.StaffSkillGroupList = StaffSkillGroupList;
     }
 
     public BindStaffSkillGroupListRequest() {
@@ -111,6 +138,12 @@ public class BindStaffSkillGroupListRequest extends AbstractModel{
                 this.SkillGroupList[i] = new Long(source.SkillGroupList[i]);
             }
         }
+        if (source.StaffSkillGroupList != null) {
+            this.StaffSkillGroupList = new StaffSkillGroupList[source.StaffSkillGroupList.length];
+            for (int i = 0; i < source.StaffSkillGroupList.length; i++) {
+                this.StaffSkillGroupList[i] = new StaffSkillGroupList(source.StaffSkillGroupList[i]);
+            }
+        }
     }
 
 
@@ -121,6 +154,7 @@ public class BindStaffSkillGroupListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "StaffEmail", this.StaffEmail);
         this.setParamArraySimple(map, prefix + "SkillGroupList.", this.SkillGroupList);
+        this.setParamArrayObj(map, prefix + "StaffSkillGroupList.", this.StaffSkillGroupList);
 
     }
 }

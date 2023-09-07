@@ -13,23 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateReleaseFlowResponse extends AbstractModel{
+public class FreshAntiFakeUrlResponse extends AbstractModel{
 
     /**
-    * 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+    * 结果成功与否
     */
-    @SerializedName("FlowId")
+    @SerializedName("Result")
     @Expose
-    private String FlowId;
+    private String Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -39,27 +37,19 @@ public class CreateReleaseFlowResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
- 
-     * @return FlowId 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+     * Get 结果成功与否 
+     * @return Result 结果成功与否
      */
-    public String getFlowId() {
-        return this.FlowId;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
-     * @param FlowId 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+     * Set 结果成功与否
+     * @param Result 结果成功与否
      */
-    public void setFlowId(String FlowId) {
-        this.FlowId = FlowId;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -78,16 +68,16 @@ public class CreateReleaseFlowResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateReleaseFlowResponse() {
+    public FreshAntiFakeUrlResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateReleaseFlowResponse(CreateReleaseFlowResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new String(source.FlowId);
+    public FreshAntiFakeUrlResponse(FreshAntiFakeUrlResponse source) {
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -99,7 +89,7 @@ public class CreateReleaseFlowResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

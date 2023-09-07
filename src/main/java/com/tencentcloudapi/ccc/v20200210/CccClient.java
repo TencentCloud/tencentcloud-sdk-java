@@ -60,7 +60,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *绑定坐席所属技能组
+     *绑定座席所属技能组
      * @param req BindStaffSkillGroupListRequest
      * @return BindStaffSkillGroupListResponse
      * @throws TencentCloudSDKException

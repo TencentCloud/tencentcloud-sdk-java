@@ -240,6 +240,14 @@ public class ParagraphBlock extends AbstractModel{
     private String TreatmentResultText;
 
     /**
+    * 月经史
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MenstrualHistoryText")
+    @Expose
+    private String MenstrualHistoryText;
+
+    /**
      * Get 切口愈合情况
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IncisionHealingText 切口愈合情况
@@ -608,7 +616,9 @@ public class ParagraphBlock extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MenstruallHistoryText 月经史
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getMenstruallHistoryText() {
         return this.MenstruallHistoryText;
     }
@@ -618,7 +628,9 @@ public class ParagraphBlock extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstruallHistoryText 月经史
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setMenstruallHistoryText(String MenstruallHistoryText) {
         this.MenstruallHistoryText = MenstruallHistoryText;
     }
@@ -783,6 +795,26 @@ public class ParagraphBlock extends AbstractModel{
         this.TreatmentResultText = TreatmentResultText;
     }
 
+    /**
+     * Get 月经史
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MenstrualHistoryText 月经史
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMenstrualHistoryText() {
+        return this.MenstrualHistoryText;
+    }
+
+    /**
+     * Set 月经史
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MenstrualHistoryText 月经史
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMenstrualHistoryText(String MenstrualHistoryText) {
+        this.MenstrualHistoryText = MenstrualHistoryText;
+    }
+
     public ParagraphBlock() {
     }
 
@@ -872,6 +904,9 @@ public class ParagraphBlock extends AbstractModel{
         if (source.TreatmentResultText != null) {
             this.TreatmentResultText = new String(source.TreatmentResultText);
         }
+        if (source.MenstrualHistoryText != null) {
+            this.MenstrualHistoryText = new String(source.MenstrualHistoryText);
+        }
     }
 
 
@@ -906,6 +941,7 @@ public class ParagraphBlock extends AbstractModel{
         this.setParamSimple(map, prefix + "BodyExaminationText", this.BodyExaminationText);
         this.setParamSimple(map, prefix + "SpecialistExaminationText", this.SpecialistExaminationText);
         this.setParamSimple(map, prefix + "TreatmentResultText", this.TreatmentResultText);
+        this.setParamSimple(map, prefix + "MenstrualHistoryText", this.MenstrualHistoryText);
 
     }
 }

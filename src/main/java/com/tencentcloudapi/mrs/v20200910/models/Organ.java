@@ -319,6 +319,14 @@ public class Organ extends AbstractModel{
     private Coord [] Coords;
 
     /**
+    * 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsthmusThickness")
+    @Expose
+    private Size IsthmusThickness;
+
+    /**
      * Get 部位
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Part 部位
@@ -683,7 +691,9 @@ public class Organ extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Size getIsthmusThicknese() {
         return this.IsthmusThicknese;
     }
@@ -693,7 +703,9 @@ public class Organ extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setIsthmusThicknese(Size IsthmusThicknese) {
         this.IsthmusThicknese = IsthmusThicknese;
     }
@@ -1058,6 +1070,26 @@ public class Organ extends AbstractModel{
         this.Coords = Coords;
     }
 
+    /**
+     * Get 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsthmusThickness 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Size getIsthmusThickness() {
+        return this.IsthmusThickness;
+    }
+
+    /**
+     * Set 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsthmusThickness 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsthmusThickness(Size IsthmusThickness) {
+        this.IsthmusThickness = IsthmusThickness;
+    }
+
     public Organ() {
     }
 
@@ -1186,6 +1218,9 @@ public class Organ extends AbstractModel{
                 this.Coords[i] = new Coord(source.Coords[i]);
             }
         }
+        if (source.IsthmusThickness != null) {
+            this.IsthmusThickness = new Size(source.IsthmusThickness);
+        }
     }
 
 
@@ -1230,6 +1265,7 @@ public class Organ extends AbstractModel{
         this.setParamObj(map, prefix + "Trend.", this.Trend);
         this.setParamObj(map, prefix + "Operation.", this.Operation);
         this.setParamArrayObj(map, prefix + "Coords.", this.Coords);
+        this.setParamObj(map, prefix + "IsthmusThickness.", this.IsthmusThickness);
 
     }
 }

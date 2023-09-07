@@ -223,6 +223,14 @@ public class ReportInfo extends AbstractModel{
     private Time [] Times;
 
     /**
+    * 床号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BedNo")
+    @Expose
+    private String BedNo;
+
+    /**
      * Get 医院名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Hospital 医院名称
@@ -722,6 +730,26 @@ public class ReportInfo extends AbstractModel{
         this.Times = Times;
     }
 
+    /**
+     * Get 床号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BedNo 床号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBedNo() {
+        return this.BedNo;
+    }
+
+    /**
+     * Set 床号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BedNo 床号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBedNo(String BedNo) {
+        this.BedNo = BedNo;
+    }
+
     public ReportInfo() {
     }
 
@@ -808,6 +836,9 @@ public class ReportInfo extends AbstractModel{
                 this.Times[i] = new Time(source.Times[i]);
             }
         }
+        if (source.BedNo != null) {
+            this.BedNo = new String(source.BedNo);
+        }
     }
 
 
@@ -840,6 +871,7 @@ public class ReportInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "OtherTime", this.OtherTime);
         this.setParamSimple(map, prefix + "PrintTime", this.PrintTime);
         this.setParamArrayObj(map, prefix + "Times.", this.Times);
+        this.setParamSimple(map, prefix + "BedNo", this.BedNo);
 
     }
 }

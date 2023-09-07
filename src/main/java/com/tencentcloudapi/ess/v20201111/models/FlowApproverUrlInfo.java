@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class FlowApproverUrlInfo extends AbstractModel{
 
     /**
-    * 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+    * 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignUrl")
@@ -31,7 +32,10 @@ public class FlowApproverUrlInfo extends AbstractModel{
     private String SignUrl;
 
     /**
-    * 签署人类型 1-个人
+    * 签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverType")
@@ -55,7 +59,8 @@ public class FlowApproverUrlInfo extends AbstractModel{
     private String ApproverMobile;
 
     /**
-    * 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+    * 签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LongUrl")
@@ -63,9 +68,11 @@ public class FlowApproverUrlInfo extends AbstractModel{
     private String LongUrl;
 
     /**
-     * Get 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Get 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SignUrl 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @return SignUrl 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignUrl() {
@@ -73,9 +80,11 @@ public class FlowApproverUrlInfo extends AbstractModel{
     }
 
     /**
-     * Set 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Set 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SignUrl 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param SignUrl 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignUrl(String SignUrl) {
@@ -83,9 +92,15 @@ public class FlowApproverUrlInfo extends AbstractModel{
     }
 
     /**
-     * Get 签署人类型 1-个人
+     * Get 签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproverType 签署人类型 1-个人
+     * @return ApproverType 签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApproverType() {
@@ -93,9 +108,15 @@ public class FlowApproverUrlInfo extends AbstractModel{
     }
 
     /**
-     * Set 签署人类型 1-个人
+     * Set 签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproverType 签署人类型 1-个人
+     * @param ApproverType 签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverType(Long ApproverType) {
@@ -143,9 +164,11 @@ public class FlowApproverUrlInfo extends AbstractModel{
     }
 
     /**
-     * Get 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Get 签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LongUrl 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @return LongUrl 签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLongUrl() {
@@ -153,9 +176,11 @@ public class FlowApproverUrlInfo extends AbstractModel{
     }
 
     /**
-     * Set 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Set 签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LongUrl 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param LongUrl 签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLongUrl(String LongUrl) {
