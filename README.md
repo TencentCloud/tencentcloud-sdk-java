@@ -454,6 +454,10 @@ cpf.getHttpProfile().setX509TrustManager(new MyX509TrustManagerImpl());
 ## DescribeInstancesRequest示例
 
 ```java
+ClientProfile cpf = new ClientProfile();
+// 自定义 Header 需要使用 v3 签名方式
+cpf.setSignMethod(ClientProfile.SIGN_TC3_256);
+
 DescribeInstancesRequest request = new DescribeInstancesRequest();
 Map<String, String> header = new HashMap<String, String>();
 header.put("X-TC-TraceId","ffe0c072-8a5d-4e17-8887-a8a60252abca");
@@ -463,6 +467,10 @@ request.SetHeader(header);
 ## CommonClientRequest示例
 
 ```java
+ClientProfile cpf = new ClientProfile();
+// 自定义 Header 需要使用 v3 签名方式
+cpf.setSignMethod(ClientProfile.SIGN_TC3_256);
+
 CommonClientRequest request = new CommonClientRequest();
 Map<String, String> header = new HashMap<String, String>();
 header.put("X-TC-TraceId","ffe0c072-8a5d-4e17-8887-a8a60252abca");
