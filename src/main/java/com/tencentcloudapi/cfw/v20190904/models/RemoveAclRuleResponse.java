@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddSpartaProtectionAutoResponse extends AbstractModel{
+public class RemoveAclRuleResponse extends AbstractModel{
+
+    /**
+    * 删除成功后返回被删除策略的uuid列表
+    */
+    @SerializedName("RuleUuid")
+    @Expose
+    private Long [] RuleUuid;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class AddSpartaProtectionAutoResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 删除成功后返回被删除策略的uuid列表 
+     * @return RuleUuid 删除成功后返回被删除策略的uuid列表
+     */
+    public Long [] getRuleUuid() {
+        return this.RuleUuid;
+    }
+
+    /**
+     * Set 删除成功后返回被删除策略的uuid列表
+     * @param RuleUuid 删除成功后返回被删除策略的uuid列表
+     */
+    public void setRuleUuid(Long [] RuleUuid) {
+        this.RuleUuid = RuleUuid;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +68,20 @@ public class AddSpartaProtectionAutoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public AddSpartaProtectionAutoResponse() {
+    public RemoveAclRuleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddSpartaProtectionAutoResponse(AddSpartaProtectionAutoResponse source) {
+    public RemoveAclRuleResponse(RemoveAclRuleResponse source) {
+        if (source.RuleUuid != null) {
+            this.RuleUuid = new Long[source.RuleUuid.length];
+            for (int i = 0; i < source.RuleUuid.length; i++) {
+                this.RuleUuid[i] = new Long(source.RuleUuid[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class AddSpartaProtectionAutoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "RuleUuid.", this.RuleUuid);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

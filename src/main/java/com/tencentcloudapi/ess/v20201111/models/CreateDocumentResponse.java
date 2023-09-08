@@ -23,14 +23,19 @@ import java.util.HashMap;
 public class CreateDocumentResponse extends AbstractModel{
 
     /**
-    * 签署流程电子文档ID
+    * 合同流程的底层电子文档ID，为32位字符串。
+
+注:
+后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
     */
     @SerializedName("DocumentId")
     @Expose
     private String DocumentId;
 
     /**
-    * 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
+    * 合同预览链接URL。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewFileUrl")
@@ -45,25 +50,41 @@ public class CreateDocumentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 签署流程电子文档ID 
-     * @return DocumentId 签署流程电子文档ID
+     * Get 合同流程的底层电子文档ID，为32位字符串。
+
+注:
+后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节 
+     * @return DocumentId 合同流程的底层电子文档ID，为32位字符串。
+
+注:
+后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
      */
     public String getDocumentId() {
         return this.DocumentId;
     }
 
     /**
-     * Set 签署流程电子文档ID
-     * @param DocumentId 签署流程电子文档ID
+     * Set 合同流程的底层电子文档ID，为32位字符串。
+
+注:
+后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+     * @param DocumentId 合同流程的底层电子文档ID，为32位字符串。
+
+注:
+后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
      */
     public void setDocumentId(String DocumentId) {
         this.DocumentId = DocumentId;
     }
 
     /**
-     * Get 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
+     * Get 合同预览链接URL。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreviewFileUrl 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
+     * @return PreviewFileUrl 合同预览链接URL。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewFileUrl() {
@@ -71,9 +92,13 @@ public class CreateDocumentResponse extends AbstractModel{
     }
 
     /**
-     * Set 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
+     * Set 合同预览链接URL。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreviewFileUrl 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
+     * @param PreviewFileUrl 合同预览链接URL。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewFileUrl(String PreviewFileUrl) {

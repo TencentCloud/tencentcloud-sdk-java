@@ -186,6 +186,27 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *获取可备份表信息
+     * @param req DescribeBackUpTablesRequest
+     * @return DescribeBackUpTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpTablesResponse DescribeBackUpTables(DescribeBackUpTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackUpTablesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackUpTablesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackUpTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群用户、集群表，数据库等相关信息
      * @param req DescribeCkSqlApisRequest
      * @return DescribeCkSqlApisResponse

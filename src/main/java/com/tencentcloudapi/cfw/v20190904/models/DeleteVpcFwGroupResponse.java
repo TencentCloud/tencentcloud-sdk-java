@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddSpartaProtectionsAutoResponse extends AbstractModel{
-
-    /**
-    * 失败原因
-    */
-    @SerializedName("FailedInfos")
-    @Expose
-    private FailedInfo [] FailedInfos;
+public class DeleteVpcFwGroupResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class AddSpartaProtectionsAutoResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 失败原因 
-     * @return FailedInfos 失败原因
-     */
-    public FailedInfo [] getFailedInfos() {
-        return this.FailedInfos;
-    }
-
-    /**
-     * Set 失败原因
-     * @param FailedInfos 失败原因
-     */
-    public void setFailedInfos(FailedInfo [] FailedInfos) {
-        this.FailedInfos = FailedInfos;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,20 +45,14 @@ public class AddSpartaProtectionsAutoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public AddSpartaProtectionsAutoResponse() {
+    public DeleteVpcFwGroupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddSpartaProtectionsAutoResponse(AddSpartaProtectionsAutoResponse source) {
-        if (source.FailedInfos != null) {
-            this.FailedInfos = new FailedInfo[source.FailedInfos.length];
-            for (int i = 0; i < source.FailedInfos.length; i++) {
-                this.FailedInfos[i] = new FailedInfo(source.FailedInfos[i]);
-            }
-        }
+    public DeleteVpcFwGroupResponse(DeleteVpcFwGroupResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -92,7 +63,6 @@ public class AddSpartaProtectionsAutoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FailedInfos.", this.FailedInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

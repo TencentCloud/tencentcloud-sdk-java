@@ -333,6 +333,27 @@ public class EbClient extends AbstractClient{
     }
 
     /**
+     *获取平台产品事件模板
+     * @param req GetPlatformEventTemplateRequest
+     * @return GetPlatformEventTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPlatformEventTemplateResponse GetPlatformEventTemplate(GetPlatformEventTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPlatformEventTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPlatformEventTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetPlatformEventTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取事件规则详情
      * @param req GetRuleRequest
      * @return GetRuleResponse
@@ -409,6 +430,69 @@ public class EbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListEventBusesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ListEventBuses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取平台产品事件名称
+     * @param req ListPlatformEventNamesRequest
+     * @return ListPlatformEventNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPlatformEventNamesResponse ListPlatformEventNames(ListPlatformEventNamesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListPlatformEventNamesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListPlatformEventNamesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListPlatformEventNames");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取平台产品事件匹配规则
+     * @param req ListPlatformEventPatternsRequest
+     * @return ListPlatformEventPatternsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPlatformEventPatternsResponse ListPlatformEventPatterns(ListPlatformEventPatternsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListPlatformEventPatternsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListPlatformEventPatternsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListPlatformEventPatterns");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取平台产品列表
+     * @param req ListPlatformProductsRequest
+     * @return ListPlatformProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPlatformProductsResponse ListPlatformProducts(ListPlatformProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListPlatformProductsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListPlatformProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListPlatformProducts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

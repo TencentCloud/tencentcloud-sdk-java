@@ -24,9 +24,9 @@ public class StartFlowResponse extends AbstractModel{
 
     /**
     * 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -41,13 +41,13 @@ EXECUTING - 已提交发起任务
 
     /**
      * Get 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务 
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul> 
      * @return Status 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
      */
     public String getStatus() {
         return this.Status;
@@ -55,13 +55,13 @@ EXECUTING - 已提交发起任务
 
     /**
      * Set 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
      * @param Status 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

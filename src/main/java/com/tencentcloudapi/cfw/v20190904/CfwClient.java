@@ -60,6 +60,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *添加互联网边界访问控制规则
+     * @param req AddAclRuleRequest
+     * @return AddAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddAclRuleResponse AddAclRule(AddAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddAclRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddAclRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建新企业安全组规则
      * @param req AddEnterpriseSecurityGroupRulesRequest
      * @return AddEnterpriseSecurityGroupRulesResponse
@@ -94,6 +115,27 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<AddNatAcRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "AddNatAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加VPC内网间规则
+     * @param req AddVpcAcRuleRequest
+     * @return AddVpcAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddVpcAcRuleResponse AddVpcAcRule(AddVpcAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddVpcAcRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddVpcAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddVpcAcRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -270,6 +312,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *创建VPC间防火墙(防火墙组)
+     * @param req CreateVpcFwGroupRequest
+     * @return CreateVpcFwGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcFwGroupResponse CreateVpcFwGroup(CreateVpcFwGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcFwGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcFwGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpcFwGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除规则
      * @param req DeleteAcRuleRequest
      * @return DeleteAcRuleResponse
@@ -325,6 +388,27 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAllAccessControlRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAllAccessControlRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量删除入侵防御封禁列表、放通列表规则
+     * @param req DeleteBlockIgnoreRuleListRequest
+     * @return DeleteBlockIgnoreRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleList(DeleteBlockIgnoreRuleListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBlockIgnoreRuleListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBlockIgnoreRuleListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBlockIgnoreRuleList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -396,6 +480,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *删除防火墙(组)，或者删除其中实例
+     * @param req DeleteVpcFwGroupRequest
+     * @return DeleteVpcFwGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcFwGroupResponse DeleteVpcFwGroup(DeleteVpcFwGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcFwGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcFwGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpcFwGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除防火墙实例
      * @param req DeleteVpcInstanceRequest
      * @return DeleteVpcInstanceResponse
@@ -430,6 +535,27 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAcListsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAcLists");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询互联网边界访问控制列表
+     * @param req DescribeAclRuleRequest
+     * @return DescribeAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAclRuleResponse DescribeAclRule(DescribeAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAclRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAclRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -600,6 +726,48 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEnterpriseSecurityGroupRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEnterpriseSecurityGroupRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *串行防火墙IP开关列表
+     * @param req DescribeFwEdgeIpsRequest
+     * @return DescribeFwEdgeIpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFwEdgeIpsResponse DescribeFwEdgeIps(DescribeFwEdgeIpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFwEdgeIpsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFwEdgeIpsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFwEdgeIps");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取租户所有VPC防火墙(组)及VPC防火墙实例卡片信息
+     * @param req DescribeFwGroupInstanceInfoRequest
+     * @return DescribeFwGroupInstanceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFwGroupInstanceInfoResponse DescribeFwGroupInstanceInfo(DescribeFwGroupInstanceInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFwGroupInstanceInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFwGroupInstanceInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFwGroupInstanceInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1011,6 +1179,48 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询内网间访问控制列表
+     * @param req DescribeVpcAcRuleRequest
+     * @return DescribeVpcAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcAcRuleResponse DescribeVpcAcRule(DescribeVpcAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcAcRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *VPC防火墙(组)开关列表
+     * @param req DescribeVpcFwGroupSwitchRequest
+     * @return DescribeVpcFwGroupSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcFwGroupSwitchResponse DescribeVpcFwGroupSwitch(DescribeVpcFwGroupSwitchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcFwGroupSwitchResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcFwGroupSwitchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcFwGroupSwitch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *防火墙垂直扩容
      * @param req ExpandCfwVerticalRequest
      * @return ExpandCfwVerticalResponse
@@ -1045,6 +1255,27 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAcRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改互联网边界访问控制规则
+     * @param req ModifyAclRuleRequest
+     * @return ModifyAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAclRuleResponse ModifyAclRule(ModifyAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAclRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAclRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1161,6 +1392,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *编辑单条入侵防御封禁列表、放通列表规则
+     * @param req ModifyBlockIgnoreRuleRequest
+     * @return ModifyBlockIgnoreRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlockIgnoreRuleResponse ModifyBlockIgnoreRule(ModifyBlockIgnoreRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBlockIgnoreRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBlockIgnoreRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBlockIgnoreRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ModifyBlockTop取消置顶接口
      * @param req ModifyBlockTopRequest
      * @return ModifyBlockTopResponse
@@ -1204,6 +1456,27 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
     }
 
     /**
+     *修改边界防火墙开关(旁路、串行)
+     * @param req ModifyEdgeIpSwitchRequest
+     * @return ModifyEdgeIpSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEdgeIpSwitchResponse ModifyEdgeIpSwitch(ModifyEdgeIpSwitchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEdgeIpSwitchResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEdgeIpSwitchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyEdgeIpSwitch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改企业安全组下发状态
      * @param req ModifyEnterpriseSecurityDispatchStatusRequest
      * @return ModifyEnterpriseSecurityDispatchStatusResponse
@@ -1238,6 +1511,27 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
                 Type type = new TypeToken<JsonResponseModel<ModifyEnterpriseSecurityGroupRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyEnterpriseSecurityGroupRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改防火墙(组)开关(支持单点模式、多点模式、全互通模式)
+     * @param req ModifyFwGroupSwitchRequest
+     * @return ModifyFwGroupSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFwGroupSwitchResponse ModifyFwGroupSwitch(ModifyFwGroupSwitchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyFwGroupSwitchResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyFwGroupSwitchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyFwGroupSwitch");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1479,6 +1773,27 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
     }
 
     /**
+     *互联网边界规则快速排序
+     * @param req ModifySequenceAclRulesRequest
+     * @return ModifySequenceAclRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySequenceAclRulesResponse ModifySequenceAclRules(ModifySequenceAclRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySequenceAclRulesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySequenceAclRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySequenceAclRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改规则执行顺序
      * @param req ModifySequenceRulesRequest
      * @return ModifySequenceRulesResponse
@@ -1542,6 +1857,69 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
     }
 
     /**
+     *修改内网间访问控制规则
+     * @param req ModifyVpcAcRuleRequest
+     * @return ModifyVpcAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcAcRuleResponse ModifyVpcAcRule(ModifyVpcAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcAcRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑VPC间防火墙(防火墙组)
+     * @param req ModifyVpcFwGroupRequest
+     * @return ModifyVpcFwGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcFwGroupResponse ModifyVpcFwGroup(ModifyVpcFwGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcFwGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcFwGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcFwGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *vpc间规则快速排序
+     * @param req ModifyVpcFwSequenceRulesRequest
+     * @return ModifyVpcFwSequenceRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcFwSequenceRulesResponse ModifyVpcFwSequenceRules(ModifyVpcFwSequenceRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcFwSequenceRulesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcFwSequenceRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcFwSequenceRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除互联网边界规则
      * @param req RemoveAcRuleRequest
      * @return RemoveAcRuleResponse
@@ -1555,6 +1933,27 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
                 Type type = new TypeToken<JsonResponseModel<RemoveAcRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除互联网边界访问控制规则
+     * @param req RemoveAclRuleRequest
+     * @return RemoveAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveAclRuleResponse RemoveAclRule(RemoveAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveAclRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveAclRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1597,6 +1996,27 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
                 Type type = new TypeToken<JsonResponseModel<RemoveNatAcRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveNatAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除VPC间规则
+     * @param req RemoveVpcAcRuleRequest
+     * @return RemoveVpcAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveVpcAcRuleResponse RemoveVpcAcRule(RemoveVpcAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveVpcAcRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveVpcAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveVpcAcRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

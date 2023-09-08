@@ -165,48 +165,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *一键接入
-     * @param req AddSpartaProtectionAutoRequest
-     * @return AddSpartaProtectionAutoResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddSpartaProtectionAutoResponse AddSpartaProtectionAuto(AddSpartaProtectionAutoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddSpartaProtectionAutoResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddSpartaProtectionAutoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddSpartaProtectionAuto");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *批量添加域名
-     * @param req AddSpartaProtectionsAutoRequest
-     * @return AddSpartaProtectionsAutoResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddSpartaProtectionsAutoResponse AddSpartaProtectionsAuto(AddSpartaProtectionsAutoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddSpartaProtectionsAutoResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddSpartaProtectionsAutoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddSpartaProtectionsAuto");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口用于创建访问日志导出
      * @param req CreateAccessExportRequest
      * @return CreateAccessExportResponse
@@ -918,6 +876,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainDetailsSaasResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDomainDetailsSaas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取添加域名操作的结果
+     * @param req DescribeDomainVerifyResultRequest
+     * @return DescribeDomainVerifyResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainVerifyResultResponse DescribeDomainVerifyResult(DescribeDomainVerifyResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainVerifyResultResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainVerifyResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainVerifyResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

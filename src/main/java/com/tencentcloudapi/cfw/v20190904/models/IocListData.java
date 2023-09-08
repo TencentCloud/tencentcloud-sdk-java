@@ -24,6 +24,7 @@ public class IocListData extends AbstractModel{
 
     /**
     * 待处置IP地址，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IP")
     @Expose
@@ -31,6 +32,7 @@ public class IocListData extends AbstractModel{
 
     /**
     * 只能为0或者1   0代表出站 1代表入站
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Direction")
     @Expose
@@ -38,14 +40,17 @@ public class IocListData extends AbstractModel{
 
     /**
     * 待处置域名，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 待处置IP地址，IP/Domain字段二选一 
+     * Get 待处置IP地址，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IP 待处置IP地址，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIP() {
         return this.IP;
@@ -53,15 +58,19 @@ public class IocListData extends AbstractModel{
 
     /**
      * Set 待处置IP地址，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IP 待处置IP地址，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get 只能为0或者1   0代表出站 1代表入站 
+     * Get 只能为0或者1   0代表出站 1代表入站
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Direction 只能为0或者1   0代表出站 1代表入站
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDirection() {
         return this.Direction;
@@ -69,15 +78,19 @@ public class IocListData extends AbstractModel{
 
     /**
      * Set 只能为0或者1   0代表出站 1代表入站
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Direction 只能为0或者1   0代表出站 1代表入站
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get 待处置域名，IP/Domain字段二选一 
+     * Get 待处置域名，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Domain 待处置域名，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -85,7 +98,9 @@ public class IocListData extends AbstractModel{
 
     /**
      * Set 待处置域名，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 待处置域名，IP/Domain字段二选一
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

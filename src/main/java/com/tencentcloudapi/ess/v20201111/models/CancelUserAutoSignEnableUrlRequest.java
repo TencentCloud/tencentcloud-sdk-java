@@ -31,17 +31,17 @@ public class CancelUserAutoSignEnableUrlRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 企业开通用户自动签场景，例如电子处方。
-<ul>
-<li>E_PRESCRIPTION_AUTO_SIGN : 电子处方</li>
-</ul>
+    * 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
     */
     @SerializedName("SceneKey")
     @Expose
     private String SceneKey;
 
     /**
-    * 指定撤销链接的用户指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+    * 预撤销链接的用户信息，包含姓名、证件类型、证件号码等信息。
 
     */
     @SerializedName("UserInfo")
@@ -77,37 +77,37 @@ public class CancelUserAutoSignEnableUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 企业开通用户自动签场景，例如电子处方。
-<ul>
-<li>E_PRESCRIPTION_AUTO_SIGN : 电子处方</li>
-</ul> 
-     * @return SceneKey 企业开通用户自动签场景，例如电子处方。
-<ul>
-<li>E_PRESCRIPTION_AUTO_SIGN : 电子处方</li>
-</ul>
+     * Get 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景` 
+     * @return SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
      */
     public String getSceneKey() {
         return this.SceneKey;
     }
 
     /**
-     * Set 企业开通用户自动签场景，例如电子处方。
-<ul>
-<li>E_PRESCRIPTION_AUTO_SIGN : 电子处方</li>
-</ul>
-     * @param SceneKey 企业开通用户自动签场景，例如电子处方。
-<ul>
-<li>E_PRESCRIPTION_AUTO_SIGN : 电子处方</li>
-</ul>
+     * Set 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
+     * @param SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
      */
     public void setSceneKey(String SceneKey) {
         this.SceneKey = SceneKey;
     }
 
     /**
-     * Get 指定撤销链接的用户指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+     * Get 预撤销链接的用户信息，包含姓名、证件类型、证件号码等信息。
  
-     * @return UserInfo 指定撤销链接的用户指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+     * @return UserInfo 预撤销链接的用户信息，包含姓名、证件类型、证件号码等信息。
 
      */
     public UserThreeFactor getUserInfo() {
@@ -115,9 +115,9 @@ public class CancelUserAutoSignEnableUrlRequest extends AbstractModel{
     }
 
     /**
-     * Set 指定撤销链接的用户指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+     * Set 预撤销链接的用户信息，包含姓名、证件类型、证件号码等信息。
 
-     * @param UserInfo 指定撤销链接的用户指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
+     * @param UserInfo 预撤销链接的用户信息，包含姓名、证件类型、证件号码等信息。
 
      */
     public void setUserInfo(UserThreeFactor UserInfo) {

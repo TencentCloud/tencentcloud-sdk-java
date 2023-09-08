@@ -30,7 +30,7 @@ public class DismissRoomRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 房间号。
+    * 数字房间号。本接口仅支持解散数字类型房间号，如需解散字符串类型房间号，请使用DismissRoomByStrRoomId。
     */
     @SerializedName("RoomId")
     @Expose
@@ -53,16 +53,16 @@ public class DismissRoomRequest extends AbstractModel{
     }
 
     /**
-     * Get 房间号。 
-     * @return RoomId 房间号。
+     * Get 数字房间号。本接口仅支持解散数字类型房间号，如需解散字符串类型房间号，请使用DismissRoomByStrRoomId。 
+     * @return RoomId 数字房间号。本接口仅支持解散数字类型房间号，如需解散字符串类型房间号，请使用DismissRoomByStrRoomId。
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 房间号。
-     * @param RoomId 房间号。
+     * Set 数字房间号。本接口仅支持解散数字类型房间号，如需解散字符串类型房间号，请使用DismissRoomByStrRoomId。
+     * @param RoomId 数字房间号。本接口仅支持解散数字类型房间号，如需解散字符串类型房间号，请使用DismissRoomByStrRoomId。
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;

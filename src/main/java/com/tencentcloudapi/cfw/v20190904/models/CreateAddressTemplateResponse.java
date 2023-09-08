@@ -30,6 +30,13 @@ public class CreateAddressTemplateResponse extends AbstractModel{
     private Long Status;
 
     /**
+    * 唯一Id
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class CreateAddressTemplateResponse extends AbstractModel{
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 唯一Id 
+     * @return Uuid 唯一Id
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set 唯一Id
+     * @param Uuid 唯一Id
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
     }
 
     /**
@@ -79,6 +102,9 @@ public class CreateAddressTemplateResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class CreateAddressTemplateResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

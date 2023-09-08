@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateBlockIgnoreRuleListResponse extends AbstractModel{
 
     /**
+    * 成功返回
+    */
+    @SerializedName("List")
+    @Expose
+    private IocListData [] List;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 成功返回 
+     * @return List 成功返回
+     */
+    public IocListData [] getList() {
+        return this.List;
+    }
+
+    /**
+     * Set 成功返回
+     * @param List 成功返回
+     */
+    public void setList(IocListData [] List) {
+        this.List = List;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,12 @@ public class CreateBlockIgnoreRuleListResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateBlockIgnoreRuleListResponse(CreateBlockIgnoreRuleListResponse source) {
+        if (source.List != null) {
+            this.List = new IocListData[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new IocListData(source.List[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class CreateBlockIgnoreRuleListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

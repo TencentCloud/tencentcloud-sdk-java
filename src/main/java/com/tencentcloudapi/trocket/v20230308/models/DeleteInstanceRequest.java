@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.trocket.v20230308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddSpartaProtectionsAutoRequest extends AbstractModel{
+public class DeleteInstanceRequest extends AbstractModel{
 
     /**
-    * 多域名
+    * 实例ID
     */
-    @SerializedName("Domain")
+    @SerializedName("InstanceId")
     @Expose
-    private String Domain;
+    private String InstanceId;
 
     /**
-     * Get 多域名 
-     * @return Domain 多域名
+     * Get 实例ID 
+     * @return InstanceId 实例ID
      */
-    public String getDomain() {
-        return this.Domain;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 多域名
-     * @param Domain 多域名
+     * Set 实例ID
+     * @param InstanceId 实例ID
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public AddSpartaProtectionsAutoRequest() {
+    public DeleteInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddSpartaProtectionsAutoRequest(AddSpartaProtectionsAutoRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+    public DeleteInstanceRequest(DeleteInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -63,7 +63,7 @@ public class AddSpartaProtectionsAutoRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

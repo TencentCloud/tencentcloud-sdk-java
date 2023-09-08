@@ -13,84 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.eb.v20210416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FailedInfo extends AbstractModel{
+public class PlatformEventSummary extends AbstractModel{
 
     /**
-    * 域名
+    * 平台事件名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Domain")
+    @SerializedName("EventName")
     @Expose
-    private String Domain;
+    private String EventName;
 
     /**
-    * 失败信息
+    * 平台事件匹配规则
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Message")
+    @SerializedName("EventPattern")
     @Expose
-    private String Message;
+    private String EventPattern;
 
     /**
-     * Get 域名
+     * Get 平台事件名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Domain 域名
+     * @return EventName 平台事件名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDomain() {
-        return this.Domain;
+    public String getEventName() {
+        return this.EventName;
     }
 
     /**
-     * Set 域名
+     * Set 平台事件名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Domain 域名
+     * @param EventName 平台事件名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setEventName(String EventName) {
+        this.EventName = EventName;
     }
 
     /**
-     * Get 失败信息
+     * Get 平台事件匹配规则
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 失败信息
+     * @return EventPattern 平台事件匹配规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMessage() {
-        return this.Message;
+    public String getEventPattern() {
+        return this.EventPattern;
     }
 
     /**
-     * Set 失败信息
+     * Set 平台事件匹配规则
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 失败信息
+     * @param EventPattern 平台事件匹配规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMessage(String Message) {
-        this.Message = Message;
+    public void setEventPattern(String EventPattern) {
+        this.EventPattern = EventPattern;
     }
 
-    public FailedInfo() {
+    public PlatformEventSummary() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public FailedInfo(FailedInfo source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+    public PlatformEventSummary(PlatformEventSummary source) {
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
         }
-        if (source.Message != null) {
-            this.Message = new String(source.Message);
+        if (source.EventPattern != null) {
+            this.EventPattern = new String(source.EventPattern);
         }
     }
 
@@ -99,8 +99,8 @@ public class FailedInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "EventName", this.EventName);
+        this.setParamSimple(map, prefix + "EventPattern", this.EventPattern);
 
     }
 }

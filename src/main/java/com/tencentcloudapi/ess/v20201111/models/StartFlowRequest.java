@@ -55,8 +55,8 @@ public class StartFlowRequest extends AbstractModel{
 
     /**
     * 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul>
     */
     @SerializedName("CcNotifyType")
     @Expose
@@ -144,11 +144,11 @@ public class StartFlowRequest extends AbstractModel{
 
     /**
      * Get 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知 
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul> 
      * @return CcNotifyType 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul>
      */
     public Long getCcNotifyType() {
         return this.CcNotifyType;
@@ -156,11 +156,11 @@ public class StartFlowRequest extends AbstractModel{
 
     /**
      * Set 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul>
      * @param CcNotifyType 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul>
      */
     public void setCcNotifyType(Long CcNotifyType) {
         this.CcNotifyType = CcNotifyType;

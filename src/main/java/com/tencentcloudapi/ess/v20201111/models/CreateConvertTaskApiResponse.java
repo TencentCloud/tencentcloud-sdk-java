@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateConvertTaskApiResponse extends AbstractModel{
 
     /**
-    * 转换任务Id
+    * 接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateConvertTaskApiResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 转换任务Id 
-     * @return TaskId 转换任务Id
+     * Get 接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。 
+     * @return TaskId 接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 转换任务Id
-     * @param TaskId 转换任务Id
+     * Set 接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。
+     * @param TaskId 接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

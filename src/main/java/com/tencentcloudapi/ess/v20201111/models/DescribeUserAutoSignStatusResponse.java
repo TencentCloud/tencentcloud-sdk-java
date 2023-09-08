@@ -30,7 +30,7 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     private Boolean IsOpen;
 
     /**
-    * 自动签许可生效时间。当且仅当已开通自动签时有值。
+    * 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
 
 值为unix时间戳,单位为秒。
     */
@@ -39,7 +39,8 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     private Long LicenseFrom;
 
     /**
-    * 自动签许可到期时间。当且仅当已开通自动签时有值。
+    * 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
 值为unix时间戳,单位为秒。
     */
     @SerializedName("LicenseTo")
@@ -47,9 +48,11 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     private Long LicenseTo;
 
     /**
-    * 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减
+    * 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
+
     */
     @SerializedName("LicenseType")
     @Expose
@@ -79,10 +82,10 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     }
 
     /**
-     * Get 自动签许可生效时间。当且仅当已开通自动签时有值。
+     * Get 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
 
 值为unix时间戳,单位为秒。 
-     * @return LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+     * @return LicenseFrom 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
 
 值为unix时间戳,单位为秒。
      */
@@ -91,10 +94,10 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     }
 
     /**
-     * Set 自动签许可生效时间。当且仅当已开通自动签时有值。
+     * Set 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
 
 值为unix时间戳,单位为秒。
-     * @param LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+     * @param LicenseFrom 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
 
 值为unix时间戳,单位为秒。
      */
@@ -103,9 +106,11 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     }
 
     /**
-     * Get 自动签许可到期时间。当且仅当已开通自动签时有值。
+     * Get 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
 值为unix时间戳,单位为秒。 
-     * @return LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+     * @return LicenseTo 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
 值为unix时间戳,单位为秒。
      */
     public Long getLicenseTo() {
@@ -113,9 +118,11 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     }
 
     /**
-     * Set 自动签许可到期时间。当且仅当已开通自动签时有值。
+     * Set 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
 值为unix时间戳,单位为秒。
-     * @param LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+     * @param LicenseTo 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
 值为unix时间戳,单位为秒。
      */
     public void setLicenseTo(Long LicenseTo) {
@@ -123,24 +130,32 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     }
 
     /**
-     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减 
-     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减
+     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
+ 
+     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
+
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减
-     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减
+     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
+
+     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
+
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;

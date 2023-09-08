@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddSpartaProtectionAutoRequest extends AbstractModel{
+public class ModifySequenceAclRulesResponse extends AbstractModel{
 
     /**
-    * 域名
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Domain")
+    @SerializedName("RequestId")
     @Expose
-    private String Domain;
+    private String RequestId;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getDomain() {
-        return this.Domain;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public AddSpartaProtectionAutoRequest() {
+    public ModifySequenceAclRulesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddSpartaProtectionAutoRequest(AddSpartaProtectionAutoRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+    public ModifySequenceAclRulesResponse(ModifySequenceAclRulesResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class AddSpartaProtectionAutoRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

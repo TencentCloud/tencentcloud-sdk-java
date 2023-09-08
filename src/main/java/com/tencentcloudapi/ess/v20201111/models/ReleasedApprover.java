@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ReleasedApprover extends AbstractModel{
 
     /**
-    * 签署人姓名，最大长度50个字符
+    * 签署人姓名，最大长度50个字。
 
     */
     @SerializedName("Name")
@@ -31,14 +31,14 @@ public class ReleasedApprover extends AbstractModel{
     private String Name;
 
     /**
-    * 签署人手机号
+    * 签署人手机号。
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
+    * 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
     */
     @SerializedName("RelievedApproverReceiptId")
     @Expose
@@ -46,33 +46,33 @@ public class ReleasedApprover extends AbstractModel{
 
     /**
     * 指定签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul>
     */
     @SerializedName("ApproverType")
     @Expose
     private String ApproverType;
 
     /**
-    * 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型
+    * 签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型（默认值）</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
     */
     @SerializedName("ApproverSignComponentType")
     @Expose
     private String ApproverSignComponentType;
 
     /**
-    * 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
+    * 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
     */
     @SerializedName("ApproverSignRole")
     @Expose
     private String ApproverSignRole;
 
     /**
-     * Get 签署人姓名，最大长度50个字符
+     * Get 签署人姓名，最大长度50个字。
  
-     * @return Name 签署人姓名，最大长度50个字符
+     * @return Name 签署人姓名，最大长度50个字。
 
      */
     public String getName() {
@@ -80,9 +80,9 @@ ENTERPRISESERVER-企业静默签
     }
 
     /**
-     * Set 签署人姓名，最大长度50个字符
+     * Set 签署人姓名，最大长度50个字。
 
-     * @param Name 签署人姓名，最大长度50个字符
+     * @param Name 签署人姓名，最大长度50个字。
 
      */
     public void setName(String Name) {
@@ -90,32 +90,32 @@ ENTERPRISESERVER-企业静默签
     }
 
     /**
-     * Get 签署人手机号 
-     * @return Mobile 签署人手机号
+     * Get 签署人手机号。 
+     * @return Mobile 签署人手机号。
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 签署人手机号
-     * @param Mobile 签署人手机号
+     * Set 签署人手机号。
+     * @param Mobile 签署人手机号。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ） 
-     * @return RelievedApproverReceiptId 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
+     * Get 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/> 
+     * @return RelievedApproverReceiptId 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
      */
     public String getRelievedApproverReceiptId() {
         return this.RelievedApproverReceiptId;
     }
 
     /**
-     * Set 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-     * @param RelievedApproverReceiptId 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
+     * Set 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @param RelievedApproverReceiptId 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
      */
     public void setRelievedApproverReceiptId(String RelievedApproverReceiptId) {
         this.RelievedApproverReceiptId = RelievedApproverReceiptId;
@@ -123,11 +123,11 @@ ENTERPRISESERVER-企业静默签
 
     /**
      * Get 指定签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签 
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul> 
      * @return ApproverType 指定签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul>
      */
     public String getApproverType() {
         return this.ApproverType;
@@ -135,51 +135,51 @@ ENTERPRISESERVER-企业静默签
 
     /**
      * Set 指定签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul>
      * @param ApproverType 指定签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul>
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;
     }
 
     /**
-     * Get 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型 
-     * @return ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型
+     * Get 签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型（默认值）</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul> 
+     * @return ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型（默认值）</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
      */
     public String getApproverSignComponentType() {
         return this.ApproverSignComponentType;
     }
 
     /**
-     * Set 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型
-     * @param ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型
+     * Set 签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型（默认值）</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
+     * @param ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型（默认值）</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
      */
     public void setApproverSignComponentType(String ApproverSignComponentType) {
         this.ApproverSignComponentType = ApproverSignComponentType;
     }
 
     /**
-     * Get 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符 
-     * @return ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
+     * Get 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。 
+     * @return ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
      */
     public String getApproverSignRole() {
         return this.ApproverSignRole;
     }
 
     /**
-     * Set 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
-     * @param ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
+     * Set 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
+     * @param ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
      */
     public void setApproverSignRole(String ApproverSignRole) {
         this.ApproverSignRole = ApproverSignRole;
