@@ -21,21 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 
 public class JsonResponseErrModel {
-  @SerializedName("RequestId")
-  @Expose
-  public String requestId;
-
-  @SerializedName("Error")
-  @Expose
-  public ErrorInfo error;
-
-  class ErrorInfo {
-    @SerializedName("Code")
+    @SerializedName("RequestId")
     @Expose
-    public String code;
+    public String requestId;
 
+    @SerializedName("Error")
     @Expose
-    @SerializedName("Message")
-    public String message;
-  }
+    public ErrorInfo error;
+
+    class ErrorInfo {
+        @SerializedName("Code")
+        @Expose
+        public String code;
+
+        @Expose
+        @SerializedName("Message")
+        public String message;
+    }
 }
