@@ -72,7 +72,7 @@ public class AutoSignConfig extends AbstractModel{
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
-<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
     */
     @SerializedName("VerifyChannels")
     @Expose
@@ -212,14 +212,14 @@ public class AutoSignConfig extends AbstractModel{
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
-<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li> 
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul> 
      * @return VerifyChannels 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
 <li>**INSIGHT** : 慧眼人脸认别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
-<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
      */
     public String [] getVerifyChannels() {
         return this.VerifyChannels;
@@ -232,14 +232,14 @@ public class AutoSignConfig extends AbstractModel{
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
-<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
      * @param VerifyChannels 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
 <li>**INSIGHT** : 慧眼人脸认别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
-<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
      */
     public void setVerifyChannels(String [] VerifyChannels) {
         this.VerifyChannels = VerifyChannels;

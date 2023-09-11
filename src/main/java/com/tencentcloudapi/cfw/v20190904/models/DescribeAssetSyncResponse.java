@@ -13,29 +13,41 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceAccountsResponse extends AbstractModel{
+public class DescribeAssetSyncResponse extends AbstractModel{
 
     /**
-    * 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败
     */
-    @SerializedName("ServiceAccounts")
+    @SerializedName("Status")
     @Expose
-    private ServiceAccount [] ServiceAccounts;
+    private Long Status;
 
     /**
-    * 服务级账户数量
+    * success 成功
+其他失败
     */
-    @SerializedName("TotalCount")
+    @SerializedName("ReturnMsg")
     @Expose
-    private Long TotalCount;
+    private String ReturnMsg;
+
+    /**
+    * 0 成功
+非0 失败
+    */
+    @SerializedName("ReturnCode")
+    @Expose
+    private Long ReturnCode;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +57,75 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败 
+     * @return Status 返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败
      */
-    public ServiceAccount [] getServiceAccounts() {
-        return this.ServiceAccounts;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败
+     * @param Status 返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败
      */
-    public void setServiceAccounts(ServiceAccount [] ServiceAccounts) {
-        this.ServiceAccounts = ServiceAccounts;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
-     * Get 服务级账户数量 
-     * @return TotalCount 服务级账户数量
+     * Get success 成功
+其他失败 
+     * @return ReturnMsg success 成功
+其他失败
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getReturnMsg() {
+        return this.ReturnMsg;
     }
 
     /**
-     * Set 服务级账户数量
-     * @param TotalCount 服务级账户数量
+     * Set success 成功
+其他失败
+     * @param ReturnMsg success 成功
+其他失败
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setReturnMsg(String ReturnMsg) {
+        this.ReturnMsg = ReturnMsg;
+    }
+
+    /**
+     * Get 0 成功
+非0 失败 
+     * @return ReturnCode 0 成功
+非0 失败
+     */
+    public Long getReturnCode() {
+        return this.ReturnCode;
+    }
+
+    /**
+     * Set 0 成功
+非0 失败
+     * @param ReturnCode 0 成功
+非0 失败
+     */
+    public void setReturnCode(Long ReturnCode) {
+        this.ReturnCode = ReturnCode;
     }
 
     /**
@@ -96,22 +144,22 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeServiceAccountsResponse() {
+    public DescribeAssetSyncResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServiceAccountsResponse(DescribeServiceAccountsResponse source) {
-        if (source.ServiceAccounts != null) {
-            this.ServiceAccounts = new ServiceAccount[source.ServiceAccounts.length];
-            for (int i = 0; i < source.ServiceAccounts.length; i++) {
-                this.ServiceAccounts[i] = new ServiceAccount(source.ServiceAccounts[i]);
-            }
+    public DescribeAssetSyncResponse(DescribeAssetSyncResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.ReturnMsg != null) {
+            this.ReturnMsg = new String(source.ReturnMsg);
+        }
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +171,9 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+        this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

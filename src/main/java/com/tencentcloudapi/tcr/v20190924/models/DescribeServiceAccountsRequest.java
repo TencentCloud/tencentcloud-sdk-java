@@ -37,7 +37,7 @@ public class DescribeServiceAccountsRequest extends AbstractModel{
     private Boolean All;
 
     /**
-    * 是否填充策略
+    * 是否填充权限信息
     */
     @SerializedName("EmbedPermission")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeServiceAccountsRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否填充策略 
-     * @return EmbedPermission 是否填充策略
+     * Get 是否填充权限信息 
+     * @return EmbedPermission 是否填充权限信息
      */
     public Boolean getEmbedPermission() {
         return this.EmbedPermission;
     }
 
     /**
-     * Set 是否填充策略
-     * @param EmbedPermission 是否填充策略
+     * Set 是否填充权限信息
+     * @param EmbedPermission 是否填充权限信息
      */
     public void setEmbedPermission(Boolean EmbedPermission) {
         this.EmbedPermission = EmbedPermission;

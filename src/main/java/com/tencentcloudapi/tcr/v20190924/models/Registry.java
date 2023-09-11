@@ -132,6 +132,13 @@ public class Registry extends AbstractModel{
     private Long RenewFlag;
 
     /**
+    * 是否开启实例删除保护，false表示不开启
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get 实例ID 
      * @return RegistryId 实例ID
      */
@@ -387,6 +394,22 @@ public class Registry extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get 是否开启实例删除保护，false表示不开启 
+     * @return DeletionProtection 是否开启实例删除保护，false表示不开启
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 是否开启实例删除保护，false表示不开启
+     * @param DeletionProtection 是否开启实例删除保护，false表示不开启
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public Registry() {
     }
 
@@ -440,6 +463,9 @@ public class Registry extends AbstractModel{
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -462,6 +488,7 @@ public class Registry extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
         this.setParamSimple(map, prefix + "PayMod", this.PayMod);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

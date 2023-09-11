@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceAccountsResponse extends AbstractModel{
+public class SwitchCloudInstanceHAResponse extends AbstractModel{
 
     /**
-    * 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 异步任务流程ID
     */
-    @SerializedName("ServiceAccounts")
+    @SerializedName("FlowId")
     @Expose
-    private ServiceAccount [] ServiceAccounts;
-
-    /**
-    * 服务级账户数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 异步任务流程ID 
+     * @return FlowId 异步任务流程ID
      */
-    public ServiceAccount [] getServiceAccounts() {
-        return this.ServiceAccounts;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 异步任务流程ID
+     * @param FlowId 异步任务流程ID
      */
-    public void setServiceAccounts(ServiceAccount [] ServiceAccounts) {
-        this.ServiceAccounts = ServiceAccounts;
-    }
-
-    /**
-     * Get 服务级账户数量 
-     * @return TotalCount 服务级账户数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 服务级账户数量
-     * @param TotalCount 服务级账户数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -96,22 +68,16 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeServiceAccountsResponse() {
+    public SwitchCloudInstanceHAResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServiceAccountsResponse(DescribeServiceAccountsResponse source) {
-        if (source.ServiceAccounts != null) {
-            this.ServiceAccounts = new ServiceAccount[source.ServiceAccounts.length];
-            for (int i = 0; i < source.ServiceAccounts.length; i++) {
-                this.ServiceAccounts[i] = new ServiceAccount(source.ServiceAccounts[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public SwitchCloudInstanceHAResponse(SwitchCloudInstanceHAResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +89,7 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -50,7 +50,7 @@ public class CreateUserAutoSignEnableUrlRequest extends AbstractModel{
     /**
     * 生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
     */
     @SerializedName("UrlType")
     @Expose
@@ -154,10 +154,10 @@ public class CreateUserAutoSignEnableUrlRequest extends AbstractModel{
     /**
      * Get 生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul> 
+<li> **H5SIGN** : 生成H5端开通链接</li></ul> 
      * @return UrlType 生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
      */
     public String getUrlType() {
         return this.UrlType;
@@ -166,10 +166,10 @@ public class CreateUserAutoSignEnableUrlRequest extends AbstractModel{
     /**
      * Set 生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
      * @param UrlType 生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
      */
     public void setUrlType(String UrlType) {
         this.UrlType = UrlType;

@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceAccountsResponse extends AbstractModel{
+public class DescribeFwSyncStatusResponse extends AbstractModel{
 
     /**
-    * 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 同步状态：1，同步中；0，同步完成
     */
-    @SerializedName("ServiceAccounts")
+    @SerializedName("SyncStatus")
     @Expose
-    private ServiceAccount [] ServiceAccounts;
-
-    /**
-    * 服务级账户数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private Long SyncStatus;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 同步状态：1，同步中；0，同步完成 
+     * @return SyncStatus 同步状态：1，同步中；0，同步完成
      */
-    public ServiceAccount [] getServiceAccounts() {
-        return this.ServiceAccounts;
+    public Long getSyncStatus() {
+        return this.SyncStatus;
     }
 
     /**
-     * Set 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 同步状态：1，同步中；0，同步完成
+     * @param SyncStatus 同步状态：1，同步中；0，同步完成
      */
-    public void setServiceAccounts(ServiceAccount [] ServiceAccounts) {
-        this.ServiceAccounts = ServiceAccounts;
-    }
-
-    /**
-     * Get 服务级账户数量 
-     * @return TotalCount 服务级账户数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 服务级账户数量
-     * @param TotalCount 服务级账户数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setSyncStatus(Long SyncStatus) {
+        this.SyncStatus = SyncStatus;
     }
 
     /**
@@ -96,22 +68,16 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeServiceAccountsResponse() {
+    public DescribeFwSyncStatusResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServiceAccountsResponse(DescribeServiceAccountsResponse source) {
-        if (source.ServiceAccounts != null) {
-            this.ServiceAccounts = new ServiceAccount[source.ServiceAccounts.length];
-            for (int i = 0; i < source.ServiceAccounts.length; i++) {
-                this.ServiceAccounts[i] = new ServiceAccount(source.ServiceAccounts[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeFwSyncStatusResponse(DescribeFwSyncStatusResponse source) {
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new Long(source.SyncStatus);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +89,7 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

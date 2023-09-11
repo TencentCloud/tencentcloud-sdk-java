@@ -564,6 +564,48 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询地址模板列表
+     * @param req DescribeAddressTemplateListRequest
+     * @return DescribeAddressTemplateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddressTemplateListResponse DescribeAddressTemplateList(DescribeAddressTemplateListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddressTemplateListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddressTemplateListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAddressTemplateList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *资产同步状态查询
+     * @param req DescribeAssetSyncRequest
+     * @return DescribeAssetSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetSyncResponse DescribeAssetSync(DescribeAssetSyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAssetSyncResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAssetSyncResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAssetSync");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取安全组关联实例列表
      * @param req DescribeAssociatedInstanceListRequest
      * @return DescribeAssociatedInstanceListResponse
@@ -776,6 +818,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *获取防火墙同步状态，一般在执行同步操作后查询
+     * @param req DescribeFwSyncStatusRequest
+     * @return DescribeFwSyncStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFwSyncStatusResponse DescribeFwSyncStatus(DescribeFwSyncStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFwSyncStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFwSyncStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFwSyncStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeGuideScanInfo新手引导扫描接口信息
      * @param req DescribeGuideScanInfoRequest
      * @return DescribeGuideScanInfoResponse
@@ -957,6 +1020,27 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNatFwVpcDnsLstResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNatFwVpcDnsLst");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询NAT边界防火墙开关列表
+     * @param req DescribeNatSwitchListRequest
+     * @return DescribeNatSwitchListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatSwitchListResponse DescribeNatSwitchList(DescribeNatSwitchListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNatSwitchListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNatSwitchListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNatSwitchList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1284,6 +1368,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *修改地址模板
+     * @param req ModifyAddressTemplateRequest
+     * @return ModifyAddressTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAddressTemplateResponse ModifyAddressTemplate(ModifyAddressTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAddressTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAddressTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAddressTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *互联网边界防火墙一键开关
      * @param req ModifyAllPublicIPSwitchStatusRequest
      * @return ModifyAllPublicIPSwitchStatusResponse
@@ -1360,6 +1465,27 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAssetScanResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAssetScan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *资产同步
+     * @param req ModifyAssetSyncRequest
+     * @return ModifyAssetSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAssetSyncResponse ModifyAssetSync(ModifyAssetSyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAssetSyncResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAssetSyncResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAssetSync");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1616,6 +1742,27 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
                 Type type = new TypeToken<JsonResponseModel<ModifyNatFwVpcDnsSwitchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNatFwVpcDnsSwitch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑NAT防火墙
+     * @param req ModifyNatInstanceRequest
+     * @return ModifyNatInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatInstanceResponse ModifyNatInstance(ModifyNatInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNatInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNatInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNatInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2080,6 +2227,27 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
                 Type type = new TypeToken<JsonResponseModel<StopSecurityGroupRuleDispatchResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopSecurityGroupRuleDispatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *同步防火墙操作，包括同步防火墙路由（若vpc，专线网关等增加了Cidr，需要手动同步一下路由使之在防火墙上生效）等。
+     * @param req SyncFwOperateRequest
+     * @return SyncFwOperateResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncFwOperateResponse SyncFwOperate(SyncFwOperateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncFwOperateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncFwOperateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncFwOperate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

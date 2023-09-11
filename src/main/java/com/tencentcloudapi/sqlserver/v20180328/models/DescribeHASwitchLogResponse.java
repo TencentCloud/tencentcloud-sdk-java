@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceAccountsResponse extends AbstractModel{
+public class DescribeHASwitchLogResponse extends AbstractModel{
 
     /**
-    * 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ServiceAccounts")
-    @Expose
-    private ServiceAccount [] ServiceAccounts;
-
-    /**
-    * 服务级账户数量
+    * 日志总数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 主备切换日志
+    */
+    @SerializedName("SwitchLog")
+    @Expose
+    private SwitchLog [] SwitchLog;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public ServiceAccount [] getServiceAccounts() {
-        return this.ServiceAccounts;
-    }
-
-    /**
-     * Set 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setServiceAccounts(ServiceAccount [] ServiceAccounts) {
-        this.ServiceAccounts = ServiceAccounts;
-    }
-
-    /**
-     * Get 服务级账户数量 
-     * @return TotalCount 服务级账户数量
+     * Get 日志总数量 
+     * @return TotalCount 日志总数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 服务级账户数量
-     * @param TotalCount 服务级账户数量
+     * Set 日志总数量
+     * @param TotalCount 日志总数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 主备切换日志 
+     * @return SwitchLog 主备切换日志
+     */
+    public SwitchLog [] getSwitchLog() {
+        return this.SwitchLog;
+    }
+
+    /**
+     * Set 主备切换日志
+     * @param SwitchLog 主备切换日志
+     */
+    public void setSwitchLog(SwitchLog [] SwitchLog) {
+        this.SwitchLog = SwitchLog;
     }
 
     /**
@@ -96,22 +91,22 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeServiceAccountsResponse() {
+    public DescribeHASwitchLogResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServiceAccountsResponse(DescribeServiceAccountsResponse source) {
-        if (source.ServiceAccounts != null) {
-            this.ServiceAccounts = new ServiceAccount[source.ServiceAccounts.length];
-            for (int i = 0; i < source.ServiceAccounts.length; i++) {
-                this.ServiceAccounts[i] = new ServiceAccount(source.ServiceAccounts[i]);
-            }
-        }
+    public DescribeHASwitchLogResponse(DescribeHASwitchLogResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SwitchLog != null) {
+            this.SwitchLog = new SwitchLog[source.SwitchLog.length];
+            for (int i = 0; i < source.SwitchLog.length; i++) {
+                this.SwitchLog[i] = new SwitchLog(source.SwitchLog[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "SwitchLog.", this.SwitchLog);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

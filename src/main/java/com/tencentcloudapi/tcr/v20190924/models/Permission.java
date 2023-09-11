@@ -31,7 +31,7 @@ public class Permission extends AbstractModel{
     private String Resource;
 
     /**
-    * 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository
+    * 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Actions")
@@ -59,9 +59,9 @@ public class Permission extends AbstractModel{
     }
 
     /**
-     * Get 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository
+     * Get 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Actions 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository
+     * @return Actions 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getActions() {
@@ -69,9 +69,9 @@ public class Permission extends AbstractModel{
     }
 
     /**
-     * Set 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository
+     * Set 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Actions 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository
+     * @param Actions 动作，目前仅支持：tcr:PushRepository、tcr:PullRepository、tcr:CreateRepository、tcr:CreateHelmChart、tcr:DescribeHelmCharts
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActions(String [] Actions) {

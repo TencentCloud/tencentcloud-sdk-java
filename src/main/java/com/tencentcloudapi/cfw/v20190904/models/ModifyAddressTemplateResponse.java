@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceAccountsResponse extends AbstractModel{
+public class ModifyAddressTemplateResponse extends AbstractModel{
 
     /**
-    * 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 创建结果,0成功
     */
-    @SerializedName("ServiceAccounts")
+    @SerializedName("Status")
     @Expose
-    private ServiceAccount [] ServiceAccounts;
+    private Long Status;
 
     /**
-    * 服务级账户数量
+    * 唯一Id
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Uuid")
     @Expose
-    private Long TotalCount;
+    private String Uuid;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建结果,0成功 
+     * @return Status 创建结果,0成功
      */
-    public ServiceAccount [] getServiceAccounts() {
-        return this.ServiceAccounts;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 创建结果,0成功
+     * @param Status 创建结果,0成功
      */
-    public void setServiceAccounts(ServiceAccount [] ServiceAccounts) {
-        this.ServiceAccounts = ServiceAccounts;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
-     * Get 服务级账户数量 
-     * @return TotalCount 服务级账户数量
+     * Get 唯一Id 
+     * @return Uuid 唯一Id
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getUuid() {
+        return this.Uuid;
     }
 
     /**
-     * Set 服务级账户数量
-     * @param TotalCount 服务级账户数量
+     * Set 唯一Id
+     * @param Uuid 唯一Id
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
     }
 
     /**
@@ -96,22 +91,19 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeServiceAccountsResponse() {
+    public ModifyAddressTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServiceAccountsResponse(DescribeServiceAccountsResponse source) {
-        if (source.ServiceAccounts != null) {
-            this.ServiceAccounts = new ServiceAccount[source.ServiceAccounts.length];
-            for (int i = 0; i < source.ServiceAccounts.length; i++) {
-                this.ServiceAccounts[i] = new ServiceAccount(source.ServiceAccounts[i]);
-            }
+    public ModifyAddressTemplateResponse(ModifyAddressTemplateResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +115,8 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

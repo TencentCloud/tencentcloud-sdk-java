@@ -438,7 +438,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *创建自定义账户
+     *创建服务级账户
      * @param req CreateServiceAccountRequest
      * @return CreateServiceAccountResponse
      * @throws TencentCloudSDKException

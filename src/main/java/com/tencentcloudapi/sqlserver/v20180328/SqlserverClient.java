@@ -963,6 +963,27 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeHASwitchLog)用于手动主备切换。
+     * @param req DescribeHASwitchLogRequest
+     * @return DescribeHASwitchLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHASwitchLogResponse DescribeHASwitchLog(DescribeHASwitchLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHASwitchLogResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHASwitchLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHASwitchLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
      * @param req DescribeIncrementalMigrationRequest
      * @return DescribeIncrementalMigrationResponse
@@ -2344,6 +2365,27 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(SwitchCloudInstanceHA)用于手动主备切换。
+     * @param req SwitchCloudInstanceHARequest
+     * @return SwitchCloudInstanceHAResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchCloudInstanceHAResponse SwitchCloudInstanceHA(SwitchCloudInstanceHARequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchCloudInstanceHAResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchCloudInstanceHAResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchCloudInstanceHA");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -58,7 +58,7 @@ public class GetGroupInfoResponse extends AbstractModel{
     private String FaceModelVersion;
 
     /**
-    * Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
+    * Group的创建时间和日期。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
     */
     @SerializedName("CreationTimestamp")
     @Expose
@@ -152,16 +152,16 @@ public class GetGroupInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-     * @return CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
+     * Get Group的创建时间和日期。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+     * @return CreationTimestamp Group的创建时间和日期。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
      */
     public Long getCreationTimestamp() {
         return this.CreationTimestamp;
     }
 
     /**
-     * Set Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
-     * @param CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
+     * Set Group的创建时间和日期。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
+     * @param CreationTimestamp Group的创建时间和日期。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。
      */
     public void setCreationTimestamp(Long CreationTimestamp) {
         this.CreationTimestamp = CreationTimestamp;

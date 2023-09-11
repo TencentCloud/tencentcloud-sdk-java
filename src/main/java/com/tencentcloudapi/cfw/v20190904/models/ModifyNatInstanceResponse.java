@@ -13,29 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceAccountsResponse extends AbstractModel{
+public class ModifyNatInstanceResponse extends AbstractModel{
 
     /**
-    * 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 0 正常
+-1 异常
     */
-    @SerializedName("ServiceAccounts")
+    @SerializedName("Status")
     @Expose
-    private ServiceAccount [] ServiceAccounts;
+    private Long Status;
 
     /**
-    * 服务级账户数量
+    * nat实例唯一ID
     */
-    @SerializedName("TotalCount")
+    @SerializedName("NatInstanceId")
     @Expose
-    private Long TotalCount;
+    private String NatInstanceId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +45,39 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 0 正常
+-1 异常 
+     * @return Status 0 正常
+-1 异常
      */
-    public ServiceAccount [] getServiceAccounts() {
-        return this.ServiceAccounts;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 0 正常
+-1 异常
+     * @param Status 0 正常
+-1 异常
      */
-    public void setServiceAccounts(ServiceAccount [] ServiceAccounts) {
-        this.ServiceAccounts = ServiceAccounts;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
-     * Get 服务级账户数量 
-     * @return TotalCount 服务级账户数量
+     * Get nat实例唯一ID 
+     * @return NatInstanceId nat实例唯一ID
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getNatInstanceId() {
+        return this.NatInstanceId;
     }
 
     /**
-     * Set 服务级账户数量
-     * @param TotalCount 服务级账户数量
+     * Set nat实例唯一ID
+     * @param NatInstanceId nat实例唯一ID
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setNatInstanceId(String NatInstanceId) {
+        this.NatInstanceId = NatInstanceId;
     }
 
     /**
@@ -96,22 +96,19 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeServiceAccountsResponse() {
+    public ModifyNatInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServiceAccountsResponse(DescribeServiceAccountsResponse source) {
-        if (source.ServiceAccounts != null) {
-            this.ServiceAccounts = new ServiceAccount[source.ServiceAccounts.length];
-            for (int i = 0; i < source.ServiceAccounts.length; i++) {
-                this.ServiceAccounts[i] = new ServiceAccount(source.ServiceAccounts[i]);
-            }
+    public ModifyNatInstanceResponse(ModifyNatInstanceResponse source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.NatInstanceId != null) {
+            this.NatInstanceId = new String(source.NatInstanceId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +120,8 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "NatInstanceId", this.NatInstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

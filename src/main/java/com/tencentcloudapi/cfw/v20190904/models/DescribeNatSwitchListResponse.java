@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceAccountsResponse extends AbstractModel{
+public class DescribeNatSwitchListResponse extends AbstractModel{
 
     /**
-    * 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总数
     */
-    @SerializedName("ServiceAccounts")
+    @SerializedName("Total")
     @Expose
-    private ServiceAccount [] ServiceAccounts;
+    private Long Total;
 
     /**
-    * 服务级账户数量
+    * NAT边界防火墙开关列表数据
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Data")
     @Expose
-    private Long TotalCount;
+    private NatSwitchListData [] Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总数 
+     * @return Total 总数
      */
-    public ServiceAccount [] getServiceAccounts() {
-        return this.ServiceAccounts;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总数
+     * @param Total 总数
      */
-    public void setServiceAccounts(ServiceAccount [] ServiceAccounts) {
-        this.ServiceAccounts = ServiceAccounts;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get 服务级账户数量 
-     * @return TotalCount 服务级账户数量
+     * Get NAT边界防火墙开关列表数据 
+     * @return Data NAT边界防火墙开关列表数据
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public NatSwitchListData [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 服务级账户数量
-     * @param TotalCount 服务级账户数量
+     * Set NAT边界防火墙开关列表数据
+     * @param Data NAT边界防火墙开关列表数据
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setData(NatSwitchListData [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -96,22 +91,22 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeServiceAccountsResponse() {
+    public DescribeNatSwitchListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServiceAccountsResponse(DescribeServiceAccountsResponse source) {
-        if (source.ServiceAccounts != null) {
-            this.ServiceAccounts = new ServiceAccount[source.ServiceAccounts.length];
-            for (int i = 0; i < source.ServiceAccounts.length; i++) {
-                this.ServiceAccounts[i] = new ServiceAccount(source.ServiceAccounts[i]);
-            }
+    public DescribeNatSwitchListResponse(DescribeNatSwitchListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.Data != null) {
+            this.Data = new NatSwitchListData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new NatSwitchListData(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ public class DescribeServiceAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
