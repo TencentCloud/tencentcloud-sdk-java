@@ -198,6 +198,15 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     private String NotifyType;
 
     /**
+    * [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+    */
+    @SerializedName("AddSignComponentsLimits")
+    @Expose
+    private ComponentLimit [] AddSignComponentsLimits;
+
+    /**
      * Get 签署人姓名，最大长度50个字符 
      * @return Name 签署人姓名，最大长度50个字符
      */
@@ -637,6 +646,30 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
         this.NotifyType = NotifyType;
     }
 
+    /**
+     * Get [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。` 
+     * @return AddSignComponentsLimits [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+     */
+    public ComponentLimit [] getAddSignComponentsLimits() {
+        return this.AddSignComponentsLimits;
+    }
+
+    /**
+     * Set [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+     * @param AddSignComponentsLimits [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+     */
+    public void setAddSignComponentsLimits(ComponentLimit [] AddSignComponentsLimits) {
+        this.AddSignComponentsLimits = AddSignComponentsLimits;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -723,6 +756,12 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
         if (source.NotifyType != null) {
             this.NotifyType = new String(source.NotifyType);
         }
+        if (source.AddSignComponentsLimits != null) {
+            this.AddSignComponentsLimits = new ComponentLimit[source.AddSignComponentsLimits.length];
+            for (int i = 0; i < source.AddSignComponentsLimits.length; i++) {
+                this.AddSignComponentsLimits[i] = new ComponentLimit(source.AddSignComponentsLimits[i]);
+            }
+        }
     }
 
 
@@ -752,6 +791,7 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         this.setParamSimple(map, prefix + "SignId", this.SignId);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUserDetailResponse extends AbstractModel{
 
     /**
-    * 帐户信息
+    * 账户信息
     */
     @SerializedName("UserInfo")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeUserDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 帐户信息 
-     * @return UserInfo 帐户信息
+     * Get 账户信息 
+     * @return UserInfo 账户信息
      */
     public UserInfo getUserInfo() {
         return this.UserInfo;
     }
 
     /**
-     * Set 帐户信息
-     * @param UserInfo 帐户信息
+     * Set 账户信息
+     * @param UserInfo 账户信息
      */
     public void setUserInfo(UserInfo UserInfo) {
         this.UserInfo = UserInfo;

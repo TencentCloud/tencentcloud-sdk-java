@@ -58,7 +58,7 @@ public class DescribeNewL7RulesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 页起始偏移，取值为(页码-1)*一页条数
+    * 规则偏移量，取值为(页码-1)*一页条数
     */
     @SerializedName("Offset")
     @Expose
@@ -166,16 +166,16 @@ public class DescribeNewL7RulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 页起始偏移，取值为(页码-1)*一页条数 
-     * @return Offset 页起始偏移，取值为(页码-1)*一页条数
+     * Get 规则偏移量，取值为(页码-1)*一页条数 
+     * @return Offset 规则偏移量，取值为(页码-1)*一页条数
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页起始偏移，取值为(页码-1)*一页条数
-     * @param Offset 页起始偏移，取值为(页码-1)*一页条数
+     * Set 规则偏移量，取值为(页码-1)*一页条数
+     * @param Offset 规则偏移量，取值为(页码-1)*一页条数
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

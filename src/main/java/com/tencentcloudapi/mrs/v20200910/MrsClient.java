@@ -124,4 +124,25 @@ public class MrsClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *将PDF格式的体检报告文件结构化,解析关键信息.
+     * @param req TurnPDFToObjectRequest
+     * @return TurnPDFToObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public TurnPDFToObjectResponse TurnPDFToObject(TurnPDFToObjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TurnPDFToObjectResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<TurnPDFToObjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TurnPDFToObject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

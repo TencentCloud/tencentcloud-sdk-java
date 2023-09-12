@@ -30,13 +30,6 @@ public class DescribeGroupsWithPluginRequest extends AbstractModel{
     private String PluginId;
 
     /**
-    * 绑定/未绑定: true / false
-    */
-    @SerializedName("Bound")
-    @Expose
-    private Boolean Bound;
-
-    /**
     * 翻页偏移量
     */
     @SerializedName("Offset")
@@ -49,6 +42,13 @@ public class DescribeGroupsWithPluginRequest extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * 绑定/未绑定: true / false
+    */
+    @SerializedName("Bound")
+    @Expose
+    private Boolean Bound;
 
     /**
     * 搜索关键字
@@ -81,22 +81,6 @@ public class DescribeGroupsWithPluginRequest extends AbstractModel{
     }
 
     /**
-     * Get 绑定/未绑定: true / false 
-     * @return Bound 绑定/未绑定: true / false
-     */
-    public Boolean getBound() {
-        return this.Bound;
-    }
-
-    /**
-     * Set 绑定/未绑定: true / false
-     * @param Bound 绑定/未绑定: true / false
-     */
-    public void setBound(Boolean Bound) {
-        this.Bound = Bound;
-    }
-
-    /**
      * Get 翻页偏移量 
      * @return Offset 翻页偏移量
      */
@@ -126,6 +110,22 @@ public class DescribeGroupsWithPluginRequest extends AbstractModel{
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get 绑定/未绑定: true / false 
+     * @return Bound 绑定/未绑定: true / false
+     */
+    public Boolean getBound() {
+        return this.Bound;
+    }
+
+    /**
+     * Set 绑定/未绑定: true / false
+     * @param Bound 绑定/未绑定: true / false
+     */
+    public void setBound(Boolean Bound) {
+        this.Bound = Bound;
     }
 
     /**
@@ -171,14 +171,14 @@ public class DescribeGroupsWithPluginRequest extends AbstractModel{
         if (source.PluginId != null) {
             this.PluginId = new String(source.PluginId);
         }
-        if (source.Bound != null) {
-            this.Bound = new Boolean(source.Bound);
-        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.Bound != null) {
+            this.Bound = new Boolean(source.Bound);
         }
         if (source.SearchWord != null) {
             this.SearchWord = new String(source.SearchWord);
@@ -194,9 +194,9 @@ public class DescribeGroupsWithPluginRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PluginId", this.PluginId);
-        this.setParamSimple(map, prefix + "Bound", this.Bound);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Bound", this.Bound);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
 

@@ -129,6 +129,20 @@ public class CommonFlowApprover extends AbstractModel{
     private Component [] SignComponents;
 
     /**
+    * 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+    */
+    @SerializedName("ApproverVerifyTypes")
+    @Expose
+    private Long [] ApproverVerifyTypes;
+
+    /**
+    * 签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
+    */
+    @SerializedName("ApproverSignTypes")
+    @Expose
+    private Long [] ApproverSignTypes;
+
+    /**
      * Get 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户 
      * @return NotChannelOrganization 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
      */
@@ -327,9 +341,7 @@ public class CommonFlowApprover extends AbstractModel{
     /**
      * Get 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS 
      * @return NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-     * @deprecated
      */
-    @Deprecated
     public String getNotifyType() {
         return this.NotifyType;
     }
@@ -337,9 +349,7 @@ public class CommonFlowApprover extends AbstractModel{
     /**
      * Set 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
      * @param NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-     * @deprecated
      */
-    @Deprecated
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
     }
@@ -374,6 +384,38 @@ public class CommonFlowApprover extends AbstractModel{
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;
+    }
+
+    /**
+     * Get 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证） 
+     * @return ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     */
+    public Long [] getApproverVerifyTypes() {
+        return this.ApproverVerifyTypes;
+    }
+
+    /**
+     * Set 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     * @param ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     */
+    public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
+        this.ApproverVerifyTypes = ApproverVerifyTypes;
+    }
+
+    /**
+     * Get 签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	 
+     * @return ApproverSignTypes 签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
+     */
+    public Long [] getApproverSignTypes() {
+        return this.ApproverSignTypes;
+    }
+
+    /**
+     * Set 签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
+     * @param ApproverSignTypes 签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
+     */
+    public void setApproverSignTypes(Long [] ApproverSignTypes) {
+        this.ApproverSignTypes = ApproverSignTypes;
     }
 
     public CommonFlowApprover() {
@@ -432,6 +474,18 @@ public class CommonFlowApprover extends AbstractModel{
                 this.SignComponents[i] = new Component(source.SignComponents[i]);
             }
         }
+        if (source.ApproverVerifyTypes != null) {
+            this.ApproverVerifyTypes = new Long[source.ApproverVerifyTypes.length];
+            for (int i = 0; i < source.ApproverVerifyTypes.length; i++) {
+                this.ApproverVerifyTypes[i] = new Long(source.ApproverVerifyTypes[i]);
+            }
+        }
+        if (source.ApproverSignTypes != null) {
+            this.ApproverSignTypes = new Long[source.ApproverSignTypes.length];
+            for (int i = 0; i < source.ApproverSignTypes.length; i++) {
+                this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
+            }
+        }
     }
 
 
@@ -454,6 +508,8 @@ public class CommonFlowApprover extends AbstractModel{
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
         this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
+        this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+        this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
 
     }
 }

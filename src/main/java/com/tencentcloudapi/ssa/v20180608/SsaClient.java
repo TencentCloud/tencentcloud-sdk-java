@@ -39,6 +39,27 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
+     *安全大屏-用户威胁告警信息
+     * @param req DescribeAlarmStatRequest
+     * @return DescribeAlarmStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmStatResponse DescribeAlarmStat(DescribeAlarmStatRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmStatResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmStatResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmStat");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *资产安全页资产详情
      * @param req DescribeAssetDetailRequest
      * @return DescribeAssetDetailResponse

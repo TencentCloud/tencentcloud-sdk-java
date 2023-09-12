@@ -46,6 +46,13 @@ public class DescribeServiceTemplateGroupsRequest extends AbstractModel{
     private String Limit;
 
     /**
+    * 是否获取协议端口模板成员标识。
+    */
+    @SerializedName("NeedMemberInfo")
+    @Expose
+    private Boolean NeedMemberInfo;
+
+    /**
      * Get 过滤条件。
 <li>service-template-group-name - String - （过滤条件）协议端口模板集合名称。</li>
 <li>service-template-group-id - String - （过滤条件）协议端口模板集合实例ID，例如：ppmg-e6dy460g。</li> 
@@ -101,6 +108,22 @@ public class DescribeServiceTemplateGroupsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 是否获取协议端口模板成员标识。 
+     * @return NeedMemberInfo 是否获取协议端口模板成员标识。
+     */
+    public Boolean getNeedMemberInfo() {
+        return this.NeedMemberInfo;
+    }
+
+    /**
+     * Set 是否获取协议端口模板成员标识。
+     * @param NeedMemberInfo 是否获取协议端口模板成员标识。
+     */
+    public void setNeedMemberInfo(Boolean NeedMemberInfo) {
+        this.NeedMemberInfo = NeedMemberInfo;
+    }
+
     public DescribeServiceTemplateGroupsRequest() {
     }
 
@@ -121,6 +144,9 @@ public class DescribeServiceTemplateGroupsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.NeedMemberInfo != null) {
+            this.NeedMemberInfo = new Boolean(source.NeedMemberInfo);
+        }
     }
 
 
@@ -131,6 +157,7 @@ public class DescribeServiceTemplateGroupsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "NeedMemberInfo", this.NeedMemberInfo);
 
     }
 }

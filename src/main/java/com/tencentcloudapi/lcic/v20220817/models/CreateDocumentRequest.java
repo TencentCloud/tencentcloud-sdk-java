@@ -85,6 +85,13 @@ public class CreateDocumentRequest extends AbstractModel{
     private Long DocumentSize;
 
     /**
+    * 是否对不支持元素开启自动处理的功能。默认关闭。
+    */
+    @SerializedName("AutoHandleUnsupportedElement")
+    @Expose
+    private Boolean AutoHandleUnsupportedElement;
+
+    /**
      * Get 低代码互动课堂的SdkAppId。 
      * @return SdkAppId 低代码互动课堂的SdkAppId。
      */
@@ -236,6 +243,22 @@ public class CreateDocumentRequest extends AbstractModel{
         this.DocumentSize = DocumentSize;
     }
 
+    /**
+     * Get 是否对不支持元素开启自动处理的功能。默认关闭。 
+     * @return AutoHandleUnsupportedElement 是否对不支持元素开启自动处理的功能。默认关闭。
+     */
+    public Boolean getAutoHandleUnsupportedElement() {
+        return this.AutoHandleUnsupportedElement;
+    }
+
+    /**
+     * Set 是否对不支持元素开启自动处理的功能。默认关闭。
+     * @param AutoHandleUnsupportedElement 是否对不支持元素开启自动处理的功能。默认关闭。
+     */
+    public void setAutoHandleUnsupportedElement(Boolean AutoHandleUnsupportedElement) {
+        this.AutoHandleUnsupportedElement = AutoHandleUnsupportedElement;
+    }
+
     public CreateDocumentRequest() {
     }
 
@@ -268,6 +291,9 @@ public class CreateDocumentRequest extends AbstractModel{
         if (source.DocumentSize != null) {
             this.DocumentSize = new Long(source.DocumentSize);
         }
+        if (source.AutoHandleUnsupportedElement != null) {
+            this.AutoHandleUnsupportedElement = new Boolean(source.AutoHandleUnsupportedElement);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class CreateDocumentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Permission", this.Permission);
         this.setParamSimple(map, prefix + "DocumentType", this.DocumentType);
         this.setParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
+        this.setParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
 
     }
 }

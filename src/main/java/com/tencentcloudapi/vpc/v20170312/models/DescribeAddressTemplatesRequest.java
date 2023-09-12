@@ -47,6 +47,13 @@ public class DescribeAddressTemplatesRequest extends AbstractModel{
     private String Limit;
 
     /**
+    * 是否获取IP地址模板成员标识。
+    */
+    @SerializedName("NeedMemberInfo")
+    @Expose
+    private Boolean NeedMemberInfo;
+
+    /**
      * Get 过滤条件。
 <li>address-template-name - IP地址模板名称。</li>
 <li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
@@ -106,6 +113,22 @@ public class DescribeAddressTemplatesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 是否获取IP地址模板成员标识。 
+     * @return NeedMemberInfo 是否获取IP地址模板成员标识。
+     */
+    public Boolean getNeedMemberInfo() {
+        return this.NeedMemberInfo;
+    }
+
+    /**
+     * Set 是否获取IP地址模板成员标识。
+     * @param NeedMemberInfo 是否获取IP地址模板成员标识。
+     */
+    public void setNeedMemberInfo(Boolean NeedMemberInfo) {
+        this.NeedMemberInfo = NeedMemberInfo;
+    }
+
     public DescribeAddressTemplatesRequest() {
     }
 
@@ -126,6 +149,9 @@ public class DescribeAddressTemplatesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.NeedMemberInfo != null) {
+            this.NeedMemberInfo = new Boolean(source.NeedMemberInfo);
+        }
     }
 
 
@@ -136,6 +162,7 @@ public class DescribeAddressTemplatesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "NeedMemberInfo", this.NeedMemberInfo);
 
     }
 }

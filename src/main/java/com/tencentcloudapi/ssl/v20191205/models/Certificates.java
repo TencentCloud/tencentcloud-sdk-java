@@ -329,6 +329,30 @@ null = 用户上传证书（没有套餐类型），
     private Long AutoRenewFlag;
 
     /**
+    * 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostingStatus")
+    @Expose
+    private Long HostingStatus;
+
+    /**
+    * 托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostingCompleteTime")
+    @Expose
+    private String HostingCompleteTime;
+
+    /**
+    * 托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostingRenewCertId")
+    @Expose
+    private String HostingRenewCertId;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -1096,6 +1120,66 @@ null = 用户上传证书（没有套餐类型），
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    /**
+     * Get 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostingStatus 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHostingStatus() {
+        return this.HostingStatus;
+    }
+
+    /**
+     * Set 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostingStatus 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostingStatus(Long HostingStatus) {
+        this.HostingStatus = HostingStatus;
+    }
+
+    /**
+     * Get 托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostingCompleteTime 托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostingCompleteTime() {
+        return this.HostingCompleteTime;
+    }
+
+    /**
+     * Set 托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostingCompleteTime 托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostingCompleteTime(String HostingCompleteTime) {
+        this.HostingCompleteTime = HostingCompleteTime;
+    }
+
+    /**
+     * Get 托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostingRenewCertId 托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostingRenewCertId() {
+        return this.HostingRenewCertId;
+    }
+
+    /**
+     * Set 托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostingRenewCertId 托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostingRenewCertId(String HostingRenewCertId) {
+        this.HostingRenewCertId = HostingRenewCertId;
+    }
+
     public Certificates() {
     }
 
@@ -1236,6 +1320,15 @@ null = 用户上传证书（没有套餐类型），
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.HostingStatus != null) {
+            this.HostingStatus = new Long(source.HostingStatus);
+        }
+        if (source.HostingCompleteTime != null) {
+            this.HostingCompleteTime = new String(source.HostingCompleteTime);
+        }
+        if (source.HostingRenewCertId != null) {
+            this.HostingRenewCertId = new String(source.HostingRenewCertId);
+        }
     }
 
 
@@ -1281,6 +1374,9 @@ null = 用户上传证书（没有套餐类型），
         this.setParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
         this.setParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
+        this.setParamSimple(map, prefix + "HostingCompleteTime", this.HostingCompleteTime);
+        this.setParamSimple(map, prefix + "HostingRenewCertId", this.HostingRenewCertId);
 
     }
 }

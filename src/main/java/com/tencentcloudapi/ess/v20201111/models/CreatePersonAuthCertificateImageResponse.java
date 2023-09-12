@@ -23,14 +23,17 @@ import java.util.HashMap;
 public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
 
     /**
-    * 个人用户证明证书的下载链接
+    * 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
     */
     @SerializedName("AuthCertUrl")
     @Expose
     private String AuthCertUrl;
 
     /**
-    * 证书图片上的证书编号，20位数字
+    * 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
+该编号会合成到个人用户证书证明图片。
+
+注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageCertId")
@@ -38,7 +41,9 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     private String ImageCertId;
 
     /**
-    * 图片证明对应的CA证书序列号
+    * CA供应商下发给用户的证书编号，在证书到期后自动续期后此证书编号会发生变动，且不会合成到个人用户证书证明图片中。
+
+注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下。`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialNumber")
@@ -46,7 +51,8 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     private String SerialNumber;
 
     /**
-    * CA证书颁发时间戳
+    * CA证书颁发时间，格式为Unix标准时间戳（秒）   
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidFrom")
@@ -54,7 +60,8 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     private Long ValidFrom;
 
     /**
-    * CA证书有效截止时间戳
+    * CA证书有效截止时间，格式为Unix标准时间戳（秒）
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidTo")
@@ -69,25 +76,31 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 个人用户证明证书的下载链接 
-     * @return AuthCertUrl 个人用户证明证书的下载链接
+     * Get 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。 
+     * @return AuthCertUrl 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
      */
     public String getAuthCertUrl() {
         return this.AuthCertUrl;
     }
 
     /**
-     * Set 个人用户证明证书的下载链接
-     * @param AuthCertUrl 个人用户证明证书的下载链接
+     * Set 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
+     * @param AuthCertUrl 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。
      */
     public void setAuthCertUrl(String AuthCertUrl) {
         this.AuthCertUrl = AuthCertUrl;
     }
 
     /**
-     * Get 证书图片上的证书编号，20位数字
+     * Get 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
+该编号会合成到个人用户证书证明图片。
+
+注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageCertId 证书图片上的证书编号，20位数字
+     * @return ImageCertId 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
+该编号会合成到个人用户证书证明图片。
+
+注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageCertId() {
@@ -95,9 +108,15 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     }
 
     /**
-     * Set 证书图片上的证书编号，20位数字
+     * Set 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
+该编号会合成到个人用户证书证明图片。
+
+注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageCertId 证书图片上的证书编号，20位数字
+     * @param ImageCertId 个人用户认证证书的编号, 为20位数字组成的字符串,  由腾讯电子签下发此编号 。
+该编号会合成到个人用户证书证明图片。
+
+注: `个人用户认证证书的编号和证明图片绑定, 获取新的证明图片编号会变动`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageCertId(String ImageCertId) {
@@ -105,9 +124,13 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     }
 
     /**
-     * Get 图片证明对应的CA证书序列号
+     * Get CA供应商下发给用户的证书编号，在证书到期后自动续期后此证书编号会发生变动，且不会合成到个人用户证书证明图片中。
+
+注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下。`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SerialNumber 图片证明对应的CA证书序列号
+     * @return SerialNumber CA供应商下发给用户的证书编号，在证书到期后自动续期后此证书编号会发生变动，且不会合成到个人用户证书证明图片中。
+
+注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerialNumber() {
@@ -115,9 +138,13 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     }
 
     /**
-     * Set 图片证明对应的CA证书序列号
+     * Set CA供应商下发给用户的证书编号，在证书到期后自动续期后此证书编号会发生变动，且不会合成到个人用户证书证明图片中。
+
+注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下。`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SerialNumber 图片证明对应的CA证书序列号
+     * @param SerialNumber CA供应商下发给用户的证书编号，在证书到期后自动续期后此证书编号会发生变动，且不会合成到个人用户证书证明图片中。
+
+注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialNumber(String SerialNumber) {
@@ -125,9 +152,11 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     }
 
     /**
-     * Get CA证书颁发时间戳
+     * Get CA证书颁发时间，格式为Unix标准时间戳（秒）   
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValidFrom CA证书颁发时间戳
+     * @return ValidFrom CA证书颁发时间，格式为Unix标准时间戳（秒）   
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidFrom() {
@@ -135,9 +164,11 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     }
 
     /**
-     * Set CA证书颁发时间戳
+     * Set CA证书颁发时间，格式为Unix标准时间戳（秒）   
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValidFrom CA证书颁发时间戳
+     * @param ValidFrom CA证书颁发时间，格式为Unix标准时间戳（秒）   
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidFrom(Long ValidFrom) {
@@ -145,9 +176,11 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     }
 
     /**
-     * Get CA证书有效截止时间戳
+     * Get CA证书有效截止时间，格式为Unix标准时间戳（秒）
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValidTo CA证书有效截止时间戳
+     * @return ValidTo CA证书有效截止时间，格式为Unix标准时间戳（秒）
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidTo() {
@@ -155,9 +188,11 @@ public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
     }
 
     /**
-     * Set CA证书有效截止时间戳
+     * Set CA证书有效截止时间，格式为Unix标准时间戳（秒）
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValidTo CA证书有效截止时间戳
+     * @param ValidTo CA证书有效截止时间，格式为Unix标准时间戳（秒）
+该时间格式化后会合成到个人用户证书证明图片
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidTo(Long ValidTo) {

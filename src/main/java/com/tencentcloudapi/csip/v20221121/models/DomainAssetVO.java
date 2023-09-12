@@ -327,6 +327,14 @@ public class DomainAssetVO extends AbstractModel{
     private Long VerifyStatus;
 
     /**
+    * bot访问数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BotAccessCount")
+    @Expose
+    private Long BotAccessCount;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -1086,6 +1094,26 @@ public class DomainAssetVO extends AbstractModel{
         this.VerifyStatus = VerifyStatus;
     }
 
+    /**
+     * Get bot访问数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BotAccessCount bot访问数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBotAccessCount() {
+        return this.BotAccessCount;
+    }
+
+    /**
+     * Set bot访问数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BotAccessCount bot访问数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBotAccessCount(Long BotAccessCount) {
+        this.BotAccessCount = BotAccessCount;
+    }
+
     public DomainAssetVO() {
     }
 
@@ -1226,6 +1254,9 @@ public class DomainAssetVO extends AbstractModel{
         if (source.VerifyStatus != null) {
             this.VerifyStatus = new Long(source.VerifyStatus);
         }
+        if (source.BotAccessCount != null) {
+            this.BotAccessCount = new Long(source.BotAccessCount);
+        }
     }
 
 
@@ -1271,6 +1302,7 @@ public class DomainAssetVO extends AbstractModel{
         this.setParamSimple(map, prefix + "VerifyDomain", this.VerifyDomain);
         this.setParamSimple(map, prefix + "VerifyTXTRecord", this.VerifyTXTRecord);
         this.setParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
+        this.setParamSimple(map, prefix + "BotAccessCount", this.BotAccessCount);
 
     }
 }

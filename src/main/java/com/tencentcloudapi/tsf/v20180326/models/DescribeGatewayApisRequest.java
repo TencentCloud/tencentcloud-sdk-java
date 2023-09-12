@@ -58,6 +58,13 @@ public class DescribeGatewayApisRequest extends AbstractModel{
     private String GatewayDeployGroupId;
 
     /**
+    * 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+    */
+    @SerializedName("ReleaseStatus")
+    @Expose
+    private String ReleaseStatus;
+
+    /**
      * Get 分组ID 
      * @return GroupId 分组ID
      */
@@ -137,6 +144,22 @@ public class DescribeGatewayApisRequest extends AbstractModel{
         this.GatewayDeployGroupId = GatewayDeployGroupId;
     }
 
+    /**
+     * Get 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败) 
+     * @return ReleaseStatus 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+     */
+    public String getReleaseStatus() {
+        return this.ReleaseStatus;
+    }
+
+    /**
+     * Set 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+     * @param ReleaseStatus 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+     */
+    public void setReleaseStatus(String ReleaseStatus) {
+        this.ReleaseStatus = ReleaseStatus;
+    }
+
     public DescribeGatewayApisRequest() {
     }
 
@@ -160,6 +183,9 @@ public class DescribeGatewayApisRequest extends AbstractModel{
         if (source.GatewayDeployGroupId != null) {
             this.GatewayDeployGroupId = new String(source.GatewayDeployGroupId);
         }
+        if (source.ReleaseStatus != null) {
+            this.ReleaseStatus = new String(source.ReleaseStatus);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class DescribeGatewayApisRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "GatewayDeployGroupId", this.GatewayDeployGroupId);
+        this.setParamSimple(map, prefix + "ReleaseStatus", this.ReleaseStatus);
 
     }
 }

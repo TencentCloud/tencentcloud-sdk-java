@@ -1972,7 +1972,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *获取多个投递项配置 
+     *获取多个投递项配置
      * @param req DescribeDeliveryConfigsRequest
      * @return DescribeDeliveryConfigsResponse
      * @throws TencentCloudSDKException

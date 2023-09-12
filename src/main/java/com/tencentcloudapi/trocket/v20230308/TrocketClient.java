@@ -39,6 +39,27 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *创建消费组
+     * @param req CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConsumerGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConsumerGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConsumerGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *购买新实例
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -60,6 +81,48 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *创建主题
+     * @param req CreateTopicRequest
+     * @return CreateTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTopicResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除消费组
+     * @param req DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteConsumerGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteConsumerGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteConsumerGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除实例
      * @param req DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -73,6 +136,48 @@ public class TrocketClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除主题
+     * @param req DeleteTopicRequest
+     * @return DeleteTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTopicResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询消费组详情
+     * @param req DescribeConsumerGroupRequest
+     * @return DescribeConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerGroupResponse DescribeConsumerGroup(DescribeConsumerGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConsumerGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConsumerGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeConsumerGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -129,6 +234,29 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *查询主题详情，Offset和Limit参数是指订阅该主题的消费组查询分页参数，Filter参数使用说明如下：
+
+ConsumerGroup，消费组名称过滤
+     * @param req DescribeTopicRequest
+     * @return DescribeTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicResponse DescribeTopic(DescribeTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopicResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取主题列表，Filter参数使用说明如下：
 
 1. TopicName，主题名称模糊搜索
@@ -153,6 +281,48 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *运营端查询topicStata
+     * @param req DescribeTopicStatsOpRequest
+     * @return DescribeTopicStatsOpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicStatsOpResponse DescribeTopicStatsOp(DescribeTopicStatsOpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopicStatsOpResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopicStatsOpResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopicStatsOp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改消费组属性
+     * @param req ModifyConsumerGroupRequest
+     * @return ModifyConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsumerGroupResponse ModifyConsumerGroup(ModifyConsumerGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyConsumerGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyConsumerGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyConsumerGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改实例属性
      * @param req ModifyInstanceRequest
      * @return ModifyInstanceResponse
@@ -166,6 +336,27 @@ public class TrocketClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改主题属性
+     * @param req ModifyTopicRequest
+     * @return ModifyTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTopicResponse ModifyTopic(ModifyTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTopicResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTopic");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

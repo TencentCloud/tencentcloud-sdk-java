@@ -461,6 +461,27 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *根据收件人列表id查询收件人列表中的所有收件人邮箱地址，分页查询，可以根据收件邮箱地址来过滤查询
+     * @param req ListReceiverDetailsRequest
+     * @return ListReceiverDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListReceiverDetailsResponse ListReceiverDetails(ListReceiverDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListReceiverDetailsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListReceiverDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListReceiverDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据条件查询收件人列表，支持分页，模糊查询，状态查询
      * @param req ListReceiversRequest
      * @return ListReceiversResponse

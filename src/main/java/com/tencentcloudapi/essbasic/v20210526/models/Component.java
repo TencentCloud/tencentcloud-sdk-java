@@ -360,6 +360,22 @@ UpperRight-右下角。
     private String Placeholder;
 
     /**
+    * 是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LockComponentValue")
+    @Expose
+    private Boolean LockComponentValue;
+
+    /**
+    * 是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ForbidMoveAndDelete")
+    @Expose
+    private Boolean ForbidMoveAndDelete;
+
+    /**
      * Get 控件编号
 
 CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
@@ -1407,6 +1423,46 @@ UpperRight-右下角。
         this.Placeholder = Placeholder;
     }
 
+    /**
+     * Get 是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LockComponentValue 是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLockComponentValue() {
+        return this.LockComponentValue;
+    }
+
+    /**
+     * Set 是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LockComponentValue 是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLockComponentValue(Boolean LockComponentValue) {
+        this.LockComponentValue = LockComponentValue;
+    }
+
+    /**
+     * Get 是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ForbidMoveAndDelete 是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getForbidMoveAndDelete() {
+        return this.ForbidMoveAndDelete;
+    }
+
+    /**
+     * Set 是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ForbidMoveAndDelete 是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setForbidMoveAndDelete(Boolean ForbidMoveAndDelete) {
+        this.ForbidMoveAndDelete = ForbidMoveAndDelete;
+    }
+
     public Component() {
     }
 
@@ -1493,6 +1549,12 @@ UpperRight-右下角。
         if (source.Placeholder != null) {
             this.Placeholder = new String(source.Placeholder);
         }
+        if (source.LockComponentValue != null) {
+            this.LockComponentValue = new Boolean(source.LockComponentValue);
+        }
+        if (source.ForbidMoveAndDelete != null) {
+            this.ForbidMoveAndDelete = new Boolean(source.ForbidMoveAndDelete);
+        }
     }
 
 
@@ -1525,6 +1587,8 @@ UpperRight-右下角。
         this.setParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
         this.setParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
         this.setParamSimple(map, prefix + "Placeholder", this.Placeholder);
+        this.setParamSimple(map, prefix + "LockComponentValue", this.LockComponentValue);
+        this.setParamSimple(map, prefix + "ForbidMoveAndDelete", this.ForbidMoveAndDelete);
 
     }
 }

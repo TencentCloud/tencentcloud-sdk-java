@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class RelieveInfo extends AbstractModel{
 
     /**
-    * 解除理由，最大支持200个字
+    * 解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-    * 解除后仍然有效的条款，保留条款，最大支持200个字
+    * 解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
 
     */
     @SerializedName("RemainInForceItem")
@@ -38,49 +38,46 @@ public class RelieveInfo extends AbstractModel{
     private String RemainInForceItem;
 
     /**
-    * 原合同事项处理-费用结算，最大支持200个字
-
+    * 原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
     */
     @SerializedName("OriginalExpenseSettlement")
     @Expose
     private String OriginalExpenseSettlement;
 
     /**
-    * 原合同事项处理-其他事项，最大支持200个字
-
+    * 原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
     */
     @SerializedName("OriginalOtherSettlement")
     @Expose
     private String OriginalOtherSettlement;
 
     /**
-    * 其他约定，最大支持200个字
-
+    * 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
     */
     @SerializedName("OtherDeals")
     @Expose
     private String OtherDeals;
 
     /**
-     * Get 解除理由，最大支持200个字 
-     * @return Reason 解除理由，最大支持200个字
+     * Get 解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。 
+     * @return Reason 解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 解除理由，最大支持200个字
-     * @param Reason 解除理由，最大支持200个字
+     * Set 解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * @param Reason 解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 解除后仍然有效的条款，保留条款，最大支持200个字
+     * Get 解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
  
-     * @return RemainInForceItem 解除后仍然有效的条款，保留条款，最大支持200个字
+     * @return RemainInForceItem 解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
 
      */
     public String getRemainInForceItem() {
@@ -88,9 +85,9 @@ public class RelieveInfo extends AbstractModel{
     }
 
     /**
-     * Set 解除后仍然有效的条款，保留条款，最大支持200个字
+     * Set 解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
 
-     * @param RemainInForceItem 解除后仍然有效的条款，保留条款，最大支持200个字
+     * @param RemainInForceItem 解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
 
      */
     public void setRemainInForceItem(String RemainInForceItem) {
@@ -98,60 +95,48 @@ public class RelieveInfo extends AbstractModel{
     }
 
     /**
-     * Get 原合同事项处理-费用结算，最大支持200个字
- 
-     * @return OriginalExpenseSettlement 原合同事项处理-费用结算，最大支持200个字
-
+     * Get 原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。 
+     * @return OriginalExpenseSettlement 原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public String getOriginalExpenseSettlement() {
         return this.OriginalExpenseSettlement;
     }
 
     /**
-     * Set 原合同事项处理-费用结算，最大支持200个字
-
-     * @param OriginalExpenseSettlement 原合同事项处理-费用结算，最大支持200个字
-
+     * Set 原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * @param OriginalExpenseSettlement 原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public void setOriginalExpenseSettlement(String OriginalExpenseSettlement) {
         this.OriginalExpenseSettlement = OriginalExpenseSettlement;
     }
 
     /**
-     * Get 原合同事项处理-其他事项，最大支持200个字
- 
-     * @return OriginalOtherSettlement 原合同事项处理-其他事项，最大支持200个字
-
+     * Get 原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。 
+     * @return OriginalOtherSettlement 原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public String getOriginalOtherSettlement() {
         return this.OriginalOtherSettlement;
     }
 
     /**
-     * Set 原合同事项处理-其他事项，最大支持200个字
-
-     * @param OriginalOtherSettlement 原合同事项处理-其他事项，最大支持200个字
-
+     * Set 原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * @param OriginalOtherSettlement 原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public void setOriginalOtherSettlement(String OriginalOtherSettlement) {
         this.OriginalOtherSettlement = OriginalOtherSettlement;
     }
 
     /**
-     * Get 其他约定，最大支持200个字
- 
-     * @return OtherDeals 其他约定，最大支持200个字
-
+     * Get 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。 
+     * @return OtherDeals 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public String getOtherDeals() {
         return this.OtherDeals;
     }
 
     /**
-     * Set 其他约定，最大支持200个字
-
-     * @param OtherDeals 其他约定，最大支持200个字
-
+     * Set 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * @param OtherDeals 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public void setOtherDeals(String OtherDeals) {
         this.OtherDeals = OtherDeals;

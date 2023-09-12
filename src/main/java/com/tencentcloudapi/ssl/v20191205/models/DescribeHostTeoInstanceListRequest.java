@@ -58,6 +58,27 @@ public class DescribeHostTeoInstanceListRequest extends AbstractModel{
     private String OldCertificateId;
 
     /**
+    * 分页偏移量，从0开始。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 每页数量，默认10。	
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 是否异步
+    */
+    @SerializedName("AsyncCache")
+    @Expose
+    private Long AsyncCache;
+
+    /**
      * Get 待部署的证书ID 
      * @return CertificateId 待部署的证书ID
      */
@@ -137,6 +158,54 @@ public class DescribeHostTeoInstanceListRequest extends AbstractModel{
         this.OldCertificateId = OldCertificateId;
     }
 
+    /**
+     * Get 分页偏移量，从0开始。 
+     * @return Offset 分页偏移量，从0开始。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移量，从0开始。
+     * @param Offset 分页偏移量，从0开始。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 每页数量，默认10。	 
+     * @return Limit 每页数量，默认10。	
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页数量，默认10。	
+     * @param Limit 每页数量，默认10。	
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 是否异步 
+     * @return AsyncCache 是否异步
+     */
+    public Long getAsyncCache() {
+        return this.AsyncCache;
+    }
+
+    /**
+     * Set 是否异步
+     * @param AsyncCache 是否异步
+     */
+    public void setAsyncCache(Long AsyncCache) {
+        this.AsyncCache = AsyncCache;
+    }
+
     public DescribeHostTeoInstanceListRequest() {
     }
 
@@ -163,6 +232,15 @@ public class DescribeHostTeoInstanceListRequest extends AbstractModel{
         if (source.OldCertificateId != null) {
             this.OldCertificateId = new String(source.OldCertificateId);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.AsyncCache != null) {
+            this.AsyncCache = new Long(source.AsyncCache);
+        }
     }
 
 
@@ -175,6 +253,9 @@ public class DescribeHostTeoInstanceListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsCache", this.IsCache);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "AsyncCache", this.AsyncCache);
 
     }
 }

@@ -30,7 +30,7 @@ public class GatewayPluginBoundParam extends AbstractModel{
     private String PluginId;
 
     /**
-    * 插件绑定到的对象类型:group/api
+    * 插件绑定到的对象类型:group/api/all
     */
     @SerializedName("ScopeType")
     @Expose
@@ -42,6 +42,20 @@ public class GatewayPluginBoundParam extends AbstractModel{
     @SerializedName("ScopeValue")
     @Expose
     private String ScopeValue;
+
+    /**
+    * 创建关联的服务id，关联envoy网关时使用
+    */
+    @SerializedName("MicroserviceId")
+    @Expose
+    private String MicroserviceId;
+
+    /**
+    * 网关id
+    */
+    @SerializedName("GatewayInstanceId")
+    @Expose
+    private String GatewayInstanceId;
 
     /**
      * Get 插件id 
@@ -60,16 +74,16 @@ public class GatewayPluginBoundParam extends AbstractModel{
     }
 
     /**
-     * Get 插件绑定到的对象类型:group/api 
-     * @return ScopeType 插件绑定到的对象类型:group/api
+     * Get 插件绑定到的对象类型:group/api/all 
+     * @return ScopeType 插件绑定到的对象类型:group/api/all
      */
     public String getScopeType() {
         return this.ScopeType;
     }
 
     /**
-     * Set 插件绑定到的对象类型:group/api
-     * @param ScopeType 插件绑定到的对象类型:group/api
+     * Set 插件绑定到的对象类型:group/api/all
+     * @param ScopeType 插件绑定到的对象类型:group/api/all
      */
     public void setScopeType(String ScopeType) {
         this.ScopeType = ScopeType;
@@ -91,6 +105,38 @@ public class GatewayPluginBoundParam extends AbstractModel{
         this.ScopeValue = ScopeValue;
     }
 
+    /**
+     * Get 创建关联的服务id，关联envoy网关时使用 
+     * @return MicroserviceId 创建关联的服务id，关联envoy网关时使用
+     */
+    public String getMicroserviceId() {
+        return this.MicroserviceId;
+    }
+
+    /**
+     * Set 创建关联的服务id，关联envoy网关时使用
+     * @param MicroserviceId 创建关联的服务id，关联envoy网关时使用
+     */
+    public void setMicroserviceId(String MicroserviceId) {
+        this.MicroserviceId = MicroserviceId;
+    }
+
+    /**
+     * Get 网关id 
+     * @return GatewayInstanceId 网关id
+     */
+    public String getGatewayInstanceId() {
+        return this.GatewayInstanceId;
+    }
+
+    /**
+     * Set 网关id
+     * @param GatewayInstanceId 网关id
+     */
+    public void setGatewayInstanceId(String GatewayInstanceId) {
+        this.GatewayInstanceId = GatewayInstanceId;
+    }
+
     public GatewayPluginBoundParam() {
     }
 
@@ -108,6 +154,12 @@ public class GatewayPluginBoundParam extends AbstractModel{
         if (source.ScopeValue != null) {
             this.ScopeValue = new String(source.ScopeValue);
         }
+        if (source.MicroserviceId != null) {
+            this.MicroserviceId = new String(source.MicroserviceId);
+        }
+        if (source.GatewayInstanceId != null) {
+            this.GatewayInstanceId = new String(source.GatewayInstanceId);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class GatewayPluginBoundParam extends AbstractModel{
         this.setParamSimple(map, prefix + "PluginId", this.PluginId);
         this.setParamSimple(map, prefix + "ScopeType", this.ScopeType);
         this.setParamSimple(map, prefix + "ScopeValue", this.ScopeValue);
+        this.setParamSimple(map, prefix + "MicroserviceId", this.MicroserviceId);
+        this.setParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
 
     }
 }

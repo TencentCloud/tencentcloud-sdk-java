@@ -44,6 +44,20 @@ public class DescribeDeliveryConfigsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 数据集idList
+    */
+    @SerializedName("ProgramIdList")
+    @Expose
+    private String [] ProgramIdList;
+
+    /**
+    * ConfigIdList
+    */
+    @SerializedName("ConfigIdList")
+    @Expose
+    private String [] ConfigIdList;
+
+    /**
      * Get 关键字 
      * @return SearchWord 关键字
      */
@@ -91,6 +105,38 @@ public class DescribeDeliveryConfigsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 数据集idList 
+     * @return ProgramIdList 数据集idList
+     */
+    public String [] getProgramIdList() {
+        return this.ProgramIdList;
+    }
+
+    /**
+     * Set 数据集idList
+     * @param ProgramIdList 数据集idList
+     */
+    public void setProgramIdList(String [] ProgramIdList) {
+        this.ProgramIdList = ProgramIdList;
+    }
+
+    /**
+     * Get ConfigIdList 
+     * @return ConfigIdList ConfigIdList
+     */
+    public String [] getConfigIdList() {
+        return this.ConfigIdList;
+    }
+
+    /**
+     * Set ConfigIdList
+     * @param ConfigIdList ConfigIdList
+     */
+    public void setConfigIdList(String [] ConfigIdList) {
+        this.ConfigIdList = ConfigIdList;
+    }
+
     public DescribeDeliveryConfigsRequest() {
     }
 
@@ -108,6 +154,18 @@ public class DescribeDeliveryConfigsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ProgramIdList != null) {
+            this.ProgramIdList = new String[source.ProgramIdList.length];
+            for (int i = 0; i < source.ProgramIdList.length; i++) {
+                this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
+            }
+        }
+        if (source.ConfigIdList != null) {
+            this.ConfigIdList = new String[source.ConfigIdList.length];
+            for (int i = 0; i < source.ConfigIdList.length; i++) {
+                this.ConfigIdList[i] = new String(source.ConfigIdList[i]);
+            }
+        }
     }
 
 
@@ -118,6 +176,8 @@ public class DescribeDeliveryConfigsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
+        this.setParamArraySimple(map, prefix + "ConfigIdList.", this.ConfigIdList);
 
     }
 }

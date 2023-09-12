@@ -44,7 +44,9 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+    * 查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
     */
     @SerializedName("Filters")
@@ -107,9 +109,13 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+     * Get 查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...] 
-     * @return Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+     * @return Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
      */
     public Filter [] getFilters() {
@@ -117,9 +123,13 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Set 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+     * Set 查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
-     * @param Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+     * @param Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
      */
     public void setFilters(Filter [] Filters) {

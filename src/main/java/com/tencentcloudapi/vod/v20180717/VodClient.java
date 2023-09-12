@@ -289,6 +289,27 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
+     * @param req CreateDomainVerifyRecordRequest
+     * @return CreateDomainVerifyRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDomainVerifyRecordResponse CreateDomainVerifyRecord(CreateDomainVerifyRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDomainVerifyRecordResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDomainVerifyRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDomainVerifyRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建音画质重生模板。
      * @param req CreateEnhanceMediaTemplateRequest
      * @return CreateEnhanceMediaTemplateResponse
@@ -3654,6 +3675,48 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SplitMediaResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SplitMedia");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *控制台验证域名归属
+     * @param req VerifyDomainOwnershipForConsoleRequest
+     * @return VerifyDomainOwnershipForConsoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyDomainOwnershipForConsoleResponse VerifyDomainOwnershipForConsole(VerifyDomainOwnershipForConsoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyDomainOwnershipForConsoleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyDomainOwnershipForConsoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VerifyDomainOwnershipForConsole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于验证域名解析值。
+     * @param req VerifyDomainRecordRequest
+     * @return VerifyDomainRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyDomainRecordResponse VerifyDomainRecord(VerifyDomainRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyDomainRecordResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyDomainRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VerifyDomainRecord");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class DescribeThirdPartyAuthCodeResponse extends AbstractModel{
 
     /**
-    * 用户是否实名，VERIFIED 为实名，UNVERIFIED 未实名
+    * AuthCode 中对应个人用户是否实名
+<ul>
+<li> **VERIFIED** : 此个人已实名</li>
+<li> **UNVERIFIED**: 此个人未实名</li></ul>
     */
     @SerializedName("VerifyStatus")
     @Expose
@@ -37,16 +40,28 @@ public class DescribeThirdPartyAuthCodeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户是否实名，VERIFIED 为实名，UNVERIFIED 未实名 
-     * @return VerifyStatus 用户是否实名，VERIFIED 为实名，UNVERIFIED 未实名
+     * Get AuthCode 中对应个人用户是否实名
+<ul>
+<li> **VERIFIED** : 此个人已实名</li>
+<li> **UNVERIFIED**: 此个人未实名</li></ul> 
+     * @return VerifyStatus AuthCode 中对应个人用户是否实名
+<ul>
+<li> **VERIFIED** : 此个人已实名</li>
+<li> **UNVERIFIED**: 此个人未实名</li></ul>
      */
     public String getVerifyStatus() {
         return this.VerifyStatus;
     }
 
     /**
-     * Set 用户是否实名，VERIFIED 为实名，UNVERIFIED 未实名
-     * @param VerifyStatus 用户是否实名，VERIFIED 为实名，UNVERIFIED 未实名
+     * Set AuthCode 中对应个人用户是否实名
+<ul>
+<li> **VERIFIED** : 此个人已实名</li>
+<li> **UNVERIFIED**: 此个人未实名</li></ul>
+     * @param VerifyStatus AuthCode 中对应个人用户是否实名
+<ul>
+<li> **VERIFIED** : 此个人已实名</li>
+<li> **UNVERIFIED**: 此个人未实名</li></ul>
      */
     public void setVerifyStatus(String VerifyStatus) {
         this.VerifyStatus = VerifyStatus;

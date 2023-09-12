@@ -149,6 +149,20 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     private String CumulativeScore;
 
     /**
+    * 当前时间（仅电子驾驶证支持返回该字段）
+    */
+    @SerializedName("CurrentTime")
+    @Expose
+    private String CurrentTime;
+
+    /**
+    * 生成时间（仅电子驾驶证支持返回该字段）
+    */
+    @SerializedName("GenerateTime")
+    @Expose
+    private String GenerateTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -457,6 +471,38 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     }
 
     /**
+     * Get 当前时间（仅电子驾驶证支持返回该字段） 
+     * @return CurrentTime 当前时间（仅电子驾驶证支持返回该字段）
+     */
+    public String getCurrentTime() {
+        return this.CurrentTime;
+    }
+
+    /**
+     * Set 当前时间（仅电子驾驶证支持返回该字段）
+     * @param CurrentTime 当前时间（仅电子驾驶证支持返回该字段）
+     */
+    public void setCurrentTime(String CurrentTime) {
+        this.CurrentTime = CurrentTime;
+    }
+
+    /**
+     * Get 生成时间（仅电子驾驶证支持返回该字段） 
+     * @return GenerateTime 生成时间（仅电子驾驶证支持返回该字段）
+     */
+    public String getGenerateTime() {
+        return this.GenerateTime;
+    }
+
+    /**
+     * Set 生成时间（仅电子驾驶证支持返回该字段）
+     * @param GenerateTime 生成时间（仅电子驾驶证支持返回该字段）
+     */
+    public void setGenerateTime(String GenerateTime) {
+        this.GenerateTime = GenerateTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -537,6 +583,12 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
         if (source.CumulativeScore != null) {
             this.CumulativeScore = new String(source.CumulativeScore);
         }
+        if (source.CurrentTime != null) {
+            this.CurrentTime = new String(source.CurrentTime);
+        }
+        if (source.GenerateTime != null) {
+            this.GenerateTime = new String(source.GenerateTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -564,6 +616,8 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
         this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CumulativeScore", this.CumulativeScore);
+        this.setParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
+        this.setParamSimple(map, prefix + "GenerateTime", this.GenerateTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

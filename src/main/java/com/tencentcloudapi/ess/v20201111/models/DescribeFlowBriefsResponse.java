@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class DescribeFlowBriefsResponse extends AbstractModel{
 
     /**
-    * 流程列表
+    * 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
     */
     @SerializedName("FlowBriefs")
     @Expose
@@ -37,16 +38,20 @@ public class DescribeFlowBriefsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流程列表 
-     * @return FlowBriefs 流程列表
+     * Get 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。` 
+     * @return FlowBriefs 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
      */
     public FlowBrief [] getFlowBriefs() {
         return this.FlowBriefs;
     }
 
     /**
-     * Set 流程列表
-     * @param FlowBriefs 流程列表
+     * Set 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
+     * @param FlowBriefs 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
      */
     public void setFlowBriefs(FlowBrief [] FlowBriefs) {
         this.FlowBriefs = FlowBriefs;
