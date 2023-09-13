@@ -19,68 +19,18 @@ package com.tencentcloudapi.common;
 
 
 public class CircuitBreaker {
-    public static class Setting {
-        // max fail nums
-        // the default is 5
-        public int maxFailNum = 5;
-        // max fail percentage
-        // the default is 75%
-        public float maxFailPercentage = 0.75f;
-        // windowIntervalMs decides when to reset counter if the state is StateClosed
-        // the default is 5minutes
-        public long windowIntervalMs = 300 * 1000;
-        // timeout decides when to turn StateOpen to StateHalfOpen
-        // the default is 60s
-        public long timeoutMs = 6 * 1000;
-        // maxRequests decides when to turn StateHalfOpen to StateClosed
-        public int maxRequests;
-    }
-
-    private enum State {
-        Closed, HalfOpen, Open,
-    }
-
-    private static class StateResult {
-        public StateResult(State state, long generation) {
-            this.state = state;
-            this.generation = generation;
-        }
-
-        public State state;
-        public long generation;
-    }
-
-    public static class Token {
-        public boolean allowed;
-        private long generation;
-        private CircuitBreaker circuitBreaker;
-
-        private Token(boolean allowed, long generation, CircuitBreaker circuitBreaker) {
-            this.allowed = allowed;
-            this.generation = generation;
-            this.circuitBreaker = circuitBreaker;
-        }
-
-        public void report(boolean success) {
-            circuitBreaker.report(generation, success);
-        }
-    }
-
     private Setting setting;
     private State state = State.Closed;
     private long generation;
     private long expiry;
-
     private int failures;
     private int all;
     private int consecutiveSuccesses;
     private int consecutiveFailures;
 
-
     public CircuitBreaker() {
         this(new Setting());
     }
-
     public CircuitBreaker(Setting setting) {
         this.setting = setting;
     }
@@ -194,5 +144,51 @@ public class CircuitBreaker {
         float failPre = (float) failures / (float) all;
         return (failures >= setting.maxFailNum && failPre >= setting.maxFailPercentage)
                 || consecutiveFailures > 5;
+    }
+
+    private enum State {
+        Closed, HalfOpen, Open,
+    }
+
+    public static class Setting {
+        // max fail nums
+        // the default is 5
+        public int maxFailNum = 5;
+        // max fail percentage
+        // the default is 75%
+        public float maxFailPercentage = 0.75f;
+        // windowIntervalMs decides when to reset counter if the state is StateClosed
+        // the default is 5minutes
+        public long windowIntervalMs = 300 * 1000;
+        // timeout decides when to turn StateOpen to StateHalfOpen
+        // the default is 60s
+        public long timeoutMs = 6 * 1000;
+        // maxRequests decides when to turn StateHalfOpen to StateClosed
+        public int maxRequests;
+    }
+
+    private static class StateResult {
+        public State state;
+        public long generation;
+        public StateResult(State state, long generation) {
+            this.state = state;
+            this.generation = generation;
+        }
+    }
+
+    public static class Token {
+        public boolean allowed;
+        private long generation;
+        private CircuitBreaker circuitBreaker;
+
+        private Token(boolean allowed, long generation, CircuitBreaker circuitBreaker) {
+            this.allowed = allowed;
+            this.generation = generation;
+            this.circuitBreaker = circuitBreaker;
+        }
+
+        public void report(boolean success) {
+            circuitBreaker.report(generation, success);
+        }
     }
 }

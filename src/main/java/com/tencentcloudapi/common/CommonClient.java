@@ -3,7 +3,7 @@ package com.tencentcloudapi.common;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
 
-public class CommonClient extends AbstractClient{
+public class CommonClient extends AbstractClient {
     public CommonClient(String productName, String version, Credential credential, String region) {
         this(productName, version, credential, region, new ClientProfile());
     }

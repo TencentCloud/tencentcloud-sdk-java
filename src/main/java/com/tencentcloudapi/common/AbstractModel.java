@@ -27,150 +27,147 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class AbstractModel {
-  /**
-   * Any stores customized parameters which are not documented. You should make sure it can be
-   * correctly serialized to json string.
-   */
-  private HashMap<String, Object> customizedParams = new HashMap<String, Object>();
+    public Map<String, String> header = new HashMap<String, String>();
+    protected boolean skipSign = false;
+    /**
+     * Any stores customized parameters which are not documented. You should make sure it can be
+     * correctly serialized to json string.
+     */
+    private HashMap<String, Object> customizedParams = new HashMap<String, Object>();
 
-  protected abstract void toMap(HashMap<String, String> map, String prefix);
-
-  /**
-   * Valid only when it's a request object.
-   * Some actions can only be posted in multipart format,
-   * this method is used to mark which parameters are binary type.
-   */
-  protected String[] getBinaryParams() {
-    return new String[0];
-  }
-
-  /**
-   * Valid only when it's a multipart request object.
-   */
-  protected HashMap<String, byte[]> getMultipartRequestParams() {
-    return new HashMap<String, byte[]>();
-  }
-
-  protected <V> void setParamSimple(HashMap<String, String> map, String key, V value) {
-    if (value != null) {
-
-      key = key.substring(0, 1).toUpperCase() + key.substring(1);
-      key = key.replace("_", ".");
-      map.put(key, String.valueOf(value));
+    public static <O extends AbstractModel> String toJsonString(O obj) {
+        return toJsonObject(obj).toString();
     }
-  }
 
-  protected <V> void setParamArraySimple(HashMap<String, String> map, String prefix, V[] array) {
-    if (array != null) {
-      for (int i = 0; i < array.length; i++) {
-        this.setParamSimple(map, prefix + i, array[i]);
-      }
+    /**
+     * Recursively generate obj's JSON object. Even if obj.any() is empty, this recursive progress
+     * cannot be skipped because customized additional parameter might be hidden in lower data
+     * structure.
+     *
+     * @param obj
+     * @return
+     */
+    private static <O extends AbstractModel> JsonObject toJsonObject(O obj) {
+        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        JsonObject joall = new JsonObject();
+        JsonObject joadd = gson.toJsonTree(obj.any()).getAsJsonObject();
+        for (Map.Entry<String, JsonElement> entry : joadd.entrySet()) {
+            joall.add(entry.getKey(), entry.getValue());
+        }
+        // jopublic will override joadd if key conflict exists
+        JsonObject jopublic = gson.toJsonTree(obj).getAsJsonObject();
+        for (Map.Entry<String, JsonElement> entry : jopublic.entrySet()) {
+            Object fo = null;
+            try {
+                Field f = obj.getClass().getDeclaredField(entry.getKey());
+                f.setAccessible(true);
+                fo = f.get(obj);
+            } catch (Exception e) {
+                // this should never happen
+                e.printStackTrace();
+            }
+            if (fo instanceof AbstractModel) {
+                joall.add(entry.getKey(), toJsonObject((AbstractModel) fo));
+            } else {
+                joall.add(entry.getKey(), entry.getValue());
+            }
+        }
+        return joall;
     }
-  }
 
-  protected <V extends AbstractModel> void setParamObj(
-      HashMap<String, String> map, String prefix, V obj) {
-    if (obj != null) {
-      obj.toMap(map, prefix);
+    /**
+     * Deserialize a JSON string into an object of the Class inherited from AbstractModel.
+     *
+     * @param json JSON formatted string.
+     * @param cls  A class which inherited from AbstractModel.
+     * @return An object of cls.
+     */
+    public static <O> O fromJsonString(String json, Class<O> cls) {
+        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        return gson.fromJson(json, cls);
     }
-  }
 
-  protected <V extends AbstractModel> void setParamArrayObj(
-      HashMap<String, String> map, String prefix, V[] array) {
-    if (array != null) {
-      for (int i = 0; i < array.length; i++) {
-        this.setParamObj(map, prefix + i + ".", array[i]);
-      }
+    protected abstract void toMap(HashMap<String, String> map, String prefix);
+
+    /**
+     * Valid only when it's a request object.
+     * Some actions can only be posted in multipart format,
+     * this method is used to mark which parameters are binary type.
+     */
+    protected String[] getBinaryParams() {
+        return new String[0];
     }
-  }
 
-  public static <O extends AbstractModel> String toJsonString(O obj) {
-    return toJsonObject(obj).toString();
-  }
-
-  /**
-   * Recursively generate obj's JSON object. Even if obj.any() is empty, this recursive progress
-   * cannot be skipped because customized additional parameter might be hidden in lower data
-   * structure.
-   *
-   * @param obj
-   * @return
-   */
-  private static <O extends AbstractModel> JsonObject toJsonObject(O obj) {
-    Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-    JsonObject joall = new JsonObject();
-    JsonObject joadd = gson.toJsonTree(obj.any()).getAsJsonObject();
-    for (Map.Entry<String, JsonElement> entry : joadd.entrySet()) {
-      joall.add(entry.getKey(), entry.getValue());
+    /**
+     * Valid only when it's a multipart request object.
+     */
+    protected HashMap<String, byte[]> getMultipartRequestParams() {
+        return new HashMap<String, byte[]>();
     }
-    // jopublic will override joadd if key conflict exists
-    JsonObject jopublic = gson.toJsonTree(obj).getAsJsonObject();
-    for (Map.Entry<String, JsonElement> entry : jopublic.entrySet()) {
-      Object fo = null;
-      try {
-        Field f = obj.getClass().getDeclaredField(entry.getKey());
-        f.setAccessible(true);
-        fo = f.get(obj);
-      } catch (Exception e) {
-        // this should never happen
-        e.printStackTrace();
-      }
-      if (fo instanceof AbstractModel) {
-        joall.add(entry.getKey(), toJsonObject((AbstractModel) fo));
-      } else {
-        joall.add(entry.getKey(), entry.getValue());
-      }
+
+    protected <V> void setParamSimple(HashMap<String, String> map, String key, V value) {
+        if (value != null) {
+
+            key = key.substring(0, 1).toUpperCase() + key.substring(1);
+            key = key.replace("_", ".");
+            map.put(key, String.valueOf(value));
+        }
     }
-    return joall;
-  }
 
-  /**
-   * Deserialize a JSON string into an object of the Class inherited from AbstractModel.
-   *
-   * @param json JSON formatted string.
-   * @param cls A class which inherited from AbstractModel.
-   * @return An object of cls.
-   */
-  public static <O> O fromJsonString(String json, Class<O> cls) {
-    Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-    return gson.fromJson(json, cls);
-  }
+    protected <V> void setParamArraySimple(HashMap<String, String> map, String prefix, V[] array) {
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                this.setParamSimple(map, prefix + i, array[i]);
+            }
+        }
+    }
 
-  /**
-   * Set any key value pair to this model.
-   *
-   * @param key
-   * @param value
-   */
-  public void set(String key, Object value) {
-    this.customizedParams.put(key, value);
-  }
+    protected <V extends AbstractModel> void setParamObj(
+            HashMap<String, String> map, String prefix, V obj) {
+        if (obj != null) {
+            obj.toMap(map, prefix);
+        }
+    }
 
-  /**
-   * Get customized key value pairs from this model.
-   */
-  public HashMap<String, Object> any() {
-    return this.customizedParams;
-  }
+    protected <V extends AbstractModel> void setParamArrayObj(
+            HashMap<String, String> map, String prefix, V[] array) {
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                this.setParamObj(map, prefix + i + ".", array[i]);
+            }
+        }
+    }
 
-  protected boolean skipSign = false;
+    /**
+     * Set any key value pair to this model.
+     *
+     * @param key
+     * @param value
+     */
+    public void set(String key, Object value) {
+        this.customizedParams.put(key, value);
+    }
 
-  public boolean getSkipSign() {
-    return skipSign;
-  }
+    /**
+     * Get customized key value pairs from this model.
+     */
+    public HashMap<String, Object> any() {
+        return this.customizedParams;
+    }
 
-  public void setSkipSign(boolean skipSign) {
-    this.skipSign = skipSign;
-  }
+    public boolean getSkipSign() {
+        return skipSign;
+    }
 
-  
-  public Map<String, String> header = new HashMap<String, String>();
+    public void setSkipSign(boolean skipSign) {
+        this.skipSign = skipSign;
+    }
 
-  public Map<String, String> GetHeader() {
-    return header;
-  }
+    public Map<String, String> GetHeader() {
+        return header;
+    }
 
-  public void SetHeader(Map<String, String> header) {
-    this.header = header;
-  }
+    public void SetHeader(Map<String, String> header) {
+        this.header = header;
+    }
 }

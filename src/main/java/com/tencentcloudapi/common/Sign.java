@@ -17,100 +17,102 @@
 
 package com.tencentcloudapi.common;
 
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import javax.xml.bind.DatatypeConverter;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.TreeMap;
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DatatypeConverter;
 
-import com.tencentcloudapi.common.exception.TencentCloudSDKException;;
+;
 
 public class Sign {
-  private static final Charset UTF8 = StandardCharsets.UTF_8;
+    private static final Charset UTF8 = StandardCharsets.UTF_8;
 
-  public static String sign(String secretKey, String sigStr, String sigMethod)
-      throws TencentCloudSDKException {
-    String sig = null;
-    try {
-      Mac mac = Mac.getInstance(sigMethod);
-      byte[] hash;
-      SecretKeySpec secretKeySpec = new SecretKeySpec(secretKey.getBytes(UTF8), mac.getAlgorithm());
+    public static String sign(String secretKey, String sigStr, String sigMethod)
+            throws TencentCloudSDKException {
+        String sig = null;
+        try {
+            Mac mac = Mac.getInstance(sigMethod);
+            byte[] hash;
+            SecretKeySpec secretKeySpec = new SecretKeySpec(secretKey.getBytes(UTF8), mac.getAlgorithm());
 
-      mac.init(secretKeySpec);
-      hash = mac.doFinal(sigStr.getBytes(UTF8));
-      sig = DatatypeConverter.printBase64Binary(hash);
-    } catch (Exception e) {
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+            mac.init(secretKeySpec);
+            hash = mac.doFinal(sigStr.getBytes(UTF8));
+            sig = DatatypeConverter.printBase64Binary(hash);
+        } catch (Exception e) {
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+        }
+        return sig;
     }
-    return sig;
-  }
 
-  public static String makeSignPlainText(
-      TreeMap<String, String> requestParams, String reqMethod, String host, String path) {
+    public static String makeSignPlainText(
+            TreeMap<String, String> requestParams, String reqMethod, String host, String path) {
 
-    String retStr = "";
-    retStr += reqMethod;
-    retStr += host;
-    retStr += path;
-    retStr += buildParamStr(requestParams, reqMethod);
-    return retStr;
-  }
-
-  protected static String buildParamStr(
-      TreeMap<String, String> requestParams, String requestMethod) {
-
-    String retStr = "";
-    for (String key : requestParams.keySet()) {
-      String value = requestParams.get(key).toString();
-      if (retStr.length() == 0) {
-        retStr += '?';
-      } else {
-        retStr += '&';
-      }
-      retStr += key.replace("_", ".") + '=' + value;
+        String retStr = "";
+        retStr += reqMethod;
+        retStr += host;
+        retStr += path;
+        retStr += buildParamStr(requestParams, reqMethod);
+        return retStr;
     }
-    return retStr;
-  }
 
-  public static String sha256Hex(String s) throws TencentCloudSDKException {
-    MessageDigest md;
-    try {
-      md = MessageDigest.getInstance("SHA-256");
-    } catch (NoSuchAlgorithmException e) {
-      throw new TencentCloudSDKException("SHA-256 is not supported." + e.getMessage());
-    }
-    byte[] d = md.digest(s.getBytes(UTF8));
-    return DatatypeConverter.printHexBinary(d).toLowerCase();
-  }
+    protected static String buildParamStr(
+            TreeMap<String, String> requestParams, String requestMethod) {
 
-  public static String sha256Hex(byte[] b) throws TencentCloudSDKException {
-    MessageDigest md;
-    try {
-      md = MessageDigest.getInstance("SHA-256");
-    } catch (NoSuchAlgorithmException e) {
-      throw new TencentCloudSDKException("SHA-256 is not supported." + e.getMessage());
+        String retStr = "";
+        for (String key : requestParams.keySet()) {
+            String value = requestParams.get(key).toString();
+            if (retStr.length() == 0) {
+                retStr += '?';
+            } else {
+                retStr += '&';
+            }
+            retStr += key.replace("_", ".") + '=' + value;
+        }
+        return retStr;
     }
-    byte[] d = md.digest(b);
-    return DatatypeConverter.printHexBinary(d).toLowerCase();
-  }
 
-  public static byte[] hmac256(byte[] key, String msg) throws TencentCloudSDKException {
-    Mac mac;
-    try {
-      mac = Mac.getInstance("HmacSHA256");
-    } catch (NoSuchAlgorithmException e) {
-      throw new TencentCloudSDKException("HmacSHA256 is not supported." + e.getMessage());
+    public static String sha256Hex(String s) throws TencentCloudSDKException {
+        MessageDigest md;
+        try {
+            md = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            throw new TencentCloudSDKException("SHA-256 is not supported." + e.getMessage());
+        }
+        byte[] d = md.digest(s.getBytes(UTF8));
+        return DatatypeConverter.printHexBinary(d).toLowerCase();
     }
-    SecretKeySpec secretKeySpec = new SecretKeySpec(key, mac.getAlgorithm());
-    try {
-      mac.init(secretKeySpec);
-    } catch (InvalidKeyException e) {
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+
+    public static String sha256Hex(byte[] b) throws TencentCloudSDKException {
+        MessageDigest md;
+        try {
+            md = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            throw new TencentCloudSDKException("SHA-256 is not supported." + e.getMessage());
+        }
+        byte[] d = md.digest(b);
+        return DatatypeConverter.printHexBinary(d).toLowerCase();
     }
-    return mac.doFinal(msg.getBytes(UTF8));
-  }
+
+    public static byte[] hmac256(byte[] key, String msg) throws TencentCloudSDKException {
+        Mac mac;
+        try {
+            mac = Mac.getInstance("HmacSHA256");
+        } catch (NoSuchAlgorithmException e) {
+            throw new TencentCloudSDKException("HmacSHA256 is not supported." + e.getMessage());
+        }
+        SecretKeySpec secretKeySpec = new SecretKeySpec(key, mac.getAlgorithm());
+        try {
+            mac.init(secretKeySpec);
+        } catch (InvalidKeyException e) {
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+        }
+        return mac.doFinal(msg.getBytes(UTF8));
+    }
 }

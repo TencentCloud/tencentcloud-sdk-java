@@ -14,55 +14,17 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 
 public class OIDCRoleArnProvider implements CredentialsProvider {
+    private static final String Service = "sts";
+    private static final String Version = "2018-08-13";
+    private static final String Action = "AssumeRoleWithWebIdentity";
+    private static final String DefaultSessionName = "tencentcloud-java-sdk-";
+    private static final long DefaultDurationSeconds = 7200;
     public String Region;
     public String ProviderId;
     public String WebIdentityToken;
     public String RoleArn;
     public String RoleSessionName;
     public long DurationSeconds;
-
-    private static final String Service = "sts";
-    private static final String Version = "2018-08-13";
-    private static final String Action = "AssumeRoleWithWebIdentity";
-    private static final String DefaultSessionName = "tencentcloud-java-sdk-";
-    private static final long DefaultDurationSeconds = 7200;
-
-    private static class Request extends AbstractModel {
-        @Expose
-        public String ProviderId;
-        @Expose
-        public String WebIdentityToken;
-        @Expose
-        public String RoleArn;
-        @Expose
-        public String RoleSessionName;
-        @Expose
-        public Long DurationSeconds;
-
-        @Override
-        protected void toMap(HashMap<String, String> map, String prefix) {
-        }
-    }
-
-    private static class Response {
-        private static class Credentials {
-            @Expose
-            public String Token;
-            @Expose
-            public String TmpSecretId;
-            @Expose
-            public String TmpSecretKey;
-        }
-
-        @Expose
-        public Long ExpiredTime;
-        @Expose
-        public String Expiration;
-        @Expose
-        public Credentials Credentials;
-        @Expose
-        public String RequestId;
-    }
 
     public OIDCRoleArnProvider(String region, String providerId, String webIdentityToken,
                                String roleArn, String roleSessionName, long durationSeconds) {
@@ -117,8 +79,46 @@ public class OIDCRoleArnProvider implements CredentialsProvider {
 
         String respStr = client.commonRequest(request, Action);
 
-        JsonResponseModel<Response> response = client.gson.fromJson(respStr, new TypeToken<JsonResponseModel<Response>>(){}.getType());
+        JsonResponseModel<Response> response = client.gson.fromJson(respStr, new TypeToken<JsonResponseModel<Response>>() {
+        }.getType());
         Response resp = response.response;
         return new Credential(resp.Credentials.TmpSecretId, resp.Credentials.TmpSecretKey, resp.Credentials.Token);
+    }
+
+    private static class Request extends AbstractModel {
+        @Expose
+        public String ProviderId;
+        @Expose
+        public String WebIdentityToken;
+        @Expose
+        public String RoleArn;
+        @Expose
+        public String RoleSessionName;
+        @Expose
+        public Long DurationSeconds;
+
+        @Override
+        protected void toMap(HashMap<String, String> map, String prefix) {
+        }
+    }
+
+    private static class Response {
+        @Expose
+        public Long ExpiredTime;
+        @Expose
+        public String Expiration;
+        @Expose
+        public Credentials Credentials;
+        @Expose
+        public String RequestId;
+
+        private static class Credentials {
+            @Expose
+            public String Token;
+            @Expose
+            public String TmpSecretId;
+            @Expose
+            public String TmpSecretKey;
+        }
     }
 }
