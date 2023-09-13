@@ -18,20 +18,15 @@
 package com.tencentcloudapi.common.http;
 
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import okhttp3.Authenticator;
-import okhttp3.Headers;
-import okhttp3.Interceptor;
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
+import okhttp3.*;
 
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
-import java.util.concurrent.TimeUnit;
 import java.io.IOException;
-import java.net.Proxy;;
+import java.net.Proxy;
+import java.util.concurrent.TimeUnit;
+
+;
 
 public class HttpConnection {
 

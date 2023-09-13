@@ -17,49 +17,36 @@
 
 package com.tencentcloudapi.common;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TimeZone;
-import java.util.TreeMap;
-import java.util.UUID;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.tencentcloudapi.common.http.HttpConnection;
+import com.tencentcloudapi.common.profile.ClientProfile;
+import com.tencentcloudapi.common.profile.HttpProfile;
+import okhttp3.*;
+import okhttp3.Headers.Builder;
 
-import java.security.SecureRandom;
 import javax.crypto.Mac;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import javax.xml.bind.DatatypeConverter;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.lang.reflect.Type;
-import java.lang.Math;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.security.SecureRandom;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
-
-import okhttp3.Authenticator;
-import okhttp3.Credentials;
-import okhttp3.Headers;
-import okhttp3.Headers.Builder;
-import okhttp3.Request;
-import okhttp3.Response;
-import okhttp3.Route;
-import com.tencentcloudapi.common.exception.TencentCloudSDKException;
-import com.tencentcloudapi.common.http.HttpConnection;
-import com.tencentcloudapi.common.profile.ClientProfile;
-import com.tencentcloudapi.common.profile.HttpProfile;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.JsonSyntaxException;
+import java.util.*;
 
 public abstract class AbstractClient {
 

@@ -17,17 +17,19 @@
 
 package com.tencentcloudapi.common;
 
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import javax.xml.bind.DatatypeConverter;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.TreeMap;
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DatatypeConverter;
 
-import com.tencentcloudapi.common.exception.TencentCloudSDKException;;
+;
 
 public class Sign {
     private static final Charset UTF8 = StandardCharsets.UTF_8;

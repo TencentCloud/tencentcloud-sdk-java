@@ -1,13 +1,12 @@
 package com.tencentcloudapi.common;
 
-import java.io.IOException;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import java.io.IOException;
 
 class TCLog implements Interceptor {
     private boolean debug;
