@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreateEmbedWebUrlRequest extends AbstractModel{
 
     /**
-    * 操作者信息
+    * 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
     */
     @SerializedName("Operator")
     @Expose
@@ -57,7 +58,8 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
     private String BusinessId;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作
+    * 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
@@ -71,23 +73,27 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
     private ReviewerInfo Reviewer;
 
     /**
-    * 个性化参数
+    * 个性化参数，用于控制页面展示内容
     */
     @SerializedName("Option")
     @Expose
     private EmbedUrlOption Option;
 
     /**
-     * Get 操作者信息 
-     * @return Operator 操作者信息
+     * Get 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。 
+     * @return Operator 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者信息
-     * @param Operator 操作者信息
+     * Set 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @param Operator 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
@@ -178,16 +184,20 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作
+     * Get 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作
+     * Set 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -210,16 +220,16 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 个性化参数 
-     * @return Option 个性化参数
+     * Get 个性化参数，用于控制页面展示内容 
+     * @return Option 个性化参数，用于控制页面展示内容
      */
     public EmbedUrlOption getOption() {
         return this.Option;
     }
 
     /**
-     * Set 个性化参数
-     * @param Option 个性化参数
+     * Set 个性化参数，用于控制页面展示内容
+     * @param Option 个性化参数，用于控制页面展示内容
      */
     public void setOption(EmbedUrlOption Option) {
         this.Option = Option;

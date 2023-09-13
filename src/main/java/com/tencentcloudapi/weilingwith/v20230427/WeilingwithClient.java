@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mrs.v20200910;
+package com.tencentcloudapi.weilingwith.v20230427;
 
 import java.lang.reflect.Type;
 import com.google.gson.JsonSyntaxException;
@@ -23,35 +23,35 @@ import com.tencentcloudapi.common.AbstractClient;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.common.JsonResponseModel;
 import com.tencentcloudapi.common.Credential;
-import com.tencentcloudapi.mrs.v20200910.models.*;
+import com.tencentcloudapi.weilingwith.v20230427.models.*;
 
-public class MrsClient extends AbstractClient{
-    private static String endpoint = "mrs.tencentcloudapi.com";
-    private static String service = "mrs";
-    private static String version = "2020-09-10";
+public class WeilingwithClient extends AbstractClient{
+    private static String endpoint = "weilingwith.tencentcloudapi.com";
+    private static String service = "weilingwith";
+    private static String version = "2023-04-27";
     
-    public MrsClient(Credential credential, String region) {
+    public WeilingwithClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    public MrsClient(Credential credential, String region, ClientProfile profile) {
-        super(MrsClient.endpoint, MrsClient.version, credential, region, profile);
+    public WeilingwithClient(Credential credential, String region, ClientProfile profile) {
+        super(WeilingwithClient.endpoint, WeilingwithClient.version, credential, region, profile);
     }
 
     /**
-     *图片分类
-     * @param req ImageToClassRequest
-     * @return ImageToClassResponse
+     *查询指定空间关联的应用列表
+     * @param req DescribeApplicationListRequest
+     * @return DescribeApplicationListResponse
      * @throws TencentCloudSDKException
      */
-    public ImageToClassResponse ImageToClass(ImageToClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageToClassResponse> rsp = null;
+    public DescribeApplicationListResponse DescribeApplicationList(DescribeApplicationListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationListResponse> rsp = null;
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ImageToClassResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationListResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ImageToClass");
+                rspStr = this.internalRequest(req, "DescribeApplicationList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -60,19 +60,19 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
-     *图片转结构化对象
-     * @param req ImageToObjectRequest
-     * @return ImageToObjectResponse
+     *查询边缘应用凭证
+     * @param req DescribeEdgeApplicationTokenRequest
+     * @return DescribeEdgeApplicationTokenResponse
      * @throws TencentCloudSDKException
      */
-    public ImageToObjectResponse ImageToObject(ImageToObjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageToObjectResponse> rsp = null;
+    public DescribeEdgeApplicationTokenResponse DescribeEdgeApplicationToken(DescribeEdgeApplicationTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgeApplicationTokenResponse> rsp = null;
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<ImageToObjectResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgeApplicationTokenResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ImageToObject");
+                rspStr = this.internalRequest(req, "DescribeEdgeApplicationToken");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -81,19 +81,19 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
-     *文本分类
-     * @param req TextToClassRequest
-     * @return TextToClassResponse
+     *查询接口列表
+     * @param req DescribeInterfaceListRequest
+     * @return DescribeInterfaceListResponse
      * @throws TencentCloudSDKException
      */
-    public TextToClassResponse TextToClass(TextToClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextToClassResponse> rsp = null;
+    public DescribeInterfaceListResponse DescribeInterfaceList(DescribeInterfaceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInterfaceListResponse> rsp = null;
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TextToClassResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeInterfaceListResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "TextToClass");
+                rspStr = this.internalRequest(req, "DescribeInterfaceList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -102,21 +102,19 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
-     *文本转结构化对象。
-
-适用场景：经过腾讯医疗专用 OCR 从图片识别之后的文本，可以调用此接口。通过其它 OCR 识别的文本可能不适配。医院的 XML 格式文本也不适配，XML 文件需要经过特殊转换才能直接调用此接口。单次调用传入的文本不宜超过 2000 字。
-     * @param req TextToObjectRequest
-     * @return TextToObjectResponse
+     *获取租户下的空间列表
+     * @param req DescribeWorkspaceListRequest
+     * @return DescribeWorkspaceListResponse
      * @throws TencentCloudSDKException
      */
-    public TextToObjectResponse TextToObject(TextToObjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextToObjectResponse> rsp = null;
+    public DescribeWorkspaceListResponse DescribeWorkspaceList(DescribeWorkspaceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkspaceListResponse> rsp = null;
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TextToObjectResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkspaceListResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "TextToObject");
+                rspStr = this.internalRequest(req, "DescribeWorkspaceList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -125,20 +123,19 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
-     *将PDF格式的体检报告文件结构化，解析关键信息。
-注意：该接口是按照体检报告 PDF 页面数量统计次数，不是按照 PDF 文件数量统计次数。通过该接口传入的报告必须是体检报告，非体检报告可能无法正确解析。
-     * @param req TurnPDFToObjectRequest
-     * @return TurnPDFToObjectResponse
+     *查询项目空间人员列表
+     * @param req DescribeWorkspaceUserListRequest
+     * @return DescribeWorkspaceUserListResponse
      * @throws TencentCloudSDKException
      */
-    public TurnPDFToObjectResponse TurnPDFToObject(TurnPDFToObjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TurnPDFToObjectResponse> rsp = null;
+    public DescribeWorkspaceUserListResponse DescribeWorkspaceUserList(DescribeWorkspaceUserListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkspaceUserListResponse> rsp = null;
         String rspStr = "";
         req.setSkipSign(false);
         try {
-                Type type = new TypeToken<JsonResponseModel<TurnPDFToObjectResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkspaceUserListResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "TurnPDFToObject");
+                rspStr = this.internalRequest(req, "DescribeWorkspaceUserList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

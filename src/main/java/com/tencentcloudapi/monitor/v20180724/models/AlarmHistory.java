@@ -193,6 +193,14 @@ public class AlarmHistory extends AbstractModel{
     private String Dimensions;
 
     /**
+    * 告警等级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private String AlarmLevel;
+
+    /**
      * Get 告警历史Id 
      * @return AlarmId 告警历史Id
      */
@@ -584,6 +592,26 @@ public class AlarmHistory extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
+    /**
+     * Get 告警等级
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmLevel 告警等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set 告警等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmLevel 告警等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmLevel(String AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
     public AlarmHistory() {
     }
 
@@ -679,6 +707,9 @@ public class AlarmHistory extends AbstractModel{
         if (source.Dimensions != null) {
             this.Dimensions = new String(source.Dimensions);
         }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new String(source.AlarmLevel);
+        }
     }
 
 
@@ -710,6 +741,7 @@ public class AlarmHistory extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
         this.setParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
         this.setParamSimple(map, prefix + "Dimensions", this.Dimensions);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
 
     }
 }

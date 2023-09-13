@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class TurnPDFToObjectRequest extends AbstractModel{
 
     /**
-    * 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
+    * 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
     */
     @SerializedName("PdfInfo")
     @Expose
     private PdfInfo PdfInfo;
 
     /**
-     * Get 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符 
-     * @return PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
+     * Get 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64) 
+     * @return PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
      */
     public PdfInfo getPdfInfo() {
         return this.PdfInfo;
     }
 
     /**
-     * Set 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
-     * @param PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
+     * Set 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+     * @param PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
      */
     public void setPdfInfo(PdfInfo PdfInfo) {
         this.PdfInfo = PdfInfo;

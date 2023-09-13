@@ -30,6 +30,13 @@ public class EHOCRResponse extends AbstractModel{
     private CompostionContext Data;
 
     /**
+    * 接口返回数据
+    */
+    @SerializedName("ResultData")
+    @Expose
+    private CompositionContext ResultData;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -39,7 +46,9 @@ public class EHOCRResponse extends AbstractModel{
     /**
      * Get 接口返回数据 
      * @return Data 接口返回数据
+     * @deprecated
      */
+    @Deprecated
     public CompostionContext getData() {
         return this.Data;
     }
@@ -47,9 +56,27 @@ public class EHOCRResponse extends AbstractModel{
     /**
      * Set 接口返回数据
      * @param Data 接口返回数据
+     * @deprecated
      */
+    @Deprecated
     public void setData(CompostionContext Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 接口返回数据 
+     * @return ResultData 接口返回数据
+     */
+    public CompositionContext getResultData() {
+        return this.ResultData;
+    }
+
+    /**
+     * Set 接口返回数据
+     * @param ResultData 接口返回数据
+     */
+    public void setResultData(CompositionContext ResultData) {
+        this.ResultData = ResultData;
     }
 
     /**
@@ -79,6 +106,9 @@ public class EHOCRResponse extends AbstractModel{
         if (source.Data != null) {
             this.Data = new CompostionContext(source.Data);
         }
+        if (source.ResultData != null) {
+            this.ResultData = new CompositionContext(source.ResultData);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +120,7 @@ public class EHOCRResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "ResultData.", this.ResultData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

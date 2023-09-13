@@ -23,10 +23,11 @@ import java.util.HashMap;
 public class WebThemeConfig extends AbstractModel{
 
     /**
-    * 是否页面底部显示电子签logo
-<br/>true：允许在页面底部隐藏电子签logo
-<br/>false：不允许允许在页面底部隐藏电子签logo
-<br/>默认false，不隐藏logo
+    * 是否显示页面底部电子签logo，取值如下：
+<ul>
+<li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li>
+</ul>
     */
     @SerializedName("DisplaySignBrandLogo")
     @Expose
@@ -41,28 +42,32 @@ public class WebThemeConfig extends AbstractModel{
     private String WebEmbedThemeColor;
 
     /**
-     * Get 是否页面底部显示电子签logo
-<br/>true：允许在页面底部隐藏电子签logo
-<br/>false：不允许允许在页面底部隐藏电子签logo
-<br/>默认false，不隐藏logo 
-     * @return DisplaySignBrandLogo 是否页面底部显示电子签logo
-<br/>true：允许在页面底部隐藏电子签logo
-<br/>false：不允许允许在页面底部隐藏电子签logo
-<br/>默认false，不隐藏logo
+     * Get 是否显示页面底部电子签logo，取值如下：
+<ul>
+<li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li>
+</ul> 
+     * @return DisplaySignBrandLogo 是否显示页面底部电子签logo，取值如下：
+<ul>
+<li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li>
+</ul>
      */
     public Boolean getDisplaySignBrandLogo() {
         return this.DisplaySignBrandLogo;
     }
 
     /**
-     * Set 是否页面底部显示电子签logo
-<br/>true：允许在页面底部隐藏电子签logo
-<br/>false：不允许允许在页面底部隐藏电子签logo
-<br/>默认false，不隐藏logo
-     * @param DisplaySignBrandLogo 是否页面底部显示电子签logo
-<br/>true：允许在页面底部隐藏电子签logo
-<br/>false：不允许允许在页面底部隐藏电子签logo
-<br/>默认false，不隐藏logo
+     * Set 是否显示页面底部电子签logo，取值如下：
+<ul>
+<li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li>
+</ul>
+     * @param DisplaySignBrandLogo 是否显示页面底部电子签logo，取值如下：
+<ul>
+<li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li>
+</ul>
      */
     public void setDisplaySignBrandLogo(Boolean DisplaySignBrandLogo) {
         this.DisplaySignBrandLogo = DisplaySignBrandLogo;

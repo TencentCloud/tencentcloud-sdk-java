@@ -115,6 +115,14 @@ public class HostItem extends AbstractModel{
     private String CageId;
 
     /**
+    * 专用宿主机关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 专用宿主机实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
      * @return Placement 专用宿主机实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
@@ -326,6 +334,26 @@ public class HostItem extends AbstractModel{
         this.CageId = CageId;
     }
 
+    /**
+     * Get 专用宿主机关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 专用宿主机关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 专用宿主机关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 专用宿主机关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public HostItem() {
     }
 
@@ -376,6 +404,12 @@ public class HostItem extends AbstractModel{
         if (source.CageId != null) {
             this.CageId = new String(source.CageId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -396,6 +430,7 @@ public class HostItem extends AbstractModel{
         this.setParamSimple(map, prefix + "HostIp", this.HostIp);
         this.setParamObj(map, prefix + "HostResource.", this.HostResource);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

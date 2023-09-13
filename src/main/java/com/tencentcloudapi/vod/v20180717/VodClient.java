@@ -3683,27 +3683,6 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *控制台验证域名归属
-     * @param req VerifyDomainOwnershipForConsoleRequest
-     * @return VerifyDomainOwnershipForConsoleResponse
-     * @throws TencentCloudSDKException
-     */
-    public VerifyDomainOwnershipForConsoleResponse VerifyDomainOwnershipForConsole(VerifyDomainOwnershipForConsoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyDomainOwnershipForConsoleResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<VerifyDomainOwnershipForConsoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyDomainOwnershipForConsole");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *该接口用于验证域名解析值。
      * @param req VerifyDomainRecordRequest
      * @return VerifyDomainRecordResponse

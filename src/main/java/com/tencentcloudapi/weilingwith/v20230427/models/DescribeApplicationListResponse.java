@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.weilingwith.v20230427.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyDomainOwnershipForConsoleResponse extends AbstractModel{
+public class DescribeApplicationListResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,14 +45,14 @@ public class VerifyDomainOwnershipForConsoleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public VerifyDomainOwnershipForConsoleResponse() {
+    public DescribeApplicationListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VerifyDomainOwnershipForConsoleResponse(VerifyDomainOwnershipForConsoleResponse source) {
+    public DescribeApplicationListResponse(DescribeApplicationListResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }

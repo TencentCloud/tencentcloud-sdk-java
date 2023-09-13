@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateOrganizationBatchSignUrlResponse extends AbstractModel{
 
     /**
-    * 批量签署入口链接
+    * 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。
     */
     @SerializedName("SignUrl")
     @Expose
     private String SignUrl;
 
     /**
-    * 链接过期时间戳
+    * 链接过期截止时间，格式为Unix标准时间戳（秒），默认为7天后截止。
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -44,32 +44,32 @@ public class CreateOrganizationBatchSignUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量签署入口链接 
-     * @return SignUrl 批量签署入口链接
+     * Get 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。 
+     * @return SignUrl 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。
      */
     public String getSignUrl() {
         return this.SignUrl;
     }
 
     /**
-     * Set 批量签署入口链接
-     * @param SignUrl 批量签署入口链接
+     * Set 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。
+     * @param SignUrl 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。
      */
     public void setSignUrl(String SignUrl) {
         this.SignUrl = SignUrl;
     }
 
     /**
-     * Get 链接过期时间戳 
-     * @return ExpiredTime 链接过期时间戳
+     * Get 链接过期截止时间，格式为Unix标准时间戳（秒），默认为7天后截止。 
+     * @return ExpiredTime 链接过期截止时间，格式为Unix标准时间戳（秒），默认为7天后截止。
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 链接过期时间戳
-     * @param ExpiredTime 链接过期时间戳
+     * Set 链接过期截止时间，格式为Unix标准时间戳（秒），默认为7天后截止。
+     * @param ExpiredTime 链接过期截止时间，格式为Unix标准时间戳（秒），默认为7天后截止。
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

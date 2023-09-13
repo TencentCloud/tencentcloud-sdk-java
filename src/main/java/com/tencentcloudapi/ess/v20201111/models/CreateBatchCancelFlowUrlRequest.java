@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreateBatchCancelFlowUrlRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，userId 必填
+    * 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
     */
     @SerializedName("Operator")
     @Expose
@@ -31,31 +32,35 @@ public class CreateBatchCancelFlowUrlRequest extends AbstractModel{
 
     /**
     * 需要执行撤回的流程(合同)的编号列表，最多100个.
-列表中的流程(合同)编号不要重复.
+<br>列表中的流程(合同)编号不要重复.
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-
+    * 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 调用方用户信息，userId 必填 
-     * @return Operator 调用方用户信息，userId 必填
+     * Get 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。 
+     * @return Operator 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填
-     * @param Operator 调用方用户信息，userId 必填
+     * Set 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @param Operator 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
@@ -63,9 +68,9 @@ public class CreateBatchCancelFlowUrlRequest extends AbstractModel{
 
     /**
      * Get 需要执行撤回的流程(合同)的编号列表，最多100个.
-列表中的流程(合同)编号不要重复. 
+<br>列表中的流程(合同)编号不要重复. 
      * @return FlowIds 需要执行撤回的流程(合同)的编号列表，最多100个.
-列表中的流程(合同)编号不要重复.
+<br>列表中的流程(合同)编号不要重复.
      */
     public String [] getFlowIds() {
         return this.FlowIds;
@@ -73,29 +78,29 @@ public class CreateBatchCancelFlowUrlRequest extends AbstractModel{
 
     /**
      * Set 需要执行撤回的流程(合同)的编号列表，最多100个.
-列表中的流程(合同)编号不要重复.
+<br>列表中的流程(合同)编号不要重复.
      * @param FlowIds 需要执行撤回的流程(合同)的编号列表，最多100个.
-列表中的流程(合同)编号不要重复.
+<br>列表中的流程(合同)编号不要重复.
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-
+     * Get 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-
+     * Set 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

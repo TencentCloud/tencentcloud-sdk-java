@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreateSealByImageRequest extends AbstractModel{
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
@@ -51,16 +52,69 @@ public class CreateSealByImageRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
+    */
+    @SerializedName("GenerateSource")
+    @Expose
+    private String GenerateSource;
+
+    /**
+    * 电子印章类型：
+<ul><li>OFFICIAL-公章</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章
+</li>
+<li>默认：OFFICIAL</li>
+<ul>
+    */
+    @SerializedName("SealType")
+    @Expose
+    private String SealType;
+
+    /**
+    * 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
+    */
+    @SerializedName("SealHorizontalText")
+    @Expose
+    private String SealHorizontalText;
+
+    /**
+    * 印章样式:
+
+<ul><li>cycle:圆形印章</li>
+<li>ellipse:椭圆印章</li>
+<li> 注：默认圆形印章</li></ul>
+    */
+    @SerializedName("SealStyle")
+    @Expose
+    private String SealStyle;
+
+    /**
+    * 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
+<li> 40_40 圆形企业印章直径40mm</li>
+<li> 45_30 椭圆形印章45mm x 30mm</li>
+</ul>
+    */
+    @SerializedName("SealSize")
+    @Expose
+    private String SealSize;
+
+    /**
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -118,6 +172,142 @@ public class CreateSealByImageRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage 
+     * @return GenerateSource 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
+     */
+    public String getGenerateSource() {
+        return this.GenerateSource;
+    }
+
+    /**
+     * Set 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
+     * @param GenerateSource 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
+     */
+    public void setGenerateSource(String GenerateSource) {
+        this.GenerateSource = GenerateSource;
+    }
+
+    /**
+     * Get 电子印章类型：
+<ul><li>OFFICIAL-公章</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章
+</li>
+<li>默认：OFFICIAL</li>
+<ul> 
+     * @return SealType 电子印章类型：
+<ul><li>OFFICIAL-公章</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章
+</li>
+<li>默认：OFFICIAL</li>
+<ul>
+     */
+    public String getSealType() {
+        return this.SealType;
+    }
+
+    /**
+     * Set 电子印章类型：
+<ul><li>OFFICIAL-公章</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章
+</li>
+<li>默认：OFFICIAL</li>
+<ul>
+     * @param SealType 电子印章类型：
+<ul><li>OFFICIAL-公章</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章
+</li>
+<li>默认：OFFICIAL</li>
+<ul>
+     */
+    public void setSealType(String SealType) {
+        this.SealType = SealType;
+    }
+
+    /**
+     * Get 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号 
+     * @return SealHorizontalText 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
+     */
+    public String getSealHorizontalText() {
+        return this.SealHorizontalText;
+    }
+
+    /**
+     * Set 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
+     * @param SealHorizontalText 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
+     */
+    public void setSealHorizontalText(String SealHorizontalText) {
+        this.SealHorizontalText = SealHorizontalText;
+    }
+
+    /**
+     * Get 印章样式:
+
+<ul><li>cycle:圆形印章</li>
+<li>ellipse:椭圆印章</li>
+<li> 注：默认圆形印章</li></ul> 
+     * @return SealStyle 印章样式:
+
+<ul><li>cycle:圆形印章</li>
+<li>ellipse:椭圆印章</li>
+<li> 注：默认圆形印章</li></ul>
+     */
+    public String getSealStyle() {
+        return this.SealStyle;
+    }
+
+    /**
+     * Set 印章样式:
+
+<ul><li>cycle:圆形印章</li>
+<li>ellipse:椭圆印章</li>
+<li> 注：默认圆形印章</li></ul>
+     * @param SealStyle 印章样式:
+
+<ul><li>cycle:圆形印章</li>
+<li>ellipse:椭圆印章</li>
+<li> 注：默认圆形印章</li></ul>
+     */
+    public void setSealStyle(String SealStyle) {
+        this.SealStyle = SealStyle;
+    }
+
+    /**
+     * Get 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
+<li> 40_40 圆形企业印章直径40mm</li>
+<li> 45_30 椭圆形印章45mm x 30mm</li>
+</ul> 
+     * @return SealSize 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
+<li> 40_40 圆形企业印章直径40mm</li>
+<li> 45_30 椭圆形印章45mm x 30mm</li>
+</ul>
+     */
+    public String getSealSize() {
+        return this.SealSize;
+    }
+
+    /**
+     * Set 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
+<li> 40_40 圆形企业印章直径40mm</li>
+<li> 45_30 椭圆形印章45mm x 30mm</li>
+</ul>
+     * @param SealSize 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
+<li> 40_40 圆形企业印章直径40mm</li>
+<li> 45_30 椭圆形印章45mm x 30mm</li>
+</ul>
+     */
+    public void setSealSize(String SealSize) {
+        this.SealSize = SealSize;
+    }
+
     public CreateSealByImageRequest() {
     }
 
@@ -138,6 +328,21 @@ public class CreateSealByImageRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.GenerateSource != null) {
+            this.GenerateSource = new String(source.GenerateSource);
+        }
+        if (source.SealType != null) {
+            this.SealType = new String(source.SealType);
+        }
+        if (source.SealHorizontalText != null) {
+            this.SealHorizontalText = new String(source.SealHorizontalText);
+        }
+        if (source.SealStyle != null) {
+            this.SealStyle = new String(source.SealStyle);
+        }
+        if (source.SealSize != null) {
+            this.SealSize = new String(source.SealSize);
+        }
     }
 
 
@@ -149,6 +354,11 @@ public class CreateSealByImageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SealName", this.SealName);
         this.setParamSimple(map, prefix + "SealImage", this.SealImage);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
+        this.setParamSimple(map, prefix + "SealType", this.SealType);
+        this.setParamSimple(map, prefix + "SealHorizontalText", this.SealHorizontalText);
+        this.setParamSimple(map, prefix + "SealStyle", this.SealStyle);
+        this.setParamSimple(map, prefix + "SealSize", this.SealSize);
 
     }
 }

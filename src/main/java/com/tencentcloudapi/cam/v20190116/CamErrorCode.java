@@ -216,7 +216,7 @@ public enum CamErrorCode {
     // 策略文档的Statement字段不合法。
      INVALIDPARAMETER_STATEMENTERROR("InvalidParameter.StatementError"),
      
-    // 子帐号数量达到上限。
+    // 子账号数量达到上限。
      INVALIDPARAMETER_SUBUSERFULL("InvalidParameter.SubUserFull"),
      
     // 子用户名称重复。

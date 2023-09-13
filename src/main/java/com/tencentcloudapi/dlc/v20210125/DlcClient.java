@@ -1341,7 +1341,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeSparkSessionBatchSqlLog）用于获取SparkSQL批任务日志
+     *本接口（DescribeSparkSessionBatchSqlLog）用于查询Spark SQL批任务日志
      * @param req DescribeSparkSessionBatchSqlLogRequest
      * @return DescribeSparkSessionBatchSqlLogResponse
      * @throws TencentCloudSDKException

@@ -93,6 +93,13 @@ public class Backup extends AbstractModel{
     private Long Strategy;
 
     /**
+    * 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
+    */
+    @SerializedName("StorageStrategy")
+    @Expose
+    private Long StorageStrategy;
+
+    /**
     * 备份方式，0-定时备份；1-手动临时备份；2-定期备份
     */
     @SerializedName("BackupWay")
@@ -302,6 +309,22 @@ public class Backup extends AbstractModel{
     }
 
     /**
+     * Get 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线 
+     * @return StorageStrategy 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
+     */
+    public Long getStorageStrategy() {
+        return this.StorageStrategy;
+    }
+
+    /**
+     * Set 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
+     * @param StorageStrategy 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
+     */
+    public void setStorageStrategy(Long StorageStrategy) {
+        this.StorageStrategy = StorageStrategy;
+    }
+
+    /**
      * Get 备份方式，0-定时备份；1-手动临时备份；2-定期备份 
      * @return BackupWay 备份方式，0-定时备份；1-手动临时备份；2-定期备份
      */
@@ -454,6 +477,9 @@ public class Backup extends AbstractModel{
         if (source.Strategy != null) {
             this.Strategy = new Long(source.Strategy);
         }
+        if (source.StorageStrategy != null) {
+            this.StorageStrategy = new Long(source.StorageStrategy);
+        }
         if (source.BackupWay != null) {
             this.BackupWay = new Long(source.BackupWay);
         }
@@ -498,6 +524,7 @@ public class Backup extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
+        this.setParamSimple(map, prefix + "StorageStrategy", this.StorageStrategy);
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

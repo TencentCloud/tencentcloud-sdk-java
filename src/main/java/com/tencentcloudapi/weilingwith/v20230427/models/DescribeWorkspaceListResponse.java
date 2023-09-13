@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecc.v20181213.models;
+package com.tencentcloudapi.weilingwith.v20230427.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CorrectMultiImageResponse extends AbstractModel{
-
-    /**
-    * 接口返回数据
-    */
-    @SerializedName("Data")
-    @Expose
-    private CompostionContext Data;
-
-    /**
-    * 接口返回数据
-    */
-    @SerializedName("ResultData")
-    @Expose
-    private CompositionContext ResultData;
+public class DescribeWorkspaceListResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,42 +28,6 @@ public class CorrectMultiImageResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 接口返回数据 
-     * @return Data 接口返回数据
-     * @deprecated
-     */
-    @Deprecated
-    public CompostionContext getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 接口返回数据
-     * @param Data 接口返回数据
-     * @deprecated
-     */
-    @Deprecated
-    public void setData(CompostionContext Data) {
-        this.Data = Data;
-    }
-
-    /**
-     * Get 接口返回数据 
-     * @return ResultData 接口返回数据
-     */
-    public CompositionContext getResultData() {
-        return this.ResultData;
-    }
-
-    /**
-     * Set 接口返回数据
-     * @param ResultData 接口返回数据
-     */
-    public void setResultData(CompositionContext ResultData) {
-        this.ResultData = ResultData;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,20 +45,14 @@ public class CorrectMultiImageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CorrectMultiImageResponse() {
+    public DescribeWorkspaceListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CorrectMultiImageResponse(CorrectMultiImageResponse source) {
-        if (source.Data != null) {
-            this.Data = new CompostionContext(source.Data);
-        }
-        if (source.ResultData != null) {
-            this.ResultData = new CompositionContext(source.ResultData);
-        }
+    public DescribeWorkspaceListResponse(DescribeWorkspaceListResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -119,8 +63,6 @@ public class CorrectMultiImageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
-        this.setParamObj(map, prefix + "ResultData.", this.ResultData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

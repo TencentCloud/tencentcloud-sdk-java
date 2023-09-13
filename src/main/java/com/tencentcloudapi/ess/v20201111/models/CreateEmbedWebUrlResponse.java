@@ -24,7 +24,7 @@ public class CreateEmbedWebUrlResponse extends AbstractModel{
 
     /**
     * 嵌入的web链接，有效期：5分钟
-EmbedType=PREVIEW_CC_FLOW，该url为h5链接
+<br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
     */
     @SerializedName("WebUrl")
     @Expose
@@ -39,9 +39,9 @@ EmbedType=PREVIEW_CC_FLOW，该url为h5链接
 
     /**
      * Get 嵌入的web链接，有效期：5分钟
-EmbedType=PREVIEW_CC_FLOW，该url为h5链接 
+<br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接 
      * @return WebUrl 嵌入的web链接，有效期：5分钟
-EmbedType=PREVIEW_CC_FLOW，该url为h5链接
+<br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
      */
     public String getWebUrl() {
         return this.WebUrl;
@@ -49,9 +49,9 @@ EmbedType=PREVIEW_CC_FLOW，该url为h5链接
 
     /**
      * Set 嵌入的web链接，有效期：5分钟
-EmbedType=PREVIEW_CC_FLOW，该url为h5链接
+<br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
      * @param WebUrl 嵌入的web链接，有效期：5分钟
-EmbedType=PREVIEW_CC_FLOW，该url为h5链接
+<br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
      */
     public void setWebUrl(String WebUrl) {
         this.WebUrl = WebUrl;

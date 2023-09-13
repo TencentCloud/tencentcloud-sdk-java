@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateChannelSubOrganizationModifyQrCodeResponse extends AbstractModel{
+public class DescribePortsResponse extends AbstractModel{
 
     /**
-    * 二维码下载链接
+    * http端口列表
     */
-    @SerializedName("QrCodeUrl")
+    @SerializedName("HttpPorts")
     @Expose
-    private String QrCodeUrl;
+    private String [] HttpPorts;
 
     /**
-    * 二维码失效时间 UNIX 时间戳 精确到秒
+    * https端口列表
     */
-    @SerializedName("ExpiredTime")
+    @SerializedName("HttpsPorts")
     @Expose
-    private Long ExpiredTime;
+    private String [] HttpsPorts;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class CreateChannelSubOrganizationModifyQrCodeResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 二维码下载链接 
-     * @return QrCodeUrl 二维码下载链接
+     * Get http端口列表 
+     * @return HttpPorts http端口列表
      */
-    public String getQrCodeUrl() {
-        return this.QrCodeUrl;
+    public String [] getHttpPorts() {
+        return this.HttpPorts;
     }
 
     /**
-     * Set 二维码下载链接
-     * @param QrCodeUrl 二维码下载链接
+     * Set http端口列表
+     * @param HttpPorts http端口列表
      */
-    public void setQrCodeUrl(String QrCodeUrl) {
-        this.QrCodeUrl = QrCodeUrl;
+    public void setHttpPorts(String [] HttpPorts) {
+        this.HttpPorts = HttpPorts;
     }
 
     /**
-     * Get 二维码失效时间 UNIX 时间戳 精确到秒 
-     * @return ExpiredTime 二维码失效时间 UNIX 时间戳 精确到秒
+     * Get https端口列表 
+     * @return HttpsPorts https端口列表
      */
-    public Long getExpiredTime() {
-        return this.ExpiredTime;
+    public String [] getHttpsPorts() {
+        return this.HttpsPorts;
     }
 
     /**
-     * Set 二维码失效时间 UNIX 时间戳 精确到秒
-     * @param ExpiredTime 二维码失效时间 UNIX 时间戳 精确到秒
+     * Set https端口列表
+     * @param HttpsPorts https端口列表
      */
-    public void setExpiredTime(Long ExpiredTime) {
-        this.ExpiredTime = ExpiredTime;
+    public void setHttpsPorts(String [] HttpsPorts) {
+        this.HttpsPorts = HttpsPorts;
     }
 
     /**
@@ -91,19 +91,25 @@ public class CreateChannelSubOrganizationModifyQrCodeResponse extends AbstractMo
         this.RequestId = RequestId;
     }
 
-    public CreateChannelSubOrganizationModifyQrCodeResponse() {
+    public DescribePortsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateChannelSubOrganizationModifyQrCodeResponse(CreateChannelSubOrganizationModifyQrCodeResponse source) {
-        if (source.QrCodeUrl != null) {
-            this.QrCodeUrl = new String(source.QrCodeUrl);
+    public DescribePortsResponse(DescribePortsResponse source) {
+        if (source.HttpPorts != null) {
+            this.HttpPorts = new String[source.HttpPorts.length];
+            for (int i = 0; i < source.HttpPorts.length; i++) {
+                this.HttpPorts[i] = new String(source.HttpPorts[i]);
+            }
         }
-        if (source.ExpiredTime != null) {
-            this.ExpiredTime = new Long(source.ExpiredTime);
+        if (source.HttpsPorts != null) {
+            this.HttpsPorts = new String[source.HttpsPorts.length];
+            for (int i = 0; i < source.HttpsPorts.length; i++) {
+                this.HttpsPorts[i] = new String(source.HttpsPorts[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +121,8 @@ public class CreateChannelSubOrganizationModifyQrCodeResponse extends AbstractMo
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "QrCodeUrl", this.QrCodeUrl);
-        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamArraySimple(map, prefix + "HttpPorts.", this.HttpPorts);
+        this.setParamArraySimple(map, prefix + "HttpsPorts.", this.HttpsPorts);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

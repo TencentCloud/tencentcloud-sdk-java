@@ -37,7 +37,7 @@ public class TurnPDFToObjectResponse extends AbstractModel{
     private TextType [] TextTypeList;
 
     /**
-    * 报告结构化结果
+    * 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
     */
     @SerializedName("Block")
     @Expose
@@ -90,16 +90,16 @@ public class TurnPDFToObjectResponse extends AbstractModel{
     }
 
     /**
-     * Get 报告结构化结果 
-     * @return Block 报告结构化结果
+     * Get 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用) 
+     * @return Block 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
      */
     public Block getBlock() {
         return this.Block;
     }
 
     /**
-     * Set 报告结构化结果
-     * @param Block 报告结构化结果
+     * Set 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
+     * @param Block 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
      */
     public void setBlock(Block Block) {
         this.Block = Block;

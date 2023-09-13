@@ -1178,6 +1178,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取非标端口列表
+     * @param req DescribePortsRequest
+     * @return DescribePortsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePortsResponse DescribePorts(DescribePortsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePortsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePortsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePorts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取各个模块具体的规格限制
      * @param req DescribeRuleLimitRequest
      * @return DescribeRuleLimitResponse

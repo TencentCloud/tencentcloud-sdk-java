@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSparkSessionBatchSqlLogResponse extends AbstractModel{
 
     /**
-    * 状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
+    * 状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
     */
     @SerializedName("State")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeSparkSessionBatchSqlLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 状态：0：初始化、1：成功、2：失败、3：取消、4：异常； 
-     * @return State 状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
+     * Get 状态：0：运行中、1：成功、2：失败、3：取消、4：超时； 
+     * @return State 状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
-     * @param State 状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
+     * Set 状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
+     * @param State 状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
      */
     public void setState(Long State) {
         this.State = State;
