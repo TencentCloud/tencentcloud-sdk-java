@@ -27,62 +27,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class AbstractModel {
+    public Map<String, String> header = new HashMap<String, String>();
+    protected boolean skipSign = false;
     /**
      * Any stores customized parameters which are not documented. You should make sure it can be
      * correctly serialized to json string.
      */
     private HashMap<String, Object> customizedParams = new HashMap<String, Object>();
-
-    protected abstract void toMap(HashMap<String, String> map, String prefix);
-
-    /**
-     * Valid only when it's a request object.
-     * Some actions can only be posted in multipart format,
-     * this method is used to mark which parameters are binary type.
-     */
-    protected String[] getBinaryParams() {
-        return new String[0];
-    }
-
-    /**
-     * Valid only when it's a multipart request object.
-     */
-    protected HashMap<String, byte[]> getMultipartRequestParams() {
-        return new HashMap<String, byte[]>();
-    }
-
-    protected <V> void setParamSimple(HashMap<String, String> map, String key, V value) {
-        if (value != null) {
-
-            key = key.substring(0, 1).toUpperCase() + key.substring(1);
-            key = key.replace("_", ".");
-            map.put(key, String.valueOf(value));
-        }
-    }
-
-    protected <V> void setParamArraySimple(HashMap<String, String> map, String prefix, V[] array) {
-        if (array != null) {
-            for (int i = 0; i < array.length; i++) {
-                this.setParamSimple(map, prefix + i, array[i]);
-            }
-        }
-    }
-
-    protected <V extends AbstractModel> void setParamObj(
-            HashMap<String, String> map, String prefix, V obj) {
-        if (obj != null) {
-            obj.toMap(map, prefix);
-        }
-    }
-
-    protected <V extends AbstractModel> void setParamArrayObj(
-            HashMap<String, String> map, String prefix, V[] array) {
-        if (array != null) {
-            for (int i = 0; i < array.length; i++) {
-                this.setParamObj(map, prefix + i + ".", array[i]);
-            }
-        }
-    }
 
     public static <O extends AbstractModel> String toJsonString(O obj) {
         return toJsonObject(obj).toString();
@@ -136,6 +87,57 @@ public abstract class AbstractModel {
         return gson.fromJson(json, cls);
     }
 
+    protected abstract void toMap(HashMap<String, String> map, String prefix);
+
+    /**
+     * Valid only when it's a request object.
+     * Some actions can only be posted in multipart format,
+     * this method is used to mark which parameters are binary type.
+     */
+    protected String[] getBinaryParams() {
+        return new String[0];
+    }
+
+    /**
+     * Valid only when it's a multipart request object.
+     */
+    protected HashMap<String, byte[]> getMultipartRequestParams() {
+        return new HashMap<String, byte[]>();
+    }
+
+    protected <V> void setParamSimple(HashMap<String, String> map, String key, V value) {
+        if (value != null) {
+
+            key = key.substring(0, 1).toUpperCase() + key.substring(1);
+            key = key.replace("_", ".");
+            map.put(key, String.valueOf(value));
+        }
+    }
+
+    protected <V> void setParamArraySimple(HashMap<String, String> map, String prefix, V[] array) {
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                this.setParamSimple(map, prefix + i, array[i]);
+            }
+        }
+    }
+
+    protected <V extends AbstractModel> void setParamObj(
+            HashMap<String, String> map, String prefix, V obj) {
+        if (obj != null) {
+            obj.toMap(map, prefix);
+        }
+    }
+
+    protected <V extends AbstractModel> void setParamArrayObj(
+            HashMap<String, String> map, String prefix, V[] array) {
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                this.setParamObj(map, prefix + i + ".", array[i]);
+            }
+        }
+    }
+
     /**
      * Set any key value pair to this model.
      *
@@ -153,8 +155,6 @@ public abstract class AbstractModel {
         return this.customizedParams;
     }
 
-    protected boolean skipSign = false;
-
     public boolean getSkipSign() {
         return skipSign;
     }
@@ -162,9 +162,6 @@ public abstract class AbstractModel {
     public void setSkipSign(boolean skipSign) {
         this.skipSign = skipSign;
     }
-
-
-    public Map<String, String> header = new HashMap<String, String>();
 
     public Map<String, String> GetHeader() {
         return header;

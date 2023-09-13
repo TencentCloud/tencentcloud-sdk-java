@@ -71,20 +71,27 @@ public class ClientProfile {
         this(ClientProfile.SIGN_TC3_256, new HttpProfile());
     }
 
+    public String getSignMethod() {
+        return this.signMethod;
+    }
+
     public void setSignMethod(String signMethod) {
         this.signMethod = signMethod;
+    }
+
+    public HttpProfile getHttpProfile() {
+        return this.httpProfile;
     }
 
     public void setHttpProfile(HttpProfile httpProfile) {
         this.httpProfile = httpProfile;
     }
 
-    public String getSignMethod() {
-        return this.signMethod;
-    }
-
-    public HttpProfile getHttpProfile() {
-        return this.httpProfile;
+    /**
+     * Get the flag of whether payload is ignored.
+     */
+    public boolean isUnsignedPayload() {
+        return this.unsignedPayload;
     }
 
     /**
@@ -94,13 +101,6 @@ public class ClientProfile {
      */
     public void setUnsignedPayload(boolean flag) {
         this.unsignedPayload = flag;
-    }
-
-    /**
-     * Get the flag of whether payload is ignored.
-     */
-    public boolean isUnsignedPayload() {
-        return this.unsignedPayload;
     }
 
     public Language getLanguage() {

@@ -52,7 +52,7 @@ public abstract class AbstractClient {
 
     public static final int HTTP_RSP_OK = 200;
     public static final String SDK_VERSION = "SDK_JAVA_3.1.854";
-
+    public Gson gson;
     private Credential credential;
     private ClientProfile profile;
     private String endpoint;
@@ -61,7 +61,6 @@ public abstract class AbstractClient {
     private String path;
     private String sdkVersion;
     private String apiVersion;
-    public Gson gson;
     private TCLog log;
     private HttpConnection httpConnection;
 
@@ -99,28 +98,28 @@ public abstract class AbstractClient {
         warmup();
     }
 
-    public void setRegion(String region) {
-        this.region = region;
-    }
-
     public String getRegion() {
         return this.region;
     }
 
-    public void setClientProfile(ClientProfile profile) {
-        this.profile = profile;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public ClientProfile getClientProfile() {
         return this.profile;
     }
 
-    public void setCredential(Credential credential) {
-        this.credential = credential;
+    public void setClientProfile(ClientProfile profile) {
+        this.profile = profile;
     }
 
     public Credential getCredential() {
         return this.credential;
+    }
+
+    public void setCredential(Credential credential) {
+        this.credential = credential;
     }
 
     /**

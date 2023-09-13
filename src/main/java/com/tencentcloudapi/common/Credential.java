@@ -50,27 +50,27 @@ public class Credential {
         this.token = token;
     }
 
-    public void setSecretId(String secretId) {
-        this.secretId = secretId;
-    }
-
-    public void setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
     public String getSecretId() {
         return this.secretId;
+    }
+
+    public void setSecretId(String secretId) {
+        this.secretId = secretId;
     }
 
     public String getSecretKey() {
         return this.secretKey;
     }
 
+    public void setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+    }
+
     public String getToken() {
         return this.token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

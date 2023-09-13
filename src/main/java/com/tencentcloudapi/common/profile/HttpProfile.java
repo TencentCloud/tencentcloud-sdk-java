@@ -101,6 +101,10 @@ public class HttpProfile {
         this.connTimeout = HttpProfile.TM_MINUTE;
     }
 
+    public String getReqMethod() {
+        return this.reqMethod;
+    }
+
     /**
      * Set request method, GET or POST.
      *
@@ -108,6 +112,10 @@ public class HttpProfile {
      */
     public void setReqMethod(String reqMethod) {
         this.reqMethod = reqMethod;
+    }
+
+    public String getEndpoint() {
+        return this.endpoint;
     }
 
     /**
@@ -125,6 +133,10 @@ public class HttpProfile {
         this.endpoint = endpoint;
     }
 
+    public int getReadTimeout() {
+        return this.readTimeout;
+    }
+
     /**
      * Set read timeout value.
      *
@@ -132,6 +144,10 @@ public class HttpProfile {
      */
     public void setReadTimeout(int readTimeout) {
         this.readTimeout = readTimeout;
+    }
+
+    public int getWriteTimeout() {
+        return this.writeTimeout;
     }
 
     /**
@@ -143,6 +159,10 @@ public class HttpProfile {
         this.writeTimeout = writeTimeout;
     }
 
+    public int getConnTimeout() {
+        return this.connTimeout;
+    }
+
     /**
      * Set connect timeout value.
      *
@@ -152,6 +172,10 @@ public class HttpProfile {
         this.connTimeout = connTimeout;
     }
 
+    public String getProtocol() {
+        return this.protocol;
+    }
+
     /**
      * Set request protocol.
      *
@@ -159,30 +183,6 @@ public class HttpProfile {
      */
     public void setProtocol(String protocol) {
         this.protocol = protocol;
-    }
-
-    public String getReqMethod() {
-        return this.reqMethod;
-    }
-
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
-    public int getReadTimeout() {
-        return this.readTimeout;
-    }
-
-    public int getWriteTimeout() {
-        return this.writeTimeout;
-    }
-
-    public int getConnTimeout() {
-        return this.connTimeout;
-    }
-
-    public String getProtocol() {
-        return this.protocol;
     }
 
     public String getProxyHost() {
