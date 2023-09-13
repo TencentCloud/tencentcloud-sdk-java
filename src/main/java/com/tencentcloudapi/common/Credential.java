@@ -31,45 +31,46 @@ package com.tencentcloudapi.common;
  */
 public class Credential {
 
-  private String secretId;
+    private String secretId;
 
-  private String secretKey;
+    private String secretKey;
 
-  private String token;
+    private String token;
 
-  public Credential() {}
+    public Credential() {
+    }
 
-  public Credential(String secretId, String secretKey) {
-    this(secretId, secretKey, "");
-  }
+    public Credential(String secretId, String secretKey) {
+        this(secretId, secretKey, "");
+    }
 
-  public Credential(String secretId, String secretKey, String token) {
-    this.secretId = secretId;
-    this.secretKey = secretKey;
-    this.token = token;
-  }
+    public Credential(String secretId, String secretKey, String token) {
+        this.secretId = secretId;
+        this.secretKey = secretKey;
+        this.token = token;
+    }
 
-  public void setSecretId(String secretId) {
-    this.secretId = secretId;
-  }
+    public void setSecretId(String secretId) {
+        this.secretId = secretId;
+    }
 
-  public void setSecretKey(String secretKey) {
-    this.secretKey = secretKey;
-  }
+    public void setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+    }
 
-  public void setToken(String token) {
-    this.token = token;
-  }
+    public void setToken(String token) {
+        this.token = token;
+    }
 
-  public String getSecretId() {
-    return this.secretId;
-  }
+    public String getSecretId() {
+        return this.secretId;
+    }
 
-  public String getSecretKey() {
-    return this.secretKey;
-  }
+    public String getSecretKey() {
+        return this.secretKey;
+    }
 
-  public String getToken() {
-    return this.token;
-  }
+    public String getToken() {
+        return this.token;
+    }
 }

@@ -117,7 +117,8 @@ public class OIDCRoleArnProvider implements CredentialsProvider {
 
         String respStr = client.commonRequest(request, Action);
 
-        JsonResponseModel<Response> response = client.gson.fromJson(respStr, new TypeToken<JsonResponseModel<Response>>(){}.getType());
+        JsonResponseModel<Response> response = client.gson.fromJson(respStr, new TypeToken<JsonResponseModel<Response>>() {
+        }.getType());
         Response resp = response.response;
         return new Credential(resp.Credentials.TmpSecretId, resp.Credentials.TmpSecretKey, resp.Credentials.Token);
     }
