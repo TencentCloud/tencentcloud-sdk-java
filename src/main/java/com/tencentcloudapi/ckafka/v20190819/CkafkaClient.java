@@ -627,6 +627,27 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *删除后付费实例
+     * @param req DeleteInstancePostRequest
+     * @return DeleteInstancePostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstancePostResponse DeleteInstancePost(DeleteInstancePostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInstancePostResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInstancePostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteInstancePost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除预付费实例
      * @param req DeleteInstancePreRequest
      * @return DeleteInstancePreResponse

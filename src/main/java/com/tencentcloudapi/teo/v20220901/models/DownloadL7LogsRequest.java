@@ -51,7 +51,7 @@ public class DownloadL7LogsRequest extends AbstractModel{
     private String [] Domains;
 
     /**
-    * 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
+    * 分页查询的限制数目，默认值为 20，最大查询条目为 300。
     */
     @SerializedName("Limit")
     @Expose
@@ -129,16 +129,16 @@ public class DownloadL7LogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页查询的限制数目，默认值为 20，最大查询条目为 1000。 
-     * @return Limit 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
+     * Get 分页查询的限制数目，默认值为 20，最大查询条目为 300。 
+     * @return Limit 分页查询的限制数目，默认值为 20，最大查询条目为 300。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
-     * @param Limit 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
+     * Set 分页查询的限制数目，默认值为 20，最大查询条目为 300。
+     * @param Limit 分页查询的限制数目，默认值为 20，最大查询条目为 300。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

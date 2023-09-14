@@ -279,6 +279,14 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     private String ImageCreateTime;
 
     /**
+    * 敏感信息数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SensitiveInfoCnt")
+    @Expose
+    private Long SensitiveInfoCnt;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -490,7 +498,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SentiveInfoCnt 敏感信息数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getSentiveInfoCnt() {
         return this.SentiveInfoCnt;
     }
@@ -500,7 +510,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SentiveInfoCnt 敏感信息数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setSentiveInfoCnt(Long SentiveInfoCnt) {
         this.SentiveInfoCnt = SentiveInfoCnt;
     }
@@ -926,6 +938,26 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 敏感信息数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SensitiveInfoCnt 敏感信息数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSensitiveInfoCnt() {
+        return this.SensitiveInfoCnt;
+    }
+
+    /**
+     * Set 敏感信息数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SensitiveInfoCnt 敏感信息数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSensitiveInfoCnt(Long SensitiveInfoCnt) {
+        this.SensitiveInfoCnt = SensitiveInfoCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1045,6 +1077,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
         if (source.ImageCreateTime != null) {
             this.ImageCreateTime = new String(source.ImageCreateTime);
         }
+        if (source.SensitiveInfoCnt != null) {
+            this.SensitiveInfoCnt = new Long(source.SensitiveInfoCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1087,6 +1122,7 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
+        this.setParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

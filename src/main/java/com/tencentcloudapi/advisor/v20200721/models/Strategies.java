@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStrategie extends AbstractModel{
+public class Strategies extends AbstractModel{
 
     /**
     * 评估项ID
@@ -92,7 +92,7 @@ public class DescribeStrategie extends AbstractModel{
     */
     @SerializedName("Conditions")
     @Expose
-    private DescribeStrategiesCondition [] Conditions;
+    private Conditions [] Conditions;
 
     /**
      * Get 评估项ID
@@ -260,7 +260,7 @@ public class DescribeStrategie extends AbstractModel{
      * @return Conditions 评估项风险列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DescribeStrategiesCondition [] getConditions() {
+    public Conditions [] getConditions() {
         return this.Conditions;
     }
 
@@ -270,18 +270,18 @@ public class DescribeStrategie extends AbstractModel{
      * @param Conditions 评估项风险列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setConditions(DescribeStrategiesCondition [] Conditions) {
+    public void setConditions(Conditions [] Conditions) {
         this.Conditions = Conditions;
     }
 
-    public DescribeStrategie() {
+    public Strategies() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeStrategie(DescribeStrategie source) {
+    public Strategies(Strategies source) {
         if (source.StrategyId != null) {
             this.StrategyId = new Long(source.StrategyId);
         }
@@ -307,9 +307,9 @@ public class DescribeStrategie extends AbstractModel{
             this.GroupName = new String(source.GroupName);
         }
         if (source.Conditions != null) {
-            this.Conditions = new DescribeStrategiesCondition[source.Conditions.length];
+            this.Conditions = new Conditions[source.Conditions.length];
             for (int i = 0; i < source.Conditions.length; i++) {
-                this.Conditions[i] = new DescribeStrategiesCondition(source.Conditions[i]);
+                this.Conditions[i] = new Conditions(source.Conditions[i]);
             }
         }
     }

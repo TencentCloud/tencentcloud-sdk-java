@@ -23,6 +23,62 @@ import java.util.HashMap;
 public class DomainsPartInfo extends AbstractModel{
 
     /**
+    * 域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * 域名id
+    */
+    @SerializedName("DomainId")
+    @Expose
+    private String DomainId;
+
+    /**
+    * 实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 类型
+    */
+    @SerializedName("Edition")
+    @Expose
+    private String Edition;
+
+    /**
+    * 实例名
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * 证书
+    */
+    @SerializedName("Cert")
+    @Expose
+    private String Cert;
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * AI防御模式
+    */
+    @SerializedName("Engine")
+    @Expose
+    private Long Engine;
+
+    /**
     * 是否开启httpRewrite
     */
     @SerializedName("HttpsRewrite")
@@ -242,6 +298,134 @@ public class DomainsPartInfo extends AbstractModel{
     @SerializedName("XFFReset")
     @Expose
     private Long XFFReset;
+
+    /**
+     * Get 域名 
+     * @return Domain 域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+     * @param Domain 域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get 域名id 
+     * @return DomainId 域名id
+     */
+    public String getDomainId() {
+        return this.DomainId;
+    }
+
+    /**
+     * Set 域名id
+     * @param DomainId 域名id
+     */
+    public void setDomainId(String DomainId) {
+        this.DomainId = DomainId;
+    }
+
+    /**
+     * Get 实例id 
+     * @return InstanceId 实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceId 实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 类型 
+     * @return Edition 类型
+     */
+    public String getEdition() {
+        return this.Edition;
+    }
+
+    /**
+     * Set 类型
+     * @param Edition 类型
+     */
+    public void setEdition(String Edition) {
+        this.Edition = Edition;
+    }
+
+    /**
+     * Get 实例名 
+     * @return InstanceName 实例名
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 实例名
+     * @param InstanceName 实例名
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get 证书 
+     * @return Cert 证书
+     */
+    public String getCert() {
+        return this.Cert;
+    }
+
+    /**
+     * Set 证书
+     * @param Cert 证书
+     */
+    public void setCert(String Cert) {
+        this.Cert = Cert;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get AI防御模式 
+     * @return Engine AI防御模式
+     */
+    public Long getEngine() {
+        return this.Engine;
+    }
+
+    /**
+     * Set AI防御模式
+     * @param Engine AI防御模式
+     */
+    public void setEngine(Long Engine) {
+        this.Engine = Engine;
+    }
 
     /**
      * Get 是否开启httpRewrite 
@@ -775,6 +959,30 @@ public class DomainsPartInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DomainsPartInfo(DomainsPartInfo source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Cert != null) {
+            this.Cert = new String(source.Cert);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Engine != null) {
+            this.Engine = new Long(source.Engine);
+        }
         if (source.HttpsRewrite != null) {
             this.HttpsRewrite = new Long(source.HttpsRewrite);
         }
@@ -887,6 +1095,14 @@ public class DomainsPartInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "DomainId", this.DomainId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Edition", this.Edition);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "Cert", this.Cert);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Engine", this.Engine);
         this.setParamSimple(map, prefix + "HttpsRewrite", this.HttpsRewrite);
         this.setParamSimple(map, prefix + "HttpsUpstreamPort", this.HttpsUpstreamPort);
         this.setParamSimple(map, prefix + "IsCdn", this.IsCdn);

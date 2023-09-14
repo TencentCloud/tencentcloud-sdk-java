@@ -30,28 +30,28 @@ public class UpdateDictionariesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * IK分词主词典COS地址
+    * 安装时填IK分词主词典COS地址，删除时填词典名如test.dic
     */
     @SerializedName("IkMainDicts")
     @Expose
     private String [] IkMainDicts;
 
     /**
-    * IK分词停用词词典COS地址
+    * 安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
     */
     @SerializedName("IkStopwords")
     @Expose
     private String [] IkStopwords;
 
     /**
-    * 同义词词典COS地址
+    * 安装时填同义词词典COS地址，删除时填词典名如test.dic
     */
     @SerializedName("Synonym")
     @Expose
     private String [] Synonym;
 
     /**
-    * QQ分词词典COS地址
+    * 安装时填QQ分词词典COS地址，删除时填词典名如test.dic
     */
     @SerializedName("QQDict")
     @Expose
@@ -88,64 +88,64 @@ public class UpdateDictionariesRequest extends AbstractModel{
     }
 
     /**
-     * Get IK分词主词典COS地址 
-     * @return IkMainDicts IK分词主词典COS地址
+     * Get 安装时填IK分词主词典COS地址，删除时填词典名如test.dic 
+     * @return IkMainDicts 安装时填IK分词主词典COS地址，删除时填词典名如test.dic
      */
     public String [] getIkMainDicts() {
         return this.IkMainDicts;
     }
 
     /**
-     * Set IK分词主词典COS地址
-     * @param IkMainDicts IK分词主词典COS地址
+     * Set 安装时填IK分词主词典COS地址，删除时填词典名如test.dic
+     * @param IkMainDicts 安装时填IK分词主词典COS地址，删除时填词典名如test.dic
      */
     public void setIkMainDicts(String [] IkMainDicts) {
         this.IkMainDicts = IkMainDicts;
     }
 
     /**
-     * Get IK分词停用词词典COS地址 
-     * @return IkStopwords IK分词停用词词典COS地址
+     * Get 安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic 
+     * @return IkStopwords 安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
      */
     public String [] getIkStopwords() {
         return this.IkStopwords;
     }
 
     /**
-     * Set IK分词停用词词典COS地址
-     * @param IkStopwords IK分词停用词词典COS地址
+     * Set 安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
+     * @param IkStopwords 安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
      */
     public void setIkStopwords(String [] IkStopwords) {
         this.IkStopwords = IkStopwords;
     }
 
     /**
-     * Get 同义词词典COS地址 
-     * @return Synonym 同义词词典COS地址
+     * Get 安装时填同义词词典COS地址，删除时填词典名如test.dic 
+     * @return Synonym 安装时填同义词词典COS地址，删除时填词典名如test.dic
      */
     public String [] getSynonym() {
         return this.Synonym;
     }
 
     /**
-     * Set 同义词词典COS地址
-     * @param Synonym 同义词词典COS地址
+     * Set 安装时填同义词词典COS地址，删除时填词典名如test.dic
+     * @param Synonym 安装时填同义词词典COS地址，删除时填词典名如test.dic
      */
     public void setSynonym(String [] Synonym) {
         this.Synonym = Synonym;
     }
 
     /**
-     * Get QQ分词词典COS地址 
-     * @return QQDict QQ分词词典COS地址
+     * Get 安装时填QQ分词词典COS地址，删除时填词典名如test.dic 
+     * @return QQDict 安装时填QQ分词词典COS地址，删除时填词典名如test.dic
      */
     public String [] getQQDict() {
         return this.QQDict;
     }
 
     /**
-     * Set QQ分词词典COS地址
-     * @param QQDict QQ分词词典COS地址
+     * Set 安装时填QQ分词词典COS地址，删除时填词典名如test.dic
+     * @param QQDict 安装时填QQ分词词典COS地址，删除时填词典名如test.dic
      */
     public void setQQDict(String [] QQDict) {
         this.QQDict = QQDict;

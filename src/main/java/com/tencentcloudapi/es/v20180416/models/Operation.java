@@ -72,6 +72,14 @@ public class Operation extends AbstractModel{
     private Float Progress;
 
     /**
+    * 操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
      * Get 操作唯一id 
      * @return Id 操作唯一id
      */
@@ -183,6 +191,26 @@ public class Operation extends AbstractModel{
         this.Progress = Progress;
     }
 
+    /**
+     * Get 操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubAccountUin 操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set 操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubAccountUin 操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
     public Operation() {
     }
 
@@ -215,6 +243,9 @@ public class Operation extends AbstractModel{
         if (source.Progress != null) {
             this.Progress = new Float(source.Progress);
         }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class Operation extends AbstractModel{
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
 
     }
 }

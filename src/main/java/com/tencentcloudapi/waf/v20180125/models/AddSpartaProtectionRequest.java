@@ -163,7 +163,7 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     private String Edition;
 
     /**
-    * 是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
+    * 是否开启长连接，0 短连接，1 长连接
     */
     @SerializedName("IsKeepAlive")
     @Expose
@@ -581,16 +581,16 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效 
-     * @return IsKeepAlive 是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
+     * Get 是否开启长连接，0 短连接，1 长连接 
+     * @return IsKeepAlive 是否开启长连接，0 短连接，1 长连接
      */
     public String getIsKeepAlive() {
         return this.IsKeepAlive;
     }
 
     /**
-     * Set 是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
-     * @param IsKeepAlive 是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
+     * Set 是否开启长连接，0 短连接，1 长连接
+     * @param IsKeepAlive 是否开启长连接，0 短连接，1 长连接
      */
     public void setIsKeepAlive(String IsKeepAlive) {
         this.IsKeepAlive = IsKeepAlive;

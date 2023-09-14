@@ -31,7 +31,7 @@ public class DescribeFlowEvidenceReportRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 签署报告编号
+    * 签署报告编号, 由<a href="https://qian.tencent.com/developers/companyApis/certificate/CreateFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>产生
     */
     @SerializedName("ReportId")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeFlowEvidenceReportRequest extends AbstractModel{
     }
 
     /**
-     * Get 签署报告编号 
-     * @return ReportId 签署报告编号
+     * Get 签署报告编号, 由<a href="https://qian.tencent.com/developers/companyApis/certificate/CreateFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>产生 
+     * @return ReportId 签署报告编号, 由<a href="https://qian.tencent.com/developers/companyApis/certificate/CreateFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>产生
      */
     public String getReportId() {
         return this.ReportId;
     }
 
     /**
-     * Set 签署报告编号
-     * @param ReportId 签署报告编号
+     * Set 签署报告编号, 由<a href="https://qian.tencent.com/developers/companyApis/certificate/CreateFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>产生
+     * @param ReportId 签署报告编号, 由<a href="https://qian.tencent.com/developers/companyApis/certificate/CreateFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>产生
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;

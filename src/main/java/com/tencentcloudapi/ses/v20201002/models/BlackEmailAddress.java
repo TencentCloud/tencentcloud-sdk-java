@@ -37,6 +37,14 @@ public class BlackEmailAddress extends AbstractModel{
     private String EmailAddress;
 
     /**
+    * 被拉黑的理由
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IspDesc")
+    @Expose
+    private String IspDesc;
+
+    /**
      * Get 邮箱被拉黑时间 
      * @return BounceTime 邮箱被拉黑时间
      */
@@ -68,6 +76,26 @@ public class BlackEmailAddress extends AbstractModel{
         this.EmailAddress = EmailAddress;
     }
 
+    /**
+     * Get 被拉黑的理由
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IspDesc 被拉黑的理由
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIspDesc() {
+        return this.IspDesc;
+    }
+
+    /**
+     * Set 被拉黑的理由
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IspDesc 被拉黑的理由
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIspDesc(String IspDesc) {
+        this.IspDesc = IspDesc;
+    }
+
     public BlackEmailAddress() {
     }
 
@@ -82,6 +110,9 @@ public class BlackEmailAddress extends AbstractModel{
         if (source.EmailAddress != null) {
             this.EmailAddress = new String(source.EmailAddress);
         }
+        if (source.IspDesc != null) {
+            this.IspDesc = new String(source.IspDesc);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class BlackEmailAddress extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BounceTime", this.BounceTime);
         this.setParamSimple(map, prefix + "EmailAddress", this.EmailAddress);
+        this.setParamSimple(map, prefix + "IspDesc", this.IspDesc);
 
     }
 }

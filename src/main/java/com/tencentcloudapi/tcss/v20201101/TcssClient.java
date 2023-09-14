@@ -3633,7 +3633,7 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询用户镜像仓库下的项目名称列表
+     *查询用户镜像仓库下的命令空间列表
      * @param req DescribeImageRegistryNamespaceListRequest
      * @return DescribeImageRegistryNamespaceListResponse
      * @throws TencentCloudSDKException

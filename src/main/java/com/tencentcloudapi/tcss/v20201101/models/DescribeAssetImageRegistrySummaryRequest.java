@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeAssetImageRegistrySummaryRequest extends AbstractModel{
 
+    /**
+    * 过滤字段
+    */
+    @SerializedName("Filters")
+    @Expose
+    private AssetFilters [] Filters;
+
+    /**
+     * Get 过滤字段 
+     * @return Filters 过滤字段
+     */
+    public AssetFilters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤字段
+     * @param Filters 过滤字段
+     */
+    public void setFilters(AssetFilters [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeAssetImageRegistrySummaryRequest() {
     }
 
@@ -30,6 +53,12 @@ public class DescribeAssetImageRegistrySummaryRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAssetImageRegistrySummaryRequest(DescribeAssetImageRegistrySummaryRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new AssetFilters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new AssetFilters(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -37,6 +66,7 @@ public class DescribeAssetImageRegistrySummaryRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

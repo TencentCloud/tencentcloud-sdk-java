@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeFlowEvidenceReportResponse extends AbstractModel{
 
     /**
-    * 出证报告PDF的下载 URL
+    * 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportUrl")
@@ -31,12 +31,11 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     private String ReportUrl;
 
     /**
-    * 签署报告出证任务的状态
-<ul>
-<li>EvidenceStatusExecuting : 出证任务在执行中</li>
-<li>EvidenceStatusSuccess : 出证任务执行成功</li>
-<li>EvidenceStatusFailed : 出证任务执行失败</li>
-</ul>
+    * 出证任务执行的状态, 状态含义如下：
+
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -50,9 +49,9 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 出证报告PDF的下载 URL
+     * Get 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReportUrl 出证报告PDF的下载 URL
+     * @return ReportUrl 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportUrl() {
@@ -60,9 +59,9 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     }
 
     /**
-     * Set 出证报告PDF的下载 URL
+     * Set 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReportUrl 出证报告PDF的下载 URL
+     * @param ReportUrl 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportUrl(String ReportUrl) {
@@ -70,36 +69,32 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     }
 
     /**
-     * Get 签署报告出证任务的状态
-<ul>
-<li>EvidenceStatusExecuting : 出证任务在执行中</li>
-<li>EvidenceStatusSuccess : 出证任务执行成功</li>
-<li>EvidenceStatusFailed : 出证任务执行失败</li>
-</ul> 
-     * @return Status 签署报告出证任务的状态
-<ul>
-<li>EvidenceStatusExecuting : 出证任务在执行中</li>
-<li>EvidenceStatusSuccess : 出证任务执行成功</li>
-<li>EvidenceStatusFailed : 出证任务执行失败</li>
-</ul>
+     * Get 出证任务执行的状态, 状态含义如下：
+
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul> 
+     * @return Status 出证任务执行的状态, 状态含义如下：
+
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 签署报告出证任务的状态
-<ul>
-<li>EvidenceStatusExecuting : 出证任务在执行中</li>
-<li>EvidenceStatusSuccess : 出证任务执行成功</li>
-<li>EvidenceStatusFailed : 出证任务执行失败</li>
-</ul>
-     * @param Status 签署报告出证任务的状态
-<ul>
-<li>EvidenceStatusExecuting : 出证任务在执行中</li>
-<li>EvidenceStatusSuccess : 出证任务执行成功</li>
-<li>EvidenceStatusFailed : 出证任务执行失败</li>
-</ul>
+     * Set 出证任务执行的状态, 状态含义如下：
+
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+     * @param Status 出证任务执行的状态, 状态含义如下：
+
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

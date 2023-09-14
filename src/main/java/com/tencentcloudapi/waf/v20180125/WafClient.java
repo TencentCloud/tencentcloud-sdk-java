@@ -1517,6 +1517,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取套餐实例的弹性qps上限
+     * @param req GetInstanceQpsLimitRequest
+     * @return GetInstanceQpsLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetInstanceQpsLimitResponse GetInstanceQpsLimit(GetInstanceQpsLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetInstanceQpsLimitResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetInstanceQpsLimitResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetInstanceQpsLimit");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于修改访问日志保存期限及大字段是否存储
      * @param req ModifyAccessPeriodRequest
      * @return ModifyAccessPeriodResponse

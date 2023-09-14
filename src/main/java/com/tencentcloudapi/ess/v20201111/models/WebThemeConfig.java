@@ -24,18 +24,17 @@ public class WebThemeConfig extends AbstractModel{
 
     /**
     * 是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul>
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul>
     */
     @SerializedName("DisplaySignBrandLogo")
     @Expose
     private Boolean DisplaySignBrandLogo;
 
     /**
-    * 主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+    * 主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/>
     */
     @SerializedName("WebEmbedThemeColor")
     @Expose
@@ -43,15 +42,11 @@ public class WebThemeConfig extends AbstractModel{
 
     /**
      * Get 是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul> 
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul> 
      * @return DisplaySignBrandLogo 是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul>
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul>
      */
     public Boolean getDisplaySignBrandLogo() {
         return this.DisplaySignBrandLogo;
@@ -59,35 +54,35 @@ public class WebThemeConfig extends AbstractModel{
 
     /**
      * Set 是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul>
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul>
      * @param DisplaySignBrandLogo 是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul>
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul>
      */
     public void setDisplaySignBrandLogo(Boolean DisplaySignBrandLogo) {
         this.DisplaySignBrandLogo = DisplaySignBrandLogo;
     }
 
     /**
-     * Get 主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65) 
-     * @return WebEmbedThemeColor 主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+     * Get 主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/> 
+     * @return WebEmbedThemeColor 主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/>
      */
     public String getWebEmbedThemeColor() {
         return this.WebEmbedThemeColor;
     }
 
     /**
-     * Set 主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
-     * @param WebEmbedThemeColor 主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+     * Set 主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/>
+     * @param WebEmbedThemeColor 主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/>
      */
     public void setWebEmbedThemeColor(String WebEmbedThemeColor) {
         this.WebEmbedThemeColor = WebEmbedThemeColor;

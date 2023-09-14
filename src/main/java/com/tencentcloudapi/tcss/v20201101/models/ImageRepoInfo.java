@@ -275,6 +275,70 @@ public class ImageRepoInfo extends AbstractModel{
     private Boolean IsLatestImage;
 
     /**
+    * low级别漏洞个数
+    */
+    @SerializedName("LowLevelVulCnt")
+    @Expose
+    private Long LowLevelVulCnt;
+
+    /**
+    * medium级别漏洞个数
+    */
+    @SerializedName("MediumLevelVulCnt")
+    @Expose
+    private Long MediumLevelVulCnt;
+
+    /**
+    * high级别漏洞个数
+    */
+    @SerializedName("HighLevelVulCnt")
+    @Expose
+    private Long HighLevelVulCnt;
+
+    /**
+    * critical级别漏洞个数
+    */
+    @SerializedName("CriticalLevelVulCnt")
+    @Expose
+    private Long CriticalLevelVulCnt;
+
+    /**
+    * 关联容器数
+    */
+    @SerializedName("ContainerCnt")
+    @Expose
+    private Long ContainerCnt;
+
+    /**
+    * 组件数
+    */
+    @SerializedName("ComponentCnt")
+    @Expose
+    private Long ComponentCnt;
+
+    /**
+    * 是否运行中
+    */
+    @SerializedName("IsRunning")
+    @Expose
+    private Boolean IsRunning;
+
+    /**
+    * 是否存在必修漏洞
+    */
+    @SerializedName("HasNeedFixVul")
+    @Expose
+    private Boolean HasNeedFixVul;
+
+    /**
+    * 敏感信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SensitiveInfoCnt")
+    @Expose
+    private Long SensitiveInfoCnt;
+
+    /**
      * Get 镜像Digest 
      * @return ImageDigest 镜像Digest
      */
@@ -453,7 +517,9 @@ public class ImageRepoInfo extends AbstractModel{
     /**
      * Get 敏感信息数 
      * @return SentiveInfoCnt 敏感信息数
+     * @deprecated
      */
+    @Deprecated
     public Long getSentiveInfoCnt() {
         return this.SentiveInfoCnt;
     }
@@ -461,7 +527,9 @@ public class ImageRepoInfo extends AbstractModel{
     /**
      * Set 敏感信息数
      * @param SentiveInfoCnt 敏感信息数
+     * @deprecated
      */
+    @Deprecated
     public void setSentiveInfoCnt(Long SentiveInfoCnt) {
         this.SentiveInfoCnt = SentiveInfoCnt;
     }
@@ -874,6 +942,154 @@ public class ImageRepoInfo extends AbstractModel{
         this.IsLatestImage = IsLatestImage;
     }
 
+    /**
+     * Get low级别漏洞个数 
+     * @return LowLevelVulCnt low级别漏洞个数
+     */
+    public Long getLowLevelVulCnt() {
+        return this.LowLevelVulCnt;
+    }
+
+    /**
+     * Set low级别漏洞个数
+     * @param LowLevelVulCnt low级别漏洞个数
+     */
+    public void setLowLevelVulCnt(Long LowLevelVulCnt) {
+        this.LowLevelVulCnt = LowLevelVulCnt;
+    }
+
+    /**
+     * Get medium级别漏洞个数 
+     * @return MediumLevelVulCnt medium级别漏洞个数
+     */
+    public Long getMediumLevelVulCnt() {
+        return this.MediumLevelVulCnt;
+    }
+
+    /**
+     * Set medium级别漏洞个数
+     * @param MediumLevelVulCnt medium级别漏洞个数
+     */
+    public void setMediumLevelVulCnt(Long MediumLevelVulCnt) {
+        this.MediumLevelVulCnt = MediumLevelVulCnt;
+    }
+
+    /**
+     * Get high级别漏洞个数 
+     * @return HighLevelVulCnt high级别漏洞个数
+     */
+    public Long getHighLevelVulCnt() {
+        return this.HighLevelVulCnt;
+    }
+
+    /**
+     * Set high级别漏洞个数
+     * @param HighLevelVulCnt high级别漏洞个数
+     */
+    public void setHighLevelVulCnt(Long HighLevelVulCnt) {
+        this.HighLevelVulCnt = HighLevelVulCnt;
+    }
+
+    /**
+     * Get critical级别漏洞个数 
+     * @return CriticalLevelVulCnt critical级别漏洞个数
+     */
+    public Long getCriticalLevelVulCnt() {
+        return this.CriticalLevelVulCnt;
+    }
+
+    /**
+     * Set critical级别漏洞个数
+     * @param CriticalLevelVulCnt critical级别漏洞个数
+     */
+    public void setCriticalLevelVulCnt(Long CriticalLevelVulCnt) {
+        this.CriticalLevelVulCnt = CriticalLevelVulCnt;
+    }
+
+    /**
+     * Get 关联容器数 
+     * @return ContainerCnt 关联容器数
+     */
+    public Long getContainerCnt() {
+        return this.ContainerCnt;
+    }
+
+    /**
+     * Set 关联容器数
+     * @param ContainerCnt 关联容器数
+     */
+    public void setContainerCnt(Long ContainerCnt) {
+        this.ContainerCnt = ContainerCnt;
+    }
+
+    /**
+     * Get 组件数 
+     * @return ComponentCnt 组件数
+     */
+    public Long getComponentCnt() {
+        return this.ComponentCnt;
+    }
+
+    /**
+     * Set 组件数
+     * @param ComponentCnt 组件数
+     */
+    public void setComponentCnt(Long ComponentCnt) {
+        this.ComponentCnt = ComponentCnt;
+    }
+
+    /**
+     * Get 是否运行中 
+     * @return IsRunning 是否运行中
+     */
+    public Boolean getIsRunning() {
+        return this.IsRunning;
+    }
+
+    /**
+     * Set 是否运行中
+     * @param IsRunning 是否运行中
+     */
+    public void setIsRunning(Boolean IsRunning) {
+        this.IsRunning = IsRunning;
+    }
+
+    /**
+     * Get 是否存在必修漏洞 
+     * @return HasNeedFixVul 是否存在必修漏洞
+     */
+    public Boolean getHasNeedFixVul() {
+        return this.HasNeedFixVul;
+    }
+
+    /**
+     * Set 是否存在必修漏洞
+     * @param HasNeedFixVul 是否存在必修漏洞
+     */
+    public void setHasNeedFixVul(Boolean HasNeedFixVul) {
+        this.HasNeedFixVul = HasNeedFixVul;
+    }
+
+    /**
+     * Get 敏感信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SensitiveInfoCnt 敏感信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSensitiveInfoCnt() {
+        return this.SensitiveInfoCnt;
+    }
+
+    /**
+     * Set 敏感信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SensitiveInfoCnt 敏感信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSensitiveInfoCnt(Long SensitiveInfoCnt) {
+        this.SensitiveInfoCnt = SensitiveInfoCnt;
+    }
+
     public ImageRepoInfo() {
     }
 
@@ -984,6 +1200,33 @@ public class ImageRepoInfo extends AbstractModel{
         if (source.IsLatestImage != null) {
             this.IsLatestImage = new Boolean(source.IsLatestImage);
         }
+        if (source.LowLevelVulCnt != null) {
+            this.LowLevelVulCnt = new Long(source.LowLevelVulCnt);
+        }
+        if (source.MediumLevelVulCnt != null) {
+            this.MediumLevelVulCnt = new Long(source.MediumLevelVulCnt);
+        }
+        if (source.HighLevelVulCnt != null) {
+            this.HighLevelVulCnt = new Long(source.HighLevelVulCnt);
+        }
+        if (source.CriticalLevelVulCnt != null) {
+            this.CriticalLevelVulCnt = new Long(source.CriticalLevelVulCnt);
+        }
+        if (source.ContainerCnt != null) {
+            this.ContainerCnt = new Long(source.ContainerCnt);
+        }
+        if (source.ComponentCnt != null) {
+            this.ComponentCnt = new Long(source.ComponentCnt);
+        }
+        if (source.IsRunning != null) {
+            this.IsRunning = new Boolean(source.IsRunning);
+        }
+        if (source.HasNeedFixVul != null) {
+            this.HasNeedFixVul = new Boolean(source.HasNeedFixVul);
+        }
+        if (source.SensitiveInfoCnt != null) {
+            this.SensitiveInfoCnt = new Long(source.SensitiveInfoCnt);
+        }
     }
 
 
@@ -1025,6 +1268,15 @@ public class ImageRepoInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
         this.setParamSimple(map, prefix + "IsLatestImage", this.IsLatestImage);
+        this.setParamSimple(map, prefix + "LowLevelVulCnt", this.LowLevelVulCnt);
+        this.setParamSimple(map, prefix + "MediumLevelVulCnt", this.MediumLevelVulCnt);
+        this.setParamSimple(map, prefix + "HighLevelVulCnt", this.HighLevelVulCnt);
+        this.setParamSimple(map, prefix + "CriticalLevelVulCnt", this.CriticalLevelVulCnt);
+        this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+        this.setParamSimple(map, prefix + "ComponentCnt", this.ComponentCnt);
+        this.setParamSimple(map, prefix + "IsRunning", this.IsRunning);
+        this.setParamSimple(map, prefix + "HasNeedFixVul", this.HasNeedFixVul);
+        this.setParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
 
     }
 }

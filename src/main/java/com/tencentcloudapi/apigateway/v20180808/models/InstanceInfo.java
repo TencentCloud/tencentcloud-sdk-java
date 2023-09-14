@@ -87,6 +87,38 @@ public class InstanceInfo extends AbstractModel{
     private String ResourceId;
 
     /**
+    * 公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OuterIpList")
+    @Expose
+    private String [] OuterIpList;
+
+    /**
+    * 内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InnerIpList")
+    @Expose
+    private String [] InnerIpList;
+
+    /**
+    * 专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceChargePrepaid")
+    @Expose
+    private InstanceChargePrepaid InstanceChargePrepaid;
+
+    /**
+    * 所属vpc
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
      * Get 独享实例唯一id 
      * @return InstanceId 独享实例唯一id
      */
@@ -234,6 +266,86 @@ public class InstanceInfo extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get 公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OuterIpList 公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOuterIpList() {
+        return this.OuterIpList;
+    }
+
+    /**
+     * Set 公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OuterIpList 公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOuterIpList(String [] OuterIpList) {
+        this.OuterIpList = OuterIpList;
+    }
+
+    /**
+     * Get 内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InnerIpList 内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getInnerIpList() {
+        return this.InnerIpList;
+    }
+
+    /**
+     * Set 内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InnerIpList 内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInnerIpList(String [] InnerIpList) {
+        this.InnerIpList = InnerIpList;
+    }
+
+    /**
+     * Get 专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceChargePrepaid 专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceChargePrepaid getInstanceChargePrepaid() {
+        return this.InstanceChargePrepaid;
+    }
+
+    /**
+     * Set 专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceChargePrepaid 专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
+        this.InstanceChargePrepaid = InstanceChargePrepaid;
+    }
+
+    /**
+     * Get 所属vpc
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UniqVpcId 所属vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set 所属vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UniqVpcId 所属vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
     public InstanceInfo() {
     }
 
@@ -269,6 +381,24 @@ public class InstanceInfo extends AbstractModel{
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.OuterIpList != null) {
+            this.OuterIpList = new String[source.OuterIpList.length];
+            for (int i = 0; i < source.OuterIpList.length; i++) {
+                this.OuterIpList[i] = new String(source.OuterIpList[i]);
+            }
+        }
+        if (source.InnerIpList != null) {
+            this.InnerIpList = new String[source.InnerIpList.length];
+            for (int i = 0; i < source.InnerIpList.length; i++) {
+                this.InnerIpList[i] = new String(source.InnerIpList[i]);
+            }
+        }
+        if (source.InstanceChargePrepaid != null) {
+            this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
     }
 
 
@@ -285,6 +415,10 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamArraySimple(map, prefix + "OuterIpList.", this.OuterIpList);
+        this.setParamArraySimple(map, prefix + "InnerIpList.", this.InnerIpList);
+        this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
 
     }
 }

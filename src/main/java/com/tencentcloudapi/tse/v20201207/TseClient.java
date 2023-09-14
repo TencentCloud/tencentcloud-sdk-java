@@ -417,6 +417,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *获取云原生API网关实例网络配置信息
+     * @param req DescribeCloudNativeAPIGatewayConfigRequest
+     * @return DescribeCloudNativeAPIGatewayConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayConfigResponse DescribeCloudNativeAPIGatewayConfig(DescribeCloudNativeAPIGatewayConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudNativeAPIGatewayConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudNativeAPIGatewayConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取云原生网关节点列表
      * @param req DescribeCloudNativeAPIGatewayNodesRequest
      * @return DescribeCloudNativeAPIGatewayNodesResponse

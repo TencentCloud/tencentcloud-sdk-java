@@ -23,16 +23,16 @@ import java.util.HashMap;
 public class CreateWebThemeConfigRequest extends AbstractModel{
 
     /**
-    * 操作人信息
+    * 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+    * 主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul>
     */
     @SerializedName("ThemeType")
     @Expose
@@ -46,47 +46,48 @@ public class CreateWebThemeConfigRequest extends AbstractModel{
     private WebThemeConfig WebThemeConfig;
 
     /**
-    * 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+     * Get 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置 
-     * @return ThemeType 主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+     * Get 主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul> 
+     * @return ThemeType 主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul>
      */
     public String getThemeType() {
         return this.ThemeType;
     }
 
     /**
-     * Set 主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
-     * @param ThemeType 主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+     * Set 主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul>
+     * @param ThemeType 主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul>
      */
     public void setThemeType(String ThemeType) {
         this.ThemeType = ThemeType;
@@ -109,16 +110,20 @@ public class CreateWebThemeConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	 
-     * @return Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
-     * @param Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

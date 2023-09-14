@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class FlowGroupOptions extends AbstractModel{
 
     /**
-    * 发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+    * 签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
     */
     @SerializedName("ApproverVerifyType")
@@ -34,7 +34,8 @@ MobileCheck：手机号验证
 
     /**
     * 发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
     */
     @SerializedName("SelfOrganizationApproverNotifyType")
     @Expose
@@ -42,20 +43,21 @@ MobileCheck：手机号验证
 
     /**
     * 发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
     */
     @SerializedName("OtherApproverNotifyType")
     @Expose
     private String OtherApproverNotifyType;
 
     /**
-     * Get 发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+     * Get 签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。 
-     * @return ApproverVerifyType 发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+     * @return ApproverVerifyType 签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      */
     public String getApproverVerifyType() {
@@ -63,13 +65,13 @@ MobileCheck：手机号验证
     }
 
     /**
-     * Set 发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+     * Set 签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
-     * @param ApproverVerifyType 发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+     * @param ApproverVerifyType 签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      */
     public void setApproverVerifyType(String ApproverVerifyType) {
@@ -78,9 +80,11 @@ MobileCheck：手机号验证
 
     /**
      * Get 发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知 
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul> 
      * @return SelfOrganizationApproverNotifyType 发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      */
     public String getSelfOrganizationApproverNotifyType() {
         return this.SelfOrganizationApproverNotifyType;
@@ -88,9 +92,11 @@ MobileCheck：手机号验证
 
     /**
      * Set 发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      * @param SelfOrganizationApproverNotifyType 发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      */
     public void setSelfOrganizationApproverNotifyType(String SelfOrganizationApproverNotifyType) {
         this.SelfOrganizationApproverNotifyType = SelfOrganizationApproverNotifyType;
@@ -98,9 +104,11 @@ MobileCheck：手机号验证
 
     /**
      * Get 发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知 
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul> 
      * @return OtherApproverNotifyType 发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      */
     public String getOtherApproverNotifyType() {
         return this.OtherApproverNotifyType;
@@ -108,9 +116,11 @@ MobileCheck：手机号验证
 
     /**
      * Set 发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      * @param OtherApproverNotifyType 发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      */
     public void setOtherApproverNotifyType(String OtherApproverNotifyType) {
         this.OtherApproverNotifyType = OtherApproverNotifyType;

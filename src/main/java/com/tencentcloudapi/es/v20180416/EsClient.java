@@ -123,7 +123,7 @@ public class EsClient extends AbstractClient{
     }
 
     /**
-     *销毁集群实例 
+     *销毁集群实例
      * @param req DeleteInstanceRequest
      * @return DeleteInstanceResponse
      * @throws TencentCloudSDKException

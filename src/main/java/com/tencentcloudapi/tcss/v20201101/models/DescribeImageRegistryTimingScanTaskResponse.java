@@ -84,6 +84,42 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
     private Boolean Latest;
 
     /**
+    * 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScanEndTime")
+    @Expose
+    private String ScanEndTime;
+
+    /**
+    * 仓库类型 tcr,ccr,harbor	
+    */
+    @SerializedName("RegistryType")
+    @Expose
+    private String [] RegistryType;
+
+    /**
+    * 是否存在运行中的容器	
+    */
+    @SerializedName("ContainerRunning")
+    @Expose
+    private Boolean ContainerRunning;
+
+    /**
+    * 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+    */
+    @SerializedName("ScanScope")
+    @Expose
+    private Long ScanScope;
+
+    /**
+    * 命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String [] Namespace;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -165,7 +201,9 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
     /**
      * Get 扫描全部镜像 
      * @return All 扫描全部镜像
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAll() {
         return this.All;
     }
@@ -173,7 +211,9 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
     /**
      * Set 扫描全部镜像
      * @param All 扫描全部镜像
+     * @deprecated
      */
+    @Deprecated
     public void setAll(Boolean All) {
         this.All = All;
     }
@@ -239,6 +279,90 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
     }
 
     /**
+     * Get 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScanEndTime 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScanEndTime() {
+        return this.ScanEndTime;
+    }
+
+    /**
+     * Set 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScanEndTime 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScanEndTime(String ScanEndTime) {
+        this.ScanEndTime = ScanEndTime;
+    }
+
+    /**
+     * Get 仓库类型 tcr,ccr,harbor	 
+     * @return RegistryType 仓库类型 tcr,ccr,harbor	
+     */
+    public String [] getRegistryType() {
+        return this.RegistryType;
+    }
+
+    /**
+     * Set 仓库类型 tcr,ccr,harbor	
+     * @param RegistryType 仓库类型 tcr,ccr,harbor	
+     */
+    public void setRegistryType(String [] RegistryType) {
+        this.RegistryType = RegistryType;
+    }
+
+    /**
+     * Get 是否存在运行中的容器	 
+     * @return ContainerRunning 是否存在运行中的容器	
+     */
+    public Boolean getContainerRunning() {
+        return this.ContainerRunning;
+    }
+
+    /**
+     * Set 是否存在运行中的容器	
+     * @param ContainerRunning 是否存在运行中的容器	
+     */
+    public void setContainerRunning(Boolean ContainerRunning) {
+        this.ContainerRunning = ContainerRunning;
+    }
+
+    /**
+     * Get 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像 
+     * @return ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     */
+    public Long getScanScope() {
+        return this.ScanScope;
+    }
+
+    /**
+     * Set 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     * @param ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     */
+    public void setScanScope(Long ScanScope) {
+        this.ScanScope = ScanScope;
+    }
+
+    /**
+     * Get 命名空间 
+     * @return Namespace 命名空间
+     */
+    public String [] getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 命名空间
+     * @param Namespace 命名空间
+     */
+    public void setNamespace(String [] Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -295,6 +419,27 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
         if (source.Latest != null) {
             this.Latest = new Boolean(source.Latest);
         }
+        if (source.ScanEndTime != null) {
+            this.ScanEndTime = new String(source.ScanEndTime);
+        }
+        if (source.RegistryType != null) {
+            this.RegistryType = new String[source.RegistryType.length];
+            for (int i = 0; i < source.RegistryType.length; i++) {
+                this.RegistryType[i] = new String(source.RegistryType[i]);
+            }
+        }
+        if (source.ContainerRunning != null) {
+            this.ContainerRunning = new Boolean(source.ContainerRunning);
+        }
+        if (source.ScanScope != null) {
+            this.ScanScope = new Long(source.ScanScope);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String[source.Namespace.length];
+            for (int i = 0; i < source.Namespace.length; i++) {
+                this.Namespace[i] = new String(source.Namespace[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -313,6 +458,11 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
         this.setParamSimple(map, prefix + "Latest", this.Latest);
+        this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+        this.setParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+        this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+        this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
+        this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

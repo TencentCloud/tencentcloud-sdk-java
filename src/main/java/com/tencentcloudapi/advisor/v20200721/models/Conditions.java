@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStrategiesCondition extends AbstractModel{
+public class Conditions extends AbstractModel{
 
     /**
     * 警告条件ID
@@ -129,14 +129,14 @@ public class DescribeStrategiesCondition extends AbstractModel{
         this.Desc = Desc;
     }
 
-    public DescribeStrategiesCondition() {
+    public Conditions() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeStrategiesCondition(DescribeStrategiesCondition source) {
+    public Conditions(Conditions source) {
         if (source.ConditionId != null) {
             this.ConditionId = new Long(source.ConditionId);
         }

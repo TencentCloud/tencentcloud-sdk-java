@@ -59,6 +59,14 @@ public class TaskDetail extends AbstractModel{
     private Long ElapsedTime;
 
     /**
+    * 任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProcessInfo")
+    @Expose
+    private ProcessDetail ProcessInfo;
+
+    /**
      * Get 任务名 
      * @return Name 任务名
      */
@@ -142,6 +150,26 @@ public class TaskDetail extends AbstractModel{
         this.ElapsedTime = ElapsedTime;
     }
 
+    /**
+     * Get 任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProcessInfo 任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProcessDetail getProcessInfo() {
+        return this.ProcessInfo;
+    }
+
+    /**
+     * Set 任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProcessInfo 任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProcessInfo(ProcessDetail ProcessInfo) {
+        this.ProcessInfo = ProcessInfo;
+    }
+
     public TaskDetail() {
     }
 
@@ -168,6 +196,9 @@ public class TaskDetail extends AbstractModel{
         if (source.ElapsedTime != null) {
             this.ElapsedTime = new Long(source.ElapsedTime);
         }
+        if (source.ProcessInfo != null) {
+            this.ProcessInfo = new ProcessDetail(source.ProcessInfo);
+        }
     }
 
 
@@ -180,6 +211,7 @@ public class TaskDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamArrayObj(map, prefix + "SubTasks.", this.SubTasks);
         this.setParamSimple(map, prefix + "ElapsedTime", this.ElapsedTime);
+        this.setParamObj(map, prefix + "ProcessInfo.", this.ProcessInfo);
 
     }
 }

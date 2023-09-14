@@ -33,8 +33,8 @@ public class CreateOrganizationBatchSignUrlRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 请指定需执行批量签署的流程ID，数量范围为1-100。</br>
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+    * 请指定需执行批量签署的流程ID，数量范围为1-100。
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
 用户将利用链接对这些合同实施批量操作。
     */
     @SerializedName("FlowIds")
@@ -50,8 +50,8 @@ public class CreateOrganizationBatchSignUrlRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
-您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+    * 员工在腾讯电子签平台的独特身份标识，为32位字符串。
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。
 UserId必须是传入合同（FlowId）中的签署人。
 - 1. 若UserId为空，Name和Mobile 必须提供。
 - 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
@@ -61,14 +61,16 @@ UserId必须是传入合同（FlowId）中的签署人。
     private String UserId;
 
     /**
-    * 员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+    * 员工姓名，必须与手机号码一起使用。
+如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+    * 员工手机号，必须与姓名一起使用。
+ 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
     */
     @SerializedName("Mobile")
     @Expose
@@ -103,11 +105,11 @@ UserId必须是传入合同（FlowId）中的签署人。
     }
 
     /**
-     * Get 请指定需执行批量签署的流程ID，数量范围为1-100。</br>
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+     * Get 请指定需执行批量签署的流程ID，数量范围为1-100。
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
 用户将利用链接对这些合同实施批量操作。 
-     * @return FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。</br>
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+     * @return FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
 用户将利用链接对这些合同实施批量操作。
      */
     public String [] getFlowIds() {
@@ -115,11 +117,11 @@ UserId必须是传入合同（FlowId）中的签署人。
     }
 
     /**
-     * Set 请指定需执行批量签署的流程ID，数量范围为1-100。</br>
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+     * Set 请指定需执行批量签署的流程ID，数量范围为1-100。
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
 用户将利用链接对这些合同实施批量操作。
-     * @param FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。</br>
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+     * @param FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
 用户将利用链接对这些合同实施批量操作。
      */
     public void setFlowIds(String [] FlowIds) {
@@ -147,13 +149,13 @@ UserId必须是传入合同（FlowId）中的签署人。
     }
 
     /**
-     * Get 员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
-您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+     * Get 员工在腾讯电子签平台的独特身份标识，为32位字符串。
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。
 UserId必须是传入合同（FlowId）中的签署人。
 - 1. 若UserId为空，Name和Mobile 必须提供。
 - 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。 
-     * @return UserId 员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
-您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+     * @return UserId 员工在腾讯电子签平台的独特身份标识，为32位字符串。
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。
 UserId必须是传入合同（FlowId）中的签署人。
 - 1. 若UserId为空，Name和Mobile 必须提供。
 - 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
@@ -163,13 +165,13 @@ UserId必须是传入合同（FlowId）中的签署人。
     }
 
     /**
-     * Set 员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
-您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+     * Set 员工在腾讯电子签平台的独特身份标识，为32位字符串。
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。
 UserId必须是传入合同（FlowId）中的签署人。
 - 1. 若UserId为空，Name和Mobile 必须提供。
 - 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
-     * @param UserId 员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
-您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+     * @param UserId 员工在腾讯电子签平台的独特身份标识，为32位字符串。
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。
 UserId必须是传入合同（FlowId）中的签署人。
 - 1. 若UserId为空，Name和Mobile 必须提供。
 - 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
@@ -179,32 +181,40 @@ UserId必须是传入合同（FlowId）中的签署人。
     }
 
     /**
-     * Get 员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。 
-     * @return Name 员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+     * Get 员工姓名，必须与手机号码一起使用。
+如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。 
+     * @return Name 员工姓名，必须与手机号码一起使用。
+如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
-     * @param Name 员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+     * Set 员工姓名，必须与手机号码一起使用。
+如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+     * @param Name 员工姓名，必须与手机号码一起使用。
+如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。 
-     * @return Mobile 员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+     * Get 员工手机号，必须与姓名一起使用。
+ 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。 
+     * @return Mobile 员工手机号，必须与姓名一起使用。
+ 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
-     * @param Mobile 员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+     * Set 员工手机号，必须与姓名一起使用。
+ 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+     * @param Mobile 员工手机号，必须与姓名一起使用。
+ 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

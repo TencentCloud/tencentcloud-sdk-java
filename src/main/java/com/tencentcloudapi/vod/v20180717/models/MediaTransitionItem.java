@@ -37,6 +37,13 @@ public class MediaTransitionItem extends AbstractModel{
     private TransitionOpertion [] Transitions;
 
     /**
+    * 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+    */
+    @SerializedName("MediaTransitions")
+    @Expose
+    private TransitionOperation [] MediaTransitions;
+
+    /**
      * Get 转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。 
      * @return Duration 转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
      */
@@ -55,7 +62,9 @@ public class MediaTransitionItem extends AbstractModel{
     /**
      * Get 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。 
      * @return Transitions 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+     * @deprecated
      */
+    @Deprecated
     public TransitionOpertion [] getTransitions() {
         return this.Transitions;
     }
@@ -63,9 +72,27 @@ public class MediaTransitionItem extends AbstractModel{
     /**
      * Set 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
      * @param Transitions 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+     * @deprecated
      */
+    @Deprecated
     public void setTransitions(TransitionOpertion [] Transitions) {
         this.Transitions = Transitions;
+    }
+
+    /**
+     * Get 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。 
+     * @return MediaTransitions 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+     */
+    public TransitionOperation [] getMediaTransitions() {
+        return this.MediaTransitions;
+    }
+
+    /**
+     * Set 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+     * @param MediaTransitions 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+     */
+    public void setMediaTransitions(TransitionOperation [] MediaTransitions) {
+        this.MediaTransitions = MediaTransitions;
     }
 
     public MediaTransitionItem() {
@@ -85,6 +112,12 @@ public class MediaTransitionItem extends AbstractModel{
                 this.Transitions[i] = new TransitionOpertion(source.Transitions[i]);
             }
         }
+        if (source.MediaTransitions != null) {
+            this.MediaTransitions = new TransitionOperation[source.MediaTransitions.length];
+            for (int i = 0; i < source.MediaTransitions.length; i++) {
+                this.MediaTransitions[i] = new TransitionOperation(source.MediaTransitions[i]);
+            }
+        }
     }
 
 
@@ -94,6 +127,7 @@ public class MediaTransitionItem extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamArrayObj(map, prefix + "Transitions.", this.Transitions);
+        this.setParamArrayObj(map, prefix + "MediaTransitions.", this.MediaTransitions);
 
     }
 }

@@ -23,18 +23,25 @@ import java.util.HashMap;
 public class DescribeImageRegistryNamespaceListResponse extends AbstractModel{
 
     /**
-    * 可返回的项目空间的总量。
+    * 可返回的命令空间的总量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 返回的项目空间列表
+    * 返回的命令空间列表
     */
     @SerializedName("NamespaceList")
     @Expose
     private String [] NamespaceList;
+
+    /**
+    * 返回的命令空间详细信息列表
+    */
+    @SerializedName("NamespaceDetail")
+    @Expose
+    private NamespaceInfo [] NamespaceDetail;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class DescribeImageRegistryNamespaceListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 可返回的项目空间的总量。 
-     * @return TotalCount 可返回的项目空间的总量。
+     * Get 可返回的命令空间的总量。 
+     * @return TotalCount 可返回的命令空间的总量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 可返回的项目空间的总量。
-     * @param TotalCount 可返回的项目空间的总量。
+     * Set 可返回的命令空间的总量。
+     * @param TotalCount 可返回的命令空间的总量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 返回的项目空间列表 
-     * @return NamespaceList 返回的项目空间列表
+     * Get 返回的命令空间列表 
+     * @return NamespaceList 返回的命令空间列表
      */
     public String [] getNamespaceList() {
         return this.NamespaceList;
     }
 
     /**
-     * Set 返回的项目空间列表
-     * @param NamespaceList 返回的项目空间列表
+     * Set 返回的命令空间列表
+     * @param NamespaceList 返回的命令空间列表
      */
     public void setNamespaceList(String [] NamespaceList) {
         this.NamespaceList = NamespaceList;
+    }
+
+    /**
+     * Get 返回的命令空间详细信息列表 
+     * @return NamespaceDetail 返回的命令空间详细信息列表
+     */
+    public NamespaceInfo [] getNamespaceDetail() {
+        return this.NamespaceDetail;
+    }
+
+    /**
+     * Set 返回的命令空间详细信息列表
+     * @param NamespaceDetail 返回的命令空间详细信息列表
+     */
+    public void setNamespaceDetail(NamespaceInfo [] NamespaceDetail) {
+        this.NamespaceDetail = NamespaceDetail;
     }
 
     /**
@@ -108,6 +131,12 @@ public class DescribeImageRegistryNamespaceListResponse extends AbstractModel{
                 this.NamespaceList[i] = new String(source.NamespaceList[i]);
             }
         }
+        if (source.NamespaceDetail != null) {
+            this.NamespaceDetail = new NamespaceInfo[source.NamespaceDetail.length];
+            for (int i = 0; i < source.NamespaceDetail.length; i++) {
+                this.NamespaceDetail[i] = new NamespaceInfo(source.NamespaceDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +149,7 @@ public class DescribeImageRegistryNamespaceListResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArraySimple(map, prefix + "NamespaceList.", this.NamespaceList);
+        this.setParamArrayObj(map, prefix + "NamespaceDetail.", this.NamespaceDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -28,7 +28,7 @@ public class DescribeStrategiesResponse extends AbstractModel{
     */
     @SerializedName("Strategies")
     @Expose
-    private DescribeStrategie [] Strategies;
+    private Strategies [] Strategies;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +43,7 @@ public class DescribeStrategiesResponse extends AbstractModel{
      * @return Strategies 评估项列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DescribeStrategie [] getStrategies() {
+    public Strategies [] getStrategies() {
         return this.Strategies;
     }
 
@@ -53,7 +53,7 @@ public class DescribeStrategiesResponse extends AbstractModel{
      * @param Strategies 评估项列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStrategies(DescribeStrategie [] Strategies) {
+    public void setStrategies(Strategies [] Strategies) {
         this.Strategies = Strategies;
     }
 
@@ -82,9 +82,9 @@ public class DescribeStrategiesResponse extends AbstractModel{
      */
     public DescribeStrategiesResponse(DescribeStrategiesResponse source) {
         if (source.Strategies != null) {
-            this.Strategies = new DescribeStrategie[source.Strategies.length];
+            this.Strategies = new Strategies[source.Strategies.length];
             for (int i = 0; i < source.Strategies.length; i++) {
-                this.Strategies[i] = new DescribeStrategie(source.Strategies[i]);
+                this.Strategies[i] = new Strategies(source.Strategies[i]);
             }
         }
         if (source.RequestId != null) {

@@ -387,6 +387,14 @@ pausing
     private Long RenewFlag;
 
     /**
+    * 节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -1266,6 +1274,26 @@ pausing
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get 节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkType 节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkType 节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1436,6 +1464,9 @@ pausing
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -1491,6 +1522,7 @@ pausing
         this.setParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel{
 
     /**
-    * 是否扫描全部镜像
+    * 是否扫描全部镜像(废弃)
     */
     @SerializedName("All")
     @Expose
@@ -51,17 +51,63 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     private Long [] Id;
 
     /**
-     * Get 是否扫描全部镜像 
-     * @return All 是否扫描全部镜像
+    * 是否最新镜像
+    */
+    @SerializedName("IsLatest")
+    @Expose
+    private Boolean IsLatest;
+
+    /**
+    * 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+    */
+    @SerializedName("ScanScope")
+    @Expose
+    private Long ScanScope;
+
+    /**
+    * 仓库类型
+    */
+    @SerializedName("RegistryType")
+    @Expose
+    private String [] RegistryType;
+
+    /**
+    * 命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String [] Namespace;
+
+    /**
+    * 是否存在运行中的容器
+    */
+    @SerializedName("ContainerRunning")
+    @Expose
+    private Boolean ContainerRunning;
+
+    /**
+    * 任务超时时长单位s
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
+     * Get 是否扫描全部镜像(废弃) 
+     * @return All 是否扫描全部镜像(废弃)
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAll() {
         return this.All;
     }
 
     /**
-     * Set 是否扫描全部镜像
-     * @param All 是否扫描全部镜像
+     * Set 是否扫描全部镜像(废弃)
+     * @param All 是否扫描全部镜像(废弃)
+     * @deprecated
      */
+    @Deprecated
     public void setAll(Boolean All) {
         this.All = All;
     }
@@ -114,6 +160,102 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
         this.Id = Id;
     }
 
+    /**
+     * Get 是否最新镜像 
+     * @return IsLatest 是否最新镜像
+     */
+    public Boolean getIsLatest() {
+        return this.IsLatest;
+    }
+
+    /**
+     * Set 是否最新镜像
+     * @param IsLatest 是否最新镜像
+     */
+    public void setIsLatest(Boolean IsLatest) {
+        this.IsLatest = IsLatest;
+    }
+
+    /**
+     * Get 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像 
+     * @return ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     */
+    public Long getScanScope() {
+        return this.ScanScope;
+    }
+
+    /**
+     * Set 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     * @param ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     */
+    public void setScanScope(Long ScanScope) {
+        this.ScanScope = ScanScope;
+    }
+
+    /**
+     * Get 仓库类型 
+     * @return RegistryType 仓库类型
+     */
+    public String [] getRegistryType() {
+        return this.RegistryType;
+    }
+
+    /**
+     * Set 仓库类型
+     * @param RegistryType 仓库类型
+     */
+    public void setRegistryType(String [] RegistryType) {
+        this.RegistryType = RegistryType;
+    }
+
+    /**
+     * Get 命名空间 
+     * @return Namespace 命名空间
+     */
+    public String [] getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 命名空间
+     * @param Namespace 命名空间
+     */
+    public void setNamespace(String [] Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get 是否存在运行中的容器 
+     * @return ContainerRunning 是否存在运行中的容器
+     */
+    public Boolean getContainerRunning() {
+        return this.ContainerRunning;
+    }
+
+    /**
+     * Set 是否存在运行中的容器
+     * @param ContainerRunning 是否存在运行中的容器
+     */
+    public void setContainerRunning(Boolean ContainerRunning) {
+        this.ContainerRunning = ContainerRunning;
+    }
+
+    /**
+     * Get 任务超时时长单位s 
+     * @return Timeout 任务超时时长单位s
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set 任务超时时长单位s
+     * @param Timeout 任务超时时长单位s
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
     public CreateAssetImageRegistryScanTaskOneKeyRequest() {
     }
 
@@ -143,6 +285,30 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.IsLatest != null) {
+            this.IsLatest = new Boolean(source.IsLatest);
+        }
+        if (source.ScanScope != null) {
+            this.ScanScope = new Long(source.ScanScope);
+        }
+        if (source.RegistryType != null) {
+            this.RegistryType = new String[source.RegistryType.length];
+            for (int i = 0; i < source.RegistryType.length; i++) {
+                this.RegistryType[i] = new String(source.RegistryType[i]);
+            }
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String[source.Namespace.length];
+            for (int i = 0; i < source.Namespace.length; i++) {
+                this.Namespace[i] = new String(source.Namespace[i]);
+            }
+        }
+        if (source.ContainerRunning != null) {
+            this.ContainerRunning = new Boolean(source.ContainerRunning);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -154,6 +320,12 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamArraySimple(map, prefix + "ScanType.", this.ScanType);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamSimple(map, prefix + "IsLatest", this.IsLatest);
+        this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
+        this.setParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+        this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+        this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

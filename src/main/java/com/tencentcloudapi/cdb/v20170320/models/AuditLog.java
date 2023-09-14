@@ -155,6 +155,14 @@ public class AuditLog extends AbstractModel{
     private Long TrxLivingTime;
 
     /**
+    * 日志命中规则模板的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateInfo")
+    @Expose
+    private LogRuleTemplateInfo [] TemplateInfo;
+
+    /**
      * Get 影响行数。 
      * @return AffectRows 影响行数。
      */
@@ -466,6 +474,26 @@ public class AuditLog extends AbstractModel{
         this.TrxLivingTime = TrxLivingTime;
     }
 
+    /**
+     * Get 日志命中规则模板的基本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateInfo 日志命中规则模板的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LogRuleTemplateInfo [] getTemplateInfo() {
+        return this.TemplateInfo;
+    }
+
+    /**
+     * Set 日志命中规则模板的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateInfo 日志命中规则模板的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateInfo(LogRuleTemplateInfo [] TemplateInfo) {
+        this.TemplateInfo = TemplateInfo;
+    }
+
     public AuditLog() {
     }
 
@@ -528,6 +556,12 @@ public class AuditLog extends AbstractModel{
         if (source.TrxLivingTime != null) {
             this.TrxLivingTime = new Long(source.TrxLivingTime);
         }
+        if (source.TemplateInfo != null) {
+            this.TemplateInfo = new LogRuleTemplateInfo[source.TemplateInfo.length];
+            for (int i = 0; i < source.TemplateInfo.length; i++) {
+                this.TemplateInfo[i] = new LogRuleTemplateInfo(source.TemplateInfo[i]);
+            }
+        }
     }
 
 
@@ -553,6 +587,7 @@ public class AuditLog extends AbstractModel{
         this.setParamSimple(map, prefix + "LockWaitTime", this.LockWaitTime);
         this.setParamSimple(map, prefix + "NsTime", this.NsTime);
         this.setParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
+        this.setParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
 
     }
 }

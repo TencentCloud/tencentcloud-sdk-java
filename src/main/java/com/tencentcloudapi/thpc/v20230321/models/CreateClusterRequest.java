@@ -168,6 +168,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private NodeScript [] InitNodeScripts;
 
     /**
+    * 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+    */
+    @SerializedName("HpcClusterId")
+    @Expose
+    private String HpcClusterId;
+
+    /**
      * Get 集群中实例所在的位置。 
      * @return Placement 集群中实例所在的位置。
      */
@@ -507,6 +514,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.InitNodeScripts = InitNodeScripts;
     }
 
+    /**
+     * Get 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。 
+     * @return HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+     */
+    public String getHpcClusterId() {
+        return this.HpcClusterId;
+    }
+
+    /**
+     * Set 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+     * @param HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+     */
+    public void setHpcClusterId(String HpcClusterId) {
+        this.HpcClusterId = HpcClusterId;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -584,6 +607,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
                 this.InitNodeScripts[i] = new NodeScript(source.InitNodeScripts[i]);
             }
         }
+        if (source.HpcClusterId != null) {
+            this.HpcClusterId = new String(source.HpcClusterId);
+        }
     }
 
 
@@ -611,6 +637,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
         this.setParamArrayObj(map, prefix + "InitNodeScripts.", this.InitNodeScripts);
+        this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
 
     }
 }

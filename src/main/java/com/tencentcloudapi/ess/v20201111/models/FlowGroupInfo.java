@@ -23,49 +23,58 @@ import java.util.HashMap;
 public class FlowGroupInfo extends AbstractModel{
 
     /**
-    * 合同（流程）的名称
+    * 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 合同（流程）的签署方信息
+    * 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
     */
     @SerializedName("Approvers")
     @Expose
     private ApproverInfo [] Approvers;
 
     /**
-    * 发起合同（流程）的资源Id,此资源必须是PDF文件,来自UploadFiles,使用文件发起合同(流程)组时必传
+    * 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 发起合同（流程）的模板Id,用模板发起合同（流程）组时必填
+    * 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 合同（流程）的类型
+    * 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+示例值：劳务合同
     */
     @SerializedName("FlowType")
     @Expose
     private String FlowType;
 
     /**
-    * 合同（流程）的描述
+    * 签署流程描述,最大长度1000个字符
     */
     @SerializedName("FlowDescription")
     @Expose
     private String FlowDescription;
 
     /**
-    * 合同（流程）的截止时间戳，单位秒。默认是一年
+    * 签署流程的签署截止时间。
+
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+示例值：1604912664
     */
     @SerializedName("Deadline")
     @Expose
@@ -79,147 +88,200 @@ public class FlowGroupInfo extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 第三方平台传递过来的信息, 限制1024字符 格式必须是base64的
+    * 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
     */
     @SerializedName("UserData")
     @Expose
     private String UserData;
 
     /**
-    * 合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认 
+    * 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
+示例值：true
     */
     @SerializedName("Unordered")
     @Expose
     private Boolean Unordered;
 
     /**
-    * 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
+    * 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>动态表格等填写控件</li></ul>
     */
     @SerializedName("Components")
     @Expose
     private Component [] Components;
 
     /**
-    * 本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。
+    * 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 [CreateFlowSignReview](https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview) 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+示例值：true
     */
     @SerializedName("NeedSignReview")
     @Expose
     private Boolean NeedSignReview;
 
     /**
-    * 本企业（发起方）自动签署，需要您在发起合同时给印章控件指定自动签的印章。
+    * 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+示例值：E_PRESCRIPTION_AUTO_SIGN
     */
     @SerializedName("AutoSignScene")
     @Expose
     private String AutoSignScene;
 
     /**
-     * Get 合同（流程）的名称 
-     * @return FlowName 合同（流程）的名称
+     * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。 
+     * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 合同（流程）的名称
-     * @param FlowName 合同（流程）的名称
+     * Set 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
+     * @param FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后的下载文件名。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 合同（流程）的签署方信息 
-     * @return Approvers 合同（流程）的签署方信息
+     * Get 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。 
+     * @return Approvers 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
      */
     public ApproverInfo [] getApprovers() {
         return this.Approvers;
     }
 
     /**
-     * Set 合同（流程）的签署方信息
-     * @param Approvers 合同（流程）的签署方信息
+     * Set 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
+     * @param Approvers 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
      */
     public void setApprovers(ApproverInfo [] Approvers) {
         this.Approvers = Approvers;
     }
 
     /**
-     * Get 发起合同（流程）的资源Id,此资源必须是PDF文件,来自UploadFiles,使用文件发起合同(流程)组时必传 
-     * @return FileIds 发起合同（流程）的资源Id,此资源必须是PDF文件,来自UploadFiles,使用文件发起合同(流程)组时必传
+     * Get 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。 
+     * @return FileIds 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 发起合同（流程）的资源Id,此资源必须是PDF文件,来自UploadFiles,使用文件发起合同(流程)组时必传
-     * @param FileIds 发起合同（流程）的资源Id,此资源必须是PDF文件,来自UploadFiles,使用文件发起合同(流程)组时必传
+     * Set 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+     * @param FileIds 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get 发起合同（流程）的模板Id,用模板发起合同（流程）组时必填 
-     * @return TemplateId 发起合同（流程）的模板Id,用模板发起合同（流程）组时必填
+     * Get 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。 
+     * @return TemplateId 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 发起合同（流程）的模板Id,用模板发起合同（流程）组时必填
-     * @param TemplateId 发起合同（流程）的模板Id,用模板发起合同（流程）组时必填
+     * Set 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
+     * @param TemplateId 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 合同（流程）的类型 
-     * @return FlowType 合同（流程）的类型
+     * Get 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+示例值：劳务合同 
+     * @return FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+示例值：劳务合同
      */
     public String getFlowType() {
         return this.FlowType;
     }
 
     /**
-     * Set 合同（流程）的类型
-     * @param FlowType 合同（流程）的类型
+     * Set 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+示例值：劳务合同
+     * @param FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+示例值：劳务合同
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;
     }
 
     /**
-     * Get 合同（流程）的描述 
-     * @return FlowDescription 合同（流程）的描述
+     * Get 签署流程描述,最大长度1000个字符 
+     * @return FlowDescription 签署流程描述,最大长度1000个字符
      */
     public String getFlowDescription() {
         return this.FlowDescription;
     }
 
     /**
-     * Set 合同（流程）的描述
-     * @param FlowDescription 合同（流程）的描述
+     * Set 签署流程描述,最大长度1000个字符
+     * @param FlowDescription 签署流程描述,最大长度1000个字符
      */
     public void setFlowDescription(String FlowDescription) {
         this.FlowDescription = FlowDescription;
     }
 
     /**
-     * Get 合同（流程）的截止时间戳，单位秒。默认是一年 
-     * @return Deadline 合同（流程）的截止时间戳，单位秒。默认是一年
+     * Get 签署流程的签署截止时间。
+
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+示例值：1604912664 
+     * @return Deadline 签署流程的签署截止时间。
+
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+示例值：1604912664
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 合同（流程）的截止时间戳，单位秒。默认是一年
-     * @param Deadline 合同（流程）的截止时间戳，单位秒。默认是一年
+     * Set 签署流程的签署截止时间。
+
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+示例值：1604912664
+     * @param Deadline 签署流程的签署截止时间。
+
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+示例值：1604912664
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
@@ -228,7 +290,9 @@ public class FlowGroupInfo extends AbstractModel{
     /**
      * Get 合同（流程）的回调地址 
      * @return CallbackUrl 合同（流程）的回调地址
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
@@ -236,86 +300,156 @@ public class FlowGroupInfo extends AbstractModel{
     /**
      * Set 合同（流程）的回调地址
      * @param CallbackUrl 合同（流程）的回调地址
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
 
     /**
-     * Get 第三方平台传递过来的信息, 限制1024字符 格式必须是base64的 
-     * @return UserData 第三方平台传递过来的信息, 限制1024字符 格式必须是base64的
+     * Get 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。 
+     * @return UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set 第三方平台传递过来的信息, 限制1024字符 格式必须是base64的
-     * @param UserData 第三方平台传递过来的信息, 限制1024字符 格式必须是base64的
+     * Set 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     * @param UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
     }
 
     /**
-     * Get 合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认  
-     * @return Unordered 合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认 
+     * Get 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
+示例值：true 
+     * @return Unordered 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
+示例值：true
      */
     public Boolean getUnordered() {
         return this.Unordered;
     }
 
     /**
-     * Set 合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认 
-     * @param Unordered 合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认 
+     * Set 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
+示例值：true
+     * @param Unordered 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
+示例值：true
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;
     }
 
     /**
-     * Get 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充 
-     * @return Components 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
+     * Get 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>动态表格等填写控件</li></ul> 
+     * @return Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>动态表格等填写控件</li></ul>
      */
     public Component [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
-     * @param Components 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
+     * Set 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>动态表格等填写控件</li></ul>
+     * @param Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>动态表格等填写控件</li></ul>
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;
     }
 
     /**
-     * Get 本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。 
-     * @return NeedSignReview 本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。
+     * Get 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 [CreateFlowSignReview](https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview) 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+示例值：true 
+     * @return NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 [CreateFlowSignReview](https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview) 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+示例值：true
      */
     public Boolean getNeedSignReview() {
         return this.NeedSignReview;
     }
 
     /**
-     * Set 本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。
-     * @param NeedSignReview 本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。
+     * Set 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 [CreateFlowSignReview](https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview) 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+示例值：true
+     * @param NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+若设置为true，审核结果需通过接口 [CreateFlowSignReview](https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview) 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+示例值：true
      */
     public void setNeedSignReview(Boolean NeedSignReview) {
         this.NeedSignReview = NeedSignReview;
     }
 
     /**
-     * Get 本企业（发起方）自动签署，需要您在发起合同时给印章控件指定自动签的印章。 
-     * @return AutoSignScene 本企业（发起方）自动签署，需要您在发起合同时给印章控件指定自动签的印章。
+     * Get 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+示例值：E_PRESCRIPTION_AUTO_SIGN 
+     * @return AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+示例值：E_PRESCRIPTION_AUTO_SIGN
      */
     public String getAutoSignScene() {
         return this.AutoSignScene;
     }
 
     /**
-     * Set 本企业（发起方）自动签署，需要您在发起合同时给印章控件指定自动签的印章。
-     * @param AutoSignScene 本企业（发起方）自动签署，需要您在发起合同时给印章控件指定自动签的印章。
+     * Set 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+示例值：E_PRESCRIPTION_AUTO_SIGN
+     * @param AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+示例值：E_PRESCRIPTION_AUTO_SIGN
      */
     public void setAutoSignScene(String AutoSignScene) {
         this.AutoSignScene = AutoSignScene;

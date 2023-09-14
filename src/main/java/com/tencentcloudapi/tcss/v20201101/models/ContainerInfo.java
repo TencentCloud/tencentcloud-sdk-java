@@ -220,6 +220,28 @@ public class ContainerInfo extends AbstractModel{
     private Long PodMem;
 
     /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 集群ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * pod uid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodUid")
+    @Expose
+    private String PodUid;
+
+    /**
      * Get 容器id 
      * @return ContainerID 容器id
      */
@@ -683,6 +705,58 @@ public class ContainerInfo extends AbstractModel{
         this.PodMem = PodMem;
     }
 
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get 集群ID 
+     * @return ClusterID 集群ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterID 集群ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get pod uid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodUid pod uid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPodUid() {
+        return this.PodUid;
+    }
+
+    /**
+     * Set pod uid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodUid pod uid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodUid(String PodUid) {
+        this.PodUid = PodUid;
+    }
+
     public ContainerInfo() {
     }
 
@@ -772,6 +846,15 @@ public class ContainerInfo extends AbstractModel{
         if (source.PodMem != null) {
             this.PodMem = new Long(source.PodMem);
         }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.PodUid != null) {
+            this.PodUid = new String(source.PodUid);
+        }
     }
 
 
@@ -806,6 +889,9 @@ public class ContainerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
         this.setParamSimple(map, prefix + "PodCpu", this.PodCpu);
         this.setParamSimple(map, prefix + "PodMem", this.PodMem);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "PodUid", this.PodUid);
 
     }
 }

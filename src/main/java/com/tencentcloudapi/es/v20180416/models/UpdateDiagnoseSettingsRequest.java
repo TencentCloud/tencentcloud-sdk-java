@@ -37,7 +37,7 @@ public class UpdateDiagnoseSettingsRequest extends AbstractModel{
     private Long Status;
 
     /**
-    * 智能运维每天定时巡检时间
+    * 智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
     */
     @SerializedName("CronTime")
     @Expose
@@ -76,16 +76,16 @@ public class UpdateDiagnoseSettingsRequest extends AbstractModel{
     }
 
     /**
-     * Get 智能运维每天定时巡检时间 
-     * @return CronTime 智能运维每天定时巡检时间
+     * Get 智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00 
+     * @return CronTime 智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
      */
     public String getCronTime() {
         return this.CronTime;
     }
 
     /**
-     * Set 智能运维每天定时巡检时间
-     * @param CronTime 智能运维每天定时巡检时间
+     * Set 智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
+     * @param CronTime 智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
      */
     public void setCronTime(String CronTime) {
         this.CronTime = CronTime;

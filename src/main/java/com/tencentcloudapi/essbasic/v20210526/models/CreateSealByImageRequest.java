@@ -66,7 +66,7 @@ public class CreateSealByImageRequest extends AbstractModel{
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul>
+</ul>
     */
     @SerializedName("SealType")
     @Expose
@@ -196,7 +196,7 @@ public class CreateSealByImageRequest extends AbstractModel{
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul> 
+</ul> 
      * @return SealType 电子印章类型：
 <ul><li>OFFICIAL-公章</li>
 <li>CONTRACT-合同专用章;</li>
@@ -204,7 +204,7 @@ public class CreateSealByImageRequest extends AbstractModel{
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul>
+</ul>
      */
     public String getSealType() {
         return this.SealType;
@@ -218,7 +218,7 @@ public class CreateSealByImageRequest extends AbstractModel{
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul>
+</ul>
      * @param SealType 电子印章类型：
 <ul><li>OFFICIAL-公章</li>
 <li>CONTRACT-合同专用章;</li>
@@ -226,7 +226,7 @@ public class CreateSealByImageRequest extends AbstractModel{
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul>
+</ul>
      */
     public void setSealType(String SealType) {
         this.SealType = SealType;
