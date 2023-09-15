@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIntegrationMainOrganizationUserResponse extends AbstractModel{
+public class ChannelCreateRoleResponse extends AbstractModel{
 
     /**
-    * 主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 角色id
     */
-    @SerializedName("IntegrationMainOrganizationUser")
+    @SerializedName("RoleId")
     @Expose
-    private IntegrationMainOrganizationUser IntegrationMainOrganizationUser;
+    private String RoleId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class DescribeIntegrationMainOrganizationUserResponse extends AbstractMod
     private String RequestId;
 
     /**
-     * Get 主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntegrationMainOrganizationUser 主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 角色id 
+     * @return RoleId 角色id
      */
-    public IntegrationMainOrganizationUser getIntegrationMainOrganizationUser() {
-        return this.IntegrationMainOrganizationUser;
+    public String getRoleId() {
+        return this.RoleId;
     }
 
     /**
-     * Set 主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntegrationMainOrganizationUser 主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 角色id
+     * @param RoleId 角色id
      */
-    public void setIntegrationMainOrganizationUser(IntegrationMainOrganizationUser IntegrationMainOrganizationUser) {
-        this.IntegrationMainOrganizationUser = IntegrationMainOrganizationUser;
+    public void setRoleId(String RoleId) {
+        this.RoleId = RoleId;
     }
 
     /**
@@ -73,16 +68,16 @@ public class DescribeIntegrationMainOrganizationUserResponse extends AbstractMod
         this.RequestId = RequestId;
     }
 
-    public DescribeIntegrationMainOrganizationUserResponse() {
+    public ChannelCreateRoleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIntegrationMainOrganizationUserResponse(DescribeIntegrationMainOrganizationUserResponse source) {
-        if (source.IntegrationMainOrganizationUser != null) {
-            this.IntegrationMainOrganizationUser = new IntegrationMainOrganizationUser(source.IntegrationMainOrganizationUser);
+    public ChannelCreateRoleResponse(ChannelCreateRoleResponse source) {
+        if (source.RoleId != null) {
+            this.RoleId = new String(source.RoleId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ public class DescribeIntegrationMainOrganizationUserResponse extends AbstractMod
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "IntegrationMainOrganizationUser.", this.IntegrationMainOrganizationUser);
+        this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

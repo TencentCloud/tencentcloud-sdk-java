@@ -1,13 +1,7 @@
 package com.tencentcloudapi.es.v20180416;
 public enum EsErrorCode {
-    // CAM签名/鉴权错误。
-     AUTHFAILURE("AuthFailure"),
-     
     // 操作未授权。
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnAuthorizedOperation"),
-     
-    // 操作失败。
-     FAILEDOPERATION("FailedOperation"),
      
     // 集群资源配额限制错误。
      FAILEDOPERATION_CLUSTERRESOURCELIMITERROR("FailedOperation.ClusterResourceLimitError"),
@@ -17,9 +11,6 @@ public enum EsErrorCode {
      
     // 集群状态错误。
      FAILEDOPERATION_ERRORCLUSTERSTATE("FailedOperation.ErrorClusterState"),
-     
-    // 集群状态不健康。
-     FAILEDOPERATION_ERRORCLUSTERSTATEUNHEALTH("FailedOperation.ErrorClusterStateUnhealth"),
      
     // 由于EsDictionaryInfo错误，不允许操纵。
      FAILEDOPERATION_ESDICTIONARYINFOERROR("FailedOperation.EsDictionaryInfoError"),
@@ -99,6 +90,15 @@ public enum EsErrorCode {
     // 实例版本EsVersion的取值和预期不符。
      INVALIDPARAMETER_INVALIDESVERSION("InvalidParameter.InvalidEsVersion"),
      
+    // 创建的索引元数据JSON IndexMetaJson的取值和预期不符。
+     INVALIDPARAMETER_INVALIDINDEXMETAJSON("InvalidParameter.InvalidIndexMetaJson"),
+     
+    // 索引名IndexName的取值和预期不符。
+     INVALIDPARAMETER_INVALIDINDEXNAME("InvalidParameter.InvalidIndexName"),
+     
+    // 索引类型IndexType的取值和预期不符。
+     INVALIDPARAMETER_INVALIDINDEXTYPE("InvalidParameter.InvalidIndexType"),
+     
     // 无效的InstanceId，没有找到对应资源。
      INVALIDPARAMETER_INVALIDINSTANCEID("InvalidParameter.InvalidInstanceId"),
      
@@ -119,6 +119,9 @@ public enum EsErrorCode {
      
     // 多可用区部署ZoneDetail的信息与预期不符。
      INVALIDPARAMETER_INVALIDMULTIZONEINFO("InvalidParameter.InvalidMultiZoneInfo"),
+     
+    // 节点名称列表NodeNames的取值和预期不符。
+     INVALIDPARAMETER_INVALIDNODENAMES("InvalidParameter.InvalidNodeNames"),
      
     // 节点数量NodeNum的取值和预期不符。
      INVALIDPARAMETER_INVALIDNODENUM("InvalidParameter.InvalidNodeNum"),
@@ -150,6 +153,9 @@ public enum EsErrorCode {
     // 地域Region的取值与预期不符。
      INVALIDPARAMETER_INVALIDREGION("InvalidParameter.InvalidRegion"),
      
+    // 可选重启模式RestartMode的取值和预期不符。
+     INVALIDPARAMETER_INVALIDRESTARTMODE("InvalidParameter.InvalidRestartMode"),
+     
     // 重启方式RestartType的取值和预期不符。
      INVALIDPARAMETER_INVALIDRESTARTTYPE("InvalidParameter.InvalidRestartType"),
      
@@ -158,6 +164,9 @@ public enum EsErrorCode {
      
     // 子网ID SubnetId的取值与预期不符。
      INVALIDPARAMETER_INVALIDSUBNETID("InvalidParameter.InvalidSubnetId"),
+     
+    // 虚拟子网络统一ID列表的取值和预期不符。
+     INVALIDPARAMETER_INVALIDSUBNETUIDLIST("InvalidParameter.InvalidSubnetUidList"),
      
     // 节点标签信息TagInfo的取值和预期不符。
      INVALIDPARAMETER_INVALIDTAGINFO("InvalidParameter.InvalidTagInfo"),
@@ -170,6 +179,9 @@ public enum EsErrorCode {
      
     // 节点类型Type的取值和预期不符。
      INVALIDPARAMETER_INVALIDTYPE("InvalidParameter.InvalidType"),
+     
+    // 更新的索引元数据json UpdateMetaJson的取值和预期不符。
+     INVALIDPARAMETER_INVALIDUPDATEMETAJSON("InvalidParameter.InvalidUpdateMetaJson"),
      
     // 更新类型UpdateType的取值和预期不符。
      INVALIDPARAMETER_INVALIDUPDATETYPE("InvalidParameter.InvalidUpdateType"),
@@ -233,12 +245,6 @@ public enum EsErrorCode {
      
     // 更新参数值过多，超过限制。
      LIMITEXCEEDED_UPDATEITEMLIMIT("LimitExceeded.UpdateItemLimit"),
-     
-    // 缺少参数错误。
-     MISSINGPARAMETER("MissingParameter"),
-     
-    // 请求的次数超过了频率限制。
-     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
@@ -306,14 +312,8 @@ public enum EsErrorCode {
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // 未授权操作。
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
-     
     // Uin不在白名单中。
      UNAUTHORIZEDOPERATION_UINNOTINWHITELIST("UnauthorizedOperation.UinNotInWhiteList"),
-     
-    // 未知参数错误。
-     UNKNOWNPARAMETER("UnknownParameter"),
      
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation"),

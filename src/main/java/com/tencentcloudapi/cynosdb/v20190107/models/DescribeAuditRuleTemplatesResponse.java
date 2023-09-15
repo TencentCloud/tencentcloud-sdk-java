@@ -30,7 +30,7 @@ public class DescribeAuditRuleTemplatesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 规则模版详细信息列表。
+    * 规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
@@ -61,9 +61,9 @@ public class DescribeAuditRuleTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get 规则模版详细信息列表。
+     * Get 规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 规则模版详细信息列表。
+     * @return Items 规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuditRuleTemplateInfo [] getItems() {
@@ -71,9 +71,9 @@ public class DescribeAuditRuleTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Set 规则模版详细信息列表。
+     * Set 规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 规则模版详细信息列表。
+     * @param Items 规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(AuditRuleTemplateInfo [] Items) {

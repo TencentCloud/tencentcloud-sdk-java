@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteAuditRuleTemplatesRequest extends AbstractModel{
 
     /**
-    * 审计规则模版ID。
+    * 审计规则模板ID。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-     * Get 审计规则模版ID。 
-     * @return RuleTemplateIds 审计规则模版ID。
+     * Get 审计规则模板ID。 
+     * @return RuleTemplateIds 审计规则模板ID。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 审计规则模版ID。
-     * @param RuleTemplateIds 审计规则模版ID。
+     * Set 审计规则模板ID。
+     * @param RuleTemplateIds 审计规则模板ID。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;

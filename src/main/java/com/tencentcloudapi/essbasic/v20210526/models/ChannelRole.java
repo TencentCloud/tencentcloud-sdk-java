@@ -47,6 +47,14 @@ public class ChannelRole extends AbstractModel{
     private Long RoleStatus;
 
     /**
+    * 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PermissionGroups")
+    @Expose
+    private PermissionGroup [] PermissionGroups;
+
+    /**
      * Get 角色id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RoleId 角色id
@@ -106,6 +114,26 @@ public class ChannelRole extends AbstractModel{
         this.RoleStatus = RoleStatus;
     }
 
+    /**
+     * Get 权限树
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PermissionGroups 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PermissionGroup [] getPermissionGroups() {
+        return this.PermissionGroups;
+    }
+
+    /**
+     * Set 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PermissionGroups 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPermissionGroups(PermissionGroup [] PermissionGroups) {
+        this.PermissionGroups = PermissionGroups;
+    }
+
     public ChannelRole() {
     }
 
@@ -123,6 +151,12 @@ public class ChannelRole extends AbstractModel{
         if (source.RoleStatus != null) {
             this.RoleStatus = new Long(source.RoleStatus);
         }
+        if (source.PermissionGroups != null) {
+            this.PermissionGroups = new PermissionGroup[source.PermissionGroups.length];
+            for (int i = 0; i < source.PermissionGroups.length; i++) {
+                this.PermissionGroups[i] = new PermissionGroup(source.PermissionGroups[i]);
+            }
+        }
     }
 
 
@@ -133,6 +167,7 @@ public class ChannelRole extends AbstractModel{
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "RoleStatus", this.RoleStatus);
+        this.setParamArrayObj(map, prefix + "PermissionGroups.", this.PermissionGroups);
 
     }
 }

@@ -173,6 +173,22 @@ public class NatGateway extends AbstractModel{
     private Long NatProductVersion;
 
     /**
+    * 是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartScheduleMode")
+    @Expose
+    private Boolean SmartScheduleMode;
+
+    /**
+    * NAT实例归属的专属集群id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -532,6 +548,46 @@ public class NatGateway extends AbstractModel{
         this.NatProductVersion = NatProductVersion;
     }
 
+    /**
+     * Get 是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSmartScheduleMode() {
+        return this.SmartScheduleMode;
+    }
+
+    /**
+     * Set 是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartScheduleMode(Boolean SmartScheduleMode) {
+        this.SmartScheduleMode = SmartScheduleMode;
+    }
+
+    /**
+     * Get NAT实例归属的专属集群id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DedicatedClusterId NAT实例归属的专属集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set NAT实例归属的专属集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DedicatedClusterId NAT实例归属的专属集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public NatGateway() {
     }
 
@@ -618,6 +674,12 @@ public class NatGateway extends AbstractModel{
         if (source.NatProductVersion != null) {
             this.NatProductVersion = new Long(source.NatProductVersion);
         }
+        if (source.SmartScheduleMode != null) {
+            this.SmartScheduleMode = new Boolean(source.SmartScheduleMode);
+        }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -645,6 +707,8 @@ public class NatGateway extends AbstractModel{
         this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
         this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
+        this.setParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

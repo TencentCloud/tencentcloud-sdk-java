@@ -291,7 +291,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *创建审计规则模版
+     *创建审计规则模板
      * @param req CreateAuditRuleTemplateRequest
      * @return CreateAuditRuleTemplateResponse
      * @throws TencentCloudSDKException
@@ -501,7 +501,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *删除审计规则模版
+     *删除审计规则模板
      * @param req DeleteAuditRuleTemplatesRequest
      * @return DeleteAuditRuleTemplatesResponse
      * @throws TencentCloudSDKException
@@ -690,7 +690,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询审计规则模版信息
+     *查询审计规则模板信息
      * @param req DescribeAuditRuleTemplatesRequest
      * @return DescribeAuditRuleTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1740,7 +1740,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改审计规则模版
+     *修改审计规则模板
      * @param req ModifyAuditRuleTemplatesRequest
      * @return ModifyAuditRuleTemplatesResponse
      * @throws TencentCloudSDKException

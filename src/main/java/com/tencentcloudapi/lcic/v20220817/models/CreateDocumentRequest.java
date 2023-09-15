@@ -86,6 +86,10 @@ public class CreateDocumentRequest extends AbstractModel{
 
     /**
     * 是否对不支持元素开启自动处理的功能。默认关闭。
+自动处理的元素如下：
+1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
+2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
+3. 已损坏音视频：移除PPT上对损坏音视频的引用
     */
     @SerializedName("AutoHandleUnsupportedElement")
     @Expose
@@ -244,8 +248,16 @@ public class CreateDocumentRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否对不支持元素开启自动处理的功能。默认关闭。 
+     * Get 是否对不支持元素开启自动处理的功能。默认关闭。
+自动处理的元素如下：
+1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
+2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
+3. 已损坏音视频：移除PPT上对损坏音视频的引用 
      * @return AutoHandleUnsupportedElement 是否对不支持元素开启自动处理的功能。默认关闭。
+自动处理的元素如下：
+1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
+2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
+3. 已损坏音视频：移除PPT上对损坏音视频的引用
      */
     public Boolean getAutoHandleUnsupportedElement() {
         return this.AutoHandleUnsupportedElement;
@@ -253,7 +265,15 @@ public class CreateDocumentRequest extends AbstractModel{
 
     /**
      * Set 是否对不支持元素开启自动处理的功能。默认关闭。
+自动处理的元素如下：
+1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
+2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
+3. 已损坏音视频：移除PPT上对损坏音视频的引用
      * @param AutoHandleUnsupportedElement 是否对不支持元素开启自动处理的功能。默认关闭。
+自动处理的元素如下：
+1. 墨迹：移除不支持的墨迹（例如WPS墨迹）
+2. 自动翻页：移除PPT上所有自动翻页设置，并设置为单击鼠标翻页
+3. 已损坏音视频：移除PPT上对损坏音视频的引用
      */
     public void setAutoHandleUnsupportedElement(Boolean AutoHandleUnsupportedElement) {
         this.AutoHandleUnsupportedElement = AutoHandleUnsupportedElement;

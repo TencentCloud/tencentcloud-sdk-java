@@ -65,7 +65,8 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
+    * PostgreSQL社区大版本+小版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新小版本号。
     */
     @SerializedName("DBVersion")
     @Expose
@@ -149,14 +150,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+    * PostgreSQL大版本号（该参数当前必传），版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。目前支持10，11，12，13，14，15这几个大版本，详情见[内核版本概述](https://cloud.tencent.com/document/product/409/67018)。
+输入该参数时，会基于此大版本号创建对应的最新小版本的最新内核版本号实例。
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-    * PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
+    * PostgreSQL内核版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新内核版本号。
     */
     @SerializedName("DBKernelVersion")
     @Expose
@@ -259,16 +262,20 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。 
-     * @return DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
+     * Get PostgreSQL社区大版本+小版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新小版本号。 
+     * @return DBVersion PostgreSQL社区大版本+小版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新小版本号。
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
-     * @param DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
+     * Set PostgreSQL社区大版本+小版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新小版本号。
+     * @param DBVersion PostgreSQL社区大版本+小版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新小版本号。
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -451,32 +458,40 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。 
-     * @return DBMajorVersion PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+     * Get PostgreSQL大版本号（该参数当前必传），版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。目前支持10，11，12，13，14，15这几个大版本，详情见[内核版本概述](https://cloud.tencent.com/document/product/409/67018)。
+输入该参数时，会基于此大版本号创建对应的最新小版本的最新内核版本号实例。 
+     * @return DBMajorVersion PostgreSQL大版本号（该参数当前必传），版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。目前支持10，11，12，13，14，15这几个大版本，详情见[内核版本概述](https://cloud.tencent.com/document/product/409/67018)。
+输入该参数时，会基于此大版本号创建对应的最新小版本的最新内核版本号实例。
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
-     * @param DBMajorVersion PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+     * Set PostgreSQL大版本号（该参数当前必传），版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。目前支持10，11，12，13，14，15这几个大版本，详情见[内核版本概述](https://cloud.tencent.com/document/product/409/67018)。
+输入该参数时，会基于此大版本号创建对应的最新小版本的最新内核版本号实例。
+     * @param DBMajorVersion PostgreSQL大版本号（该参数当前必传），版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。目前支持10，11，12，13，14，15这几个大版本，详情见[内核版本概述](https://cloud.tencent.com/document/product/409/67018)。
+输入该参数时，会基于此大版本号创建对应的最新小版本的最新内核版本号实例。
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
     }
 
     /**
-     * Get PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。 
-     * @return DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
+     * Get PostgreSQL内核版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新内核版本号。 
+     * @return DBKernelVersion PostgreSQL内核版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新内核版本号。
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
     }
 
     /**
-     * Set PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
-     * @param DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
+     * Set PostgreSQL内核版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新内核版本号。
+     * @param DBKernelVersion PostgreSQL内核版本号。
+一般场景不推荐传入该参数。如需指定，只能传当前大版本号下最新内核版本号。
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;

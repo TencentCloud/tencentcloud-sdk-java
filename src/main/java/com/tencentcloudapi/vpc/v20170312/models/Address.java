@@ -185,6 +185,14 @@ public class Address extends AbstractModel{
     private String InstanceType;
 
     /**
+    * 静态单线IP网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
     * 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
     */
     @SerializedName("AntiDDoSPackageId")
@@ -588,6 +596,26 @@ public class Address extends AbstractModel{
     }
 
     /**
+     * Get 静态单线IP网络出口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Egress 静态单线IP网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set 静态单线IP网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Egress 静态单线IP网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
+    /**
      * Get 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID. 
      * @return AntiDDoSPackageId 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
      */
@@ -677,6 +705,9 @@ public class Address extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
         if (source.AntiDDoSPackageId != null) {
             this.AntiDDoSPackageId = new String(source.AntiDDoSPackageId);
         }
@@ -708,6 +739,7 @@ public class Address extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "DeadlineDate", this.DeadlineDate);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
 
     }

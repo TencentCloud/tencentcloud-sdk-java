@@ -44,7 +44,7 @@ public class ImportTableFileRequest extends AbstractModel{
     private String CosUri;
 
     /**
-    * 表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File]
+    * 表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
     */
     @SerializedName("DataType")
     @Expose
@@ -106,16 +106,16 @@ public class ImportTableFileRequest extends AbstractModel{
     }
 
     /**
-     * Get 表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File] 
-     * @return DataType 表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File]
+     * Get 表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean] 
+     * @return DataType 表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
      */
     public String [] getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set 表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File]
-     * @param DataType 表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File]
+     * Set 表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
+     * @param DataType 表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
      */
     public void setDataType(String [] DataType) {
         this.DataType = DataType;

@@ -543,6 +543,27 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
+     *SaDivulgeScanRuleMutate
+     * @param req SaDivulgeScanRuleMutateRequest
+     * @return SaDivulgeScanRuleMutateResponse
+     * @throws TencentCloudSDKException
+     */
+    public SaDivulgeScanRuleMutateResponse SaDivulgeScanRuleMutate(SaDivulgeScanRuleMutateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SaDivulgeScanRuleMutateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SaDivulgeScanRuleMutateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SaDivulgeScanRuleMutate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *安全事件通用字段
      * @param req SaEventPubRequest
      * @return SaEventPubResponse

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAuditRuleTemplateResponse extends AbstractModel{
 
     /**
-    * 生成的规则模版ID。
+    * 生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateId")
@@ -38,9 +38,9 @@ public class CreateAuditRuleTemplateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 生成的规则模版ID。
+     * Get 生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleTemplateId 生成的规则模版ID。
+     * @return RuleTemplateId 生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleTemplateId() {
@@ -48,9 +48,9 @@ public class CreateAuditRuleTemplateResponse extends AbstractModel{
     }
 
     /**
-     * Set 生成的规则模版ID。
+     * Set 生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleTemplateId 生成的规则模版ID。
+     * @param RuleTemplateId 生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateId(String RuleTemplateId) {

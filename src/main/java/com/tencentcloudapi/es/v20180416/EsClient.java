@@ -459,7 +459,7 @@ public class EsClient extends AbstractClient{
     }
 
     /**
-     *重启ES集群实例(用于系统版本更新等操作) 
+     *重启ES集群实例(用于系统版本更新等操作)
      * @param req RestartInstanceRequest
      * @return RestartInstanceResponse
      * @throws TencentCloudSDKException
@@ -480,7 +480,7 @@ public class EsClient extends AbstractClient{
     }
 
     /**
-     *重启Kibana 
+     *重启Kibana
      * @param req RestartKibanaRequest
      * @return RestartKibanaResponse
      * @throws TencentCloudSDKException

@@ -30,18 +30,32 @@ public class CreateAuditRuleTemplateRequest extends AbstractModel{
     private RuleFilters [] RuleFilters;
 
     /**
-    * 规则模版名称。
+    * 规则模板名称。
     */
     @SerializedName("RuleTemplateName")
     @Expose
     private String RuleTemplateName;
 
     /**
-    * 规则模版描述。
+    * 规则模板描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
+
+    /**
+    * 告警等级。1-低风险，2-中风险，3-高风险
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
+    * 告警策略。0-不告警，1-告警。
+    */
+    @SerializedName("AlarmPolicy")
+    @Expose
+    private Long AlarmPolicy;
 
     /**
      * Get 审计规则。 
@@ -60,35 +74,67 @@ public class CreateAuditRuleTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 规则模版名称。 
-     * @return RuleTemplateName 规则模版名称。
+     * Get 规则模板名称。 
+     * @return RuleTemplateName 规则模板名称。
      */
     public String getRuleTemplateName() {
         return this.RuleTemplateName;
     }
 
     /**
-     * Set 规则模版名称。
-     * @param RuleTemplateName 规则模版名称。
+     * Set 规则模板名称。
+     * @param RuleTemplateName 规则模板名称。
      */
     public void setRuleTemplateName(String RuleTemplateName) {
         this.RuleTemplateName = RuleTemplateName;
     }
 
     /**
-     * Get 规则模版描述。 
-     * @return Description 规则模版描述。
+     * Get 规则模板描述。 
+     * @return Description 规则模板描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 规则模版描述。
-     * @param Description 规则模版描述。
+     * Set 规则模板描述。
+     * @param Description 规则模板描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get 告警等级。1-低风险，2-中风险，3-高风险 
+     * @return AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set 告警等级。1-低风险，2-中风险，3-高风险
+     * @param AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
+     * Get 告警策略。0-不告警，1-告警。 
+     * @return AlarmPolicy 告警策略。0-不告警，1-告警。
+     */
+    public Long getAlarmPolicy() {
+        return this.AlarmPolicy;
+    }
+
+    /**
+     * Set 告警策略。0-不告警，1-告警。
+     * @param AlarmPolicy 告警策略。0-不告警，1-告警。
+     */
+    public void setAlarmPolicy(Long AlarmPolicy) {
+        this.AlarmPolicy = AlarmPolicy;
     }
 
     public CreateAuditRuleTemplateRequest() {
@@ -111,6 +157,12 @@ public class CreateAuditRuleTemplateRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
+        if (source.AlarmPolicy != null) {
+            this.AlarmPolicy = new Long(source.AlarmPolicy);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class CreateAuditRuleTemplateRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
         this.setParamSimple(map, prefix + "RuleTemplateName", this.RuleTemplateName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
 
     }
 }

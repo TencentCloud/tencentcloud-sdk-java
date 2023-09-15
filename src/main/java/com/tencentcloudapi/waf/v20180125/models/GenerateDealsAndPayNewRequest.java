@@ -13,53 +13,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextGenerationChoices extends AbstractModel{
+public class GenerateDealsAndPayNewRequest extends AbstractModel{
 
     /**
-    * 内容
-注意：此字段可能返回 null，表示取不到有效值。
+    * 计费下单入参
     */
-    @SerializedName("Message")
+    @SerializedName("Goods")
     @Expose
-    private TextGenerationMessage Message;
+    private GoodNews [] Goods;
 
     /**
-     * Get 内容
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 内容
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 计费下单入参 
+     * @return Goods 计费下单入参
      */
-    public TextGenerationMessage getMessage() {
-        return this.Message;
+    public GoodNews [] getGoods() {
+        return this.Goods;
     }
 
     /**
-     * Set 内容
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 内容
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 计费下单入参
+     * @param Goods 计费下单入参
      */
-    public void setMessage(TextGenerationMessage Message) {
-        this.Message = Message;
+    public void setGoods(GoodNews [] Goods) {
+        this.Goods = Goods;
     }
 
-    public TextGenerationChoices() {
+    public GenerateDealsAndPayNewRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TextGenerationChoices(TextGenerationChoices source) {
-        if (source.Message != null) {
-            this.Message = new TextGenerationMessage(source.Message);
+    public GenerateDealsAndPayNewRequest(GenerateDealsAndPayNewRequest source) {
+        if (source.Goods != null) {
+            this.Goods = new GoodNews[source.Goods.length];
+            for (int i = 0; i < source.Goods.length; i++) {
+                this.Goods[i] = new GoodNews(source.Goods[i]);
+            }
         }
     }
 
@@ -68,7 +66,7 @@ public class TextGenerationChoices extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Message.", this.Message);
+        this.setParamArrayObj(map, prefix + "Goods.", this.Goods);
 
     }
 }

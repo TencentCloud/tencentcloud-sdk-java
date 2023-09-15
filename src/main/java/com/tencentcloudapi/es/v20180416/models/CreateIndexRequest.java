@@ -44,7 +44,7 @@ public class CreateIndexRequest extends AbstractModel{
     private String IndexName;
 
     /**
-    * 创建的索引元数据JSON，如mappings、settings
+    * 【必填】创建的索引元数据JSON，如mappings、settings
     */
     @SerializedName("IndexMetaJson")
     @Expose
@@ -113,16 +113,16 @@ public class CreateIndexRequest extends AbstractModel{
     }
 
     /**
-     * Get 创建的索引元数据JSON，如mappings、settings 
-     * @return IndexMetaJson 创建的索引元数据JSON，如mappings、settings
+     * Get 【必填】创建的索引元数据JSON，如mappings、settings 
+     * @return IndexMetaJson 【必填】创建的索引元数据JSON，如mappings、settings
      */
     public String getIndexMetaJson() {
         return this.IndexMetaJson;
     }
 
     /**
-     * Set 创建的索引元数据JSON，如mappings、settings
-     * @param IndexMetaJson 创建的索引元数据JSON，如mappings、settings
+     * Set 【必填】创建的索引元数据JSON，如mappings、settings
+     * @param IndexMetaJson 【必填】创建的索引元数据JSON，如mappings、settings
      */
     public void setIndexMetaJson(String IndexMetaJson) {
         this.IndexMetaJson = IndexMetaJson;

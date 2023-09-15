@@ -44,6 +44,13 @@ public class NatGatewayAddress extends AbstractModel{
     private Boolean IsBlocked;
 
     /**
+    * 资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
+    */
+    @SerializedName("BlockType")
+    @Expose
+    private String BlockType;
+
+    /**
      * Get 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。 
      * @return AddressId 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
      */
@@ -91,6 +98,22 @@ public class NatGatewayAddress extends AbstractModel{
         this.IsBlocked = IsBlocked;
     }
 
+    /**
+     * Get 资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。 
+     * @return BlockType 资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
+     */
+    public String getBlockType() {
+        return this.BlockType;
+    }
+
+    /**
+     * Set 资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
+     * @param BlockType 资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
+     */
+    public void setBlockType(String BlockType) {
+        this.BlockType = BlockType;
+    }
+
     public NatGatewayAddress() {
     }
 
@@ -108,6 +131,9 @@ public class NatGatewayAddress extends AbstractModel{
         if (source.IsBlocked != null) {
             this.IsBlocked = new Boolean(source.IsBlocked);
         }
+        if (source.BlockType != null) {
+            this.BlockType = new String(source.BlockType);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class NatGatewayAddress extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressId", this.AddressId);
         this.setParamSimple(map, prefix + "PublicIpAddress", this.PublicIpAddress);
         this.setParamSimple(map, prefix + "IsBlocked", this.IsBlocked);
+        this.setParamSimple(map, prefix + "BlockType", this.BlockType);
 
     }
 }

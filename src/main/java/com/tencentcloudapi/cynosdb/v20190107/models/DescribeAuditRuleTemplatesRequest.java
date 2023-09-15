@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeAuditRuleTemplatesRequest extends AbstractModel{
 
     /**
-    * 规则模版ID。
+    * 规则模板ID。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-    * 规则模版名称
+    * 规则模板名称
     */
     @SerializedName("RuleTemplateNames")
     @Expose
@@ -51,32 +51,46 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-     * Get 规则模版ID。 
-     * @return RuleTemplateIds 规则模版ID。
+    * 告警等级。1-低风险，2-中风险，3-高风险。
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
+    * 告警策略。0-不告警，1-告警。
+    */
+    @SerializedName("AlarmPolicy")
+    @Expose
+    private Long AlarmPolicy;
+
+    /**
+     * Get 规则模板ID。 
+     * @return RuleTemplateIds 规则模板ID。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 规则模版ID。
-     * @param RuleTemplateIds 规则模版ID。
+     * Set 规则模板ID。
+     * @param RuleTemplateIds 规则模板ID。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get 规则模版名称 
-     * @return RuleTemplateNames 规则模版名称
+     * Get 规则模板名称 
+     * @return RuleTemplateNames 规则模板名称
      */
     public String [] getRuleTemplateNames() {
         return this.RuleTemplateNames;
     }
 
     /**
-     * Set 规则模版名称
-     * @param RuleTemplateNames 规则模版名称
+     * Set 规则模板名称
+     * @param RuleTemplateNames 规则模板名称
      */
     public void setRuleTemplateNames(String [] RuleTemplateNames) {
         this.RuleTemplateNames = RuleTemplateNames;
@@ -114,6 +128,38 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 告警等级。1-低风险，2-中风险，3-高风险。 
+     * @return AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set 告警等级。1-低风险，2-中风险，3-高风险。
+     * @param AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
+     * Get 告警策略。0-不告警，1-告警。 
+     * @return AlarmPolicy 告警策略。0-不告警，1-告警。
+     */
+    public Long getAlarmPolicy() {
+        return this.AlarmPolicy;
+    }
+
+    /**
+     * Set 告警策略。0-不告警，1-告警。
+     * @param AlarmPolicy 告警策略。0-不告警，1-告警。
+     */
+    public void setAlarmPolicy(Long AlarmPolicy) {
+        this.AlarmPolicy = AlarmPolicy;
+    }
+
     public DescribeAuditRuleTemplatesRequest() {
     }
 
@@ -140,6 +186,12 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
+        if (source.AlarmPolicy != null) {
+            this.AlarmPolicy = new Long(source.AlarmPolicy);
+        }
     }
 
 
@@ -151,6 +203,8 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "RuleTemplateNames.", this.RuleTemplateNames);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
 
     }
 }

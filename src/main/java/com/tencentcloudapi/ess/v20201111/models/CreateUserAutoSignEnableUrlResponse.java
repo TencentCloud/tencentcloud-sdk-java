@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateUserAutoSignEnableUrlResponse extends AbstractModel{
 
     /**
-    * 个人用户自动签的开通链接, 短链形式
+    * 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
     */
     @SerializedName("Url")
     @Expose
@@ -82,16 +82,16 @@ public class CreateUserAutoSignEnableUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 个人用户自动签的开通链接, 短链形式 
-     * @return Url 个人用户自动签的开通链接, 短链形式
+     * Get 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。 
+     * @return Url 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 个人用户自动签的开通链接, 短链形式
-     * @param Url 个人用户自动签的开通链接, 短链形式
+     * Set 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
+     * @param Url 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
      */
     public void setUrl(String Url) {
         this.Url = Url;

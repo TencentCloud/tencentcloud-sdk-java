@@ -30,13 +30,6 @@ public class ChannelDescribeRolesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
     * 指定每页多少条数据，单页最大200
     */
     @SerializedName("Limit")
@@ -47,10 +40,18 @@ public class ChannelDescribeRolesRequest extends AbstractModel{
     * 查询的关键字段:
 Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 操作人信息
@@ -76,22 +77,6 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     }
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
      * Get 指定每页多少条数据，单页最大200 
      * @return Limit 指定每页多少条数据，单页最大200
      */
@@ -110,10 +95,12 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     /**
      * Get 查询的关键字段:
 Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色 
+Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段 
      * @return Filters 查询的关键字段:
 Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -123,12 +110,30 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
      * Set 查询的关键字段:
 Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
      * @param Filters 查询的关键字段:
 Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000 
+     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -162,9 +167,6 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
@@ -173,6 +175,9 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
@@ -185,9 +190,9 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

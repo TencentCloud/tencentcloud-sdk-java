@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class FillApproverInfo extends AbstractModel{
 
     /**
-    * 对应模板中的参与方ID
+    * 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
+模板发起合同时，该参数为必填项。
+文件发起合同是，该参数无需传值。
+如果开发者后序用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。
     */
     @SerializedName("RecipientId")
     @Expose
@@ -39,38 +42,50 @@ WEWORKAPP: 企业微信
     private String ApproverSource;
 
     /**
-    * 企业自定义账号ID
-<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
+    * 企业微信UserId
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
     */
     @SerializedName("CustomUserId")
     @Expose
     private String CustomUserId;
 
     /**
-    * 补充签署人姓名
+    * 补充企业签署人员工姓名
     */
     @SerializedName("ApproverName")
     @Expose
     private String ApproverName;
 
     /**
-    * 补充签署人手机号
+    * 补充企业签署人员工手机号
     */
     @SerializedName("ApproverMobile")
     @Expose
     private String ApproverMobile;
 
     /**
-     * Get 对应模板中的参与方ID 
-     * @return RecipientId 对应模板中的参与方ID
+     * Get 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
+模板发起合同时，该参数为必填项。
+文件发起合同是，该参数无需传值。
+如果开发者后序用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。 
+     * @return RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
+模板发起合同时，该参数为必填项。
+文件发起合同是，该参数无需传值。
+如果开发者后序用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 对应模板中的参与方ID
-     * @param RecipientId 对应模板中的参与方ID
+     * Set 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
+模板发起合同时，该参数为必填项。
+文件发起合同是，该参数无需传值。
+如果开发者后序用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。
+     * @param RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
+模板发起合同时，该参数为必填项。
+文件发起合同是，该参数无需传值。
+如果开发者后序用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
@@ -101,52 +116,52 @@ WEWORKAPP: 企业微信
     }
 
     /**
-     * Get 企业自定义账号ID
-<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid 
-     * @return CustomUserId 企业自定义账号ID
-<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
+     * Get 企业微信UserId
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId 
+     * @return CustomUserId 企业微信UserId
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
      */
     public String getCustomUserId() {
         return this.CustomUserId;
     }
 
     /**
-     * Set 企业自定义账号ID
-<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
-     * @param CustomUserId 企业自定义账号ID
-<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
+     * Set 企业微信UserId
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
+     * @param CustomUserId 企业微信UserId
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
      */
     public void setCustomUserId(String CustomUserId) {
         this.CustomUserId = CustomUserId;
     }
 
     /**
-     * Get 补充签署人姓名 
-     * @return ApproverName 补充签署人姓名
+     * Get 补充企业签署人员工姓名 
+     * @return ApproverName 补充企业签署人员工姓名
      */
     public String getApproverName() {
         return this.ApproverName;
     }
 
     /**
-     * Set 补充签署人姓名
-     * @param ApproverName 补充签署人姓名
+     * Set 补充企业签署人员工姓名
+     * @param ApproverName 补充企业签署人员工姓名
      */
     public void setApproverName(String ApproverName) {
         this.ApproverName = ApproverName;
     }
 
     /**
-     * Get 补充签署人手机号 
-     * @return ApproverMobile 补充签署人手机号
+     * Get 补充企业签署人员工手机号 
+     * @return ApproverMobile 补充企业签署人员工手机号
      */
     public String getApproverMobile() {
         return this.ApproverMobile;
     }
 
     /**
-     * Set 补充签署人手机号
-     * @param ApproverMobile 补充签署人手机号
+     * Set 补充企业签署人员工手机号
+     * @param ApproverMobile 补充企业签署人员工手机号
      */
     public void setApproverMobile(String ApproverMobile) {
         this.ApproverMobile = ApproverMobile;

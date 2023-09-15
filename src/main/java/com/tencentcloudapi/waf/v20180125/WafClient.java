@@ -1454,6 +1454,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *计费资源购买、续费下单接口
+     * @param req GenerateDealsAndPayNewRequest
+     * @return GenerateDealsAndPayNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateDealsAndPayNewResponse GenerateDealsAndPayNew(GenerateDealsAndPayNewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateDealsAndPayNewResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateDealsAndPayNewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateDealsAndPayNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询下载攻击日志任务记录列表
      * @param req GetAttackDownloadRecordsRequest
      * @return GetAttackDownloadRecordsResponse

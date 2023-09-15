@@ -30,6 +30,13 @@ public class RestoreMediaRequest extends AbstractModel{
     private String [] FileIds;
 
     /**
+    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
     */
     @SerializedName("RestoreDay")
@@ -50,13 +57,6 @@ public class RestoreMediaRequest extends AbstractModel{
     private String RestoreTier;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get 媒体文件唯一标识列表，最大长度：100。 
      * @return FileIds 媒体文件唯一标识列表，最大长度：100。
      */
@@ -70,6 +70,22 @@ public class RestoreMediaRequest extends AbstractModel{
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
+    }
+
+    /**
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
+     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -128,22 +144,6 @@ public class RestoreMediaRequest extends AbstractModel{
         this.RestoreTier = RestoreTier;
     }
 
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public RestoreMediaRequest() {
     }
 
@@ -158,14 +158,14 @@ public class RestoreMediaRequest extends AbstractModel{
                 this.FileIds[i] = new String(source.FileIds[i]);
             }
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.RestoreDay != null) {
             this.RestoreDay = new Long(source.RestoreDay);
         }
         if (source.RestoreTier != null) {
             this.RestoreTier = new String(source.RestoreTier);
-        }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
         }
     }
 
@@ -175,9 +175,9 @@ public class RestoreMediaRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
         this.setParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

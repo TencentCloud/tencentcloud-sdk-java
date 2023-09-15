@@ -60,6 +60,27 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *取消证书审核
+     * @param req CancelAuditCertificateRequest
+     * @return CancelAuditCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelAuditCertificateResponse CancelAuditCertificate(CancelAuditCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelAuditCertificateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelAuditCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelAuditCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *取消证书订单。
      * @param req CancelCertificateOrderRequest
      * @return CancelCertificateOrderResponse
@@ -934,6 +955,27 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCertificateProjectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCertificateProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *针对审核失败或审核取消的付费证书，重新发起审核
+     * @param req ModifyCertificateResubmitRequest
+     * @return ModifyCertificateResubmitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCertificateResubmitResponse ModifyCertificateResubmit(ModifyCertificateResubmitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCertificateResubmitResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCertificateResubmitResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCertificateResubmit");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class DescribeIntegrationRolesResponse extends AbstractModel{
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+    * 指定分页返回的页码。页码从0开始，最大为2000。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 指定每页多少条数据，单页最大200
+    * 指定分页每页返回的数据条数，单页最大支持 200。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 符合查询条件的总的角色数
+    * 符合查询条件的总角色数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 企业角色信息列表
+    * 企业角色信息列表。
     */
     @SerializedName("IntegrateRoles")
     @Expose
@@ -58,64 +58,64 @@ public class DescribeIntegrationRolesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * Get 指定分页返回的页码。页码从0开始，最大为2000。 
+     * @return Offset 指定分页返回的页码。页码从0开始，最大为2000。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * Set 指定分页返回的页码。页码从0开始，最大为2000。
+     * @param Offset 指定分页返回的页码。页码从0开始，最大为2000。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 指定每页多少条数据，单页最大200 
-     * @return Limit 指定每页多少条数据，单页最大200
+     * Get 指定分页每页返回的数据条数，单页最大支持 200。 
+     * @return Limit 指定分页每页返回的数据条数，单页最大支持 200。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页多少条数据，单页最大200
-     * @param Limit 指定每页多少条数据，单页最大200
+     * Set 指定分页每页返回的数据条数，单页最大支持 200。
+     * @param Limit 指定分页每页返回的数据条数，单页最大支持 200。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 符合查询条件的总的角色数 
-     * @return TotalCount 符合查询条件的总的角色数
+     * Get 符合查询条件的总角色数。 
+     * @return TotalCount 符合查询条件的总角色数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的总的角色数
-     * @param TotalCount 符合查询条件的总的角色数
+     * Set 符合查询条件的总角色数。
+     * @param TotalCount 符合查询条件的总角色数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 企业角色信息列表 
-     * @return IntegrateRoles 企业角色信息列表
+     * Get 企业角色信息列表。 
+     * @return IntegrateRoles 企业角色信息列表。
      */
     public IntegrateRole [] getIntegrateRoles() {
         return this.IntegrateRoles;
     }
 
     /**
-     * Set 企业角色信息列表
-     * @param IntegrateRoles 企业角色信息列表
+     * Set 企业角色信息列表。
+     * @param IntegrateRoles 企业角色信息列表。
      */
     public void setIntegrateRoles(IntegrateRole [] IntegrateRoles) {
         this.IntegrateRoles = IntegrateRoles;

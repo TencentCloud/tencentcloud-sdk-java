@@ -23,135 +23,180 @@ import java.util.HashMap;
 public class DescribeIntegrationRolesRequest extends AbstractModel{
 
     /**
-    * 操作人信息，UserId必填
+    * 执行本接口操作的员工信息。使用此接口时，必须填写UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 指定每页多少条数据，单页最大200
+    * 指定分页每页返回的数据条数，单页最大支持 200。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsGroupRole"，Values:["0"]:查询非集团角色，Values:["1"]表示查询集团角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
+    * 查询的关键字段，支持Key-Value单值查询。可选键值对如下：
+<ul>
+  <li>Key:"RoleType"，查询角色类型，Values可选：
+    <ul><li>**"1"**：查询系统角色</li><li>**"2"**：查询自定义角色</li></ul>
+  </li><li>Key:"RoleStatus"，查询角色状态，Values可选：
+    <ul><li>**"1"**：查询启用角色</li><li>**"2"**：查询禁用角色</li></ul>
+  </li><li>Key:"IsGroupRole"，是否查询集团角色，Values可选：
+    <ul><li>**"0"**：查询非集团角色</li><li>**"1"**：查询集团角色</li></ul>
+  </li><li>Key:"IsReturnPermissionGroup"，是否返回角色对应权限树，Values可选：
+    <ul><li>**"0"**：接口不返回角色对应的权限树字段</li><li>**"1"**：接口返回角色对应的权限树字段</li></ul>
+  </li>
+</ul>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+    * 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大2000。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 操作人信息，UserId必填 
-     * @return Operator 操作人信息，UserId必填
+     * Get 执行本接口操作的员工信息。使用此接口时，必须填写UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。 
+     * @return Operator 执行本接口操作的员工信息。使用此接口时，必须填写UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息，UserId必填
-     * @param Operator 操作人信息，UserId必填
+     * Set 执行本接口操作的员工信息。使用此接口时，必须填写UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @param Operator 执行本接口操作的员工信息。使用此接口时，必须填写UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 指定每页多少条数据，单页最大200 
-     * @return Limit 指定每页多少条数据，单页最大200
+     * Get 指定分页每页返回的数据条数，单页最大支持 200。 
+     * @return Limit 指定分页每页返回的数据条数，单页最大支持 200。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页多少条数据，单页最大200
-     * @param Limit 指定每页多少条数据，单页最大200
+     * Set 指定分页每页返回的数据条数，单页最大支持 200。
+     * @param Limit 指定分页每页返回的数据条数，单页最大支持 200。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsGroupRole"，Values:["0"]:查询非集团角色，Values:["1"]表示查询集团角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段 
-     * @return Filters 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsGroupRole"，Values:["0"]:查询非集团角色，Values:["1"]表示查询集团角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
+     * Get 查询的关键字段，支持Key-Value单值查询。可选键值对如下：
+<ul>
+  <li>Key:"RoleType"，查询角色类型，Values可选：
+    <ul><li>**"1"**：查询系统角色</li><li>**"2"**：查询自定义角色</li></ul>
+  </li><li>Key:"RoleStatus"，查询角色状态，Values可选：
+    <ul><li>**"1"**：查询启用角色</li><li>**"2"**：查询禁用角色</li></ul>
+  </li><li>Key:"IsGroupRole"，是否查询集团角色，Values可选：
+    <ul><li>**"0"**：查询非集团角色</li><li>**"1"**：查询集团角色</li></ul>
+  </li><li>Key:"IsReturnPermissionGroup"，是否返回角色对应权限树，Values可选：
+    <ul><li>**"0"**：接口不返回角色对应的权限树字段</li><li>**"1"**：接口返回角色对应的权限树字段</li></ul>
+  </li>
+</ul> 
+     * @return Filters 查询的关键字段，支持Key-Value单值查询。可选键值对如下：
+<ul>
+  <li>Key:"RoleType"，查询角色类型，Values可选：
+    <ul><li>**"1"**：查询系统角色</li><li>**"2"**：查询自定义角色</li></ul>
+  </li><li>Key:"RoleStatus"，查询角色状态，Values可选：
+    <ul><li>**"1"**：查询启用角色</li><li>**"2"**：查询禁用角色</li></ul>
+  </li><li>Key:"IsGroupRole"，是否查询集团角色，Values可选：
+    <ul><li>**"0"**：查询非集团角色</li><li>**"1"**：查询集团角色</li></ul>
+  </li><li>Key:"IsReturnPermissionGroup"，是否返回角色对应权限树，Values可选：
+    <ul><li>**"0"**：接口不返回角色对应的权限树字段</li><li>**"1"**：接口返回角色对应的权限树字段</li></ul>
+  </li>
+</ul>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsGroupRole"，Values:["0"]:查询非集团角色，Values:["1"]表示查询集团角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
-     * @param Filters 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsGroupRole"，Values:["0"]:查询非集团角色，Values:["1"]表示查询集团角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
+     * Set 查询的关键字段，支持Key-Value单值查询。可选键值对如下：
+<ul>
+  <li>Key:"RoleType"，查询角色类型，Values可选：
+    <ul><li>**"1"**：查询系统角色</li><li>**"2"**：查询自定义角色</li></ul>
+  </li><li>Key:"RoleStatus"，查询角色状态，Values可选：
+    <ul><li>**"1"**：查询启用角色</li><li>**"2"**：查询禁用角色</li></ul>
+  </li><li>Key:"IsGroupRole"，是否查询集团角色，Values可选：
+    <ul><li>**"0"**：查询非集团角色</li><li>**"1"**：查询集团角色</li></ul>
+  </li><li>Key:"IsReturnPermissionGroup"，是否返回角色对应权限树，Values可选：
+    <ul><li>**"0"**：接口不返回角色对应的权限树字段</li><li>**"1"**：接口返回角色对应的权限树字段</li></ul>
+  </li>
+</ul>
+     * @param Filters 查询的关键字段，支持Key-Value单值查询。可选键值对如下：
+<ul>
+  <li>Key:"RoleType"，查询角色类型，Values可选：
+    <ul><li>**"1"**：查询系统角色</li><li>**"2"**：查询自定义角色</li></ul>
+  </li><li>Key:"RoleStatus"，查询角色状态，Values可选：
+    <ul><li>**"1"**：查询启用角色</li><li>**"2"**：查询禁用角色</li></ul>
+  </li><li>Key:"IsGroupRole"，是否查询集团角色，Values可选：
+    <ul><li>**"0"**：查询非集团角色</li><li>**"1"**：查询集团角色</li></ul>
+  </li><li>Key:"IsReturnPermissionGroup"，是否返回角色对应权限树，Values可选：
+    <ul><li>**"0"**：接口不返回角色对应的权限树字段</li><li>**"1"**：接口返回角色对应的权限树字段</li></ul>
+  </li>
+</ul>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * Get 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大2000。 
+     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大2000。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * Set 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大2000。
+     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大2000。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -169,6 +169,13 @@ public class Blueprint extends AbstractModel{
     private String DockerVersion;
 
     /**
+    * 镜像是否已共享。
+    */
+    @SerializedName("BlueprintShared")
+    @Expose
+    private Boolean BlueprintShared;
+
+    /**
      * Get 镜像 ID  ，是 Blueprint 的唯一标识。 
      * @return BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      */
@@ -512,6 +519,22 @@ public class Blueprint extends AbstractModel{
         this.DockerVersion = DockerVersion;
     }
 
+    /**
+     * Get 镜像是否已共享。 
+     * @return BlueprintShared 镜像是否已共享。
+     */
+    public Boolean getBlueprintShared() {
+        return this.BlueprintShared;
+    }
+
+    /**
+     * Set 镜像是否已共享。
+     * @param BlueprintShared 镜像是否已共享。
+     */
+    public void setBlueprintShared(Boolean BlueprintShared) {
+        this.BlueprintShared = BlueprintShared;
+    }
+
     public Blueprint() {
     }
 
@@ -583,6 +606,9 @@ public class Blueprint extends AbstractModel{
         if (source.DockerVersion != null) {
             this.DockerVersion = new String(source.DockerVersion);
         }
+        if (source.BlueprintShared != null) {
+            this.BlueprintShared = new Boolean(source.BlueprintShared);
+        }
     }
 
 
@@ -610,6 +636,7 @@ public class Blueprint extends AbstractModel{
         this.setParamSimple(map, prefix + "GuideUrl", this.GuideUrl);
         this.setParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
         this.setParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
+        this.setParamSimple(map, prefix + "BlueprintShared", this.BlueprintShared);
 
     }
 }

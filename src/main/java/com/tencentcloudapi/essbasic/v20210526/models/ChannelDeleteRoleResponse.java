@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIntegrationMainOrganizationUserRequest extends AbstractModel{
+public class ChannelDeleteRoleResponse extends AbstractModel{
 
     /**
-    * 操作人信息，userId必填
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Operator")
+    @SerializedName("RequestId")
     @Expose
-    private UserInfo Operator;
+    private String RequestId;
 
     /**
-     * Get 操作人信息，userId必填 
-     * @return Operator 操作人信息，userId必填
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public UserInfo getOperator() {
-        return this.Operator;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 操作人信息，userId必填
-     * @param Operator 操作人信息，userId必填
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeIntegrationMainOrganizationUserRequest() {
+    public ChannelDeleteRoleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIntegrationMainOrganizationUserRequest(DescribeIntegrationMainOrganizationUserRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
+    public ChannelDeleteRoleResponse(ChannelDeleteRoleResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeIntegrationMainOrganizationUserRequest extends AbstractMode
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

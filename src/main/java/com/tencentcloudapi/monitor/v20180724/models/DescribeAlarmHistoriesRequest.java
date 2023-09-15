@@ -151,6 +151,13 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String [] PolicyIds;
 
     /**
+    * 告警等级
+    */
+    @SerializedName("AlarmLevels")
+    @Expose
+    private String [] AlarmLevels;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -446,6 +453,22 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
         this.PolicyIds = PolicyIds;
     }
 
+    /**
+     * Get 告警等级 
+     * @return AlarmLevels 告警等级
+     */
+    public String [] getAlarmLevels() {
+        return this.AlarmLevels;
+    }
+
+    /**
+     * Set 告警等级
+     * @param AlarmLevels 告警等级
+     */
+    public void setAlarmLevels(String [] AlarmLevels) {
+        this.AlarmLevels = AlarmLevels;
+    }
+
     public DescribeAlarmHistoriesRequest() {
     }
 
@@ -535,6 +558,12 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
+        if (source.AlarmLevels != null) {
+            this.AlarmLevels = new String[source.AlarmLevels.length];
+            for (int i = 0; i < source.AlarmLevels.length; i++) {
+                this.AlarmLevels[i] = new String(source.AlarmLevels[i]);
+            }
+        }
     }
 
 
@@ -560,6 +589,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ReceiverUids.", this.ReceiverUids);
         this.setParamArraySimple(map, prefix + "ReceiverGroups.", this.ReceiverGroups);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamArraySimple(map, prefix + "AlarmLevels.", this.AlarmLevels);
 
     }
 }

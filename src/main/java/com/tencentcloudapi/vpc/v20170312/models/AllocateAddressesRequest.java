@@ -74,7 +74,6 @@ public class AllocateAddressesRequest extends AbstractModel{
     * EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
     */
     @SerializedName("AddressType")
@@ -121,7 +120,7 @@ AnycastEIP是否用于绑定负载均衡。
     private String AddressName;
 
     /**
-    * 网络出口，默认是：center_egress1
+    * 静态单线IP网络出口，默认值：center_egress1
     */
     @SerializedName("Egress")
     @Expose
@@ -277,12 +276,10 @@ AnycastEIP是否用于绑定负载均衡。
      * Get EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul> 
      * @return AddressType EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
      */
     public String getAddressType() {
@@ -293,12 +290,10 @@ AnycastEIP是否用于绑定负载均衡。
      * Set EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
      * @param AddressType EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
      */
     public void setAddressType(String AddressType) {
@@ -402,16 +397,16 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
-     * Get 网络出口，默认是：center_egress1 
-     * @return Egress 网络出口，默认是：center_egress1
+     * Get 静态单线IP网络出口，默认值：center_egress1 
+     * @return Egress 静态单线IP网络出口，默认值：center_egress1
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set 网络出口，默认是：center_egress1
-     * @param Egress 网络出口，默认是：center_egress1
+     * Set 静态单线IP网络出口，默认值：center_egress1
+     * @param Egress 静态单线IP网络出口，默认值：center_egress1
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

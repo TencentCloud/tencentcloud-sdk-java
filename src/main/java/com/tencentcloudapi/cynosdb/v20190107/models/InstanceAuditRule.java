@@ -46,6 +46,22 @@ public class InstanceAuditRule extends AbstractModel{
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
+    * 是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OldRule")
+    @Expose
+    private Boolean OldRule;
+
+    /**
+    * 实例应用的规则模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleTemplates")
+    @Expose
+    private RuleTemplateInfo [] RuleTemplates;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -101,6 +117,46 @@ public class InstanceAuditRule extends AbstractModel{
         this.AuditRuleFilters = AuditRuleFilters;
     }
 
+    /**
+     * Get 是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OldRule 是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getOldRule() {
+        return this.OldRule;
+    }
+
+    /**
+     * Set 是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OldRule 是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOldRule(Boolean OldRule) {
+        this.OldRule = OldRule;
+    }
+
+    /**
+     * Get 实例应用的规则模板详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleTemplates 实例应用的规则模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuleTemplateInfo [] getRuleTemplates() {
+        return this.RuleTemplates;
+    }
+
+    /**
+     * Set 实例应用的规则模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleTemplates 实例应用的规则模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleTemplates(RuleTemplateInfo [] RuleTemplates) {
+        this.RuleTemplates = RuleTemplates;
+    }
+
     public InstanceAuditRule() {
     }
 
@@ -121,6 +177,15 @@ public class InstanceAuditRule extends AbstractModel{
                 this.AuditRuleFilters[i] = new AuditRuleFilters(source.AuditRuleFilters[i]);
             }
         }
+        if (source.OldRule != null) {
+            this.OldRule = new Boolean(source.OldRule);
+        }
+        if (source.RuleTemplates != null) {
+            this.RuleTemplates = new RuleTemplateInfo[source.RuleTemplates.length];
+            for (int i = 0; i < source.RuleTemplates.length; i++) {
+                this.RuleTemplates[i] = new RuleTemplateInfo(source.RuleTemplates[i]);
+            }
+        }
     }
 
 
@@ -131,6 +196,8 @@ public class InstanceAuditRule extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "AuditRule", this.AuditRule);
         this.setParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
+        this.setParamSimple(map, prefix + "OldRule", this.OldRule);
+        this.setParamArrayObj(map, prefix + "RuleTemplates.", this.RuleTemplates);
 
     }
 }
