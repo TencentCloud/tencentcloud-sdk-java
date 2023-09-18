@@ -31,7 +31,7 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+    * 电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
     */
     @SerializedName("DeptId")
     @Expose
@@ -46,28 +46,28 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
+    * 电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
     */
     @SerializedName("ParentDeptId")
     @Expose
     private String ParentDeptId;
 
     /**
-    * 部门名称，不超过50个字符
+    * 部门名称，最大长度为50个字符。
     */
     @SerializedName("DeptName")
     @Expose
     private String DeptName;
 
     /**
-    * 客户系统部门ID，不超过64个字符
+    * 客户系统部门ID，最大长度为64个字符。
     */
     @SerializedName("DeptOpenId")
     @Expose
     private String DeptOpenId;
 
     /**
-    * 排序号,1~30000范围内
+    * 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
     */
     @SerializedName("OrderNo")
     @Expose
@@ -94,16 +94,16 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取 
-     * @return DeptId 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+     * Get 电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。 
+     * @return DeptId 电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
      */
     public String getDeptId() {
         return this.DeptId;
     }
 
     /**
-     * Set 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
-     * @param DeptId 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+     * Set 电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
+     * @param DeptId 电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
      */
     public void setDeptId(String DeptId) {
         this.DeptId = DeptId;
@@ -130,64 +130,64 @@ public class ModifyIntegrationDepartmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取 
-     * @return ParentDeptId 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
+     * Get 电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。 
+     * @return ParentDeptId 电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
      */
     public String getParentDeptId() {
         return this.ParentDeptId;
     }
 
     /**
-     * Set 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
-     * @param ParentDeptId 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
+     * Set 电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
+     * @param ParentDeptId 电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
      */
     public void setParentDeptId(String ParentDeptId) {
         this.ParentDeptId = ParentDeptId;
     }
 
     /**
-     * Get 部门名称，不超过50个字符 
-     * @return DeptName 部门名称，不超过50个字符
+     * Get 部门名称，最大长度为50个字符。 
+     * @return DeptName 部门名称，最大长度为50个字符。
      */
     public String getDeptName() {
         return this.DeptName;
     }
 
     /**
-     * Set 部门名称，不超过50个字符
-     * @param DeptName 部门名称，不超过50个字符
+     * Set 部门名称，最大长度为50个字符。
+     * @param DeptName 部门名称，最大长度为50个字符。
      */
     public void setDeptName(String DeptName) {
         this.DeptName = DeptName;
     }
 
     /**
-     * Get 客户系统部门ID，不超过64个字符 
-     * @return DeptOpenId 客户系统部门ID，不超过64个字符
+     * Get 客户系统部门ID，最大长度为64个字符。 
+     * @return DeptOpenId 客户系统部门ID，最大长度为64个字符。
      */
     public String getDeptOpenId() {
         return this.DeptOpenId;
     }
 
     /**
-     * Set 客户系统部门ID，不超过64个字符
-     * @param DeptOpenId 客户系统部门ID，不超过64个字符
+     * Set 客户系统部门ID，最大长度为64个字符。
+     * @param DeptOpenId 客户系统部门ID，最大长度为64个字符。
      */
     public void setDeptOpenId(String DeptOpenId) {
         this.DeptOpenId = DeptOpenId;
     }
 
     /**
-     * Get 排序号,1~30000范围内 
-     * @return OrderNo 排序号,1~30000范围内
+     * Get 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。 
+     * @return OrderNo 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
      */
     public Long getOrderNo() {
         return this.OrderNo;
     }
 
     /**
-     * Set 排序号,1~30000范围内
-     * @param OrderNo 排序号,1~30000范围内
+     * Set 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
+     * @param OrderNo 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
      */
     public void setOrderNo(Long OrderNo) {
         this.OrderNo = OrderNo;

@@ -31,7 +31,9 @@ public class DescribeIntegrationDepartmentsRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+    * 查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
     */
     @SerializedName("QueryType")
     @Expose
@@ -46,14 +48,16 @@ public class DescribeIntegrationDepartmentsRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
+    * 查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
     */
     @SerializedName("DeptId")
     @Expose
     private String DeptId;
 
     /**
-    * 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
+    * 查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
     */
     @SerializedName("DeptOpenId")
     @Expose
@@ -80,16 +84,24 @@ public class DescribeIntegrationDepartmentsRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表 
-     * @return QueryType 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+     * Get 查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul> 
+     * @return QueryType 查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
      */
     public Long getQueryType() {
         return this.QueryType;
     }
 
     /**
-     * Set 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
-     * @param QueryType 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+     * Set 查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
+     * @param QueryType 查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
      */
     public void setQueryType(Long QueryType) {
         this.QueryType = QueryType;
@@ -116,32 +128,40 @@ public class DescribeIntegrationDepartmentsRequest extends AbstractModel{
     }
 
     /**
-     * Get 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据 
-     * @return DeptId 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
+     * Get 查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。` 
+     * @return DeptId 查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
      */
     public String getDeptId() {
         return this.DeptId;
     }
 
     /**
-     * Set 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
-     * @param DeptId 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
+     * Set 查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
+     * @param DeptId 查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
      */
     public void setDeptId(String DeptId) {
         this.DeptId = DeptId;
     }
 
     /**
-     * Get 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据 
-     * @return DeptOpenId 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
+     * Get 查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。` 
+     * @return DeptOpenId 查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
      */
     public String getDeptOpenId() {
         return this.DeptOpenId;
     }
 
     /**
-     * Set 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
-     * @param DeptOpenId 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
+     * Set 查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
+     * @param DeptOpenId 查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
      */
     public void setDeptOpenId(String DeptOpenId) {
         this.DeptOpenId = DeptOpenId;

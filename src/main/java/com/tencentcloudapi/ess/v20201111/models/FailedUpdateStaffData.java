@@ -30,7 +30,7 @@ public class FailedUpdateStaffData extends AbstractModel{
     private String DisplayName;
 
     /**
-    * 用户传入的手机号
+    * 用户传入的手机号，明文展示
     */
     @SerializedName("Mobile")
     @Expose
@@ -44,7 +44,8 @@ public class FailedUpdateStaffData extends AbstractModel{
     private String Reason;
 
     /**
-    * 用户Id
+    * 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
     */
     @SerializedName("UserId")
     @Expose
@@ -74,16 +75,16 @@ public class FailedUpdateStaffData extends AbstractModel{
     }
 
     /**
-     * Get 用户传入的手机号 
-     * @return Mobile 用户传入的手机号
+     * Get 用户传入的手机号，明文展示 
+     * @return Mobile 用户传入的手机号，明文展示
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 用户传入的手机号
-     * @param Mobile 用户传入的手机号
+     * Set 用户传入的手机号，明文展示
+     * @param Mobile 用户传入的手机号，明文展示
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
@@ -106,16 +107,20 @@ public class FailedUpdateStaffData extends AbstractModel{
     }
 
     /**
-     * Get 用户Id 
-     * @return UserId 用户Id
+     * Get 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。 
+     * @return UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户Id
-     * @param UserId 用户Id
+     * Set 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+     * @param UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

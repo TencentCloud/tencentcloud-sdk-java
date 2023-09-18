@@ -30,7 +30,7 @@ public class InvokeCommandRequest extends AbstractModel{
     private String CommandId;
 
     /**
-    * 待执行命令的实例ID列表，上限100。
+    * 待执行命令的实例ID列表，上限200。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -103,16 +103,16 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Get 待执行命令的实例ID列表，上限100。 
-     * @return InstanceIds 待执行命令的实例ID列表，上限100。
+     * Get 待执行命令的实例ID列表，上限200。 
+     * @return InstanceIds 待执行命令的实例ID列表，上限200。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 待执行命令的实例ID列表，上限100。
-     * @param InstanceIds 待执行命令的实例ID列表，上限100。
+     * Set 待执行命令的实例ID列表，上限200。
+     * @param InstanceIds 待执行命令的实例ID列表，上限200。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

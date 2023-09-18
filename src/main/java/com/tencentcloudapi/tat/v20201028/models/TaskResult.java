@@ -38,6 +38,7 @@ public class TaskResult extends AbstractModel{
 
     /**
     * 命令执行开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecStartTime")
     @Expose
@@ -45,6 +46,7 @@ public class TaskResult extends AbstractModel{
 
     /**
     * 命令执行结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecEndTime")
     @Expose
@@ -104,8 +106,10 @@ public class TaskResult extends AbstractModel{
     }
 
     /**
-     * Get 命令执行开始时间。 
+     * Get 命令执行开始时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExecStartTime 命令执行开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecStartTime() {
         return this.ExecStartTime;
@@ -113,15 +117,19 @@ public class TaskResult extends AbstractModel{
 
     /**
      * Set 命令执行开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecStartTime 命令执行开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecStartTime(String ExecStartTime) {
         this.ExecStartTime = ExecStartTime;
     }
 
     /**
-     * Get 命令执行结束时间。 
+     * Get 命令执行结束时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExecEndTime 命令执行结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecEndTime() {
         return this.ExecEndTime;
@@ -129,7 +137,9 @@ public class TaskResult extends AbstractModel{
 
     /**
      * Set 命令执行结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecEndTime 命令执行结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecEndTime(String ExecEndTime) {
         this.ExecEndTime = ExecEndTime;

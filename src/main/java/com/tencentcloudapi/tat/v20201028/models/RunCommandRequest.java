@@ -30,7 +30,7 @@ public class RunCommandRequest extends AbstractModel{
     private String Content;
 
     /**
-    * 待执行命令的实例ID列表，上限100。支持实例类型：
+    * 待执行命令的实例ID列表，上限200。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
     */
@@ -75,9 +75,9 @@ public class RunCommandRequest extends AbstractModel{
 
     /**
     * 是否保存命令，取值范围：
-<li> True：保存
-<li> False：不保存
-默认为 False。
+<li> true：保存
+<li> false：不保存
+默认为 false。
     */
     @SerializedName("SaveCommand")
     @Expose
@@ -86,6 +86,9 @@ public class RunCommandRequest extends AbstractModel{
     /**
     * 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
+取值范围：
+<li> true：启用
+<li> false：不启用
 默认值：false。
     */
     @SerializedName("EnableParameter")
@@ -102,6 +105,13 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     @SerializedName("DefaultParameters")
     @Expose
     private String DefaultParameters;
+
+    /**
+    * 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
+    */
+    @SerializedName("DefaultParameterConfs")
+    @Expose
+    private DefaultParameterConf [] DefaultParameterConfs;
 
     /**
     * Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
@@ -163,10 +173,10 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Get 待执行命令的实例ID列表，上限100。支持实例类型：
+     * Get 待执行命令的实例ID列表，上限200。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE 
-     * @return InstanceIds 待执行命令的实例ID列表，上限100。支持实例类型：
+     * @return InstanceIds 待执行命令的实例ID列表，上限200。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
      */
@@ -175,10 +185,10 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Set 待执行命令的实例ID列表，上限100。支持实例类型：
+     * Set 待执行命令的实例ID列表，上限200。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
-     * @param InstanceIds 待执行命令的实例ID列表，上限100。支持实例类型：
+     * @param InstanceIds 待执行命令的实例ID列表，上限200。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
      */
@@ -268,13 +278,13 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Get 是否保存命令，取值范围：
-<li> True：保存
-<li> False：不保存
-默认为 False。 
+<li> true：保存
+<li> false：不保存
+默认为 false。 
      * @return SaveCommand 是否保存命令，取值范围：
-<li> True：保存
-<li> False：不保存
-默认为 False。
+<li> true：保存
+<li> false：不保存
+默认为 false。
      */
     public Boolean getSaveCommand() {
         return this.SaveCommand;
@@ -282,13 +292,13 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Set 是否保存命令，取值范围：
-<li> True：保存
-<li> False：不保存
-默认为 False。
+<li> true：保存
+<li> false：不保存
+默认为 false。
      * @param SaveCommand 是否保存命令，取值范围：
-<li> True：保存
-<li> False：不保存
-默认为 False。
+<li> true：保存
+<li> false：不保存
+默认为 false。
      */
     public void setSaveCommand(Boolean SaveCommand) {
         this.SaveCommand = SaveCommand;
@@ -297,9 +307,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * Get 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
+取值范围：
+<li> true：启用
+<li> false：不启用
 默认值：false。 
      * @return EnableParameter 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
+取值范围：
+<li> true：启用
+<li> false：不启用
 默认值：false。
      */
     public Boolean getEnableParameter() {
@@ -309,9 +325,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * Set 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
+取值范围：
+<li> true：启用
+<li> false：不启用
 默认值：false。
      * @param EnableParameter 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
+取值范围：
+<li> true：启用
+<li> false：不启用
 默认值：false。
      */
     public void setEnableParameter(Boolean EnableParameter) {
@@ -348,6 +370,22 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      */
     public void setDefaultParameters(String DefaultParameters) {
         this.DefaultParameters = DefaultParameters;
+    }
+
+    /**
+     * Get 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。 
+     * @return DefaultParameterConfs 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
+     */
+    public DefaultParameterConf [] getDefaultParameterConfs() {
+        return this.DefaultParameterConfs;
+    }
+
+    /**
+     * Set 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
+     * @param DefaultParameterConfs 自定义参数数组。 如果 Parameters 未提供，将使用这里的默认值进行替换。 自定义参数最多20个。
+     */
+    public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
+        this.DefaultParameterConfs = DefaultParameterConfs;
     }
 
     /**
@@ -503,6 +541,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         if (source.DefaultParameters != null) {
             this.DefaultParameters = new String(source.DefaultParameters);
         }
+        if (source.DefaultParameterConfs != null) {
+            this.DefaultParameterConfs = new DefaultParameterConf[source.DefaultParameterConfs.length];
+            for (int i = 0; i < source.DefaultParameterConfs.length; i++) {
+                this.DefaultParameterConfs[i] = new DefaultParameterConf(source.DefaultParameterConfs[i]);
+            }
+        }
         if (source.Parameters != null) {
             this.Parameters = new String(source.Parameters);
         }
@@ -538,6 +582,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.setParamSimple(map, prefix + "SaveCommand", this.SaveCommand);
         this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Username", this.Username);

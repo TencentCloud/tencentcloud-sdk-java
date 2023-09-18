@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateIntegrationEmployeesResponse extends AbstractModel{
 
     /**
-    * 创建员工的结果
+    * 创建员工的结果。包含创建成功的数据与创建失败数据。
     */
     @SerializedName("CreateEmployeeResult")
     @Expose
@@ -37,16 +37,16 @@ public class CreateIntegrationEmployeesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建员工的结果 
-     * @return CreateEmployeeResult 创建员工的结果
+     * Get 创建员工的结果。包含创建成功的数据与创建失败数据。 
+     * @return CreateEmployeeResult 创建员工的结果。包含创建成功的数据与创建失败数据。
      */
     public CreateStaffResult getCreateEmployeeResult() {
         return this.CreateEmployeeResult;
     }
 
     /**
-     * Set 创建员工的结果
-     * @param CreateEmployeeResult 创建员工的结果
+     * Set 创建员工的结果。包含创建成功的数据与创建失败数据。
+     * @param CreateEmployeeResult 创建员工的结果。包含创建成功的数据与创建失败数据。
      */
     public void setCreateEmployeeResult(CreateStaffResult CreateEmployeeResult) {
         this.CreateEmployeeResult = CreateEmployeeResult;

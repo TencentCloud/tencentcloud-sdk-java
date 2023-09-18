@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class DeleteIntegrationEmployeesResponse extends AbstractModel{
 
     /**
-    * 员工删除数据
+    * 员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
     */
     @SerializedName("DeleteEmployeeResult")
     @Expose
@@ -37,16 +39,24 @@ public class DeleteIntegrationEmployeesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 员工删除数据 
-     * @return DeleteEmployeeResult 员工删除数据
+     * Get 员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul> 
+     * @return DeleteEmployeeResult 员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
      */
     public DeleteStaffsResult getDeleteEmployeeResult() {
         return this.DeleteEmployeeResult;
     }
 
     /**
-     * Set 员工删除数据
-     * @param DeleteEmployeeResult 员工删除数据
+     * Set 员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
+     * @param DeleteEmployeeResult 员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
      */
     public void setDeleteEmployeeResult(DeleteStaffsResult DeleteEmployeeResult) {
         this.DeleteEmployeeResult = DeleteEmployeeResult;

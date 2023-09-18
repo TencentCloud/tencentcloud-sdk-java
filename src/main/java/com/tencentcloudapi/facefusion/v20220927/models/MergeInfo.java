@@ -44,11 +44,18 @@ public class MergeInfo extends AbstractModel{
     private FaceRect InputImageFaceRect;
 
     /**
-    * 控制台上传的素材人脸ID，不填默认取最大人脸
+    * 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。
     */
     @SerializedName("TemplateFaceID")
     @Expose
     private String TemplateFaceID;
+
+    /**
+    * 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。
+    */
+    @SerializedName("TemplateFaceRect")
+    @Expose
+    private FaceRect TemplateFaceRect;
 
     /**
      * Get 输入图片base64 
@@ -99,19 +106,35 @@ public class MergeInfo extends AbstractModel{
     }
 
     /**
-     * Get 控制台上传的素材人脸ID，不填默认取最大人脸 
-     * @return TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸
+     * Get 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。 
+     * @return TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。
      */
     public String getTemplateFaceID() {
         return this.TemplateFaceID;
     }
 
     /**
-     * Set 控制台上传的素材人脸ID，不填默认取最大人脸
-     * @param TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸
+     * Set 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。
+     * @param TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。
      */
     public void setTemplateFaceID(String TemplateFaceID) {
         this.TemplateFaceID = TemplateFaceID;
+    }
+
+    /**
+     * Get 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。 
+     * @return TemplateFaceRect 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。
+     */
+    public FaceRect getTemplateFaceRect() {
+        return this.TemplateFaceRect;
+    }
+
+    /**
+     * Set 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。
+     * @param TemplateFaceRect 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。
+     */
+    public void setTemplateFaceRect(FaceRect TemplateFaceRect) {
+        this.TemplateFaceRect = TemplateFaceRect;
     }
 
     public MergeInfo() {
@@ -134,6 +157,9 @@ public class MergeInfo extends AbstractModel{
         if (source.TemplateFaceID != null) {
             this.TemplateFaceID = new String(source.TemplateFaceID);
         }
+        if (source.TemplateFaceRect != null) {
+            this.TemplateFaceRect = new FaceRect(source.TemplateFaceRect);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class MergeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "InputImageFaceRect.", this.InputImageFaceRect);
         this.setParamSimple(map, prefix + "TemplateFaceID", this.TemplateFaceID);
+        this.setParamObj(map, prefix + "TemplateFaceRect.", this.TemplateFaceRect);
 
     }
 }

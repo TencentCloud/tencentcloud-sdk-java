@@ -23,21 +23,22 @@ import java.util.HashMap;
 public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel{
 
     /**
-    * 操作人信息，userId必填
+    * 执行本接口操作的员工信息,userId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 指定每页多少条数据，单页最大1000
+    * 指定分页每页返回的数据条数，单页最大1000
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
+    * 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
     */
     @SerializedName("Offset")
     @Expose
@@ -51,7 +52,13 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     private String Name;
 
     /**
-    * 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+    * 成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul>
     */
     @SerializedName("Status")
     @Expose
@@ -59,61 +66,67 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
 
     /**
     * 是否导出当前成员企业数据
+<ul><li> **false**：不导出（默认值）</li>
+<li> **true**：导出</li></ul>
     */
     @SerializedName("Export")
     @Expose
     private Boolean Export;
 
     /**
-    * 成员企业机构 ID，在PC控制台 集团管理可获取
+    * 成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get 操作人信息，userId必填 
-     * @return Operator 操作人信息，userId必填
+     * Get 执行本接口操作的员工信息,userId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。 
+     * @return Operator 执行本接口操作的员工信息,userId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息，userId必填
-     * @param Operator 操作人信息，userId必填
+     * Set 执行本接口操作的员工信息,userId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @param Operator 执行本接口操作的员工信息,userId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 指定每页多少条数据，单页最大1000 
-     * @return Limit 指定每页多少条数据，单页最大1000
+     * Get 指定分页每页返回的数据条数，单页最大1000 
+     * @return Limit 指定分页每页返回的数据条数，单页最大1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页多少条数据，单页最大1000
-     * @param Limit 指定每页多少条数据，单页最大1000
+     * Set 指定分页每页返回的数据条数，单页最大1000
+     * @param Limit 指定分页每页返回的数据条数，单页最大1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
+     * Get 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0 
+     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0
+     * Set 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -136,24 +149,52 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     }
 
     /**
-     * Get 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入 
-     * @return Status 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+     * Get 成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul> 
+     * @return Status 成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
-     * @param Status 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+     * Set 成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul>
+     * @param Status 成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否导出当前成员企业数据 
+     * Get 是否导出当前成员企业数据
+<ul><li> **false**：不导出（默认值）</li>
+<li> **true**：导出</li></ul> 
      * @return Export 是否导出当前成员企业数据
+<ul><li> **false**：不导出（默认值）</li>
+<li> **true**：导出</li></ul>
      */
     public Boolean getExport() {
         return this.Export;
@@ -161,23 +202,27 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
 
     /**
      * Set 是否导出当前成员企业数据
+<ul><li> **false**：不导出（默认值）</li>
+<li> **true**：导出</li></ul>
      * @param Export 是否导出当前成员企业数据
+<ul><li> **false**：不导出（默认值）</li>
+<li> **true**：导出</li></ul>
      */
     public void setExport(Boolean Export) {
         this.Export = Export;
     }
 
     /**
-     * Get 成员企业机构 ID，在PC控制台 集团管理可获取 
-     * @return Id 成员企业机构 ID，在PC控制台 集团管理可获取
+     * Get 成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取 
+     * @return Id 成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 成员企业机构 ID，在PC控制台 集团管理可获取
-     * @param Id 成员企业机构 ID，在PC控制台 集团管理可获取
+     * Set 成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取
+     * @param Id 成员企业机构 ID，32 位字符串，在PC控制台 集团管理可获取
      */
     public void setId(String Id) {
         this.Id = Id;

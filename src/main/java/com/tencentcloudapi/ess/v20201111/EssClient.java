@@ -39,7 +39,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *将电子签系统员工userId与客户系统员工openId进行绑定
+     *此接口（BindEmployeeUserIdWithClientOpenId）用于将电子签系统员工UserId与客户系统员工OpenId进行绑定。
      * @param req BindEmployeeUserIdWithClientOpenIdRequest
      * @return BindEmployeeUserIdWithClientOpenIdResponse
      * @throws TencentCloudSDKException
@@ -468,7 +468,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *通过此接口，创建企业的部门，支持绑定客户系统部门ID。
+     *此接口（CreateIntegrationDepartment）用于创建企业的部门信息，支持绑定客户系统部门ID。
      * @param req CreateIntegrationDepartmentRequest
      * @return CreateIntegrationDepartmentResponse
      * @throws TencentCloudSDKException
@@ -489,8 +489,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *创建员工,此接口会发送提醒员工实名的短信，如果通过手机号发现员工已经创建，则不会重新创建，会发送短信提醒员工实名
-注意：此接口支持企微组织架构的 openid 创建员工，这种场景下传递明文的企微 openid 到WeworkOpenId字段即可（企微明文的 openid 一定要在应用的可见范围内才行），通过企微创建的员工，会发送企微消息去提醒实名
+     *此接口（CreateIntegrationEmployees）用于创建企业员工。调用成功后会给员工发送提醒员工实名的短信。若通过手机号发现员工已经创建，则不会重新创建，但会发送短信提醒员工实名。另外，此接口还支持通过企微组织架构的openid 创建员工（将WeworkOpenId字段设置为企微员工明文的openid，但需确保该企微员工在应用的可见范围内），该场景下，员工会接收到提醒实名的企微消息。
      * @param req CreateIntegrationEmployeesRequest
      * @return CreateIntegrationEmployeesResponse
      * @throws TencentCloudSDKException
@@ -848,7 +847,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *通过此接口，删除企业的部门。
+     *此接口（DeleteIntegrationDepartment）用于删除企业的部门信息。
      * @param req DeleteIntegrationDepartmentRequest
      * @return DeleteIntegrationDepartmentResponse
      * @throws TencentCloudSDKException
@@ -869,10 +868,11 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *移除员工
-这里分两个场景
-如果不传交接人的ReceiveUserId或者ReceiveOpenId，则会直接把这个人进行离职
-如果传了交接人，会把离职人未处理完的合同交接给交接人后再离职
+     *该接口（DeleteIntegrationEmployees）用于移除企业员工，同时可选择是否进行离职交接。
+-  如果不设置交接人的ReceiveUserId或ReceiveOpenId，则该员工将被直接移除而不进行交接操作。
+-  如果设置了ReceiveUserId或ReceiveOpenId，该员工未处理的合同将会被系统交接给设置的交接人，然后再对该员工进行离职操作。
+
+注：`1. 超管或法人身份的员工不能被删除。2. 员工存在待处理合同且无人交接时不能被删除。`
      * @param req DeleteIntegrationEmployeesRequest
      * @return DeleteIntegrationEmployeesResponse
      * @throws TencentCloudSDKException
@@ -1112,7 +1112,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *通过此接口，查询企业的部门，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
+     *此接口（DescribeIntegrationDepartments）用于查询企业的部门信息列表，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
      * @param req DescribeIntegrationDepartmentsRequest
      * @return DescribeIntegrationDepartmentsResponse
      * @throws TencentCloudSDKException
@@ -1133,7 +1133,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *查询企业员工列表，每次返回的数据量最大为20
+     *此接口（DescribeIntegrationEmployees）用于分页查询企业员工信息列表，支持设置过滤条件以筛选员工查询结果。
      * @param req DescribeIntegrationEmployeesRequest
      * @return DescribeIntegrationEmployeesResponse
      * @throws TencentCloudSDKException
@@ -1177,7 +1177,8 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *此API接口用户查询加入集团的成员企业
+     *此API接口用来查询加入集团的成员企业信息
+适用场景：子企业在加入集团后，主企业可能通过此接口获取到所有的子企业列表，方便进行展示和统计
      * @param req DescribeOrganizationGroupOrganizationsRequest
      * @return DescribeOrganizationGroupOrganizationsResponse
      * @throws TencentCloudSDKException
@@ -1344,7 +1345,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *通过此接口，更新企业的部门信息，支持更新部门名、客户系统部门ID、部门序列号。
+     *此接口（ModifyIntegrationDepartment）用于更新企业的部门信息，支持更新部门名称、客户系统部门ID和部门序号等信息。
      * @param req ModifyIntegrationDepartmentRequest
      * @return ModifyIntegrationDepartmentResponse
      * @throws TencentCloudSDKException
@@ -1419,7 +1420,9 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *将存在绑定关系的电子签系统员工userId与客户系统员工openId进行解绑
+     *此接口（UnbindEmployeeUserIdWithClientOpenId）用于解除电子签系统员工UserId与客户系统员工OpenId之间的绑定关系。
+
+注：`在调用此接口时，需确保OpenId已通过调用`<a href="https://qian.tencent.com/developers/companyApis/staffs/BindEmployeeUserIdWithClientOpenId" target="_blank">BindEmployeeUserIdWithClientOpenId</a>`接口与电子签系统的UserId绑定过。若OpenId未经过绑定，则无法使用此接口进行解绑操作。`
      * @param req UnbindEmployeeUserIdWithClientOpenIdRequest
      * @return UnbindEmployeeUserIdWithClientOpenIdResponse
      * @throws TencentCloudSDKException

@@ -65,7 +65,7 @@ public class CreateProxyEndPointRequest extends AbstractModel{
     private Long ConnectionPoolTimeOut;
 
     /**
-    * 安全组ID数组
+    * 绑定的安全组ID数组
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -79,7 +79,7 @@ public class CreateProxyEndPointRequest extends AbstractModel{
     private String Description;
 
     /**
-    * vip信息
+    * 想要绑定的vip信息，需与UniqueVpcId对应。
     */
     @SerializedName("Vip")
     @Expose
@@ -101,7 +101,10 @@ system-系统分配，custom-自定义
     private String AutoAddRo;
 
     /**
-    * 是否开启故障转移
+    * 是否开启故障转移。
+yes：开启
+no：不开启。
+数据库代理出现故障时，链接地址将会路由到主实例
     */
     @SerializedName("FailOver")
     @Expose
@@ -124,14 +127,14 @@ READWRITE,READONLY
     private String RwType;
 
     /**
-    * 一致性超时时间
+    * 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
     private Long ConsistencyTimeOut;
 
     /**
-    * 事务拆分
+    * 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
     */
     @SerializedName("TransSplit")
     @Expose
@@ -249,16 +252,16 @@ nearby,balance
     }
 
     /**
-     * Get 安全组ID数组 
-     * @return SecurityGroupIds 安全组ID数组
+     * Get 绑定的安全组ID数组 
+     * @return SecurityGroupIds 绑定的安全组ID数组
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID数组
-     * @param SecurityGroupIds 安全组ID数组
+     * Set 绑定的安全组ID数组
+     * @param SecurityGroupIds 绑定的安全组ID数组
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
@@ -281,16 +284,16 @@ nearby,balance
     }
 
     /**
-     * Get vip信息 
-     * @return Vip vip信息
+     * Get 想要绑定的vip信息，需与UniqueVpcId对应。 
+     * @return Vip 想要绑定的vip信息，需与UniqueVpcId对应。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set vip信息
-     * @param Vip vip信息
+     * Set 想要绑定的vip信息，需与UniqueVpcId对应。
+     * @param Vip 想要绑定的vip信息，需与UniqueVpcId对应。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
@@ -333,16 +336,28 @@ system-系统分配，custom-自定义
     }
 
     /**
-     * Get 是否开启故障转移 
-     * @return FailOver 是否开启故障转移
+     * Get 是否开启故障转移。
+yes：开启
+no：不开启。
+数据库代理出现故障时，链接地址将会路由到主实例 
+     * @return FailOver 是否开启故障转移。
+yes：开启
+no：不开启。
+数据库代理出现故障时，链接地址将会路由到主实例
      */
     public String getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set 是否开启故障转移
-     * @param FailOver 是否开启故障转移
+     * Set 是否开启故障转移。
+yes：开启
+no：不开启。
+数据库代理出现故障时，链接地址将会路由到主实例
+     * @param FailOver 是否开启故障转移。
+yes：开启
+no：不开启。
+数据库代理出现故障时，链接地址将会路由到主实例
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
@@ -389,32 +404,32 @@ READWRITE,READONLY
     }
 
     /**
-     * Get 一致性超时时间 
-     * @return ConsistencyTimeOut 一致性超时时间
+     * Get 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待 
+     * @return ConsistencyTimeOut 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
      */
     public Long getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set 一致性超时时间
-     * @param ConsistencyTimeOut 一致性超时时间
+     * Set 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
+     * @param ConsistencyTimeOut 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
      */
     public void setConsistencyTimeOut(Long ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;
     }
 
     /**
-     * Get 事务拆分 
-     * @return TransSplit 事务拆分
+     * Get 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行 
+     * @return TransSplit 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 事务拆分
-     * @param TransSplit 事务拆分
+     * Set 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
+     * @param TransSplit 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;

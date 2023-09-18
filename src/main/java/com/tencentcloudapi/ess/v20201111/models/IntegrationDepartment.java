@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class IntegrationDepartment extends AbstractModel{
 
     /**
-    * 部门ID
+    * 部门ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeptId")
@@ -31,7 +31,7 @@ public class IntegrationDepartment extends AbstractModel{
     private String DeptId;
 
     /**
-    * 部门名
+    * 部门名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeptName")
@@ -55,7 +55,7 @@ public class IntegrationDepartment extends AbstractModel{
     private String DeptOpenId;
 
     /**
-    * 序列号
+    * 序列号。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderNo")
@@ -63,9 +63,9 @@ public class IntegrationDepartment extends AbstractModel{
     private Long OrderNo;
 
     /**
-     * Get 部门ID
+     * Get 部门ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeptId 部门ID
+     * @return DeptId 部门ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeptId() {
@@ -73,9 +73,9 @@ public class IntegrationDepartment extends AbstractModel{
     }
 
     /**
-     * Set 部门ID
+     * Set 部门ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeptId 部门ID
+     * @param DeptId 部门ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeptId(String DeptId) {
@@ -83,9 +83,9 @@ public class IntegrationDepartment extends AbstractModel{
     }
 
     /**
-     * Get 部门名
+     * Get 部门名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeptName 部门名
+     * @return DeptName 部门名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeptName() {
@@ -93,9 +93,9 @@ public class IntegrationDepartment extends AbstractModel{
     }
 
     /**
-     * Set 部门名
+     * Set 部门名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeptName 部门名
+     * @param DeptName 部门名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeptName(String DeptName) {
@@ -143,9 +143,9 @@ public class IntegrationDepartment extends AbstractModel{
     }
 
     /**
-     * Get 序列号
+     * Get 序列号。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrderNo 序列号
+     * @return OrderNo 序列号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrderNo() {
@@ -153,9 +153,9 @@ public class IntegrationDepartment extends AbstractModel{
     }
 
     /**
-     * Set 序列号
+     * Set 序列号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrderNo 序列号
+     * @param OrderNo 序列号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderNo(Long OrderNo) {

@@ -58,6 +58,20 @@ public class CreateEmbedTokenRequest extends AbstractModel{
     private String ExtraParam;
 
     /**
+    * 使用者企业Id(仅用于多用户)
+    */
+    @SerializedName("UserCorpId")
+    @Expose
+    private String UserCorpId;
+
+    /**
+    * 使用者Id(仅用于多用户)
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 分享项目id 
      * @return ProjectId 分享项目id
      */
@@ -137,6 +151,38 @@ public class CreateEmbedTokenRequest extends AbstractModel{
         this.ExtraParam = ExtraParam;
     }
 
+    /**
+     * Get 使用者企业Id(仅用于多用户) 
+     * @return UserCorpId 使用者企业Id(仅用于多用户)
+     */
+    public String getUserCorpId() {
+        return this.UserCorpId;
+    }
+
+    /**
+     * Set 使用者企业Id(仅用于多用户)
+     * @param UserCorpId 使用者企业Id(仅用于多用户)
+     */
+    public void setUserCorpId(String UserCorpId) {
+        this.UserCorpId = UserCorpId;
+    }
+
+    /**
+     * Get 使用者Id(仅用于多用户) 
+     * @return UserId 使用者Id(仅用于多用户)
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 使用者Id(仅用于多用户)
+     * @param UserId 使用者Id(仅用于多用户)
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public CreateEmbedTokenRequest() {
     }
 
@@ -160,6 +206,12 @@ public class CreateEmbedTokenRequest extends AbstractModel{
         if (source.ExtraParam != null) {
             this.ExtraParam = new String(source.ExtraParam);
         }
+        if (source.UserCorpId != null) {
+            this.UserCorpId = new String(source.UserCorpId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class CreateEmbedTokenRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
+        this.setParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

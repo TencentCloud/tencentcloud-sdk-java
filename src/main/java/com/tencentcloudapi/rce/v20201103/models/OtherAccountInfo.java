@@ -23,69 +23,124 @@ import java.util.HashMap;
 public class OtherAccountInfo extends AbstractModel{
 
     /**
-    * id
+    * 其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+
     */
     @SerializedName("AccountId")
     @Expose
     private String AccountId;
 
     /**
-    * 手机号
+    * 手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。
     */
     @SerializedName("MobilePhone")
     @Expose
     private String MobilePhone;
 
     /**
-    * id
+    * 用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
+
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-     * Get id 
-     * @return AccountId id
+     * Get 其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+ 
+     * @return AccountId 其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+
      */
     public String getAccountId() {
         return this.AccountId;
     }
 
     /**
-     * Set id
-     * @param AccountId id
+     * Set 其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+
+     * @param AccountId 其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+
      */
     public void setAccountId(String AccountId) {
         this.AccountId = AccountId;
     }
 
     /**
-     * Get 手机号 
-     * @return MobilePhone 手机号
+     * Get 手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。 
+     * @return MobilePhone 手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。
      */
     public String getMobilePhone() {
         return this.MobilePhone;
     }
 
     /**
-     * Set 手机号
-     * @param MobilePhone 手机号
+     * Set 手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。
+     * @param MobilePhone 手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。
      */
     public void setMobilePhone(String MobilePhone) {
         this.MobilePhone = MobilePhone;
     }
 
     /**
-     * Get id 
-     * @return DeviceId id
+     * Get 用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
+ 
+     * @return DeviceId 用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
+
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set id
-     * @param DeviceId id
+     * Set 用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
+
+     * @param DeviceId 用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
+
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;

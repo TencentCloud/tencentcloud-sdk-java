@@ -31,43 +31,44 @@ public class CreateIntegrationDepartmentRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 部门名称，不超过50个字符
+    * 部门名称，最大长度为50个字符。
     */
     @SerializedName("DeptName")
     @Expose
     private String DeptName;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
+    * 电子签父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
     */
     @SerializedName("ParentDeptId")
     @Expose
     private String ParentDeptId;
 
     /**
-    * 第三方平台中父部门ID,与ParentDeptId二选一,优先ParentDeptId,都为空时自动填充至根节点下
+    * 第三方平台中父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
     */
     @SerializedName("ParentDeptOpenId")
     @Expose
     private String ParentDeptOpenId;
 
     /**
-    * 客户系统部门ID，不超过64个字符
+    * 客户系统部门ID，最大长度为64个字符。
     */
     @SerializedName("DeptOpenId")
     @Expose
     private String DeptOpenId;
 
     /**
-    * 排序号,1~30000范围内
+    * 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
     */
     @SerializedName("OrderNo")
     @Expose
@@ -94,100 +95,104 @@ public class CreateIntegrationDepartmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 部门名称，不超过50个字符 
-     * @return DeptName 部门名称，不超过50个字符
+     * Get 部门名称，最大长度为50个字符。 
+     * @return DeptName 部门名称，最大长度为50个字符。
      */
     public String getDeptName() {
         return this.DeptName;
     }
 
     /**
-     * Set 部门名称，不超过50个字符
-     * @param DeptName 部门名称，不超过50个字符
+     * Set 部门名称，最大长度为50个字符。
+     * @param DeptName 部门名称，最大长度为50个字符。
      */
     public void setDeptName(String DeptName) {
         this.DeptName = DeptName;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下 
-     * @return ParentDeptId 电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
+     * Get 电子签父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。` 
+     * @return ParentDeptId 电子签父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
      */
     public String getParentDeptId() {
         return this.ParentDeptId;
     }
 
     /**
-     * Set 电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
-     * @param ParentDeptId 电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
+     * Set 电子签父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
+     * @param ParentDeptId 电子签父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
      */
     public void setParentDeptId(String ParentDeptId) {
         this.ParentDeptId = ParentDeptId;
     }
 
     /**
-     * Get 第三方平台中父部门ID,与ParentDeptId二选一,优先ParentDeptId,都为空时自动填充至根节点下 
-     * @return ParentDeptOpenId 第三方平台中父部门ID,与ParentDeptId二选一,优先ParentDeptId,都为空时自动填充至根节点下
+     * Get 第三方平台中父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。` 
+     * @return ParentDeptOpenId 第三方平台中父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
      */
     public String getParentDeptOpenId() {
         return this.ParentDeptOpenId;
     }
 
     /**
-     * Set 第三方平台中父部门ID,与ParentDeptId二选一,优先ParentDeptId,都为空时自动填充至根节点下
-     * @param ParentDeptOpenId 第三方平台中父部门ID,与ParentDeptId二选一,优先ParentDeptId,都为空时自动填充至根节点下
+     * Set 第三方平台中父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
+     * @param ParentDeptOpenId 第三方平台中父部门ID。
+注：`如果同时指定了ParentDeptId与ParentDeptOpenId参数，系统将优先使用ParentDeptId。当二者都未指定时，创建的新部门将自动填充至根节点部门下。`
      */
     public void setParentDeptOpenId(String ParentDeptOpenId) {
         this.ParentDeptOpenId = ParentDeptOpenId;
     }
 
     /**
-     * Get 客户系统部门ID，不超过64个字符 
-     * @return DeptOpenId 客户系统部门ID，不超过64个字符
+     * Get 客户系统部门ID，最大长度为64个字符。 
+     * @return DeptOpenId 客户系统部门ID，最大长度为64个字符。
      */
     public String getDeptOpenId() {
         return this.DeptOpenId;
     }
 
     /**
-     * Set 客户系统部门ID，不超过64个字符
-     * @param DeptOpenId 客户系统部门ID，不超过64个字符
+     * Set 客户系统部门ID，最大长度为64个字符。
+     * @param DeptOpenId 客户系统部门ID，最大长度为64个字符。
      */
     public void setDeptOpenId(String DeptOpenId) {
         this.DeptOpenId = DeptOpenId;
     }
 
     /**
-     * Get 排序号,1~30000范围内 
-     * @return OrderNo 排序号,1~30000范围内
+     * Get 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。 
+     * @return OrderNo 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
      */
     public Long getOrderNo() {
         return this.OrderNo;
     }
 
     /**
-     * Set 排序号,1~30000范围内
-     * @param OrderNo 排序号,1~30000范围内
+     * Set 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
+     * @param OrderNo 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
      */
     public void setOrderNo(Long OrderNo) {
         this.OrderNo = OrderNo;

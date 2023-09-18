@@ -111,6 +111,22 @@ public class EmbedTokenInfo extends AbstractModel{
     private Long ExpireTime;
 
     /**
+    * 使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserCorpId")
+    @Expose
+    private String UserCorpId;
+
+    /**
+    * 使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get 信息标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 信息标识
@@ -330,6 +346,46 @@ public class EmbedTokenInfo extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserCorpId 使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserCorpId() {
+        return this.UserCorpId;
+    }
+
+    /**
+     * Set 使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserCorpId 使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserCorpId(String UserCorpId) {
+        this.UserCorpId = UserCorpId;
+    }
+
+    /**
+     * Get 使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId 使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId 使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public EmbedTokenInfo() {
     }
 
@@ -371,6 +427,12 @@ public class EmbedTokenInfo extends AbstractModel{
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
+        if (source.UserCorpId != null) {
+            this.UserCorpId = new String(source.UserCorpId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -389,6 +451,8 @@ public class EmbedTokenInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class UnbindEmployeeUserIdWithClientOpenIdResponse extends AbstractModel{
 
     /**
-    * 解绑是否成功，1表示成功，0表示失败
+    * 解绑是否成功。
+<ul><li> **0**：失败 </li>
+<li> **1**：成功 </li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -37,16 +39,24 @@ public class UnbindEmployeeUserIdWithClientOpenIdResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 解绑是否成功，1表示成功，0表示失败 
-     * @return Status 解绑是否成功，1表示成功，0表示失败
+     * Get 解绑是否成功。
+<ul><li> **0**：失败 </li>
+<li> **1**：成功 </li></ul> 
+     * @return Status 解绑是否成功。
+<ul><li> **0**：失败 </li>
+<li> **1**：成功 </li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 解绑是否成功，1表示成功，0表示失败
-     * @param Status 解绑是否成功，1表示成功，0表示失败
+     * Set 解绑是否成功。
+<ul><li> **0**：失败 </li>
+<li> **1**：成功 </li></ul>
+     * @param Status 解绑是否成功。
+<ul><li> **0**：失败 </li>
+<li> **1**：成功 </li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

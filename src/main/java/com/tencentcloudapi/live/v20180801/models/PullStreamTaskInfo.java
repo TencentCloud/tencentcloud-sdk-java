@@ -283,6 +283,14 @@ PullVodPushLive -点播。
     private String RecordTemplateId;
 
     /**
+    * 新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupToUrl")
+    @Expose
+    private String BackupToUrl;
+
+    /**
      * Get 拉流任务Id。 
      * @return TaskId 拉流任务Id。
      */
@@ -986,6 +994,26 @@ PullVodPushLive -点播。
         this.RecordTemplateId = RecordTemplateId;
     }
 
+    /**
+     * Get 新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupToUrl 新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupToUrl() {
+        return this.BackupToUrl;
+    }
+
+    /**
+     * Set 新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupToUrl 新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupToUrl(String BackupToUrl) {
+        this.BackupToUrl = BackupToUrl;
+    }
+
     public PullStreamTaskInfo() {
     }
 
@@ -1087,6 +1115,9 @@ PullVodPushLive -点播。
         if (source.RecordTemplateId != null) {
             this.RecordTemplateId = new String(source.RecordTemplateId);
         }
+        if (source.BackupToUrl != null) {
+            this.BackupToUrl = new String(source.BackupToUrl);
+        }
     }
 
 
@@ -1122,6 +1153,7 @@ PullVodPushLive -点播。
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
         this.setParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
+        this.setParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateIntegrationDepartmentResponse extends AbstractModel{
 
     /**
-    * 电子签部门ID
+    * 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
     */
     @SerializedName("DeptId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateIntegrationDepartmentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 电子签部门ID 
-     * @return DeptId 电子签部门ID
+     * Get 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。 
+     * @return DeptId 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
      */
     public String getDeptId() {
         return this.DeptId;
     }
 
     /**
-     * Set 电子签部门ID
-     * @param DeptId 电子签部门ID
+     * Set 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
+     * @param DeptId 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
      */
     public void setDeptId(String DeptId) {
         this.DeptId = DeptId;

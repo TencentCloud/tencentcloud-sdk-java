@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SetRenewFlagRequest extends AbstractModel{
 
     /**
-    * 需操作的实例ID
+    * 需操作的集群ID
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -37,16 +37,16 @@ public class SetRenewFlagRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-     * Get 需操作的实例ID 
-     * @return ResourceIds 需操作的实例ID
+     * Get 需操作的集群ID 
+     * @return ResourceIds 需操作的集群ID
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 需操作的实例ID
-     * @param ResourceIds 需操作的实例ID
+     * Set 需操作的集群ID
+     * @param ResourceIds 需操作的集群ID
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;

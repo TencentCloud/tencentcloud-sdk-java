@@ -85,6 +85,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     private String DefaultParameters;
 
     /**
+    * 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+    */
+    @SerializedName("DefaultParameterConfs")
+    @Expose
+    private DefaultParameterConf [] DefaultParameterConfs;
+
+    /**
     * 为命令关联的标签，列表长度不超过10。
     */
     @SerializedName("Tags")
@@ -269,6 +278,30 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
+     * Get 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。 
+     * @return DefaultParameterConfs 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+     */
+    public DefaultParameterConf [] getDefaultParameterConfs() {
+        return this.DefaultParameterConfs;
+    }
+
+    /**
+     * Set 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+     * @param DefaultParameterConfs 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+     */
+    public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
+        this.DefaultParameterConfs = DefaultParameterConfs;
+    }
+
+    /**
      * Get 为命令关联的标签，列表长度不超过10。 
      * @return Tags 为命令关联的标签，列表长度不超过10。
      */
@@ -380,6 +413,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         if (source.DefaultParameters != null) {
             this.DefaultParameters = new String(source.DefaultParameters);
         }
+        if (source.DefaultParameterConfs != null) {
+            this.DefaultParameterConfs = new DefaultParameterConf[source.DefaultParameterConfs.length];
+            for (int i = 0; i < source.DefaultParameterConfs.length; i++) {
+                this.DefaultParameterConfs[i] = new DefaultParameterConf(source.DefaultParameterConfs[i]);
+            }
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -410,6 +449,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);

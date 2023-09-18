@@ -23,79 +23,89 @@ import java.util.HashMap;
 public class CreateIntegrationEmployeesRequest extends AbstractModel{
 
     /**
-    * 操作人信息，userId必填
+    * 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
+    * 待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。
     */
     @SerializedName("Employees")
     @Expose
     private Staff [] Employees;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 操作人信息，userId必填 
-     * @return Operator 操作人信息，userId必填
+     * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息，userId必填
-     * @param Operator 操作人信息，userId必填
+     * Set 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息 
-     * @return Employees 待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
+     * Get 待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。 
+     * @return Employees 待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。
      */
     public Staff [] getEmployees() {
         return this.Employees;
     }
 
     /**
-     * Set 待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
-     * @param Employees 待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
+     * Set 待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。
+     * @param Employees 待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。
      */
     public void setEmployees(Staff [] Employees) {
         this.Employees = Employees;
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Department extends AbstractModel{
 
     /**
-    * 部门id
+    * 部门ID。
     */
     @SerializedName("DepartmentId")
     @Expose
     private String DepartmentId;
 
     /**
-    * 部门名称
+    * 部门名称。
     */
     @SerializedName("DepartmentName")
     @Expose
     private String DepartmentName;
 
     /**
-     * Get 部门id 
-     * @return DepartmentId 部门id
+     * Get 部门ID。 
+     * @return DepartmentId 部门ID。
      */
     public String getDepartmentId() {
         return this.DepartmentId;
     }
 
     /**
-     * Set 部门id
-     * @param DepartmentId 部门id
+     * Set 部门ID。
+     * @param DepartmentId 部门ID。
      */
     public void setDepartmentId(String DepartmentId) {
         this.DepartmentId = DepartmentId;
     }
 
     /**
-     * Get 部门名称 
-     * @return DepartmentName 部门名称
+     * Get 部门名称。 
+     * @return DepartmentName 部门名称。
      */
     public String getDepartmentName() {
         return this.DepartmentName;
     }
 
     /**
-     * Set 部门名称
-     * @param DepartmentName 部门名称
+     * Set 部门名称。
+     * @param DepartmentName 部门名称。
      */
     public void setDepartmentName(String DepartmentName) {
         this.DepartmentName = DepartmentName;

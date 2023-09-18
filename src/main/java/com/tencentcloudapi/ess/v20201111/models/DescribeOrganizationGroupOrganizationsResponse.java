@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel{
 
     /**
-    * 查询到的符合条件的成员企业总数量
+    * 符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -31,7 +31,7 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     private Long Total;
 
     /**
-    * 已授权待激活的企业数量
+    * 已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinedTotal")
@@ -63,7 +63,7 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     private GroupOrganization [] List;
 
     /**
-    * 已加入的企业数量
+    * 已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivatedTotal")
@@ -78,9 +78,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 查询到的符合条件的成员企业总数量
+     * Get 符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 查询到的符合条件的成员企业总数量
+     * @return Total 符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -88,9 +88,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Set 查询到的符合条件的成员企业总数量
+     * Set 符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 查询到的符合条件的成员企业总数量
+     * @param Total 符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -98,9 +98,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Get 已授权待激活的企业数量
+     * Get 已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JoinedTotal 已授权待激活的企业数量
+     * @return JoinedTotal 已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJoinedTotal() {
@@ -108,9 +108,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Set 已授权待激活的企业数量
+     * Set 已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JoinedTotal 已授权待激活的企业数量
+     * @param JoinedTotal 已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinedTotal(Long JoinedTotal) {
@@ -182,9 +182,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Get 已加入的企业数量
+     * Get 已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActivatedTotal 已加入的企业数量
+     * @return ActivatedTotal 已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActivatedTotal() {
@@ -192,9 +192,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Set 已加入的企业数量
+     * Set 已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActivatedTotal 已加入的企业数量
+     * @param ActivatedTotal 已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivatedTotal(Long ActivatedTotal) {

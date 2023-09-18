@@ -55,21 +55,21 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
     */
     @SerializedName("Add")
     @Expose
-    private String Add;
+    private ChannelInfo [] Add;
 
     /**
     * 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
     */
     @SerializedName("Del")
     @Expose
-    private String Del;
+    private String [] Del;
 
     /**
     * 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
     */
     @SerializedName("OrganizationId")
     @Expose
-    private String OrganizationId;
+    private String [] OrganizationId;
 
     /**
      * Get 录像计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段） 
@@ -139,7 +139,7 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
      * Get 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量） 
      * @return Add 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
      */
-    public String getAdd() {
+    public ChannelInfo [] getAdd() {
         return this.Add;
     }
 
@@ -147,7 +147,7 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
      * Set 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
      * @param Add 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
      */
-    public void setAdd(String Add) {
+    public void setAdd(ChannelInfo [] Add) {
         this.Add = Add;
     }
 
@@ -155,7 +155,7 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
      * Get 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段） 
      * @return Del 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
      */
-    public String getDel() {
+    public String [] getDel() {
         return this.Del;
     }
 
@@ -163,7 +163,7 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
      * Set 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
      * @param Del 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
      */
-    public void setDel(String Del) {
+    public void setDel(String [] Del) {
         this.Del = Del;
     }
 
@@ -171,7 +171,7 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
      * Get 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量）） 
      * @return OrganizationId 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
      */
-    public String getOrganizationId() {
+    public String [] getOrganizationId() {
         return this.OrganizationId;
     }
 
@@ -179,7 +179,7 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
      * Set 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
      * @param OrganizationId 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
      */
-    public void setOrganizationId(String OrganizationId) {
+    public void setOrganizationId(String [] OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
@@ -204,13 +204,22 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
             this.LifeCycle = new LifeCycleData(source.LifeCycle);
         }
         if (source.Add != null) {
-            this.Add = new String(source.Add);
+            this.Add = new ChannelInfo[source.Add.length];
+            for (int i = 0; i < source.Add.length; i++) {
+                this.Add[i] = new ChannelInfo(source.Add[i]);
+            }
         }
         if (source.Del != null) {
-            this.Del = new String(source.Del);
+            this.Del = new String[source.Del.length];
+            for (int i = 0; i < source.Del.length; i++) {
+                this.Del[i] = new String(source.Del[i]);
+            }
         }
         if (source.OrganizationId != null) {
-            this.OrganizationId = new String(source.OrganizationId);
+            this.OrganizationId = new String[source.OrganizationId.length];
+            for (int i = 0; i < source.OrganizationId.length; i++) {
+                this.OrganizationId[i] = new String(source.OrganizationId[i]);
+            }
         }
     }
 
@@ -223,9 +232,9 @@ public class UpdateRecordBackupPlanModify extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "Describe", this.Describe);
         this.setParamObj(map, prefix + "LifeCycle.", this.LifeCycle);
-        this.setParamSimple(map, prefix + "Add", this.Add);
-        this.setParamSimple(map, prefix + "Del", this.Del);
-        this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
+        this.setParamArrayObj(map, prefix + "Add.", this.Add);
+        this.setParamArraySimple(map, prefix + "Del.", this.Del);
+        this.setParamArraySimple(map, prefix + "OrganizationId.", this.OrganizationId);
 
     }
 }

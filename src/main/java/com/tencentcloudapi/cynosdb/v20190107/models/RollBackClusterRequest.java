@@ -37,14 +37,16 @@ public class RollBackClusterRequest extends AbstractModel{
     private String RollbackStrategy;
 
     /**
-    * 回档ID
+    * 备份文件ID。
+回档策略为按备份文件回档时必填。
     */
     @SerializedName("RollbackId")
     @Expose
     private Long RollbackId;
 
     /**
-    * 期望回档时间
+    * 期望回档时间。
+回档策略为timeRollback按时间点回档时必填。
     */
     @SerializedName("ExpectTime")
     @Expose
@@ -111,32 +113,40 @@ public class RollBackClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get 回档ID 
-     * @return RollbackId 回档ID
+     * Get 备份文件ID。
+回档策略为按备份文件回档时必填。 
+     * @return RollbackId 备份文件ID。
+回档策略为按备份文件回档时必填。
      */
     public Long getRollbackId() {
         return this.RollbackId;
     }
 
     /**
-     * Set 回档ID
-     * @param RollbackId 回档ID
+     * Set 备份文件ID。
+回档策略为按备份文件回档时必填。
+     * @param RollbackId 备份文件ID。
+回档策略为按备份文件回档时必填。
      */
     public void setRollbackId(Long RollbackId) {
         this.RollbackId = RollbackId;
     }
 
     /**
-     * Get 期望回档时间 
-     * @return ExpectTime 期望回档时间
+     * Get 期望回档时间。
+回档策略为timeRollback按时间点回档时必填。 
+     * @return ExpectTime 期望回档时间。
+回档策略为timeRollback按时间点回档时必填。
      */
     public String getExpectTime() {
         return this.ExpectTime;
     }
 
     /**
-     * Set 期望回档时间
-     * @param ExpectTime 期望回档时间
+     * Set 期望回档时间。
+回档策略为timeRollback按时间点回档时必填。
+     * @param ExpectTime 期望回档时间。
+回档策略为timeRollback按时间点回档时必填。
      */
     public void setExpectTime(String ExpectTime) {
         this.ExpectTime = ExpectTime;

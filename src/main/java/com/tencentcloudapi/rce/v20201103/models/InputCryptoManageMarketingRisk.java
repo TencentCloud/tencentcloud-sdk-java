@@ -23,69 +23,89 @@ import java.util.HashMap;
 public class InputCryptoManageMarketingRisk extends AbstractModel{
 
     /**
-    * 是否授权
+    * 是否授权：1已授权，否则未授权。
+ 调用全栈式风控引擎接口服务时，客户需先明确授权
+
+
     */
     @SerializedName("IsAuthorized")
     @Expose
     private String IsAuthorized;
 
     /**
-    * 加密类型
+    * 加密类型：1AES加密
+
     */
     @SerializedName("CryptoType")
     @Expose
     private String CryptoType;
 
     /**
-    * 加密内容
+    * 加密内容，非空时接口采用加密模式。
     */
     @SerializedName("CryptoContent")
     @Expose
     private String CryptoContent;
 
     /**
-     * Get 是否授权 
-     * @return IsAuthorized 是否授权
+     * Get 是否授权：1已授权，否则未授权。
+ 调用全栈式风控引擎接口服务时，客户需先明确授权
+
+ 
+     * @return IsAuthorized 是否授权：1已授权，否则未授权。
+ 调用全栈式风控引擎接口服务时，客户需先明确授权
+
+
      */
     public String getIsAuthorized() {
         return this.IsAuthorized;
     }
 
     /**
-     * Set 是否授权
-     * @param IsAuthorized 是否授权
+     * Set 是否授权：1已授权，否则未授权。
+ 调用全栈式风控引擎接口服务时，客户需先明确授权
+
+
+     * @param IsAuthorized 是否授权：1已授权，否则未授权。
+ 调用全栈式风控引擎接口服务时，客户需先明确授权
+
+
      */
     public void setIsAuthorized(String IsAuthorized) {
         this.IsAuthorized = IsAuthorized;
     }
 
     /**
-     * Get 加密类型 
-     * @return CryptoType 加密类型
+     * Get 加密类型：1AES加密
+ 
+     * @return CryptoType 加密类型：1AES加密
+
      */
     public String getCryptoType() {
         return this.CryptoType;
     }
 
     /**
-     * Set 加密类型
-     * @param CryptoType 加密类型
+     * Set 加密类型：1AES加密
+
+     * @param CryptoType 加密类型：1AES加密
+
      */
     public void setCryptoType(String CryptoType) {
         this.CryptoType = CryptoType;
     }
 
     /**
-     * Get 加密内容 
-     * @return CryptoContent 加密内容
+     * Get 加密内容，非空时接口采用加密模式。 
+     * @return CryptoContent 加密内容，非空时接口采用加密模式。
      */
     public String getCryptoContent() {
         return this.CryptoContent;
     }
 
     /**
-     * Set 加密内容
-     * @param CryptoContent 加密内容
+     * Set 加密内容，非空时接口采用加密模式。
+     * @param CryptoContent 加密内容，非空时接口采用加密模式。
      */
     public void setCryptoContent(String CryptoContent) {
         this.CryptoContent = CryptoContent;

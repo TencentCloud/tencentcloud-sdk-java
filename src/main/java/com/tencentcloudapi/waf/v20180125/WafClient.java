@@ -460,7 +460,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *waf斯巴达-删除防护域名
+     *SAASWAF删除防护域名
      * @param req DeleteSpartaProtectionRequest
      * @return DeleteSpartaProtectionResponse
      * @throws TencentCloudSDKException
@@ -1951,6 +1951,90 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyHostStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyHostStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改实例的QPS弹性计费开关
+     * @param req ModifyInstanceElasticModeRequest
+     * @return ModifyInstanceElasticModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceElasticModeResponse ModifyInstanceElasticMode(ModifyInstanceElasticModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceElasticModeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceElasticModeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceElasticMode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改实例的名称
+     * @param req ModifyInstanceNameRequest
+     * @return ModifyInstanceNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceNameResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceName");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置套餐实例的弹性qps上限
+     * @param req ModifyInstanceQpsLimitRequest
+     * @return ModifyInstanceQpsLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimit(ModifyInstanceQpsLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceQpsLimitResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceQpsLimitResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceQpsLimit");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改实例的自动续费开关
+     * @param req ModifyInstanceRenewFlagRequest
+     * @return ModifyInstanceRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(ModifyInstanceRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceRenewFlagResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceRenewFlagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceRenewFlag");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

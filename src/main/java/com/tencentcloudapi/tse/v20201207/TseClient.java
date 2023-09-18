@@ -81,6 +81,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建云原生网关证书
+     * @param req CreateCloudNativeAPIGatewayCertificateRequest
+     * @return CreateCloudNativeAPIGatewayCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayCertificateResponse CreateCloudNativeAPIGatewayCertificate(CreateCloudNativeAPIGatewayCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudNativeAPIGatewayCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudNativeAPIGatewayCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建云原生网关路由
      * @param req CreateCloudNativeAPIGatewayRouteRequest
      * @return CreateCloudNativeAPIGatewayRouteResponse
@@ -249,6 +270,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *删除云原生网关证书
+     * @param req DeleteCloudNativeAPIGatewayCertificateRequest
+     * @return DeleteCloudNativeAPIGatewayCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificate(DeleteCloudNativeAPIGatewayCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCloudNativeAPIGatewayCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCloudNativeAPIGatewayCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除云原生网关路由
      * @param req DeleteCloudNativeAPIGatewayRouteRequest
      * @return DeleteCloudNativeAPIGatewayRouteResponse
@@ -409,6 +451,48 @@ public class TseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudNativeAPIGatewayCanaryRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCloudNativeAPIGatewayCanaryRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询云原生网关单个证书详情
+     * @param req DescribeCloudNativeAPIGatewayCertificateDetailsRequest
+     * @return DescribeCloudNativeAPIGatewayCertificateDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayCertificateDetailsResponse DescribeCloudNativeAPIGatewayCertificateDetails(DescribeCloudNativeAPIGatewayCertificateDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificateDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudNativeAPIGatewayCertificateDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询云原生网关证书列表
+     * @param req DescribeCloudNativeAPIGatewayCertificatesRequest
+     * @return DescribeCloudNativeAPIGatewayCertificatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayCertificatesResponse DescribeCloudNativeAPIGatewayCertificates(DescribeCloudNativeAPIGatewayCertificatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudNativeAPIGatewayCertificatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudNativeAPIGatewayCertificates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -892,6 +976,27 @@ public class TseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyNativeGatewayServerGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNativeGatewayServerGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改云原生网关证书信息
+     * @param req UpdateCloudNativeAPIGatewayCertificateInfoRequest
+     * @return UpdateCloudNativeAPIGatewayCertificateInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfo(UpdateCloudNativeAPIGatewayCertificateInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateCloudNativeAPIGatewayCertificateInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateCloudNativeAPIGatewayCertificateInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

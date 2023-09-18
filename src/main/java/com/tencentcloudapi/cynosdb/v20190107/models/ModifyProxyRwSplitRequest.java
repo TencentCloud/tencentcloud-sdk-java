@@ -44,7 +44,8 @@ public class ModifyProxyRwSplitRequest extends AbstractModel{
     private String ConsistencyType;
 
     /**
-    * 一致性超时时间
+    * 一致性超时时间。
+取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
@@ -58,7 +59,8 @@ public class ModifyProxyRwSplitRequest extends AbstractModel{
     private String WeightMode;
 
     /**
-    * 实例只读权重
+    * 实例只读权重。
+该参数必填。
     */
     @SerializedName("InstanceWeights")
     @Expose
@@ -79,7 +81,8 @@ public class ModifyProxyRwSplitRequest extends AbstractModel{
     private String AutoAddRo;
 
     /**
-    * 是否打开读写分离
+    * 是否打开读写分离。
+该参数已废弃，请通过RwType设置读写属性。
     */
     @SerializedName("OpenRw")
     @Expose
@@ -94,7 +97,8 @@ READWRITE,READONLY
     private String RwType;
 
     /**
-    * 事务拆分
+    * 事务拆分。
+在一个事务中拆分读和写到不同的实例上去执行。
     */
     @SerializedName("TransSplit")
     @Expose
@@ -125,7 +129,8 @@ SessionConnectionPool
     private String ConnectionPoolType;
 
     /**
-    * 连接池时间
+    * 连接池时间。
+可选范围:0~300（秒）
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
@@ -180,16 +185,20 @@ SessionConnectionPool
     }
 
     /**
-     * Get 一致性超时时间 
-     * @return ConsistencyTimeOut 一致性超时时间
+     * Get 一致性超时时间。
+取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。 
+     * @return ConsistencyTimeOut 一致性超时时间。
+取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
      */
     public String getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set 一致性超时时间
-     * @param ConsistencyTimeOut 一致性超时时间
+     * Set 一致性超时时间。
+取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
+     * @param ConsistencyTimeOut 一致性超时时间。
+取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。
      */
     public void setConsistencyTimeOut(String ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;
@@ -212,16 +221,20 @@ SessionConnectionPool
     }
 
     /**
-     * Get 实例只读权重 
-     * @return InstanceWeights 实例只读权重
+     * Get 实例只读权重。
+该参数必填。 
+     * @return InstanceWeights 实例只读权重。
+该参数必填。
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
     }
 
     /**
-     * Set 实例只读权重
-     * @param InstanceWeights 实例只读权重
+     * Set 实例只读权重。
+该参数必填。
+     * @param InstanceWeights 实例只读权重。
+该参数必填。
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;
@@ -260,16 +273,20 @@ SessionConnectionPool
     }
 
     /**
-     * Get 是否打开读写分离 
-     * @return OpenRw 是否打开读写分离
+     * Get 是否打开读写分离。
+该参数已废弃，请通过RwType设置读写属性。 
+     * @return OpenRw 是否打开读写分离。
+该参数已废弃，请通过RwType设置读写属性。
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set 是否打开读写分离
-     * @param OpenRw 是否打开读写分离
+     * Set 是否打开读写分离。
+该参数已废弃，请通过RwType设置读写属性。
+     * @param OpenRw 是否打开读写分离。
+该参数已废弃，请通过RwType设置读写属性。
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;
@@ -296,16 +313,20 @@ READWRITE,READONLY
     }
 
     /**
-     * Get 事务拆分 
-     * @return TransSplit 事务拆分
+     * Get 事务拆分。
+在一个事务中拆分读和写到不同的实例上去执行。 
+     * @return TransSplit 事务拆分。
+在一个事务中拆分读和写到不同的实例上去执行。
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 事务拆分
-     * @param TransSplit 事务拆分
+     * Set 事务拆分。
+在一个事务中拆分读和写到不同的实例上去执行。
+     * @param TransSplit 事务拆分。
+在一个事务中拆分读和写到不同的实例上去执行。
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
@@ -372,16 +393,20 @@ SessionConnectionPool
     }
 
     /**
-     * Get 连接池时间 
-     * @return ConnectionPoolTimeOut 连接池时间
+     * Get 连接池时间。
+可选范围:0~300（秒） 
+     * @return ConnectionPoolTimeOut 连接池时间。
+可选范围:0~300（秒）
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set 连接池时间
-     * @param ConnectionPoolTimeOut 连接池时间
+     * Set 连接池时间。
+可选范围:0~300（秒）
+     * @param ConnectionPoolTimeOut 连接池时间。
+可选范围:0~300（秒）
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;

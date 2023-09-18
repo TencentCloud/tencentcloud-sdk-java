@@ -107,6 +107,13 @@ public class CreateNatGatewayRequest extends AbstractModel{
     private Boolean PublicIpFromSameZone;
 
     /**
+    * NAT网关大版本号，1是传统型，2是标准型，默认是1
+    */
+    @SerializedName("NatProductVersion")
+    @Expose
+    private Long NatProductVersion;
+
+    /**
      * Get NAT网关名称 
      * @return NatGatewayName NAT网关名称
      */
@@ -298,6 +305,22 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.PublicIpFromSameZone = PublicIpFromSameZone;
     }
 
+    /**
+     * Get NAT网关大版本号，1是传统型，2是标准型，默认是1 
+     * @return NatProductVersion NAT网关大版本号，1是传统型，2是标准型，默认是1
+     */
+    public Long getNatProductVersion() {
+        return this.NatProductVersion;
+    }
+
+    /**
+     * Set NAT网关大版本号，1是传统型，2是标准型，默认是1
+     * @param NatProductVersion NAT网关大版本号，1是传统型，2是标准型，默认是1
+     */
+    public void setNatProductVersion(Long NatProductVersion) {
+        this.NatProductVersion = NatProductVersion;
+    }
+
     public CreateNatGatewayRequest() {
     }
 
@@ -348,6 +371,9 @@ public class CreateNatGatewayRequest extends AbstractModel{
         if (source.PublicIpFromSameZone != null) {
             this.PublicIpFromSameZone = new Boolean(source.PublicIpFromSameZone);
         }
+        if (source.NatProductVersion != null) {
+            this.NatProductVersion = new Long(source.NatProductVersion);
+        }
     }
 
 
@@ -367,6 +393,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
+        this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
 
     }
 }

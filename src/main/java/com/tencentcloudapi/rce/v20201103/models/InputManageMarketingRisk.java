@@ -23,7 +23,16 @@ import java.util.HashMap;
 public class InputManageMarketingRisk extends AbstractModel{
 
     /**
-    * 账号信息。
+    * 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+
     */
     @SerializedName("Account")
     @Expose
@@ -146,9 +155,12 @@ public class InputManageMarketingRisk extends AbstractModel{
     private String VendorId;
 
     /**
-    * 设备类型：
-1：Android
-2：IOS
+    * 设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5;
     */
     @SerializedName("DeviceType")
     @Expose
@@ -176,23 +188,63 @@ public class InputManageMarketingRisk extends AbstractModel{
     private OnlineScamInfo OnlineScam;
 
     /**
-    * 平台: 1android
+    * 1：安卓
+2：iOS 
+3：H5 
+4：小程序 
+
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-     * Get 账号信息。 
-     * @return Account 账号信息。
+     * Get 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+ 
+     * @return Account 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+
      */
     public AccountInfo getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 账号信息。
-     * @param Account 账号信息。
+     * Set 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+
+     * @param Account 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+
      */
     public void setAccount(AccountInfo Account) {
         this.Account = Account;
@@ -471,24 +523,36 @@ public class InputManageMarketingRisk extends AbstractModel{
     }
 
     /**
-     * Get 设备类型：
-1：Android
-2：IOS 
-     * @return DeviceType 设备类型：
-1：Android
-2：IOS
+     * Get 设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5; 
+     * @return DeviceType 设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5;
      */
     public Long getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 设备类型：
-1：Android
-2：IOS
-     * @param DeviceType 设备类型：
-1：Android
-2：IOS
+     * Set 设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5;
+     * @param DeviceType 设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5;
      */
     public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;
@@ -543,16 +607,32 @@ public class InputManageMarketingRisk extends AbstractModel{
     }
 
     /**
-     * Get 平台: 1android 
-     * @return Platform 平台: 1android
+     * Get 1：安卓
+2：iOS 
+3：H5 
+4：小程序 
+ 
+     * @return Platform 1：安卓
+2：iOS 
+3：H5 
+4：小程序 
+
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台: 1android
-     * @param Platform 平台: 1android
+     * Set 1：安卓
+2：iOS 
+3：H5 
+4：小程序 
+
+     * @param Platform 1：安卓
+2：iOS 
+3：H5 
+4：小程序 
+
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

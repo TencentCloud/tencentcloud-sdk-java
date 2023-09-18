@@ -84,6 +84,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     private String DefaultParameters;
 
     /**
+    * 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+    */
+    @SerializedName("DefaultParameterConfs")
+    @Expose
+    private DefaultParameterConf [] DefaultParameterConfs;
+
+    /**
     * 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
     */
@@ -257,6 +266,30 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
+     * Get 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。 
+     * @return DefaultParameterConfs 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+     */
+    public DefaultParameterConf [] getDefaultParameterConfs() {
+        return this.DefaultParameterConfs;
+    }
+
+    /**
+     * Set 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+     * @param DefaultParameterConfs 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+     */
+    public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
+        this.DefaultParameterConfs = DefaultParameterConfs;
+    }
+
+    /**
      * Get 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。 
      * @return Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
@@ -352,6 +385,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         if (source.DefaultParameters != null) {
             this.DefaultParameters = new String(source.DefaultParameters);
         }
+        if (source.DefaultParameterConfs != null) {
+            this.DefaultParameterConfs = new DefaultParameterConf[source.DefaultParameterConfs.length];
+            for (int i = 0; i < source.DefaultParameterConfs.length; i++) {
+                this.DefaultParameterConfs[i] = new DefaultParameterConf(source.DefaultParameterConfs[i]);
+            }
+        }
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
@@ -376,6 +415,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
         this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
         this.setParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);

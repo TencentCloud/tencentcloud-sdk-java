@@ -31,7 +31,7 @@ public class DeleteIntegrationDepartmentRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+    * 电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
     */
     @SerializedName("DeptId")
     @Expose
@@ -46,7 +46,8 @@ public class DeleteIntegrationDepartmentRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
+    * 交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
     */
     @SerializedName("ReceiveDeptId")
     @Expose
@@ -73,16 +74,16 @@ public class DeleteIntegrationDepartmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得 
-     * @return DeptId 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+     * Get 电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。 
+     * @return DeptId 电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
      */
     public String getDeptId() {
         return this.DeptId;
     }
 
     /**
-     * Set 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
-     * @param DeptId 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+     * Set 电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
+     * @param DeptId 电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
      */
     public void setDeptId(String DeptId) {
         this.DeptId = DeptId;
@@ -109,16 +110,20 @@ public class DeleteIntegrationDepartmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。 
-     * @return ReceiveDeptId 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
+     * Get 交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。 
+     * @return ReceiveDeptId 交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
      */
     public String getReceiveDeptId() {
         return this.ReceiveDeptId;
     }
 
     /**
-     * Set 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
-     * @param ReceiveDeptId 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
+     * Set 交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
+     * @param ReceiveDeptId 交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
      */
     public void setReceiveDeptId(String ReceiveDeptId) {
         this.ReceiveDeptId = ReceiveDeptId;

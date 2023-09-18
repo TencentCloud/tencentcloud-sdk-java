@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeIntegrationDepartmentsResponse extends AbstractModel{
 
     /**
-    * 部门列表
+    * 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
     */
     @SerializedName("Departments")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeIntegrationDepartmentsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 部门列表 
-     * @return Departments 部门列表
+     * Get 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。 
+     * @return Departments 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
      */
     public IntegrationDepartment [] getDepartments() {
         return this.Departments;
     }
 
     /**
-     * Set 部门列表
-     * @param Departments 部门列表
+     * Set 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
+     * @param Departments 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
      */
     public void setDepartments(IntegrationDepartment [] Departments) {
         this.Departments = Departments;

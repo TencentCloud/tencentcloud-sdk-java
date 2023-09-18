@@ -1026,6 +1026,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDatasourceConnection）用于查询数据源信息
+     * @param req DescribeDatasourceConnectionRequest
+     * @return DescribeDatasourceConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatasourceConnectionResponse DescribeDatasourceConnection(DescribeDatasourceConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatasourceConnectionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatasourceConnectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatasourceConnection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口根据引擎ID查询数据引擎资源使用情况
      * @param req DescribeEngineUsageInfoRequest
      * @return DescribeEngineUsageInfoResponse
