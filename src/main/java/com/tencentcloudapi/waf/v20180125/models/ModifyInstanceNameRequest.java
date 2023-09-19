@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class ModifyInstanceNameRequest extends AbstractModel{
 
     /**
+    * 新名称
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
     * 实例id
     */
     @SerializedName("InstanceID")
@@ -35,6 +42,22 @@ public class ModifyInstanceNameRequest extends AbstractModel{
     @SerializedName("Edition")
     @Expose
     private String Edition;
+
+    /**
+     * Get 新名称 
+     * @return InstanceName 新名称
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 新名称
+     * @param InstanceName 新名称
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
 
     /**
      * Get 实例id 
@@ -76,6 +99,9 @@ public class ModifyInstanceNameRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyInstanceNameRequest(ModifyInstanceNameRequest source) {
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
         }
@@ -89,6 +115,7 @@ public class ModifyInstanceNameRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
 

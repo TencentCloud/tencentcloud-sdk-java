@@ -38,6 +38,16 @@ public class SchedulesInfo extends AbstractModel{
     private String ScheduleName;
 
     /**
+    * 编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 编排状态，取值范围：
 Enabled：已启用，
 Disabled：已禁用。
@@ -137,6 +147,34 @@ Disabled：已禁用。
      */
     public void setScheduleName(String ScheduleName) {
         this.ScheduleName = ScheduleName;
+    }
+
+    /**
+     * Get 编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -321,6 +359,9 @@ Disabled：已禁用。
         if (source.ScheduleName != null) {
             this.ScheduleName = new String(source.ScheduleName);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -357,6 +398,7 @@ Disabled：已禁用。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         this.setParamSimple(map, prefix + "ScheduleName", this.ScheduleName);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Trigger.", this.Trigger);
         this.setParamArrayObj(map, prefix + "Activities.", this.Activities);

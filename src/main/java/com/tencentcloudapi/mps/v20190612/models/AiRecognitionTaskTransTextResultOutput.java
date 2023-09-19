@@ -37,13 +37,6 @@ public class AiRecognitionTaskTransTextResultOutput extends AbstractModel{
     private String SubtitlePath;
 
     /**
-    * 字幕文件存储位置。
-    */
-    @SerializedName("OutputStorage")
-    @Expose
-    private TaskOutputStorage OutputStorage;
-
-    /**
      * Get 翻译片段列表。 
      * @return SegmentSet 翻译片段列表。
      */
@@ -75,22 +68,6 @@ public class AiRecognitionTaskTransTextResultOutput extends AbstractModel{
         this.SubtitlePath = SubtitlePath;
     }
 
-    /**
-     * Get 字幕文件存储位置。 
-     * @return OutputStorage 字幕文件存储位置。
-     */
-    public TaskOutputStorage getOutputStorage() {
-        return this.OutputStorage;
-    }
-
-    /**
-     * Set 字幕文件存储位置。
-     * @param OutputStorage 字幕文件存储位置。
-     */
-    public void setOutputStorage(TaskOutputStorage OutputStorage) {
-        this.OutputStorage = OutputStorage;
-    }
-
     public AiRecognitionTaskTransTextResultOutput() {
     }
 
@@ -108,9 +85,6 @@ public class AiRecognitionTaskTransTextResultOutput extends AbstractModel{
         if (source.SubtitlePath != null) {
             this.SubtitlePath = new String(source.SubtitlePath);
         }
-        if (source.OutputStorage != null) {
-            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
-        }
     }
 
 
@@ -120,7 +94,6 @@ public class AiRecognitionTaskTransTextResultOutput extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
-        this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }
 }

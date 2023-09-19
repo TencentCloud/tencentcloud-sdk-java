@@ -44,7 +44,7 @@ public class ActivityResItem extends AbstractModel{
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
-    private MediaProcessTaskSampleSnapshotResult SnapshotByTimeOffsetTask;
+    private MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask;
 
     /**
     * 采样截图任务输出
@@ -140,7 +140,7 @@ public class ActivityResItem extends AbstractModel{
      * @return SnapshotByTimeOffsetTask 时间点截图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public MediaProcessTaskSampleSnapshotResult getSnapshotByTimeOffsetTask() {
+    public MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
@@ -150,7 +150,7 @@ public class ActivityResItem extends AbstractModel{
      * @param SnapshotByTimeOffsetTask 时间点截图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSnapshotByTimeOffsetTask(MediaProcessTaskSampleSnapshotResult SnapshotByTimeOffsetTask) {
+    public void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
@@ -289,7 +289,7 @@ public class ActivityResItem extends AbstractModel{
             this.AnimatedGraphicTask = new MediaProcessTaskAnimatedGraphicResult(source.AnimatedGraphicTask);
         }
         if (source.SnapshotByTimeOffsetTask != null) {
-            this.SnapshotByTimeOffsetTask = new MediaProcessTaskSampleSnapshotResult(source.SnapshotByTimeOffsetTask);
+            this.SnapshotByTimeOffsetTask = new MediaProcessTaskSnapshotByTimeOffsetResult(source.SnapshotByTimeOffsetTask);
         }
         if (source.SampleSnapshotTask != null) {
             this.SampleSnapshotTask = new MediaProcessTaskSampleSnapshotResult(source.SampleSnapshotTask);

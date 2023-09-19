@@ -44,7 +44,7 @@ public class HostRecord extends AbstractModel{
     private String MainDomain;
 
     /**
-    * waf模式，同saas waf保持一致
+    * 规则引擎防护模式，0 观察模式，1拦截模式
     */
     @SerializedName("Mode")
     @Expose
@@ -65,7 +65,7 @@ public class HostRecord extends AbstractModel{
     private Long State;
 
     /**
-    * 使用的规则，同saas waf保持一致
+    * 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
     */
     @SerializedName("Engine")
     @Expose
@@ -154,6 +154,14 @@ public class HostRecord extends AbstractModel{
     private Long EngineType;
 
     /**
+    * 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private String CloudType;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -202,16 +210,16 @@ public class HostRecord extends AbstractModel{
     }
 
     /**
-     * Get waf模式，同saas waf保持一致 
-     * @return Mode waf模式，同saas waf保持一致
+     * Get 规则引擎防护模式，0 观察模式，1拦截模式 
+     * @return Mode 规则引擎防护模式，0 观察模式，1拦截模式
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set waf模式，同saas waf保持一致
-     * @param Mode waf模式，同saas waf保持一致
+     * Set 规则引擎防护模式，0 观察模式，1拦截模式
+     * @param Mode 规则引擎防护模式，0 观察模式，1拦截模式
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
@@ -250,16 +258,16 @@ public class HostRecord extends AbstractModel{
     }
 
     /**
-     * Get 使用的规则，同saas waf保持一致 
-     * @return Engine 使用的规则，同saas waf保持一致
+     * Get 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式 
+     * @return Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public Long getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set 使用的规则，同saas waf保持一致
-     * @param Engine 使用的规则，同saas waf保持一致
+     * Set 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * @param Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public void setEngine(Long Engine) {
         this.Engine = Engine;
@@ -461,6 +469,26 @@ public class HostRecord extends AbstractModel{
         this.EngineType = EngineType;
     }
 
+    /**
+     * Get 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudType(String CloudType) {
+        this.CloudType = CloudType;
+    }
+
     public HostRecord() {
     }
 
@@ -532,6 +560,9 @@ public class HostRecord extends AbstractModel{
         if (source.EngineType != null) {
             this.EngineType = new Long(source.EngineType);
         }
+        if (source.CloudType != null) {
+            this.CloudType = new String(source.CloudType);
+        }
     }
 
 
@@ -557,6 +588,7 @@ public class HostRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "AlbType", this.AlbType);
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
 
     }
 }

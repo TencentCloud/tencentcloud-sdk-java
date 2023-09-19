@@ -247,7 +247,7 @@ public class ModifySpartaProtectionRequest extends AbstractModel{
     private String [] IpHeaders;
 
     /**
-    * 0:关闭xff重置；1:开启xff重置
+    * 0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
     */
     @SerializedName("XFFReset")
     @Expose
@@ -766,16 +766,16 @@ public class ModifySpartaProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get 0:关闭xff重置；1:开启xff重置 
-     * @return XFFReset 0:关闭xff重置；1:开启xff重置
+     * Get 0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启 
+     * @return XFFReset 0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
      */
     public Long getXFFReset() {
         return this.XFFReset;
     }
 
     /**
-     * Set 0:关闭xff重置；1:开启xff重置
-     * @param XFFReset 0:关闭xff重置；1:开启xff重置
+     * Set 0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
+     * @param XFFReset 0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
      */
     public void setXFFReset(Long XFFReset) {
         this.XFFReset = XFFReset;

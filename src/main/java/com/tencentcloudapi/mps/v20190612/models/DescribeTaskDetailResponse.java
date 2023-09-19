@@ -133,6 +133,14 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private ScheduleTask ScheduleTask;
 
     /**
+    * 直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LiveScheduleTask")
+    @Expose
+    private LiveScheduleTask LiveScheduleTask;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -412,6 +420,26 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LiveScheduleTask 直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LiveScheduleTask getLiveScheduleTask() {
+        return this.LiveScheduleTask;
+    }
+
+    /**
+     * Set 直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveScheduleTask 直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLiveScheduleTask(LiveScheduleTask LiveScheduleTask) {
+        this.LiveScheduleTask = LiveScheduleTask;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -477,6 +505,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         if (source.ScheduleTask != null) {
             this.ScheduleTask = new ScheduleTask(source.ScheduleTask);
         }
+        if (source.LiveScheduleTask != null) {
+            this.LiveScheduleTask = new LiveScheduleTask(source.LiveScheduleTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -501,6 +532,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamObj(map, prefix + "ScheduleTask.", this.ScheduleTask);
+        this.setParamObj(map, prefix + "LiveScheduleTask.", this.LiveScheduleTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

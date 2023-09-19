@@ -107,6 +107,20 @@ public class CreateTtsTaskRequest extends AbstractModel{
     private Boolean VoiceoverDialogueSplit;
 
     /**
+    * 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+    */
+    @SerializedName("EmotionCategory")
+    @Expose
+    private String EmotionCategory;
+
+    /**
+    * 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
+    */
+    @SerializedName("EmotionIntensity")
+    @Expose
+    private Long EmotionIntensity;
+
+    /**
      * Get 合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符 
      * @return Text 合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符
      */
@@ -298,6 +312,38 @@ public class CreateTtsTaskRequest extends AbstractModel{
         this.VoiceoverDialogueSplit = VoiceoverDialogueSplit;
     }
 
+    /**
+     * Get 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo) 
+     * @return EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+     */
+    public String getEmotionCategory() {
+        return this.EmotionCategory;
+    }
+
+    /**
+     * Set 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+     * @param EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+     */
+    public void setEmotionCategory(String EmotionCategory) {
+        this.EmotionCategory = EmotionCategory;
+    }
+
+    /**
+     * Get 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。 
+     * @return EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
+     */
+    public Long getEmotionIntensity() {
+        return this.EmotionIntensity;
+    }
+
+    /**
+     * Set 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
+     * @param EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
+     */
+    public void setEmotionIntensity(Long EmotionIntensity) {
+        this.EmotionIntensity = EmotionIntensity;
+    }
+
     public CreateTtsTaskRequest() {
     }
 
@@ -342,6 +388,12 @@ public class CreateTtsTaskRequest extends AbstractModel{
         if (source.VoiceoverDialogueSplit != null) {
             this.VoiceoverDialogueSplit = new Boolean(source.VoiceoverDialogueSplit);
         }
+        if (source.EmotionCategory != null) {
+            this.EmotionCategory = new String(source.EmotionCategory);
+        }
+        if (source.EmotionIntensity != null) {
+            this.EmotionIntensity = new Long(source.EmotionIntensity);
+        }
     }
 
 
@@ -361,6 +413,8 @@ public class CreateTtsTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
         this.setParamSimple(map, prefix + "VoiceoverDialogueSplit", this.VoiceoverDialogueSplit);
+        this.setParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
+        this.setParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
 
     }
 }

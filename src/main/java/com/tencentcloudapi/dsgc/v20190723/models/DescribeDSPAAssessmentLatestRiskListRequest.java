@@ -107,6 +107,13 @@ public class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel{
     private String [] RiskSide;
 
     /**
+    * ASC 正序，DESC倒叙
+    */
+    @SerializedName("TimeSort")
+    @Expose
+    private String TimeSort;
+
+    /**
      * Get dspa实例Id 
      * @return DspaId dspa实例Id
      */
@@ -298,6 +305,22 @@ public class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel{
         this.RiskSide = RiskSide;
     }
 
+    /**
+     * Get ASC 正序，DESC倒叙 
+     * @return TimeSort ASC 正序，DESC倒叙
+     */
+    public String getTimeSort() {
+        return this.TimeSort;
+    }
+
+    /**
+     * Set ASC 正序，DESC倒叙
+     * @param TimeSort ASC 正序，DESC倒叙
+     */
+    public void setTimeSort(String TimeSort) {
+        this.TimeSort = TimeSort;
+    }
+
     public DescribeDSPAAssessmentLatestRiskListRequest() {
     }
 
@@ -345,6 +368,9 @@ public class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel{
                 this.RiskSide[i] = new String(source.RiskSide[i]);
             }
         }
+        if (source.TimeSort != null) {
+            this.TimeSort = new String(source.TimeSort);
+        }
     }
 
 
@@ -364,6 +390,7 @@ public class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamArraySimple(map, prefix + "RiskSide.", this.RiskSide);
+        this.setParamSimple(map, prefix + "TimeSort", this.TimeSort);
 
     }
 }

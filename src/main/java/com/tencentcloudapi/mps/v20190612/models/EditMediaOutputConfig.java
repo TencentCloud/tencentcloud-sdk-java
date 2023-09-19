@@ -24,6 +24,7 @@ public class EditMediaOutputConfig extends AbstractModel{
 
     /**
     * 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Container")
     @Expose
@@ -31,14 +32,17 @@ public class EditMediaOutputConfig extends AbstractModel{
 
     /**
     * 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。 
+     * Get 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Container 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainer() {
         return this.Container;
@@ -46,15 +50,19 @@ public class EditMediaOutputConfig extends AbstractModel{
 
     /**
      * Set 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Container 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal 
+     * Get 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -62,7 +70,9 @@ public class EditMediaOutputConfig extends AbstractModel{
 
     /**
      * Set 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

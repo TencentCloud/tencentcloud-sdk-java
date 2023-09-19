@@ -111,6 +111,14 @@ public class ClbDomainsInfo extends AbstractModel{
     private String CdcClusters;
 
     /**
+    * 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private String CloudType;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -318,6 +326,26 @@ public class ClbDomainsInfo extends AbstractModel{
         this.CdcClusters = CdcClusters;
     }
 
+    /**
+     * Get 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudType(String CloudType) {
+        this.CloudType = CloudType;
+    }
+
     public ClbDomainsInfo() {
     }
 
@@ -368,6 +396,9 @@ public class ClbDomainsInfo extends AbstractModel{
         if (source.CdcClusters != null) {
             this.CdcClusters = new String(source.CdcClusters);
         }
+        if (source.CloudType != null) {
+            this.CloudType = new String(source.CloudType);
+        }
     }
 
 
@@ -387,6 +418,7 @@ public class ClbDomainsInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AlbType", this.AlbType);
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
         this.setParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
 
     }
 }

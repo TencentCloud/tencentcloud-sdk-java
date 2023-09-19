@@ -31,6 +31,7 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
 
     /**
     * 精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -53,8 +54,10 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
     }
 
     /**
-     * Get 精彩片段的存储位置。 
+     * Get 精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputStorage 精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
@@ -62,7 +65,9 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel{
 
     /**
      * Set 精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStorage 精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

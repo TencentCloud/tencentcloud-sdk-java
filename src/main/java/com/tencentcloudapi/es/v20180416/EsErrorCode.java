@@ -1,5 +1,8 @@
 package com.tencentcloudapi.es.v20180416;
 public enum EsErrorCode {
+    // 当前用户对查询集群实例操作未授权，请添加CAM权限。
+     AUTHFAILURE_UNAUTHDESCRIBEINSTANCES("AuthFailure.UnAuthDescribeInstances"),
+     
     // 操作未授权。
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnAuthorizedOperation"),
      
@@ -356,6 +359,12 @@ public enum EsErrorCode {
      
     // 不支持该插件。
      UNSUPPORTEDOPERATION_PLUGIN("UnsupportedOperation.Plugin"),
+     
+    // 离线节点蓝绿变更存在风险，请直接选择重启“in-place”。
+     UNSUPPORTEDOPERATION_RESTARTMODE("UnsupportedOperation.RestartMode"),
+     
+    // 不支持该操作，当前实例运行状态不为正常。
+     UNSUPPORTEDOPERATION_STATUSNOTNORMAL("UnsupportedOperation.StatusNotNormal"),
      
     // 不支持该操作，实例状态有误。
      UNSUPPORTEDOPERATION_STATUSNOTSUPPORT("UnsupportedOperation.StatusNotSupport"),

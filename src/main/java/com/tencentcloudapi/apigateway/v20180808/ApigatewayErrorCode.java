@@ -150,6 +150,9 @@ public enum ApigatewayErrorCode {
     // 标签绑定服务失败。
      FAILEDOPERATION_TAGBINDSERVICEERROR("FailedOperation.TagBindServiceError"),
      
+    // 迁移任务重复
+     FAILEDOPERATION_TASKALREADYEXIST("FailedOperation.TaskAlreadyExist"),
+     
     // 协议类型错误。
      FAILEDOPERATION_UNKNOWNPROTOCOLTYPEERROR("FailedOperation.UnknownProtocolTypeError"),
      

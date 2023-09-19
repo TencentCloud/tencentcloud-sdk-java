@@ -24,6 +24,7 @@ public class HeadTailParameter extends AbstractModel{
 
     /**
     * 片头列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadSet")
     @Expose
@@ -31,14 +32,17 @@ public class HeadTailParameter extends AbstractModel{
 
     /**
     * 片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TailSet")
     @Expose
     private MediaInputInfo [] TailSet;
 
     /**
-     * Get 片头列表。 
+     * Get 片头列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HeadSet 片头列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInputInfo [] getHeadSet() {
         return this.HeadSet;
@@ -46,15 +50,19 @@ public class HeadTailParameter extends AbstractModel{
 
     /**
      * Set 片头列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadSet 片头列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadSet(MediaInputInfo [] HeadSet) {
         this.HeadSet = HeadSet;
     }
 
     /**
-     * Get 片尾列表。 
+     * Get 片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TailSet 片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInputInfo [] getTailSet() {
         return this.TailSet;
@@ -62,7 +70,9 @@ public class HeadTailParameter extends AbstractModel{
 
     /**
      * Set 片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TailSet 片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTailSet(MediaInputInfo [] TailSet) {
         this.TailSet = TailSet;

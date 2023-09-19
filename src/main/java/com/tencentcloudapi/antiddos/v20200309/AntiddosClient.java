@@ -921,7 +921,9 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *获取DDoS防护的IP黑白名单
+     *接口变更
+
+获取DDoS防护的IP黑白名单
      * @param req DescribeBlackWhiteIpListRequest
      * @return DescribeBlackWhiteIpListResponse
      * @throws TencentCloudSDKException
@@ -1426,7 +1428,9 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
+     *接口变更
+
+获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
      * @param req DescribeListProtectThresholdConfigRequest
      * @return DescribeListProtectThresholdConfigResponse
      * @throws TencentCloudSDKException

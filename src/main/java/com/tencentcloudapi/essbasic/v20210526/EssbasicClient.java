@@ -165,6 +165,33 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *通过此接口，创建小程序批量签署链接，个人/企业员工点击此链接即可跳转小程序进行批量签署。
+请确保生成链接时候的身份信息和签署合同参与方的信息保持一致。
+
+注：
+- 参与人点击链接后需短信验证码才能查看合同内容。
+- 企业用户批量签署，需要传OrganizationName（参与方所在企业名称）参数生成签署链接，`请确保此企业已完成腾讯电子签企业认证`。
+- 个人批量签署，签名区`仅支持手写签名`。
+     * @param req ChannelCreateBatchSignUrlRequest
+     * @return ChannelCreateBatchSignUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateBatchSignUrlResponse ChannelCreateBatchSignUrl(ChannelCreateBatchSignUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateBatchSignUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateBatchSignUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateBatchSignUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口（ChannelCreateBoundFlows）用于子客领取合同，经办人需要有相应的角色，合同不能重复领取。
      * @param req ChannelCreateBoundFlowsRequest
      * @return ChannelCreateBoundFlowsResponse

@@ -78,7 +78,9 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
     /**
      * Get 字幕文件存储位置。 
      * @return OutputStorage 字幕文件存储位置。
+     * @deprecated
      */
+    @Deprecated
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
@@ -86,7 +88,9 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
     /**
      * Set 字幕文件存储位置。
      * @param OutputStorage 字幕文件存储位置。
+     * @deprecated
      */
+    @Deprecated
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }

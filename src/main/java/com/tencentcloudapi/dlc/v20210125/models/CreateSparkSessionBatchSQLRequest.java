@@ -30,7 +30,7 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     private String DataEngineName;
 
     /**
-    * 运行sql
+    * 运行sql，需要base64编码。
     */
     @SerializedName("ExecuteSQL")
     @Expose
@@ -95,7 +95,7 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     private KVPair [] Arguments;
 
     /**
-    * 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+    * 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
     */
     @SerializedName("IsInherit")
     @Expose
@@ -118,16 +118,16 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     }
 
     /**
-     * Get 运行sql 
-     * @return ExecuteSQL 运行sql
+     * Get 运行sql，需要base64编码。 
+     * @return ExecuteSQL 运行sql，需要base64编码。
      */
     public String getExecuteSQL() {
         return this.ExecuteSQL;
     }
 
     /**
-     * Set 运行sql
-     * @param ExecuteSQL 运行sql
+     * Set 运行sql，需要base64编码。
+     * @param ExecuteSQL 运行sql，需要base64编码。
      */
     public void setExecuteSQL(String ExecuteSQL) {
         this.ExecuteSQL = ExecuteSQL;
@@ -270,16 +270,16 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否继承集群的资源类配置：0：自定义（默认），1：继承集群； 
-     * @return IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     * Get 是否继承集群的资源类配置：0：不继承（默认），1：继承集群； 
+     * @return IsInherit 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
      */
     public Long getIsInherit() {
         return this.IsInherit;
     }
 
     /**
-     * Set 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
-     * @param IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     * Set 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
+     * @param IsInherit 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
      */
     public void setIsInherit(Long IsInherit) {
         this.IsInherit = IsInherit;

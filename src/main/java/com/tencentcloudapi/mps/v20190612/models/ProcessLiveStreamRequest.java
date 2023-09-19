@@ -93,6 +93,17 @@ public class ProcessLiveStreamRequest extends AbstractModel{
     private String SessionContext;
 
     /**
+    * 直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
+    */
+    @SerializedName("ScheduleId")
+    @Expose
+    private Long ScheduleId;
+
+    /**
      * Get 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。 
      * @return Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
      */
@@ -252,6 +263,38 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    /**
+     * Get 直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。 
+     * @return ScheduleId 直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
+     */
+    public Long getScheduleId() {
+        return this.ScheduleId;
+    }
+
+    /**
+     * Set 直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
+     * @param ScheduleId 直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
+     */
+    public void setScheduleId(Long ScheduleId) {
+        this.ScheduleId = ScheduleId;
+    }
+
     public ProcessLiveStreamRequest() {
     }
 
@@ -290,6 +333,9 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
+        if (source.ScheduleId != null) {
+            this.ScheduleId = new Long(source.ScheduleId);
+        }
     }
 
 
@@ -307,6 +353,7 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
 
     }
 }

@@ -111,6 +111,14 @@ public class AssessmentTemplate extends AbstractModel{
     private Boolean IsASMTemplate;
 
     /**
+    * 合规组id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdentifyComplianceId")
+    @Expose
+    private Long IdentifyComplianceId;
+
+    /**
      * Get id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id id
@@ -318,6 +326,26 @@ public class AssessmentTemplate extends AbstractModel{
         this.IsASMTemplate = IsASMTemplate;
     }
 
+    /**
+     * Get 合规组id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdentifyComplianceId 合规组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIdentifyComplianceId() {
+        return this.IdentifyComplianceId;
+    }
+
+    /**
+     * Set 合规组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdentifyComplianceId 合规组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdentifyComplianceId(Long IdentifyComplianceId) {
+        this.IdentifyComplianceId = IdentifyComplianceId;
+    }
+
     public AssessmentTemplate() {
     }
 
@@ -365,6 +393,9 @@ public class AssessmentTemplate extends AbstractModel{
         if (source.IsASMTemplate != null) {
             this.IsASMTemplate = new Boolean(source.IsASMTemplate);
         }
+        if (source.IdentifyComplianceId != null) {
+            this.IdentifyComplianceId = new Long(source.IdentifyComplianceId);
+        }
     }
 
 
@@ -384,6 +415,7 @@ public class AssessmentTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "SupportDataSource.", this.SupportDataSource);
         this.setParamSimple(map, prefix + "IsASMTemplate", this.IsASMTemplate);
+        this.setParamSimple(map, prefix + "IdentifyComplianceId", this.IdentifyComplianceId);
 
     }
 }

@@ -166,6 +166,22 @@ public class RiskItemInfo extends AbstractModel{
     private String RiskSide;
 
     /**
+    * API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("APIRiskLinkURL")
+    @Expose
+    private String APIRiskLinkURL;
+
+    /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 最新风险项id 
      * @return Id 最新风险项id
      */
@@ -521,6 +537,46 @@ public class RiskItemInfo extends AbstractModel{
         this.RiskSide = RiskSide;
     }
 
+    /**
+     * Get API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return APIRiskLinkURL API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAPIRiskLinkURL() {
+        return this.APIRiskLinkURL;
+    }
+
+    /**
+     * Set API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param APIRiskLinkURL API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAPIRiskLinkURL(String APIRiskLinkURL) {
+        this.APIRiskLinkURL = APIRiskLinkURL;
+    }
+
+    /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public RiskItemInfo() {
     }
 
@@ -586,6 +642,12 @@ public class RiskItemInfo extends AbstractModel{
         if (source.RiskSide != null) {
             this.RiskSide = new String(source.RiskSide);
         }
+        if (source.APIRiskLinkURL != null) {
+            this.APIRiskLinkURL = new String(source.APIRiskLinkURL);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -611,6 +673,8 @@ public class RiskItemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IdentifyComplianceId", this.IdentifyComplianceId);
         this.setParamSimple(map, prefix + "ItemSubType", this.ItemSubType);
         this.setParamSimple(map, prefix + "RiskSide", this.RiskSide);
+        this.setParamSimple(map, prefix + "APIRiskLinkURL", this.APIRiskLinkURL);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

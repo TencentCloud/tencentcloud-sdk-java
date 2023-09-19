@@ -23,31 +23,36 @@ import java.util.HashMap;
 public class CreateFlowSignReviewRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，userId 必填
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 签署流程编号
+    * 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝
+    * 企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul>
     */
     @SerializedName("ReviewType")
     @Expose
     private String ReviewType;
 
     /**
-    * 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+    * 审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+
     */
     @SerializedName("ReviewMessage")
     @Expose
@@ -61,98 +66,117 @@ REJECT: 拒绝
     private Agent Agent;
 
     /**
-    * 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
+    * 审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。
     */
     @SerializedName("RecipientId")
     @Expose
     private String RecipientId;
 
     /**
-    * 操作类型：（接口通过该字段区分操作类型）
+    * 操作类型：（接口通过该字段区分不同的操作类型）
 
-SignReview:签署审核
-CreateReview:发起审核
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-默认：SignReview；SignReview:签署审核
-
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview
+如果审核节点是个人，则操作类型只能为SignReview。
     */
     @SerializedName("OperateType")
     @Expose
     private String OperateType;
 
     /**
-     * Get 调用方用户信息，userId 必填 
-     * @return Operator 调用方用户信息，userId 必填
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填
-     * @param Operator 调用方用户信息，userId 必填
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 签署流程编号 
-     * @return FlowId 签署流程编号
+     * Get 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。 
+     * @return FlowId 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 签署流程编号
-     * @param FlowId 签署流程编号
+     * Set 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     * @param FlowId 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝 
-     * @return ReviewType 企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝
+     * Get 企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul> 
+     * @return ReviewType 企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul>
      */
     public String getReviewType() {
         return this.ReviewType;
     }
 
     /**
-     * Set 企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝
-     * @param ReviewType 企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝
+     * Set 企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul>
+     * @param ReviewType 企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul>
      */
     public void setReviewType(String ReviewType) {
         this.ReviewType = ReviewType;
     }
 
     /**
-     * Get 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200 
-     * @return ReviewMessage 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+     * Get 审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+ 
+     * @return ReviewMessage 审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+
      */
     public String getReviewMessage() {
         return this.ReviewMessage;
     }
 
     /**
-     * Set 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
-     * @param ReviewMessage 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+     * Set 审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+
+     * @param ReviewMessage 审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+
      */
     public void setReviewMessage(String ReviewMessage) {
         this.ReviewMessage = ReviewMessage;
@@ -175,64 +199,60 @@ REJECT: 拒绝
     }
 
     /**
-     * Get 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。 
-     * @return RecipientId 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
+     * Get 审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。 
+     * @return RecipientId 审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
-     * @param RecipientId 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
+     * Set 审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。
+     * @param RecipientId 审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
     }
 
     /**
-     * Get 操作类型：（接口通过该字段区分操作类型）
+     * Get 操作类型：（接口通过该字段区分不同的操作类型）
 
-SignReview:签署审核
-CreateReview:发起审核
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-默认：SignReview；SignReview:签署审核
+如果审核节点是个人，则操作类型只能为SignReview。 
+     * @return OperateType 操作类型：（接口通过该字段区分不同的操作类型）
 
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview 
-     * @return OperateType 操作类型：（接口通过该字段区分操作类型）
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-SignReview:签署审核
-CreateReview:发起审核
-
-默认：SignReview；SignReview:签署审核
-
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview
+如果审核节点是个人，则操作类型只能为SignReview。
      */
     public String getOperateType() {
         return this.OperateType;
     }
 
     /**
-     * Set 操作类型：（接口通过该字段区分操作类型）
+     * Set 操作类型：（接口通过该字段区分不同的操作类型）
 
-SignReview:签署审核
-CreateReview:发起审核
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-默认：SignReview；SignReview:签署审核
+如果审核节点是个人，则操作类型只能为SignReview。
+     * @param OperateType 操作类型：（接口通过该字段区分不同的操作类型）
 
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview
-     * @param OperateType 操作类型：（接口通过该字段区分操作类型）
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-SignReview:签署审核
-CreateReview:发起审核
-
-默认：SignReview；SignReview:签署审核
-
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview
+如果审核节点是个人，则操作类型只能为SignReview。
      */
     public void setOperateType(String OperateType) {
         this.OperateType = OperateType;

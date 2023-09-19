@@ -1509,6 +1509,27 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *接口用于查询RocketMQ实例的公网接入信息
+     * @param req DescribeRocketMQPublicAccessPointRequest
+     * @return DescribeRocketMQPublicAccessPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPoint(DescribeRocketMQPublicAccessPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQPublicAccessPointResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQPublicAccessPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQPublicAccessPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *rocketmq 消息查询
      * @param req DescribeRocketMQTopicMsgsRequest
      * @return DescribeRocketMQTopicMsgsResponse
@@ -1795,6 +1816,27 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyEnvironmentRoleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyEnvironmentRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *RabbitMQ专享版修改公网管控台，vpc15672开关
+     * @param req ModifyPublicNetworkAccessPointRequest
+     * @return ModifyPublicNetworkAccessPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPublicNetworkAccessPointResponse ModifyPublicNetworkAccessPoint(ModifyPublicNetworkAccessPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPublicNetworkAccessPointResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPublicNetworkAccessPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPublicNetworkAccessPoint");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2238,6 +2280,27 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
                 Type type = new TypeToken<JsonResponseModel<SendRocketMQMessageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SendRocketMQMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于开启关闭公网访问、设置安全访问策略
+     * @param req SetRocketMQPublicAccessPointRequest
+     * @return SetRocketMQPublicAccessPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetRocketMQPublicAccessPointResponse SetRocketMQPublicAccessPoint(SetRocketMQPublicAccessPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetRocketMQPublicAccessPointResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetRocketMQPublicAccessPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetRocketMQPublicAccessPoint");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

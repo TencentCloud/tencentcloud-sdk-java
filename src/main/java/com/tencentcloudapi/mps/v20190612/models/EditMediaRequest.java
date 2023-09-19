@@ -38,17 +38,29 @@ public class EditMediaRequest extends AbstractModel{
 
     /**
     * 媒体处理输出文件的目标路径。
+
+注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
+
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-    * 编辑后生成的文件配置。
+    * 【剪辑】任务生成的文件配置。
     */
     @SerializedName("OutputConfig")
     @Expose
     private EditMediaOutputConfig OutputConfig;
+
+    /**
+    * 【合成】任务配置。
+
+注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+    */
+    @SerializedName("ComposeConfig")
+    @Expose
+    private ComposeMediaConfig ComposeConfig;
 
     /**
     * 任务的事件通知信息，不填代表不获取事件通知。
@@ -111,8 +123,14 @@ public class EditMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get 媒体处理输出文件的目标路径。 
+     * Get 媒体处理输出文件的目标路径。
+
+注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
+ 
      * @return OutputObjectPath 媒体处理输出文件的目标路径。
+
+注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
+
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
@@ -120,26 +138,56 @@ public class EditMediaRequest extends AbstractModel{
 
     /**
      * Set 媒体处理输出文件的目标路径。
+
+注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
+
      * @param OutputObjectPath 媒体处理输出文件的目标路径。
+
+注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
+
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
     }
 
     /**
-     * Get 编辑后生成的文件配置。 
-     * @return OutputConfig 编辑后生成的文件配置。
+     * Get 【剪辑】任务生成的文件配置。 
+     * @return OutputConfig 【剪辑】任务生成的文件配置。
      */
     public EditMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 编辑后生成的文件配置。
-     * @param OutputConfig 编辑后生成的文件配置。
+     * Set 【剪辑】任务生成的文件配置。
+     * @param OutputConfig 【剪辑】任务生成的文件配置。
      */
     public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
+    }
+
+    /**
+     * Get 【合成】任务配置。
+
+注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。 
+     * @return ComposeConfig 【合成】任务配置。
+
+注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+     */
+    public ComposeMediaConfig getComposeConfig() {
+        return this.ComposeConfig;
+    }
+
+    /**
+     * Set 【合成】任务配置。
+
+注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+     * @param ComposeConfig 【合成】任务配置。
+
+注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+     */
+    public void setComposeConfig(ComposeMediaConfig ComposeConfig) {
+        this.ComposeConfig = ComposeConfig;
     }
 
     /**
@@ -229,6 +277,9 @@ public class EditMediaRequest extends AbstractModel{
         if (source.OutputConfig != null) {
             this.OutputConfig = new EditMediaOutputConfig(source.OutputConfig);
         }
+        if (source.ComposeConfig != null) {
+            this.ComposeConfig = new ComposeMediaConfig(source.ComposeConfig);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -252,6 +303,7 @@ public class EditMediaRequest extends AbstractModel{
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+        this.setParamObj(map, prefix + "ComposeConfig.", this.ComposeConfig);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

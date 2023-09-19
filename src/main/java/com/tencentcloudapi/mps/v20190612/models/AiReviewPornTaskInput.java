@@ -24,14 +24,17 @@ public class AiReviewPornTaskInput extends AbstractModel{
 
     /**
     * 鉴黄模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get 鉴黄模板 ID。 
+     * Get 鉴黄模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Definition 鉴黄模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefinition() {
         return this.Definition;
@@ -39,7 +42,9 @@ public class AiReviewPornTaskInput extends AbstractModel{
 
     /**
      * Set 鉴黄模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Definition 鉴黄模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

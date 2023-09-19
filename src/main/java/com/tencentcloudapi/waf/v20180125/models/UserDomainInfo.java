@@ -89,6 +89,14 @@ public class UserDomainInfo extends AbstractModel{
     private Long Cls;
 
     /**
+    * 标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private String CloudType;
+
+    /**
      * Get 用户id 
      * @return Appid 用户id
      */
@@ -244,6 +252,26 @@ public class UserDomainInfo extends AbstractModel{
         this.Cls = Cls;
     }
 
+    /**
+     * Get 标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudType(String CloudType) {
+        this.CloudType = CloudType;
+    }
+
     public UserDomainInfo() {
     }
 
@@ -279,6 +307,9 @@ public class UserDomainInfo extends AbstractModel{
         if (source.Cls != null) {
             this.Cls = new Long(source.Cls);
         }
+        if (source.CloudType != null) {
+            this.CloudType = new String(source.CloudType);
+        }
     }
 
 
@@ -295,6 +326,7 @@ public class UserDomainInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "WriteConfig", this.WriteConfig);
         this.setParamSimple(map, prefix + "Cls", this.Cls);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
 
     }
 }

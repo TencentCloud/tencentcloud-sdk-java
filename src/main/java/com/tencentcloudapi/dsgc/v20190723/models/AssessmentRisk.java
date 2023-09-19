@@ -163,6 +163,14 @@ public class AssessmentRisk extends AbstractModel{
     private String RiskSide;
 
     /**
+    * 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataSourceType")
+    @Expose
+    private String DataSourceType;
+
+    /**
      * Get 风险项Id 
      * @return RiskId 风险项Id
      */
@@ -494,6 +502,26 @@ public class AssessmentRisk extends AbstractModel{
         this.RiskSide = RiskSide;
     }
 
+    /**
+     * Get 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataSourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataSourceType() {
+        return this.DataSourceType;
+    }
+
+    /**
+     * Set 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataSourceType(String DataSourceType) {
+        this.DataSourceType = DataSourceType;
+    }
+
     public AssessmentRisk() {
     }
 
@@ -562,6 +590,9 @@ public class AssessmentRisk extends AbstractModel{
         if (source.RiskSide != null) {
             this.RiskSide = new String(source.RiskSide);
         }
+        if (source.DataSourceType != null) {
+            this.DataSourceType = new String(source.DataSourceType);
+        }
     }
 
 
@@ -588,6 +619,7 @@ public class AssessmentRisk extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SecurityProduct.", this.SecurityProduct);
         this.setParamSimple(map, prefix + "RiskType", this.RiskType);
         this.setParamSimple(map, prefix + "RiskSide", this.RiskSide);
+        this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
 
     }
 }

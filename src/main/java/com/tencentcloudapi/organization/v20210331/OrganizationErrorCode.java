@@ -102,6 +102,9 @@ public enum OrganizationErrorCode {
     // 成员是主体管理账号不允许删除。
      FAILEDOPERATION_ORGANIZATIONAUTHMANAGENOTALLOWDELETE("FailedOperation.OrganizationAuthManageNotAllowDelete"),
      
+    // 企业组织已经存在。
+     FAILEDOPERATION_ORGANIZATIONEXISTALREADY("FailedOperation.OrganizationExistAlready"),
+     
     // 组织身份策略不合法。
      FAILEDOPERATION_ORGANIZATIONIDENTITYPOLICYERROR("FailedOperation.OrganizationIdentityPolicyError"),
      
@@ -120,20 +123,35 @@ public enum OrganizationErrorCode {
     // 组织节点不存在。
      FAILEDOPERATION_ORGANIZATIONNODENOTEXIST("FailedOperation.OrganizationNodeNotExist"),
      
+    // 企业组织成员不为空。
+     FAILEDOPERATION_ORGANIZATIONNOTEMPTY("FailedOperation.OrganizationNotEmpty"),
+     
     // 组织权限不合法。
      FAILEDOPERATION_ORGANIZATIONPERMISSIONILLEGAL("FailedOperation.OrganizationPermissionIllegal"),
      
     // 组织策略不合法。
      FAILEDOPERATION_ORGANIZATIONPOLICYILLEGAL("FailedOperation.OrganizationPolicyIllegal"),
      
+    // 集团策略不是禁用状态。
+     FAILEDOPERATION_ORGANIZATIONPOLICYISNOTDISABLED("FailedOperation.OrganizationPolicyIsNotDisabled"),
+     
     // 代付者不合法。
      FAILEDOPERATION_PAYUINILLEGAL("FailedOperation.PayUinIllegal"),
+     
+    // 退出共享单元失败。
+     FAILEDOPERATION_QUITSHAREUINT("FailedOperation.QuitShareUint"),
      
     // 退出共享单元错误。
      FAILEDOPERATION_QUITSHAREUINTERROR("FailedOperation.QuitShareUintError"),
      
+    // 退出共享单元失败。
+     FAILEDOPERATION_QUITESHAREUNIT("FailedOperation.QuiteShareUnit"),
+     
     // 成员正在使用共享资源。
      FAILEDOPERATION_SHARERESOURCEMEMBERINUSE("FailedOperation.ShareResourceMemberInUse"),
+     
+    // 共享单元不为空。
+     FAILEDOPERATION_SHAREUNITNOTEMPTY("FailedOperation.ShareUnitNotEmpty"),
      
     // 存在不属于当前组织的uin。
      FAILEDOPERATION_SOMEUINSNOTINORGANIZATION("FailedOperation.SomeUinsNotInOrganization"),
@@ -227,6 +245,9 @@ public enum OrganizationErrorCode {
      
     // 不允许添加优惠继承关系。
      UNSUPPORTEDOPERATION_ADDDISCOUNTINHERITNOTALLOW("UnsupportedOperation.AddDiscountInheritNotAllow"),
+     
+    // 创建的成员不允许创建组织。
+     UNSUPPORTEDOPERATION_CREATEMEMBERNOTALLOWCREATEORGANIZATION("UnsupportedOperation.CreateMemberNotAllowCreateOrganization"),
      
     // 创建的成员不允许删除。
      UNSUPPORTEDOPERATION_CREATEMEMBERNOTALLOWDELETE("UnsupportedOperation.CreateMemberNotAllowDelete"),

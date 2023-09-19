@@ -24,6 +24,7 @@ public class AwsSQS extends AbstractModel{
 
     /**
     * SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SQSRegion")
     @Expose
@@ -31,6 +32,7 @@ public class AwsSQS extends AbstractModel{
 
     /**
     * SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SQSQueueName")
     @Expose
@@ -38,6 +40,7 @@ public class AwsSQS extends AbstractModel{
 
     /**
     * 读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3SecretId")
     @Expose
@@ -45,14 +48,17 @@ public class AwsSQS extends AbstractModel{
 
     /**
     * 读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-     * Get SQS 队列区域。 
+     * Get SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SQSRegion SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSQSRegion() {
         return this.SQSRegion;
@@ -60,15 +66,19 @@ public class AwsSQS extends AbstractModel{
 
     /**
      * Set SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SQSRegion SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSQSRegion(String SQSRegion) {
         this.SQSRegion = SQSRegion;
     }
 
     /**
-     * Get SQS 队列名称。 
+     * Get SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SQSQueueName SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSQSQueueName() {
         return this.SQSQueueName;
@@ -76,15 +86,19 @@ public class AwsSQS extends AbstractModel{
 
     /**
      * Set SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SQSQueueName SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSQSQueueName(String SQSQueueName) {
         this.SQSQueueName = SQSQueueName;
     }
 
     /**
-     * Get 读写SQS的秘钥id。 
+     * Get 读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3SecretId 读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3SecretId() {
         return this.S3SecretId;
@@ -92,15 +106,19 @@ public class AwsSQS extends AbstractModel{
 
     /**
      * Set 读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3SecretId 读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get 读写SQS的秘钥key。 
+     * Get 读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3SecretKey 读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
@@ -108,7 +126,9 @@ public class AwsSQS extends AbstractModel{
 
     /**
      * Set 读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3SecretKey 读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;

@@ -30,18 +30,28 @@ public class EditMediaFileInfo extends AbstractModel{
     private MediaInputInfo InputInfo;
 
     /**
-    * 视频剪辑的起始时间偏移，单位：秒。
+    * 【剪辑】任务生效，视频剪辑的起始时间偏移，单位：秒。
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 视频剪辑的结束时间偏移，单位：秒。
+    * 【剪辑】任务生效，视频剪辑的结束时间偏移，单位：秒。
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
+
+    /**
+    * 【合成】任务必选，用于轨道元素中媒体关联源素材 ID。
+
+注意：允许字母、数字、-、_ ，最长 32 字符
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
 
     /**
      * Get 视频的输入信息。 
@@ -60,35 +70,63 @@ public class EditMediaFileInfo extends AbstractModel{
     }
 
     /**
-     * Get 视频剪辑的起始时间偏移，单位：秒。 
-     * @return StartTimeOffset 视频剪辑的起始时间偏移，单位：秒。
+     * Get 【剪辑】任务生效，视频剪辑的起始时间偏移，单位：秒。 
+     * @return StartTimeOffset 【剪辑】任务生效，视频剪辑的起始时间偏移，单位：秒。
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 视频剪辑的起始时间偏移，单位：秒。
-     * @param StartTimeOffset 视频剪辑的起始时间偏移，单位：秒。
+     * Set 【剪辑】任务生效，视频剪辑的起始时间偏移，单位：秒。
+     * @param StartTimeOffset 【剪辑】任务生效，视频剪辑的起始时间偏移，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 视频剪辑的结束时间偏移，单位：秒。 
-     * @return EndTimeOffset 视频剪辑的结束时间偏移，单位：秒。
+     * Get 【剪辑】任务生效，视频剪辑的结束时间偏移，单位：秒。 
+     * @return EndTimeOffset 【剪辑】任务生效，视频剪辑的结束时间偏移，单位：秒。
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 视频剪辑的结束时间偏移，单位：秒。
-     * @param EndTimeOffset 视频剪辑的结束时间偏移，单位：秒。
+     * Set 【剪辑】任务生效，视频剪辑的结束时间偏移，单位：秒。
+     * @param EndTimeOffset 【剪辑】任务生效，视频剪辑的结束时间偏移，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
+    }
+
+    /**
+     * Get 【合成】任务必选，用于轨道元素中媒体关联源素材 ID。
+
+注意：允许字母、数字、-、_ ，最长 32 字符
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 【合成】任务必选，用于轨道元素中媒体关联源素材 ID。
+
+注意：允许字母、数字、-、_ ，最长 32 字符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 【合成】任务必选，用于轨道元素中媒体关联源素材 ID。
+
+注意：允许字母、数字、-、_ ，最长 32 字符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 【合成】任务必选，用于轨道元素中媒体关联源素材 ID。
+
+注意：允许字母、数字、-、_ ，最长 32 字符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     public EditMediaFileInfo() {
@@ -108,6 +146,9 @@ public class EditMediaFileInfo extends AbstractModel{
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Float(source.EndTimeOffset);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -118,6 +159,7 @@ public class EditMediaFileInfo extends AbstractModel{
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

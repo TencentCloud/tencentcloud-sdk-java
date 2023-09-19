@@ -111,6 +111,14 @@ public class LoadBalancerPackageNew extends AbstractModel{
     private String LoadBalancerType;
 
     /**
+    * 负载均衡器的域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerDomain")
+    @Expose
+    private String LoadBalancerDomain;
+
+    /**
      * Get 监听id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListenerId 监听id
@@ -330,6 +338,26 @@ public class LoadBalancerPackageNew extends AbstractModel{
         this.LoadBalancerType = LoadBalancerType;
     }
 
+    /**
+     * Get 负载均衡器的域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerDomain 负载均衡器的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancerDomain() {
+        return this.LoadBalancerDomain;
+    }
+
+    /**
+     * Set 负载均衡器的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerDomain 负载均衡器的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerDomain(String LoadBalancerDomain) {
+        this.LoadBalancerDomain = LoadBalancerDomain;
+    }
+
     public LoadBalancerPackageNew() {
     }
 
@@ -371,6 +399,9 @@ public class LoadBalancerPackageNew extends AbstractModel{
         if (source.LoadBalancerType != null) {
             this.LoadBalancerType = new String(source.LoadBalancerType);
         }
+        if (source.LoadBalancerDomain != null) {
+            this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
+        }
     }
 
 
@@ -389,6 +420,7 @@ public class LoadBalancerPackageNew extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
+        this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
 
     }
 }

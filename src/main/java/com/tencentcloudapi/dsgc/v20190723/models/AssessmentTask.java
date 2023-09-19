@@ -30,6 +30,15 @@ public class AssessmentTask extends AbstractModel{
     private String TaskId;
 
     /**
+    * 评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskUid")
+    @Expose
+    private Long TaskUid;
+
+    /**
     * 评估任务名称
     */
     @SerializedName("TaskName")
@@ -144,6 +153,22 @@ public class AssessmentTask extends AbstractModel{
     private String ErrorInfo;
 
     /**
+    * 模版主键id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateUid")
+    @Expose
+    private Long TemplateUid;
+
+    /**
+    * 进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProgressPercent")
+    @Expose
+    private Long ProgressPercent;
+
+    /**
      * Get 评估任务Id 
      * @return TaskId 评估任务Id
      */
@@ -157,6 +182,30 @@ public class AssessmentTask extends AbstractModel{
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskUid 评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskUid() {
+        return this.TaskUid;
+    }
+
+    /**
+     * Set 评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskUid 评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskUid(Long TaskUid) {
+        this.TaskUid = TaskUid;
     }
 
     /**
@@ -423,6 +472,46 @@ public class AssessmentTask extends AbstractModel{
         this.ErrorInfo = ErrorInfo;
     }
 
+    /**
+     * Get 模版主键id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateUid 模版主键id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTemplateUid() {
+        return this.TemplateUid;
+    }
+
+    /**
+     * Set 模版主键id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateUid 模版主键id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateUid(Long TemplateUid) {
+        this.TemplateUid = TemplateUid;
+    }
+
+    /**
+     * Get 进度百分比
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProgressPercent 进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProgressPercent() {
+        return this.ProgressPercent;
+    }
+
+    /**
+     * Set 进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProgressPercent 进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProgressPercent(Long ProgressPercent) {
+        this.ProgressPercent = ProgressPercent;
+    }
+
     public AssessmentTask() {
     }
 
@@ -433,6 +522,9 @@ public class AssessmentTask extends AbstractModel{
     public AssessmentTask(AssessmentTask source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
+        }
+        if (source.TaskUid != null) {
+            this.TaskUid = new Long(source.TaskUid);
         }
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
@@ -485,6 +577,12 @@ public class AssessmentTask extends AbstractModel{
         if (source.ErrorInfo != null) {
             this.ErrorInfo = new String(source.ErrorInfo);
         }
+        if (source.TemplateUid != null) {
+            this.TemplateUid = new Long(source.TemplateUid);
+        }
+        if (source.ProgressPercent != null) {
+            this.ProgressPercent = new Long(source.ProgressPercent);
+        }
     }
 
 
@@ -493,6 +591,7 @@ public class AssessmentTask extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TaskUid", this.TaskUid);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "BusinessName", this.BusinessName);
         this.setParamSimple(map, prefix + "BusinessDept", this.BusinessDept);
@@ -509,6 +608,8 @@ public class AssessmentTask extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RiskCountInfoList.", this.RiskCountInfoList);
         this.setParamObj(map, prefix + "DiscoveryCondition.", this.DiscoveryCondition);
         this.setParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
+        this.setParamSimple(map, prefix + "TemplateUid", this.TemplateUid);
+        this.setParamSimple(map, prefix + "ProgressPercent", this.ProgressPercent);
 
     }
 }
