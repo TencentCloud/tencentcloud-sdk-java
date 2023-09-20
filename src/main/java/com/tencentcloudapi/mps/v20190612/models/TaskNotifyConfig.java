@@ -87,6 +87,14 @@ public class TaskNotifyConfig extends AbstractModel{
     private AwsSQS AwsSQS;
 
     /**
+    * 用于生成回调签名的key。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NotifyKey")
+    @Expose
+    private String NotifyKey;
+
+    /**
      * Get 通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
@@ -246,6 +254,26 @@ public class TaskNotifyConfig extends AbstractModel{
         this.AwsSQS = AwsSQS;
     }
 
+    /**
+     * Get 用于生成回调签名的key。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NotifyKey 用于生成回调签名的key。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNotifyKey() {
+        return this.NotifyKey;
+    }
+
+    /**
+     * Set 用于生成回调签名的key。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NotifyKey 用于生成回调签名的key。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNotifyKey(String NotifyKey) {
+        this.NotifyKey = NotifyKey;
+    }
+
     public TaskNotifyConfig() {
     }
 
@@ -278,6 +306,9 @@ public class TaskNotifyConfig extends AbstractModel{
         if (source.AwsSQS != null) {
             this.AwsSQS = new AwsSQS(source.AwsSQS);
         }
+        if (source.NotifyKey != null) {
+            this.NotifyKey = new String(source.NotifyKey);
+        }
     }
 
 
@@ -293,6 +324,7 @@ public class TaskNotifyConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamObj(map, prefix + "AwsSQS.", this.AwsSQS);
+        this.setParamSimple(map, prefix + "NotifyKey", this.NotifyKey);
 
     }
 }

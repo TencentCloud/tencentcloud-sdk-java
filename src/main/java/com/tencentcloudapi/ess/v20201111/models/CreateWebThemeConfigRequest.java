@@ -39,7 +39,7 @@ public class CreateWebThemeConfigRequest extends AbstractModel{
     private String ThemeType;
 
     /**
-    * 主题配置
+    * 电子签logo是否展示，主体颜色等配置项
     */
     @SerializedName("WebThemeConfig")
     @Expose
@@ -94,16 +94,16 @@ public class CreateWebThemeConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 主题配置 
-     * @return WebThemeConfig 主题配置
+     * Get 电子签logo是否展示，主体颜色等配置项 
+     * @return WebThemeConfig 电子签logo是否展示，主体颜色等配置项
      */
     public WebThemeConfig getWebThemeConfig() {
         return this.WebThemeConfig;
     }
 
     /**
-     * Set 主题配置
-     * @param WebThemeConfig 主题配置
+     * Set 电子签logo是否展示，主体颜色等配置项
+     * @param WebThemeConfig 电子签logo是否展示，主体颜色等配置项
      */
     public void setWebThemeConfig(WebThemeConfig WebThemeConfig) {
         this.WebThemeConfig = WebThemeConfig;

@@ -144,7 +144,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *添加Spart防护域名
+     *添加SaaS型WAF防护域名
      * @param req AddSpartaProtectionRequest
      * @return AddSpartaProtectionResponse
      * @throws TencentCloudSDKException
@@ -186,7 +186,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *clb-waf中添加防护的域名
+     *clb-waf中添加防护域名
      * @param req CreateHostRequest
      * @return CreateHostResponse
      * @throws TencentCloudSDKException
@@ -460,7 +460,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *SAASWAF删除防护域名
+     *Saas型WAF删除防护域名
      * @param req DeleteSpartaProtectionRequest
      * @return DeleteSpartaProtectionResponse
      * @throws TencentCloudSDKException
@@ -758,7 +758,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *查询加密套件信息
+     *Saas型WAF接入查询加密套件信息
      * @param req DescribeCiphersDetailRequest
      * @return DescribeCiphersDetailResponse
      * @throws TencentCloudSDKException
@@ -842,7 +842,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *获取一个clb域名详情
+     *获取一个clbwaf域名详情
      * @param req DescribeDomainDetailsClbRequest
      * @return DescribeDomainDetailsClbResponse
      * @throws TencentCloudSDKException
@@ -863,7 +863,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *查询单个saas域名详情
+     *查询单个saaswaf域名详情
      * @param req DescribeDomainDetailsSaasRequest
      * @return DescribeDomainDetailsSaasResponse
      * @throws TencentCloudSDKException
@@ -1178,7 +1178,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *获取非标端口列表
+     *获取Saas型WAF防护端口列表
      * @param req DescribePortsRequest
      * @return DescribePortsResponse
      * @throws TencentCloudSDKException
@@ -1811,7 +1811,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *修改ipv6开关
+     *切换ipv6开关
      * @param req ModifyDomainIpv6StatusRequest
      * @return ModifyDomainIpv6StatusResponse
      * @throws TencentCloudSDKException
@@ -2266,6 +2266,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SwitchDomainRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SwitchDomainRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *切换弹性的开关
+     * @param req SwitchElasticModeRequest
+     * @return SwitchElasticModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchElasticModeResponse SwitchElasticMode(SwitchElasticModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchElasticModeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchElasticModeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchElasticMode");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

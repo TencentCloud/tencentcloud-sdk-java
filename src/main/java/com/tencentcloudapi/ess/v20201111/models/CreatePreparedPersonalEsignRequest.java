@@ -30,33 +30,35 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel{
     private String UserName;
 
     /**
-    * 身份证件号码
+    * 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
     */
     @SerializedName("IdCardNumber")
     @Expose
     private String IdCardNumber;
 
     /**
-    * 印章名称
+    * 印章名称，长度1-50个字。
     */
     @SerializedName("SealName")
     @Expose
     private String SealName;
 
     /**
-    * 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾
+    * 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
     */
     @SerializedName("IdCardType")
     @Expose
@@ -105,10 +107,12 @@ BLUE 蓝色。
     private String SealColor;
 
     /**
-    * 是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。
+    * 是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul>
     */
     @SerializedName("ProcessSeal")
     @Expose
@@ -124,7 +128,8 @@ true：做透明化处理和颜色增强。
     private String FileId;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
@@ -154,84 +159,92 @@ true：做透明化处理和颜色增强。
     }
 
     /**
-     * Get 身份证件号码 
-     * @return IdCardNumber 身份证件号码
+     * Get 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul> 
+     * @return IdCardNumber 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 身份证件号码
-     * @param IdCardNumber 身份证件号码
+     * Set 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * @param IdCardNumber 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;
     }
 
     /**
-     * Get 印章名称 
-     * @return SealName 印章名称
+     * Get 印章名称，长度1-50个字。 
+     * @return SealName 印章名称，长度1-50个字。
      */
     public String getSealName() {
         return this.SealName;
     }
 
     /**
-     * Set 印章名称
-     * @param SealName 印章名称
+     * Set 印章名称，长度1-50个字。
+     * @param SealName 印章名称，长度1-50个字。
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;
     }
 
     /**
-     * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。 
-     * @return Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
-     * @param Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾 
-     * @return IdCardType 身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾
+     * Get 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul> 
+     * @return IdCardType 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set 身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾
-     * @param IdCardType 身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾
+     * Set 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     * @param IdCardType 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
@@ -350,28 +363,36 @@ BLUE 蓝色。
     }
 
     /**
-     * Get 是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。 
-     * @return ProcessSeal 是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。
+     * Get 是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul> 
+     * @return ProcessSeal 是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul>
      */
     public Boolean getProcessSeal() {
         return this.ProcessSeal;
     }
 
     /**
-     * Set 是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。
-     * @param ProcessSeal 是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。
+     * Set 是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul>
+     * @param ProcessSeal 是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul>
      */
     public void setProcessSeal(Boolean ProcessSeal) {
         this.ProcessSeal = ProcessSeal;
@@ -402,16 +423,20 @@ true：做透明化处理和颜色增强。
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

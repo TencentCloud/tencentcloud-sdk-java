@@ -30,7 +30,7 @@ public class DescribeFlowInfoResponse extends AbstractModel{
     private FlowDetailInfo [] FlowDetailInfos;
 
     /**
-    * 合同组ID
+    * 合同组ID，为32位字符串
     */
     @SerializedName("FlowGroupId")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeFlowInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 合同组ID 
-     * @return FlowGroupId 合同组ID
+     * Get 合同组ID，为32位字符串 
+     * @return FlowGroupId 合同组ID，为32位字符串
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID
-     * @param FlowGroupId 合同组ID
+     * Set 合同组ID，为32位字符串
+     * @param FlowGroupId 合同组ID，为32位字符串
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;

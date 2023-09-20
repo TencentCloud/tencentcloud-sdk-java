@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeFlowTemplatesResponse extends AbstractModel{
 
     /**
-    * 模板详情列表
+    * 模板详情列表数据
     */
     @SerializedName("Templates")
     @Expose
     private TemplateInfo [] Templates;
 
     /**
-    * 查询到的总数
+    * 查询到的模板总数
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeFlowTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 模板详情列表 
-     * @return Templates 模板详情列表
+     * Get 模板详情列表数据 
+     * @return Templates 模板详情列表数据
      */
     public TemplateInfo [] getTemplates() {
         return this.Templates;
     }
 
     /**
-     * Set 模板详情列表
-     * @param Templates 模板详情列表
+     * Set 模板详情列表数据
+     * @param Templates 模板详情列表数据
      */
     public void setTemplates(TemplateInfo [] Templates) {
         this.Templates = Templates;
     }
 
     /**
-     * Get 查询到的总数 
-     * @return TotalCount 查询到的总数
+     * Get 查询到的模板总数 
+     * @return TotalCount 查询到的模板总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询到的总数
-     * @param TotalCount 查询到的总数
+     * Set 查询到的模板总数
+     * @param TotalCount 查询到的模板总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

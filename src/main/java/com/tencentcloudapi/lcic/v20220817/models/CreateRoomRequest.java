@@ -188,7 +188,7 @@ video 纯视频
     private Long IsGradingRequiredPostClass;
 
     /**
-    * 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+    * 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
     */
     @SerializedName("RoomType")
     @Expose
@@ -610,16 +610,16 @@ video 纯视频
     }
 
     /**
-     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展) 
-     * @return RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放) 
+     * @return RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
      */
     public Long getRoomType() {
         return this.RoomType;
     }
 
     /**
-     * Set 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
-     * @param RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * Set 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
+     * @param RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
      */
     public void setRoomType(Long RoomType) {
         this.RoomType = RoomType;

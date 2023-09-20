@@ -1223,6 +1223,90 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *InquiryPriceCreateLoadBalancer接口查询创建负载均衡的价格。
+     * @param req InquiryPriceCreateLoadBalancerRequest
+     * @return InquiryPriceCreateLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceCreateLoadBalancerResponse InquiryPriceCreateLoadBalancer(InquiryPriceCreateLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceCreateLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceCreateLoadBalancer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *InquiryPriceModifyLoadBalancer接口修改负载均衡配置询价。
+     * @param req InquiryPriceModifyLoadBalancerRequest
+     * @return InquiryPriceModifyLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceModifyLoadBalancerResponse InquiryPriceModifyLoadBalancer(InquiryPriceModifyLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceModifyLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceModifyLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceModifyLoadBalancer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *InquiryPriceRefundLoadBalancer接口查询负载均衡退费价格。
+     * @param req InquiryPriceRefundLoadBalancerRequest
+     * @return InquiryPriceRefundLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRefundLoadBalancerResponse InquiryPriceRefundLoadBalancer(InquiryPriceRefundLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRefundLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRefundLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceRefundLoadBalancer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *InquiryPriceRenewLoadBalancer接口查询对负载均衡续费的价格，只支持预付费负载均衡续费。
+     * @param req InquiryPriceRenewLoadBalancerRequest
+     * @return InquiryPriceRenewLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewLoadBalancerResponse InquiryPriceRenewLoadBalancer(InquiryPriceRenewLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRenewLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceRenewLoadBalancer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户手动配置原访问地址和重定向地址，系统自动将原访问地址的请求重定向至对应路径的目的地址。同一域名下可以配置多条路径作为重定向策略，实现http/https之间请求的自动跳转。设置重定向时，需满足如下约束条件：若A已经重定向至B，则A不能再重定向至C（除非先删除老的重定向关系，再建立新的重定向关系），B不能重定向至任何其它地址。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
      * @param req ManualRewriteRequest

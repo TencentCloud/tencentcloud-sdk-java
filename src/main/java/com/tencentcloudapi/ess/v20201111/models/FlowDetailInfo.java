@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class FlowDetailInfo extends AbstractModel{
 
     /**
-    * 合同(流程)的ID
+    * 合同流程ID，为32位字符串。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 合同(流程)的名字
+    * 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 合同(流程)的类型
+    * 合同流程的类别分类（如销售合同/入职合同等）。	
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowType")
@@ -45,26 +45,14 @@ public class FlowDetailInfo extends AbstractModel{
     private String FlowType;
 
     /**
-    * 流程状态
-- 0 还没有发起
-- 1 待签署
-- 2 部分签署
-- 3 已拒签
-- 4 已签署
-- 5 已过期
-- 6 已撤销
-- 7 还没有预发起
-- 8 等待填写
-- 9 部分填写
-- 10 拒填
-- 21 已解除
+    * 合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **21** : 已解除</li></ul>	
     */
     @SerializedName("FlowStatus")
     @Expose
     private Long FlowStatus;
 
     /**
-    * 合同(流程)的信息
+    * 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowMessage")
@@ -72,7 +60,7 @@ public class FlowDetailInfo extends AbstractModel{
     private String FlowMessage;
 
     /**
-    * 流程的描述
+    * 合同流程描述信息。	
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowDescription")
@@ -80,28 +68,28 @@ public class FlowDetailInfo extends AbstractModel{
     private String FlowDescription;
 
     /**
-    * 合同(流程)的创建时间戳，单位秒
+    * 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。	
     */
     @SerializedName("CreatedOn")
     @Expose
     private Long CreatedOn;
 
     /**
-    * 合同(流程)的签署方数组
+    * 合同流程的签署方数组
     */
     @SerializedName("FlowApproverInfos")
     @Expose
     private FlowApproverDetail [] FlowApproverInfos;
 
     /**
-    * 合同(流程)的关注方信息列表
+    * 合同流程的关注方信息数组
     */
     @SerializedName("CcInfos")
     @Expose
     private FlowApproverDetail [] CcInfos;
 
     /**
-    * 合同发起人UserId
+    * 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
@@ -109,41 +97,41 @@ public class FlowDetailInfo extends AbstractModel{
     private String Creator;
 
     /**
-     * Get 合同(流程)的ID 
-     * @return FlowId 合同(流程)的ID
+     * Get 合同流程ID，为32位字符串。 
+     * @return FlowId 合同流程ID，为32位字符串。
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同(流程)的ID
-     * @param FlowId 合同(流程)的ID
+     * Set 合同流程ID，为32位字符串。
+     * @param FlowId 合同流程ID，为32位字符串。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 合同(流程)的名字 
-     * @return FlowName 合同(流程)的名字
+     * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 
+     * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 合同(流程)的名字
-     * @param FlowName 合同(流程)的名字
+     * Set 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 合同(流程)的类型
+     * Get 合同流程的类别分类（如销售合同/入职合同等）。	
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowType 合同(流程)的类型
+     * @return FlowType 合同流程的类别分类（如销售合同/入职合同等）。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowType() {
@@ -151,9 +139,9 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Set 合同(流程)的类型
+     * Set 合同流程的类别分类（如销售合同/入职合同等）。	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowType 合同(流程)的类型
+     * @param FlowType 合同流程的类别分类（如销售合同/入职合同等）。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowType(String FlowType) {
@@ -161,73 +149,25 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 流程状态
-- 0 还没有发起
-- 1 待签署
-- 2 部分签署
-- 3 已拒签
-- 4 已签署
-- 5 已过期
-- 6 已撤销
-- 7 还没有预发起
-- 8 等待填写
-- 9 部分填写
-- 10 拒填
-- 21 已解除 
-     * @return FlowStatus 流程状态
-- 0 还没有发起
-- 1 待签署
-- 2 部分签署
-- 3 已拒签
-- 4 已签署
-- 5 已过期
-- 6 已撤销
-- 7 还没有预发起
-- 8 等待填写
-- 9 部分填写
-- 10 拒填
-- 21 已解除
+     * Get 合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **21** : 已解除</li></ul>	 
+     * @return FlowStatus 合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **21** : 已解除</li></ul>	
      */
     public Long getFlowStatus() {
         return this.FlowStatus;
     }
 
     /**
-     * Set 流程状态
-- 0 还没有发起
-- 1 待签署
-- 2 部分签署
-- 3 已拒签
-- 4 已签署
-- 5 已过期
-- 6 已撤销
-- 7 还没有预发起
-- 8 等待填写
-- 9 部分填写
-- 10 拒填
-- 21 已解除
-     * @param FlowStatus 流程状态
-- 0 还没有发起
-- 1 待签署
-- 2 部分签署
-- 3 已拒签
-- 4 已签署
-- 5 已过期
-- 6 已撤销
-- 7 还没有预发起
-- 8 等待填写
-- 9 部分填写
-- 10 拒填
-- 21 已解除
+     * Set 合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **21** : 已解除</li></ul>	
+     * @param FlowStatus 合同流程当前的签署状态, 会存在下列的状态值 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li> <li> **1** : 待签署</li> <li> **2** : 部分签署</li> <li> **3** : 已拒签</li> <li> **4** : 已签署</li> <li> **5** : 已过期</li> <li> **6** : 已撤销</li> <li> **7** : 未开启流程(合同中存在填写环节)</li> <li> **8** : 等待填写</li> <li> **9** : 部分填写</li> <li> **10** : 已拒填</li> <li> **21** : 已解除</li></ul>	
      */
     public void setFlowStatus(Long FlowStatus) {
         this.FlowStatus = FlowStatus;
     }
 
     /**
-     * Get 合同(流程)的信息
+     * Get 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowMessage 合同(流程)的信息
+     * @return FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowMessage() {
@@ -235,9 +175,9 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Set 合同(流程)的信息
+     * Set 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowMessage 合同(流程)的信息
+     * @param FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowMessage(String FlowMessage) {
@@ -245,9 +185,9 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 流程的描述
+     * Get 合同流程描述信息。	
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowDescription 流程的描述
+     * @return FlowDescription 合同流程描述信息。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowDescription() {
@@ -255,9 +195,9 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Set 流程的描述
+     * Set 合同流程描述信息。	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowDescription 流程的描述
+     * @param FlowDescription 合同流程描述信息。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowDescription(String FlowDescription) {
@@ -265,57 +205,57 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同(流程)的创建时间戳，单位秒 
-     * @return CreatedOn 合同(流程)的创建时间戳，单位秒
+     * Get 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。	 
+     * @return CreatedOn 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。	
      */
     public Long getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 合同(流程)的创建时间戳，单位秒
-     * @param CreatedOn 合同(流程)的创建时间戳，单位秒
+     * Set 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。	
+     * @param CreatedOn 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。	
      */
     public void setCreatedOn(Long CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 合同(流程)的签署方数组 
-     * @return FlowApproverInfos 合同(流程)的签署方数组
+     * Get 合同流程的签署方数组 
+     * @return FlowApproverInfos 合同流程的签署方数组
      */
     public FlowApproverDetail [] getFlowApproverInfos() {
         return this.FlowApproverInfos;
     }
 
     /**
-     * Set 合同(流程)的签署方数组
-     * @param FlowApproverInfos 合同(流程)的签署方数组
+     * Set 合同流程的签署方数组
+     * @param FlowApproverInfos 合同流程的签署方数组
      */
     public void setFlowApproverInfos(FlowApproverDetail [] FlowApproverInfos) {
         this.FlowApproverInfos = FlowApproverInfos;
     }
 
     /**
-     * Get 合同(流程)的关注方信息列表 
-     * @return CcInfos 合同(流程)的关注方信息列表
+     * Get 合同流程的关注方信息数组 
+     * @return CcInfos 合同流程的关注方信息数组
      */
     public FlowApproverDetail [] getCcInfos() {
         return this.CcInfos;
     }
 
     /**
-     * Set 合同(流程)的关注方信息列表
-     * @param CcInfos 合同(流程)的关注方信息列表
+     * Set 合同流程的关注方信息数组
+     * @param CcInfos 合同流程的关注方信息数组
      */
     public void setCcInfos(FlowApproverDetail [] CcInfos) {
         this.CcInfos = CcInfos;
     }
 
     /**
-     * Get 合同发起人UserId
+     * Get 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Creator 合同发起人UserId
+     * @return Creator 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
@@ -323,9 +263,9 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Set 合同发起人UserId
+     * Set 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Creator 合同发起人UserId
+     * @param Creator 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {

@@ -586,6 +586,27 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *退出企业组织
+     * @param req QuitOrganizationRequest
+     * @return QuitOrganizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public QuitOrganizationResponse QuitOrganization(QuitOrganizationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QuitOrganizationResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<QuitOrganizationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QuitOrganization");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新组织成员信息
      * @param req UpdateOrganizationMemberRequest
      * @return UpdateOrganizationMemberResponse

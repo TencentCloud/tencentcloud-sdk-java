@@ -60,6 +60,14 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     private String BackupType;
 
     /**
+    * 跨地域逻辑备份配置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogicCrossRegionsConfigUpdateTime")
+    @Expose
+    private String LogicCrossRegionsConfigUpdateTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -155,6 +163,26 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 跨地域逻辑备份配置修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogicCrossRegionsConfigUpdateTime() {
+        return this.LogicCrossRegionsConfigUpdateTime;
+    }
+
+    /**
+     * Set 跨地域逻辑备份配置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogicCrossRegionsConfigUpdateTime(String LogicCrossRegionsConfigUpdateTime) {
+        this.LogicCrossRegionsConfigUpdateTime = LogicCrossRegionsConfigUpdateTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -196,6 +224,9 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         if (source.BackupType != null) {
             this.BackupType = new String(source.BackupType);
         }
+        if (source.LogicCrossRegionsConfigUpdateTime != null) {
+            this.LogicCrossRegionsConfigUpdateTime = new String(source.LogicCrossRegionsConfigUpdateTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -211,6 +242,7 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
         this.setParamArraySimple(map, prefix + "BackupFreq.", this.BackupFreq);
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
+        this.setParamSimple(map, prefix + "LogicCrossRegionsConfigUpdateTime", this.LogicCrossRegionsConfigUpdateTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

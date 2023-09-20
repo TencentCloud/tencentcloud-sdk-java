@@ -24,7 +24,7 @@ public class CreateFlowOption extends AbstractModel{
 
     /**
     * 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
     */
     @SerializedName("CanEditFlow")
     @Expose
@@ -33,8 +33,8 @@ public class CreateFlowOption extends AbstractModel{
     /**
     * 是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/>
     */
     @SerializedName("CanEditFormField")
     @Expose
@@ -43,8 +43,8 @@ public class CreateFlowOption extends AbstractModel{
     /**
     * 发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/>
     */
     @SerializedName("HideShowFlowName")
     @Expose
@@ -53,8 +53,8 @@ public class CreateFlowOption extends AbstractModel{
     /**
     * 发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
 
     */
     @SerializedName("HideShowFlowType")
@@ -64,8 +64,8 @@ public class CreateFlowOption extends AbstractModel{
     /**
     * 发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/>
     */
     @SerializedName("HideShowDeadline")
     @Expose
@@ -74,8 +74,8 @@ public class CreateFlowOption extends AbstractModel{
     /**
     * 发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
 
     */
     @SerializedName("CanSkipAddApprover")
@@ -85,8 +85,8 @@ public class CreateFlowOption extends AbstractModel{
     /**
     * 文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/>
     */
     @SerializedName("SkipUploadFile")
     @Expose
@@ -95,15 +95,15 @@ public class CreateFlowOption extends AbstractModel{
     /**
     * 禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件
+<br/>false:允许编辑填写控件（默认值）
+<br/>
     */
     @SerializedName("ForbidEditFillComponent")
     @Expose
     private Boolean ForbidEditFillComponent;
 
     /**
-    * 定制化发起合同弹窗的描述信息，描述信息最长500
+    * 定制化发起合同弹窗的描述信息，描述信息最长500字符
 
     */
     @SerializedName("CustomCreateFlowDescription")
@@ -112,9 +112,9 @@ public class CreateFlowOption extends AbstractModel{
 
     /**
      * Get 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑 
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/> 
      * @return CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
      */
     public Boolean getCanEditFlow() {
         return this.CanEditFlow;
@@ -122,9 +122,9 @@ public class CreateFlowOption extends AbstractModel{
 
     /**
      * Set 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
      * @param CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
      */
     public void setCanEditFlow(Boolean CanEditFlow) {
         this.CanEditFlow = CanEditFlow;
@@ -133,12 +133,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Get 是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息 
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/> 
      * @return CanEditFormField 是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/>
      */
     public Boolean getCanEditFormField() {
         return this.CanEditFormField;
@@ -147,12 +147,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Set 是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/>
      * @param CanEditFormField 是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/>
      */
     public void setCanEditFormField(Boolean CanEditFormField) {
         this.CanEditFormField = CanEditFormField;
@@ -161,12 +161,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Get 发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示 
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/> 
      * @return HideShowFlowName 发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/>
      */
     public Boolean getHideShowFlowName() {
         return this.HideShowFlowName;
@@ -175,12 +175,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Set 发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/>
      * @param HideShowFlowName 发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/>
      */
     public void setHideShowFlowName(Boolean HideShowFlowName) {
         this.HideShowFlowName = HideShowFlowName;
@@ -189,13 +189,13 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Get 发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
  
      * @return HideShowFlowType 发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
 
      */
     public Boolean getHideShowFlowType() {
@@ -205,13 +205,13 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Set 发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
 
      * @param HideShowFlowType 发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
 
      */
     public void setHideShowFlowType(Boolean HideShowFlowType) {
@@ -221,12 +221,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Get 发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示 
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/> 
      * @return HideShowDeadline 发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/>
      */
     public Boolean getHideShowDeadline() {
         return this.HideShowDeadline;
@@ -235,12 +235,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Set 发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/>
      * @param HideShowDeadline 发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/>
      */
     public void setHideShowDeadline(Boolean HideShowDeadline) {
         this.HideShowDeadline = HideShowDeadline;
@@ -249,13 +249,13 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Get 发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
  
      * @return CanSkipAddApprover 发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
 
      */
     public Boolean getCanSkipAddApprover() {
@@ -265,13 +265,13 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Set 发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
 
      * @param CanSkipAddApprover 发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
 
      */
     public void setCanSkipAddApprover(Boolean CanSkipAddApprover) {
@@ -281,12 +281,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Get 文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤 
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/> 
      * @return SkipUploadFile 文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/>
      */
     public Boolean getSkipUploadFile() {
         return this.SkipUploadFile;
@@ -295,12 +295,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Set 文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/>
      * @param SkipUploadFile 文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/>
      */
     public void setSkipUploadFile(Boolean SkipUploadFile) {
         this.SkipUploadFile = SkipUploadFile;
@@ -309,12 +309,12 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Get 禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件 
+<br/>false:允许编辑填写控件（默认值）
+<br/> 
      * @return ForbidEditFillComponent 禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件
+<br/>false:允许编辑填写控件（默认值）
+<br/>
      */
     public Boolean getForbidEditFillComponent() {
         return this.ForbidEditFillComponent;
@@ -323,21 +323,21 @@ public class CreateFlowOption extends AbstractModel{
     /**
      * Set 禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件
+<br/>false:允许编辑填写控件（默认值）
+<br/>
      * @param ForbidEditFillComponent 禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件
+<br/>false:允许编辑填写控件（默认值）
+<br/>
      */
     public void setForbidEditFillComponent(Boolean ForbidEditFillComponent) {
         this.ForbidEditFillComponent = ForbidEditFillComponent;
     }
 
     /**
-     * Get 定制化发起合同弹窗的描述信息，描述信息最长500
+     * Get 定制化发起合同弹窗的描述信息，描述信息最长500字符
  
-     * @return CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500
+     * @return CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500字符
 
      */
     public String getCustomCreateFlowDescription() {
@@ -345,9 +345,9 @@ public class CreateFlowOption extends AbstractModel{
     }
 
     /**
-     * Set 定制化发起合同弹窗的描述信息，描述信息最长500
+     * Set 定制化发起合同弹窗的描述信息，描述信息最长500字符
 
-     * @param CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500
+     * @param CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500字符
 
      */
     public void setCustomCreateFlowDescription(String CustomCreateFlowDescription) {

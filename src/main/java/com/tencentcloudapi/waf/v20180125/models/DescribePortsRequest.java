@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribePortsRequest extends AbstractModel{
 
     /**
-    * 版本
-    */
-    @SerializedName("Edition")
-    @Expose
-    private String Edition;
-
-    /**
     * 实例ID
     */
     @SerializedName("InstanceID")
@@ -37,20 +30,11 @@ public class DescribePortsRequest extends AbstractModel{
     private String InstanceID;
 
     /**
-     * Get 版本 
-     * @return Edition 版本
-     */
-    public String getEdition() {
-        return this.Edition;
-    }
-
-    /**
-     * Set 版本
-     * @param Edition 版本
-     */
-    public void setEdition(String Edition) {
-        this.Edition = Edition;
-    }
+    * 实例类型
+    */
+    @SerializedName("Edition")
+    @Expose
+    private String Edition;
 
     /**
      * Get 实例ID 
@@ -68,6 +52,22 @@ public class DescribePortsRequest extends AbstractModel{
         this.InstanceID = InstanceID;
     }
 
+    /**
+     * Get 实例类型 
+     * @return Edition 实例类型
+     */
+    public String getEdition() {
+        return this.Edition;
+    }
+
+    /**
+     * Set 实例类型
+     * @param Edition 实例类型
+     */
+    public void setEdition(String Edition) {
+        this.Edition = Edition;
+    }
+
     public DescribePortsRequest() {
     }
 
@@ -76,11 +76,11 @@ public class DescribePortsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePortsRequest(DescribePortsRequest source) {
-        if (source.Edition != null) {
-            this.Edition = new String(source.Edition);
-        }
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribePortsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "Edition", this.Edition);
 
     }
 }

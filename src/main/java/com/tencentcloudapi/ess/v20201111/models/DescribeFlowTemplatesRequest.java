@@ -23,26 +23,26 @@ import java.util.HashMap;
 public class DescribeFlowTemplatesRequest extends AbstractModel{
 
     /**
-    * 调用方员工/经办人信息
-UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证员工有相关的角色权限
+    * 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 代理相关应用信息
-如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 查询内容类型
-0-模板列表及详情（默认）
-1-仅模板列表
+    * 查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
@@ -50,31 +50,35 @@ UserId 必填，在企业控制台组织架构中可以查到员工的UserId
 
     /**
     * 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id
-Values：需要查询的模板Id列表
+Key：template-id Values：需要查询的模板Id列表
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+    * 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 指定每页多少条数据，如果不传默认为20，单页最大200。
+    * 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 用于查询指定应用号下单模板列表。
-ApplicationId不为空，查询指定应用下的模板列表
-ApplicationId为空，查询所有应用下的模板列表
+    * 指定查询的应用号，指定后查询该应用号下的模板列表。
+
+注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -103,68 +107,68 @@ ApplicationId为空，查询所有应用下的模板列表
     private Long GenerateSource;
 
     /**
-     * Get 调用方员工/经办人信息
-UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证员工有相关的角色权限 
-     * @return Operator 调用方员工/经办人信息
-UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证员工有相关的角色权限
+     * Get 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方员工/经办人信息
-UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证员工有相关的角色权限
-     * @param Operator 调用方员工/经办人信息
-UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证员工有相关的角色权限
+     * Set 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 代理相关应用信息
-如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息
-如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息
-如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息
-如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 查询内容类型
-0-模板列表及详情（默认）
-1-仅模板列表 
-     * @return ContentType 查询内容类型
-0-模板列表及详情（默认）
-1-仅模板列表
+     * Get 查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul> 
+     * @return ContentType 查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul>
      */
     public Long getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 查询内容类型
-0-模板列表及详情（默认）
-1-仅模板列表
-     * @param ContentType 查询内容类型
-0-模板列表及详情（默认）
-1-仅模板列表
+     * Set 查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul>
+     * @param ContentType 查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul>
      */
     public void setContentType(Long ContentType) {
         this.ContentType = ContentType;
@@ -172,11 +176,9 @@ UserId 必填，在企业控制台组织架构中可以查到员工的UserId
 
     /**
      * Get 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id
-Values：需要查询的模板Id列表 
+Key：template-id Values：需要查询的模板Id列表 
      * @return Filters 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id
-Values：需要查询的模板Id列表
+Key：template-id Values：需要查询的模板Id列表
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -184,67 +186,85 @@ Values：需要查询的模板Id列表
 
     /**
      * Set 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id
-Values：需要查询的模板Id列表
+Key：template-id Values：需要查询的模板Id列表
      * @param Filters 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id
-Values：需要查询的模板Id列表
+Key：template-id Values：需要查询的模板Id列表
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+     * Get 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。` 
+     * @return Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+     * Set 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
+     * @param Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 指定每页多少条数据，如果不传默认为20，单页最大200。 
-     * @return Limit 指定每页多少条数据，如果不传默认为20，单页最大200。
+     * Get 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。` 
+     * @return Limit 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页多少条数据，如果不传默认为20，单页最大200。
-     * @param Limit 指定每页多少条数据，如果不传默认为20，单页最大200。
+     * Set 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
+     * @param Limit 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 用于查询指定应用号下单模板列表。
-ApplicationId不为空，查询指定应用下的模板列表
-ApplicationId为空，查询所有应用下的模板列表 
-     * @return ApplicationId 用于查询指定应用号下单模板列表。
-ApplicationId不为空，查询指定应用下的模板列表
-ApplicationId为空，查询所有应用下的模板列表
+     * Get 指定查询的应用号，指定后查询该应用号下的模板列表。
+
+注：`1.ApplicationId为空时，查询所有应用下的模板列表。` 
+     * @return ApplicationId 指定查询的应用号，指定后查询该应用号下的模板列表。
+
+注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 用于查询指定应用号下单模板列表。
-ApplicationId不为空，查询指定应用下的模板列表
-ApplicationId为空，查询所有应用下的模板列表
-     * @param ApplicationId 用于查询指定应用号下单模板列表。
-ApplicationId不为空，查询指定应用下的模板列表
-ApplicationId为空，查询所有应用下的模板列表
+     * Set 指定查询的应用号，指定后查询该应用号下的模板列表。
+
+注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
+     * @param ApplicationId 指定查询的应用号，指定后查询该应用号下的模板列表。
+
+注：`1.ApplicationId为空时，查询所有应用下的模板列表。`
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

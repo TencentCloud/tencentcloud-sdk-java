@@ -837,6 +837,27 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *修改高危命令模板
+     * @param req ModifyCmdTemplateRequest
+     * @return ModifyCmdTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCmdTemplateResponse ModifyCmdTemplate(ModifyCmdTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCmdTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCmdTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCmdTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改资产信息
      * @param req ModifyDeviceRequest
      * @return ModifyDeviceResponse

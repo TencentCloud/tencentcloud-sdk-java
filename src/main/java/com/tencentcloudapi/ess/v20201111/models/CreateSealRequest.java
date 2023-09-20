@@ -56,10 +56,12 @@ public class CreateSealRequest extends AbstractModel{
 
     /**
     * 电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章.
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul>
     */
     @SerializedName("SealType")
     @Expose
@@ -135,11 +137,13 @@ PERSONNEL-人事专用章.
     private String FileToken;
 
     /**
-    * 印章样式:
+    * 印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul>
     */
     @SerializedName("SealStyle")
     @Expose
@@ -147,9 +151,11 @@ ellipse:椭圆印章;
 
     /**
     * 印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm;
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul>
     */
     @SerializedName("SealSize")
     @Expose
@@ -237,15 +243,19 @@ ellipse:椭圆印章;
 
     /**
      * Get 电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章. 
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul> 
      * @return SealType 电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章.
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul>
      */
     public String getSealType() {
         return this.SealType;
@@ -253,15 +263,19 @@ PERSONNEL-人事专用章.
 
     /**
      * Set 电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章.
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul>
      * @param SealType 电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章.
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul>
      */
     public void setSealType(String SealType) {
         this.SealType = SealType;
@@ -436,32 +450,40 @@ PERSONNEL-人事专用章.
     }
 
     /**
-     * Get 印章样式:
+     * Get 印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章 
-     * @return SealStyle 印章样式:
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul> 
+     * @return SealStyle 印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul>
      */
     public String getSealStyle() {
         return this.SealStyle;
     }
 
     /**
-     * Set 印章样式:
+     * Set 印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章
-     * @param SealStyle 印章样式:
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul>
+     * @param SealStyle 印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul>
      */
     public void setSealStyle(String SealStyle) {
         this.SealStyle = SealStyle;
@@ -469,13 +491,17 @@ ellipse:椭圆印章;
 
     /**
      * Get 印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm; 
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul> 
      * @return SealSize 印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm;
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul>
      */
     public String getSealSize() {
         return this.SealSize;
@@ -483,13 +509,17 @@ ellipse:椭圆印章;
 
     /**
      * Set 印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm;
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul>
      * @param SealSize 印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm;
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul>
      */
     public void setSealSize(String SealSize) {
         this.SealSize = SealSize;

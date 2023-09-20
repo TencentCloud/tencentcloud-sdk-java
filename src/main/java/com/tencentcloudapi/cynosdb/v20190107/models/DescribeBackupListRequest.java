@@ -115,6 +115,20 @@ public class DescribeBackupListRequest extends AbstractModel{
     private Long [] SnapshotIdList;
 
     /**
+    * 备份地域
+    */
+    @SerializedName("BackupRegion")
+    @Expose
+    private String BackupRegion;
+
+    /**
+    * 是否跨地域备份
+    */
+    @SerializedName("IsCrossRegionsBackup")
+    @Expose
+    private String IsCrossRegionsBackup;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -326,6 +340,38 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.SnapshotIdList = SnapshotIdList;
     }
 
+    /**
+     * Get 备份地域 
+     * @return BackupRegion 备份地域
+     */
+    public String getBackupRegion() {
+        return this.BackupRegion;
+    }
+
+    /**
+     * Set 备份地域
+     * @param BackupRegion 备份地域
+     */
+    public void setBackupRegion(String BackupRegion) {
+        this.BackupRegion = BackupRegion;
+    }
+
+    /**
+     * Get 是否跨地域备份 
+     * @return IsCrossRegionsBackup 是否跨地域备份
+     */
+    public String getIsCrossRegionsBackup() {
+        return this.IsCrossRegionsBackup;
+    }
+
+    /**
+     * Set 是否跨地域备份
+     * @param IsCrossRegionsBackup 是否跨地域备份
+     */
+    public void setIsCrossRegionsBackup(String IsCrossRegionsBackup) {
+        this.IsCrossRegionsBackup = IsCrossRegionsBackup;
+    }
+
     public DescribeBackupListRequest() {
     }
 
@@ -385,6 +431,12 @@ public class DescribeBackupListRequest extends AbstractModel{
                 this.SnapshotIdList[i] = new Long(source.SnapshotIdList[i]);
             }
         }
+        if (source.BackupRegion != null) {
+            this.BackupRegion = new String(source.BackupRegion);
+        }
+        if (source.IsCrossRegionsBackup != null) {
+            this.IsCrossRegionsBackup = new String(source.IsCrossRegionsBackup);
+        }
     }
 
 
@@ -405,6 +457,8 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FileNames.", this.FileNames);
         this.setParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
         this.setParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
+        this.setParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
+        this.setParamSimple(map, prefix + "IsCrossRegionsBackup", this.IsCrossRegionsBackup);
 
     }
 }

@@ -30,7 +30,7 @@ public class DeleteSpartaProtectionRequest extends AbstractModel{
     private String [] Domains;
 
     /**
-    * 版本
+    * 实例类型
     */
     @SerializedName("Edition")
     @Expose
@@ -60,16 +60,16 @@ public class DeleteSpartaProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get 版本 
-     * @return Edition 版本
+     * Get 实例类型 
+     * @return Edition 实例类型
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 版本
-     * @param Edition 版本
+     * Set 实例类型
+     * @param Edition 实例类型
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;

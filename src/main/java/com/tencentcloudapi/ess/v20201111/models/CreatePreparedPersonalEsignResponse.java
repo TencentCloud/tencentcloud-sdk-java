@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreatePreparedPersonalEsignResponse extends AbstractModel{
 
     /**
-    * 导入生成的印章ID
+    * 导入生成的印章ID，为32位字符串。
+建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
     */
     @SerializedName("SealId")
     @Expose
@@ -37,16 +38,20 @@ public class CreatePreparedPersonalEsignResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 导入生成的印章ID 
-     * @return SealId 导入生成的印章ID
+     * Get 导入生成的印章ID，为32位字符串。
+建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。 
+     * @return SealId 导入生成的印章ID，为32位字符串。
+建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
      */
     public String getSealId() {
         return this.SealId;
     }
 
     /**
-     * Set 导入生成的印章ID
-     * @param SealId 导入生成的印章ID
+     * Set 导入生成的印章ID，为32位字符串。
+建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
+     * @param SealId 导入生成的印章ID，为32位字符串。
+建议开发者保存此印章ID，开头实名认证后，通过此 ID查询导入的印章。
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;

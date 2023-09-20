@@ -987,6 +987,28 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *平台支持将数据以TS切片的形式存入客户自有COS桶，该接口用于支持客户快捷查询切片信息列表
+（注意：只支持标准存储类型的查询）
+     * @param req DescribeRecordSliceRequest
+     * @return DescribeRecordSliceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordSliceResponse DescribeRecordSlice(DescribeRecordSliceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordSliceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordSliceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordSlice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于查询实时上云模板详情
      * @param req DescribeRecordTemplateRequest
      * @return DescribeRecordTemplateResponse

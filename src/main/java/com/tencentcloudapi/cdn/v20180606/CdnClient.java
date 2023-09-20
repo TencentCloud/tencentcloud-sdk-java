@@ -102,7 +102,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *CreateDiagnoseUrl 用于添加域名诊断任务URL， <font color=red>将于 **2023年5月31日** 下线</font><br>
+     *### <font color=red>**该接口已废弃** </font><br>
+CreateDiagnoseUrl 用于添加域名诊断任务URL。
      * @param req CreateDiagnoseUrlRequest
      * @return CreateDiagnoseUrlResponse
      * @throws TencentCloudSDKException
@@ -412,7 +413,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：此接口即将下线，不再进行维护，请通过DescribeIpStatus 接口进行查询）
+     *### <font color=red>**该接口已废弃** </font><br>
+本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：替换接口为DescribeIpStatus）
      * @param req DescribeCdnOriginIpRequest
      * @return DescribeCdnOriginIpResponse
      * @throws TencentCloudSDKException
@@ -475,7 +477,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *DescribeDiagnoseReport 用于获取指定报告id的内容， <font color=red>将于 **2023年5月31日** 下线</font><br>
+     *### <font color=red>**该接口已废弃** </font><br>
+DescribeDiagnoseReport 用于获取指定报告id的内容。
      * @param req DescribeDiagnoseReportRequest
      * @return DescribeDiagnoseReportResponse
      * @throws TencentCloudSDKException
@@ -1070,7 +1073,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。（注：接口尚在内测中，暂未全量开放；封禁URL并非无限期永久封禁）
+     *### <font color=red>**该接口已废弃** </font><br>
+DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。
      * @param req DisableCachesRequest
      * @return DisableCachesResponse
      * @throws TencentCloudSDKException
@@ -1134,7 +1138,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
+     *### <font color=red>**该接口已废弃** </font><br>
+EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。
      * @param req EnableCachesRequest
      * @return EnableCachesResponse
      * @throws TencentCloudSDKException
@@ -1176,7 +1181,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
+     *### <font color=red>**该接口已废弃** </font><br>
+GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。
      * @param req GetDisableRecordsRequest
      * @return GetDisableRecordsResponse
      * @throws TencentCloudSDKException
@@ -1239,7 +1245,8 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情， <font color=red>将于 **2023年5月31日** 下线</font><br>
+     *### <font color=red>**该接口已废弃** </font><br>
+ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
      * @param req ListDiagnoseReportRequest
      * @return ListDiagnoseReportResponse
      * @throws TencentCloudSDKException
