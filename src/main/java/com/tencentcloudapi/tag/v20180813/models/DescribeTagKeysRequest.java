@@ -37,7 +37,7 @@ public class DescribeTagKeysRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 每页大小，默认为 15
+    * 每页大小，默认为 15，最大1000
     */
     @SerializedName("Limit")
     @Expose
@@ -49,6 +49,13 @@ public class DescribeTagKeysRequest extends AbstractModel{
     @SerializedName("ShowProject")
     @Expose
     private Long ShowProject;
+
+    /**
+    * 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
 
     /**
      * Get 创建者用户 Uin，不传或为空只将 Uin 作为条件查询 
@@ -83,16 +90,16 @@ public class DescribeTagKeysRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页大小，默认为 15 
-     * @return Limit 每页大小，默认为 15
+     * Get 每页大小，默认为 15，最大1000 
+     * @return Limit 每页大小，默认为 15，最大1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页大小，默认为 15
-     * @param Limit 每页大小，默认为 15
+     * Set 每页大小，默认为 15，最大1000
+     * @param Limit 每页大小，默认为 15，最大1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -112,6 +119,22 @@ public class DescribeTagKeysRequest extends AbstractModel{
      */
     public void setShowProject(Long ShowProject) {
         this.ShowProject = ShowProject;
+    }
+
+    /**
+     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。 
+     * @return Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * @param Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
     }
 
     public DescribeTagKeysRequest() {
@@ -134,6 +157,9 @@ public class DescribeTagKeysRequest extends AbstractModel{
         if (source.ShowProject != null) {
             this.ShowProject = new Long(source.ShowProject);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeTagKeysRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ShowProject", this.ShowProject);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

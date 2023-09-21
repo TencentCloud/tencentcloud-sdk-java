@@ -135,6 +135,13 @@ public class QueueConfig extends AbstractModel{
     private Long ScaleUpMemRatio;
 
     /**
+    * 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
+    */
+    @SerializedName("EnhancedService")
+    @Expose
+    private EnhancedService EnhancedService;
+
+    /**
      * Get 队列名称。 
      * @return QueueName 队列名称。
      */
@@ -402,6 +409,22 @@ public class QueueConfig extends AbstractModel{
         this.ScaleUpMemRatio = ScaleUpMemRatio;
     }
 
+    /**
+     * Get 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。 
+     * @return EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
+     */
+    public EnhancedService getEnhancedService() {
+        return this.EnhancedService;
+    }
+
+    /**
+     * Set 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
+     * @param EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
+     */
+    public void setEnhancedService(EnhancedService EnhancedService) {
+        this.EnhancedService = EnhancedService;
+    }
+
     public QueueConfig() {
     }
 
@@ -461,6 +484,9 @@ public class QueueConfig extends AbstractModel{
         if (source.ScaleUpMemRatio != null) {
             this.ScaleUpMemRatio = new Long(source.ScaleUpMemRatio);
         }
+        if (source.EnhancedService != null) {
+            this.EnhancedService = new EnhancedService(source.EnhancedService);
+        }
     }
 
 
@@ -483,6 +509,7 @@ public class QueueConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "ScaleOutNodeThreshold", this.ScaleOutNodeThreshold);
         this.setParamSimple(map, prefix + "MaxNodesPerCycle", this.MaxNodesPerCycle);
         this.setParamSimple(map, prefix + "ScaleUpMemRatio", this.ScaleUpMemRatio);
+        this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
 
     }
 }

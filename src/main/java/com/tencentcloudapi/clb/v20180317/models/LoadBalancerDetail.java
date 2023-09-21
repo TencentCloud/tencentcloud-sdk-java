@@ -311,7 +311,7 @@ Public：公网属性， Private：内网属性。
     private String [] Zones;
 
     /**
-    * 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+    * 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SniSwitch")
@@ -1055,9 +1055,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Get 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+     * Get 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+     * @return SniSwitch 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSniSwitch() {
@@ -1065,9 +1065,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Set 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+     * Set 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+     * @param SniSwitch 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSniSwitch(Long SniSwitch) {

@@ -93,6 +93,20 @@ public class CreateCodePackRequest extends AbstractModel{
     private Long SerialType;
 
     /**
+    * 关联产品ID
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+    * 层级码时是否提前生成关联关系，默认为 1
+    */
+    @SerializedName("RelateType")
+    @Expose
+    private Long RelateType;
+
+    /**
      * Get 商户ID 
      * @return MerchantId 商户ID
      */
@@ -252,6 +266,38 @@ public class CreateCodePackRequest extends AbstractModel{
         this.SerialType = SerialType;
     }
 
+    /**
+     * Get 关联产品ID 
+     * @return ProductId 关联产品ID
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 关联产品ID
+     * @param ProductId 关联产品ID
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * Get 层级码时是否提前生成关联关系，默认为 1 
+     * @return RelateType 层级码时是否提前生成关联关系，默认为 1
+     */
+    public Long getRelateType() {
+        return this.RelateType;
+    }
+
+    /**
+     * Set 层级码时是否提前生成关联关系，默认为 1
+     * @param RelateType 层级码时是否提前生成关联关系，默认为 1
+     */
+    public void setRelateType(Long RelateType) {
+        this.RelateType = RelateType;
+    }
+
     public CreateCodePackRequest() {
     }
 
@@ -293,6 +339,12 @@ public class CreateCodePackRequest extends AbstractModel{
         if (source.SerialType != null) {
             this.SerialType = new Long(source.SerialType);
         }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.RelateType != null) {
+            this.RelateType = new Long(source.RelateType);
+        }
     }
 
 
@@ -310,6 +362,8 @@ public class CreateCodePackRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
         this.setParamSimple(map, prefix + "SerialType", this.SerialType);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "RelateType", this.RelateType);
 
     }
 }

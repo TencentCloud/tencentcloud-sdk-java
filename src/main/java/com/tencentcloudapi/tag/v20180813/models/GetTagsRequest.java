@@ -48,6 +48,13 @@ public class GetTagsRequest extends AbstractModel{
     private String [] TagKeys;
 
     /**
+    * 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get 从上一页的响应中获取的下一页的Token值。
 如果是第一次请求，设置为空。 
      * @return PaginationToken 从上一页的响应中获取的下一页的Token值。
@@ -111,6 +118,22 @@ public class GetTagsRequest extends AbstractModel{
         this.TagKeys = TagKeys;
     }
 
+    /**
+     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。 
+     * @return Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * @param Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public GetTagsRequest() {
     }
 
@@ -131,6 +154,9 @@ public class GetTagsRequest extends AbstractModel{
                 this.TagKeys[i] = new String(source.TagKeys[i]);
             }
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -141,6 +167,7 @@ public class GetTagsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PaginationToken", this.PaginationToken);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

@@ -84,16 +84,16 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long ResTextFormat;
 
     /**
-    * 语音数据来源
-0：语音 URL；
-1：语音数据（post body）
+    * 音频数据来源
+0：音频URL；
+1：音频数据（post body）
     */
     @SerializedName("SourceType")
     @Expose
     private Long SourceType;
 
     /**
-    * 语音数据base64编码
+    * 音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含）
@@ -110,7 +110,7 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long DataLen;
 
     /**
-    * 语音URL的地址（需要公网环境浏览器可下载）
+    * 音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：
@@ -486,35 +486,35 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 语音数据来源
-0：语音 URL；
-1：语音数据（post body） 
-     * @return SourceType 语音数据来源
-0：语音 URL；
-1：语音数据（post body）
+     * Get 音频数据来源
+0：音频URL；
+1：音频数据（post body） 
+     * @return SourceType 音频数据来源
+0：音频URL；
+1：音频数据（post body）
      */
     public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 语音数据来源
-0：语音 URL；
-1：语音数据（post body）
-     * @param SourceType 语音数据来源
-0：语音 URL；
-1：语音数据（post body）
+     * Set 音频数据来源
+0：音频URL；
+1：音频数据（post body）
+     * @param SourceType 音频数据来源
+0：音频URL；
+1：音频数据（post body）
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 语音数据base64编码
+     * Get 音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含） 
-     * @return Data 语音数据base64编码
+     * @return Data 音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含）
@@ -524,11 +524,11 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Set 语音数据base64编码
+     * Set 音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含）
-     * @param Data 语音数据base64编码
+     * @param Data 音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含）
@@ -554,13 +554,13 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 语音URL的地址（需要公网环境浏览器可下载）
+     * Get 音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：
 1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
 2. 请保证文件的下载速度，否则可能下载失败 
-     * @return Url 语音URL的地址（需要公网环境浏览器可下载）
+     * @return Url 音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：
@@ -572,13 +572,13 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Set 语音URL的地址（需要公网环境浏览器可下载）
+     * Set 音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：
 1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
 2. 请保证文件的下载速度，否则可能下载失败
-     * @param Url 语音URL的地址（需要公网环境浏览器可下载）
+     * @param Url 音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：

@@ -66,6 +66,14 @@ public class TagResource extends AbstractModel{
     private String ServiceType;
 
     /**
+    * 标签类型。取值： Custom：自定义标签。 System：系统标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get 标签键 
      * @return TagKey 标签键
      */
@@ -165,6 +173,26 @@ public class TagResource extends AbstractModel{
         this.ServiceType = ServiceType;
     }
 
+    /**
+     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Category 标签类型。取值： Custom：自定义标签。 System：系统标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set 标签类型。取值： Custom：自定义标签。 System：系统标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Category 标签类型。取值： Custom：自定义标签。 System：系统标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public TagResource() {
     }
 
@@ -191,6 +219,9 @@ public class TagResource extends AbstractModel{
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class TagResource extends AbstractModel{
         this.setParamSimple(map, prefix + "TagKeyMd5", this.TagKeyMd5);
         this.setParamSimple(map, prefix + "TagValueMd5", this.TagValueMd5);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

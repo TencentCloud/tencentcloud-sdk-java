@@ -124,6 +124,27 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *通用查询调用链列表
+     * @param req DescribeGeneralSpanListRequest
+     * @return DescribeGeneralSpanListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGeneralSpanListResponse DescribeGeneralSpanList(DescribeGeneralSpanListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGeneralSpanListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGeneralSpanListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGeneralSpanList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *拉取通用指标列表
      * @param req DescribeMetricRecordsRequest
      * @return DescribeMetricRecordsResponse

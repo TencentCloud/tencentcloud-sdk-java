@@ -4166,27 +4166,6 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
-     *登记挂账撤销。此接口可以实现把RegisterBillSupportWithdraw接口完成的登记挂账进行撤销，即调减普通会员子账户的可提现和可用余额，调增挂账子账户的可用余额。
-     * @param req RevResigterBillSupportWithdrawRequest
-     * @return RevResigterBillSupportWithdrawResponse
-     * @throws TencentCloudSDKException
-     */
-    public RevResigterBillSupportWithdrawResponse RevResigterBillSupportWithdraw(RevResigterBillSupportWithdrawRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RevResigterBillSupportWithdrawResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RevResigterBillSupportWithdrawResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RevResigterBillSupportWithdraw");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *修改会员属性-普通商户子账户。修改会员的会员属性。
      * @param req ReviseMbrPropertyRequest
      * @return ReviseMbrPropertyResponse

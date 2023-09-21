@@ -93,6 +93,22 @@ public class CreateCustomPackRequest extends AbstractModel{
     private Long SerialType;
 
     /**
+    * 产品ID
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+    * 是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效
+    */
+    @SerializedName("RelateType")
+    @Expose
+    private Long RelateType;
+
+    /**
      * Get 商户ID 
      * @return MerchantId 商户ID
      */
@@ -252,6 +268,46 @@ public class CreateCustomPackRequest extends AbstractModel{
         this.SerialType = SerialType;
     }
 
+    /**
+     * Get 产品ID 
+     * @return ProductId 产品ID
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 产品ID
+     * @param ProductId 产品ID
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * Get 是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效 
+     * @return RelateType 是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效
+     */
+    public Long getRelateType() {
+        return this.RelateType;
+    }
+
+    /**
+     * Set 是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效
+     * @param RelateType 是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效
+     */
+    public void setRelateType(Long RelateType) {
+        this.RelateType = RelateType;
+    }
+
     public CreateCustomPackRequest() {
     }
 
@@ -296,6 +352,12 @@ public class CreateCustomPackRequest extends AbstractModel{
         if (source.SerialType != null) {
             this.SerialType = new Long(source.SerialType);
         }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.RelateType != null) {
+            this.RelateType = new Long(source.RelateType);
+        }
     }
 
 
@@ -313,6 +375,8 @@ public class CreateCustomPackRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "CodeParts.", this.CodeParts);
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
         this.setParamSimple(map, prefix + "SerialType", this.SerialType);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "RelateType", this.RelateType);
 
     }
 }

@@ -183,6 +183,38 @@ public class CodePack extends AbstractModel{
     private PackSpec [] PackSpec;
 
     /**
+    * 商品名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
+    * 商品规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductSpecification")
+    @Expose
+    private String ProductSpecification;
+
+    /**
+    * 商品ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+    * 码关系是否预关联
+0:否, 1:是
+    */
+    @SerializedName("RelateType")
+    @Expose
+    private Long RelateType;
+
+    /**
      * Get 码id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PackId 码id
@@ -582,6 +614,86 @@ public class CodePack extends AbstractModel{
         this.PackSpec = PackSpec;
     }
 
+    /**
+     * Get 商品名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductName 商品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set 商品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductName 商品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
+    }
+
+    /**
+     * Get 商品规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductSpecification 商品规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductSpecification() {
+        return this.ProductSpecification;
+    }
+
+    /**
+     * Set 商品规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductSpecification 商品规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductSpecification(String ProductSpecification) {
+        this.ProductSpecification = ProductSpecification;
+    }
+
+    /**
+     * Get 商品ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductId 商品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 商品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductId 商品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * Get 码关系是否预关联
+0:否, 1:是 
+     * @return RelateType 码关系是否预关联
+0:否, 1:是
+     */
+    public Long getRelateType() {
+        return this.RelateType;
+    }
+
+    /**
+     * Set 码关系是否预关联
+0:否, 1:是
+     * @param RelateType 码关系是否预关联
+0:否, 1:是
+     */
+    public void setRelateType(Long RelateType) {
+        this.RelateType = RelateType;
+    }
+
     public CodePack() {
     }
 
@@ -653,6 +765,18 @@ public class CodePack extends AbstractModel{
                 this.PackSpec[i] = new PackSpec(source.PackSpec[i]);
             }
         }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ProductSpecification != null) {
+            this.ProductSpecification = new String(source.ProductSpecification);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.RelateType != null) {
+            this.RelateType = new Long(source.RelateType);
+        }
     }
 
 
@@ -680,6 +804,10 @@ public class CodePack extends AbstractModel{
         this.setParamSimple(map, prefix + "PackType", this.PackType);
         this.setParamSimple(map, prefix + "PackLevel", this.PackLevel);
         this.setParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "ProductSpecification", this.ProductSpecification);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "RelateType", this.RelateType);
 
     }
 }

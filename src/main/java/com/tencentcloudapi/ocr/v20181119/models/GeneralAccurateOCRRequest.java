@@ -69,6 +69,13 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
     private Long PdfPageNumber;
 
     /**
+    * 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+    */
+    @SerializedName("EnableDetectText")
+    @Expose
+    private Boolean EnableDetectText;
+
+    /**
      * Get 图片的 Base64 值。
 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
@@ -180,6 +187,22 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
         this.PdfPageNumber = PdfPageNumber;
     }
 
+    /**
+     * Get 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。 
+     * @return EnableDetectText 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+     */
+    public Boolean getEnableDetectText() {
+        return this.EnableDetectText;
+    }
+
+    /**
+     * Set 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+     * @param EnableDetectText 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+     */
+    public void setEnableDetectText(Boolean EnableDetectText) {
+        this.EnableDetectText = EnableDetectText;
+    }
+
     public GeneralAccurateOCRRequest() {
     }
 
@@ -206,6 +229,9 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
         if (source.PdfPageNumber != null) {
             this.PdfPageNumber = new Long(source.PdfPageNumber);
         }
+        if (source.EnableDetectText != null) {
+            this.EnableDetectText = new Boolean(source.EnableDetectText);
+        }
     }
 
 
@@ -219,6 +245,7 @@ public class GeneralAccurateOCRRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+        this.setParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
 
     }
 }

@@ -123,6 +123,27 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *开始云端推流到指定URL
+     * @param req StartPublishStreamWithURLRequest
+     * @return StartPublishStreamWithURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartPublishStreamWithURLResponse StartPublishStreamWithURL(StartPublishStreamWithURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartPublishStreamWithURLResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartPublishStreamWithURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartPublishStreamWithURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *停止云端推流
      * @param req StopPublishStreamRequest
      * @return StopPublishStreamResponse

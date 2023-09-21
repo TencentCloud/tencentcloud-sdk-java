@@ -51,6 +51,13 @@ public class DescribeTagValuesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get 标签键列表 
      * @return TagKeys 标签键列表
      */
@@ -114,6 +121,22 @@ public class DescribeTagValuesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。 
+     * @return Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * @param Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public DescribeTagValuesRequest() {
     }
 
@@ -137,6 +160,9 @@ public class DescribeTagValuesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class DescribeTagValuesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

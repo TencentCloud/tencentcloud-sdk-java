@@ -1720,6 +1720,48 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *查询指定时刻指标的最新值
+     * @param req QueryMetricRequest
+     * @return QueryMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryMetricResponse QueryMetric(QueryMetricRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryMetricResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryMetricResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryMetric");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定时间范围内指标的变化趋势
+     * @param req QueryRangeMetricRequest
+     * @return QueryRangeMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryRangeMetricResponse QueryRangeMetric(QueryRangeMetricRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryRangeMetricResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryRangeMetricResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryRangeMetric");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *重试失败的投递任务
      * @param req RetryShipperTaskRequest
      * @return RetryShipperTaskResponse
