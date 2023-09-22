@@ -819,6 +819,27 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取agent安装命令
+     * @param req DescribeAgentInstallCommandRequest
+     * @return DescribeAgentInstallCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentInstallCommandResponse DescribeAgentInstallCommand(DescribeAgentInstallCommandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentInstallCommandResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentInstallCommandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAgentInstallCommand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取告警点所在事件的所有节点信息
      * @param req DescribeAlarmIncidentNodesRequest
      * @return DescribeAlarmIncidentNodesResponse

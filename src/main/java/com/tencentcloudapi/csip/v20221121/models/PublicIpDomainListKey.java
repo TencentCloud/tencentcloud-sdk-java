@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gaap.v20180529.models;
+package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomHeaderRequest extends AbstractModel{
+public class PublicIpDomainListKey extends AbstractModel{
 
     /**
-    * 规则ID
+    * 资产值
     */
-    @SerializedName("RuleId")
+    @SerializedName("Asset")
     @Expose
-    private String RuleId;
+    private String Asset;
 
     /**
-     * Get 规则ID 
-     * @return RuleId 规则ID
+     * Get 资产值 
+     * @return Asset 资产值
      */
-    public String getRuleId() {
-        return this.RuleId;
+    public String getAsset() {
+        return this.Asset;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleId 规则ID
+     * Set 资产值
+     * @param Asset 资产值
      */
-    public void setRuleId(String RuleId) {
-        this.RuleId = RuleId;
+    public void setAsset(String Asset) {
+        this.Asset = Asset;
     }
 
-    public DescribeCustomHeaderRequest() {
+    public PublicIpDomainListKey() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCustomHeaderRequest(DescribeCustomHeaderRequest source) {
-        if (source.RuleId != null) {
-            this.RuleId = new String(source.RuleId);
+    public PublicIpDomainListKey(PublicIpDomainListKey source) {
+        if (source.Asset != null) {
+            this.Asset = new String(source.Asset);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeCustomHeaderRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "Asset", this.Asset);
 
     }
 }

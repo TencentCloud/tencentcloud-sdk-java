@@ -116,7 +116,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String [] MetricNames;
 
     /**
-    * 根据策略名称模糊搜索
+    * 根据策略名称模糊搜索,不支持大小写区分
     */
     @SerializedName("PolicyName")
     @Expose
@@ -151,7 +151,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String [] PolicyIds;
 
     /**
-    * 告警等级
+    * 告警等级,取值范围：Remind、Serious、Warn
     */
     @SerializedName("AlarmLevels")
     @Expose
@@ -374,16 +374,16 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据策略名称模糊搜索 
-     * @return PolicyName 根据策略名称模糊搜索
+     * Get 根据策略名称模糊搜索,不支持大小写区分 
+     * @return PolicyName 根据策略名称模糊搜索,不支持大小写区分
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 根据策略名称模糊搜索
-     * @param PolicyName 根据策略名称模糊搜索
+     * Set 根据策略名称模糊搜索,不支持大小写区分
+     * @param PolicyName 根据策略名称模糊搜索,不支持大小写区分
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
@@ -454,16 +454,16 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 告警等级 
-     * @return AlarmLevels 告警等级
+     * Get 告警等级,取值范围：Remind、Serious、Warn 
+     * @return AlarmLevels 告警等级,取值范围：Remind、Serious、Warn
      */
     public String [] getAlarmLevels() {
         return this.AlarmLevels;
     }
 
     /**
-     * Set 告警等级
-     * @param AlarmLevels 告警等级
+     * Set 告警等级,取值范围：Remind、Serious、Warn
+     * @param AlarmLevels 告警等级,取值范围：Remind、Serious、Warn
      */
     public void setAlarmLevels(String [] AlarmLevels) {
         this.AlarmLevels = AlarmLevels;

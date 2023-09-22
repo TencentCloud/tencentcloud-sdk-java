@@ -39,6 +39,14 @@ public class SentenceDetail extends AbstractModel{
     private String SliceSentence;
 
     /**
+    * 口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WrittenText")
+    @Expose
+    private String WrittenText;
+
+    /**
     * 单句开始时间（毫秒）
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -148,6 +156,26 @@ public class SentenceDetail extends AbstractModel{
      */
     public void setSliceSentence(String SliceSentence) {
         this.SliceSentence = SliceSentence;
+    }
+
+    /**
+     * Get 口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WrittenText 口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWrittenText() {
+        return this.WrittenText;
+    }
+
+    /**
+     * Set 口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WrittenText 口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWrittenText(String WrittenText) {
+        this.WrittenText = WrittenText;
     }
 
     /**
@@ -344,6 +372,9 @@ public class SentenceDetail extends AbstractModel{
         if (source.SliceSentence != null) {
             this.SliceSentence = new String(source.SliceSentence);
         }
+        if (source.WrittenText != null) {
+            this.WrittenText = new String(source.WrittenText);
+        }
         if (source.StartMs != null) {
             this.StartMs = new Long(source.StartMs);
         }
@@ -386,6 +417,7 @@ public class SentenceDetail extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FinalSentence", this.FinalSentence);
         this.setParamSimple(map, prefix + "SliceSentence", this.SliceSentence);
+        this.setParamSimple(map, prefix + "WrittenText", this.WrittenText);
         this.setParamSimple(map, prefix + "StartMs", this.StartMs);
         this.setParamSimple(map, prefix + "EndMs", this.EndMs);
         this.setParamSimple(map, prefix + "WordsNum", this.WordsNum);

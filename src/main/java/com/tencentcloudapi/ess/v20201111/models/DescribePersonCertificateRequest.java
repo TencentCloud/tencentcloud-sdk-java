@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowGroupByTemplatesRequest extends AbstractModel{
+public class DescribePersonCertificateRequest extends AbstractModel{
 
     /**
     * 执行本接口操作的员工信息。
@@ -31,18 +31,14 @@ public class CreateFlowGroupByTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+    * 个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul>
     */
-    @SerializedName("FlowGroupName")
+    @SerializedName("UserInfo")
     @Expose
-    private String FlowGroupName;
-
-    /**
-    * 合同（流程）组的子合同信息，支持2-50个子合同
-    */
-    @SerializedName("FlowGroupInfos")
-    @Expose
-    private FlowGroupInfo [] FlowGroupInfos;
+    private UserThreeFactor UserInfo;
 
     /**
     * 代理企业和员工的信息。
@@ -53,16 +49,13 @@ public class CreateFlowGroupByTemplatesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul>
+    * 证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景`
     */
-    @SerializedName("FlowGroupOptions")
+    @SerializedName("SceneKey")
     @Expose
-    private FlowGroupOptions FlowGroupOptions;
+    private String SceneKey;
 
     /**
      * Get 执行本接口操作的员工信息。
@@ -85,35 +78,31 @@ public class CreateFlowGroupByTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 
-     * @return FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * Get 个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul> 
+     * @return UserInfo 个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul>
      */
-    public String getFlowGroupName() {
-        return this.FlowGroupName;
+    public UserThreeFactor getUserInfo() {
+        return this.UserInfo;
     }
 
     /**
-     * Set 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-     * @param FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * Set 个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul>
+     * @param UserInfo 个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul>
      */
-    public void setFlowGroupName(String FlowGroupName) {
-        this.FlowGroupName = FlowGroupName;
-    }
-
-    /**
-     * Get 合同（流程）组的子合同信息，支持2-50个子合同 
-     * @return FlowGroupInfos 合同（流程）组的子合同信息，支持2-50个子合同
-     */
-    public FlowGroupInfo [] getFlowGroupInfos() {
-        return this.FlowGroupInfos;
-    }
-
-    /**
-     * Set 合同（流程）组的子合同信息，支持2-50个子合同
-     * @param FlowGroupInfos 合同（流程）组的子合同信息，支持2-50个子合同
-     */
-    public void setFlowGroupInfos(FlowGroupInfo [] FlowGroupInfos) {
-        this.FlowGroupInfos = FlowGroupInfos;
+    public void setUserInfo(UserThreeFactor UserInfo) {
+        this.UserInfo = UserInfo;
     }
 
     /**
@@ -137,66 +126,48 @@ public class CreateFlowGroupByTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul> 
-     * @return FlowGroupOptions 合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul>
+     * Get 证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景` 
+     * @return SceneKey 证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景`
      */
-    public FlowGroupOptions getFlowGroupOptions() {
-        return this.FlowGroupOptions;
+    public String getSceneKey() {
+        return this.SceneKey;
     }
 
     /**
-     * Set 合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul>
-     * @param FlowGroupOptions 合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul>
+     * Set 证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景`
+     * @param SceneKey 证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景`
      */
-    public void setFlowGroupOptions(FlowGroupOptions FlowGroupOptions) {
-        this.FlowGroupOptions = FlowGroupOptions;
+    public void setSceneKey(String SceneKey) {
+        this.SceneKey = SceneKey;
     }
 
-    public CreateFlowGroupByTemplatesRequest() {
+    public DescribePersonCertificateRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateFlowGroupByTemplatesRequest(CreateFlowGroupByTemplatesRequest source) {
+    public DescribePersonCertificateRequest(DescribePersonCertificateRequest source) {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
-        if (source.FlowGroupName != null) {
-            this.FlowGroupName = new String(source.FlowGroupName);
-        }
-        if (source.FlowGroupInfos != null) {
-            this.FlowGroupInfos = new FlowGroupInfo[source.FlowGroupInfos.length];
-            for (int i = 0; i < source.FlowGroupInfos.length; i++) {
-                this.FlowGroupInfos[i] = new FlowGroupInfo(source.FlowGroupInfos[i]);
-            }
+        if (source.UserInfo != null) {
+            this.UserInfo = new UserThreeFactor(source.UserInfo);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.FlowGroupOptions != null) {
-            this.FlowGroupOptions = new FlowGroupOptions(source.FlowGroupOptions);
+        if (source.SceneKey != null) {
+            this.SceneKey = new String(source.SceneKey);
         }
     }
 
@@ -206,10 +177,9 @@ public class CreateFlowGroupByTemplatesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
-        this.setParamArrayObj(map, prefix + "FlowGroupInfos.", this.FlowGroupInfos);
+        this.setParamObj(map, prefix + "UserInfo.", this.UserInfo);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamObj(map, prefix + "FlowGroupOptions.", this.FlowGroupOptions);
+        this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
 
     }
 }

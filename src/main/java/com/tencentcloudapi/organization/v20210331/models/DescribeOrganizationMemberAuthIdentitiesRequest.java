@@ -37,11 +37,18 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
     private Long Limit;
 
     /**
-    * 组织成员Uin。
+    * 组织成员Uin。入参MemberUin与IdentityId至少填写一个
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
+
+    /**
+    * 身份ID。入参MemberUin与IdentityId至少填写一个
+    */
+    @SerializedName("IdentityId")
+    @Expose
+    private Long IdentityId;
 
     /**
      * Get 偏移量。取值是limit的整数倍，默认值 : 0 
@@ -76,19 +83,35 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
     }
 
     /**
-     * Get 组织成员Uin。 
-     * @return MemberUin 组织成员Uin。
+     * Get 组织成员Uin。入参MemberUin与IdentityId至少填写一个 
+     * @return MemberUin 组织成员Uin。入参MemberUin与IdentityId至少填写一个
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 组织成员Uin。
-     * @param MemberUin 组织成员Uin。
+     * Set 组织成员Uin。入参MemberUin与IdentityId至少填写一个
+     * @param MemberUin 组织成员Uin。入参MemberUin与IdentityId至少填写一个
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
+    }
+
+    /**
+     * Get 身份ID。入参MemberUin与IdentityId至少填写一个 
+     * @return IdentityId 身份ID。入参MemberUin与IdentityId至少填写一个
+     */
+    public Long getIdentityId() {
+        return this.IdentityId;
+    }
+
+    /**
+     * Set 身份ID。入参MemberUin与IdentityId至少填写一个
+     * @param IdentityId 身份ID。入参MemberUin与IdentityId至少填写一个
+     */
+    public void setIdentityId(Long IdentityId) {
+        this.IdentityId = IdentityId;
     }
 
     public DescribeOrganizationMemberAuthIdentitiesRequest() {
@@ -108,6 +131,9 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
         if (source.MemberUin != null) {
             this.MemberUin = new Long(source.MemberUin);
         }
+        if (source.IdentityId != null) {
+            this.IdentityId = new Long(source.IdentityId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
+        this.setParamSimple(map, prefix + "IdentityId", this.IdentityId);
 
     }
 }

@@ -23,21 +23,22 @@ import java.util.HashMap;
 public class DescribeFlowInfoResponse extends AbstractModel{
 
     /**
-    * 签署流程信息
+    * 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
     */
     @SerializedName("FlowDetailInfos")
     @Expose
     private FlowDetailInfo [] FlowDetailInfos;
 
     /**
-    * 合同组ID，为32位字符串
+    * 合同组ID，只有在查询合同组信息时才会返回。
     */
     @SerializedName("FlowGroupId")
     @Expose
     private String FlowGroupId;
 
     /**
-    * 合同组名称
+    * 合同组名称，只有在查询合同组信息时才会返回。
     */
     @SerializedName("FlowGroupName")
     @Expose
@@ -51,48 +52,52 @@ public class DescribeFlowInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 签署流程信息 
-     * @return FlowDetailInfos 签署流程信息
+     * Get 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。 
+     * @return FlowDetailInfos 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
      */
     public FlowDetailInfo [] getFlowDetailInfos() {
         return this.FlowDetailInfos;
     }
 
     /**
-     * Set 签署流程信息
-     * @param FlowDetailInfos 签署流程信息
+     * Set 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+     * @param FlowDetailInfos 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
      */
     public void setFlowDetailInfos(FlowDetailInfo [] FlowDetailInfos) {
         this.FlowDetailInfos = FlowDetailInfos;
     }
 
     /**
-     * Get 合同组ID，为32位字符串 
-     * @return FlowGroupId 合同组ID，为32位字符串
+     * Get 合同组ID，只有在查询合同组信息时才会返回。 
+     * @return FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID，为32位字符串
-     * @param FlowGroupId 合同组ID，为32位字符串
+     * Set 合同组ID，只有在查询合同组信息时才会返回。
+     * @param FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 合同组名称 
-     * @return FlowGroupName 合同组名称
+     * Get 合同组名称，只有在查询合同组信息时才会返回。 
+     * @return FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
      */
     public String getFlowGroupName() {
         return this.FlowGroupName;
     }
 
     /**
-     * Set 合同组名称
-     * @param FlowGroupName 合同组名称
+     * Set 合同组名称，只有在查询合同组信息时才会返回。
+     * @param FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
      */
     public void setFlowGroupName(String FlowGroupName) {
         this.FlowGroupName = FlowGroupName;

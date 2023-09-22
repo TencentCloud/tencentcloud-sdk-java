@@ -13,48 +13,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gaap.v20180529.models;
+package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomHeaderRequest extends AbstractModel{
+public class StopRiskCenterTaskRequest extends AbstractModel{
 
     /**
-    * 规则ID
+    * 任务id 列表
     */
-    @SerializedName("RuleId")
+    @SerializedName("TaskIdList")
     @Expose
-    private String RuleId;
+    private TaskIdListKey [] TaskIdList;
 
     /**
-     * Get 规则ID 
-     * @return RuleId 规则ID
+     * Get 任务id 列表 
+     * @return TaskIdList 任务id 列表
      */
-    public String getRuleId() {
-        return this.RuleId;
+    public TaskIdListKey [] getTaskIdList() {
+        return this.TaskIdList;
     }
 
     /**
-     * Set 规则ID
-     * @param RuleId 规则ID
+     * Set 任务id 列表
+     * @param TaskIdList 任务id 列表
      */
-    public void setRuleId(String RuleId) {
-        this.RuleId = RuleId;
+    public void setTaskIdList(TaskIdListKey [] TaskIdList) {
+        this.TaskIdList = TaskIdList;
     }
 
-    public DescribeCustomHeaderRequest() {
+    public StopRiskCenterTaskRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCustomHeaderRequest(DescribeCustomHeaderRequest source) {
-        if (source.RuleId != null) {
-            this.RuleId = new String(source.RuleId);
+    public StopRiskCenterTaskRequest(StopRiskCenterTaskRequest source) {
+        if (source.TaskIdList != null) {
+            this.TaskIdList = new TaskIdListKey[source.TaskIdList.length];
+            for (int i = 0; i < source.TaskIdList.length; i++) {
+                this.TaskIdList[i] = new TaskIdListKey(source.TaskIdList[i]);
+            }
         }
     }
 
@@ -63,7 +66,7 @@ public class DescribeCustomHeaderRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamArrayObj(map, prefix + "TaskIdList.", this.TaskIdList);
 
     }
 }

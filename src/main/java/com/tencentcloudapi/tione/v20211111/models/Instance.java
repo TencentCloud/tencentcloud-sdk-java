@@ -114,6 +114,14 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
     private String SpecAlias;
 
     /**
+    * 计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecFeatures")
+    @Expose
+    private String [] SpecFeatures;
+
+    /**
      * Get 资源组节点id 
      * @return InstanceId 资源组节点id
      */
@@ -357,6 +365,26 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
         this.SpecAlias = SpecAlias;
     }
 
+    /**
+     * Get 计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecFeatures 计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSpecFeatures() {
+        return this.SpecFeatures;
+    }
+
+    /**
+     * Set 计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecFeatures 计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecFeatures(String [] SpecFeatures) {
+        this.SpecFeatures = SpecFeatures;
+    }
+
     public Instance() {
     }
 
@@ -395,6 +423,12 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
         if (source.SpecAlias != null) {
             this.SpecAlias = new String(source.SpecAlias);
         }
+        if (source.SpecFeatures != null) {
+            this.SpecFeatures = new String[source.SpecFeatures.length];
+            for (int i = 0; i < source.SpecFeatures.length; i++) {
+                this.SpecFeatures[i] = new String(source.SpecFeatures[i]);
+            }
+        }
     }
 
 
@@ -412,6 +446,7 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "SpecId", this.SpecId);
         this.setParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
+        this.setParamArraySimple(map, prefix + "SpecFeatures.", this.SpecFeatures);
 
     }
 }

@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.organization.v20210331.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddOrganizationMemberEmailResponse extends AbstractModel{
+public class DescribePersonCertificateResponse extends AbstractModel{
 
     /**
-    * 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 证书的Base64
     */
-    @SerializedName("BindId")
+    @SerializedName("Cert")
     @Expose
-    private Long BindId;
+    private String Cert;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class AddOrganizationMemberEmailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BindId 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书的Base64 
+     * @return Cert 证书的Base64
      */
-    public Long getBindId() {
-        return this.BindId;
+    public String getCert() {
+        return this.Cert;
     }
 
     /**
-     * Set 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param BindId 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 证书的Base64
+     * @param Cert 证书的Base64
      */
-    public void setBindId(Long BindId) {
-        this.BindId = BindId;
+    public void setCert(String Cert) {
+        this.Cert = Cert;
     }
 
     /**
@@ -73,16 +68,16 @@ public class AddOrganizationMemberEmailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public AddOrganizationMemberEmailResponse() {
+    public DescribePersonCertificateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddOrganizationMemberEmailResponse(AddOrganizationMemberEmailResponse source) {
-        if (source.BindId != null) {
-            this.BindId = new Long(source.BindId);
+    public DescribePersonCertificateResponse(DescribePersonCertificateResponse source) {
+        if (source.Cert != null) {
+            this.Cert = new String(source.Cert);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ public class AddOrganizationMemberEmailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BindId", this.BindId);
+        this.setParamSimple(map, prefix + "Cert", this.Cert);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

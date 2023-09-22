@@ -24,7 +24,8 @@ public class CloudStorage extends AbstractModel{
 
     /**
     * 第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
     */
     @SerializedName("Vendor")
     @Expose
@@ -69,9 +70,11 @@ public class CloudStorage extends AbstractModel{
 
     /**
      * Get 第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。 
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。 
      * @return Vendor 第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
      */
     public Long getVendor() {
         return this.Vendor;
@@ -79,9 +82,11 @@ public class CloudStorage extends AbstractModel{
 
     /**
      * Set 第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
      * @param Vendor 第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
      */
     public void setVendor(Long Vendor) {
         this.Vendor = Vendor;

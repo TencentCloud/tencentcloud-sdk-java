@@ -37,6 +37,13 @@ public class CreateRefreshTaskResponse extends AbstractModel{
     private String CreateResult;
 
     /**
+    * 返回创建的新集群检查任务ID
+    */
+    @SerializedName("NewTaskID")
+    @Expose
+    private String NewTaskID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class CreateRefreshTaskResponse extends AbstractModel{
     }
 
     /**
+     * Get 返回创建的新集群检查任务ID 
+     * @return NewTaskID 返回创建的新集群检查任务ID
+     */
+    public String getNewTaskID() {
+        return this.NewTaskID;
+    }
+
+    /**
+     * Set 返回创建的新集群检查任务ID
+     * @param NewTaskID 返回创建的新集群检查任务ID
+     */
+    public void setNewTaskID(String NewTaskID) {
+        this.NewTaskID = NewTaskID;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +128,9 @@ public class CreateRefreshTaskResponse extends AbstractModel{
         if (source.CreateResult != null) {
             this.CreateResult = new String(source.CreateResult);
         }
+        if (source.NewTaskID != null) {
+            this.NewTaskID = new String(source.NewTaskID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +143,7 @@ public class CreateRefreshTaskResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "CreateResult", this.CreateResult);
+        this.setParamSimple(map, prefix + "NewTaskID", this.NewTaskID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

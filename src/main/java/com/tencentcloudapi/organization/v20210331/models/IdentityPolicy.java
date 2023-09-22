@@ -23,49 +23,105 @@ import java.util.HashMap;
 public class IdentityPolicy extends AbstractModel{
 
     /**
-    * 策略ID
+    * CAM预设策略ID。PolicyType 为预设策略时有效且必选
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * 策略名称
+    * CAM预设策略名称。PolicyType 为预设策略时有效且必选
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-     * Get 策略ID 
-     * @return PolicyId 策略ID
+    * 策略类型。取值 1-自定义策略  2-预设策略；默认值2
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyType")
+    @Expose
+    private Long PolicyType;
+
+    /**
+    * 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyDocument")
+    @Expose
+    private String PolicyDocument;
+
+    /**
+     * Get CAM预设策略ID。PolicyType 为预设策略时有效且必选 
+     * @return PolicyId CAM预设策略ID。PolicyType 为预设策略时有效且必选
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略ID
-     * @param PolicyId 策略ID
+     * Set CAM预设策略ID。PolicyType 为预设策略时有效且必选
+     * @param PolicyId CAM预设策略ID。PolicyType 为预设策略时有效且必选
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 策略名称 
-     * @return PolicyName 策略名称
+     * Get CAM预设策略名称。PolicyType 为预设策略时有效且必选 
+     * @return PolicyName CAM预设策略名称。PolicyType 为预设策略时有效且必选
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名称
-     * @param PolicyName 策略名称
+     * Set CAM预设策略名称。PolicyType 为预设策略时有效且必选
+     * @param PolicyName CAM预设策略名称。PolicyType 为预设策略时有效且必选
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
+    }
+
+    /**
+     * Get 策略类型。取值 1-自定义策略  2-预设策略；默认值2
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyType 策略类型。取值 1-自定义策略  2-预设策略；默认值2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPolicyType() {
+        return this.PolicyType;
+    }
+
+    /**
+     * Set 策略类型。取值 1-自定义策略  2-预设策略；默认值2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyType 策略类型。取值 1-自定义策略  2-预设策略；默认值2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyType(Long PolicyType) {
+        this.PolicyType = PolicyType;
+    }
+
+    /**
+     * Get 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyDocument 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPolicyDocument() {
+        return this.PolicyDocument;
+    }
+
+    /**
+     * Set 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyDocument 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyDocument(String PolicyDocument) {
+        this.PolicyDocument = PolicyDocument;
     }
 
     public IdentityPolicy() {
@@ -82,6 +138,12 @@ public class IdentityPolicy extends AbstractModel{
         if (source.PolicyName != null) {
             this.PolicyName = new String(source.PolicyName);
         }
+        if (source.PolicyType != null) {
+            this.PolicyType = new Long(source.PolicyType);
+        }
+        if (source.PolicyDocument != null) {
+            this.PolicyDocument = new String(source.PolicyDocument);
+        }
     }
 
 
@@ -91,6 +153,8 @@ public class IdentityPolicy extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
+        this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
+        this.setParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
 
     }
 }

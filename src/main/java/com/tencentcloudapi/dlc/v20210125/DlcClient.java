@@ -1362,6 +1362,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSparkSessionBatchSQL）用于查询Spark SQL批任务运行状态
+     * @param req DescribeSparkSessionBatchSQLRequest
+     * @return DescribeSparkSessionBatchSQLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkSessionBatchSQLResponse DescribeSparkSessionBatchSQL(DescribeSparkSessionBatchSQLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSparkSessionBatchSQLResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSparkSessionBatchSQLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSparkSessionBatchSQL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeSparkSessionBatchSqlLog）用于查询Spark SQL批任务日志
      * @param req DescribeSparkSessionBatchSqlLogRequest
      * @return DescribeSparkSessionBatchSqlLogResponse

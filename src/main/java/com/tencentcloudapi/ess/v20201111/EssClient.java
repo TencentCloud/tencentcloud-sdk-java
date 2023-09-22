@@ -1086,7 +1086,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *接口用户查询合同流程的详情信息, 支持查询多个(数量不能超过100)
+     *此接口用于查询合同流程的详情信息，支持查询多个（数量不能超过100）。
 
 适用场景：可用于主动查询某个合同详情信息。
      * @param req DescribeFlowInfoRequest
@@ -1243,6 +1243,27 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationSealsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOrganizationSeals");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口（DescribePersonCertificate）用于查询个人数字证书信息。<br />注：`1.目前仅用于查询开通了医疗自动签署功能的个人数字证书。`<br />`2.调用此接口需要开通白名单，使用前请联系相关人员开通白名单。`
+     * @param req DescribePersonCertificateRequest
+     * @return DescribePersonCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePersonCertificateResponse DescribePersonCertificate(DescribePersonCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePersonCertificateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePersonCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePersonCertificate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

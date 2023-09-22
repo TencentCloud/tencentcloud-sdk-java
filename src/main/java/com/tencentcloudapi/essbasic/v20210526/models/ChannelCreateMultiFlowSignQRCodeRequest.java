@@ -99,6 +99,13 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
+    */
+    @SerializedName("ApproverComponentLimitTypes")
+    @Expose
+    private ApproverComponentLimitType [] ApproverComponentLimitTypes;
+
+    /**
      * Get 应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
      * @return Agent 应用相关信息。
@@ -294,6 +301,22 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。 
+     * @return ApproverComponentLimitTypes 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
+     */
+    public ApproverComponentLimitType [] getApproverComponentLimitTypes() {
+        return this.ApproverComponentLimitTypes;
+    }
+
+    /**
+     * Set 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
+     * @param ApproverComponentLimitTypes 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
+     */
+    public void setApproverComponentLimitTypes(ApproverComponentLimitType [] ApproverComponentLimitTypes) {
+        this.ApproverComponentLimitTypes = ApproverComponentLimitTypes;
+    }
+
     public ChannelCreateMultiFlowSignQRCodeRequest() {
     }
 
@@ -335,6 +358,12 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.ApproverComponentLimitTypes != null) {
+            this.ApproverComponentLimitTypes = new ApproverComponentLimitType[source.ApproverComponentLimitTypes.length];
+            for (int i = 0; i < source.ApproverComponentLimitTypes.length; i++) {
+                this.ApproverComponentLimitTypes[i] = new ApproverComponentLimitType(source.ApproverComponentLimitTypes[i]);
+            }
+        }
     }
 
 
@@ -352,6 +381,7 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
 
     }
 }

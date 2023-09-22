@@ -114,6 +114,13 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private ApproverRestriction ApproverRestrictions;
 
     /**
+    * 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
+    */
+    @SerializedName("ApproverComponentLimitTypes")
+    @Expose
+    private ApproverComponentLimitType [] ApproverComponentLimitTypes;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -353,6 +360,22 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.ApproverRestrictions = ApproverRestrictions;
     }
 
+    /**
+     * Get 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。 
+     * @return ApproverComponentLimitTypes 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
+     */
+    public ApproverComponentLimitType [] getApproverComponentLimitTypes() {
+        return this.ApproverComponentLimitTypes;
+    }
+
+    /**
+     * Set 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
+     * @param ApproverComponentLimitTypes 指定签署方在使用个人印章签署控件（SIGN_SIGNATURE） 时可使用的签署方式：自由书写、正楷临摹、系统签名、个人印章。
+     */
+    public void setApproverComponentLimitTypes(ApproverComponentLimitType [] ApproverComponentLimitTypes) {
+        this.ApproverComponentLimitTypes = ApproverComponentLimitTypes;
+    }
+
     public CreateMultiFlowSignQRCodeRequest() {
     }
 
@@ -397,6 +420,12 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         if (source.ApproverRestrictions != null) {
             this.ApproverRestrictions = new ApproverRestriction(source.ApproverRestrictions);
         }
+        if (source.ApproverComponentLimitTypes != null) {
+            this.ApproverComponentLimitTypes = new ApproverComponentLimitType[source.ApproverComponentLimitTypes.length];
+            for (int i = 0; i < source.ApproverComponentLimitTypes.length; i++) {
+                this.ApproverComponentLimitTypes[i] = new ApproverComponentLimitType(source.ApproverComponentLimitTypes[i]);
+            }
+        }
     }
 
 
@@ -415,6 +444,7 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
+        this.setParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
 
     }
 }

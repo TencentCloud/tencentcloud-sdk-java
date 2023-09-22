@@ -30,9 +30,8 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数
+    * 需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。
     */
     @SerializedName("FlowIds")
     @Expose
@@ -46,9 +45,7 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
-
+    * 需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。
     */
     @SerializedName("FlowGroupId")
     @Expose
@@ -71,24 +68,20 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数 
-     * @return FlowIds 需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数
+     * Get 需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。 
+     * @return FlowIds 需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数
-     * @param FlowIds 需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数
+     * Set 需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。
+     * @param FlowIds 需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
@@ -111,24 +104,16 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
- 
-     * @return FlowGroupId 合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
-
+     * Get 需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。 
+     * @return FlowGroupId 需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
-
-     * @param FlowGroupId 合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
-
+     * Set 需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。
+     * @param FlowGroupId 需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;

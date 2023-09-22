@@ -67,6 +67,7 @@ Other 混合云专区
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
     */
     @SerializedName("Filters")
     @Expose
@@ -174,7 +175,8 @@ Other 混合云专区
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
-<li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li> 
+<li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li> 
      * @return Filters 过滤条件。
 <li>Ips - String - 是否必填：否 - 通过ip查询 </li>
 <li>Names - String - 是否必填：否 - 通过实例名查询 </li>
@@ -186,6 +188,7 @@ Other 混合云专区
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -203,6 +206,7 @@ Other 混合云专区
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
      * @param Filters 过滤条件。
 <li>Ips - String - 是否必填：否 - 通过ip查询 </li>
 <li>Names - String - 是否必填：否 - 通过实例名查询 </li>
@@ -214,6 +218,7 @@ Other 混合云专区
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

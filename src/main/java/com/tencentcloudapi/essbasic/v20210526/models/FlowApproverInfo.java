@@ -90,7 +90,12 @@ PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通
     */
     @SerializedName("ApproverType")
     @Expose
@@ -364,13 +369,23 @@ PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。 
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通 
      * @return ApproverType 签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通
      */
     public String getApproverType() {
         return this.ApproverType;
@@ -382,13 +397,23 @@ PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通
      * @param ApproverType 签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;

@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class CreateRefreshTaskRequest extends AbstractModel{
 
+    /**
+    * 指定集群列表,若为空则标识同步所有集群
+    */
+    @SerializedName("ClusterIDs")
+    @Expose
+    private String [] ClusterIDs;
+
+    /**
+    * 是否只同步列表
+    */
+    @SerializedName("IsSyncListOnly")
+    @Expose
+    private Boolean IsSyncListOnly;
+
+    /**
+     * Get 指定集群列表,若为空则标识同步所有集群 
+     * @return ClusterIDs 指定集群列表,若为空则标识同步所有集群
+     */
+    public String [] getClusterIDs() {
+        return this.ClusterIDs;
+    }
+
+    /**
+     * Set 指定集群列表,若为空则标识同步所有集群
+     * @param ClusterIDs 指定集群列表,若为空则标识同步所有集群
+     */
+    public void setClusterIDs(String [] ClusterIDs) {
+        this.ClusterIDs = ClusterIDs;
+    }
+
+    /**
+     * Get 是否只同步列表 
+     * @return IsSyncListOnly 是否只同步列表
+     */
+    public Boolean getIsSyncListOnly() {
+        return this.IsSyncListOnly;
+    }
+
+    /**
+     * Set 是否只同步列表
+     * @param IsSyncListOnly 是否只同步列表
+     */
+    public void setIsSyncListOnly(Boolean IsSyncListOnly) {
+        this.IsSyncListOnly = IsSyncListOnly;
+    }
+
     public CreateRefreshTaskRequest() {
     }
 
@@ -30,6 +76,15 @@ public class CreateRefreshTaskRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateRefreshTaskRequest(CreateRefreshTaskRequest source) {
+        if (source.ClusterIDs != null) {
+            this.ClusterIDs = new String[source.ClusterIDs.length];
+            for (int i = 0; i < source.ClusterIDs.length; i++) {
+                this.ClusterIDs[i] = new String(source.ClusterIDs[i]);
+            }
+        }
+        if (source.IsSyncListOnly != null) {
+            this.IsSyncListOnly = new Boolean(source.IsSyncListOnly);
+        }
     }
 
 
@@ -37,6 +92,8 @@ public class CreateRefreshTaskRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
+        this.setParamSimple(map, prefix + "IsSyncListOnly", this.IsSyncListOnly);
 
     }
 }

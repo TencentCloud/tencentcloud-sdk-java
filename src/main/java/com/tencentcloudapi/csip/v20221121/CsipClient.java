@@ -102,6 +102,48 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *删除域名和ip请求
+     * @param req DeleteDomainAndIpRequest
+     * @return DeleteDomainAndIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDomainAndIpResponse DeleteDomainAndIp(DeleteDomainAndIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDomainAndIpResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDomainAndIpResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDomainAndIp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除风险中心扫描任务
+     * @param req DeleteRiskScanTaskRequest
+     * @return DeleteRiskScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRiskScanTaskResponse DeleteRiskScanTask(DeleteRiskScanTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRiskScanTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRiskScanTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRiskScanTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *cvm详情
      * @param req DescribeCVMAssetInfoRequest
      * @return DescribeCVMAssetInfoResponse
@@ -451,6 +493,27 @@ public class CsipClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcAssetsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVpcAssets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止扫风险中心扫描任务
+     * @param req StopRiskCenterTaskRequest
+     * @return StopRiskCenterTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopRiskCenterTaskResponse StopRiskCenterTask(StopRiskCenterTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopRiskCenterTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopRiskCenterTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopRiskCenterTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
