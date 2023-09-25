@@ -131,7 +131,9 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
     /**
      * Get 证书私钥 
      * @return Key 证书私钥
+     * @deprecated
      */
+    @Deprecated
     public String getKey() {
         return this.Key;
     }
@@ -139,7 +141,9 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
     /**
      * Set 证书私钥
      * @param Key 证书私钥
+     * @deprecated
      */
+    @Deprecated
     public void setKey(String Key) {
         this.Key = Key;
     }
@@ -147,7 +151,9 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
     /**
      * Get 证书pem格式 
      * @return Crt 证书pem格式
+     * @deprecated
      */
+    @Deprecated
     public String getCrt() {
         return this.Crt;
     }
@@ -155,7 +161,9 @@ public class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
     /**
      * Set 证书pem格式
      * @param Crt 证书pem格式
+     * @deprecated
      */
+    @Deprecated
     public void setCrt(String Crt) {
         this.Crt = Crt;
     }

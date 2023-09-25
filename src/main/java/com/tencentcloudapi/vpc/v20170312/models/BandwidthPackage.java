@@ -79,6 +79,14 @@ public class BandwidthPackage extends AbstractModel{
     private Long Bandwidth;
 
     /**
+    * 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get 带宽包唯一标识Id 
      * @return BandwidthPackageId 带宽包唯一标识Id
      */
@@ -206,6 +214,26 @@ public class BandwidthPackage extends AbstractModel{
         this.Bandwidth = Bandwidth;
     }
 
+    /**
+     * Get 网络出口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public BandwidthPackage() {
     }
 
@@ -241,6 +269,9 @@ public class BandwidthPackage extends AbstractModel{
         if (source.Bandwidth != null) {
             this.Bandwidth = new Long(source.Bandwidth);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -256,6 +287,7 @@ public class BandwidthPackage extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

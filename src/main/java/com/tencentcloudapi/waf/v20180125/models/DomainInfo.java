@@ -93,14 +93,14 @@ public class DomainInfo extends AbstractModel{
     private Long Status;
 
     /**
-    * 规则防御模式,0观察模式 1拦截模式
+    * 规则引擎防护模式,0观察模式 1拦截模式
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+    * 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
     */
     @SerializedName("Engine")
     @Expose
@@ -229,6 +229,14 @@ public class DomainInfo extends AbstractModel{
     @SerializedName("SgDetail")
     @Expose
     private String SgDetail;
+
+    /**
+    * 域名类型:hybrid表示混合云域名，public表示公有云域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private String CloudType;
 
     /**
      * Get 域名 
@@ -391,32 +399,32 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get 规则防御模式,0观察模式 1拦截模式 
-     * @return Mode 规则防御模式,0观察模式 1拦截模式
+     * Get 规则引擎防护模式,0观察模式 1拦截模式 
+     * @return Mode 规则引擎防护模式,0观察模式 1拦截模式
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 规则防御模式,0观察模式 1拦截模式
-     * @param Mode 规则防御模式,0观察模式 1拦截模式
+     * Set 规则引擎防护模式,0观察模式 1拦截模式
+     * @param Mode 规则引擎防护模式,0观察模式 1拦截模式
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式 
-     * @return Engine AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * Get 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式 
+     * @return Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public Long getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
-     * @param Engine AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * Set 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * @param Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public void setEngine(Long Engine) {
         this.Engine = Engine;
@@ -714,6 +722,26 @@ public class DomainInfo extends AbstractModel{
         this.SgDetail = SgDetail;
     }
 
+    /**
+     * Get 域名类型:hybrid表示混合云域名，public表示公有云域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudType 域名类型:hybrid表示混合云域名，public表示公有云域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 域名类型:hybrid表示混合云域名，public表示公有云域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudType 域名类型:hybrid表示混合云域名，public表示公有云域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudType(String CloudType) {
+        this.CloudType = CloudType;
+    }
+
     public DomainInfo() {
     }
 
@@ -821,6 +849,9 @@ public class DomainInfo extends AbstractModel{
         if (source.SgDetail != null) {
             this.SgDetail = new String(source.SgDetail);
         }
+        if (source.CloudType != null) {
+            this.CloudType = new String(source.CloudType);
+        }
     }
 
 
@@ -857,6 +888,7 @@ public class DomainInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AlbType", this.AlbType);
         this.setParamSimple(map, prefix + "SgState", this.SgState);
         this.setParamSimple(map, prefix + "SgDetail", this.SgDetail);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
 
     }
 }

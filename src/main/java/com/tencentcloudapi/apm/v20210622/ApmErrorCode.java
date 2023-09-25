@@ -30,6 +30,9 @@ public enum ApmErrorCode {
     // 非法实例id。
      FAILEDOPERATION_INVALIDINSTANCEID("FailedOperation.InvalidInstanceID"),
      
+    // 不合法请求
+     FAILEDOPERATION_INVALIDREQUEST("FailedOperation.InvalidRequest"),
+     
     // 查询指标类数据查询条件缺少过滤参数。
      FAILEDOPERATION_METRICFILTERSLACKPARAMS("FailedOperation.MetricFiltersLackParams"),
      

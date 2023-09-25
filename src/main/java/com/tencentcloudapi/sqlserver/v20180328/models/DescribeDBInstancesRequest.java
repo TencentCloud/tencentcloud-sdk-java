@@ -147,6 +147,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String InstanceType;
 
     /**
+    * 分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
+    */
+    @SerializedName("PaginationType")
+    @Expose
+    private String PaginationType;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -450,6 +457,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber 
+     * @return PaginationType 分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
+     */
+    public String getPaginationType() {
+        return this.PaginationType;
+    }
+
+    /**
+     * Set 分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
+     * @param PaginationType 分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
+     */
+    public void setPaginationType(String PaginationType) {
+        this.PaginationType = PaginationType;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -524,6 +547,9 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.PaginationType != null) {
+            this.PaginationType = new String(source.PaginationType);
+        }
     }
 
 
@@ -547,6 +573,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamArraySimple(map, prefix + "UidSet.", this.UidSet);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "PaginationType", this.PaginationType);
 
     }
 }

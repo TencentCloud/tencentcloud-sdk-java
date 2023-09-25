@@ -90,7 +90,9 @@ public class EvaluationResponse extends AbstractModel{
     /**
      * Get 任务 id，用于查询接口 
      * @return TaskId 任务 id，用于查询接口
+     * @deprecated
      */
+    @Deprecated
     public String getTaskId() {
         return this.TaskId;
     }
@@ -98,7 +100,9 @@ public class EvaluationResponse extends AbstractModel{
     /**
      * Set 任务 id，用于查询接口
      * @param TaskId 任务 id，用于查询接口
+     * @deprecated
      */
+    @Deprecated
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }

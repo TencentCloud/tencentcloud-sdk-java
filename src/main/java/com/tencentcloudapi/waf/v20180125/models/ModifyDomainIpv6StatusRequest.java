@@ -44,7 +44,7 @@ public class ModifyDomainIpv6StatusRequest extends AbstractModel{
     private String DomainId;
 
     /**
-    * 修改域名的Ipv6开关为Status （0:关闭 1:开启）
+    * 修改域名的Ipv6开关为Status （1:开启 2:关闭）
     */
     @SerializedName("Status")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyDomainIpv6StatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 修改域名的Ipv6开关为Status （0:关闭 1:开启） 
-     * @return Status 修改域名的Ipv6开关为Status （0:关闭 1:开启）
+     * Get 修改域名的Ipv6开关为Status （1:开启 2:关闭） 
+     * @return Status 修改域名的Ipv6开关为Status （1:开启 2:关闭）
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 修改域名的Ipv6开关为Status （0:关闭 1:开启）
-     * @param Status 修改域名的Ipv6开关为Status （0:关闭 1:开启）
+     * Set 修改域名的Ipv6开关为Status （1:开启 2:关闭）
+     * @param Status 修改域名的Ipv6开关为Status （1:开启 2:关闭）
      */
     public void setStatus(Long Status) {
         this.Status = Status;

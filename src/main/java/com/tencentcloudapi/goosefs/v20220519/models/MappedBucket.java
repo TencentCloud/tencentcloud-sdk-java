@@ -68,6 +68,29 @@ public class MappedBucket extends AbstractModel{
     private String RuleDescription;
 
     /**
+    * 桶关联状态 0：关联中 1：关联完成
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccelerateFlag")
+    @Expose
+    private Boolean AccelerateFlag;
+
+    /**
+    * 桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BucketRegion")
+    @Expose
+    private String BucketRegion;
+
+    /**
      * Get 对象存储Bucket名 
      * @return BucketName 对象存储Bucket名
      */
@@ -187,6 +210,62 @@ public class MappedBucket extends AbstractModel{
         this.RuleDescription = RuleDescription;
     }
 
+    /**
+     * Get 桶关联状态 0：关联中 1：关联完成 
+     * @return Status 桶关联状态 0：关联中 1：关联完成
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 桶关联状态 0：关联中 1：关联完成
+     * @param Status 桶关联状态 0：关联中 1：关联完成
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccelerateFlag 是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAccelerateFlag() {
+        return this.AccelerateFlag;
+    }
+
+    /**
+     * Set 是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccelerateFlag 是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccelerateFlag(Boolean AccelerateFlag) {
+        this.AccelerateFlag = AccelerateFlag;
+    }
+
+    /**
+     * Get 桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BucketRegion 桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBucketRegion() {
+        return this.BucketRegion;
+    }
+
+    /**
+     * Set 桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BucketRegion 桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBucketRegion(String BucketRegion) {
+        this.BucketRegion = BucketRegion;
+    }
+
     public MappedBucket() {
     }
 
@@ -213,6 +292,15 @@ public class MappedBucket extends AbstractModel{
         if (source.RuleDescription != null) {
             this.RuleDescription = new String(source.RuleDescription);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.AccelerateFlag != null) {
+            this.AccelerateFlag = new Boolean(source.AccelerateFlag);
+        }
+        if (source.BucketRegion != null) {
+            this.BucketRegion = new String(source.BucketRegion);
+        }
     }
 
 
@@ -225,6 +313,9 @@ public class MappedBucket extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DataRepositoryTaskAutoStrategy.", this.DataRepositoryTaskAutoStrategy);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleDescription", this.RuleDescription);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "AccelerateFlag", this.AccelerateFlag);
+        this.setParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
 
     }
 }

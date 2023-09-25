@@ -26,6 +26,9 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     * 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
     */
     @SerializedName("NetworkType")
     @Expose
@@ -87,12 +90,25 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private Long TimeSpan;
 
     /**
+    * 网络出口，默认值：center_egress1
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
-<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li> 
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li> 
      * @return NetworkType 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      */
     public String getNetworkType() {
         return this.NetworkType;
@@ -102,9 +118,15 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
      * Set 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      * @param NetworkType 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -246,6 +268,22 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
         this.TimeSpan = TimeSpan;
     }
 
+    /**
+     * Get 网络出口，默认值：center_egress1 
+     * @return Egress 网络出口，默认值：center_egress1
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set 网络出口，默认值：center_egress1
+     * @param Egress 网络出口，默认值：center_egress1
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public CreateBandwidthPackageRequest() {
     }
 
@@ -281,6 +319,9 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -296,6 +337,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }
