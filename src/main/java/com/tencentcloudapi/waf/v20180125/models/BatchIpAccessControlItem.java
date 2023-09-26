@@ -23,6 +23,14 @@ import java.util.HashMap;
 public class BatchIpAccessControlItem extends AbstractModel{
 
     /**
+    * mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 黑名单42或白名单40
     */
     @SerializedName("ActionType")
@@ -70,6 +78,26 @@ public class BatchIpAccessControlItem extends AbstractModel{
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
+
+    /**
+     * Get mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
 
     /**
      * Get 黑名单42或白名单40 
@@ -191,6 +219,9 @@ public class BatchIpAccessControlItem extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BatchIpAccessControlItem(BatchIpAccessControlItem source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.ActionType != null) {
             this.ActionType = new Long(source.ActionType);
         }
@@ -222,6 +253,7 @@ public class BatchIpAccessControlItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Note", this.Note);

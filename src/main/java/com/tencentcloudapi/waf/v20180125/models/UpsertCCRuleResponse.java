@@ -31,6 +31,13 @@ public class UpsertCCRuleResponse extends AbstractModel{
     private String Data;
 
     /**
+    * 操作的RuleId
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -55,6 +62,22 @@ public class UpsertCCRuleResponse extends AbstractModel{
      */
     public void setData(String Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 操作的RuleId 
+     * @return RuleId 操作的RuleId
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 操作的RuleId
+     * @param RuleId 操作的RuleId
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
     }
 
     /**
@@ -84,6 +107,9 @@ public class UpsertCCRuleResponse extends AbstractModel{
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +121,7 @@ public class UpsertCCRuleResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

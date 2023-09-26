@@ -25,6 +25,7 @@ public class ModifyEdgeIpSwitchRequest extends AbstractModel{
     /**
     * 0 关闭开关
 1 打开开关
+2 不操作开关，此次切换模式
     */
     @SerializedName("Enable")
     @Expose
@@ -38,10 +39,29 @@ public class ModifyEdgeIpSwitchRequest extends AbstractModel{
     private EdgeIpSwitch [] EdgeIpSwitchLst;
 
     /**
+    * 0 不自动选择子网
+1 自动选择子网创建私有连接
+    */
+    @SerializedName("AutoChooseSubnet")
+    @Expose
+    private Long AutoChooseSubnet;
+
+    /**
+    * 0 切换为旁路
+1 切换为串行
+2 不切换模式，此次操作开关
+    */
+    @SerializedName("SwitchMode")
+    @Expose
+    private Long SwitchMode;
+
+    /**
      * Get 0 关闭开关
-1 打开开关 
+1 打开开关
+2 不操作开关，此次切换模式 
      * @return Enable 0 关闭开关
 1 打开开关
+2 不操作开关，此次切换模式
      */
     public Long getEnable() {
         return this.Enable;
@@ -50,8 +70,10 @@ public class ModifyEdgeIpSwitchRequest extends AbstractModel{
     /**
      * Set 0 关闭开关
 1 打开开关
+2 不操作开关，此次切换模式
      * @param Enable 0 关闭开关
 1 打开开关
+2 不操作开关，此次切换模式
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
@@ -73,6 +95,50 @@ public class ModifyEdgeIpSwitchRequest extends AbstractModel{
         this.EdgeIpSwitchLst = EdgeIpSwitchLst;
     }
 
+    /**
+     * Get 0 不自动选择子网
+1 自动选择子网创建私有连接 
+     * @return AutoChooseSubnet 0 不自动选择子网
+1 自动选择子网创建私有连接
+     */
+    public Long getAutoChooseSubnet() {
+        return this.AutoChooseSubnet;
+    }
+
+    /**
+     * Set 0 不自动选择子网
+1 自动选择子网创建私有连接
+     * @param AutoChooseSubnet 0 不自动选择子网
+1 自动选择子网创建私有连接
+     */
+    public void setAutoChooseSubnet(Long AutoChooseSubnet) {
+        this.AutoChooseSubnet = AutoChooseSubnet;
+    }
+
+    /**
+     * Get 0 切换为旁路
+1 切换为串行
+2 不切换模式，此次操作开关 
+     * @return SwitchMode 0 切换为旁路
+1 切换为串行
+2 不切换模式，此次操作开关
+     */
+    public Long getSwitchMode() {
+        return this.SwitchMode;
+    }
+
+    /**
+     * Set 0 切换为旁路
+1 切换为串行
+2 不切换模式，此次操作开关
+     * @param SwitchMode 0 切换为旁路
+1 切换为串行
+2 不切换模式，此次操作开关
+     */
+    public void setSwitchMode(Long SwitchMode) {
+        this.SwitchMode = SwitchMode;
+    }
+
     public ModifyEdgeIpSwitchRequest() {
     }
 
@@ -90,6 +156,12 @@ public class ModifyEdgeIpSwitchRequest extends AbstractModel{
                 this.EdgeIpSwitchLst[i] = new EdgeIpSwitch(source.EdgeIpSwitchLst[i]);
             }
         }
+        if (source.AutoChooseSubnet != null) {
+            this.AutoChooseSubnet = new Long(source.AutoChooseSubnet);
+        }
+        if (source.SwitchMode != null) {
+            this.SwitchMode = new Long(source.SwitchMode);
+        }
     }
 
 
@@ -99,6 +171,8 @@ public class ModifyEdgeIpSwitchRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamArrayObj(map, prefix + "EdgeIpSwitchLst.", this.EdgeIpSwitchLst);
+        this.setParamSimple(map, prefix + "AutoChooseSubnet", this.AutoChooseSubnet);
+        this.setParamSimple(map, prefix + "SwitchMode", this.SwitchMode);
 
     }
 }

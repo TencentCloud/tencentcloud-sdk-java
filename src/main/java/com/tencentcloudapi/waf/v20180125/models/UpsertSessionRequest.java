@@ -79,6 +79,20 @@ public class UpsertSessionRequest extends AbstractModel{
     private String Edition;
 
     /**
+    * Session名
+    */
+    @SerializedName("SessionName")
+    @Expose
+    private String SessionName;
+
+    /**
+    * Session对应ID
+    */
+    @SerializedName("SessionID")
+    @Expose
+    private Long SessionID;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -206,6 +220,38 @@ public class UpsertSessionRequest extends AbstractModel{
         this.Edition = Edition;
     }
 
+    /**
+     * Get Session名 
+     * @return SessionName Session名
+     */
+    public String getSessionName() {
+        return this.SessionName;
+    }
+
+    /**
+     * Set Session名
+     * @param SessionName Session名
+     */
+    public void setSessionName(String SessionName) {
+        this.SessionName = SessionName;
+    }
+
+    /**
+     * Get Session对应ID 
+     * @return SessionID Session对应ID
+     */
+    public Long getSessionID() {
+        return this.SessionID;
+    }
+
+    /**
+     * Set Session对应ID
+     * @param SessionID Session对应ID
+     */
+    public void setSessionID(Long SessionID) {
+        this.SessionID = SessionID;
+    }
+
     public UpsertSessionRequest() {
     }
 
@@ -238,6 +284,12 @@ public class UpsertSessionRequest extends AbstractModel{
         if (source.Edition != null) {
             this.Edition = new String(source.Edition);
         }
+        if (source.SessionName != null) {
+            this.SessionName = new String(source.SessionName);
+        }
+        if (source.SessionID != null) {
+            this.SessionID = new Long(source.SessionID);
+        }
     }
 
 
@@ -253,6 +305,8 @@ public class UpsertSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartOffset", this.StartOffset);
         this.setParamSimple(map, prefix + "EndOffset", this.EndOffset);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
+        this.setParamSimple(map, prefix + "SessionName", this.SessionName);
+        this.setParamSimple(map, prefix + "SessionID", this.SessionID);
 
     }
 }

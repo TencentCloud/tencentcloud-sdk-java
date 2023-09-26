@@ -72,7 +72,7 @@ public class PeakPointsItem extends AbstractModel{
     private Long BotAccess;
 
     /**
-    * WAF返回给客户端状态码次数
+    * WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusServerError")
@@ -80,7 +80,7 @@ public class PeakPointsItem extends AbstractModel{
     private Long StatusServerError;
 
     /**
-    * WAF返回给客户端状态码次数
+    * WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusClientError")
@@ -88,7 +88,7 @@ public class PeakPointsItem extends AbstractModel{
     private Long StatusClientError;
 
     /**
-    * WAF返回给客户端状态码次数
+    * WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusRedirect")
@@ -96,7 +96,7 @@ public class PeakPointsItem extends AbstractModel{
     private Long StatusRedirect;
 
     /**
-    * WAF返回给客户端状态码次数
+    * WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusOk")
@@ -104,7 +104,7 @@ public class PeakPointsItem extends AbstractModel{
     private Long StatusOk;
 
     /**
-    * 源站返回给WAF状态码次数
+    * 源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamServerError")
@@ -112,7 +112,7 @@ public class PeakPointsItem extends AbstractModel{
     private Long UpstreamServerError;
 
     /**
-    * 源站返回给WAF状态码次数
+    * 源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamClientError")
@@ -120,12 +120,44 @@ public class PeakPointsItem extends AbstractModel{
     private Long UpstreamClientError;
 
     /**
-    * 源站返回给WAF状态码次数
+    * 源站返回给WAF状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamRedirect")
     @Expose
     private Long UpstreamRedirect;
+
+    /**
+    * 黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BlackIP")
+    @Expose
+    private Long BlackIP;
+
+    /**
+    * 防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tamper")
+    @Expose
+    private Long Tamper;
+
+    /**
+    * 信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Leak")
+    @Expose
+    private Long Leak;
+
+    /**
+    * 访问控制 
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ACL")
+    @Expose
+    private Long ACL;
 
     /**
      * Get 秒级别时间戳 
@@ -240,9 +272,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Get WAF返回给客户端状态码次数
+     * Get WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusServerError WAF返回给客户端状态码次数
+     * @return StatusServerError WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatusServerError() {
@@ -250,9 +282,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Set WAF返回给客户端状态码次数
+     * Set WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusServerError WAF返回给客户端状态码次数
+     * @param StatusServerError WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusServerError(Long StatusServerError) {
@@ -260,9 +292,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Get WAF返回给客户端状态码次数
+     * Get WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusClientError WAF返回给客户端状态码次数
+     * @return StatusClientError WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatusClientError() {
@@ -270,9 +302,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Set WAF返回给客户端状态码次数
+     * Set WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusClientError WAF返回给客户端状态码次数
+     * @param StatusClientError WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusClientError(Long StatusClientError) {
@@ -280,9 +312,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Get WAF返回给客户端状态码次数
+     * Get WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusRedirect WAF返回给客户端状态码次数
+     * @return StatusRedirect WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatusRedirect() {
@@ -290,9 +322,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Set WAF返回给客户端状态码次数
+     * Set WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusRedirect WAF返回给客户端状态码次数
+     * @param StatusRedirect WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusRedirect(Long StatusRedirect) {
@@ -300,9 +332,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Get WAF返回给客户端状态码次数
+     * Get WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusOk WAF返回给客户端状态码次数
+     * @return StatusOk WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatusOk() {
@@ -310,9 +342,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Set WAF返回给客户端状态码次数
+     * Set WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusOk WAF返回给客户端状态码次数
+     * @param StatusOk WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusOk(Long StatusOk) {
@@ -320,9 +352,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Get 源站返回给WAF状态码次数
+     * Get 源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamServerError 源站返回给WAF状态码次数
+     * @return UpstreamServerError 源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpstreamServerError() {
@@ -330,9 +362,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Set 源站返回给WAF状态码次数
+     * Set 源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamServerError 源站返回给WAF状态码次数
+     * @param UpstreamServerError 源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamServerError(Long UpstreamServerError) {
@@ -340,9 +372,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Get 源站返回给WAF状态码次数
+     * Get 源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamClientError 源站返回给WAF状态码次数
+     * @return UpstreamClientError 源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpstreamClientError() {
@@ -350,9 +382,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Set 源站返回给WAF状态码次数
+     * Set 源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamClientError 源站返回给WAF状态码次数
+     * @param UpstreamClientError 源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamClientError(Long UpstreamClientError) {
@@ -360,9 +392,9 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Get 源站返回给WAF状态码次数
+     * Get 源站返回给WAF状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamRedirect 源站返回给WAF状态码次数
+     * @return UpstreamRedirect 源站返回给WAF状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpstreamRedirect() {
@@ -370,13 +402,93 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Set 源站返回给WAF状态码次数
+     * Set 源站返回给WAF状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamRedirect 源站返回给WAF状态码次数
+     * @param UpstreamRedirect 源站返回给WAF状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamRedirect(Long UpstreamRedirect) {
         this.UpstreamRedirect = UpstreamRedirect;
+    }
+
+    /**
+     * Get 黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BlackIP 黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBlackIP() {
+        return this.BlackIP;
+    }
+
+    /**
+     * Set 黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlackIP 黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBlackIP(Long BlackIP) {
+        this.BlackIP = BlackIP;
+    }
+
+    /**
+     * Get 防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tamper 防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTamper() {
+        return this.Tamper;
+    }
+
+    /**
+     * Set 防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tamper 防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTamper(Long Tamper) {
+        this.Tamper = Tamper;
+    }
+
+    /**
+     * Get 信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Leak 信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLeak() {
+        return this.Leak;
+    }
+
+    /**
+     * Set 信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Leak 信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLeak(Long Leak) {
+        this.Leak = Leak;
+    }
+
+    /**
+     * Get 访问控制 
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ACL 访问控制 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getACL() {
+        return this.ACL;
+    }
+
+    /**
+     * Set 访问控制 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ACL 访问控制 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setACL(Long ACL) {
+        this.ACL = ACL;
     }
 
     public PeakPointsItem() {
@@ -429,6 +541,18 @@ public class PeakPointsItem extends AbstractModel{
         if (source.UpstreamRedirect != null) {
             this.UpstreamRedirect = new Long(source.UpstreamRedirect);
         }
+        if (source.BlackIP != null) {
+            this.BlackIP = new Long(source.BlackIP);
+        }
+        if (source.Tamper != null) {
+            this.Tamper = new Long(source.Tamper);
+        }
+        if (source.Leak != null) {
+            this.Leak = new Long(source.Leak);
+        }
+        if (source.ACL != null) {
+            this.ACL = new Long(source.ACL);
+        }
     }
 
 
@@ -450,6 +574,10 @@ public class PeakPointsItem extends AbstractModel{
         this.setParamSimple(map, prefix + "UpstreamServerError", this.UpstreamServerError);
         this.setParamSimple(map, prefix + "UpstreamClientError", this.UpstreamClientError);
         this.setParamSimple(map, prefix + "UpstreamRedirect", this.UpstreamRedirect);
+        this.setParamSimple(map, prefix + "BlackIP", this.BlackIP);
+        this.setParamSimple(map, prefix + "Tamper", this.Tamper);
+        this.setParamSimple(map, prefix + "Leak", this.Leak);
+        this.setParamSimple(map, prefix + "ACL", this.ACL);
 
     }
 }

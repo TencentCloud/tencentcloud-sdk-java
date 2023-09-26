@@ -72,6 +72,14 @@ public class CreateExportRequest extends AbstractModel{
     private String Format;
 
     /**
+    * 语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
      * Get 日志主题ID 
      * @return TopicId 日志主题ID
      */
@@ -183,6 +191,26 @@ public class CreateExportRequest extends AbstractModel{
         this.Format = Format;
     }
 
+    /**
+     * Get 语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。 
+     * @return SyntaxRule 语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set 语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。
+     * @param SyntaxRule 语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
     public CreateExportRequest() {
     }
 
@@ -212,6 +240,9 @@ public class CreateExportRequest extends AbstractModel{
         if (source.Format != null) {
             this.Format = new String(source.Format);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class CreateExportRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

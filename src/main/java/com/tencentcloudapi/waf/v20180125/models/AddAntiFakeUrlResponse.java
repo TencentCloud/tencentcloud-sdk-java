@@ -30,6 +30,13 @@ public class AddAntiFakeUrlResponse extends AbstractModel{
     private String Result;
 
     /**
+    * 规则ID
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class AddAntiFakeUrlResponse extends AbstractModel{
      */
     public void setResult(String Result) {
         this.Result = Result;
+    }
+
+    /**
+     * Get 规则ID 
+     * @return Id 规则ID
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 规则ID
+     * @param Id 规则ID
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
@@ -79,6 +102,9 @@ public class AddAntiFakeUrlResponse extends AbstractModel{
         if (source.Result != null) {
             this.Result = new String(source.Result);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class AddAntiFakeUrlResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

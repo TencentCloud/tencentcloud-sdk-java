@@ -30,6 +30,13 @@ public class DescribeWafAutoDenyRulesRequest extends AbstractModel{
     private String Domain;
 
     /**
+    * 实例Id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -45,6 +52,22 @@ public class DescribeWafAutoDenyRulesRequest extends AbstractModel{
         this.Domain = Domain;
     }
 
+    /**
+     * Get 实例Id 
+     * @return InstanceId 实例Id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例Id
+     * @param InstanceId 实例Id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public DescribeWafAutoDenyRulesRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeWafAutoDenyRulesRequest extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeWafAutoDenyRulesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

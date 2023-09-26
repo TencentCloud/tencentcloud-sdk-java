@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Zone extends AbstractModel{
 
     /**
-    * 站点ID。
+    * 站点 ID。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -56,16 +56,18 @@ public class Zone extends AbstractModel{
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
 <li> deactivated：被封禁。 </li>
+<li> initializing：待绑定套餐。 </li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 站点接入方式，取值有
-<li> full：NS 接入； </li>
+    * 站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -178,23 +180,31 @@ public class Zone extends AbstractModel{
     private Long IsFake;
 
     /**
-    * 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+    * 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
     */
     @SerializedName("LockStatus")
     @Expose
     private String LockStatus;
 
     /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
+    * 归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnershipVerification")
+    @Expose
+    private OwnershipVerification OwnershipVerification;
+
+    /**
+     * Get 站点 ID。 
+     * @return ZoneId 站点 ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
+     * Set 站点 ID。
+     * @param ZoneId 站点 ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -253,12 +263,14 @@ public class Zone extends AbstractModel{
 <li> active：NS 已切换； </li>
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
-<li> deactivated：被封禁。 </li> 
+<li> deactivated：被封禁。 </li>
+<li> initializing：待绑定套餐。 </li> 
      * @return Status 站点状态，取值有：
 <li> active：NS 已切换； </li>
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
 <li> deactivated：被封禁。 </li>
+<li> initializing：待绑定套餐。 </li>
      */
     public String getStatus() {
         return this.Status;
@@ -270,39 +282,45 @@ public class Zone extends AbstractModel{
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
 <li> deactivated：被封禁。 </li>
+<li> initializing：待绑定套餐。 </li>
      * @param Status 站点状态，取值有：
 <li> active：NS 已切换； </li>
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
 <li> deactivated：被封禁。 </li>
+<li> initializing：待绑定套餐。 </li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 站点接入方式，取值有
-<li> full：NS 接入； </li>
+     * Get 站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li> 
-     * @return Type 站点接入方式，取值有
-<li> full：NS 接入； </li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li> 
+     * @return Type 站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 站点接入方式，取值有
-<li> full：NS 接入； </li>
+     * Set 站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li>
-     * @param Type 站点接入方式，取值有
-<li> full：NS 接入； </li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li>
+     * @param Type 站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -577,19 +595,39 @@ public class Zone extends AbstractModel{
     }
 
     /**
-     * Get 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li> 
-     * @return LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+     * Get 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li> 
+     * @return LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
      */
     public String getLockStatus() {
         return this.LockStatus;
     }
 
     /**
-     * Set 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
-     * @param LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+     * Set 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
+     * @param LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
      */
     public void setLockStatus(String LockStatus) {
         this.LockStatus = LockStatus;
+    }
+
+    /**
+     * Get 归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnershipVerification 归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OwnershipVerification getOwnershipVerification() {
+        return this.OwnershipVerification;
+    }
+
+    /**
+     * Set 归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnershipVerification 归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
+        this.OwnershipVerification = OwnershipVerification;
     }
 
     public Zone() {
@@ -675,6 +713,9 @@ public class Zone extends AbstractModel{
         if (source.LockStatus != null) {
             this.LockStatus = new String(source.LockStatus);
         }
+        if (source.OwnershipVerification != null) {
+            this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
+        }
     }
 
 
@@ -702,6 +743,7 @@ public class Zone extends AbstractModel{
         this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         this.setParamSimple(map, prefix + "IsFake", this.IsFake);
         this.setParamSimple(map, prefix + "LockStatus", this.LockStatus);
+        this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
 
     }
 }

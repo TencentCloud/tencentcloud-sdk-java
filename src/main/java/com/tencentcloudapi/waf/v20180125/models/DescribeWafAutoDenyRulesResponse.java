@@ -51,6 +51,13 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel{
     private Long DefenseStatus;
 
     /**
+    * 重保护网域名状态
+    */
+    @SerializedName("HWState")
+    @Expose
+    private Long HWState;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel{
     }
 
     /**
+     * Get 重保护网域名状态 
+     * @return HWState 重保护网域名状态
+     */
+    public Long getHWState() {
+        return this.HWState;
+    }
+
+    /**
+     * Set 重保护网域名状态
+     * @param HWState 重保护网域名状态
+     */
+    public void setHWState(Long HWState) {
+        this.HWState = HWState;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -157,6 +180,9 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel{
         if (source.DefenseStatus != null) {
             this.DefenseStatus = new Long(source.DefenseStatus);
         }
+        if (source.HWState != null) {
+            this.HWState = new Long(source.HWState);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +197,7 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeThreshold", this.TimeThreshold);
         this.setParamSimple(map, prefix + "DenyTimeThreshold", this.DenyTimeThreshold);
         this.setParamSimple(map, prefix + "DefenseStatus", this.DefenseStatus);
+        this.setParamSimple(map, prefix + "HWState", this.HWState);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,6 +23,14 @@ import java.util.HashMap;
 public class IpAccessControlItem extends AbstractModel{
 
     /**
+    * mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 动作
     */
     @SerializedName("ActionType")
@@ -64,6 +72,34 @@ public class IpAccessControlItem extends AbstractModel{
     @SerializedName("ValidTs")
     @Expose
     private Long ValidTs;
+
+    /**
+    * 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValidStatus")
+    @Expose
+    private Long ValidStatus;
+
+    /**
+     * Get mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
 
     /**
      * Get 动作 
@@ -165,6 +201,26 @@ public class IpAccessControlItem extends AbstractModel{
         this.ValidTs = ValidTs;
     }
 
+    /**
+     * Get 生效状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValidStatus 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getValidStatus() {
+        return this.ValidStatus;
+    }
+
+    /**
+     * Set 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValidStatus 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValidStatus(Long ValidStatus) {
+        this.ValidStatus = ValidStatus;
+    }
+
     public IpAccessControlItem() {
     }
 
@@ -173,6 +229,9 @@ public class IpAccessControlItem extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public IpAccessControlItem(IpAccessControlItem source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.ActionType != null) {
             this.ActionType = new Long(source.ActionType);
         }
@@ -191,6 +250,9 @@ public class IpAccessControlItem extends AbstractModel{
         if (source.ValidTs != null) {
             this.ValidTs = new Long(source.ValidTs);
         }
+        if (source.ValidStatus != null) {
+            this.ValidStatus = new Long(source.ValidStatus);
+        }
     }
 
 
@@ -198,12 +260,14 @@ public class IpAccessControlItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "TsVersion", this.TsVersion);
         this.setParamSimple(map, prefix + "ValidTs", this.ValidTs);
+        this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
 
     }
 }

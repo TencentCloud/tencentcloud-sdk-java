@@ -31,6 +31,14 @@ public class BlockIgnoreRule extends AbstractModel{
     private String Domain;
 
     /**
+    * IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IP")
+    @Expose
+    private String IP;
+
+    /**
     * 规则ip
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -168,6 +176,26 @@ public class BlockIgnoreRule extends AbstractModel{
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
+    }
+
+    /**
+     * Get IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IP IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIP() {
+        return this.IP;
+    }
+
+    /**
+     * Set IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IP IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIP(String IP) {
+        this.IP = IP;
     }
 
     /**
@@ -481,6 +509,9 @@ public class BlockIgnoreRule extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.IP != null) {
+            this.IP = new String(source.IP);
+        }
         if (source.Ioc != null) {
             this.Ioc = new String(source.Ioc);
         }
@@ -534,6 +565,7 @@ public class BlockIgnoreRule extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "IP", this.IP);
         this.setParamSimple(map, prefix + "Ioc", this.Ioc);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "EventName", this.EventName);

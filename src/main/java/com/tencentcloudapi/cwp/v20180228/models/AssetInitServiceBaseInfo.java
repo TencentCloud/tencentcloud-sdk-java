@@ -144,6 +144,13 @@ public class AssetInitServiceBaseInfo extends AbstractModel{
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * 开机自启动[0:否|1:是]
+    */
+    @SerializedName("IsAutoRun")
+    @Expose
+    private Long IsAutoRun;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -447,6 +454,22 @@ public class AssetInitServiceBaseInfo extends AbstractModel{
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get 开机自启动[0:否|1:是] 
+     * @return IsAutoRun 开机自启动[0:否|1:是]
+     */
+    public Long getIsAutoRun() {
+        return this.IsAutoRun;
+    }
+
+    /**
+     * Set 开机自启动[0:否|1:是]
+     * @param IsAutoRun 开机自启动[0:否|1:是]
+     */
+    public void setIsAutoRun(Long IsAutoRun) {
+        this.IsAutoRun = IsAutoRun;
+    }
+
     public AssetInitServiceBaseInfo() {
     }
 
@@ -500,6 +523,9 @@ public class AssetInitServiceBaseInfo extends AbstractModel{
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.IsAutoRun != null) {
+            this.IsAutoRun = new Long(source.IsAutoRun);
+        }
     }
 
 
@@ -522,6 +548,7 @@ public class AssetInitServiceBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
         this.setParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "IsAutoRun", this.IsAutoRun);
 
     }
 }

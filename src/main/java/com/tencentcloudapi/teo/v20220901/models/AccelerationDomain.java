@@ -23,19 +23,11 @@ import java.util.HashMap;
 public class AccelerationDomain extends AbstractModel{
 
     /**
-    * 源站信息。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 站点 ID。
     */
-    @SerializedName("OriginDetail")
+    @SerializedName("ZoneId")
     @Expose
-    private OriginDetail OriginDetail;
-
-    /**
-    * 创建时间。
-    */
-    @SerializedName("CreatedOn")
-    @Expose
-    private String CreatedOn;
+    private String ZoneId;
 
     /**
     * 加速域名名称。
@@ -43,20 +35,6 @@ public class AccelerationDomain extends AbstractModel{
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
-
-    /**
-    * 修改时间。
-    */
-    @SerializedName("ModifiedOn")
-    @Expose
-    private String ModifiedOn;
-
-    /**
-    * 站点 ID。
-    */
-    @SerializedName("ZoneId")
-    @Expose
-    private String ZoneId;
 
     /**
     * 加速域名状态，取值有：
@@ -69,6 +47,14 @@ public class AccelerationDomain extends AbstractModel{
     @SerializedName("DomainStatus")
     @Expose
     private String DomainStatus;
+
+    /**
+    * 源站信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginDetail")
+    @Expose
+    private OriginDetail OriginDetail;
 
     /**
     * CNAME 地址。
@@ -86,39 +72,41 @@ public class AccelerationDomain extends AbstractModel{
     private String IdentificationStatus;
 
     /**
-     * Get 源站信息。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginDetail 源站信息。
+    * 创建时间。
+    */
+    @SerializedName("CreatedOn")
+    @Expose
+    private String CreatedOn;
+
+    /**
+    * 修改时间。
+    */
+    @SerializedName("ModifiedOn")
+    @Expose
+    private String ModifiedOn;
+
+    /**
+    * 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
 注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnershipVerification")
+    @Expose
+    private OwnershipVerification OwnershipVerification;
+
+    /**
+     * Get 站点 ID。 
+     * @return ZoneId 站点 ID。
      */
-    public OriginDetail getOriginDetail() {
-        return this.OriginDetail;
+    public String getZoneId() {
+        return this.ZoneId;
     }
 
     /**
-     * Set 源站信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginDetail 源站信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 站点 ID。
+     * @param ZoneId 站点 ID。
      */
-    public void setOriginDetail(OriginDetail OriginDetail) {
-        this.OriginDetail = OriginDetail;
-    }
-
-    /**
-     * Get 创建时间。 
-     * @return CreatedOn 创建时间。
-     */
-    public String getCreatedOn() {
-        return this.CreatedOn;
-    }
-
-    /**
-     * Set 创建时间。
-     * @param CreatedOn 创建时间。
-     */
-    public void setCreatedOn(String CreatedOn) {
-        this.CreatedOn = CreatedOn;
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
     /**
@@ -135,38 +123,6 @@ public class AccelerationDomain extends AbstractModel{
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
-    }
-
-    /**
-     * Get 修改时间。 
-     * @return ModifiedOn 修改时间。
-     */
-    public String getModifiedOn() {
-        return this.ModifiedOn;
-    }
-
-    /**
-     * Set 修改时间。
-     * @param ModifiedOn 修改时间。
-     */
-    public void setModifiedOn(String ModifiedOn) {
-        this.ModifiedOn = ModifiedOn;
-    }
-
-    /**
-     * Get 站点 ID。 
-     * @return ZoneId 站点 ID。
-     */
-    public String getZoneId() {
-        return this.ZoneId;
-    }
-
-    /**
-     * Set 站点 ID。
-     * @param ZoneId 站点 ID。
-     */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
     }
 
     /**
@@ -206,6 +162,26 @@ public class AccelerationDomain extends AbstractModel{
     }
 
     /**
+     * Get 源站信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginDetail 源站信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OriginDetail getOriginDetail() {
+        return this.OriginDetail;
+    }
+
+    /**
+     * Set 源站信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginDetail 源站信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginDetail(OriginDetail OriginDetail) {
+        this.OriginDetail = OriginDetail;
+    }
+
+    /**
      * Get CNAME 地址。 
      * @return Cname CNAME 地址。
      */
@@ -241,6 +217,58 @@ public class AccelerationDomain extends AbstractModel{
         this.IdentificationStatus = IdentificationStatus;
     }
 
+    /**
+     * Get 创建时间。 
+     * @return CreatedOn 创建时间。
+     */
+    public String getCreatedOn() {
+        return this.CreatedOn;
+    }
+
+    /**
+     * Set 创建时间。
+     * @param CreatedOn 创建时间。
+     */
+    public void setCreatedOn(String CreatedOn) {
+        this.CreatedOn = CreatedOn;
+    }
+
+    /**
+     * Get 修改时间。 
+     * @return ModifiedOn 修改时间。
+     */
+    public String getModifiedOn() {
+        return this.ModifiedOn;
+    }
+
+    /**
+     * Set 修改时间。
+     * @param ModifiedOn 修改时间。
+     */
+    public void setModifiedOn(String ModifiedOn) {
+        this.ModifiedOn = ModifiedOn;
+    }
+
+    /**
+     * Get 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnershipVerification 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OwnershipVerification getOwnershipVerification() {
+        return this.OwnershipVerification;
+    }
+
+    /**
+     * Set 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnershipVerification 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
+        this.OwnershipVerification = OwnershipVerification;
+    }
+
     public AccelerationDomain() {
     }
 
@@ -249,29 +277,32 @@ public class AccelerationDomain extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AccelerationDomain(AccelerationDomain source) {
-        if (source.OriginDetail != null) {
-            this.OriginDetail = new OriginDetail(source.OriginDetail);
-        }
-        if (source.CreatedOn != null) {
-            this.CreatedOn = new String(source.CreatedOn);
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
         }
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
-        if (source.ModifiedOn != null) {
-            this.ModifiedOn = new String(source.ModifiedOn);
-        }
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
-        }
         if (source.DomainStatus != null) {
             this.DomainStatus = new String(source.DomainStatus);
+        }
+        if (source.OriginDetail != null) {
+            this.OriginDetail = new OriginDetail(source.OriginDetail);
         }
         if (source.Cname != null) {
             this.Cname = new String(source.Cname);
         }
         if (source.IdentificationStatus != null) {
             this.IdentificationStatus = new String(source.IdentificationStatus);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
+        }
+        if (source.ModifiedOn != null) {
+            this.ModifiedOn = new String(source.ModifiedOn);
+        }
+        if (source.OwnershipVerification != null) {
+            this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
         }
     }
 
@@ -280,14 +311,15 @@ public class AccelerationDomain extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
-        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
-        this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
+        this.setParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
         this.setParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
+        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
 
     }
 }

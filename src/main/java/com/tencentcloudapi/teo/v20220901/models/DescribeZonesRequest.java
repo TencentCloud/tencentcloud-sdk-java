@@ -30,37 +30,37 @@ public class DescribeZonesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 分页查询限制数目。默认值：20，最大值：1000。
+    * 分页查询限制数目。默认值：20，最大值：100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：否</li><li>status<br>   按照【<strong>站点状态</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-key<br>   按照【<strong>标签键</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-value<br>   按照【<strong>标签值</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为zone-name。
+    * 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 appid 下有权限的所有站点信息。详细的过滤条件如下：
+<li>zone-name：按照站点名称进行过滤；</li><li>zone-id：按照站点 ID进行过滤。站点 ID 形如：zone-2noz78a8ev6k；</li><li>status：按照站点状态进行过滤；</li><li>tag-key：按照标签键进行过滤；</li><li>tag-value： 按照标签值进行过滤。</li>模糊查询时仅支持过滤字段名为 zone-name。
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * 排序字段，取值有：
+    * 可根据该字段对返回结果进行排序，取值有：
 <li> type：接入类型；</li>
 <li> area：加速区域；</li>
 <li> create-time：创建时间；</li>
 <li> zone-name：站点名称；</li>
 <li> use-time：最近使用时间；</li>
-<li> active-status：生效状态。</li>不填写使用默认值create-time。
+<li> active-status：生效状态。</li>不填写时对返回结果默认按照 create-time 排序。
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序方向，取值有：
+    * 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
 <li> asc：从小到大排序；</li>
-<li> desc：从大到小排序。</li>不填写使用默认值desc。
+<li> desc：从大到小排序。</li>不填写使用默认值 desc。
     */
     @SerializedName("Direction")
     @Expose
@@ -83,100 +83,100 @@ public class DescribeZonesRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页查询限制数目。默认值：20，最大值：1000。 
-     * @return Limit 分页查询限制数目。默认值：20，最大值：1000。
+     * Get 分页查询限制数目。默认值：20，最大值：100。 
+     * @return Limit 分页查询限制数目。默认值：20，最大值：100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询限制数目。默认值：20，最大值：1000。
-     * @param Limit 分页查询限制数目。默认值：20，最大值：1000。
+     * Set 分页查询限制数目。默认值：20，最大值：100。
+     * @param Limit 分页查询限制数目。默认值：20，最大值：100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：否</li><li>status<br>   按照【<strong>站点状态</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-key<br>   按照【<strong>标签键</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-value<br>   按照【<strong>标签值</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为zone-name。 
-     * @return Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：否</li><li>status<br>   按照【<strong>站点状态</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-key<br>   按照【<strong>标签键</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-value<br>   按照【<strong>标签值</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为zone-name。
+     * Get 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 appid 下有权限的所有站点信息。详细的过滤条件如下：
+<li>zone-name：按照站点名称进行过滤；</li><li>zone-id：按照站点 ID进行过滤。站点 ID 形如：zone-2noz78a8ev6k；</li><li>status：按照站点状态进行过滤；</li><li>tag-key：按照标签键进行过滤；</li><li>tag-value： 按照标签值进行过滤。</li>模糊查询时仅支持过滤字段名为 zone-name。 
+     * @return Filters 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 appid 下有权限的所有站点信息。详细的过滤条件如下：
+<li>zone-name：按照站点名称进行过滤；</li><li>zone-id：按照站点 ID进行过滤。站点 ID 形如：zone-2noz78a8ev6k；</li><li>status：按照站点状态进行过滤；</li><li>tag-key：按照标签键进行过滤；</li><li>tag-value： 按照标签值进行过滤。</li>模糊查询时仅支持过滤字段名为 zone-name。
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：否</li><li>status<br>   按照【<strong>站点状态</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-key<br>   按照【<strong>标签键</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-value<br>   按照【<strong>标签值</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为zone-name。
-     * @param Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：否</li><li>status<br>   按照【<strong>站点状态</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-key<br>   按照【<strong>标签键</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-value<br>   按照【<strong>标签值</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为zone-name。
+     * Set 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 appid 下有权限的所有站点信息。详细的过滤条件如下：
+<li>zone-name：按照站点名称进行过滤；</li><li>zone-id：按照站点 ID进行过滤。站点 ID 形如：zone-2noz78a8ev6k；</li><li>status：按照站点状态进行过滤；</li><li>tag-key：按照标签键进行过滤；</li><li>tag-value： 按照标签值进行过滤。</li>模糊查询时仅支持过滤字段名为 zone-name。
+     * @param Filters 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 appid 下有权限的所有站点信息。详细的过滤条件如下：
+<li>zone-name：按照站点名称进行过滤；</li><li>zone-id：按照站点 ID进行过滤。站点 ID 形如：zone-2noz78a8ev6k；</li><li>status：按照站点状态进行过滤；</li><li>tag-key：按照标签键进行过滤；</li><li>tag-value： 按照标签值进行过滤。</li>模糊查询时仅支持过滤字段名为 zone-name。
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 排序字段，取值有：
+     * Get 可根据该字段对返回结果进行排序，取值有：
 <li> type：接入类型；</li>
 <li> area：加速区域；</li>
 <li> create-time：创建时间；</li>
 <li> zone-name：站点名称；</li>
 <li> use-time：最近使用时间；</li>
-<li> active-status：生效状态。</li>不填写使用默认值create-time。 
-     * @return Order 排序字段，取值有：
+<li> active-status：生效状态。</li>不填写时对返回结果默认按照 create-time 排序。 
+     * @return Order 可根据该字段对返回结果进行排序，取值有：
 <li> type：接入类型；</li>
 <li> area：加速区域；</li>
 <li> create-time：创建时间；</li>
 <li> zone-name：站点名称；</li>
 <li> use-time：最近使用时间；</li>
-<li> active-status：生效状态。</li>不填写使用默认值create-time。
+<li> active-status：生效状态。</li>不填写时对返回结果默认按照 create-time 排序。
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序字段，取值有：
+     * Set 可根据该字段对返回结果进行排序，取值有：
 <li> type：接入类型；</li>
 <li> area：加速区域；</li>
 <li> create-time：创建时间；</li>
 <li> zone-name：站点名称；</li>
 <li> use-time：最近使用时间；</li>
-<li> active-status：生效状态。</li>不填写使用默认值create-time。
-     * @param Order 排序字段，取值有：
+<li> active-status：生效状态。</li>不填写时对返回结果默认按照 create-time 排序。
+     * @param Order 可根据该字段对返回结果进行排序，取值有：
 <li> type：接入类型；</li>
 <li> area：加速区域；</li>
 <li> create-time：创建时间；</li>
 <li> zone-name：站点名称；</li>
 <li> use-time：最近使用时间；</li>
-<li> active-status：生效状态。</li>不填写使用默认值create-time。
+<li> active-status：生效状态。</li>不填写时对返回结果默认按照 create-time 排序。
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序方向，取值有：
+     * Get 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
 <li> asc：从小到大排序；</li>
-<li> desc：从大到小排序。</li>不填写使用默认值desc。 
-     * @return Direction 排序方向，取值有：
+<li> desc：从大到小排序。</li>不填写使用默认值 desc。 
+     * @return Direction 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
 <li> asc：从小到大排序；</li>
-<li> desc：从大到小排序。</li>不填写使用默认值desc。
+<li> desc：从大到小排序。</li>不填写使用默认值 desc。
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 排序方向，取值有：
+     * Set 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
 <li> asc：从小到大排序；</li>
-<li> desc：从大到小排序。</li>不填写使用默认值desc。
-     * @param Direction 排序方向，取值有：
+<li> desc：从大到小排序。</li>不填写使用默认值 desc。
+     * @param Direction 排序方向，如果是字段值为数字，则根据数字大小排序；如果字段值为文本，则根据 ascill 码的大小排序。取值有：
 <li> asc：从小到大排序；</li>
-<li> desc：从大到小排序。</li>不填写使用默认值desc。
+<li> desc：从大到小排序。</li>不填写使用默认值 desc。
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;

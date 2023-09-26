@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateAccelerationDomainResponse extends AbstractModel{
 
     /**
+    * 当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnershipVerification")
+    @Expose
+    private OwnershipVerification OwnershipVerification;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnershipVerification 当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OwnershipVerification getOwnershipVerification() {
+        return this.OwnershipVerification;
+    }
+
+    /**
+     * Set 当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnershipVerification 当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
+        this.OwnershipVerification = OwnershipVerification;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,9 @@ public class CreateAccelerationDomainResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAccelerationDomainResponse(CreateAccelerationDomainResponse source) {
+        if (source.OwnershipVerification != null) {
+            this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class CreateAccelerationDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

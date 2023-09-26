@@ -37,6 +37,13 @@ public class UpsertIpAccessControlRequest extends AbstractModel{
     private String [] Items;
 
     /**
+    * 实例Id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
     */
     @SerializedName("Edition")
@@ -80,6 +87,22 @@ public class UpsertIpAccessControlRequest extends AbstractModel{
      */
     public void setItems(String [] Items) {
         this.Items = Items;
+    }
+
+    /**
+     * Get 实例Id 
+     * @return InstanceId 实例Id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例Id
+     * @param InstanceId 实例Id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -131,6 +154,9 @@ public class UpsertIpAccessControlRequest extends AbstractModel{
                 this.Items[i] = new String(source.Items[i]);
             }
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.Edition != null) {
             this.Edition = new String(source.Edition);
         }
@@ -146,6 +172,7 @@ public class UpsertIpAccessControlRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArraySimple(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 

@@ -24,6 +24,7 @@ public class KongTarget extends AbstractModel{
 
     /**
     * Host
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
@@ -31,6 +32,7 @@ public class KongTarget extends AbstractModel{
 
     /**
     * 端口
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -38,6 +40,7 @@ public class KongTarget extends AbstractModel{
 
     /**
     * 权重
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -45,6 +48,7 @@ public class KongTarget extends AbstractModel{
 
     /**
     * 健康状态
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Health")
     @Expose
@@ -52,6 +56,7 @@ public class KongTarget extends AbstractModel{
 
     /**
     * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -59,14 +64,17 @@ public class KongTarget extends AbstractModel{
 
     /**
     * Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-     * Get Host 
+     * Get Host
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Host Host
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -74,15 +82,19 @@ public class KongTarget extends AbstractModel{
 
     /**
      * Set Host
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Host Host
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 端口 
+     * Get 端口
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Port 端口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -90,15 +102,19 @@ public class KongTarget extends AbstractModel{
 
     /**
      * Set 端口
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 权重 
+     * Get 权重
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -106,15 +122,19 @@ public class KongTarget extends AbstractModel{
 
     /**
      * Set 权重
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 健康状态 
+     * Get 健康状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Health 健康状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealth() {
         return this.Health;
@@ -122,15 +142,19 @@ public class KongTarget extends AbstractModel{
 
     /**
      * Set 健康状态
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Health 健康状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealth(String Health) {
         this.Health = Health;
     }
 
     /**
-     * Get 创建时间 
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -138,15 +162,19 @@ public class KongTarget extends AbstractModel{
 
     /**
      * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Target的来源 
+     * Get Target的来源
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Source Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -154,7 +182,9 @@ public class KongTarget extends AbstractModel{
 
     /**
      * Set Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Source Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;

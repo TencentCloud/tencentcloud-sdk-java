@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateAccelerationDomainRequest extends AbstractModel{
 
     /**
-    * 加速域名所属站点ID。
+    * 加速域名所属站点 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 加速域名名称。
+    * 加速域名。
     */
     @SerializedName("DomainName")
     @Expose
@@ -44,32 +44,32 @@ public class CreateAccelerationDomainRequest extends AbstractModel{
     private OriginInfo OriginInfo;
 
     /**
-     * Get 加速域名所属站点ID。 
-     * @return ZoneId 加速域名所属站点ID。
+     * Get 加速域名所属站点 ID。 
+     * @return ZoneId 加速域名所属站点 ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 加速域名所属站点ID。
-     * @param ZoneId 加速域名所属站点ID。
+     * Set 加速域名所属站点 ID。
+     * @param ZoneId 加速域名所属站点 ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 加速域名名称。 
-     * @return DomainName 加速域名名称。
+     * Get 加速域名。 
+     * @return DomainName 加速域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 加速域名名称。
-     * @param DomainName 加速域名名称。
+     * Set 加速域名。
+     * @param DomainName 加速域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;

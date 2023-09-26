@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class AddAntiInfoLeakRulesResponse extends AbstractModel{
 
     /**
+    * 规则ID
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 规则ID 
+     * @return RuleId 规则ID
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 规则ID
+     * @param RuleId 规则ID
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class AddAntiInfoLeakRulesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddAntiInfoLeakRulesResponse(AddAntiInfoLeakRulesResponse source) {
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class AddAntiInfoLeakRulesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

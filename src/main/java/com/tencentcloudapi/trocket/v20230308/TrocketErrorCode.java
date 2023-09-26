@@ -21,6 +21,9 @@ public enum TrocketErrorCode {
     // 实例不存在。
      RESOURCENOTFOUND_INSTANCE("ResourceNotFound.Instance"),
      
+    // 角色不存在，请检查后重试。
+     RESOURCENOTFOUND_ROLE("ResourceNotFound.Role"),
+     
     // 主题不存在，请检查后重试。
      RESOURCENOTFOUND_TOPIC("ResourceNotFound.Topic"),
      

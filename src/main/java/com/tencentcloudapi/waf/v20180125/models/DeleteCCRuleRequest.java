@@ -44,6 +44,13 @@ public class DeleteCCRuleRequest extends AbstractModel{
     private String Edition;
 
     /**
+    * 规则Id
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -91,6 +98,22 @@ public class DeleteCCRuleRequest extends AbstractModel{
         this.Edition = Edition;
     }
 
+    /**
+     * Get 规则Id 
+     * @return RuleId 规则Id
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 规则Id
+     * @param RuleId 规则Id
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public DeleteCCRuleRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DeleteCCRuleRequest extends AbstractModel{
         if (source.Edition != null) {
             this.Edition = new String(source.Edition);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DeleteCCRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

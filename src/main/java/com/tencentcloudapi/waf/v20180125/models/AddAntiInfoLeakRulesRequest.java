@@ -30,14 +30,14 @@ public class AddAntiInfoLeakRulesRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 名称
+    * 规则名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 动作
+    * 动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
     */
     @SerializedName("ActionType")
     @Expose
@@ -74,32 +74,32 @@ public class AddAntiInfoLeakRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 规则名称 
+     * @return Name 规则名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 规则名称
+     * @param Name 规则名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 动作 
-     * @return ActionType 动作
+     * Get 动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断） 
+     * @return ActionType 动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作
-     * @param ActionType 动作
+     * Set 动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
+     * @param ActionType 动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;

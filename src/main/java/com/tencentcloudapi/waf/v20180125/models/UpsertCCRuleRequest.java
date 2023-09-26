@@ -128,6 +128,20 @@ public class UpsertCCRuleRequest extends AbstractModel{
     private String EventId;
 
     /**
+    * 规则需要启用的SessionID
+    */
+    @SerializedName("SessionApplied")
+    @Expose
+    private Long [] SessionApplied;
+
+    /**
+    * 规则ID，新增时填0
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -367,6 +381,38 @@ public class UpsertCCRuleRequest extends AbstractModel{
         this.EventId = EventId;
     }
 
+    /**
+     * Get 规则需要启用的SessionID 
+     * @return SessionApplied 规则需要启用的SessionID
+     */
+    public Long [] getSessionApplied() {
+        return this.SessionApplied;
+    }
+
+    /**
+     * Set 规则需要启用的SessionID
+     * @param SessionApplied 规则需要启用的SessionID
+     */
+    public void setSessionApplied(Long [] SessionApplied) {
+        this.SessionApplied = SessionApplied;
+    }
+
+    /**
+     * Get 规则ID，新增时填0 
+     * @return RuleId 规则ID，新增时填0
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 规则ID，新增时填0
+     * @param RuleId 规则ID，新增时填0
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public UpsertCCRuleRequest() {
     }
 
@@ -420,6 +466,15 @@ public class UpsertCCRuleRequest extends AbstractModel{
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
+        if (source.SessionApplied != null) {
+            this.SessionApplied = new Long[source.SessionApplied.length];
+            for (int i = 0; i < source.SessionApplied.length; i++) {
+                this.SessionApplied[i] = new Long(source.SessionApplied[i]);
+            }
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
     }
 
 
@@ -442,6 +497,8 @@ public class UpsertCCRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

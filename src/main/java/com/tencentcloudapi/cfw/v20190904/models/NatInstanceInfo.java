@@ -167,6 +167,14 @@ public class NatInstanceInfo extends AbstractModel{
     private Long UpdateEnable;
 
     /**
+    * 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NeedProbeEngineUpdate")
+    @Expose
+    private Long NeedProbeEngineUpdate;
+
+    /**
      * Get nat实例id 
      * @return NatinsId nat实例id
      */
@@ -514,6 +522,26 @@ public class NatInstanceInfo extends AbstractModel{
         this.UpdateEnable = UpdateEnable;
     }
 
+    /**
+     * Get 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NeedProbeEngineUpdate 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNeedProbeEngineUpdate() {
+        return this.NeedProbeEngineUpdate;
+    }
+
+    /**
+     * Set 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NeedProbeEngineUpdate 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNeedProbeEngineUpdate(Long NeedProbeEngineUpdate) {
+        this.NeedProbeEngineUpdate = NeedProbeEngineUpdate;
+    }
+
     public NatInstanceInfo() {
     }
 
@@ -588,6 +616,9 @@ public class NatInstanceInfo extends AbstractModel{
         if (source.UpdateEnable != null) {
             this.UpdateEnable = new Long(source.UpdateEnable);
         }
+        if (source.NeedProbeEngineUpdate != null) {
+            this.NeedProbeEngineUpdate = new Long(source.NeedProbeEngineUpdate);
+        }
     }
 
 
@@ -614,6 +645,7 @@ public class NatInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleMax", this.RuleMax);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
+        this.setParamSimple(map, prefix + "NeedProbeEngineUpdate", this.NeedProbeEngineUpdate);
 
     }
 }

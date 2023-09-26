@@ -37,6 +37,13 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
     private String [] Items;
 
     /**
+    * 若IsId字段为True，则Items列表元素需为Id，否则为IP
+    */
+    @SerializedName("IsId")
+    @Expose
+    private Boolean IsId;
+
+    /**
     * 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
     */
     @SerializedName("DeleteAll")
@@ -80,6 +87,22 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
      */
     public void setItems(String [] Items) {
         this.Items = Items;
+    }
+
+    /**
+     * Get 若IsId字段为True，则Items列表元素需为Id，否则为IP 
+     * @return IsId 若IsId字段为True，则Items列表元素需为Id，否则为IP
+     */
+    public Boolean getIsId() {
+        return this.IsId;
+    }
+
+    /**
+     * Set 若IsId字段为True，则Items列表元素需为Id，否则为IP
+     * @param IsId 若IsId字段为True，则Items列表元素需为Id，否则为IP
+     */
+    public void setIsId(Boolean IsId) {
+        this.IsId = IsId;
     }
 
     /**
@@ -131,6 +154,9 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
                 this.Items[i] = new String(source.Items[i]);
             }
         }
+        if (source.IsId != null) {
+            this.IsId = new Boolean(source.IsId);
+        }
         if (source.DeleteAll != null) {
             this.DeleteAll = new Boolean(source.DeleteAll);
         }
@@ -146,6 +172,7 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArraySimple(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "IsId", this.IsId);
         this.setParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 

@@ -37,6 +37,13 @@ public class CreateBlockIgnoreRuleListRequest extends AbstractModel{
     private Long RuleType;
 
     /**
+    * 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+    */
+    @SerializedName("CoverDuplicate")
+    @Expose
+    private Long CoverDuplicate;
+
+    /**
      * Get 规则列表 
      * @return Rules 规则列表
      */
@@ -68,6 +75,22 @@ public class CreateBlockIgnoreRuleListRequest extends AbstractModel{
         this.RuleType = RuleType;
     }
 
+    /**
+     * Get 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据 
+     * @return CoverDuplicate 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+     */
+    public Long getCoverDuplicate() {
+        return this.CoverDuplicate;
+    }
+
+    /**
+     * Set 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+     * @param CoverDuplicate 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+     */
+    public void setCoverDuplicate(Long CoverDuplicate) {
+        this.CoverDuplicate = CoverDuplicate;
+    }
+
     public CreateBlockIgnoreRuleListRequest() {
     }
 
@@ -85,6 +108,9 @@ public class CreateBlockIgnoreRuleListRequest extends AbstractModel{
         if (source.RuleType != null) {
             this.RuleType = new Long(source.RuleType);
         }
+        if (source.CoverDuplicate != null) {
+            this.CoverDuplicate = new Long(source.CoverDuplicate);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class CreateBlockIgnoreRuleListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "CoverDuplicate", this.CoverDuplicate);
 
     }
 }

@@ -107,6 +107,13 @@ public class DescribeIpAccessControlRequest extends AbstractModel{
     private String Ip;
 
     /**
+    * 生效状态
+    */
+    @SerializedName("ValidStatus")
+    @Expose
+    private Long ValidStatus;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -298,6 +305,22 @@ public class DescribeIpAccessControlRequest extends AbstractModel{
         this.Ip = Ip;
     }
 
+    /**
+     * Get 生效状态 
+     * @return ValidStatus 生效状态
+     */
+    public Long getValidStatus() {
+        return this.ValidStatus;
+    }
+
+    /**
+     * Set 生效状态
+     * @param ValidStatus 生效状态
+     */
+    public void setValidStatus(Long ValidStatus) {
+        this.ValidStatus = ValidStatus;
+    }
+
     public DescribeIpAccessControlRequest() {
     }
 
@@ -342,6 +365,9 @@ public class DescribeIpAccessControlRequest extends AbstractModel{
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
         }
+        if (source.ValidStatus != null) {
+            this.ValidStatus = new Long(source.ValidStatus);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
 
     }
 }

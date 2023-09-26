@@ -73,6 +73,30 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
     private Long ApiRiskEventCount;
 
     /**
+    * 黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPBlackCount")
+    @Expose
+    private Long IPBlackCount;
+
+    /**
+    * 防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TamperCount")
+    @Expose
+    private Long TamperCount;
+
+    /**
+    * 信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LeakCount")
+    @Expose
+    private Long LeakCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -196,6 +220,66 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get 黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPBlackCount 黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIPBlackCount() {
+        return this.IPBlackCount;
+    }
+
+    /**
+     * Set 黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPBlackCount 黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPBlackCount(Long IPBlackCount) {
+        this.IPBlackCount = IPBlackCount;
+    }
+
+    /**
+     * Get 防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TamperCount 防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTamperCount() {
+        return this.TamperCount;
+    }
+
+    /**
+     * Set 防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TamperCount 防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTamperCount(Long TamperCount) {
+        this.TamperCount = TamperCount;
+    }
+
+    /**
+     * Get 信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LeakCount 信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLeakCount() {
+        return this.LeakCount;
+    }
+
+    /**
+     * Set 信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LeakCount 信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLeakCount(Long LeakCount) {
+        this.LeakCount = LeakCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -240,6 +324,15 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
         if (source.ApiRiskEventCount != null) {
             this.ApiRiskEventCount = new Long(source.ApiRiskEventCount);
         }
+        if (source.IPBlackCount != null) {
+            this.IPBlackCount = new Long(source.IPBlackCount);
+        }
+        if (source.TamperCount != null) {
+            this.TamperCount = new Long(source.TamperCount);
+        }
+        if (source.LeakCount != null) {
+            this.LeakCount = new Long(source.LeakCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -257,6 +350,9 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BotCount", this.BotCount);
         this.setParamSimple(map, prefix + "ApiAssetsCount", this.ApiAssetsCount);
         this.setParamSimple(map, prefix + "ApiRiskEventCount", this.ApiRiskEventCount);
+        this.setParamSimple(map, prefix + "IPBlackCount", this.IPBlackCount);
+        this.setParamSimple(map, prefix + "TamperCount", this.TamperCount);
+        this.setParamSimple(map, prefix + "LeakCount", this.LeakCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

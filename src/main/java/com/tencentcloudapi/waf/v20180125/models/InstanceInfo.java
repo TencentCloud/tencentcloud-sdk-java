@@ -251,6 +251,22 @@ public class InstanceInfo extends AbstractModel{
     private Long IsAPISecurityTrial;
 
     /**
+    * 重保包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MajorEventsPkg")
+    @Expose
+    private MajorEventsPkg MajorEventsPkg;
+
+    /**
+    * 混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HybridPkg")
+    @Expose
+    private HybridPkg HybridPkg;
+
+    /**
      * Get id 
      * @return InstanceId id
      */
@@ -790,6 +806,46 @@ public class InstanceInfo extends AbstractModel{
         this.IsAPISecurityTrial = IsAPISecurityTrial;
     }
 
+    /**
+     * Get 重保包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MajorEventsPkg 重保包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MajorEventsPkg getMajorEventsPkg() {
+        return this.MajorEventsPkg;
+    }
+
+    /**
+     * Set 重保包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MajorEventsPkg 重保包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMajorEventsPkg(MajorEventsPkg MajorEventsPkg) {
+        this.MajorEventsPkg = MajorEventsPkg;
+    }
+
+    /**
+     * Get 混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HybridPkg 混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HybridPkg getHybridPkg() {
+        return this.HybridPkg;
+    }
+
+    /**
+     * Set 混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HybridPkg 混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHybridPkg(HybridPkg HybridPkg) {
+        this.HybridPkg = HybridPkg;
+    }
+
     public InstanceInfo() {
     }
 
@@ -891,6 +947,12 @@ public class InstanceInfo extends AbstractModel{
         if (source.IsAPISecurityTrial != null) {
             this.IsAPISecurityTrial = new Long(source.IsAPISecurityTrial);
         }
+        if (source.MajorEventsPkg != null) {
+            this.MajorEventsPkg = new MajorEventsPkg(source.MajorEventsPkg);
+        }
+        if (source.HybridPkg != null) {
+            this.HybridPkg = new HybridPkg(source.HybridPkg);
+        }
     }
 
 
@@ -929,6 +991,8 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SandboxQps", this.SandboxQps);
         this.setParamSimple(map, prefix + "IsAPISecurityTrial", this.IsAPISecurityTrial);
+        this.setParamObj(map, prefix + "MajorEventsPkg.", this.MajorEventsPkg);
+        this.setParamObj(map, prefix + "HybridPkg.", this.HybridPkg);
 
     }
 }

@@ -196,6 +196,14 @@ public class EdgeIpInfo extends AbstractModel{
     private Long SwitchMode;
 
     /**
+    * 开关权重
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SwitchWeight")
+    @Expose
+    private Long SwitchWeight;
+
+    /**
      * Get 公网IP 
      * @return PublicIp 公网IP
      */
@@ -647,6 +655,26 @@ public class EdgeIpInfo extends AbstractModel{
         this.SwitchMode = SwitchMode;
     }
 
+    /**
+     * Get 开关权重
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SwitchWeight 开关权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSwitchWeight() {
+        return this.SwitchWeight;
+    }
+
+    /**
+     * Set 开关权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SwitchWeight 开关权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSwitchWeight(Long SwitchWeight) {
+        this.SwitchWeight = SwitchWeight;
+    }
+
     public EdgeIpInfo() {
     }
 
@@ -715,6 +743,9 @@ public class EdgeIpInfo extends AbstractModel{
         if (source.SwitchMode != null) {
             this.SwitchMode = new Long(source.SwitchMode);
         }
+        if (source.SwitchWeight != null) {
+            this.SwitchWeight = new Long(source.SwitchWeight);
+        }
     }
 
 
@@ -742,6 +773,7 @@ public class EdgeIpInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EndpointId", this.EndpointId);
         this.setParamSimple(map, prefix + "EndpointIp", this.EndpointIp);
         this.setParamSimple(map, prefix + "SwitchMode", this.SwitchMode);
+        this.setParamSimple(map, prefix + "SwitchWeight", this.SwitchWeight);
 
     }
 }
