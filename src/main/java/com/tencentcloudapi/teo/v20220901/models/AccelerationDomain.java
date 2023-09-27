@@ -94,6 +94,14 @@ public class AccelerationDomain extends AbstractModel{
     private OwnershipVerification OwnershipVerification;
 
     /**
+    * 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Certificate")
+    @Expose
+    private AccelerationDomainCertificate Certificate;
+
+    /**
      * Get 站点 ID。 
      * @return ZoneId 站点 ID。
      */
@@ -269,6 +277,26 @@ public class AccelerationDomain extends AbstractModel{
         this.OwnershipVerification = OwnershipVerification;
     }
 
+    /**
+     * Get 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Certificate 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccelerationDomainCertificate getCertificate() {
+        return this.Certificate;
+    }
+
+    /**
+     * Set 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Certificate 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertificate(AccelerationDomainCertificate Certificate) {
+        this.Certificate = Certificate;
+    }
+
     public AccelerationDomain() {
     }
 
@@ -304,6 +332,9 @@ public class AccelerationDomain extends AbstractModel{
         if (source.OwnershipVerification != null) {
             this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
         }
+        if (source.Certificate != null) {
+            this.Certificate = new AccelerationDomainCertificate(source.Certificate);
+        }
     }
 
 
@@ -320,6 +351,7 @@ public class AccelerationDomain extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
         this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
+        this.setParamObj(map, prefix + "Certificate.", this.Certificate);
 
     }
 }

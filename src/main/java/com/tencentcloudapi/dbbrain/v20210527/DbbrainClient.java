@@ -648,6 +648,48 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询某张表的慢查模板概览
+     * @param req DescribeIndexRecommendAggregationSlowLogsRequest
+     * @return DescribeIndexRecommendAggregationSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIndexRecommendAggregationSlowLogsResponse DescribeIndexRecommendAggregationSlowLogs(DescribeIndexRecommendAggregationSlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIndexRecommendAggregationSlowLogsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIndexRecommendAggregationSlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIndexRecommendAggregationSlowLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例的索引推荐信息，包括索引统计相关信息，推荐索引列表，无效索引列表等。
+     * @param req DescribeIndexRecommendInfoRequest
+     * @return DescribeIndexRecommendInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIndexRecommendInfoResponse DescribeIndexRecommendInfo(DescribeIndexRecommendInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIndexRecommendInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIndexRecommendInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIndexRecommendInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。
      * @param req DescribeMailProfileRequest
      * @return DescribeMailProfileResponse
@@ -745,6 +787,27 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProxySessionKillTasksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProxySessionKillTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取 Redis 实例所有 proxy 节点的实时会话详情列表。
+     * @param req DescribeRedisProcessListRequest
+     * @return DescribeRedisProcessListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisProcessListResponse DescribeRedisProcessList(DescribeRedisProcessListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRedisProcessListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRedisProcessListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRedisProcessList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
