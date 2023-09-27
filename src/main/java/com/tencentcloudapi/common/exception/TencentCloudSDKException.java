@@ -30,6 +30,10 @@ public class TencentCloudSDKException extends Exception {
      */
     private String errorCode;
 
+    public TencentCloudSDKException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
     public TencentCloudSDKException(String message) {
         this(message, "");
     }

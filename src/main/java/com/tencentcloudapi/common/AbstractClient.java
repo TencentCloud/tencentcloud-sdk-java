@@ -259,7 +259,7 @@ public abstract class AbstractClient {
         try {
             resp = this.httpConnection.postRequest(url, body, hb.build());
         } catch (IOException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage(), e);
         }
         if (resp.code() != AbstractClient.HTTP_RSP_OK) {
             String msg = "response code is " + resp.code() + ", not 200";
@@ -273,7 +273,7 @@ public abstract class AbstractClient {
             String msg =
                     "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
             log.info(msg);
-            throw new TencentCloudSDKException(msg, "", e.getClass().getName());
+            throw new TencentCloudSDKException(msg, e);
         }
         JsonResponseModel<JsonResponseErrModel> errResp = null;
         try {
@@ -283,7 +283,7 @@ public abstract class AbstractClient {
         } catch (JsonSyntaxException e) {
             String msg = "json is not a valid representation for an object of type";
             log.info(msg);
-            throw new TencentCloudSDKException(msg, "", e.getClass().getName());
+            throw new TencentCloudSDKException(msg, e);
         }
         if (errResp.response.error != null) {
             throw new TencentCloudSDKException(
@@ -387,7 +387,7 @@ public abstract class AbstractClient {
             if (breakerToken != null) {
                 breakerToken.report(false);
             }
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+            throw new TencentCloudSDKException("", e);
         }
 
         if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
@@ -401,7 +401,7 @@ public abstract class AbstractClient {
         } catch (IOException e) {
             String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
             log.info(msg);
-            throw new TencentCloudSDKException(msg, "", endpoint.getClass().getName());
+            throw new TencentCloudSDKException(msg, e);
         }
 
         JsonResponseModel<JsonResponseErrModel> errResp = null;
@@ -412,7 +412,7 @@ public abstract class AbstractClient {
         } catch (JsonSyntaxException e) {
             String msg = "json is not a valid representation for an object of type";
             log.info(msg);
-            throw new TencentCloudSDKException(msg, "", e.getClass().getName());
+            throw new TencentCloudSDKException(msg, e);
         }
 
         if (errResp.response.error != null) {
@@ -470,7 +470,7 @@ public abstract class AbstractClient {
             try {
                 requestPayload = getMultipartPayload(request, boundary);
             } catch (Exception e) {
-                throw new TencentCloudSDKException("Failed to generate multipart. because: " + e);
+                throw new TencentCloudSDKException("Failed to generate multipart.", e);
             }
         } else if (httpRequestMethod.equals(HttpProfile.REQ_POST)) {
             requestPayload = AbstractModel.toJsonString(request).getBytes(StandardCharsets.UTF_8);
@@ -616,7 +616,7 @@ public abstract class AbstractClient {
             try {
                 v = URLEncoder.encode(entry.getValue(), "UTF8");
             } catch (UnsupportedEncodingException e) {
-                throw new TencentCloudSDKException("UTF8 is not supported." + e.getMessage());
+                throw new TencentCloudSDKException("UTF8 is not supported.", e);
             }
             queryString.append("&").append(entry.getKey()).append("=").append(v);
         }
@@ -677,7 +677,7 @@ public abstract class AbstractClient {
             }
             strParam += ("Signature=" + URLEncoder.encode(sigOutParam, "utf-8"));
         } catch (UnsupportedEncodingException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+            throw new TencentCloudSDKException("", e);
         }
         return strParam;
     }
@@ -730,13 +730,13 @@ public abstract class AbstractClient {
         try {
             method = cls.getMethod(methodName, req.getClass());
         } catch (NoSuchMethodException e) {
-            throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
+            throw new TencentCloudSDKException("ClientSideError", e);
         }
         do {
             try {
                 return method.invoke(this, req);
             } catch (IllegalAccessException e) {
-                throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
+                throw new TencentCloudSDKException("ClientSideError", e);
             } catch (InvocationTargetException e) {
                 if (retryTimes == 0) {
                     throw (TencentCloudSDKException) e.getTargetException();
@@ -745,7 +745,7 @@ public abstract class AbstractClient {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                throw new TencentCloudSDKException(e.toString(), "", "ClientSideError");
+                throw new TencentCloudSDKException("ClientSideError", e);
             }
         } while (--retryTimes >= 0);
         return null;
