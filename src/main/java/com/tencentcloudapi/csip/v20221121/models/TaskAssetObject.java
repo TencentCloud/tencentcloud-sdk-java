@@ -62,6 +62,14 @@ public class TaskAssetObject extends AbstractModel{
     private String Region;
 
     /**
+    * 多云资产唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Arn")
+    @Expose
+    private String Arn;
+
+    /**
      * Get 资产名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetName 资产名
@@ -157,6 +165,26 @@ public class TaskAssetObject extends AbstractModel{
         this.Region = Region;
     }
 
+    /**
+     * Get 多云资产唯一id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Arn 多云资产唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArn() {
+        return this.Arn;
+    }
+
+    /**
+     * Set 多云资产唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Arn 多云资产唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArn(String Arn) {
+        this.Arn = Arn;
+    }
+
     public TaskAssetObject() {
     }
 
@@ -180,6 +208,9 @@ public class TaskAssetObject extends AbstractModel{
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Arn != null) {
+            this.Arn = new String(source.Arn);
+        }
     }
 
 
@@ -192,6 +223,7 @@ public class TaskAssetObject extends AbstractModel{
         this.setParamSimple(map, prefix + "AssetType", this.AssetType);
         this.setParamSimple(map, prefix + "Asset", this.Asset);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Arn", this.Arn);
 
     }
 }

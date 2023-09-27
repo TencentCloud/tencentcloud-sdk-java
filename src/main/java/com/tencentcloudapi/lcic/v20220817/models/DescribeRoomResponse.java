@@ -174,7 +174,7 @@ video 纯视频
     private Long VideoOrientation;
 
     /**
-    * 开启课后评分。 0：不开启(默认)  1：开启
+    * 该房间是否开启了课后评分功能。0：未开启  1：开启
     */
     @SerializedName("IsGradingRequiredPostClass")
     @Expose
@@ -585,16 +585,16 @@ video 纯视频
     }
 
     /**
-     * Get 开启课后评分。 0：不开启(默认)  1：开启 
-     * @return IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
+     * Get 该房间是否开启了课后评分功能。0：未开启  1：开启 
+     * @return IsGradingRequiredPostClass 该房间是否开启了课后评分功能。0：未开启  1：开启
      */
     public Long getIsGradingRequiredPostClass() {
         return this.IsGradingRequiredPostClass;
     }
 
     /**
-     * Set 开启课后评分。 0：不开启(默认)  1：开启
-     * @param IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
+     * Set 该房间是否开启了课后评分功能。0：未开启  1：开启
+     * @param IsGradingRequiredPostClass 该房间是否开启了课后评分功能。0：未开启  1：开启
      */
     public void setIsGradingRequiredPostClass(Long IsGradingRequiredPostClass) {
         this.IsGradingRequiredPostClass = IsGradingRequiredPostClass;

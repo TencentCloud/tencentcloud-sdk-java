@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class UploadFilesResponse extends AbstractModel{
 
     /**
-    * 文件id数组
+    * 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
     */
     @SerializedName("FileIds")
     @Expose
@@ -44,16 +45,20 @@ public class UploadFilesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文件id数组 
-     * @return FileIds 文件id数组
+     * Get 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。 
+     * @return FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 文件id数组
-     * @param FileIds 文件id数组
+     * Set 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+     * @param FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;

@@ -79,6 +79,7 @@ public class InvocationTask extends AbstractModel{
 
     /**
     * 执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -86,6 +87,7 @@ public class InvocationTask extends AbstractModel{
 
     /**
     * 执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -275,8 +277,10 @@ public class InvocationTask extends AbstractModel{
     }
 
     /**
-     * Get 执行任务开始时间。 
+     * Get 执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -284,15 +288,19 @@ public class InvocationTask extends AbstractModel{
 
     /**
      * Set 执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 执行任务结束时间。 
+     * Get 执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -300,7 +308,9 @@ public class InvocationTask extends AbstractModel{
 
     /**
      * Set 执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

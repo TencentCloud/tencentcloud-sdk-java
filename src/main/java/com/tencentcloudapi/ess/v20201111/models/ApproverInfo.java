@@ -116,6 +116,13 @@ public class ApproverInfo extends AbstractModel{
     private Long ApproverRole;
 
     /**
+    * 自定义签署人角色名：收款人、开具人、见证人
+    */
+    @SerializedName("ApproverRoleName")
+    @Expose
+    private String ApproverRoleName;
+
+    /**
     * 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
@@ -484,6 +491,22 @@ public class ApproverInfo extends AbstractModel{
     }
 
     /**
+     * Get 自定义签署人角色名：收款人、开具人、见证人 
+     * @return ApproverRoleName 自定义签署人角色名：收款人、开具人、见证人
+     */
+    public String getApproverRoleName() {
+        return this.ApproverRoleName;
+    }
+
+    /**
+     * Set 自定义签署人角色名：收款人、开具人、见证人
+     * @param ApproverRoleName 自定义签署人角色名：收款人、开具人、见证人
+     */
+    public void setApproverRoleName(String ApproverRoleName) {
+        this.ApproverRoleName = ApproverRoleName;
+    }
+
+    /**
      * Get 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置 
@@ -817,6 +840,9 @@ public class ApproverInfo extends AbstractModel{
         if (source.ApproverRole != null) {
             this.ApproverRole = new Long(source.ApproverRole);
         }
+        if (source.ApproverRoleName != null) {
+            this.ApproverRoleName = new String(source.ApproverRoleName);
+        }
         if (source.VerifyChannel != null) {
             this.VerifyChannel = new String[source.VerifyChannel.length];
             for (int i = 0; i < source.VerifyChannel.length; i++) {
@@ -875,6 +901,7 @@ public class ApproverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "ApproverRole", this.ApproverRole);
+        this.setParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
         this.setParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
         this.setParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
         this.setParamSimple(map, prefix + "UserId", this.UserId);

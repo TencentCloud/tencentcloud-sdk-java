@@ -13,35 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tmt.v20180321.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextTranslateResponse extends AbstractModel{
+public class VerifyOwnershipResponse extends AbstractModel{
 
     /**
-    * 翻译后的文本
+    * 归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li>
     */
-    @SerializedName("TargetText")
+    @SerializedName("Status")
     @Expose
-    private String TargetText;
+    private String Status;
 
     /**
-    * 源语言，详见入参Source
+    * 当验证结果为不通过时，该字段会返回原因，协助您排查问题。
     */
-    @SerializedName("Source")
+    @SerializedName("Result")
     @Expose
-    private String Source;
-
-    /**
-    * 目标语言，详见入参Target
-    */
-    @SerializedName("Target")
-    @Expose
-    private String Target;
+    private String Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +46,43 @@ public class TextTranslateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 翻译后的文本 
-     * @return TargetText 翻译后的文本
+     * Get 归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li> 
+     * @return Status 归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li>
      */
-    public String getTargetText() {
-        return this.TargetText;
+    public String getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set 翻译后的文本
-     * @param TargetText 翻译后的文本
+     * Set 归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li>
+     * @param Status 归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li>
      */
-    public void setTargetText(String TargetText) {
-        this.TargetText = TargetText;
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     /**
-     * Get 源语言，详见入参Source 
-     * @return Source 源语言，详见入参Source
+     * Get 当验证结果为不通过时，该字段会返回原因，协助您排查问题。 
+     * @return Result 当验证结果为不通过时，该字段会返回原因，协助您排查问题。
      */
-    public String getSource() {
-        return this.Source;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 源语言，详见入参Source
-     * @param Source 源语言，详见入参Source
+     * Set 当验证结果为不通过时，该字段会返回原因，协助您排查问题。
+     * @param Result 当验证结果为不通过时，该字段会返回原因，协助您排查问题。
      */
-    public void setSource(String Source) {
-        this.Source = Source;
-    }
-
-    /**
-     * Get 目标语言，详见入参Target 
-     * @return Target 目标语言，详见入参Target
-     */
-    public String getTarget() {
-        return this.Target;
-    }
-
-    /**
-     * Set 目标语言，详见入参Target
-     * @param Target 目标语言，详见入参Target
-     */
-    public void setTarget(String Target) {
-        this.Target = Target;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -114,22 +101,19 @@ public class TextTranslateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public TextTranslateResponse() {
+    public VerifyOwnershipResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TextTranslateResponse(TextTranslateResponse source) {
-        if (source.TargetText != null) {
-            this.TargetText = new String(source.TargetText);
+    public VerifyOwnershipResponse(VerifyOwnershipResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
-        if (source.Source != null) {
-            this.Source = new String(source.Source);
-        }
-        if (source.Target != null) {
-            this.Target = new String(source.Target);
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +125,8 @@ public class TextTranslateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TargetText", this.TargetText);
-        this.setParamSimple(map, prefix + "Source", this.Source);
-        this.setParamSimple(map, prefix + "Target", this.Target);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

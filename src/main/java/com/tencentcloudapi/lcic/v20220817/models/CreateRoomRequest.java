@@ -61,7 +61,7 @@ public class CreateRoomRequest extends AbstractModel{
     private Long Resolution;
 
     /**
-    * 最大连麦人数（不包括老师）。取值范围[0, 16]
+    * 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
     */
     @SerializedName("MaxMicNumber")
     @Expose
@@ -294,16 +294,16 @@ video 纯视频
     }
 
     /**
-     * Get 最大连麦人数（不包括老师）。取值范围[0, 16] 
-     * @return MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
+     * Get 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。 
+     * @return MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set 最大连麦人数（不包括老师）。取值范围[0, 16]
-     * @param MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
+     * Set 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+     * @param MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;

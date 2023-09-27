@@ -438,6 +438,27 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *修改用户角色信息
+     * @param req ModifyUserRoleRequest
+     * @return ModifyUserRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserRoleResponse ModifyUserRole(ModifyUserRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserRoleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *项目-修改用户角色信息
      * @param req ModifyUserRoleProjectRequest
      * @return ModifyUserRoleProjectResponse

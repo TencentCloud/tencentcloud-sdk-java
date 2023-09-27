@@ -95,6 +95,22 @@ public class BotPkg extends AbstractModel{
     private Long RenewFlag;
 
     /**
+    * 购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BotCPWaf")
+    @Expose
+    private Long BotCPWaf;
+
+    /**
+    * 控制台买bot5折
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BotNPWaf")
+    @Expose
+    private Long BotNPWaf;
+
+    /**
      * Get 资源id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceIds 资源id
@@ -274,6 +290,46 @@ public class BotPkg extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get 购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BotCPWaf 购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBotCPWaf() {
+        return this.BotCPWaf;
+    }
+
+    /**
+     * Set 购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BotCPWaf 购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBotCPWaf(Long BotCPWaf) {
+        this.BotCPWaf = BotCPWaf;
+    }
+
+    /**
+     * Get 控制台买bot5折
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BotNPWaf 控制台买bot5折
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBotNPWaf() {
+        return this.BotNPWaf;
+    }
+
+    /**
+     * Set 控制台买bot5折
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BotNPWaf 控制台买bot5折
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBotNPWaf(Long BotNPWaf) {
+        this.BotNPWaf = BotNPWaf;
+    }
+
     public BotPkg() {
     }
 
@@ -309,6 +365,12 @@ public class BotPkg extends AbstractModel{
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.BotCPWaf != null) {
+            this.BotCPWaf = new Long(source.BotCPWaf);
+        }
+        if (source.BotNPWaf != null) {
+            this.BotNPWaf = new Long(source.BotNPWaf);
+        }
     }
 
 
@@ -325,6 +387,8 @@ public class BotPkg extends AbstractModel{
         this.setParamSimple(map, prefix + "UsedNum", this.UsedNum);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "BotCPWaf", this.BotCPWaf);
+        this.setParamSimple(map, prefix + "BotNPWaf", this.BotNPWaf);
 
     }
 }

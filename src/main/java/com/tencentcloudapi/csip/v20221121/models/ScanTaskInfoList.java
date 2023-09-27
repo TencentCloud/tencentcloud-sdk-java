@@ -47,7 +47,7 @@ public class ScanTaskInfoList extends AbstractModel{
     private String EndTime;
 
     /**
-    * corn
+    * cron格式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanPlanContent")
@@ -119,7 +119,7 @@ public class ScanTaskInfoList extends AbstractModel{
     private Long AssetNumber;
 
     /**
-    * 扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+    * 扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanStatus")
@@ -335,6 +335,14 @@ public class ScanTaskInfoList extends AbstractModel{
     private Long IsDelete;
 
     /**
+    * 任务源类型，0-默认，1-小助手，2-体检项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private Long SourceType;
+
+    /**
      * Get 任务名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskName 任务名称
@@ -395,9 +403,9 @@ public class ScanTaskInfoList extends AbstractModel{
     }
 
     /**
-     * Get corn
+     * Get cron格式
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScanPlanContent corn
+     * @return ScanPlanContent cron格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanPlanContent() {
@@ -405,9 +413,9 @@ public class ScanTaskInfoList extends AbstractModel{
     }
 
     /**
-     * Set corn
+     * Set cron格式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScanPlanContent corn
+     * @param ScanPlanContent cron格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanPlanContent(String ScanPlanContent) {
@@ -575,9 +583,9 @@ public class ScanTaskInfoList extends AbstractModel{
     }
 
     /**
-     * Get 扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+     * Get 扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScanStatus 扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+     * @return ScanStatus 扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanStatus() {
@@ -585,9 +593,9 @@ public class ScanTaskInfoList extends AbstractModel{
     }
 
     /**
-     * Set 扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+     * Set 扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScanStatus 扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+     * @param ScanStatus 扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanStatus(Long ScanStatus) {
@@ -1114,6 +1122,26 @@ public class ScanTaskInfoList extends AbstractModel{
         this.IsDelete = IsDelete;
     }
 
+    /**
+     * Get 任务源类型，0-默认，1-小助手，2-体检项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceType 任务源类型，0-默认，1-小助手，2-体检项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set 任务源类型，0-默认，1-小助手，2-体检项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceType 任务源类型，0-默认，1-小助手，2-体检项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceType(Long SourceType) {
+        this.SourceType = SourceType;
+    }
+
     public ScanTaskInfoList() {
     }
 
@@ -1245,6 +1273,9 @@ public class ScanTaskInfoList extends AbstractModel{
         if (source.IsDelete != null) {
             this.IsDelete = new Long(source.IsDelete);
         }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
     }
 
 
@@ -1291,6 +1322,7 @@ public class ScanTaskInfoList extends AbstractModel{
         this.setParamSimple(map, prefix + "ScanFrom", this.ScanFrom);
         this.setParamSimple(map, prefix + "IsFree", this.IsFree);
         this.setParamSimple(map, prefix + "IsDelete", this.IsDelete);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 
     }
 }

@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeVpcPeeringConnectionsResponse extends AbstractModel{
 
     /**
+    * 满足条件的对等连接实例个数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 对等连接实例列表。
+    */
+    @SerializedName("PeerConnectionSet")
+    @Expose
+    private PeerConnection [] PeerConnectionSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 满足条件的对等连接实例个数。 
+     * @return TotalCount 满足条件的对等连接实例个数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 满足条件的对等连接实例个数。
+     * @param TotalCount 满足条件的对等连接实例个数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 对等连接实例列表。 
+     * @return PeerConnectionSet 对等连接实例列表。
+     */
+    public PeerConnection [] getPeerConnectionSet() {
+        return this.PeerConnectionSet;
+    }
+
+    /**
+     * Set 对等连接实例列表。
+     * @param PeerConnectionSet 对等连接实例列表。
+     */
+    public void setPeerConnectionSet(PeerConnection [] PeerConnectionSet) {
+        this.PeerConnectionSet = PeerConnectionSet;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,15 @@ public class DescribeVpcPeeringConnectionsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeVpcPeeringConnectionsResponse(DescribeVpcPeeringConnectionsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.PeerConnectionSet != null) {
+            this.PeerConnectionSet = new PeerConnection[source.PeerConnectionSet.length];
+            for (int i = 0; i < source.PeerConnectionSet.length; i++) {
+                this.PeerConnectionSet[i] = new PeerConnection(source.PeerConnectionSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DescribeVpcPeeringConnectionsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "PeerConnectionSet.", this.PeerConnectionSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -60,6 +60,13 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     private TaskInfo [] TaskInfos;
 
     /**
+    * 签署方信息，如角色ID、角色名称等
+    */
+    @SerializedName("FlowApprovers")
+    @Expose
+    private FlowApproverItem [] FlowApprovers;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -155,6 +162,22 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     }
 
     /**
+     * Get 签署方信息，如角色ID、角色名称等 
+     * @return FlowApprovers 签署方信息，如角色ID、角色名称等
+     */
+    public FlowApproverItem [] getFlowApprovers() {
+        return this.FlowApprovers;
+    }
+
+    /**
+     * Set 签署方信息，如角色ID、角色名称等
+     * @param FlowApprovers 签署方信息，如角色ID、角色名称等
+     */
+    public void setFlowApprovers(FlowApproverItem [] FlowApprovers) {
+        this.FlowApprovers = FlowApprovers;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -208,6 +231,12 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
                 this.TaskInfos[i] = new TaskInfo(source.TaskInfos[i]);
             }
         }
+        if (source.FlowApprovers != null) {
+            this.FlowApprovers = new FlowApproverItem[source.FlowApprovers.length];
+            for (int i = 0; i < source.FlowApprovers.length; i++) {
+                this.FlowApprovers[i] = new FlowApproverItem(source.FlowApprovers[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -223,6 +252,7 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
         this.setParamArraySimple(map, prefix + "PreviewUrls.", this.PreviewUrls);
         this.setParamArrayObj(map, prefix + "TaskInfos.", this.TaskInfos);
+        this.setParamArrayObj(map, prefix + "FlowApprovers.", this.FlowApprovers);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -53,6 +53,15 @@ CLOSE:关闭
     private String Operate;
 
     /**
+    * 链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+    */
+    @SerializedName("Endpoint")
+    @Expose
+    private String Endpoint;
+
+    /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
 
 注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId 
@@ -136,6 +145,30 @@ CLOSE:关闭
         this.Operate = Operate;
     }
 
+    /**
+     * Get 链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul> 
+     * @return Endpoint 链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+     */
+    public String getEndpoint() {
+        return this.Endpoint;
+    }
+
+    /**
+     * Set 链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+     * @param Endpoint 链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+     */
+    public void setEndpoint(String Endpoint) {
+        this.Endpoint = Endpoint;
+    }
+
     public ModifyExtendedServiceRequest() {
     }
 
@@ -153,6 +186,9 @@ CLOSE:关闭
         if (source.Operate != null) {
             this.Operate = new String(source.Operate);
         }
+        if (source.Endpoint != null) {
+            this.Endpoint = new String(source.Endpoint);
+        }
     }
 
 
@@ -163,6 +199,7 @@ CLOSE:关闭
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "Operate", this.Operate);
+        this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
 
     }
 }

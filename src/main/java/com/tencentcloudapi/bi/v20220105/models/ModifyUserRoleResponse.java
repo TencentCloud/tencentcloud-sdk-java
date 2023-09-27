@@ -13,35 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tmt.v20180321.models;
+package com.tencentcloudapi.bi.v20220105.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextTranslateResponse extends AbstractModel{
+public class ModifyUserRoleResponse extends AbstractModel{
 
     /**
-    * 翻译后的文本
+    * 扩展
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TargetText")
+    @SerializedName("Extra")
     @Expose
-    private String TargetText;
+    private String Extra;
 
     /**
-    * 源语言，详见入参Source
+    * 消息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Source")
+    @SerializedName("Msg")
     @Expose
-    private String Source;
+    private String Msg;
 
     /**
-    * 目标语言，详见入参Target
+    * 数据
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Target")
+    @SerializedName("Data")
     @Expose
-    private String Target;
+    private String Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +54,63 @@ public class TextTranslateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 翻译后的文本 
-     * @return TargetText 翻译后的文本
+     * Get 扩展
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Extra 扩展
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTargetText() {
-        return this.TargetText;
+    public String getExtra() {
+        return this.Extra;
     }
 
     /**
-     * Set 翻译后的文本
-     * @param TargetText 翻译后的文本
+     * Set 扩展
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Extra 扩展
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTargetText(String TargetText) {
-        this.TargetText = TargetText;
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
     }
 
     /**
-     * Get 源语言，详见入参Source 
-     * @return Source 源语言，详见入参Source
+     * Get 消息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Msg 消息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getSource() {
-        return this.Source;
+    public String getMsg() {
+        return this.Msg;
     }
 
     /**
-     * Set 源语言，详见入参Source
-     * @param Source 源语言，详见入参Source
+     * Set 消息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Msg 消息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSource(String Source) {
-        this.Source = Source;
+    public void setMsg(String Msg) {
+        this.Msg = Msg;
     }
 
     /**
-     * Get 目标语言，详见入参Target 
-     * @return Target 目标语言，详见入参Target
+     * Get 数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTarget() {
-        return this.Target;
+    public String getData() {
+        return this.Data;
     }
 
     /**
-     * Set 目标语言，详见入参Target
-     * @param Target 目标语言，详见入参Target
+     * Set 数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTarget(String Target) {
-        this.Target = Target;
+    public void setData(String Data) {
+        this.Data = Data;
     }
 
     /**
@@ -114,22 +129,22 @@ public class TextTranslateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public TextTranslateResponse() {
+    public ModifyUserRoleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TextTranslateResponse(TextTranslateResponse source) {
-        if (source.TargetText != null) {
-            this.TargetText = new String(source.TargetText);
+    public ModifyUserRoleResponse(ModifyUserRoleResponse source) {
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
         }
-        if (source.Source != null) {
-            this.Source = new String(source.Source);
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
         }
-        if (source.Target != null) {
-            this.Target = new String(source.Target);
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +156,9 @@ public class TextTranslateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TargetText", this.TargetText);
-        this.setParamSimple(map, prefix + "Source", this.Source);
-        this.setParamSimple(map, prefix + "Target", this.Target);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

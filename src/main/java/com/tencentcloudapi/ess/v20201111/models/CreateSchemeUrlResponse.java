@@ -34,6 +34,13 @@ public class CreateSchemeUrlResponse extends AbstractModel{
     private String SchemeUrl;
 
     /**
+    * 二维码，在生成动态签署人跳转封面页链接时返回
+    */
+    @SerializedName("SchemeQrcodeUrl")
+    @Expose
+    private String SchemeQrcodeUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -73,6 +80,22 @@ public class CreateSchemeUrlResponse extends AbstractModel{
     }
 
     /**
+     * Get 二维码，在生成动态签署人跳转封面页链接时返回 
+     * @return SchemeQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+     */
+    public String getSchemeQrcodeUrl() {
+        return this.SchemeQrcodeUrl;
+    }
+
+    /**
+     * Set 二维码，在生成动态签署人跳转封面页链接时返回
+     * @param SchemeQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+     */
+    public void setSchemeQrcodeUrl(String SchemeQrcodeUrl) {
+        this.SchemeQrcodeUrl = SchemeQrcodeUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -99,6 +122,9 @@ public class CreateSchemeUrlResponse extends AbstractModel{
         if (source.SchemeUrl != null) {
             this.SchemeUrl = new String(source.SchemeUrl);
         }
+        if (source.SchemeQrcodeUrl != null) {
+            this.SchemeQrcodeUrl = new String(source.SchemeQrcodeUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -110,6 +136,7 @@ public class CreateSchemeUrlResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SchemeUrl", this.SchemeUrl);
+        this.setParamSimple(map, prefix + "SchemeQrcodeUrl", this.SchemeQrcodeUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

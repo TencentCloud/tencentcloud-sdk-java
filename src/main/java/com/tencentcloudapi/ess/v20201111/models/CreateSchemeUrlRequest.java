@@ -122,6 +122,13 @@ public class CreateSchemeUrlRequest extends AbstractModel{
     private Long [] Hides;
 
     /**
+    * 签署节点ID，用于生成动态签署人链接完成领取
+    */
+    @SerializedName("RecipientId")
+    @Expose
+    private String RecipientId;
+
+    /**
      * Get 执行本接口操作的员工信息, userId 必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息, userId 必填。
@@ -385,6 +392,22 @@ public class CreateSchemeUrlRequest extends AbstractModel{
         this.Hides = Hides;
     }
 
+    /**
+     * Get 签署节点ID，用于生成动态签署人链接完成领取 
+     * @return RecipientId 签署节点ID，用于生成动态签署人链接完成领取
+     */
+    public String getRecipientId() {
+        return this.RecipientId;
+    }
+
+    /**
+     * Set 签署节点ID，用于生成动态签署人链接完成领取
+     * @param RecipientId 签署节点ID，用于生成动态签署人链接完成领取
+     */
+    public void setRecipientId(String RecipientId) {
+        this.RecipientId = RecipientId;
+    }
+
     public CreateSchemeUrlRequest() {
     }
 
@@ -429,6 +452,9 @@ public class CreateSchemeUrlRequest extends AbstractModel{
                 this.Hides[i] = new Long(source.Hides[i]);
             }
         }
+        if (source.RecipientId != null) {
+            this.RecipientId = new String(source.RecipientId);
+        }
     }
 
 
@@ -447,6 +473,7 @@ public class CreateSchemeUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArraySimple(map, prefix + "Hides.", this.Hides);
+        this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
 
     }
 }

@@ -30,6 +30,13 @@ public class DescribeDbAssetsRequest extends AbstractModel{
     private Filter Filter;
 
     /**
+    * 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+    */
+    @SerializedName("AssetTypes")
+    @Expose
+    private String [] AssetTypes;
+
+    /**
      * Get - 
      * @return Filter -
      */
@@ -45,6 +52,22 @@ public class DescribeDbAssetsRequest extends AbstractModel{
         this.Filter = Filter;
     }
 
+    /**
+     * Get 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS 
+     * @return AssetTypes 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     */
+    public String [] getAssetTypes() {
+        return this.AssetTypes;
+    }
+
+    /**
+     * Set 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     * @param AssetTypes 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     */
+    public void setAssetTypes(String [] AssetTypes) {
+        this.AssetTypes = AssetTypes;
+    }
+
     public DescribeDbAssetsRequest() {
     }
 
@@ -56,6 +79,12 @@ public class DescribeDbAssetsRequest extends AbstractModel{
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
+        if (source.AssetTypes != null) {
+            this.AssetTypes = new String[source.AssetTypes.length];
+            for (int i = 0; i < source.AssetTypes.length; i++) {
+                this.AssetTypes[i] = new String(source.AssetTypes[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class DescribeDbAssetsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArraySimple(map, prefix + "AssetTypes.", this.AssetTypes);
 
     }
 }

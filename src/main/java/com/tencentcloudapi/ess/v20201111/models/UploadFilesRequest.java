@@ -23,41 +23,55 @@ import java.util.HashMap;
 public class UploadFilesRequest extends AbstractModel{
 
     /**
-    * 文件对应业务类型
-1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
-3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+    * 文件对应业务类型,可以选择的类型如下
+<ul><li> **TEMPLATE** : 此上传的文件用户生成合同模板，文件类型支持.pdf/.doc/.docx/.html格式，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用来发起合同流程，文件类型支持.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用于合同图片控件的填充，文件类型支持.jpg/.png</li>
+<li> **SEAL** : 此文件用于印章的生成，文件类型支持.jpg/.jpeg/.png</li></ul>
     */
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
 
     /**
-    * 调用方信息，其中OperatorId为必填字段，即用户的UserId
+    * 执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
     @SerializedName("Caller")
     @Expose
     private Caller Caller;
 
     /**
-    * 上传文件内容数组，最多支持20个文件
+    * 上传文件内容数组，最多支持上传20个文件。
     */
     @SerializedName("FileInfos")
     @Expose
     private UploadFile [] FileInfos;
 
     /**
-    * 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
-如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
+    * 文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
+可支持的指定类型如下:
+<ul><li>pdf</li>
+<li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>html</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li></ul>
+如：pdf 表示上传的文件 张三入职合同.pdf的文件类型是 pdf
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-默认为false--否，不处理
+    * 此参数仅对上传的PDF文件有效。其主要作用是确定是否将PDF中的灰色矩阵置为白色。
+<ul><li>**true**：将灰色矩阵置为白色。</li>
+<li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
+
+注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。`
     */
     @SerializedName("CoverRect")
     @Expose
@@ -65,6 +79,8 @@ true--是，处理置白
 
     /**
     * 用户自定义ID数组，与上传文件一一对应
+
+注: `历史遗留问题，已经废弃，调用接口时不用赋值`
     */
     @SerializedName("CustomIds")
     @Expose
@@ -78,112 +94,180 @@ true--是，处理置白
     private String FileUrls;
 
     /**
-     * Get 文件对应业务类型
-1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
-3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png 
-     * @return BusinessType 文件对应业务类型
-1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
-3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+     * Get 文件对应业务类型,可以选择的类型如下
+<ul><li> **TEMPLATE** : 此上传的文件用户生成合同模板，文件类型支持.pdf/.doc/.docx/.html格式，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用来发起合同流程，文件类型支持.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用于合同图片控件的填充，文件类型支持.jpg/.png</li>
+<li> **SEAL** : 此文件用于印章的生成，文件类型支持.jpg/.jpeg/.png</li></ul> 
+     * @return BusinessType 文件对应业务类型,可以选择的类型如下
+<ul><li> **TEMPLATE** : 此上传的文件用户生成合同模板，文件类型支持.pdf/.doc/.docx/.html格式，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用来发起合同流程，文件类型支持.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用于合同图片控件的填充，文件类型支持.jpg/.png</li>
+<li> **SEAL** : 此文件用于印章的生成，文件类型支持.jpg/.jpeg/.png</li></ul>
      */
     public String getBusinessType() {
         return this.BusinessType;
     }
 
     /**
-     * Set 文件对应业务类型
-1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
-3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-     * @param BusinessType 文件对应业务类型
-1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
-3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+     * Set 文件对应业务类型,可以选择的类型如下
+<ul><li> **TEMPLATE** : 此上传的文件用户生成合同模板，文件类型支持.pdf/.doc/.docx/.html格式，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用来发起合同流程，文件类型支持.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用于合同图片控件的填充，文件类型支持.jpg/.png</li>
+<li> **SEAL** : 此文件用于印章的生成，文件类型支持.jpg/.jpeg/.png</li></ul>
+     * @param BusinessType 文件对应业务类型,可以选择的类型如下
+<ul><li> **TEMPLATE** : 此上传的文件用户生成合同模板，文件类型支持.pdf/.doc/.docx/.html格式，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用来发起合同流程，文件类型支持.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html，如果非pdf文件需要通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务</a>转换后才能使用</li>
+<li> **DOCUMENT** : 此文件用于合同图片控件的填充，文件类型支持.jpg/.png</li>
+<li> **SEAL** : 此文件用于印章的生成，文件类型支持.jpg/.jpeg/.png</li></ul>
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get 调用方信息，其中OperatorId为必填字段，即用户的UserId 
-     * @return Caller 调用方信息，其中OperatorId为必填字段，即用户的UserId
+     * Get 执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
+     * @return Caller 执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public Caller getCaller() {
         return this.Caller;
     }
 
     /**
-     * Set 调用方信息，其中OperatorId为必填字段，即用户的UserId
-     * @param Caller 调用方信息，其中OperatorId为必填字段，即用户的UserId
+     * Set 执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param Caller 执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public void setCaller(Caller Caller) {
         this.Caller = Caller;
     }
 
     /**
-     * Get 上传文件内容数组，最多支持20个文件 
-     * @return FileInfos 上传文件内容数组，最多支持20个文件
+     * Get 上传文件内容数组，最多支持上传20个文件。 
+     * @return FileInfos 上传文件内容数组，最多支持上传20个文件。
      */
     public UploadFile [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 上传文件内容数组，最多支持20个文件
-     * @param FileInfos 上传文件内容数组，最多支持20个文件
+     * Set 上传文件内容数组，最多支持上传20个文件。
+     * @param FileInfos 上传文件内容数组，最多支持上传20个文件。
      */
     public void setFileInfos(UploadFile [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
-如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF 
-     * @return FileType 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
-如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
+     * Get 文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
+可支持的指定类型如下:
+<ul><li>pdf</li>
+<li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>html</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li></ul>
+如：pdf 表示上传的文件 张三入职合同.pdf的文件类型是 pdf 
+     * @return FileType 文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
+可支持的指定类型如下:
+<ul><li>pdf</li>
+<li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>html</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li></ul>
+如：pdf 表示上传的文件 张三入职合同.pdf的文件类型是 pdf
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
-如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
-     * @param FileType 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
-如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
+     * Set 文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
+可支持的指定类型如下:
+<ul><li>pdf</li>
+<li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>html</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li></ul>
+如：pdf 表示上传的文件 张三入职合同.pdf的文件类型是 pdf
+     * @param FileType 文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
+可支持的指定类型如下:
+<ul><li>pdf</li>
+<li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>html</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li></ul>
+如：pdf 表示上传的文件 张三入职合同.pdf的文件类型是 pdf
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-默认为false--否，不处理 
-     * @return CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-默认为false--否，不处理
+     * Get 此参数仅对上传的PDF文件有效。其主要作用是确定是否将PDF中的灰色矩阵置为白色。
+<ul><li>**true**：将灰色矩阵置为白色。</li>
+<li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
+
+注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。` 
+     * @return CoverRect 此参数仅对上传的PDF文件有效。其主要作用是确定是否将PDF中的灰色矩阵置为白色。
+<ul><li>**true**：将灰色矩阵置为白色。</li>
+<li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
+
+注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。`
      */
     public Boolean getCoverRect() {
         return this.CoverRect;
     }
 
     /**
-     * Set 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-默认为false--否，不处理
-     * @param CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-默认为false--否，不处理
+     * Set 此参数仅对上传的PDF文件有效。其主要作用是确定是否将PDF中的灰色矩阵置为白色。
+<ul><li>**true**：将灰色矩阵置为白色。</li>
+<li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
+
+注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。`
+     * @param CoverRect 此参数仅对上传的PDF文件有效。其主要作用是确定是否将PDF中的灰色矩阵置为白色。
+<ul><li>**true**：将灰色矩阵置为白色。</li>
+<li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
+
+注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。`
      */
     public void setCoverRect(Boolean CoverRect) {
         this.CoverRect = CoverRect;
     }
 
     /**
-     * Get 用户自定义ID数组，与上传文件一一对应 
+     * Get 用户自定义ID数组，与上传文件一一对应
+
+注: `历史遗留问题，已经废弃，调用接口时不用赋值` 
      * @return CustomIds 用户自定义ID数组，与上传文件一一对应
+
+注: `历史遗留问题，已经废弃，调用接口时不用赋值`
      */
     public String [] getCustomIds() {
         return this.CustomIds;
@@ -191,7 +275,11 @@ true--是，处理置白
 
     /**
      * Set 用户自定义ID数组，与上传文件一一对应
+
+注: `历史遗留问题，已经废弃，调用接口时不用赋值`
      * @param CustomIds 用户自定义ID数组，与上传文件一一对应
+
+注: `历史遗留问题，已经废弃，调用接口时不用赋值`
      */
     public void setCustomIds(String [] CustomIds) {
         this.CustomIds = CustomIds;
@@ -215,6 +303,26 @@ true--是，处理置白
     @Deprecated
     public void setFileUrls(String FileUrls) {
         this.FileUrls = FileUrls;
+    }
+
+    /**
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     public UploadFilesRequest() {
@@ -252,6 +360,9 @@ true--是，处理置白
         if (source.FileUrls != null) {
             this.FileUrls = new String(source.FileUrls);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -266,6 +377,7 @@ true--是，处理置白
         this.setParamSimple(map, prefix + "CoverRect", this.CoverRect);
         this.setParamArraySimple(map, prefix + "CustomIds.", this.CustomIds);
         this.setParamSimple(map, prefix + "FileUrls", this.FileUrls);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

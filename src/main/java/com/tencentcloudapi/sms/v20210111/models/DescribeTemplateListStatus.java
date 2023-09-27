@@ -30,7 +30,7 @@ public class DescribeTemplateListStatus extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
+    * 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。
     */
     @SerializedName("International")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeTemplateListStatus extends AbstractModel{
     }
 
     /**
-     * Get 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。 
-     * @return International 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
+     * Get 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。 
+     * @return International 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。
      */
     public Long getInternational() {
         return this.International;
     }
 
     /**
-     * Set 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
-     * @param International 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
+     * Set 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。
+     * @param International 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。
      */
     public void setInternational(Long International) {
         this.International = International;

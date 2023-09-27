@@ -212,6 +212,13 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     private ComponentLimit [] AddSignComponentsLimits;
 
     /**
+    * 自定义签署方角色名称
+    */
+    @SerializedName("ApproverRoleName")
+    @Expose
+    private String ApproverRoleName;
+
+    /**
      * Get 签署人姓名，最大长度50个字符 
      * @return Name 签署人姓名，最大长度50个字符
      */
@@ -695,6 +702,22 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
         this.AddSignComponentsLimits = AddSignComponentsLimits;
     }
 
+    /**
+     * Get 自定义签署方角色名称 
+     * @return ApproverRoleName 自定义签署方角色名称
+     */
+    public String getApproverRoleName() {
+        return this.ApproverRoleName;
+    }
+
+    /**
+     * Set 自定义签署方角色名称
+     * @param ApproverRoleName 自定义签署方角色名称
+     */
+    public void setApproverRoleName(String ApproverRoleName) {
+        this.ApproverRoleName = ApproverRoleName;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -787,6 +810,9 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
                 this.AddSignComponentsLimits[i] = new ComponentLimit(source.AddSignComponentsLimits[i]);
             }
         }
+        if (source.ApproverRoleName != null) {
+            this.ApproverRoleName = new String(source.ApproverRoleName);
+        }
     }
 
 
@@ -817,6 +843,7 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
         this.setParamSimple(map, prefix + "SignId", this.SignId);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
+        this.setParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
 
     }
 }

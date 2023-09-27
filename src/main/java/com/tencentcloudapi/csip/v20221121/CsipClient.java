@@ -228,7 +228,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *资产列表
+     *数据库资产列表
      * @param req DescribeDbAssetsRequest
      * @return DescribeDbAssetsResponse
      * @throws TencentCloudSDKException

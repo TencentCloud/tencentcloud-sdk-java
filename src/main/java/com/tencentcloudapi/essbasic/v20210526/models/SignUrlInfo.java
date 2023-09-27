@@ -129,6 +129,14 @@ PERSON 自然人
     private String FlowGroupId;
 
     /**
+    * 二维码，在生成动态签署人跳转封面页链接时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SignQrcodeUrl")
+    @Expose
+    private String SignQrcodeUrl;
+
+    /**
      * Get 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SignUrl 签署链接，过期时间为90天
@@ -400,6 +408,26 @@ PERSON 自然人
         this.FlowGroupId = FlowGroupId;
     }
 
+    /**
+     * Get 二维码，在生成动态签署人跳转封面页链接时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SignQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSignQrcodeUrl() {
+        return this.SignQrcodeUrl;
+    }
+
+    /**
+     * Set 二维码，在生成动态签署人跳转封面页链接时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SignQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignQrcodeUrl(String SignQrcodeUrl) {
+        this.SignQrcodeUrl = SignQrcodeUrl;
+    }
+
     public SignUrlInfo() {
     }
 
@@ -447,6 +475,9 @@ PERSON 自然人
         if (source.FlowGroupId != null) {
             this.FlowGroupId = new String(source.FlowGroupId);
         }
+        if (source.SignQrcodeUrl != null) {
+            this.SignQrcodeUrl = new String(source.SignQrcodeUrl);
+        }
     }
 
 
@@ -467,6 +498,7 @@ PERSON 自然人
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+        this.setParamSimple(map, prefix + "SignQrcodeUrl", this.SignQrcodeUrl);
 
     }
 }

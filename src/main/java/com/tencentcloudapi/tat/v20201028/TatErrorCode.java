@@ -156,6 +156,9 @@ public enum TatErrorCode {
     // 查询不到注册码。
      RESOURCENOTFOUND_REGISTERCODESNOTFOUNDCODE("ResourceNotFound.RegisterCodesNotFoundCode"),
      
+    // 查询不到注册实例。
+     RESOURCENOTFOUND_REGISTERINSTANCENOTFOUNDCODE("ResourceNotFound.RegisterInstanceNotFoundCode"),
+     
     // 角色不存在。
      RESOURCENOTFOUND_ROLENOTFOUND("ResourceNotFound.RoleNotFound"),
      

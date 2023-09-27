@@ -76,8 +76,8 @@ public class ModifyRoomRequest extends AbstractModel{
     private Long Resolution;
 
     /**
-    * 最大连麦人数（不包括老师）。取值范围[0, 17)
-直播开始后不允许修改。
+    * 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。
+取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
     */
     @SerializedName("MaxMicNumber")
     @Expose
@@ -168,7 +168,7 @@ video 纯视频
     private Long IsGradingRequiredPostClass;
 
     /**
-    * 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+    * 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 （预留参数、暂未开放)
     */
     @SerializedName("RoomType")
     @Expose
@@ -317,20 +317,20 @@ video 纯视频
     }
 
     /**
-     * Get 最大连麦人数（不包括老师）。取值范围[0, 17)
-直播开始后不允许修改。 
-     * @return MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 17)
-直播开始后不允许修改。
+     * Get 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。
+取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。 
+     * @return MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。
+取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set 最大连麦人数（不包括老师）。取值范围[0, 17)
-直播开始后不允许修改。
-     * @param MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 17)
-直播开始后不允许修改。
+     * Set 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。
+取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+     * @param MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。
+取值范围[0,16]，当取值为0时表示当前课堂/直播，不支持连麦互动。
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;
@@ -553,16 +553,16 @@ video 纯视频
     }
 
     /**
-     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展) 
-     * @return RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 （预留参数、暂未开放) 
+     * @return RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 （预留参数、暂未开放)
      */
     public Long getRoomType() {
         return this.RoomType;
     }
 
     /**
-     * Set 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
-     * @param RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * Set 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 （预留参数、暂未开放)
+     * @param RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 （预留参数、暂未开放)
      */
     public void setRoomType(Long RoomType) {
         this.RoomType = RoomType;

@@ -30,6 +30,16 @@ public class ApproverOption extends AbstractModel{
     private Boolean HideOneKeySign;
 
     /**
+    * 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+    */
+    @SerializedName("FillType")
+    @Expose
+    private Long FillType;
+
+    /**
      * Get 是否隐藏一键签署 默认false-不隐藏true-隐藏 
      * @return HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
      */
@@ -45,6 +55,34 @@ public class ApproverOption extends AbstractModel{
         this.HideOneKeySign = HideOneKeySign;
     }
 
+    /**
+     * Get 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul> 
+     * @return FillType 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     */
+    public Long getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     * @param FillType 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     */
+    public void setFillType(Long FillType) {
+        this.FillType = FillType;
+    }
+
     public ApproverOption() {
     }
 
@@ -56,6 +94,9 @@ public class ApproverOption extends AbstractModel{
         if (source.HideOneKeySign != null) {
             this.HideOneKeySign = new Boolean(source.HideOneKeySign);
         }
+        if (source.FillType != null) {
+            this.FillType = new Long(source.FillType);
+        }
     }
 
 
@@ -64,6 +105,7 @@ public class ApproverOption extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HideOneKeySign", this.HideOneKeySign);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
 
     }
 }

@@ -29,6 +29,9 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel{
 - ENTERPRISE_BUNDLE_INSTANCE 企业型套餐实例 
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
+- STARTER_BUNDLE_INSTANCE 入门型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照
 - BLUEPRINT 自定义镜像
@@ -47,6 +50,9 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel{
 - ENTERPRISE_BUNDLE_INSTANCE 企业型套餐实例 
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
+- STARTER_BUNDLE_INSTANCE 入门型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照
 - BLUEPRINT 自定义镜像
@@ -59,6 +65,9 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel{
 - ENTERPRISE_BUNDLE_INSTANCE 企业型套餐实例 
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
+- STARTER_BUNDLE_INSTANCE 入门型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照
 - BLUEPRINT 自定义镜像
@@ -77,6 +86,9 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel{
 - ENTERPRISE_BUNDLE_INSTANCE 企业型套餐实例 
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
+- STARTER_BUNDLE_INSTANCE 入门型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照
 - BLUEPRINT 自定义镜像
@@ -89,6 +101,9 @@ public class DescribeGeneralResourceQuotasRequest extends AbstractModel{
 - ENTERPRISE_BUNDLE_INSTANCE 企业型套餐实例 
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
+- STARTER_BUNDLE_INSTANCE 入门型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照
 - BLUEPRINT 自定义镜像

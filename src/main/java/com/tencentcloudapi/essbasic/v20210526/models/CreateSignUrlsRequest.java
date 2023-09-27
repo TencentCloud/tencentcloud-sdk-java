@@ -139,6 +139,13 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     private Long [] Hides;
 
     /**
+    * 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+    */
+    @SerializedName("RecipientIds")
+    @Expose
+    private String [] RecipientIds;
+
+    /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
      * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
@@ -438,6 +445,22 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         this.Hides = Hides;
     }
 
+    /**
+     * Get 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致 
+     * @return RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+     */
+    public String [] getRecipientIds() {
+        return this.RecipientIds;
+    }
+
+    /**
+     * Set 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+     * @param RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+     */
+    public void setRecipientIds(String [] RecipientIds) {
+        this.RecipientIds = RecipientIds;
+    }
+
     public CreateSignUrlsRequest() {
     }
 
@@ -494,6 +517,12 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
                 this.Hides[i] = new Long(source.Hides[i]);
             }
         }
+        if (source.RecipientIds != null) {
+            this.RecipientIds = new String[source.RecipientIds.length];
+            for (int i = 0; i < source.RecipientIds.length; i++) {
+                this.RecipientIds[i] = new String(source.RecipientIds[i]);
+            }
+        }
     }
 
 
@@ -515,6 +544,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "Hides.", this.Hides);
+        this.setParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
 
     }
 }

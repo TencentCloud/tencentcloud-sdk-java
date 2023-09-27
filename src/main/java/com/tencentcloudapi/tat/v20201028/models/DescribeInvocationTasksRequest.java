@@ -51,7 +51,7 @@ public class DescribeInvocationTasksRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 是否隐藏输出，取值范围：<br><li>True：隐藏输出 <br><li>False：不隐藏 <br>默认为 True。
+    * 是否隐藏输出，取值范围：<br><li>true：隐藏输出 <br><li>false：不隐藏 <br>默认为 false。
     */
     @SerializedName("HideOutput")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeInvocationTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否隐藏输出，取值范围：<br><li>True：隐藏输出 <br><li>False：不隐藏 <br>默认为 True。 
-     * @return HideOutput 是否隐藏输出，取值范围：<br><li>True：隐藏输出 <br><li>False：不隐藏 <br>默认为 True。
+     * Get 是否隐藏输出，取值范围：<br><li>true：隐藏输出 <br><li>false：不隐藏 <br>默认为 false。 
+     * @return HideOutput 是否隐藏输出，取值范围：<br><li>true：隐藏输出 <br><li>false：不隐藏 <br>默认为 false。
      */
     public Boolean getHideOutput() {
         return this.HideOutput;
     }
 
     /**
-     * Set 是否隐藏输出，取值范围：<br><li>True：隐藏输出 <br><li>False：不隐藏 <br>默认为 True。
-     * @param HideOutput 是否隐藏输出，取值范围：<br><li>True：隐藏输出 <br><li>False：不隐藏 <br>默认为 True。
+     * Set 是否隐藏输出，取值范围：<br><li>true：隐藏输出 <br><li>false：不隐藏 <br>默认为 false。
+     * @param HideOutput 是否隐藏输出，取值范围：<br><li>true：隐藏输出 <br><li>false：不隐藏 <br>默认为 false。
      */
     public void setHideOutput(Boolean HideOutput) {
         this.HideOutput = HideOutput;

@@ -1432,4 +1432,27 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
         return rsp.response;
     }
 
+    /**
+     *在 CNAME 接入模式下，您需要对站点或者域名的归属权进行验证，可以通过本接口触发验证。若站点通过归属权验证后，后续添加域名无需再验证。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+
+在 NS 接入模式下，您也可以通过本接口来查询 NS 服务器是否切换成功，详情参考 [修改 DNS 服务器](https://cloud.tencent.com/document/product/1552/90452)。
+     * @param req VerifyOwnershipRequest
+     * @return VerifyOwnershipResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyOwnershipResponse VerifyOwnership(VerifyOwnershipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyOwnershipResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyOwnershipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VerifyOwnership");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

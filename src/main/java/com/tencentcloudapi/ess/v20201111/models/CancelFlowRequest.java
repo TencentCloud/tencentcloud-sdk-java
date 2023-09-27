@@ -32,14 +32,15 @@ public class CancelFlowRequest extends AbstractModel{
 
     /**
     * 合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 撤销此合同(流程)的原因，最长200个字。
+    * 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
     */
     @SerializedName("CancelMessage")
     @Expose
@@ -75,9 +76,11 @@ public class CancelFlowRequest extends AbstractModel{
 
     /**
      * Get 合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。 
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。 
      * @return FlowId 合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -85,25 +88,27 @@ public class CancelFlowRequest extends AbstractModel{
 
     /**
      * Set 合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      * @param FlowId 合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 撤销此合同(流程)的原因，最长200个字。 
-     * @return CancelMessage 撤销此合同(流程)的原因，最长200个字。
+     * Get 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。 
+     * @return CancelMessage 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
      */
     public String getCancelMessage() {
         return this.CancelMessage;
     }
 
     /**
-     * Set 撤销此合同(流程)的原因，最长200个字。
-     * @param CancelMessage 撤销此合同(流程)的原因，最长200个字。
+     * Set 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+     * @param CancelMessage 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
      */
     public void setCancelMessage(String CancelMessage) {
         this.CancelMessage = CancelMessage;

@@ -43,6 +43,16 @@ public class ApproverOption extends AbstractModel{
     private Boolean NoTransfer;
 
     /**
+    * 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+    */
+    @SerializedName("FillType")
+    @Expose
+    private Long FillType;
+
+    /**
      * Get 签署方是否可以拒签
 
 <ul><li> **false** : ( 默认)可以拒签</li>
@@ -98,6 +108,34 @@ public class ApproverOption extends AbstractModel{
         this.NoTransfer = NoTransfer;
     }
 
+    /**
+     * Get 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul> 
+     * @return FillType 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     */
+    public Long getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     * @param FillType 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     */
+    public void setFillType(Long FillType) {
+        this.FillType = FillType;
+    }
+
     public ApproverOption() {
     }
 
@@ -112,6 +150,9 @@ public class ApproverOption extends AbstractModel{
         if (source.NoTransfer != null) {
             this.NoTransfer = new Boolean(source.NoTransfer);
         }
+        if (source.FillType != null) {
+            this.FillType = new Long(source.FillType);
+        }
     }
 
 
@@ -121,6 +162,7 @@ public class ApproverOption extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NoRefuse", this.NoRefuse);
         this.setParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
 
     }
 }

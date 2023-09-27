@@ -142,6 +142,14 @@ public class FlowApproverDetail extends AbstractModel{
     private String SignId;
 
     /**
+    * 自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproverRoleName")
+    @Expose
+    private String ApproverRoleName;
+
+    /**
      * Get 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApproveMessage 签署时的相关信息
@@ -449,6 +457,26 @@ public class FlowApproverDetail extends AbstractModel{
         this.SignId = SignId;
     }
 
+    /**
+     * Get 自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproverRoleName 自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApproverRoleName() {
+        return this.ApproverRoleName;
+    }
+
+    /**
+     * Set 自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproverRoleName 自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproverRoleName(String ApproverRoleName) {
+        this.ApproverRoleName = ApproverRoleName;
+    }
+
     public FlowApproverDetail() {
     }
 
@@ -499,6 +527,9 @@ public class FlowApproverDetail extends AbstractModel{
         if (source.SignId != null) {
             this.SignId = new String(source.SignId);
         }
+        if (source.ApproverRoleName != null) {
+            this.ApproverRoleName = new String(source.ApproverRoleName);
+        }
     }
 
 
@@ -520,6 +551,7 @@ public class FlowApproverDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "SignId", this.SignId);
+        this.setParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
 
     }
 }
