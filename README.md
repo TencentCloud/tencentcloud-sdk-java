@@ -127,7 +127,7 @@ public class DescribeInstances {
             DescribeInstancesRequest req = new DescribeInstancesRequest();
 
             // 填充请求参数,这里request对象的成员变量即对应接口的入参
-            // 你可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
+            // 您可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
             Filter respFilter = new Filter(); // 创建Filter对象, 以zone的维度来查询cvm实例
             respFilter.setName("zone");
             respFilter.setValues(new String[] { "ap-shanghai-1", "ap-shanghai-2" });
@@ -141,7 +141,7 @@ public class DescribeInstances {
             System.out.println(DescribeInstancesResponse.toJsonString(resp));
 
             // 也可以取出单个值。
-            // 你可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
+            // 您可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
             System.out.println(resp.getTotalCount());
         } catch (TencentCloudSDKException e) {
             System.out.println(e.toString());
@@ -215,7 +215,7 @@ CvmClient client = new CvmClient(cred, "ap-shanghai", clientProfile);
 ```java
 DescribeInstancesRequest req = new DescribeInstancesRequest();
 // 填充请求参数,这里request对象的成员变量即对应接口的入参
-// 你可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
+// 您可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
 Filter respFilter = new Filter(); // 创建Filter对象, 以zone的维度来查询cvm实例
 respFilter.setName("zone");
 respFilter.setValues(new String[] { "ap-shanghai-1", "ap-shanghai-2" });
@@ -236,7 +236,7 @@ DescribeInstancesResponse resp = client.DescribeInstances(req);
 // 输出json格式的字符串回包
 System.out.println(DescribeInstancesResponse.toJsonString(resp));
 // 也可以取出单个值。
-// 你可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
+// 您可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
 System.out.println(resp.getTotalCount());
 } 
 ```
