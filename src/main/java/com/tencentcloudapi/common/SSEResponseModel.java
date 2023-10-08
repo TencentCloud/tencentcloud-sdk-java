@@ -82,6 +82,12 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
                 if (line.isEmpty()) {
                     break;
                 }
+
+                //comment
+                if (line.charAt(0) == ':') {
+                    continue;
+                }
+
                 int colonIdx = line.indexOf(':');
                 String key = line.substring(0, colonIdx);
                 switch (key) {
