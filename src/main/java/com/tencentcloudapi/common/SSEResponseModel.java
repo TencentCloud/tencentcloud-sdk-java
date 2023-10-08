@@ -77,6 +77,7 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
         @Override
         public SSE next() {
             SSE e = new SSE();
+            StringBuilder sb = new StringBuilder();
             while (true) {
                 String line = this.scanner.nextLine();
                 if (line.isEmpty()) {
@@ -98,13 +99,18 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
                         e.Event = line.substring(colonIdx + 1);
                         break;
                     case "data":
-                        e.Data = line.substring(colonIdx + 1);
+                        // The spec allows for multiple data fields per event, concatenated them with "\n".
+                        if (sb.length() > 0) {
+                            sb.append('\n');
+                        }
+                        sb.append(line.substring(colonIdx + 1));
                         break;
                     case "retry":
                         e.Retry = Integer.parseInt(line.substring(colonIdx + 1));
                         break;
                 }
             }
+            e.Data = sb.toString();
             return e;
         }
 
