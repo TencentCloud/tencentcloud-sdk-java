@@ -145,6 +145,14 @@ public class WxGatewayRountItem extends AbstractModel{
     private String GatewayRoutePathMatchType;
 
     /**
+    * 安全网关自定义头部
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomHeader")
+    @Expose
+    private CustomHeader CustomHeader;
+
+    /**
      * Get 安全网关路由名称 
      * @return GatewayRouteName 安全网关路由名称
      */
@@ -440,6 +448,26 @@ public class WxGatewayRountItem extends AbstractModel{
         this.GatewayRoutePathMatchType = GatewayRoutePathMatchType;
     }
 
+    /**
+     * Get 安全网关自定义头部
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomHeader 安全网关自定义头部
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CustomHeader getCustomHeader() {
+        return this.CustomHeader;
+    }
+
+    /**
+     * Set 安全网关自定义头部
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomHeader 安全网关自定义头部
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomHeader(CustomHeader CustomHeader) {
+        this.CustomHeader = CustomHeader;
+    }
+
     public WxGatewayRountItem() {
     }
 
@@ -499,6 +527,9 @@ public class WxGatewayRountItem extends AbstractModel{
         if (source.GatewayRoutePathMatchType != null) {
             this.GatewayRoutePathMatchType = new String(source.GatewayRoutePathMatchType);
         }
+        if (source.CustomHeader != null) {
+            this.CustomHeader = new CustomHeader(source.CustomHeader);
+        }
     }
 
 
@@ -522,6 +553,7 @@ public class WxGatewayRountItem extends AbstractModel{
         this.setParamSimple(map, prefix + "GatewayRoutePort", this.GatewayRoutePort);
         this.setParamSimple(map, prefix + "GatewayRouteEnvId", this.GatewayRouteEnvId);
         this.setParamSimple(map, prefix + "GatewayRoutePathMatchType", this.GatewayRoutePathMatchType);
+        this.setParamObj(map, prefix + "CustomHeader.", this.CustomHeader);
 
     }
 }

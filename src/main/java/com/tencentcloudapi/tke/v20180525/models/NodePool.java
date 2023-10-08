@@ -174,6 +174,54 @@ public class NodePool extends AbstractModel{
     private Boolean DeletionProtection;
 
     /**
+    * 节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtraArgs")
+    @Expose
+    private InstanceExtraArgs ExtraArgs;
+
+    /**
+    * GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GPUArgs")
+    @Expose
+    private GPUArgs GPUArgs;
+
+    /**
+    * dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DockerGraphPath")
+    @Expose
+    private String DockerGraphPath;
+
+    /**
+    * 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
+    * 是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Unschedulable")
+    @Expose
+    private Long Unschedulable;
+
+    /**
+    * 用户自定义脚本,在UserScript前执行
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreStartUserScript")
+    @Expose
+    private String PreStartUserScript;
+
+    /**
      * Get NodePoolId 资源池id 
      * @return NodePoolId NodePoolId 资源池id
      */
@@ -537,6 +585,126 @@ public class NodePool extends AbstractModel{
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get 节点配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtraArgs 节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceExtraArgs getExtraArgs() {
+        return this.ExtraArgs;
+    }
+
+    /**
+     * Set 节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraArgs 节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
+        this.ExtraArgs = ExtraArgs;
+    }
+
+    /**
+     * Get GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GPUArgs getGPUArgs() {
+        return this.GPUArgs;
+    }
+
+    /**
+     * Set GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGPUArgs(GPUArgs GPUArgs) {
+        this.GPUArgs = GPUArgs;
+    }
+
+    /**
+     * Get dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDockerGraphPath() {
+        return this.DockerGraphPath;
+    }
+
+    /**
+     * Set dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDockerGraphPath(String DockerGraphPath) {
+        this.DockerGraphPath = DockerGraphPath;
+    }
+
+    /**
+     * Get 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataDisks 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataDisks 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
+    /**
+     * Get 是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Unschedulable 是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUnschedulable() {
+        return this.Unschedulable;
+    }
+
+    /**
+     * Set 是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Unschedulable 是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnschedulable(Long Unschedulable) {
+        this.Unschedulable = Unschedulable;
+    }
+
+    /**
+     * Get 用户自定义脚本,在UserScript前执行
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreStartUserScript 用户自定义脚本,在UserScript前执行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreStartUserScript() {
+        return this.PreStartUserScript;
+    }
+
+    /**
+     * Set 用户自定义脚本,在UserScript前执行
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreStartUserScript 用户自定义脚本,在UserScript前执行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreStartUserScript(String PreStartUserScript) {
+        this.PreStartUserScript = PreStartUserScript;
+    }
+
     public NodePool() {
     }
 
@@ -614,6 +782,27 @@ public class NodePool extends AbstractModel{
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.ExtraArgs != null) {
+            this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
+        }
+        if (source.GPUArgs != null) {
+            this.GPUArgs = new GPUArgs(source.GPUArgs);
+        }
+        if (source.DockerGraphPath != null) {
+            this.DockerGraphPath = new String(source.DockerGraphPath);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
+        if (source.Unschedulable != null) {
+            this.Unschedulable = new Long(source.Unschedulable);
+        }
+        if (source.PreStartUserScript != null) {
+            this.PreStartUserScript = new String(source.PreStartUserScript);
+        }
     }
 
 
@@ -641,6 +830,12 @@ public class NodePool extends AbstractModel{
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+        this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
+        this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
 
     }
 }

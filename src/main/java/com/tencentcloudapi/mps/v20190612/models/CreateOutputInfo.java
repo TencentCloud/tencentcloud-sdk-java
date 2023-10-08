@@ -87,6 +87,13 @@ public class CreateOutputInfo extends AbstractModel{
     private Long MaxConcurrent;
 
     /**
+    * 绑定的输入安全组 ID。 
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 输出的名称。 
      * @return OutputName 输出的名称。
      */
@@ -234,6 +241,22 @@ public class CreateOutputInfo extends AbstractModel{
         this.MaxConcurrent = MaxConcurrent;
     }
 
+    /**
+     * Get 绑定的输入安全组 ID。  
+     * @return SecurityGroupIds 绑定的输入安全组 ID。 
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 绑定的输入安全组 ID。 
+     * @param SecurityGroupIds 绑定的输入安全组 ID。 
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public CreateOutputInfo() {
     }
 
@@ -272,6 +295,12 @@ public class CreateOutputInfo extends AbstractModel{
         if (source.MaxConcurrent != null) {
             this.MaxConcurrent = new Long(source.MaxConcurrent);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -288,6 +317,7 @@ public class CreateOutputInfo extends AbstractModel{
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

@@ -138,6 +138,14 @@ public class DescribeOutput extends AbstractModel{
     private Long MaxConcurrent;
 
     /**
+    * 绑定的安全组 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 输出Id。 
      * @return OutputId 输出Id。
      */
@@ -417,6 +425,26 @@ public class DescribeOutput extends AbstractModel{
         this.MaxConcurrent = MaxConcurrent;
     }
 
+    /**
+     * Get 绑定的安全组 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupIds 绑定的安全组 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 绑定的安全组 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupIds 绑定的安全组 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public DescribeOutput() {
     }
 
@@ -476,6 +504,12 @@ public class DescribeOutput extends AbstractModel{
         if (source.MaxConcurrent != null) {
             this.MaxConcurrent = new Long(source.MaxConcurrent);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -498,6 +532,7 @@ public class DescribeOutput extends AbstractModel{
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

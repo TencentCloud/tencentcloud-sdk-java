@@ -110,6 +110,13 @@ public class ModifyInput extends AbstractModel{
     private ResilientStreamConf ResilientStream;
 
     /**
+    * 绑定的输入安全组 ID。 仅支持关联一组安全组。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 输入Id。 
      * @return InputId 输入Id。
      */
@@ -313,6 +320,22 @@ public class ModifyInput extends AbstractModel{
         this.ResilientStream = ResilientStream;
     }
 
+    /**
+     * Get 绑定的输入安全组 ID。 仅支持关联一组安全组。 
+     * @return SecurityGroupIds 绑定的输入安全组 ID。 仅支持关联一组安全组。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 绑定的输入安全组 ID。 仅支持关联一组安全组。
+     * @param SecurityGroupIds 绑定的输入安全组 ID。 仅支持关联一组安全组。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public ModifyInput() {
     }
 
@@ -360,6 +383,12 @@ public class ModifyInput extends AbstractModel{
         if (source.ResilientStream != null) {
             this.ResilientStream = new ResilientStreamConf(source.ResilientStream);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -379,6 +408,7 @@ public class ModifyInput extends AbstractModel{
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

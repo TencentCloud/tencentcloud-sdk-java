@@ -96,6 +96,9 @@ public enum WafErrorCode {
     // 回源信息参数错误
      INVALIDPARAMETER_UPSTREAMPARAMETERERR("InvalidParameter.UpstreamParameterErr"),
      
+    // XFF重置参数错误
+     INVALIDPARAMETER_XFFRESETPARAMETERERR("InvalidParameter.XFFResetParameterErr"),
+     
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      

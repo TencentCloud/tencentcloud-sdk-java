@@ -149,6 +149,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private String DockerGraphPath;
 
     /**
+    * base64编码后的自定义脚本
+    */
+    @SerializedName("PreStartUserScript")
+    @Expose
+    private String PreStartUserScript;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -436,6 +443,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.DockerGraphPath = DockerGraphPath;
     }
 
+    /**
+     * Get base64编码后的自定义脚本 
+     * @return PreStartUserScript base64编码后的自定义脚本
+     */
+    public String getPreStartUserScript() {
+        return this.PreStartUserScript;
+    }
+
+    /**
+     * Set base64编码后的自定义脚本
+     * @param PreStartUserScript base64编码后的自定义脚本
+     */
+    public void setPreStartUserScript(String PreStartUserScript) {
+        this.PreStartUserScript = PreStartUserScript;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -507,6 +530,9 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         if (source.DockerGraphPath != null) {
             this.DockerGraphPath = new String(source.DockerGraphPath);
         }
+        if (source.PreStartUserScript != null) {
+            this.PreStartUserScript = new String(source.PreStartUserScript);
+        }
     }
 
 
@@ -532,6 +558,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
+        this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
 
     }
 }

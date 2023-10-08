@@ -1510,7 +1510,6 @@ public class ClsClient extends AbstractClient{
 
     /**
      *本接口用于修改索引配置，该接口除受默认接口请求频率限制外，针对单个日志主题，并发数不能超过1，即同一时间同一个日志主题只能有一个正在执行的索引配置修改操作。
-
      * @param req ModifyIndexRequest
      * @return ModifyIndexResponse
      * @throws TencentCloudSDKException

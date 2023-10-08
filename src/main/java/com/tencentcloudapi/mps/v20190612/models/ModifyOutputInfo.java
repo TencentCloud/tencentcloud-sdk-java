@@ -87,6 +87,13 @@ public class ModifyOutputInfo extends AbstractModel{
     private Long MaxConcurrent;
 
     /**
+    * 绑定的安全组 ID。 仅支持关联一组安全组。	
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 需要修改的Output的Id。 
      * @return OutputId 需要修改的Output的Id。
      */
@@ -234,6 +241,22 @@ public class ModifyOutputInfo extends AbstractModel{
         this.MaxConcurrent = MaxConcurrent;
     }
 
+    /**
+     * Get 绑定的安全组 ID。 仅支持关联一组安全组。	 
+     * @return SecurityGroupIds 绑定的安全组 ID。 仅支持关联一组安全组。	
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 绑定的安全组 ID。 仅支持关联一组安全组。	
+     * @param SecurityGroupIds 绑定的安全组 ID。 仅支持关联一组安全组。	
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public ModifyOutputInfo() {
     }
 
@@ -272,6 +295,12 @@ public class ModifyOutputInfo extends AbstractModel{
         if (source.MaxConcurrent != null) {
             this.MaxConcurrent = new Long(source.MaxConcurrent);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -288,6 +317,7 @@ public class ModifyOutputInfo extends AbstractModel{
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

@@ -762,7 +762,6 @@ public class IaiClient extends AbstractClient{
 
 >     
 - 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
-
      * @param req SearchFacesReturnsByGroupRequest
      * @return SearchFacesReturnsByGroupResponse
      * @throws TencentCloudSDKException

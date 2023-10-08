@@ -753,6 +753,27 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *预留券实例的购买会预先扣除本次实例购买所需金额，在调用本接口前请确保账户余额充足。
+     * @param req CreateReservedInstancesRequest
+     * @return CreateReservedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReservedInstancesResponse CreateReservedInstances(CreateReservedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReservedInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReservedInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReservedInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建边缘计算集群
      * @param req CreateTKEEdgeClusterRequest
      * @return CreateTKEEdgeClusterResponse
@@ -1333,6 +1354,27 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusTemplateSyncResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeletePrometheusTemplateSync");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *预留券实例如符合退还规则，可通过本接口主动退还。
+     * @param req DeleteReservedInstancesRequest
+     * @return DeleteReservedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReservedInstancesResponse DeleteReservedInstances(DeleteReservedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReservedInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReservedInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReservedInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2412,6 +2454,69 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询各个规格的 Pod 的抵扣率
+     * @param req DescribePodDeductionRateRequest
+     * @return DescribePodDeductionRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePodDeductionRateResponse DescribePodDeductionRate(DescribePodDeductionRateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePodDeductionRateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePodDeductionRateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePodDeductionRate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询可以用预留券抵扣的 Pod 信息。
+     * @param req DescribePodsBySpecRequest
+     * @return DescribePodsBySpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePodsBySpecResponse DescribePodsBySpec(DescribePodsBySpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePodsBySpecResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePodsBySpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePodsBySpec");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *包括 Pod 资源统计和绑定的预留券资源统计。
+     * @param req DescribePostNodeResourcesRequest
+     * @return DescribePostNodeResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePostNodeResourcesResponse DescribePostNodeResources(DescribePostNodeResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePostNodeResourcesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePostNodeResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePostNodeResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取关联目标集群的实例列表
      * @param req DescribePrometheusAgentInstancesRequest
      * @return DescribePrometheusAgentInstancesResponse
@@ -2811,6 +2916,27 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *预留实例用量查询
+     * @param req DescribeRIUtilizationDetailRequest
+     * @return DescribeRIUtilizationDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRIUtilizationDetailResponse DescribeRIUtilizationDetail(DescribeRIUtilizationDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRIUtilizationDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRIUtilizationDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRIUtilizationDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取容器服务支持的所有地域
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -2824,6 +2950,27 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询预留实例列表
+     * @param req DescribeReservedInstancesRequest
+     * @return DescribeReservedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesResponse DescribeReservedInstances(DescribeReservedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReservedInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3840,6 +3987,27 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *修改预留券的抵扣范围，抵扣范围取值：Region、Zone 和 Node。
+     * @param req ModifyReservedInstanceScopeRequest
+     * @return ModifyReservedInstanceScopeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReservedInstanceScopeResponse ModifyReservedInstanceScope(ModifyReservedInstanceScopeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyReservedInstanceScopeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyReservedInstanceScopeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyReservedInstanceScope");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *移出节点池节点，但保留在集群内
      * @param req RemoveNodeFromNodePoolRequest
      * @return RemoveNodeFromNodePoolResponse
@@ -3853,6 +4021,27 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveNodeFromNodePoolResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveNodeFromNodePool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *续费时请确保账户余额充足。
+     * @param req RenewReservedInstancesRequest
+     * @return RenewReservedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewReservedInstancesResponse RenewReservedInstances(RenewReservedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewReservedInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewReservedInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RenewReservedInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

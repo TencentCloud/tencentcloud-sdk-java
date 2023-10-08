@@ -153,6 +153,14 @@ Saas 域名扩展包  sv_wsm_waf_domain
     private String InstanceId;
 
     /**
+    * 资源id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get 时间间隔
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeSpan 时间间隔
@@ -540,6 +548,26 @@ Saas 域名扩展包  sv_wsm_waf_domain
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 资源id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceId 资源id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceId 资源id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public GoodsDetailNew() {
     }
 
@@ -587,6 +615,9 @@ Saas 域名扩展包  sv_wsm_waf_domain
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -605,6 +636,7 @@ Saas 域名扩展包  sv_wsm_waf_domain
         this.setParamArraySimple(map, prefix + "LabelCounts.", this.LabelCounts);
         this.setParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

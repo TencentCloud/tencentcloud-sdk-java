@@ -24,6 +24,7 @@ public class CUDNN extends AbstractModel{
 
     /**
     * cuDNN的版本
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -31,6 +32,7 @@ public class CUDNN extends AbstractModel{
 
     /**
     * cuDNN的名字
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -38,6 +40,7 @@ public class CUDNN extends AbstractModel{
 
     /**
     * cuDNN的Doc名字
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocName")
     @Expose
@@ -45,14 +48,17 @@ public class CUDNN extends AbstractModel{
 
     /**
     * cuDNN的Dev名字
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevName")
     @Expose
     private String DevName;
 
     /**
-     * Get cuDNN的版本 
+     * Get cuDNN的版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Version cuDNN的版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -60,15 +66,19 @@ public class CUDNN extends AbstractModel{
 
     /**
      * Set cuDNN的版本
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Version cuDNN的版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get cuDNN的名字 
+     * Get cuDNN的名字
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name cuDNN的名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -76,15 +86,19 @@ public class CUDNN extends AbstractModel{
 
     /**
      * Set cuDNN的名字
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Name cuDNN的名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get cuDNN的Doc名字 
+     * Get cuDNN的Doc名字
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocName cuDNN的Doc名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocName() {
         return this.DocName;
@@ -92,15 +106,19 @@ public class CUDNN extends AbstractModel{
 
     /**
      * Set cuDNN的Doc名字
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DocName cuDNN的Doc名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocName(String DocName) {
         this.DocName = DocName;
     }
 
     /**
-     * Get cuDNN的Dev名字 
+     * Get cuDNN的Dev名字
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DevName cuDNN的Dev名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDevName() {
         return this.DevName;
@@ -108,7 +126,9 @@ public class CUDNN extends AbstractModel{
 
     /**
      * Set cuDNN的Dev名字
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DevName cuDNN的Dev名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevName(String DevName) {
         this.DevName = DevName;

@@ -34,14 +34,7 @@ public class RuleCondition extends AbstractModel{
     private String Operator;
 
     /**
-    * 匹配类型，取值有：
-<li> filename：文件名； </li>
-<li> extension：文件后缀； </li>
-<li> host：HOST； </li>
-<li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li>
-<li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li>
-<li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li>
-<li> request_header：HTTP请求头部。 </li>
+    * 匹配类型，取值有： <li> filename：文件名； </li> <li> extension：文件后缀； </li> <li> host：HOST； </li> <li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li> <li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li> <li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li> <li> request_header：HTTP请求头部。 </li>
     */
     @SerializedName("Target")
     @Expose
@@ -120,44 +113,16 @@ public class RuleCondition extends AbstractModel{
     }
 
     /**
-     * Get 匹配类型，取值有：
-<li> filename：文件名； </li>
-<li> extension：文件后缀； </li>
-<li> host：HOST； </li>
-<li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li>
-<li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li>
-<li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li>
-<li> request_header：HTTP请求头部。 </li> 
-     * @return Target 匹配类型，取值有：
-<li> filename：文件名； </li>
-<li> extension：文件后缀； </li>
-<li> host：HOST； </li>
-<li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li>
-<li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li>
-<li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li>
-<li> request_header：HTTP请求头部。 </li>
+     * Get 匹配类型，取值有： <li> filename：文件名； </li> <li> extension：文件后缀； </li> <li> host：HOST； </li> <li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li> <li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li> <li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li> <li> request_header：HTTP请求头部。 </li> 
+     * @return Target 匹配类型，取值有： <li> filename：文件名； </li> <li> extension：文件后缀； </li> <li> host：HOST； </li> <li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li> <li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li> <li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li> <li> request_header：HTTP请求头部。 </li>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set 匹配类型，取值有：
-<li> filename：文件名； </li>
-<li> extension：文件后缀； </li>
-<li> host：HOST； </li>
-<li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li>
-<li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li>
-<li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li>
-<li> request_header：HTTP请求头部。 </li>
-     * @param Target 匹配类型，取值有：
-<li> filename：文件名； </li>
-<li> extension：文件后缀； </li>
-<li> host：HOST； </li>
-<li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li>
-<li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li>
-<li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li>
-<li> request_header：HTTP请求头部。 </li>
+     * Set 匹配类型，取值有： <li> filename：文件名； </li> <li> extension：文件后缀； </li> <li> host：HOST； </li> <li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li> <li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li> <li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li> <li> request_header：HTTP请求头部。 </li>
+     * @param Target 匹配类型，取值有： <li> filename：文件名； </li> <li> extension：文件后缀； </li> <li> host：HOST； </li> <li> full_url：URL Full，当前站点下完整 URL 路径，必须包含 HTTP 协议，Host 和 路径； </li> <li> url：URL Path，当前站点下 URL 路径的请求； </li><li>client_country：客户端国家/地区；</li> <li> query_string：查询字符串，当前站点下请求URL的查询字符串； </li> <li> request_header：HTTP请求头部。 </li>
      */
     public void setTarget(String Target) {
         this.Target = Target;
@@ -260,7 +225,9 @@ public class RuleCondition extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IgnoreNameCase 是否忽略参数名称的大小写，默认值为 false。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getIgnoreNameCase() {
         return this.IgnoreNameCase;
     }
@@ -270,7 +237,9 @@ public class RuleCondition extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreNameCase 是否忽略参数名称的大小写，默认值为 false。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setIgnoreNameCase(Boolean IgnoreNameCase) {
         this.IgnoreNameCase = IgnoreNameCase;
     }

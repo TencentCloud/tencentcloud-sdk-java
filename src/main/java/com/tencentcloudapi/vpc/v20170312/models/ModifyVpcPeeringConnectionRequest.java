@@ -22,6 +22,98 @@ import java.util.HashMap;
 
 public class ModifyVpcPeeringConnectionRequest extends AbstractModel{
 
+    /**
+    * 对等连接ID。
+    */
+    @SerializedName("PeeringConnectionId")
+    @Expose
+    private String PeeringConnectionId;
+
+    /**
+    * 对等连接名称。
+    */
+    @SerializedName("PeeringConnectionName")
+    @Expose
+    private String PeeringConnectionName;
+
+    /**
+    * 带宽上限，单位Mbps。
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
+     * Get 对等连接ID。 
+     * @return PeeringConnectionId 对等连接ID。
+     */
+    public String getPeeringConnectionId() {
+        return this.PeeringConnectionId;
+    }
+
+    /**
+     * Set 对等连接ID。
+     * @param PeeringConnectionId 对等连接ID。
+     */
+    public void setPeeringConnectionId(String PeeringConnectionId) {
+        this.PeeringConnectionId = PeeringConnectionId;
+    }
+
+    /**
+     * Get 对等连接名称。 
+     * @return PeeringConnectionName 对等连接名称。
+     */
+    public String getPeeringConnectionName() {
+        return this.PeeringConnectionName;
+    }
+
+    /**
+     * Set 对等连接名称。
+     * @param PeeringConnectionName 对等连接名称。
+     */
+    public void setPeeringConnectionName(String PeeringConnectionName) {
+        this.PeeringConnectionName = PeeringConnectionName;
+    }
+
+    /**
+     * Get 带宽上限，单位Mbps。 
+     * @return Bandwidth 带宽上限，单位Mbps。
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 带宽上限，单位Mbps。
+     * @param Bandwidth 带宽上限，单位Mbps。
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。 
+     * @return ChargeType 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
+     * @param ChargeType 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
     public ModifyVpcPeeringConnectionRequest() {
     }
 
@@ -30,6 +122,18 @@ public class ModifyVpcPeeringConnectionRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyVpcPeeringConnectionRequest(ModifyVpcPeeringConnectionRequest source) {
+        if (source.PeeringConnectionId != null) {
+            this.PeeringConnectionId = new String(source.PeeringConnectionId);
+        }
+        if (source.PeeringConnectionName != null) {
+            this.PeeringConnectionName = new String(source.PeeringConnectionName);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
     }
 
 
@@ -37,6 +141,10 @@ public class ModifyVpcPeeringConnectionRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PeeringConnectionId", this.PeeringConnectionId);
+        this.setParamSimple(map, prefix + "PeeringConnectionName", this.PeeringConnectionName);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
 
     }
 }

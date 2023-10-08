@@ -649,6 +649,27 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateOrganizationInfoChangeUrl）用于创建企业信息变更链接，支持创建企业超管变更链接或企业基础信息变更链接，通过入参ChangeType指定。
+     * @param req CreateOrganizationInfoChangeUrlRequest
+     * @return CreateOrganizationInfoChangeUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationInfoChangeUrlResponse CreateOrganizationInfoChangeUrl(CreateOrganizationInfoChangeUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOrganizationInfoChangeUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOrganizationInfoChangeUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOrganizationInfoChangeUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取个人用户认证证书图片下载URL
 
 个人用户认证证书图片样式如下图

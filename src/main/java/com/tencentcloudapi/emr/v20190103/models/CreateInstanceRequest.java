@@ -215,8 +215,8 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
     * hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
     */
     @SerializedName("MetaType")
@@ -773,12 +773,12 @@ Hadoop-Hbase
 
     /**
      * Get hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li> 
      * @return MetaType hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      */
     public String getMetaType() {
@@ -787,12 +787,12 @@ Hadoop-Hbase
 
     /**
      * Set hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      * @param MetaType hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      */
     public void setMetaType(String MetaType) {

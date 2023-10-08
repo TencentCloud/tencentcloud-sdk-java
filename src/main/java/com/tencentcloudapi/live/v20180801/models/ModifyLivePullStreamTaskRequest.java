@@ -136,6 +136,14 @@ ResetTaskConfig：任务更新回调。
     private Long OffsetTime;
 
     /**
+    * 目标 Url。
+换目标地址，会断流重推到新地址。
+    */
+    @SerializedName("ToUrl")
+    @Expose
+    private String ToUrl;
+
+    /**
     * 任务备注。
     */
     @SerializedName("Comment")
@@ -498,6 +506,26 @@ ResetTaskConfig：任务更新回调。
     }
 
     /**
+     * Get 目标 Url。
+换目标地址，会断流重推到新地址。 
+     * @return ToUrl 目标 Url。
+换目标地址，会断流重推到新地址。
+     */
+    public String getToUrl() {
+        return this.ToUrl;
+    }
+
+    /**
+     * Set 目标 Url。
+换目标地址，会断流重推到新地址。
+     * @param ToUrl 目标 Url。
+换目标地址，会断流重推到新地址。
+     */
+    public void setToUrl(String ToUrl) {
+        this.ToUrl = ToUrl;
+    }
+
+    /**
      * Get 任务备注。 
      * @return Comment 任务备注。
      */
@@ -703,6 +731,9 @@ PullVodPushLive -点播。
         if (source.OffsetTime != null) {
             this.OffsetTime = new Long(source.OffsetTime);
         }
+        if (source.ToUrl != null) {
+            this.ToUrl = new String(source.ToUrl);
+        }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
@@ -740,6 +771,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
         this.setParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
+        this.setParamSimple(map, prefix + "ToUrl", this.ToUrl);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);

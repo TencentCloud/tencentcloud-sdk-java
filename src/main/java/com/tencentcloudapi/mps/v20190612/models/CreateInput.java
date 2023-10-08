@@ -100,6 +100,13 @@ public class CreateInput extends AbstractModel{
     private ResilientStreamConf ResilientStream;
 
     /**
+    * 绑定的输入安全组 ID。 
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get 输入名称，可填大小写、数字和下划线，长度为[1, 32]。 
      * @return InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
      */
@@ -275,6 +282,22 @@ public class CreateInput extends AbstractModel{
         this.ResilientStream = ResilientStream;
     }
 
+    /**
+     * Get 绑定的输入安全组 ID。  
+     * @return SecurityGroupIds 绑定的输入安全组 ID。 
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 绑定的输入安全组 ID。 
+     * @param SecurityGroupIds 绑定的输入安全组 ID。 
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public CreateInput() {
     }
 
@@ -319,6 +342,12 @@ public class CreateInput extends AbstractModel{
         if (source.ResilientStream != null) {
             this.ResilientStream = new ResilientStreamConf(source.ResilientStream);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -337,6 +366,7 @@ public class CreateInput extends AbstractModel{
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

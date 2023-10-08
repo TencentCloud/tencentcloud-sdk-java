@@ -24,6 +24,7 @@ public class OutputSRTSourceAddressResp extends AbstractModel{
 
     /**
     * 监听IP。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -31,14 +32,17 @@ public class OutputSRTSourceAddressResp extends AbstractModel{
 
     /**
     * 监听端口。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get 监听IP。 
+     * Get 监听IP。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ip 监听IP。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -46,15 +50,19 @@ public class OutputSRTSourceAddressResp extends AbstractModel{
 
     /**
      * Set 监听IP。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 监听IP。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 监听端口。 
+     * Get 监听端口。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Port 监听端口。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -62,7 +70,9 @@ public class OutputSRTSourceAddressResp extends AbstractModel{
 
     /**
      * Set 监听端口。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 监听端口。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;

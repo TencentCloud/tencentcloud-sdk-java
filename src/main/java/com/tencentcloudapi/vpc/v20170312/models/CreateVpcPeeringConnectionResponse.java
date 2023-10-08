@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateVpcPeeringConnectionResponse extends AbstractModel{
 
     /**
+    * 对等连接ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PeeringConnectionId")
+    @Expose
+    private String PeeringConnectionId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 对等连接ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PeeringConnectionId 对等连接ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPeeringConnectionId() {
+        return this.PeeringConnectionId;
+    }
+
+    /**
+     * Set 对等连接ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PeeringConnectionId 对等连接ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPeeringConnectionId(String PeeringConnectionId) {
+        this.PeeringConnectionId = PeeringConnectionId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,9 @@ public class CreateVpcPeeringConnectionResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateVpcPeeringConnectionResponse(CreateVpcPeeringConnectionResponse source) {
+        if (source.PeeringConnectionId != null) {
+            this.PeeringConnectionId = new String(source.PeeringConnectionId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class CreateVpcPeeringConnectionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PeeringConnectionId", this.PeeringConnectionId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
