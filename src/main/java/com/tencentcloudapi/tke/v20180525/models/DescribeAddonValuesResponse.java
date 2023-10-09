@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAddonValuesResponse extends AbstractModel{
 
     /**
-    * 参数列表，如果addon已安装，会使用已设置的的参数做渲染，是一个json格式的字符串
+    * 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
     */
     @SerializedName("Values")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeAddonValuesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 参数列表，如果addon已安装，会使用已设置的的参数做渲染，是一个json格式的字符串 
-     * @return Values 参数列表，如果addon已安装，会使用已设置的的参数做渲染，是一个json格式的字符串
+     * Get 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串 
+     * @return Values 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
      */
     public String getValues() {
         return this.Values;
     }
 
     /**
-     * Set 参数列表，如果addon已安装，会使用已设置的的参数做渲染，是一个json格式的字符串
-     * @param Values 参数列表，如果addon已安装，会使用已设置的的参数做渲染，是一个json格式的字符串
+     * Set 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
+     * @param Values 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
      */
     public void setValues(String Values) {
         this.Values = Values;

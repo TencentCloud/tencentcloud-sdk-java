@@ -51,6 +51,14 @@ public class CLS extends AbstractModel{
     private Boolean NeedDelete;
 
     /**
+    * cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 是否启用 
      * @return Enable 是否启用
      */
@@ -114,6 +122,26 @@ public class CLS extends AbstractModel{
         this.NeedDelete = NeedDelete;
     }
 
+    /**
+     * Get cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
     public CLS() {
     }
 
@@ -134,6 +162,9 @@ public class CLS extends AbstractModel{
         if (source.NeedDelete != null) {
             this.NeedDelete = new Boolean(source.NeedDelete);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class CLS extends AbstractModel{
         this.setParamSimple(map, prefix + "LogSet", this.LogSet);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "NeedDelete", this.NeedDelete);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

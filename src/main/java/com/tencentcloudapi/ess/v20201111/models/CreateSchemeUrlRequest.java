@@ -84,7 +84,8 @@ public class CreateSchemeUrlRequest extends AbstractModel{
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
     */
     @SerializedName("PathType")
     @Expose
@@ -122,7 +123,9 @@ public class CreateSchemeUrlRequest extends AbstractModel{
     private Long [] Hides;
 
     /**
-    * 签署节点ID，用于生成动态签署人链接完成领取
+    * 签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。`
     */
     @SerializedName("RecipientId")
     @Expose
@@ -277,12 +280,14 @@ public class CreateSchemeUrlRequest extends AbstractModel{
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul> 
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul> 
      * @return PathType 要跳转到的页面类型 
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
      */
     public Long getPathType() {
         return this.PathType;
@@ -293,12 +298,14 @@ public class CreateSchemeUrlRequest extends AbstractModel{
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
      * @param PathType 要跳转到的页面类型 
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
      */
     public void setPathType(Long PathType) {
         this.PathType = PathType;
@@ -393,16 +400,24 @@ public class CreateSchemeUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 签署节点ID，用于生成动态签署人链接完成领取 
-     * @return RecipientId 签署节点ID，用于生成动态签署人链接完成领取
+     * Get 签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。` 
+     * @return RecipientId 签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。`
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 签署节点ID，用于生成动态签署人链接完成领取
-     * @param RecipientId 签署节点ID，用于生成动态签署人链接完成领取
+     * Set 签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。`
+     * @param RecipientId 签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。`
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;

@@ -73,6 +73,30 @@ public class RocketMQTopic extends AbstractModel{
     private Long UpdateTime;
 
     /**
+    * 最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastUpdateTime")
+    @Expose
+    private Long LastUpdateTime;
+
+    /**
+    * 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubscriptionCount")
+    @Expose
+    private Long SubscriptionCount;
+
+    /**
+    * 订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubscriptionData")
+    @Expose
+    private RocketMQSubscription [] SubscriptionData;
+
+    /**
      * Get 主题名称 
      * @return Name 主题名称
      */
@@ -188,6 +212,66 @@ public class RocketMQTopic extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastUpdateTime 最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastUpdateTime() {
+        return this.LastUpdateTime;
+    }
+
+    /**
+     * Set 最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastUpdateTime 最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastUpdateTime(Long LastUpdateTime) {
+        this.LastUpdateTime = LastUpdateTime;
+    }
+
+    /**
+     * Get 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscriptionCount 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubscriptionCount() {
+        return this.SubscriptionCount;
+    }
+
+    /**
+     * Set 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscriptionCount 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscriptionCount(Long SubscriptionCount) {
+        this.SubscriptionCount = SubscriptionCount;
+    }
+
+    /**
+     * Get 订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscriptionData 订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RocketMQSubscription [] getSubscriptionData() {
+        return this.SubscriptionData;
+    }
+
+    /**
+     * Set 订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscriptionData 订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscriptionData(RocketMQSubscription [] SubscriptionData) {
+        this.SubscriptionData = SubscriptionData;
+    }
+
     public RocketMQTopic() {
     }
 
@@ -217,6 +301,18 @@ public class RocketMQTopic extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new Long(source.LastUpdateTime);
+        }
+        if (source.SubscriptionCount != null) {
+            this.SubscriptionCount = new Long(source.SubscriptionCount);
+        }
+        if (source.SubscriptionData != null) {
+            this.SubscriptionData = new RocketMQSubscription[source.SubscriptionData.length];
+            for (int i = 0; i < source.SubscriptionData.length; i++) {
+                this.SubscriptionData[i] = new RocketMQSubscription(source.SubscriptionData[i]);
+            }
+        }
     }
 
 
@@ -231,6 +327,9 @@ public class RocketMQTopic extends AbstractModel{
         this.setParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
+        this.setParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
+        this.setParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
 
     }
 }

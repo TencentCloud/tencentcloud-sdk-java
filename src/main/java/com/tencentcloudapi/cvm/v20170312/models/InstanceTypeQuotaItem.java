@@ -179,6 +179,14 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     private String Frequency;
 
     /**
+    * 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusCategory")
+    @Expose
+    private String StatusCategory;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -538,6 +546,26 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         this.Frequency = Frequency;
     }
 
+    /**
+     * Get 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusCategory 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatusCategory() {
+        return this.StatusCategory;
+    }
+
+    /**
+     * Set 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusCategory 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusCategory(String StatusCategory) {
+        this.StatusCategory = StatusCategory;
+    }
+
     public InstanceTypeQuotaItem() {
     }
 
@@ -615,6 +643,9 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         if (source.Frequency != null) {
             this.Frequency = new String(source.Frequency);
         }
+        if (source.StatusCategory != null) {
+            this.StatusCategory = new String(source.StatusCategory);
+        }
     }
 
 
@@ -644,6 +675,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "GpuCount", this.GpuCount);
         this.setParamSimple(map, prefix + "Frequency", this.Frequency);
+        this.setParamSimple(map, prefix + "StatusCategory", this.StatusCategory);
 
     }
 }

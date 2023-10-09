@@ -58,6 +58,14 @@ public class PrometheusZoneItem extends AbstractModel{
     private String ZoneName;
 
     /**
+    * 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneResourceState")
+    @Expose
+    private Long ZoneResourceState;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -137,6 +145,26 @@ public class PrometheusZoneItem extends AbstractModel{
         this.ZoneName = ZoneName;
     }
 
+    /**
+     * Get 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneResourceState 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getZoneResourceState() {
+        return this.ZoneResourceState;
+    }
+
+    /**
+     * Set 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneResourceState 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneResourceState(Long ZoneResourceState) {
+        this.ZoneResourceState = ZoneResourceState;
+    }
+
     public PrometheusZoneItem() {
     }
 
@@ -160,6 +188,9 @@ public class PrometheusZoneItem extends AbstractModel{
         if (source.ZoneName != null) {
             this.ZoneName = new String(source.ZoneName);
         }
+        if (source.ZoneResourceState != null) {
+            this.ZoneResourceState = new Long(source.ZoneResourceState);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class PrometheusZoneItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneState", this.ZoneState);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "ZoneResourceState", this.ZoneResourceState);
 
     }
 }

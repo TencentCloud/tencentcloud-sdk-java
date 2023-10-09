@@ -291,6 +291,69 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CheckDataEngineConfigPairsValidity）用于检查引擎用户自定义参数的有效性
+     * @param req CheckDataEngineConfigPairsValidityRequest
+     * @return CheckDataEngineConfigPairsValidityResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckDataEngineConfigPairsValidityResponse CheckDataEngineConfigPairsValidity(CheckDataEngineConfigPairsValidityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckDataEngineConfigPairsValidityResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckDataEngineConfigPairsValidityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckDataEngineConfigPairsValidity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CheckDataEngineImageCanBeRollback）用于查看集群是否能回滚。
+     * @param req CheckDataEngineImageCanBeRollbackRequest
+     * @return CheckDataEngineImageCanBeRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckDataEngineImageCanBeRollbackResponse CheckDataEngineImageCanBeRollback(CheckDataEngineImageCanBeRollbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckDataEngineImageCanBeRollbackResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckDataEngineImageCanBeRollbackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckDataEngineImageCanBeRollback");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CheckDataEngineImageCanBeUpgrade）用于查看集群镜像是否能够升级。
+     * @param req CheckDataEngineImageCanBeUpgradeRequest
+     * @return CheckDataEngineImageCanBeUpgradeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckDataEngineImageCanBeUpgradeResponse CheckDataEngineImageCanBeUpgrade(CheckDataEngineImageCanBeUpgradeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckDataEngineImageCanBeUpgradeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckDataEngineImageCanBeUpgradeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckDataEngineImageCanBeUpgrade");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *元数据锁检查
      * @param req CheckLockMetaDataRequest
      * @return CheckLockMetaDataResponse
@@ -774,6 +837,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *删除数据引擎
+     * @param req DeleteDataEngineRequest
+     * @return DeleteDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataEngineResponse DeleteDataEngine(DeleteDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDataEngineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteNotebookSession）用于删除交互式session（notebook）
      * @param req DeleteNotebookSessionRequest
      * @return DeleteNotebookSessionResponse
@@ -976,6 +1060,69 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDMSTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDMSTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口根据名称用于获取数据引擎详细信息
+     * @param req DescribeDataEngineRequest
+     * @return DescribeDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEngineResponse DescribeDataEngine(DescribeDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataEngineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDataEngineImageVersions）用于获取独享集群大版本镜像列表。
+     * @param req DescribeDataEngineImageVersionsRequest
+     * @return DescribeDataEngineImageVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEngineImageVersionsResponse DescribeDataEngineImageVersions(DescribeDataEngineImageVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataEngineImageVersionsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataEngineImageVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataEngineImageVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDataEnginePythonSparkImages）用于获取PYSPARK镜像列表
+     * @param req DescribeDataEnginePythonSparkImagesRequest
+     * @return DescribeDataEnginePythonSparkImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEnginePythonSparkImagesResponse DescribeDataEnginePythonSparkImages(DescribeDataEnginePythonSparkImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataEnginePythonSparkImagesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataEnginePythonSparkImagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataEnginePythonSparkImages");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1509,6 +1656,48 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询用户自定义引擎参数
+     * @param req DescribeUserDataEngineConfigRequest
+     * @return DescribeUserDataEngineConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserDataEngineConfigResponse DescribeUserDataEngineConfig(DescribeUserDataEngineConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserDataEngineConfigResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserDataEngineConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserDataEngineConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户详细信息
+     * @param req DescribeUserInfoRequest
+     * @return DescribeUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *列举用户角色信息
      * @param req DescribeUserRolesRequest
      * @return DescribeUserRolesResponse
@@ -1522,6 +1711,27 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUserRolesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUserRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户类型
+     * @param req DescribeUserTypeRequest
+     * @return DescribeUserTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserTypeResponse DescribeUserType(DescribeUserTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserTypeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserType");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1564,6 +1774,27 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeViewsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeViews");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取工作组详细信息
+     * @param req DescribeWorkGroupInfoRequest
+     * @return DescribeWorkGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkGroupInfoResponse DescribeWorkGroupInfo(DescribeWorkGroupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkGroupInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkGroupInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkGroupInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1761,6 +1992,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *修改引擎描述信息
+     * @param req ModifyDataEngineDescriptionRequest
+     * @return ModifyDataEngineDescriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataEngineDescriptionResponse ModifyDataEngineDescription(ModifyDataEngineDescriptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDataEngineDescriptionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDataEngineDescriptionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDataEngineDescription");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改数据治理事件阈值
      * @param req ModifyGovernEventRuleRequest
      * @return ModifyGovernEventRuleResponse
@@ -1845,6 +2097,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *修改用户类型。只有管理员用户能够调用该接口进行操作
+     * @param req ModifyUserTypeRequest
+     * @return ModifyUserTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserTypeResponse ModifyUserType(ModifyUserTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserTypeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改工作组信息
      * @param req ModifyWorkGroupRequest
      * @return ModifyWorkGroupResponse
@@ -1887,6 +2160,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *续费数据引擎
+     * @param req RenewDataEngineRequest
+     * @return RenewDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewDataEngineResponse RenewDataEngine(RenewDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewDataEngineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RenewDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *上报元数据心跳
      * @param req ReportHeartbeatMetaDataRequest
      * @return ReportHeartbeatMetaDataResponse
@@ -1900,6 +2194,48 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReportHeartbeatMetaDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReportHeartbeatMetaData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重启引擎
+     * @param req RestartDataEngineRequest
+     * @return RestartDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartDataEngineResponse RestartDataEngine(RestartDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartDataEngineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *回滚引擎镜像版本
+     * @param req RollbackDataEngineImageRequest
+     * @return RollbackDataEngineImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollbackDataEngineImageResponse RollbackDataEngineImage(RollbackDataEngineImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RollbackDataEngineImageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RollbackDataEngineImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RollbackDataEngineImage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1950,6 +2286,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *切换引擎镜像版本
+     * @param req SwitchDataEngineImageRequest
+     * @return SwitchDataEngineImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDataEngineImageResponse SwitchDataEngineImage(SwitchDataEngineImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDataEngineImageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDataEngineImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDataEngineImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解绑用户上的用户组
      * @param req UnbindWorkGroupsFromUserRequest
      * @return UnbindWorkGroupsFromUserResponse
@@ -1992,6 +2349,48 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口用于更新数据引擎配置
+     * @param req UpdateDataEngineRequest
+     * @return UpdateDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataEngineResponse UpdateDataEngine(UpdateDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDataEngineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用户某种操作，触发引擎配置修改
+     * @param req UpdateDataEngineConfigRequest
+     * @return UpdateDataEngineConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataEngineConfigResponse UpdateDataEngineConfig(UpdateDataEngineConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDataEngineConfigResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDataEngineConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDataEngineConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于更新行过滤规则。注意只能更新过滤规则，不能更新规格对象catalog，database和table。
      * @param req UpdateRowFilterRequest
      * @return UpdateRowFilterResponse
@@ -2005,6 +2404,48 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateRowFilterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateRowFilter");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户引擎自定义配置
+     * @param req UpdateUserDataEngineConfigRequest
+     * @return UpdateUserDataEngineConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserDataEngineConfigResponse UpdateUserDataEngineConfig(UpdateUserDataEngineConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateUserDataEngineConfigResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateUserDataEngineConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateUserDataEngineConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *升级引擎镜像
+     * @param req UpgradeDataEngineImageRequest
+     * @return UpgradeDataEngineImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDataEngineImageResponse UpgradeDataEngineImage(UpgradeDataEngineImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDataEngineImageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDataEngineImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeDataEngineImage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

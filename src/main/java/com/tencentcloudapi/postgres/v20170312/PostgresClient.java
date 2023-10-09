@@ -1916,4 +1916,25 @@ public class PostgresClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *本接口（UpgradeDBInstanceMajorVersion）用于升级实例内核大版本，例如从PostgreSQL 12升级到PostgreSQL 15。
+     * @param req UpgradeDBInstanceMajorVersionRequest
+     * @return UpgradeDBInstanceMajorVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceMajorVersionResponse UpgradeDBInstanceMajorVersion(UpgradeDBInstanceMajorVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDBInstanceMajorVersionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceMajorVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeDBInstanceMajorVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

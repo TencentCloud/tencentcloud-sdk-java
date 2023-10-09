@@ -39,6 +39,14 @@ public class IndexMetaField extends AbstractModel{
     private String IndexName;
 
     /**
+    * 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexMetaJson")
+    @Expose
+    private String IndexMetaJson;
+
+    /**
     * 索引状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -172,6 +180,26 @@ public class IndexMetaField extends AbstractModel{
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
+    }
+
+    /**
+     * Get 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexMetaJson 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexMetaJson() {
+        return this.IndexMetaJson;
+    }
+
+    /**
+     * Set 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexMetaJson 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexMetaJson(String IndexMetaJson) {
+        this.IndexMetaJson = IndexMetaJson;
     }
 
     /**
@@ -428,6 +456,9 @@ public class IndexMetaField extends AbstractModel{
         if (source.IndexName != null) {
             this.IndexName = new String(source.IndexName);
         }
+        if (source.IndexMetaJson != null) {
+            this.IndexMetaJson = new String(source.IndexMetaJson);
+        }
         if (source.IndexStatus != null) {
             this.IndexStatus = new String(source.IndexStatus);
         }
@@ -476,6 +507,7 @@ public class IndexMetaField extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IndexType", this.IndexType);
         this.setParamSimple(map, prefix + "IndexName", this.IndexName);
+        this.setParamSimple(map, prefix + "IndexMetaJson", this.IndexMetaJson);
         this.setParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
         this.setParamSimple(map, prefix + "IndexStorage", this.IndexStorage);
         this.setParamSimple(map, prefix + "IndexCreateTime", this.IndexCreateTime);

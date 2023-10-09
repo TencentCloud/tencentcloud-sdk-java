@@ -900,7 +900,9 @@ public class SslClient extends AbstractClient{
     }
 
     /**
-     *云资源托管
+     *证书托管接口已重构， 旧接口预下线， 近30天无请求
+
+云资源托管
      * @param req HostCertificateRequest
      * @return HostCertificateResponse
      * @throws TencentCloudSDKException

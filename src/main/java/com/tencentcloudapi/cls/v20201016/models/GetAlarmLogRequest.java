@@ -23,161 +23,176 @@ import java.util.HashMap;
 public class GetAlarmLogRequest extends AbstractModel{
 
     /**
-    * 要查询的日志的起始时间，Unix时间戳，单位ms
+    * 要查询的执行详情的起始时间，Unix时间戳，单位ms
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 要查询的日志的结束时间，Unix时间戳，单位ms
+    * 要查询的执行详情的结束时间，Unix时间戳，单位ms
     */
     @SerializedName("To")
     @Expose
     private Long To;
 
     /**
-    * 查询语句，语句长度最大为1024
+    * 查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 单次查询返回的日志条数，最大值为1000
+    * 单次查询返回的执行详情条数，最大值为1000
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+    * 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+    * 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+    * 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
     */
     @SerializedName("UseNewAnalysis")
     @Expose
     private Boolean UseNewAnalysis;
 
     /**
-     * Get 要查询的日志的起始时间，Unix时间戳，单位ms 
-     * @return From 要查询的日志的起始时间，Unix时间戳，单位ms
+     * Get 要查询的执行详情的起始时间，Unix时间戳，单位ms 
+     * @return From 要查询的执行详情的起始时间，Unix时间戳，单位ms
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 要查询的日志的起始时间，Unix时间戳，单位ms
-     * @param From 要查询的日志的起始时间，Unix时间戳，单位ms
+     * Set 要查询的执行详情的起始时间，Unix时间戳，单位ms
+     * @param From 要查询的执行详情的起始时间，Unix时间戳，单位ms
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 要查询的日志的结束时间，Unix时间戳，单位ms 
-     * @return To 要查询的日志的结束时间，Unix时间戳，单位ms
+     * Get 要查询的执行详情的结束时间，Unix时间戳，单位ms 
+     * @return To 要查询的执行详情的结束时间，Unix时间戳，单位ms
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 要查询的日志的结束时间，Unix时间戳，单位ms
-     * @param To 要查询的日志的结束时间，Unix时间戳，单位ms
+     * Set 要查询的执行详情的结束时间，Unix时间戳，单位ms
+     * @param To 要查询的执行详情的结束时间，Unix时间戳，单位ms
      */
     public void setTo(Long To) {
         this.To = To;
     }
 
     /**
-     * Get 查询语句，语句长度最大为1024 
-     * @return Query 查询语句，语句长度最大为1024
+     * Get 查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")` 
+     * @return Query 查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句，语句长度最大为1024
-     * @param Query 查询语句，语句长度最大为1024
+     * Set 查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
+     * @param Query 查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 单次查询返回的日志条数，最大值为1000 
-     * @return Limit 单次查询返回的日志条数，最大值为1000
+     * Get 单次查询返回的执行详情条数，最大值为1000 
+     * @return Limit 单次查询返回的执行详情条数，最大值为1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的日志条数，最大值为1000
-     * @param Limit 单次查询返回的日志条数，最大值为1000
+     * Set 单次查询返回的执行详情条数，最大值为1000
+     * @param Limit 单次查询返回的执行详情条数，最大值为1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容 
-     * @return Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * Get 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情 
+     * @return Context 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
-     * @param Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * Set 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+     * @param Context 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc 
-     * @return Sort 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * Get 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc 
+     * @return Sort 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
-     * @param Sort 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * Set 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * @param Sort 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效 
-     * @return UseNewAnalysis 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+     * Get 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效 
+     * @return UseNewAnalysis 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
      */
     public Boolean getUseNewAnalysis() {
         return this.UseNewAnalysis;
     }
 
     /**
-     * Set 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
-     * @param UseNewAnalysis 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+     * Set 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
+     * @param UseNewAnalysis 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
      */
     public void setUseNewAnalysis(Boolean UseNewAnalysis) {
         this.UseNewAnalysis = UseNewAnalysis;

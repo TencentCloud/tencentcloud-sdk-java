@@ -63,6 +63,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
 - FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
     */
     @SerializedName("GenerateType")
     @Expose
@@ -139,7 +140,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     private Long [] Hides;
 
     /**
-    * 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+    * 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
     */
     @SerializedName("RecipientIds")
     @Expose
@@ -236,7 +237,8 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - CHANNEL：第三方平台子客企业企业
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
-- FOLLOWER：关注方，目前是合同抄送方 
+- FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接 
      * @return GenerateType 签署链接生成类型，可以选择的类型如下
 
 - ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
@@ -244,6 +246,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
 - FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
      */
     public String getGenerateType() {
         return this.GenerateType;
@@ -257,6 +260,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
 - FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
      * @param GenerateType 签署链接生成类型，可以选择的类型如下
 
 - ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
@@ -264,6 +268,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
 - FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
@@ -446,16 +451,16 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Get 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致 
-     * @return RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+     * Get 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应 
+     * @return RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
      */
     public String [] getRecipientIds() {
         return this.RecipientIds;
     }
 
     /**
-     * Set 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
-     * @param RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+     * Set 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
+     * @param RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
      */
     public void setRecipientIds(String [] RecipientIds) {
         this.RecipientIds = RecipientIds;

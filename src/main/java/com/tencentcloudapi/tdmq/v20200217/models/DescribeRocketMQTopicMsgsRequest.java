@@ -107,6 +107,20 @@ public class DescribeRocketMQTopicMsgsRequest extends AbstractModel{
     private Long NumOfLatestMsg;
 
     /**
+    * TAG表达式
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
+    * 死信查询时该值为true，只对Rocketmq有效
+    */
+    @SerializedName("QueryDeadLetterMessage")
+    @Expose
+    private Boolean QueryDeadLetterMessage;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -269,7 +283,9 @@ public class DescribeRocketMQTopicMsgsRequest extends AbstractModel{
     /**
      * Get 死信查询时该值为true，只对Rocketmq有效 
      * @return QueryDlqMsg 死信查询时该值为true，只对Rocketmq有效
+     * @deprecated
      */
+    @Deprecated
     public Boolean getQueryDlqMsg() {
         return this.QueryDlqMsg;
     }
@@ -277,7 +293,9 @@ public class DescribeRocketMQTopicMsgsRequest extends AbstractModel{
     /**
      * Set 死信查询时该值为true，只对Rocketmq有效
      * @param QueryDlqMsg 死信查询时该值为true，只对Rocketmq有效
+     * @deprecated
      */
+    @Deprecated
     public void setQueryDlqMsg(Boolean QueryDlqMsg) {
         this.QueryDlqMsg = QueryDlqMsg;
     }
@@ -296,6 +314,38 @@ public class DescribeRocketMQTopicMsgsRequest extends AbstractModel{
      */
     public void setNumOfLatestMsg(Long NumOfLatestMsg) {
         this.NumOfLatestMsg = NumOfLatestMsg;
+    }
+
+    /**
+     * Get TAG表达式 
+     * @return Tag TAG表达式
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set TAG表达式
+     * @param Tag TAG表达式
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
+     * Get 死信查询时该值为true，只对Rocketmq有效 
+     * @return QueryDeadLetterMessage 死信查询时该值为true，只对Rocketmq有效
+     */
+    public Boolean getQueryDeadLetterMessage() {
+        return this.QueryDeadLetterMessage;
+    }
+
+    /**
+     * Set 死信查询时该值为true，只对Rocketmq有效
+     * @param QueryDeadLetterMessage 死信查询时该值为true，只对Rocketmq有效
+     */
+    public void setQueryDeadLetterMessage(Boolean QueryDeadLetterMessage) {
+        this.QueryDeadLetterMessage = QueryDeadLetterMessage;
     }
 
     public DescribeRocketMQTopicMsgsRequest() {
@@ -342,6 +392,12 @@ public class DescribeRocketMQTopicMsgsRequest extends AbstractModel{
         if (source.NumOfLatestMsg != null) {
             this.NumOfLatestMsg = new Long(source.NumOfLatestMsg);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.QueryDeadLetterMessage != null) {
+            this.QueryDeadLetterMessage = new Boolean(source.QueryDeadLetterMessage);
+        }
     }
 
 
@@ -361,6 +417,8 @@ public class DescribeRocketMQTopicMsgsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskRequestId", this.TaskRequestId);
         this.setParamSimple(map, prefix + "QueryDlqMsg", this.QueryDlqMsg);
         this.setParamSimple(map, prefix + "NumOfLatestMsg", this.NumOfLatestMsg);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
 
     }
 }

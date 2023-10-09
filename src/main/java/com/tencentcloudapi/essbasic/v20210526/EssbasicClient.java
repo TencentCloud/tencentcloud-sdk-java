@@ -428,6 +428,32 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *通过此接口，创建小程序批量签署链接，可以创建企业批量签署链接，员工只需点击链接即可跳转至控制台进行批量签署。
+
+注：
+- 员工必须在企业下完成实名认证，且需作为批量签署合同的签署方或者领取方。
+- 仅支持传入待签署或者待领取的合同，待填写暂不支持。
+- 员工批量签署，支持多种签名方式，包括手写签名、临摹签名、系统签名、个人印章，暂不支持签批控件
+     * @param req ChannelCreateOrganizationBatchSignUrlRequest
+     * @return ChannelCreateOrganizationBatchSignUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateOrganizationBatchSignUrlResponse ChannelCreateOrganizationBatchSignUrl(ChannelCreateOrganizationBatchSignUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateOrganizationBatchSignUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateOrganizationBatchSignUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateOrganizationBatchSignUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *生成渠道子客编辑企业信息二维码
      * @param req ChannelCreateOrganizationModifyQrCodeRequest
      * @return ChannelCreateOrganizationModifyQrCodeResponse

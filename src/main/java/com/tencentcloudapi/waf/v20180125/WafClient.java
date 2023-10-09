@@ -758,6 +758,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取证书的检查结果
+     * @param req DescribeCertificateVerifyResultRequest
+     * @return DescribeCertificateVerifyResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCertificateVerifyResultResponse DescribeCertificateVerifyResult(DescribeCertificateVerifyResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCertificateVerifyResultResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCertificateVerifyResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCertificateVerifyResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Saas型WAF接入查询加密套件信息
      * @param req DescribeCiphersDetailRequest
      * @return DescribeCiphersDetailResponse

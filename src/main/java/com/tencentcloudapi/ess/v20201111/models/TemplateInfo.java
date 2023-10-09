@@ -177,6 +177,14 @@ false-未发布
     private Boolean Published;
 
     /**
+    * 分享来源的模板ID。用在集团账号子企业模板里
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShareTemplateId")
+    @Expose
+    private String ShareTemplateId;
+
+    /**
     * 模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -569,6 +577,26 @@ false-未发布
     }
 
     /**
+     * Get 分享来源的模板ID。用在集团账号子企业模板里
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShareTemplateId 分享来源的模板ID。用在集团账号子企业模板里
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getShareTemplateId() {
+        return this.ShareTemplateId;
+    }
+
+    /**
+     * Set 分享来源的模板ID。用在集团账号子企业模板里
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShareTemplateId 分享来源的模板ID。用在集团账号子企业模板里
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShareTemplateId(String ShareTemplateId) {
+        this.ShareTemplateId = ShareTemplateId;
+    }
+
+    /**
      * Get 模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TemplateSeals 模板内部指定的印章列表
@@ -701,6 +729,9 @@ false-未发布
         if (source.Published != null) {
             this.Published = new Boolean(source.Published);
         }
+        if (source.ShareTemplateId != null) {
+            this.ShareTemplateId = new String(source.ShareTemplateId);
+        }
         if (source.TemplateSeals != null) {
             this.TemplateSeals = new SealInfo[source.TemplateSeals.length];
             for (int i = 0; i < source.TemplateSeals.length; i++) {
@@ -740,6 +771,7 @@ false-未发布
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
         this.setParamSimple(map, prefix + "Published", this.Published);
+        this.setParamSimple(map, prefix + "ShareTemplateId", this.ShareTemplateId);
         this.setParamArrayObj(map, prefix + "TemplateSeals.", this.TemplateSeals);
         this.setParamArrayObj(map, prefix + "Seals.", this.Seals);
 

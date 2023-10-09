@@ -1320,7 +1320,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于获取告警任务历史
+     *本接口用于获取告警策略执行详情
      * @param req GetAlarmLogRequest
      * @return GetAlarmLogResponse
      * @throws TencentCloudSDKException
