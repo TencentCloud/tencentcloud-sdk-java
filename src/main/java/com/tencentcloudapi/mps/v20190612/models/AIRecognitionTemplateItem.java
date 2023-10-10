@@ -79,6 +79,14 @@ public class AIRecognitionTemplateItem extends AbstractModel{
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
+    * 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TranslateConfigure")
+    @Expose
+    private TranslateConfigureInfo TranslateConfigure;
+
+    /**
     * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
     */
     @SerializedName("CreateTime")
@@ -231,6 +239,26 @@ public class AIRecognitionTemplateItem extends AbstractModel{
     }
 
     /**
+     * Get 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TranslateConfigure 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TranslateConfigureInfo getTranslateConfigure() {
+        return this.TranslateConfigure;
+    }
+
+    /**
+     * Set 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TranslateConfigure 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTranslateConfigure(TranslateConfigureInfo TranslateConfigure) {
+        this.TranslateConfigure = TranslateConfigure;
+    }
+
+    /**
      * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
@@ -322,6 +350,9 @@ public class AIRecognitionTemplateItem extends AbstractModel{
         if (source.AsrWordsConfigure != null) {
             this.AsrWordsConfigure = new AsrWordsConfigureInfo(source.AsrWordsConfigure);
         }
+        if (source.TranslateConfigure != null) {
+            this.TranslateConfigure = new TranslateConfigureInfo(source.TranslateConfigure);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -346,6 +377,7 @@ public class AIRecognitionTemplateItem extends AbstractModel{
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
         this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "TranslateConfigure.", this.TranslateConfigure);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Type", this.Type);

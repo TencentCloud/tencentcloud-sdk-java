@@ -101,6 +101,14 @@ public class TableBaseInfo extends AbstractModel{
     private String DbGovernPolicyIsDisable;
 
     /**
+    * 智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartPolicy")
+    @Expose
+    private SmartPolicy SmartPolicy;
+
+    /**
      * Get 该数据表所属数据库名字 
      * @return DatabaseName 该数据表所属数据库名字
      */
@@ -292,6 +300,26 @@ public class TableBaseInfo extends AbstractModel{
         this.DbGovernPolicyIsDisable = DbGovernPolicyIsDisable;
     }
 
+    /**
+     * Get 智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartPolicy 智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartPolicy getSmartPolicy() {
+        return this.SmartPolicy;
+    }
+
+    /**
+     * Set 智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartPolicy 智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartPolicy(SmartPolicy SmartPolicy) {
+        this.SmartPolicy = SmartPolicy;
+    }
+
     public TableBaseInfo() {
     }
 
@@ -330,6 +358,9 @@ public class TableBaseInfo extends AbstractModel{
         if (source.DbGovernPolicyIsDisable != null) {
             this.DbGovernPolicyIsDisable = new String(source.DbGovernPolicyIsDisable);
         }
+        if (source.SmartPolicy != null) {
+            this.SmartPolicy = new SmartPolicy(source.SmartPolicy);
+        }
     }
 
 
@@ -347,6 +378,7 @@ public class TableBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
         this.setParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
         this.setParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
+        this.setParamObj(map, prefix + "SmartPolicy.", this.SmartPolicy);
 
     }
 }

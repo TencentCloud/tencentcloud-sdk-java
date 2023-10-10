@@ -86,6 +86,27 @@ public class DescribeTaskListRequest extends AbstractModel{
     private ActionFilter [] Filters;
 
     /**
+    * 演练ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long [] TaskId;
+
+    /**
+    * 关联应用ID筛选
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String [] ApplicationId;
+
+    /**
+    * 关联应用筛选
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String [] ApplicationName;
+
+    /**
      * Get 分页Limit 
      * @return Limit 分页Limit
      */
@@ -229,6 +250,54 @@ public class DescribeTaskListRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get 演练ID 
+     * @return TaskId 演练ID
+     */
+    public Long [] getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 演练ID
+     * @param TaskId 演练ID
+     */
+    public void setTaskId(Long [] TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 关联应用ID筛选 
+     * @return ApplicationId 关联应用ID筛选
+     */
+    public String [] getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 关联应用ID筛选
+     * @param ApplicationId 关联应用ID筛选
+     */
+    public void setApplicationId(String [] ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get 关联应用筛选 
+     * @return ApplicationName 关联应用筛选
+     */
+    public String [] getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set 关联应用筛选
+     * @param ApplicationName 关联应用筛选
+     */
+    public void setApplicationName(String [] ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
     public DescribeTaskListRequest() {
     }
 
@@ -273,6 +342,24 @@ public class DescribeTaskListRequest extends AbstractModel{
                 this.Filters[i] = new ActionFilter(source.Filters[i]);
             }
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long[source.TaskId.length];
+            for (int i = 0; i < source.TaskId.length; i++) {
+                this.TaskId[i] = new Long(source.TaskId[i]);
+            }
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String[source.ApplicationId.length];
+            for (int i = 0; i < source.ApplicationId.length; i++) {
+                this.ApplicationId[i] = new String(source.ApplicationId[i]);
+            }
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String[source.ApplicationName.length];
+            for (int i = 0; i < source.ApplicationName.length; i++) {
+                this.ApplicationName[i] = new String(source.ApplicationName[i]);
+            }
+        }
     }
 
 
@@ -289,6 +376,9 @@ public class DescribeTaskListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskEndTime", this.TaskEndTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "TaskId.", this.TaskId);
+        this.setParamArraySimple(map, prefix + "ApplicationId.", this.ApplicationId);
+        this.setParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
 
     }
 }

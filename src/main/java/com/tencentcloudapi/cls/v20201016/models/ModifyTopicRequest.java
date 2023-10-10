@@ -87,7 +87,7 @@ public class ModifyTopicRequest extends AbstractModel{
     private Long HotPeriod;
 
     /**
-    * webtracking开关； false: 关闭 true: 开启
+    * 免鉴权开关； false: 关闭 true: 开启
     */
     @SerializedName("IsWebTracking")
     @Expose
@@ -242,16 +242,16 @@ public class ModifyTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get webtracking开关； false: 关闭 true: 开启 
-     * @return IsWebTracking webtracking开关； false: 关闭 true: 开启
+     * Get 免鉴权开关； false: 关闭 true: 开启 
+     * @return IsWebTracking 免鉴权开关； false: 关闭 true: 开启
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set webtracking开关； false: 关闭 true: 开启
-     * @param IsWebTracking webtracking开关； false: 关闭 true: 开启
+     * Set 免鉴权开关； false: 关闭 true: 开启
+     * @param IsWebTracking 免鉴权开关； false: 关闭 true: 开启
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;

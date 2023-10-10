@@ -191,6 +191,13 @@ public class TrainTicket extends AbstractModel{
     private Long ReimburseOnlyMark;
 
     /**
+    * 是否有退票费标识（0：没有，1：有）
+    */
+    @SerializedName("RefundMark")
+    @Expose
+    private Long RefundMark;
+
+    /**
      * Get 发票名称 
      * @return Title 发票名称
      */
@@ -574,6 +581,22 @@ public class TrainTicket extends AbstractModel{
         this.ReimburseOnlyMark = ReimburseOnlyMark;
     }
 
+    /**
+     * Get 是否有退票费标识（0：没有，1：有） 
+     * @return RefundMark 是否有退票费标识（0：没有，1：有）
+     */
+    public Long getRefundMark() {
+        return this.RefundMark;
+    }
+
+    /**
+     * Set 是否有退票费标识（0：没有，1：有）
+     * @param RefundMark 是否有退票费标识（0：没有，1：有）
+     */
+    public void setRefundMark(Long RefundMark) {
+        this.RefundMark = RefundMark;
+    }
+
     public TrainTicket() {
     }
 
@@ -654,6 +677,9 @@ public class TrainTicket extends AbstractModel{
         if (source.ReimburseOnlyMark != null) {
             this.ReimburseOnlyMark = new Long(source.ReimburseOnlyMark);
         }
+        if (source.RefundMark != null) {
+            this.RefundMark = new Long(source.RefundMark);
+        }
     }
 
 
@@ -685,6 +711,7 @@ public class TrainTicket extends AbstractModel{
         this.setParamSimple(map, prefix + "ReceiptNumber", this.ReceiptNumber);
         this.setParamSimple(map, prefix + "QRCodeMark", this.QRCodeMark);
         this.setParamSimple(map, prefix + "ReimburseOnlyMark", this.ReimburseOnlyMark);
+        this.setParamSimple(map, prefix + "RefundMark", this.RefundMark);
 
     }
 }

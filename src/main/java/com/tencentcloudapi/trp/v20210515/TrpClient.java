@@ -418,6 +418,29 @@ public class TrpClient extends AbstractClient{
 
     /**
      *查询批次列表
+     * @param req DescribeCodeBatchesRequest
+     * @return DescribeCodeBatchesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCodeBatchesResponse DescribeCodeBatches(DescribeCodeBatchesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCodeBatchesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCodeBatchesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCodeBatches");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询批次列表
+
+旧版接口已经弃用，新业务请使用用新版的接口 DescribeCodeBatches
      * @param req DescribeCodeBatchsRequest
      * @return DescribeCodeBatchsResponse
      * @throws TencentCloudSDKException

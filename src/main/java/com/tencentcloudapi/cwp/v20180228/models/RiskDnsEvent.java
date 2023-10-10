@@ -199,6 +199,13 @@ public class RiskDnsEvent extends AbstractModel{
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
+    */
+    @SerializedName("OsType")
+    @Expose
+    private Long OsType;
+
+    /**
      * Get 事件Id 
      * @return Id 事件Id
      */
@@ -602,6 +609,22 @@ public class RiskDnsEvent extends AbstractModel{
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE] 
+     * @return OsType [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
+     */
+    public Long getOsType() {
+        return this.OsType;
+    }
+
+    /**
+     * Set [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
+     * @param OsType [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
+     */
+    public void setOsType(Long OsType) {
+        this.OsType = OsType;
+    }
+
     public RiskDnsEvent() {
     }
 
@@ -688,6 +711,9 @@ public class RiskDnsEvent extends AbstractModel{
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.OsType != null) {
+            this.OsType = new Long(source.OsType);
+        }
     }
 
 
@@ -720,6 +746,7 @@ public class RiskDnsEvent extends AbstractModel{
         this.setParamSimple(map, prefix + "LastTime", this.LastTime);
         this.setParamSimple(map, prefix + "HostStatus", this.HostStatus);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "OsType", this.OsType);
 
     }
 }

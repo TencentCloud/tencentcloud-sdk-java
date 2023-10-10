@@ -155,6 +155,14 @@ public class BGPInstance extends AbstractModel{
     private Long Line;
 
     /**
+    * 不计费的业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FreeServiceBandwidth")
+    @Expose
+    private Long FreeServiceBandwidth;
+
+    /**
     * 弹性业务带宽开关
     */
     @SerializedName("ElasticServiceBandwidth")
@@ -509,6 +517,26 @@ public class BGPInstance extends AbstractModel{
     }
 
     /**
+     * Get 不计费的业务带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FreeServiceBandwidth 不计费的业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFreeServiceBandwidth() {
+        return this.FreeServiceBandwidth;
+    }
+
+    /**
+     * Set 不计费的业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FreeServiceBandwidth 不计费的业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFreeServiceBandwidth(Long FreeServiceBandwidth) {
+        this.FreeServiceBandwidth = FreeServiceBandwidth;
+    }
+
+    /**
      * Get 弹性业务带宽开关 
      * @return ElasticServiceBandwidth 弹性业务带宽开关
      */
@@ -645,6 +673,9 @@ public class BGPInstance extends AbstractModel{
         if (source.Line != null) {
             this.Line = new Long(source.Line);
         }
+        if (source.FreeServiceBandwidth != null) {
+            this.FreeServiceBandwidth = new Long(source.FreeServiceBandwidth);
+        }
         if (source.ElasticServiceBandwidth != null) {
             this.ElasticServiceBandwidth = new Long(source.ElasticServiceBandwidth);
         }
@@ -681,6 +712,7 @@ public class BGPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
         this.setParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
         this.setParamSimple(map, prefix + "Line", this.Line);
+        this.setParamSimple(map, prefix + "FreeServiceBandwidth", this.FreeServiceBandwidth);
         this.setParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
         this.setParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);

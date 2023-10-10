@@ -1950,6 +1950,27 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *GetOptimizerPolicy
+     * @param req GetOptimizerPolicyRequest
+     * @return GetOptimizerPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetOptimizerPolicyResponse GetOptimizerPolicy(GetOptimizerPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetOptimizerPolicyResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetOptimizerPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetOptimizerPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
      * @param req ListTaskJobLogDetailRequest
      * @return ListTaskJobLogDetailResponse

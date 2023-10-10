@@ -311,7 +311,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private Long DealMode;
 
     /**
-    * 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+    * 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
     */
     @SerializedName("ParamTemplateId")
     @Expose
@@ -1028,16 +1028,16 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID 
-     * @return ParamTemplateId 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * Get 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID 
+     * @return ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
-     * @param ParamTemplateId 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * Set 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * @param ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;

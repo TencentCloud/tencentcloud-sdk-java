@@ -257,6 +257,32 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *适用场景：
+当通过模板或文件发起合同时，若未指定企业签署人信息，则可调用此接口动态补充签署人。同一签署人只允许补充一人，最终实际签署人取决于谁先领取合同完成签署。
+
+限制条件：
+1. 本企业（发起方企业）企业签署人仅支持通过企业名称+姓名+手机号进行补充。
+2. 个人签署人仅支持通过姓名+手机号进行补充。
+     * @param req ChannelCreateFlowApproversRequest
+     * @return ChannelCreateFlowApproversResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateFlowApproversResponse ChannelCreateFlowApprovers(ChannelCreateFlowApproversRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateFlowApproversResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowApproversResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateFlowApprovers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口（ChannelCreateFlowByFiles）用于通过文件创建签署流程。此接口静默签能力不可直接使用，请联系客户经理申请使用
      * @param req ChannelCreateFlowByFilesRequest
      * @return ChannelCreateFlowByFilesResponse
@@ -602,6 +628,34 @@ public class EssbasicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateUserAutoSignEnableUrlResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ChannelCreateUserAutoSignEnableUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设置自动签印章小程序链接。
+
+注意：
+<ul><li>需要<code>企业开通自动签</code>后使用。</li>
+<li>仅支持<code>已经开通了自动签的个人</code>更换自动签印章。</li>
+<li>链接有效期默认7天，<code>最多30天</code>。</li>
+<li>该接口的链接适用于<code>小程序</code>端。</li>
+<li>该接口不会扣除您的合同套餐，暂不参与计费。</li></ul>
+     * @param req ChannelCreateUserAutoSignSealUrlRequest
+     * @return ChannelCreateUserAutoSignSealUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateUserAutoSignSealUrlResponse ChannelCreateUserAutoSignSealUrl(ChannelCreateUserAutoSignSealUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateUserAutoSignSealUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateUserAutoSignSealUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateUserAutoSignSealUrl");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class UpdateCertificateInstanceRequest extends AbstractModel{
 
     /**
-    * 一键更新新证书ID
-    */
-    @SerializedName("CertificateId")
-    @Expose
-    private String CertificateId;
-
-    /**
     * 一键更新原证书ID
     */
     @SerializedName("OldCertificateId")
@@ -42,6 +35,13 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
     @SerializedName("ResourceTypes")
     @Expose
     private String [] ResourceTypes;
+
+    /**
+    * 一键更新新证书ID
+    */
+    @SerializedName("CertificateId")
+    @Expose
+    private String CertificateId;
 
     /**
     * 需要部署的地域列表（废弃）
@@ -58,20 +58,53 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
     private ResourceTypeRegions [] ResourceTypesRegions;
 
     /**
-     * Get 一键更新新证书ID 
-     * @return CertificateId 一键更新新证书ID
-     */
-    public String getCertificateId() {
-        return this.CertificateId;
-    }
+    * 证书公钥， 若上传证书公钥， 则CertificateId不用传
+    */
+    @SerializedName("CertificatePublicKey")
+    @Expose
+    private String CertificatePublicKey;
 
     /**
-     * Set 一键更新新证书ID
-     * @param CertificateId 一键更新新证书ID
-     */
-    public void setCertificateId(String CertificateId) {
-        this.CertificateId = CertificateId;
-    }
+    * 证书私钥，若上传证书公钥， 则证书私钥必填
+    */
+    @SerializedName("CertificatePrivateKey")
+    @Expose
+    private String CertificatePrivateKey;
+
+    /**
+    * 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知
+    */
+    @SerializedName("ExpiringNotificationSwitch")
+    @Expose
+    private Long ExpiringNotificationSwitch;
+
+    /**
+    * 相同的证书是否允许重复上传，若上传证书公钥， 则可以配置该参数
+    */
+    @SerializedName("Repeatable")
+    @Expose
+    private Boolean Repeatable;
+
+    /**
+    * 是否允许下载，若上传证书公钥， 则可以配置该参数
+    */
+    @SerializedName("AllowDownload")
+    @Expose
+    private Boolean AllowDownload;
+
+    /**
+    * 标签列表，若上传证书公钥， 则可以配置该参数
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
+    * 项目 ID，若上传证书公钥， 则可以配置该参数
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
 
     /**
      * Get 一键更新原证书ID 
@@ -103,6 +136,22 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
+    }
+
+    /**
+     * Get 一键更新新证书ID 
+     * @return CertificateId 一键更新新证书ID
+     */
+    public String getCertificateId() {
+        return this.CertificateId;
+    }
+
+    /**
+     * Set 一键更新新证书ID
+     * @param CertificateId 一键更新新证书ID
+     */
+    public void setCertificateId(String CertificateId) {
+        this.CertificateId = CertificateId;
     }
 
     /**
@@ -141,6 +190,118 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
         this.ResourceTypesRegions = ResourceTypesRegions;
     }
 
+    /**
+     * Get 证书公钥， 若上传证书公钥， 则CertificateId不用传 
+     * @return CertificatePublicKey 证书公钥， 若上传证书公钥， 则CertificateId不用传
+     */
+    public String getCertificatePublicKey() {
+        return this.CertificatePublicKey;
+    }
+
+    /**
+     * Set 证书公钥， 若上传证书公钥， 则CertificateId不用传
+     * @param CertificatePublicKey 证书公钥， 若上传证书公钥， 则CertificateId不用传
+     */
+    public void setCertificatePublicKey(String CertificatePublicKey) {
+        this.CertificatePublicKey = CertificatePublicKey;
+    }
+
+    /**
+     * Get 证书私钥，若上传证书公钥， 则证书私钥必填 
+     * @return CertificatePrivateKey 证书私钥，若上传证书公钥， 则证书私钥必填
+     */
+    public String getCertificatePrivateKey() {
+        return this.CertificatePrivateKey;
+    }
+
+    /**
+     * Set 证书私钥，若上传证书公钥， 则证书私钥必填
+     * @param CertificatePrivateKey 证书私钥，若上传证书公钥， 则证书私钥必填
+     */
+    public void setCertificatePrivateKey(String CertificatePrivateKey) {
+        this.CertificatePrivateKey = CertificatePrivateKey;
+    }
+
+    /**
+     * Get 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知 
+     * @return ExpiringNotificationSwitch 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知
+     */
+    public Long getExpiringNotificationSwitch() {
+        return this.ExpiringNotificationSwitch;
+    }
+
+    /**
+     * Set 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知
+     * @param ExpiringNotificationSwitch 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知
+     */
+    public void setExpiringNotificationSwitch(Long ExpiringNotificationSwitch) {
+        this.ExpiringNotificationSwitch = ExpiringNotificationSwitch;
+    }
+
+    /**
+     * Get 相同的证书是否允许重复上传，若上传证书公钥， 则可以配置该参数 
+     * @return Repeatable 相同的证书是否允许重复上传，若上传证书公钥， 则可以配置该参数
+     */
+    public Boolean getRepeatable() {
+        return this.Repeatable;
+    }
+
+    /**
+     * Set 相同的证书是否允许重复上传，若上传证书公钥， 则可以配置该参数
+     * @param Repeatable 相同的证书是否允许重复上传，若上传证书公钥， 则可以配置该参数
+     */
+    public void setRepeatable(Boolean Repeatable) {
+        this.Repeatable = Repeatable;
+    }
+
+    /**
+     * Get 是否允许下载，若上传证书公钥， 则可以配置该参数 
+     * @return AllowDownload 是否允许下载，若上传证书公钥， 则可以配置该参数
+     */
+    public Boolean getAllowDownload() {
+        return this.AllowDownload;
+    }
+
+    /**
+     * Set 是否允许下载，若上传证书公钥， 则可以配置该参数
+     * @param AllowDownload 是否允许下载，若上传证书公钥， 则可以配置该参数
+     */
+    public void setAllowDownload(Boolean AllowDownload) {
+        this.AllowDownload = AllowDownload;
+    }
+
+    /**
+     * Get 标签列表，若上传证书公钥， 则可以配置该参数 
+     * @return Tags 标签列表，若上传证书公钥， 则可以配置该参数
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表，若上传证书公钥， 则可以配置该参数
+     * @param Tags 标签列表，若上传证书公钥， 则可以配置该参数
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 项目 ID，若上传证书公钥， 则可以配置该参数 
+     * @return ProjectId 项目 ID，若上传证书公钥， 则可以配置该参数
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目 ID，若上传证书公钥， 则可以配置该参数
+     * @param ProjectId 项目 ID，若上传证书公钥， 则可以配置该参数
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public UpdateCertificateInstanceRequest() {
     }
 
@@ -149,9 +310,6 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateCertificateInstanceRequest(UpdateCertificateInstanceRequest source) {
-        if (source.CertificateId != null) {
-            this.CertificateId = new String(source.CertificateId);
-        }
         if (source.OldCertificateId != null) {
             this.OldCertificateId = new String(source.OldCertificateId);
         }
@@ -160,6 +318,9 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
             for (int i = 0; i < source.ResourceTypes.length; i++) {
                 this.ResourceTypes[i] = new String(source.ResourceTypes[i]);
             }
+        }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
         }
         if (source.Regions != null) {
             this.Regions = new String[source.Regions.length];
@@ -173,6 +334,30 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
                 this.ResourceTypesRegions[i] = new ResourceTypeRegions(source.ResourceTypesRegions[i]);
             }
         }
+        if (source.CertificatePublicKey != null) {
+            this.CertificatePublicKey = new String(source.CertificatePublicKey);
+        }
+        if (source.CertificatePrivateKey != null) {
+            this.CertificatePrivateKey = new String(source.CertificatePrivateKey);
+        }
+        if (source.ExpiringNotificationSwitch != null) {
+            this.ExpiringNotificationSwitch = new Long(source.ExpiringNotificationSwitch);
+        }
+        if (source.Repeatable != null) {
+            this.Repeatable = new Boolean(source.Repeatable);
+        }
+        if (source.AllowDownload != null) {
+            this.AllowDownload = new Boolean(source.AllowDownload);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
     }
 
 
@@ -180,11 +365,18 @@ public class UpdateCertificateInstanceRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
         this.setParamArraySimple(map, prefix + "ResourceTypes.", this.ResourceTypes);
+        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamArraySimple(map, prefix + "Regions.", this.Regions);
         this.setParamArrayObj(map, prefix + "ResourceTypesRegions.", this.ResourceTypesRegions);
+        this.setParamSimple(map, prefix + "CertificatePublicKey", this.CertificatePublicKey);
+        this.setParamSimple(map, prefix + "CertificatePrivateKey", this.CertificatePrivateKey);
+        this.setParamSimple(map, prefix + "ExpiringNotificationSwitch", this.ExpiringNotificationSwitch);
+        this.setParamSimple(map, prefix + "Repeatable", this.Repeatable);
+        this.setParamSimple(map, prefix + "AllowDownload", this.AllowDownload);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

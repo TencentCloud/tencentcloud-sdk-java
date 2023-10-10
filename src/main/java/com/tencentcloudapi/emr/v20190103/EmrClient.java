@@ -566,6 +566,27 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *修改用户密码（用户管理）
+     * @param req ModifyUserManagerPwdRequest
+     * @return ModifyUserManagerPwdResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserManagerPwdResponse ModifyUserManagerPwd(ModifyUserManagerPwdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserManagerPwdResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserManagerPwdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserManagerPwd");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建流程作业
      * @param req RunJobFlowRequest
      * @return RunJobFlowResponse

@@ -139,6 +139,22 @@ public class Template extends AbstractModel{
     private Long TemplateSource;
 
     /**
+    * apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApmServiceList")
+    @Expose
+    private ApmServiceInfo [] ApmServiceList;
+
+    /**
+    * 告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmPolicy")
+    @Expose
+    private String [] AlarmPolicy;
+
+    /**
      * Get 经验库ID 
      * @return TemplateId 经验库ID
      */
@@ -410,6 +426,46 @@ public class Template extends AbstractModel{
         this.TemplateSource = TemplateSource;
     }
 
+    /**
+     * Get apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApmServiceList apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ApmServiceInfo [] getApmServiceList() {
+        return this.ApmServiceList;
+    }
+
+    /**
+     * Set apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApmServiceList apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApmServiceList(ApmServiceInfo [] ApmServiceList) {
+        this.ApmServiceList = ApmServiceList;
+    }
+
+    /**
+     * Get 告警指标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmPolicy 告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAlarmPolicy() {
+        return this.AlarmPolicy;
+    }
+
+    /**
+     * Set 告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmPolicy 告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmPolicy(String [] AlarmPolicy) {
+        this.AlarmPolicy = AlarmPolicy;
+    }
+
     public Template() {
     }
 
@@ -475,6 +531,18 @@ public class Template extends AbstractModel{
         if (source.TemplateSource != null) {
             this.TemplateSource = new Long(source.TemplateSource);
         }
+        if (source.ApmServiceList != null) {
+            this.ApmServiceList = new ApmServiceInfo[source.ApmServiceList.length];
+            for (int i = 0; i < source.ApmServiceList.length; i++) {
+                this.ApmServiceList[i] = new ApmServiceInfo(source.ApmServiceList[i]);
+            }
+        }
+        if (source.AlarmPolicy != null) {
+            this.AlarmPolicy = new String[source.AlarmPolicy.length];
+            for (int i = 0; i < source.AlarmPolicy.length; i++) {
+                this.AlarmPolicy[i] = new String(source.AlarmPolicy[i]);
+            }
+        }
     }
 
 
@@ -498,6 +566,8 @@ public class Template extends AbstractModel{
         this.setParamObj(map, prefix + "TemplatePolicy.", this.TemplatePolicy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
+        this.setParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
+        this.setParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
 
     }
 }

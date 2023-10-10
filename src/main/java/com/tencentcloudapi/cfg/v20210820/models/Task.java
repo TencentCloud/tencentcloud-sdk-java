@@ -196,6 +196,38 @@ public class Task extends AbstractModel{
     private String TaskPlanTitle;
 
     /**
+    * 关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * 关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String ApplicationName;
+
+    /**
+    * 关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmPolicy")
+    @Expose
+    private String [] AlarmPolicy;
+
+    /**
+    * 关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApmServiceList")
+    @Expose
+    private ApmServiceInfo [] ApmServiceList;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -611,6 +643,86 @@ public class Task extends AbstractModel{
         this.TaskPlanTitle = TaskPlanTitle;
     }
 
+    /**
+     * Get 关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId 关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId 关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get 关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationName 关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set 关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationName 关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationName(String ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
+    /**
+     * Get 关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmPolicy 关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAlarmPolicy() {
+        return this.AlarmPolicy;
+    }
+
+    /**
+     * Set 关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmPolicy 关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmPolicy(String [] AlarmPolicy) {
+        this.AlarmPolicy = AlarmPolicy;
+    }
+
+    /**
+     * Get 关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApmServiceList 关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ApmServiceInfo [] getApmServiceList() {
+        return this.ApmServiceList;
+    }
+
+    /**
+     * Set 关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApmServiceList 关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApmServiceList(ApmServiceInfo [] ApmServiceList) {
+        this.ApmServiceList = ApmServiceList;
+    }
+
     public Task() {
     }
 
@@ -697,6 +809,24 @@ public class Task extends AbstractModel{
         if (source.TaskPlanTitle != null) {
             this.TaskPlanTitle = new String(source.TaskPlanTitle);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
+        if (source.AlarmPolicy != null) {
+            this.AlarmPolicy = new String[source.AlarmPolicy.length];
+            for (int i = 0; i < source.AlarmPolicy.length; i++) {
+                this.AlarmPolicy[i] = new String(source.AlarmPolicy[i]);
+            }
+        }
+        if (source.ApmServiceList != null) {
+            this.ApmServiceList = new ApmServiceInfo[source.ApmServiceList.length];
+            for (int i = 0; i < source.ApmServiceList.length; i++) {
+                this.ApmServiceList[i] = new ApmServiceInfo(source.ApmServiceList[i]);
+            }
+        }
     }
 
 
@@ -727,6 +857,10 @@ public class Task extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TaskPlanId", this.TaskPlanId);
         this.setParamSimple(map, prefix + "TaskPlanTitle", this.TaskPlanTitle);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+        this.setParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
+        this.setParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
 
     }
 }

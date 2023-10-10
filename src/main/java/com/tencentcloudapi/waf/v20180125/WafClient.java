@@ -905,6 +905,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *拉取域名的防护规则列表
+     * @param req DescribeDomainRulesRequest
+     * @return DescribeDomainRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainRulesResponse DescribeDomainRules(DescribeDomainRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainRulesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取添加域名操作的结果
      * @param req DescribeDomainVerifyResultRequest
      * @return DescribeDomainVerifyResultResponse
@@ -1338,6 +1359,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUserDomainInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUserDomainInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户特征规则列表
+     * @param req DescribeUserSignatureRuleRequest
+     * @return DescribeUserSignatureRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserSignatureRuleResponse DescribeUserSignatureRule(DescribeUserSignatureRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserSignatureRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserSignatureRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserSignatureRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2064,6 +2106,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *设置某个domain下基础安全模块的开关
+     * @param req ModifyModuleStatusRequest
+     * @return ModifyModuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModuleStatusResponse ModifyModuleStatus(ModifyModuleStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyModuleStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyModuleStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyModuleStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *waf斯巴达-waf开关
      * @param req ModifyProtectionStatusRequest
      * @return ModifyProtectionStatusResponse
@@ -2127,6 +2190,48 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *修改用户防护规则等级
+     * @param req ModifyUserLevelRequest
+     * @return ModifyUserLevelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserLevelResponse ModifyUserLevel(ModifyUserLevelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserLevelResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserLevelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserLevel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户防护规则，开启关闭具体的某条规则
+     * @param req ModifyUserSignatureRuleRequest
+     * @return ModifyUserSignatureRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserSignatureRuleResponse ModifyUserSignatureRule(ModifyUserSignatureRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserSignatureRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserSignatureRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserSignatureRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改ip惩罚规则
      * @param req ModifyWafAutoDenyRulesRequest
      * @return ModifyWafAutoDenyRulesResponse
@@ -2182,6 +2287,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyWafThreatenIntelligenceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyWafThreatenIntelligence");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置域名的webshell状态。
+     * @param req ModifyWebshellStatusRequest
+     * @return ModifyWebshellStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWebshellStatusResponse ModifyWebshellStatus(ModifyWebshellStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyWebshellStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyWebshellStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyWebshellStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,10 +23,7 @@ import java.util.HashMap;
 public class InstanceNameSettings extends AbstractModel{
 
     /**
-    * 云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
+    * 云服务器的实例名。字符长度为[2, 108]。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -44,28 +41,16 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     private String InstanceNameStyle;
 
     /**
-     * Get 云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。 
-     * @return InstanceName 云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
+     * Get 云服务器的实例名。字符长度为[2, 108]。 
+     * @return InstanceName 云服务器的实例名。字符长度为[2, 108]。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
-     * @param InstanceName 云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
+     * Set 云服务器的实例名。字符长度为[2, 108]。
+     * @param InstanceName 云服务器的实例名。字符长度为[2, 108]。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

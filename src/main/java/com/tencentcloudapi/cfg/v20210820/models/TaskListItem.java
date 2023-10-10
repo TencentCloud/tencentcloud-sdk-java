@@ -97,6 +97,22 @@ public class TaskListItem extends AbstractModel{
     private Long TaskExpect;
 
     /**
+    * 关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * 关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String ApplicationName;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -272,6 +288,46 @@ public class TaskListItem extends AbstractModel{
         this.TaskExpect = TaskExpect;
     }
 
+    /**
+     * Get 关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId 关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId 关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get 关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationName 关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set 关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationName 关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationName(String ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
     public TaskListItem() {
     }
 
@@ -310,6 +366,12 @@ public class TaskListItem extends AbstractModel{
         if (source.TaskExpect != null) {
             this.TaskExpect = new Long(source.TaskExpect);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
     }
 
 
@@ -327,6 +389,8 @@ public class TaskListItem extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskPreCheckStatus", this.TaskPreCheckStatus);
         this.setParamSimple(map, prefix + "TaskPreCheckSuccess", this.TaskPreCheckSuccess);
         this.setParamSimple(map, prefix + "TaskExpect", this.TaskExpect);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
 
     }
 }

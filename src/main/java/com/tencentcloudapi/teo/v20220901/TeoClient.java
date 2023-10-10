@@ -167,27 +167,6 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *创建源站组
-     * @param req CreateOriginGroupRequest
-     * @return CreateOriginGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateOriginGroupResponse CreateOriginGroup(CreateOriginGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateOriginGroupResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateOriginGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateOriginGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *为未购买套餐的站点购买套餐
      * @param req CreatePlanForZoneRequest
      * @return CreatePlanForZoneResponse
@@ -415,27 +394,6 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteApplicationProxyRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *删除源站组
-     * @param req DeleteOriginGroupRequest
-     * @return DeleteOriginGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteOriginGroupResponse DeleteOriginGroup(DeleteOriginGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteOriginGroupResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOriginGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOriginGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1278,27 +1236,6 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
                 Type type = new TypeToken<JsonResponseModel<ModifyHostsCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyHostsCertificate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *修改源站组
-     * @param req ModifyOriginGroupRequest
-     * @return ModifyOriginGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyOriginGroupResponse ModifyOriginGroup(ModifyOriginGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyOriginGroupResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyOriginGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyOriginGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
