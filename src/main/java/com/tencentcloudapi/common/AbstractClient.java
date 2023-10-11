@@ -342,28 +342,6 @@ public abstract class AbstractClient {
 
     protected String internalRequest(AbstractModel request, String actionName)
             throws TencentCloudSDKException {
-        Response okRsp = null;
-        String endpoint = this.getEndpoint();
-        String[] binaryParams = request.getBinaryParams();
-        String sm = this.profile.getSignMethod();
-        String reqMethod = this.profile.getHttpProfile().getReqMethod();
-
-        // currently, customized params only can be supported via post json tc3-hmac-sha256
-        HashMap<String, Object> customizedParams = request.any();
-        if (customizedParams.size() > 0) {
-            if (binaryParams.length > 0) {
-                throw new TencentCloudSDKException(
-                        "WrongUsage: Cannot post multipart with customized parameters.");
-            }
-            if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
-                throw new TencentCloudSDKException(
-                        "WrongUsage: Cannot use HmacSHA1 or HmacSHA256 with customized parameters.");
-            }
-            if (reqMethod.equals(HttpProfile.REQ_GET)) {
-                throw new TencentCloudSDKException(
-                        "WrongUsage: Cannot use get method with customized parameters.");
-            }
-        }
 
         CircuitBreaker.Token breakerToken = null;
         if (regionBreaker != null) {
@@ -373,15 +351,9 @@ public abstract class AbstractClient {
             }
         }
 
+        Response okRsp;
         try {
-            if (binaryParams.length > 0 || sm.equals(ClientProfile.SIGN_TC3_256)) {
-                okRsp = doRequestWithTC3(endpoint, request, actionName);
-            } else if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
-                okRsp = doRequest(endpoint, request, actionName);
-            } else {
-                throw new TencentCloudSDKException(
-                        "Signature method " + sm + " is invalid or not supported yet.");
-            }
+            okRsp = internalRequestRaw(request, actionName);
         } catch (IOException e) {
             // network failure, consider region failure
             if (breakerToken != null) {
@@ -390,12 +362,7 @@ public abstract class AbstractClient {
             throw new TencentCloudSDKException("", e);
         }
 
-        if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
-            String msg = "response code is " + okRsp.code() + ", not 200";
-            log.info(msg);
-            throw new TencentCloudSDKException(msg, "", "ServerSideError");
-        }
-        String strResp = null;
+        String strResp;
         try {
             strResp = okRsp.body().string();
         } catch (IOException e) {
@@ -404,7 +371,7 @@ public abstract class AbstractClient {
             throw new TencentCloudSDKException(msg, e);
         }
 
-        JsonResponseModel<JsonResponseErrModel> errResp = null;
+        JsonResponseModel<JsonResponseErrModel> errResp;
         try {
             Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
             }.getType();
@@ -431,6 +398,127 @@ public abstract class AbstractClient {
         }
 
         return strResp;
+    }
+
+    protected <T> T internalRequest(AbstractModel request, String actionName, Class<T> typeOfT)
+            throws TencentCloudSDKException {
+        CircuitBreaker.Token breakerToken = null;
+        if (regionBreaker != null) {
+            breakerToken = regionBreaker.allow();
+            if (!breakerToken.allowed) {
+                endpoint = service + "." + profile.getBackupEndpoint();
+            }
+        }
+
+        try {
+            Response resp = internalRequestRaw(request, actionName);
+            if (Objects.equals(resp.header("Content-Type"), "text/event-stream")) {
+                return processResponseSSE(resp, typeOfT, breakerToken);
+            }
+            return processResponseJson(resp, typeOfT, breakerToken);
+        } catch (IOException e) {
+            // network failure, consider region failure
+            if (breakerToken != null) {
+                breakerToken.report(false);
+            }
+            throw new TencentCloudSDKException("", e);
+        }
+    }
+
+    protected <T> T processResponseSSE(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
+        SSEResponseModel responseModel;
+        try {
+            responseModel = (SSEResponseModel) typeOfT.newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            throw new TencentCloudSDKException("", e);
+        }
+        responseModel.setRequestId(resp.header("X-TC-RequestId"));
+        responseModel.setToken(breakerToken);
+        responseModel.setResponse(resp);
+        return (T) responseModel;
+    }
+
+    protected <T> T processResponseJson(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
+        String body;
+        try {
+            body = resp.body().string();
+        } catch (IOException e) {
+            String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
+        }
+
+        JsonResponseModel<JsonResponseErrModel> errResp;
+        try {
+            Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
+            }.getType();
+            errResp = gson.fromJson(body, errType);
+        } catch (JsonSyntaxException e) {
+            String msg = "json is not a valid representation for an object of type";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, e);
+        }
+
+        if (errResp.response.error != null) {
+            if (breakerToken != null) {
+                JsonResponseErrModel error = errResp.response;
+                boolean regionOk = error.requestId != null
+                        && !error.requestId.isEmpty()
+                        && error.error.code != null
+                        && !error.error.code.equals("InternalError");
+                breakerToken.report(regionOk);
+            }
+            throw new TencentCloudSDKException(
+                    errResp.response.error.message,
+                    errResp.response.requestId,
+                    errResp.response.error.code);
+        }
+
+        return gson.fromJson(body, new TypeToken<JsonResponseModel<T>>() {
+        }.getType());
+    }
+
+    protected Response internalRequestRaw(AbstractModel request, String actionName)
+            throws TencentCloudSDKException, IOException {
+        Response okRsp = null;
+        String endpoint = this.getEndpoint();
+        String[] binaryParams = request.getBinaryParams();
+        String sm = this.profile.getSignMethod();
+        String reqMethod = this.profile.getHttpProfile().getReqMethod();
+
+        // currently, customized params only can be supported via post json tc3-hmac-sha256
+        HashMap<String, Object> customizedParams = request.any();
+        if (customizedParams.size() > 0) {
+            if (binaryParams.length > 0) {
+                throw new TencentCloudSDKException(
+                        "WrongUsage: Cannot post multipart with customized parameters.");
+            }
+            if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
+                throw new TencentCloudSDKException(
+                        "WrongUsage: Cannot use HmacSHA1 or HmacSHA256 with customized parameters.");
+            }
+            if (reqMethod.equals(HttpProfile.REQ_GET)) {
+                throw new TencentCloudSDKException(
+                        "WrongUsage: Cannot use get method with customized parameters.");
+            }
+        }
+
+
+        if (binaryParams.length > 0 || sm.equals(ClientProfile.SIGN_TC3_256)) {
+            okRsp = doRequestWithTC3(endpoint, request, actionName);
+        } else if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
+            okRsp = doRequest(endpoint, request, actionName);
+        } else {
+            throw new TencentCloudSDKException(
+                    "Signature method " + sm + " is invalid or not supported yet.");
+        }
+
+        if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
+            String msg = "response code is " + okRsp.code() + ", not 200";
+            log.info(msg);
+            throw new TencentCloudSDKException(msg, "", "ServerSideError");
+        }
+        return okRsp;
     }
 
     private Response doRequest(String endpoint, AbstractModel request, String action)
