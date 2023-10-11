@@ -20,32 +20,35 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateUserDataEngineConfigRequest extends AbstractModel{
+public class DataEngineConfigInstanceInfo extends AbstractModel{
 
     /**
     * 引擎ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineId")
     @Expose
     private String DataEngineId;
 
     /**
-    * 引擎配置项
+    * 用户自定义配置项集合
     */
     @SerializedName("DataEngineConfigPairs")
     @Expose
     private DataEngineConfigPair [] DataEngineConfigPairs;
 
     /**
-    * 作业引擎资源配置模版
+    * 作业集群资源参数配置模版
     */
     @SerializedName("SessionResourceTemplate")
     @Expose
     private SessionResourceTemplate SessionResourceTemplate;
 
     /**
-     * Get 引擎ID 
+     * Get 引擎ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataEngineId 引擎ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineId() {
         return this.DataEngineId;
@@ -53,52 +56,54 @@ public class UpdateUserDataEngineConfigRequest extends AbstractModel{
 
     /**
      * Set 引擎ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineId 引擎ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineId(String DataEngineId) {
         this.DataEngineId = DataEngineId;
     }
 
     /**
-     * Get 引擎配置项 
-     * @return DataEngineConfigPairs 引擎配置项
+     * Get 用户自定义配置项集合 
+     * @return DataEngineConfigPairs 用户自定义配置项集合
      */
     public DataEngineConfigPair [] getDataEngineConfigPairs() {
         return this.DataEngineConfigPairs;
     }
 
     /**
-     * Set 引擎配置项
-     * @param DataEngineConfigPairs 引擎配置项
+     * Set 用户自定义配置项集合
+     * @param DataEngineConfigPairs 用户自定义配置项集合
      */
     public void setDataEngineConfigPairs(DataEngineConfigPair [] DataEngineConfigPairs) {
         this.DataEngineConfigPairs = DataEngineConfigPairs;
     }
 
     /**
-     * Get 作业引擎资源配置模版 
-     * @return SessionResourceTemplate 作业引擎资源配置模版
+     * Get 作业集群资源参数配置模版 
+     * @return SessionResourceTemplate 作业集群资源参数配置模版
      */
     public SessionResourceTemplate getSessionResourceTemplate() {
         return this.SessionResourceTemplate;
     }
 
     /**
-     * Set 作业引擎资源配置模版
-     * @param SessionResourceTemplate 作业引擎资源配置模版
+     * Set 作业集群资源参数配置模版
+     * @param SessionResourceTemplate 作业集群资源参数配置模版
      */
     public void setSessionResourceTemplate(SessionResourceTemplate SessionResourceTemplate) {
         this.SessionResourceTemplate = SessionResourceTemplate;
     }
 
-    public UpdateUserDataEngineConfigRequest() {
+    public DataEngineConfigInstanceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateUserDataEngineConfigRequest(UpdateUserDataEngineConfigRequest source) {
+    public DataEngineConfigInstanceInfo(DataEngineConfigInstanceInfo source) {
         if (source.DataEngineId != null) {
             this.DataEngineId = new String(source.DataEngineId);
         }

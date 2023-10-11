@@ -249,6 +249,27 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *创建堡垒机实例
+     * @param req CreateResourceRequest
+     * @return CreateResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourceResponse CreateResource(CreateResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateResourceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新建用户
      * @param req CreateUserRequest
      * @return CreateUserResponse
@@ -892,6 +913,27 @@ public class DasbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDeviceGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *资源变配
+     * @param req ModifyResourceRequest
+     * @return ModifyResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceResponse ModifyResource(ModifyResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyResource");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

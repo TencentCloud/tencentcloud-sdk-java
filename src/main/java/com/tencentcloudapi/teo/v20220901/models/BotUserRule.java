@@ -34,7 +34,9 @@ public class BotUserRule extends AbstractModel{
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
 <li>trans：放行；</li>
-<li>alg：JavaScript挑战；</li>
+<li>redirect：重定向；</li>
+<li>page：指定页面；</li>
+<li>alg：JavaScript 挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机处置；</li>
 <li>silence：静默；</li>
@@ -48,7 +50,7 @@ public class BotUserRule extends AbstractModel{
     /**
     * 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>默认on生效。
+<li>off：不生效。</li>默认 on 生效。
     */
     @SerializedName("RuleStatus")
     @Expose
@@ -69,8 +71,7 @@ public class BotUserRule extends AbstractModel{
     private Long RulePriority;
 
     /**
-    * 规则id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 规则 Id。仅出参使用。
     */
     @SerializedName("RuleID")
     @Expose
@@ -85,30 +86,57 @@ public class BotUserRule extends AbstractModel{
 
     /**
     * 过滤词，取值有：
-<li>sip：客户端ip。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>sip：客户端 ip。</li>
+默认为空字符串。
     */
     @SerializedName("FreqFields")
     @Expose
     private String [] FreqFields;
 
     /**
-    * 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 更新时间。仅出参使用。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 统计范围，字段为null时，代表source_to_eo。取值有：
-<li>source_to_eo：（响应）源站到EdgeOne。</li>
-<li>client_to_eo：（请求）客户端到EdgeOne；</li>
-注意：此字段可能返回 null，表示取不到有效值。
+    * 统计范围。取值有：
+<li>source_to_eo：（响应）源站到 EdgeOne；</li>
+<li>client_to_eo：（请求）客户端到 EdgeOne。</li>
+默认为 source_to_eo。
     */
     @SerializedName("FreqScope")
     @Expose
     private String [] FreqScope;
+
+    /**
+    * 自定义返回页面的名称。Action 是 page 时必填，且不能为空。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
+    */
+    @SerializedName("CustomResponseId")
+    @Expose
+    private String CustomResponseId;
+
+    /**
+    * 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
+    */
+    @SerializedName("ResponseCode")
+    @Expose
+    private Long ResponseCode;
+
+    /**
+    * 重定向时候的地址。Action 是 redirect 时必填，且不能为空。
+    */
+    @SerializedName("RedirectUrl")
+    @Expose
+    private String RedirectUrl;
 
     /**
      * Get 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。 
@@ -131,7 +159,9 @@ public class BotUserRule extends AbstractModel{
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
 <li>trans：放行；</li>
-<li>alg：JavaScript挑战；</li>
+<li>redirect：重定向；</li>
+<li>page：指定页面；</li>
+<li>alg：JavaScript 挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机处置；</li>
 <li>silence：静默；</li>
@@ -141,7 +171,9 @@ public class BotUserRule extends AbstractModel{
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
 <li>trans：放行；</li>
-<li>alg：JavaScript挑战；</li>
+<li>redirect：重定向；</li>
+<li>page：指定页面；</li>
+<li>alg：JavaScript 挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机处置；</li>
 <li>silence：静默；</li>
@@ -157,7 +189,9 @@ public class BotUserRule extends AbstractModel{
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
 <li>trans：放行；</li>
-<li>alg：JavaScript挑战；</li>
+<li>redirect：重定向；</li>
+<li>page：指定页面；</li>
+<li>alg：JavaScript 挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机处置；</li>
 <li>silence：静默；</li>
@@ -167,7 +201,9 @@ public class BotUserRule extends AbstractModel{
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
 <li>trans：放行；</li>
-<li>alg：JavaScript挑战；</li>
+<li>redirect：重定向；</li>
+<li>page：指定页面；</li>
+<li>alg：JavaScript 挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机处置；</li>
 <li>silence：静默；</li>
@@ -181,10 +217,10 @@ public class BotUserRule extends AbstractModel{
     /**
      * Get 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>默认on生效。 
+<li>off：不生效。</li>默认 on 生效。 
      * @return RuleStatus 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>默认on生效。
+<li>off：不生效。</li>默认 on 生效。
      */
     public String getRuleStatus() {
         return this.RuleStatus;
@@ -193,10 +229,10 @@ public class BotUserRule extends AbstractModel{
     /**
      * Set 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>默认on生效。
+<li>off：不生效。</li>默认 on 生效。
      * @param RuleStatus 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>默认on生效。
+<li>off：不生效。</li>默认 on 生效。
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
@@ -235,20 +271,16 @@ public class BotUserRule extends AbstractModel{
     }
 
     /**
-     * Get 规则id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleID 规则id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 规则 Id。仅出参使用。 
+     * @return RuleID 规则 Id。仅出参使用。
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set 规则id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleID 规则id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 规则 Id。仅出参使用。
+     * @param RuleID 规则 Id。仅出参使用。
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
@@ -272,11 +304,11 @@ public class BotUserRule extends AbstractModel{
 
     /**
      * Get 过滤词，取值有：
-<li>sip：客户端ip。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>sip：客户端 ip。</li>
+默认为空字符串。 
      * @return FreqFields 过滤词，取值有：
-<li>sip：客户端ip。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>sip：客户端 ip。</li>
+默认为空字符串。
      */
     public String [] getFreqFields() {
         return this.FreqFields;
@@ -284,62 +316,122 @@ public class BotUserRule extends AbstractModel{
 
     /**
      * Set 过滤词，取值有：
-<li>sip：客户端ip。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>sip：客户端 ip。</li>
+默认为空字符串。
      * @param FreqFields 过滤词，取值有：
-<li>sip：客户端ip。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>sip：客户端 ip。</li>
+默认为空字符串。
      */
     public void setFreqFields(String [] FreqFields) {
         this.FreqFields = FreqFields;
     }
 
     /**
-     * Get 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 更新时间。仅出参使用。 
+     * @return UpdateTime 更新时间。仅出参使用。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 更新时间。仅出参使用。
+     * @param UpdateTime 更新时间。仅出参使用。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 统计范围，字段为null时，代表source_to_eo。取值有：
-<li>source_to_eo：（响应）源站到EdgeOne。</li>
-<li>client_to_eo：（请求）客户端到EdgeOne；</li>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FreqScope 统计范围，字段为null时，代表source_to_eo。取值有：
-<li>source_to_eo：（响应）源站到EdgeOne。</li>
-<li>client_to_eo：（请求）客户端到EdgeOne；</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 统计范围。取值有：
+<li>source_to_eo：（响应）源站到 EdgeOne；</li>
+<li>client_to_eo：（请求）客户端到 EdgeOne。</li>
+默认为 source_to_eo。 
+     * @return FreqScope 统计范围。取值有：
+<li>source_to_eo：（响应）源站到 EdgeOne；</li>
+<li>client_to_eo：（请求）客户端到 EdgeOne。</li>
+默认为 source_to_eo。
      */
     public String [] getFreqScope() {
         return this.FreqScope;
     }
 
     /**
-     * Set 统计范围，字段为null时，代表source_to_eo。取值有：
-<li>source_to_eo：（响应）源站到EdgeOne。</li>
-<li>client_to_eo：（请求）客户端到EdgeOne；</li>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FreqScope 统计范围，字段为null时，代表source_to_eo。取值有：
-<li>source_to_eo：（响应）源站到EdgeOne。</li>
-<li>client_to_eo：（请求）客户端到EdgeOne；</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 统计范围。取值有：
+<li>source_to_eo：（响应）源站到 EdgeOne；</li>
+<li>client_to_eo：（请求）客户端到 EdgeOne。</li>
+默认为 source_to_eo。
+     * @param FreqScope 统计范围。取值有：
+<li>source_to_eo：（响应）源站到 EdgeOne；</li>
+<li>client_to_eo：（请求）客户端到 EdgeOne。</li>
+默认为 source_to_eo。
      */
     public void setFreqScope(String [] FreqScope) {
         this.FreqScope = FreqScope;
+    }
+
+    /**
+     * Get 自定义返回页面的名称。Action 是 page 时必填，且不能为空。 
+     * @return Name 自定义返回页面的名称。Action 是 page 时必填，且不能为空。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 自定义返回页面的名称。Action 是 page 时必填，且不能为空。
+     * @param Name 自定义返回页面的名称。Action 是 page 时必填，且不能为空。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	 
+     * @return CustomResponseId 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
+     */
+    public String getCustomResponseId() {
+        return this.CustomResponseId;
+    }
+
+    /**
+     * Set 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
+     * @param CustomResponseId 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
+     */
+    public void setCustomResponseId(String CustomResponseId) {
+        this.CustomResponseId = CustomResponseId;
+    }
+
+    /**
+     * Get 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。 
+     * @return ResponseCode 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
+     */
+    public Long getResponseCode() {
+        return this.ResponseCode;
+    }
+
+    /**
+     * Set 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
+     * @param ResponseCode 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
+     */
+    public void setResponseCode(Long ResponseCode) {
+        this.ResponseCode = ResponseCode;
+    }
+
+    /**
+     * Get 重定向时候的地址。Action 是 redirect 时必填，且不能为空。 
+     * @return RedirectUrl 重定向时候的地址。Action 是 redirect 时必填，且不能为空。
+     */
+    public String getRedirectUrl() {
+        return this.RedirectUrl;
+    }
+
+    /**
+     * Set 重定向时候的地址。Action 是 redirect 时必填，且不能为空。
+     * @param RedirectUrl 重定向时候的地址。Action 是 redirect 时必填，且不能为空。
+     */
+    public void setRedirectUrl(String RedirectUrl) {
+        this.RedirectUrl = RedirectUrl;
     }
 
     public BotUserRule() {
@@ -392,6 +484,18 @@ public class BotUserRule extends AbstractModel{
                 this.FreqScope[i] = new String(source.FreqScope[i]);
             }
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CustomResponseId != null) {
+            this.CustomResponseId = new String(source.CustomResponseId);
+        }
+        if (source.ResponseCode != null) {
+            this.ResponseCode = new Long(source.ResponseCode);
+        }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
+        }
     }
 
 
@@ -409,6 +513,10 @@ public class BotUserRule extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
+        this.setParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
+        this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
 
     }
 }

@@ -219,7 +219,7 @@ public class DeployContainerGroupRequest extends AbstractModel{
     private Boolean DeployAgent;
 
     /**
-    * 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+    * 节点调度策略。若不指定该参数，则默认不使用节点调度策略。
     */
     @SerializedName("SchedulingStrategy")
     @Expose
@@ -737,16 +737,16 @@ public class DeployContainerGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 节点调度策略。若不指定改参数，则默认不使用节点调度策略。 
-     * @return SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     * Get 节点调度策略。若不指定该参数，则默认不使用节点调度策略。 
+     * @return SchedulingStrategy 节点调度策略。若不指定该参数，则默认不使用节点调度策略。
      */
     public SchedulingStrategy getSchedulingStrategy() {
         return this.SchedulingStrategy;
     }
 
     /**
-     * Set 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
-     * @param SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     * Set 节点调度策略。若不指定该参数，则默认不使用节点调度策略。
+     * @param SchedulingStrategy 节点调度策略。若不指定该参数，则默认不使用节点调度策略。
      */
     public void setSchedulingStrategy(SchedulingStrategy SchedulingStrategy) {
         this.SchedulingStrategy = SchedulingStrategy;

@@ -23,22 +23,22 @@ import java.util.HashMap;
 public class DropPageDetail extends AbstractModel{
 
     /**
-    * 拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
+    * 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
     */
     @SerializedName("PageId")
     @Expose
     private Long PageId;
 
     /**
-    * 拦截页面的HTTP状态码。状态码范围是100-600。
+    * 拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * 页面文件名或url。
+    * 页面文件名或 url。
     */
     @SerializedName("Name")
     @Expose
@@ -46,60 +46,67 @@ public class DropPageDetail extends AbstractModel{
 
     /**
     * 页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li>
+<li>page：指定页面。</li>
+
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。 
-     * @return PageId 拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
+    * 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
+    */
+    @SerializedName("CustomResponseId")
+    @Expose
+    private String CustomResponseId;
+
+    /**
+     * Get 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。 
+     * @return PageId 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
      */
     public Long getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set 拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
-     * @param PageId 拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
+     * Set 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
+     * @param PageId 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
      */
     public void setPageId(Long PageId) {
         this.PageId = PageId;
     }
 
     /**
-     * Get 拦截页面的HTTP状态码。状态码范围是100-600。 
-     * @return StatusCode 拦截页面的HTTP状态码。状态码范围是100-600。
+     * Get 拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567. 
+     * @return StatusCode 拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set 拦截页面的HTTP状态码。状态码范围是100-600。
-     * @param StatusCode 拦截页面的HTTP状态码。状态码范围是100-600。
+     * Set 拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
+     * @param StatusCode 拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get 页面文件名或url。 
-     * @return Name 页面文件名或url。
+     * Get 页面文件名或 url。 
+     * @return Name 页面文件名或 url。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 页面文件名或url。
-     * @param Name 页面文件名或url。
+     * Set 页面文件名或 url。
+     * @param Name 页面文件名或 url。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -107,11 +114,11 @@ public class DropPageDetail extends AbstractModel{
 
     /**
      * Get 页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li> 
+<li>page：指定页面。</li>
+ 
      * @return Type 页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li>
+<li>page：指定页面。</li>
+
      */
     public String getType() {
         return this.Type;
@@ -119,14 +126,30 @@ public class DropPageDetail extends AbstractModel{
 
     /**
      * Set 页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li>
+<li>page：指定页面。</li>
+
      * @param Type 页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li>
+<li>page：指定页面。</li>
+
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。 
+     * @return CustomResponseId 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
+     */
+    public String getCustomResponseId() {
+        return this.CustomResponseId;
+    }
+
+    /**
+     * Set 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
+     * @param CustomResponseId 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
+     */
+    public void setCustomResponseId(String CustomResponseId) {
+        this.CustomResponseId = CustomResponseId;
     }
 
     public DropPageDetail() {
@@ -149,6 +172,9 @@ public class DropPageDetail extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.CustomResponseId != null) {
+            this.CustomResponseId = new String(source.CustomResponseId);
+        }
     }
 
 
@@ -160,6 +186,7 @@ public class DropPageDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
 
     }
 }

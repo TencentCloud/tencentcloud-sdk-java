@@ -75,6 +75,14 @@ public class AiAnalysisResult extends AbstractModel{
     private AiAnalysisTaskHighlightResult HighlightTask;
 
     /**
+    * 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeLogoTask")
+    @Expose
+    private AiAnalysisTaskDelLogoResult DeLogoTask;
+
+    /**
      * Get 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -210,6 +218,26 @@ public class AiAnalysisResult extends AbstractModel{
         this.HighlightTask = HighlightTask;
     }
 
+    /**
+     * Get 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeLogoTask 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskDelLogoResult getDeLogoTask() {
+        return this.DeLogoTask;
+    }
+
+    /**
+     * Set 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeLogoTask 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeLogoTask(AiAnalysisTaskDelLogoResult DeLogoTask) {
+        this.DeLogoTask = DeLogoTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -236,6 +264,9 @@ public class AiAnalysisResult extends AbstractModel{
         if (source.HighlightTask != null) {
             this.HighlightTask = new AiAnalysisTaskHighlightResult(source.HighlightTask);
         }
+        if (source.DeLogoTask != null) {
+            this.DeLogoTask = new AiAnalysisTaskDelLogoResult(source.DeLogoTask);
+        }
     }
 
 
@@ -249,6 +280,7 @@ public class AiAnalysisResult extends AbstractModel{
         this.setParamObj(map, prefix + "TagTask.", this.TagTask);
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
         this.setParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
+        this.setParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
 
     }
 }

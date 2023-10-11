@@ -22,6 +22,62 @@ import java.util.HashMap;
 
 public class DataEngineConfigPair extends AbstractModel{
 
+    /**
+    * 配置项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigItem")
+    @Expose
+    private String ConfigItem;
+
+    /**
+    * 配置值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigValue")
+    @Expose
+    private String ConfigValue;
+
+    /**
+     * Get 配置项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigItem 配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConfigItem() {
+        return this.ConfigItem;
+    }
+
+    /**
+     * Set 配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigItem 配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigItem(String ConfigItem) {
+        this.ConfigItem = ConfigItem;
+    }
+
+    /**
+     * Get 配置值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigValue 配置值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConfigValue() {
+        return this.ConfigValue;
+    }
+
+    /**
+     * Set 配置值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigValue 配置值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigValue(String ConfigValue) {
+        this.ConfigValue = ConfigValue;
+    }
+
     public DataEngineConfigPair() {
     }
 
@@ -30,6 +86,12 @@ public class DataEngineConfigPair extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DataEngineConfigPair(DataEngineConfigPair source) {
+        if (source.ConfigItem != null) {
+            this.ConfigItem = new String(source.ConfigItem);
+        }
+        if (source.ConfigValue != null) {
+            this.ConfigValue = new String(source.ConfigValue);
+        }
     }
 
 
@@ -37,6 +99,8 @@ public class DataEngineConfigPair extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ConfigItem", this.ConfigItem);
+        this.setParamSimple(map, prefix + "ConfigValue", this.ConfigValue);
 
     }
 }

@@ -23,11 +23,49 @@ import java.util.HashMap;
 public class CreateFlowApproversResponse extends AbstractModel{
 
     /**
+    * 批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FillError")
+    @Expose
+    private FillError [] FillError;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FillError 批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FillError [] getFillError() {
+        return this.FillError;
+    }
+
+    /**
+     * Set 批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FillError 批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFillError(FillError [] FillError) {
+        this.FillError = FillError;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +91,12 @@ public class CreateFlowApproversResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFlowApproversResponse(CreateFlowApproversResponse source) {
+        if (source.FillError != null) {
+            this.FillError = new FillError[source.FillError.length];
+            for (int i = 0; i < source.FillError.length; i++) {
+                this.FillError[i] = new FillError(source.FillError[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +107,7 @@ public class CreateFlowApproversResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "FillError.", this.FillError);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

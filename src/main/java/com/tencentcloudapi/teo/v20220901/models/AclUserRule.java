@@ -34,10 +34,10 @@ public class AclUserRule extends AbstractModel{
 <li>trans：放行；</li>
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
-<li>ban：IP封禁；</li>
+<li>ban：IP 封禁；</li>
 <li>redirect：重定向；</li>
 <li>page：指定页面；</li>
-<li>alg：Javascript挑战。</li>
+<li>alg：JavaScript 挑战。</li>
     */
     @SerializedName("Action")
     @Expose
@@ -67,8 +67,7 @@ public class AclUserRule extends AbstractModel{
     private Long RulePriority;
 
     /**
-    * 规则Id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 规则 Id。仅出参使用。
     */
     @SerializedName("RuleID")
     @Expose
@@ -76,62 +75,62 @@ public class AclUserRule extends AbstractModel{
 
     /**
     * 更新时间。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * ip封禁的惩罚时间，取值范围0-2天。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+    * ip 封禁的惩罚时间。Action 是 ban 时必填，且不能为空，取值范围0-2天。
     */
     @SerializedName("PunishTime")
     @Expose
     private Long PunishTime;
 
     /**
-    * ip封禁的惩罚时间单位，取值有：
+    * ip 封禁的惩罚时间单位，取值有：
 <li>second：秒；</li>
 <li>minutes：分；</li>
-<li>hour：小时。</li>默认为second。
-注意：此字段可能返回 null，表示取不到有效值。
+<li>hour：小时。</li>默认为 second。
     */
     @SerializedName("PunishTimeUnit")
     @Expose
     private String PunishTimeUnit;
 
     /**
-    * 自定义返回页面的名称。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 自定义返回页面的名称。Action 是 page 时必填，且不能为空。	
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 自定义返回页面的实例id。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 自定义返回页面的实例 Id。默认为0，代表使用系统默认拦截页面。该参数已废弃。
     */
     @SerializedName("PageId")
     @Expose
     private Long PageId;
 
     /**
-    * 重定向时候的地址，必须为本用户接入的站点子域名。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
     */
-    @SerializedName("RedirectUrl")
+    @SerializedName("CustomResponseId")
     @Expose
-    private String RedirectUrl;
+    private String CustomResponseId;
 
     /**
-    * 重定向时候的返回码。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
     */
     @SerializedName("ResponseCode")
     @Expose
     private Long ResponseCode;
+
+    /**
+    * 重定向时候的地址。Action 是 redirect 时必填，且不能为空。	
+    */
+    @SerializedName("RedirectUrl")
+    @Expose
+    private String RedirectUrl;
 
     /**
      * Get 规则名。 
@@ -154,18 +153,18 @@ public class AclUserRule extends AbstractModel{
 <li>trans：放行；</li>
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
-<li>ban：IP封禁；</li>
+<li>ban：IP 封禁；</li>
 <li>redirect：重定向；</li>
 <li>page：指定页面；</li>
-<li>alg：Javascript挑战。</li> 
+<li>alg：JavaScript 挑战。</li> 
      * @return Action 处罚动作，取值有：
 <li>trans：放行；</li>
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
-<li>ban：IP封禁；</li>
+<li>ban：IP 封禁；</li>
 <li>redirect：重定向；</li>
 <li>page：指定页面；</li>
-<li>alg：Javascript挑战。</li>
+<li>alg：JavaScript 挑战。</li>
      */
     public String getAction() {
         return this.Action;
@@ -176,18 +175,18 @@ public class AclUserRule extends AbstractModel{
 <li>trans：放行；</li>
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
-<li>ban：IP封禁；</li>
+<li>ban：IP 封禁；</li>
 <li>redirect：重定向；</li>
 <li>page：指定页面；</li>
-<li>alg：Javascript挑战。</li>
+<li>alg：JavaScript 挑战。</li>
      * @param Action 处罚动作，取值有：
 <li>trans：放行；</li>
 <li>drop：拦截；</li>
 <li>monitor：观察；</li>
-<li>ban：IP封禁；</li>
+<li>ban：IP 封禁；</li>
 <li>redirect：重定向；</li>
 <li>page：指定页面；</li>
-<li>alg：Javascript挑战。</li>
+<li>alg：JavaScript 挑战。</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -250,30 +249,24 @@ public class AclUserRule extends AbstractModel{
     }
 
     /**
-     * Get 规则Id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleID 规则Id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 规则 Id。仅出参使用。 
+     * @return RuleID 规则 Id。仅出参使用。
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set 规则Id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleID 规则Id。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 规则 Id。仅出参使用。
+     * @param RuleID 规则 Id。仅出参使用。
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get 更新时间。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间。仅出参使用。 
      * @return UpdateTime 更新时间。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -281,144 +274,134 @@ public class AclUserRule extends AbstractModel{
 
     /**
      * Set 更新时间。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get ip封禁的惩罚时间，取值范围0-2天。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishTime ip封禁的惩罚时间，取值范围0-2天。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get ip 封禁的惩罚时间。Action 是 ban 时必填，且不能为空，取值范围0-2天。 
+     * @return PunishTime ip 封禁的惩罚时间。Action 是 ban 时必填，且不能为空，取值范围0-2天。
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set ip封禁的惩罚时间，取值范围0-2天。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishTime ip封禁的惩罚时间，取值范围0-2天。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set ip 封禁的惩罚时间。Action 是 ban 时必填，且不能为空，取值范围0-2天。
+     * @param PunishTime ip 封禁的惩罚时间。Action 是 ban 时必填，且不能为空，取值范围0-2天。
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;
     }
 
     /**
-     * Get ip封禁的惩罚时间单位，取值有：
+     * Get ip 封禁的惩罚时间单位，取值有：
 <li>second：秒；</li>
 <li>minutes：分；</li>
-<li>hour：小时。</li>默认为second。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishTimeUnit ip封禁的惩罚时间单位，取值有：
+<li>hour：小时。</li>默认为 second。 
+     * @return PunishTimeUnit ip 封禁的惩罚时间单位，取值有：
 <li>second：秒；</li>
 <li>minutes：分；</li>
-<li>hour：小时。</li>默认为second。
-注意：此字段可能返回 null，表示取不到有效值。
+<li>hour：小时。</li>默认为 second。
      */
     public String getPunishTimeUnit() {
         return this.PunishTimeUnit;
     }
 
     /**
-     * Set ip封禁的惩罚时间单位，取值有：
+     * Set ip 封禁的惩罚时间单位，取值有：
 <li>second：秒；</li>
 <li>minutes：分；</li>
-<li>hour：小时。</li>默认为second。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishTimeUnit ip封禁的惩罚时间单位，取值有：
+<li>hour：小时。</li>默认为 second。
+     * @param PunishTimeUnit ip 封禁的惩罚时间单位，取值有：
 <li>second：秒；</li>
 <li>minutes：分；</li>
-<li>hour：小时。</li>默认为second。
-注意：此字段可能返回 null，表示取不到有效值。
+<li>hour：小时。</li>默认为 second。
      */
     public void setPunishTimeUnit(String PunishTimeUnit) {
         this.PunishTimeUnit = PunishTimeUnit;
     }
 
     /**
-     * Get 自定义返回页面的名称。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 自定义返回页面的名称。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 自定义返回页面的名称。Action 是 page 时必填，且不能为空。	 
+     * @return Name 自定义返回页面的名称。Action 是 page 时必填，且不能为空。	
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 自定义返回页面的名称。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 自定义返回页面的名称。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 自定义返回页面的名称。Action 是 page 时必填，且不能为空。	
+     * @param Name 自定义返回页面的名称。Action 是 page 时必填，且不能为空。	
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 自定义返回页面的实例id。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageId 自定义返回页面的实例id。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 自定义返回页面的实例 Id。默认为0，代表使用系统默认拦截页面。该参数已废弃。 
+     * @return PageId 自定义返回页面的实例 Id。默认为0，代表使用系统默认拦截页面。该参数已废弃。
      */
     public Long getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set 自定义返回页面的实例id。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageId 自定义返回页面的实例id。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 自定义返回页面的实例 Id。默认为0，代表使用系统默认拦截页面。该参数已废弃。
+     * @param PageId 自定义返回页面的实例 Id。默认为0，代表使用系统默认拦截页面。该参数已废弃。
      */
     public void setPageId(Long PageId) {
         this.PageId = PageId;
     }
 
     /**
-     * Get 重定向时候的地址，必须为本用户接入的站点子域名。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	 
+     * @return CustomResponseId 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
      */
-    public String getRedirectUrl() {
-        return this.RedirectUrl;
+    public String getCustomResponseId() {
+        return this.CustomResponseId;
     }
 
     /**
-     * Set 重定向时候的地址，必须为本用户接入的站点子域名。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RedirectUrl 重定向时候的地址，必须为本用户接入的站点子域名。默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
+     * @param CustomResponseId 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Action 是 page 时必填，且不能为空。	
      */
-    public void setRedirectUrl(String RedirectUrl) {
-        this.RedirectUrl = RedirectUrl;
+    public void setCustomResponseId(String CustomResponseId) {
+        this.CustomResponseId = CustomResponseId;
     }
 
     /**
-     * Get 重定向时候的返回码。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseCode 重定向时候的返回码。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。 
+     * @return ResponseCode 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
      */
     public Long getResponseCode() {
         return this.ResponseCode;
     }
 
     /**
-     * Set 重定向时候的返回码。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseCode 重定向时候的返回码。默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
+     * @param ResponseCode 自定义返回页面的响应码。Action 是 page 时必填，且不能为空，取值: 100~600，不支持 3xx 响应码。默认值：567。
      */
     public void setResponseCode(Long ResponseCode) {
         this.ResponseCode = ResponseCode;
+    }
+
+    /**
+     * Get 重定向时候的地址。Action 是 redirect 时必填，且不能为空。	 
+     * @return RedirectUrl 重定向时候的地址。Action 是 redirect 时必填，且不能为空。	
+     */
+    public String getRedirectUrl() {
+        return this.RedirectUrl;
+    }
+
+    /**
+     * Set 重定向时候的地址。Action 是 redirect 时必填，且不能为空。	
+     * @param RedirectUrl 重定向时候的地址。Action 是 redirect 时必填，且不能为空。	
+     */
+    public void setRedirectUrl(String RedirectUrl) {
+        this.RedirectUrl = RedirectUrl;
     }
 
     public AclUserRule() {
@@ -465,11 +448,14 @@ public class AclUserRule extends AbstractModel{
         if (source.PageId != null) {
             this.PageId = new Long(source.PageId);
         }
-        if (source.RedirectUrl != null) {
-            this.RedirectUrl = new String(source.RedirectUrl);
+        if (source.CustomResponseId != null) {
+            this.CustomResponseId = new String(source.CustomResponseId);
         }
         if (source.ResponseCode != null) {
             this.ResponseCode = new Long(source.ResponseCode);
+        }
+        if (source.RedirectUrl != null) {
+            this.RedirectUrl = new String(source.RedirectUrl);
         }
     }
 
@@ -489,8 +475,9 @@ public class AclUserRule extends AbstractModel{
         this.setParamSimple(map, prefix + "PunishTimeUnit", this.PunishTimeUnit);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
-        this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+        this.setParamSimple(map, prefix + "CustomResponseId", this.CustomResponseId);
         this.setParamSimple(map, prefix + "ResponseCode", this.ResponseCode);
+        this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
 
     }
 }

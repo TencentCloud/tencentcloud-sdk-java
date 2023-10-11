@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeDataEngineImageRequest extends AbstractModel{
+public class AiAnalysisTaskDelLogoInput extends AbstractModel{
 
     /**
-    * 引擎ID
+    * 视频智能去水印模板 ID。
     */
-    @SerializedName("DataEngineId")
+    @SerializedName("Definition")
     @Expose
-    private String DataEngineId;
+    private Long Definition;
 
     /**
-     * Get 引擎ID 
-     * @return DataEngineId 引擎ID
+     * Get 视频智能去水印模板 ID。 
+     * @return Definition 视频智能去水印模板 ID。
      */
-    public String getDataEngineId() {
-        return this.DataEngineId;
+    public Long getDefinition() {
+        return this.Definition;
     }
 
     /**
-     * Set 引擎ID
-     * @param DataEngineId 引擎ID
+     * Set 视频智能去水印模板 ID。
+     * @param Definition 视频智能去水印模板 ID。
      */
-    public void setDataEngineId(String DataEngineId) {
-        this.DataEngineId = DataEngineId;
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
-    public UpgradeDataEngineImageRequest() {
+    public AiAnalysisTaskDelLogoInput() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpgradeDataEngineImageRequest(UpgradeDataEngineImageRequest source) {
-        if (source.DataEngineId != null) {
-            this.DataEngineId = new String(source.DataEngineId);
+    public AiAnalysisTaskDelLogoInput(AiAnalysisTaskDelLogoInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
         }
     }
 
@@ -63,7 +63,7 @@ public class UpgradeDataEngineImageRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }
 }

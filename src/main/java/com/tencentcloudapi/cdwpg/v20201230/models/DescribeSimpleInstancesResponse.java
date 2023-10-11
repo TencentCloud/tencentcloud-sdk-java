@@ -13,29 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.cdwpg.v20201230.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserDataEngineConfigResponse extends AbstractModel{
+public class DescribeSimpleInstancesResponse extends AbstractModel{
 
     /**
-    * 用户引擎自定义配置项列表。
+    * 1
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("DataEngineConfigInstanceInfos")
-    @Expose
-    private DataEngineConfigInstanceInfo [] DataEngineConfigInstanceInfos;
-
-    /**
-    * 配置项总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstancesList")
+    @Expose
+    private InstanceSimpleInfoNew [] InstancesList;
+
+    /**
+    * -
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +54,63 @@ public class DescribeUserDataEngineConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户引擎自定义配置项列表。
+     * Get 1
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataEngineConfigInstanceInfos 用户引擎自定义配置项列表。
+     * @return TotalCount 1
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public DataEngineConfigInstanceInfo [] getDataEngineConfigInstanceInfos() {
-        return this.DataEngineConfigInstanceInfos;
-    }
-
-    /**
-     * Set 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataEngineConfigInstanceInfos 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setDataEngineConfigInstanceInfos(DataEngineConfigInstanceInfo [] DataEngineConfigInstanceInfos) {
-        this.DataEngineConfigInstanceInfos = DataEngineConfigInstanceInfos;
-    }
-
-    /**
-     * Get 配置项总数。 
-     * @return TotalCount 配置项总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 配置项总数。
-     * @param TotalCount 配置项总数。
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 1
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstancesList 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceSimpleInfoNew [] getInstancesList() {
+        return this.InstancesList;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstancesList 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstancesList(InstanceSimpleInfoNew [] InstancesList) {
+        this.InstancesList = InstancesList;
+    }
+
+    /**
+     * Get -
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMsg -
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set -
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMsg -
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
     }
 
     /**
@@ -96,22 +129,25 @@ public class DescribeUserDataEngineConfigResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeUserDataEngineConfigResponse() {
+    public DescribeSimpleInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeUserDataEngineConfigResponse(DescribeUserDataEngineConfigResponse source) {
-        if (source.DataEngineConfigInstanceInfos != null) {
-            this.DataEngineConfigInstanceInfos = new DataEngineConfigInstanceInfo[source.DataEngineConfigInstanceInfos.length];
-            for (int i = 0; i < source.DataEngineConfigInstanceInfos.length; i++) {
-                this.DataEngineConfigInstanceInfos[i] = new DataEngineConfigInstanceInfo(source.DataEngineConfigInstanceInfos[i]);
-            }
-        }
+    public DescribeSimpleInstancesResponse(DescribeSimpleInstancesResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.InstancesList != null) {
+            this.InstancesList = new InstanceSimpleInfoNew[source.InstancesList.length];
+            for (int i = 0; i < source.InstancesList.length; i++) {
+                this.InstancesList[i] = new InstanceSimpleInfoNew(source.InstancesList[i]);
+            }
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +159,9 @@ public class DescribeUserDataEngineConfigResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DataEngineConfigInstanceInfos.", this.DataEngineConfigInstanceInfos);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "InstancesList.", this.InstancesList);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

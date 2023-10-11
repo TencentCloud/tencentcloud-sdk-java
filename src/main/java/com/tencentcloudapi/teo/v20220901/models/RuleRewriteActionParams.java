@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RuleRewriteActionParams extends AbstractModel{
 
     /**
-    * 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。现在只有三种取值：
+    * 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。现在只有三种取值：
 <li> add：添加 HTTP 头部；</li>
 <li> set：重写 HTTP 头部；</li>
 <li> del：删除 HTTP 头部。</li>
@@ -47,11 +47,11 @@ public class RuleRewriteActionParams extends AbstractModel{
     private String [] Values;
 
     /**
-     * Get 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。现在只有三种取值：
+     * Get 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。现在只有三种取值：
 <li> add：添加 HTTP 头部；</li>
 <li> set：重写 HTTP 头部；</li>
 <li> del：删除 HTTP 头部。</li> 
-     * @return Action 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。现在只有三种取值：
+     * @return Action 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。现在只有三种取值：
 <li> add：添加 HTTP 头部；</li>
 <li> set：重写 HTTP 头部；</li>
 <li> del：删除 HTTP 头部。</li>
@@ -61,11 +61,11 @@ public class RuleRewriteActionParams extends AbstractModel{
     }
 
     /**
-     * Set 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。现在只有三种取值：
+     * Set 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。现在只有三种取值：
 <li> add：添加 HTTP 头部；</li>
 <li> set：重写 HTTP 头部；</li>
 <li> del：删除 HTTP 头部。</li>
-     * @param Action 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。现在只有三种取值：
+     * @param Action 功能参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。现在只有三种取值：
 <li> add：添加 HTTP 头部；</li>
 <li> set：重写 HTTP 头部；</li>
 <li> del：删除 HTTP 头部。</li>

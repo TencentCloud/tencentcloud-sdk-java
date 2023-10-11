@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class RestartDataEngineRequest extends AbstractModel{
 
+    /**
+    * 引擎ID
+    */
+    @SerializedName("DataEngineId")
+    @Expose
+    private String DataEngineId;
+
+    /**
+    * 是否强制重启，忽略任务
+    */
+    @SerializedName("ForcedOperation")
+    @Expose
+    private Boolean ForcedOperation;
+
+    /**
+     * Get 引擎ID 
+     * @return DataEngineId 引擎ID
+     */
+    public String getDataEngineId() {
+        return this.DataEngineId;
+    }
+
+    /**
+     * Set 引擎ID
+     * @param DataEngineId 引擎ID
+     */
+    public void setDataEngineId(String DataEngineId) {
+        this.DataEngineId = DataEngineId;
+    }
+
+    /**
+     * Get 是否强制重启，忽略任务 
+     * @return ForcedOperation 是否强制重启，忽略任务
+     */
+    public Boolean getForcedOperation() {
+        return this.ForcedOperation;
+    }
+
+    /**
+     * Set 是否强制重启，忽略任务
+     * @param ForcedOperation 是否强制重启，忽略任务
+     */
+    public void setForcedOperation(Boolean ForcedOperation) {
+        this.ForcedOperation = ForcedOperation;
+    }
+
     public RestartDataEngineRequest() {
     }
 
@@ -30,6 +76,12 @@ public class RestartDataEngineRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RestartDataEngineRequest(RestartDataEngineRequest source) {
+        if (source.DataEngineId != null) {
+            this.DataEngineId = new String(source.DataEngineId);
+        }
+        if (source.ForcedOperation != null) {
+            this.ForcedOperation = new Boolean(source.ForcedOperation);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class RestartDataEngineRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+        this.setParamSimple(map, prefix + "ForcedOperation", this.ForcedOperation);
 
     }
 }

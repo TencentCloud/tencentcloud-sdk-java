@@ -13,23 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateFlowApproversResponse extends AbstractModel{
-
-    /**
-    * 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("FillError")
-    @Expose
-    private FillError [] FillError;
+public class ModifyResourceResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,30 +28,6 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FillError 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public FillError [] getFillError() {
-        return this.FillError;
-    }
-
-    /**
-     * Set 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FillError 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setFillError(FillError [] FillError) {
-        this.FillError = FillError;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -78,20 +45,14 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ChannelCreateFlowApproversResponse() {
+    public ModifyResourceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChannelCreateFlowApproversResponse(ChannelCreateFlowApproversResponse source) {
-        if (source.FillError != null) {
-            this.FillError = new FillError[source.FillError.length];
-            for (int i = 0; i < source.FillError.length; i++) {
-                this.FillError[i] = new FillError(source.FillError[i]);
-            }
-        }
+    public ModifyResourceResponse(ModifyResourceResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -102,7 +63,6 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FillError.", this.FillError);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -58,7 +58,8 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long InstanceCount;
 
     /**
-    * 可用区列表。默认为随机可用区
+    * 可用区列表。
+不填此参数，表示为随机可用区。
     */
     @SerializedName("Zones")
     @Expose
@@ -83,7 +84,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private String ClientToken;
 
     /**
-    * 实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
+    * 实例登录密码信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码。
     */
     @SerializedName("LoginConfiguration")
     @Expose
@@ -109,6 +110,17 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     @SerializedName("FirewallTemplateId")
     @Expose
     private String FirewallTemplateId;
+
+    /**
+    * 标签键和标签值。
+如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。
+同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。
+如果标签不存在会为您自动创建标签。
+数组最多支持10个元素。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。 
@@ -191,16 +203,20 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 可用区列表。默认为随机可用区 
-     * @return Zones 可用区列表。默认为随机可用区
+     * Get 可用区列表。
+不填此参数，表示为随机可用区。 
+     * @return Zones 可用区列表。
+不填此参数，表示为随机可用区。
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 可用区列表。默认为随机可用区
-     * @param Zones 可用区列表。默认为随机可用区
+     * Set 可用区列表。
+不填此参数，表示为随机可用区。
+     * @param Zones 可用区列表。
+不填此参数，表示为随机可用区。
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
@@ -255,16 +271,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。 
-     * @return LoginConfiguration 实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
+     * Get 实例登录密码信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码。 
+     * @return LoginConfiguration 实例登录密码信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码。
      */
     public LoginConfiguration getLoginConfiguration() {
         return this.LoginConfiguration;
     }
 
     /**
-     * Set 实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
-     * @param LoginConfiguration 实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
+     * Set 实例登录密码信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码。
+     * @param LoginConfiguration 实例登录密码信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码。
      */
     public void setLoginConfiguration(LoginConfiguration LoginConfiguration) {
         this.LoginConfiguration = LoginConfiguration;
@@ -318,6 +334,38 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.FirewallTemplateId = FirewallTemplateId;
     }
 
+    /**
+     * Get 标签键和标签值。
+如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。
+同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。
+如果标签不存在会为您自动创建标签。
+数组最多支持10个元素。 
+     * @return Tags 标签键和标签值。
+如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。
+同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。
+如果标签不存在会为您自动创建标签。
+数组最多支持10个元素。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签键和标签值。
+如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。
+同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。
+如果标签不存在会为您自动创建标签。
+数组最多支持10个元素。
+     * @param Tags 标签键和标签值。
+如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。
+同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。
+如果标签不存在会为您自动创建标签。
+数组最多支持10个元素。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -368,6 +416,12 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.FirewallTemplateId != null) {
             this.FirewallTemplateId = new String(source.FirewallTemplateId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -387,6 +441,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

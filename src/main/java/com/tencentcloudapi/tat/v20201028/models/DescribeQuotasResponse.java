@@ -13,23 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateFlowApproversResponse extends AbstractModel{
+public class DescribeQuotasResponse extends AbstractModel{
 
     /**
-    * 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
+    * 资源额度列表
     */
-    @SerializedName("FillError")
+    @SerializedName("GeneralResourceQuotaSet")
     @Expose
-    private FillError [] FillError;
+    private GeneralResourceQuotaSet [] GeneralResourceQuotaSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -39,27 +37,19 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FillError 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资源额度列表 
+     * @return GeneralResourceQuotaSet 资源额度列表
      */
-    public FillError [] getFillError() {
-        return this.FillError;
+    public GeneralResourceQuotaSet [] getGeneralResourceQuotaSet() {
+        return this.GeneralResourceQuotaSet;
     }
 
     /**
-     * Set 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FillError 批量补充签署人时，补充失败的报错说明 
-注:`目前仅补充动态签署人时会返回补充失败的原因`	
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 资源额度列表
+     * @param GeneralResourceQuotaSet 资源额度列表
      */
-    public void setFillError(FillError [] FillError) {
-        this.FillError = FillError;
+    public void setGeneralResourceQuotaSet(GeneralResourceQuotaSet [] GeneralResourceQuotaSet) {
+        this.GeneralResourceQuotaSet = GeneralResourceQuotaSet;
     }
 
     /**
@@ -78,18 +68,18 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ChannelCreateFlowApproversResponse() {
+    public DescribeQuotasResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChannelCreateFlowApproversResponse(ChannelCreateFlowApproversResponse source) {
-        if (source.FillError != null) {
-            this.FillError = new FillError[source.FillError.length];
-            for (int i = 0; i < source.FillError.length; i++) {
-                this.FillError[i] = new FillError(source.FillError[i]);
+    public DescribeQuotasResponse(DescribeQuotasResponse source) {
+        if (source.GeneralResourceQuotaSet != null) {
+            this.GeneralResourceQuotaSet = new GeneralResourceQuotaSet[source.GeneralResourceQuotaSet.length];
+            for (int i = 0; i < source.GeneralResourceQuotaSet.length; i++) {
+                this.GeneralResourceQuotaSet[i] = new GeneralResourceQuotaSet(source.GeneralResourceQuotaSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -102,7 +92,7 @@ public class ChannelCreateFlowApproversResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FillError.", this.FillError);
+        this.setParamArrayObj(map, prefix + "GeneralResourceQuotaSet.", this.GeneralResourceQuotaSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

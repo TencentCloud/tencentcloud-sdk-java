@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class UpdateDataEngineConfigRequest extends AbstractModel{
 
+    /**
+    * 引擎ID
+    */
+    @SerializedName("DataEngineIds")
+    @Expose
+    private String [] DataEngineIds;
+
+    /**
+    * 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+    */
+    @SerializedName("DataEngineConfigCommand")
+    @Expose
+    private String DataEngineConfigCommand;
+
+    /**
+     * Get 引擎ID 
+     * @return DataEngineIds 引擎ID
+     */
+    public String [] getDataEngineIds() {
+        return this.DataEngineIds;
+    }
+
+    /**
+     * Set 引擎ID
+     * @param DataEngineIds 引擎ID
+     */
+    public void setDataEngineIds(String [] DataEngineIds) {
+        this.DataEngineIds = DataEngineIds;
+    }
+
+    /**
+     * Get 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置） 
+     * @return DataEngineConfigCommand 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+     */
+    public String getDataEngineConfigCommand() {
+        return this.DataEngineConfigCommand;
+    }
+
+    /**
+     * Set 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+     * @param DataEngineConfigCommand 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+     */
+    public void setDataEngineConfigCommand(String DataEngineConfigCommand) {
+        this.DataEngineConfigCommand = DataEngineConfigCommand;
+    }
+
     public UpdateDataEngineConfigRequest() {
     }
 
@@ -30,6 +76,15 @@ public class UpdateDataEngineConfigRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateDataEngineConfigRequest(UpdateDataEngineConfigRequest source) {
+        if (source.DataEngineIds != null) {
+            this.DataEngineIds = new String[source.DataEngineIds.length];
+            for (int i = 0; i < source.DataEngineIds.length; i++) {
+                this.DataEngineIds[i] = new String(source.DataEngineIds[i]);
+            }
+        }
+        if (source.DataEngineConfigCommand != null) {
+            this.DataEngineConfigCommand = new String(source.DataEngineConfigCommand);
+        }
     }
 
 
@@ -37,6 +92,8 @@ public class UpdateDataEngineConfigRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "DataEngineIds.", this.DataEngineIds);
+        this.setParamSimple(map, prefix + "DataEngineConfigCommand", this.DataEngineConfigCommand);
 
     }
 }

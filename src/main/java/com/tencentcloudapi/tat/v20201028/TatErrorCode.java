@@ -180,6 +180,9 @@ public enum TatErrorCode {
     // 实例未处于运行中。
      RESOURCEUNAVAILABLE_INSTANCESTATENOTRUNNING("ResourceUnavailable.InstanceStateNotRunning"),
      
+    // 不存在的资源名称
+     RESOURCEUNAVAILABLE_INVALIDRESOURCEQUOTARESOURCECODE("ResourceUnavailable.InvalidResourceQuotaResourceCode"),
+     
     // Lighthouse 尚不支持指定的地域。
      RESOURCEUNAVAILABLE_LIGHTHOUSEUNSUPPORTEDREGION("ResourceUnavailable.LighthouseUnsupportedRegion"),
      

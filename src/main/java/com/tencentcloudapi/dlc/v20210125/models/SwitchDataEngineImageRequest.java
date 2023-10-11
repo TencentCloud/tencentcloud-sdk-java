@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class SwitchDataEngineImageRequest extends AbstractModel{
 
+    /**
+    * 引擎ID
+    */
+    @SerializedName("DataEngineId")
+    @Expose
+    private String DataEngineId;
+
+    /**
+    * 新镜像版本ID
+    */
+    @SerializedName("NewImageVersionId")
+    @Expose
+    private String NewImageVersionId;
+
+    /**
+     * Get 引擎ID 
+     * @return DataEngineId 引擎ID
+     */
+    public String getDataEngineId() {
+        return this.DataEngineId;
+    }
+
+    /**
+     * Set 引擎ID
+     * @param DataEngineId 引擎ID
+     */
+    public void setDataEngineId(String DataEngineId) {
+        this.DataEngineId = DataEngineId;
+    }
+
+    /**
+     * Get 新镜像版本ID 
+     * @return NewImageVersionId 新镜像版本ID
+     */
+    public String getNewImageVersionId() {
+        return this.NewImageVersionId;
+    }
+
+    /**
+     * Set 新镜像版本ID
+     * @param NewImageVersionId 新镜像版本ID
+     */
+    public void setNewImageVersionId(String NewImageVersionId) {
+        this.NewImageVersionId = NewImageVersionId;
+    }
+
     public SwitchDataEngineImageRequest() {
     }
 
@@ -30,6 +76,12 @@ public class SwitchDataEngineImageRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SwitchDataEngineImageRequest(SwitchDataEngineImageRequest source) {
+        if (source.DataEngineId != null) {
+            this.DataEngineId = new String(source.DataEngineId);
+        }
+        if (source.NewImageVersionId != null) {
+            this.NewImageVersionId = new String(source.NewImageVersionId);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class SwitchDataEngineImageRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+        this.setParamSimple(map, prefix + "NewImageVersionId", this.NewImageVersionId);
 
     }
 }

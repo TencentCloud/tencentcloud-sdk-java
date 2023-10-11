@@ -148,6 +148,27 @@ public class TatClient extends AbstractClient{
     }
 
     /**
+     *批量删除命令接口
+     * @param req DeleteCommandsRequest
+     * @return DeleteCommandsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCommandsResponse DeleteCommands(DeleteCommandsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCommandsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCommandsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCommands");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于删除执行器。
      * @param req DeleteInvokerRequest
      * @return DeleteInvokerResponse
@@ -329,6 +350,27 @@ public class TatClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInvokersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInvokers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于获取配额信息
+     * @param req DescribeQuotasRequest
+     * @return DescribeQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQuotasResponse DescribeQuotas(DescribeQuotasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQuotasResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQuotasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeQuotas");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

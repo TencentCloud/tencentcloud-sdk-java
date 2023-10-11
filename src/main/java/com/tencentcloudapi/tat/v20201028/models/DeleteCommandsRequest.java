@@ -13,48 +13,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeDataEngineImageRequest extends AbstractModel{
+public class DeleteCommandsRequest extends AbstractModel{
 
     /**
-    * 引擎ID
+    * 待删除命令id
     */
-    @SerializedName("DataEngineId")
+    @SerializedName("CommandIds")
     @Expose
-    private String DataEngineId;
+    private String [] CommandIds;
 
     /**
-     * Get 引擎ID 
-     * @return DataEngineId 引擎ID
+     * Get 待删除命令id 
+     * @return CommandIds 待删除命令id
      */
-    public String getDataEngineId() {
-        return this.DataEngineId;
+    public String [] getCommandIds() {
+        return this.CommandIds;
     }
 
     /**
-     * Set 引擎ID
-     * @param DataEngineId 引擎ID
+     * Set 待删除命令id
+     * @param CommandIds 待删除命令id
      */
-    public void setDataEngineId(String DataEngineId) {
-        this.DataEngineId = DataEngineId;
+    public void setCommandIds(String [] CommandIds) {
+        this.CommandIds = CommandIds;
     }
 
-    public UpgradeDataEngineImageRequest() {
+    public DeleteCommandsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpgradeDataEngineImageRequest(UpgradeDataEngineImageRequest source) {
-        if (source.DataEngineId != null) {
-            this.DataEngineId = new String(source.DataEngineId);
+    public DeleteCommandsRequest(DeleteCommandsRequest source) {
+        if (source.CommandIds != null) {
+            this.CommandIds = new String[source.CommandIds.length];
+            for (int i = 0; i < source.CommandIds.length; i++) {
+                this.CommandIds[i] = new String(source.CommandIds[i]);
+            }
         }
     }
 
@@ -63,7 +66,7 @@ public class UpgradeDataEngineImageRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+        this.setParamArraySimple(map, prefix + "CommandIds.", this.CommandIds);
 
     }
 }

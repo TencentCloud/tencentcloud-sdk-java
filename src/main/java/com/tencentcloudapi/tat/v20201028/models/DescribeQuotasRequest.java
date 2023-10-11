@@ -13,48 +13,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeDataEngineImageRequest extends AbstractModel{
+public class DescribeQuotasRequest extends AbstractModel{
 
     /**
-    * 引擎ID
+    * 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
     */
-    @SerializedName("DataEngineId")
+    @SerializedName("ResourceNames")
     @Expose
-    private String DataEngineId;
+    private String [] ResourceNames;
 
     /**
-     * Get 引擎ID 
-     * @return DataEngineId 引擎ID
+     * Get 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标 
+     * @return ResourceNames 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
      */
-    public String getDataEngineId() {
-        return this.DataEngineId;
+    public String [] getResourceNames() {
+        return this.ResourceNames;
     }
 
     /**
-     * Set 引擎ID
-     * @param DataEngineId 引擎ID
+     * Set 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+     * @param ResourceNames 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
      */
-    public void setDataEngineId(String DataEngineId) {
-        this.DataEngineId = DataEngineId;
+    public void setResourceNames(String [] ResourceNames) {
+        this.ResourceNames = ResourceNames;
     }
 
-    public UpgradeDataEngineImageRequest() {
+    public DescribeQuotasRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpgradeDataEngineImageRequest(UpgradeDataEngineImageRequest source) {
-        if (source.DataEngineId != null) {
-            this.DataEngineId = new String(source.DataEngineId);
+    public DescribeQuotasRequest(DescribeQuotasRequest source) {
+        if (source.ResourceNames != null) {
+            this.ResourceNames = new String[source.ResourceNames.length];
+            for (int i = 0; i < source.ResourceNames.length; i++) {
+                this.ResourceNames[i] = new String(source.ResourceNames[i]);
+            }
         }
     }
 
@@ -63,7 +66,7 @@ public class UpgradeDataEngineImageRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+        this.setParamArraySimple(map, prefix + "ResourceNames.", this.ResourceNames);
 
     }
 }

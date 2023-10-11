@@ -37,7 +37,7 @@ public class CreateTopicRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
+    * 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
     */
     @SerializedName("Partitions")
     @Expose
@@ -120,16 +120,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。 
-     * @return Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
+     * Get 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。 
+     * @return Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
      */
     public Long getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
-     * @param Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
+     * Set 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
+     * @param Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
