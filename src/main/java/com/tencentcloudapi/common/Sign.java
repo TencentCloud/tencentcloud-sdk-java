@@ -21,7 +21,6 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DatatypeConverter;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
@@ -29,13 +28,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.TreeMap;
 
-;
 
 public class Sign {
     private static final Charset UTF8 = StandardCharsets.UTF_8;
 
-    public static String sign(String secretKey, String sigStr, String sigMethod)
-            throws TencentCloudSDKException {
+    public static String sign(String secretKey, String sigStr, String sigMethod) throws TencentCloudSDKException {
         String sig = null;
         try {
             Mac mac = Mac.getInstance(sigMethod);
@@ -51,8 +48,7 @@ public class Sign {
         return sig;
     }
 
-    public static String makeSignPlainText(
-            TreeMap<String, String> requestParams, String reqMethod, String host, String path) {
+    public static String makeSignPlainText(TreeMap<String, String> requestParams, String reqMethod, String host, String path) {
 
         String retStr = "";
         retStr += reqMethod;
@@ -62,8 +58,7 @@ public class Sign {
         return retStr;
     }
 
-    protected static String buildParamStr(
-            TreeMap<String, String> requestParams, String requestMethod) {
+    protected static String buildParamStr(TreeMap<String, String> requestParams, String requestMethod) {
 
         String retStr = "";
         for (String key : requestParams.keySet()) {
