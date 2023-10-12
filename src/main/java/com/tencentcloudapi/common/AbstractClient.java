@@ -474,8 +474,8 @@ public abstract class AbstractClient {
                     errResp.response.error.code);
         }
 
-        return gson.fromJson(body, new TypeToken<JsonResponseModel<T>>() {
-        }.getType());
+        Type type = TypeToken.getParameterized(JsonResponseModel.class, typeOfT).getType();
+        return ((JsonResponseModel<T>) gson.fromJson(body, type)).response;
     }
 
     protected Response internalRequestRaw(AbstractModel request, String actionName)
