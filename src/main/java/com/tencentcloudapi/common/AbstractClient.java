@@ -32,7 +32,6 @@ import javax.crypto.Mac;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
-import javax.xml.bind.DatatypeConverter;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -474,8 +473,8 @@ public abstract class AbstractClient {
                     errResp.response.error.code);
         }
 
-        return gson.fromJson(body, new TypeToken<JsonResponseModel<T>>() {
-        }.getType());
+        Type type = TypeToken.getParameterized(JsonResponseModel.class, typeOfT).getType();
+        return ((JsonResponseModel<T>)gson.fromJson(body, type)).response;
     }
 
     protected Response internalRequestRaw(AbstractModel request, String actionName)
