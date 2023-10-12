@@ -30,7 +30,7 @@ public class CreateGrafanaIntegrationRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
+    * 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
     */
     @SerializedName("Kind")
     @Expose
@@ -60,16 +60,16 @@ public class CreateGrafanaIntegrationRequest extends AbstractModel{
     }
 
     /**
-     * Get 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus 
-     * @return Kind 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
+     * Get 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段) 
+     * @return Kind 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
-     * @param Kind 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
+     * Set 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
+     * @param Kind 集成类型(接口DescribeGrafanaIntegrationOverviews返回的集成信息中的Code字段)
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

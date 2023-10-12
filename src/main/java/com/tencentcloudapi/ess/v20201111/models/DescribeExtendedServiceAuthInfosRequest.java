@@ -38,7 +38,9 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel{
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+
     */
     @SerializedName("ExtendServiceType")
     @Expose
@@ -80,7 +82,9 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel{
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul> 
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+ 
      * @return ExtendServiceType 要查询的扩展服务类型。
 默认为空，即查询当前支持的所有扩展服务信息。
 若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
@@ -88,7 +92,9 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel{
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+
      */
     public String getExtendServiceType() {
         return this.ExtendServiceType;
@@ -102,7 +108,9 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel{
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+
      * @param ExtendServiceType 要查询的扩展服务类型。
 默认为空，即查询当前支持的所有扩展服务信息。
 若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
@@ -110,7 +118,9 @@ public class DescribeExtendedServiceAuthInfosRequest extends AbstractModel{
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+
      */
     public void setExtendServiceType(String ExtendServiceType) {
         this.ExtendServiceType = ExtendServiceType;

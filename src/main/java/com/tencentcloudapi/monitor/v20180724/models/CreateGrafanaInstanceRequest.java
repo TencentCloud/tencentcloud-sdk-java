@@ -30,14 +30,14 @@ public class CreateGrafanaInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * VPC ID
+    * VPC ID (私有网络 ID)
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID 数组
+    * 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -51,7 +51,7 @@ public class CreateGrafanaInstanceRequest extends AbstractModel{
     private Boolean EnableInternet;
 
     /**
-    * Grafana 初始密码
+    * Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
     */
     @SerializedName("GrafanaInitPassword")
     @Expose
@@ -81,32 +81,32 @@ public class CreateGrafanaInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get VPC ID (私有网络 ID) 
+     * @return VpcId VPC ID (私有网络 ID)
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set VPC ID (私有网络 ID)
+     * @param VpcId VPC ID (私有网络 ID)
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID 数组 
-     * @return SubnetIds 子网 ID 数组
+     * Get 子网 ID 数组(VPC ID下的子网 ID，只取第一个) 
+     * @return SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网 ID 数组
-     * @param SubnetIds 子网 ID 数组
+     * Set 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+     * @param SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
@@ -129,16 +129,16 @@ public class CreateGrafanaInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Grafana 初始密码 
-     * @return GrafanaInitPassword Grafana 初始密码
+     * Get Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知) 
+     * @return GrafanaInitPassword Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
      */
     public String getGrafanaInitPassword() {
         return this.GrafanaInitPassword;
     }
 
     /**
-     * Set Grafana 初始密码
-     * @param GrafanaInitPassword Grafana 初始密码
+     * Set Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
+     * @param GrafanaInitPassword Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
      */
     public void setGrafanaInitPassword(String GrafanaInitPassword) {
         this.GrafanaInitPassword = GrafanaInitPassword;

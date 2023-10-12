@@ -30,7 +30,7 @@ public class UpgradeGrafanaInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 版本别名，例如：v7.4.2
+    * 版本别名，目前固定为 v9.1.5
     */
     @SerializedName("Alias")
     @Expose
@@ -53,16 +53,16 @@ public class UpgradeGrafanaInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 版本别名，例如：v7.4.2 
-     * @return Alias 版本别名，例如：v7.4.2
+     * Get 版本别名，目前固定为 v9.1.5 
+     * @return Alias 版本别名，目前固定为 v9.1.5
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 版本别名，例如：v7.4.2
-     * @param Alias 版本别名，例如：v7.4.2
+     * Set 版本别名，目前固定为 v9.1.5
+     * @param Alias 版本别名，目前固定为 v9.1.5
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

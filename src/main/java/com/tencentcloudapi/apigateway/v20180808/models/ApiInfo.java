@@ -431,6 +431,14 @@ public class ApiInfo extends AbstractModel{
     private Base64EncodedTriggerRule [] Base64EncodedTriggerRules;
 
     /**
+    * 是否开启SCF Event异步调用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceScfEventIsAsyncCall")
+    @Expose
+    private Boolean ServiceScfEventIsAsyncCall;
+
+    /**
      * Get API 所在的服务唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceId API 所在的服务唯一 ID。
@@ -1450,6 +1458,26 @@ public class ApiInfo extends AbstractModel{
         this.Base64EncodedTriggerRules = Base64EncodedTriggerRules;
     }
 
+    /**
+     * Get 是否开启SCF Event异步调用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceScfEventIsAsyncCall 是否开启SCF Event异步调用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getServiceScfEventIsAsyncCall() {
+        return this.ServiceScfEventIsAsyncCall;
+    }
+
+    /**
+     * Set 是否开启SCF Event异步调用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceScfEventIsAsyncCall 是否开启SCF Event异步调用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceScfEventIsAsyncCall(Boolean ServiceScfEventIsAsyncCall) {
+        this.ServiceScfEventIsAsyncCall = ServiceScfEventIsAsyncCall;
+    }
+
     public ApiInfo() {
     }
 
@@ -1638,6 +1666,9 @@ public class ApiInfo extends AbstractModel{
                 this.Base64EncodedTriggerRules[i] = new Base64EncodedTriggerRule(source.Base64EncodedTriggerRules[i]);
             }
         }
+        if (source.ServiceScfEventIsAsyncCall != null) {
+            this.ServiceScfEventIsAsyncCall = new Boolean(source.ServiceScfEventIsAsyncCall);
+        }
     }
 
 
@@ -1696,6 +1727,7 @@ public class ApiInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
         this.setParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
         this.setParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
+        this.setParamSimple(map, prefix + "ServiceScfEventIsAsyncCall", this.ServiceScfEventIsAsyncCall);
 
     }
 }

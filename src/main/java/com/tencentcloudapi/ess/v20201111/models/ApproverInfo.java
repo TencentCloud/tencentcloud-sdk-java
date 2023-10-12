@@ -227,6 +227,13 @@ public class ApproverInfo extends AbstractModel{
     private ComponentLimit [] AddSignComponentsLimits;
 
     /**
+    * 签署须知：支持传入富文本，最长字数：500个中文字符
+    */
+    @SerializedName("SignInstructionContent")
+    @Expose
+    private String SignInstructionContent;
+
+    /**
      * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -802,6 +809,22 @@ public class ApproverInfo extends AbstractModel{
         this.AddSignComponentsLimits = AddSignComponentsLimits;
     }
 
+    /**
+     * Get 签署须知：支持传入富文本，最长字数：500个中文字符 
+     * @return SignInstructionContent 签署须知：支持传入富文本，最长字数：500个中文字符
+     */
+    public String getSignInstructionContent() {
+        return this.SignInstructionContent;
+    }
+
+    /**
+     * Set 签署须知：支持传入富文本，最长字数：500个中文字符
+     * @param SignInstructionContent 签署须知：支持传入富文本，最长字数：500个中文字符
+     */
+    public void setSignInstructionContent(String SignInstructionContent) {
+        this.SignInstructionContent = SignInstructionContent;
+    }
+
     public ApproverInfo() {
     }
 
@@ -885,6 +908,9 @@ public class ApproverInfo extends AbstractModel{
                 this.AddSignComponentsLimits[i] = new ComponentLimit(source.AddSignComponentsLimits[i]);
             }
         }
+        if (source.SignInstructionContent != null) {
+            this.SignInstructionContent = new String(source.SignInstructionContent);
+        }
     }
 
 
@@ -912,6 +938,7 @@ public class ApproverInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         this.setParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
         this.setParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
+        this.setParamSimple(map, prefix + "SignInstructionContent", this.SignInstructionContent);
 
     }
 }

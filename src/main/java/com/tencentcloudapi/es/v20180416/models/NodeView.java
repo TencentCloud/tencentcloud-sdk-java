@@ -142,6 +142,13 @@ public class NodeView extends AbstractModel{
     private Boolean Hidden;
 
     /**
+    * 是否充当协调节点的角色
+    */
+    @SerializedName("IsCoordinationNode")
+    @Expose
+    private Boolean IsCoordinationNode;
+
+    /**
      * Get 节点ID 
      * @return NodeId 节点ID
      */
@@ -413,6 +420,22 @@ public class NodeView extends AbstractModel{
         this.Hidden = Hidden;
     }
 
+    /**
+     * Get 是否充当协调节点的角色 
+     * @return IsCoordinationNode 是否充当协调节点的角色
+     */
+    public Boolean getIsCoordinationNode() {
+        return this.IsCoordinationNode;
+    }
+
+    /**
+     * Set 是否充当协调节点的角色
+     * @param IsCoordinationNode 是否充当协调节点的角色
+     */
+    public void setIsCoordinationNode(Boolean IsCoordinationNode) {
+        this.IsCoordinationNode = IsCoordinationNode;
+    }
+
     public NodeView() {
     }
 
@@ -475,6 +498,9 @@ public class NodeView extends AbstractModel{
         if (source.Hidden != null) {
             this.Hidden = new Boolean(source.Hidden);
         }
+        if (source.IsCoordinationNode != null) {
+            this.IsCoordinationNode = new Boolean(source.IsCoordinationNode);
+        }
     }
 
 
@@ -499,6 +525,7 @@ public class NodeView extends AbstractModel{
         this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         this.setParamSimple(map, prefix + "Hidden", this.Hidden);
+        this.setParamSimple(map, prefix + "IsCoordinationNode", this.IsCoordinationNode);
 
     }
 }

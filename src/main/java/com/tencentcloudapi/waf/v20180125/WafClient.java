@@ -1157,6 +1157,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查看防护对象列表
+     * @param req DescribeObjectsRequest
+     * @return DescribeObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeObjectsResponse DescribeObjects(DescribeObjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeObjectsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeObjectsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeObjects");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询业务和攻击概要趋势
      * @param req DescribePeakPointsRequest
      * @return DescribePeakPointsResponse
@@ -2119,6 +2140,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyModuleStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyModuleStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改防护对象
+     * @param req ModifyObjectRequest
+     * @return ModifyObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyObjectResponse ModifyObject(ModifyObjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyObjectResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyObjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyObject");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

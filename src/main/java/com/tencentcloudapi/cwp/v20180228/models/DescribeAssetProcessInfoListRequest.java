@@ -31,7 +31,9 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 
     /**
     * 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 进程名</li>
 <li>User - String - 是否必填：否 - 进程用户</li>
 <li>Group - String - 是否必填：否 - 进程用户组</li>
@@ -100,7 +102,9 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 
     /**
      * Get 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 进程名</li>
 <li>User - String - 是否必填：否 - 进程用户</li>
 <li>Group - String - 是否必填：否 - 进程用户组</li>
@@ -119,7 +123,9 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li> 
      * @return Filters 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 进程名</li>
 <li>User - String - 是否必填：否 - 进程用户</li>
 <li>Group - String - 是否必填：否 - 进程用户组</li>
@@ -144,7 +150,9 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 
     /**
      * Set 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 进程名</li>
 <li>User - String - 是否必填：否 - 进程用户</li>
 <li>Group - String - 是否必填：否 - 进程用户组</li>
@@ -163,7 +171,9 @@ public class DescribeAssetProcessInfoListRequest extends AbstractModel{
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param Filters 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 进程名</li>
 <li>User - String - 是否必填：否 - 进程用户</li>
 <li>Group - String - 是否必填：否 - 进程用户组</li>

@@ -44,7 +44,7 @@ public class UpdateGrafanaIntegrationRequest extends AbstractModel{
     private String Kind;
 
     /**
-    * 集成内容
+    * 集成内容，请查看示例
     */
     @SerializedName("Content")
     @Expose
@@ -99,16 +99,16 @@ public class UpdateGrafanaIntegrationRequest extends AbstractModel{
     }
 
     /**
-     * Get 集成内容 
-     * @return Content 集成内容
+     * Get 集成内容，请查看示例 
+     * @return Content 集成内容，请查看示例
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 集成内容
-     * @param Content 集成内容
+     * Set 集成内容，请查看示例
+     * @param Content 集成内容，请查看示例
      */
     public void setContent(String Content) {
         this.Content = Content;

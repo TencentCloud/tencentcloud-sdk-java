@@ -58,6 +58,21 @@ public class TColumn extends AbstractModel{
     private Boolean NotNull;
 
     /**
+    * 表示整个 numeric 的长度,取值1-38
+    */
+    @SerializedName("Precision")
+    @Expose
+    private Long Precision;
+
+    /**
+    * 表示小数部分的长度
+Scale小于Precision
+    */
+    @SerializedName("Scale")
+    @Expose
+    private Long Scale;
+
+    /**
      * Get 字段名称 
      * @return Name 字段名称
      */
@@ -137,6 +152,42 @@ public class TColumn extends AbstractModel{
         this.NotNull = NotNull;
     }
 
+    /**
+     * Get 表示整个 numeric 的长度,取值1-38 
+     * @return Precision 表示整个 numeric 的长度,取值1-38
+     */
+    public Long getPrecision() {
+        return this.Precision;
+    }
+
+    /**
+     * Set 表示整个 numeric 的长度,取值1-38
+     * @param Precision 表示整个 numeric 的长度,取值1-38
+     */
+    public void setPrecision(Long Precision) {
+        this.Precision = Precision;
+    }
+
+    /**
+     * Get 表示小数部分的长度
+Scale小于Precision 
+     * @return Scale 表示小数部分的长度
+Scale小于Precision
+     */
+    public Long getScale() {
+        return this.Scale;
+    }
+
+    /**
+     * Set 表示小数部分的长度
+Scale小于Precision
+     * @param Scale 表示小数部分的长度
+Scale小于Precision
+     */
+    public void setScale(Long Scale) {
+        this.Scale = Scale;
+    }
+
     public TColumn() {
     }
 
@@ -160,6 +211,12 @@ public class TColumn extends AbstractModel{
         if (source.NotNull != null) {
             this.NotNull = new Boolean(source.NotNull);
         }
+        if (source.Precision != null) {
+            this.Precision = new Long(source.Precision);
+        }
+        if (source.Scale != null) {
+            this.Scale = new Long(source.Scale);
+        }
     }
 
 
@@ -172,6 +229,8 @@ public class TColumn extends AbstractModel{
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "Default", this.Default);
         this.setParamSimple(map, prefix + "NotNull", this.NotNull);
+        this.setParamSimple(map, prefix + "Precision", this.Precision);
+        this.setParamSimple(map, prefix + "Scale", this.Scale);
 
     }
 }

@@ -30,7 +30,8 @@ public class UpdateGrafanaEnvironmentsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 环境变量字符串
+    * JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
+
     */
     @SerializedName("Envs")
     @Expose
@@ -53,16 +54,20 @@ public class UpdateGrafanaEnvironmentsRequest extends AbstractModel{
     }
 
     /**
-     * Get 环境变量字符串 
-     * @return Envs 环境变量字符串
+     * Get JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
+ 
+     * @return Envs JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
+
      */
     public String getEnvs() {
         return this.Envs;
     }
 
     /**
-     * Set 环境变量字符串
-     * @param Envs 环境变量字符串
+     * Set JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
+
+     * @param Envs JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
+
      */
     public void setEnvs(String Envs) {
         this.Envs = Envs;

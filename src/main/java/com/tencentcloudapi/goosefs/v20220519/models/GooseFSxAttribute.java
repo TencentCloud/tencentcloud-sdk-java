@@ -30,7 +30,7 @@ public class GooseFSxAttribute extends AbstractModel{
     private String Model;
 
     /**
-    * 容量单位是GB, 比如4608(4.5TB)
+    * 容量单位是GB, 例如4608(4.5TB)
     */
     @SerializedName("Capacity")
     @Expose
@@ -67,16 +67,16 @@ public class GooseFSxAttribute extends AbstractModel{
     }
 
     /**
-     * Get 容量单位是GB, 比如4608(4.5TB) 
-     * @return Capacity 容量单位是GB, 比如4608(4.5TB)
+     * Get 容量单位是GB, 例如4608(4.5TB) 
+     * @return Capacity 容量单位是GB, 例如4608(4.5TB)
      */
     public Long getCapacity() {
         return this.Capacity;
     }
 
     /**
-     * Set 容量单位是GB, 比如4608(4.5TB)
-     * @param Capacity 容量单位是GB, 比如4608(4.5TB)
+     * Set 容量单位是GB, 例如4608(4.5TB)
+     * @param Capacity 容量单位是GB, 例如4608(4.5TB)
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;

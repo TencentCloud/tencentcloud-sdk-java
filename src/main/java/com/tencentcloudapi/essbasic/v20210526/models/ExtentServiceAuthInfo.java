@@ -24,11 +24,14 @@ public class ExtentServiceAuthInfo extends AbstractModel{
 
     /**
     * 扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同 
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul>
     */
     @SerializedName("Type")
     @Expose
@@ -68,17 +71,23 @@ DISABLE 关闭
 
     /**
      * Get 扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同  
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul> 
      * @return Type 扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同 
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul>
      */
     public String getType() {
         return this.Type;
@@ -86,17 +95,23 @@ DISABLE 关闭
 
     /**
      * Set 扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同 
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul>
      * @param Type 扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同 
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul>
      */
     public void setType(String Type) {
         this.Type = Type;

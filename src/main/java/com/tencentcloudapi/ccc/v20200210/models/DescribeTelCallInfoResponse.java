@@ -51,6 +51,13 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
     private Long VoipCallInCount;
 
     /**
+    * 音频套餐包消耗分钟数
+    */
+    @SerializedName("VOIPCallInCount")
+    @Expose
+    private Long VOIPCallInCount;
+
+    /**
     * 离线语音转文字套餐包消耗分钟数
     */
     @SerializedName("AsrOfflineCount")
@@ -122,7 +129,9 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
     /**
      * Get 音频套餐包消耗分钟数 
      * @return VoipCallInCount 音频套餐包消耗分钟数
+     * @deprecated
      */
+    @Deprecated
     public Long getVoipCallInCount() {
         return this.VoipCallInCount;
     }
@@ -130,9 +139,27 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
     /**
      * Set 音频套餐包消耗分钟数
      * @param VoipCallInCount 音频套餐包消耗分钟数
+     * @deprecated
      */
+    @Deprecated
     public void setVoipCallInCount(Long VoipCallInCount) {
         this.VoipCallInCount = VoipCallInCount;
+    }
+
+    /**
+     * Get 音频套餐包消耗分钟数 
+     * @return VOIPCallInCount 音频套餐包消耗分钟数
+     */
+    public Long getVOIPCallInCount() {
+        return this.VOIPCallInCount;
+    }
+
+    /**
+     * Set 音频套餐包消耗分钟数
+     * @param VOIPCallInCount 音频套餐包消耗分钟数
+     */
+    public void setVOIPCallInCount(Long VOIPCallInCount) {
+        this.VOIPCallInCount = VOIPCallInCount;
     }
 
     /**
@@ -203,6 +230,9 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
         if (source.VoipCallInCount != null) {
             this.VoipCallInCount = new Long(source.VoipCallInCount);
         }
+        if (source.VOIPCallInCount != null) {
+            this.VOIPCallInCount = new Long(source.VOIPCallInCount);
+        }
         if (source.AsrOfflineCount != null) {
             this.AsrOfflineCount = new Long(source.AsrOfflineCount);
         }
@@ -223,6 +253,7 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TelCallInCount", this.TelCallInCount);
         this.setParamSimple(map, prefix + "SeatUsedCount", this.SeatUsedCount);
         this.setParamSimple(map, prefix + "VoipCallInCount", this.VoipCallInCount);
+        this.setParamSimple(map, prefix + "VOIPCallInCount", this.VOIPCallInCount);
         this.setParamSimple(map, prefix + "AsrOfflineCount", this.AsrOfflineCount);
         this.setParamSimple(map, prefix + "AsrRealtimeCount", this.AsrRealtimeCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

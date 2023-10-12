@@ -72,6 +72,13 @@ public class CreateCallOutSessionRequest extends AbstractModel{
     private String Uui;
 
     /**
+    * 自定义数据，长度限制 1024 字节
+    */
+    @SerializedName("UUI")
+    @Expose
+    private String UUI;
+
+    /**
      * Get 应用 ID 
      * @return SdkAppId 应用 ID
      */
@@ -170,7 +177,9 @@ public class CreateCallOutSessionRequest extends AbstractModel{
     /**
      * Get 自定义数据，长度限制 1024 字节 
      * @return Uui 自定义数据，长度限制 1024 字节
+     * @deprecated
      */
+    @Deprecated
     public String getUui() {
         return this.Uui;
     }
@@ -178,9 +187,27 @@ public class CreateCallOutSessionRequest extends AbstractModel{
     /**
      * Set 自定义数据，长度限制 1024 字节
      * @param Uui 自定义数据，长度限制 1024 字节
+     * @deprecated
      */
+    @Deprecated
     public void setUui(String Uui) {
         this.Uui = Uui;
+    }
+
+    /**
+     * Get 自定义数据，长度限制 1024 字节 
+     * @return UUI 自定义数据，长度限制 1024 字节
+     */
+    public String getUUI() {
+        return this.UUI;
+    }
+
+    /**
+     * Set 自定义数据，长度限制 1024 字节
+     * @param UUI 自定义数据，长度限制 1024 字节
+     */
+    public void setUUI(String UUI) {
+        this.UUI = UUI;
     }
 
     public CreateCallOutSessionRequest() {
@@ -215,6 +242,9 @@ public class CreateCallOutSessionRequest extends AbstractModel{
         if (source.Uui != null) {
             this.Uui = new String(source.Uui);
         }
+        if (source.UUI != null) {
+            this.UUI = new String(source.UUI);
+        }
     }
 
 
@@ -229,6 +259,7 @@ public class CreateCallOutSessionRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamSimple(map, prefix + "IsForceUseMobile", this.IsForceUseMobile);
         this.setParamSimple(map, prefix + "Uui", this.Uui);
+        this.setParamSimple(map, prefix + "UUI", this.UUI);
 
     }
 }

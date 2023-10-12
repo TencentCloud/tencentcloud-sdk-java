@@ -60,6 +60,27 @@ public class CdwpgClient extends AbstractClient{
     }
 
     /**
+     *集群详情页中显示集群状态、流程进度等
+     * @param req DescribeInstanceStateRequest
+     * @return DescribeInstanceStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceStateResponse DescribeInstanceState(DescribeInstanceStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceStateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取集群实例列表
      * @param req DescribeSimpleInstancesRequest
      * @return DescribeSimpleInstancesResponse
@@ -94,6 +115,27 @@ public class CdwpgClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DestroyInstanceByApiResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DestroyInstanceByApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改实例信息，目前为实例名称
+     * @param req ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

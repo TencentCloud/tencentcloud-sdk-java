@@ -37,7 +37,7 @@ public class CreateSSOAccountRequest extends AbstractModel{
     private String UserId;
 
     /**
-    * 权限
+    * 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
     */
     @SerializedName("Role")
     @Expose
@@ -83,16 +83,16 @@ public class CreateSSOAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get 权限 
-     * @return Role 权限
+     * Get 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填) 
+     * @return Role 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
      */
     public GrafanaAccountRole [] getRole() {
         return this.Role;
     }
 
     /**
-     * Set 权限
-     * @param Role 权限
+     * Set 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
+     * @param Role 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
      */
     public void setRole(GrafanaAccountRole [] Role) {
         this.Role = Role;

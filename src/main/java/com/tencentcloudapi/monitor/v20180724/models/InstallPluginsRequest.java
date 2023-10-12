@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InstallPluginsRequest extends AbstractModel{
 
     /**
-    * 插件信息
+    * 插件信息(可通过 DescribePluginOverviews 接口获取)
     */
     @SerializedName("Plugins")
     @Expose
@@ -37,16 +37,16 @@ public class InstallPluginsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-     * Get 插件信息 
-     * @return Plugins 插件信息
+     * Get 插件信息(可通过 DescribePluginOverviews 接口获取) 
+     * @return Plugins 插件信息(可通过 DescribePluginOverviews 接口获取)
      */
     public GrafanaPlugin [] getPlugins() {
         return this.Plugins;
     }
 
     /**
-     * Set 插件信息
-     * @param Plugins 插件信息
+     * Set 插件信息(可通过 DescribePluginOverviews 接口获取)
+     * @param Plugins 插件信息(可通过 DescribePluginOverviews 接口获取)
      */
     public void setPlugins(GrafanaPlugin [] Plugins) {
         this.Plugins = Plugins;

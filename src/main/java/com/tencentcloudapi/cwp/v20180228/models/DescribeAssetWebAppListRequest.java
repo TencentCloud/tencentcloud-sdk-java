@@ -31,7 +31,9 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 
     /**
     * 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 应用名</li>
 <li>Domain - String - 是否必填：否 - 站点域名</li>
 <li>Type - int - 是否必填：否 - 服务类型：
@@ -98,7 +100,9 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 
     /**
      * Get 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 应用名</li>
 <li>Domain - String - 是否必填：否 - 站点域名</li>
 <li>Type - int - 是否必填：否 - 服务类型：
@@ -115,7 +119,9 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 <li>OsType - String - 是否必填：否 - windows/linux</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li> 
      * @return Filters 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 应用名</li>
 <li>Domain - String - 是否必填：否 - 站点域名</li>
 <li>Type - int - 是否必填：否 - 服务类型：
@@ -138,7 +144,9 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 
     /**
      * Set 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 应用名</li>
 <li>Domain - String - 是否必填：否 - 站点域名</li>
 <li>Type - int - 是否必填：否 - 服务类型：
@@ -155,7 +163,9 @@ public class DescribeAssetWebAppListRequest extends AbstractModel{
 <li>OsType - String - 是否必填：否 - windows/linux</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param Filters 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name - String - 是否必填：否 - 应用名</li>
 <li>Domain - String - 是否必填：否 - 站点域名</li>
 <li>Type - int - 是否必填：否 - 服务类型：

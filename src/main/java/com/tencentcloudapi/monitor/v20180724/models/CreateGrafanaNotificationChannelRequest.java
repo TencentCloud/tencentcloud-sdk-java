@@ -37,14 +37,14 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     private String ChannelName;
 
     /**
-    * 默认为1，已废弃，请使用 OrganizationIds
+    * 默认为1，建议使用 OrganizationIds
     */
     @SerializedName("OrgId")
     @Expose
     private Long OrgId;
 
     /**
-    * 接受告警通道 ID 数组
+    * 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
     */
     @SerializedName("Receivers")
     @Expose
@@ -97,32 +97,32 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get 默认为1，已废弃，请使用 OrganizationIds 
-     * @return OrgId 默认为1，已废弃，请使用 OrganizationIds
+     * Get 默认为1，建议使用 OrganizationIds 
+     * @return OrgId 默认为1，建议使用 OrganizationIds
      */
     public Long getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set 默认为1，已废弃，请使用 OrganizationIds
-     * @param OrgId 默认为1，已废弃，请使用 OrganizationIds
+     * Set 默认为1，建议使用 OrganizationIds
+     * @param OrgId 默认为1，建议使用 OrganizationIds
      */
     public void setOrgId(Long OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get 接受告警通道 ID 数组 
-     * @return Receivers 接受告警通道 ID 数组
+     * Get 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID  
+     * @return Receivers 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
      */
     public String [] getReceivers() {
         return this.Receivers;
     }
 
     /**
-     * Set 接受告警通道 ID 数组
-     * @param Receivers 接受告警通道 ID 数组
+     * Set 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
+     * @param Receivers 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
      */
     public void setReceivers(String [] Receivers) {
         this.Receivers = Receivers;

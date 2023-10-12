@@ -318,6 +318,14 @@ public class Cluster extends AbstractModel{
     private Order [] Orders;
 
     /**
+    * Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SqlGateways")
+    @Expose
+    private SqlGatewayItem [] SqlGateways;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1029,6 +1037,26 @@ public class Cluster extends AbstractModel{
         this.Orders = Orders;
     }
 
+    /**
+     * Get Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SqlGateways Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SqlGatewayItem [] getSqlGateways() {
+        return this.SqlGateways;
+    }
+
+    /**
+     * Set Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SqlGateways Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSqlGateways(SqlGatewayItem [] SqlGateways) {
+        this.SqlGateways = SqlGateways;
+    }
+
     public Cluster() {
     }
 
@@ -1169,6 +1197,12 @@ public class Cluster extends AbstractModel{
                 this.Orders[i] = new Order(source.Orders[i]);
             }
         }
+        if (source.SqlGateways != null) {
+            this.SqlGateways = new SqlGatewayItem[source.SqlGateways.length];
+            for (int i = 0; i < source.SqlGateways.length; i++) {
+                this.SqlGateways[i] = new SqlGatewayItem(source.SqlGateways[i]);
+            }
+        }
     }
 
 
@@ -1215,6 +1249,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "ArchGeneration", this.ArchGeneration);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamArrayObj(map, prefix + "Orders.", this.Orders);
+        this.setParamArrayObj(map, prefix + "SqlGateways.", this.SqlGateways);
 
     }
 }

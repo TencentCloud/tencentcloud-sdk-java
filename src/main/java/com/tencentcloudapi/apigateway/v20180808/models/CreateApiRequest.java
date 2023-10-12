@@ -359,6 +359,13 @@ public class CreateApiRequest extends AbstractModel{
     private String ServiceScfFunctionType;
 
     /**
+    * 是否开启SCF Event异步调用。
+    */
+    @SerializedName("ServiceScfEventIsAsyncCall")
+    @Expose
+    private Boolean ServiceScfEventIsAsyncCall;
+
+    /**
     * EIAM应用类型。
     */
     @SerializedName("EIAMAppType")
@@ -1162,6 +1169,22 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启SCF Event异步调用。 
+     * @return ServiceScfEventIsAsyncCall 是否开启SCF Event异步调用。
+     */
+    public Boolean getServiceScfEventIsAsyncCall() {
+        return this.ServiceScfEventIsAsyncCall;
+    }
+
+    /**
+     * Set 是否开启SCF Event异步调用。
+     * @param ServiceScfEventIsAsyncCall 是否开启SCF Event异步调用。
+     */
+    public void setServiceScfEventIsAsyncCall(Boolean ServiceScfEventIsAsyncCall) {
+        this.ServiceScfEventIsAsyncCall = ServiceScfEventIsAsyncCall;
+    }
+
+    /**
      * Get EIAM应用类型。 
      * @return EIAMAppType EIAM应用类型。
      */
@@ -1411,6 +1434,9 @@ public class CreateApiRequest extends AbstractModel{
         if (source.ServiceScfFunctionType != null) {
             this.ServiceScfFunctionType = new String(source.ServiceScfFunctionType);
         }
+        if (source.ServiceScfEventIsAsyncCall != null) {
+            this.ServiceScfEventIsAsyncCall = new Boolean(source.ServiceScfEventIsAsyncCall);
+        }
         if (source.EIAMAppType != null) {
             this.EIAMAppType = new String(source.EIAMAppType);
         }
@@ -1481,6 +1507,7 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
         this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
         this.setParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
+        this.setParamSimple(map, prefix + "ServiceScfEventIsAsyncCall", this.ServiceScfEventIsAsyncCall);
         this.setParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
         this.setParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
         this.setParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);

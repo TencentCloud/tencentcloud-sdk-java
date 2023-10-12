@@ -127,7 +127,9 @@ public class DescribeTelCdrRequest extends AbstractModel{
     /**
      * Get 实例 ID（废弃） 
      * @return InstanceId 实例 ID（废弃）
+     * @deprecated
      */
+    @Deprecated
     public Long getInstanceId() {
         return this.InstanceId;
     }
@@ -135,7 +137,9 @@ public class DescribeTelCdrRequest extends AbstractModel{
     /**
      * Set 实例 ID（废弃）
      * @param InstanceId 实例 ID（废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceId(Long InstanceId) {
         this.InstanceId = InstanceId;
     }

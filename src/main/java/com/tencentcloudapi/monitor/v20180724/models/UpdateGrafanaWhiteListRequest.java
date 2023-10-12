@@ -30,7 +30,8 @@ public class UpdateGrafanaWhiteListRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+    * 白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入
     */
     @SerializedName("Whitelist")
     @Expose
@@ -53,16 +54,20 @@ public class UpdateGrafanaWhiteListRequest extends AbstractModel{
     }
 
     /**
-     * Get 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看 
-     * @return Whitelist 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+     * Get 白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入 
+     * @return Whitelist 白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入
      */
     public String [] getWhitelist() {
         return this.Whitelist;
     }
 
     /**
-     * Set 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
-     * @param Whitelist 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+     * Set 白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入
+     * @param Whitelist 白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入
      */
     public void setWhitelist(String [] Whitelist) {
         this.Whitelist = Whitelist;

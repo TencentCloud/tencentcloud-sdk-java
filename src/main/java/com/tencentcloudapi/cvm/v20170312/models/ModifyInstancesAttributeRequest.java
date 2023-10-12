@@ -59,7 +59,7 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     private String HostName;
 
     /**
-    * 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+    * 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例<br><li>false：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：false。
     */
     @SerializedName("DisableApiTermination")
     @Expose
@@ -159,16 +159,16 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。 
-     * @return DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+     * Get 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例<br><li>false：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：false。 
+     * @return DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例<br><li>false：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：false。
      */
     public Boolean getDisableApiTermination() {
         return this.DisableApiTermination;
     }
 
     /**
-     * Set 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
-     * @param DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+     * Set 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例<br><li>false：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：false。
+     * @param DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>true：表示开启实例保护，不允许通过api接口删除实例<br><li>false：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：false。
      */
     public void setDisableApiTermination(Boolean DisableApiTermination) {
         this.DisableApiTermination = DisableApiTermination;

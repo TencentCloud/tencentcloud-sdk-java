@@ -312,6 +312,14 @@ public class TelCdrInfo extends AbstractModel{
     private String Uui;
 
     /**
+    * 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UUI")
+    @Expose
+    private String UUI;
+
+    /**
     * IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -1184,7 +1192,9 @@ public class TelCdrInfo extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uui 客户自定义数据（User-to-User Interface）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getUui() {
         return this.Uui;
     }
@@ -1194,9 +1204,31 @@ public class TelCdrInfo extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Uui 客户自定义数据（User-to-User Interface）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setUui(String Uui) {
         this.Uui = Uui;
+    }
+
+    /**
+     * Get 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UUI 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUUI() {
+        return this.UUI;
+    }
+
+    /**
+     * Set 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UUI 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUUI(String UUI) {
+        this.UUI = UUI;
     }
 
     /**
@@ -1437,6 +1469,9 @@ public class TelCdrInfo extends AbstractModel{
         if (source.Uui != null) {
             this.Uui = new String(source.Uui);
         }
+        if (source.UUI != null) {
+            this.UUI = new String(source.UUI);
+        }
         if (source.IVRKeyPressedEx != null) {
             this.IVRKeyPressedEx = new IVRKeyPressedElement[source.IVRKeyPressedEx.length];
             for (int i = 0; i < source.IVRKeyPressedEx.length; i++) {
@@ -1501,6 +1536,7 @@ public class TelCdrInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
         this.setParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
         this.setParamSimple(map, prefix + "Uui", this.Uui);
+        this.setParamSimple(map, prefix + "UUI", this.UUI);
         this.setParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
         this.setParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
         this.setParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);

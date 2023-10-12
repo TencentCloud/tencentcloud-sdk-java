@@ -1093,6 +1093,27 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *用于获取视频通道的码率信息
+     * @param req DescribeVideoBitRateRequest
+     * @return DescribeVideoBitRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoBitRateResponse DescribeVideoBitRate(DescribeVideoBitRateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVideoBitRateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVideoBitRateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVideoBitRate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于获取云录像下载 url
      * @param req DescribeVideoDownloadUrlRequest
      * @return DescribeVideoDownloadUrlResponse
