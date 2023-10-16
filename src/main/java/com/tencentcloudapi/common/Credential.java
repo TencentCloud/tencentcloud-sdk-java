@@ -17,6 +17,8 @@
 
 package com.tencentcloudapi.common;
 
+import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+
 /**
  * Credential has many types in Tencent Cloud Access Management service.
  *
@@ -30,12 +32,10 @@ package com.tencentcloudapi.common;
  * API to refresh it.
  */
 public class Credential {
-
     private String secretId;
-
     private String secretKey;
-
     private String token;
+    private Updater updater;
 
     public Credential() {
     }
@@ -50,7 +50,28 @@ public class Credential {
         this.token = token;
     }
 
+    public Credential(String secretId, String secretKey, String token, Updater updater) {
+        this.secretId = secretId;
+        this.secretKey = secretKey;
+        this.token = token;
+        this.updater = updater;
+    }
+
+    public Updater getUpdater() {
+        return updater;
+    }
+
+    public void setUpdater(Updater updater) {
+        this.updater = updater;
+    }
+
     public String getSecretId() {
+        try {
+            tryUpdate();
+        } catch (TencentCloudSDKException e) {
+            // wrap as RuntimeException to keep API consistent
+            throw new RuntimeException(e);
+        }
         return this.secretId;
     }
 
@@ -59,6 +80,11 @@ public class Credential {
     }
 
     public String getSecretKey() {
+        try {
+            tryUpdate();
+        } catch (TencentCloudSDKException e) {
+            throw new RuntimeException(e);
+        }
         return this.secretKey;
     }
 
@@ -67,10 +93,25 @@ public class Credential {
     }
 
     public String getToken() {
+        try {
+            tryUpdate();
+        } catch (TencentCloudSDKException e) {
+            throw new RuntimeException(e);
+        }
         return this.token;
     }
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    private void tryUpdate() throws TencentCloudSDKException {
+        if (updater != null) {
+            updater.update(this);
+        }
+    }
+
+    public interface Updater {
+        void update(Credential credential) throws TencentCloudSDKException;
     }
 }
