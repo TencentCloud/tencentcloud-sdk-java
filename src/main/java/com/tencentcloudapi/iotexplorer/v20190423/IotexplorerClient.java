@@ -1257,6 +1257,27 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *拉取设备统计汇总数据 
+     * @param req GetDeviceSumStatisticsRequest
+     * @return GetDeviceSumStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDeviceSumStatisticsResponse GetDeviceSumStatistics(GetDeviceSumStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDeviceSumStatisticsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDeviceSumStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetDeviceSumStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于获取设备绑定的用户列表
      * @param req GetFamilyDeviceUserListRequest
      * @return GetFamilyDeviceUserListResponse

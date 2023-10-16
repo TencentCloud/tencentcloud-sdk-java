@@ -233,6 +233,13 @@ public class InstanceApiOpsRequest extends AbstractModel{
     private String DataTimeCycle;
 
     /**
+    * 资源组id,多个资源组id用英文逗号分隔
+    */
+    @SerializedName("ExecutorGroupIdList")
+    @Expose
+    private String [] ExecutorGroupIdList;
+
+    /**
      * Get 单个查询条件 
      * @return Instance 单个查询条件
      */
@@ -712,6 +719,22 @@ public class InstanceApiOpsRequest extends AbstractModel{
         this.DataTimeCycle = DataTimeCycle;
     }
 
+    /**
+     * Get 资源组id,多个资源组id用英文逗号分隔 
+     * @return ExecutorGroupIdList 资源组id,多个资源组id用英文逗号分隔
+     */
+    public String [] getExecutorGroupIdList() {
+        return this.ExecutorGroupIdList;
+    }
+
+    /**
+     * Set 资源组id,多个资源组id用英文逗号分隔
+     * @param ExecutorGroupIdList 资源组id,多个资源组id用英文逗号分隔
+     */
+    public void setExecutorGroupIdList(String [] ExecutorGroupIdList) {
+        this.ExecutorGroupIdList = ExecutorGroupIdList;
+    }
+
     public InstanceApiOpsRequest() {
     }
 
@@ -843,6 +866,12 @@ public class InstanceApiOpsRequest extends AbstractModel{
         if (source.DataTimeCycle != null) {
             this.DataTimeCycle = new String(source.DataTimeCycle);
         }
+        if (source.ExecutorGroupIdList != null) {
+            this.ExecutorGroupIdList = new String[source.ExecutorGroupIdList.length];
+            for (int i = 0; i < source.ExecutorGroupIdList.length; i++) {
+                this.ExecutorGroupIdList[i] = new String(source.ExecutorGroupIdList[i]);
+            }
+        }
     }
 
 
@@ -880,6 +909,7 @@ public class InstanceApiOpsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DagDepth", this.DagDepth);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "DataTimeCycle", this.DataTimeCycle);
+        this.setParamArraySimple(map, prefix + "ExecutorGroupIdList.", this.ExecutorGroupIdList);
 
     }
 }

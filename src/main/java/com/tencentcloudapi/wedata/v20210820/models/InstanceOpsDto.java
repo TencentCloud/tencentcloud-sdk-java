@@ -439,6 +439,22 @@ public class InstanceOpsDto extends AbstractModel{
     private String InstanceKey;
 
     /**
+    * 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorGroupId")
+    @Expose
+    private String ExecutorGroupId;
+
+    /**
+    * 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorGroupName")
+    @Expose
+    private String ExecutorGroupName;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1478,6 +1494,46 @@ public class InstanceOpsDto extends AbstractModel{
         this.InstanceKey = InstanceKey;
     }
 
+    /**
+     * Get 资源组id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutorGroupId() {
+        return this.ExecutorGroupId;
+    }
+
+    /**
+     * Set 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorGroupId(String ExecutorGroupId) {
+        this.ExecutorGroupId = ExecutorGroupId;
+    }
+
+    /**
+     * Get 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutorGroupName() {
+        return this.ExecutorGroupName;
+    }
+
+    /**
+     * Set 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorGroupName(String ExecutorGroupName) {
+        this.ExecutorGroupName = ExecutorGroupName;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -1642,6 +1698,12 @@ public class InstanceOpsDto extends AbstractModel{
         if (source.InstanceKey != null) {
             this.InstanceKey = new String(source.InstanceKey);
         }
+        if (source.ExecutorGroupId != null) {
+            this.ExecutorGroupId = new String(source.ExecutorGroupId);
+        }
+        if (source.ExecutorGroupName != null) {
+            this.ExecutorGroupName = new String(source.ExecutorGroupName);
+        }
     }
 
 
@@ -1701,6 +1763,8 @@ public class InstanceOpsDto extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "InstanceKey", this.InstanceKey);
+        this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
+        this.setParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
 
     }
 }

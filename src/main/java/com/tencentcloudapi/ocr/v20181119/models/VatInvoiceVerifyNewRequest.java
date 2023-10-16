@@ -74,7 +74,7 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel{
     private String RegionCode;
 
     /**
-    * 销方税号，通用机打电子发票必填
+    * 销方税号，通用机打电子发票必填，区块链发票时必填
     */
     @SerializedName("SellerTaxCode")
     @Expose
@@ -208,16 +208,16 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel{
     }
 
     /**
-     * Get 销方税号，通用机打电子发票必填 
-     * @return SellerTaxCode 销方税号，通用机打电子发票必填
+     * Get 销方税号，通用机打电子发票必填，区块链发票时必填 
+     * @return SellerTaxCode 销方税号，通用机打电子发票必填，区块链发票时必填
      */
     public String getSellerTaxCode() {
         return this.SellerTaxCode;
     }
 
     /**
-     * Set 销方税号，通用机打电子发票必填
-     * @param SellerTaxCode 销方税号，通用机打电子发票必填
+     * Set 销方税号，通用机打电子发票必填，区块链发票时必填
+     * @param SellerTaxCode 销方税号，通用机打电子发票必填，区块链发票时必填
      */
     public void setSellerTaxCode(String SellerTaxCode) {
         this.SellerTaxCode = SellerTaxCode;

@@ -163,6 +163,13 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel{
     private String AlarmType;
 
     /**
+    * 资源组id,多个资源组id之间以英文字符逗号分隔
+    */
+    @SerializedName("ExecutorGroupIdList")
+    @Expose
+    private String ExecutorGroupIdList;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -482,6 +489,22 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel{
         this.AlarmType = AlarmType;
     }
 
+    /**
+     * Get 资源组id,多个资源组id之间以英文字符逗号分隔 
+     * @return ExecutorGroupIdList 资源组id,多个资源组id之间以英文字符逗号分隔
+     */
+    public String getExecutorGroupIdList() {
+        return this.ExecutorGroupIdList;
+    }
+
+    /**
+     * Set 资源组id,多个资源组id之间以英文字符逗号分隔
+     * @param ExecutorGroupIdList 资源组id,多个资源组id之间以英文字符逗号分隔
+     */
+    public void setExecutorGroupIdList(String ExecutorGroupIdList) {
+        this.ExecutorGroupIdList = ExecutorGroupIdList;
+    }
+
     public DescribeOperateOpsTasksRequest() {
     }
 
@@ -550,6 +573,9 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel{
         if (source.AlarmType != null) {
             this.AlarmType = new String(source.AlarmType);
         }
+        if (source.ExecutorGroupIdList != null) {
+            this.ExecutorGroupIdList = new String(source.ExecutorGroupIdList);
+        }
     }
 
 
@@ -577,6 +603,7 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetServiceId", this.TargetServiceId);
         this.setParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
         this.setParamSimple(map, prefix + "AlarmType", this.AlarmType);
+        this.setParamSimple(map, prefix + "ExecutorGroupIdList", this.ExecutorGroupIdList);
 
     }
 }

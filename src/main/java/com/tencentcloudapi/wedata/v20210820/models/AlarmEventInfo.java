@@ -158,6 +158,30 @@ public class AlarmEventInfo extends AbstractModel{
     private String RegularId;
 
     /**
+    * 告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmRecipientName")
+    @Expose
+    private String AlarmRecipientName;
+
+    /**
+    * 告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+    * 发送结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SendResult")
+    @Expose
+    private String SendResult;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -481,6 +505,66 @@ public class AlarmEventInfo extends AbstractModel{
         this.RegularId = RegularId;
     }
 
+    /**
+     * Get 告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmRecipientName 告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlarmRecipientName() {
+        return this.AlarmRecipientName;
+    }
+
+    /**
+     * Set 告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmRecipientName 告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmRecipientName(String AlarmRecipientName) {
+        this.AlarmRecipientName = AlarmRecipientName;
+    }
+
+    /**
+     * Get 告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskType 告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskType 告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 发送结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SendResult 发送结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSendResult() {
+        return this.SendResult;
+    }
+
+    /**
+     * Set 发送结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SendResult 发送结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSendResult(String SendResult) {
+        this.SendResult = SendResult;
+    }
+
     public AlarmEventInfo() {
     }
 
@@ -543,6 +627,15 @@ public class AlarmEventInfo extends AbstractModel{
         if (source.RegularId != null) {
             this.RegularId = new String(source.RegularId);
         }
+        if (source.AlarmRecipientName != null) {
+            this.AlarmRecipientName = new String(source.AlarmRecipientName);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.SendResult != null) {
+            this.SendResult = new String(source.SendResult);
+        }
     }
 
 
@@ -568,6 +661,9 @@ public class AlarmEventInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MessageId", this.MessageId);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "RegularId", this.RegularId);
+        this.setParamSimple(map, prefix + "AlarmRecipientName", this.AlarmRecipientName);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "SendResult", this.SendResult);
 
     }
 }

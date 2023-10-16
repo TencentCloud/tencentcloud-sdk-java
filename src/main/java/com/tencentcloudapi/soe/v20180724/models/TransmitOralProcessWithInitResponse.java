@@ -199,7 +199,9 @@ public class TransmitOralProcessWithInitResponse extends AbstractModel{
     /**
      * Get 已废弃，不再保存语音音频文件下载地址 
      * @return AudioUrl 已废弃，不再保存语音音频文件下载地址
+     * @deprecated
      */
+    @Deprecated
     public String getAudioUrl() {
         return this.AudioUrl;
     }
@@ -207,7 +209,9 @@ public class TransmitOralProcessWithInitResponse extends AbstractModel{
     /**
      * Set 已废弃，不再保存语音音频文件下载地址
      * @param AudioUrl 已废弃，不再保存语音音频文件下载地址
+     * @deprecated
      */
+    @Deprecated
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
     }

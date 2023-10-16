@@ -124,6 +124,27 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取集群的自动扩缩容的详细记录
+     * @param req DescribeAutoScaleRecordsRequest
+     * @return DescribeAutoScaleRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScaleRecordsResponse DescribeAutoScaleRecords(DescribeAutoScaleRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoScaleRecordsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoScaleRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAutoScaleRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群节点信息
      * @param req DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse

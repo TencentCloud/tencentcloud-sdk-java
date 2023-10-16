@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel{
 
     /**
-    * 要查看的实时任务的任务Id
+    * 要查看的实时任务的任务ID，可在任务列表页面中获得
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 无
+    * 要查看的项目ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -51,32 +51,32 @@ public class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-     * Get 要查看的实时任务的任务Id 
-     * @return TaskId 要查看的实时任务的任务Id
+     * Get 要查看的实时任务的任务ID，可在任务列表页面中获得 
+     * @return TaskId 要查看的实时任务的任务ID，可在任务列表页面中获得
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 要查看的实时任务的任务Id
-     * @param TaskId 要查看的实时任务的任务Id
+     * Set 要查看的实时任务的任务ID，可在任务列表页面中获得
+     * @param TaskId 要查看的实时任务的任务ID，可在任务列表页面中获得
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 无 
-     * @return ProjectId 无
+     * Get 要查看的项目ID 
+     * @return ProjectId 要查看的项目ID
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 无
-     * @param ProjectId 无
+     * Set 要查看的项目ID
+     * @param ProjectId 要查看的项目ID
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

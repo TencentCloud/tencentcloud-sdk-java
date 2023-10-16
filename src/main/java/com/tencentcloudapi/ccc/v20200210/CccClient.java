@@ -504,6 +504,27 @@ public class CccClient extends AbstractClient{
 
     /**
      *获取包括全媒体和文本会话两种类型的服务记录。
+     * @param req DescribeIMCdrListRequest
+     * @return DescribeIMCdrListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIMCdrListResponse DescribeIMCdrList(DescribeIMCdrListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIMCdrListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIMCdrListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIMCdrList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取包括全媒体和文本会话两种类型的服务记录。
      * @param req DescribeIMCdrsRequest
      * @return DescribeIMCdrsResponse
      * @throws TencentCloudSDKException

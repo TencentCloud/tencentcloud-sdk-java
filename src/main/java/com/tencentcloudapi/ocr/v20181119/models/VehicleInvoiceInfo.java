@@ -121,14 +121,14 @@ public class VehicleInvoiceInfo extends AbstractModel{
     private String MotorTaxRate;
 
     /**
-    * 开户行
+    * 银行账号
     */
     @SerializedName("MotorBankName")
     @Expose
     private String MotorBankName;
 
     /**
-    * 账号
+    * 开户行
     */
     @SerializedName("MotorBankAccount")
     @Expose
@@ -380,32 +380,32 @@ public class VehicleInvoiceInfo extends AbstractModel{
     }
 
     /**
-     * Get 开户行 
-     * @return MotorBankName 开户行
+     * Get 银行账号 
+     * @return MotorBankName 银行账号
      */
     public String getMotorBankName() {
         return this.MotorBankName;
     }
 
     /**
-     * Set 开户行
-     * @param MotorBankName 开户行
+     * Set 银行账号
+     * @param MotorBankName 银行账号
      */
     public void setMotorBankName(String MotorBankName) {
         this.MotorBankName = MotorBankName;
     }
 
     /**
-     * Get 账号 
-     * @return MotorBankAccount 账号
+     * Get 开户行 
+     * @return MotorBankAccount 开户行
      */
     public String getMotorBankAccount() {
         return this.MotorBankAccount;
     }
 
     /**
-     * Set 账号
-     * @param MotorBankAccount 账号
+     * Set 开户行
+     * @param MotorBankAccount 开户行
      */
     public void setMotorBankAccount(String MotorBankAccount) {
         this.MotorBankAccount = MotorBankAccount;

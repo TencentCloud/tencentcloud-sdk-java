@@ -87,7 +87,7 @@ public class InstanceNetInfo extends AbstractModel{
     private String WanDomain;
 
     /**
-    * 外网Ip
+    * 外网IP
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanIP")
@@ -271,9 +271,9 @@ public class InstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get 外网Ip
+     * Get 外网IP
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WanIP 外网Ip
+     * @return WanIP 外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanIP() {
@@ -281,9 +281,9 @@ public class InstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Set 外网Ip
+     * Set 外网IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WanIP 外网Ip
+     * @param WanIP 外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanIP(String WanIP) {

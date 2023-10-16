@@ -81,6 +81,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *供用户控制台调用，增加Tiga规则引擎白名单。
+     * @param req AddAttackWhiteRuleRequest
+     * @return AddAttackWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddAttackWhiteRuleResponse AddAttackWhiteRule(AddAttackWhiteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddAttackWhiteRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddAttackWhiteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddAttackWhiteRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *增加访问控制（自定义策略）
      * @param req AddCustomRuleRequest
      * @return AddCustomRuleResponse
@@ -283,6 +304,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAttackDownloadRecordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAttackDownloadRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *供用户控制台调用，删除Tiga规则引擎白名单。
+     * @param req DeleteAttackWhiteRuleRequest
+     * @return DeleteAttackWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAttackWhiteRuleResponse DeleteAttackWhiteRule(DeleteAttackWhiteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAttackWhiteRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAttackWhiteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAttackWhiteRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -664,6 +706,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAttackOverviewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAttackOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户规则白名单列表
+     * @param req DescribeAttackWhiteRuleRequest
+     * @return DescribeAttackWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAttackWhiteRuleResponse DescribeAttackWhiteRule(DescribeAttackWhiteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAttackWhiteRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAttackWhiteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAttackWhiteRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1782,6 +1845,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAreaBanStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAreaBanStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *供用户控制台调用，修改Tiga规则引擎白名单。
+     * @param req ModifyAttackWhiteRuleRequest
+     * @return ModifyAttackWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAttackWhiteRuleResponse ModifyAttackWhiteRule(ModifyAttackWhiteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAttackWhiteRuleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAttackWhiteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAttackWhiteRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

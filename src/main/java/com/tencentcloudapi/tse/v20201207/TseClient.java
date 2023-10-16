@@ -879,6 +879,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *更新云原生网关证书
+     * @param req ModifyCloudNativeAPIGatewayCertificateRequest
+     * @return ModifyCloudNativeAPIGatewayCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudNativeAPIGatewayCertificateResponse ModifyCloudNativeAPIGatewayCertificate(ModifyCloudNativeAPIGatewayCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCloudNativeAPIGatewayCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCloudNativeAPIGatewayCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改云原生网关路由
      * @param req ModifyCloudNativeAPIGatewayRouteRequest
      * @return ModifyCloudNativeAPIGatewayRouteResponse

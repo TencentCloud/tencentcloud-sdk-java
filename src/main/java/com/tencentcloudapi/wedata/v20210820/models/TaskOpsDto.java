@@ -663,6 +663,22 @@ public class TaskOpsDto extends AbstractModel{
     private Boolean Submit;
 
     /**
+    * 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorGroupId")
+    @Expose
+    private String ExecutorGroupId;
+
+    /**
+    * 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorGroupName")
+    @Expose
+    private String ExecutorGroupName;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2262,6 +2278,46 @@ public class TaskOpsDto extends AbstractModel{
         this.Submit = Submit;
     }
 
+    /**
+     * Get 资源组id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutorGroupId() {
+        return this.ExecutorGroupId;
+    }
+
+    /**
+     * Set 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorGroupId(String ExecutorGroupId) {
+        this.ExecutorGroupId = ExecutorGroupId;
+    }
+
+    /**
+     * Get 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutorGroupName() {
+        return this.ExecutorGroupName;
+    }
+
+    /**
+     * Set 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorGroupName(String ExecutorGroupName) {
+        this.ExecutorGroupName = ExecutorGroupName;
+    }
+
     public TaskOpsDto() {
     }
 
@@ -2510,6 +2566,12 @@ public class TaskOpsDto extends AbstractModel{
         if (source.Submit != null) {
             this.Submit = new Boolean(source.Submit);
         }
+        if (source.ExecutorGroupId != null) {
+            this.ExecutorGroupId = new String(source.ExecutorGroupId);
+        }
+        if (source.ExecutorGroupName != null) {
+            this.ExecutorGroupName = new String(source.ExecutorGroupName);
+        }
     }
 
 
@@ -2597,6 +2659,8 @@ public class TaskOpsDto extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
         this.setParamSimple(map, prefix + "TasksStr", this.TasksStr);
         this.setParamSimple(map, prefix + "Submit", this.Submit);
+        this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
+        this.setParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
 
     }
 }

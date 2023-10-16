@@ -174,6 +174,16 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
     private String ExtraCmd;
 
     /**
+    * 自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
+    */
+    @SerializedName("SpecifyTaskId")
+    @Expose
+    private String SpecifyTaskId;
+
+    /**
     * 任务描述，限制 512 字节。
     */
     @SerializedName("Comment")
@@ -679,6 +689,34 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
     }
 
     /**
+     * Get 自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。 
+     * @return SpecifyTaskId 自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
+     */
+    public String getSpecifyTaskId() {
+        return this.SpecifyTaskId;
+    }
+
+    /**
+     * Set 自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
+     * @param SpecifyTaskId 自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
+     */
+    public void setSpecifyTaskId(String SpecifyTaskId) {
+        this.SpecifyTaskId = SpecifyTaskId;
+    }
+
+    /**
      * Get 任务描述，限制 512 字节。 
      * @return Comment 任务描述，限制 512 字节。
      */
@@ -926,6 +964,9 @@ PullVodPushLive -点播。
         if (source.ExtraCmd != null) {
             this.ExtraCmd = new String(source.ExtraCmd);
         }
+        if (source.SpecifyTaskId != null) {
+            this.SpecifyTaskId = new String(source.SpecifyTaskId);
+        }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
@@ -971,6 +1012,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "VodRefreshType", this.VodRefreshType);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "ExtraCmd", this.ExtraCmd);
+        this.setParamSimple(map, prefix + "SpecifyTaskId", this.SpecifyTaskId);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "ToUrl", this.ToUrl);
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);

@@ -30,7 +30,7 @@ public class DeletePrivateZoneRecordRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * 记录ID
+    * 记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
     */
     @SerializedName("RecordId")
     @Expose
@@ -60,16 +60,16 @@ public class DeletePrivateZoneRecordRequest extends AbstractModel{
     }
 
     /**
-     * Get 记录ID 
-     * @return RecordId 记录ID
+     * Get 记录ID（调用DescribePrivateZoneRecordList可获取到RecordId） 
+     * @return RecordId 记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 记录ID
-     * @param RecordId 记录ID
+     * Set 记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
+     * @param RecordId 记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

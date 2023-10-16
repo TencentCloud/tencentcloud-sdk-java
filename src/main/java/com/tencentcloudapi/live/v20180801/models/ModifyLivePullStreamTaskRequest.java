@@ -136,6 +136,15 @@ ResetTaskConfig：任务更新回调。
     private Long OffsetTime;
 
     /**
+    * 指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。
+    */
+    @SerializedName("SpecifyTaskId")
+    @Expose
+    private String SpecifyTaskId;
+
+    /**
     * 目标 Url。
 换目标地址，会断流重推到新地址。
     */
@@ -506,6 +515,30 @@ ResetTaskConfig：任务更新回调。
     }
 
     /**
+     * Get 指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。 
+     * @return SpecifyTaskId 指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。
+     */
+    public String getSpecifyTaskId() {
+        return this.SpecifyTaskId;
+    }
+
+    /**
+     * Set 指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。
+     * @param SpecifyTaskId 指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。
+     */
+    public void setSpecifyTaskId(String SpecifyTaskId) {
+        this.SpecifyTaskId = SpecifyTaskId;
+    }
+
+    /**
      * Get 目标 Url。
 换目标地址，会断流重推到新地址。 
      * @return ToUrl 目标 Url。
@@ -731,6 +764,9 @@ PullVodPushLive -点播。
         if (source.OffsetTime != null) {
             this.OffsetTime = new Long(source.OffsetTime);
         }
+        if (source.SpecifyTaskId != null) {
+            this.SpecifyTaskId = new String(source.SpecifyTaskId);
+        }
         if (source.ToUrl != null) {
             this.ToUrl = new String(source.ToUrl);
         }
@@ -771,6 +807,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
         this.setParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
+        this.setParamSimple(map, prefix + "SpecifyTaskId", this.SpecifyTaskId);
         this.setParamSimple(map, prefix + "ToUrl", this.ToUrl);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);

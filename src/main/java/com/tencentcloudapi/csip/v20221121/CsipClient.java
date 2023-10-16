@@ -396,6 +396,27 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取端口视角的端口风险列表
+     * @param req DescribeRiskCenterPortViewPortRiskListRequest
+     * @return DescribeRiskCenterPortViewPortRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskCenterPortViewPortRiskListResponse DescribeRiskCenterPortViewPortRiskList(DescribeRiskCenterPortViewPortRiskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskCenterPortViewPortRiskListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterPortViewPortRiskListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskCenterPortViewPortRiskList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取风险服务列表
      * @param req DescribeRiskCenterServerRiskListRequest
      * @return DescribeRiskCenterServerRiskListResponse
@@ -409,6 +430,27 @@ public class CsipClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterServerRiskListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRiskCenterServerRiskList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取漏洞视角的漏洞风险列表
+     * @param req DescribeRiskCenterVULViewVULRiskListRequest
+     * @return DescribeRiskCenterVULViewVULRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskCenterVULViewVULRiskListResponse DescribeRiskCenterVULViewVULRiskList(DescribeRiskCenterVULViewVULRiskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskCenterVULViewVULRiskListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterVULViewVULRiskListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskCenterVULViewVULRiskList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -577,6 +619,27 @@ public class CsipClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcAssetsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVpcAssets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改风险中心风险状态
+     * @param req ModifyRiskCenterRiskStatusRequest
+     * @return ModifyRiskCenterRiskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(ModifyRiskCenterRiskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRiskCenterRiskStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRiskCenterRiskStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRiskCenterRiskStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

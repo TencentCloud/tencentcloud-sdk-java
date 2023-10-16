@@ -83,7 +83,7 @@ public class AuditRuleTemplateInfo extends AbstractModel{
     private Long AlarmPolicy;
 
     /**
-    * 模版状态。0-无任务 ，1-修改中。
+    * 模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -243,9 +243,9 @@ public class AuditRuleTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模版状态。0-无任务 ，1-修改中。
+     * Get 模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 模版状态。0-无任务 ，1-修改中。
+     * @return Status 模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -253,9 +253,9 @@ public class AuditRuleTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 模版状态。0-无任务 ，1-修改中。
+     * Set 模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 模版状态。0-无任务 ，1-修改中。
+     * @param Status 模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

@@ -142,7 +142,7 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
     private String Device;
 
     /**
-    * 是否海外
+    * 显示是否海外
     */
     @SerializedName("IsAbroad")
     @Expose
@@ -176,6 +176,13 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
     @SerializedName("GroupByType")
     @Expose
     private Long GroupByType;
+
+    /**
+    * 无需关注，是否查询zhiyan
+    */
+    @SerializedName("IsNewData")
+    @Expose
+    private Long IsNewData;
 
     /**
      * Get 开始时间 
@@ -450,16 +457,16 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否海外 
-     * @return IsAbroad 是否海外
+     * Get 显示是否海外 
+     * @return IsAbroad 显示是否海外
      */
     public String getIsAbroad() {
         return this.IsAbroad;
     }
 
     /**
-     * Set 是否海外
-     * @param IsAbroad 是否海外
+     * Set 显示是否海外
+     * @param IsAbroad 显示是否海外
      */
     public void setIsAbroad(String IsAbroad) {
         this.IsAbroad = IsAbroad;
@@ -531,6 +538,22 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
      */
     public void setGroupByType(Long GroupByType) {
         this.GroupByType = GroupByType;
+    }
+
+    /**
+     * Get 无需关注，是否查询zhiyan 
+     * @return IsNewData 无需关注，是否查询zhiyan
+     */
+    public Long getIsNewData() {
+        return this.IsNewData;
+    }
+
+    /**
+     * Set 无需关注，是否查询zhiyan
+     * @param IsNewData 无需关注，是否查询zhiyan
+     */
+    public void setIsNewData(Long IsNewData) {
+        this.IsNewData = IsNewData;
     }
 
     public DescribeDataPvUrlStatisticsRequest() {
@@ -607,6 +630,9 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
         if (source.GroupByType != null) {
             this.GroupByType = new Long(source.GroupByType);
         }
+        if (source.IsNewData != null) {
+            this.IsNewData = new Long(source.IsNewData);
+        }
     }
 
 
@@ -636,6 +662,7 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Browser", this.Browser);
         this.setParamSimple(map, prefix + "Env", this.Env);
         this.setParamSimple(map, prefix + "GroupByType", this.GroupByType);
+        this.setParamSimple(map, prefix + "IsNewData", this.IsNewData);
 
     }
 }

@@ -60,6 +60,27 @@ public class CdwpgClient extends AbstractClient{
     }
 
     /**
+     *根据实例ID查询某个实例的具体信息
+     * @param req DescribeInstanceRequest
+     * @return DescribeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *集群详情页中显示集群状态、流程进度等
      * @param req DescribeInstanceStateRequest
      * @return DescribeInstanceStateResponse

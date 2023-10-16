@@ -72,6 +72,13 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel{
     private String [] SelfDefiningAssets;
 
     /**
+    * 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+    */
+    @SerializedName("ScanFrom")
+    @Expose
+    private String ScanFrom;
+
+    /**
     * 高级配置
     */
     @SerializedName("TaskAdvanceCFG")
@@ -198,6 +205,22 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel{
     }
 
     /**
+     * Get 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip 
+     * @return ScanFrom 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+     */
+    public String getScanFrom() {
+        return this.ScanFrom;
+    }
+
+    /**
+     * Set 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+     * @param ScanFrom 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+     */
+    public void setScanFrom(String ScanFrom) {
+        this.ScanFrom = ScanFrom;
+    }
+
+    /**
      * Get 高级配置 
      * @return TaskAdvanceCFG 高级配置
      */
@@ -267,6 +290,9 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel{
                 this.SelfDefiningAssets[i] = new String(source.SelfDefiningAssets[i]);
             }
         }
+        if (source.ScanFrom != null) {
+            this.ScanFrom = new String(source.ScanFrom);
+        }
         if (source.TaskAdvanceCFG != null) {
             this.TaskAdvanceCFG = new TaskAdvanceCFG(source.TaskAdvanceCFG);
         }
@@ -287,6 +313,7 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Assets.", this.Assets);
         this.setParamSimple(map, prefix + "ScanPlanContent", this.ScanPlanContent);
         this.setParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);
+        this.setParamSimple(map, prefix + "ScanFrom", this.ScanFrom);
         this.setParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
         this.setParamSimple(map, prefix + "TaskMode", this.TaskMode);
 

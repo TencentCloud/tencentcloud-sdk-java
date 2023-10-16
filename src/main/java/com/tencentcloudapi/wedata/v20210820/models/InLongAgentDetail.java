@@ -126,6 +126,22 @@ public class InLongAgentDetail extends AbstractModel{
     private Long LifeDays;
 
     /**
+    * 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * agent地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentRegion")
+    @Expose
+    private String AgentRegion;
+
+    /**
      * Get Agent ID 
      * @return AgentId Agent ID
      */
@@ -369,6 +385,46 @@ public class InLongAgentDetail extends AbstractModel{
         this.LifeDays = LifeDays;
     }
 
+    /**
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get agent地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentRegion agent地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAgentRegion() {
+        return this.AgentRegion;
+    }
+
+    /**
+     * Set agent地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentRegion agent地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentRegion(String AgentRegion) {
+        this.AgentRegion = AgentRegion;
+    }
+
     public InLongAgentDetail() {
     }
 
@@ -422,6 +478,12 @@ public class InLongAgentDetail extends AbstractModel{
         if (source.LifeDays != null) {
             this.LifeDays = new Long(source.LifeDays);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.AgentRegion != null) {
+            this.AgentRegion = new String(source.AgentRegion);
+        }
     }
 
 
@@ -443,6 +505,8 @@ public class InLongAgentDetail extends AbstractModel{
         this.setParamArrayObj(map, prefix + "CvmAgentStatusList.", this.CvmAgentStatusList);
         this.setParamSimple(map, prefix + "AgentTotal", this.AgentTotal);
         this.setParamSimple(map, prefix + "LifeDays", this.LifeDays);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "AgentRegion", this.AgentRegion);
 
     }
 }

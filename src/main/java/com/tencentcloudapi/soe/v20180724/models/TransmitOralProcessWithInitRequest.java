@@ -189,6 +189,13 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
     private String Keyword;
 
     /**
+    * 音频存储路径，支持通过子路径指定文件夹名称
+    */
+    @SerializedName("COSBucketURL")
+    @Expose
+    private String COSBucketURL;
+
+    /**
      * Get 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
 注意：序号上限为3000，不能超过上限。 
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
@@ -485,7 +492,9 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
 注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。 
      * @return StorageMode 音频存储模式，此参数已废弃，无需设置，设置与否都默认为0不存储；
 注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
+     * @deprecated
      */
+    @Deprecated
     public Long getStorageMode() {
         return this.StorageMode;
     }
@@ -495,7 +504,9 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
 注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
      * @param StorageMode 音频存储模式，此参数已废弃，无需设置，设置与否都默认为0不存储；
 注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
+     * @deprecated
      */
+    @Deprecated
     public void setStorageMode(Long StorageMode) {
         this.StorageMode = StorageMode;
     }
@@ -636,6 +647,22 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
         this.Keyword = Keyword;
     }
 
+    /**
+     * Get 音频存储路径，支持通过子路径指定文件夹名称 
+     * @return COSBucketURL 音频存储路径，支持通过子路径指定文件夹名称
+     */
+    public String getCOSBucketURL() {
+        return this.COSBucketURL;
+    }
+
+    /**
+     * Set 音频存储路径，支持通过子路径指定文件夹名称
+     * @param COSBucketURL 音频存储路径，支持通过子路径指定文件夹名称
+     */
+    public void setCOSBucketURL(String COSBucketURL) {
+        this.COSBucketURL = COSBucketURL;
+    }
+
     public TransmitOralProcessWithInitRequest() {
     }
 
@@ -698,6 +725,9 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
         if (source.Keyword != null) {
             this.Keyword = new String(source.Keyword);
         }
+        if (source.COSBucketURL != null) {
+            this.COSBucketURL = new String(source.COSBucketURL);
+        }
     }
 
 
@@ -723,6 +753,7 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
         this.setParamSimple(map, prefix + "TextMode", this.TextMode);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamSimple(map, prefix + "COSBucketURL", this.COSBucketURL);
 
     }
 }
