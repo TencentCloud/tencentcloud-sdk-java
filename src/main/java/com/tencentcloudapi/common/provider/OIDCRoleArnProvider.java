@@ -9,11 +9,12 @@ import com.tencentcloudapi.common.JsonResponseModel;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
 
-public class OIDCRoleArnProvider implements CredentialsProvider {
+public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Updater {
     private static final String Service = "sts";
     private static final String Version = "2018-08-13";
     private static final String Action = "AssumeRoleWithWebIdentity";
@@ -25,6 +26,8 @@ public class OIDCRoleArnProvider implements CredentialsProvider {
     public String RoleArn;
     public String RoleSessionName;
     public long DurationSeconds;
+    public long ExpirationReservationTime = 600;
+    private long expiredTime;
 
     public OIDCRoleArnProvider(String region, String providerId, String webIdentityToken,
                                String roleArn, String roleSessionName, long durationSeconds) {
@@ -66,6 +69,18 @@ public class OIDCRoleArnProvider implements CredentialsProvider {
 
     @Override
     public Credential getCredentials() throws TencentCloudSDKException {
+        Credential cred = new Credential("", "", "", this);
+        update(cred);
+        return cred;
+    }
+
+    @Override
+    public void update(Credential credential) throws TencentCloudSDKException {
+        long now = System.currentTimeMillis() / 1000;
+        if (this.expiredTime - now > this.ExpirationReservationTime) {
+            return;
+        }
+
         // can not use sts package here, because it will cause circular dependency
         CommonClient client = new CommonClient(Service, Version, new Credential("", ""), Region);
 
@@ -79,10 +94,15 @@ public class OIDCRoleArnProvider implements CredentialsProvider {
 
         String respStr = client.commonRequest(request, Action);
 
-        JsonResponseModel<Response> response = client.gson.fromJson(respStr, new TypeToken<JsonResponseModel<Response>>() {
-        }.getType());
+        Type type = new TypeToken<JsonResponseModel<Response>>() {
+        }.getType();
+        JsonResponseModel<Response> response = client.gson.fromJson(respStr, type);
         Response resp = response.response;
-        return new Credential(resp.Credentials.TmpSecretId, resp.Credentials.TmpSecretKey, resp.Credentials.Token);
+        this.expiredTime = resp.ExpiredTime;
+
+        credential.setSecretId(resp.Credentials.TmpSecretId);
+        credential.setSecretKey(resp.Credentials.TmpSecretKey);
+        credential.setToken(resp.Credentials.Token);
     }
 
     private static class Request extends AbstractModel {
