@@ -66,12 +66,7 @@ public class Credential {
     }
 
     public String getSecretId() {
-        try {
-            tryUpdate();
-        } catch (TencentCloudSDKException e) {
-            // wrap as RuntimeException to keep API consistent
-            throw new RuntimeException(e);
-        }
+        tryUpdate();
         return this.secretId;
     }
 
@@ -80,11 +75,7 @@ public class Credential {
     }
 
     public String getSecretKey() {
-        try {
-            tryUpdate();
-        } catch (TencentCloudSDKException e) {
-            throw new RuntimeException(e);
-        }
+        tryUpdate();
         return this.secretKey;
     }
 
@@ -93,11 +84,7 @@ public class Credential {
     }
 
     public String getToken() {
-        try {
-            tryUpdate();
-        } catch (TencentCloudSDKException e) {
-            throw new RuntimeException(e);
-        }
+        tryUpdate();
         return this.token;
     }
 
@@ -105,9 +92,16 @@ public class Credential {
         this.token = token;
     }
 
-    private void tryUpdate() throws TencentCloudSDKException {
-        if (updater != null) {
+    private void tryUpdate() {
+        if (updater == null) {
+            return;
+        }
+
+        try {
             updater.update(this);
+        } catch (TencentCloudSDKException e) {
+            // wrap as RuntimeException to keep API consistent
+            throw new RuntimeException(e);
         }
     }
 
