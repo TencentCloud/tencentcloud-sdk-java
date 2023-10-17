@@ -529,7 +529,7 @@ public abstract class AbstractClient {
         String protocol = this.profile.getHttpProfile().getProtocol();
         String url = protocol + endpoint + this.path;
         String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
-        if ( null != apigwEndpoint) {
+        if (null != apigwEndpoint) {
             url = protocol + apigwEndpoint;
         }
         if (reqMethod.equals(HttpProfile.REQ_GET)) {
@@ -659,7 +659,7 @@ public abstract class AbstractClient {
         String protocol = this.profile.getHttpProfile().getProtocol();
         String url = protocol + endpoint + this.path;
         String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
-        if ( null != apigwEndpoint) {
+        if (null != apigwEndpoint) {
             url = protocol + apigwEndpoint;
             hb.set("Host", apigwEndpoint);
         }

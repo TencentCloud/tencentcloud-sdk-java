@@ -17,6 +17,8 @@ public class ApigwEndpointDescribeZones
             HttpProfile httpProfile = new HttpProfile();
             // 仅支持域名，不支持带path
             httpProfile.setApigwEndpoint("service-1q2w3e4r-12345678.gz.apigw.tencentcs.com");
+            // 需要和ApiGateway后端设置中指定的云API域名保持一致
+            httpProfile.setEndpoint("cvm.tencentcloudapi.com");
             ClientProfile clientProfile = new ClientProfile();
             clientProfile.setHttpProfile(httpProfile);
 
