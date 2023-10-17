@@ -91,6 +91,11 @@ public class HttpProfile {
 
     private X509TrustManager trustManager;
 
+    /**
+     * APIGateway endpoint
+     */
+    private String apigwEndpoint;
+
     public HttpProfile() {
         this.reqMethod = HttpProfile.REQ_POST;
         this.endpoint = null;
@@ -99,6 +104,7 @@ public class HttpProfile {
         this.readTimeout = 0;
         this.writeTimeout = 0;
         this.connTimeout = HttpProfile.TM_MINUTE;
+        this.apigwEndpoint = null;
     }
 
     public String getReqMethod() {
@@ -239,5 +245,13 @@ public class HttpProfile {
 
     public void setX509TrustManager(X509TrustManager trustManager) {
         this.trustManager = trustManager;
+    }
+
+    public String getApigwEndpoint() {
+        return apigwEndpoint;
+    }
+
+    public void setApigwEndpoint(String apigwEndpoint) {
+        this.apigwEndpoint = apigwEndpoint;
     }
 }

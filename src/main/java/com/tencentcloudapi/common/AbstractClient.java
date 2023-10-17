@@ -526,7 +526,12 @@ public abstract class AbstractClient {
         request.toMap(param, "");
         String strParam = this.formatRequestData(action, param);
         String reqMethod = this.profile.getHttpProfile().getReqMethod();
-        String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
+        String protocol = this.profile.getHttpProfile().getProtocol();
+        String url = protocol + endpoint + this.path;
+        String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
+        if ( null != apigwEndpoint) {
+            url = protocol + apigwEndpoint;
+        }
         if (reqMethod.equals(HttpProfile.REQ_GET)) {
             return this.httpConnection.getRequest(url + "?" + strParam);
         } else if (reqMethod.equals(HttpProfile.REQ_POST)) {
@@ -624,7 +629,6 @@ public abstract class AbstractClient {
                             + "Signature="
                             + signature;
         }
-        String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
         Builder hb = new Headers.Builder();
         hb.add("Content-Type", contentType)
                 .add("Host", endpoint)
@@ -652,6 +656,13 @@ public abstract class AbstractClient {
             hb.add("X-TC-Language", this.profile.getLanguage().getValue());
         }
 
+        String protocol = this.profile.getHttpProfile().getProtocol();
+        String url = protocol + endpoint + this.path;
+        String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
+        if ( null != apigwEndpoint) {
+            url = protocol + apigwEndpoint;
+            hb.set("Host", apigwEndpoint);
+        }
         Headers headers = hb.build();
         if (httpRequestMethod.equals(HttpProfile.REQ_GET)) {
             return this.httpConnection.getRequest(url + "?" + canonicalQueryString, headers);
