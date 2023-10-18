@@ -6,7 +6,7 @@ import com.tencentcloudapi.cvm.v20170312.CvmClient;
 import com.tencentcloudapi.cvm.v20170312.models.DescribeZonesRequest;
 import com.tencentcloudapi.cvm.v20170312.models.DescribeZonesResponse;
 
-public class DescribeZones
+public class ApigwEndpointDescribeZones
 {
     public static void main(String [] args) {
         try{
@@ -14,9 +14,16 @@ public class DescribeZones
             // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
             // Credential cred = new Credential("SecretId", "SecretKey");
             Credential cred = new Credential(System.getenv("TENCENTCLOUD_SECRET_ID"), System.getenv("TENCENTCLOUD_SECRET_KEY"));
+            HttpProfile httpProfile = new HttpProfile();
+            // 仅支持域名，不支持带path
+            httpProfile.setApigwEndpoint("service-1q2w3e4r-12345678.gz.apigw.tencentcs.com");
+            // 需要和ApiGateway后端设置中指定的云API域名保持一致
+            httpProfile.setEndpoint("cvm.tencentcloudapi.com");
+            ClientProfile clientProfile = new ClientProfile();
+            clientProfile.setHttpProfile(httpProfile);
 
             // 实例化要请求产品(以cvm为例)的client对象
-            CvmClient client = new CvmClient(cred, "ap-guangzhou");
+            CvmClient client = new CvmClient(cred, "ap-guangzhou", clientProfile);
 
             // 实例化一个请求对象
             DescribeZonesRequest req = new DescribeZonesRequest();
