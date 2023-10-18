@@ -37,7 +37,7 @@ public class DescribeIntegrationTaskRequest extends AbstractModel{
     private String ProjectId;
 
     /**
-    * 任务类型：201. stream,   202. offline
+    * 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
     */
     @SerializedName("TaskType")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeIntegrationTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务类型：201. stream,   202. offline 
-     * @return TaskType 任务类型：201. stream,   202. offline
+     * Get 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型 
+     * @return TaskType 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型：201. stream,   202. offline
-     * @param TaskType 任务类型：201. stream,   202. offline
+     * Set 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
+     * @param TaskType 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;

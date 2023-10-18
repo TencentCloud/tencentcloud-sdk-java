@@ -714,6 +714,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询指定域名TOP N攻击类型
+     * @param req DescribeAttackTypeRequest
+     * @return DescribeAttackTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAttackTypeResponse DescribeAttackType(DescribeAttackTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAttackTypeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAttackTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAttackType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取用户规则白名单列表
      * @param req DescribeAttackWhiteRuleRequest
      * @return DescribeAttackWhiteRuleResponse
@@ -1094,6 +1115,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询多种条件的聚类分析
+     * @param req DescribeHistogramRequest
+     * @return DescribeHistogramResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHistogramResponse DescribeHistogram(DescribeHistogramRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHistogramResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHistogramResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHistogram");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *clb-waf获取防护域名详情
      * @param req DescribeHostRequest
      * @return DescribeHostResponse
@@ -1380,6 +1422,27 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTlsVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTlsVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询Top5的攻击域名
+     * @param req DescribeTopAttackDomainRequest
+     * @return DescribeTopAttackDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopAttackDomainResponse DescribeTopAttackDomain(DescribeTopAttackDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopAttackDomainResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopAttackDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopAttackDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -149,6 +149,22 @@ public class OfflineTaskAddParam extends AbstractModel{
     private String ExecutionStartTime;
 
     /**
+    * 是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskAutoSubmit")
+    @Expose
+    private Boolean TaskAutoSubmit;
+
+    /**
+    * 实例初始化策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceInitStrategy")
+    @Expose
+    private String InstanceInitStrategy;
+
+    /**
      * Get 名称 
      * @return WorkflowName 名称
      */
@@ -448,6 +464,46 @@ public class OfflineTaskAddParam extends AbstractModel{
         this.ExecutionStartTime = ExecutionStartTime;
     }
 
+    /**
+     * Get 是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskAutoSubmit 是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTaskAutoSubmit() {
+        return this.TaskAutoSubmit;
+    }
+
+    /**
+     * Set 是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskAutoSubmit 是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskAutoSubmit(Boolean TaskAutoSubmit) {
+        this.TaskAutoSubmit = TaskAutoSubmit;
+    }
+
+    /**
+     * Get 实例初始化策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceInitStrategy 实例初始化策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceInitStrategy() {
+        return this.InstanceInitStrategy;
+    }
+
+    /**
+     * Set 实例初始化策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceInitStrategy 实例初始化策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceInitStrategy(String InstanceInitStrategy) {
+        this.InstanceInitStrategy = InstanceInitStrategy;
+    }
+
     public OfflineTaskAddParam() {
     }
 
@@ -507,6 +563,12 @@ public class OfflineTaskAddParam extends AbstractModel{
         if (source.ExecutionStartTime != null) {
             this.ExecutionStartTime = new String(source.ExecutionStartTime);
         }
+        if (source.TaskAutoSubmit != null) {
+            this.TaskAutoSubmit = new Boolean(source.TaskAutoSubmit);
+        }
+        if (source.InstanceInitStrategy != null) {
+            this.InstanceInitStrategy = new String(source.InstanceInitStrategy);
+        }
     }
 
 
@@ -531,6 +593,8 @@ public class OfflineTaskAddParam extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskAction", this.TaskAction);
         this.setParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
         this.setParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
+        this.setParamSimple(map, prefix + "TaskAutoSubmit", this.TaskAutoSubmit);
+        this.setParamSimple(map, prefix + "InstanceInitStrategy", this.InstanceInitStrategy);
 
     }
 }

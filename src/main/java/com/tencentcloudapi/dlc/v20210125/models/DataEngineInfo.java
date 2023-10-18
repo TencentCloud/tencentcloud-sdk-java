@@ -370,6 +370,14 @@ public class DataEngineInfo extends AbstractModel{
     private SessionResourceTemplate SessionResourceTemplate;
 
     /**
+    * 自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoAuthorization")
+    @Expose
+    private Boolean AutoAuthorization;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1217,6 +1225,26 @@ public class DataEngineInfo extends AbstractModel{
         this.SessionResourceTemplate = SessionResourceTemplate;
     }
 
+    /**
+     * Get 自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoAuthorization 自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoAuthorization() {
+        return this.AutoAuthorization;
+    }
+
+    /**
+     * Set 自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoAuthorization 自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoAuthorization(Boolean AutoAuthorization) {
+        this.AutoAuthorization = AutoAuthorization;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1369,6 +1397,9 @@ public class DataEngineInfo extends AbstractModel{
         if (source.SessionResourceTemplate != null) {
             this.SessionResourceTemplate = new SessionResourceTemplate(source.SessionResourceTemplate);
         }
+        if (source.AutoAuthorization != null) {
+            this.AutoAuthorization = new Boolean(source.AutoAuthorization);
+        }
     }
 
 
@@ -1421,6 +1452,7 @@ public class DataEngineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UserAppId", this.UserAppId);
         this.setParamSimple(map, prefix + "UserUin", this.UserUin);
         this.setParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
+        this.setParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
 
     }
 }

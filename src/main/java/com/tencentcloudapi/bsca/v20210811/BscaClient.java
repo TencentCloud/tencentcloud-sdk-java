@@ -60,6 +60,27 @@ public class BscaClient extends AbstractClient{
     }
 
     /**
+     *查询特定组件的版本列表
+     * @param req DescribeKBComponentVersionListRequest
+     * @return DescribeKBComponentVersionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKBComponentVersionListResponse DescribeKBComponentVersionList(DescribeKBComponentVersionListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKBComponentVersionListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKBComponentVersionListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKBComponentVersionList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeKBComponentVulnerability)用于在知识库中查询开源组件的漏洞信息。
      * @param req DescribeKBComponentVulnerabilityRequest
      * @return DescribeKBComponentVulnerabilityResponse
@@ -136,6 +157,27 @@ public class BscaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<MatchKBPURLListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "MatchKBPURLList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据输入的组件名、组件类型搜索相应的组件，返回符合条件的组件列表
+     * @param req SearchKBComponentRequest
+     * @return SearchKBComponentResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchKBComponentResponse SearchKBComponent(SearchKBComponentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchKBComponentResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchKBComponentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchKBComponent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

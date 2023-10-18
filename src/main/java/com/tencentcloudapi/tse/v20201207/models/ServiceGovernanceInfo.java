@@ -79,6 +79,14 @@ public class ServiceGovernanceInfo extends AbstractModel{
     private VpcInfo [] LimiterVpcInfos;
 
     /**
+    * 引擎关联CLS日志主题信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CLSTopics")
+    @Expose
+    private PolarisCLSTopicInfo [] CLSTopics;
+
+    /**
      * Get 引擎所在的地域 
      * @return EngineRegion 引擎所在的地域
      */
@@ -206,6 +214,26 @@ public class ServiceGovernanceInfo extends AbstractModel{
         this.LimiterVpcInfos = LimiterVpcInfos;
     }
 
+    /**
+     * Get 引擎关联CLS日志主题信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CLSTopics 引擎关联CLS日志主题信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PolarisCLSTopicInfo [] getCLSTopics() {
+        return this.CLSTopics;
+    }
+
+    /**
+     * Set 引擎关联CLS日志主题信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CLSTopics 引擎关联CLS日志主题信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCLSTopics(PolarisCLSTopicInfo [] CLSTopics) {
+        this.CLSTopics = CLSTopics;
+    }
+
     public ServiceGovernanceInfo() {
     }
 
@@ -253,6 +281,12 @@ public class ServiceGovernanceInfo extends AbstractModel{
                 this.LimiterVpcInfos[i] = new VpcInfo(source.LimiterVpcInfos[i]);
             }
         }
+        if (source.CLSTopics != null) {
+            this.CLSTopics = new PolarisCLSTopicInfo[source.CLSTopics.length];
+            for (int i = 0; i < source.CLSTopics.length; i++) {
+                this.CLSTopics[i] = new PolarisCLSTopicInfo(source.CLSTopics[i]);
+            }
+        }
     }
 
 
@@ -268,6 +302,7 @@ public class ServiceGovernanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MainPassword", this.MainPassword);
         this.setParamArrayObj(map, prefix + "PgwVpcInfos.", this.PgwVpcInfos);
         this.setParamArrayObj(map, prefix + "LimiterVpcInfos.", this.LimiterVpcInfos);
+        this.setParamArrayObj(map, prefix + "CLSTopics.", this.CLSTopics);
 
     }
 }

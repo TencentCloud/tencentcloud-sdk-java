@@ -102,6 +102,27 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *创建自定义DNS Host
+     * @param req CreateCustomDnsHostRequest
+     * @return CreateCustomDnsHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomDnsHostResponse CreateCustomDnsHost(CreateCustomDnsHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomDnsHostResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomDnsHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomDnsHost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 ( CreateDomainBatch ) 用于批量域名注册 。
      * @param req CreateDomainBatchRequest
      * @return CreateDomainBatchResponse

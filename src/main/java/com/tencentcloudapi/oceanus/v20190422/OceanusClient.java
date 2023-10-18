@@ -522,6 +522,27 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *查询Sql Gateway的Statement执行结果
+     * @param req FetchSqlGatewayStatementResultRequest
+     * @return FetchSqlGatewayStatementResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchSqlGatewayStatementResultResponse FetchSqlGatewayStatementResult(FetchSqlGatewayStatementResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchSqlGatewayStatementResultResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchSqlGatewayStatementResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FetchSqlGatewayStatementResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新作业属性，仅允许以下3种操作，不支持组合操作：
 (1)	更新作业名称
 (2)	更新作业备注 
@@ -566,6 +587,27 @@ public class OceanusClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RunJobsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RunJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过Sql gateway执行satement
+     * @param req RunSqlGatewayStatementRequest
+     * @return RunSqlGatewayStatementResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunSqlGatewayStatementResponse RunSqlGatewayStatement(RunSqlGatewayStatementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RunSqlGatewayStatementResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RunSqlGatewayStatementResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RunSqlGatewayStatement");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

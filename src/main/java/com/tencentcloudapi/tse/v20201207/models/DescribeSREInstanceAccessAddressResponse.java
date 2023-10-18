@@ -84,6 +84,14 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     private PolarisLimiterAddress [] LimiterAddressInfos;
 
     /**
+    * InternetAddress 的公网 CLB 多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CLBMultiRegion")
+    @Expose
+    private CLBMultiRegion CLBMultiRegion;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -239,6 +247,26 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
     }
 
     /**
+     * Get InternetAddress 的公网 CLB 多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CLBMultiRegion InternetAddress 的公网 CLB 多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CLBMultiRegion getCLBMultiRegion() {
+        return this.CLBMultiRegion;
+    }
+
+    /**
+     * Set InternetAddress 的公网 CLB 多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CLBMultiRegion InternetAddress 的公网 CLB 多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCLBMultiRegion(CLBMultiRegion CLBMultiRegion) {
+        this.CLBMultiRegion = CLBMultiRegion;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -292,6 +320,9 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
                 this.LimiterAddressInfos[i] = new PolarisLimiterAddress(source.LimiterAddressInfos[i]);
             }
         }
+        if (source.CLBMultiRegion != null) {
+            this.CLBMultiRegion = new CLBMultiRegion(source.CLBMultiRegion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -310,6 +341,7 @@ public class DescribeSREInstanceAccessAddressResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
         this.setParamSimple(map, prefix + "ConsoleInternetBandWidth", this.ConsoleInternetBandWidth);
         this.setParamArrayObj(map, prefix + "LimiterAddressInfos.", this.LimiterAddressInfos);
+        this.setParamObj(map, prefix + "CLBMultiRegion.", this.CLBMultiRegion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

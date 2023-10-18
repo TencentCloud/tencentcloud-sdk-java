@@ -306,6 +306,14 @@ public class AlarmPolicy extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportAlarmTag")
+    @Expose
+    private Long IsSupportAlarmTag;
+
+    /**
      * Get 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 告警策略 ID
@@ -1017,6 +1025,26 @@ public class AlarmPolicy extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportAlarmTag 是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSupportAlarmTag() {
+        return this.IsSupportAlarmTag;
+    }
+
+    /**
+     * Set 是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportAlarmTag 是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportAlarmTag(Long IsSupportAlarmTag) {
+        this.IsSupportAlarmTag = IsSupportAlarmTag;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -1148,6 +1176,9 @@ public class AlarmPolicy extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IsSupportAlarmTag != null) {
+            this.IsSupportAlarmTag = new Long(source.IsSupportAlarmTag);
+        }
     }
 
 
@@ -1190,6 +1221,7 @@ public class AlarmPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "AdvancedMetricNumber", this.AdvancedMetricNumber);
         this.setParamSimple(map, prefix + "IsBindAll", this.IsBindAll);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsSupportAlarmTag", this.IsSupportAlarmTag);
 
     }
 }

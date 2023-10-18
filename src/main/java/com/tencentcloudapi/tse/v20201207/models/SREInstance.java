@@ -279,6 +279,14 @@ public class SREInstance extends AbstractModel{
     private Boolean EnableClientIntranet;
 
     /**
+    * 存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageOption")
+    @Expose
+    private StorageOption [] StorageOption;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -906,6 +914,26 @@ public class SREInstance extends AbstractModel{
         this.EnableClientIntranet = EnableClientIntranet;
     }
 
+    /**
+     * Get 存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageOption 存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StorageOption [] getStorageOption() {
+        return this.StorageOption;
+    }
+
+    /**
+     * Set 存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageOption 存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageOption(StorageOption [] StorageOption) {
+        this.StorageOption = StorageOption;
+    }
+
     public SREInstance() {
     }
 
@@ -1031,6 +1059,12 @@ public class SREInstance extends AbstractModel{
         if (source.EnableClientIntranet != null) {
             this.EnableClientIntranet = new Boolean(source.EnableClientIntranet);
         }
+        if (source.StorageOption != null) {
+            this.StorageOption = new StorageOption[source.StorageOption.length];
+            for (int i = 0; i < source.StorageOption.length; i++) {
+                this.StorageOption[i] = new StorageOption(source.StorageOption[i]);
+            }
+        }
     }
 
 
@@ -1071,6 +1105,7 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "EKSType", this.EKSType);
         this.setParamSimple(map, prefix + "FeatureVersion", this.FeatureVersion);
         this.setParamSimple(map, prefix + "EnableClientIntranet", this.EnableClientIntranet);
+        this.setParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
 
     }
 }

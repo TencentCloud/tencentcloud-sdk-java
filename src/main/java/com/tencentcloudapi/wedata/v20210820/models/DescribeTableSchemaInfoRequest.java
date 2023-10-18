@@ -37,7 +37,7 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
-    * 表类型
+    * 数据源的类型（例如MYSQL、HIVE、KAFKA等）
     */
     @SerializedName("MsType")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel{
     private String DatasourceId;
 
     /**
-    * HIVE传rpc
+    * 连接类型（示例值rpc）
     */
     @SerializedName("ConnectionType")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 表类型 
-     * @return MsType 表类型
+     * Get 数据源的类型（例如MYSQL、HIVE、KAFKA等） 
+     * @return MsType 数据源的类型（例如MYSQL、HIVE、KAFKA等）
      */
     public String getMsType() {
         return this.MsType;
     }
 
     /**
-     * Set 表类型
-     * @param MsType 表类型
+     * Set 数据源的类型（例如MYSQL、HIVE、KAFKA等）
+     * @param MsType 数据源的类型（例如MYSQL、HIVE、KAFKA等）
      */
     public void setMsType(String MsType) {
         this.MsType = MsType;
@@ -129,16 +129,16 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get HIVE传rpc 
-     * @return ConnectionType HIVE传rpc
+     * Get 连接类型（示例值rpc） 
+     * @return ConnectionType 连接类型（示例值rpc）
      */
     public String getConnectionType() {
         return this.ConnectionType;
     }
 
     /**
-     * Set HIVE传rpc
-     * @param ConnectionType HIVE传rpc
+     * Set 连接类型（示例值rpc）
+     * @param ConnectionType 连接类型（示例值rpc）
      */
     public void setConnectionType(String ConnectionType) {
         this.ConnectionType = ConnectionType;

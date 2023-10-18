@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyAssetRequest extends AbstractModel{
 
     /**
-    * 全部同步
+    * 全部同步，俩参数必选一个 All优先
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * 要同步的主机列表 两个参数必选一个 All优先
+    * 要同步的主机列表uuid ，俩参数必选一个 All优先
     */
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
 
     /**
-     * Get 全部同步 
-     * @return All 全部同步
+     * Get 全部同步，俩参数必选一个 All优先 
+     * @return All 全部同步，俩参数必选一个 All优先
      */
     public Boolean getAll() {
         return this.All;
     }
 
     /**
-     * Set 全部同步
-     * @param All 全部同步
+     * Set 全部同步，俩参数必选一个 All优先
+     * @param All 全部同步，俩参数必选一个 All优先
      */
     public void setAll(Boolean All) {
         this.All = All;
     }
 
     /**
-     * Get 要同步的主机列表 两个参数必选一个 All优先 
-     * @return Hosts 要同步的主机列表 两个参数必选一个 All优先
+     * Get 要同步的主机列表uuid ，俩参数必选一个 All优先 
+     * @return Hosts 要同步的主机列表uuid ，俩参数必选一个 All优先
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set 要同步的主机列表 两个参数必选一个 All优先
-     * @param Hosts 要同步的主机列表 两个参数必选一个 All优先
+     * Set 要同步的主机列表uuid ，俩参数必选一个 All优先
+     * @param Hosts 要同步的主机列表uuid ，俩参数必选一个 All优先
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;

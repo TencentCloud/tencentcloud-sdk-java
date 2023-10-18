@@ -65,7 +65,7 @@ public class CreateDisksRequest extends AbstractModel{
     private Long DiskCount;
 
     /**
-    * 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+    * 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
     */
     @SerializedName("DiskBackupQuota")
     @Expose
@@ -182,16 +182,16 @@ public class CreateDisksRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。 
-     * @return DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     * Get 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。 
+     * @return DiskBackupQuota 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
      */
     public Long getDiskBackupQuota() {
         return this.DiskBackupQuota;
     }
 
     /**
-     * Set 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
-     * @param DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     * Set 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
+     * @param DiskBackupQuota 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
      */
     public void setDiskBackupQuota(Long DiskBackupQuota) {
         this.DiskBackupQuota = DiskBackupQuota;

@@ -166,7 +166,10 @@ public enum TseErrorCode {
      UNAUTHORIZEDOPERATION_UIN("UnauthorizedOperation.Uin"),
      
     // 未授权的操作。
-     UNAUTHORIZEDOPERATION_UNAUTHORIZEDOPERATION("UnauthorizedOperation.UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION_UNAUTHORIZEDOPERATION("UnauthorizedOperation.UnauthorizedOperation"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private TseErrorCode (String value){

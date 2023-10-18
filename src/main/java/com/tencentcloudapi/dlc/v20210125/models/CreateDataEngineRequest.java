@@ -233,6 +233,13 @@ public class CreateDataEngineRequest extends AbstractModel{
     private SessionResourceTemplate SessionResourceTemplate;
 
     /**
+    * 自动授权
+    */
+    @SerializedName("AutoAuthorization")
+    @Expose
+    private Boolean AutoAuthorization;
+
+    /**
      * Get 引擎类型spark/presto 
      * @return EngineType 引擎类型spark/presto
      */
@@ -716,6 +723,22 @@ public class CreateDataEngineRequest extends AbstractModel{
         this.SessionResourceTemplate = SessionResourceTemplate;
     }
 
+    /**
+     * Get 自动授权 
+     * @return AutoAuthorization 自动授权
+     */
+    public Boolean getAutoAuthorization() {
+        return this.AutoAuthorization;
+    }
+
+    /**
+     * Set 自动授权
+     * @param AutoAuthorization 自动授权
+     */
+    public void setAutoAuthorization(Boolean AutoAuthorization) {
+        this.AutoAuthorization = AutoAuthorization;
+    }
+
     public CreateDataEngineRequest() {
     }
 
@@ -820,6 +843,9 @@ public class CreateDataEngineRequest extends AbstractModel{
         if (source.SessionResourceTemplate != null) {
             this.SessionResourceTemplate = new SessionResourceTemplate(source.SessionResourceTemplate);
         }
+        if (source.AutoAuthorization != null) {
+            this.AutoAuthorization = new Boolean(source.AutoAuthorization);
+        }
     }
 
 
@@ -857,6 +883,7 @@ public class CreateDataEngineRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
         this.setParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
+        this.setParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
 
     }
 }

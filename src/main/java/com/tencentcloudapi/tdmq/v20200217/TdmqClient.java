@@ -1446,6 +1446,27 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *查询Topic迁移状态列表，源集群和目标集群客户端数量信息需要配合DescribeRocketMQSmoothMigrationTaskTopicInsNum接口查询
+     * @param req DescribeRocketMQMigratingTopicListRequest
+     * @return DescribeRocketMQMigratingTopicListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQMigratingTopicListResponse DescribeRocketMQMigratingTopicList(DescribeRocketMQMigratingTopicListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQMigratingTopicListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQMigratingTopicListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQMigratingTopicList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *rocketmq消息详情
      * @param req DescribeRocketMQMsgRequest
      * @return DescribeRocketMQMsgResponse
@@ -1522,6 +1543,90 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQPublicAccessPointResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRocketMQPublicAccessPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于获取RocketMQ平滑迁移任务详情
+     * @param req DescribeRocketMQSmoothMigrationTaskRequest
+     * @return DescribeRocketMQSmoothMigrationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQSmoothMigrationTaskResponse DescribeRocketMQSmoothMigrationTask(DescribeRocketMQSmoothMigrationTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQSmoothMigrationTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQSmoothMigrationTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQSmoothMigrationTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于查询RocketMQ平滑迁移任务列表
+     * @param req DescribeRocketMQSmoothMigrationTaskListRequest
+     * @return DescribeRocketMQSmoothMigrationTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQSmoothMigrationTaskListResponse DescribeRocketMQSmoothMigrationTaskList(DescribeRocketMQSmoothMigrationTaskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQSmoothMigrationTaskListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQSmoothMigrationTaskListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQSmoothMigrationTaskList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *平滑迁移过程获取源集群group列表接口
+     * @param req DescribeRocketMQSourceClusterGroupListRequest
+     * @return DescribeRocketMQSourceClusterGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQSourceClusterGroupListResponse DescribeRocketMQSourceClusterGroupList(DescribeRocketMQSourceClusterGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQSourceClusterGroupListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQSourceClusterGroupListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQSourceClusterGroupList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *平滑迁移过程获取源集群topic列表接口
+     * @param req DescribeRocketMQSourceClusterTopicListRequest
+     * @return DescribeRocketMQSourceClusterTopicListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQSourceClusterTopicListResponse DescribeRocketMQSourceClusterTopicList(DescribeRocketMQSourceClusterTopicListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQSourceClusterTopicListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQSourceClusterTopicListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQSourceClusterTopicList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1669,6 +1774,48 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTopics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *输入迁移任务id和要导入的Group，导入后台
+     * @param req ImportRocketMQConsumerGroupsRequest
+     * @return ImportRocketMQConsumerGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportRocketMQConsumerGroupsResponse ImportRocketMQConsumerGroups(ImportRocketMQConsumerGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportRocketMQConsumerGroupsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportRocketMQConsumerGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ImportRocketMQConsumerGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *导入topic列表
+     * @param req ImportRocketMQTopicsRequest
+     * @return ImportRocketMQTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportRocketMQTopicsResponse ImportRocketMQTopics(ImportRocketMQTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportRocketMQTopicsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportRocketMQTopicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ImportRocketMQTopics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

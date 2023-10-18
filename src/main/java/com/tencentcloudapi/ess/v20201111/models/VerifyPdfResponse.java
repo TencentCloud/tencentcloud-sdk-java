@@ -55,6 +55,13 @@ public class VerifyPdfResponse extends AbstractModel{
     private String VerifySerialNo;
 
     /**
+    * 合同文件MD5哈希值
+    */
+    @SerializedName("PdfResourceMd5")
+    @Expose
+    private String PdfResourceMd5;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -154,6 +161,22 @@ public class VerifyPdfResponse extends AbstractModel{
     }
 
     /**
+     * Get 合同文件MD5哈希值 
+     * @return PdfResourceMd5 合同文件MD5哈希值
+     */
+    public String getPdfResourceMd5() {
+        return this.PdfResourceMd5;
+    }
+
+    /**
+     * Set 合同文件MD5哈希值
+     * @param PdfResourceMd5 合同文件MD5哈希值
+     */
+    public void setPdfResourceMd5(String PdfResourceMd5) {
+        this.PdfResourceMd5 = PdfResourceMd5;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -189,6 +212,9 @@ public class VerifyPdfResponse extends AbstractModel{
         if (source.VerifySerialNo != null) {
             this.VerifySerialNo = new String(source.VerifySerialNo);
         }
+        if (source.PdfResourceMd5 != null) {
+            this.PdfResourceMd5 = new String(source.PdfResourceMd5);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +228,7 @@ public class VerifyPdfResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "VerifyResult", this.VerifyResult);
         this.setParamArrayObj(map, prefix + "PdfVerifyResults.", this.PdfVerifyResults);
         this.setParamSimple(map, prefix + "VerifySerialNo", this.VerifySerialNo);
+        this.setParamSimple(map, prefix + "PdfResourceMd5", this.PdfResourceMd5);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

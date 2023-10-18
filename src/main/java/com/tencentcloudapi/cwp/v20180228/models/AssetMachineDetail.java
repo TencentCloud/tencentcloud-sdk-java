@@ -114,7 +114,7 @@ public class AssetMachineDetail extends AbstractModel{
     private Long CpuSize;
 
     /**
-    * Cpu使用率百分比
+    * Cpu负载
     */
     @SerializedName("CpuLoad")
     @Expose
@@ -277,6 +277,22 @@ public class AssetMachineDetail extends AbstractModel{
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
+
+    /**
+    * CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CpuLoadVul")
+    @Expose
+    private String CpuLoadVul;
+
+    /**
+    * 时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstTime")
+    @Expose
+    private String FirstTime;
 
     /**
      * Get 服务器Quuid 
@@ -487,16 +503,16 @@ public class AssetMachineDetail extends AbstractModel{
     }
 
     /**
-     * Get Cpu使用率百分比 
-     * @return CpuLoad Cpu使用率百分比
+     * Get Cpu负载 
+     * @return CpuLoad Cpu负载
      */
     public String getCpuLoad() {
         return this.CpuLoad;
     }
 
     /**
-     * Set Cpu使用率百分比
-     * @param CpuLoad Cpu使用率百分比
+     * Set Cpu负载
+     * @param CpuLoad Cpu负载
      */
     public void setCpuLoad(String CpuLoad) {
         this.CpuLoad = CpuLoad;
@@ -870,6 +886,46 @@ public class AssetMachineDetail extends AbstractModel{
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CpuLoadVul CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCpuLoadVul() {
+        return this.CpuLoadVul;
+    }
+
+    /**
+     * Set CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CpuLoadVul CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCpuLoadVul(String CpuLoadVul) {
+        this.CpuLoadVul = CpuLoadVul;
+    }
+
+    /**
+     * Get 时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirstTime 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFirstTime() {
+        return this.FirstTime;
+    }
+
+    /**
+     * Set 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstTime 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstTime(String FirstTime) {
+        this.FirstTime = FirstTime;
+    }
+
     public AssetMachineDetail() {
     }
 
@@ -992,6 +1048,12 @@ public class AssetMachineDetail extends AbstractModel{
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.CpuLoadVul != null) {
+            this.CpuLoadVul = new String(source.CpuLoadVul);
+        }
+        if (source.FirstTime != null) {
+            this.FirstTime = new String(source.FirstTime);
+        }
     }
 
 
@@ -1035,6 +1097,8 @@ public class AssetMachineDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "CpuLoadVul", this.CpuLoadVul);
+        this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
 
     }
 }

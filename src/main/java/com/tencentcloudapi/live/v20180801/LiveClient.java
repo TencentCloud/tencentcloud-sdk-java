@@ -1109,6 +1109,31 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *返回正在直播中的流列表。适用于推流成功后查询在线流信息。
+
+注意：
+1. 该接口仅提供辅助查询在线流列表功能，业务重要场景不可强依赖该接口。
+2. 该接口仅适用于流数少于2万路的情况，对于流数较大用户请联系售后。
+     * @param req DescribeBackupStreamListRequest
+     * @return DescribeBackupStreamListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupStreamListResponse DescribeBackupStreamList(DescribeBackupStreamListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupStreamListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupStreamListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupStreamList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *直播播放带宽和流量数据查询。
      * @param req DescribeBillBandwidthAndFluxListRequest
      * @return DescribeBillBandwidthAndFluxListResponse
@@ -2734,6 +2759,28 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *启用择优调度。
+注意：流维度的择优调度，当主备流结束后自动失效。
+     * @param req EnableOptimalSwitchingRequest
+     * @return EnableOptimalSwitchingResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableOptimalSwitchingResponse EnableOptimalSwitching(EnableOptimalSwitchingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableOptimalSwitchingResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableOptimalSwitchingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableOptimalSwitching");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *停止使用某个直播域名。
      * @param req ForbidLiveDomainRequest
      * @return ForbidLiveDomainResponse
@@ -3261,6 +3308,27 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<StopScreenshotTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopScreenshotTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *调用该接口实现切换当前播放所使用的主备流。
+     * @param req SwitchBackupStreamRequest
+     * @return SwitchBackupStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchBackupStreamResponse SwitchBackupStream(SwitchBackupStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchBackupStreamResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchBackupStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchBackupStream");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

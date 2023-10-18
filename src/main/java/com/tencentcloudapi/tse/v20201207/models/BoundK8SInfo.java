@@ -46,6 +46,14 @@ public class BoundK8SInfo extends AbstractModel{
     private String SyncMode;
 
     /**
+    * 绑定的kubernetes集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BindRegion")
+    @Expose
+    private String BindRegion;
+
+    /**
      * Get 绑定的kubernetes集群ID 
      * @return BoundClusterId 绑定的kubernetes集群ID
      */
@@ -101,6 +109,26 @@ public class BoundK8SInfo extends AbstractModel{
         this.SyncMode = SyncMode;
     }
 
+    /**
+     * Get 绑定的kubernetes集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BindRegion 绑定的kubernetes集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBindRegion() {
+        return this.BindRegion;
+    }
+
+    /**
+     * Set 绑定的kubernetes集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BindRegion 绑定的kubernetes集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBindRegion(String BindRegion) {
+        this.BindRegion = BindRegion;
+    }
+
     public BoundK8SInfo() {
     }
 
@@ -118,6 +146,9 @@ public class BoundK8SInfo extends AbstractModel{
         if (source.SyncMode != null) {
             this.SyncMode = new String(source.SyncMode);
         }
+        if (source.BindRegion != null) {
+            this.BindRegion = new String(source.BindRegion);
+        }
     }
 
 
@@ -128,6 +159,7 @@ public class BoundK8SInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BoundClusterId", this.BoundClusterId);
         this.setParamSimple(map, prefix + "BoundClusterType", this.BoundClusterType);
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
+        this.setParamSimple(map, prefix + "BindRegion", this.BindRegion);
 
     }
 }

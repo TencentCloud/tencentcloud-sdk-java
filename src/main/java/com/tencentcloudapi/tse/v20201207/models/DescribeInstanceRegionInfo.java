@@ -47,12 +47,20 @@ public class DescribeInstanceRegionInfo extends AbstractModel{
     private String SpecId;
 
     /**
-    * 内网的网络信息
+    * 客户端内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntranetVpcInfos")
     @Expose
     private VpcInfo [] IntranetVpcInfos;
+
+    /**
+    * 控制台内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsoleIntranetVpcInfos")
+    @Expose
+    private VpcInfo [] ConsoleIntranetVpcInfos;
 
     /**
     * 是否开公网
@@ -61,6 +69,30 @@ public class DescribeInstanceRegionInfo extends AbstractModel{
     @SerializedName("EnableClientInternet")
     @Expose
     private Boolean EnableClientInternet;
+
+    /**
+    * 限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LimiterIntranetVpcInfos")
+    @Expose
+    private VpcInfo [] LimiterIntranetVpcInfos;
+
+    /**
+    * 是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MainRegion")
+    @Expose
+    private Boolean MainRegion;
+
+    /**
+    * 该地域所在的EKS集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EKSClusterID")
+    @Expose
+    private String EKSClusterID;
 
     /**
      * Get 引擎部署地域信息
@@ -123,9 +155,9 @@ public class DescribeInstanceRegionInfo extends AbstractModel{
     }
 
     /**
-     * Get 内网的网络信息
+     * Get 客户端内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntranetVpcInfos 内网的网络信息
+     * @return IntranetVpcInfos 客户端内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getIntranetVpcInfos() {
@@ -133,13 +165,33 @@ public class DescribeInstanceRegionInfo extends AbstractModel{
     }
 
     /**
-     * Set 内网的网络信息
+     * Set 客户端内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntranetVpcInfos 内网的网络信息
+     * @param IntranetVpcInfos 客户端内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntranetVpcInfos(VpcInfo [] IntranetVpcInfos) {
         this.IntranetVpcInfos = IntranetVpcInfos;
+    }
+
+    /**
+     * Get 控制台内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsoleIntranetVpcInfos 控制台内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpcInfo [] getConsoleIntranetVpcInfos() {
+        return this.ConsoleIntranetVpcInfos;
+    }
+
+    /**
+     * Set 控制台内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsoleIntranetVpcInfos 控制台内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsoleIntranetVpcInfos(VpcInfo [] ConsoleIntranetVpcInfos) {
+        this.ConsoleIntranetVpcInfos = ConsoleIntranetVpcInfos;
     }
 
     /**
@@ -160,6 +212,66 @@ public class DescribeInstanceRegionInfo extends AbstractModel{
      */
     public void setEnableClientInternet(Boolean EnableClientInternet) {
         this.EnableClientInternet = EnableClientInternet;
+    }
+
+    /**
+     * Get 限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LimiterIntranetVpcInfos 限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpcInfo [] getLimiterIntranetVpcInfos() {
+        return this.LimiterIntranetVpcInfos;
+    }
+
+    /**
+     * Set 限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LimiterIntranetVpcInfos 限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLimiterIntranetVpcInfos(VpcInfo [] LimiterIntranetVpcInfos) {
+        this.LimiterIntranetVpcInfos = LimiterIntranetVpcInfos;
+    }
+
+    /**
+     * Get 是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MainRegion 是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getMainRegion() {
+        return this.MainRegion;
+    }
+
+    /**
+     * Set 是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MainRegion 是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMainRegion(Boolean MainRegion) {
+        this.MainRegion = MainRegion;
+    }
+
+    /**
+     * Get 该地域所在的EKS集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EKSClusterID 该地域所在的EKS集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEKSClusterID() {
+        return this.EKSClusterID;
+    }
+
+    /**
+     * Set 该地域所在的EKS集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EKSClusterID 该地域所在的EKS集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEKSClusterID(String EKSClusterID) {
+        this.EKSClusterID = EKSClusterID;
     }
 
     public DescribeInstanceRegionInfo() {
@@ -185,8 +297,26 @@ public class DescribeInstanceRegionInfo extends AbstractModel{
                 this.IntranetVpcInfos[i] = new VpcInfo(source.IntranetVpcInfos[i]);
             }
         }
+        if (source.ConsoleIntranetVpcInfos != null) {
+            this.ConsoleIntranetVpcInfos = new VpcInfo[source.ConsoleIntranetVpcInfos.length];
+            for (int i = 0; i < source.ConsoleIntranetVpcInfos.length; i++) {
+                this.ConsoleIntranetVpcInfos[i] = new VpcInfo(source.ConsoleIntranetVpcInfos[i]);
+            }
+        }
         if (source.EnableClientInternet != null) {
             this.EnableClientInternet = new Boolean(source.EnableClientInternet);
+        }
+        if (source.LimiterIntranetVpcInfos != null) {
+            this.LimiterIntranetVpcInfos = new VpcInfo[source.LimiterIntranetVpcInfos.length];
+            for (int i = 0; i < source.LimiterIntranetVpcInfos.length; i++) {
+                this.LimiterIntranetVpcInfos[i] = new VpcInfo(source.LimiterIntranetVpcInfos[i]);
+            }
+        }
+        if (source.MainRegion != null) {
+            this.MainRegion = new Boolean(source.MainRegion);
+        }
+        if (source.EKSClusterID != null) {
+            this.EKSClusterID = new String(source.EKSClusterID);
         }
     }
 
@@ -199,7 +329,11 @@ public class DescribeInstanceRegionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Replica", this.Replica);
         this.setParamSimple(map, prefix + "SpecId", this.SpecId);
         this.setParamArrayObj(map, prefix + "IntranetVpcInfos.", this.IntranetVpcInfos);
+        this.setParamArrayObj(map, prefix + "ConsoleIntranetVpcInfos.", this.ConsoleIntranetVpcInfos);
         this.setParamSimple(map, prefix + "EnableClientInternet", this.EnableClientInternet);
+        this.setParamArrayObj(map, prefix + "LimiterIntranetVpcInfos.", this.LimiterIntranetVpcInfos);
+        this.setParamSimple(map, prefix + "MainRegion", this.MainRegion);
+        this.setParamSimple(map, prefix + "EKSClusterID", this.EKSClusterID);
 
     }
 }

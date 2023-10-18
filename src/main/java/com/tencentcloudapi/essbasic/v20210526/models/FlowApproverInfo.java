@@ -23,54 +23,68 @@ import java.util.HashMap;
 public class FlowApproverInfo extends AbstractModel{
 
     /**
-    * 签署人姓名，最大长度50个字符
+    * 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 签署人的证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+    * 签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他证件</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
     */
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
 
     /**
-    * 签署人证件号（长度不超过18位）
+    * 签署方经办人的证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
     */
     @SerializedName("IdCardNumber")
     @Expose
     private String IdCardNumber;
 
     /**
-    * 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
+    * 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)， 不支持海外手机号。
+请确认手机号所有方为此合同签署方。
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
+    * 组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
 
     /**
-    * 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
+    * 指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。
+<ul>
+<li>false: 默认值，第三方平台子客企业下员工</li>
+<li>true: SaaS平台企业下的员工</li>
+</ul>
+
     */
     @SerializedName("NotChannelOrganization")
     @Expose
     private Boolean NotChannelOrganization;
 
     /**
-    * 用户侧第三方id，最大长度64个字符
+    * 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
+
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
     */
     @SerializedName("OpenId")
@@ -78,24 +92,25 @@ public class FlowApproverInfo extends AbstractModel{
     private String OpenId;
 
     /**
-    * 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+    * 同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符
     */
     @SerializedName("OrganizationOpenId")
     @Expose
     private String OrganizationOpenId;
 
     /**
-    * 签署人类型
-PERSON-个人/自然人；
-PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
-ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+    * 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
+<ul><li> **PERSON** :个人/自然人</li>
+<li> **PERSON_AUTO_SIGN** :个人/自然人自动签署，适用于个人自动签场景</li>
+<li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业静默签）</li>
+<li> **ENTERPRISESERVER** :企业/企业员自动签（他方企业自动签署或文件发起时的本方企业自动签）</li></ul>
 
-若要实现他方企业（同一应用下）自动签，需要满足3个条件：
-条件1：ApproverType 设置为ENTERPRISESERVER
-条件2：子客之间完成授权
-条件3：联系对接的客户经理沟通
+注:  
+`1. 个人自动签场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。`
+`2. 若要实现他方企业（同一应用下）自动签，需要满足3个条件：`
+<ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li>
+<li>条件2：子客之间完成授权</li>
+<li>条件3：联系对接的客户经理沟通如何使用</li></ul>
     */
     @SerializedName("ApproverType")
     @Expose
@@ -109,7 +124,8 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     private String RecipientId;
 
     /**
-    * 签署截止时间戳，默认一年
+    * 本签署人在此合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
     */
     @SerializedName("Deadline")
     @Expose
@@ -141,7 +157,14 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     private String [] ComponentLimitType;
 
     /**
-    * 合同的强制预览时间：3~300s，未指定则按合同页数计算
+    * 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+<ul>
+<li>合同页数少于等于2页，阅读时间为3秒；</li>
+<li>合同页数为3到5页，阅读时间为5秒；</li>
+<li>合同页数大于等于6页，阅读时间为10秒。</li>
+</ul>
     */
     @SerializedName("PreReadTime")
     @Expose
@@ -155,7 +178,8 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     private String JumpUrl;
 
     /**
-    * 签署人个性化能力值
+    * 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。
     */
     @SerializedName("ApproverOption")
     @Expose
@@ -195,8 +219,11 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     private String SignId;
 
     /**
-    * SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
-默认为SMS(签署方为子客时该字段不生效)
+    * 通知签署方经办人的方式, 有以下途径:
+<ul><li> **SMS** :(默认)短信</li>
+<li> **NONE** : 不通知</li></ul>
+
+注: `签署方为第三方子客企业时会被置为NONE,   不会发短信通知`
     */
     @SerializedName("NotifyType")
     @Expose
@@ -212,132 +239,186 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     private ComponentLimit [] AddSignComponentsLimits;
 
     /**
-    * 自定义签署方角色名称
+    * 自定义签署人角色名，如收款人、开具人、见证人等
     */
     @SerializedName("ApproverRoleName")
     @Expose
     private String ApproverRoleName;
 
     /**
-     * Get 签署人姓名，最大长度50个字符 
-     * @return Name 签署人姓名，最大长度50个字符
+     * Get 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。 
+     * @return Name 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 签署人姓名，最大长度50个字符
-     * @param Name 签署人姓名，最大长度50个字符
+     * Set 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
+     * @param Name 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 签署人的证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理） 
-     * @return IdCardType 签署人的证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+     * Get 签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他证件</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。` 
+     * @return IdCardType 签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他证件</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set 签署人的证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
-     * @param IdCardType 签署人的证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+     * Set 签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他证件</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+     * @param IdCardType 签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他证件</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
     }
 
     /**
-     * Get 签署人证件号（长度不超过18位） 
-     * @return IdCardNumber 签署人证件号（长度不超过18位）
+     * Get 签署方经办人的证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul> 
+     * @return IdCardNumber 签署方经办人的证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 签署人证件号（长度不超过18位）
-     * @param IdCardNumber 签署人证件号（长度不超过18位）
+     * Set 签署方经办人的证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * @param IdCardNumber 签署方经办人的证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;
     }
 
     /**
-     * Get 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。 
-     * @return Mobile 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
+     * Get 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)， 不支持海外手机号。
+请确认手机号所有方为此合同签署方。 
+     * @return Mobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)， 不支持海外手机号。
+请确认手机号所有方为此合同签署方。
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
-     * @param Mobile 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
+     * Set 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)， 不支持海外手机号。
+请确认手机号所有方为此合同签署方。
+     * @param Mobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)， 不支持海外手机号。
+请确认手机号所有方为此合同签署方。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符； 
-     * @return OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
+     * Get 组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。 
+     * @return OrganizationName 组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
-     * @param OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
+     * Set 组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+     * @param OrganizationName 组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下； 
-     * @return NotChannelOrganization 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
+     * Get 指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。
+<ul>
+<li>false: 默认值，第三方平台子客企业下员工</li>
+<li>true: SaaS平台企业下的员工</li>
+</ul>
+ 
+     * @return NotChannelOrganization 指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。
+<ul>
+<li>false: 默认值，第三方平台子客企业下员工</li>
+<li>true: SaaS平台企业下的员工</li>
+</ul>
+
      */
     public Boolean getNotChannelOrganization() {
         return this.NotChannelOrganization;
     }
 
     /**
-     * Set 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
-     * @param NotChannelOrganization 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
+     * Set 指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。
+<ul>
+<li>false: 默认值，第三方平台子客企业下员工</li>
+<li>true: SaaS平台企业下的员工</li>
+</ul>
+
+     * @param NotChannelOrganization 指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。
+<ul>
+<li>false: 默认值，第三方平台子客企业下员工</li>
+<li>true: SaaS平台企业下的员工</li>
+</ul>
+
      */
     public void setNotChannelOrganization(Boolean NotChannelOrganization) {
         this.NotChannelOrganization = NotChannelOrganization;
     }
 
     /**
-     * Get 用户侧第三方id，最大长度64个字符
+     * Get 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
+
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程 
-     * @return OpenId 用户侧第三方id，最大长度64个字符
+     * @return OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
+
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
      */
     public String getOpenId() {
@@ -345,9 +426,11 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     }
 
     /**
-     * Set 用户侧第三方id，最大长度64个字符
+     * Set 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
+
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
-     * @param OpenId 用户侧第三方id，最大长度64个字符
+     * @param OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
+
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
      */
     public void setOpenId(String OpenId) {
@@ -355,72 +438,76 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     }
 
     /**
-     * Get 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符； 
-     * @return OrganizationOpenId 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+     * Get 同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符 
+     * @return OrganizationOpenId 同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
 
     /**
-     * Set 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
-     * @param OrganizationOpenId 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+     * Set 同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符
+     * @param OrganizationOpenId 同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
     }
 
     /**
-     * Get 签署人类型
-PERSON-个人/自然人；
-PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
-ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+     * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
+<ul><li> **PERSON** :个人/自然人</li>
+<li> **PERSON_AUTO_SIGN** :个人/自然人自动签署，适用于个人自动签场景</li>
+<li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业静默签）</li>
+<li> **ENTERPRISESERVER** :企业/企业员自动签（他方企业自动签署或文件发起时的本方企业自动签）</li></ul>
 
-若要实现他方企业（同一应用下）自动签，需要满足3个条件：
-条件1：ApproverType 设置为ENTERPRISESERVER
-条件2：子客之间完成授权
-条件3：联系对接的客户经理沟通 
-     * @return ApproverType 签署人类型
-PERSON-个人/自然人；
-PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
-ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+注:  
+`1. 个人自动签场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。`
+`2. 若要实现他方企业（同一应用下）自动签，需要满足3个条件：`
+<ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li>
+<li>条件2：子客之间完成授权</li>
+<li>条件3：联系对接的客户经理沟通如何使用</li></ul> 
+     * @return ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
+<ul><li> **PERSON** :个人/自然人</li>
+<li> **PERSON_AUTO_SIGN** :个人/自然人自动签署，适用于个人自动签场景</li>
+<li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业静默签）</li>
+<li> **ENTERPRISESERVER** :企业/企业员自动签（他方企业自动签署或文件发起时的本方企业自动签）</li></ul>
 
-若要实现他方企业（同一应用下）自动签，需要满足3个条件：
-条件1：ApproverType 设置为ENTERPRISESERVER
-条件2：子客之间完成授权
-条件3：联系对接的客户经理沟通
+注:  
+`1. 个人自动签场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。`
+`2. 若要实现他方企业（同一应用下）自动签，需要满足3个条件：`
+<ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li>
+<li>条件2：子客之间完成授权</li>
+<li>条件3：联系对接的客户经理沟通如何使用</li></ul>
      */
     public String getApproverType() {
         return this.ApproverType;
     }
 
     /**
-     * Set 签署人类型
-PERSON-个人/自然人；
-PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
-ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+     * Set 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
+<ul><li> **PERSON** :个人/自然人</li>
+<li> **PERSON_AUTO_SIGN** :个人/自然人自动签署，适用于个人自动签场景</li>
+<li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业静默签）</li>
+<li> **ENTERPRISESERVER** :企业/企业员自动签（他方企业自动签署或文件发起时的本方企业自动签）</li></ul>
 
-若要实现他方企业（同一应用下）自动签，需要满足3个条件：
-条件1：ApproverType 设置为ENTERPRISESERVER
-条件2：子客之间完成授权
-条件3：联系对接的客户经理沟通
-     * @param ApproverType 签署人类型
-PERSON-个人/自然人；
-PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
-ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+注:  
+`1. 个人自动签场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。`
+`2. 若要实现他方企业（同一应用下）自动签，需要满足3个条件：`
+<ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li>
+<li>条件2：子客之间完成授权</li>
+<li>条件3：联系对接的客户经理沟通如何使用</li></ul>
+     * @param ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
+<ul><li> **PERSON** :个人/自然人</li>
+<li> **PERSON_AUTO_SIGN** :个人/自然人自动签署，适用于个人自动签场景</li>
+<li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业静默签）</li>
+<li> **ENTERPRISESERVER** :企业/企业员自动签（他方企业自动签署或文件发起时的本方企业自动签）</li></ul>
 
-若要实现他方企业（同一应用下）自动签，需要满足3个条件：
-条件1：ApproverType 设置为ENTERPRISESERVER
-条件2：子客之间完成授权
-条件3：联系对接的客户经理沟通
+注:  
+`1. 个人自动签场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。`
+`2. 若要实现他方企业（同一应用下）自动签，需要满足3个条件：`
+<ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li>
+<li>条件2：子客之间完成授权</li>
+<li>条件3：联系对接的客户经理沟通如何使用</li></ul>
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;
@@ -443,16 +530,20 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     }
 
     /**
-     * Get 签署截止时间戳，默认一年 
-     * @return Deadline 签署截止时间戳，默认一年
+     * Get 本签署人在此合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。 
+     * @return Deadline 本签署人在此合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 签署截止时间戳，默认一年
-     * @param Deadline 签署截止时间戳，默认一年
+     * Set 本签署人在此合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     * @param Deadline 本签署人在此合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
@@ -527,16 +618,44 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     }
 
     /**
-     * Get 合同的强制预览时间：3~300s，未指定则按合同页数计算 
-     * @return PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     * Get 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+<ul>
+<li>合同页数少于等于2页，阅读时间为3秒；</li>
+<li>合同页数为3到5页，阅读时间为5秒；</li>
+<li>合同页数大于等于6页，阅读时间为10秒。</li>
+</ul> 
+     * @return PreReadTime 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+<ul>
+<li>合同页数少于等于2页，阅读时间为3秒；</li>
+<li>合同页数为3到5页，阅读时间为5秒；</li>
+<li>合同页数大于等于6页，阅读时间为10秒。</li>
+</ul>
      */
     public Long getPreReadTime() {
         return this.PreReadTime;
     }
 
     /**
-     * Set 合同的强制预览时间：3~300s，未指定则按合同页数计算
-     * @param PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     * Set 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+<ul>
+<li>合同页数少于等于2页，阅读时间为3秒；</li>
+<li>合同页数为3到5页，阅读时间为5秒；</li>
+<li>合同页数大于等于6页，阅读时间为10秒。</li>
+</ul>
+     * @param PreReadTime 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+<ul>
+<li>合同页数少于等于2页，阅读时间为3秒；</li>
+<li>合同页数为3到5页，阅读时间为5秒；</li>
+<li>合同页数大于等于6页，阅读时间为10秒。</li>
+</ul>
      */
     public void setPreReadTime(Long PreReadTime) {
         this.PreReadTime = PreReadTime;
@@ -559,16 +678,20 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     }
 
     /**
-     * Get 签署人个性化能力值 
-     * @return ApproverOption 签署人个性化能力值
+     * Get 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。 
+     * @return ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。
      */
     public ApproverOption getApproverOption() {
         return this.ApproverOption;
     }
 
     /**
-     * Set 签署人个性化能力值
-     * @param ApproverOption 签署人个性化能力值
+     * Set 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。
+     * @param ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。
      */
     public void setApproverOption(ApproverOption ApproverOption) {
         this.ApproverOption = ApproverOption;
@@ -659,20 +782,32 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     }
 
     /**
-     * Get SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
-默认为SMS(签署方为子客时该字段不生效) 
-     * @return NotifyType SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
-默认为SMS(签署方为子客时该字段不生效)
+     * Get 通知签署方经办人的方式, 有以下途径:
+<ul><li> **SMS** :(默认)短信</li>
+<li> **NONE** : 不通知</li></ul>
+
+注: `签署方为第三方子客企业时会被置为NONE,   不会发短信通知` 
+     * @return NotifyType 通知签署方经办人的方式, 有以下途径:
+<ul><li> **SMS** :(默认)短信</li>
+<li> **NONE** : 不通知</li></ul>
+
+注: `签署方为第三方子客企业时会被置为NONE,   不会发短信通知`
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
-默认为SMS(签署方为子客时该字段不生效)
-     * @param NotifyType SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
-默认为SMS(签署方为子客时该字段不生效)
+     * Set 通知签署方经办人的方式, 有以下途径:
+<ul><li> **SMS** :(默认)短信</li>
+<li> **NONE** : 不通知</li></ul>
+
+注: `签署方为第三方子客企业时会被置为NONE,   不会发短信通知`
+     * @param NotifyType 通知签署方经办人的方式, 有以下途径:
+<ul><li> **SMS** :(默认)短信</li>
+<li> **NONE** : 不通知</li></ul>
+
+注: `签署方为第三方子客企业时会被置为NONE,   不会发短信通知`
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
@@ -703,16 +838,16 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     }
 
     /**
-     * Get 自定义签署方角色名称 
-     * @return ApproverRoleName 自定义签署方角色名称
+     * Get 自定义签署人角色名，如收款人、开具人、见证人等 
+     * @return ApproverRoleName 自定义签署人角色名，如收款人、开具人、见证人等
      */
     public String getApproverRoleName() {
         return this.ApproverRoleName;
     }
 
     /**
-     * Set 自定义签署方角色名称
-     * @param ApproverRoleName 自定义签署方角色名称
+     * Set 自定义签署人角色名，如收款人、开具人、见证人等
+     * @param ApproverRoleName 自定义签署人角色名，如收款人、开具人、见证人等
      */
     public void setApproverRoleName(String ApproverRoleName) {
         this.ApproverRoleName = ApproverRoleName;

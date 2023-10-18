@@ -5150,6 +5150,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *开发空间-获取数据开发脚本信息
+     * @param req GetFileInfoRequest
+     * @return GetFileInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFileInfoResponse GetFileInfo(GetFileInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFileInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFileInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFileInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提取数据集成节点字段Schema
      * @param req GetIntegrationNodeColumnSchemaRequest
      * @return GetIntegrationNodeColumnSchemaResponse

@@ -24,8 +24,8 @@ public class SendEmailRequest extends AbstractModel{
 
     /**
     * 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人说明，请按照如下方式： 
-别名 <邮箱地址>
+如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
+别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
     */
     @SerializedName("FromEmailAddress")
     @Expose
@@ -103,11 +103,11 @@ public class SendEmailRequest extends AbstractModel{
 
     /**
      * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人说明，请按照如下方式： 
-别名 <邮箱地址> 
+如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
+别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com> 
      * @return FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人说明，请按照如下方式： 
-别名 <邮箱地址>
+如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
+别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
@@ -115,11 +115,11 @@ public class SendEmailRequest extends AbstractModel{
 
     /**
      * Set 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人说明，请按照如下方式： 
-别名 <邮箱地址>
+如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
+别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
      * @param FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人说明，请按照如下方式： 
-别名 <邮箱地址>
+如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
+别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;

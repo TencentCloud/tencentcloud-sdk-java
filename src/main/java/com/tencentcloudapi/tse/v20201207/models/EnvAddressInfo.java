@@ -68,6 +68,14 @@ public class EnvAddressInfo extends AbstractModel{
     private Long InternetBandWidth;
 
     /**
+    * 客户端公网CLB多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CLBMultiRegion")
+    @Expose
+    private CLBMultiRegion CLBMultiRegion;
+
+    /**
      * Get 环境名 
      * @return EnvName 环境名
      */
@@ -175,6 +183,26 @@ public class EnvAddressInfo extends AbstractModel{
         this.InternetBandWidth = InternetBandWidth;
     }
 
+    /**
+     * Get 客户端公网CLB多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CLBMultiRegion 客户端公网CLB多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CLBMultiRegion getCLBMultiRegion() {
+        return this.CLBMultiRegion;
+    }
+
+    /**
+     * Set 客户端公网CLB多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CLBMultiRegion 客户端公网CLB多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCLBMultiRegion(CLBMultiRegion CLBMultiRegion) {
+        this.CLBMultiRegion = CLBMultiRegion;
+    }
+
     public EnvAddressInfo() {
     }
 
@@ -201,6 +229,9 @@ public class EnvAddressInfo extends AbstractModel{
         if (source.InternetBandWidth != null) {
             this.InternetBandWidth = new Long(source.InternetBandWidth);
         }
+        if (source.CLBMultiRegion != null) {
+            this.CLBMultiRegion = new CLBMultiRegion(source.CLBMultiRegion);
+        }
     }
 
 
@@ -214,6 +245,7 @@ public class EnvAddressInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ConfigIntranetAddress", this.ConfigIntranetAddress);
         this.setParamSimple(map, prefix + "EnableConfigIntranet", this.EnableConfigIntranet);
         this.setParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
+        this.setParamObj(map, prefix + "CLBMultiRegion.", this.CLBMultiRegion);
 
     }
 }

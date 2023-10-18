@@ -44,14 +44,16 @@ public class DescribeRealtimeScanConfigResponse extends AbstractModel{
     private Long AuditType;
 
     /**
-    * 用户号正则表达式
+    * 用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
     */
     @SerializedName("UserIdRegex")
     @Expose
     private String [] UserIdRegex;
 
     /**
-    * 房间号正则表达式
+    * 房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
     */
     @SerializedName("RoomIdRegex")
     @Expose
@@ -127,32 +129,40 @@ public class DescribeRealtimeScanConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get 用户号正则表达式 
-     * @return UserIdRegex 用户号正则表达式
+     * Get 用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检） 
+     * @return UserIdRegex 用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
      */
     public String [] getUserIdRegex() {
         return this.UserIdRegex;
     }
 
     /**
-     * Set 用户号正则表达式
-     * @param UserIdRegex 用户号正则表达式
+     * Set 用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
+     * @param UserIdRegex 用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
      */
     public void setUserIdRegex(String [] UserIdRegex) {
         this.UserIdRegex = UserIdRegex;
     }
 
     /**
-     * Get 房间号正则表达式 
-     * @return RoomIdRegex 房间号正则表达式
+     * Get 房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检） 
+     * @return RoomIdRegex 房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      */
     public String [] getRoomIdRegex() {
         return this.RoomIdRegex;
     }
 
     /**
-     * Set 房间号正则表达式
-     * @param RoomIdRegex 房间号正则表达式
+     * Set 房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
+     * @param RoomIdRegex 房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      */
     public void setRoomIdRegex(String [] RoomIdRegex) {
         this.RoomIdRegex = RoomIdRegex;
