@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cii.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAutoClassifyStructureTaskInfo extends AbstractModel{
+public class CreateAutoClassifyStructureTaskInfo extends AbstractModel {
 
     /**
     * 报告文件上传的地址列表，需按顺序排列。如果使用ImageList参数，置为空数组即可

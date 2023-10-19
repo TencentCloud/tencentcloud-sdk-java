@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateUserSAMLConfigRequest extends AbstractModel{
+public class UpdateUserSAMLConfigRequest extends AbstractModel {
 
     /**
     * 修改的操作类型:enable:启用,disable:禁用,updateSAML:修改元数据文档

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextVehicleBack extends AbstractModel{
+public class TextVehicleBack extends AbstractModel {
 
     /**
     * 号牌号码

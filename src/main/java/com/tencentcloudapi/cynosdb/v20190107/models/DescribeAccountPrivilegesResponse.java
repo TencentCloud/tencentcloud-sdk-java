@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountPrivilegesResponse extends AbstractModel{
+public class DescribeAccountPrivilegesResponse extends AbstractModel {
 
     /**
     * 权限列表，示例值为：["","select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]

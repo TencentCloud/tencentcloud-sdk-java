@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmvpc.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRoutePoliciesRequest extends AbstractModel{
+public class DescribeRoutePoliciesRequest extends AbstractModel {
 
     /**
     * 路由表实例ID，例如：rtb-afg8md3c。

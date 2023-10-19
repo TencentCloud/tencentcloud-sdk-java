@@ -16,11 +16,12 @@
 package com.tencentcloudapi.npp.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RreCallerHandle extends AbstractModel{
+public class RreCallerHandle extends AbstractModel {
 
     /**
     * 呼叫主叫以后，给主叫用户的语音提示，播放该提示时用户所有按键无效

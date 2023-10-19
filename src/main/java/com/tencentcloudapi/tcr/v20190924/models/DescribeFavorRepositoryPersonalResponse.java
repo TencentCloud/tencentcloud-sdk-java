@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFavorRepositoryPersonalResponse extends AbstractModel{
+public class DescribeFavorRepositoryPersonalResponse extends AbstractModel {
 
     /**
     * 个人收藏仓库列表返回信息

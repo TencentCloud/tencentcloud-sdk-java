@@ -16,11 +16,12 @@
 package com.tencentcloudapi.chdfs.v20201112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccessGroupResponse extends AbstractModel{
+public class CreateAccessGroupResponse extends AbstractModel {
 
     /**
     * 权限组

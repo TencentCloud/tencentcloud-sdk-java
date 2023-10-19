@@ -16,11 +16,12 @@
 package com.tencentcloudapi.advisor.v20200721.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStrategyRisksResponse extends AbstractModel{
+public class DescribeTaskStrategyRisksResponse extends AbstractModel {
 
     /**
     * 根据此配置，匹配风险实例列表（Risks）对应字段，例如:

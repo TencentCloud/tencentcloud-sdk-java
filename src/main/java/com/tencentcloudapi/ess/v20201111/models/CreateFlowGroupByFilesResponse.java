@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowGroupByFilesResponse extends AbstractModel{
+public class CreateFlowGroupByFilesResponse extends AbstractModel {
 
     /**
     * 合同(流程)组的合同组Id

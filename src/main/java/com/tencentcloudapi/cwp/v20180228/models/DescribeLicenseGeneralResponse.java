@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLicenseGeneralResponse extends AbstractModel{
+public class DescribeLicenseGeneralResponse extends AbstractModel {
 
     /**
     * 总授权数 (包含隔离,过期等不可用状态)

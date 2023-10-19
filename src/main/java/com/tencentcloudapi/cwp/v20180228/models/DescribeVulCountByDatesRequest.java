@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulCountByDatesRequest extends AbstractModel{
+public class DescribeVulCountByDatesRequest extends AbstractModel {
 
     /**
     * 需要查询最近几天的数据，需要都 -1后传入

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ft.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryFaceMorphJobResponse extends AbstractModel{
+public class QueryFaceMorphJobResponse extends AbstractModel {
 
     /**
     * 当前任务状态：排队中、处理中、处理失败或者处理完成

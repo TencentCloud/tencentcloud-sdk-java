@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MaterialInfo extends AbstractModel{
+public class MaterialInfo extends AbstractModel {
 
     /**
     * 媒体基本信息。

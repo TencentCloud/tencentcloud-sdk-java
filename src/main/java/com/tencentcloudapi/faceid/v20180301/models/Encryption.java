@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Encryption extends AbstractModel{
+public class Encryption extends AbstractModel {
 
     /**
     * 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段

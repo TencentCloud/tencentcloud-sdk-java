@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchOperateDeviceRequest extends AbstractModel{
+public class BatchOperateDeviceRequest extends AbstractModel {
 
     /**
     * 设备 ID 数组（从获取设备列表接口ListDevices中获取）

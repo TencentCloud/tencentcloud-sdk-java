@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceMonitorTopNCmdResponse extends AbstractModel{
+public class DescribeInstanceMonitorTopNCmdResponse extends AbstractModel {
 
     /**
     * 访问命令信息

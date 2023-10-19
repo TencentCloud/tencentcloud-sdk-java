@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SupportFeature extends AbstractModel{
+public class SupportFeature extends AbstractModel {
 
     /**
     * 接入区域支持的网络类型列表，normal表示支持常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip。

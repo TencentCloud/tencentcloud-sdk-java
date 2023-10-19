@@ -16,11 +16,12 @@
 package com.tencentcloudapi.omics.v20221128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunGroup extends AbstractModel{
+public class RunGroup extends AbstractModel {
 
     /**
     * 任务批次ID。

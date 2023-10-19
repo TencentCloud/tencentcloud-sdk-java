@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSDKLogResponse extends AbstractModel{
+public class DescribeSDKLogResponse extends AbstractModel {
 
     /**
     * 日志检索上下文

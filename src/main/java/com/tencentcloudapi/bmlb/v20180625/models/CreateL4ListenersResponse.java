@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL4ListenersResponse extends AbstractModel{
+public class CreateL4ListenersResponse extends AbstractModel {
 
     /**
     * 任务ID。该接口为异步任务，可根据本参数调用DescribeLoadBalancerTaskResult接口来查询任务操作结果

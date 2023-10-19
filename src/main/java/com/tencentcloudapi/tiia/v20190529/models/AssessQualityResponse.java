@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssessQualityResponse extends AbstractModel{
+public class AssessQualityResponse extends AbstractModel {
 
     /**
     * 取值为TRUE或FALSE，TRUE为长图，FALSE为正常图，长图定义为长宽比大于等于3或小于等于1/3的图片。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcm.v20210413.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExtensiveClusters extends AbstractModel{
+public class ExtensiveClusters extends AbstractModel {
 
     /**
     * 4层集群配置

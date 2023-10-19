@@ -45,18 +45,8 @@ public class MrsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ImageToClassResponse ImageToClass(ImageToClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageToClassResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImageToClassResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImageToClass");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ImageToClass", ImageToClassResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class MrsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ImageToObjectResponse ImageToObject(ImageToObjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageToObjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImageToObjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImageToObject");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ImageToObject", ImageToObjectResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class MrsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextToClassResponse TextToClass(TextToClassRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextToClassResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextToClassResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextToClass");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextToClass", TextToClassResponse.class);
     }
 
     /**
@@ -110,18 +80,8 @@ public class MrsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextToObjectResponse TextToObject(TextToObjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextToObjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextToObjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextToObject");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextToObject", TextToObjectResponse.class);
     }
 
     /**
@@ -132,18 +92,8 @@ public class MrsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TurnPDFToObjectResponse TurnPDFToObject(TurnPDFToObjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TurnPDFToObjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TurnPDFToObjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TurnPDFToObject");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TurnPDFToObject", TurnPDFToObjectResponse.class);
     }
 
 }

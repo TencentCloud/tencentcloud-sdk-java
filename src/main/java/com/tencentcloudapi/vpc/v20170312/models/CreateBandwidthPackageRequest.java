@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBandwidthPackageRequest extends AbstractModel{
+public class CreateBandwidthPackageRequest extends AbstractModel {
 
     /**
     * 带宽包类型, 默认值: BGP, 可选值:

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cms.v20190321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogoDetail extends AbstractModel{
+public class LogoDetail extends AbstractModel {
 
     /**
     * 命中的Applogo详情

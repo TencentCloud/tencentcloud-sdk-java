@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesDiskNumResponse extends AbstractModel{
+public class DescribeInstancesDiskNumResponse extends AbstractModel {
 
     /**
     * 挂载信息列表

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetailPrice extends AbstractModel{
+public class DetailPrice extends AbstractModel {
 
     /**
     * 描述计费项目名称，目前取值

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gpm.v20200820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MatchTicket extends AbstractModel{
+public class MatchTicket extends AbstractModel {
 
     /**
     * 匹配票据 ID长度 128 [a-zA-Z0-9-\.]*

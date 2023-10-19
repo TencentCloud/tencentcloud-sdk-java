@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mmps.v20200710.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskFlowStepsInfo extends AbstractModel{
+public class TaskFlowStepsInfo extends AbstractModel {
 
     /**
     * 流程编号

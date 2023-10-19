@@ -45,18 +45,8 @@ public class PdsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeNewUserAcquisitionResponse DescribeNewUserAcquisition(DescribeNewUserAcquisitionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeNewUserAcquisitionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeNewUserAcquisitionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeNewUserAcquisition");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeNewUserAcquisition", DescribeNewUserAcquisitionResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class PdsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStockEstimationResponse DescribeStockEstimation(DescribeStockEstimationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStockEstimationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStockEstimationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStockEstimation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeStockEstimation", DescribeStockEstimationResponse.class);
     }
 
 }

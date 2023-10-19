@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBPriceResponse extends AbstractModel{
+public class DescribeDBPriceResponse extends AbstractModel {
 
     /**
     * 实例价格，单位：分。

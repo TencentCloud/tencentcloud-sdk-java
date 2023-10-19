@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAddonValuesResponse extends AbstractModel{
+public class DescribeAddonValuesResponse extends AbstractModel {
 
     /**
     * 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串

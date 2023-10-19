@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCustomerProfileListResponse extends AbstractModel{
+public class QueryCustomerProfileListResponse extends AbstractModel {
 
     /**
     * 分页游标，下次调用带上该值，则从当前的位置继续往后拉，以实现增量拉取。

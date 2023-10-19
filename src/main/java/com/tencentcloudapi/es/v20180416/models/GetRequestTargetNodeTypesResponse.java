@@ -16,11 +16,12 @@
 package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetRequestTargetNodeTypesResponse extends AbstractModel{
+public class GetRequestTargetNodeTypesResponse extends AbstractModel {
 
     /**
     * 接收请求的目标节点类型列表

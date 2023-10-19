@@ -45,18 +45,8 @@ public class MarketClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public FlowProductRemindResponse FlowProductRemind(FlowProductRemindRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<FlowProductRemindResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<FlowProductRemindResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "FlowProductRemind");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "FlowProductRemind", FlowProductRemindResponse.class);
     }
 
     /**
@@ -67,18 +57,8 @@ public class MarketClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetUsagePlanUsageAmountResponse GetUsagePlanUsageAmount(GetUsagePlanUsageAmountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetUsagePlanUsageAmountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetUsagePlanUsageAmountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetUsagePlanUsageAmount");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetUsagePlanUsageAmount", GetUsagePlanUsageAmountResponse.class);
     }
 
 }

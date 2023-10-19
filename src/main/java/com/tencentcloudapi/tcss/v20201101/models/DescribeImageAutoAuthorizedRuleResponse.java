@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel{
+public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
     * 规则是否生效，0:不生效，1:已生效

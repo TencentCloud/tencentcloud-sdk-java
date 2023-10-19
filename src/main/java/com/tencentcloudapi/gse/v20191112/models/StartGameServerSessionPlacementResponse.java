@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartGameServerSessionPlacementResponse extends AbstractModel{
+public class StartGameServerSessionPlacementResponse extends AbstractModel {
 
     /**
     * 游戏服务器会话放置

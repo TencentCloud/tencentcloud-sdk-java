@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindTrafficMirrorReceiver extends AbstractModel{
+public class UnbindTrafficMirrorReceiver extends AbstractModel {
 
     /**
     * 待解绑的主机端口，可选值1~65535。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdc.v20201214.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDedicatedSupportedZonesRequest extends AbstractModel{
+public class DescribeDedicatedSupportedZonesRequest extends AbstractModel {
 
     /**
     * 传入region列表

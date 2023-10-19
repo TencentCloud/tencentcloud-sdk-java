@@ -16,11 +16,12 @@
 package com.tencentcloudapi.keewidb.v20220308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesRequest extends AbstractModel{
+public class DescribeInstancesRequest extends AbstractModel {
 
     /**
     * 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。

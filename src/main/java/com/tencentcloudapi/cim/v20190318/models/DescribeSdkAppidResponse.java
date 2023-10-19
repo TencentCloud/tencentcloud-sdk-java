@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cim.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSdkAppidResponse extends AbstractModel{
+public class DescribeSdkAppidResponse extends AbstractModel {
 
     /**
     * 表示 appid 对应的 SdkAppid 的数据

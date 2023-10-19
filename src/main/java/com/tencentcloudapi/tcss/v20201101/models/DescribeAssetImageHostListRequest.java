@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetImageHostListRequest extends AbstractModel{
+public class DescribeAssetImageHostListRequest extends AbstractModel {
 
     /**
     * 过滤条件 支持ImageID,HostID

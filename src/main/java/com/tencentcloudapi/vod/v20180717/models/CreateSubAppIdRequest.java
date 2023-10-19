@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSubAppIdRequest extends AbstractModel{
+public class CreateSubAppIdRequest extends AbstractModel {
 
     /**
     * 子应用名称，长度限制：40个字符。

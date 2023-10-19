@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReleasedApprover extends AbstractModel{
+public class ReleasedApprover extends AbstractModel {
 
     /**
     * 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符

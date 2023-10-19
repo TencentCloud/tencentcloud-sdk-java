@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewHostsRequest extends AbstractModel{
+public class InquiryPriceRenewHostsRequest extends AbstractModel {
 
     /**
     * 一个或多个待操作的`CDH`实例`ID`。可通过[`DescribeHosts`](https://cloud.tencent.com/document/api/213/16474)接口返回值中的`HostId`获取。每次请求批量实例的上限为100。

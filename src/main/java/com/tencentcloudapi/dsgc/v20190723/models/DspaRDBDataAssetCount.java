@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DspaRDBDataAssetCount extends AbstractModel{
+public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产

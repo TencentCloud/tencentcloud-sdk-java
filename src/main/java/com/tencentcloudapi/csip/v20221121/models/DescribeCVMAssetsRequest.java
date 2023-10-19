@@ -16,11 +16,12 @@
 package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCVMAssetsRequest extends AbstractModel{
+public class DescribeCVMAssetsRequest extends AbstractModel {
 
     /**
     * -

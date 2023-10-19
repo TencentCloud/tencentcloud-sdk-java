@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReservedInstances extends AbstractModel{
+public class ReservedInstances extends AbstractModel {
 
     /**
     * （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。

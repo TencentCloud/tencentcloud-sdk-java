@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetTableIndexRequest extends AbstractModel{
+public class SetTableIndexRequest extends AbstractModel {
 
     /**
     * 表所属集群实例ID

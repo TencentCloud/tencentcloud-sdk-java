@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCloudBaseRunResourceResponse extends AbstractModel{
+public class CreateCloudBaseRunResourceResponse extends AbstractModel {
 
     /**
     * 返回集群创建是否成功 succ为成功。并且中间无err

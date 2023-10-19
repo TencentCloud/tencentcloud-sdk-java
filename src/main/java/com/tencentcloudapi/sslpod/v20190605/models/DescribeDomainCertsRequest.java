@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sslpod.v20190605.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDomainCertsRequest extends AbstractModel{
+public class DescribeDomainCertsRequest extends AbstractModel {
 
     /**
     * 域名ID，可通过搜索域名接口获得

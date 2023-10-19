@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yinsuda.v20220527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncRobotCommand extends AbstractModel{
+public class SyncRobotCommand extends AbstractModel {
 
     /**
     * 可同时传入多个指令，顺序执行。取值有：

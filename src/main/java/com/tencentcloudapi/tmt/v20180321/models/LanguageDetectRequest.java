@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tmt.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LanguageDetectRequest extends AbstractModel{
+public class LanguageDetectRequest extends AbstractModel {
 
     /**
     * 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。

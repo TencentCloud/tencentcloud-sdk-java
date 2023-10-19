@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListApplicationAuthorizationsResponse extends AbstractModel{
+public class ListApplicationAuthorizationsResponse extends AbstractModel {
 
     /**
     * 返回的应用授权信息列表。

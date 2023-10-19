@@ -50,18 +50,8 @@ public class AiartClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ImageToImageResponse ImageToImage(ImageToImageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageToImageResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImageToImageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImageToImage");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ImageToImage", ImageToImageResponse.class);
     }
 
     /**
@@ -76,18 +66,8 @@ public class AiartClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextToImageResponse TextToImage(TextToImageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextToImageResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextToImageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextToImage");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextToImage", TextToImageResponse.class);
     }
 
 }

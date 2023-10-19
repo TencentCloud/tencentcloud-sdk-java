@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageModerationAsyncTaskRequest extends AbstractModel{
+public class CreateImageModerationAsyncTaskRequest extends AbstractModel {
 
     /**
     * 接收审核信息回调地址，审核过程中产生的所有结果发送至此地址。

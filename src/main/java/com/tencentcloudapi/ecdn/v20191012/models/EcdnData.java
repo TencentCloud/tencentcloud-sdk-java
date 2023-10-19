@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EcdnData extends AbstractModel{
+public class EcdnData extends AbstractModel {
 
     /**
     * 查询指定的指标名称：Bandwidth，Flux，Request，Delay，状态码，LogBandwidth，LogFlux，LogRequest

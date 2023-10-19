@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryString extends AbstractModel{
+public class QueryString extends AbstractModel {
 
     /**
     * CacheKey是否由QueryString组成，取值有：

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tem.v20201221.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCosTokenV2Response extends AbstractModel{
+public class CreateCosTokenV2Response extends AbstractModel {
 
     /**
     * 成功时为CosToken对象，失败为null

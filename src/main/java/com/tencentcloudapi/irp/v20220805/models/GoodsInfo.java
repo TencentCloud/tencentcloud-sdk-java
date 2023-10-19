@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220805.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GoodsInfo extends AbstractModel{
+public class GoodsInfo extends AbstractModel {
 
     /**
     * 商品唯一ID，skuId或spuId，客户根据需求自行决定商品主键粒度。建议限制在128字符以内

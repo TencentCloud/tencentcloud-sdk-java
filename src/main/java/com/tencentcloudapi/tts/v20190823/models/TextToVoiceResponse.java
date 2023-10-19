@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tts.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse extends AbstractModel{
+public class TextToVoiceResponse extends AbstractModel {
 
     /**
     * base64编码的wav/mp3音频数据

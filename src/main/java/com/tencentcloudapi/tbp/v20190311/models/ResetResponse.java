@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tbp.v20190311.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetResponse extends AbstractModel{
+public class ResetResponse extends AbstractModel {
 
     /**
     * 当前会话状态。取值:"start"/"continue"/"complete"

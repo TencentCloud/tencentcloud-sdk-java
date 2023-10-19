@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAuditConfigResponse extends AbstractModel{
+public class DescribeAuditConfigResponse extends AbstractModel {
 
     /**
     * 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。

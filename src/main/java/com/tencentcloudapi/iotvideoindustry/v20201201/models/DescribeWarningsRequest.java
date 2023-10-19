@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideoindustry.v20201201.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWarningsRequest extends AbstractModel{
+public class DescribeWarningsRequest extends AbstractModel {
 
     /**
     * 1:创建时间倒序 2：创建时间升序 3：level倒序 4：leve升序

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWebPageEventListResponse extends AbstractModel{
+public class DescribeWebPageEventListResponse extends AbstractModel {
 
     /**
     * 防护事件列表信息

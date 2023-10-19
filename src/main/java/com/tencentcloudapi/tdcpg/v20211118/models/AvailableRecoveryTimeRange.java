@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdcpg.v20211118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AvailableRecoveryTimeRange extends AbstractModel{
+public class AvailableRecoveryTimeRange extends AbstractModel {
 
     /**
     * 可回档起始时间。按照RFC3339标准表示，并且使用东八区时区时间，格式为：YYYY-MM-DDThh:mm:ss+08:00。

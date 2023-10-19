@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDomainErrorPageInfoRequest extends AbstractModel{
+public class DeleteDomainErrorPageInfoRequest extends AbstractModel {
 
     /**
     * 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应

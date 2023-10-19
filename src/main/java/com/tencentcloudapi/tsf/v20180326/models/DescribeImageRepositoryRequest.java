@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageRepositoryRequest extends AbstractModel{
+public class DescribeImageRepositoryRequest extends AbstractModel {
 
     /**
     * 仓库名，搜索关键字,不带命名空间的

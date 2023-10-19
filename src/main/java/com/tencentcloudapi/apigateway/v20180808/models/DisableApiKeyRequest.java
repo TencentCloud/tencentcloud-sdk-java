@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableApiKeyRequest extends AbstractModel{
+public class DisableApiKeyRequest extends AbstractModel {
 
     /**
     * 待禁用的密钥 ID。

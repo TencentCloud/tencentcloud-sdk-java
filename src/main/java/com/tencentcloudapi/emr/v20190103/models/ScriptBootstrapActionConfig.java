@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScriptBootstrapActionConfig extends AbstractModel{
+public class ScriptBootstrapActionConfig extends AbstractModel {
 
     /**
     * 脚本的cos地址，参照格式：https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh查询cos存储桶列表：[存储桶列表](https://console.cloud.tencent.com/cos/bucket)

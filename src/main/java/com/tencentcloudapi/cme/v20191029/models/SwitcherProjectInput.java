@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SwitcherProjectInput extends AbstractModel{
+public class SwitcherProjectInput extends AbstractModel {
 
     /**
     * 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。

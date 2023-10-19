@@ -16,11 +16,12 @@
 package com.tencentcloudapi.captcha.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetRequestStatisticsRequest extends AbstractModel{
+public class GetRequestStatisticsRequest extends AbstractModel {
 
     /**
     * 验证码AppId

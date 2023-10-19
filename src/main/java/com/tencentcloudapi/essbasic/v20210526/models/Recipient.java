@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Recipient extends AbstractModel{
+public class Recipient extends AbstractModel {
 
     /**
     * 签署人唯一标识，在通过模板发起合同的时候对应签署方ID

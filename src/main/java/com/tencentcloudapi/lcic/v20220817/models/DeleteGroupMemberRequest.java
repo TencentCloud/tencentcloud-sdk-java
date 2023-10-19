@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteGroupMemberRequest extends AbstractModel{
+public class DeleteGroupMemberRequest extends AbstractModel {
 
     /**
     * 群组ID，联合群组无法删除群组成员

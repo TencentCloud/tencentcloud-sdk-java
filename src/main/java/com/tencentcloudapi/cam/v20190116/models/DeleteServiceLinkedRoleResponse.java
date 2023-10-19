@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServiceLinkedRoleResponse extends AbstractModel{
+public class DeleteServiceLinkedRoleResponse extends AbstractModel {
 
     /**
     * 删除任务ID，可用于检查删除服务相关角色状态。

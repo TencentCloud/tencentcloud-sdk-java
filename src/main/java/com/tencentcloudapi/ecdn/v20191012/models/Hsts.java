@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Hsts extends AbstractModel{
+public class Hsts extends AbstractModel {
 
     /**
     * 是否开启，on或off。

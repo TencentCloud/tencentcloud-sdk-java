@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProIspPlaySumInfo extends AbstractModel{
+public class ProIspPlaySumInfo extends AbstractModel {
 
     /**
     * 省份/运营商/国家或地区。

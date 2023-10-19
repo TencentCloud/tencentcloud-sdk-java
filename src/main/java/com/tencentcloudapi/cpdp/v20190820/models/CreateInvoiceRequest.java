@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInvoiceRequest extends AbstractModel{
+public class CreateInvoiceRequest extends AbstractModel {
 
     /**
     * 开票平台ID。0：高灯，1：票易通

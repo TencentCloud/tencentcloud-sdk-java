@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIntegrationDepartmentsResponse extends AbstractModel{
+public class DescribeIntegrationDepartmentsResponse extends AbstractModel {
 
     /**
     * 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。

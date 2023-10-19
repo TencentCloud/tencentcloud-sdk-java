@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpperBodyClothSleeve extends AbstractModel{
+public class UpperBodyClothSleeve extends AbstractModel {
 
     /**
     * 上衣衣袖信息, 返回值为以下集合中的一个 {长袖, 短袖}。

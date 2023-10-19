@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cii.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeQualityScoreRequest extends AbstractModel{
+public class DescribeQualityScoreRequest extends AbstractModel {
 
     /**
     * 文件二进制数据

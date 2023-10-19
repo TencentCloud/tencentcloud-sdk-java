@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AggregationCondition extends AbstractModel{
+public class AggregationCondition extends AbstractModel {
 
     /**
     * 聚合字段。目前仅支持host-源IP、user-用户名、dbName-数据库名、sqlType-sql类型。

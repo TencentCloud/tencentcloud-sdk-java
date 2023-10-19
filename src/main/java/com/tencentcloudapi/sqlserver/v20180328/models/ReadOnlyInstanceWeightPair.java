@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReadOnlyInstanceWeightPair extends AbstractModel{
+public class ReadOnlyInstanceWeightPair extends AbstractModel {
 
     /**
     * 只读实例ID，格式如：mssqlro-3l3fgqn7

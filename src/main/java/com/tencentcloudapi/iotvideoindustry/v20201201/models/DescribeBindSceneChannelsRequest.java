@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideoindustry.v20201201.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBindSceneChannelsRequest extends AbstractModel{
+public class DescribeBindSceneChannelsRequest extends AbstractModel {
 
     /**
     * 条数限制最大不能超过1000

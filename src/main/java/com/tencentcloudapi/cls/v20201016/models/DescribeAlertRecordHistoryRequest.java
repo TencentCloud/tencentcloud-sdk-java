@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAlertRecordHistoryRequest extends AbstractModel{
+public class DescribeAlertRecordHistoryRequest extends AbstractModel {
 
     /**
     * 查询时间范围启始时间，毫秒级unix时间戳

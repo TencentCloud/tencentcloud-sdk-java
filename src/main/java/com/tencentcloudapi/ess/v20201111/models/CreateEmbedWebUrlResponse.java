@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEmbedWebUrlResponse extends AbstractModel{
+public class CreateEmbedWebUrlResponse extends AbstractModel {
 
     /**
     * 嵌入的web链接，有效期：5分钟

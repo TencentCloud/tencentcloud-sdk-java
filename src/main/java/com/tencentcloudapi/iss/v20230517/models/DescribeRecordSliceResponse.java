@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRecordSliceResponse extends AbstractModel{
+public class DescribeRecordSliceResponse extends AbstractModel {
 
     /**
     * 云录像切片信息列表

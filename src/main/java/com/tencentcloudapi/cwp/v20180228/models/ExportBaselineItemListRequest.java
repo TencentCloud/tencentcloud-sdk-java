@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportBaselineItemListRequest extends AbstractModel{
+public class ExportBaselineItemListRequest extends AbstractModel {
 
     /**
     * <li>PolicyId - int64 - 是否必填：否 - 策略Id</li>

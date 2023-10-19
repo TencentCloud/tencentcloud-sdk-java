@@ -16,11 +16,12 @@
 package com.tencentcloudapi.aa.v20200224.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryActivityAntiRushResponse extends AbstractModel{
+public class QueryActivityAntiRushResponse extends AbstractModel {
 
     /**
     * 操作时间戳，单位：秒。

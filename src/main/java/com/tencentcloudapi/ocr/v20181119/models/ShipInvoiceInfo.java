@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShipInvoiceInfo extends AbstractModel{
+public class ShipInvoiceInfo extends AbstractModel {
 
     /**
     * 识别出的字段名称(关键字)，支持以下字段：

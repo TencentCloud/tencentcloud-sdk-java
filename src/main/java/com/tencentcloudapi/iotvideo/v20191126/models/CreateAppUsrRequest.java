@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAppUsrRequest extends AbstractModel{
+public class CreateAppUsrRequest extends AbstractModel {
 
     /**
     * 标识用户的唯一ID，防止同一个用户多次注册

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateAliasRequest extends AbstractModel{
+public class UpdateAliasRequest extends AbstractModel {
 
     /**
     * 新的别名，1-60个字符或数字的组合

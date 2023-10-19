@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosOutputStorage extends AbstractModel{
+public class CosOutputStorage extends AbstractModel {
 
     /**
     * 媒体处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。

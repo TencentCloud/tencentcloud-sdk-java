@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCfsPGroupResponse extends AbstractModel{
+public class UpdateCfsPGroupResponse extends AbstractModel {
 
     /**
     * 权限组ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDataSourceListResponse extends AbstractModel{
+public class DescribeDataSourceListResponse extends AbstractModel {
 
     /**
     * 数据源列表

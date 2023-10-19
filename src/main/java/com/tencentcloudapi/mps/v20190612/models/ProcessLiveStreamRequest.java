@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcessLiveStreamRequest extends AbstractModel{
+public class ProcessLiveStreamRequest extends AbstractModel {
 
     /**
     * 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IntentionVerifyData extends AbstractModel{
+public class IntentionVerifyData extends AbstractModel {
 
     /**
     * 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。

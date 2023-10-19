@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20190711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsPackagesStatisticsRequest extends AbstractModel{
+public class SmsPackagesStatisticsRequest extends AbstractModel {
 
     /**
     * 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际SdkAppid，示例如1400006666。

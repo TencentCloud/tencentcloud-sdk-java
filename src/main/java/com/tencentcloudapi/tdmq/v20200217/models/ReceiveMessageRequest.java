@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReceiveMessageRequest extends AbstractModel{
+public class ReceiveMessageRequest extends AbstractModel {
 
     /**
     * 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default

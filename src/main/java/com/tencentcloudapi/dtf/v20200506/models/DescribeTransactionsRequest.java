@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dtf.v20200506.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTransactionsRequest extends AbstractModel{
+public class DescribeTransactionsRequest extends AbstractModel {
 
     /**
     * 事务分组ID

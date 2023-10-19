@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AndroidPlan extends AbstractModel{
+public class AndroidPlan extends AbstractModel {
 
     /**
     * 非必输字段，PlanId 是指本次加固使用的配置策略Id，可通过载入上次配置接口获取。其值非0时，代表引用对应的策略。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassifyContentRequest extends AbstractModel{
+public class ClassifyContentRequest extends AbstractModel {
 
     /**
     * 待分类的文章的标题（仅支持UTF-8格式，不超过100字符）。

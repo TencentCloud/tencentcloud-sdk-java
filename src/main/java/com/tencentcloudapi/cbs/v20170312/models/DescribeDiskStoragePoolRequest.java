@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskStoragePoolRequest extends AbstractModel{
+public class DescribeDiskStoragePoolRequest extends AbstractModel {
 
     /**
     * 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDisksRequest extends AbstractModel{
+public class InquiryPriceCreateDisksRequest extends AbstractModel {
 
     /**
     * 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcex.v20200727.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlgorithmResult extends AbstractModel{
+public class AlgorithmResult extends AbstractModel {
 
     /**
     * 算法ID

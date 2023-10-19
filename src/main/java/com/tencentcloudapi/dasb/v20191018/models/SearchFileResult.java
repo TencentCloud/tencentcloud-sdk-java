@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchFileResult extends AbstractModel{
+public class SearchFileResult extends AbstractModel {
 
     /**
     * 文件传输的时间

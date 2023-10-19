@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tts.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTtsTaskRespData extends AbstractModel{
+public class CreateTtsTaskRespData extends AbstractModel {
 
     /**
     * 任务ID，可通过此ID在轮询接口获取合成状态与结果。注意：TaskId数据类型为string

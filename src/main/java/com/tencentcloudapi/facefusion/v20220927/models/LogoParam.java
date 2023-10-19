@@ -16,11 +16,12 @@
 package com.tencentcloudapi.facefusion.v20220927.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogoParam extends AbstractModel{
+public class LogoParam extends AbstractModel {
 
     /**
     * 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配

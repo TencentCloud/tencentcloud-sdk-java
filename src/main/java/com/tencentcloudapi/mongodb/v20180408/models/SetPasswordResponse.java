@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetPasswordResponse extends AbstractModel{
+public class SetPasswordResponse extends AbstractModel {
 
     /**
     * 返回的异步任务ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apcas.v20201127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LabelValue extends AbstractModel{
+public class LabelValue extends AbstractModel {
 
     /**
     * 标签覆盖率占比（在整个上传的ID列表中的覆盖率）

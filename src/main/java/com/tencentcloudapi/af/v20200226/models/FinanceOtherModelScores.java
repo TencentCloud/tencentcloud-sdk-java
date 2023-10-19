@@ -16,11 +16,12 @@
 package com.tencentcloudapi.af.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FinanceOtherModelScores extends AbstractModel{
+public class FinanceOtherModelScores extends AbstractModel {
 
     /**
     * 模型ID序号

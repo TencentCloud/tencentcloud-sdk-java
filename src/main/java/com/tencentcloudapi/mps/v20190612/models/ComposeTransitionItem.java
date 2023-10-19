@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeTransitionItem extends AbstractModel{
+public class ComposeTransitionItem extends AbstractModel {
 
     /**
     * 元素时长，时间支持：<li>以 s 结尾，表示时间点单位为秒，如 3s 表示时间点为第3秒。</li>

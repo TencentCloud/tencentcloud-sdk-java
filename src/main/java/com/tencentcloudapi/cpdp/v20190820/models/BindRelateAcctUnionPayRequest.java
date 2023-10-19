@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindRelateAcctUnionPayRequest extends AbstractModel{
+public class BindRelateAcctUnionPayRequest extends AbstractModel {
 
     /**
     * STRING(32)，交易网会员代码（若需要把一个待绑定账户关联到两个会员名下，此字段可上送两个会员的交易网代码，并且须用“|::|”（右侧）进行分隔）

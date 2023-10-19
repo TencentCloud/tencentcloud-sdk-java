@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxiesRequest extends AbstractModel{
+public class DescribeProxiesRequest extends AbstractModel {
 
     /**
     * （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。

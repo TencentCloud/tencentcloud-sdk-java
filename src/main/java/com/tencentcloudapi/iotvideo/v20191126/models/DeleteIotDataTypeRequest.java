@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteIotDataTypeRequest extends AbstractModel{
+public class DeleteIotDataTypeRequest extends AbstractModel {
 
     /**
     * 自定义数据类型的标识符

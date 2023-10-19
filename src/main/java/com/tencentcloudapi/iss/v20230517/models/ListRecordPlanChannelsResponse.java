@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListRecordPlanChannelsResponse extends AbstractModel{
+public class ListRecordPlanChannelsResponse extends AbstractModel {
 
     /**
     * 返回结果

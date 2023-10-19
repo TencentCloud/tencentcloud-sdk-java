@@ -16,11 +16,12 @@
 package com.tencentcloudapi.af.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FinanceAntiFraudRecord extends AbstractModel{
+public class FinanceAntiFraudRecord extends AbstractModel {
 
     /**
     * 表示该条记录能否查到：1为能查到，-1为查不到

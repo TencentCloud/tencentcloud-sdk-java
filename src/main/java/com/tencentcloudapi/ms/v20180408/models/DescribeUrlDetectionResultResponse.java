@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUrlDetectionResultResponse extends AbstractModel{
+public class DescribeUrlDetectionResultResponse extends AbstractModel {
 
     /**
     * [查询结果]查询结果；枚举值：0 查询成功，否则查询失败

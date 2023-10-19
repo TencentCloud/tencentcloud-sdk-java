@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitAudioTaskRequest extends AbstractModel{
+public class SubmitAudioTaskRequest extends AbstractModel {
 
     /**
     * 音频源的语言，默认0为英文，1为中文

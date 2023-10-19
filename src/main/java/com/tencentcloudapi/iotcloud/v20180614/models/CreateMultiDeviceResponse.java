@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMultiDeviceResponse extends AbstractModel{
+public class CreateMultiDeviceResponse extends AbstractModel {
 
     /**
     * 任务ID，腾讯云生成全局唯一的任务 ID，有效期一个月，一个月之后任务失效。可以调用获取创建多设备任务状态接口获取该任务的执行状态，当状态为成功时，可以调用获取创建多设备任务结果接口获取该任务的结果

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskGroupConfig extends AbstractModel{
+public class TaskGroupConfig extends AbstractModel {
 
     /**
     * 动作组所关联的实例对象

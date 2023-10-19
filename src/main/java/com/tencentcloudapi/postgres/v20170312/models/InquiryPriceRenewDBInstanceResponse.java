@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
+public class InquiryPriceRenewDBInstanceResponse extends AbstractModel {
 
     /**
     * 刊例价，单位为分。如24650表示246.5元

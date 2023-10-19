@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveVpcAcRuleRequest extends AbstractModel{
+public class RemoveVpcAcRuleRequest extends AbstractModel {
 
     /**
     * 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则

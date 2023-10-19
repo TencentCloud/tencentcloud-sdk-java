@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOperationResultResponse extends AbstractModel{
+public class DescribeOperationResultResponse extends AbstractModel {
 
     /**
     * 任务的整体状态，取值如下：<br>

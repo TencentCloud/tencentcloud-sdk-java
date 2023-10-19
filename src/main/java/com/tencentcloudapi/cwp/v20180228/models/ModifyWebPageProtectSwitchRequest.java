@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyWebPageProtectSwitchRequest extends AbstractModel{
+public class ModifyWebPageProtectSwitchRequest extends AbstractModel {
 
     /**
     * 开关类型 1 防护开关  2 自动恢复开关 3 移除防护目录

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassificationEditingInfo extends AbstractModel{
+public class ClassificationEditingInfo extends AbstractModel {
 
     /**
     * 是否开启视频分类识别。0为关闭，1为开启。其他非0非1值默认为0。

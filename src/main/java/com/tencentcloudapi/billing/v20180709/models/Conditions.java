@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Conditions extends AbstractModel{
+public class Conditions extends AbstractModel {
 
     /**
     * 只支持6和12两个值

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableKeysRequest extends AbstractModel{
+public class DisableKeysRequest extends AbstractModel {
 
     /**
     * 需要批量禁用的CMK Id 列表，CMK数量最大支持100

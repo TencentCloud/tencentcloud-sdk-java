@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTaskAlarmRegularResponse extends AbstractModel{
+public class DeleteTaskAlarmRegularResponse extends AbstractModel {
 
     /**
     * 删除结果(true表示删除成功，false表示删除失败)

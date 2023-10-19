@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssetSupportSys extends AbstractModel{
+public class AssetSupportSys extends AbstractModel {
 
     /**
     * 生成包操作系统的镜像Id

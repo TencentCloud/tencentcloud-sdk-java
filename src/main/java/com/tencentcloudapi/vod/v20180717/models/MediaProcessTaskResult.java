@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaProcessTaskResult extends AbstractModel{
+public class MediaProcessTaskResult extends AbstractModel {
 
     /**
     * 任务的类型，可以取的值有：

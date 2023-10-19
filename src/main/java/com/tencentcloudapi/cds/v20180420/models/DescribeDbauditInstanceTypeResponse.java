@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cds.v20180420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDbauditInstanceTypeResponse extends AbstractModel{
+public class DescribeDbauditInstanceTypeResponse extends AbstractModel {
 
     /**
     * 数据安全审计产品规格信息列表

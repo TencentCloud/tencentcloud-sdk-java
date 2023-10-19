@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vrs.v20200824.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Words extends AbstractModel{
+public class Words extends AbstractModel {
 
     /**
     * 准确度 (<75则认为不合格)

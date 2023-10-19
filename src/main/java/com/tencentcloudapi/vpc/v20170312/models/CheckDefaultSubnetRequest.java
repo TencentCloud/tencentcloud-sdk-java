@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckDefaultSubnetRequest extends AbstractModel{
+public class CheckDefaultSubnetRequest extends AbstractModel {
 
     /**
     * 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20180330.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConsistencyParams extends AbstractModel{
+public class ConsistencyParams extends AbstractModel {
 
     /**
     * 数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100]

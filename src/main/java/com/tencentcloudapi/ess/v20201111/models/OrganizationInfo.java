@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OrganizationInfo extends AbstractModel{
+public class OrganizationInfo extends AbstractModel {
 
     /**
     * 机构在平台的编号，内部字段，暂未开放

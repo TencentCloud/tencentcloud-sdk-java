@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ame.v20190916.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMusicOnShelvesRequest extends AbstractModel{
+public class ModifyMusicOnShelvesRequest extends AbstractModel {
 
     /**
     * 歌曲变更信息

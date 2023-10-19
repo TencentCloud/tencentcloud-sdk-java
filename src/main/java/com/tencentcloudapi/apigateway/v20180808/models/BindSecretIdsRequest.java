@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindSecretIdsRequest extends AbstractModel{
+public class BindSecretIdsRequest extends AbstractModel {
 
     /**
     * 待绑定的使用计划唯一 ID。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicesBindInfoResponse extends AbstractModel{
+public class DescribeDevicesBindInfoResponse extends AbstractModel {
 
     /**
     * 返回的负载均衡绑定信息。

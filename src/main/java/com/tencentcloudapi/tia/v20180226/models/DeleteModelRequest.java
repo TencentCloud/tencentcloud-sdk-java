@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tia.v20180226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteModelRequest extends AbstractModel{
+public class DeleteModelRequest extends AbstractModel {
 
     /**
     * 要删除的模型名称

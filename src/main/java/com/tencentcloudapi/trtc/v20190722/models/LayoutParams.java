@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LayoutParams extends AbstractModel{
+public class LayoutParams extends AbstractModel {
 
     /**
     * 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。

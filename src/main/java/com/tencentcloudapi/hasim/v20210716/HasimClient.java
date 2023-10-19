@@ -45,18 +45,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateRule", CreateRuleResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTacticResponse CreateTactic(CreateTacticRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTacticResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateTacticResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTactic");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateTactic", CreateTacticResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTagResponse CreateTag(CreateTagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTagResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateTagResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTag");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateTag", CreateTagResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteRule", DeleteRuleResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTacticResponse DeleteTactic(DeleteTacticRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTacticResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTacticResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTactic");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteTactic", DeleteTacticResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteTagResponse DeleteTag(DeleteTagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTagResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTagResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteTag");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteTag", DeleteTagResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeLinkResponse DescribeLink(DescribeLinkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLinkResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLinkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLink");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeLink", DescribeLinkResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeLinksResponse DescribeLinks(DescribeLinksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLinksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLinksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLinks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeLinks", DescribeLinksResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOrdersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOrders");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeOrders", DescribeOrdersResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRuleResponse DescribeRule(DescribeRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRule", DescribeRuleResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRules", DescribeRulesResponse.class);
     }
 
     /**
@@ -276,18 +166,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTacticResponse DescribeTactic(DescribeTacticRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTacticResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTacticResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTactic");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTactic", DescribeTacticResponse.class);
     }
 
     /**
@@ -297,18 +177,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTacticsResponse DescribeTactics(DescribeTacticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTacticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTacticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTactics");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTactics", DescribeTacticsResponse.class);
     }
 
     /**
@@ -318,18 +188,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTagsResponse DescribeTags(DescribeTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTagsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTags");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTags", DescribeTagsResponse.class);
     }
 
     /**
@@ -339,18 +199,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyLinkAdvancedLogResponse ModifyLinkAdvancedLog(ModifyLinkAdvancedLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLinkAdvancedLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLinkAdvancedLogResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLinkAdvancedLog");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyLinkAdvancedLog", ModifyLinkAdvancedLogResponse.class);
     }
 
     /**
@@ -360,18 +210,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyLinkTacticResponse ModifyLinkTactic(ModifyLinkTacticRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLinkTacticResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLinkTacticResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLinkTactic");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyLinkTactic", ModifyLinkTacticResponse.class);
     }
 
     /**
@@ -381,18 +221,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyLinkTeleResponse ModifyLinkTele(ModifyLinkTeleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLinkTeleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLinkTeleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLinkTele");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyLinkTele", ModifyLinkTeleResponse.class);
     }
 
     /**
@@ -402,18 +232,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyRule", ModifyRuleResponse.class);
     }
 
     /**
@@ -423,18 +243,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyRuleStatusResponse ModifyRuleStatus(ModifyRuleStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRuleStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRuleStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRuleStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyRuleStatus", ModifyRuleStatusResponse.class);
     }
 
     /**
@@ -444,18 +254,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyTacticResponse ModifyTactic(ModifyTacticRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTacticResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTacticResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTactic");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyTactic", ModifyTacticResponse.class);
     }
 
     /**
@@ -465,18 +265,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyTagResponse ModifyTag(ModifyTagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyTagResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyTagResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyTag");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyTag", ModifyTagResponse.class);
     }
 
     /**
@@ -486,18 +276,8 @@ public class HasimClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RenewLinkInfoResponse RenewLinkInfo(RenewLinkInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RenewLinkInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RenewLinkInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RenewLinkInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RenewLinkInfo", RenewLinkInfoResponse.class);
     }
 
 }

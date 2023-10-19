@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeModelServiceHotUpdatedResponse extends AbstractModel{
+public class DescribeModelServiceHotUpdatedResponse extends AbstractModel {
 
     /**
     * 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速

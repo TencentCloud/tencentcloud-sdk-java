@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VertexInfo extends AbstractModel{
+public class VertexInfo extends AbstractModel {
 
     /**
     * 该结点类型，进程:1；网络:2；文件:3；ssh:4；

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloudStorageEvent extends AbstractModel{
+public class CloudStorageEvent extends AbstractModel {
 
     /**
     * 事件起始时间（Unix 时间戳，秒级

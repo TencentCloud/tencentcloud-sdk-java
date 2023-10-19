@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShardSpecResponse extends AbstractModel{
+public class DescribeShardSpecResponse extends AbstractModel {
 
     /**
     * 按机型分类的可售卖规格列表

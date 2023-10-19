@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FlowGroupOptions extends AbstractModel{
+public class FlowGroupOptions extends AbstractModel {
 
     /**
     * 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：

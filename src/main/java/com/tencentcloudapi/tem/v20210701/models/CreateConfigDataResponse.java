@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateConfigDataResponse extends AbstractModel{
+public class CreateConfigDataResponse extends AbstractModel {
 
     /**
     * 创建是否成功

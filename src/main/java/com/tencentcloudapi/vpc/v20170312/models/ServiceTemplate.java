@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceTemplate extends AbstractModel{
+public class ServiceTemplate extends AbstractModel {
 
     /**
     * 协议端口实例ID，例如：ppm-f5n1f8da。

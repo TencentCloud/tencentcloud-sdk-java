@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CronScaleJob extends AbstractModel{
+public class CronScaleJob extends AbstractModel {
 
     /**
     * Cron表达式，标识任务的执行时间，精确到分钟级

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apcas.v20201127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadIdRequest extends AbstractModel{
+public class UploadIdRequest extends AbstractModel {
 
     /**
     * id标志的类型: 0:imei 7:IDFA 8:MD5(imei)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackupLimitVpcItem extends AbstractModel{
+public class BackupLimitVpcItem extends AbstractModel {
 
     /**
     * 备份文件的下载地址对应VPC 所属的地域。

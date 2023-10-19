@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProxyGroupRwInfo extends AbstractModel{
+public class ProxyGroupRwInfo extends AbstractModel {
 
     /**
     * 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性

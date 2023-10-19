@@ -16,11 +16,12 @@
 package com.tencentcloudapi.asw.v20200722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowServiceRequest extends AbstractModel{
+public class CreateFlowServiceRequest extends AbstractModel {
 
     /**
     * 定义文本（JSON格式）

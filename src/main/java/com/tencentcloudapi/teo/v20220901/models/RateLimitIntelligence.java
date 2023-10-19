@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RateLimitIntelligence extends AbstractModel{
+public class RateLimitIntelligence extends AbstractModel {
 
     /**
     * 功能开关，取值有：

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScreenProtection extends AbstractModel{
+public class ScreenProtection extends AbstractModel {
 
     /**
     * 类型值：文件查杀，暴力破解，漏洞扫描，基线检测

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpScope extends AbstractModel{
+public class OpScope extends AbstractModel {
 
     /**
     * 操作范围，要操作的服务信息

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateGameServerSessionRequest extends AbstractModel{
+public class UpdateGameServerSessionRequest extends AbstractModel {
 
     /**
     * 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符

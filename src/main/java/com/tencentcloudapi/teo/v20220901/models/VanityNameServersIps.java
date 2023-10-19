@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VanityNameServersIps extends AbstractModel{
+public class VanityNameServersIps extends AbstractModel {
 
     /**
     * 自定义名字服务器名称。

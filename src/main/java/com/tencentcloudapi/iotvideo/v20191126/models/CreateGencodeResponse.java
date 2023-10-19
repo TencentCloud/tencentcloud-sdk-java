@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateGencodeResponse extends AbstractModel{
+public class CreateGencodeResponse extends AbstractModel {
 
     /**
     * 生成的源代码(zip压缩后的base64编码)

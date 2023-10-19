@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyIntegrationRoleRequest extends AbstractModel{
+public class ModifyIntegrationRoleRequest extends AbstractModel {
 
     /**
     * 角色Id，可通过接口 DescribeIntegrationRoles 查询获取

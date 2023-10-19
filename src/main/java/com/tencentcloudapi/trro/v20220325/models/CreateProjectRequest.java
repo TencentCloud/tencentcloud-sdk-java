@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trro.v20220325.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProjectRequest extends AbstractModel{
+public class CreateProjectRequest extends AbstractModel {
 
     /**
     * 项目名称，长度不超过24个字符

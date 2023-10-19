@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cis.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter extends AbstractModel{
+public class Filter extends AbstractModel {
 
     /**
     * 过滤字段，可选值 - Zone，VpcId，InstanceName

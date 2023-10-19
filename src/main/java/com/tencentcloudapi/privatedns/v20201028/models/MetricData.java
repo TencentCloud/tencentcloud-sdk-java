@@ -16,11 +16,12 @@
 package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetricData extends AbstractModel{
+public class MetricData extends AbstractModel {
 
     /**
     * 资源描述

@@ -45,18 +45,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(AcceptDirectConnectTunnelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AcceptDirectConnectTunnelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AcceptDirectConnectTunnelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AcceptDirectConnectTunnel");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AcceptDirectConnectTunnel", AcceptDirectConnectTunnelResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyInternetAddressResponse ApplyInternetAddress(ApplyInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ApplyInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ApplyInternetAddress", ApplyInternetAddressResponse.class);
     }
 
     /**
@@ -90,18 +70,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDirectConnectResponse CreateDirectConnect(CreateDirectConnectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDirectConnectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDirectConnectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDirectConnect");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDirectConnect", CreateDirectConnectResponse.class);
     }
 
     /**
@@ -111,18 +81,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(CreateDirectConnectTunnelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDirectConnectTunnelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDirectConnectTunnelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDirectConnectTunnel");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDirectConnectTunnel", CreateDirectConnectTunnelResponse.class);
     }
 
     /**
@@ -133,18 +93,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDirectConnectResponse DeleteDirectConnect(DeleteDirectConnectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDirectConnect");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteDirectConnect", DeleteDirectConnectResponse.class);
     }
 
     /**
@@ -154,18 +104,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(DeleteDirectConnectTunnelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDirectConnectTunnelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectTunnelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDirectConnectTunnel");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteDirectConnectTunnel", DeleteDirectConnectTunnelResponse.class);
     }
 
     /**
@@ -176,18 +116,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAccessPointsResponse DescribeAccessPoints(DescribeAccessPointsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccessPointsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccessPoints");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAccessPoints", DescribeAccessPointsResponse.class);
     }
 
     /**
@@ -197,18 +127,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtra(DescribeDirectConnectTunnelExtraRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDirectConnectTunnelExtraResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectTunnelExtraResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDirectConnectTunnelExtra");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDirectConnectTunnelExtra", DescribeDirectConnectTunnelExtraResponse.class);
     }
 
     /**
@@ -218,18 +138,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(DescribeDirectConnectTunnelsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDirectConnectTunnelsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectTunnelsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDirectConnectTunnels");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDirectConnectTunnels", DescribeDirectConnectTunnelsResponse.class);
     }
 
     /**
@@ -239,18 +149,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDirectConnectsResponse DescribeDirectConnects(DescribeDirectConnectsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDirectConnectsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDirectConnects");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDirectConnects", DescribeDirectConnectsResponse.class);
     }
 
     /**
@@ -260,18 +160,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInternetAddressResponse DescribeInternetAddress(DescribeInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInternetAddress", DescribeInternetAddressResponse.class);
     }
 
     /**
@@ -281,18 +171,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressQuotaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInternetAddressQuota");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInternetAddressQuota", DescribeInternetAddressQuotaResponse.class);
     }
 
     /**
@@ -302,18 +182,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInternetAddressStatistics");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInternetAddressStatistics", DescribeInternetAddressStatisticsResponse.class);
     }
 
     /**
@@ -323,18 +193,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePublicDirectConnectTunnelRoutesResponse DescribePublicDirectConnectTunnelRoutes(DescribePublicDirectConnectTunnelRoutesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePublicDirectConnectTunnelRoutes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePublicDirectConnectTunnelRoutes", DescribePublicDirectConnectTunnelRoutesResponse.class);
     }
 
     /**
@@ -344,18 +204,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisableInternetAddressResponse DisableInternetAddress(DisableInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DisableInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DisableInternetAddress", DisableInternetAddressResponse.class);
     }
 
     /**
@@ -365,18 +215,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableInternetAddressResponse EnableInternetAddress(EnableInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<EnableInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "EnableInternetAddress", EnableInternetAddressResponse.class);
     }
 
     /**
@@ -386,18 +226,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDirectConnectAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyDirectConnectAttribute", ModifyDirectConnectAttributeResponse.class);
     }
 
     /**
@@ -407,18 +237,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(ModifyDirectConnectTunnelAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDirectConnectTunnelAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyDirectConnectTunnelAttribute", ModifyDirectConnectTunnelAttributeResponse.class);
     }
 
     /**
@@ -428,18 +248,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtra(ModifyDirectConnectTunnelExtraRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDirectConnectTunnelExtraResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectTunnelExtraResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDirectConnectTunnelExtra");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyDirectConnectTunnelExtra", ModifyDirectConnectTunnelExtraResponse.class);
     }
 
     /**
@@ -449,18 +259,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(RejectDirectConnectTunnelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RejectDirectConnectTunnelResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RejectDirectConnectTunnelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RejectDirectConnectTunnel");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RejectDirectConnectTunnel", RejectDirectConnectTunnelResponse.class);
     }
 
     /**
@@ -470,18 +270,8 @@ public class DcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ReleaseInternetAddressResponse ReleaseInternetAddress(ReleaseInternetAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ReleaseInternetAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReleaseInternetAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ReleaseInternetAddress", ReleaseInternetAddressResponse.class);
     }
 
 }

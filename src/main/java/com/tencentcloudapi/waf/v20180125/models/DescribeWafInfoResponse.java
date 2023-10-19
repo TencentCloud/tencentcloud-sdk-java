@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWafInfoResponse extends AbstractModel{
+public class DescribeWafInfoResponse extends AbstractModel {
 
     /**
     * 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息

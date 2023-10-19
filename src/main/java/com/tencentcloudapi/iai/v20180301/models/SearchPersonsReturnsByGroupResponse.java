@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchPersonsReturnsByGroupResponse extends AbstractModel{
+public class SearchPersonsReturnsByGroupResponse extends AbstractModel {
 
     /**
     * 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。

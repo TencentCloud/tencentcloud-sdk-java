@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesRequest extends AbstractModel{
+public class CreateDBInstancesRequest extends AbstractModel {
 
     /**
     * 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。

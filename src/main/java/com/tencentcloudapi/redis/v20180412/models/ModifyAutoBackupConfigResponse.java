@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAutoBackupConfigResponse extends AbstractModel{
+public class ModifyAutoBackupConfigResponse extends AbstractModel {
 
     /**
     * 自动备份类型。目前仅能配置为：1 ，指定时备份。

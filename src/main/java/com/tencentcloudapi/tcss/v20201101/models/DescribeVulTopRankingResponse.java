@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulTopRankingResponse extends AbstractModel{
+public class DescribeVulTopRankingResponse extends AbstractModel {
 
     /**
     * 漏洞Top排名信息列表

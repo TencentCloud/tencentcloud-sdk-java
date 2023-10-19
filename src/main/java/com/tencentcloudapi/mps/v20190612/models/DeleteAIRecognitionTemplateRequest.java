@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAIRecognitionTemplateRequest extends AbstractModel{
+public class DeleteAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
     * 视频内容识别模板唯一标识。

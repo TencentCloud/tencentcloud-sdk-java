@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LibResult extends AbstractModel{
+public class LibResult extends AbstractModel {
 
     /**
     * 该字段表示模型的场景识别结果，默认取值为Similar。

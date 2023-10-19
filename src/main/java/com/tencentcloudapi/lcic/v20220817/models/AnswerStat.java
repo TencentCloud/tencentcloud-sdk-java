@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AnswerStat extends AbstractModel{
+public class AnswerStat extends AbstractModel {
 
     /**
     * 选项（按照位表示是否选择，如0x1表示选择A，0x11表示选择AB）

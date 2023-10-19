@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaTaskInput extends AbstractModel{
+public class EditMediaTaskInput extends AbstractModel {
 
     /**
     * 输入视频的来源类型，可以取的值为 File，Stream 两种。

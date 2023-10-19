@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupByFlowIdRequest extends AbstractModel{
+public class DescribeBackupByFlowIdRequest extends AbstractModel {
 
     /**
     * 实例ID，格式如：mssql-3l3fgqn7

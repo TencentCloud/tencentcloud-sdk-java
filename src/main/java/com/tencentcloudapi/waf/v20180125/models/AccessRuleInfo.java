@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccessRuleInfo extends AbstractModel{
+public class AccessRuleInfo extends AbstractModel {
 
     /**
     * 全文索引配置

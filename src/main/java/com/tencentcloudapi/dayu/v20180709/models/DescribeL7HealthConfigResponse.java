@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL7HealthConfigResponse extends AbstractModel{
+public class DescribeL7HealthConfigResponse extends AbstractModel {
 
     /**
     * 七层健康检查配置数组

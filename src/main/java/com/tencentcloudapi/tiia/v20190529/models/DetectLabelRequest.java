@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectLabelRequest extends AbstractModel{
+public class DetectLabelRequest extends AbstractModel {
 
     /**
     * 图片 Base64 编码数据。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMiniProgramReviewInfoItem extends AbstractModel{
+public class MediaMiniProgramReviewInfoItem extends AbstractModel {
 
     /**
     * 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel{
+public class DescribeModifyCheckSyncJobResultResponse extends AbstractModel {
 
     /**
     * 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)

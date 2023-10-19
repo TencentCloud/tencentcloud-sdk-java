@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceNetworkResponse extends AbstractModel{
+public class ModifyInstanceNetworkResponse extends AbstractModel {
 
     /**
     * 异步任务ID，根据此FlowId通过DescribeFlow接口查询任务进行状态

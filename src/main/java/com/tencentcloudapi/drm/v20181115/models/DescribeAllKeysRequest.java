@@ -16,11 +16,12 @@
 package com.tencentcloudapi.drm.v20181115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAllKeysRequest extends AbstractModel{
+public class DescribeAllKeysRequest extends AbstractModel {
 
     /**
     * 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceConfig extends AbstractModel{
+public class ServiceConfig extends AbstractModel {
 
     /**
     * 后端类型。启用vpc时生效，目前支持的类型为clb, cvm和upstream

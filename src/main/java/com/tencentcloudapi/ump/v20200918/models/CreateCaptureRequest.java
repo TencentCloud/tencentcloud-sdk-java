@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ump.v20200918.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCaptureRequest extends AbstractModel{
+public class CreateCaptureRequest extends AbstractModel {
 
     /**
     * 原始抓拍报文

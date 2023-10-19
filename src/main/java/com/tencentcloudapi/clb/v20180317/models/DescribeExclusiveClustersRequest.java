@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExclusiveClustersRequest extends AbstractModel{
+public class DescribeExclusiveClustersRequest extends AbstractModel {
 
     /**
     * 返回集群列表数目，默认值为20，最大值为100。

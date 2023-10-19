@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SessionResourceTemplate extends AbstractModel{
+public class SessionResourceTemplate extends AbstractModel {
 
     /**
     * driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge

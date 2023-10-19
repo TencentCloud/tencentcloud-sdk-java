@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupUrlResponse extends AbstractModel{
+public class DescribeBackupUrlResponse extends AbstractModel {
 
     /**
     * 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。

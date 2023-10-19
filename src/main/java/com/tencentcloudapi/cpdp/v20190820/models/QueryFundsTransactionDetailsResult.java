@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryFundsTransactionDetailsResult extends AbstractModel{
+public class QueryFundsTransactionDetailsResult extends AbstractModel {
 
     /**
     * 本次交易返回查询结果记录数。

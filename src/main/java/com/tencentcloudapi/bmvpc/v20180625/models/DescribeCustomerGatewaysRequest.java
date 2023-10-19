@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmvpc.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomerGatewaysRequest extends AbstractModel{
+public class DescribeCustomerGatewaysRequest extends AbstractModel {
 
     /**
     * 对端网关ID，例如：bmcgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。

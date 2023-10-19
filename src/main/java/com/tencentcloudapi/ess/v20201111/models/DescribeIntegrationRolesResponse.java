@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIntegrationRolesResponse extends AbstractModel{
+public class DescribeIntegrationRolesResponse extends AbstractModel {
 
     /**
     * 指定分页返回的页码。页码从0开始，最大为2000。

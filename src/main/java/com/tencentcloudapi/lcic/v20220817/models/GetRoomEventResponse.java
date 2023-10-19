@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetRoomEventResponse extends AbstractModel{
+public class GetRoomEventResponse extends AbstractModel {
 
     /**
     * 该房间的事件总数，keyword搜索不影响该值。

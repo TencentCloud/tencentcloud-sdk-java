@@ -16,11 +16,12 @@
 package com.tencentcloudapi.pts.v20210728.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SamplePair extends AbstractModel{
+public class SamplePair extends AbstractModel {
 
     /**
     * is the number of milliseconds since the epoch (1970-01-01 00:00 UTC) excluding leap seconds.

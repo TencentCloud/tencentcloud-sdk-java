@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mmps.v20200710.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAppScanTaskRepeatRequest extends AbstractModel{
+public class CreateAppScanTaskRepeatRequest extends AbstractModel {
 
     /**
     * 任务类型, 0:基础版, 1:专家版, 2:本地化

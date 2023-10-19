@@ -16,11 +16,12 @@
 package com.tencentcloudapi.btoe.v20210514.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyEvidenceBlockChainTxHashRequest extends AbstractModel{
+public class VerifyEvidenceBlockChainTxHashRequest extends AbstractModel {
 
     /**
     * 区块链交易 hash，在“存证基本信息查询（GetDepositInfo）”接口中可以获取。

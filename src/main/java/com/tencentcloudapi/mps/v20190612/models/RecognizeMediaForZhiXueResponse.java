@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeMediaForZhiXueResponse extends AbstractModel{
+public class RecognizeMediaForZhiXueResponse extends AbstractModel {
 
     /**
     * 任务 ID，可以通过该 ID 查询任务状态和结果。

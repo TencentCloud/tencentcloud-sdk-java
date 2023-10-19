@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMetadata extends AbstractModel{
+public class MediaMetadata extends AbstractModel {
 
     /**
     * 媒资视频文件大小，单位为字节

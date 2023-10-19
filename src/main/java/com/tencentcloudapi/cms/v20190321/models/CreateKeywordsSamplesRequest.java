@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cms.v20190321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateKeywordsSamplesRequest extends AbstractModel{
+public class CreateKeywordsSamplesRequest extends AbstractModel {
 
     /**
     * 关键词库信息：单次限制写入2000个，词库总容量不可超过10000个。

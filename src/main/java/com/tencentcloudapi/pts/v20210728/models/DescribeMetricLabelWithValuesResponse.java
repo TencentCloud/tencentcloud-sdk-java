@@ -16,11 +16,12 @@
 package com.tencentcloudapi.pts.v20210728.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMetricLabelWithValuesResponse extends AbstractModel{
+public class DescribeMetricLabelWithValuesResponse extends AbstractModel {
 
     /**
     * 指标所有的label和values数组

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLifecycleHooksRequest extends AbstractModel{
+public class DescribeLifecycleHooksRequest extends AbstractModel {
 
     /**
     * 按照一个或者多个生命周期挂钩ID查询。生命周期挂钩ID形如：`ash-8azjzxcl`。每次请求的上限为100。参数不支持同时指定`LifecycleHookIds`和`Filters`。

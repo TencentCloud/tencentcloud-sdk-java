@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveStreamEventListResponse extends AbstractModel{
+public class DescribeLiveStreamEventListResponse extends AbstractModel {
 
     /**
     * 推断流事件列表。

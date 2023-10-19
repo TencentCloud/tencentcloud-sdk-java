@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlarmPolicyEventCondition extends AbstractModel{
+public class AlarmPolicyEventCondition extends AbstractModel {
 
     /**
     * 告警触发条件列表

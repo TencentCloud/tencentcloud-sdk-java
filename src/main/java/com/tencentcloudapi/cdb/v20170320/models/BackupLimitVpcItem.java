@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackupLimitVpcItem extends AbstractModel{
+public class BackupLimitVpcItem extends AbstractModel {
 
     /**
     * 限制下载来源的地域。目前仅支持当前地域。

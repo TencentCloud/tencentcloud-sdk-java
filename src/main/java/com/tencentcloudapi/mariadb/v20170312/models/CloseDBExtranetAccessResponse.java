@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseDBExtranetAccessResponse extends AbstractModel{
+public class CloseDBExtranetAccessResponse extends AbstractModel {
 
     /**
     * 异步任务ID，可通过 DescribeFlow 查询任务状态。

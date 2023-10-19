@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iir.v20200417.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeProductResponse extends AbstractModel{
+public class RecognizeProductResponse extends AbstractModel {
 
     /**
     * 检测到的图片中的商品位置和品类预测。 

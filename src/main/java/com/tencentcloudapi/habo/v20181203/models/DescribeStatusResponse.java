@@ -16,11 +16,12 @@
 package com.tencentcloudapi.habo.v20181203.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStatusResponse extends AbstractModel{
+public class DescribeStatusResponse extends AbstractModel {
 
     /**
     * 接口调用状态，1表示成功，非1表示失败

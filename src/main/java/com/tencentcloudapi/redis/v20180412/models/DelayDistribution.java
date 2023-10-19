@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DelayDistribution extends AbstractModel{
+public class DelayDistribution extends AbstractModel {
 
     /**
     * 指延时分布阶梯，其与延时区间的对应关系如下所示。

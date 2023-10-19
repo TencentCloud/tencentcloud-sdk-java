@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetricSet extends AbstractModel{
+public class MetricSet extends AbstractModel {
 
     /**
     * 命名空间，每个云产品会有一个命名空间

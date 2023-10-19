@@ -16,11 +16,12 @@
 package com.tencentcloudapi.anicloud.v20220923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GoodsDetail extends AbstractModel{
+public class GoodsDetail extends AbstractModel {
 
     /**
     * 按照四层接入的产品需要传入产品标签,例如:p_cvm

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.afc.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransportGeneralInterfaceRequest extends AbstractModel{
+public class TransportGeneralInterfaceRequest extends AbstractModel {
 
     /**
     * 业务入参

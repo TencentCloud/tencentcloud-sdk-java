@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComplianceTaskPolicyItemSummaryListResponse extends AbstractModel{
+public class DescribeComplianceTaskPolicyItemSummaryListResponse extends AbstractModel {
 
     /**
     * 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。

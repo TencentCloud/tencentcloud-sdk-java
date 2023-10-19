@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ams.v20200608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAmsListResponse extends AbstractModel{
+public class DescribeAmsListResponse extends AbstractModel {
 
     /**
     * 返回列表数据----非必选，该参数暂未对外开放

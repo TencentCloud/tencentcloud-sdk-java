@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dtf.v20200506.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PagedTransaction extends AbstractModel{
+public class PagedTransaction extends AbstractModel {
 
     /**
     * 总条数，特定在该接口中总是会返回null

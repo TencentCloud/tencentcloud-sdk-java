@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ft.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgeInfo extends AbstractModel{
+public class AgeInfo extends AbstractModel {
 
     /**
     * 变化到的人脸年龄 [10,80]。

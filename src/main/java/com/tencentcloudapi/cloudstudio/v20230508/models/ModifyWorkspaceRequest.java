@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudstudio.v20230508.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyWorkspaceRequest extends AbstractModel{
+public class ModifyWorkspaceRequest extends AbstractModel {
 
     /**
     * 工作空间 SpaceKey. 更新该工作空间的属性

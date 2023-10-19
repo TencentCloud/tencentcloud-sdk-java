@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BotRecord extends AbstractModel{
+public class BotRecord extends AbstractModel {
 
     /**
     * 动作，取值为以为3个类型中的一个："intercept","permit","monitor"，分别表示： 拦截， 放行，监控

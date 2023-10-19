@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInternalEndpointsResponse extends AbstractModel{
+public class DescribeInternalEndpointsResponse extends AbstractModel {
 
     /**
     * 内网接入信息的列表

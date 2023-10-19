@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tmt.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTranslateRequest extends AbstractModel{
+public class ImageTranslateRequest extends AbstractModel {
 
     /**
     * 唯一id，返回时原样返回

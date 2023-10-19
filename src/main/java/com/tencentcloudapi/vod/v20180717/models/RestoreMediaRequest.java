@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestoreMediaRequest extends AbstractModel{
+public class RestoreMediaRequest extends AbstractModel {
 
     /**
     * 媒体文件唯一标识列表，最大长度：100。

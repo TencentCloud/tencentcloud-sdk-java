@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExportJobResultResponse extends AbstractModel{
+public class DescribeExportJobResultResponse extends AbstractModel {
 
     /**
     * 导出的状态。取值为, SUCCESS:成功、FAILURE:失败，RUNNING: 进行中。

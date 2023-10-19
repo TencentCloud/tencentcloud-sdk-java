@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eb.v20210416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TargetDescription extends AbstractModel{
+public class TargetDescription extends AbstractModel {
 
     /**
     * QCS资源六段式，更多参考 [资源六段式](https://cloud.tencent.com/document/product/598/10606)

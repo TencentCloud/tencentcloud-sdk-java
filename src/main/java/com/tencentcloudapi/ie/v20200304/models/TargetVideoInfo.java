@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TargetVideoInfo extends AbstractModel{
+public class TargetVideoInfo extends AbstractModel {
 
     /**
     * 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。

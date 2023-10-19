@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateClusterKubeconfigResponse extends AbstractModel{
+public class UpdateClusterKubeconfigResponse extends AbstractModel {
 
     /**
     * 已更新的子账户Uin列表

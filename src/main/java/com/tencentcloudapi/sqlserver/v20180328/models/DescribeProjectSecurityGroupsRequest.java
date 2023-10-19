@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
+public class DescribeProjectSecurityGroupsRequest extends AbstractModel {
 
     /**
     * 项目ID，可通过控制台项目管理中查看

@@ -45,18 +45,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddSubStructureTasksResponse AddSubStructureTasks(AddSubStructureTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddSubStructureTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddSubStructureTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddSubStructureTasks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AddSubStructureTasks", AddSubStructureTasksResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAutoClassifyStructureTaskResponse CreateAutoClassifyStructureTask(CreateAutoClassifyStructureTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAutoClassifyStructureTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAutoClassifyStructureTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAutoClassifyStructureTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAutoClassifyStructureTask", CreateAutoClassifyStructureTaskResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateStructureTaskResponse CreateStructureTask(CreateStructureTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateStructureTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateStructureTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateStructureTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateStructureTask", CreateStructureTaskResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateUnderwriteTaskByIdResponse CreateUnderwriteTaskById(CreateUnderwriteTaskByIdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUnderwriteTaskByIdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateUnderwriteTaskByIdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUnderwriteTaskById");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateUnderwriteTaskById", CreateUnderwriteTaskByIdResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeMachineUnderwriteResponse DescribeMachineUnderwrite(DescribeMachineUnderwriteRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMachineUnderwriteResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMachineUnderwriteResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMachineUnderwrite");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeMachineUnderwrite", DescribeMachineUnderwriteResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeQualityScoreResponse DescribeQualityScore(DescribeQualityScoreRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeQualityScoreResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeQualityScoreResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeQualityScore");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeQualityScore", DescribeQualityScoreResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeReportClassifyResponse DescribeReportClassify(DescribeReportClassifyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeReportClassifyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReportClassifyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReportClassify");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeReportClassify", DescribeReportClassifyResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStructCompareDataResponse DescribeStructCompareData(DescribeStructCompareDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStructCompareDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStructCompareDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStructCompareData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeStructCompareData", DescribeStructCompareDataResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStructureDifferenceResponse DescribeStructureDifference(DescribeStructureDifferenceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStructureDifferenceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStructureDifferenceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStructureDifference");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeStructureDifference", DescribeStructureDifferenceResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStructureResultResponse DescribeStructureResult(DescribeStructureResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStructureResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStructureResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStructureResult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeStructureResult", DescribeStructureResultResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStructureTaskResultResponse DescribeStructureTaskResult(DescribeStructureTaskResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStructureTaskResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStructureTaskResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStructureTaskResult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeStructureTaskResult", DescribeStructureTaskResultResponse.class);
     }
 
     /**
@@ -276,18 +166,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeUnderwriteTaskResponse DescribeUnderwriteTask(DescribeUnderwriteTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUnderwriteTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUnderwriteTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUnderwriteTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUnderwriteTask", DescribeUnderwriteTaskResponse.class);
     }
 
     /**
@@ -297,18 +177,8 @@ public class CiiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UploadMedicalFileResponse UploadMedicalFile(UploadMedicalFileRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UploadMedicalFileResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UploadMedicalFileResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UploadMedicalFile");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UploadMedicalFile", UploadMedicalFileResponse.class);
     }
 
 }

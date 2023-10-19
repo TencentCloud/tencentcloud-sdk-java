@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyDBInstanceResponse extends AbstractModel{
+public class DestroyDBInstanceResponse extends AbstractModel {
 
     /**
     * 实例 ID，与入参InstanceId一致。

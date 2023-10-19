@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBindedProductsResponse extends AbstractModel{
+public class DescribeBindedProductsResponse extends AbstractModel {
 
     /**
     * 当前分页的子产品数组

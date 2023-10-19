@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tms.v20200713.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTextStatRequest extends AbstractModel{
+public class DescribeTextStatRequest extends AbstractModel {
 
     /**
     * 审核类型 1: 机器审核; 2: 人工审核

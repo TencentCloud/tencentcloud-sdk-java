@@ -16,11 +16,12 @@
 package com.tencentcloudapi.pts.v20210728.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Job extends AbstractModel{
+public class Job extends AbstractModel {
 
     /**
     * 任务的JobID

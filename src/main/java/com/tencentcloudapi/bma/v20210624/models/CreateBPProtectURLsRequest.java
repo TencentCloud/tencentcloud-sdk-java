@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bma.v20210624.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBPProtectURLsRequest extends AbstractModel{
+public class CreateBPProtectURLsRequest extends AbstractModel {
 
     /**
     * 企业名称

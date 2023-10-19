@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVodDomainsRequest extends AbstractModel{
+public class DescribeVodDomainsRequest extends AbstractModel {
 
     /**
     * 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewDisksRequest extends AbstractModel{
+public class InquiryPriceRenewDisksRequest extends AbstractModel {
 
     /**
     * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。

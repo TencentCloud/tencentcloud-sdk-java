@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteEcdnDomainRequest extends AbstractModel{
+public class DeleteEcdnDomainRequest extends AbstractModel {
 
     /**
     * 待删除域名。

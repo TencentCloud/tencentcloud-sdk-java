@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDisksReturnableRequest extends AbstractModel{
+public class DescribeDisksReturnableRequest extends AbstractModel {
 
     /**
     * 云硬盘ID列表。

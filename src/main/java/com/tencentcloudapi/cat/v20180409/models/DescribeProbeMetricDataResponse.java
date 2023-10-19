@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cat.v20180409.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProbeMetricDataResponse extends AbstractModel{
+public class DescribeProbeMetricDataResponse extends AbstractModel {
 
     /**
     * 返回指标 JSON 序列化后的字符串,具体如下所示：

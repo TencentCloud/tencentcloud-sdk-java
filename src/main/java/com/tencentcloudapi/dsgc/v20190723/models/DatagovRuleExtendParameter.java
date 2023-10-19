@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatagovRuleExtendParameter extends AbstractModel{
+public class DatagovRuleExtendParameter extends AbstractModel {
 
     /**
     * 扩展参数名称，目前支持如下两个扩展属性名称：

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDiagnoseUrlResponse extends AbstractModel{
+public class CreateDiagnoseUrlResponse extends AbstractModel {
 
     /**
     * 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。

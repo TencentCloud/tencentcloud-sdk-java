@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RevocationConfigResponse extends AbstractModel{
+public class RevocationConfigResponse extends AbstractModel {
 
     /**
     * true：回滚成功；false：回滚失败

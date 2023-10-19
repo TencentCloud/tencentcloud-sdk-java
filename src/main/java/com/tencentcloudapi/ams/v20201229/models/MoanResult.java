@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ams.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MoanResult extends AbstractModel{
+public class MoanResult extends AbstractModel {
 
     /**
     * 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表改音频中无呻吟/娇喘相关违规内容；

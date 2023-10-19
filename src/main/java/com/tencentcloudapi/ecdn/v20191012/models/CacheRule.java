@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CacheRule extends AbstractModel{
+public class CacheRule extends AbstractModel {
 
     /**
     * 缓存类型，支持all，file，directory，path，index，分别表示全部文件，后缀类型，目录，完整路径，首页。

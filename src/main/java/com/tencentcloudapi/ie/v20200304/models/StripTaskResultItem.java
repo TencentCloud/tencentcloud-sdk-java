@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StripTaskResultItem extends AbstractModel{
+public class StripTaskResultItem extends AbstractModel {
 
     /**
     * 视频拆条片段地址。

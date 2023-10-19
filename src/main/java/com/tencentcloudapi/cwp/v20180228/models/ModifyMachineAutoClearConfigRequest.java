@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMachineAutoClearConfigRequest extends AbstractModel{
+public class ModifyMachineAutoClearConfigRequest extends AbstractModel {
 
     /**
     * 清理规则时间, 0 表示关闭, 单位为天, 最大为 30天

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EipConfigOut extends AbstractModel{
+public class EipConfigOut extends AbstractModel {
 
     /**
     * 是否是固定IP，["ENABLE","DISABLE"]

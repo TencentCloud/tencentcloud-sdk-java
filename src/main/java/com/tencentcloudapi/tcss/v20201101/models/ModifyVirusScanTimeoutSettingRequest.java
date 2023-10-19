@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyVirusScanTimeoutSettingRequest extends AbstractModel{
+public class ModifyVirusScanTimeoutSettingRequest extends AbstractModel {
 
     /**
     * 超时时长单位小时(5~24h)

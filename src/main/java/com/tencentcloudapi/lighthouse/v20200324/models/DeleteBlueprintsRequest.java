@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteBlueprintsRequest extends AbstractModel{
+public class DeleteBlueprintsRequest extends AbstractModel {
 
     /**
     * 镜像ID列表。镜像ID，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。

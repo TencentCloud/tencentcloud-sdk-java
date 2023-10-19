@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDomainFilterListRequest extends AbstractModel{
+public class DescribeDomainFilterListRequest extends AbstractModel {
 
     /**
     * 根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。

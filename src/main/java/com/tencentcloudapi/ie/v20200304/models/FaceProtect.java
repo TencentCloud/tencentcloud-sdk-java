@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceProtect extends AbstractModel{
+public class FaceProtect extends AbstractModel {
 
     /**
     * 人脸区域增强强度，可选项：0.0-1.0。小于0.0的默认为0.0，大于1.0的默认为1.0。

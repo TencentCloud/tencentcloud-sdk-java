@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReceiverInfo extends AbstractModel{
+public class ReceiverInfo extends AbstractModel {
 
     /**
     * 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"

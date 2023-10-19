@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewInstanceRequest extends AbstractModel{
+public class InquiryPriceRenewInstanceRequest extends AbstractModel {
 
     /**
     * 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月

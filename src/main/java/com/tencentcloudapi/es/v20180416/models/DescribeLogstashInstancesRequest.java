@@ -16,11 +16,12 @@
 package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogstashInstancesRequest extends AbstractModel{
+public class DescribeLogstashInstancesRequest extends AbstractModel {
 
     /**
     * 实例所属可用区，不传则默认所有可用区

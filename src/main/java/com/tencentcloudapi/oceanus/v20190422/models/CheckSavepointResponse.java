@@ -16,11 +16,12 @@
 package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckSavepointResponse extends AbstractModel{
+public class CheckSavepointResponse extends AbstractModel {
 
     /**
     * 资源 id

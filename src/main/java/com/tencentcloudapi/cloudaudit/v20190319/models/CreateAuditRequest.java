@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudaudit.v20190319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAuditRequest extends AbstractModel{
+public class CreateAuditRequest extends AbstractModel {
 
     /**
     * 是否开启cmq消息通知。1：是，0：否。目前仅支持cmq的队列服务。如果开启cmq消息通知服务，云审计会将您的日志内容实时投递到您指定地域的指定队列中。

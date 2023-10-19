@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20201215.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BalanceTransaction extends AbstractModel{
+public class BalanceTransaction extends AbstractModel {
 
     /**
     * 账户类型：1-设备接入 2-云存。

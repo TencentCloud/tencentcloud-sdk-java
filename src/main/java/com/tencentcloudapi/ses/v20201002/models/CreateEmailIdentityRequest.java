@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEmailIdentityRequest extends AbstractModel{
+public class CreateEmailIdentityRequest extends AbstractModel {
 
     /**
     * 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。

@@ -45,18 +45,8 @@ public class TafClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RecognizeCustomizedAudienceResponse RecognizeCustomizedAudience(RecognizeCustomizedAudienceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeCustomizedAudienceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeCustomizedAudienceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeCustomizedAudience");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RecognizeCustomizedAudience", RecognizeCustomizedAudienceResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TafClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudience(RecognizePreciseTargetAudienceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizePreciseTargetAudienceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RecognizePreciseTargetAudienceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizePreciseTargetAudience");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RecognizePreciseTargetAudience", RecognizePreciseTargetAudienceResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TafClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RecognizeTargetAudienceResponse RecognizeTargetAudience(RecognizeTargetAudienceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeTargetAudienceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeTargetAudienceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeTargetAudience");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RecognizeTargetAudience", RecognizeTargetAudienceResponse.class);
     }
 
 }

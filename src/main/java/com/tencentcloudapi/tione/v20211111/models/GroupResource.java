@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GroupResource extends AbstractModel{
+public class GroupResource extends AbstractModel {
 
     /**
     * CPU核数; 单位为1/1000核，比如100表示0.1核

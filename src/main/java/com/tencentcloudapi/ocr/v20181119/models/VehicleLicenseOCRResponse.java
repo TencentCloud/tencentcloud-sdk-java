@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VehicleLicenseOCRResponse extends AbstractModel{
+public class VehicleLicenseOCRResponse extends AbstractModel {
 
     /**
     * 行驶证主页正面的识别结果，CardSide 为 FRONT。

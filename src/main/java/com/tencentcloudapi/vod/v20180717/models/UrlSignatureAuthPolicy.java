@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UrlSignatureAuthPolicy extends AbstractModel{
+public class UrlSignatureAuthPolicy extends AbstractModel {
 
     /**
     * [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)设置状态，可选值：

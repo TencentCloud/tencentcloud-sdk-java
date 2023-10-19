@@ -16,11 +16,12 @@
 package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrganizationMemberAuthAccountsRequest extends AbstractModel{
+public class DescribeOrganizationMemberAuthAccountsRequest extends AbstractModel {
 
     /**
     * 偏移量。

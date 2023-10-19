@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionsRequest extends AbstractModel{
+public class DescribeRegionsRequest extends AbstractModel {
 
     /**
     * 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆

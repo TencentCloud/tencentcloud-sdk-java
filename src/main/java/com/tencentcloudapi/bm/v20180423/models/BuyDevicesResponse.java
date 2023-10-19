@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BuyDevicesResponse extends AbstractModel{
+public class BuyDevicesResponse extends AbstractModel {
 
     /**
     * 购买的物理机实例ID列表

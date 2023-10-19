@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCommandsResponse extends AbstractModel{
+public class DescribeCommandsResponse extends AbstractModel {
 
     /**
     * 符合条件的命令总数。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInvokersResponse extends AbstractModel{
+public class DescribeInvokersResponse extends AbstractModel {
 
     /**
     * 满足条件的执行器数量。

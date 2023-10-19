@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageModerationAsyncTaskResponse extends AbstractModel{
+public class CreateImageModerationAsyncTaskResponse extends AbstractModel {
 
     /**
     * 该字段用于返回检测对象对应请求参数中的DataId。

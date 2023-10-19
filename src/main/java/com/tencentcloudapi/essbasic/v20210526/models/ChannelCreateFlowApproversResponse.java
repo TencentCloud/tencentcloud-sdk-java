@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateFlowApproversResponse extends AbstractModel{
+public class ChannelCreateFlowApproversResponse extends AbstractModel {
 
     /**
     * 批量补充签署人时，补充失败的报错说明 

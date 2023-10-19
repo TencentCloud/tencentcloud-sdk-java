@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SvgWatermarkInput extends AbstractModel{
+public class SvgWatermarkInput extends AbstractModel {
 
     /**
     * 水印的宽度，支持 px，%，W%，H%，S%，L% 六种格式：

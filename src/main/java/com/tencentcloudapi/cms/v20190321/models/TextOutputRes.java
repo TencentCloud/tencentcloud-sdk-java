@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cms.v20190321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextOutputRes extends AbstractModel{
+public class TextOutputRes extends AbstractModel {
 
     /**
     * 操作人,信安处理人企业微信ID

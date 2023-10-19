@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DuplicateImagePersonalResponse extends AbstractModel{
+public class DuplicateImagePersonalResponse extends AbstractModel {
 
     /**
     * 复制镜像返回值

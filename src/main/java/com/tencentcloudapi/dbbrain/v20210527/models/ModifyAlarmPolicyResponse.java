@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAlarmPolicyResponse extends AbstractModel{
+public class ModifyAlarmPolicyResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

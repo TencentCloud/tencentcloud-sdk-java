@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceAdvancedSettings extends AbstractModel{
+public class InstanceAdvancedSettings extends AbstractModel {
 
     /**
     * 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限

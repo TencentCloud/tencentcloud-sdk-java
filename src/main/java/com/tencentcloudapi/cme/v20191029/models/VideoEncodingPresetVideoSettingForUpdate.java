@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoEncodingPresetVideoSettingForUpdate extends AbstractModel{
+public class VideoEncodingPresetVideoSettingForUpdate extends AbstractModel {
 
     /**
     * 视频短边尺寸，取值范围： [128, 4096]，单位：px。

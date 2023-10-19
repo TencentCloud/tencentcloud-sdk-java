@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20230321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GooseFSOption extends AbstractModel{
+public class GooseFSOption extends AbstractModel {
 
     /**
     * 文件系统本地挂载路径。

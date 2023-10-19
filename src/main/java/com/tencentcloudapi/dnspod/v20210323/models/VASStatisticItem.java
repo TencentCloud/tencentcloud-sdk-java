@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VASStatisticItem extends AbstractModel{
+public class VASStatisticItem extends AbstractModel {
 
     /**
     * 增值服务名称

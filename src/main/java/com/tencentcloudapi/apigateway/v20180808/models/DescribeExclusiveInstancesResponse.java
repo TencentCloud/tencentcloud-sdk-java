@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExclusiveInstancesResponse extends AbstractModel{
+public class DescribeExclusiveInstancesResponse extends AbstractModel {
 
     /**
     * 独享实例列表查询结果

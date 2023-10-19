@@ -16,11 +16,12 @@
 package com.tencentcloudapi.acp.v20220105.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanTaskListRequest extends AbstractModel{
+public class DescribeScanTaskListRequest extends AbstractModel {
 
     /**
     * 任务来源, -1:所有, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;

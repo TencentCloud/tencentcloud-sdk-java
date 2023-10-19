@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20201222.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyUserResponse extends AbstractModel{
+public class ModifyUserResponse extends AbstractModel {
 
     /**
     * 腾讯电子签平台用户唯一标识

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskLogURL extends AbstractModel{
+public class TaskLogURL extends AbstractModel {
 
     /**
     * 报告下载临时链接

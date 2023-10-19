@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLinkResponse extends AbstractModel{
+public class CreateLinkResponse extends AbstractModel {
 
     /**
     * 新建链接的媒体 Id。

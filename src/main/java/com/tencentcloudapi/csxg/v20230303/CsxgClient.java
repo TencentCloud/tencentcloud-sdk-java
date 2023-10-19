@@ -45,18 +45,8 @@ public class CsxgClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public Create5GInstanceResponse Create5GInstance(Create5GInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<Create5GInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<Create5GInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Create5GInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "Create5GInstance", Create5GInstanceResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class CsxgClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public Delete5GInstanceResponse Delete5GInstance(Delete5GInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<Delete5GInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<Delete5GInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Delete5GInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "Delete5GInstance", Delete5GInstanceResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class CsxgClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public Describe5GAPNsResponse Describe5GAPNs(Describe5GAPNsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<Describe5GAPNsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<Describe5GAPNsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Describe5GAPNs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "Describe5GAPNs", Describe5GAPNsResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class CsxgClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public Describe5GInstancesResponse Describe5GInstances(Describe5GInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<Describe5GInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<Describe5GInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Describe5GInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "Describe5GInstances", Describe5GInstancesResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class CsxgClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public Modify5GInstanceAttributeResponse Modify5GInstanceAttribute(Modify5GInstanceAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<Modify5GInstanceAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<Modify5GInstanceAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Modify5GInstanceAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "Modify5GInstanceAttribute", Modify5GInstanceAttributeResponse.class);
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.pts.v20210728.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlertRecord extends AbstractModel{
+public class AlertRecord extends AbstractModel {
 
     /**
     * 告警历史记录项 ID

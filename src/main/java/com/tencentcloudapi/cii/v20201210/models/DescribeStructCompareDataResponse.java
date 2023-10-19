@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cii.v20201210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStructCompareDataResponse extends AbstractModel{
+public class DescribeStructCompareDataResponse extends AbstractModel {
 
     /**
     * 保单号

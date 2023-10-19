@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mgobe.v20190929.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DismissRoomRequest extends AbstractModel{
+public class DismissRoomRequest extends AbstractModel {
 
     /**
     * 表示游戏资源唯一 ID, 由后台自动分配, 无法修改。

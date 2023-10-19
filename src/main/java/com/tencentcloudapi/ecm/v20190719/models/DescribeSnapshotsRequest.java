@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSnapshotsRequest extends AbstractModel{
+public class DescribeSnapshotsRequest extends AbstractModel {
 
     /**
     * 要查询快照的ID列表。参数不支持同时指定`SnapshotIds`和`Filters`。

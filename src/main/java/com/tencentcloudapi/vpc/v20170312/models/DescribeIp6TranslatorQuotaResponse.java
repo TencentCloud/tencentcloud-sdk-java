@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIp6TranslatorQuotaResponse extends AbstractModel{
+public class DescribeIp6TranslatorQuotaResponse extends AbstractModel {
 
     /**
     * 账户在指定地域的IPV6转换实例及规则配额信息

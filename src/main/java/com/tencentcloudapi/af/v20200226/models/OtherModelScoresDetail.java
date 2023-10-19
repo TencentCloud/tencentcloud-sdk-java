@@ -16,11 +16,12 @@
 package com.tencentcloudapi.af.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OtherModelScoresDetail extends AbstractModel{
+public class OtherModelScoresDetail extends AbstractModel {
 
     /**
     * 模型版本号；默认顺序为 0、1、2、3、…其中：0=主模型，跟 RiskScore 保持一致；

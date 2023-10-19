@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ticm.v20181127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageModerationRequest extends AbstractModel{
+public class ImageModerationRequest extends AbstractModel {
 
     /**
     * 本次调用支持的识别场景，可选值如下：

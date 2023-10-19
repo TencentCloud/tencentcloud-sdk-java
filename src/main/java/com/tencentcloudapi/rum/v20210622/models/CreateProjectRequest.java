@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProjectRequest extends AbstractModel{
+public class CreateProjectRequest extends AbstractModel {
 
     /**
     * 创建的项目名(不为空且最长为 200)

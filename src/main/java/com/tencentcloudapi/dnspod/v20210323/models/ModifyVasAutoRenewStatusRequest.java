@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyVasAutoRenewStatusRequest extends AbstractModel{
+public class ModifyVasAutoRenewStatusRequest extends AbstractModel {
 
     /**
     * 资源ID。可以从控制台查看所有的资源

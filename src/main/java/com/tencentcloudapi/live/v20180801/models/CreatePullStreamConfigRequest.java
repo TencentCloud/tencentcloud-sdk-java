@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePullStreamConfigRequest extends AbstractModel{
+public class CreatePullStreamConfigRequest extends AbstractModel {
 
     /**
     * 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。

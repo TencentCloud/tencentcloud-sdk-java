@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceSetting extends AbstractModel{
+public class ServiceSetting extends AbstractModel {
 
     /**
     * 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputMappingConfig extends AbstractModel{
+public class OutputMappingConfig extends AbstractModel {
 
     /**
     * 存储类型，仅支持COS

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tbaas.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SignCertCsr extends AbstractModel{
+public class SignCertCsr extends AbstractModel {
 
     /**
     * 用户签名证书的标识，会存在于用户申请的证书中

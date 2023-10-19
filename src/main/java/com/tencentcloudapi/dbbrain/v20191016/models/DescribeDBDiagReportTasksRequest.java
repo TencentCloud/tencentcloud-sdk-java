@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBDiagReportTasksRequest extends AbstractModel{
+public class DescribeDBDiagReportTasksRequest extends AbstractModel {
 
     /**
     * 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogConfig extends AbstractModel{
+public class LogConfig extends AbstractModel {
 
     /**
     * 日志需要投递到cls的日志集

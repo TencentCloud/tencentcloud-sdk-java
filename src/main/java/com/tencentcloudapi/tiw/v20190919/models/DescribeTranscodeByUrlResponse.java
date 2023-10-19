@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTranscodeByUrlResponse extends AbstractModel{
+public class DescribeTranscodeByUrlResponse extends AbstractModel {
 
     /**
     * 转码的当前进度,取值范围为0~100

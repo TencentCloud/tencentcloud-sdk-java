@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBDiagReportTaskResponse extends AbstractModel{
+public class CreateDBDiagReportTaskResponse extends AbstractModel {
 
     /**
     * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。

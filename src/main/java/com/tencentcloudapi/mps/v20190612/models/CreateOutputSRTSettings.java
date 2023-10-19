@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOutputSRTSettings extends AbstractModel{
+public class CreateOutputSRTSettings extends AbstractModel {
 
     /**
     * 转推的目标地址，当Mode为CALLER时必填，且只能填1组。

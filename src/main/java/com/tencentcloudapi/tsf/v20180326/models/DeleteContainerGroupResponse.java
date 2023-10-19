@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteContainerGroupResponse extends AbstractModel{
+public class DeleteContainerGroupResponse extends AbstractModel {
 
     /**
     * 删除操作是否成功：

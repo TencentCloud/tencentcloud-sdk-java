@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PriceDetail extends AbstractModel{
+public class PriceDetail extends AbstractModel {
 
     /**
     * 表示折扣，20 表示20%，打2折

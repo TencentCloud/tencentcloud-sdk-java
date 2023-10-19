@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ic.v20190307.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppRequest extends AbstractModel{
+public class DescribeAppRequest extends AbstractModel {
 
     /**
     * 物联卡应用ID

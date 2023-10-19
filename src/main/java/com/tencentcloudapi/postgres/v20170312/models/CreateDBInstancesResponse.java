@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesResponse extends AbstractModel{
+public class CreateDBInstancesResponse extends AbstractModel {
 
     /**
     * 订单号列表。每个实例对应一个订单号。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSnapshotFilesRequest extends AbstractModel{
+public class DescribeSnapshotFilesRequest extends AbstractModel {
 
     /**
     * 业务类型，目前支持安全组：securitygroup。

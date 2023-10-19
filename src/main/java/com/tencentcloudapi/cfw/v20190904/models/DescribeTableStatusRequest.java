@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTableStatusRequest extends AbstractModel{
+public class DescribeTableStatusRequest extends AbstractModel {
 
     /**
     * EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；

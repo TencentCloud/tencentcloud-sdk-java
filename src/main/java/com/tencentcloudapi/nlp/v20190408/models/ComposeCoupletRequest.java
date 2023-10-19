@@ -16,11 +16,12 @@
 package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeCoupletRequest extends AbstractModel{
+public class ComposeCoupletRequest extends AbstractModel {
 
     /**
     * 生成对联的关键词。长度需>=2，当长度>2时，自动截取前两个字作为关键字。内容需为常用汉字（不含有数字、英文、韩语、日语、符号等等其他）。

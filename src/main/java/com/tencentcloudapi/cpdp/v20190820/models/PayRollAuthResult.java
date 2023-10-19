@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PayRollAuthResult extends AbstractModel{
+public class PayRollAuthResult extends AbstractModel {
 
     /**
     * 结果为核身失败时的原因描述，仅在失败记录返回，空字符串等同null

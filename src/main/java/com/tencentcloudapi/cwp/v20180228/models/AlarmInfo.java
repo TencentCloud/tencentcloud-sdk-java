@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlarmInfo extends AbstractModel{
+public class AlarmInfo extends AbstractModel {
 
     /**
     * 该节点关联的告警，告警的table_name+id（t1:id1,t2:id2,...)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchCreateGroupWithMembersResponse extends AbstractModel{
+public class BatchCreateGroupWithMembersResponse extends AbstractModel {
 
     /**
     * 新创建群组ID列表，与输入创建参数顺序一致

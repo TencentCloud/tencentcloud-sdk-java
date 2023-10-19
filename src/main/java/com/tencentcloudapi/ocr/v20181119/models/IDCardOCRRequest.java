@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IDCardOCRRequest extends AbstractModel{
+public class IDCardOCRRequest extends AbstractModel {
 
     /**
     * 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。

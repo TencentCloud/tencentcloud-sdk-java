@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetworkData extends AbstractModel{
+public class NetworkData extends AbstractModel {
 
     /**
     * 时延数组，最大长度30

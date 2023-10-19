@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdwch.v20200915.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScaleUpInstanceResponse extends AbstractModel{
+public class ScaleUpInstanceResponse extends AbstractModel {
 
     /**
     * 流程ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoEncode extends AbstractModel{
+public class VideoEncode extends AbstractModel {
 
     /**
     * 输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。

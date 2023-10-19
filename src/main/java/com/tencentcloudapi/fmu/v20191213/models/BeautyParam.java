@@ -16,11 +16,12 @@
 package com.tencentcloudapi.fmu.v20191213.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BeautyParam extends AbstractModel{
+public class BeautyParam extends AbstractModel {
 
     /**
     * 美白程度，取值范围[0,100]。0不美白，100代表最高程度。默认值30。

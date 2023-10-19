@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttackLogInfo extends AbstractModel{
+public class AttackLogInfo extends AbstractModel {
 
     /**
     * 攻击日志的详情内容

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBaasPackageListRequest extends AbstractModel{
+public class DescribeBaasPackageListRequest extends AbstractModel {
 
     /**
     * tcb产品套餐ID，不填拉取全量package信息。

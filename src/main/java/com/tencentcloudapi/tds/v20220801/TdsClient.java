@@ -45,18 +45,8 @@ public class TdsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFraudBaseResponse DescribeFraudBase(DescribeFraudBaseRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFraudBaseResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFraudBaseResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFraudBase");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFraudBase", DescribeFraudBaseResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TdsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFraudPremiumResponse DescribeFraudPremium(DescribeFraudPremiumRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFraudPremiumResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFraudPremiumResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFraudPremium");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFraudPremium", DescribeFraudPremiumResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TdsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFraudUltimateResponse DescribeFraudUltimate(DescribeFraudUltimateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFraudUltimateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFraudUltimateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFraudUltimate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFraudUltimate", DescribeFraudUltimateResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class TdsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTrustedIDResponse DescribeTrustedID(DescribeTrustedIDRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTrustedIDResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTrustedIDResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTrustedID");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTrustedID", DescribeTrustedIDResponse.class);
     }
 
 }

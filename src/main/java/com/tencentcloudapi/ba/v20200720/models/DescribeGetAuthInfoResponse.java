@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ba.v20200720.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGetAuthInfoResponse extends AbstractModel{
+public class DescribeGetAuthInfoResponse extends AbstractModel {
 
     /**
     * 实名认证状态：0未实名，1已实名

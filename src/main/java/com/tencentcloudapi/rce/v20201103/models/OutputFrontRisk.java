@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rce.v20201103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputFrontRisk extends AbstractModel{
+public class OutputFrontRisk extends AbstractModel {
 
     /**
     * 名称

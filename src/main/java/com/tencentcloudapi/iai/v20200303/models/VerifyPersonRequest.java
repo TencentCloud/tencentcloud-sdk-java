@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyPersonRequest extends AbstractModel{
+public class VerifyPersonRequest extends AbstractModel {
 
     /**
     * 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。

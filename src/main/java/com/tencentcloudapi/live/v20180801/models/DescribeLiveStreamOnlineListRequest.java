@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
+public class DescribeLiveStreamOnlineListRequest extends AbstractModel {
 
     /**
     * 推流域名。多域名用户需要填写 DomainName。

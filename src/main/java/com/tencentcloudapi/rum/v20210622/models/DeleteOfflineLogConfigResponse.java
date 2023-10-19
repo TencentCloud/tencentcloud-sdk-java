@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteOfflineLogConfigResponse extends AbstractModel{
+public class DeleteOfflineLogConfigResponse extends AbstractModel {
 
     /**
     * 接口调用信息

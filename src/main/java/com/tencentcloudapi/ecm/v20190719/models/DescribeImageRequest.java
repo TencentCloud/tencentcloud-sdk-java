@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageRequest extends AbstractModel{
+public class DescribeImageRequest extends AbstractModel {
 
     /**
     * 过滤条件，每次请求的Filters的上限为10，详细的过滤条件如下：

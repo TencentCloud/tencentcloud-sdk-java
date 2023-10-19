@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyOpenBankOrderDetailReceiptRequest extends AbstractModel{
+public class ApplyOpenBankOrderDetailReceiptRequest extends AbstractModel {
 
     /**
     * 外部回单申请编号

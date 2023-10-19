@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20191022.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCodeRepositoriesRequest extends AbstractModel{
+public class DescribeCodeRepositoriesRequest extends AbstractModel {
 
     /**
     * 偏移量，默认为0

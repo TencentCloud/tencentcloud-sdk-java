@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryOpenBankDownLoadUrlResponse extends AbstractModel{
+public class QueryOpenBankDownLoadUrlResponse extends AbstractModel {
 
     /**
     * 业务系统返回码，SUCCESS表示成功，其他表示失败。

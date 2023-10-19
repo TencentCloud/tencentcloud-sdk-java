@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PrepayPrice extends AbstractModel{
+public class PrepayPrice extends AbstractModel {
 
     /**
     * 预付费云盘或快照预支费用的折扣价，单位：元。

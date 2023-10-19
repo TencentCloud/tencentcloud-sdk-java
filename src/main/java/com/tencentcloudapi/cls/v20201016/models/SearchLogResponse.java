@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchLogResponse extends AbstractModel{
+public class SearchLogResponse extends AbstractModel {
 
     /**
     * 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。

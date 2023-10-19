@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindAutoSnapshotPolicyRequest extends AbstractModel{
+public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
     * 需要解绑的文件系统ID列表，用"," 分割

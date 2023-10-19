@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTaskRequest extends AbstractModel{
+public class CreateTaskRequest extends AbstractModel {
 
     /**
     * 计算任务，该参数中包含任务类型及其相关配置信息

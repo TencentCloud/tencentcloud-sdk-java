@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tics.v20181115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeThreatInfoRequest extends AbstractModel{
+public class DescribeThreatInfoRequest extends AbstractModel {
 
     /**
     * 查询对象，域名或IP

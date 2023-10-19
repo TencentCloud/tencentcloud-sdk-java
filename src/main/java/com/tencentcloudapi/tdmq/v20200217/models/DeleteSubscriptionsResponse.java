@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSubscriptionsResponse extends AbstractModel{
+public class DeleteSubscriptionsResponse extends AbstractModel {
 
     /**
     * 成功删除的订阅关系数组。

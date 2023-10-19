@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eb.v20210416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SCFParams extends AbstractModel{
+public class SCFParams extends AbstractModel {
 
     /**
     * 批量投递最长等待时间

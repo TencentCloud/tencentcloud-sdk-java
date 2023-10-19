@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudaudit.v20190319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeyMetadata extends AbstractModel{
+public class KeyMetadata extends AbstractModel {
 
     /**
     * 作为密钥更容易辨识，更容易被人看懂的别名

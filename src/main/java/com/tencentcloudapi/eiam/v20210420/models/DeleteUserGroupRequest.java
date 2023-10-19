@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUserGroupRequest extends AbstractModel{
+public class DeleteUserGroupRequest extends AbstractModel {
 
     /**
     * 用户组ID，是用户组的全局唯一标识。

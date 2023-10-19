@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProductSecretRequest extends AbstractModel{
+public class CreateProductSecretRequest extends AbstractModel {
 
     /**
     * 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTagKeysRequest extends AbstractModel{
+public class DescribeTagKeysRequest extends AbstractModel {
 
     /**
     * 创建者用户 Uin，不传或为空只将 Uin 作为条件查询

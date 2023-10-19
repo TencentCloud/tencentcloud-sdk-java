@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRedisProcessListResponse extends AbstractModel{
+public class DescribeRedisProcessListResponse extends AbstractModel {
 
     /**
     * 该实例的Proxy节点数量，可用于分页查询。

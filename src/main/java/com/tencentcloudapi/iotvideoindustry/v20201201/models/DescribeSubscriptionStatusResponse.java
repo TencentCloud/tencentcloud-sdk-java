@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideoindustry.v20201201.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubscriptionStatusResponse extends AbstractModel{
+public class DescribeSubscriptionStatusResponse extends AbstractModel {
 
     /**
     * 设备GB28181报警订阅状态 1：未开启订阅；2：已开启订阅

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CompareOptions extends AbstractModel{
+public class CompareOptions extends AbstractModel {
 
     /**
     * 对比类型：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDosageDetailByDateRequest extends AbstractModel{
+public class DescribeDosageDetailByDateRequest extends AbstractModel {
 
     /**
     * 查询账单开始日期，如 2019-01-01

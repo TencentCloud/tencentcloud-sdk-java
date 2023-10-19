@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceData extends AbstractModel{
+public class DeviceData extends AbstractModel {
 
     /**
     * 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。

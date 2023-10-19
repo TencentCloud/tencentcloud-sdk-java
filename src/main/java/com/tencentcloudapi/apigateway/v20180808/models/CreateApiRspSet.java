@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateApiRspSet extends AbstractModel{
+public class CreateApiRspSet extends AbstractModel {
 
     /**
     * 个数

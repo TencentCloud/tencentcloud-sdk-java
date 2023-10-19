@@ -16,11 +16,12 @@
 package com.tencentcloudapi.facefusion.v20220927.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageCodecParam extends AbstractModel{
+public class ImageCodecParam extends AbstractModel {
 
     /**
     * 元数据

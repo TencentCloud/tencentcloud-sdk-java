@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOperationEventResponse extends AbstractModel{
+public class DescribeOperationEventResponse extends AbstractModel {
 
     /**
     * 操作日志列表

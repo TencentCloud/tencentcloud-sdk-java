@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateGameServerSessionQueueResponse extends AbstractModel{
+public class UpdateGameServerSessionQueueResponse extends AbstractModel {
 
     /**
     * 部署服务组对象

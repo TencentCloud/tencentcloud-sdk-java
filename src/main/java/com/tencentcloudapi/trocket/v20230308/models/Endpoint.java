@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trocket.v20230308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Endpoint extends AbstractModel{
+public class Endpoint extends AbstractModel {
 
     /**
     * 接入点类型，

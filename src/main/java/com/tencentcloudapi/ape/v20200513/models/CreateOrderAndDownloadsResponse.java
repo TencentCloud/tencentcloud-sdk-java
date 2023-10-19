@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ape.v20200513.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOrderAndDownloadsResponse extends AbstractModel{
+public class CreateOrderAndDownloadsResponse extends AbstractModel {
 
     /**
     * 成功核销后可以获取图片基本信息和原图地址

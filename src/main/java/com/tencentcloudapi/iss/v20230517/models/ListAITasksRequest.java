@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListAITasksRequest extends AbstractModel{
+public class ListAITasksRequest extends AbstractModel {
 
     /**
     * 是否包含通道列表。"true"代表包含通道列表，"false"代表不包含通道列表，默认为 false

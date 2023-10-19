@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eis.v20200715.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListEisConnectorsRequest extends AbstractModel{
+public class ListEisConnectorsRequest extends AbstractModel {
 
     /**
     * 连接器名称,非必输，如输入则按照输入值模糊匹配

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mvj.v20190926.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MarketingValueJudgementResponse extends AbstractModel{
+public class MarketingValueJudgementResponse extends AbstractModel {
 
     /**
     * 返回数据

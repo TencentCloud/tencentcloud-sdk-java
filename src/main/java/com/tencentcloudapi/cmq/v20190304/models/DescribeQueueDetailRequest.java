@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cmq.v20190304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeQueueDetailRequest extends AbstractModel{
+public class DescribeQueueDetailRequest extends AbstractModel {
 
     /**
     * 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0

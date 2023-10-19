@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccountParam extends AbstractModel{
+public class AccountParam extends AbstractModel {
 
     /**
     * 参数名称，当前仅支持参数：max_user_connections

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.af.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetAntiFraudRequest extends AbstractModel{
+public class GetAntiFraudRequest extends AbstractModel {
 
     /**
     * 默认不传，约定用原始业务

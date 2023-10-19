@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LivenessResponse extends AbstractModel{
+public class LivenessResponse extends AbstractModel {
 
     /**
     * 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。

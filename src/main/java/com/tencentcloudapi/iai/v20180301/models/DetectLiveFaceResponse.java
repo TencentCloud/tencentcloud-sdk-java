@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectLiveFaceResponse extends AbstractModel{
+public class DetectLiveFaceResponse extends AbstractModel {
 
     /**
     * 活体打分，取值范围 [0,100]，分数一般落于[80, 100]区间内，0分也为常见值。推荐相大于 87 时可判断为活体。可根据具体场景自行调整阈值。

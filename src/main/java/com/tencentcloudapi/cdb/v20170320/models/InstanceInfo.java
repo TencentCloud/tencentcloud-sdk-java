@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceInfo extends AbstractModel{
+public class InstanceInfo extends AbstractModel {
 
     /**
     * 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网

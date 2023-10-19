@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSupportProxyVersionResponse extends AbstractModel{
+public class DescribeSupportProxyVersionResponse extends AbstractModel {
 
     /**
     * 支持的数据库代理版本集合

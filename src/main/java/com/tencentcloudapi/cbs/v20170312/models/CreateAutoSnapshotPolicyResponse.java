@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAutoSnapshotPolicyResponse extends AbstractModel{
+public class CreateAutoSnapshotPolicyResponse extends AbstractModel {
 
     /**
     * 新创建的定期快照策略ID。

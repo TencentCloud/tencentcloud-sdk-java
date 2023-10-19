@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAsyncRequestInfoRequest extends AbstractModel{
+public class DescribeAsyncRequestInfoRequest extends AbstractModel {
 
     /**
     * 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance

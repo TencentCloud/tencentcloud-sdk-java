@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExternalContactTag extends AbstractModel{
+public class ExternalContactTag extends AbstractModel {
 
     /**
     * 该成员添加此外部联系人所打标签的分组名称（标签功能需要企业微信升级到2.7.5及以上版本）

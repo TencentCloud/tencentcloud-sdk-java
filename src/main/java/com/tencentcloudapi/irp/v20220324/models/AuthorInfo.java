@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuthorInfo extends AbstractModel{
+public class AuthorInfo extends AbstractModel {
 
     /**
     * 作者id

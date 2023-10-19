@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateUploadPathResponse extends AbstractModel{
+public class CreateUploadPathResponse extends AbstractModel {
 
     /**
     * 固件上传地址URL，用户可将本地的固件文件通过该URL以PUT的请求方式上传。

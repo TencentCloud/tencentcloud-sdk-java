@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel{
+public class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel {
 
     /**
     * 文本鉴别涉及令人不适宜的信息的任务开关，可选值：

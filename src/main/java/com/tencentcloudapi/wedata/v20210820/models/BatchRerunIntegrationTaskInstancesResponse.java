@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchRerunIntegrationTaskInstancesResponse extends AbstractModel{
+public class BatchRerunIntegrationTaskInstancesResponse extends AbstractModel {
 
     /**
     * 操作成功的任务数

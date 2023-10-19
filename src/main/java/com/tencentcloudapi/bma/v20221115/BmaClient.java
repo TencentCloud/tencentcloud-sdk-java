@@ -45,18 +45,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBPBrandResponse CreateBPBrand(CreateBPBrandRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBPBrandResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateBPBrandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateBPBrand");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateBPBrand", CreateBPBrandResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBPFakeAPPResponse CreateBPFakeAPP(CreateBPFakeAPPRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBPFakeAPPResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateBPFakeAPPResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateBPFakeAPP");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateBPFakeAPP", CreateBPFakeAPPResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBPFakeAPPListResponse CreateBPFakeAPPList(CreateBPFakeAPPListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBPFakeAPPListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateBPFakeAPPListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateBPFakeAPPList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateBPFakeAPPList", CreateBPFakeAPPListResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBPFakeURLResponse CreateBPFakeURL(CreateBPFakeURLRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBPFakeURLResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateBPFakeURLResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateBPFakeURL");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateBPFakeURL", CreateBPFakeURLResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBPFakeURLsResponse CreateBPFakeURLs(CreateBPFakeURLsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBPFakeURLsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateBPFakeURLsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateBPFakeURLs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateBPFakeURLs", CreateBPFakeURLsResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBPWhiteListResponse CreateBPWhiteList(CreateBPWhiteListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBPWhiteListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateBPWhiteListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateBPWhiteList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateBPWhiteList", CreateBPWhiteListResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteBPWhiteListResponse DeleteBPWhiteList(DeleteBPWhiteListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteBPWhiteListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteBPWhiteListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteBPWhiteList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteBPWhiteList", DeleteBPWhiteListResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBPBrandsResponse DescribeBPBrands(DescribeBPBrandsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBPBrandsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBPBrandsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBPBrands");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBPBrands", DescribeBPBrandsResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBPFakeAPPListResponse DescribeBPFakeAPPList(DescribeBPFakeAPPListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBPFakeAPPListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBPFakeAPPListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBPFakeAPPList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBPFakeAPPList", DescribeBPFakeAPPListResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBPFakeURLsResponse DescribeBPFakeURLs(DescribeBPFakeURLsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBPFakeURLsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBPFakeURLs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBPFakeURLs", DescribeBPFakeURLsResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class BmaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBPWhiteListsResponse DescribeBPWhiteLists(DescribeBPWhiteListsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBPWhiteListsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBPWhiteListsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBPWhiteLists");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBPWhiteLists", DescribeBPWhiteListsResponse.class);
     }
 
 }

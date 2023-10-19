@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSecurityGroupRequest extends AbstractModel{
+public class CreateSecurityGroupRequest extends AbstractModel {
 
     /**
     * 安全组名称，可任意命名，但不得超过60个字符。

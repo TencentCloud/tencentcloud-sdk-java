@@ -16,11 +16,12 @@
 package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStatusRequest extends AbstractModel{
+public class DescribeTaskStatusRequest extends AbstractModel {
 
     /**
     * 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。

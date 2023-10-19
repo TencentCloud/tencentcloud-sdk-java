@@ -49,18 +49,8 @@ public class IirClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RecognizeProductResponse RecognizeProduct(RecognizeProductRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeProductResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeProductResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeProduct");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RecognizeProduct", RecognizeProductResponse.class);
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220805.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGoodsRecommendResponse extends AbstractModel{
+public class DescribeGoodsRecommendResponse extends AbstractModel {
 
     /**
     * 推荐返回的商品信息列表

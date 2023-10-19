@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePackageConsumeTaskResponse extends AbstractModel{
+public class DescribePackageConsumeTaskResponse extends AbstractModel {
 
     /**
     * 文件下载的url，文件详情是套餐包消耗详情

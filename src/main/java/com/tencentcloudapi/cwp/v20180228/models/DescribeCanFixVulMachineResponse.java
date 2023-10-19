@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCanFixVulMachineResponse extends AbstractModel{
+public class DescribeCanFixVulMachineResponse extends AbstractModel {
 
     /**
     * 主机漏洞修护信息列表

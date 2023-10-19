@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DspaDiscoveryCOSDataRule extends AbstractModel{
+public class DspaDiscoveryCOSDataRule extends AbstractModel {
 
     /**
     * 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.

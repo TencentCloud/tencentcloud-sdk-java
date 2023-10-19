@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMachineSnapshotRequest extends AbstractModel{
+public class DescribeMachineSnapshotRequest extends AbstractModel {
 
     /**
     * cvm id 集合

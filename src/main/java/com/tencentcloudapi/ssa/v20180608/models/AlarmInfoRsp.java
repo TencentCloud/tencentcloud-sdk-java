@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlarmInfoRsp extends AbstractModel{
+public class AlarmInfoRsp extends AbstractModel {
 
     /**
     * 近7天威胁告警

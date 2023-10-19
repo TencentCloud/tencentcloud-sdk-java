@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryOpenBankBankAccountBalanceResult extends AbstractModel{
+public class QueryOpenBankBankAccountBalanceResult extends AbstractModel {
 
     /**
     * 总余额，单位分

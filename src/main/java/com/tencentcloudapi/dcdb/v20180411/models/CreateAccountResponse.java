@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccountResponse extends AbstractModel{
+public class CreateAccountResponse extends AbstractModel {
 
     /**
     * 实例ID，透传入参。

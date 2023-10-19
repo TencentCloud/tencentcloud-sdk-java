@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ccc.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTelCallInfoResponse extends AbstractModel{
+public class DescribeTelCallInfoResponse extends AbstractModel {
 
     /**
     * 呼出套餐包消耗分钟数

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagSpecification extends AbstractModel{
+public class TagSpecification extends AbstractModel {
 
     /**
     * 标签绑定的资源类型，当前支持类型："cluster"

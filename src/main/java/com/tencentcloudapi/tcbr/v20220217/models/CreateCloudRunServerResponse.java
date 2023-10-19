@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcbr.v20220217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCloudRunServerResponse extends AbstractModel{
+public class CreateCloudRunServerResponse extends AbstractModel {
 
     /**
     * 一键部署任务Id，微信云托管，暂时用不到

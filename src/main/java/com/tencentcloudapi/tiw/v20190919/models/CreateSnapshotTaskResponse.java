@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSnapshotTaskResponse extends AbstractModel{
+public class CreateSnapshotTaskResponse extends AbstractModel {
 
     /**
     * 白板板书生成任务ID，只有任务创建成功的时候才会返回此字段

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220805.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DocItem extends AbstractModel{
+public class DocItem extends AbstractModel {
 
     /**
     * 内容唯一id，建议限制在128字符以内

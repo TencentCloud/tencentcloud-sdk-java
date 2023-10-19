@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MaterialImportedEvent extends AbstractModel{
+public class MaterialImportedEvent extends AbstractModel {
 
     /**
     * 导入的媒体信息列表。

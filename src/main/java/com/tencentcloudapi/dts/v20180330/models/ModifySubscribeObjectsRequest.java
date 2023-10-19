@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20180330.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySubscribeObjectsRequest extends AbstractModel{
+public class ModifySubscribeObjectsRequest extends AbstractModel {
 
     /**
     * 数据订阅实例的ID

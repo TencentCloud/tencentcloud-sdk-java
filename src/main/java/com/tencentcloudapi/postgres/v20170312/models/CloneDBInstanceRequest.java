@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloneDBInstanceRequest extends AbstractModel{
+public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
     * 克隆的源实例ID。

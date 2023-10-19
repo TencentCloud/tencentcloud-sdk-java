@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideoindustry.v20201201.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ControlPresetRequest extends AbstractModel{
+public class ControlPresetRequest extends AbstractModel {
 
     /**
     * 通道ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCommandRequest extends AbstractModel{
+public class CreateCommandRequest extends AbstractModel {
 
     /**
     * 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。

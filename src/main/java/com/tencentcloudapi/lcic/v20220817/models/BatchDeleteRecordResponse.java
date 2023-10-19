@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchDeleteRecordResponse extends AbstractModel{
+public class BatchDeleteRecordResponse extends AbstractModel {
 
     /**
     * 本次操作删除成功的房间ID列表。如果入参列表中某个房间ID的录制文件已经删除，则出参列表中无对应的房间ID。

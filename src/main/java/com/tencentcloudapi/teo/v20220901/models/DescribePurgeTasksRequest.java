@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePurgeTasksRequest extends AbstractModel{
+public class DescribePurgeTasksRequest extends AbstractModel {
 
     /**
     * 字段已废弃，请使用Filters中的zone-id。

@@ -45,18 +45,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindZoneToPlanResponse BindZoneToPlan(BindZoneToPlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindZoneToPlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindZoneToPlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindZoneToPlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindZoneToPlan", BindZoneToPlanResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TeoClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CheckCnameStatusResponse CheckCnameStatus(CheckCnameStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckCnameStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CheckCnameStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CheckCnameStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CheckCnameStatus", CheckCnameStatusResponse.class);
     }
 
     /**
@@ -89,18 +69,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreateAccelerationDomainResponse CreateAccelerationDomain(CreateAccelerationDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAccelerationDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAccelerationDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAccelerationDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAccelerationDomain", CreateAccelerationDomainResponse.class);
     }
 
     /**
@@ -110,18 +80,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreateAliasDomainResponse CreateAliasDomain(CreateAliasDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAliasDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAliasDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAliasDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAliasDomain", CreateAliasDomainResponse.class);
     }
 
     /**
@@ -131,18 +91,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreateApplicationProxyResponse CreateApplicationProxy(CreateApplicationProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApplicationProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateApplicationProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApplicationProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateApplicationProxy", CreateApplicationProxyResponse.class);
     }
 
     /**
@@ -152,18 +102,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreateApplicationProxyRuleResponse CreateApplicationProxyRule(CreateApplicationProxyRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApplicationProxyRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateApplicationProxyRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApplicationProxyRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateApplicationProxyRule", CreateApplicationProxyRuleResponse.class);
     }
 
     /**
@@ -173,18 +113,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreatePlanForZoneResponse CreatePlanForZone(CreatePlanForZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePlanForZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreatePlanForZoneResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePlanForZone");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreatePlanForZone", CreatePlanForZoneResponse.class);
     }
 
     /**
@@ -194,18 +124,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreatePrefetchTaskResponse CreatePrefetchTask(CreatePrefetchTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePrefetchTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreatePrefetchTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePrefetchTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreatePrefetchTask", CreatePrefetchTaskResponse.class);
     }
 
     /**
@@ -217,18 +137,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreatePurgeTaskResponse CreatePurgeTask(CreatePurgeTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePurgeTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreatePurgeTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePurgeTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreatePurgeTask", CreatePurgeTaskResponse.class);
     }
 
     /**
@@ -238,18 +148,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateRule", CreateRuleResponse.class);
     }
 
     /**
@@ -259,18 +159,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreateSecurityIPGroupResponse CreateSecurityIPGroup(CreateSecurityIPGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSecurityIPGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateSecurityIPGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSecurityIPGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateSecurityIPGroup", CreateSecurityIPGroupResponse.class);
     }
 
     /**
@@ -280,18 +170,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreateSharedCNAMEResponse CreateSharedCNAME(CreateSharedCNAMERequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSharedCNAMEResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateSharedCNAMEResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSharedCNAME");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateSharedCNAME", CreateSharedCNAMEResponse.class);
     }
 
     /**
@@ -303,18 +183,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public CreateZoneResponse CreateZone(CreateZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateZoneResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateZone");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateZone", CreateZoneResponse.class);
     }
 
     /**
@@ -324,18 +194,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DeleteAccelerationDomainsResponse DeleteAccelerationDomains(DeleteAccelerationDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAccelerationDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAccelerationDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAccelerationDomains");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteAccelerationDomains", DeleteAccelerationDomainsResponse.class);
     }
 
     /**
@@ -345,18 +205,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DeleteAliasDomainResponse DeleteAliasDomain(DeleteAliasDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAliasDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAliasDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAliasDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteAliasDomain", DeleteAliasDomainResponse.class);
     }
 
     /**
@@ -366,18 +216,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DeleteApplicationProxyResponse DeleteApplicationProxy(DeleteApplicationProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApplicationProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteApplicationProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteApplicationProxy", DeleteApplicationProxyResponse.class);
     }
 
     /**
@@ -387,18 +227,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApplicationProxyRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteApplicationProxyRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteApplicationProxyRule", DeleteApplicationProxyRuleResponse.class);
     }
 
     /**
@@ -408,18 +238,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DeleteRulesResponse DeleteRules(DeleteRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteRules", DeleteRulesResponse.class);
     }
 
     /**
@@ -429,18 +249,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DeleteSecurityIPGroupResponse DeleteSecurityIPGroup(DeleteSecurityIPGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSecurityIPGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSecurityIPGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSecurityIPGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteSecurityIPGroup", DeleteSecurityIPGroupResponse.class);
     }
 
     /**
@@ -450,18 +260,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DeleteZoneResponse DeleteZone(DeleteZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteZoneResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteZone");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteZone", DeleteZoneResponse.class);
     }
 
     /**
@@ -471,18 +271,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeAccelerationDomainsResponse DescribeAccelerationDomains(DescribeAccelerationDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccelerationDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccelerationDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccelerationDomains");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAccelerationDomains", DescribeAccelerationDomainsResponse.class);
     }
 
     /**
@@ -492,18 +282,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeAliasDomainsResponse DescribeAliasDomains(DescribeAliasDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAliasDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAliasDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAliasDomains");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAliasDomains", DescribeAliasDomainsResponse.class);
     }
 
     /**
@@ -513,18 +293,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeApplicationProxiesResponse DescribeApplicationProxies(DescribeApplicationProxiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationProxiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApplicationProxiesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApplicationProxies");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApplicationProxies", DescribeApplicationProxiesResponse.class);
     }
 
     /**
@@ -534,18 +304,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeAvailablePlansResponse DescribeAvailablePlans(DescribeAvailablePlansRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAvailablePlansResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAvailablePlansResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAvailablePlans");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAvailablePlans", DescribeAvailablePlansResponse.class);
     }
 
     /**
@@ -555,18 +315,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeContentQuotaResponse DescribeContentQuota(DescribeContentQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeContentQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeContentQuotaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeContentQuota");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeContentQuota", DescribeContentQuotaResponse.class);
     }
 
     /**
@@ -576,18 +326,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeDDoSAttackDataResponse DescribeDDoSAttackData(DescribeDDoSAttackDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDoSAttackDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDDoSAttackData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDDoSAttackData", DescribeDDoSAttackDataResponse.class);
     }
 
     /**
@@ -597,18 +337,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeDDoSAttackEventResponse DescribeDDoSAttackEvent(DescribeDDoSAttackEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDoSAttackEventResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackEventResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDDoSAttackEvent");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDDoSAttackEvent", DescribeDDoSAttackEventResponse.class);
     }
 
     /**
@@ -618,18 +348,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeDDoSAttackTopDataResponse DescribeDDoSAttackTopData(DescribeDDoSAttackTopDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDDoSAttackTopDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackTopDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDDoSAttackTopData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDDoSAttackTopData", DescribeDDoSAttackTopDataResponse.class);
     }
 
     /**
@@ -639,18 +359,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeDefaultCertificatesResponse DescribeDefaultCertificates(DescribeDefaultCertificatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDefaultCertificatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDefaultCertificatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDefaultCertificates");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDefaultCertificates", DescribeDefaultCertificatesResponse.class);
     }
 
     /**
@@ -660,18 +370,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeHostsSettingResponse DescribeHostsSetting(DescribeHostsSettingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHostsSettingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeHostsSettingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeHostsSetting");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeHostsSetting", DescribeHostsSettingResponse.class);
     }
 
     /**
@@ -681,18 +381,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeIdentificationsResponse DescribeIdentifications(DescribeIdentificationsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIdentificationsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIdentificationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIdentifications");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeIdentifications", DescribeIdentificationsResponse.class);
     }
 
     /**
@@ -702,18 +392,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeOriginGroupResponse DescribeOriginGroup(DescribeOriginGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOriginGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOriginGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOriginGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeOriginGroup", DescribeOriginGroupResponse.class);
     }
 
     /**
@@ -723,18 +403,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeOriginProtectionResponse DescribeOriginProtection(DescribeOriginProtectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOriginProtectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOriginProtectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOriginProtection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeOriginProtection", DescribeOriginProtectionResponse.class);
     }
 
     /**
@@ -744,18 +414,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeOverviewL7DataResponse DescribeOverviewL7Data(DescribeOverviewL7DataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOverviewL7DataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOverviewL7DataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOverviewL7Data");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeOverviewL7Data", DescribeOverviewL7DataResponse.class);
     }
 
     /**
@@ -765,18 +425,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribePrefetchTasksResponse DescribePrefetchTasks(DescribePrefetchTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePrefetchTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePrefetchTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePrefetchTasks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePrefetchTasks", DescribePrefetchTasksResponse.class);
     }
 
     /**
@@ -786,18 +436,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribePurgeTasksResponse DescribePurgeTasks(DescribePurgeTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePurgeTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePurgeTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePurgeTasks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePurgeTasks", DescribePurgeTasksResponse.class);
     }
 
     /**
@@ -807,18 +447,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRules", DescribeRulesResponse.class);
     }
 
     /**
@@ -828,18 +458,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeRulesSettingResponse DescribeRulesSetting(DescribeRulesSettingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRulesSettingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRulesSettingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRulesSetting");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRulesSetting", DescribeRulesSettingResponse.class);
     }
 
     /**
@@ -849,18 +469,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeTimingL4DataResponse DescribeTimingL4Data(DescribeTimingL4DataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimingL4DataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTimingL4DataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTimingL4Data");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTimingL4Data", DescribeTimingL4DataResponse.class);
     }
 
     /**
@@ -870,18 +480,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(DescribeTimingL7AnalysisDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimingL7AnalysisDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTimingL7AnalysisDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTimingL7AnalysisData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTimingL7AnalysisData", DescribeTimingL7AnalysisDataResponse.class);
     }
 
     /**
@@ -891,18 +491,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(DescribeTimingL7CacheDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTimingL7CacheDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTimingL7CacheDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTimingL7CacheData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTimingL7CacheData", DescribeTimingL7CacheDataResponse.class);
     }
 
     /**
@@ -912,18 +502,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(DescribeTopL7AnalysisDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopL7AnalysisDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopL7AnalysisDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopL7AnalysisData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTopL7AnalysisData", DescribeTopL7AnalysisDataResponse.class);
     }
 
     /**
@@ -933,18 +513,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeTopL7CacheDataResponse DescribeTopL7CacheData(DescribeTopL7CacheDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTopL7CacheDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTopL7CacheDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTopL7CacheData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTopL7CacheData", DescribeTopL7CacheDataResponse.class);
     }
 
     /**
@@ -954,18 +524,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeZoneSettingResponse DescribeZoneSetting(DescribeZoneSettingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeZoneSettingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeZoneSettingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeZoneSetting");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeZoneSetting", DescribeZoneSettingResponse.class);
     }
 
     /**
@@ -975,18 +535,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeZonesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeZones");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeZones", DescribeZonesResponse.class);
     }
 
     /**
@@ -996,18 +546,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DownloadL4LogsResponse DownloadL4Logs(DownloadL4LogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownloadL4LogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DownloadL4LogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DownloadL4Logs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DownloadL4Logs", DownloadL4LogsResponse.class);
     }
 
     /**
@@ -1017,18 +557,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public DownloadL7LogsResponse DownloadL7Logs(DownloadL7LogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownloadL7LogsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DownloadL7LogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DownloadL7Logs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DownloadL7Logs", DownloadL7LogsResponse.class);
     }
 
     /**
@@ -1038,18 +568,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public IdentifyZoneResponse IdentifyZone(IdentifyZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IdentifyZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<IdentifyZoneResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "IdentifyZone");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "IdentifyZone", IdentifyZoneResponse.class);
     }
 
     /**
@@ -1059,18 +579,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyAccelerationDomainResponse ModifyAccelerationDomain(ModifyAccelerationDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAccelerationDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAccelerationDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAccelerationDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAccelerationDomain", ModifyAccelerationDomainResponse.class);
     }
 
     /**
@@ -1080,18 +590,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyAccelerationDomainStatusesResponse ModifyAccelerationDomainStatuses(ModifyAccelerationDomainStatusesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAccelerationDomainStatusesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAccelerationDomainStatusesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAccelerationDomainStatuses");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAccelerationDomainStatuses", ModifyAccelerationDomainStatusesResponse.class);
     }
 
     /**
@@ -1101,18 +601,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyAliasDomainResponse ModifyAliasDomain(ModifyAliasDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAliasDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAliasDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAliasDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAliasDomain", ModifyAliasDomainResponse.class);
     }
 
     /**
@@ -1122,18 +612,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyAliasDomainStatusResponse ModifyAliasDomainStatus(ModifyAliasDomainStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAliasDomainStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAliasDomainStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAliasDomainStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAliasDomainStatus", ModifyAliasDomainStatusResponse.class);
     }
 
     /**
@@ -1143,18 +623,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationProxyResponse ModifyApplicationProxy(ModifyApplicationProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApplicationProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyApplicationProxy", ModifyApplicationProxyResponse.class);
     }
 
     /**
@@ -1164,18 +634,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationProxyRuleResponse ModifyApplicationProxyRule(ModifyApplicationProxyRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationProxyRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApplicationProxyRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyApplicationProxyRule", ModifyApplicationProxyRuleResponse.class);
     }
 
     /**
@@ -1185,18 +645,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationProxyRuleStatusResponse ModifyApplicationProxyRuleStatus(ModifyApplicationProxyRuleStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationProxyRuleStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyRuleStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApplicationProxyRuleStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyApplicationProxyRuleStatus", ModifyApplicationProxyRuleStatusResponse.class);
     }
 
     /**
@@ -1206,18 +656,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(ModifyApplicationProxyStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApplicationProxyStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApplicationProxyStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyApplicationProxyStatus", ModifyApplicationProxyStatusResponse.class);
     }
 
     /**
@@ -1229,18 +669,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyHostsCertificateResponse ModifyHostsCertificate(ModifyHostsCertificateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyHostsCertificateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyHostsCertificateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyHostsCertificate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyHostsCertificate", ModifyHostsCertificateResponse.class);
     }
 
     /**
@@ -1250,18 +680,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRuleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyRule", ModifyRuleResponse.class);
     }
 
     /**
@@ -1271,18 +691,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifySecurityIPGroupResponse ModifySecurityIPGroup(ModifySecurityIPGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySecurityIPGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifySecurityIPGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySecurityIPGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifySecurityIPGroup", ModifySecurityIPGroupResponse.class);
     }
 
     /**
@@ -1292,18 +702,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifySecurityPolicyResponse ModifySecurityPolicy(ModifySecurityPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySecurityPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifySecurityPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySecurityPolicy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifySecurityPolicy", ModifySecurityPolicyResponse.class);
     }
 
     /**
@@ -1313,18 +713,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyZoneResponse ModifyZone(ModifyZoneRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyZoneResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyZoneResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyZone");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyZone", ModifyZoneResponse.class);
     }
 
     /**
@@ -1334,18 +724,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyZoneSettingResponse ModifyZoneSetting(ModifyZoneSettingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyZoneSettingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyZoneSettingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyZoneSetting");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyZoneSetting", ModifyZoneSettingResponse.class);
     }
 
     /**
@@ -1355,18 +735,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyZoneStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyZoneStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyZoneStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
     }
 
     /**
@@ -1378,18 +748,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
      * @throws TencentCloudSDKException
      */
     public VerifyOwnershipResponse VerifyOwnership(VerifyOwnershipRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyOwnershipResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<VerifyOwnershipResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyOwnership");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "VerifyOwnership", VerifyOwnershipResponse.class);
     }
 
 }

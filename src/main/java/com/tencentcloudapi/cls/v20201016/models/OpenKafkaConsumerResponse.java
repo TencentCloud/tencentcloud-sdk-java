@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenKafkaConsumerResponse extends AbstractModel{
+public class OpenKafkaConsumerResponse extends AbstractModel {
 
     /**
     * KafkaConsumer 消费时使用的Topic参数

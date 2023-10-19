@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySecurityGroupSequenceRulesResponse extends AbstractModel{
+public class ModifySecurityGroupSequenceRulesResponse extends AbstractModel {
 
     /**
     * 状态值，0：修改成功，非0：修改失败

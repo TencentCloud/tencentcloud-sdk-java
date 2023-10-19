@@ -16,11 +16,12 @@
 package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeJobSavepointRequest extends AbstractModel{
+public class DescribeJobSavepointRequest extends AbstractModel {
 
     /**
     * 作业 SerialId

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PreviewKafkaRechargeRequest extends AbstractModel{
+public class PreviewKafkaRechargeRequest extends AbstractModel {
 
     /**
     * 预览类型，1:源数据预览，2:导出结果预览

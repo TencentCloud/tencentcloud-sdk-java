@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyWebPageProtectSettingRequest extends AbstractModel{
+public class ModifyWebPageProtectSettingRequest extends AbstractModel {
 
     /**
     * 需要操作的类型1 目录名称 2 防护文件类型

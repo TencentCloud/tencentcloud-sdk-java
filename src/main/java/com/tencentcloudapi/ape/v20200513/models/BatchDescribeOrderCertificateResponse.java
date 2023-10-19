@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ape.v20200513.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchDescribeOrderCertificateResponse extends AbstractModel{
+public class BatchDescribeOrderCertificateResponse extends AbstractModel {
 
     /**
     * 授权书的下载地址

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20230321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StorageOption extends AbstractModel{
+public class StorageOption extends AbstractModel {
 
     /**
     * 集群挂载CFS文件系统选项。

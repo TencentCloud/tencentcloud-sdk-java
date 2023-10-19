@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tchd.v20230306.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEventsResponse extends AbstractModel{
+public class DescribeEventsResponse extends AbstractModel {
 
     /**
     * 事件详情列表

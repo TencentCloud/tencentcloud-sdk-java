@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateSignedVideoURLResponse extends AbstractModel{
+public class GenerateSignedVideoURLResponse extends AbstractModel {
 
     /**
     * 视频防盗链播放URL

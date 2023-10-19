@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20201215.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAIModelChannelResponse extends AbstractModel{
+public class DescribeAIModelChannelResponse extends AbstractModel {
 
     /**
     * 推送类型。ckafka：消息队列；forward：http/https推送

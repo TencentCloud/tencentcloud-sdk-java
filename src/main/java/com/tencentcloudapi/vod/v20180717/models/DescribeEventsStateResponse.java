@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEventsStateResponse extends AbstractModel{
+public class DescribeEventsStateResponse extends AbstractModel {
 
     /**
     * 待进行拉取的事件通知数，为近似值，约5秒延迟。

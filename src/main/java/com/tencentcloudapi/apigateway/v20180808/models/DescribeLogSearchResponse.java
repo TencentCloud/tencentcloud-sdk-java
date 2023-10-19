@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogSearchResponse extends AbstractModel{
+public class DescribeLogSearchResponse extends AbstractModel {
 
     /**
     * 获取更多检索结果的游标，值为""表示无后续结果

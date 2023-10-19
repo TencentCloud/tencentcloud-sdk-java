@@ -16,11 +16,12 @@
 package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class JobGraph extends AbstractModel{
+public class JobGraph extends AbstractModel {
 
     /**
     * 运行图的点集合

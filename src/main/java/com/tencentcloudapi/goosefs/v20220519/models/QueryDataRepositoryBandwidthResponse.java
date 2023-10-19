@@ -16,11 +16,12 @@
 package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryDataRepositoryBandwidthResponse extends AbstractModel{
+public class QueryDataRepositoryBandwidthResponse extends AbstractModel {
 
     /**
     * 数据流动带宽, 单位MB/s

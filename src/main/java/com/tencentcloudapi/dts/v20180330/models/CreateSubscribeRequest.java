@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20180330.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSubscribeRequest extends AbstractModel{
+public class CreateSubscribeRequest extends AbstractModel {
 
     /**
     * 订阅的数据库类型，目前支持的有 mysql

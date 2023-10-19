@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyL4BackendProbePortRequest extends AbstractModel{
+public class ModifyL4BackendProbePortRequest extends AbstractModel {
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。

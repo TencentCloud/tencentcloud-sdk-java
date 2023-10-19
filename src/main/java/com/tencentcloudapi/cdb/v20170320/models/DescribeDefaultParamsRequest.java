@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDefaultParamsRequest extends AbstractModel{
+public class DescribeDefaultParamsRequest extends AbstractModel {
 
     /**
     * 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCCAlarmThresholdRequest extends AbstractModel{
+public class ModifyCCAlarmThresholdRequest extends AbstractModel {
 
     /**
     * 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示高防包；bgp-multip表示多ip高防包；net表示高防IP专业版）

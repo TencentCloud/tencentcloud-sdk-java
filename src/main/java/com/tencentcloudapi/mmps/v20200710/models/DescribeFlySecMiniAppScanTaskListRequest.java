@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mmps.v20200710.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlySecMiniAppScanTaskListRequest extends AbstractModel{
+public class DescribeFlySecMiniAppScanTaskListRequest extends AbstractModel {
 
     /**
     * 诊断方式 1:基础诊断，2:深度诊断

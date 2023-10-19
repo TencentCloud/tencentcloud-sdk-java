@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AdvancedAuthenticationTypeE extends AbstractModel{
+public class AdvancedAuthenticationTypeE extends AbstractModel {
 
     /**
     * 用于计算签名的密钥，只允许字母和数字，长度6-32字节。

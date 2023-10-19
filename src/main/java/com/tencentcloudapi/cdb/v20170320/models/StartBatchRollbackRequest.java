@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartBatchRollbackRequest extends AbstractModel{
+public class StartBatchRollbackRequest extends AbstractModel {
 
     /**
     * 用于回档的实例详情信息。

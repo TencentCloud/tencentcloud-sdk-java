@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tms.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Device extends AbstractModel{
+public class Device extends AbstractModel {
 
     /**
     * 该字段表示业务用户对应设备的IP地址。<br>

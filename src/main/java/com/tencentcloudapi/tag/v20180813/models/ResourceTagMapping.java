@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceTagMapping extends AbstractModel{
+public class ResourceTagMapping extends AbstractModel {
 
     /**
     * 资源六段式。腾讯云使用资源六段式描述一个资源。

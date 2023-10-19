@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeK8sApiAbnormalSummaryResponse extends AbstractModel{
+public class DescribeK8sApiAbnormalSummaryResponse extends AbstractModel {
 
     /**
     * 待处理事件个数

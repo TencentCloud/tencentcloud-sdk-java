@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckDataEngineConfigPairsValidityResponse extends AbstractModel{
+public class CheckDataEngineConfigPairsValidityResponse extends AbstractModel {
 
     /**
     * 参数有效性：ture:有效，false:至少存在一个无效参数；

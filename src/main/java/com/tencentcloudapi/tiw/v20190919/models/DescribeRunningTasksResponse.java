@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRunningTasksResponse extends AbstractModel{
+public class DescribeRunningTasksResponse extends AbstractModel {
 
     /**
     * 当前正在执行中的任务总数

@@ -46,18 +46,8 @@ public class YunsouClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DataManipulationResponse DataManipulation(DataManipulationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DataManipulationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DataManipulationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DataManipulation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DataManipulation", DataManipulationResponse.class);
     }
 
     /**
@@ -68,18 +58,8 @@ public class YunsouClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DataSearchResponse DataSearch(DataSearchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DataSearchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DataSearchResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DataSearch");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DataSearch", DataSearchResponse.class);
     }
 
 }

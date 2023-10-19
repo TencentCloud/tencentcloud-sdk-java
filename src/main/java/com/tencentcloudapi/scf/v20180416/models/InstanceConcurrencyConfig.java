@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceConcurrencyConfig extends AbstractModel{
+public class InstanceConcurrencyConfig extends AbstractModel {
 
     /**
     * 是否开启智能动态并发。'FALSE'时是静态并发。''时取消多并发配置。

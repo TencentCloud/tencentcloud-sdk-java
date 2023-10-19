@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchUpdateShadow extends AbstractModel{
+public class BatchUpdateShadow extends AbstractModel {
 
     /**
     * 设备影子的期望状态，格式为 Json 对象序列化之后的字符串

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
+public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
     * 实例或只读组要绑定的安全组列表。

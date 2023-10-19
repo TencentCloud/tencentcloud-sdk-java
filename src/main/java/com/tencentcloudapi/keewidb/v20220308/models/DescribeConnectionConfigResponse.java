@@ -16,11 +16,12 @@
 package com.tencentcloudapi.keewidb.v20220308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeConnectionConfigResponse extends AbstractModel{
+public class DescribeConnectionConfigResponse extends AbstractModel {
 
     /**
     * 单分片入流量带宽限制，单位：MB。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaTranscodeItem extends AbstractModel{
+public class MediaTranscodeItem extends AbstractModel {
 
     /**
     * 转码后文件的目标存储。

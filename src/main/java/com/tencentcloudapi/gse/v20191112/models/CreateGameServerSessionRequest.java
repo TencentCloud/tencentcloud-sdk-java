@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateGameServerSessionRequest extends AbstractModel{
+public class CreateGameServerSessionRequest extends AbstractModel {
 
     /**
     * 最大玩家数量，最小值不小于0

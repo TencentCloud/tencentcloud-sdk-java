@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyWordSampleRequest extends AbstractModel{
+public class ModifyWordSampleRequest extends AbstractModel {
 
     /**
     * 关键词，长度限制：128 个字符。

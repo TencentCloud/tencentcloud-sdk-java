@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmvpc.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHostedInterfacesResponse extends AbstractModel{
+public class DeleteHostedInterfacesResponse extends AbstractModel {
 
     /**
     * 异步任务ID

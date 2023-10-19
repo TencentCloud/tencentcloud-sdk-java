@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceTokenRequest extends AbstractModel{
+public class ModifyInstanceTokenRequest extends AbstractModel {
 
     /**
     * 实例长期访问凭证 ID

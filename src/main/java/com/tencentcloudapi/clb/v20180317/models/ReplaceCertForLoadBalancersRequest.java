@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplaceCertForLoadBalancersRequest extends AbstractModel{
+public class ReplaceCertForLoadBalancersRequest extends AbstractModel {
 
     /**
     * 需要被替换的证书的ID，可以是服务端证书或客户端证书

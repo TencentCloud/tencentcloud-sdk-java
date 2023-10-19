@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUnfinishRefreshTaskResponse extends AbstractModel{
+public class DescribeUnfinishRefreshTaskResponse extends AbstractModel {
 
     /**
     * 返回最近的一次任务ID

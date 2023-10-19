@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceMemInfo extends AbstractModel{
+public class DeviceMemInfo extends AbstractModel {
 
     /**
     * 总内存大小。free命令中Mem:一行total的值,单位：KB

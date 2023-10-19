@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryDealerInfoListResponse extends AbstractModel{
+public class QueryDealerInfoListResponse extends AbstractModel {
 
     /**
     * 经销商信息列表

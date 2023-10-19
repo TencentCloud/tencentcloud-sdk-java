@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LabelResult extends AbstractModel{
+public class LabelResult extends AbstractModel {
 
     /**
     * 该字段用于返回模型识别出的场景结果，如广告、色情、有害内容等场景。

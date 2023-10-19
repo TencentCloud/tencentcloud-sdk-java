@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenBankGoodsInfo extends AbstractModel{
+public class OpenBankGoodsInfo extends AbstractModel {
 
     /**
     * 商品标题。默认值“商品支付”。

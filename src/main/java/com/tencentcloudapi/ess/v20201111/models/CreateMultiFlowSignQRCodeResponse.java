@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMultiFlowSignQRCodeResponse extends AbstractModel{
+public class CreateMultiFlowSignQRCodeResponse extends AbstractModel {
 
     /**
     * 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。

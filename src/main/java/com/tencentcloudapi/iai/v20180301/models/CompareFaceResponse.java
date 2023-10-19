@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CompareFaceResponse extends AbstractModel{
+public class CompareFaceResponse extends AbstractModel {
 
     /**
     * 两张图片中人脸的相似度分数。

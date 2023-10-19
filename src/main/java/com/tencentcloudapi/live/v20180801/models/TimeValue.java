@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimeValue extends AbstractModel{
+public class TimeValue extends AbstractModel {
 
     /**
     * UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。

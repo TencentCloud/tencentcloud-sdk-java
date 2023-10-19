@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopDataResponse extends AbstractModel{
+public class DescribeTopDataResponse extends AbstractModel {
 
     /**
     * 各个资源的Top 访问数据详情。

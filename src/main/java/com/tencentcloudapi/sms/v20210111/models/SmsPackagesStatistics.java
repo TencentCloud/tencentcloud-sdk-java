@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20210111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsPackagesStatistics extends AbstractModel{
+public class SmsPackagesStatistics extends AbstractModel {
 
     /**
     * 套餐包创建时间，UNIX 时间戳（单位：秒）。

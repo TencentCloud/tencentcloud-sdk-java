@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tbp.v20190627.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResponseMessage extends AbstractModel{
+public class ResponseMessage extends AbstractModel {
 
     /**
     * 消息组列表。

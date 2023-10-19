@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sts.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryApiKeyRequest extends AbstractModel{
+public class QueryApiKeyRequest extends AbstractModel {
 
     /**
     * 待查询的账号(不填默认查当前账号)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApproverInfo extends AbstractModel{
+public class ApproverInfo extends AbstractModel {
 
     /**
     * 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:

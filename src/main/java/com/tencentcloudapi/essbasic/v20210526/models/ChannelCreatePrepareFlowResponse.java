@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreatePrepareFlowResponse extends AbstractModel{
+public class ChannelCreatePrepareFlowResponse extends AbstractModel {
 
     /**
     * 预发起的合同链接， 可以直接点击进入进行合同发起

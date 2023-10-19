@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelVerifyPdfRequest extends AbstractModel{
+public class ChannelVerifyPdfRequest extends AbstractModel {
 
     /**
     * 合同流程ID，为32位字符串。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRecTaskResponse extends AbstractModel{
+public class CreateRecTaskResponse extends AbstractModel {
 
     /**
     * 录音文件识别的请求返回结果，包含结果查询需要的TaskId

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SwitchElasticModeRequest extends AbstractModel{
+public class SwitchElasticModeRequest extends AbstractModel {
 
     /**
     * 版本，只能是sparta-waf, clb-waf, cdn-waf

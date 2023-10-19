@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DspaDiscoveryLevelDetail extends AbstractModel{
+public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
     * 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复

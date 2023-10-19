@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurchaseConcern extends AbstractModel{
+public class PurchaseConcern extends AbstractModel {
 
     /**
     * 购车关注点code

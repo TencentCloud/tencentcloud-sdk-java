@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeHealthCodeOCRResponse extends AbstractModel{
+public class RecognizeHealthCodeOCRResponse extends AbstractModel {
 
     /**
     * 持码人姓名，如：王*（允许返回空值）

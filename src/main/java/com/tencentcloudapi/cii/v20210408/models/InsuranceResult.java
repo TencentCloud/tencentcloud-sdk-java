@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cii.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InsuranceResult extends AbstractModel{
+public class InsuranceResult extends AbstractModel {
 
     /**
     * 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)

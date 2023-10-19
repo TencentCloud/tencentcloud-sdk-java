@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAttendanceResultResponse extends AbstractModel{
+public class DescribeAttendanceResultResponse extends AbstractModel {
 
     /**
     * 缺失人员的ID列表(只针对请求中的libids字段)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVirusEventTendencyRequest extends AbstractModel{
+public class DescribeVirusEventTendencyRequest extends AbstractModel {
 
     /**
     * 趋势周期(默认为7天)

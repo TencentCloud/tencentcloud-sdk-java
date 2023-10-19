@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IntentionQuestion extends AbstractModel{
+public class IntentionQuestion extends AbstractModel {
 
     /**
     * 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。

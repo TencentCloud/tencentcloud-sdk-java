@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStrategyExistResponse extends AbstractModel{
+public class DescribeStrategyExistResponse extends AbstractModel {
 
     /**
     * 策略是否存在, 1是 0否

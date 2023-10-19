@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDeviceListRequest extends AbstractModel{
+public class GetDeviceListRequest extends AbstractModel {
 
     /**
     * 需要查看设备列表的产品ID, -1代表ProjectId来筛选

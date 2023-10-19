@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUsagePlanSecretIdsResponse extends AbstractModel{
+public class DescribeUsagePlanSecretIdsResponse extends AbstractModel {
 
     /**
     * 使用计划绑定的密钥列表。

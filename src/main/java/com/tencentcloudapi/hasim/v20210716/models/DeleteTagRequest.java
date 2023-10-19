@@ -16,11 +16,12 @@
 package com.tencentcloudapi.hasim.v20210716.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTagRequest extends AbstractModel{
+public class DeleteTagRequest extends AbstractModel {
 
     /**
     * 标签ID

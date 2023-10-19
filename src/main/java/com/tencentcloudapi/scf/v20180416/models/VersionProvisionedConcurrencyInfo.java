@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VersionProvisionedConcurrencyInfo extends AbstractModel{
+public class VersionProvisionedConcurrencyInfo extends AbstractModel {
 
     /**
     * 设置的预置并发数。

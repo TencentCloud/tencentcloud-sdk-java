@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGatewayData extends AbstractModel{
+public class DescribeGatewayData extends AbstractModel {
 
     /**
     * 网关索引ID，用于网关查询，更新，删除操作

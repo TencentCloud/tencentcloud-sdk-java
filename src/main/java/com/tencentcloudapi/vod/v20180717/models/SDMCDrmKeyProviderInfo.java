@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SDMCDrmKeyProviderInfo extends AbstractModel{
+public class SDMCDrmKeyProviderInfo extends AbstractModel {
 
     /**
     * 华曦达分配的用户 ID。最大长度为128个字符。

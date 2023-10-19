@@ -16,11 +16,12 @@
 package com.tencentcloudapi.soe.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeywordEvaluateRequest extends AbstractModel{
+public class KeywordEvaluateRequest extends AbstractModel {
 
     /**
     * 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式时无意义。

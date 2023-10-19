@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSyncJobRequest extends AbstractModel{
+public class CreateSyncJobRequest extends AbstractModel {
 
     /**
     * 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)

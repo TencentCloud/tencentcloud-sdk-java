@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneInfo extends AbstractModel{
+public class ZoneInfo extends AbstractModel {
 
     /**
     * 可用区数值形式的唯一ID，如：100001

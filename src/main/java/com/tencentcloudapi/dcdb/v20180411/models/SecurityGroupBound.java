@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityGroupBound extends AbstractModel{
+public class SecurityGroupBound extends AbstractModel {
 
     /**
     * 来源 IP 或 IP 段，例如192.168.0.0/16

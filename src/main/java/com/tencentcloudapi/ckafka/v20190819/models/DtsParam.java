@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DtsParam extends AbstractModel{
+public class DtsParam extends AbstractModel {
 
     /**
     * Dts实例Id

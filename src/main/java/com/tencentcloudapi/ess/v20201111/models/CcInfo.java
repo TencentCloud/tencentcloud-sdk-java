@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CcInfo extends AbstractModel{
+public class CcInfo extends AbstractModel {
 
     /**
     * 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。

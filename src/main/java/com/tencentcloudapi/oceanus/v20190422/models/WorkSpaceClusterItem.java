@@ -16,11 +16,12 @@
 package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WorkSpaceClusterItem extends AbstractModel{
+public class WorkSpaceClusterItem extends AbstractModel {
 
     /**
     * 集群 ID

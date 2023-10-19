@@ -16,11 +16,12 @@
 package com.tencentcloudapi.omics.v20221128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableRow extends AbstractModel{
+public class TableRow extends AbstractModel {
 
     /**
     * 表格行UUID。

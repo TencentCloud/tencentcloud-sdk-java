@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trp.v20210515.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCodePackStatusResponse extends AbstractModel{
+public class DescribeCodePackStatusResponse extends AbstractModel {
 
     /**
     * 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败

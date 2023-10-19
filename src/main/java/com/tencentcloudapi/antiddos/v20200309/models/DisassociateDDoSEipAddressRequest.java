@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisassociateDDoSEipAddressRequest extends AbstractModel{
+public class DisassociateDDoSEipAddressRequest extends AbstractModel {
 
     /**
     * 资源实例ID，实例ID形如：bgpip-0000011x。只能填写高防IP实例。

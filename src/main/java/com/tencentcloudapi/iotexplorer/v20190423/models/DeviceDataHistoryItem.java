@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceDataHistoryItem extends AbstractModel{
+public class DeviceDataHistoryItem extends AbstractModel {
 
     /**
     * 时间点，毫秒时间戳

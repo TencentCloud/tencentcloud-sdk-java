@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadCertificateResponse extends AbstractModel{
+public class DownloadCertificateResponse extends AbstractModel {
 
     /**
     * ZIP base64 编码内容，base64 解码后可保存为 ZIP 文件。

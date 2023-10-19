@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUsersRequest extends AbstractModel{
+public class DeleteUsersRequest extends AbstractModel {
 
     /**
     * 被删除用户的ID列表。DeleteIdList 和 DeleteNameList 需至少一个不为空；都不为空时优先使用 DeleteNameList。

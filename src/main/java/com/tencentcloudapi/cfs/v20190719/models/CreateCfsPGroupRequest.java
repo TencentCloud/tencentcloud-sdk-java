@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCfsPGroupRequest extends AbstractModel{
+public class CreateCfsPGroupRequest extends AbstractModel {
 
     /**
     * 权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线

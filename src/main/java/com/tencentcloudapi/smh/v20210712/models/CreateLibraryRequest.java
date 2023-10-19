@@ -16,11 +16,12 @@
 package com.tencentcloudapi.smh.v20210712.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLibraryRequest extends AbstractModel{
+public class CreateLibraryRequest extends AbstractModel {
 
     /**
     * 媒体库名称，最多 50 个字符

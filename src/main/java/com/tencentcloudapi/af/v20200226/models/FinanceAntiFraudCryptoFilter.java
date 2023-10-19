@@ -16,11 +16,12 @@
 package com.tencentcloudapi.af.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FinanceAntiFraudCryptoFilter extends AbstractModel{
+public class FinanceAntiFraudCryptoFilter extends AbstractModel {
 
     /**
     * 值1定义：AES加密方式[加密模式ECB；填充格式pkcs7padding；秘钥16字节即128位

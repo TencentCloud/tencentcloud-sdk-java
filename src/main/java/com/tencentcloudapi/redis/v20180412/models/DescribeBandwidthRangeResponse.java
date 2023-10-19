@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBandwidthRangeResponse extends AbstractModel{
+public class DescribeBandwidthRangeResponse extends AbstractModel {
 
     /**
     * 标准带宽。指购买实例时，系统为每个节点分配的带宽。

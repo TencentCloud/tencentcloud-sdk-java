@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCheckComponentResponse extends AbstractModel{
+public class CreateCheckComponentResponse extends AbstractModel {
 
     /**
     * "InstallSucc"表示安装成功，"InstallFailed"表示安装失败

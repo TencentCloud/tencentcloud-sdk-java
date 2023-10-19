@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDealResponse extends AbstractModel{
+public class CreateDealResponse extends AbstractModel {
 
     /**
     * 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单

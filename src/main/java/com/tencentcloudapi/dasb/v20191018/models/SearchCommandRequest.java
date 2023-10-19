@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchCommandRequest extends AbstractModel{
+public class SearchCommandRequest extends AbstractModel {
 
     /**
     * 搜索区间的开始时间

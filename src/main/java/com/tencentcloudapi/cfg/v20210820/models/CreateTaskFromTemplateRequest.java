@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTaskFromTemplateRequest extends AbstractModel{
+public class CreateTaskFromTemplateRequest extends AbstractModel {
 
     /**
     * 从经验库中查询到的经验模板ID

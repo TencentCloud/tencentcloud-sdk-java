@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetProvisionedConcurrencyConfigRequest extends AbstractModel{
+public class GetProvisionedConcurrencyConfigRequest extends AbstractModel {
 
     /**
     * 需要获取预置并发详情的函数名称。

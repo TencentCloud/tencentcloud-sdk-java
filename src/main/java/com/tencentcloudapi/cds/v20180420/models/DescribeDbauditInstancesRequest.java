@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cds.v20180420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDbauditInstancesRequest extends AbstractModel{
+public class DescribeDbauditInstancesRequest extends AbstractModel {
 
     /**
     * 查询条件地域

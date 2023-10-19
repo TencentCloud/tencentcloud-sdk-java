@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ame.v20190916.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchDescribeKTVMusicDetailsRequest extends AbstractModel{
+public class BatchDescribeKTVMusicDetailsRequest extends AbstractModel {
 
     /**
     * 歌曲Id列表，注：列表最大长度为50

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetBatchProductionsListResponse extends AbstractModel{
+public class GetBatchProductionsListResponse extends AbstractModel {
 
     /**
     * 返回详情信息。

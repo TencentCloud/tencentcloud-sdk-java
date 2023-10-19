@@ -45,18 +45,8 @@ public class HaboClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStatusResponse DescribeStatus(DescribeStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeStatus", DescribeStatusResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class HaboClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StartAnalyseResponse StartAnalyse(StartAnalyseRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartAnalyseResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartAnalyseResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartAnalyse");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "StartAnalyse", StartAnalyseResponse.class);
     }
 
 }

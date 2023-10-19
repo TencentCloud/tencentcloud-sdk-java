@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPornTaskOutput extends AbstractModel{
+public class AiReviewPornTaskOutput extends AbstractModel {
 
     /**
     * 视频鉴别涉及令人反感的信息的评分，分值为0到100。

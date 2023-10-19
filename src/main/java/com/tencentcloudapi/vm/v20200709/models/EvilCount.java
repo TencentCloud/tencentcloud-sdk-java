@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20200709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EvilCount extends AbstractModel{
+public class EvilCount extends AbstractModel {
 
     /**
     * 违规类型：

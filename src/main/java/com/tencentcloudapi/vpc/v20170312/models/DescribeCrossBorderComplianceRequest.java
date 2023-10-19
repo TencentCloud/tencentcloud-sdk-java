@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCrossBorderComplianceRequest extends AbstractModel{
+public class DescribeCrossBorderComplianceRequest extends AbstractModel {
 
     /**
     * （精确匹配）服务商，可选值：`UNICOM`。

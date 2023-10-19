@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vms.v20200902.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendCodeVoiceRequest extends AbstractModel{
+public class SendCodeVoiceRequest extends AbstractModel {
 
     /**
     * 验证码，仅支持填写数字，实际播报语音时，会自动在数字前补充语音文本"您的验证码是"。

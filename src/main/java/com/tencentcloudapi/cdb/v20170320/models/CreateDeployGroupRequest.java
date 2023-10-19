@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDeployGroupRequest extends AbstractModel{
+public class CreateDeployGroupRequest extends AbstractModel {
 
     /**
     * 置放群组名称，最长不能超过60个字符。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckCnameStatusResponse extends AbstractModel{
+public class CheckCnameStatusResponse extends AbstractModel {
 
     /**
     * 加速域名 CNAME 状态信息列表。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssociateInstancesKeyPairsRequest extends AbstractModel{
+public class AssociateInstancesKeyPairsRequest extends AbstractModel {
 
     /**
     * 密钥对 ID 列表。每次请求批量密钥对的上限为 100。

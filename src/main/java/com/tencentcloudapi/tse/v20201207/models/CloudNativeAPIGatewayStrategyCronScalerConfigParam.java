@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends AbstractModel{
+public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends AbstractModel {
 
     /**
     * 定时伸缩周期

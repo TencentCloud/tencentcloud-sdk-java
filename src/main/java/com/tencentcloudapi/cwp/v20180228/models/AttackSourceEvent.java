@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttackSourceEvent extends AbstractModel{
+public class AttackSourceEvent extends AbstractModel {
 
     /**
     * 事件类型：0：文件查杀，1：异常登录， 2：密码破解，3：恶意请求，4：高危命令

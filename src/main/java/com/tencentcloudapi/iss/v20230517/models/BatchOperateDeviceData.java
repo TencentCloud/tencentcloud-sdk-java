@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchOperateDeviceData extends AbstractModel{
+public class BatchOperateDeviceData extends AbstractModel {
 
     /**
     * 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）

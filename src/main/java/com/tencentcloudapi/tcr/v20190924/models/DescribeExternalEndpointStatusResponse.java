@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExternalEndpointStatusResponse extends AbstractModel{
+public class DescribeExternalEndpointStatusResponse extends AbstractModel {
 
     /**
     * 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）

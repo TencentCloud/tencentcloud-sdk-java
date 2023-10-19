@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommonMetrics extends AbstractModel{
+public class CommonMetrics extends AbstractModel {
 
     /**
     * 创建任务时长，单位：ms

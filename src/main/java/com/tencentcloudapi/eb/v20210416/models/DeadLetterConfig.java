@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eb.v20210416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeadLetterConfig extends AbstractModel{
+public class DeadLetterConfig extends AbstractModel {
 
     /**
     * 支持dlq、丢弃、忽略错误继续传递三种模式, 分别对应: DLQ,DROP,IGNORE_ERROR

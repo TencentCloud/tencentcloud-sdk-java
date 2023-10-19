@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitFullBodyClassTaskResponse extends AbstractModel{
+public class SubmitFullBodyClassTaskResponse extends AbstractModel {
 
     /**
     * 图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 TeacherBodyMovement、TimeInfo

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitConversationTaskResponse extends AbstractModel{
+public class SubmitConversationTaskResponse extends AbstractModel {
 
     /**
     * 	查询结果时指名的jobid。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。

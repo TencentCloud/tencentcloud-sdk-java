@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AdvancedRetentionPolicy extends AbstractModel{
+public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
     * 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]

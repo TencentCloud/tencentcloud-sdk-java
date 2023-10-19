@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCustomerProfileListRequest extends AbstractModel{
+public class QueryCustomerProfileListRequest extends AbstractModel {
 
     /**
     * 分页，预期请求的数据量，取值范围 1 ~ 1000

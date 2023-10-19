@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudaudit.v20190319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEventsRequest extends AbstractModel{
+public class DescribeEventsRequest extends AbstractModel {
 
     /**
     * 起始时间戳（单位秒，不超过当前时间 90 天）

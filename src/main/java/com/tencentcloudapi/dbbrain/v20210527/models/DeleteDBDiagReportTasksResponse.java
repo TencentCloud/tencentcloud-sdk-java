@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDBDiagReportTasksResponse extends AbstractModel{
+public class DeleteDBDiagReportTasksResponse extends AbstractModel {
 
     /**
     * 任务删除状态, 0-删除成功

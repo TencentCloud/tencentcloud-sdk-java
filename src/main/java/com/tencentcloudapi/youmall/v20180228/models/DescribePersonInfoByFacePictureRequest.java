@@ -16,11 +16,12 @@
 package com.tencentcloudapi.youmall.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonInfoByFacePictureRequest extends AbstractModel{
+public class DescribePersonInfoByFacePictureRequest extends AbstractModel {
 
     /**
     * 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取

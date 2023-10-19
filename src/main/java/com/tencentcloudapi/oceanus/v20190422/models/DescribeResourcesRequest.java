@@ -16,11 +16,12 @@
 package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourcesRequest extends AbstractModel{
+public class DescribeResourcesRequest extends AbstractModel {
 
     /**
     * 需要查询的资源ID数组，数量不超过100个。如果填写了该参数则忽略Filters参数。

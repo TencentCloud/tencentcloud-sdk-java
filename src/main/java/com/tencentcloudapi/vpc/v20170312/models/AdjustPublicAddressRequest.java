@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AdjustPublicAddressRequest extends AbstractModel{
+public class AdjustPublicAddressRequest extends AbstractModel {
 
     /**
     * 标识CVM实例的唯一 ID。CVM 唯一 ID 形如：`ins-11112222`。

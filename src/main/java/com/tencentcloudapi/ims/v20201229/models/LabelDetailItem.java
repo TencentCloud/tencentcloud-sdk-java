@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LabelDetailItem extends AbstractModel{
+public class LabelDetailItem extends AbstractModel {
 
     /**
     * 该字段用于返回识别对象的ID以方便识别和区分。

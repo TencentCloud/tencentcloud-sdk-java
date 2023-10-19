@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResultListItem extends AbstractModel{
+public class ResultListItem extends AbstractModel {
 
     /**
     * banner广告软件标记，分别为-1-不确定，0-否，1-是

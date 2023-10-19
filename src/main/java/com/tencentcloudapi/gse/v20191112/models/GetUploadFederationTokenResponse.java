@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetUploadFederationTokenResponse extends AbstractModel{
+public class GetUploadFederationTokenResponse extends AbstractModel {
 
     /**
     * 临时证书的过期时间，Unix 时间戳，精确到秒

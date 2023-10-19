@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GuetzliAdapter extends AbstractModel{
+public class GuetzliAdapter extends AbstractModel {
 
     /**
     * 图片优化-GuetzliAdapter配置开关，取值有：

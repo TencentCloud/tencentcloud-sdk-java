@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMultiDeviceRequest extends AbstractModel{
+public class CreateMultiDeviceRequest extends AbstractModel {
 
     /**
     * 产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID

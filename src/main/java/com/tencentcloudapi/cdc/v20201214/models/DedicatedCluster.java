@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdc.v20201214.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DedicatedCluster extends AbstractModel{
+public class DedicatedCluster extends AbstractModel {
 
     /**
     * 专用集群id。如"cluster-xxxxx"。

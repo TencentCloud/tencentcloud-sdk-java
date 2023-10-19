@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceVncUrlRequest extends AbstractModel{
+public class DescribeInstanceVncUrlRequest extends AbstractModel {
 
     /**
     * 一个操作的实例ID。可通过DescribeInstances API返回值中的InstanceId获取。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetParametersForImportResponse extends AbstractModel{
+public class GetParametersForImportResponse extends AbstractModel {
 
     /**
     * CMK的唯一标识，用于指定目标导入密钥材料的CMK。

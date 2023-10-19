@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpperBodyClothColor extends AbstractModel{
+public class UpperBodyClothColor extends AbstractModel {
 
     /**
     * 上衣颜色信息，返回值为以下集合中的一个 {红色系, 黄色系, 绿色系, 蓝色系, 黑色系, 灰白色系。

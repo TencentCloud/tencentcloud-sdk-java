@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLicenseOrderRequest extends AbstractModel{
+public class CreateLicenseOrderRequest extends AbstractModel {
 
     /**
     * 标签数组, 空则表示不需要绑定标签

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel{
+public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel {
 
     /**
     * 文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。

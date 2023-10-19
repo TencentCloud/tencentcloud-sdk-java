@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanVulSettingRequest extends AbstractModel{
+public class ScanVulSettingRequest extends AbstractModel {
 
     /**
     * 定期检测间隔时间（天）

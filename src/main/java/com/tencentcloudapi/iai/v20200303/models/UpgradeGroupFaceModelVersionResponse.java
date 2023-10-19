@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeGroupFaceModelVersionResponse extends AbstractModel{
+public class UpgradeGroupFaceModelVersionResponse extends AbstractModel {
 
     /**
     * 升级任务ID，用于查询、获取升级的进度和结果。

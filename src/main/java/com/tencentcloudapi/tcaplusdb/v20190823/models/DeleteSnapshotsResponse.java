@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSnapshotsResponse extends AbstractModel{
+public class DeleteSnapshotsResponse extends AbstractModel {
 
     /**
     * 批量删除的快照数量

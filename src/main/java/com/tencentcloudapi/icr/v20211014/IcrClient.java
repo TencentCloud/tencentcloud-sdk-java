@@ -45,18 +45,8 @@ public class IcrClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetIndustryV1HomeMembersResponse GetIndustryV1HomeMembers(GetIndustryV1HomeMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetIndustryV1HomeMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetIndustryV1HomeMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetIndustryV1HomeMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetIndustryV1HomeMembers", GetIndustryV1HomeMembersResponse.class);
     }
 
 }

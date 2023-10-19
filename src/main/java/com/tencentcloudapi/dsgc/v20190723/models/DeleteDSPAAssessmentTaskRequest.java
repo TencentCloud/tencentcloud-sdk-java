@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDSPAAssessmentTaskRequest extends AbstractModel{
+public class DeleteDSPAAssessmentTaskRequest extends AbstractModel {
 
     /**
     * DSPA实例Id，格式“dspa-xxxxxxxx”

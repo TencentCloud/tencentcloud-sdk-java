@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourcesRequest extends AbstractModel{
+public class DescribeResourcesRequest extends AbstractModel {
 
     /**
     * 返回可用区资源列表数目，默认20，最大值100。

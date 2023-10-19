@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportJavaMemShellsResponse extends AbstractModel{
+public class ExportJavaMemShellsResponse extends AbstractModel {
 
     /**
     * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址

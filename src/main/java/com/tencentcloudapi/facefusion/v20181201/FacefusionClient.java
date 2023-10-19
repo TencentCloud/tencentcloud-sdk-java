@@ -45,18 +45,8 @@ public class FacefusionClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeMaterialListResponse DescribeMaterialList(DescribeMaterialListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMaterialListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMaterialListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMaterialList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeMaterialList", DescribeMaterialListResponse.class);
     }
 
     /**
@@ -68,18 +58,8 @@ public class FacefusionClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public FaceFusionResponse FaceFusion(FaceFusionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<FaceFusionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<FaceFusionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "FaceFusion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "FaceFusion", FaceFusionResponse.class);
     }
 
     /**
@@ -91,18 +71,8 @@ public class FacefusionClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public FaceFusionLiteResponse FaceFusionLite(FaceFusionLiteRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<FaceFusionLiteResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<FaceFusionLiteResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "FaceFusionLite");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "FaceFusionLite", FaceFusionLiteResponse.class);
     }
 
     /**
@@ -116,18 +86,8 @@ public class FacefusionClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public FuseFaceResponse FuseFace(FuseFaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<FuseFaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<FuseFaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "FuseFace");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "FuseFace", FuseFaceResponse.class);
     }
 
 }

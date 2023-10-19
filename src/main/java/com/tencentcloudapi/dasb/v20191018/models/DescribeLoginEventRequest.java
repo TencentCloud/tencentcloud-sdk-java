@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoginEventRequest extends AbstractModel{
+public class DescribeLoginEventRequest extends AbstractModel {
 
     /**
     * 用户名，如果不包含其他条件时对user_name or real_name两个字段模糊查询

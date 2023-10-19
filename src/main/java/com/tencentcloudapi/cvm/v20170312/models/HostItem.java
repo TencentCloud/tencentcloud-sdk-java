@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HostItem extends AbstractModel{
+public class HostItem extends AbstractModel {
 
     /**
     * 专用宿主机实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。

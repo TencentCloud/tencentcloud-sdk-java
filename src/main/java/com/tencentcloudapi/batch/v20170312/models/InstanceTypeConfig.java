@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceTypeConfig extends AbstractModel{
+public class InstanceTypeConfig extends AbstractModel {
 
     /**
     * 内存容量，单位：`GB`。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel{
+public class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel {
 
     /**
     * 是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。

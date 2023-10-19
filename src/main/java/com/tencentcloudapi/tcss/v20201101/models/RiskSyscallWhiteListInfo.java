@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RiskSyscallWhiteListInfo extends AbstractModel{
+public class RiskSyscallWhiteListInfo extends AbstractModel {
 
     /**
     * 镜像id数组，为空代表全部

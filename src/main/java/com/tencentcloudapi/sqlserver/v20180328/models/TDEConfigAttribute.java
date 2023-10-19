@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TDEConfigAttribute extends AbstractModel{
+public class TDEConfigAttribute extends AbstractModel {
 
     /**
     * 是否已开通TDE加密，enable-已开通，disable-未开通

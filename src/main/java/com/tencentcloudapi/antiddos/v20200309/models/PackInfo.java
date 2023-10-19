@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PackInfo extends AbstractModel{
+public class PackInfo extends AbstractModel {
 
     /**
     * 套餐包的类型，取值[

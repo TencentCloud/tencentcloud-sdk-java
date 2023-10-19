@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchClsLogResponse extends AbstractModel{
+public class SearchClsLogResponse extends AbstractModel {
 
     /**
     * 日志内容结果

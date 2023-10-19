@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskSegmentSegmentItem extends AbstractModel{
+public class AiRecognitionTaskSegmentSegmentItem extends AbstractModel {
 
     /**
     * 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。

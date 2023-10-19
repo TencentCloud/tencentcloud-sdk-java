@@ -16,11 +16,12 @@
 package com.tencentcloudapi.facefusion.v20181201.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMaterialListRequest extends AbstractModel{
+public class DescribeMaterialListRequest extends AbstractModel {
 
     /**
     * 活动Id

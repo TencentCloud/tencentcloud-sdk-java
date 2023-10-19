@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Result extends AbstractModel{
+public class Result extends AbstractModel {
 
     /**
     * 表示执行过程中的日志输出，异步调用返回为空

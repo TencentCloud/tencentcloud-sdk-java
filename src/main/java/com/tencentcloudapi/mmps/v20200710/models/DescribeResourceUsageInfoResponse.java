@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mmps.v20200710.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourceUsageInfoResponse extends AbstractModel{
+public class DescribeResourceUsageInfoResponse extends AbstractModel {
 
     /**
     * 返回值, 0:成功, 其他值请查看“返回值”定义

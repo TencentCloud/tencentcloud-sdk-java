@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CompareIdlFilesRequest extends AbstractModel{
+public class CompareIdlFilesRequest extends AbstractModel {
 
     /**
     * 待修改表格所在集群ID

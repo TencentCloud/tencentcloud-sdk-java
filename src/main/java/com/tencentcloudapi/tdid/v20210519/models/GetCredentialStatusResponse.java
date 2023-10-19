@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdid.v20210519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCredentialStatusResponse extends AbstractModel{
+public class GetCredentialStatusResponse extends AbstractModel {
 
     /**
     * 凭证状态信息

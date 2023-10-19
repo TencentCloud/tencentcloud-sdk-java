@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceInfo extends AbstractModel{
+public class ServiceInfo extends AbstractModel {
 
     /**
     * 服务版本，基础版basic，专业版professional，企业版enterprise。

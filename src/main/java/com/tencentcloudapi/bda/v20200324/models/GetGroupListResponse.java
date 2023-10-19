@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetGroupListResponse extends AbstractModel{
+public class GetGroupListResponse extends AbstractModel {
 
     /**
     * 返回的人体库信息。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Code extends AbstractModel{
+public class Code extends AbstractModel {
 
     /**
     * 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）

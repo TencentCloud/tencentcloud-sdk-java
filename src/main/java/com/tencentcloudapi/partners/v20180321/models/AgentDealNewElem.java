@@ -16,11 +16,12 @@
 package com.tencentcloudapi.partners.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentDealNewElem extends AbstractModel{
+public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 订单自增 ID【请勿依赖该字段作为唯一标识】

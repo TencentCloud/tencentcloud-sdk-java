@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralHandwritingOCRResponse extends AbstractModel{
+public class GeneralHandwritingOCRResponse extends AbstractModel {
 
     /**
     * 检测到的文本信息，具体内容请点击左侧链接。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEipRequest extends AbstractModel{
+public class CreateEipRequest extends AbstractModel {
 
     /**
     * 申请数量，默认为1, 最大 20

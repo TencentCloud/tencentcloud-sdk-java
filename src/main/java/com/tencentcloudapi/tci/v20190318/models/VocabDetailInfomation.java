@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VocabDetailInfomation extends AbstractModel{
+public class VocabDetailInfomation extends AbstractModel {
 
     /**
     * 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳

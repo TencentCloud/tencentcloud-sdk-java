@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunjing.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWeeklyReportInfoResponse extends AbstractModel{
+public class DescribeWeeklyReportInfoResponse extends AbstractModel {
 
     /**
     * 账号所属公司或个人名称。

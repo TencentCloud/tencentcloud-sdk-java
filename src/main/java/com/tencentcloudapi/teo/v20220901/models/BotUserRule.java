@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BotUserRule extends AbstractModel{
+public class BotUserRule extends AbstractModel {
 
     /**
     * 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。

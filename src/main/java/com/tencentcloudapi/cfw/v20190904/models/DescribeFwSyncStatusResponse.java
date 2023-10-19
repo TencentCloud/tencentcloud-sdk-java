@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFwSyncStatusResponse extends AbstractModel{
+public class DescribeFwSyncStatusResponse extends AbstractModel {
 
     /**
     * 同步状态：1，同步中；0，同步完成

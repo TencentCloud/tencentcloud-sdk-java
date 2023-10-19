@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateKeyPairRequest extends AbstractModel{
+public class CreateKeyPairRequest extends AbstractModel {
 
     /**
     * 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppCustomContent extends AbstractModel{
+public class AppCustomContent extends AbstractModel {
 
     /**
     * 场景参数，一个应用下可以设置多个不同场景。

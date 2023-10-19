@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicesBindInfoL4Listener extends AbstractModel{
+public class DevicesBindInfoL4Listener extends AbstractModel {
 
     /**
     * 七层监听器实例ID。

@@ -47,18 +47,8 @@ public class MgobeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ChangeRoomPlayerProfileResponse ChangeRoomPlayerProfile(ChangeRoomPlayerProfileRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ChangeRoomPlayerProfileResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ChangeRoomPlayerProfileResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ChangeRoomPlayerProfile");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ChangeRoomPlayerProfile", ChangeRoomPlayerProfileResponse.class);
     }
 
     /**
@@ -70,18 +60,8 @@ public class MgobeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ChangeRoomPlayerStatusResponse ChangeRoomPlayerStatus(ChangeRoomPlayerStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ChangeRoomPlayerStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ChangeRoomPlayerStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ChangeRoomPlayerStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ChangeRoomPlayerStatus", ChangeRoomPlayerStatusResponse.class);
     }
 
     /**
@@ -93,18 +73,8 @@ public class MgobeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePlayerResponse DescribePlayer(DescribePlayerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePlayerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePlayerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePlayer");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePlayer", DescribePlayerResponse.class);
     }
 
     /**
@@ -116,18 +86,8 @@ public class MgobeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRoomResponse DescribeRoom(DescribeRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRoom");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRoom", DescribeRoomResponse.class);
     }
 
     /**
@@ -139,18 +99,8 @@ public class MgobeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DismissRoomResponse DismissRoom(DismissRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DismissRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DismissRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DismissRoom");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DismissRoom", DismissRoomResponse.class);
     }
 
     /**
@@ -162,18 +112,8 @@ public class MgobeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyRoomResponse ModifyRoom(ModifyRoomRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRoomResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRoomResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRoom");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyRoom", ModifyRoomResponse.class);
     }
 
     /**
@@ -185,18 +125,8 @@ public class MgobeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RemoveRoomPlayerResponse RemoveRoomPlayer(RemoveRoomPlayerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RemoveRoomPlayerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RemoveRoomPlayerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveRoomPlayer");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RemoveRoomPlayer", RemoveRoomPlayerResponse.class);
     }
 
 }

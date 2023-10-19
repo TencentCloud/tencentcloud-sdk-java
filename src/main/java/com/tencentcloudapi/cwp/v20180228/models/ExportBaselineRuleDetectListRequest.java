@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportBaselineRuleDetectListRequest extends AbstractModel{
+public class ExportBaselineRuleDetectListRequest extends AbstractModel {
 
     /**
     * <li>RuleName - string - 是否必填：否 - 规则名称</i>

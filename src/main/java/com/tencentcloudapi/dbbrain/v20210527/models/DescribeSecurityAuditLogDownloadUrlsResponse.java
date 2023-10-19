@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityAuditLogDownloadUrlsResponse extends AbstractModel{
+public class DescribeSecurityAuditLogDownloadUrlsResponse extends AbstractModel {
 
     /**
     * 导出结果的COS链接列表。当结果集很大时，可能会切分为多个url下载。

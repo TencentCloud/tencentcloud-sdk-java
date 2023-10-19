@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Database extends AbstractModel{
+public class Database extends AbstractModel {
 
     /**
     * 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填

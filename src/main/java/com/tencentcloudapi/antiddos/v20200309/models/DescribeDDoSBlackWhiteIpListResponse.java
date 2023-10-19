@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSBlackWhiteIpListResponse extends AbstractModel{
+public class DescribeDDoSBlackWhiteIpListResponse extends AbstractModel {
 
     /**
     * 黑名单IP列表

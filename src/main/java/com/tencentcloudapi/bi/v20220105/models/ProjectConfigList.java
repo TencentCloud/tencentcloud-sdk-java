@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bi.v20220105.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProjectConfigList extends AbstractModel{
+public class ProjectConfigList extends AbstractModel {
 
     /**
     * 模块组

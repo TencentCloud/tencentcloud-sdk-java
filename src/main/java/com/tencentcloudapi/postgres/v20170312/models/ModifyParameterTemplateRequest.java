@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyParameterTemplateRequest extends AbstractModel{
+public class ModifyParameterTemplateRequest extends AbstractModel {
 
     /**
     * 参数模板ID，用于唯一确认参数模板，不可修改

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ic.v20190307.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResOrderIds extends AbstractModel{
+public class ResOrderIds extends AbstractModel {
 
     /**
     * 每一张续费卡片的订单ID数组

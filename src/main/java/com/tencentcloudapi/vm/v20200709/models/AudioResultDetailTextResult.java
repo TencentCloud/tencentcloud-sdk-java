@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20200709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioResultDetailTextResult extends AbstractModel{
+public class AudioResultDetailTextResult extends AbstractModel {
 
     /**
     * 标签

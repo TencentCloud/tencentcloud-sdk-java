@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonGroupInfoResponse extends AbstractModel{
+public class GetPersonGroupInfoResponse extends AbstractModel {
 
     /**
     * 包含此人员的人员库及描述字段内容列表

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRuleTemplatesRequest extends AbstractModel{
+public class DescribeRuleTemplatesRequest extends AbstractModel {
 
     /**
     * 模版类型 1.系统模版 2.自定义模版

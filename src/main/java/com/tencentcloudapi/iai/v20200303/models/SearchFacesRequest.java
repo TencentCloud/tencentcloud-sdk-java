@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchFacesRequest extends AbstractModel{
+public class SearchFacesRequest extends AbstractModel {
 
     /**
     * 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId。

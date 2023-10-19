@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RootCertificates extends AbstractModel{
+public class RootCertificates extends AbstractModel {
 
     /**
     * 国密签名证书

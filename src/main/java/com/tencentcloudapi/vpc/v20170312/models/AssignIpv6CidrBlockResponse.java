@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignIpv6CidrBlockResponse extends AbstractModel{
+public class AssignIpv6CidrBlockResponse extends AbstractModel {
 
     /**
     * 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。

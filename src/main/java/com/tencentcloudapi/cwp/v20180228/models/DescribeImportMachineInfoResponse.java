@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImportMachineInfoResponse extends AbstractModel{
+public class DescribeImportMachineInfoResponse extends AbstractModel {
 
     /**
     * 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签

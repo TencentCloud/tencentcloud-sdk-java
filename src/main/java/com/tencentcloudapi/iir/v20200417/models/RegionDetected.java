@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iir.v20200417.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionDetected extends AbstractModel{
+public class RegionDetected extends AbstractModel {
 
     /**
     * 商品的品类预测结果。 

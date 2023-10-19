@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportScanTaskDetailsRequest extends AbstractModel{
+public class ExportScanTaskDetailsRequest extends AbstractModel {
 
     /**
     * 本次检测的任务id（不同于出参的导出本次检测Excel的任务Id）

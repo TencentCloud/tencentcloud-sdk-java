@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstancePreData extends AbstractModel{
+public class CreateInstancePreData extends AbstractModel {
 
     /**
     * CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentRunningMode extends AbstractModel{
+public class AgentRunningMode extends AbstractModel {
 
     /**
     * 场景类型，支持WINDOWS

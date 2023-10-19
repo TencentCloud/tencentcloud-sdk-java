@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ValidateNamespaceExistPersonalRequest extends AbstractModel{
+public class ValidateNamespaceExistPersonalRequest extends AbstractModel {
 
     /**
     * 命名空间名称

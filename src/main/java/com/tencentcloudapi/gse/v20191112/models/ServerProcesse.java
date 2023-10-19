@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServerProcesse extends AbstractModel{
+public class ServerProcesse extends AbstractModel {
 
     /**
     * 并发执行数量，所有进程并发执行总数最小值1，最大值50

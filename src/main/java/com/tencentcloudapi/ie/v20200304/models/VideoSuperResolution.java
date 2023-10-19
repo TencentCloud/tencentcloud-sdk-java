@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoSuperResolution extends AbstractModel{
+public class VideoSuperResolution extends AbstractModel {
 
     /**
     * 超分视频类型：可选值：lq,hq

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportNonlocalLoginPlacesRequest extends AbstractModel{
+public class ExportNonlocalLoginPlacesRequest extends AbstractModel {
 
     /**
     * <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>

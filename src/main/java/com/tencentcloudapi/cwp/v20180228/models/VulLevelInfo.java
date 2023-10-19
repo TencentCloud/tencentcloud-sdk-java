@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VulLevelInfo extends AbstractModel{
+public class VulLevelInfo extends AbstractModel {
 
     /**
     * // 危害等级：1-低危；2-中危；3-高危；4-严重

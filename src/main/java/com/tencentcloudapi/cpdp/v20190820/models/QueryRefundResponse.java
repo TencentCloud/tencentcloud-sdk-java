@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryRefundResponse extends AbstractModel{
+public class QueryRefundResponse extends AbstractModel {
 
     /**
     * 退款状态码，退款提交成功后返回  1：退款中；  2：退款成功；  3：退款失败。

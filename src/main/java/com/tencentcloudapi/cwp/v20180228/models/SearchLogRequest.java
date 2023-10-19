@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchLogRequest extends AbstractModel{
+public class SearchLogRequest extends AbstractModel {
 
     /**
     * 要检索分析的日志的起始时间，Unix时间戳（毫秒）

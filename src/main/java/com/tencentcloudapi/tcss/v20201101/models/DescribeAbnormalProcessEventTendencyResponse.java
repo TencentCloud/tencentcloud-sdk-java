@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAbnormalProcessEventTendencyResponse extends AbstractModel{
+public class DescribeAbnormalProcessEventTendencyResponse extends AbstractModel {
 
     /**
     * 待处理异常进程事件趋势

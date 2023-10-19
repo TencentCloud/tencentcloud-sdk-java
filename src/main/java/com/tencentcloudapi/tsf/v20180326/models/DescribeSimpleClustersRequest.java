@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSimpleClustersRequest extends AbstractModel{
+public class DescribeSimpleClustersRequest extends AbstractModel {
 
     /**
     * 需要查询的集群ID列表，不填或不传入时查询所有内容

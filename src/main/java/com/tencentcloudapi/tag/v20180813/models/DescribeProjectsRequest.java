@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectsRequest extends AbstractModel{
+public class DescribeProjectsRequest extends AbstractModel {
 
     /**
     * 传1拉取所有项目（包括隐藏项目），传0拉取显示项目

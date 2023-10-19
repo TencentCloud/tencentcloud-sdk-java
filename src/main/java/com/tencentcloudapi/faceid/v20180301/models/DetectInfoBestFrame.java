@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectInfoBestFrame extends AbstractModel{
+public class DetectInfoBestFrame extends AbstractModel {
 
     /**
     * 活体比对最佳帧Base64编码。

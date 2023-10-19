@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProductResourceRequest extends AbstractModel{
+public class DescribeProductResourceRequest extends AbstractModel {
 
     /**
     * 需要查看资源列表的产品 ID

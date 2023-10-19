@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParseNfcDataResponse extends AbstractModel{
+public class ParseNfcDataResponse extends AbstractModel {
 
     /**
     * 0为首次查询成功，-1为查询失败。

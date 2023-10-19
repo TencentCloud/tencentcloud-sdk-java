@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadVpnGatewaySslClientCertRequest extends AbstractModel{
+public class DownloadVpnGatewaySslClientCertRequest extends AbstractModel {
 
     /**
     * SSL-VPN-CLIENT 实例ID。不可以和SslVpnClientIds同时使用。

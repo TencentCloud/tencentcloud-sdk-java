@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstanceDealResponse extends AbstractModel{
+public class DescribeDBInstanceDealResponse extends AbstractModel {
 
     /**
     * 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。

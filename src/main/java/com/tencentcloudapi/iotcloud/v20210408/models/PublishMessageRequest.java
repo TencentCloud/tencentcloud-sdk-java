@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublishMessageRequest extends AbstractModel{
+public class PublishMessageRequest extends AbstractModel {
 
     /**
     * 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}

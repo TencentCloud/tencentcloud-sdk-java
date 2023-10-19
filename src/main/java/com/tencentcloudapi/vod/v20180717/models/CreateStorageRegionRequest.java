@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStorageRegionRequest extends AbstractModel{
+public class CreateStorageRegionRequest extends AbstractModel {
 
     /**
     * 待开通的存储地域，必须是系统支持的地域。

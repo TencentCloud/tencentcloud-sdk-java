@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20180330.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAsyncRequestInfoResponse extends AbstractModel{
+public class DescribeAsyncRequestInfoResponse extends AbstractModel {
 
     /**
     * 任务执行结果信息

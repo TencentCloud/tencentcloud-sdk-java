@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVocabLibResponse extends AbstractModel{
+public class DescribeVocabLibResponse extends AbstractModel {
 
     /**
     * 返回该appid下的所有词汇库名

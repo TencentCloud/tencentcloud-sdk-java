@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagsInfoOfTable extends AbstractModel{
+public class TagsInfoOfTable extends AbstractModel {
 
     /**
     * 表格实例ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bsca.v20210811.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Qualifier extends AbstractModel{
+public class Qualifier extends AbstractModel {
 
     /**
     * 额外属性的名称。

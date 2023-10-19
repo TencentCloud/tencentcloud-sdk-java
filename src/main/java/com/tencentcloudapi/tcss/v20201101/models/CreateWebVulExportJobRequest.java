@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateWebVulExportJobRequest extends AbstractModel{
+public class CreateWebVulExportJobRequest extends AbstractModel {
 
     /**
     * 需要返回的数量，默认为50000，最大值为50000

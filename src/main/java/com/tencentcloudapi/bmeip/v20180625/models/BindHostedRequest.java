@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindHostedRequest extends AbstractModel{
+public class BindHostedRequest extends AbstractModel {
 
     /**
     * Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFileTamperRuleCountRequest extends AbstractModel{
+public class DescribeFileTamperRuleCountRequest extends AbstractModel {
 
     /**
     * 查询的主机uuids 一次性最多只能查100个

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncProxyOrganizationOperatorsResponse extends AbstractModel{
+public class SyncProxyOrganizationOperatorsResponse extends AbstractModel {
 
     /**
     * Status 同步状态,全部同步失败接口会直接报错

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.aai.v20180522.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceRecognitionResponse extends AbstractModel{
+public class SentenceRecognitionResponse extends AbstractModel {
 
     /**
     * 识别结果。

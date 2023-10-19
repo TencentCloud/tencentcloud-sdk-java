@@ -16,11 +16,12 @@
 package com.tencentcloudapi.domain.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PriceInfo extends AbstractModel{
+public class PriceInfo extends AbstractModel {
 
     /**
     * 域名后缀，例如.com

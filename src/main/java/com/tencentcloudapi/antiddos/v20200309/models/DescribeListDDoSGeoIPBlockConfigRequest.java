@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeListDDoSGeoIPBlockConfigRequest extends AbstractModel{
+public class DescribeListDDoSGeoIPBlockConfigRequest extends AbstractModel {
 
     /**
     * 页起始偏移，取值为(页码-1)*一页条数

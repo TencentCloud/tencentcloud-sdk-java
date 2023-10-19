@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dc.v20180410.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDirectConnectTunnelRequest extends AbstractModel{
+public class CreateDirectConnectTunnelRequest extends AbstractModel {
 
     /**
     * 专线 ID，例如：dc-kd7d06of

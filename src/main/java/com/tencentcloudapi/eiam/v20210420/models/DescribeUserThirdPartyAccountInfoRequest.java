@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserThirdPartyAccountInfoRequest extends AbstractModel{
+public class DescribeUserThirdPartyAccountInfoRequest extends AbstractModel {
 
     /**
     * 用户名。 Username 和 UserId 需至少一个不为空；都不为空时优先使用 Username。

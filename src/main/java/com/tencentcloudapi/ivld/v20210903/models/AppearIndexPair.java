@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppearIndexPair extends AbstractModel{
+public class AppearIndexPair extends AbstractModel {
 
     /**
     * 出现信息，取值范围为[1，3]

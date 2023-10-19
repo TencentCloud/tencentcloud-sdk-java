@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
+public class DescribeProjectSecurityGroupsResponse extends AbstractModel {
 
     /**
     * 安全组详情。

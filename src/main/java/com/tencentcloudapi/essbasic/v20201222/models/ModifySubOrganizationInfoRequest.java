@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20201222.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySubOrganizationInfoRequest extends AbstractModel{
+public class ModifySubOrganizationInfoRequest extends AbstractModel {
 
     /**
     * 调用方信息，该接口 SubOrganizationId 字段与 OpenId 字段二者至少需要传入一个，全部传入时则使用 SubOrganizationId 信息

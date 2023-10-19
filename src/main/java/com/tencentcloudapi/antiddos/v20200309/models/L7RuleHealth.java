@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7RuleHealth extends AbstractModel{
+public class L7RuleHealth extends AbstractModel {
 
     /**
     * 配置状态，0： 正常，1：配置中，2：配置失败

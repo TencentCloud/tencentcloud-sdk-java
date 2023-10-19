@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpGeolocationInfosRequest extends AbstractModel{
+public class DescribeIpGeolocationInfosRequest extends AbstractModel {
 
     /**
     * 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。

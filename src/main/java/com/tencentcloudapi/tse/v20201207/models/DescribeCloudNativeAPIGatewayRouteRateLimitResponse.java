@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCloudNativeAPIGatewayRouteRateLimitResponse extends AbstractModel{
+public class DescribeCloudNativeAPIGatewayRouteRateLimitResponse extends AbstractModel {
 
     /**
     * 获取云原生网关限流插件(路由)

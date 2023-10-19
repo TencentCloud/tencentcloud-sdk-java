@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaKeyFrameDescItem extends AbstractModel{
+public class MediaKeyFrameDescItem extends AbstractModel {
 
     /**
     * 打点的视频偏移时间，单位：秒。

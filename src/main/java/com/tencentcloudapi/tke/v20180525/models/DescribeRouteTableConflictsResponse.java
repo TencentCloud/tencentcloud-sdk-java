@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRouteTableConflictsResponse extends AbstractModel{
+public class DescribeRouteTableConflictsResponse extends AbstractModel {
 
     /**
     * 路由表是否冲突。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RepairTaskControlResponse extends AbstractModel{
+public class RepairTaskControlResponse extends AbstractModel {
 
     /**
     * 出参TaskId是黑石异步任务ID，不同于入参TaskId字段。

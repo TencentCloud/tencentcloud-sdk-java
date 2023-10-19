@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosDetailSets extends AbstractModel{
+public class CosDetailSets extends AbstractModel {
 
     /**
     * 存储桶名称

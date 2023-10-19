@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisassociateSecurityGroupsRequest extends AbstractModel{
+public class DisassociateSecurityGroupsRequest extends AbstractModel {
 
     /**
     * 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。

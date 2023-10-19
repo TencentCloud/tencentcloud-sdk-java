@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupSummariesRequest extends AbstractModel{
+public class DescribeBackupSummariesRequest extends AbstractModel {
 
     /**
     * 需要查询的云数据库产品类型，目前仅支持 "mysql"。

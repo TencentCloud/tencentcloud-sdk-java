@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdwch.v20200915.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DiskSpec extends AbstractModel{
+public class DiskSpec extends AbstractModel {
 
     /**
     * 磁盘类型，例如“CLOUD_SSD", "LOCAL_SSD"等

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAssetSortingReportTaskResponse extends AbstractModel{
+public class CreateAssetSortingReportTaskResponse extends AbstractModel {
 
     /**
     * 报表任务id

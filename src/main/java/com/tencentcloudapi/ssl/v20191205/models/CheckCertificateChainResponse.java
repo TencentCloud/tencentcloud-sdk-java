@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckCertificateChainResponse extends AbstractModel{
+public class CheckCertificateChainResponse extends AbstractModel {
 
     /**
     * true为通过检查，false为未通过检查。

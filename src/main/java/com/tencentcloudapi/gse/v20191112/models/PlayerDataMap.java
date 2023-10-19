@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlayerDataMap extends AbstractModel{
+public class PlayerDataMap extends AbstractModel {
 
     /**
     * 玩家自定义数据键，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符

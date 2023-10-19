@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInsurePacksRequest extends AbstractModel{
+public class DescribeInsurePacksRequest extends AbstractModel {
 
     /**
     * 可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；

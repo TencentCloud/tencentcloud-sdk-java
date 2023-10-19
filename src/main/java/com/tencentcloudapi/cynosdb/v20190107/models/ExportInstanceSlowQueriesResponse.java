@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportInstanceSlowQueriesResponse extends AbstractModel{
+public class ExportInstanceSlowQueriesResponse extends AbstractModel {
 
     /**
     * 慢查询导出内容

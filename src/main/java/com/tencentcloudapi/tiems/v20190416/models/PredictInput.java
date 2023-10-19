@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiems.v20190416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PredictInput extends AbstractModel{
+public class PredictInput extends AbstractModel {
 
     /**
     * 输入路径，支持 cos 格式路径文件夹或文件

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Https extends AbstractModel{
+public class Https extends AbstractModel {
 
     /**
     * https配置开关，on或off。开启https配置的域名在部署中状态，开关保持off。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTraceIdsResponse extends AbstractModel{
+public class DescribeTraceIdsResponse extends AbstractModel {
 
     /**
     * 设备TID列表，列表元素之间以“,”分隔

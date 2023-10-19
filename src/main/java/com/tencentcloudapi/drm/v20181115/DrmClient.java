@@ -46,18 +46,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddFairPlayPemResponse AddFairPlayPem(AddFairPlayPemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddFairPlayPemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddFairPlayPemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddFairPlayPem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AddFairPlayPem", AddFairPlayPemResponse.class);
     }
 
     /**
@@ -67,18 +57,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateEncryptKeysResponse CreateEncryptKeys(CreateEncryptKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEncryptKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateEncryptKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEncryptKeys");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateEncryptKeys", CreateEncryptKeysResponse.class);
     }
 
     /**
@@ -89,18 +69,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateLicenseResponse CreateLicense(CreateLicenseRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLicenseResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLicenseResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLicense");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateLicense", CreateLicenseResponse.class);
     }
 
     /**
@@ -112,18 +82,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteFairPlayPemResponse DeleteFairPlayPem(DeleteFairPlayPemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteFairPlayPemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteFairPlayPemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteFairPlayPem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteFairPlayPem", DeleteFairPlayPemResponse.class);
     }
 
     /**
@@ -134,18 +94,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAllKeysResponse DescribeAllKeys(DescribeAllKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAllKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAllKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAllKeys");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAllKeys", DescribeAllKeysResponse.class);
     }
 
     /**
@@ -155,18 +105,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFairPlayPemResponse DescribeFairPlayPem(DescribeFairPlayPemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFairPlayPemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFairPlayPemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFairPlayPem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFairPlayPem", DescribeFairPlayPemResponse.class);
     }
 
     /**
@@ -178,18 +118,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeKeysResponse DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeKeysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeKeys");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeKeys", DescribeKeysResponse.class);
     }
 
     /**
@@ -200,18 +130,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyFairPlayPemResponse ModifyFairPlayPem(ModifyFairPlayPemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyFairPlayPemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyFairPlayPemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyFairPlayPem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyFairPlayPem", ModifyFairPlayPemResponse.class);
     }
 
     /**
@@ -222,18 +142,8 @@ public class DrmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StartEncryptionResponse StartEncryption(StartEncryptionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartEncryptionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartEncryptionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartEncryption");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "StartEncryption", StartEncryptionResponse.class);
     }
 
 }

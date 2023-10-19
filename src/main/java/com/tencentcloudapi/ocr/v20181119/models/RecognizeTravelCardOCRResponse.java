@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeTravelCardOCRResponse extends AbstractModel{
+public class RecognizeTravelCardOCRResponse extends AbstractModel {
 
     /**
     * 行程卡更新时间，格式为：XXXX.XX.XX XX:XX:XX

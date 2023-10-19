@@ -16,11 +16,12 @@
 package com.tencentcloudapi.region.v20220627.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionProduct extends AbstractModel{
+public class RegionProduct extends AbstractModel {
 
     /**
     * 产品名称，如cvm

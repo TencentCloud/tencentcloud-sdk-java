@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20220401.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterActivitiesRequest extends AbstractModel{
+public class DescribeClusterActivitiesRequest extends AbstractModel {
 
     /**
     * 集群ID。通过该参数指定需要查询活动历史记录的集群。

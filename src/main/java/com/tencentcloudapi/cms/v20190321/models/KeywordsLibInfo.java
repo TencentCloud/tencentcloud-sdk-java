@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cms.v20190321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeywordsLibInfo extends AbstractModel{
+public class KeywordsLibInfo extends AbstractModel {
 
     /**
     * 关键词库ID

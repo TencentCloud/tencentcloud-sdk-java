@@ -45,18 +45,8 @@ public class TourismClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDrawResourceListResponse DescribeDrawResourceList(DescribeDrawResourceListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDrawResourceListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDrawResourceListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDrawResourceList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDrawResourceList", DescribeDrawResourceListResponse.class);
     }
 
 }

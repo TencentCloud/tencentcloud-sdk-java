@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneResourceConfiguration extends AbstractModel{
+public class ZoneResourceConfiguration extends AbstractModel {
 
     /**
     * 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。

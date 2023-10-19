@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceHourRequest extends AbstractModel{
+public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
     * 实例数量，默认值为 1，最小值 1，最大值为 100。

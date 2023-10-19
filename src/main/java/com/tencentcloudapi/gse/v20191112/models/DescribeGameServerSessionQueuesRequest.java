@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGameServerSessionQueuesRequest extends AbstractModel{
+public class DescribeGameServerSessionQueuesRequest extends AbstractModel {
 
     /**
     * 游戏服务器会话队列名称数组，单个名字长度1~128

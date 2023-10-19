@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskResult extends AbstractModel{
+public class TaskResult extends AbstractModel {
 
     /**
     * 该字段用于返回创建视频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。

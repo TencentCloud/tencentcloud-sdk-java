@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoadBalancerListByCertIdResponse extends AbstractModel{
+public class DescribeLoadBalancerListByCertIdResponse extends AbstractModel {
 
     /**
     * 证书ID，以及与该证书ID关联的负载均衡实例列表

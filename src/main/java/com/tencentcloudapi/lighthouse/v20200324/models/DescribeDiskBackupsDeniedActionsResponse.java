@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskBackupsDeniedActionsResponse extends AbstractModel{
+public class DescribeDiskBackupsDeniedActionsResponse extends AbstractModel {
 
     /**
     * 云硬盘备份点操作限制列表详细信息。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListOrganizationChannelNumbersRequest extends AbstractModel{
+public class ListOrganizationChannelNumbersRequest extends AbstractModel {
 
     /**
     * 组织ID，json数组格式，最多一次支持10个组织

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cr.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BlackListData extends AbstractModel{
+public class BlackListData extends AbstractModel {
 
     /**
     * 黑名单类型，01代表手机号码。

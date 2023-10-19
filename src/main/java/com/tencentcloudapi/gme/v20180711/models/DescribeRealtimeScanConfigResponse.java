@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealtimeScanConfigResponse extends AbstractModel{
+public class DescribeRealtimeScanConfigResponse extends AbstractModel {
 
     /**
     * 返回结果码，0正常，非0失败

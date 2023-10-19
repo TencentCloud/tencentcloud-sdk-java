@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStreamLinkInputRequest extends AbstractModel{
+public class CreateStreamLinkInputRequest extends AbstractModel {
 
     /**
     * 媒体传输流ID。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProxySessionKillTaskResponse extends AbstractModel{
+public class CreateProxySessionKillTaskResponse extends AbstractModel {
 
     /**
     * 创建 kill 会话任务返回的异步任务 id

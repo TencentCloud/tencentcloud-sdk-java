@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ccc.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIMCdrListRequest extends AbstractModel{
+public class DescribeIMCdrListRequest extends AbstractModel {
 
     /**
     * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.afc.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryAntiFraudVipRequest extends AbstractModel{
+public class QueryAntiFraudVipRequest extends AbstractModel {
 
     /**
     * 电话号码(五选二)

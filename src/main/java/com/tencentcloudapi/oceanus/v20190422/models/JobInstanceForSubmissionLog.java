@@ -16,11 +16,12 @@
 package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class JobInstanceForSubmissionLog extends AbstractModel{
+public class JobInstanceForSubmissionLog extends AbstractModel {
 
     /**
     * 实例的Id, 按照启动的时间顺序，从1开始

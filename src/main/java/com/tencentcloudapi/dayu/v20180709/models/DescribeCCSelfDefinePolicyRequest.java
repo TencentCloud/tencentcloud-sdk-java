@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCCSelfDefinePolicyRequest extends AbstractModel{
+public class DescribeCCSelfDefinePolicyRequest extends AbstractModel {
 
     /**
     * 大禹子产品代号（bgp高防包；bgp-multip共享包）

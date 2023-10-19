@@ -45,18 +45,8 @@ public class TbpClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateBotResponse CreateBot(CreateBotRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateBotResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateBotResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateBot");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateBot", CreateBotResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TbpClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ResetResponse Reset(ResetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ResetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Reset");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "Reset", ResetResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TbpClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextProcessResponse TextProcess(TextProcessRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextProcessResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextProcessResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextProcess");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextProcess", TextProcessResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class TbpClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextResetResponse TextReset(TextResetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextResetResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextResetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextReset");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextReset", TextResetResponse.class);
     }
 
 }

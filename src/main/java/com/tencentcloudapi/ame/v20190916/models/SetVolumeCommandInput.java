@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ame.v20190916.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetVolumeCommandInput extends AbstractModel{
+public class SetVolumeCommandInput extends AbstractModel {
 
     /**
     * 音量大小，取值范围为 0~100，默认值为 50。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParseWordsResponse extends AbstractModel{
+public class ParseWordsResponse extends AbstractModel {
 
     /**
     * 输入文本正则化的结果。（包括对英文文本中的开头和实体进行大写等）

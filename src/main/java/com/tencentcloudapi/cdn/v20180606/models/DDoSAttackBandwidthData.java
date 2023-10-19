@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDoSAttackBandwidthData extends AbstractModel{
+public class DDoSAttackBandwidthData extends AbstractModel {
 
     /**
     * ddos攻击类型，当值为all的时候表示所有的攻击类型的总带宽峰值

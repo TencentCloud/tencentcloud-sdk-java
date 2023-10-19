@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MixPortraitSegmentParams extends AbstractModel{
+public class MixPortraitSegmentParams extends AbstractModel {
 
     /**
     * 抠图背景颜色，

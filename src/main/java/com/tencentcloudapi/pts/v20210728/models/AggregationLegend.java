@@ -16,11 +16,12 @@
 package com.tencentcloudapi.pts.v20210728.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AggregationLegend extends AbstractModel{
+public class AggregationLegend extends AbstractModel {
 
     /**
     * 指标支持的聚合函数

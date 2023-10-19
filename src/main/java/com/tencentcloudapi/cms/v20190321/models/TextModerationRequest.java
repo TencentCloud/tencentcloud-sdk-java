@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cms.v20190321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextModerationRequest extends AbstractModel{
+public class TextModerationRequest extends AbstractModel {
 
     /**
     * 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。

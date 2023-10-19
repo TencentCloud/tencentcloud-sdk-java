@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseCloudOrderRequest extends AbstractModel{
+public class CloseCloudOrderRequest extends AbstractModel {
 
     /**
     * 米大师分配的支付主MidasAppId

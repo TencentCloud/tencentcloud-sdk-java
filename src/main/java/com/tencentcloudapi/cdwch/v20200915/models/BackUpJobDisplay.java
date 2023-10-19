@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdwch.v20200915.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackUpJobDisplay extends AbstractModel{
+public class BackUpJobDisplay extends AbstractModel {
 
     /**
     * 备份任务id

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourcePackageDetailRequest extends AbstractModel{
+public class DescribeResourcePackageDetailRequest extends AbstractModel {
 
     /**
     * 资源包唯一ID

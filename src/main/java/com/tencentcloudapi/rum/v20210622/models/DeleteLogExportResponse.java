@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLogExportResponse extends AbstractModel{
+public class DeleteLogExportResponse extends AbstractModel {
 
     /**
     * 是否成功，成功则为success；失败则直接返回Error，不返回该参数

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel{
+public class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel {
 
     /**
     * 本组数据对应的时间点，格式如：2020-09-07或2020-09-07 00:05:05。

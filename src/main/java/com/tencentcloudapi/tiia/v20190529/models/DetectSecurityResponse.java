@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectSecurityResponse extends AbstractModel{
+public class DetectSecurityResponse extends AbstractModel {
 
     /**
     * 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。

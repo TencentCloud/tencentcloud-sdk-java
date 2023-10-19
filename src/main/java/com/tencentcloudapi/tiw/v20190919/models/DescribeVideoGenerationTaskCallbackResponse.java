@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVideoGenerationTaskCallbackResponse extends AbstractModel{
+public class DescribeVideoGenerationTaskCallbackResponse extends AbstractModel {
 
     /**
     * 录制视频生成回调地址

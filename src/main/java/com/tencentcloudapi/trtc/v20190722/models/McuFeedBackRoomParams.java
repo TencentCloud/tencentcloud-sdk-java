@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class McuFeedBackRoomParams extends AbstractModel{
+public class McuFeedBackRoomParams extends AbstractModel {
 
     /**
     * 回推房间的RoomId。

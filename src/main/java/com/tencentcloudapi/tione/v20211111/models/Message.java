@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Message extends AbstractModel{
+public class Message extends AbstractModel {
 
     /**
     * 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。

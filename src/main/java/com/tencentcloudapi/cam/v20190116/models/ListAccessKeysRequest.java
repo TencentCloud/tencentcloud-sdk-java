@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListAccessKeysRequest extends AbstractModel{
+public class ListAccessKeysRequest extends AbstractModel {
 
     /**
     * 指定用户Uin，不填默认列出当前用户访问密钥

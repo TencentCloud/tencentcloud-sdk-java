@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillDownloadUrlResponse extends AbstractModel{
+public class DescribeBillDownloadUrlResponse extends AbstractModel {
 
     /**
     * 账单文件是否准备就绪，0文件生成中，1文件已生成

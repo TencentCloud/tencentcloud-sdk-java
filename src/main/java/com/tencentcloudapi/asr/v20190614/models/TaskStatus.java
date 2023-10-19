@@ -16,11 +16,12 @@
 package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskStatus extends AbstractModel{
+public class TaskStatus extends AbstractModel {
 
     /**
     * 任务标识。注意：TaskId数据类型为uint64。

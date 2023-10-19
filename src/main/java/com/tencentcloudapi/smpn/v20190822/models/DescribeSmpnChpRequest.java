@@ -16,11 +16,12 @@
 package com.tencentcloudapi.smpn.v20190822.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSmpnChpRequest extends AbstractModel{
+public class DescribeSmpnChpRequest extends AbstractModel {
 
     /**
     * 客户用于计费的资源Id

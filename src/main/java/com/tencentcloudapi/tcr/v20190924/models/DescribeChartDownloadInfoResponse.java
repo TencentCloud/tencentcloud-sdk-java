@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeChartDownloadInfoResponse extends AbstractModel{
+public class DescribeChartDownloadInfoResponse extends AbstractModel {
 
     /**
     * 用于下载的url的预签名地址

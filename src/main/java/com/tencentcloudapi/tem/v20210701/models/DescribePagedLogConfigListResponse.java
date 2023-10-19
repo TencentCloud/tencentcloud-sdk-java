@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePagedLogConfigListResponse extends AbstractModel{
+public class DescribePagedLogConfigListResponse extends AbstractModel {
 
     /**
     * 日志收集配置列表

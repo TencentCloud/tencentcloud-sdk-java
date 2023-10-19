@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUsersRequest extends AbstractModel{
+public class DescribeUsersRequest extends AbstractModel {
 
     /**
     * 指定查询的子用户uin，用户需要通过CreateUser接口创建。

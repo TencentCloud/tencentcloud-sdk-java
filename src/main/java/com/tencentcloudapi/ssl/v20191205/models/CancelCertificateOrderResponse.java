@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelCertificateOrderResponse extends AbstractModel{
+public class CancelCertificateOrderResponse extends AbstractModel {
 
     /**
     * 取消订单成功的证书 ID。

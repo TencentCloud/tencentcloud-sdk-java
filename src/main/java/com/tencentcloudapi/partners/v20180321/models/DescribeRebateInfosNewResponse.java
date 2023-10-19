@@ -16,11 +16,12 @@
 package com.tencentcloudapi.partners.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRebateInfosNewResponse extends AbstractModel{
+public class DescribeRebateInfosNewResponse extends AbstractModel {
 
     /**
     * 返佣信息列表

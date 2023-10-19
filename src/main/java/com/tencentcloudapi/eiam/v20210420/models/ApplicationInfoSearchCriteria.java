@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplicationInfoSearchCriteria extends AbstractModel{
+public class ApplicationInfoSearchCriteria extends AbstractModel {
 
     /**
     * 应用匹配搜索关键字，匹配范围包括：应用名称、应用ID。

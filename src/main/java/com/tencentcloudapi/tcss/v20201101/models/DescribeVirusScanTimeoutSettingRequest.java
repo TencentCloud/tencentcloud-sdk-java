@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVirusScanTimeoutSettingRequest extends AbstractModel{
+public class DescribeVirusScanTimeoutSettingRequest extends AbstractModel {
 
     /**
     * 设置类型0一键检测，1定时检测

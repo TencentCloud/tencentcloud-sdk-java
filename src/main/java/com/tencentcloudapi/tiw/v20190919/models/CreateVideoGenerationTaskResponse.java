@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVideoGenerationTaskResponse extends AbstractModel{
+public class CreateVideoGenerationTaskResponse extends AbstractModel {
 
     /**
     * 视频生成的任务Id

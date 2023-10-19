@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelEncryptTaskResponse extends AbstractModel{
+public class CancelEncryptTaskResponse extends AbstractModel {
 
     /**
     * 1: 取消任务成功 ； -1 ：取消任务失败，原因为任务进程已结束，不能取消。

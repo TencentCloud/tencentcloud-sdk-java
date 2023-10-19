@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillDetailRequest extends AbstractModel{
+public class DescribeBillDetailRequest extends AbstractModel {
 
     /**
     * 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推

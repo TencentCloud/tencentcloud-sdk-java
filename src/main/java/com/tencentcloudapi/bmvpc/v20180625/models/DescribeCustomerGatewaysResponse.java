@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmvpc.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomerGatewaysResponse extends AbstractModel{
+public class DescribeCustomerGatewaysResponse extends AbstractModel {
 
     /**
     * 对端网关对象列表

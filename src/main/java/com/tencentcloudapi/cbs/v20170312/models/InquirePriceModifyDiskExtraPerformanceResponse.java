@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePriceModifyDiskExtraPerformanceResponse extends AbstractModel{
+public class InquirePriceModifyDiskExtraPerformanceResponse extends AbstractModel {
 
     /**
     * 描述了调整云盘额外性能时对应的价格。

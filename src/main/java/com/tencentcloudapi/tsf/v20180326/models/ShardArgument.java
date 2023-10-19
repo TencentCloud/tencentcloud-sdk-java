@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShardArgument extends AbstractModel{
+public class ShardArgument extends AbstractModel {
 
     /**
     * 分片参数 KEY，整形, 范围 [1,1000]

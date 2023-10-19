@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bizlive.v20190313.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WorkerRegionInfo extends AbstractModel{
+public class WorkerRegionInfo extends AbstractModel {
 
     /**
     * 该区域空闲机器数量

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.keewidb.v20220308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskInfoResponse extends AbstractModel{
+public class DescribeTaskInfoResponse extends AbstractModel {
 
     /**
     * 任务状态。<ul><li>preparing：待执行。</li><li>running：执行中。</li><li>succeed：成功。</li><li>failed：失败。</li><li>error：执行出错。</li></ul>

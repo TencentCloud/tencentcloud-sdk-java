@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportMediaRequest extends AbstractModel{
+public class ImportMediaRequest extends AbstractModel {
 
     /**
     * 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB

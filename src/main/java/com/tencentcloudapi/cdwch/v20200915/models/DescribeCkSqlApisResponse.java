@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdwch.v20200915.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCkSqlApisResponse extends AbstractModel{
+public class DescribeCkSqlApisResponse extends AbstractModel {
 
     /**
     * 返回的查询数据，大部分情况是list，也可能是bool

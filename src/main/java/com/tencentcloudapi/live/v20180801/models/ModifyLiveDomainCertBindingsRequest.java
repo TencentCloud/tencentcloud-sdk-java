@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLiveDomainCertBindingsRequest extends AbstractModel{
+public class ModifyLiveDomainCertBindingsRequest extends AbstractModel {
 
     /**
     * 要绑定证书的播放域名/状态 信息列表。

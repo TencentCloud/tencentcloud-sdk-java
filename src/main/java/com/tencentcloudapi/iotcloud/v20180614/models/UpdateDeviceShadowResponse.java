@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateDeviceShadowResponse extends AbstractModel{
+public class UpdateDeviceShadowResponse extends AbstractModel {
 
     /**
     * 设备影子数据，JSON字符串格式

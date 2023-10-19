@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RepairTaskControlRequest extends AbstractModel{
+public class RepairTaskControlRequest extends AbstractModel {
 
     /**
     * 待授权任务实例对应的产品类型，支持取值：

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteStreamLinkEventRequest extends AbstractModel{
+public class DeleteStreamLinkEventRequest extends AbstractModel {
 
     /**
     * 媒体传输事件Id，删除前需要保证该Event关联的所有Flow都已经删除。

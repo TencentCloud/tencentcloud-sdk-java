@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DCNReplicaConfig extends AbstractModel{
+public class DCNReplicaConfig extends AbstractModel {
 
     /**
     * DCN 运行状态，START为正常运行，STOP为暂停

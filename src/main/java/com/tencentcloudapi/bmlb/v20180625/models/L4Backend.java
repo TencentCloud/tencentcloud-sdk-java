@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L4Backend extends AbstractModel{
+public class L4Backend extends AbstractModel {
 
     /**
     * 绑定类别（0代表黑石物理机，1代表虚拟机IP）。

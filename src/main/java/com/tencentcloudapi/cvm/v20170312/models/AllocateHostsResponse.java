@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateHostsResponse extends AbstractModel{
+public class AllocateHostsResponse extends AbstractModel {
 
     /**
     * 新创建云子机的实例ID列表。

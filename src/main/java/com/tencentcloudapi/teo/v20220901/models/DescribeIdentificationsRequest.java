@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIdentificationsRequest extends AbstractModel{
+public class DescribeIdentificationsRequest extends AbstractModel {
 
     /**
     * 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：

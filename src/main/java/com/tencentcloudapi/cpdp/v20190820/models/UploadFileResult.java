@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadFileResult extends AbstractModel{
+public class UploadFileResult extends AbstractModel {
 
     /**
     * 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域

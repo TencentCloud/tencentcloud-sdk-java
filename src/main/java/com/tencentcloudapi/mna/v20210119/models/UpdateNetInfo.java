@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateNetInfo extends AbstractModel{
+public class UpdateNetInfo extends AbstractModel {
 
     /**
     * 网络类型：

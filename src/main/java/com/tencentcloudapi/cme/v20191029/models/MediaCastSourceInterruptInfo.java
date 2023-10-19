@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaCastSourceInterruptInfo extends AbstractModel{
+public class MediaCastSourceInterruptInfo extends AbstractModel {
 
     /**
     * 发生断流的输入源信息。

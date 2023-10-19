@@ -16,11 +16,12 @@
 package com.tencentcloudapi.smop.v20201203.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskEventData extends AbstractModel{
+public class TaskEventData extends AbstractModel {
 
     /**
     * 状态码

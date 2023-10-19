@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KubeJarvisStateStatistic extends AbstractModel{
+public class KubeJarvisStateStatistic extends AbstractModel {
 
     /**
     * 诊断结果的健康水平

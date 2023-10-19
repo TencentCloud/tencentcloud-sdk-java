@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCpmOsInfoRequest extends AbstractModel{
+public class DescribeCpmOsInfoRequest extends AbstractModel {
 
     /**
     * 黑石设备类型代号。 可以从[DescribeDeviceClass](https://cloud.tencent.com/document/api/386/32911)查询设备类型列表。

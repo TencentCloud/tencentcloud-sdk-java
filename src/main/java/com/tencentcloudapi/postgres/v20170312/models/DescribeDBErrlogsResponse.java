@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBErrlogsResponse extends AbstractModel{
+public class DescribeDBErrlogsResponse extends AbstractModel {
 
     /**
     * 查询到的日志数量，最大值为10000条。

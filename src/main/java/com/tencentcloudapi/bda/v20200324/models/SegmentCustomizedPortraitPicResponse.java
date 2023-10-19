@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SegmentCustomizedPortraitPicResponse extends AbstractModel{
+public class SegmentCustomizedPortraitPicResponse extends AbstractModel {
 
     /**
     * 根据指定标签分割输出的透明背景人像图片的 base64 数据。

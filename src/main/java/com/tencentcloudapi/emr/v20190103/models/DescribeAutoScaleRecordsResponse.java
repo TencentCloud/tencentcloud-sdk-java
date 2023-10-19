@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAutoScaleRecordsResponse extends AbstractModel{
+public class DescribeAutoScaleRecordsResponse extends AbstractModel {
 
     /**
     * 总扩缩容记录数。

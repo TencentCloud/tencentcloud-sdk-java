@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopSpaceSchemaTimeSeriesResponse extends AbstractModel{
+public class DescribeTopSpaceSchemaTimeSeriesResponse extends AbstractModel {
 
     /**
     * 返回的Top库空间统计信息的时序数据列表。

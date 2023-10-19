@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePriceModifyDiskBackupQuotaResponse extends AbstractModel{
+public class InquirePriceModifyDiskBackupQuotaResponse extends AbstractModel {
 
     /**
     * 描述了修改云硬盘备份点之后的云盘价格。

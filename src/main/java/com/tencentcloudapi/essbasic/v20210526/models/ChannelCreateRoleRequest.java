@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateRoleRequest extends AbstractModel{
+public class ChannelCreateRoleRequest extends AbstractModel {
 
     /**
     * 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。

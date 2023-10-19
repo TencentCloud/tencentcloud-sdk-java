@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAssetScanRequest extends AbstractModel{
+public class ModifyAssetScanRequest extends AbstractModel {
 
     /**
     * 扫描范围：1端口, 2端口+漏扫

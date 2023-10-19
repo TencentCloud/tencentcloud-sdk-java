@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmvpc.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteVpnConnectionRequest extends AbstractModel{
+public class DeleteVpnConnectionRequest extends AbstractModel {
 
     /**
     * VPN通道实例ID。形如：bmvpnx-f49l6u0z。

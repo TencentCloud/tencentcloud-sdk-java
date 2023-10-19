@@ -45,18 +45,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchSendEmailResponse BatchSendEmail(BatchSendEmailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchSendEmailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BatchSendEmailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchSendEmail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BatchSendEmail", BatchSendEmailResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateEmailAddressResponse CreateEmailAddress(CreateEmailAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEmailAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateEmailAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEmailAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateEmailAddress", CreateEmailAddressResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateEmailIdentityResponse CreateEmailIdentity(CreateEmailIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEmailIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateEmailIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEmailIdentity");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateEmailIdentity", CreateEmailIdentityResponse.class);
     }
 
     /**
@@ -109,18 +79,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateEmailTemplateResponse CreateEmailTemplate(CreateEmailTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEmailTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateEmailTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEmailTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateEmailTemplate", CreateEmailTemplateResponse.class);
     }
 
     /**
@@ -130,18 +90,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateReceiverResponse CreateReceiver(CreateReceiverRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateReceiverResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateReceiverResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateReceiver");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateReceiver", CreateReceiverResponse.class);
     }
 
     /**
@@ -151,18 +101,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateReceiverDetailResponse CreateReceiverDetail(CreateReceiverDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateReceiverDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateReceiverDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateReceiverDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateReceiverDetail", CreateReceiverDetailResponse.class);
     }
 
     /**
@@ -172,18 +112,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateReceiverDetailWithDataResponse CreateReceiverDetailWithData(CreateReceiverDetailWithDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateReceiverDetailWithDataResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateReceiverDetailWithDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateReceiverDetailWithData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateReceiverDetailWithData", CreateReceiverDetailWithDataResponse.class);
     }
 
     /**
@@ -193,18 +123,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteBlackListResponse DeleteBlackList(DeleteBlackListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteBlackListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteBlackListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteBlackList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteBlackList", DeleteBlackListResponse.class);
     }
 
     /**
@@ -214,18 +134,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteEmailAddressResponse DeleteEmailAddress(DeleteEmailAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteEmailAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteEmailAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteEmailAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteEmailAddress", DeleteEmailAddressResponse.class);
     }
 
     /**
@@ -235,18 +145,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteEmailIdentityResponse DeleteEmailIdentity(DeleteEmailIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteEmailIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteEmailIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteEmailIdentity");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteEmailIdentity", DeleteEmailIdentityResponse.class);
     }
 
     /**
@@ -256,18 +156,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteEmailTemplateResponse DeleteEmailTemplate(DeleteEmailTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteEmailTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteEmailTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteEmailTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteEmailTemplate", DeleteEmailTemplateResponse.class);
     }
 
     /**
@@ -277,18 +167,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteReceiverResponse DeleteReceiver(DeleteReceiverRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteReceiverResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteReceiverResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteReceiver");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteReceiver", DeleteReceiverResponse.class);
     }
 
     /**
@@ -298,18 +178,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetEmailIdentityResponse GetEmailIdentity(GetEmailIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetEmailIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetEmailIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetEmailIdentity");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetEmailIdentity", GetEmailIdentityResponse.class);
     }
 
     /**
@@ -319,18 +189,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetEmailTemplateResponse GetEmailTemplate(GetEmailTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetEmailTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetEmailTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetEmailTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetEmailTemplate", GetEmailTemplateResponse.class);
     }
 
     /**
@@ -341,18 +201,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetSendEmailStatusResponse GetSendEmailStatus(GetSendEmailStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetSendEmailStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetSendEmailStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetSendEmailStatus", GetSendEmailStatusResponse.class);
     }
 
     /**
@@ -362,18 +212,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetStatisticsReportResponse GetStatisticsReport(GetStatisticsReportRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetStatisticsReportResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetStatisticsReportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetStatisticsReport");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetStatisticsReport", GetStatisticsReportResponse.class);
     }
 
     /**
@@ -383,18 +223,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListBlackEmailAddressResponse ListBlackEmailAddress(ListBlackEmailAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListBlackEmailAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListBlackEmailAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListBlackEmailAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListBlackEmailAddress", ListBlackEmailAddressResponse.class);
     }
 
     /**
@@ -404,18 +234,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListEmailAddressResponse ListEmailAddress(ListEmailAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEmailAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListEmailAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEmailAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListEmailAddress", ListEmailAddressResponse.class);
     }
 
     /**
@@ -425,18 +245,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListEmailIdentitiesResponse ListEmailIdentities(ListEmailIdentitiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEmailIdentitiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListEmailIdentitiesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEmailIdentities");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListEmailIdentities", ListEmailIdentitiesResponse.class);
     }
 
     /**
@@ -446,18 +256,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListEmailTemplatesResponse ListEmailTemplates(ListEmailTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEmailTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListEmailTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEmailTemplates");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListEmailTemplates", ListEmailTemplatesResponse.class);
     }
 
     /**
@@ -467,18 +267,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListReceiverDetailsResponse ListReceiverDetails(ListReceiverDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListReceiverDetailsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListReceiverDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListReceiverDetails");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListReceiverDetails", ListReceiverDetailsResponse.class);
     }
 
     /**
@@ -488,18 +278,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListReceiversResponse ListReceivers(ListReceiversRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListReceiversResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListReceiversResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListReceivers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListReceivers", ListReceiversResponse.class);
     }
 
     /**
@@ -509,18 +289,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListSendTasksResponse ListSendTasks(ListSendTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListSendTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListSendTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListSendTasks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListSendTasks", ListSendTasksResponse.class);
     }
 
     /**
@@ -530,18 +300,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendEmailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SendEmailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SendEmail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
     }
 
     /**
@@ -551,18 +311,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpdateEmailIdentityResponse UpdateEmailIdentity(UpdateEmailIdentityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateEmailIdentityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateEmailIdentityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateEmailIdentity");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpdateEmailIdentity", UpdateEmailIdentityResponse.class);
     }
 
     /**
@@ -572,18 +322,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpdateEmailSmtpPassWordResponse UpdateEmailSmtpPassWord(UpdateEmailSmtpPassWordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateEmailSmtpPassWordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateEmailSmtpPassWordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateEmailSmtpPassWord");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpdateEmailSmtpPassWord", UpdateEmailSmtpPassWordResponse.class);
     }
 
     /**
@@ -593,18 +333,8 @@ public class SesClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpdateEmailTemplateResponse UpdateEmailTemplate(UpdateEmailTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateEmailTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateEmailTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateEmailTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpdateEmailTemplate", UpdateEmailTemplateResponse.class);
     }
 
 }

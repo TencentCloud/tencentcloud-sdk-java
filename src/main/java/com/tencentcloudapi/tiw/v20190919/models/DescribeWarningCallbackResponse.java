@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWarningCallbackResponse extends AbstractModel{
+public class DescribeWarningCallbackResponse extends AbstractModel {
 
     /**
     * 告警事件回调地址，如果未设置回调地址，该字段为空字符串

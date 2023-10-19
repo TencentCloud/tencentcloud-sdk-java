@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMediaRequest extends AbstractModel{
+public class DescribeMediaRequest extends AbstractModel {
 
     /**
     * 导入媒资返回的媒资ID，最长32B

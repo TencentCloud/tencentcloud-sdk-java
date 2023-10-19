@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HDFSConfig extends AbstractModel{
+public class HDFSConfig extends AbstractModel {
 
     /**
     * 集群实例ID,实例ID形如: emr-xxxxxxxx

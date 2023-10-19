@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDoSAlarmThreshold extends AbstractModel{
+public class DDoSAlarmThreshold extends AbstractModel {
 
     /**
     * 告警阈值类型，1-入流量，2-清洗流量

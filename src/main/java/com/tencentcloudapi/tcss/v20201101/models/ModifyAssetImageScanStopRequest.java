@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAssetImageScanStopRequest extends AbstractModel{
+public class ModifyAssetImageScanStopRequest extends AbstractModel {
 
     /**
     * 任务id；任务id，镜像id和根据过滤条件筛选三选一。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tts.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTtsTaskRequest extends AbstractModel{
+public class CreateTtsTaskRequest extends AbstractModel {
 
     /**
     * 合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符

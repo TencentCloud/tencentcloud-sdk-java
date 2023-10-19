@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeThirdPartyAuthCodeResponse extends AbstractModel{
+public class DescribeThirdPartyAuthCodeResponse extends AbstractModel {
 
     /**
     * AuthCode 中对应个人用户是否实名

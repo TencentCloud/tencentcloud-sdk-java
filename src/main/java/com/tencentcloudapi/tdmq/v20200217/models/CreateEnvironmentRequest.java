@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEnvironmentRequest extends AbstractModel{
+public class CreateEnvironmentRequest extends AbstractModel {
 
     /**
     * 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。

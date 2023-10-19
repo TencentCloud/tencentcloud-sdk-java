@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanDetail extends AbstractModel{
+public class ScanDetail extends AbstractModel {
 
     /**
     * 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义

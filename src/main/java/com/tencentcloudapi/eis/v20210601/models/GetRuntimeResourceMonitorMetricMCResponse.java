@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eis.v20210601.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetRuntimeResourceMonitorMetricMCResponse extends AbstractModel{
+public class GetRuntimeResourceMonitorMetricMCResponse extends AbstractModel {
 
     /**
     * 指标名称，K8sWorkloadCpuCoreUsed，K8sWorkloadMemUsageBytes，K8sWorkloadNetworkReceiveBytesBw，K8sWorkloadNetworkTransmitBytesBw

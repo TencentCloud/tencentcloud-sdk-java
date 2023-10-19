@@ -16,11 +16,12 @@
 package com.tencentcloudapi.youmall.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonInfo extends AbstractModel{
+public class PersonInfo extends AbstractModel {
 
     /**
     * 用户ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FlowRealtimeStatusCommon extends AbstractModel{
+public class FlowRealtimeStatusCommon extends AbstractModel {
 
     /**
     * 当前连接状态，Connected|Waiting|Idle。

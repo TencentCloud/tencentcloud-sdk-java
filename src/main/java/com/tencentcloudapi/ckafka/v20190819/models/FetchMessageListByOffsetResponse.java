@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FetchMessageListByOffsetResponse extends AbstractModel{
+public class FetchMessageListByOffsetResponse extends AbstractModel {
 
     /**
     * 返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口

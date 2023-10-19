@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateOrganizationBatchSignUrlResponse extends AbstractModel{
+public class ChannelCreateOrganizationBatchSignUrlResponse extends AbstractModel {
 
     /**
     * 批量签署入口链接，用户可使用这个链接跳转到控制台页面对合同进行签署操作。	

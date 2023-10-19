@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CertificateOutput extends AbstractModel{
+public class CertificateOutput extends AbstractModel {
 
     /**
     * 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证

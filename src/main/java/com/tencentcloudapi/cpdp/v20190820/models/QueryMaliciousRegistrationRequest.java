@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryMaliciousRegistrationRequest extends AbstractModel{
+public class QueryMaliciousRegistrationRequest extends AbstractModel {
 
     /**
     * 商户ID，调用方使用的商户号信息，与商户主体一一对应

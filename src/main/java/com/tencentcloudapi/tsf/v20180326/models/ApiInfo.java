@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApiInfo extends AbstractModel{
+public class ApiInfo extends AbstractModel {
 
     /**
     * 命名空间Id，若为外部API,为固定值："namespace-external"

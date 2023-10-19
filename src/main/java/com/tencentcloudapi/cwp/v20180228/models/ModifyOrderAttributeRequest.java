@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyOrderAttributeRequest extends AbstractModel{
+public class ModifyOrderAttributeRequest extends AbstractModel {
 
     /**
     * 授权类型 0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月

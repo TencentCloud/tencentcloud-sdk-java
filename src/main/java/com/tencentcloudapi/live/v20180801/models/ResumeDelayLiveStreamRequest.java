@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeDelayLiveStreamRequest extends AbstractModel{
+public class ResumeDelayLiveStreamRequest extends AbstractModel {
 
     /**
     * 推流路径，与推流和播放地址中的AppName保持一致，默认为live。

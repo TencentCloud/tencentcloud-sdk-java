@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dc.v20180410.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInternetAddressQuotaResponse extends AbstractModel{
+public class DescribeInternetAddressQuotaResponse extends AbstractModel {
 
     /**
     * IPv6互联网公网允许的最小前缀长度

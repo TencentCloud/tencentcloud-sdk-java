@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAuditServiceResponse extends AbstractModel{
+public class ModifyAuditServiceResponse extends AbstractModel {
 
     /**
     * 审计配置修改结果，0-修改成功,非0-修改失败。

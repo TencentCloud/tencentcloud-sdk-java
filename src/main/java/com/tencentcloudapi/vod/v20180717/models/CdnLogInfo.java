@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CdnLogInfo extends AbstractModel{
+public class CdnLogInfo extends AbstractModel {
 
     /**
     * 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。

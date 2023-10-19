@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDNSConfigRequest extends AbstractModel{
+public class DescribeDNSConfigRequest extends AbstractModel {
 
     /**
     * Grafana 实例 ID，例如：grafana-abcdefgh

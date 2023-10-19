@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLicenseUsageDataResponse extends AbstractModel{
+public class DescribeLicenseUsageDataResponse extends AbstractModel {
 
     /**
     * License 查询次数统计数据，展示所查询 License 次数的明细数据。

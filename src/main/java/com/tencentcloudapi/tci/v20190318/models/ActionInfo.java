@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionInfo extends AbstractModel{
+public class ActionInfo extends AbstractModel {
 
     /**
     * 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）

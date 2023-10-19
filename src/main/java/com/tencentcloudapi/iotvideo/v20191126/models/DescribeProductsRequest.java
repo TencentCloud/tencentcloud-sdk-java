@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProductsRequest extends AbstractModel{
+public class DescribeProductsRequest extends AbstractModel {
 
     /**
     * 分页大小，当前页面中显示的最大数量，值范围 1-100

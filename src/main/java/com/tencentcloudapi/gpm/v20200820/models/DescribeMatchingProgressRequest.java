@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gpm.v20200820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMatchingProgressRequest extends AbstractModel{
+public class DescribeMatchingProgressRequest extends AbstractModel {
 
     /**
     * 匹配票据 ID列表, 列表长度 12。

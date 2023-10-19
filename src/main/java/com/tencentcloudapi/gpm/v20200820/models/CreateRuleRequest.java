@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gpm.v20200820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRuleRequest extends AbstractModel{
+public class CreateRuleRequest extends AbstractModel {
 
     /**
     * 规则名称，[a-zA-Z0-9-\.]* 长度128

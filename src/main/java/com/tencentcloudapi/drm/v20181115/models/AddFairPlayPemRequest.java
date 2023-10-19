@@ -16,11 +16,12 @@
 package com.tencentcloudapi.drm.v20181115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddFairPlayPemRequest extends AbstractModel{
+public class AddFairPlayPemRequest extends AbstractModel {
 
     /**
     * 加密后的fairplay方案申请时使用的私钥。

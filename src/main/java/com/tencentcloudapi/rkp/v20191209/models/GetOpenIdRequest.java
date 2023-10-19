@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rkp.v20191209.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetOpenIdRequest extends AbstractModel{
+public class GetOpenIdRequest extends AbstractModel {
 
     /**
     * dev临时token，通过sdk接口获取

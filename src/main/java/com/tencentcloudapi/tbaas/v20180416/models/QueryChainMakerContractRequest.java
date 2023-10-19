@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tbaas.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryChainMakerContractRequest extends AbstractModel{
+public class QueryChainMakerContractRequest extends AbstractModel {
 
     /**
     * 网络ID，可在区块链网络详情或列表中获取

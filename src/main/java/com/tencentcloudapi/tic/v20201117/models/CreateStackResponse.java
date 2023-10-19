@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tic.v20201117.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStackResponse extends AbstractModel{
+public class CreateStackResponse extends AbstractModel {
 
     /**
     * 创建得到的资源栈ID

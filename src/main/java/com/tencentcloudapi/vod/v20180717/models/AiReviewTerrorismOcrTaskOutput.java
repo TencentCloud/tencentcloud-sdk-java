@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
+public class AiReviewTerrorismOcrTaskOutput extends AbstractModel {
 
     /**
     * Ocr 文字有涉及令人不安全信息的评分，分值为0到100。

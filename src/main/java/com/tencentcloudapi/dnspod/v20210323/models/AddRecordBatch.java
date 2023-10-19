@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddRecordBatch extends AbstractModel{
+public class AddRecordBatch extends AbstractModel {
 
     /**
     * 记录类型, 详见 DescribeRecordType 接口。

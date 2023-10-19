@@ -16,11 +16,12 @@
 package com.tencentcloudapi.hcm.v20181106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EvaluationRequest extends AbstractModel{
+public class EvaluationRequest extends AbstractModel {
 
     /**
     * 图片唯一标识，一张图片一个SessionId；

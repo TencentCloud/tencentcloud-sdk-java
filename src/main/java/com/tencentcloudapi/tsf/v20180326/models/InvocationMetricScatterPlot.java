@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InvocationMetricScatterPlot extends AbstractModel{
+public class InvocationMetricScatterPlot extends AbstractModel {
 
     /**
     * 时间轴截止时间，GMT，精确到毫秒

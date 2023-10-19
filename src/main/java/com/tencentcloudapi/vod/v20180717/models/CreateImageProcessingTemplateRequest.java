@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageProcessingTemplateRequest extends AbstractModel{
+public class CreateImageProcessingTemplateRequest extends AbstractModel {
 
     /**
     * 图片处理操作数组，操作将以其在数组中的顺序执行。

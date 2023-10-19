@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCallbackRecordsListResponse extends AbstractModel{
+public class DescribeCallbackRecordsListResponse extends AbstractModel {
 
     /**
     * 回调事件列表。

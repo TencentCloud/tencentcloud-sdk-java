@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tbaas.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyChainMakerBatchUserCertResponse extends AbstractModel{
+public class ApplyChainMakerBatchUserCertResponse extends AbstractModel {
 
     /**
     * 成功生成的用户证书的base64编码字符串列表，与SignUserCsrList一一对应

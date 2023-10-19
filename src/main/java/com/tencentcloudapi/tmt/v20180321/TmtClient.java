@@ -45,18 +45,8 @@ public class TmtClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public FileTranslateResponse FileTranslate(FileTranslateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<FileTranslateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<FileTranslateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "FileTranslate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "FileTranslate", FileTranslateResponse.class);
     }
 
     /**
@@ -68,18 +58,8 @@ public class TmtClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetFileTranslateResponse GetFileTranslate(GetFileTranslateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetFileTranslateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetFileTranslateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetFileTranslate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetFileTranslate", GetFileTranslateResponse.class);
     }
 
     /**
@@ -90,18 +70,8 @@ public class TmtClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ImageTranslateResponse ImageTranslate(ImageTranslateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageTranslateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImageTranslateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImageTranslate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ImageTranslate", ImageTranslateResponse.class);
     }
 
     /**
@@ -112,18 +82,8 @@ public class TmtClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public LanguageDetectResponse LanguageDetect(LanguageDetectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<LanguageDetectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<LanguageDetectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "LanguageDetect");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "LanguageDetect", LanguageDetectResponse.class);
     }
 
     /**
@@ -137,18 +97,8 @@ public class TmtClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SpeechTranslateResponse SpeechTranslate(SpeechTranslateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SpeechTranslateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SpeechTranslateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SpeechTranslate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SpeechTranslate", SpeechTranslateResponse.class);
     }
 
     /**
@@ -159,18 +109,8 @@ public class TmtClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextTranslateResponse TextTranslate(TextTranslateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextTranslateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextTranslateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextTranslate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextTranslate", TextTranslateResponse.class);
     }
 
     /**
@@ -180,18 +120,8 @@ public class TmtClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextTranslateBatchResponse TextTranslateBatch(TextTranslateBatchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextTranslateBatchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextTranslateBatchResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextTranslateBatch");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextTranslateBatch", TextTranslateBatchResponse.class);
     }
 
 }

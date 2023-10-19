@@ -16,11 +16,12 @@
 package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClustersRequest extends AbstractModel{
+public class DescribeClustersRequest extends AbstractModel {
 
     /**
     * 按照一个或者多个集群 ID 查询，每次请求的集群上限为 100

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserInAndOutTimeResponse extends AbstractModel{
+public class DescribeUserInAndOutTimeResponse extends AbstractModel {
 
     /**
     * 用户在房间得进出时间列表

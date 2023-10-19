@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyApiAnalyzeStatusResponse extends AbstractModel{
+public class ModifyApiAnalyzeStatusResponse extends AbstractModel {
 
     /**
     * 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败

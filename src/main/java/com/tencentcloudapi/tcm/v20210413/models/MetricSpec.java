@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcm.v20210413.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetricSpec extends AbstractModel{
+public class MetricSpec extends AbstractModel {
 
     /**
     * 指标来源类型，支持 Pods/Resource

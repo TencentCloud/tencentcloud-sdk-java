@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLicenseListRequest extends AbstractModel{
+public class DescribeLicenseListRequest extends AbstractModel {
 
     /**
     * 多个条件筛选时 LicenseStatus,DeadlineStatus,ResourceId,Keywords 取交集

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PrometheusInstanceTenantUsage extends AbstractModel{
+public class PrometheusInstanceTenantUsage extends AbstractModel {
 
     /**
     * 实例ID

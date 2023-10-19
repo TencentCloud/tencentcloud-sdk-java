@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopRollbackRequest extends AbstractModel{
+public class StopRollbackRequest extends AbstractModel {
 
     /**
     * 撤销回档任务对应的实例Id。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskTemplatesRequest extends AbstractModel{
+public class DescribeTaskTemplatesRequest extends AbstractModel {
 
     /**
     * 任务模板ID列表，与Filters参数不能同时指定。

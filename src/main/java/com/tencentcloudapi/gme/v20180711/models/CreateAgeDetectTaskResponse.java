@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAgeDetectTaskResponse extends AbstractModel{
+public class CreateAgeDetectTaskResponse extends AbstractModel {
 
     /**
     * 本次任务提交后唯一id，用于获取任务运行结果

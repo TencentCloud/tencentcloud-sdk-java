@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRotationDetailResponse extends AbstractModel{
+public class DescribeRotationDetailResponse extends AbstractModel {
 
     /**
     * 否允许轮转，true表示开启轮转，false表示禁止轮转。

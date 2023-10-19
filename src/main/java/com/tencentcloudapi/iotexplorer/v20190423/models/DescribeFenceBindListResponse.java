@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFenceBindListResponse extends AbstractModel{
+public class DescribeFenceBindListResponse extends AbstractModel {
 
     /**
     * 围栏绑定的产品设备列表

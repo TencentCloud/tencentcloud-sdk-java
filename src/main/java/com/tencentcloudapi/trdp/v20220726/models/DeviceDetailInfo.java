@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trdp.v20220726.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceDetailInfo extends AbstractModel{
+public class DeviceDetailInfo extends AbstractModel {
 
     /**
     * mac地址或唯一设备标识

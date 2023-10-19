@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DrmStreamingsInfoForUpdate extends AbstractModel{
+public class DrmStreamingsInfoForUpdate extends AbstractModel {
 
     /**
     * 保护类型为 SimpleAES 的转自适应码流模板 ID。

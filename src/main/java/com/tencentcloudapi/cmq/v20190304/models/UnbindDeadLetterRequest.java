@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cmq.v20190304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindDeadLetterRequest extends AbstractModel{
+public class UnbindDeadLetterRequest extends AbstractModel {
 
     /**
     * 死信策略源队列名称，调用本接口会清空该队列的死信队列策略。

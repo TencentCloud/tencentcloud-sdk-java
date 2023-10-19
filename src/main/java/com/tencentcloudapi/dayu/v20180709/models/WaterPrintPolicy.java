@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WaterPrintPolicy extends AbstractModel{
+public class WaterPrintPolicy extends AbstractModel {
 
     /**
     * TCP端口段，例如["2000-3000","3500-4000"]

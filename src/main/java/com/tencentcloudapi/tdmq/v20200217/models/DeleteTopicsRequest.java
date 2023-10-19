@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTopicsRequest extends AbstractModel{
+public class DeleteTopicsRequest extends AbstractModel {
 
     /**
     * 主题集合，每次最多删除20个。

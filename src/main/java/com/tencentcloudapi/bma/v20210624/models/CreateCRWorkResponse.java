@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bma.v20210624.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCRWorkResponse extends AbstractModel{
+public class CreateCRWorkResponse extends AbstractModel {
 
     /**
     * 作品ID，一个作品对应唯一的workid

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextWritingRequest extends AbstractModel{
+public class TextWritingRequest extends AbstractModel {
 
     /**
     * 待续写的句子，文本统一使用utf-8格式编码，长度不超过200字符。

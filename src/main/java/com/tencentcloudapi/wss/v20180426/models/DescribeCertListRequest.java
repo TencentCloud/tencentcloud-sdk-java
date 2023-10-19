@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wss.v20180426.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertListRequest extends AbstractModel{
+public class DescribeCertListRequest extends AbstractModel {
 
     /**
     * 模块名称，应填 ssl。

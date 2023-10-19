@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConsumptionSummaryTrend extends AbstractModel{
+public class ConsumptionSummaryTrend extends AbstractModel {
 
     /**
     * 趋势类型，upward上升/downward下降/none无

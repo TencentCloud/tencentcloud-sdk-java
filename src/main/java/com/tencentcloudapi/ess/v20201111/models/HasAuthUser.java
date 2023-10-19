@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HasAuthUser extends AbstractModel{
+public class HasAuthUser extends AbstractModel {
 
     /**
     * 员工在腾讯电子签平台的唯一身份标识，为32位字符串。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.domain.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetDomainAutoRenewRequest extends AbstractModel{
+public class SetDomainAutoRenewRequest extends AbstractModel {
 
     /**
     * 域名ID 例如：domain-123abc

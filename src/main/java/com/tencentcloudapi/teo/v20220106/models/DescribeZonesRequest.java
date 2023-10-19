@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZonesRequest extends AbstractModel{
+public class DescribeZonesRequest extends AbstractModel {
 
     /**
     * 分页查询偏移量。默认值：0，最小值：0。

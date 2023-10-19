@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudaudit.v20190319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAuditTrackRequest extends AbstractModel{
+public class CreateAuditTrackRequest extends AbstractModel {
 
     /**
     * 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符

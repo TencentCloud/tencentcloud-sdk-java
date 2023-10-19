@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel{
+public class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel {
 
     /**
     * 填写ClusterId获取当前集群各个组件版本和最新版本

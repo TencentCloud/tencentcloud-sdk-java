@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneConf extends AbstractModel{
+public class ZoneConf extends AbstractModel {
 
     /**
     * 可用区部署方式，可能的值为：0-单可用区；1-多可用区

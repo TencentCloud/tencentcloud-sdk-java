@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tic.v20201117.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateStackVersionRequest extends AbstractModel{
+public class UpdateStackVersionRequest extends AbstractModel {
 
     /**
     * 待更新的版本ID

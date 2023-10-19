@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportLicenseDetailResponse extends AbstractModel{
+public class ExportLicenseDetailResponse extends AbstractModel {
 
     /**
     * 下载地址,该字段废弃

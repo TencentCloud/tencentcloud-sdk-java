@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeModelServiceHotUpdatedRequest extends AbstractModel{
+public class DescribeModelServiceHotUpdatedRequest extends AbstractModel {
 
     /**
     * 镜像信息，配置服务运行所需的镜像地址等信息

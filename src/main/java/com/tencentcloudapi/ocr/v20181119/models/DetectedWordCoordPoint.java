@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectedWordCoordPoint extends AbstractModel{
+public class DetectedWordCoordPoint extends AbstractModel {
 
     /**
     * 单字在原图中的坐标，以四个顶点坐标表示，以左上角为起点，顺时针返回。

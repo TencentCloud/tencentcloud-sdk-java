@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoginConfiguration extends AbstractModel{
+public class LoginConfiguration extends AbstractModel {
 
     /**
     * <li>"YES"代表选择自动生成密码，这时不指定Password字段。</li>

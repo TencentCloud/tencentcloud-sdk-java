@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpGeolocationDatabaseUrlRequest extends AbstractModel{
+public class DescribeIpGeolocationDatabaseUrlRequest extends AbstractModel {
 
     /**
     * IP地理位置库协议类型，目前仅支持"ipv4"。

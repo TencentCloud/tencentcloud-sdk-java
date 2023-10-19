@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MerchantRiskInfo extends AbstractModel{
+public class MerchantRiskInfo extends AbstractModel {
 
     /**
     * 恶意注册等级，0-9级，9级最高

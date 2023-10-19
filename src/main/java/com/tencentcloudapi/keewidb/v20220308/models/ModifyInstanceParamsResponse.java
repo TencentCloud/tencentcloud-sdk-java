@@ -16,11 +16,12 @@
 package com.tencentcloudapi.keewidb.v20220308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceParamsResponse extends AbstractModel{
+public class ModifyInstanceParamsResponse extends AbstractModel {
 
     /**
     * 修改是否成功。<ul><li>true：修改成功。</li><li>false：修改失败。</li></ul>

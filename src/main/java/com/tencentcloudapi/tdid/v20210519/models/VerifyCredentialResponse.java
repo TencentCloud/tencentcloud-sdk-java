@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdid.v20210519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyCredentialResponse extends AbstractModel{
+public class VerifyCredentialResponse extends AbstractModel {
 
     /**
     * 是否验证成功

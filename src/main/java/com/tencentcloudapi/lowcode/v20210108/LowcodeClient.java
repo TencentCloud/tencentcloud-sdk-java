@@ -45,18 +45,8 @@ public class LowcodeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDataSourceListResponse DescribeDataSourceList(DescribeDataSourceListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDataSourceListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataSourceListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataSourceList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDataSourceList", DescribeDataSourceListResponse.class);
     }
 
 }

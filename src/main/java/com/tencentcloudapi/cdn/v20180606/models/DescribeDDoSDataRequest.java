@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSDataRequest extends AbstractModel{
+public class DescribeDDoSDataRequest extends AbstractModel {
 
     /**
     * 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220805.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DislikeInfo extends AbstractModel{
+public class DislikeInfo extends AbstractModel {
 
     /**
     * 过滤的类别：<br>● author 作者名<br/>（如当前类型不满足，请<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决方案）

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDomainAliasRequest extends AbstractModel{
+public class DeleteDomainAliasRequest extends AbstractModel {
 
     /**
     * 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mrs.v20200910.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SurgeryUrogenitalSystem extends AbstractModel{
+public class SurgeryUrogenitalSystem extends AbstractModel {
 
     /**
     * 泌尿生殖系统总体描述

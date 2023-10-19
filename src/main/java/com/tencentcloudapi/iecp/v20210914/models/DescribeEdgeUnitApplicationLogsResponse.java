@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iecp.v20210914.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEdgeUnitApplicationLogsResponse extends AbstractModel{
+public class DescribeEdgeUnitApplicationLogsResponse extends AbstractModel {
 
     /**
     * 日志列表

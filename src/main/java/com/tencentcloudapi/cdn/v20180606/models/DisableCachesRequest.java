@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableCachesRequest extends AbstractModel{
+public class DisableCachesRequest extends AbstractModel {
 
     /**
     * 禁用的 URL 列表（分协议生效，必须包含http://或https://）

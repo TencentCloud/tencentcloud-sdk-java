@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCustomGroupRequest extends AbstractModel{
+public class CreateCustomGroupRequest extends AbstractModel {
 
     /**
     * 人脸图片COS存储桶Host地址

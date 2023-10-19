@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListLogRequest extends AbstractModel{
+public class ListLogRequest extends AbstractModel {
 
     /**
     * 日志开始时间，毫秒级时间戳

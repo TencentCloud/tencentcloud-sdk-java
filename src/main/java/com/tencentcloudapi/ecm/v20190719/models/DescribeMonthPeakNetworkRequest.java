@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMonthPeakNetworkRequest extends AbstractModel{
+public class DescribeMonthPeakNetworkRequest extends AbstractModel {
 
     /**
     * 月份时间(xxxx-xx) 如2021-03,默认取当前时间的上一个月份

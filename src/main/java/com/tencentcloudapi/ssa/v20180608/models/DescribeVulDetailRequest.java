@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulDetailRequest extends AbstractModel{
+public class DescribeVulDetailRequest extends AbstractModel {
 
     /**
     * 漏洞唯一标识符

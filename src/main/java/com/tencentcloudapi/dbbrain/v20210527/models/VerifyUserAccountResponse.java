@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyUserAccountResponse extends AbstractModel{
+public class VerifyUserAccountResponse extends AbstractModel {
 
     /**
     * 会话token，有效期为5分钟。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tms.v20200713.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetailResults extends AbstractModel{
+public class DetailResults extends AbstractModel {
 
     /**
     * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。

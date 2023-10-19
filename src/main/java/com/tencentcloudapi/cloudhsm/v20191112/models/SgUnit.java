@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudhsm.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SgUnit extends AbstractModel{
+public class SgUnit extends AbstractModel {
 
     /**
     * 安全组Id

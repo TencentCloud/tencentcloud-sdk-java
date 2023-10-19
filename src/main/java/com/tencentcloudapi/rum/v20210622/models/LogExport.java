@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogExport extends AbstractModel{
+public class LogExport extends AbstractModel {
 
     /**
     * 日志导出路径

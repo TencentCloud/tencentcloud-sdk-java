@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL7RulesBySSLCertIdResponse extends AbstractModel{
+public class DescribeL7RulesBySSLCertIdResponse extends AbstractModel {
 
     /**
     * 证书规则集合

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInLongAgentRequest extends AbstractModel{
+public class CreateInLongAgentRequest extends AbstractModel {
 
     /**
     * 采集器类型，1：TKE Agent，2：BOSS SDK，默认：1

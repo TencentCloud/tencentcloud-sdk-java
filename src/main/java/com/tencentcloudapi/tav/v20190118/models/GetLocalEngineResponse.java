@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tav.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetLocalEngineResponse extends AbstractModel{
+public class GetLocalEngineResponse extends AbstractModel {
 
     /**
     * 接口调用状态，成功返回200，失败返回400

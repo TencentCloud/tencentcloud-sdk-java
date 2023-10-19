@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendChatMessageRequest extends AbstractModel{
+public class SendChatMessageRequest extends AbstractModel {
 
     /**
     * 会话id，标识一组对话的唯一id，id变更则重置会话

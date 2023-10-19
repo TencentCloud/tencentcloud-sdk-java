@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnhanceMediaByTemplateResponse extends AbstractModel{
+public class EnhanceMediaByTemplateResponse extends AbstractModel {
 
     /**
     * 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。

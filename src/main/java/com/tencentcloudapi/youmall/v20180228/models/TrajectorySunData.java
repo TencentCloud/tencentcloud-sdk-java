@@ -16,11 +16,12 @@
 package com.tencentcloudapi.youmall.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TrajectorySunData extends AbstractModel{
+public class TrajectorySunData extends AbstractModel {
 
     /**
     * 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID

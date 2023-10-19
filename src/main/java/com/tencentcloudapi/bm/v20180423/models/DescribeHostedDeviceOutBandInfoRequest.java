@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHostedDeviceOutBandInfoRequest extends AbstractModel{
+public class DescribeHostedDeviceOutBandInfoRequest extends AbstractModel {
 
     /**
     * 托管设备的唯一ID数组,数组个数不超过20

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DistributeMultiApplyResult extends AbstractModel{
+public class DistributeMultiApplyResult extends AbstractModel {
 
     /**
     * 分账状态（0分账初始 1分账成功 2分账失败）

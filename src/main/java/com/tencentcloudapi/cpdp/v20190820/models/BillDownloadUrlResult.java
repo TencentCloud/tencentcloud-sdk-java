@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BillDownloadUrlResult extends AbstractModel{
+public class BillDownloadUrlResult extends AbstractModel {
 
     /**
     * 对账单下载地址。GET方式访问，返回zip包，解压后为csv格式文件。

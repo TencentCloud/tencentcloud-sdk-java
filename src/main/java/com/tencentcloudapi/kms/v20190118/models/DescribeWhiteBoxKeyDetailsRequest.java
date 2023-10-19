@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel{
+public class DescribeWhiteBoxKeyDetailsRequest extends AbstractModel {
 
     /**
     * 过滤条件：密钥的状态，0：disabled，1：enabled

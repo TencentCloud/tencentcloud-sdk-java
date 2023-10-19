@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20210922.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RcbAsr extends AbstractModel{
+public class RcbAsr extends AbstractModel {
 
     /**
     * 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。

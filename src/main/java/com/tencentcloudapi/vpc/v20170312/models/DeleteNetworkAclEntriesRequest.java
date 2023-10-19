@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteNetworkAclEntriesRequest extends AbstractModel{
+public class DeleteNetworkAclEntriesRequest extends AbstractModel {
 
     /**
     * 三元组网络ACL实例ID。例如：acl-12345678。

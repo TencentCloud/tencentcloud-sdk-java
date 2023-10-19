@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimingDataItem extends AbstractModel{
+public class TimingDataItem extends AbstractModel {
 
     /**
     * 返回数据对应时间点，采用unix秒级时间戳。

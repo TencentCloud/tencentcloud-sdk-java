@@ -16,11 +16,12 @@
 package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetachLoadBalancersResponse extends AbstractModel{
+public class DetachLoadBalancersResponse extends AbstractModel {
 
     /**
     * 伸缩活动ID

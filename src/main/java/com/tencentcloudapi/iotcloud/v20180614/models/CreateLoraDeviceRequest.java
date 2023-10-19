@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoraDeviceRequest extends AbstractModel{
+public class CreateLoraDeviceRequest extends AbstractModel {
 
     /**
     * 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id

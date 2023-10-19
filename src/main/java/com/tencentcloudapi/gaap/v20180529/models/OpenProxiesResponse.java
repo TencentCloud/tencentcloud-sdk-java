@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenProxiesResponse extends AbstractModel{
+public class OpenProxiesResponse extends AbstractModel {
 
     /**
     * 非关闭状态下的通道实例ID列表，不可开启。

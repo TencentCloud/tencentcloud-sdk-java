@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyApplicationTriggerPersonalRequest extends AbstractModel{
+public class ModifyApplicationTriggerPersonalRequest extends AbstractModel {
 
     /**
     * 触发器关联的镜像仓库，library/test格式

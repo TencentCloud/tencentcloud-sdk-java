@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LightResult extends AbstractModel{
+public class LightResult extends AbstractModel {
 
     /**
     * 光照程度，参考提交任务时的LightStandard指定的Name参数

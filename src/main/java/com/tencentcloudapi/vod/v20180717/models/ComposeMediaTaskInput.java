@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeMediaTaskInput extends AbstractModel{
+public class ComposeMediaTaskInput extends AbstractModel {
 
     /**
     * 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。

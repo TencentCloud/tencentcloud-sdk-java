@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowEvidenceReportResponse extends AbstractModel{
+public class DescribeFlowEvidenceReportResponse extends AbstractModel {
 
     /**
     * 出证报告PDF的下载 URL，`有效期为5分钟`，超过有效期后将无法再下载。

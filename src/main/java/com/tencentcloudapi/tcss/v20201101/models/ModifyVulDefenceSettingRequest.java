@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyVulDefenceSettingRequest extends AbstractModel{
+public class ModifyVulDefenceSettingRequest extends AbstractModel {
 
     /**
     * 是否开启:0: 关闭 1:开启

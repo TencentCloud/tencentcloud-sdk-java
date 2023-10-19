@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupDomainConfigResponse extends AbstractModel{
+public class DescribeGroupDomainConfigResponse extends AbstractModel {
 
     /**
     * 域名解析就近接入配置列表。

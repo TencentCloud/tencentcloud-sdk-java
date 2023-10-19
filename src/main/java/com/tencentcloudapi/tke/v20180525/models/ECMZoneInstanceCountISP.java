@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ECMZoneInstanceCountISP extends AbstractModel{
+public class ECMZoneInstanceCountISP extends AbstractModel {
 
     /**
     * 创建实例的可用区

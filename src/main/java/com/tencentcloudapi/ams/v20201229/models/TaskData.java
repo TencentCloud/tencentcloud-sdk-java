@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ams.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskData extends AbstractModel{
+public class TaskData extends AbstractModel {
 
     /**
     * 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。

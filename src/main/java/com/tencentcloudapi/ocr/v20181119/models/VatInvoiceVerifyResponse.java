@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VatInvoiceVerifyResponse extends AbstractModel{
+public class VatInvoiceVerifyResponse extends AbstractModel {
 
     /**
     * 增值税发票信息，详情请点击左侧链接。

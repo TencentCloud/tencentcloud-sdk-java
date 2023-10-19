@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAnonymousAccessTokenRequest extends AbstractModel{
+public class CreateAnonymousAccessTokenRequest extends AbstractModel {
 
     /**
     * Token的TTL(time to alive)分钟数,最大值1440(即24小时)

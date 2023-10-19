@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMachineRegionsResponse extends AbstractModel{
+public class DescribeMachineRegionsResponse extends AbstractModel {
 
     /**
     * CVM 云服务器地域列表

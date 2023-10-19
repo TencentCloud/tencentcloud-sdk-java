@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeQuotasRequest extends AbstractModel{
+public class DescribeQuotasRequest extends AbstractModel {
 
     /**
     * 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标

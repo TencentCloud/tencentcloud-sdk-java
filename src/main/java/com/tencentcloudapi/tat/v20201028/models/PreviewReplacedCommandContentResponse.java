@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PreviewReplacedCommandContentResponse extends AbstractModel{
+public class PreviewReplacedCommandContentResponse extends AbstractModel {
 
     /**
     * 自定义参数替换后的，经Base64编码的命令内容。

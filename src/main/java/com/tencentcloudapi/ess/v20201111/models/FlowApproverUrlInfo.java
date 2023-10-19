@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FlowApproverUrlInfo extends AbstractModel{
+public class FlowApproverUrlInfo extends AbstractModel {
 
     /**
     * 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。

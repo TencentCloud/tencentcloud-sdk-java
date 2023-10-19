@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WebHookHostLabel extends AbstractModel{
+public class WebHookHostLabel extends AbstractModel {
 
     /**
     * 主机范围[1:所属项目|2:腾讯云标签|3:主机安全标签|4:自选]空数组为全部

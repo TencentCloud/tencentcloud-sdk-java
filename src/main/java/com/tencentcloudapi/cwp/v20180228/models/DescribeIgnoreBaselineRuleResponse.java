@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIgnoreBaselineRuleResponse extends AbstractModel{
+public class DescribeIgnoreBaselineRuleResponse extends AbstractModel {
 
     /**
     * 忽略基线检测项列表信息

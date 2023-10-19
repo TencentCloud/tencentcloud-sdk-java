@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserResponse extends AbstractModel{
+public class UserResponse extends AbstractModel {
 
     /**
     * 符合条件的用户列表

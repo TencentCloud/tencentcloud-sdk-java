@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchCosRechargeInfoResponse extends AbstractModel{
+public class SearchCosRechargeInfoResponse extends AbstractModel {
 
     /**
     * 匹配到的存储桶下的某个文件的前几行数据

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScoreDetail extends AbstractModel{
+public class ScoreDetail extends AbstractModel {
 
     /**
     * 扣分项分类，取值包括：可用性、可维护性、性能及可靠性。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDocumentRequest extends AbstractModel{
+public class CreateDocumentRequest extends AbstractModel {
 
     /**
     * 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。

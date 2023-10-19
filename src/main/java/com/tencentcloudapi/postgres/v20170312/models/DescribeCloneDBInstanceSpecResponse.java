@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCloneDBInstanceSpecResponse extends AbstractModel{
+public class DescribeCloneDBInstanceSpecResponse extends AbstractModel {
 
     /**
     * 可购买的最小规格码。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7CCRuleResponse extends AbstractModel{
+public class CreateL7CCRuleResponse extends AbstractModel {
 
     /**
     * 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideoindustry.v20201201.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLiveVideoListRequest extends AbstractModel{
+public class DeleteLiveVideoListRequest extends AbstractModel {
 
     /**
     * 视频ID 列表, 大小限制(100)

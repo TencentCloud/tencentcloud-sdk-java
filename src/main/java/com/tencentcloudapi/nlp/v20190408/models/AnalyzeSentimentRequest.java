@@ -16,11 +16,12 @@
 package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AnalyzeSentimentRequest extends AbstractModel{
+public class AnalyzeSentimentRequest extends AbstractModel {
 
     /**
     * 待分析的文本（仅支持UTF-8格式，不超过200字）。

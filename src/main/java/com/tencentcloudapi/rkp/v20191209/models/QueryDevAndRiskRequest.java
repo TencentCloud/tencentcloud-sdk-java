@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rkp.v20191209.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryDevAndRiskRequest extends AbstractModel{
+public class QueryDevAndRiskRequest extends AbstractModel {
 
     /**
     * 设备类型 0表示Android， 1表示IOS

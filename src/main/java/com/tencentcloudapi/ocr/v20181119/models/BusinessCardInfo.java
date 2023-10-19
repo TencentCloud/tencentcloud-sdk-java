@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BusinessCardInfo extends AbstractModel{
+public class BusinessCardInfo extends AbstractModel {
 
     /**
     * 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：

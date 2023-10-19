@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupOverviewResponse extends AbstractModel{
+public class DescribeBackupOverviewResponse extends AbstractModel {
 
     /**
     * 用户在当前地域备份的总个数（包含数据备份和日志备份）。

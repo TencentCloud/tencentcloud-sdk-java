@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel{
+public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel {
 
     /**
     * 更新进度状态,doing更新中，success更新成功，failed失败

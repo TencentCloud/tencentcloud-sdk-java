@@ -16,11 +16,12 @@
 package com.tencentcloudapi.icr.v20211014.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetIndustryV1HomeMembersRespProduct extends AbstractModel{
+public class GetIndustryV1HomeMembersRespProduct extends AbstractModel {
 
     /**
     * 创建时间

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.anicloud.v20220923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryResourceResponse extends AbstractModel{
+public class QueryResourceResponse extends AbstractModel {
 
     /**
     * 资源信息列表

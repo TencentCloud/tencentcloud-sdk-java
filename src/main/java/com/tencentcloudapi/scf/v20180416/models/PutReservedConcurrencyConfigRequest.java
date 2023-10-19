@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PutReservedConcurrencyConfigRequest extends AbstractModel{
+public class PutReservedConcurrencyConfigRequest extends AbstractModel {
 
     /**
     * 需要设置最大独占配额的函数的名称

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RotateProductSecretResponse extends AbstractModel{
+public class RotateProductSecretResponse extends AbstractModel {
 
     /**
     * 当凭据类型为云产品凭据时（即SecretType为1，如MySQL、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。

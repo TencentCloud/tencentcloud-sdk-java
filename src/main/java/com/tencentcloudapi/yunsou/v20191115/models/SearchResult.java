@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunsou.v20191115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchResult extends AbstractModel{
+public class SearchResult extends AbstractModel {
 
     /**
     * 检索耗时，单位ms

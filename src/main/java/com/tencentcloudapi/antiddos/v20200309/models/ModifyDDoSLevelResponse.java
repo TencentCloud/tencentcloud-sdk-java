@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDDoSLevelResponse extends AbstractModel{
+public class ModifyDDoSLevelResponse extends AbstractModel {
 
     /**
     * 防护等级，取值[low,middle,high]

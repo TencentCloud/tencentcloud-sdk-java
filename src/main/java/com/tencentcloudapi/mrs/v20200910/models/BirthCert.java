@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mrs.v20200910.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BirthCert extends AbstractModel{
+public class BirthCert extends AbstractModel {
 
     /**
     * 新生儿信息

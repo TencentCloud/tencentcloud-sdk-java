@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListOrganizationChannelNumbersData extends AbstractModel{
+public class ListOrganizationChannelNumbersData extends AbstractModel {
 
     /**
     * 组织下通道总数

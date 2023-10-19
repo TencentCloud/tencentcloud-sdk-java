@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudstudio.v20210524.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CustomizeTemplatesPresetsInfo extends AbstractModel{
+public class CustomizeTemplatesPresetsInfo extends AbstractModel {
 
     /**
     * 模板tag列表

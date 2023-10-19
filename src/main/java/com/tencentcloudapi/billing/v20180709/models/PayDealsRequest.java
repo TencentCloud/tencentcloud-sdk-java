@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PayDealsRequest extends AbstractModel{
+public class PayDealsRequest extends AbstractModel {
 
     /**
     * 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数

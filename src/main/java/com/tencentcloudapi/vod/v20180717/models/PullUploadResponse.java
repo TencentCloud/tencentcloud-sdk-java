@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullUploadResponse extends AbstractModel{
+public class PullUploadResponse extends AbstractModel {
 
     /**
     * 拉取上传视频的任务 ID，可以通过该 ID 查询拉取上传任务的状态。

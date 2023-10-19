@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IsolateHourDCDBInstanceResponse extends AbstractModel{
+public class IsolateHourDCDBInstanceResponse extends AbstractModel {
 
     /**
     * 隔离成功的实例id列表

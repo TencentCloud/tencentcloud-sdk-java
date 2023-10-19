@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mrs.v20200910.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SurgeryHeadNeck extends AbstractModel{
+public class SurgeryHeadNeck extends AbstractModel {
 
     /**
     * 头颈部总体描述

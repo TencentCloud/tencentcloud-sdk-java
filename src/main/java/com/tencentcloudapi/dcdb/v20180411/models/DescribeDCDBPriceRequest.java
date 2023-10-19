@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBPriceRequest extends AbstractModel{
+public class DescribeDCDBPriceRequest extends AbstractModel {
 
     /**
     * 欲新购实例的可用区ID。

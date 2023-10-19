@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SchedulingStrategy extends AbstractModel{
+public class SchedulingStrategy extends AbstractModel {
 
     /**
     * NONE：不使用调度策略；CROSS_AZ：跨可用区部署

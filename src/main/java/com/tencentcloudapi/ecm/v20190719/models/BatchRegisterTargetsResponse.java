@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchRegisterTargetsResponse extends AbstractModel{
+public class BatchRegisterTargetsResponse extends AbstractModel {
 
     /**
     * 绑定失败的监听器ID，如为空表示全部绑定成功。

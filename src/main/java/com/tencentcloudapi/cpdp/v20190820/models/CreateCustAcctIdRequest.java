@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCustAcctIdRequest extends AbstractModel{
+public class CreateCustAcctIdRequest extends AbstractModel {
 
     /**
     * STRING(2)，功能标志（1: 开户; 3: 销户）

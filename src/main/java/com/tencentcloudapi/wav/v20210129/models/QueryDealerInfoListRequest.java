@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryDealerInfoListRequest extends AbstractModel{
+public class QueryDealerInfoListRequest extends AbstractModel {
 
     /**
     * 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GPUInfo extends AbstractModel{
+public class GPUInfo extends AbstractModel {
 
     /**
     * 实例GPU个数。值小于1代表VGPU类型，大于1代表GPU直通类型。

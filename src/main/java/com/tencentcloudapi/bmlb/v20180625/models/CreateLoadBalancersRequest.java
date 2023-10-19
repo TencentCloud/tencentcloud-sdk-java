@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancersRequest extends AbstractModel{
+public class CreateLoadBalancersRequest extends AbstractModel {
 
     /**
     * 黑石负载均衡实例所属的私有网络ID。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEnvsRequest extends AbstractModel{
+public class DescribeEnvsRequest extends AbstractModel {
 
     /**
     * 环境ID，如果传了这个参数则只返回该环境的相关信息

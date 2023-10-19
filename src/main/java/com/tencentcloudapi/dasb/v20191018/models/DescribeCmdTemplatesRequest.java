@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCmdTemplatesRequest extends AbstractModel{
+public class DescribeCmdTemplatesRequest extends AbstractModel {
 
     /**
     * 命令模板ID集合，非必需

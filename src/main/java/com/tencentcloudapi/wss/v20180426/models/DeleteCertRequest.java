@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wss.v20180426.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCertRequest extends AbstractModel{
+public class DeleteCertRequest extends AbstractModel {
 
     /**
     * 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。

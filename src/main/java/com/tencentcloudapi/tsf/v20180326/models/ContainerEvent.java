@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContainerEvent extends AbstractModel{
+public class ContainerEvent extends AbstractModel {
 
     /**
     * 第一次出现的时间，以 ms 为单位的时间戳

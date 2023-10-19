@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindEipAclsRequest extends AbstractModel{
+public class BindEipAclsRequest extends AbstractModel {
 
     /**
     * 待关联的 EIP 与 ACL关系列表

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxyNodesRequest extends AbstractModel{
+public class DescribeProxyNodesRequest extends AbstractModel {
 
     /**
     * 返回数量，默认为 20，最大值为 100

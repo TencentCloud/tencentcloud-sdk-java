@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAllNamespacesRequest extends AbstractModel{
+public class DescribeAllNamespacesRequest extends AbstractModel {
 
     /**
     * 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型

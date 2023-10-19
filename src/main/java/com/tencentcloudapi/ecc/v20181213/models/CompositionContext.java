@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecc.v20181213.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CompositionContext extends AbstractModel{
+public class CompositionContext extends AbstractModel {
 
     /**
     * 作文内容

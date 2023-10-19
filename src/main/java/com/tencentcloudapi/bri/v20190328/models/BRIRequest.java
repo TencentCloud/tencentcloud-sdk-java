@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bri.v20190328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BRIRequest extends AbstractModel{
+public class BRIRequest extends AbstractModel {
 
     /**
     * 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)

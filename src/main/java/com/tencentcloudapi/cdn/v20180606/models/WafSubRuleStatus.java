@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WafSubRuleStatus extends AbstractModel{
+public class WafSubRuleStatus extends AbstractModel {
 
     /**
     * Waf子规则开关状态配置开关，取值有：

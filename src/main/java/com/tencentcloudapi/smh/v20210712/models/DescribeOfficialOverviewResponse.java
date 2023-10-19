@@ -16,11 +16,12 @@
 package com.tencentcloudapi.smh.v20210712.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOfficialOverviewResponse extends AbstractModel{
+public class DescribeOfficialOverviewResponse extends AbstractModel {
 
     /**
     * 云盘实例数量

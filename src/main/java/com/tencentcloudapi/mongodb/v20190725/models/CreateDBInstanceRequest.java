@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceRequest extends AbstractModel{
+public class CreateDBInstanceRequest extends AbstractModel {
 
     /**
     * 指每个副本集内节点个数。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。

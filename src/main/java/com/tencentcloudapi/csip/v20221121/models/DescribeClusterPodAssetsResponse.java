@@ -16,11 +16,12 @@
 package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterPodAssetsResponse extends AbstractModel{
+public class DescribeClusterPodAssetsResponse extends AbstractModel {
 
     /**
     * 列表

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCreateGatewayApiStatusRequest extends AbstractModel{
+public class DescribeCreateGatewayApiStatusRequest extends AbstractModel {
 
     /**
     * 所属分组ID

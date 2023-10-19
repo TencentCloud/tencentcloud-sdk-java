@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckDefaultSubnetResponse extends AbstractModel{
+public class CheckDefaultSubnetResponse extends AbstractModel {
 
     /**
     * 检查结果。true为可以创建默认子网，false为不可以创建默认子网。

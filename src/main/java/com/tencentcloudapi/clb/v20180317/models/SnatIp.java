@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SnatIp extends AbstractModel{
+public class SnatIp extends AbstractModel {
 
     /**
     * 私有网络子网的唯一性id，如subnet-12345678

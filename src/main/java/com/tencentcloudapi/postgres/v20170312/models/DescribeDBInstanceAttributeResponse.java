@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstanceAttributeResponse extends AbstractModel{
+public class DescribeDBInstanceAttributeResponse extends AbstractModel {
 
     /**
     * 实例详细信息。

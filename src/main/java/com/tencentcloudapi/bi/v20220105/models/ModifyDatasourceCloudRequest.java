@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bi.v20220105.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDatasourceCloudRequest extends AbstractModel{
+public class ModifyDatasourceCloudRequest extends AbstractModel {
 
     /**
     * 后端提供字典：域类型，1、腾讯云，2、本地

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trdp.v20220726.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EvaluateUserRiskRequest extends AbstractModel{
+public class EvaluateUserRiskRequest extends AbstractModel {
 
     /**
     * 账号信息

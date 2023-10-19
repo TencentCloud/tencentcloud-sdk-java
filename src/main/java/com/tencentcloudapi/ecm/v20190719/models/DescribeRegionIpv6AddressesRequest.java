@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionIpv6AddressesRequest extends AbstractModel{
+public class DescribeRegionIpv6AddressesRequest extends AbstractModel {
 
     /**
     * ECM 地域，为空时返回所有地域的IPv6地址。

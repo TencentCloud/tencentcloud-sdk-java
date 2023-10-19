@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bizlive.v20190313.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopGameRequest extends AbstractModel{
+public class StopGameRequest extends AbstractModel {
 
     /**
     * 游戏用户ID

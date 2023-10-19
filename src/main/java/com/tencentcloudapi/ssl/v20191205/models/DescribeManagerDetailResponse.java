@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeManagerDetailResponse extends AbstractModel{
+public class DescribeManagerDetailResponse extends AbstractModel {
 
     /**
     * 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期

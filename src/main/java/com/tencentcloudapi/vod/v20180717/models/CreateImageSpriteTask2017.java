@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageSpriteTask2017 extends AbstractModel{
+public class CreateImageSpriteTask2017 extends AbstractModel {
 
     /**
     * 截图雪碧图任务 ID。

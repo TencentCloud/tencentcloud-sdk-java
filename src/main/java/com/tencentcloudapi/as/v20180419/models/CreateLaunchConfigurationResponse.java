@@ -16,11 +16,12 @@
 package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLaunchConfigurationResponse extends AbstractModel{
+public class CreateLaunchConfigurationResponse extends AbstractModel {
 
     /**
     * 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。

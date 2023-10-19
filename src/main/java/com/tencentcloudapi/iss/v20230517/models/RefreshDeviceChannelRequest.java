@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RefreshDeviceChannelRequest extends AbstractModel{
+public class RefreshDeviceChannelRequest extends AbstractModel {
 
     /**
     * 设备 ID（从获取设备列表ListDevices接口中获取）

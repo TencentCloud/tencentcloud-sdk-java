@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUserDeviceRequest extends AbstractModel{
+public class DeleteUserDeviceRequest extends AbstractModel {
 
     /**
     * 设备ID（从获取设备列表ListDevices接口中获取）

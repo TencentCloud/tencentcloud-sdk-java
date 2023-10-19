@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAvailablePlansResponse extends AbstractModel{
+public class DescribeAvailablePlansResponse extends AbstractModel {
 
     /**
     * 当前账户可购买套餐类型及相关信息。

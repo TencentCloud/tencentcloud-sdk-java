@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bsca.v20210811.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchKBComponentResponse extends AbstractModel{
+public class SearchKBComponentResponse extends AbstractModel {
 
     /**
     * 满足搜索条件的组件列表

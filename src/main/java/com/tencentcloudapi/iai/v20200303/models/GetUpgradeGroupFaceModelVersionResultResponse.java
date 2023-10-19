@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetUpgradeGroupFaceModelVersionResultResponse extends AbstractModel{
+public class GetUpgradeGroupFaceModelVersionResultResponse extends AbstractModel {
 
     /**
     * 人员升级任务预估结束时间。 StartTimestamp的值是自 Unix 纪元时间到人员查重任务预估结束的毫秒数。  

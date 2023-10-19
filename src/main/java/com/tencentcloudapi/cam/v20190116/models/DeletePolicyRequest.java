@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeletePolicyRequest extends AbstractModel{
+public class DeletePolicyRequest extends AbstractModel {
 
     /**
     * 数组，数组成员是策略 id，支持批量删除策略

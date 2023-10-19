@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBDiagReportTasksResponse extends AbstractModel{
+public class DescribeDBDiagReportTasksResponse extends AbstractModel {
 
     /**
     * 任务总数目。

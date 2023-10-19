@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRegisterCodesRequest extends AbstractModel{
+public class DeleteRegisterCodesRequest extends AbstractModel {
 
     /**
     * 注册码ID列表。限制输入的注册码ID数量大于0小于100。

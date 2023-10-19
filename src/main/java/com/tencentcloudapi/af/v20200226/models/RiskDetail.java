@@ -16,11 +16,12 @@
 package com.tencentcloudapi.af.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RiskDetail extends AbstractModel{
+public class RiskDetail extends AbstractModel {
 
     /**
     * 风险码 参数详细定义请加微信：TYXGJ-01

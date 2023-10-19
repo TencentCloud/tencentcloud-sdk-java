@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSparkAppJobRequest extends AbstractModel{
+public class DescribeSparkAppJobRequest extends AbstractModel {
 
     /**
     * spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个

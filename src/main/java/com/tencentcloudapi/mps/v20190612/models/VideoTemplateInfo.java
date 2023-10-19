@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoTemplateInfo extends AbstractModel{
+public class VideoTemplateInfo extends AbstractModel {
 
     /**
     * 视频流的编码格式，可选值：

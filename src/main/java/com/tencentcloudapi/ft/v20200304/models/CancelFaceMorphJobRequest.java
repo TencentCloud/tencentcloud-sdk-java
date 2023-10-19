@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ft.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelFaceMorphJobRequest extends AbstractModel{
+public class CancelFaceMorphJobRequest extends AbstractModel {
 
     /**
     * 人像渐变任务Job id

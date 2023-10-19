@@ -45,18 +45,8 @@ public class AnicloudClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CheckAppidExistResponse CheckAppidExist(CheckAppidExistRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckAppidExistResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CheckAppidExistResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CheckAppidExist");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CheckAppidExist", CheckAppidExistResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class AnicloudClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryResourceResponse QueryResource(QueryResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryResource");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryResource", QueryResourceResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class AnicloudClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryResourceInfoResponse QueryResourceInfo(QueryResourceInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryResourceInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryResourceInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryResourceInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryResourceInfo", QueryResourceInfoResponse.class);
     }
 
 }

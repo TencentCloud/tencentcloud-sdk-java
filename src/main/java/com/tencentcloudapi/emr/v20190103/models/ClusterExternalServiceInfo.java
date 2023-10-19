@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClusterExternalServiceInfo extends AbstractModel{
+public class ClusterExternalServiceInfo extends AbstractModel {
 
     /**
     * 依赖关系，0:被其他集群依赖，1:依赖其他集群

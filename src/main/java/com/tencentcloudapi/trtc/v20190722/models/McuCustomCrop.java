@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class McuCustomCrop extends AbstractModel{
+public class McuCustomCrop extends AbstractModel {
 
     /**
     * 自定义裁剪起始位置的X偏移，单位为像素值，大于等于0。

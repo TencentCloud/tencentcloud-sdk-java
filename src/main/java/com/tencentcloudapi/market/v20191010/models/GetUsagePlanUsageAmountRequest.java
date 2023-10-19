@@ -16,11 +16,12 @@
 package com.tencentcloudapi.market.v20191010.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetUsagePlanUsageAmountRequest extends AbstractModel{
+public class GetUsagePlanUsageAmountRequest extends AbstractModel {
 
     /**
     * 用于查询实例的Id

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ticm.v20181127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VodAsrTextSegmentItem extends AbstractModel{
+public class VodAsrTextSegmentItem extends AbstractModel {
 
     /**
     * 嫌疑片段起始的偏移时间，单位：秒。

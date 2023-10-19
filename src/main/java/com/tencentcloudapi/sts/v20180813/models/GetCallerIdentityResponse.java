@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sts.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCallerIdentityResponse extends AbstractModel{
+public class GetCallerIdentityResponse extends AbstractModel {
 
     /**
     * 当前调用者ARN。

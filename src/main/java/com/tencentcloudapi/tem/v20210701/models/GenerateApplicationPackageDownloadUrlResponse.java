@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateApplicationPackageDownloadUrlResponse extends AbstractModel{
+public class GenerateApplicationPackageDownloadUrlResponse extends AbstractModel {
 
     /**
     * 包下载临时链接

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DuplicateImagePersonalRequest extends AbstractModel{
+public class DuplicateImagePersonalRequest extends AbstractModel {
 
     /**
     * 源镜像名称，不包含domain。例如： tencentyun/foo:v1

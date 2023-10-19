@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResilientStreamConf extends AbstractModel{
+public class ResilientStreamConf extends AbstractModel {
 
     /**
     * 是否开启延播平滑吐流，true开启，false不开启，默认不开启。

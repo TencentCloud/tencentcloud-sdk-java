@@ -16,11 +16,12 @@
 package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoicePrintCountResponse extends AbstractModel{
+public class VoicePrintCountResponse extends AbstractModel {
 
     /**
     * 统计数据

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSchedulerMailProfileRequest extends AbstractModel{
+public class CreateSchedulerMailProfileRequest extends AbstractModel {
 
     /**
     * 取值范围1-7，分别代表周一至周日。

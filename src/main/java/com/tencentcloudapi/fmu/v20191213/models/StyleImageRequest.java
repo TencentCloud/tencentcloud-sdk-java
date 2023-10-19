@@ -16,11 +16,12 @@
 package com.tencentcloudapi.fmu.v20191213.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StyleImageRequest extends AbstractModel{
+public class StyleImageRequest extends AbstractModel {
 
     /**
     * 滤镜类型，取值如下： 

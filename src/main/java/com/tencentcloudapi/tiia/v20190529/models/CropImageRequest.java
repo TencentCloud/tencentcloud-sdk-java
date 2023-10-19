@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CropImageRequest extends AbstractModel{
+public class CropImageRequest extends AbstractModel {
 
     /**
     * 需要裁剪区域的宽度，与Height共同组成所需裁剪的图片宽高比例。

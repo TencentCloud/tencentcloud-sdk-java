@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateRandomResponse extends AbstractModel{
+public class GenerateRandomResponse extends AbstractModel {
 
     /**
     * 生成的随机数的明文，该明文使用base64编码，用户需要使用base64解码得到明文。

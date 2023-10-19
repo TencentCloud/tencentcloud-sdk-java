@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainAnalyticsDetail extends AbstractModel{
+public class DomainAnalyticsDetail extends AbstractModel {
 
     /**
     * 当前统计维度解析量小计

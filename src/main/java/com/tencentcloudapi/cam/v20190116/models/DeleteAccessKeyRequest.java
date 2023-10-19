@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccessKeyRequest extends AbstractModel{
+public class DeleteAccessKeyRequest extends AbstractModel {
 
     /**
     * 指定需要删除的AccessKeyId

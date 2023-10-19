@@ -45,18 +45,8 @@ public class AfcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetAntiFraudVipResponse GetAntiFraudVip(GetAntiFraudVipRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAntiFraudVipResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetAntiFraudVipResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetAntiFraudVip");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetAntiFraudVip", GetAntiFraudVipResponse.class);
     }
 
     /**
@@ -68,18 +58,8 @@ public class AfcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryAntiFraudVipResponse QueryAntiFraudVip(QueryAntiFraudVipRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryAntiFraudVipResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryAntiFraudVipResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryAntiFraudVip");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryAntiFraudVip", QueryAntiFraudVipResponse.class);
     }
 
     /**
@@ -89,18 +69,8 @@ public class AfcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TransportGeneralInterfaceResponse TransportGeneralInterface(TransportGeneralInterfaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TransportGeneralInterfaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TransportGeneralInterfaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TransportGeneralInterface");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TransportGeneralInterface", TransportGeneralInterfaceResponse.class);
     }
 
 }

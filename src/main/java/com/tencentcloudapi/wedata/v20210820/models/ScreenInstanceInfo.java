@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScreenInstanceInfo extends AbstractModel{
+public class ScreenInstanceInfo extends AbstractModel {
 
     /**
     * 统计标示 0：全部、1：当前天、2：昨天

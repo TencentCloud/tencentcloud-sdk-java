@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DorisConnectParam extends AbstractModel{
+public class DorisConnectParam extends AbstractModel {
 
     /**
     * Doris jdbc 负载均衡连接 port，通常映射到 fe 的 9030 端口

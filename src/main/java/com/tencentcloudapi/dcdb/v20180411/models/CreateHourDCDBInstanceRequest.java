@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHourDCDBInstanceRequest extends AbstractModel{
+public class CreateHourDCDBInstanceRequest extends AbstractModel {
 
     /**
     * 分片内存大小，单位：GB，可以通过 DescribeShardSpec

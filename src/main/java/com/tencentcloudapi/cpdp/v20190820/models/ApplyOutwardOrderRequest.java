@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyOutwardOrderRequest extends AbstractModel{
+public class ApplyOutwardOrderRequest extends AbstractModel {
 
     /**
     * 对接方汇出指令编号

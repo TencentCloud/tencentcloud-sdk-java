@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gpm.v20200820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Player extends AbstractModel{
+public class Player extends AbstractModel {
 
     /**
     * 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSAttackIPRegionMapResponse extends AbstractModel{
+public class DescribeDDoSAttackIPRegionMapResponse extends AbstractModel {
 
     /**
     * 全球地域分布数据

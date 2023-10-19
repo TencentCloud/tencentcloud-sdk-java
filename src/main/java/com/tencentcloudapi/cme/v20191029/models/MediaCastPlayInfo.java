@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaCastPlayInfo extends AbstractModel{
+public class MediaCastPlayInfo extends AbstractModel {
 
     /**
     * 点播转直播项目运行状态，取值有：

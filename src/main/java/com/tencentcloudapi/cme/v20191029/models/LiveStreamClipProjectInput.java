@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamClipProjectInput extends AbstractModel{
+public class LiveStreamClipProjectInput extends AbstractModel {
 
     /**
     * 直播流播放地址，目前仅支持 HLS 和 FLV 格式。

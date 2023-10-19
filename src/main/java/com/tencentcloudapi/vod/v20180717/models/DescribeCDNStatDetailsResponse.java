@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCDNStatDetailsResponse extends AbstractModel{
+public class DescribeCDNStatDetailsResponse extends AbstractModel {
 
     /**
     * 每条数据的时间粒度，单位：分钟。

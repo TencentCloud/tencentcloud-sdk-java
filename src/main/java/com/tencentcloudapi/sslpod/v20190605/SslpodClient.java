@@ -45,18 +45,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDomainResponse CreateDomain(CreateDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDomain", CreateDomainResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDomainResponse DeleteDomain(DeleteDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteDomain", DeleteDomainResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDashboardResponse DescribeDashboard(DescribeDashboardRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDashboardResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDashboardResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDashboard");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDashboard", DescribeDashboardResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDomainCertsResponse DescribeDomainCerts(DescribeDomainCertsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainCertsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDomainCertsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDomainCerts");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDomainCerts", DescribeDomainCertsResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDomainTagsResponse DescribeDomainTags(DescribeDomainTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDomainTagsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDomainTags");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDomainTags", DescribeDomainTagsResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDomains");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDomains", DescribeDomainsResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeNoticeInfoResponse DescribeNoticeInfo(DescribeNoticeInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeNoticeInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeNoticeInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeNoticeInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeNoticeInfo", DescribeNoticeInfoResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDomainTagsResponse ModifyDomainTags(ModifyDomainTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDomainTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDomainTagsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDomainTags");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyDomainTags", ModifyDomainTagsResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RefreshDomainResponse RefreshDomain(RefreshDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RefreshDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RefreshDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RefreshDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RefreshDomain", RefreshDomainResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class SslpodClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ResolveDomainResponse ResolveDomain(ResolveDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResolveDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ResolveDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResolveDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ResolveDomain", ResolveDomainResponse.class);
     }
 
 }

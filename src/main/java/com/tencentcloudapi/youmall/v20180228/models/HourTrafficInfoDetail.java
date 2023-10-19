@@ -16,11 +16,12 @@
 package com.tencentcloudapi.youmall.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HourTrafficInfoDetail extends AbstractModel{
+public class HourTrafficInfoDetail extends AbstractModel {
 
     /**
     * 小时 取值为：0，1，2，3，4，5，6，7，8，9，10，11，12，13，14，15，16，17，18，19，20，21，22，23

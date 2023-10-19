@@ -16,11 +16,12 @@
 package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposePoetryResponse extends AbstractModel{
+public class ComposePoetryResponse extends AbstractModel {
 
     /**
     * 诗题，即输入的生成诗词的关键词。

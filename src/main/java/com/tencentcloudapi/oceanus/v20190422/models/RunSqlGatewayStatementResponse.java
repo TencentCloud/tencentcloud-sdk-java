@@ -16,11 +16,12 @@
 package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunSqlGatewayStatementResponse extends AbstractModel{
+public class RunSqlGatewayStatementResponse extends AbstractModel {
 
     /**
     * 错误信息

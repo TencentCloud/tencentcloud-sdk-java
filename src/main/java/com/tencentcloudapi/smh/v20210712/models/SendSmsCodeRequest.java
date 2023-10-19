@@ -16,11 +16,12 @@
 package com.tencentcloudapi.smh.v20210712.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendSmsCodeRequest extends AbstractModel{
+public class SendSmsCodeRequest extends AbstractModel {
 
     /**
     * 验证码目的，当前支持换绑超级管理员账号， BindSuperAdmin；体验版企业升级，ChannelUpdateVerify等

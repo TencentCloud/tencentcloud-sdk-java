@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tds.v20220801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrustedIDRequest extends AbstractModel{
+public class DescribeTrustedIDRequest extends AbstractModel {
 
     /**
     * 客户端通过SDK获取的设备Token

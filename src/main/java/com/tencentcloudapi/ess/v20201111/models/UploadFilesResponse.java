@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadFilesResponse extends AbstractModel{
+public class UploadFilesResponse extends AbstractModel {
 
     /**
     * 文件资源ID数组，每个文件资源ID为32位字符串。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RefreshUrlCacheRequest extends AbstractModel{
+public class RefreshUrlCacheRequest extends AbstractModel {
 
     /**
     * 刷新的 URL 列表，单次最多指定20个 URL。

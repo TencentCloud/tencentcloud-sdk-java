@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeChargeDetailResponse extends AbstractModel{
+public class DescribeChargeDetailResponse extends AbstractModel {
 
     /**
     * 交易状态 （0：成功，1：失败，2：异常,3:冲正，5：待处理）

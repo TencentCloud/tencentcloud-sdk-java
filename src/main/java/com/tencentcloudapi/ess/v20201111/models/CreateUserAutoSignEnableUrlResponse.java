@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateUserAutoSignEnableUrlResponse extends AbstractModel{
+public class CreateUserAutoSignEnableUrlResponse extends AbstractModel {
 
     /**
     * 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。

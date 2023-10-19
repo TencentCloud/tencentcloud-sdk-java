@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PulsarNetworkAccessPointInfo extends AbstractModel{
+public class PulsarNetworkAccessPointInfo extends AbstractModel {
 
     /**
     * vpc的id，支撑网和公网接入点，该字段为空

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImagesResponse extends AbstractModel{
+public class DescribeImagesResponse extends AbstractModel {
 
     /**
     * 一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。

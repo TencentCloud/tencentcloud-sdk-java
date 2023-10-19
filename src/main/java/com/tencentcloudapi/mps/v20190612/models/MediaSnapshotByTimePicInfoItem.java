@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaSnapshotByTimePicInfoItem extends AbstractModel{
+public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
 
     /**
     * 该张截图对应视频文件中的时间偏移，单位为秒。

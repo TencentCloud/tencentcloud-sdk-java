@@ -16,11 +16,12 @@
 package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePrivateZoneRecordListResponse extends AbstractModel{
+public class DescribePrivateZoneRecordListResponse extends AbstractModel {
 
     /**
     * 解析记录数量

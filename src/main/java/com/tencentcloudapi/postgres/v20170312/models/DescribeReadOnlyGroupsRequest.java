@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReadOnlyGroupsRequest extends AbstractModel{
+public class DescribeReadOnlyGroupsRequest extends AbstractModel {
 
     /**
     * 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：

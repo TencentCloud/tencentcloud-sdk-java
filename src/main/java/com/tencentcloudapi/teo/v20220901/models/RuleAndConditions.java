@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleAndConditions extends AbstractModel{
+public class RuleAndConditions extends AbstractModel {
 
     /**
     * 规则引擎条件，该数组内所有项全部满足即判断该条件满足。

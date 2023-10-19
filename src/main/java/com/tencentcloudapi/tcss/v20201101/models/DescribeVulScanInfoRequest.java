@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulScanInfoRequest extends AbstractModel{
+public class DescribeVulScanInfoRequest extends AbstractModel {
 
     /**
     * 本地镜像漏洞扫描任务ID，无则返回最近一次的漏洞任务扫描

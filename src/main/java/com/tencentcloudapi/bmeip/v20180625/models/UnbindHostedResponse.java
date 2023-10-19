@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindHostedResponse extends AbstractModel{
+public class UnbindHostedResponse extends AbstractModel {
 
     /**
     * 异步任务ID，可以通过EipBmQueryTask查询任务状态

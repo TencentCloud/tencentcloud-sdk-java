@@ -16,11 +16,12 @@
 package com.tencentcloudapi.btoe.v20210514.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyEvidenceHashRequest extends AbstractModel{
+public class VerifyEvidenceHashRequest extends AbstractModel {
 
     /**
     * 存证内容hash，hash类型即为用户在存证时所用或所选的hash类型

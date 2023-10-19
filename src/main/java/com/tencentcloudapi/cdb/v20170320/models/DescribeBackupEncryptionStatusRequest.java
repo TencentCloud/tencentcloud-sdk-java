@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupEncryptionStatusRequest extends AbstractModel{
+public class DescribeBackupEncryptionStatusRequest extends AbstractModel {
 
     /**
     * 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。

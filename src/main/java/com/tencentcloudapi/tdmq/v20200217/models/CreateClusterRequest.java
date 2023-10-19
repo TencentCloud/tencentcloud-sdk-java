@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterRequest extends AbstractModel{
+public class CreateClusterRequest extends AbstractModel {
 
     /**
     * 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。

@@ -45,18 +45,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateEditingTaskResponse CreateEditingTask(CreateEditingTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEditingTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateEditingTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEditingTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateEditingTask", CreateEditingTaskResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateMediaProcessTaskResponse CreateMediaProcessTask(CreateMediaProcessTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaProcessTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaProcessTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaProcessTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateMediaProcessTask", CreateMediaProcessTaskResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateMediaQualityRestorationTaskResponse CreateMediaQualityRestorationTask(CreateMediaQualityRestorationTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaQualityRestorationTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaQualityRestorationTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaQualityRestorationTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateMediaQualityRestorationTask", CreateMediaQualityRestorationTaskResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateQualityControlTaskResponse CreateQualityControlTask(CreateQualityControlTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateQualityControlTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateQualityControlTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateQualityControlTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateQualityControlTask", CreateQualityControlTaskResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEditingTaskResultResponse DescribeEditingTaskResult(DescribeEditingTaskResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEditingTaskResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeEditingTaskResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeEditingTaskResult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeEditingTaskResult", DescribeEditingTaskResultResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeMediaProcessTaskResultResponse DescribeMediaProcessTaskResult(DescribeMediaProcessTaskResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaProcessTaskResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaProcessTaskResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaProcessTaskResult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeMediaProcessTaskResult", DescribeMediaProcessTaskResultResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeMediaQualityRestorationTaskRusultResponse DescribeMediaQualityRestorationTaskRusult(DescribeMediaQualityRestorationTaskRusultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaQualityRestorationTaskRusultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaQualityRestorationTaskRusultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaQualityRestorationTaskRusult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeMediaQualityRestorationTaskRusult", DescribeMediaQualityRestorationTaskRusultResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeQualityControlTaskResultResponse DescribeQualityControlTaskResult(DescribeQualityControlTaskResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeQualityControlTaskResultResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeQualityControlTaskResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeQualityControlTaskResult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeQualityControlTaskResult", DescribeQualityControlTaskResultResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StopMediaProcessTaskResponse StopMediaProcessTask(StopMediaProcessTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopMediaProcessTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<StopMediaProcessTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopMediaProcessTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "StopMediaProcessTask", StopMediaProcessTaskResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class IeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StopMediaQualityRestorationTaskResponse StopMediaQualityRestorationTask(StopMediaQualityRestorationTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopMediaQualityRestorationTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<StopMediaQualityRestorationTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopMediaQualityRestorationTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "StopMediaQualityRestorationTask", StopMediaQualityRestorationTaskResponse.class);
     }
 
 }

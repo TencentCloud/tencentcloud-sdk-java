@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBSwitchInfo extends AbstractModel{
+public class DBSwitchInfo extends AbstractModel {
 
     /**
     * 切换时间，格式为：2017-09-03 01:34:31

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaOutputConfig extends AbstractModel{
+public class EditMediaOutputConfig extends AbstractModel {
 
     /**
     * 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。

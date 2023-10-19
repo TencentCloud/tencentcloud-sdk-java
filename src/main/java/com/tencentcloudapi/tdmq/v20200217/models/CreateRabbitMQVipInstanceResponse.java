@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRabbitMQVipInstanceResponse extends AbstractModel{
+public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
 
     /**
     * 订单号Id

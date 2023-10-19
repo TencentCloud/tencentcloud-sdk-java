@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateServiceLinkedRoleRequest extends AbstractModel{
+public class CreateServiceLinkedRoleRequest extends AbstractModel {
 
     /**
     * 授权服务，附加了此角色的腾讯云服务主体。

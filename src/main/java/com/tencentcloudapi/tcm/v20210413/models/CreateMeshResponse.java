@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcm.v20210413.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMeshResponse extends AbstractModel{
+public class CreateMeshResponse extends AbstractModel {
 
     /**
     * 创建的Mesh的Id

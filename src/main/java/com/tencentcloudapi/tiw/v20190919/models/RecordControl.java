@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecordControl extends AbstractModel{
+public class RecordControl extends AbstractModel {
 
     /**
     * 设置是否开启录制控制参数，只有设置为true的时候，录制控制参数才生效。

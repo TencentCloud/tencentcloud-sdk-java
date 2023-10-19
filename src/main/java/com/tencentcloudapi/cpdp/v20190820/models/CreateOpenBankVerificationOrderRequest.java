@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOpenBankVerificationOrderRequest extends AbstractModel{
+public class CreateOpenBankVerificationOrderRequest extends AbstractModel {
 
     /**
     * 云企付渠道商户号。外部接入平台入驻云企付平台后下发。

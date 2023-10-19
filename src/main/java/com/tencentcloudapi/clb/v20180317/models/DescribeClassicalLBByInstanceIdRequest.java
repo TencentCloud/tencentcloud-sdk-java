@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClassicalLBByInstanceIdRequest extends AbstractModel{
+public class DescribeClassicalLBByInstanceIdRequest extends AbstractModel {
 
     /**
     * 后端实例ID列表。

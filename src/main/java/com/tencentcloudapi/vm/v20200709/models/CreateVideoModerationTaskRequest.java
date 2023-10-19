@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20200709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVideoModerationTaskRequest extends AbstractModel{
+public class CreateVideoModerationTaskRequest extends AbstractModel {
 
     /**
     * 业务类型, 定义 模版策略，输出存储配置。如果没有BizType，可以先参考 【创建业务配置】接口进行创建

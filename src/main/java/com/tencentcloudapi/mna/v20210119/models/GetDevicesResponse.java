@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDevicesResponse extends AbstractModel{
+public class GetDevicesResponse extends AbstractModel {
 
     /**
     * 设备信息列表

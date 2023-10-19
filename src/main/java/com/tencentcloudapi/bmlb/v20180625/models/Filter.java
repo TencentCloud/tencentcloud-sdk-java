@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter extends AbstractModel{
+public class Filter extends AbstractModel {
 
     /**
     * 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。

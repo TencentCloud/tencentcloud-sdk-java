@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RedisNodeInfo extends AbstractModel{
+public class RedisNodeInfo extends AbstractModel {
 
     /**
     * 节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>

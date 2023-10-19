@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tics.v20181115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpInfoResponse extends AbstractModel{
+public class DescribeIpInfoResponse extends AbstractModel {
 
     /**
     * 是否有数据，0代表有数据，1代表没有数据

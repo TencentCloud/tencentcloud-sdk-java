@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryExternalUserMappingInfoRequest extends AbstractModel{
+public class QueryExternalUserMappingInfoRequest extends AbstractModel {
 
     /**
     * 企业主体对应的外部联系人id列表，列表长度限制最大为50。

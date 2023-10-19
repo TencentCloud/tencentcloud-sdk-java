@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskDiscountRequest extends AbstractModel{
+public class DescribeDiskDiscountRequest extends AbstractModel {
 
     /**
     * 云硬盘类型, 取值: "CLOUD_PREMIUM"。

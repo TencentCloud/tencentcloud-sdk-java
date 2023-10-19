@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListTopCcDataRequest extends AbstractModel{
+public class ListTopCcDataRequest extends AbstractModel {
 
     /**
     * 查询Top数据的开始时间，格式为：2020-01-01 00:00:00

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyServiceGroupWeightsResponse extends AbstractModel{
+public class ModifyServiceGroupWeightsResponse extends AbstractModel {
 
     /**
     * 更新权重后的服务组信息

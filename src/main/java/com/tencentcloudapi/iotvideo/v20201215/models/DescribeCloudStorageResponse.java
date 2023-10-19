@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20201215.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCloudStorageResponse extends AbstractModel{
+public class DescribeCloudStorageResponse extends AbstractModel {
 
     /**
     * 云存开启状态，1为开启，0为未开启或已过期

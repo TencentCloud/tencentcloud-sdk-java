@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AutoUpgradeClusterLevel extends AbstractModel{
+public class AutoUpgradeClusterLevel extends AbstractModel {
 
     /**
     * 是否开启自动变配集群等级

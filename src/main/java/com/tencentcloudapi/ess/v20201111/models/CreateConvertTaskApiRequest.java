@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateConvertTaskApiRequest extends AbstractModel{
+public class CreateConvertTaskApiRequest extends AbstractModel {
 
     /**
     * 需要进行转换的资源文件类型

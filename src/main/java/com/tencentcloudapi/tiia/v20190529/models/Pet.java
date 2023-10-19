@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Pet extends AbstractModel{
+public class Pet extends AbstractModel {
 
     /**
     * 识别出的宠物类型（猫或者狗，暂不支持识别猫狗品种）。

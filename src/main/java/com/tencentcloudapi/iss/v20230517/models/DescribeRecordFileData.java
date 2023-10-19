@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRecordFileData extends AbstractModel{
+public class DescribeRecordFileData extends AbstractModel {
 
     /**
     * 提示类型，0:时间段内无归档录像，1:时间段内有归档录像

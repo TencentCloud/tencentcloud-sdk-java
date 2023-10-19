@@ -45,18 +45,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateWorkspaceResponse CreateWorkspace(CreateWorkspaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWorkspaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateWorkspaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateWorkspace");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateWorkspace", CreateWorkspaceResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateWorkspaceTokenResponse CreateWorkspaceToken(CreateWorkspaceTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWorkspaceTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateWorkspaceTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateWorkspaceToken");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateWorkspaceToken", CreateWorkspaceTokenResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeConfig", DescribeConfigResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeImagesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeImages");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeImages", DescribeImagesResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeWorkspacesResponse DescribeWorkspaces(DescribeWorkspacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeWorkspacesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeWorkspacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeWorkspaces");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeWorkspaces", DescribeWorkspacesResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyWorkspaceResponse ModifyWorkspace(ModifyWorkspaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyWorkspaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyWorkspaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyWorkspace");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyWorkspace", ModifyWorkspaceResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RemoveWorkspaceResponse RemoveWorkspace(RemoveWorkspaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RemoveWorkspaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RemoveWorkspaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveWorkspace");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RemoveWorkspace", RemoveWorkspaceResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RunWorkspaceResponse RunWorkspace(RunWorkspaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RunWorkspaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RunWorkspaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RunWorkspace");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RunWorkspace", RunWorkspaceResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class CloudstudioClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StopWorkspaceResponse StopWorkspace(StopWorkspaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopWorkspaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<StopWorkspaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopWorkspace");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "StopWorkspace", StopWorkspaceResponse.class);
     }
 
 }

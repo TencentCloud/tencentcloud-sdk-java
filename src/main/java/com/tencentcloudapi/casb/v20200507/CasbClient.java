@@ -52,18 +52,8 @@ public class CasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CopyCryptoColumnPolicyResponse CopyCryptoColumnPolicy(CopyCryptoColumnPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CopyCryptoColumnPolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CopyCryptoColumnPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CopyCryptoColumnPolicy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CopyCryptoColumnPolicy", CopyCryptoColumnPolicyResponse.class);
     }
 
 }

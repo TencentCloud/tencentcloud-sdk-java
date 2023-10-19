@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HighlightsInfomation extends AbstractModel{
+public class HighlightsInfomation extends AbstractModel {
 
     /**
     * 专注的起始与终止时间信息。

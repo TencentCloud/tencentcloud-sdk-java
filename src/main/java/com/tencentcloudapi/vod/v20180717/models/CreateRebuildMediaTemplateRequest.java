@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRebuildMediaTemplateRequest extends AbstractModel{
+public class CreateRebuildMediaTemplateRequest extends AbstractModel {
 
     /**
     * 输出文件封装格式，可选值：mp4、flv、hls。

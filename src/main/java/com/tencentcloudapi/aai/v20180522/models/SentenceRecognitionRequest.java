@@ -16,11 +16,12 @@
 package com.tencentcloudapi.aai.v20180522.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceRecognitionRequest extends AbstractModel{
+public class SentenceRecognitionRequest extends AbstractModel {
 
     /**
     * 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。

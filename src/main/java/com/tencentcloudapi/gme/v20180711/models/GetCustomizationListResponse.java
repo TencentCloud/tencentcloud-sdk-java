@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCustomizationListResponse extends AbstractModel{
+public class GetCustomizationListResponse extends AbstractModel {
 
     /**
     * 语音消息转文本热句模型配置

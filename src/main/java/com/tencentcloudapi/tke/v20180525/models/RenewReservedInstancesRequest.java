@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RenewReservedInstancesRequest extends AbstractModel{
+public class RenewReservedInstancesRequest extends AbstractModel {
 
     /**
     * 预留券实例ID，每次请求实例的上限为100。

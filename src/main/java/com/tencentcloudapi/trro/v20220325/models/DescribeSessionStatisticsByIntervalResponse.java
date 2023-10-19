@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trro.v20220325.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSessionStatisticsByIntervalResponse extends AbstractModel{
+public class DescribeSessionStatisticsByIntervalResponse extends AbstractModel {
 
     /**
     * 各时间段的会话统计数据

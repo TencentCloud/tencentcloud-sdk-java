@@ -16,11 +16,12 @@
 package com.tencentcloudapi.car.v20220110.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSessionResponse extends AbstractModel{
+public class CreateSessionResponse extends AbstractModel {
 
     /**
     * 服务端session信息，返回给SDK

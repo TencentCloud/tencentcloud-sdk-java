@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTargetGroupInstancesRequest extends AbstractModel{
+public class DescribeTargetGroupInstancesRequest extends AbstractModel {
 
     /**
     * 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。

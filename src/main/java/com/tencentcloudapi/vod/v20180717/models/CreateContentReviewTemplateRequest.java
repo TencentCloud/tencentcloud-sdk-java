@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateContentReviewTemplateRequest extends AbstractModel{
+public class CreateContentReviewTemplateRequest extends AbstractModel {
 
     /**
     * 音视频审核结果是否进入音视频审核墙（对识别结果进行人工复核）的开关。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRunSyncAssetResponse extends AbstractModel{
+public class ModifyRunSyncAssetResponse extends AbstractModel {
 
     /**
     * 0：同步成功，1：资产更新中，2：后台同步调用失败

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcbr.v20220217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCloudRunEnvResponse extends AbstractModel{
+public class CreateCloudRunEnvResponse extends AbstractModel {
 
     /**
     * 环境Id

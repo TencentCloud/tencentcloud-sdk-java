@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskFrameTagInput extends AbstractModel{
+public class AiAnalysisTaskFrameTagInput extends AbstractModel {
 
     /**
     * 视频智能按帧标签模板 ID。

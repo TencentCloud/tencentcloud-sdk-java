@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePayRollPreOrderWithAuthRequest extends AbstractModel{
+public class CreatePayRollPreOrderWithAuthRequest extends AbstractModel {
 
     /**
     * 用户在商户对应appid下的唯一标识

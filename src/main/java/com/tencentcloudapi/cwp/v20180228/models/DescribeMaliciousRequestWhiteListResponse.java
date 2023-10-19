@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMaliciousRequestWhiteListResponse extends AbstractModel{
+public class DescribeMaliciousRequestWhiteListResponse extends AbstractModel {
 
     /**
     * 白名单信息列表

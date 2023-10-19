@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDealsByCondRequest extends AbstractModel{
+public class DescribeDealsByCondRequest extends AbstractModel {
 
     /**
     * 开始时间 2016-01-01 00:00:00

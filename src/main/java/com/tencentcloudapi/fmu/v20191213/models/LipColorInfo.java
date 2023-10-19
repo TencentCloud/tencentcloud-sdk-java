@@ -16,11 +16,12 @@
 package com.tencentcloudapi.fmu.v20191213.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LipColorInfo extends AbstractModel{
+public class LipColorInfo extends AbstractModel {
 
     /**
     * 使用RGBA模型试唇色。

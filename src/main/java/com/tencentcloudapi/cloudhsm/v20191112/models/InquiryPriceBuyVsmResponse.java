@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudhsm.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceBuyVsmResponse extends AbstractModel{
+public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
     * 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99

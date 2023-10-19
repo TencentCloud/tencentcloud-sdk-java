@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBInfo extends AbstractModel{
+public class DBInfo extends AbstractModel {
 
     /**
     * 表示节点角色，针对分布式数据库，如mongodb中的mongos节点

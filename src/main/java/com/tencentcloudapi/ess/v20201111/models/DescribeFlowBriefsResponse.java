@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowBriefsResponse extends AbstractModel{
+public class DescribeFlowBriefsResponse extends AbstractModel {
 
     /**
     * 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 

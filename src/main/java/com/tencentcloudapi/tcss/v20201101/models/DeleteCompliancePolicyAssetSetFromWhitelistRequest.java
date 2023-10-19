@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCompliancePolicyAssetSetFromWhitelistRequest extends AbstractModel{
+public class DeleteCompliancePolicyAssetSetFromWhitelistRequest extends AbstractModel {
 
     /**
     * （检查项ID+资产ID列表）的列表

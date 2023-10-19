@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDrmKeyProviderInfoResponse extends AbstractModel{
+public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
 
     /**
     * 华曦达（SDMC）相关的 DRM 密钥提供商信息。

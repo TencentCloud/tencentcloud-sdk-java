@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IntentionActionConfig extends AbstractModel{
+public class IntentionActionConfig extends AbstractModel {
 
     /**
     * 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。

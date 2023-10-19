@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBatchSignUrlResponse extends AbstractModel{
+public class CreateBatchSignUrlResponse extends AbstractModel {
 
     /**
     * 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。

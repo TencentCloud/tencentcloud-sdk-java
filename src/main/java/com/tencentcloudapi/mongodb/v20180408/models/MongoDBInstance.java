@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MongoDBInstance extends AbstractModel{
+public class MongoDBInstance extends AbstractModel {
 
     /**
     * 实例ID

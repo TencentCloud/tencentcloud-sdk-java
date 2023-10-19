@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
+public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel {
 
     /**
     * CCN实例ID，形如：ccn-f49l6u0z。

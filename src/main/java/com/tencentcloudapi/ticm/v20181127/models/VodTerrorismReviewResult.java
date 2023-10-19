@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ticm.v20181127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VodTerrorismReviewResult extends AbstractModel{
+public class VodTerrorismReviewResult extends AbstractModel {
 
     /**
     * 视频暴恐评分，分值为0到100。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudaudit.v20190319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetAttributeKeyRequest extends AbstractModel{
+public class GetAttributeKeyRequest extends AbstractModel {
 
     /**
     * 网站类型，取值范围是zh和en。如果不传值默认zh

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskByStatusReportResponse extends AbstractModel{
+public class DescribeTaskByStatusReportResponse extends AbstractModel {
 
     /**
     * 任务上报趋势指标

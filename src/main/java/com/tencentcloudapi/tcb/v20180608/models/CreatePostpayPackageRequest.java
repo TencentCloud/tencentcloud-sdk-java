@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePostpayPackageRequest extends AbstractModel{
+public class CreatePostpayPackageRequest extends AbstractModel {
 
     /**
     * 环境ID，需要系统自动创建环境时，此字段不传

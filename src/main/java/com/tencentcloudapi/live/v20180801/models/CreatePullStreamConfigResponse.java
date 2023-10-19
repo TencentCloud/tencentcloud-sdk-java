@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePullStreamConfigResponse extends AbstractModel{
+public class CreatePullStreamConfigResponse extends AbstractModel {
 
     /**
     * 配置成功后的 ID。

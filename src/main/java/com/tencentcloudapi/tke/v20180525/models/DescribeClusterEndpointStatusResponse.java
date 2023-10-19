@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterEndpointStatusResponse extends AbstractModel{
+public class DescribeClusterEndpointStatusResponse extends AbstractModel {
 
     /**
     * 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MixLayout extends AbstractModel{
+public class MixLayout extends AbstractModel {
 
     /**
     * 画布上该画面左上角的 y 轴坐标，取值范围 [0, 1920]，不能超过画布的高。

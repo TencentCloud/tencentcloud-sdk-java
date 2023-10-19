@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRolePermissionsBoundaryRequest extends AbstractModel{
+public class DeleteRolePermissionsBoundaryRequest extends AbstractModel {
 
     /**
     * 角色ID（与角色名至少填一个）

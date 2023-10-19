@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDSPAAssessmentTasksResponse extends AbstractModel{
+public class DescribeDSPAAssessmentTasksResponse extends AbstractModel {
 
     /**
     * 符合条件的评估任务数目

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20190711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendStatusStatistics extends AbstractModel{
+public class SendStatusStatistics extends AbstractModel {
 
     /**
     * 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。

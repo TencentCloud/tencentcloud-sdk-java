@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerAttributesResponse extends AbstractModel{
+public class ModifyLoadBalancerAttributesResponse extends AbstractModel {
 
     /**
     * 切换负载均衡计费方式时，可用此参数查询切换任务是否成功。

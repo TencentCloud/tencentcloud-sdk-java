@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trro.v20220325.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SessionIntervalStatistic extends AbstractModel{
+public class SessionIntervalStatistic extends AbstractModel {
 
     /**
     * 活跃现场设备数

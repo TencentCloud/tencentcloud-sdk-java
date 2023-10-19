@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eb.v20210416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEventBusRequest extends AbstractModel{
+public class CreateEventBusRequest extends AbstractModel {
 
     /**
     * 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符

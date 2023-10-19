@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeApplicationTriggerLogPersonalResponse extends AbstractModel{
+public class DescribeApplicationTriggerLogPersonalResponse extends AbstractModel {
 
     /**
     * 触发日志返回值

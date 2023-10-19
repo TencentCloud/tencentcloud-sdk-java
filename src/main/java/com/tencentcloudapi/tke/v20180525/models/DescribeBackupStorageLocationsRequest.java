@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupStorageLocationsRequest extends AbstractModel{
+public class DescribeBackupStorageLocationsRequest extends AbstractModel {
 
     /**
     * 多个备份仓库名称，如果不填写，默认返回当前地域所有存储仓库名称

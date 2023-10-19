@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TopicRetentionTimeConfigRsp extends AbstractModel{
+public class TopicRetentionTimeConfigRsp extends AbstractModel {
 
     /**
     * 期望值，即用户配置的Topic消息保留时间(单位分钟)

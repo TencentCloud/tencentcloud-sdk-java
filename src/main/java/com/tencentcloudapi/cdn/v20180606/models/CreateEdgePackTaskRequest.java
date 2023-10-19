@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEdgePackTaskRequest extends AbstractModel{
+public class CreateEdgePackTaskRequest extends AbstractModel {
 
     /**
     * apk 所在的 cos 存储桶, 如 edgepack-xxxxxxxx

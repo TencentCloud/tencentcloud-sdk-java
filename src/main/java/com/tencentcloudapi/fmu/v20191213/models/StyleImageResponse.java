@@ -16,11 +16,12 @@
 package com.tencentcloudapi.fmu.v20191213.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StyleImageResponse extends AbstractModel{
+public class StyleImageResponse extends AbstractModel {
 
     /**
     * RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64

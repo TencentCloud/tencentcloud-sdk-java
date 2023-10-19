@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EventBusParam extends AbstractModel{
+public class EventBusParam extends AbstractModel {
 
     /**
     * 资源类型。EB_COS/EB_ES/EB_CLS

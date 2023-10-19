@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommonTimeWindow extends AbstractModel{
+public class CommonTimeWindow extends AbstractModel {
 
     /**
     * 周一的时间窗，格式如： 02:00-06:00

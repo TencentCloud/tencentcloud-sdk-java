@@ -16,11 +16,12 @@
 package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAuditLogResponse extends AbstractModel{
+public class DescribeAuditLogResponse extends AbstractModel {
 
     /**
     * 操作日志列表

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonExDescriptionInfo extends AbstractModel{
+public class PersonExDescriptionInfo extends AbstractModel {
 
     /**
     * 人员描述字段Index，从0开始

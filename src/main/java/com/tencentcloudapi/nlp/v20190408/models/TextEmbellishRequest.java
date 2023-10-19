@@ -16,11 +16,12 @@
 package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextEmbellishRequest extends AbstractModel{
+public class TextEmbellishRequest extends AbstractModel {
 
     /**
     * 待润色的文本。中文文本长度需<=50字符；英文文本长度需<=30个单词。

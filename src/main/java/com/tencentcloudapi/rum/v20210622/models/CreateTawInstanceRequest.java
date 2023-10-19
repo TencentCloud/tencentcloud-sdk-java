@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTawInstanceRequest extends AbstractModel{
+public class CreateTawInstanceRequest extends AbstractModel {
 
     /**
     * 片区Id，(至少大于0)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDedicatedClusterDCDBInstanceResponse extends AbstractModel{
+public class CreateDedicatedClusterDCDBInstanceResponse extends AbstractModel {
 
     /**
     * 分配资源ID数组

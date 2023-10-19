@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEscapeSafeStateResponse extends AbstractModel{
+public class DescribeEscapeSafeStateResponse extends AbstractModel {
 
     /**
     * Unsafe：存在风险，Safe：暂无风险,UnKnown:未知风险

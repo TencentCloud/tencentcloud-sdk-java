@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AclRuleInfo extends AbstractModel{
+public class AclRuleInfo extends AbstractModel {
 
     /**
     * Acl操作方式，枚举值(所有操作: All, 读：Read，写：Write)

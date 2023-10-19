@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PostQuantumCryptoSignRequest extends AbstractModel{
+public class PostQuantumCryptoSignRequest extends AbstractModel {
 
     /**
     * Base64 编码的消息原文。消息原文的长度（Base64编码前的长度）不超过4096字节。

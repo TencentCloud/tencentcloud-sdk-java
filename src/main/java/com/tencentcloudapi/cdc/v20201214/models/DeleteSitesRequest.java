@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdc.v20201214.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSitesRequest extends AbstractModel{
+public class DeleteSitesRequest extends AbstractModel {
 
     /**
     * 要删除的站点id列表

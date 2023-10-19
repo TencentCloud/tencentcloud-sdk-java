@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20230321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExpansionNodeConfig extends AbstractModel{
+public class ExpansionNodeConfig extends AbstractModel {
 
     /**
     * 扩容实例所在的位置。

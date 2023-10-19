@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryFinancialDataUrlRequest extends AbstractModel{
+public class QueryFinancialDataUrlRequest extends AbstractModel {
 
     /**
     * 数据查询范围:结束时间 yyyy-MM-dd HH:mm:ss

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ams.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAudioModerationTaskRequest extends AbstractModel{
+public class CreateAudioModerationTaskRequest extends AbstractModel {
 
     /**
     * 该字段表示输入的音频审核任务信息，具体输入内容请参见TaskInput数据结构的详细描述。<br> 备注：最多同时可创建**10个任务**。

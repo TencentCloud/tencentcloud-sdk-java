@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateRecordBackupTemplateRequest extends AbstractModel{
+public class UpdateRecordBackupTemplateRequest extends AbstractModel {
 
     /**
     * 模板ID（从查询录像上云模板列表接口ListRecordBackupTemplates中获取）

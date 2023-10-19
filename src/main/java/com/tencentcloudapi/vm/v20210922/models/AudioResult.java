@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20210922.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioResult extends AbstractModel{
+public class AudioResult extends AbstractModel {
 
     /**
     * 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。

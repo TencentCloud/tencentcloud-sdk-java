@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceParamResponse extends AbstractModel{
+public class ModifyInstanceParamResponse extends AbstractModel {
 
     /**
     * 异步任务 ID，可用于查询任务进度。

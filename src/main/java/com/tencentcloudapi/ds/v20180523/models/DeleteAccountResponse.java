@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ds.v20180523.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccountResponse extends AbstractModel{
+public class DeleteAccountResponse extends AbstractModel {
 
     /**
     * 删除成功帐号ID列表

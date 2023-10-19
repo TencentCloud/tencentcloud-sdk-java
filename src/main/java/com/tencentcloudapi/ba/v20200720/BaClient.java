@@ -45,18 +45,8 @@ public class BaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateWeappQRUrlResponse CreateWeappQRUrl(CreateWeappQRUrlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateWeappQRUrlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateWeappQRUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateWeappQRUrl");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateWeappQRUrl", CreateWeappQRUrlResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class BaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeGetAuthInfoResponse DescribeGetAuthInfo(DescribeGetAuthInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGetAuthInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGetAuthInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGetAuthInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeGetAuthInfo", DescribeGetAuthInfoResponse.class);
     }
 
     /**
@@ -88,18 +68,8 @@ public class BaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SyncIcpOrderWebInfoResponse SyncIcpOrderWebInfo(SyncIcpOrderWebInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SyncIcpOrderWebInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SyncIcpOrderWebInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SyncIcpOrderWebInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SyncIcpOrderWebInfo", SyncIcpOrderWebInfoResponse.class);
     }
 
 }

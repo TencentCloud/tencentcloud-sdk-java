@@ -16,11 +16,12 @@
 package com.tencentcloudapi.smpn.v20190822.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSmpnMrlRequest extends AbstractModel{
+public class DescribeSmpnMrlRequest extends AbstractModel {
 
     /**
     * 恶意标记等级请求内容

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryOpenBankSupportBankListResult extends AbstractModel{
+public class QueryOpenBankSupportBankListResult extends AbstractModel {
 
     /**
     * 支持的银行列表

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudhsm.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetAlarmEventResponse extends AbstractModel{
+public class GetAlarmEventResponse extends AbstractModel {
 
     /**
     * 用户所有的告警策略

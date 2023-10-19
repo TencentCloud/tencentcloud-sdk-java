@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Schedule extends AbstractModel{
+public class Schedule extends AbstractModel {
 
     /**
     * 类型：Hourly, Daily, Weekly, Custom, Manual, Dryrun, None

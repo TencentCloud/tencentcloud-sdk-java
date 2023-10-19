@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoginStatistic extends AbstractModel{
+public class LoginStatistic extends AbstractModel {
 
     /**
     * 统计类型 新增NEWUSER 和登录 LOGIN

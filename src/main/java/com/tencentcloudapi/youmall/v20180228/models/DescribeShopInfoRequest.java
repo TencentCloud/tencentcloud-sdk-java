@@ -16,11 +16,12 @@
 package com.tencentcloudapi.youmall.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShopInfoRequest extends AbstractModel{
+public class DescribeShopInfoRequest extends AbstractModel {
 
     /**
     * 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit

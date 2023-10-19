@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apcas.v20201127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RatingData extends AbstractModel{
+public class RatingData extends AbstractModel {
 
     /**
     * 线索评级（取值：0、1、2、3分别代表无、低、中、高意愿）

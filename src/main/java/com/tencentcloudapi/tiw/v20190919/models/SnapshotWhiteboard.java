@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SnapshotWhiteboard extends AbstractModel{
+public class SnapshotWhiteboard extends AbstractModel {
 
     /**
     * 白板宽度大小，默认为1280，有效取值范围[0，2560]

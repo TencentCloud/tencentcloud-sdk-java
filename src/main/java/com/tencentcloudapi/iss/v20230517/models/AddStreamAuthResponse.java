@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddStreamAuthResponse extends AbstractModel{
+public class AddStreamAuthResponse extends AbstractModel {
 
     /**
     * 设置推拉流鉴权返回数据

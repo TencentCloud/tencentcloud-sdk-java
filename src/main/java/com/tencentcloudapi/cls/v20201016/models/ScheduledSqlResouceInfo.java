@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScheduledSqlResouceInfo extends AbstractModel{
+public class ScheduledSqlResouceInfo extends AbstractModel {
 
     /**
     * 目标主题id

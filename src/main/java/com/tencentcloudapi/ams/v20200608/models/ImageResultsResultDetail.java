@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ams.v20200608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageResultsResultDetail extends AbstractModel{
+public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 位置信息

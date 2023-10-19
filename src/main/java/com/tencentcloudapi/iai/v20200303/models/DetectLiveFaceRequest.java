@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectLiveFaceRequest extends AbstractModel{
+public class DetectLiveFaceRequest extends AbstractModel {
 
     /**
     * 图片 base64 数据，base64 编码后大小不可超过5M。

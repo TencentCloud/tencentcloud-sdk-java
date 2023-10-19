@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleDimCnt extends AbstractModel{
+public class RuleDimCnt extends AbstractModel {
 
     /**
     * 1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性

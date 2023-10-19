@@ -45,18 +45,8 @@ public class AaiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ChatResponse Chat(ChatRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ChatResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ChatResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Chat");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "Chat", ChatResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class AaiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SentenceRecognitionResponse SentenceRecognition(SentenceRecognitionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SentenceRecognitionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SentenceRecognitionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SentenceRecognition");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SentenceRecognition", SentenceRecognitionResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class AaiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SimultaneousInterpretingResponse SimultaneousInterpreting(SimultaneousInterpretingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SimultaneousInterpretingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SimultaneousInterpretingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SimultaneousInterpreting");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SimultaneousInterpreting", SimultaneousInterpretingResponse.class);
     }
 
     /**
@@ -110,18 +80,8 @@ public class AaiClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextToVoiceResponse TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextToVoiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextToVoiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextToVoice");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextToVoice", TextToVoiceResponse.class);
     }
 
 }

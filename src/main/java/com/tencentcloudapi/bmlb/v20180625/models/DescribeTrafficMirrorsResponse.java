@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorsResponse extends AbstractModel{
+public class DescribeTrafficMirrorsResponse extends AbstractModel {
 
     /**
     * 流量镜像总数。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExecuteFunctionResponse extends AbstractModel{
+public class ExecuteFunctionResponse extends AbstractModel {
 
     /**
     * 处理结果打包后的字符串，具体与后台一同协调。

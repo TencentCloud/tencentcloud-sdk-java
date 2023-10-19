@@ -45,18 +45,8 @@ public class RceClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskAssessmentResponse DescribeRiskAssessment(DescribeRiskAssessmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskAssessmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskAssessmentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskAssessment");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskAssessment", DescribeRiskAssessmentResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class RceClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskTrendsResponse DescribeRiskTrends(DescribeRiskTrendsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskTrendsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskTrendsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskTrends");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskTrends", DescribeRiskTrendsResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class RceClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ManageMarketingRiskResponse ManageMarketingRisk(ManageMarketingRiskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ManageMarketingRiskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ManageMarketingRiskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ManageMarketingRisk");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ManageMarketingRisk", ManageMarketingRiskResponse.class);
     }
 
 }

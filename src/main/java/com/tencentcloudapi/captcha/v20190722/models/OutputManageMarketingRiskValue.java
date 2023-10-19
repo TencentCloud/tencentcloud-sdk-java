@@ -16,11 +16,12 @@
 package com.tencentcloudapi.captcha.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputManageMarketingRiskValue extends AbstractModel{
+public class OutputManageMarketingRiskValue extends AbstractModel {
 
     /**
     * 账号 ID。对应输入参数： AccountType 是 1 时，对应 QQ 的 OpenID。

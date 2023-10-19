@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicesBindInfoBackend extends AbstractModel{
+public class DevicesBindInfoBackend extends AbstractModel {
 
     /**
     * 黑石物理机的主机ID、托管主机ID或虚拟机IP。

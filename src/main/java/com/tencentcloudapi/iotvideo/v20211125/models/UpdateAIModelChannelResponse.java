@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateAIModelChannelResponse extends AbstractModel{
+public class UpdateAIModelChannelResponse extends AbstractModel {
 
     /**
     * 第三方推送密钥，如果选择自动生成则会返回此字段

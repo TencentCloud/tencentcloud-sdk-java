@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaTargetInfo extends AbstractModel{
+public class MediaTargetInfo extends AbstractModel {
 
     /**
     * 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。

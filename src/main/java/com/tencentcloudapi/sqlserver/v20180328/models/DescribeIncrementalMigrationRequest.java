@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIncrementalMigrationRequest extends AbstractModel{
+public class DescribeIncrementalMigrationRequest extends AbstractModel {
 
     /**
     * 备份导入任务ID，由CreateBackupMigration接口返回

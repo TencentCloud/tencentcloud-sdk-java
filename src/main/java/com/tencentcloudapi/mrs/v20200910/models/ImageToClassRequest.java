@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mrs.v20200910.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageToClassRequest extends AbstractModel{
+public class ImageToClassRequest extends AbstractModel {
 
     /**
     * 图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCkafkaZoneResponse extends AbstractModel{
+public class DescribeCkafkaZoneResponse extends AbstractModel {
 
     /**
     * 查询结果复杂对象实体

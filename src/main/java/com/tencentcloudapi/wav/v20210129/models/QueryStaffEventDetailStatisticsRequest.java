@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryStaffEventDetailStatisticsRequest extends AbstractModel{
+public class QueryStaffEventDetailStatisticsRequest extends AbstractModel {
 
     /**
     * 查询开始时间， 单位秒

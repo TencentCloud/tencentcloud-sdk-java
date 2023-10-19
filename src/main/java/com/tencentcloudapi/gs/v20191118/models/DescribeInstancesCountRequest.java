@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesCountRequest extends AbstractModel{
+public class DescribeInstancesCountRequest extends AbstractModel {
 
     /**
     * 游戏ID

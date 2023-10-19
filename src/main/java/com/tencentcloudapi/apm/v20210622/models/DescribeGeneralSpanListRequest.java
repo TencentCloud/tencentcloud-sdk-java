@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apm.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGeneralSpanListRequest extends AbstractModel{
+public class DescribeGeneralSpanListRequest extends AbstractModel {
 
     /**
     * 分页

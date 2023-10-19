@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePrometheusScrapeJobResponse extends AbstractModel{
+public class CreatePrometheusScrapeJobResponse extends AbstractModel {
 
     /**
     * 成功创建抓取任务 Id

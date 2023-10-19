@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBatchIpAccessControlRequest extends AbstractModel{
+public class DescribeBatchIpAccessControlRequest extends AbstractModel {
 
     /**
     * 筛选条件，支持 ActionType 40/42，Ip：ip地址，Domain：域名三类

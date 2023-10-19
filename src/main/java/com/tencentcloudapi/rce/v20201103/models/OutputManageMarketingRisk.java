@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rce.v20201103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputManageMarketingRisk extends AbstractModel{
+public class OutputManageMarketingRisk extends AbstractModel {
 
     /**
     * 返回码。0表示成功，非0标识失败错误码。

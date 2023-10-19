@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSDefendStatusResponse extends AbstractModel{
+public class DescribeDDoSDefendStatusResponse extends AbstractModel {
 
     /**
     * 防护状态，为0表示防护处于关闭状态，为1表示防护处于开启状态

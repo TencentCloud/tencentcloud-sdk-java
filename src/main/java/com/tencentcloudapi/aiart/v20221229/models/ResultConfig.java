@@ -16,11 +16,12 @@
 package com.tencentcloudapi.aiart.v20221229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResultConfig extends AbstractModel{
+public class ResultConfig extends AbstractModel {
 
     /**
     * 生成图分辨率

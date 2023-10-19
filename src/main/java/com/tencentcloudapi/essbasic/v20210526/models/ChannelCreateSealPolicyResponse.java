@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateSealPolicyResponse extends AbstractModel{
+public class ChannelCreateSealPolicyResponse extends AbstractModel {
 
     /**
     * 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。

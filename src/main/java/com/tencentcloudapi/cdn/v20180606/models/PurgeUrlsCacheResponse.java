@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurgeUrlsCacheResponse extends AbstractModel{
+public class PurgeUrlsCacheResponse extends AbstractModel {
 
     /**
     * 刷新任务 ID，同一批次提交的 URL 共用一个任务 ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyZoneSettingRequest extends AbstractModel{
+public class ModifyZoneSettingRequest extends AbstractModel {
 
     /**
     * 待变更的站点 ID。

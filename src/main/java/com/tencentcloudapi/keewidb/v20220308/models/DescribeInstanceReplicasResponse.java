@@ -16,11 +16,12 @@
 package com.tencentcloudapi.keewidb.v20220308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceReplicasResponse extends AbstractModel{
+public class DescribeInstanceReplicasResponse extends AbstractModel {
 
     /**
     * 实例所有节点数量，包括主节点、副本节点。

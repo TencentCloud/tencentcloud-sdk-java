@@ -45,18 +45,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddDeviceGroupMembersResponse AddDeviceGroupMembers(AddDeviceGroupMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddDeviceGroupMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddDeviceGroupMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddDeviceGroupMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AddDeviceGroupMembers", AddDeviceGroupMembersResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddUserGroupMembersResponse AddUserGroupMembers(AddUserGroupMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddUserGroupMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddUserGroupMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddUserGroupMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AddUserGroupMembers", AddUserGroupMembersResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindDeviceAccountPasswordResponse BindDeviceAccountPassword(BindDeviceAccountPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindDeviceAccountPasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindDeviceAccountPasswordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindDeviceAccountPassword");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindDeviceAccountPassword", BindDeviceAccountPasswordResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindDeviceAccountPrivateKeyResponse BindDeviceAccountPrivateKey(BindDeviceAccountPrivateKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindDeviceAccountPrivateKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindDeviceAccountPrivateKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindDeviceAccountPrivateKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindDeviceAccountPrivateKey", BindDeviceAccountPrivateKeyResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindDeviceResourceResponse BindDeviceResource(BindDeviceResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindDeviceResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindDeviceResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindDeviceResource");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindDeviceResource", BindDeviceResourceResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAclResponse CreateAcl(CreateAclRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAclResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAclResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAcl");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAcl", CreateAclResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAssetSyncJobResponse CreateAssetSyncJob(CreateAssetSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAssetSyncJobResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAssetSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAssetSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAssetSyncJob", CreateAssetSyncJobResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCmdTemplateResponse CreateCmdTemplate(CreateCmdTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCmdTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateCmdTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCmdTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateCmdTemplate", CreateCmdTemplateResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDeviceAccountResponse CreateDeviceAccount(CreateDeviceAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDeviceAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDeviceAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDeviceAccount");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDeviceAccount", CreateDeviceAccountResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDeviceGroupResponse CreateDeviceGroup(CreateDeviceGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDeviceGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDeviceGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDeviceGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDeviceGroup", CreateDeviceGroupResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateResourceResponse CreateResource(CreateResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateResource");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateResource", CreateResourceResponse.class);
     }
 
     /**
@@ -276,18 +166,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
     }
 
     /**
@@ -297,18 +177,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUserGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateUserGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUserGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateUserGroup", CreateUserGroupResponse.class);
     }
 
     /**
@@ -318,18 +188,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteAclsResponse DeleteAcls(DeleteAclsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAclsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAclsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAcls");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteAcls", DeleteAclsResponse.class);
     }
 
     /**
@@ -339,18 +199,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCmdTemplatesResponse DeleteCmdTemplates(DeleteCmdTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCmdTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteCmdTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteCmdTemplates");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteCmdTemplates", DeleteCmdTemplatesResponse.class);
     }
 
     /**
@@ -360,18 +210,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDeviceAccountsResponse DeleteDeviceAccounts(DeleteDeviceAccountsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDeviceAccountsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDeviceAccountsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDeviceAccounts");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteDeviceAccounts", DeleteDeviceAccountsResponse.class);
     }
 
     /**
@@ -381,18 +221,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDeviceGroupMembersResponse DeleteDeviceGroupMembers(DeleteDeviceGroupMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDeviceGroupMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDeviceGroupMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDeviceGroupMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteDeviceGroupMembers", DeleteDeviceGroupMembersResponse.class);
     }
 
     /**
@@ -402,18 +232,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDeviceGroupsResponse DeleteDeviceGroups(DeleteDeviceGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDeviceGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDeviceGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDeviceGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteDeviceGroups", DeleteDeviceGroupsResponse.class);
     }
 
     /**
@@ -423,18 +243,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDevicesResponse DeleteDevices(DeleteDevicesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDevicesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDevicesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDevices");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteDevices", DeleteDevicesResponse.class);
     }
 
     /**
@@ -444,18 +254,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteUserGroupMembersResponse DeleteUserGroupMembers(DeleteUserGroupMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUserGroupMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUserGroupMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUserGroupMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteUserGroupMembers", DeleteUserGroupMembersResponse.class);
     }
 
     /**
@@ -465,18 +265,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteUserGroupsResponse DeleteUserGroups(DeleteUserGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUserGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUserGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUserGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteUserGroups", DeleteUserGroupsResponse.class);
     }
 
     /**
@@ -486,18 +276,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUsersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUsersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUsers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteUsers", DeleteUsersResponse.class);
     }
 
     /**
@@ -507,18 +287,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeployResourceResponse DeployResource(DeployResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeployResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeployResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeployResource");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeployResource", DeployResourceResponse.class);
     }
 
     /**
@@ -528,18 +298,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAclsResponse DescribeAcls(DescribeAclsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAclsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAclsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAcls");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAcls", DescribeAclsResponse.class);
     }
 
     /**
@@ -549,18 +309,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAssetSyncStatusResponse DescribeAssetSyncStatus(DescribeAssetSyncStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAssetSyncStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAssetSyncStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAssetSyncStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAssetSyncStatus", DescribeAssetSyncStatusResponse.class);
     }
 
     /**
@@ -570,18 +320,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCmdTemplatesResponse DescribeCmdTemplates(DescribeCmdTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCmdTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCmdTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCmdTemplates");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeCmdTemplates", DescribeCmdTemplatesResponse.class);
     }
 
     /**
@@ -591,18 +331,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDasbImageIdsResponse DescribeDasbImageIds(DescribeDasbImageIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDasbImageIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDasbImageIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDasbImageIds");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDasbImageIds", DescribeDasbImageIdsResponse.class);
     }
 
     /**
@@ -612,18 +342,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDeviceAccountsResponse DescribeDeviceAccounts(DescribeDeviceAccountsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDeviceAccountsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDeviceAccountsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDeviceAccounts");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDeviceAccounts", DescribeDeviceAccountsResponse.class);
     }
 
     /**
@@ -633,18 +353,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDeviceGroupMembersResponse DescribeDeviceGroupMembers(DescribeDeviceGroupMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDeviceGroupMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDeviceGroupMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDeviceGroupMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDeviceGroupMembers", DescribeDeviceGroupMembersResponse.class);
     }
 
     /**
@@ -654,18 +364,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDeviceGroupsResponse DescribeDeviceGroups(DescribeDeviceGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDeviceGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDeviceGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDeviceGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDeviceGroups", DescribeDeviceGroupsResponse.class);
     }
 
     /**
@@ -675,18 +375,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDevicesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDevices");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDevices", DescribeDevicesResponse.class);
     }
 
     /**
@@ -696,18 +386,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeLoginEventResponse DescribeLoginEvent(DescribeLoginEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLoginEventResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLoginEventResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLoginEvent");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeLoginEvent", DescribeLoginEventResponse.class);
     }
 
     /**
@@ -717,18 +397,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeOperationEventResponse DescribeOperationEvent(DescribeOperationEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeOperationEventResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeOperationEventResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeOperationEvent");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeOperationEvent", DescribeOperationEventResponse.class);
     }
 
     /**
@@ -738,18 +408,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeResourcesResponse DescribeResources(DescribeResourcesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeResourcesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeResourcesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeResources");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeResources", DescribeResourcesResponse.class);
     }
 
     /**
@@ -759,18 +419,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeUserGroupMembersResponse DescribeUserGroupMembers(DescribeUserGroupMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserGroupMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserGroupMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserGroupMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUserGroupMembers", DescribeUserGroupMembersResponse.class);
     }
 
     /**
@@ -780,18 +430,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeUserGroupsResponse DescribeUserGroups(DescribeUserGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUserGroups", DescribeUserGroupsResponse.class);
     }
 
     /**
@@ -801,18 +441,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeUsersResponse DescribeUsers(DescribeUsersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUsers", DescribeUsersResponse.class);
     }
 
     /**
@@ -822,18 +452,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ImportExternalDeviceResponse ImportExternalDevice(ImportExternalDeviceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImportExternalDeviceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImportExternalDeviceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImportExternalDevice");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ImportExternalDevice", ImportExternalDeviceResponse.class);
     }
 
     /**
@@ -843,18 +463,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyAclResponse ModifyAcl(ModifyAclRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAclResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAclResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAcl");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAcl", ModifyAclResponse.class);
     }
 
     /**
@@ -864,18 +474,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyCmdTemplateResponse ModifyCmdTemplate(ModifyCmdTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCmdTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCmdTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCmdTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyCmdTemplate", ModifyCmdTemplateResponse.class);
     }
 
     /**
@@ -885,18 +485,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDeviceResponse ModifyDevice(ModifyDeviceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDeviceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDeviceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDevice");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyDevice", ModifyDeviceResponse.class);
     }
 
     /**
@@ -906,18 +496,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDeviceGroupResponse ModifyDeviceGroup(ModifyDeviceGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDeviceGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDeviceGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDeviceGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyDeviceGroup", ModifyDeviceGroupResponse.class);
     }
 
     /**
@@ -927,18 +507,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyResourceResponse ModifyResource(ModifyResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyResource");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyResource", ModifyResourceResponse.class);
     }
 
     /**
@@ -948,18 +518,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyUserResponse ModifyUser(ModifyUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyUser", ModifyUserResponse.class);
     }
 
     /**
@@ -969,18 +529,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ResetDeviceAccountPasswordResponse ResetDeviceAccountPassword(ResetDeviceAccountPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetDeviceAccountPasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ResetDeviceAccountPasswordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetDeviceAccountPassword");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ResetDeviceAccountPassword", ResetDeviceAccountPasswordResponse.class);
     }
 
     /**
@@ -990,18 +540,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ResetDeviceAccountPrivateKeyResponse ResetDeviceAccountPrivateKey(ResetDeviceAccountPrivateKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetDeviceAccountPrivateKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ResetDeviceAccountPrivateKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetDeviceAccountPrivateKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ResetDeviceAccountPrivateKey", ResetDeviceAccountPrivateKeyResponse.class);
     }
 
     /**
@@ -1011,18 +551,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ResetUserResponse ResetUser(ResetUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ResetUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ResetUser", ResetUserResponse.class);
     }
 
     /**
@@ -1032,18 +562,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SearchAuditLogResponse SearchAuditLog(SearchAuditLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchAuditLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SearchAuditLogResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchAuditLog");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SearchAuditLog", SearchAuditLogResponse.class);
     }
 
     /**
@@ -1053,18 +573,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SearchCommandResponse SearchCommand(SearchCommandRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchCommandResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SearchCommandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchCommand");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SearchCommand", SearchCommandResponse.class);
     }
 
     /**
@@ -1074,18 +584,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SearchCommandBySidResponse SearchCommandBySid(SearchCommandBySidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchCommandBySidResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SearchCommandBySidResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchCommandBySid");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SearchCommandBySid", SearchCommandBySidResponse.class);
     }
 
     /**
@@ -1095,18 +595,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SearchFileResponse SearchFile(SearchFileRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchFileResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SearchFileResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchFile");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SearchFile", SearchFileResponse.class);
     }
 
     /**
@@ -1116,18 +606,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SearchFileBySidResponse SearchFileBySid(SearchFileBySidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchFileBySidResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SearchFileBySidResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchFileBySid");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SearchFileBySid", SearchFileBySidResponse.class);
     }
 
     /**
@@ -1137,18 +617,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SearchSessionResponse SearchSession(SearchSessionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchSessionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SearchSessionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchSession");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SearchSession", SearchSessionResponse.class);
     }
 
     /**
@@ -1158,18 +628,8 @@ public class DasbClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SearchSessionCommandResponse SearchSessionCommand(SearchSessionCommandRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SearchSessionCommandResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SearchSessionCommandResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SearchSessionCommand");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SearchSessionCommand", SearchSessionCommandResponse.class);
     }
 
 }

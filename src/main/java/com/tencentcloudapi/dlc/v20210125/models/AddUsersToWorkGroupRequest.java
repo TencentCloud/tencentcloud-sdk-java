@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUsersToWorkGroupRequest extends AbstractModel{
+public class AddUsersToWorkGroupRequest extends AbstractModel {
 
     /**
     * 要操作的工作组和用户信息

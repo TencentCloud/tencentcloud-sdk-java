@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBPriceRequest extends AbstractModel{
+public class DescribeDBPriceRequest extends AbstractModel {
 
     /**
     * 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。

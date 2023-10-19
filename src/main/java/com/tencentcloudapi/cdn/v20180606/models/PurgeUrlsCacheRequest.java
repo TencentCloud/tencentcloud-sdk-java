@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurgeUrlsCacheRequest extends AbstractModel{
+public class PurgeUrlsCacheRequest extends AbstractModel {
 
     /**
     * URL 列表，需要包含协议头部 http:// 或 https://

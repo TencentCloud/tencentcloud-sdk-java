@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRiskDnsEventRequest extends AbstractModel{
+public class DeleteRiskDnsEventRequest extends AbstractModel {
 
     /**
     * 恶意请求记录ID数组，(最大100条), 为空时全部删除

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CarInvoiceOCRRequest extends AbstractModel{
+public class CarInvoiceOCRRequest extends AbstractModel {
 
     /**
     * 图片的 Base64 值。

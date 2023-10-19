@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DistributeCancelResult extends AbstractModel{
+public class DistributeCancelResult extends AbstractModel {
 
     /**
     * 分账订单状态（0初始1成功2失败3撤销）

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.advisor.v20200721.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RiskFieldsDesc extends AbstractModel{
+public class RiskFieldsDesc extends AbstractModel {
 
     /**
     * 字段ID

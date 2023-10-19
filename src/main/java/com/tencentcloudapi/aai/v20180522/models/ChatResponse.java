@@ -16,11 +16,12 @@
 package com.tencentcloudapi.aai.v20180522.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChatResponse extends AbstractModel{
+public class ChatResponse extends AbstractModel {
 
     /**
     * 聊天输出文本

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScheduleInstanceResponse extends AbstractModel{
+public class DescribeScheduleInstanceResponse extends AbstractModel {
 
     /**
     * 基线实例中的调度任务实例信息

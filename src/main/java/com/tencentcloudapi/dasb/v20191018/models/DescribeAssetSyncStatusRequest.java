@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetSyncStatusRequest extends AbstractModel{
+public class DescribeAssetSyncStatusRequest extends AbstractModel {
 
     /**
     * 查询的资产同步类型。1 -主机资产， 2 - 数据库资产

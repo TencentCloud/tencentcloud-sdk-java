@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mgobe.v20201014.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRoomResponse extends AbstractModel{
+public class DescribeRoomResponse extends AbstractModel {
 
     /**
     * 房间信息。

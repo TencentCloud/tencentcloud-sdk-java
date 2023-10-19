@@ -45,18 +45,8 @@ public class EisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetRuntimeMCResponse GetRuntimeMC(GetRuntimeMCRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRuntimeMCResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetRuntimeMCResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRuntimeMC");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetRuntimeMC", GetRuntimeMCResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class EisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetRuntimeResourceMonitorMetricMCResponse GetRuntimeResourceMonitorMetricMC(GetRuntimeResourceMonitorMetricMCRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRuntimeResourceMonitorMetricMCResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetRuntimeResourceMonitorMetricMCResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRuntimeResourceMonitorMetricMC");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetRuntimeResourceMonitorMetricMC", GetRuntimeResourceMonitorMetricMCResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class EisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListDeployableRuntimesMCResponse ListDeployableRuntimesMC(ListDeployableRuntimesMCRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListDeployableRuntimesMCResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListDeployableRuntimesMCResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListDeployableRuntimesMC");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListDeployableRuntimesMC", ListDeployableRuntimesMCResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class EisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListRuntimeDeployedInstancesMCResponse ListRuntimeDeployedInstancesMC(ListRuntimeDeployedInstancesMCRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListRuntimeDeployedInstancesMCResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListRuntimeDeployedInstancesMCResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListRuntimeDeployedInstancesMC");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListRuntimeDeployedInstancesMC", ListRuntimeDeployedInstancesMCResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class EisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListRuntimesMCResponse ListRuntimesMC(ListRuntimesMCRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListRuntimesMCResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListRuntimesMCResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListRuntimesMC");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListRuntimesMC", ListRuntimesMCResponse.class);
     }
 
 }

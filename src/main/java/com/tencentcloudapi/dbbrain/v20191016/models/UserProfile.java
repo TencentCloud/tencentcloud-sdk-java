@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserProfile extends AbstractModel{
+public class UserProfile extends AbstractModel {
 
     /**
     * 配置的id。

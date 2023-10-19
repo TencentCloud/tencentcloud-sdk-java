@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCustomPersonResponse extends AbstractModel{
+public class UpdateCustomPersonResponse extends AbstractModel {
 
     /**
     * 成功更新的自定义人物Id

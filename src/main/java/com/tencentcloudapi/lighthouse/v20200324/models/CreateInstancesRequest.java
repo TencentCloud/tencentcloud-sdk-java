@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstancesRequest extends AbstractModel{
+public class CreateInstancesRequest extends AbstractModel {
 
     /**
     * 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMediaQualityRestorationTaskResponse extends AbstractModel{
+public class CreateMediaQualityRestorationTaskResponse extends AbstractModel {
 
     /**
     * 画质重生任务ID，可以通过该ID查询任务状态。

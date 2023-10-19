@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetachResourcesTagRequest extends AbstractModel{
+public class DetachResourcesTagRequest extends AbstractModel {
 
     /**
     * 资源所属业务名称（资源六段式中的第三段）

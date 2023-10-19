@@ -16,11 +16,12 @@
 package com.tencentcloudapi.pds.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserInfos extends AbstractModel{
+public class UserInfos extends AbstractModel {
 
     /**
     * 用户的手机号

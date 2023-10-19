@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateZoneRequest extends AbstractModel{
+public class CreateZoneRequest extends AbstractModel {
 
     /**
     * 站点接入类型。该参数取值如下，不填写时默认为 partial：

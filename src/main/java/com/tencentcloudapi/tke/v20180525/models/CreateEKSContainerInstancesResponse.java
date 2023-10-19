@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEKSContainerInstancesResponse extends AbstractModel{
+public class CreateEKSContainerInstancesResponse extends AbstractModel {
 
     /**
     * EKS Container Instance Id集合，格式为eksci-xxx，是容器实例的唯一标识。

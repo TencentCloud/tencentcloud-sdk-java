@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRebuildMediaTemplateResponse extends AbstractModel{
+public class CreateRebuildMediaTemplateResponse extends AbstractModel {
 
     /**
     * 视频重生模板 ID。

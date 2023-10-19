@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceBackupsRequest extends AbstractModel{
+public class DescribeInstanceBackupsRequest extends AbstractModel {
 
     /**
     * 每页输出的备份列表大小。默认大小为20，最大值为 100。

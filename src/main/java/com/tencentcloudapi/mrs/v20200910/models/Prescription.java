@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mrs.v20200910.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Prescription extends AbstractModel{
+public class Prescription extends AbstractModel {
 
     /**
     * 药品列表

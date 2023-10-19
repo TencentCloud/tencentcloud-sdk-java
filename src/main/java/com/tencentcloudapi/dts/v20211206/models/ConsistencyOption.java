@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConsistencyOption extends AbstractModel{
+public class ConsistencyOption extends AbstractModel {
 
     /**
     * 一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)

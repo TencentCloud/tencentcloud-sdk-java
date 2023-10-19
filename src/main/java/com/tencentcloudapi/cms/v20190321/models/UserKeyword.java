@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cms.v20190321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserKeyword extends AbstractModel{
+public class UserKeyword extends AbstractModel {
 
     /**
     * 关键词内容：最多40个字符，并且符合词类型的规则

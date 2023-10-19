@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ft.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MorphFaceRequest extends AbstractModel{
+public class MorphFaceRequest extends AbstractModel {
 
     /**
     * 图片 base64 数据，base64 编码后大小不可超过5M。 

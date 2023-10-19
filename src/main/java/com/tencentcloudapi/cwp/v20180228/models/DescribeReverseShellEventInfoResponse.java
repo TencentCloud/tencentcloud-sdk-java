@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReverseShellEventInfoResponse extends AbstractModel{
+public class DescribeReverseShellEventInfoResponse extends AbstractModel {
 
     /**
     * 反弹shell详情信息

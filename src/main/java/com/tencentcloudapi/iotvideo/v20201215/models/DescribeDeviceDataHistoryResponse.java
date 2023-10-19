@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20201215.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceDataHistoryResponse extends AbstractModel{
+public class DescribeDeviceDataHistoryResponse extends AbstractModel {
 
     /**
     * 属性字段名称，对应数据模板中功能属性的标识符

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20220401.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClustersRequest extends AbstractModel{
+public class DescribeClustersRequest extends AbstractModel {
 
     /**
     * 集群ID列表。通过该参数可以指定需要查询信息的集群列表。<br>如果您不指定该参数，则返回Limit数量以内的集群信息。

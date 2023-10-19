@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
+public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel {
 
     /**
     * 分省份分运营商错误码为2或3或4或5开头的状态码数据信息。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.organization.v20181225.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListOrganizationInvitationsRequest extends AbstractModel{
+public class ListOrganizationInvitationsRequest extends AbstractModel {
 
     /**
     * 是否被邀请。1：被邀请，0：发出的邀请

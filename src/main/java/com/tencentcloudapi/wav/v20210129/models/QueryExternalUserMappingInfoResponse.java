@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryExternalUserMappingInfoResponse extends AbstractModel{
+public class QueryExternalUserMappingInfoResponse extends AbstractModel {
 
     /**
     * 外部联系人映射信息, 只返回映射成功的记录

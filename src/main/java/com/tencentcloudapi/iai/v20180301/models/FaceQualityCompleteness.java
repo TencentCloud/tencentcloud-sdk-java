@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceQualityCompleteness extends AbstractModel{
+public class FaceQualityCompleteness extends AbstractModel {
 
     /**
     * 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 

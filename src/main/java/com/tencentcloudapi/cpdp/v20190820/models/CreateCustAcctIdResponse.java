@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCustAcctIdResponse extends AbstractModel{
+public class CreateCustAcctIdResponse extends AbstractModel {
 
     /**
     * STRING(50)，见证子账户的账号（平台需要记录下来，后续所有接口交互都会用到）

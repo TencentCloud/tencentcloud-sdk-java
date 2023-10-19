@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCloudNativeAPIGatewaySpecResponse extends AbstractModel{
+public class UpdateCloudNativeAPIGatewaySpecResponse extends AbstractModel {
 
     /**
     * 更新云原生API网关实例规格的响应结果。

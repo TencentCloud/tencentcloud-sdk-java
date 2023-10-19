@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportVulDefenceListRequest extends AbstractModel{
+public class ExportVulDefenceListRequest extends AbstractModel {
 
     /**
     * 过滤条件：Keywords: 漏洞名称或CVE编号模糊匹配, Level精确匹配

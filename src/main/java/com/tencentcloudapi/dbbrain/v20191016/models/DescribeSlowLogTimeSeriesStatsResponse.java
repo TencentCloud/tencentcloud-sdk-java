@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSlowLogTimeSeriesStatsResponse extends AbstractModel{
+public class DescribeSlowLogTimeSeriesStatsResponse extends AbstractModel {
 
     /**
     * 柱间单位时间间隔，单位为秒。

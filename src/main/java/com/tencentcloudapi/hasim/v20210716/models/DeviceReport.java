@@ -16,11 +16,12 @@
 package com.tencentcloudapi.hasim.v20210716.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceReport extends AbstractModel{
+public class DeviceReport extends AbstractModel {
 
     /**
     * 移动设备ID

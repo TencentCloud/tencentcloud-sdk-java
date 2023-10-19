@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MultiLevelPersonInfo extends AbstractModel{
+public class MultiLevelPersonInfo extends AbstractModel {
 
     /**
     * 一级分类名称(分类信息参见自定义人物类型)

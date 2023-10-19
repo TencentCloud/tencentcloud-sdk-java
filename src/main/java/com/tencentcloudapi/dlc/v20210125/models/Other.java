@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Other extends AbstractModel{
+public class Other extends AbstractModel {
 
     /**
     * 枚举类型，默认值为Json，可选值为[Json, Parquet, ORC, AVRD]之一。

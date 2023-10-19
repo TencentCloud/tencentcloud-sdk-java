@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTagsRequest extends AbstractModel{
+public class DescribeTagsRequest extends AbstractModel {
 
     /**
     * 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签

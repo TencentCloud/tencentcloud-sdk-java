@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLicenseRecordRequest extends AbstractModel{
+public class DeleteLicenseRecordRequest extends AbstractModel {
 
     /**
     * 授权ID ,可以用授权订单列表获取.

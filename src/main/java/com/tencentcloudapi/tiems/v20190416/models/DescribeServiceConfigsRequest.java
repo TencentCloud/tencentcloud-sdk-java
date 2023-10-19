@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiems.v20190416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceConfigsRequest extends AbstractModel{
+public class DescribeServiceConfigsRequest extends AbstractModel {
 
     /**
     * 筛选选项，支持按照name等进行筛选

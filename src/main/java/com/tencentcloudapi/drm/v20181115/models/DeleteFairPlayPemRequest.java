@@ -16,11 +16,12 @@
 package com.tencentcloudapi.drm.v20181115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteFairPlayPemRequest extends AbstractModel{
+public class DeleteFairPlayPemRequest extends AbstractModel {
 
     /**
     * 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。

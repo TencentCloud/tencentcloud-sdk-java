@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDSPADiscoveryServiceStatusResponse extends AbstractModel{
+public class DescribeDSPADiscoveryServiceStatusResponse extends AbstractModel {
 
     /**
     * 分类分级服务是否开通，true 表示已开通，false表示未开通

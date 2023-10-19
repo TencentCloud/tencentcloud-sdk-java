@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20201222.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubOrganizationsResponse extends AbstractModel{
+public class DescribeSubOrganizationsResponse extends AbstractModel {
 
     /**
     * 子机构信息列表

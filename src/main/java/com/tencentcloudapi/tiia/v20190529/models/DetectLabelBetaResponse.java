@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectLabelBetaResponse extends AbstractModel{
+public class DetectLabelBetaResponse extends AbstractModel {
 
     /**
     * Web网络版标签结果数组。如未选择WEB场景，则为空。

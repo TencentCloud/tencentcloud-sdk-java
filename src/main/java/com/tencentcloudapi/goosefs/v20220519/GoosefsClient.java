@@ -45,18 +45,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddCrossVpcSubnetSupportForClientNodeResponse AddCrossVpcSubnetSupportForClientNode(AddCrossVpcSubnetSupportForClientNodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddCrossVpcSubnetSupportForClientNodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddCrossVpcSubnetSupportForClientNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddCrossVpcSubnetSupportForClientNode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AddCrossVpcSubnetSupportForClientNode", AddCrossVpcSubnetSupportForClientNodeResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AttachFileSystemBucketResponse AttachFileSystemBucket(AttachFileSystemBucketRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachFileSystemBucketResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AttachFileSystemBucketResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachFileSystemBucket");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AttachFileSystemBucket", AttachFileSystemBucketResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchAddClientNodesResponse BatchAddClientNodes(BatchAddClientNodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchAddClientNodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BatchAddClientNodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchAddClientNodes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BatchAddClientNodes", BatchAddClientNodesResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BatchDeleteClientNodesResponse BatchDeleteClientNodes(BatchDeleteClientNodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BatchDeleteClientNodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BatchDeleteClientNodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BatchDeleteClientNodes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BatchDeleteClientNodes", BatchDeleteClientNodesResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDataRepositoryTaskResponse CreateDataRepositoryTask(CreateDataRepositoryTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDataRepositoryTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDataRepositoryTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDataRepositoryTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDataRepositoryTask", CreateDataRepositoryTaskResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateFileSystemResponse CreateFileSystem(CreateFileSystemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateFileSystemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateFileSystemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateFileSystem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateFileSystem", CreateFileSystemResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCrossVpcSubnetSupportForClientNodeResponse DeleteCrossVpcSubnetSupportForClientNode(DeleteCrossVpcSubnetSupportForClientNodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCrossVpcSubnetSupportForClientNodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteCrossVpcSubnetSupportForClientNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteCrossVpcSubnetSupportForClientNode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteCrossVpcSubnetSupportForClientNode", DeleteCrossVpcSubnetSupportForClientNodeResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteFileSystemResponse DeleteFileSystem(DeleteFileSystemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteFileSystemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteFileSystemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteFileSystem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteFileSystem", DeleteFileSystemResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeClientNodesResponse DescribeClientNodes(DescribeClientNodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClientNodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClientNodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClientNodes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeClientNodes", DescribeClientNodesResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeClusterClientTokenResponse DescribeClusterClientToken(DescribeClusterClientTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClusterClientTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClusterClientTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClusterClientToken");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeClusterClientToken", DescribeClusterClientTokenResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeClusterRoleTokenResponse DescribeClusterRoleToken(DescribeClusterRoleTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClusterRoleTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClusterRoleTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClusterRoleToken");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeClusterRoleToken", DescribeClusterRoleTokenResponse.class);
     }
 
     /**
@@ -276,18 +166,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeClusterRolesResponse DescribeClusterRoles(DescribeClusterRolesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClusterRolesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClusterRolesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClusterRoles");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeClusterRoles", DescribeClusterRolesResponse.class);
     }
 
     /**
@@ -297,18 +177,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDataRepositoryTaskStatusResponse DescribeDataRepositoryTaskStatus(DescribeDataRepositoryTaskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDataRepositoryTaskStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDataRepositoryTaskStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDataRepositoryTaskStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDataRepositoryTaskStatus", DescribeDataRepositoryTaskStatusResponse.class);
     }
 
     /**
@@ -318,18 +188,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFileSystemBucketsResponse DescribeFileSystemBuckets(DescribeFileSystemBucketsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFileSystemBucketsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFileSystemBucketsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFileSystemBuckets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFileSystemBuckets", DescribeFileSystemBucketsResponse.class);
     }
 
     /**
@@ -339,18 +199,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFileSystemsResponse DescribeFileSystems(DescribeFileSystemsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFileSystemsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFileSystemsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFileSystems");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFileSystems", DescribeFileSystemsResponse.class);
     }
 
     /**
@@ -360,18 +210,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DetachFileSystemBucketResponse DetachFileSystemBucket(DetachFileSystemBucketRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetachFileSystemBucketResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DetachFileSystemBucketResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachFileSystemBucket");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DetachFileSystemBucket", DetachFileSystemBucketResponse.class);
     }
 
     /**
@@ -381,18 +221,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ExpandCapacityResponse ExpandCapacity(ExpandCapacityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ExpandCapacityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ExpandCapacityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ExpandCapacity");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ExpandCapacity", ExpandCapacityResponse.class);
     }
 
     /**
@@ -402,18 +232,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDataRepositoryBandwidthResponse ModifyDataRepositoryBandwidth(ModifyDataRepositoryBandwidthRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDataRepositoryBandwidthResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDataRepositoryBandwidthResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDataRepositoryBandwidth");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyDataRepositoryBandwidth", ModifyDataRepositoryBandwidthResponse.class);
     }
 
     /**
@@ -423,18 +243,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryCrossVpcSubnetSupportForClientNodeResponse QueryCrossVpcSubnetSupportForClientNode(QueryCrossVpcSubnetSupportForClientNodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCrossVpcSubnetSupportForClientNodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryCrossVpcSubnetSupportForClientNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryCrossVpcSubnetSupportForClientNode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryCrossVpcSubnetSupportForClientNode", QueryCrossVpcSubnetSupportForClientNodeResponse.class);
     }
 
     /**
@@ -444,18 +254,8 @@ public class GoosefsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryDataRepositoryBandwidthResponse QueryDataRepositoryBandwidth(QueryDataRepositoryBandwidthRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryDataRepositoryBandwidthResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryDataRepositoryBandwidthResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryDataRepositoryBandwidth");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryDataRepositoryBandwidth", QueryDataRepositoryBandwidthResponse.class);
     }
 
 }

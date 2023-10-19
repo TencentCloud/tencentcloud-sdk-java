@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunjing.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityTrendsRequest extends AbstractModel{
+public class DescribeSecurityTrendsRequest extends AbstractModel {
 
     /**
     * 开始时间。

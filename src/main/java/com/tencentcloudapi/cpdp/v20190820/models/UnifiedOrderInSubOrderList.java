@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnifiedOrderInSubOrderList extends AbstractModel{
+public class UnifiedOrderInSubOrderList extends AbstractModel {
 
     /**
     * 子订单结算应收金额，单位： 分

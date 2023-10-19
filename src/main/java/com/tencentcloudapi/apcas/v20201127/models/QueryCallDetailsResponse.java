@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apcas.v20201127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCallDetailsResponse extends AbstractModel{
+public class QueryCallDetailsResponse extends AbstractModel {
 
     /**
     * 调用明细

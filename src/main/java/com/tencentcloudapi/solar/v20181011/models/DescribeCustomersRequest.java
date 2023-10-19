@@ -16,11 +16,12 @@
 package com.tencentcloudapi.solar.v20181011.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomersRequest extends AbstractModel{
+public class DescribeCustomersRequest extends AbstractModel {
 
     /**
     * 查询类型，0.个人，1负责部门，2.指定部门

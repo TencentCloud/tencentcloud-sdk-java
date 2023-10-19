@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryOpenBankProfitSharePayeeRequest extends AbstractModel{
+public class QueryOpenBankProfitSharePayeeRequest extends AbstractModel {
 
     /**
     * 渠道商户号。代理商/集团ID

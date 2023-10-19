@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCcDataResponse extends AbstractModel{
+public class DescribeCcDataResponse extends AbstractModel {
 
     /**
     * 指定执行动作的请求数数据，如果指定类型为空，表示所有类型的请求总数

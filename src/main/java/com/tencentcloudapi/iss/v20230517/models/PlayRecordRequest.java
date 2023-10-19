@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlayRecordRequest extends AbstractModel{
+public class PlayRecordRequest extends AbstractModel {
 
     /**
     * 通道 ID（从查询通道DescribeDeviceChannel接口中获取）

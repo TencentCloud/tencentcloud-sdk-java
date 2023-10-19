@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckFacePhotoResponse extends AbstractModel{
+public class CheckFacePhotoResponse extends AbstractModel {
 
     /**
     * 人脸检查结果，0：通过检查，1：图片模糊

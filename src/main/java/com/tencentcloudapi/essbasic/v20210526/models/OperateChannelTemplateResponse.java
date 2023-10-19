@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OperateChannelTemplateResponse extends AbstractModel{
+public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
     * 腾讯电子签颁发给第三方应用平台的应用ID

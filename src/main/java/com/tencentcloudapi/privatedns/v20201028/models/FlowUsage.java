@@ -16,11 +16,12 @@
 package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FlowUsage extends AbstractModel{
+public class FlowUsage extends AbstractModel {
 
     /**
     * 流量包类型：ZONE 私有域；TRAFFIC 解析流量包

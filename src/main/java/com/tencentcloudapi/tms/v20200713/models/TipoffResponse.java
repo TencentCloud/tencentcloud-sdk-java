@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tms.v20200713.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TipoffResponse extends AbstractModel{
+public class TipoffResponse extends AbstractModel {
 
     /**
     * 举报结果， "0-举报数据提交成功  99-举报数据提交失败"

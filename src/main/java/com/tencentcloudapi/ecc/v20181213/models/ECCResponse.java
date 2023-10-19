@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecc.v20181213.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ECCResponse extends AbstractModel{
+public class ECCResponse extends AbstractModel {
 
     /**
     * 整体的批改结果

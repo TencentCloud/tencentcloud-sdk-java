@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunjing.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountStatisticsRequest extends AbstractModel{
+public class DescribeAccountStatisticsRequest extends AbstractModel {
 
     /**
     * 返回数量，默认为10，最大值为100。

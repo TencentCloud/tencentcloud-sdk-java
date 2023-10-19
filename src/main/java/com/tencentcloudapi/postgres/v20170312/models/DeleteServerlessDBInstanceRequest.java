@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServerlessDBInstanceRequest extends AbstractModel{
+public class DeleteServerlessDBInstanceRequest extends AbstractModel {
 
     /**
     * DB实例名称，实例名和实例ID必须至少传一个，如果同时存在，将只以实例ID为准。

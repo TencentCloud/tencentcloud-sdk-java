@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRewriteResponse extends AbstractModel{
+public class DescribeRewriteResponse extends AbstractModel {
 
     /**
     * 重定向转发规则构成的数组，若无重定向规则，则返回空数组。

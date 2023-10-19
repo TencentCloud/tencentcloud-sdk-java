@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRoleRequest extends AbstractModel{
+public class CreateRoleRequest extends AbstractModel {
 
     /**
     * 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。

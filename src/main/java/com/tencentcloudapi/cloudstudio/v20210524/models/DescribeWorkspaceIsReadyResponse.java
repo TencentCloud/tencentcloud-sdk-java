@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudstudio.v20210524.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWorkspaceIsReadyResponse extends AbstractModel{
+public class DescribeWorkspaceIsReadyResponse extends AbstractModel {
 
     /**
     * 工作空间是否就绪

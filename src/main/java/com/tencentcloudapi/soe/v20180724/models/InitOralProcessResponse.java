@@ -16,11 +16,12 @@
 package com.tencentcloudapi.soe.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InitOralProcessResponse extends AbstractModel{
+public class InitOralProcessResponse extends AbstractModel {
 
     /**
     * 语音段唯一标识，一个完整语音一个SessionId

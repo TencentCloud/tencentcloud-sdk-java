@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ManageImageLifecycleGlobalPersonalRequest extends AbstractModel{
+public class ManageImageLifecycleGlobalPersonalRequest extends AbstractModel {
 
     /**
     * global_keep_last_days:全局保留最近几天的数据;global_keep_last_nums:全局保留最近多少个

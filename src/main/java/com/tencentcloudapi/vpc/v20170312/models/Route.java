@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Route extends AbstractModel{
+public class Route extends AbstractModel {
 
     /**
     * 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。

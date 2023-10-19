@@ -16,11 +16,12 @@
 package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRequestDataRequest extends AbstractModel{
+public class DescribeRequestDataRequest extends AbstractModel {
 
     /**
     * 请求量统计起始时间，格式：2020-11-22 00:00:00

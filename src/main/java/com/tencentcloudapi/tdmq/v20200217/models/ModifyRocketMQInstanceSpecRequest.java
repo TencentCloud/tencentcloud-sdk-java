@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRocketMQInstanceSpecRequest extends AbstractModel{
+public class ModifyRocketMQInstanceSpecRequest extends AbstractModel {
 
     /**
     * 专享实例ID

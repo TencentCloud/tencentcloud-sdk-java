@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplicableProducts extends AbstractModel{
+public class ApplicableProducts extends AbstractModel {
 
     /**
     * 适用商品名称，值为“全产品通用”或商品名称组成的string，以","分割。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrdersRequest extends AbstractModel{
+public class DescribeOrdersRequest extends AbstractModel {
 
     /**
     * 订单数组。发货时会返回订单名字，利用该订单名字调用DescribeOrders接口查询发货情况

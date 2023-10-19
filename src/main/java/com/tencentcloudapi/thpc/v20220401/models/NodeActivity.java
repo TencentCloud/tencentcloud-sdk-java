@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20220401.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NodeActivity extends AbstractModel{
+public class NodeActivity extends AbstractModel {
 
     /**
     * 节点活动所在的实例ID。

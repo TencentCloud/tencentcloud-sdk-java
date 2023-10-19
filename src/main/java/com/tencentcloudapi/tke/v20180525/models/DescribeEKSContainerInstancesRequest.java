@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEKSContainerInstancesRequest extends AbstractModel{
+public class DescribeEKSContainerInstancesRequest extends AbstractModel {
 
     /**
     * 限定此次返回资源的数量。如果不设定，默认返回20，最大不能超过100

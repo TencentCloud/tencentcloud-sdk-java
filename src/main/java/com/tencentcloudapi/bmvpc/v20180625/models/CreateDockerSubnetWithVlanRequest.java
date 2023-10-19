@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmvpc.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDockerSubnetWithVlanRequest extends AbstractModel{
+public class CreateDockerSubnetWithVlanRequest extends AbstractModel {
 
     /**
     * 系统分配的私有网络ID，例如：vpc-kd7d06of

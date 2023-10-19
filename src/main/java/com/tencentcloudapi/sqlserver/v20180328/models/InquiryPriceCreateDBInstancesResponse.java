@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
+public class InquiryPriceCreateDBInstancesResponse extends AbstractModel {
 
     /**
     * 未打折前价格，其值除以100表示最终的价格。

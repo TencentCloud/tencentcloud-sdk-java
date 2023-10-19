@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveXP2PDetailInfoListResponse extends AbstractModel{
+public class DescribeLiveXP2PDetailInfoListResponse extends AbstractModel {
 
     /**
     * P2P流统计信息。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillingDataResponse extends AbstractModel{
+public class DescribeBillingDataResponse extends AbstractModel {
 
     /**
     * 时间粒度，根据查询时传递参数指定：

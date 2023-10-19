@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ticm.v20181127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoModerationRequest extends AbstractModel{
+public class VideoModerationRequest extends AbstractModel {
 
     /**
     * 需要审核的视频的URL地址

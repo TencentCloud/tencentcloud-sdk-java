@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScreenAttackHotspotResponse extends AbstractModel{
+public class DescribeScreenAttackHotspotResponse extends AbstractModel {
 
     /**
     * 攻击热点列表

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageRegistryNamespaceListRequest extends AbstractModel{
+public class DescribeImageRegistryNamespaceListRequest extends AbstractModel {
 
     /**
     * 本次查询的起始偏移量，默认为0。

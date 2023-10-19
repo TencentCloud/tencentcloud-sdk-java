@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFenceEventListRequest extends AbstractModel{
+public class DescribeFenceEventListRequest extends AbstractModel {
 
     /**
     * 围栏告警信息的查询起始时间，Unix时间，单位为毫秒

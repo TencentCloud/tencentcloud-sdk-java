@@ -16,11 +16,12 @@
 package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RetrieveSimilarWordsRequest extends AbstractModel{
+public class RetrieveSimilarWordsRequest extends AbstractModel {
 
     /**
     * 输入的词语。（仅支持UTF-8格式，不超过10字符）

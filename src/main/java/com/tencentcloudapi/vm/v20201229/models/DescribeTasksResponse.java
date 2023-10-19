@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksResponse extends AbstractModel{
+public class DescribeTasksResponse extends AbstractModel {
 
     /**
     * 该字段用于返回当前查询的任务总量，格式为int字符串。

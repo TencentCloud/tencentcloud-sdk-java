@@ -16,11 +16,12 @@
 package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCrossVpcSubnetSupportForClientNodeResponse extends AbstractModel{
+public class QueryCrossVpcSubnetSupportForClientNodeResponse extends AbstractModel {
 
     /**
     * 支持的子网信息集合

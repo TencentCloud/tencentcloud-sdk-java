@@ -16,11 +16,12 @@
 package com.tencentcloudapi.btoe.v20210514.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVideoDepositResponse extends AbstractModel{
+public class CreateVideoDepositResponse extends AbstractModel {
 
     /**
     * 业务ID 透传 长度最大不超过64

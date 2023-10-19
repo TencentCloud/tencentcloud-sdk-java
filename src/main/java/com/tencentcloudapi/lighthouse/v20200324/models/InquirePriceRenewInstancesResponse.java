@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lighthouse.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePriceRenewInstancesResponse extends AbstractModel{
+public class InquirePriceRenewInstancesResponse extends AbstractModel {
 
     /**
     * 询价信息。默认为列表中第一个实例的价格信息。

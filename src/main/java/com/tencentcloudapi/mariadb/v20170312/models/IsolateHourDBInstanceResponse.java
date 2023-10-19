@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IsolateHourDBInstanceResponse extends AbstractModel{
+public class IsolateHourDBInstanceResponse extends AbstractModel {
 
     /**
     * 解隔离成功的实例id列表

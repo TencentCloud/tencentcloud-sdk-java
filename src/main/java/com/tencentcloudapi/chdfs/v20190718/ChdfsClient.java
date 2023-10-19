@@ -47,18 +47,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAccessGroupResponse CreateAccessGroup(CreateAccessGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAccessGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAccessGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAccessGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAccessGroup", CreateAccessGroupResponse.class);
     }
 
     /**
@@ -70,18 +60,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAccessRulesResponse CreateAccessRules(CreateAccessRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAccessRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAccessRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAccessRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAccessRules", CreateAccessRulesResponse.class);
     }
 
     /**
@@ -93,18 +73,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateFileSystemResponse CreateFileSystem(CreateFileSystemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateFileSystemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateFileSystemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateFileSystem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateFileSystem", CreateFileSystemResponse.class);
     }
 
     /**
@@ -116,18 +86,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateLifeCycleRulesResponse CreateLifeCycleRules(CreateLifeCycleRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLifeCycleRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLifeCycleRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLifeCycleRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateLifeCycleRules", CreateLifeCycleRulesResponse.class);
     }
 
     /**
@@ -139,18 +99,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateMountPointResponse CreateMountPoint(CreateMountPointRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMountPointResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateMountPointResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateMountPoint");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateMountPoint", CreateMountPointResponse.class);
     }
 
     /**
@@ -162,18 +112,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateRestoreTasksResponse CreateRestoreTasks(CreateRestoreTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRestoreTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateRestoreTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRestoreTasks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateRestoreTasks", CreateRestoreTasksResponse.class);
     }
 
     /**
@@ -185,18 +125,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteAccessGroupResponse DeleteAccessGroup(DeleteAccessGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAccessGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAccessGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAccessGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteAccessGroup", DeleteAccessGroupResponse.class);
     }
 
     /**
@@ -208,18 +138,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteAccessRulesResponse DeleteAccessRules(DeleteAccessRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAccessRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAccessRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAccessRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteAccessRules", DeleteAccessRulesResponse.class);
     }
 
     /**
@@ -231,18 +151,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteFileSystemResponse DeleteFileSystem(DeleteFileSystemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteFileSystemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteFileSystemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteFileSystem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteFileSystem", DeleteFileSystemResponse.class);
     }
 
     /**
@@ -254,18 +164,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteLifeCycleRulesResponse DeleteLifeCycleRules(DeleteLifeCycleRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLifeCycleRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLifeCycleRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLifeCycleRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteLifeCycleRules", DeleteLifeCycleRulesResponse.class);
     }
 
     /**
@@ -277,18 +177,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteMountPointResponse DeleteMountPoint(DeleteMountPointRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMountPointResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMountPointResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteMountPoint");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteMountPoint", DeleteMountPointResponse.class);
     }
 
     /**
@@ -300,18 +190,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAccessGroupsResponse DescribeAccessGroups(DescribeAccessGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccessGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccessGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccessGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAccessGroups", DescribeAccessGroupsResponse.class);
     }
 
     /**
@@ -323,18 +203,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAccessRulesResponse DescribeAccessRules(DescribeAccessRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccessRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccessRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccessRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAccessRules", DescribeAccessRulesResponse.class);
     }
 
     /**
@@ -346,18 +216,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFileSystemResponse DescribeFileSystem(DescribeFileSystemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFileSystemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFileSystemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFileSystem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFileSystem", DescribeFileSystemResponse.class);
     }
 
     /**
@@ -369,18 +229,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFileSystemsResponse DescribeFileSystems(DescribeFileSystemsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFileSystemsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFileSystemsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFileSystems");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFileSystems", DescribeFileSystemsResponse.class);
     }
 
     /**
@@ -392,18 +242,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeLifeCycleRulesResponse DescribeLifeCycleRules(DescribeLifeCycleRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLifeCycleRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLifeCycleRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLifeCycleRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeLifeCycleRules", DescribeLifeCycleRulesResponse.class);
     }
 
     /**
@@ -415,18 +255,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeMountPointResponse DescribeMountPoint(DescribeMountPointRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMountPointResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMountPointResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMountPoint");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeMountPoint", DescribeMountPointResponse.class);
     }
 
     /**
@@ -438,18 +268,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeMountPointsResponse DescribeMountPoints(DescribeMountPointsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMountPointsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMountPointsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMountPoints");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeMountPoints", DescribeMountPointsResponse.class);
     }
 
     /**
@@ -461,18 +281,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeResourceTagsResponse DescribeResourceTags(DescribeResourceTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeResourceTagsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeResourceTags");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeResourceTags", DescribeResourceTagsResponse.class);
     }
 
     /**
@@ -484,18 +294,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRestoreTasksResponse DescribeRestoreTasks(DescribeRestoreTasksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRestoreTasksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRestoreTasksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRestoreTasks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRestoreTasks", DescribeRestoreTasksResponse.class);
     }
 
     /**
@@ -507,18 +307,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyAccessGroupResponse ModifyAccessGroup(ModifyAccessGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAccessGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAccessGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAccessGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAccessGroup", ModifyAccessGroupResponse.class);
     }
 
     /**
@@ -530,18 +320,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyAccessRulesResponse ModifyAccessRules(ModifyAccessRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAccessRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAccessRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAccessRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAccessRules", ModifyAccessRulesResponse.class);
     }
 
     /**
@@ -553,18 +333,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyFileSystemResponse ModifyFileSystem(ModifyFileSystemRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyFileSystemResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyFileSystemResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyFileSystem");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyFileSystem", ModifyFileSystemResponse.class);
     }
 
     /**
@@ -576,18 +346,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyLifeCycleRulesResponse ModifyLifeCycleRules(ModifyLifeCycleRulesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLifeCycleRulesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLifeCycleRulesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLifeCycleRules");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyLifeCycleRules", ModifyLifeCycleRulesResponse.class);
     }
 
     /**
@@ -599,18 +359,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyMountPointResponse ModifyMountPoint(ModifyMountPointRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMountPointResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMountPointResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMountPoint");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyMountPoint", ModifyMountPointResponse.class);
     }
 
     /**
@@ -622,18 +372,8 @@ public class ChdfsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyResourceTagsResponse ModifyResourceTags(ModifyResourceTagsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyResourceTagsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyResourceTags");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyResourceTags", ModifyResourceTagsResponse.class);
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcEndPointServiceRequest extends AbstractModel{
+public class DescribeVpcEndPointServiceRequest extends AbstractModel {
 
     /**
     * 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20200303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonRequest extends AbstractModel{
+public class CreatePersonRequest extends AbstractModel {
 
     /**
     * 待加入的人员库ID，取值为创建人员库接口中的GroupId

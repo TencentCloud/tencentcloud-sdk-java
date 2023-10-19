@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenBankSettlementRulesInfo extends AbstractModel{
+public class OpenBankSettlementRulesInfo extends AbstractModel {
 
     /**
     * ONCE：仅单次解冻（默认）

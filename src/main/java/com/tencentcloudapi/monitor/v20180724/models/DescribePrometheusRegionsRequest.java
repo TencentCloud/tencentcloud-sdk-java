@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePrometheusRegionsRequest extends AbstractModel{
+public class DescribePrometheusRegionsRequest extends AbstractModel {
 
     /**
     * 1-预付费，2-后付费，3-全地域（不填默认全地域）

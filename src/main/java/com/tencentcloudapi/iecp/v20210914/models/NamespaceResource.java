@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iecp.v20210914.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NamespaceResource extends AbstractModel{
+public class NamespaceResource extends AbstractModel {
 
     /**
     * 类型(workload|grid|configmap|secret)

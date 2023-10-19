@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryRefundRequest extends AbstractModel{
+public class QueryRefundRequest extends AbstractModel {
 
     /**
     * 用户ID，长度不小于5位，仅支持字母和数字的组合。

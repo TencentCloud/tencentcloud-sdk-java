@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestAddressInfo extends AbstractModel{
+public class DestAddressInfo extends AbstractModel {
 
     /**
     * 加速业务目标 ip 地址数组

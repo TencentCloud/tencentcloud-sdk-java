@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealServersRequest extends AbstractModel{
+public class DescribeRealServersRequest extends AbstractModel {
 
     /**
     * 查询源站的所属项目ID，-1表示所有项目

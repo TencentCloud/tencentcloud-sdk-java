@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckEdgeClusterCIDRResponse extends AbstractModel{
+public class CheckEdgeClusterCIDRResponse extends AbstractModel {
 
     /**
     * 返回码，具体如下

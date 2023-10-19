@@ -16,11 +16,12 @@
 package com.tencentcloudapi.partners.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUnbindClientListRequest extends AbstractModel{
+public class DescribeUnbindClientListRequest extends AbstractModel {
 
     /**
     * 解绑状态：0:所有,1:审核中,2已解绑

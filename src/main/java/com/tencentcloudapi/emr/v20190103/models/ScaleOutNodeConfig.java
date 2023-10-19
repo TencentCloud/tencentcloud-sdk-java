@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScaleOutNodeConfig extends AbstractModel{
+public class ScaleOutNodeConfig extends AbstractModel {
 
     /**
     * 扩容节点类型取值范围：

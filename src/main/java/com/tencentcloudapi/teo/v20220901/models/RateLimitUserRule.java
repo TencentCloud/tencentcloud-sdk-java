@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RateLimitUserRule extends AbstractModel{
+public class RateLimitUserRule extends AbstractModel {
 
     /**
     * 速率限制统计阈值，单位是次，取值范围0-4294967294。

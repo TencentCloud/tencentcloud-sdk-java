@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDSPASelfBuildMetaResourceResponse extends AbstractModel{
+public class CreateDSPASelfBuildMetaResourceResponse extends AbstractModel {
 
     /**
     * 连通性测试情况，success表示可正常访问，failed表示无法访问。

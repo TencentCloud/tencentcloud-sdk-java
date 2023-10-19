@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20191022.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNotebookLifecycleScriptRequest extends AbstractModel{
+public class DescribeNotebookLifecycleScriptRequest extends AbstractModel {
 
     /**
     * 生命周期脚本名称

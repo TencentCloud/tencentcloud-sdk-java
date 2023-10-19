@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MakeUpTasksNewResponse extends AbstractModel{
+public class MakeUpTasksNewResponse extends AbstractModel {
 
     /**
     * 返回批量操作成功个数、失败个数、操作总数

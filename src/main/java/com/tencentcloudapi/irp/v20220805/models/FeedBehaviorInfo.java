@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220805.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FeedBehaviorInfo extends AbstractModel{
+public class FeedBehaviorInfo extends AbstractModel {
 
     /**
     * 用户唯一ID，客户自定义用户ID，作为一个用户的唯一标识

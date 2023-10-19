@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceCustomizedDomainResponse extends AbstractModel{
+public class DescribeInstanceCustomizedDomainResponse extends AbstractModel {
 
     /**
     * 域名信息列表

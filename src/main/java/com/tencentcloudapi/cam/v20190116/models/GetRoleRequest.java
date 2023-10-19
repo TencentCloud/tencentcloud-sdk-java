@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetRoleRequest extends AbstractModel{
+public class GetRoleRequest extends AbstractModel {
 
     /**
     * 角色 ID，用于指定角色，入参 RoleId 与 RoleName 二选一

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel{
+public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel {
 
     /**
     * 自适应转码格式，取值范围：

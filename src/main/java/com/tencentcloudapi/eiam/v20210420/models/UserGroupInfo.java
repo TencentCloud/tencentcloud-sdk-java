@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserGroupInfo extends AbstractModel{
+public class UserGroupInfo extends AbstractModel {
 
     /**
     * 昵称，长度限制：64个字符。 默认与用户名相同。

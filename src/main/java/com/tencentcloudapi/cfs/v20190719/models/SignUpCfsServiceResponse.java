@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SignUpCfsServiceResponse extends AbstractModel{
+public class SignUpCfsServiceResponse extends AbstractModel {
 
     /**
     * 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通

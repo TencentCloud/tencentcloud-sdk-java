@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnvironmentRoleSet extends AbstractModel{
+public class EnvironmentRoleSet extends AbstractModel {
 
     /**
     * 需要绑定的命名空间Id，不重复且存在资源

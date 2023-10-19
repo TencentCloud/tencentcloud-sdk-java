@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceStatisticsResult extends AbstractModel{
+public class ServiceStatisticsResult extends AbstractModel {
 
     /**
     * 请求模版路径:type为接口时返回，服务时不返回

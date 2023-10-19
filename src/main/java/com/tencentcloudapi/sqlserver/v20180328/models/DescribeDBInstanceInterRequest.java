@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstanceInterRequest extends AbstractModel{
+public class DescribeDBInstanceInterRequest extends AbstractModel {
 
     /**
     * 分页，页大小，范围是1-100

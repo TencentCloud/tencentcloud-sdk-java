@@ -16,11 +16,12 @@
 package com.tencentcloudapi.domain.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePhoneEmailListRequest extends AbstractModel{
+public class DescribePhoneEmailListRequest extends AbstractModel {
 
     /**
     * 0：所有类型  1：手机  2：邮箱，默认0

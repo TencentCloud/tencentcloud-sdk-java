@@ -16,11 +16,12 @@
 package com.tencentcloudapi.solar.v20181011.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filters extends AbstractModel{
+public class Filters extends AbstractModel {
 
     /**
     * 过滤类型, 0: 默认(可见部门+自创) 1: 自创 2: 指定部门(部门在可见范围内)

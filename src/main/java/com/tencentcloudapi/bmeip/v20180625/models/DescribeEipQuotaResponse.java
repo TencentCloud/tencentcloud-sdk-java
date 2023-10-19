@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEipQuotaResponse extends AbstractModel{
+public class DescribeEipQuotaResponse extends AbstractModel {
 
     /**
     * 能拥有的EIP个数的总配额，默认是100个

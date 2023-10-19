@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryMaterialListRequest extends AbstractModel{
+public class QueryMaterialListRequest extends AbstractModel {
 
     /**
     * 素材类型：0-图片，1-视频，3-文章，10-车型，11-名片

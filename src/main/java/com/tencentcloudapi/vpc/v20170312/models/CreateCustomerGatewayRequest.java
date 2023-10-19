@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCustomerGatewayRequest extends AbstractModel{
+public class CreateCustomerGatewayRequest extends AbstractModel {
 
     /**
     * 对端网关名称，可任意命名，但不得超过60个字符。

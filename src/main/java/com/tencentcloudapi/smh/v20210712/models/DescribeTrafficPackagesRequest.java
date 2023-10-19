@@ -16,11 +16,12 @@
 package com.tencentcloudapi.smh.v20210712.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficPackagesRequest extends AbstractModel{
+public class DescribeTrafficPackagesRequest extends AbstractModel {
 
     /**
     * 按照一个或者多个资源 ID 查询，每次请求的上限为 100 个。

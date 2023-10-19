@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyProxyGroupAttributeRequest extends AbstractModel{
+public class ModifyProxyGroupAttributeRequest extends AbstractModel {
 
     /**
     * 需要修改的通道组ID。

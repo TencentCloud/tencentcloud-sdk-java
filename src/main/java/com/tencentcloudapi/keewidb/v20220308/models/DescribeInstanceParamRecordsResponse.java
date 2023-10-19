@@ -16,11 +16,12 @@
 package com.tencentcloudapi.keewidb.v20220308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceParamRecordsResponse extends AbstractModel{
+public class DescribeInstanceParamRecordsResponse extends AbstractModel {
 
     /**
     * 修改历史记录总数。

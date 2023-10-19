@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcCniPodLimitsRequest extends AbstractModel{
+public class DescribeVpcCniPodLimitsRequest extends AbstractModel {
 
     /**
     * 查询的机型所在可用区，如：ap-guangzhou-3，默认为空，即不按可用区过滤信息

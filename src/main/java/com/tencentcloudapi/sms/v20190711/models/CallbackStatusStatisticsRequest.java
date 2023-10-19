@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20190711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallbackStatusStatisticsRequest extends AbstractModel{
+public class CallbackStatusStatisticsRequest extends AbstractModel {
 
     /**
     * 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。

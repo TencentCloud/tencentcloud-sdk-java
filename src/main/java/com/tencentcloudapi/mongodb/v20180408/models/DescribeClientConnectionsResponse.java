@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClientConnectionsResponse extends AbstractModel{
+public class DescribeClientConnectionsResponse extends AbstractModel {
 
     /**
     * 客户端连接信息，包括客户端IP和对应IP的连接数量

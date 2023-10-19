@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiSampleFailFaceInfo extends AbstractModel{
+public class AiSampleFailFaceInfo extends AbstractModel {
 
     /**
     * 对应入参 FaceContents 中错误图片下标，从 0 开始。

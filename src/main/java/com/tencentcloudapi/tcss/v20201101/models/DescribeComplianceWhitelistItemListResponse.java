@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComplianceWhitelistItemListResponse extends AbstractModel{
+public class DescribeComplianceWhitelistItemListResponse extends AbstractModel {
 
     /**
     * 白名单项的列表。

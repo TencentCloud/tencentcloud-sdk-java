@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListRecordPlanChannelsData extends AbstractModel{
+public class ListRecordPlanChannelsData extends AbstractModel {
 
     /**
     * 用户所有计划下通道id，存在通道是为数组格式，不存在时，字段数据为空 

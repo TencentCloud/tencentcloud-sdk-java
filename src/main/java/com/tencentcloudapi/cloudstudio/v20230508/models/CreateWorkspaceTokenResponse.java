@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudstudio.v20230508.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateWorkspaceTokenResponse extends AbstractModel{
+public class CreateWorkspaceTokenResponse extends AbstractModel {
 
     /**
     * 访问工作空间临时凭证

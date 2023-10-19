@@ -45,18 +45,8 @@ public class RpClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryRegisterProtectionResponse QueryRegisterProtection(QueryRegisterProtectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryRegisterProtectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryRegisterProtectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryRegisterProtection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryRegisterProtection", QueryRegisterProtectionResponse.class);
     }
 
 }

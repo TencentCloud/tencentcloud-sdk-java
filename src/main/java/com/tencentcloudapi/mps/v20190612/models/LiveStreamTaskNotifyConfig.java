@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamTaskNotifyConfig extends AbstractModel{
+public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
     * CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。

@@ -45,18 +45,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AcceptOrganizationInvitationResponse AcceptOrganizationInvitation(AcceptOrganizationInvitationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AcceptOrganizationInvitationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AcceptOrganizationInvitationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AcceptOrganizationInvitation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AcceptOrganizationInvitation", AcceptOrganizationInvitationResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddOrganizationNodeResponse AddOrganizationNode(AddOrganizationNodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddOrganizationNodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddOrganizationNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddOrganizationNode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AddOrganizationNode", AddOrganizationNodeResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CancelOrganizationInvitationResponse CancelOrganizationInvitation(CancelOrganizationInvitationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelOrganizationInvitationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CancelOrganizationInvitationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CancelOrganizationInvitation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CancelOrganizationInvitation", CancelOrganizationInvitationResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateOrganizationResponse CreateOrganization(CreateOrganizationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateOrganizationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateOrganizationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateOrganization");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateOrganization", CreateOrganizationResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteOrganizationResponse DeleteOrganization(DeleteOrganizationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteOrganizationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOrganizationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOrganization");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteOrganization", DeleteOrganizationResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteOrganizationMemberFromNodeResponse DeleteOrganizationMemberFromNode(DeleteOrganizationMemberFromNodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteOrganizationMemberFromNodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOrganizationMemberFromNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOrganizationMemberFromNode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteOrganizationMemberFromNode", DeleteOrganizationMemberFromNodeResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteOrganizationMembersResponse DeleteOrganizationMembers(DeleteOrganizationMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteOrganizationMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOrganizationMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOrganizationMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteOrganizationMembers", DeleteOrganizationMembersResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteOrganizationNodesResponse DeleteOrganizationNodes(DeleteOrganizationNodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteOrganizationNodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteOrganizationNodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteOrganizationNodes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteOrganizationNodes", DeleteOrganizationNodesResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DenyOrganizationInvitationResponse DenyOrganizationInvitation(DenyOrganizationInvitationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DenyOrganizationInvitationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DenyOrganizationInvitationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DenyOrganizationInvitation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DenyOrganizationInvitation", DenyOrganizationInvitationResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetOrganizationResponse GetOrganization(GetOrganizationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetOrganizationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetOrganizationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetOrganization");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetOrganization", GetOrganizationResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetOrganizationMemberResponse GetOrganizationMember(GetOrganizationMemberRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetOrganizationMemberResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetOrganizationMemberResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetOrganizationMember");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetOrganizationMember", GetOrganizationMemberResponse.class);
     }
 
     /**
@@ -276,18 +166,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListOrganizationInvitationsResponse ListOrganizationInvitations(ListOrganizationInvitationsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListOrganizationInvitationsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListOrganizationInvitationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListOrganizationInvitations");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListOrganizationInvitations", ListOrganizationInvitationsResponse.class);
     }
 
     /**
@@ -297,18 +177,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListOrganizationMembersResponse ListOrganizationMembers(ListOrganizationMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListOrganizationMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListOrganizationMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListOrganizationMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListOrganizationMembers", ListOrganizationMembersResponse.class);
     }
 
     /**
@@ -318,18 +188,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListOrganizationNodeMembersResponse ListOrganizationNodeMembers(ListOrganizationNodeMembersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListOrganizationNodeMembersResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListOrganizationNodeMembersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListOrganizationNodeMembers");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListOrganizationNodeMembers", ListOrganizationNodeMembersResponse.class);
     }
 
     /**
@@ -339,18 +199,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListOrganizationNodesResponse ListOrganizationNodes(ListOrganizationNodesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListOrganizationNodesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListOrganizationNodesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListOrganizationNodes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListOrganizationNodes", ListOrganizationNodesResponse.class);
     }
 
     /**
@@ -360,18 +210,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public MoveOrganizationMembersToNodeResponse MoveOrganizationMembersToNode(MoveOrganizationMembersToNodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<MoveOrganizationMembersToNodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<MoveOrganizationMembersToNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "MoveOrganizationMembersToNode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "MoveOrganizationMembersToNode", MoveOrganizationMembersToNodeResponse.class);
     }
 
     /**
@@ -381,18 +221,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QuitOrganizationResponse QuitOrganization(QuitOrganizationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QuitOrganizationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QuitOrganizationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QuitOrganization");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QuitOrganization", QuitOrganizationResponse.class);
     }
 
     /**
@@ -402,18 +232,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SendOrganizationInvitationResponse SendOrganizationInvitation(SendOrganizationInvitationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SendOrganizationInvitationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SendOrganizationInvitationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SendOrganizationInvitation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SendOrganizationInvitation", SendOrganizationInvitationResponse.class);
     }
 
     /**
@@ -423,18 +243,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpdateOrganizationMemberResponse UpdateOrganizationMember(UpdateOrganizationMemberRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateOrganizationMemberResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateOrganizationMemberResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateOrganizationMember");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpdateOrganizationMember", UpdateOrganizationMemberResponse.class);
     }
 
     /**
@@ -444,18 +254,8 @@ public class OrganizationClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpdateOrganizationNodeResponse UpdateOrganizationNode(UpdateOrganizationNodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateOrganizationNodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateOrganizationNodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateOrganizationNode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpdateOrganizationNode", UpdateOrganizationNodeResponse.class);
     }
 
 }

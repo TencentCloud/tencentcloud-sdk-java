@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageLimitConfig extends AbstractModel{
+public class ImageLimitConfig extends AbstractModel {
 
     /**
     * 支持的最大镜像大小，包括可导入的自定义镜像大小，中心云镜像大小，单位为GB。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateGroupRequest extends AbstractModel{
+public class CreateGroupRequest extends AbstractModel {
 
     /**
     * 图库ID，不可重复，仅支持字母、数字和下划线。图库数量单个用户上限为30。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAllAccessControlRuleRequest extends AbstractModel{
+public class DeleteAllAccessControlRuleRequest extends AbstractModel {
 
     /**
     * 方向，0：出站，1：入站  默认值是 0

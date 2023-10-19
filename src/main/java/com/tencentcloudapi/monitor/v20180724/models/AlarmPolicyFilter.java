@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AlarmPolicyFilter extends AbstractModel{
+public class AlarmPolicyFilter extends AbstractModel {
 
     /**
     * 过滤条件类型 DIMENSION=使用 Dimensions 做过滤

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchSendEmailRequest extends AbstractModel{
+public class BatchSendEmailRequest extends AbstractModel {
 
     /**
     * 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照

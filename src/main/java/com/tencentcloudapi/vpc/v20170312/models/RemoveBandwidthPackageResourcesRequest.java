@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveBandwidthPackageResourcesRequest extends AbstractModel{
+public class RemoveBandwidthPackageResourcesRequest extends AbstractModel {
 
     /**
     * 带宽包唯一标识ID，形如'bwp-xxxx'

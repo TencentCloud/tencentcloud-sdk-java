@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEcdnStatisticsRequest extends AbstractModel{
+public class DescribeEcdnStatisticsRequest extends AbstractModel {
 
     /**
     * 查询起始时间，如：2019-12-13 00:00:00

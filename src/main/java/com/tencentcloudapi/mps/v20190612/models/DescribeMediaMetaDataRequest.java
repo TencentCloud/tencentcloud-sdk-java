@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMediaMetaDataRequest extends AbstractModel{
+public class DescribeMediaMetaDataRequest extends AbstractModel {
 
     /**
     * 需要获取元信息的文件输入信息。

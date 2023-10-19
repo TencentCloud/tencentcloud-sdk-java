@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCrossRegionZoneResponse extends AbstractModel{
+public class DescribeCrossRegionZoneResponse extends AbstractModel {
 
     /**
     * 备机所在地域的字符串ID，形如：ap-guangzhou

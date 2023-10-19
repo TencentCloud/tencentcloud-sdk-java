@@ -62,18 +62,8 @@ public class TtsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTtsTaskResponse CreateTtsTask(CreateTtsTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTtsTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateTtsTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTtsTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateTtsTask", CreateTtsTaskResponse.class);
     }
 
     /**
@@ -86,18 +76,8 @@ public class TtsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTtsTaskStatusResponse DescribeTtsTaskStatus(DescribeTtsTaskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTtsTaskStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTtsTaskStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTtsTaskStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTtsTaskStatus", DescribeTtsTaskStatusResponse.class);
     }
 
     /**
@@ -110,18 +90,8 @@ public class TtsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextToVoiceResponse TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextToVoiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextToVoiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextToVoice");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextToVoice", TextToVoiceResponse.class);
     }
 
 }

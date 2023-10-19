@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LocalBinlogConfig extends AbstractModel{
+public class LocalBinlogConfig extends AbstractModel {
 
     /**
     * 本地binlog保留时长，可取值范围：[72,168]。

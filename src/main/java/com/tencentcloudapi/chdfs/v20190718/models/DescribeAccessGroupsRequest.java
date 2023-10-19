@@ -16,11 +16,12 @@
 package com.tencentcloudapi.chdfs.v20190718.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccessGroupsRequest extends AbstractModel{
+public class DescribeAccessGroupsRequest extends AbstractModel {
 
     /**
     * 过滤条件，Name可选“AccessGroupId“和“AccessGroupName”，Values上限为10

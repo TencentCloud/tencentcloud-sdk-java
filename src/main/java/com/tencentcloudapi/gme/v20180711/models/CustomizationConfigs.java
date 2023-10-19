@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CustomizationConfigs extends AbstractModel{
+public class CustomizationConfigs extends AbstractModel {
 
     /**
     * 应用 ID，登录控制台创建应用得到的AppID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.soe.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordRsp extends AbstractModel{
+public class WordRsp extends AbstractModel {
 
     /**
     * 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。

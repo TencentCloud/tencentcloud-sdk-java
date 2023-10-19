@@ -16,11 +16,12 @@
 package com.tencentcloudapi.aiart.v20221229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToImageResponse extends AbstractModel{
+public class TextToImageResponse extends AbstractModel {
 
     /**
     * 根据入参 RspImgType 填入不同，返回不同的内容。

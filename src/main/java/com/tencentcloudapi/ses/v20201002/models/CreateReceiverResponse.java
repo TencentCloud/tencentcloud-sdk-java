@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateReceiverResponse extends AbstractModel{
+public class CreateReceiverResponse extends AbstractModel {
 
     /**
     * 收件人列表id，后续根据收件人列表id上传收件人地址

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20210922.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksRequest extends AbstractModel{
+public class DescribeTasksRequest extends AbstractModel {
 
     /**
     * 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。

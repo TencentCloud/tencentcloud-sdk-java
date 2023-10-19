@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QuerySinglePaymentResultResponse extends AbstractModel{
+public class QuerySinglePaymentResultResponse extends AbstractModel {
 
     /**
     * 错误码。响应成功："SUCCESS"，其他为不成功

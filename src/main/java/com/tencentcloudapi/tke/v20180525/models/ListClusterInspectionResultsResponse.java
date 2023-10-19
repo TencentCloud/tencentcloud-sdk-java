@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListClusterInspectionResultsResponse extends AbstractModel{
+public class ListClusterInspectionResultsResponse extends AbstractModel {
 
     /**
     * 集群诊断结果列表

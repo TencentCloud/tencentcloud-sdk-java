@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BankCardVerificationRequest extends AbstractModel{
+public class BankCardVerificationRequest extends AbstractModel {
 
     /**
     * 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。

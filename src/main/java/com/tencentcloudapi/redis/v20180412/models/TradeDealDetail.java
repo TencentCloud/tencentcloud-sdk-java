@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TradeDealDetail extends AbstractModel{
+public class TradeDealDetail extends AbstractModel {
 
     /**
     * 订单号ID，调用云API时使用此ID

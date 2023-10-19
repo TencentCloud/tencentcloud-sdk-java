@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CurvePoint extends AbstractModel{
+public class CurvePoint extends AbstractModel {
 
     /**
     * 当前坐标 X轴的值 当前是日期格式:"yyyy-MM-dd HH:mm:ss"

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaProcessTaskAnimatedGraphicResult extends AbstractModel{
+public class MediaProcessTaskAnimatedGraphicResult extends AbstractModel {
 
     /**
     * 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。

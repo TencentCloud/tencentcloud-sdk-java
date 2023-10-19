@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cds.v20180420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceDbauditInstanceRequest extends AbstractModel{
+public class InquiryPriceDbauditInstanceRequest extends AbstractModel {
 
     /**
     * 实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版

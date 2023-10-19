@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransferItem extends AbstractModel{
+public class TransferItem extends AbstractModel {
 
     /**
     * STRING(10)，入账类型（02: 会员充值; 03: 资金挂账）

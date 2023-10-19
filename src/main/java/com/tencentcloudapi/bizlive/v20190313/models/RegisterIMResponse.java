@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bizlive.v20190313.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterIMResponse extends AbstractModel{
+public class RegisterIMResponse extends AbstractModel {
 
     /**
     * 用来传递给插件的关键字段

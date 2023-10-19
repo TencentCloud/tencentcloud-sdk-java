@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEnvironmentResponse extends AbstractModel{
+public class CreateEnvironmentResponse extends AbstractModel {
 
     /**
     * 成功时为环境ID，失败为null

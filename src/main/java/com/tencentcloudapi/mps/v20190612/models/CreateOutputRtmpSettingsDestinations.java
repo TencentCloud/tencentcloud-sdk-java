@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOutputRtmpSettingsDestinations extends AbstractModel{
+public class CreateOutputRtmpSettingsDestinations extends AbstractModel {
 
     /**
     * 转推的URL，格式如：rtmp://domain/live。

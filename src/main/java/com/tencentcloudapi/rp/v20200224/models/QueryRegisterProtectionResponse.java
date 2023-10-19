@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rp.v20200224.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryRegisterProtectionResponse extends AbstractModel{
+public class QueryRegisterProtectionResponse extends AbstractModel {
 
     /**
     * 业务侧错误码，成功时返回 Success，错误时返回具体业务错误原因。

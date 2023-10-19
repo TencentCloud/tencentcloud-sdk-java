@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTrafficMirrorRequest extends AbstractModel{
+public class DeleteTrafficMirrorRequest extends AbstractModel {
 
     /**
     * 流量镜像实例ID数组，可以批量删除，每次删除上限为20

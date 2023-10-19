@@ -16,11 +16,12 @@
 package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePrivateZoneRequest extends AbstractModel{
+public class CreatePrivateZoneRequest extends AbstractModel {
 
     /**
     * 域名，格式必须是标准的TLD

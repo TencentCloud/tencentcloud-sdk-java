@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDistrictIspDataRequest extends AbstractModel{
+public class DescribeDistrictIspDataRequest extends AbstractModel {
 
     /**
     * 域名列表，最多支持20个域名

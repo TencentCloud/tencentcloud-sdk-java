@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEipTaskResponse extends AbstractModel{
+public class DescribeEipTaskResponse extends AbstractModel {
 
     /**
     * 当前任务状态码：0-成功，1-失败，2-进行中

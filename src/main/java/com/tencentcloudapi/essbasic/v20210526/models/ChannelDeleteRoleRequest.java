@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelDeleteRoleRequest extends AbstractModel{
+public class ChannelDeleteRoleRequest extends AbstractModel {
 
     /**
     * 代理企业和员工的信息。

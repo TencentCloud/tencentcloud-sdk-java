@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbdc.v20201029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesRequest extends AbstractModel{
+public class DescribeInstancesRequest extends AbstractModel {
 
     /**
     * 集群类型: 0 一主一备, 1 一主两备...N-1 一主N备

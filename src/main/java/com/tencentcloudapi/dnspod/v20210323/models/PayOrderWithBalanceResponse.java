@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PayOrderWithBalanceResponse extends AbstractModel{
+public class PayOrderWithBalanceResponse extends AbstractModel {
 
     /**
     * 此次操作支付成功的订单id数组

@@ -45,18 +45,8 @@ public class TicmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVideoTaskResponse DescribeVideoTask(DescribeVideoTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVideoTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVideoTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVideoTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVideoTask", DescribeVideoTaskResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TicmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ImageModerationResponse ImageModeration(ImageModerationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageModerationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImageModerationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImageModeration");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ImageModeration", ImageModerationResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TicmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public VideoModerationResponse VideoModeration(VideoModerationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VideoModerationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<VideoModerationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VideoModeration");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "VideoModeration", VideoModerationResponse.class);
     }
 
 }

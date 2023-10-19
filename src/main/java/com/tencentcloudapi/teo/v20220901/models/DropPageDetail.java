@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DropPageDetail extends AbstractModel{
+public class DropPageDetail extends AbstractModel {
 
     /**
     * 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20180330.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SrcInfo extends AbstractModel{
+public class SrcInfo extends AbstractModel {
 
     /**
     * 阿里云AccessKey。源库是阿里云RDS5.6适用

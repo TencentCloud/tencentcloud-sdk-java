@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAccessPeriodRequest extends AbstractModel{
+public class ModifyAccessPeriodRequest extends AbstractModel {
 
     /**
     * 访问日志保存期限，范围为[1, 30]

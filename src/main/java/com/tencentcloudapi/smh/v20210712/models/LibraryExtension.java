@@ -16,11 +16,12 @@
 package com.tencentcloudapi.smh.v20210712.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LibraryExtension extends AbstractModel{
+public class LibraryExtension extends AbstractModel {
 
     /**
     * true 为文件类型媒体库，可存储任何类型文件；false 为媒体类型媒体库，仅可存储照片和视频类型文件。默认为 false。在媒体库创建后不能修改。

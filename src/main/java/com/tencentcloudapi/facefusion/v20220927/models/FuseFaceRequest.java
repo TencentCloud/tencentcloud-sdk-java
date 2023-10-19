@@ -16,11 +16,12 @@
 package com.tencentcloudapi.facefusion.v20220927.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FuseFaceRequest extends AbstractModel{
+public class FuseFaceRequest extends AbstractModel {
 
     /**
     * 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。

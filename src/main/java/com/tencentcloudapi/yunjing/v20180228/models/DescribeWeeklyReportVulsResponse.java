@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunjing.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWeeklyReportVulsResponse extends AbstractModel{
+public class DescribeWeeklyReportVulsResponse extends AbstractModel {
 
     /**
     * 专业周报漏洞数据数组。

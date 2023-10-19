@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecommendContentResponse extends AbstractModel{
+public class RecommendContentResponse extends AbstractModel {
 
     /**
     * 推荐追踪id，用于行为上报。每次接口调用返回的traceId不同

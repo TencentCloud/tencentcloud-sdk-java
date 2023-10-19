@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSegmentationTaskResponse extends AbstractModel{
+public class DescribeSegmentationTaskResponse extends AbstractModel {
 
     /**
     * 当前任务状态：

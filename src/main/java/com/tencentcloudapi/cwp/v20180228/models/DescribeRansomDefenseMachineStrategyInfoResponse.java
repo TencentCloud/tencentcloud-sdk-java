@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRansomDefenseMachineStrategyInfoResponse extends AbstractModel{
+public class DescribeRansomDefenseMachineStrategyInfoResponse extends AbstractModel {
 
     /**
     * 策略ID列表,0表示未绑定任何策略

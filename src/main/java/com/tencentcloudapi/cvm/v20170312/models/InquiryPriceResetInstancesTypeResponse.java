@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceResetInstancesTypeResponse extends AbstractModel{
+public class InquiryPriceResetInstancesTypeResponse extends AbstractModel {
 
     /**
     * 该参数表示调整成对应机型实例的价格。

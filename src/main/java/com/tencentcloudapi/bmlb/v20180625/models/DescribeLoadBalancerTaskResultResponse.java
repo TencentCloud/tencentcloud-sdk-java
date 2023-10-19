@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmlb.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoadBalancerTaskResultResponse extends AbstractModel{
+public class DescribeLoadBalancerTaskResultResponse extends AbstractModel {
 
     /**
     * 任务当前状态。0：成功，1：失败，2：进行中。

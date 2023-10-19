@@ -45,18 +45,8 @@ public class AdvisorClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeStrategiesResponse DescribeStrategies(DescribeStrategiesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStrategiesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStrategiesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStrategies");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeStrategies", DescribeStrategiesResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class AdvisorClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTaskStrategyRisksResponse DescribeTaskStrategyRisks(DescribeTaskStrategyRisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskStrategyRisksResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskStrategyRisksResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskStrategyRisks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTaskStrategyRisks", DescribeTaskStrategyRisksResponse.class);
     }
 
 }

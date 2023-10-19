@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseSecurityPolicyResponse extends AbstractModel{
+public class CloseSecurityPolicyResponse extends AbstractModel {
 
     /**
     * 异步流程ID，可以通过DescribeAsyncTaskStatus 查询流程执行进展和状态

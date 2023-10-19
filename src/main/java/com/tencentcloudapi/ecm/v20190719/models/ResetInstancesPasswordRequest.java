@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetInstancesPasswordRequest extends AbstractModel{
+public class ResetInstancesPasswordRequest extends AbstractModel {
 
     /**
     * 待重置密码的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。

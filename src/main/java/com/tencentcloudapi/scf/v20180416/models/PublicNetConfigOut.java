@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublicNetConfigOut extends AbstractModel{
+public class PublicNetConfigOut extends AbstractModel {
 
     /**
     * 是否开启公网访问能力取值['DISABLE','ENABLE']

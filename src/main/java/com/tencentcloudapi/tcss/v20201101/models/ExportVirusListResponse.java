@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportVirusListResponse extends AbstractModel{
+public class ExportVirusListResponse extends AbstractModel {
 
     /**
     * 导出任务ID，前端拿着任务ID查询任务进度

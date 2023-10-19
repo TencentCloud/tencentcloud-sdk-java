@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateOption extends AbstractModel{
+public class MigrateOption extends AbstractModel {
 
     /**
     * 迁移对象选项，需要告知迁移服务迁移哪些库表对象

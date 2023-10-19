@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyProxiesProjectRequest extends AbstractModel{
+public class ModifyProxiesProjectRequest extends AbstractModel {
 
     /**
     * 需要修改到的项目ID。

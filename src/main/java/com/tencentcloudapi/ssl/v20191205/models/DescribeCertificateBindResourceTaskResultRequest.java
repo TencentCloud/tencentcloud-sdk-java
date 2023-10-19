@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertificateBindResourceTaskResultRequest extends AbstractModel{
+public class DescribeCertificateBindResourceTaskResultRequest extends AbstractModel {
 
     /**
     * 任务ID，根据任务ID查询绑定云资源结果， 最大支持100个

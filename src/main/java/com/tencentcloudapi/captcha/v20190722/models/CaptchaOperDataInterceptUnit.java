@@ -16,11 +16,12 @@
 package com.tencentcloudapi.captcha.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CaptchaOperDataInterceptUnit extends AbstractModel{
+public class CaptchaOperDataInterceptUnit extends AbstractModel {
 
     /**
     * 时间

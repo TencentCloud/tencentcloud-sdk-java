@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesCountResponse extends AbstractModel{
+public class DescribeInstancesCountResponse extends AbstractModel {
 
     /**
     * 客户的实例总数

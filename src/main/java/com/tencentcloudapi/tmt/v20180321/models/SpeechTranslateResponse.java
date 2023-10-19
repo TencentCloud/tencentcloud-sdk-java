@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tmt.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpeechTranslateResponse extends AbstractModel{
+public class SpeechTranslateResponse extends AbstractModel {
 
     /**
     * 请求的SessionUuid直接返回

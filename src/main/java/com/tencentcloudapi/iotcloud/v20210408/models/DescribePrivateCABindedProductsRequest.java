@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePrivateCABindedProductsRequest extends AbstractModel{
+public class DescribePrivateCABindedProductsRequest extends AbstractModel {
 
     /**
     * 证书名称

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Whiteboard extends AbstractModel{
+public class Whiteboard extends AbstractModel {
 
     /**
     * 实时录制结果里白板视频宽，取值必须大于等于2，默认为1280

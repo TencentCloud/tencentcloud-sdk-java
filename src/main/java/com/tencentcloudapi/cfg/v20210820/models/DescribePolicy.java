@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePolicy extends AbstractModel{
+public class DescribePolicy extends AbstractModel {
 
     /**
     * 保护策略ID列表

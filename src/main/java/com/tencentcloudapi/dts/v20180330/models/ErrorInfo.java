@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20180330.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ErrorInfo extends AbstractModel{
+public class ErrorInfo extends AbstractModel {
 
     /**
     * 具体的报错日志, 包含错误码和错误信息

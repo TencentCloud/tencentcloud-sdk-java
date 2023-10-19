@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCustomMFATokenInfoResponse extends AbstractModel{
+public class GetCustomMFATokenInfoResponse extends AbstractModel {
 
     /**
     * 自定义多因子验证Token对应的帐号Id

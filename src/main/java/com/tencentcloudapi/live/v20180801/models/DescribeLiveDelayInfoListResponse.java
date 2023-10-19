@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveDelayInfoListResponse extends AbstractModel{
+public class DescribeLiveDelayInfoListResponse extends AbstractModel {
 
     /**
     * 延播信息列表。

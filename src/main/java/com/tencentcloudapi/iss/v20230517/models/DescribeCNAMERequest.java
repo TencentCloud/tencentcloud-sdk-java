@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCNAMERequest extends AbstractModel{
+public class DescribeCNAMERequest extends AbstractModel {
 
     /**
     * 服务节点 ID（从查询域名可绑定服务节点接口DescribeDomainRegion中获取）

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecordTaskResult extends AbstractModel{
+public class RecordTaskResult extends AbstractModel {
 
     /**
     * AUTO - 自动停止录制， USER_CALL - 用户主动调用停止录制

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HealthCheckConfig extends AbstractModel{
+public class HealthCheckConfig extends AbstractModel {
 
     /**
     * 支持的健康检查类型，如 HttpGet，TcpSocket，Exec

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulScanInfoResponse extends AbstractModel{
+public class DescribeVulScanInfoResponse extends AbstractModel {
 
     /**
     * 本次扫描的本地镜像总数

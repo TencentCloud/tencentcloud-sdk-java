@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KuaishouPublishInfo extends AbstractModel{
+public class KuaishouPublishInfo extends AbstractModel {
 
     /**
     * 视频发布标题，限30个字符。

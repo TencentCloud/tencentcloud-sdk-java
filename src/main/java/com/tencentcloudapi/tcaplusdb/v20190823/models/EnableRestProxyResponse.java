@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableRestProxyResponse extends AbstractModel{
+public class EnableRestProxyResponse extends AbstractModel {
 
     /**
     * RestProxy的状态，0为关闭，1为开启中，2为开启，3为关闭中

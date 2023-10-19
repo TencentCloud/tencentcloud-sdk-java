@@ -45,18 +45,8 @@ public class ApigatewayClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AttachPluginResponse AttachPlugin(AttachPluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AttachPluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AttachPluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AttachPlugin");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AttachPlugin", AttachPluginResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class ApigatewayClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindApiAppResponse BindApiApp(BindApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindApiApp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindApiApp", BindApiAppResponse.class);
     }
 
     /**
@@ -89,18 +69,8 @@ public class ApigatewayClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindEnvironmentResponse BindEnvironment(BindEnvironmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindEnvironmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindEnvironmentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindEnvironment");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindEnvironment", BindEnvironmentResponse.class);
     }
 
     /**
@@ -110,18 +80,8 @@ public class ApigatewayClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindIPStrategyResponse BindIPStrategy(BindIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindIPStrategy", BindIPStrategyResponse.class);
     }
 
     /**
@@ -132,18 +92,8 @@ public class ApigatewayClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindSecretIdsResponse BindSecretIds(BindSecretIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindSecretIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindSecretIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindSecretIds");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindSecretIds", BindSecretIdsResponse.class);
     }
 
     /**
@@ -154,18 +104,8 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
      * @throws TencentCloudSDKException
      */
     public BindSubDomainResponse BindSubDomain(BindSubDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindSubDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindSubDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindSubDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindSubDomain", BindSubDomainResponse.class);
     }
 
     /**
@@ -175,18 +115,8 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
      * @throws TencentCloudSDKException
      */
     public BuildAPIDocResponse BuildAPIDoc(BuildAPIDocRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BuildAPIDocResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BuildAPIDocResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BuildAPIDoc");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BuildAPIDoc", BuildAPIDocResponse.class);
     }
 
     /**
@@ -196,18 +126,8 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
      * @throws TencentCloudSDKException
      */
     public CreateAPIDocResponse CreateAPIDoc(CreateAPIDocRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAPIDocResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAPIDocResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAPIDoc");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAPIDoc", CreateAPIDocResponse.class);
     }
 
     /**
@@ -217,18 +137,8 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
      * @throws TencentCloudSDKException
      */
     public CreateApiResponse CreateApi(CreateApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApi");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateApi", CreateApiResponse.class);
     }
 
     /**
@@ -238,18 +148,8 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
      * @throws TencentCloudSDKException
      */
     public CreateApiAppResponse CreateApiApp(CreateApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApiApp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateApiApp", CreateApiAppResponse.class);
     }
 
     /**
@@ -259,18 +159,8 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
      * @throws TencentCloudSDKException
      */
     public CreateApiKeyResponse CreateApiKey(CreateApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateApiKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateApiKey", CreateApiKeyResponse.class);
     }
 
     /**
@@ -280,18 +170,8 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
      * @throws TencentCloudSDKException
      */
     public CreateIPStrategyResponse CreateIPStrategy(CreateIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateIPStrategy", CreateIPStrategyResponse.class);
     }
 
     /**
@@ -301,18 +181,8 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
      * @throws TencentCloudSDKException
      */
     public CreatePluginResponse CreatePlugin(CreatePluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreatePluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePlugin");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreatePlugin", CreatePluginResponse.class);
     }
 
     /**
@@ -323,18 +193,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public CreateServiceResponse CreateService(CreateServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateService", CreateServiceResponse.class);
     }
 
     /**
@@ -344,18 +204,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public CreateUpstreamResponse CreateUpstream(CreateUpstreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUpstreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateUpstreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUpstream");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateUpstream", CreateUpstreamResponse.class);
     }
 
     /**
@@ -366,18 +216,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public CreateUsagePlanResponse CreateUsagePlan(CreateUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateUsagePlan", CreateUsagePlanResponse.class);
     }
 
     /**
@@ -387,18 +227,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteAPIDocResponse DeleteAPIDoc(DeleteAPIDocRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAPIDocResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAPIDocResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAPIDoc");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteAPIDoc", DeleteAPIDocResponse.class);
     }
 
     /**
@@ -408,18 +238,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteApiResponse DeleteApi(DeleteApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteApi");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteApi", DeleteApiResponse.class);
     }
 
     /**
@@ -429,18 +249,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteApiAppResponse DeleteApiApp(DeleteApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteApiApp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteApiApp", DeleteApiAppResponse.class);
     }
 
     /**
@@ -450,18 +260,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteApiKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteApiKey", DeleteApiKeyResponse.class);
     }
 
     /**
@@ -471,18 +271,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteIPStrategyResponse DeleteIPStrategy(DeleteIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteIPStrategy", DeleteIPStrategyResponse.class);
     }
 
     /**
@@ -492,18 +282,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeletePluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeletePlugin");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeletePlugin", DeletePluginResponse.class);
     }
 
     /**
@@ -513,18 +293,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteServiceResponse DeleteService(DeleteServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteService", DeleteServiceResponse.class);
     }
 
     /**
@@ -535,18 +305,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(DeleteServiceSubDomainMappingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteServiceSubDomainMappingResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteServiceSubDomainMappingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteServiceSubDomainMapping");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteServiceSubDomainMapping", DeleteServiceSubDomainMappingResponse.class);
     }
 
     /**
@@ -556,18 +316,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteUpstreamResponse DeleteUpstream(DeleteUpstreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUpstreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUpstreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUpstream");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteUpstream", DeleteUpstreamResponse.class);
     }
 
     /**
@@ -577,18 +327,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DeleteUsagePlanResponse DeleteUsagePlan(DeleteUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteUsagePlan", DeleteUsagePlanResponse.class);
     }
 
     /**
@@ -600,18 +340,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(DemoteServiceUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DemoteServiceUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DemoteServiceUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DemoteServiceUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DemoteServiceUsagePlan", DemoteServiceUsagePlanResponse.class);
     }
 
     /**
@@ -621,18 +351,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeAPIDocDetailResponse DescribeAPIDocDetail(DescribeAPIDocDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAPIDocDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAPIDocDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAPIDocDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAPIDocDetail", DescribeAPIDocDetailResponse.class);
     }
 
     /**
@@ -642,18 +362,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeAPIDocsResponse DescribeAPIDocs(DescribeAPIDocsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAPIDocsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAPIDocsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAPIDocs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAPIDocs", DescribeAPIDocsResponse.class);
     }
 
     /**
@@ -663,18 +373,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeAllPluginApisResponse DescribeAllPluginApis(DescribeAllPluginApisRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAllPluginApisResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAllPluginApis");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAllPluginApis", DescribeAllPluginApisResponse.class);
     }
 
     /**
@@ -684,18 +384,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiResponse DescribeApi(DescribeApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApi");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApi", DescribeApiResponse.class);
     }
 
     /**
@@ -705,18 +395,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiAppResponse DescribeApiApp(DescribeApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiApp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiApp", DescribeApiAppResponse.class);
     }
 
     /**
@@ -726,18 +406,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatus(DescribeApiAppBindApisStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiAppBindApisStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiAppBindApisStatus", DescribeApiAppBindApisStatusResponse.class);
     }
 
     /**
@@ -747,18 +417,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiAppsStatusResponse DescribeApiAppsStatus(DescribeApiAppsStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiAppsStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiAppsStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiAppsStatus", DescribeApiAppsStatusResponse.class);
     }
 
     /**
@@ -768,18 +428,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(DescribeApiBindApiAppsStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiBindApiAppsStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiBindApiAppsStatus", DescribeApiBindApiAppsStatusResponse.class);
     }
 
     /**
@@ -789,18 +439,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(DescribeApiEnvironmentStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiEnvironmentStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiEnvironmentStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiEnvironmentStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiEnvironmentStrategy", DescribeApiEnvironmentStrategyResponse.class);
     }
 
     /**
@@ -810,18 +450,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiForApiAppResponse DescribeApiForApiApp(DescribeApiForApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiForApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiForApiApp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiForApiApp", DescribeApiForApiAppResponse.class);
     }
 
     /**
@@ -832,18 +462,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiKeyResponse DescribeApiKey(DescribeApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiKey", DescribeApiKeyResponse.class);
     }
 
     /**
@@ -854,18 +474,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiKeysStatusResponse DescribeApiKeysStatus(DescribeApiKeysStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiKeysStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiKeysStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiKeysStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiKeysStatus", DescribeApiKeysStatusResponse.class);
     }
 
     /**
@@ -876,18 +486,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApiUsagePlanResponse DescribeApiUsagePlan(DescribeApiUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApiUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApiUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApiUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApiUsagePlan", DescribeApiUsagePlanResponse.class);
     }
 
     /**
@@ -897,18 +497,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeApisStatusResponse DescribeApisStatus(DescribeApisStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApisStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApisStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApisStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeApisStatus", DescribeApisStatusResponse.class);
     }
 
     /**
@@ -918,18 +508,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeExclusiveInstanceDetailResponse DescribeExclusiveInstanceDetail(DescribeExclusiveInstanceDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeExclusiveInstanceDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstanceDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeExclusiveInstanceDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeExclusiveInstanceDetail", DescribeExclusiveInstanceDetailResponse.class);
     }
 
     /**
@@ -939,18 +519,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeExclusiveInstancesResponse DescribeExclusiveInstances(DescribeExclusiveInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeExclusiveInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeExclusiveInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeExclusiveInstances", DescribeExclusiveInstancesResponse.class);
     }
 
     /**
@@ -960,18 +530,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeExclusiveInstancesStatusResponse DescribeExclusiveInstancesStatus(DescribeExclusiveInstancesStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeExclusiveInstancesStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstancesStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeExclusiveInstancesStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeExclusiveInstancesStatus", DescribeExclusiveInstancesStatusResponse.class);
     }
 
     /**
@@ -981,18 +541,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeIPStrategyResponse DescribeIPStrategy(DescribeIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeIPStrategy", DescribeIPStrategyResponse.class);
     }
 
     /**
@@ -1002,18 +552,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(DescribeIPStrategyApisStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIPStrategyApisStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyApisStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIPStrategyApisStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeIPStrategyApisStatus", DescribeIPStrategyApisStatusResponse.class);
     }
 
     /**
@@ -1023,18 +563,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(DescribeIPStrategysStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIPStrategysStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategysStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIPStrategysStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeIPStrategysStatus", DescribeIPStrategysStatusResponse.class);
     }
 
     /**
@@ -1044,18 +574,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeLogSearchResponse DescribeLogSearch(DescribeLogSearchRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLogSearchResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLogSearchResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLogSearch");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeLogSearch", DescribeLogSearchResponse.class);
     }
 
     /**
@@ -1065,18 +585,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribePluginResponse DescribePlugin(DescribePluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePlugin");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePlugin", DescribePluginResponse.class);
     }
 
     /**
@@ -1086,18 +596,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribePluginApisResponse DescribePluginApis(DescribePluginApisRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePluginApisResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePluginApisResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePluginApis");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePluginApis", DescribePluginApisResponse.class);
     }
 
     /**
@@ -1107,18 +607,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribePluginsResponse DescribePlugins(DescribePluginsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePluginsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePluginsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePlugins");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePlugins", DescribePluginsResponse.class);
     }
 
     /**
@@ -1128,18 +618,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribePluginsByApiResponse DescribePluginsByApi(DescribePluginsByApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePluginsByApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePluginsByApi");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePluginsByApi", DescribePluginsByApiResponse.class);
     }
 
     /**
@@ -1149,18 +629,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeServiceResponse DescribeService(DescribeServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeService", DescribeServiceResponse.class);
     }
 
     /**
@@ -1170,18 +640,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(DescribeServiceEnvironmentListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceEnvironmentListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceEnvironmentList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceEnvironmentList", DescribeServiceEnvironmentListResponse.class);
     }
 
     /**
@@ -1192,18 +652,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(DescribeServiceEnvironmentReleaseHistoryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceEnvironmentReleaseHistoryResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentReleaseHistoryResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceEnvironmentReleaseHistory");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceEnvironmentReleaseHistory", DescribeServiceEnvironmentReleaseHistoryResponse.class);
     }
 
     /**
@@ -1213,18 +663,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeServiceEnvironmentStrategyResponse DescribeServiceEnvironmentStrategy(DescribeServiceEnvironmentStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceEnvironmentStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceEnvironmentStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceEnvironmentStrategy", DescribeServiceEnvironmentStrategyResponse.class);
     }
 
     /**
@@ -1234,18 +674,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeServiceForApiAppResponse DescribeServiceForApiApp(DescribeServiceForApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceForApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceForApiApp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceForApiApp", DescribeServiceForApiAppResponse.class);
     }
 
     /**
@@ -1256,18 +686,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
      * @throws TencentCloudSDKException
      */
     public DescribeServiceReleaseVersionResponse DescribeServiceReleaseVersion(DescribeServiceReleaseVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceReleaseVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceReleaseVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceReleaseVersion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceReleaseVersion", DescribeServiceReleaseVersionResponse.class);
     }
 
     /**
@@ -1278,18 +698,8 @@ API 网关可绑定自定义域名到服务，并且可以对自定义域名的�
      * @throws TencentCloudSDKException
      */
     public DescribeServiceSubDomainMappingsResponse DescribeServiceSubDomainMappings(DescribeServiceSubDomainMappingsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceSubDomainMappingsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceSubDomainMappingsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceSubDomainMappings");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceSubDomainMappings", DescribeServiceSubDomainMappingsResponse.class);
     }
 
     /**
@@ -1300,18 +710,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeServiceSubDomainsResponse DescribeServiceSubDomains(DescribeServiceSubDomainsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceSubDomainsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceSubDomainsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceSubDomains");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceSubDomains", DescribeServiceSubDomainsResponse.class);
     }
 
     /**
@@ -1322,18 +722,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(DescribeServiceUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceUsagePlan", DescribeServiceUsagePlanResponse.class);
     }
 
     /**
@@ -1343,18 +733,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeServicesStatusResponse DescribeServicesStatus(DescribeServicesStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServicesStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServicesStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServicesStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServicesStatus", DescribeServicesStatusResponse.class);
     }
 
     /**
@@ -1364,18 +744,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(DescribeUpstreamBindApisRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUpstreamBindApisResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUpstreamBindApis");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUpstreamBindApis", DescribeUpstreamBindApisResponse.class);
     }
 
     /**
@@ -1385,18 +755,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeUpstreamsResponse DescribeUpstreams(DescribeUpstreamsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUpstreamsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUpstreams");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUpstreams", DescribeUpstreamsResponse.class);
     }
 
     /**
@@ -1406,18 +766,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeUsagePlanResponse DescribeUsagePlan(DescribeUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUsagePlan", DescribeUsagePlanResponse.class);
     }
 
     /**
@@ -1428,18 +778,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(DescribeUsagePlanEnvironmentsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsagePlanEnvironmentsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanEnvironmentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsagePlanEnvironments");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUsagePlanEnvironments", DescribeUsagePlanEnvironmentsResponse.class);
     }
 
     /**
@@ -1450,18 +790,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeUsagePlanSecretIdsResponse DescribeUsagePlanSecretIds(DescribeUsagePlanSecretIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsagePlanSecretIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanSecretIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsagePlanSecretIds");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUsagePlanSecretIds", DescribeUsagePlanSecretIdsResponse.class);
     }
 
     /**
@@ -1471,18 +801,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DescribeUsagePlansStatusResponse DescribeUsagePlansStatus(DescribeUsagePlansStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUsagePlansStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlansStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUsagePlansStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUsagePlansStatus", DescribeUsagePlansStatusResponse.class);
     }
 
     /**
@@ -1492,18 +812,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DetachPluginResponse DetachPlugin(DetachPluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DetachPluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DetachPluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DetachPlugin");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DetachPlugin", DetachPluginResponse.class);
     }
 
     /**
@@ -1513,18 +823,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public DisableApiKeyResponse DisableApiKey(DisableApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DisableApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableApiKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DisableApiKey", DisableApiKeyResponse.class);
     }
 
     /**
@@ -1534,18 +834,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public EnableApiKeyResponse EnableApiKey(EnableApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<EnableApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableApiKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "EnableApiKey", EnableApiKeyResponse.class);
     }
 
     /**
@@ -1555,18 +845,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ImportOpenApiResponse ImportOpenApi(ImportOpenApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImportOpenApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImportOpenApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImportOpenApi");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ImportOpenApi", ImportOpenApiResponse.class);
     }
 
     /**
@@ -1576,18 +856,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyAPIDocResponse ModifyAPIDoc(ModifyAPIDocRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAPIDocResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAPIDocResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAPIDoc");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAPIDoc", ModifyAPIDocResponse.class);
     }
 
     /**
@@ -1597,18 +867,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyApiResponse ModifyApi(ModifyApiRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApiResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApiResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApi");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyApi", ModifyApiResponse.class);
     }
 
     /**
@@ -1618,18 +878,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyApiAppResponse ModifyApiApp(ModifyApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApiApp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyApiApp", ModifyApiAppResponse.class);
     }
 
     /**
@@ -1639,18 +889,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(ModifyApiEnvironmentStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApiEnvironmentStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApiEnvironmentStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApiEnvironmentStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyApiEnvironmentStrategy", ModifyApiEnvironmentStrategyResponse.class);
     }
 
     /**
@@ -1660,18 +900,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyApiIncrementResponse ModifyApiIncrement(ModifyApiIncrementRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyApiIncrementResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyApiIncrementResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyApiIncrement");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyApiIncrement", ModifyApiIncrementResponse.class);
     }
 
     /**
@@ -1681,18 +911,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyExclusiveInstanceResponse ModifyExclusiveInstance(ModifyExclusiveInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyExclusiveInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyExclusiveInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyExclusiveInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyExclusiveInstance", ModifyExclusiveInstanceResponse.class);
     }
 
     /**
@@ -1702,18 +922,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyIPStrategyResponse ModifyIPStrategy(ModifyIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyIPStrategy", ModifyIPStrategyResponse.class);
     }
 
     /**
@@ -1723,18 +933,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPluginResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPluginResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyPlugin");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyPlugin", ModifyPluginResponse.class);
     }
 
     /**
@@ -1744,18 +944,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyServiceResponse ModifyService(ModifyServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyService", ModifyServiceResponse.class);
     }
 
     /**
@@ -1765,18 +955,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyServiceEnvironmentStrategyResponse ModifyServiceEnvironmentStrategy(ModifyServiceEnvironmentStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyServiceEnvironmentStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyServiceEnvironmentStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyServiceEnvironmentStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyServiceEnvironmentStrategy", ModifyServiceEnvironmentStrategyResponse.class);
     }
 
     /**
@@ -1786,18 +966,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifySubDomainResponse ModifySubDomain(ModifySubDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySubDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifySubDomain", ModifySubDomainResponse.class);
     }
 
     /**
@@ -1807,18 +977,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyUpstreamResponse ModifyUpstream(ModifyUpstreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyUpstreamResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyUpstreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyUpstream");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyUpstream", ModifyUpstreamResponse.class);
     }
 
     /**
@@ -1828,18 +988,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
      * @throws TencentCloudSDKException
      */
     public ModifyUsagePlanResponse ModifyUsagePlan(ModifyUsagePlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyUsagePlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyUsagePlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyUsagePlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyUsagePlan", ModifyUsagePlanResponse.class);
     }
 
     /**
@@ -1850,18 +1000,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public ReleaseServiceResponse ReleaseService(ReleaseServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReleaseServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ReleaseServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReleaseService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ReleaseService", ReleaseServiceResponse.class);
     }
 
     /**
@@ -1871,18 +1011,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public ResetAPIDocPasswordResponse ResetAPIDocPassword(ResetAPIDocPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetAPIDocPasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ResetAPIDocPasswordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetAPIDocPassword");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ResetAPIDocPassword", ResetAPIDocPasswordResponse.class);
     }
 
     /**
@@ -1892,18 +1022,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UnBindEnvironmentResponse UnBindEnvironment(UnBindEnvironmentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindEnvironmentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnBindEnvironmentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindEnvironment");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnBindEnvironment", UnBindEnvironmentResponse.class);
     }
 
     /**
@@ -1913,18 +1033,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UnBindIPStrategyResponse UnBindIPStrategy(UnBindIPStrategyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindIPStrategyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnBindIPStrategyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindIPStrategy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnBindIPStrategy", UnBindIPStrategyResponse.class);
     }
 
     /**
@@ -1934,18 +1044,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UnBindSecretIdsResponse UnBindSecretIds(UnBindSecretIdsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindSecretIdsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnBindSecretIdsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindSecretIds");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnBindSecretIds", UnBindSecretIdsResponse.class);
     }
 
     /**
@@ -1956,18 +1056,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UnBindSubDomainResponse UnBindSubDomain(UnBindSubDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnBindSubDomainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnBindSubDomainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnBindSubDomain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnBindSubDomain", UnBindSubDomainResponse.class);
     }
 
     /**
@@ -1978,18 +1068,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UnReleaseServiceResponse UnReleaseService(UnReleaseServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnReleaseServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnReleaseServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnReleaseService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnReleaseService", UnReleaseServiceResponse.class);
     }
 
     /**
@@ -1999,18 +1079,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UnbindApiAppResponse UnbindApiApp(UnbindApiAppRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnbindApiAppResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnbindApiAppResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnbindApiApp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnbindApiApp", UnbindApiAppResponse.class);
     }
 
     /**
@@ -2020,18 +1090,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UpdateApiAppKeyResponse UpdateApiAppKey(UpdateApiAppKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateApiAppKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateApiAppKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpdateApiAppKey", UpdateApiAppKeyResponse.class);
     }
 
     /**
@@ -2041,18 +1101,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UpdateApiKeyResponse UpdateApiKey(UpdateApiKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateApiKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateApiKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateApiKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpdateApiKey", UpdateApiKeyResponse.class);
     }
 
     /**
@@ -2062,18 +1112,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
      * @throws TencentCloudSDKException
      */
     public UpdateServiceResponse UpdateService(UpdateServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateServiceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpdateService", UpdateServiceResponse.class);
     }
 
 }

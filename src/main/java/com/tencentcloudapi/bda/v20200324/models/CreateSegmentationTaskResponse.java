@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bda.v20200324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSegmentationTaskResponse extends AbstractModel{
+public class CreateSegmentationTaskResponse extends AbstractModel {
 
     /**
     * 任务标识ID,可以用与追溯任务状态，查看任务结果

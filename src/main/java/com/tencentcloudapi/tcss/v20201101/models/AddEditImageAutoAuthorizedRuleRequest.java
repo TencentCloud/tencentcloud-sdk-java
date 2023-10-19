@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel{
+public class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel {
 
     /**
     * 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像

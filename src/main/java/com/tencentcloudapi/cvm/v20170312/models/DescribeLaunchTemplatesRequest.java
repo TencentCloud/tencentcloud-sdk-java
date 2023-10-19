@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLaunchTemplatesRequest extends AbstractModel{
+public class DescribeLaunchTemplatesRequest extends AbstractModel {
 
     /**
     * 启动模板ID，一个或者多个启动模板ID。若未指定，则显示用户所有模板。

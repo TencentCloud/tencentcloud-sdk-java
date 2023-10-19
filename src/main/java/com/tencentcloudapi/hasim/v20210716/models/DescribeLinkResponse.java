@@ -16,11 +16,12 @@
 package com.tencentcloudapi.hasim.v20210716.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLinkResponse extends AbstractModel{
+public class DescribeLinkResponse extends AbstractModel {
 
     /**
     * 云兔连接详细信息

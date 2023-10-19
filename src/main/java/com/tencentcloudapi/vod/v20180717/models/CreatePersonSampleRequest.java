@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonSampleRequest extends AbstractModel{
+public class CreatePersonSampleRequest extends AbstractModel {
 
     /**
     * 素材名称，长度限制：20 个字符。

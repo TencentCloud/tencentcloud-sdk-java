@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListDiagnoseReportRequest extends AbstractModel{
+public class ListDiagnoseReportRequest extends AbstractModel {
 
     /**
     * 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。

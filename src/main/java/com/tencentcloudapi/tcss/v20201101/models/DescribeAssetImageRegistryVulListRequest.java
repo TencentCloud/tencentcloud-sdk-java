@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetImageRegistryVulListRequest extends AbstractModel{
+public class DescribeAssetImageRegistryVulListRequest extends AbstractModel {
 
     /**
     * 需要返回的数量，默认为10，最大值为100

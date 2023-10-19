@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePurgeTasksRequest extends AbstractModel{
+public class DescribePurgeTasksRequest extends AbstractModel {
 
     /**
     * 查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。

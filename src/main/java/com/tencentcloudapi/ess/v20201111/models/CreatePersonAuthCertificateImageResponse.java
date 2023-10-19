@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonAuthCertificateImageResponse extends AbstractModel{
+public class CreatePersonAuthCertificateImageResponse extends AbstractModel {
 
     /**
     * 个人用户认证证书图片下载URL，`有效期为5分钟`，超过有效期后将无法再下载。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tms.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextModerationRequest extends AbstractModel{
+public class TextModerationRequest extends AbstractModel {
 
     /**
     * 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密

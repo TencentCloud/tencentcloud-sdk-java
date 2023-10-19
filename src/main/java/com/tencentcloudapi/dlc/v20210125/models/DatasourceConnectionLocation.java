@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatasourceConnectionLocation extends AbstractModel{
+public class DatasourceConnectionLocation extends AbstractModel {
 
     /**
     * 数据连接所在Vpc实例Id，如“vpc-azd4dt1c”。

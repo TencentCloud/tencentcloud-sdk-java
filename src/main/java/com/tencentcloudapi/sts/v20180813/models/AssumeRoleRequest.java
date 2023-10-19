@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sts.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssumeRoleRequest extends AbstractModel{
+public class AssumeRoleRequest extends AbstractModel {
 
     /**
     * 角色的资源描述，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。

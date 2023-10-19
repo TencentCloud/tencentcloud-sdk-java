@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecc.v20181213.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CorrectMultiImageRequest extends AbstractModel{
+public class CorrectMultiImageRequest extends AbstractModel {
 
     /**
     * 图片的url链接或base64数据。每张图片数据作为数组的一个元素，数组个数与图片个数保持一致。存放类别依据InputType而定，url与base64编码不能混合使用。

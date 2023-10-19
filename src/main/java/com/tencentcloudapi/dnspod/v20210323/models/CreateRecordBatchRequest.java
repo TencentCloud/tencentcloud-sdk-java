@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRecordBatchRequest extends AbstractModel{
+public class CreateRecordBatchRequest extends AbstractModel {
 
     /**
     * 域名ID，多个 domain_id 用英文逗号进行分割。

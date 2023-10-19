@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListRecordBackupPlanDevicesRequest extends AbstractModel{
+public class ListRecordBackupPlanDevicesRequest extends AbstractModel {
 
     /**
     * 录像计划ID（从查询录像上云计划列表接口ListRecordBackupPlans中获取）

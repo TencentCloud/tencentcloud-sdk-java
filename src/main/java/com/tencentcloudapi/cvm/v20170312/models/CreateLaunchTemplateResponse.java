@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLaunchTemplateResponse extends AbstractModel{
+public class CreateLaunchTemplateResponse extends AbstractModel {
 
     /**
     * 当通过本接口来创建实例启动模板时会返回该参数，表示创建成功的实例启动模板`ID`。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCosSecKeyInstanceRequest extends AbstractModel{
+public class CreateCosSecKeyInstanceRequest extends AbstractModel {
 
     /**
     * 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNewL7RulesRequest extends AbstractModel{
+public class DescribeNewL7RulesRequest extends AbstractModel {
 
     /**
     * DDoS防护子产品代号（bgpip表示高防IP）

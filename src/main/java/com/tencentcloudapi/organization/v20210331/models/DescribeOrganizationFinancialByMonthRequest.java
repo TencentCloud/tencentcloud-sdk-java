@@ -16,11 +16,12 @@
 package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrganizationFinancialByMonthRequest extends AbstractModel{
+public class DescribeOrganizationFinancialByMonthRequest extends AbstractModel {
 
     /**
     * 查询月数。取值范围：1~6，默认值：6

@@ -45,18 +45,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddNewBindRoleUserResponse AddNewBindRoleUser(AddNewBindRoleUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddNewBindRoleUserResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddNewBindRoleUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddNewBindRoleUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AddNewBindRoleUser", AddNewBindRoleUserResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDomainAndIpResponse CreateDomainAndIp(CreateDomainAndIpRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDomainAndIpResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDomainAndIpResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDomainAndIp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDomainAndIp", CreateDomainAndIpResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(CreateRiskCenterScanTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRiskCenterScanTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateRiskCenterScanTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRiskCenterScanTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateRiskCenterScanTask", CreateRiskCenterScanTaskResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteDomainAndIpResponse DeleteDomainAndIp(DeleteDomainAndIpRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDomainAndIpResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDomainAndIpResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDomainAndIp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteDomainAndIp", DeleteDomainAndIpResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteRiskScanTaskResponse DeleteRiskScanTask(DeleteRiskScanTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRiskScanTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRiskScanTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRiskScanTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteRiskScanTask", DeleteRiskScanTaskResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCVMAssetInfoResponse DescribeCVMAssetInfo(DescribeCVMAssetInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCVMAssetInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCVMAssetInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCVMAssetInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeCVMAssetInfo", DescribeCVMAssetInfoResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCVMAssetsResponse DescribeCVMAssets(DescribeCVMAssetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCVMAssetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCVMAssetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCVMAssets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeCVMAssets", DescribeCVMAssetsResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeClusterPodAssetsResponse DescribeClusterPodAssets(DescribeClusterPodAssetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClusterPodAssetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClusterPodAssetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClusterPodAssets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeClusterPodAssets", DescribeClusterPodAssetsResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDbAssetInfoResponse DescribeDbAssetInfo(DescribeDbAssetInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDbAssetInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDbAssetInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDbAssetInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDbAssetInfo", DescribeDbAssetInfoResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDbAssetsResponse DescribeDbAssets(DescribeDbAssetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDbAssetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDbAssetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDbAssets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDbAssets", DescribeDbAssetsResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDomainAssetsResponse DescribeDomainAssets(DescribeDomainAssetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainAssetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDomainAssetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDomainAssets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDomainAssets", DescribeDomainAssetsResponse.class);
     }
 
     /**
@@ -276,18 +166,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeListenerListResponse DescribeListenerList(DescribeListenerListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListenerListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeListenerListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeListenerList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeListenerList", DescribeListenerListResponse.class);
     }
 
     /**
@@ -297,18 +177,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePublicIpAssetsResponse DescribePublicIpAssets(DescribePublicIpAssetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePublicIpAssetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePublicIpAssetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePublicIpAssets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePublicIpAssets", DescribePublicIpAssetsResponse.class);
     }
 
     /**
@@ -318,18 +188,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskCenterAssetViewCFGRiskListResponse DescribeRiskCenterAssetViewCFGRiskList(DescribeRiskCenterAssetViewCFGRiskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskCenterAssetViewCFGRiskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterAssetViewCFGRiskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskCenterAssetViewCFGRiskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskCenterAssetViewCFGRiskList", DescribeRiskCenterAssetViewCFGRiskListResponse.class);
     }
 
     /**
@@ -339,18 +199,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskCenterAssetViewPortRiskListResponse DescribeRiskCenterAssetViewPortRiskList(DescribeRiskCenterAssetViewPortRiskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskCenterAssetViewPortRiskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterAssetViewPortRiskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskCenterAssetViewPortRiskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskCenterAssetViewPortRiskList", DescribeRiskCenterAssetViewPortRiskListResponse.class);
     }
 
     /**
@@ -360,18 +210,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskCenterAssetViewVULRiskListResponse DescribeRiskCenterAssetViewVULRiskList(DescribeRiskCenterAssetViewVULRiskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskCenterAssetViewVULRiskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterAssetViewVULRiskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskCenterAssetViewVULRiskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskCenterAssetViewVULRiskList", DescribeRiskCenterAssetViewVULRiskListResponse.class);
     }
 
     /**
@@ -381,18 +221,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskCenterAssetViewWeakPasswordRiskListResponse DescribeRiskCenterAssetViewWeakPasswordRiskList(DescribeRiskCenterAssetViewWeakPasswordRiskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskCenterAssetViewWeakPasswordRiskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterAssetViewWeakPasswordRiskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskCenterAssetViewWeakPasswordRiskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskCenterAssetViewWeakPasswordRiskList", DescribeRiskCenterAssetViewWeakPasswordRiskListResponse.class);
     }
 
     /**
@@ -402,18 +232,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskCenterPortViewPortRiskListResponse DescribeRiskCenterPortViewPortRiskList(DescribeRiskCenterPortViewPortRiskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskCenterPortViewPortRiskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterPortViewPortRiskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskCenterPortViewPortRiskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskCenterPortViewPortRiskList", DescribeRiskCenterPortViewPortRiskListResponse.class);
     }
 
     /**
@@ -423,18 +243,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskCenterServerRiskListResponse DescribeRiskCenterServerRiskList(DescribeRiskCenterServerRiskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskCenterServerRiskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterServerRiskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskCenterServerRiskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskCenterServerRiskList", DescribeRiskCenterServerRiskListResponse.class);
     }
 
     /**
@@ -444,18 +254,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskCenterVULViewVULRiskListResponse DescribeRiskCenterVULViewVULRiskList(DescribeRiskCenterVULViewVULRiskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskCenterVULViewVULRiskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterVULViewVULRiskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskCenterVULViewVULRiskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskCenterVULViewVULRiskList", DescribeRiskCenterVULViewVULRiskListResponse.class);
     }
 
     /**
@@ -465,18 +265,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRiskCenterWebsiteRiskListResponse DescribeRiskCenterWebsiteRiskList(DescribeRiskCenterWebsiteRiskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRiskCenterWebsiteRiskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterWebsiteRiskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRiskCenterWebsiteRiskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRiskCenterWebsiteRiskList", DescribeRiskCenterWebsiteRiskListResponse.class);
     }
 
     /**
@@ -486,18 +276,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeScanReportListResponse DescribeScanReportList(DescribeScanReportListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeScanReportListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScanReportListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeScanReportList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeScanReportList", DescribeScanReportListResponse.class);
     }
 
     /**
@@ -507,18 +287,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeScanTaskListResponse DescribeScanTaskList(DescribeScanTaskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeScanTaskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScanTaskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeScanTaskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeScanTaskList", DescribeScanTaskListResponse.class);
     }
 
     /**
@@ -528,18 +298,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSearchBugInfoResponse DescribeSearchBugInfo(DescribeSearchBugInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSearchBugInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSearchBugInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSearchBugInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeSearchBugInfo", DescribeSearchBugInfoResponse.class);
     }
 
     /**
@@ -549,18 +309,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSubnetAssetsResponse DescribeSubnetAssets(DescribeSubnetAssetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSubnetAssetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubnetAssetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubnetAssets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeSubnetAssets", DescribeSubnetAssetsResponse.class);
     }
 
     /**
@@ -570,18 +320,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTaskLogListResponse DescribeTaskLogList(DescribeTaskLogListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskLogListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskLogListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskLogList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTaskLogList", DescribeTaskLogListResponse.class);
     }
 
     /**
@@ -591,18 +331,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTaskLogURLResponse DescribeTaskLogURL(DescribeTaskLogURLRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskLogURLResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskLogURLResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskLogURL");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTaskLogURL", DescribeTaskLogURLResponse.class);
     }
 
     /**
@@ -612,18 +342,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVpcAssetsResponse DescribeVpcAssets(DescribeVpcAssetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpcAssetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpcAssetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpcAssets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVpcAssets", DescribeVpcAssetsResponse.class);
     }
 
     /**
@@ -633,18 +353,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyRiskCenterRiskStatusResponse ModifyRiskCenterRiskStatus(ModifyRiskCenterRiskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRiskCenterRiskStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRiskCenterRiskStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRiskCenterRiskStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyRiskCenterRiskStatus", ModifyRiskCenterRiskStatusResponse.class);
     }
 
     /**
@@ -654,18 +364,8 @@ public class CsipClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StopRiskCenterTaskResponse StopRiskCenterTask(StopRiskCenterTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopRiskCenterTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<StopRiskCenterTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopRiskCenterTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "StopRiskCenterTask", StopRiskCenterTaskResponse.class);
     }
 
 }

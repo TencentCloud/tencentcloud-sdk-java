@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ticm.v20181127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Candidate extends AbstractModel{
+public class Candidate extends AbstractModel {
 
     /**
     * 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。

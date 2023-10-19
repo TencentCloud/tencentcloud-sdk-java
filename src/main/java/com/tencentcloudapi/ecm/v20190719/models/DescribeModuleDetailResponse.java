@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeModuleDetailResponse extends AbstractModel{
+public class DescribeModuleDetailResponse extends AbstractModel {
 
     /**
     * 模块的详细信息，详细见数据结构中的ModuleInfo。

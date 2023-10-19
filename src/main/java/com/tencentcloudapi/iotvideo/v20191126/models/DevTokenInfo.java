@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20191126.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevTokenInfo extends AbstractModel{
+public class DevTokenInfo extends AbstractModel {
 
     /**
     * 客户的终端用户在IotVideo上的唯一标识id

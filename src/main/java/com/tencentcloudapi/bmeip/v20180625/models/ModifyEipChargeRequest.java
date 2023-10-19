@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEipChargeRequest extends AbstractModel{
+public class ModifyEipChargeRequest extends AbstractModel {
 
     /**
     * EIP计费方式，flow-流量计费；bandwidth-带宽计费

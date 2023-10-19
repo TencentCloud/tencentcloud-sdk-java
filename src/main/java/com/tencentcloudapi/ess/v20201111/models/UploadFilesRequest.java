@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadFilesRequest extends AbstractModel{
+public class UploadFilesRequest extends AbstractModel {
 
     /**
     * 文件对应业务类型,可以选择的类型如下

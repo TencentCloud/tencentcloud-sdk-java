@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyConnectionConfigRequest extends AbstractModel{
+public class ModifyConnectionConfigRequest extends AbstractModel {
 
     /**
     * 实例的ID，长度在12-36之间。

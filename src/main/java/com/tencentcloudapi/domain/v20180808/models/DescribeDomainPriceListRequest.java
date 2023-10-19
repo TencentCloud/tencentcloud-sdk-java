@@ -16,11 +16,12 @@
 package com.tencentcloudapi.domain.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDomainPriceListRequest extends AbstractModel{
+public class DescribeDomainPriceListRequest extends AbstractModel {
 
     /**
     * 查询价格的后缀列表。默认则为全部后缀

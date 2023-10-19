@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertificatesResponse extends AbstractModel{
+public class DescribeCertificatesResponse extends AbstractModel {
 
     /**
     * 服务器证书列表，包括证书ID 和证书名称。

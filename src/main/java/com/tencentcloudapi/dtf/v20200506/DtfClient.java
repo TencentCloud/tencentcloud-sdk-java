@@ -45,18 +45,8 @@ public class DtfClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTransactionsResponse DescribeTransactions(DescribeTransactionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTransactionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTransactionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTransactions");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTransactions", DescribeTransactionsResponse.class);
     }
 
 }

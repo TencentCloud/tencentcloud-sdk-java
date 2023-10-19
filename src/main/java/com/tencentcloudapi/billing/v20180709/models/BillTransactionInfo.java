@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BillTransactionInfo extends AbstractModel{
+public class BillTransactionInfo extends AbstractModel {
 
     /**
     * 收支类型：deduct 扣费, recharge 充值, return 退费， block 冻结, unblock 解冻

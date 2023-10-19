@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstancesProjectRequest extends AbstractModel{
+public class ModifyDBInstancesProjectRequest extends AbstractModel {
 
     /**
     * 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。

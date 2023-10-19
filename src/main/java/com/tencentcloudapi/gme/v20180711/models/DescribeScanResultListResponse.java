@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanResultListResponse extends AbstractModel{
+public class DescribeScanResultListResponse extends AbstractModel {
 
     /**
     * 要查询的语音检测任务的结果

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssociateAddressResponse extends AbstractModel{
+public class AssociateAddressResponse extends AbstractModel {
 
     /**
     * 异步任务TaskId。可以使用DescribeTaskResult接口查询任务状态。

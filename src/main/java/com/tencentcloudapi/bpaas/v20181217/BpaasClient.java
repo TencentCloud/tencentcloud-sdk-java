@@ -45,18 +45,8 @@ public class BpaasClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetBpaasApproveDetailResponse GetBpaasApproveDetail(GetBpaasApproveDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetBpaasApproveDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetBpaasApproveDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetBpaasApproveDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetBpaasApproveDetail", GetBpaasApproveDetailResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class BpaasClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public OutApproveBpaasApplicationResponse OutApproveBpaasApplication(OutApproveBpaasApplicationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OutApproveBpaasApplicationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<OutApproveBpaasApplicationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "OutApproveBpaasApplication");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "OutApproveBpaasApplication", OutApproveBpaasApplicationResponse.class);
     }
 
 }

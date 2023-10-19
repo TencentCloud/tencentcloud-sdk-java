@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputMappingOption extends AbstractModel{
+public class OutputMappingOption extends AbstractModel {
 
     /**
     * 容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20200709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBizConfigRequest extends AbstractModel{
+public class CreateBizConfigRequest extends AbstractModel {
 
     /**
     * 业务ID，仅限英文字母、数字和下划线（_）组成，长度不超过8位

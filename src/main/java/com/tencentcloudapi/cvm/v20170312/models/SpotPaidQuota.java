@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpotPaidQuota extends AbstractModel{
+public class SpotPaidQuota extends AbstractModel {
 
     /**
     * 已使用配额，单位：vCPU核心数

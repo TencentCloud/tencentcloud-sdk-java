@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpecConfigInfo extends AbstractModel{
+public class SpecConfigInfo extends AbstractModel {
 
     /**
     * 节点个数，2 表示一主一从，3 表示一主二从

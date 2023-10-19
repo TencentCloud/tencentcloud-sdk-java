@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListFunctionsRequest extends AbstractModel{
+public class ListFunctionsRequest extends AbstractModel {
 
     /**
     * 以升序还是降序的方式返回结果，可选值 ASC 和 DESC

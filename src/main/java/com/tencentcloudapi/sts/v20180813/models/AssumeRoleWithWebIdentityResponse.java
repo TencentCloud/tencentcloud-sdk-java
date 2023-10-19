@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sts.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssumeRoleWithWebIdentityResponse extends AbstractModel{
+public class AssumeRoleWithWebIdentityResponse extends AbstractModel {
 
     /**
     * 临时访问凭证过期时间(时间戳)

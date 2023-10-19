@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAreaBillBandwidthAndFluxListRequest extends AbstractModel{
+public class DescribeAreaBillBandwidthAndFluxListRequest extends AbstractModel {
 
     /**
     * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。

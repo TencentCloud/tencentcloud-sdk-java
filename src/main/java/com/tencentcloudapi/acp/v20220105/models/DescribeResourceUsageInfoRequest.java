@@ -16,11 +16,12 @@
 package com.tencentcloudapi.acp.v20220105.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourceUsageInfoRequest extends AbstractModel{
+public class DescribeResourceUsageInfoRequest extends AbstractModel {
 
     /**
     * 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)

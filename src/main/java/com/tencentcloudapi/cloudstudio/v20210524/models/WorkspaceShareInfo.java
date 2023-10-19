@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudstudio.v20210524.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WorkspaceShareInfo extends AbstractModel{
+public class WorkspaceShareInfo extends AbstractModel {
 
     /**
     * 共享或不共享状态

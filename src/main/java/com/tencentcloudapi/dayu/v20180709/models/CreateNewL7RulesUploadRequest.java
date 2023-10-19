@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNewL7RulesUploadRequest extends AbstractModel{
+public class CreateNewL7RulesUploadRequest extends AbstractModel {
 
     /**
     * 大禹子产品代号（bgpip表示高防IP）

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20230321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnhancedService extends AbstractModel{
+public class EnhancedService extends AbstractModel {
 
     /**
     * 开启云安全服务。若不指定该参数，则默认开启云安全服务。

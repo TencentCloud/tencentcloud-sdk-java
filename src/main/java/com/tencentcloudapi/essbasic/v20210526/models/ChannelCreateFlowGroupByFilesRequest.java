@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateFlowGroupByFilesRequest extends AbstractModel{
+public class ChannelCreateFlowGroupByFilesRequest extends AbstractModel {
 
     /**
     * 每个子合同的发起所需的信息，数量限制2-50

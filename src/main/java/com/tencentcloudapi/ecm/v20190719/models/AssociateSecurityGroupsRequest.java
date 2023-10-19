@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssociateSecurityGroupsRequest extends AbstractModel{
+public class AssociateSecurityGroupsRequest extends AbstractModel {
 
     /**
     * 要绑定的安全组ID，类似esg-efil73jd，只支持绑定单个安全组。

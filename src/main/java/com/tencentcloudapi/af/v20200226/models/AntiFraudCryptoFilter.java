@@ -16,11 +16,12 @@
 package com.tencentcloudapi.af.v20200226.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AntiFraudCryptoFilter extends AbstractModel{
+public class AntiFraudCryptoFilter extends AbstractModel {
 
     /**
     * 约定用入参，默认不涉及默认BusinessSecurityData 与BusinessCrptoData 不传

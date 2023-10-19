@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iecp.v20210914.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DracoNodeInfo extends AbstractModel{
+public class DracoNodeInfo extends AbstractModel {
 
     /**
     * 设备SN。SN仅支持大写字母、数字，长度限制为1~32个字符

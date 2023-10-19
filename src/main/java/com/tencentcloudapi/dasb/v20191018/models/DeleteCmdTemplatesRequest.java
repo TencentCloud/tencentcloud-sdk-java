@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCmdTemplatesRequest extends AbstractModel{
+public class DeleteCmdTemplatesRequest extends AbstractModel {
 
     /**
     * 待删除的ID集合

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel{
+public class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel {
 
     /**
     * 按帧标签起始的偏移时间。

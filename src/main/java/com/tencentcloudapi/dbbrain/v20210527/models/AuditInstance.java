@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuditInstance extends AbstractModel{
+public class AuditInstance extends AbstractModel {
 
     /**
     * 审计状态，已开通审计为：YES，未开通审计为：ON。

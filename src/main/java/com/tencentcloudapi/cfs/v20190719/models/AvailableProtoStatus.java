@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AvailableProtoStatus extends AbstractModel{
+public class AvailableProtoStatus extends AbstractModel {
 
     /**
     * 售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售

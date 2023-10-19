@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDownloadFileResponse extends AbstractModel{
+public class DescribeDownloadFileResponse extends AbstractModel {
 
     /**
     * 文件路径，该字段已废弃

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransmitAudioStreamRequest extends AbstractModel{
+public class TransmitAudioStreamRequest extends AbstractModel {
 
     /**
     * 功能开关列表，表示是否需要打开相应的功能，返回相应的信息

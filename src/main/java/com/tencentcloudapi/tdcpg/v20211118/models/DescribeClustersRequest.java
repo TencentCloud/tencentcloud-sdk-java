@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdcpg.v20211118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClustersRequest extends AbstractModel{
+public class DescribeClustersRequest extends AbstractModel {
 
     /**
     * 页码，取值范围为[1,INF)，默认值为1

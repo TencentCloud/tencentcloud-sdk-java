@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegistryChargePrepaid extends AbstractModel{
+public class RegistryChargePrepaid extends AbstractModel {
 
     /**
     * 购买实例的时长，单位：月

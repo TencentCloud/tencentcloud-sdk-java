@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateBucketCORSOptRequest extends AbstractModel{
+public class UpdateBucketCORSOptRequest extends AbstractModel {
 
     /**
     * 允许的访问来源;具体参见 [cos文档](https://cloud.tencent.com/document/product/436/8279)

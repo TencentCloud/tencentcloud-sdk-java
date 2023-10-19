@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bri.v20190328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBRIResponse extends AbstractModel{
+public class DescribeBRIResponse extends AbstractModel {
 
     /**
     * 业务风险情报响应体

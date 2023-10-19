@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ccc.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeChatMessagesRequest extends AbstractModel{
+public class DescribeChatMessagesRequest extends AbstractModel {
 
     /**
     * 实例 ID（废弃）

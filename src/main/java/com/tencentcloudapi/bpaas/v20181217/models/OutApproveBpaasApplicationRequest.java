@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bpaas.v20181217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutApproveBpaasApplicationRequest extends AbstractModel{
+public class OutApproveBpaasApplicationRequest extends AbstractModel {
 
     /**
     * 状态  1:通过  2:拒绝

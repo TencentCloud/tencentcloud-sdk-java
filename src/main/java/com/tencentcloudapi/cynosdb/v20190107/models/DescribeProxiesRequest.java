@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxiesRequest extends AbstractModel{
+public class DescribeProxiesRequest extends AbstractModel {
 
     /**
     * 集群ID（该参数必传，例如cynosdbmysql-xxxxxx）

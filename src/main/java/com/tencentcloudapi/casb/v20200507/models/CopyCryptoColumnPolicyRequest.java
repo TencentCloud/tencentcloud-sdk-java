@@ -16,11 +16,12 @@
 package com.tencentcloudapi.casb.v20200507.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CopyCryptoColumnPolicyRequest extends AbstractModel{
+public class CopyCryptoColumnPolicyRequest extends AbstractModel {
 
     /**
     * 实例Id

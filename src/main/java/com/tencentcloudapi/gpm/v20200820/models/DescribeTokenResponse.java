@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gpm.v20200820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTokenResponse extends AbstractModel{
+public class DescribeTokenResponse extends AbstractModel {
 
     /**
     * 当前的MatchCode对应的Token。如果当前MatchCode没有Token，该参数可能取不到有效值。

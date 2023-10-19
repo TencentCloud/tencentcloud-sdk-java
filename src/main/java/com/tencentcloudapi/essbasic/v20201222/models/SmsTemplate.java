@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20201222.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsTemplate extends AbstractModel{
+public class SmsTemplate extends AbstractModel {
 
     /**
     * 模板ID，必须填写已审核通过的模板ID。模板ID可登录短信控制台查看。

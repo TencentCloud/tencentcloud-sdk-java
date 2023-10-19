@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
+public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
     * 快照重复时间点,0-23

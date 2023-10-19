@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeApiResultServiceParametersInfo extends AbstractModel{
+public class DescribeApiResultServiceParametersInfo extends AbstractModel {
 
     /**
     * API的后端服务参数名称。只有ServiceType是HTTP才会用到此参数。前后端参数名称可不同。

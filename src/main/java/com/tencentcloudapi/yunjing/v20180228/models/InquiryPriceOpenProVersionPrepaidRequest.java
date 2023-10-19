@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunjing.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceOpenProVersionPrepaidRequest extends AbstractModel{
+public class InquiryPriceOpenProVersionPrepaidRequest extends AbstractModel {
 
     /**
     * 预付费模式(包年包月)参数设置。

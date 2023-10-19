@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iottid.v20190411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadTidsResponse extends AbstractModel{
+public class DownloadTidsResponse extends AbstractModel {
 
     /**
     * 下载的TID信息列表

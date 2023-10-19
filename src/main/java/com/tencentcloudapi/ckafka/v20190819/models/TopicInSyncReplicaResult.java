@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TopicInSyncReplicaResult extends AbstractModel{
+public class TopicInSyncReplicaResult extends AbstractModel {
 
     /**
     * Topic详情及副本合集

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PostQuantumCryptoSignResponse extends AbstractModel{
+public class PostQuantumCryptoSignResponse extends AbstractModel {
 
     /**
     * 签名值，Base64编码。可使用 PostQuantumCryptoVerify接口对签名值进行验证。

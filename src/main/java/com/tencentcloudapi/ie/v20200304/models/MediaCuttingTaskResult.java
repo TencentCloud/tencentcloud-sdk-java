@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaCuttingTaskResult extends AbstractModel{
+public class MediaCuttingTaskResult extends AbstractModel {
 
     /**
     * 如果ResultListType不为NoListFile时，结果（TaskResultFile）列表文件的存储位置。

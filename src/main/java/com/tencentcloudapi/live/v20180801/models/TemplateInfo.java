@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TemplateInfo extends AbstractModel{
+public class TemplateInfo extends AbstractModel {
 
     /**
     * 视频编码：h264/h265/origin，默认h264。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ba.v20200720.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateWeappQRUrlRequest extends AbstractModel{
+public class CreateWeappQRUrlRequest extends AbstractModel {
 
     /**
     * 代理角色临时密钥的Token

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvActivitiesResponse extends AbstractModel{
+public class DescribeComputeEnvActivitiesResponse extends AbstractModel {
 
     /**
     * 计算环境中的活动列表

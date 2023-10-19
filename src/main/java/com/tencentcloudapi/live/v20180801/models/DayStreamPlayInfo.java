@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DayStreamPlayInfo extends AbstractModel{
+public class DayStreamPlayInfo extends AbstractModel {
 
     /**
     * 数据时间点，接口返回支持两种时间格式：

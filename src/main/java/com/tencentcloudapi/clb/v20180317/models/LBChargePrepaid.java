@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LBChargePrepaid extends AbstractModel{
+public class LBChargePrepaid extends AbstractModel {
 
     /**
     * 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicePriceInfoResponse extends AbstractModel{
+public class DescribeDevicePriceInfoResponse extends AbstractModel {
 
     /**
     * 服务器价格信息列表

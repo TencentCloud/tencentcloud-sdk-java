@@ -57,18 +57,8 @@ public class BriClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBRIResponse DescribeBRI(DescribeBRIRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBRIResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBRIResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBRI");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBRI", DescribeBRIResponse.class);
     }
 
 }

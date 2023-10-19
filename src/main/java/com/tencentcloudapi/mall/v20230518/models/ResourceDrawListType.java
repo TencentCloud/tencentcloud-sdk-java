@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mall.v20230518.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceDrawListType extends AbstractModel{
+public class ResourceDrawListType extends AbstractModel {
 
     /**
     * 记录id

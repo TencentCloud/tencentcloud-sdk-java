@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageUrl extends AbstractModel{
+public class ImageUrl extends AbstractModel {
 
     /**
     * 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。

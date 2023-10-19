@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePublicConfigsRequest extends AbstractModel{
+public class DescribePublicConfigsRequest extends AbstractModel {
 
     /**
     * 配置项ID，不传入时查询全量，高优先级

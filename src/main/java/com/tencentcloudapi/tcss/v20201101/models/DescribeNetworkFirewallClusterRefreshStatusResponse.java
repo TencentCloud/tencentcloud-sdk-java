@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkFirewallClusterRefreshStatusResponse extends AbstractModel{
+public class DescribeNetworkFirewallClusterRefreshStatusResponse extends AbstractModel {
 
     /**
     * 任务状态，可能为：Task_Running,Task_Succ,Task_Error,Task_NoExist

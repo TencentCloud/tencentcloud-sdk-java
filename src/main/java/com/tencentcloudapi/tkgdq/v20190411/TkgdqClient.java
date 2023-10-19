@@ -45,18 +45,8 @@ public class TkgdqClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEntityResponse DescribeEntity(DescribeEntityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEntityResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeEntityResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeEntity");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeEntity", DescribeEntityResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TkgdqClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRelationResponse DescribeRelation(DescribeRelationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRelationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRelationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRelation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRelation", DescribeRelationResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TkgdqClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTripleResponse DescribeTriple(DescribeTripleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTripleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTripleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTriple");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTriple", DescribeTripleResponse.class);
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RenameRestoreDatabase extends AbstractModel{
+public class RenameRestoreDatabase extends AbstractModel {
 
     /**
     * 库的名字，如果oldName不存在则返回失败。

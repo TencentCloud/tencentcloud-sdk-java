@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWebPageGeneralizeResponse extends AbstractModel{
+public class DescribeWebPageGeneralizeResponse extends AbstractModel {
 
     /**
     * 防护监测 0 未开启 1 已开启 2 异常

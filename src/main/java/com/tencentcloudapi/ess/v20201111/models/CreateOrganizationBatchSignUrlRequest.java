@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOrganizationBatchSignUrlRequest extends AbstractModel{
+public class CreateOrganizationBatchSignUrlRequest extends AbstractModel {
 
     /**
     * 执行本接口操作的员工信息。使用此接口时，必须填写userId。

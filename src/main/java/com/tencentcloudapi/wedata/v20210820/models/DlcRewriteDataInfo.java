@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DlcRewriteDataInfo extends AbstractModel{
+public class DlcRewriteDataInfo extends AbstractModel {
 
     /**
     * 是否启用数据重排布治理项：enable（启动）、disable（不启用，默认）

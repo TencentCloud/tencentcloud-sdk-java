@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindDeviceAccountPasswordRequest extends AbstractModel{
+public class BindDeviceAccountPasswordRequest extends AbstractModel {
 
     /**
     * 主机账号ID

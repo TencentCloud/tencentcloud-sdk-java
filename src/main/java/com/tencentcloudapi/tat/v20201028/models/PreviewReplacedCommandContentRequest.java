@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tat.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PreviewReplacedCommandContentRequest extends AbstractModel{
+public class PreviewReplacedCommandContentRequest extends AbstractModel {
 
     /**
     * 本次预览采用的自定义参数。字段类型为 json encoded string，如：{\"varA\": \"222\"}。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PoliticalConfigureInfoForUpdate extends AbstractModel{
+public class PoliticalConfigureInfoForUpdate extends AbstractModel {
 
     /**
     * 画面鉴别涉及令人不适宜的信息的控制参数。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaJoiningInfo extends AbstractModel{
+public class MediaJoiningInfo extends AbstractModel {
 
     /**
     * 输出目标信息，拼接只采用FileName和Format，用于指定目标文件名和格式。

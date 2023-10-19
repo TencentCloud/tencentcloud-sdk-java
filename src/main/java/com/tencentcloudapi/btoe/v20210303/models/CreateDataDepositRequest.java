@@ -16,11 +16,12 @@
 package com.tencentcloudapi.btoe.v20210303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDataDepositRequest extends AbstractModel{
+public class CreateDataDepositRequest extends AbstractModel {
 
     /**
     * 业务数据明文(json格式字符串)，最大256kb

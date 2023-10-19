@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableRollbackResultNew extends AbstractModel{
+public class TableRollbackResultNew extends AbstractModel {
 
     /**
     * 表格实例ID，形如：tcaplus-3be64cbb

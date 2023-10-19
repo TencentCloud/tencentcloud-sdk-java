@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendMessagesResponse extends AbstractModel{
+public class SendMessagesResponse extends AbstractModel {
 
     /**
     * 消息的messageID, 是全局唯一的，用来标识消息的元数据信息

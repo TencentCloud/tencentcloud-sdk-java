@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RollingUpdateApplicationByVersionResponse extends AbstractModel{
+public class RollingUpdateApplicationByVersionResponse extends AbstractModel {
 
     /**
     * 版本ID

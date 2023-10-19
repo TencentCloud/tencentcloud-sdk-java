@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupEncryptionStatusResponse extends AbstractModel{
+public class DescribeBackupEncryptionStatusResponse extends AbstractModel {
 
     /**
     * 实例是否开启了物理备份加密。可能的值有 on, off 。

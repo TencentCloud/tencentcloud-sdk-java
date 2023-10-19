@@ -45,18 +45,8 @@ public class WssClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCertResponse DeleteCert(DeleteCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCertResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteCert", DeleteCertResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class WssClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCertListResponse DescribeCertList(DescribeCertListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCertListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCertListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCertList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeCertList", DescribeCertListResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class WssClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UploadCertResponse UploadCert(UploadCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UploadCertResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UploadCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UploadCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UploadCert", UploadCertResponse.class);
     }
 
 }

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.organization.v20181225.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListOrganizationNodeMembersRequest extends AbstractModel{
+public class ListOrganizationNodeMembersRequest extends AbstractModel {
 
     /**
     * 企业组织单元ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apcas.v20201127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallDetailItem extends AbstractModel{
+public class CallDetailItem extends AbstractModel {
 
     /**
     * 数据类型 0 imei 1 qimei 2 qq 3 phone 7:IDFA 8:MD5(imei)

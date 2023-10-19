@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePublicConfigSummaryResponse extends AbstractModel{
+public class DescribePublicConfigSummaryResponse extends AbstractModel {
 
     /**
     * 分页的全局配置统计信息列表

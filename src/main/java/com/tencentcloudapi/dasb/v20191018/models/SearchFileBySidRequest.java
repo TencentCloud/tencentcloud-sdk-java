@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchFileBySidRequest extends AbstractModel{
+public class SearchFileBySidRequest extends AbstractModel {
 
     /**
     * 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话

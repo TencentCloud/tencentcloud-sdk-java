@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CCReqLimitPolicyRecord extends AbstractModel{
+public class CCReqLimitPolicyRecord extends AbstractModel {
 
     /**
     * 统计周期，可取值1，10，30，60，单位秒

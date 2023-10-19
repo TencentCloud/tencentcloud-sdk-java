@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskInfo extends AbstractModel{
+public class TaskInfo extends AbstractModel {
 
     /**
     * 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息

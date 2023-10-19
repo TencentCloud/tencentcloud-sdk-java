@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCloudStorageDateResponse extends AbstractModel{
+public class DescribeCloudStorageDateResponse extends AbstractModel {
 
     /**
     * 云存日期数组，["2021-01-05","2021-01-06"]

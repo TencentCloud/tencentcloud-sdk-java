@@ -16,11 +16,12 @@
 package com.tencentcloudapi.partners.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClientBalanceNewResponse extends AbstractModel{
+public class DescribeClientBalanceNewResponse extends AbstractModel {
 
     /**
     * 账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）

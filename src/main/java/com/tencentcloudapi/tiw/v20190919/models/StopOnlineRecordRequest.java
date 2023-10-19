@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopOnlineRecordRequest extends AbstractModel{
+public class StopOnlineRecordRequest extends AbstractModel {
 
     /**
     * 客户的SdkAppId

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ame.v20190916.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMusicSaleStatusRequest extends AbstractModel{
+public class DescribeMusicSaleStatusRequest extends AbstractModel {
 
     /**
     * 歌曲Id集合，可传单个，也可传多个，上线查询单次50个

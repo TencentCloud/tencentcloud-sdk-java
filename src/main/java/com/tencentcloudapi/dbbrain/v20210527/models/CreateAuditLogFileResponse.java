@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAuditLogFileResponse extends AbstractModel{
+public class CreateAuditLogFileResponse extends AbstractModel {
 
     /**
     * 审计日志文件下载的任务ID

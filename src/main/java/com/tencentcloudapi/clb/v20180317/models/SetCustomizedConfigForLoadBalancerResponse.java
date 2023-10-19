@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetCustomizedConfigForLoadBalancerResponse extends AbstractModel{
+public class SetCustomizedConfigForLoadBalancerResponse extends AbstractModel {
 
     /**
     * 个性化配置ID，如：pz-1234abcd

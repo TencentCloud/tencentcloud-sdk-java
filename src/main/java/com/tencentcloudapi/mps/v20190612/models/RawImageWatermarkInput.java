@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RawImageWatermarkInput extends AbstractModel{
+public class RawImageWatermarkInput extends AbstractModel {
 
     /**
     * 水印图片的输入内容。支持 jpeg、png 图片格式。

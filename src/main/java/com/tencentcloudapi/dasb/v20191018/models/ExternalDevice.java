@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExternalDevice extends AbstractModel{
+public class ExternalDevice extends AbstractModel {
 
     /**
     * 操作系统名称，只能是Linux、Windows或MySQL

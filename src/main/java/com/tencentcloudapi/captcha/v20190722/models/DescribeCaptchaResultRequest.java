@@ -16,11 +16,12 @@
 package com.tencentcloudapi.captcha.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCaptchaResultRequest extends AbstractModel{
+public class DescribeCaptchaResultRequest extends AbstractModel {
 
     /**
     * 固定填值：9。可在控制台配置不同验证码类型。

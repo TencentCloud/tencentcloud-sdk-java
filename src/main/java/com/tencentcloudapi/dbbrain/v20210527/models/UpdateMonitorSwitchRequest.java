@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateMonitorSwitchRequest extends AbstractModel{
+public class UpdateMonitorSwitchRequest extends AbstractModel {
 
     /**
     * 停止或重连Agent实例，支持值包括："on" - 重连实例， "off" - 停止实例。

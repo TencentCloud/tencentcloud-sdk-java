@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteContainerGroupRequest extends AbstractModel{
+public class DeleteContainerGroupRequest extends AbstractModel {
 
     /**
     * 部署组ID，分组唯一标识

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageResult extends AbstractModel{
+public class ImageResult extends AbstractModel {
 
     /**
     * 该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。

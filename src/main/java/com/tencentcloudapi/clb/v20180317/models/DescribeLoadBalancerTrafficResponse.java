@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoadBalancerTrafficResponse extends AbstractModel{
+public class DescribeLoadBalancerTrafficResponse extends AbstractModel {
 
     /**
     * 按出带宽从高到低排序后的负载均衡信息。

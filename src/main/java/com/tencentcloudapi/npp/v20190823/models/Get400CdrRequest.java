@@ -16,11 +16,12 @@
 package com.tencentcloudapi.npp.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Get400CdrRequest extends AbstractModel{
+public class Get400CdrRequest extends AbstractModel {
 
     /**
     * 业务appid

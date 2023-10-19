@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CandWord extends AbstractModel{
+public class CandWord extends AbstractModel {
 
     /**
     * 候选字符集的单词信息（包括单词Character和单词置信度confidence）

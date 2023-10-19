@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScheduleRequest extends AbstractModel{
+public class CreateScheduleRequest extends AbstractModel {
 
     /**
     * 编排名称，最多128字符。同一个用户该名称唯一。

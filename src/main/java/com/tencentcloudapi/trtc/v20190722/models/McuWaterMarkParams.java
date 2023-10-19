@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class McuWaterMarkParams extends AbstractModel{
+public class McuWaterMarkParams extends AbstractModel {
 
     /**
     * 水印类型，0为图片（默认），1为文字。

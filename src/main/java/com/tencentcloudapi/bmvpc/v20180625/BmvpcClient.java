@@ -45,18 +45,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AcceptVpcPeerConnectionResponse AcceptVpcPeerConnection(AcceptVpcPeerConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AcceptVpcPeerConnectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AcceptVpcPeerConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AcceptVpcPeerConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AcceptVpcPeerConnection", AcceptVpcPeerConnectionResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AsyncRegisterIpsResponse AsyncRegisterIps(AsyncRegisterIpsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AsyncRegisterIpsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AsyncRegisterIpsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AsyncRegisterIps");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AsyncRegisterIps", AsyncRegisterIpsResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindEipsToNatGatewayResponse BindEipsToNatGateway(BindEipsToNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindEipsToNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindEipsToNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindEipsToNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindEipsToNatGateway", BindEipsToNatGatewayResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindIpsToNatGatewayResponse BindIpsToNatGateway(BindIpsToNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindIpsToNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindIpsToNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindIpsToNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindIpsToNatGateway", BindIpsToNatGatewayResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BindSubnetsToNatGatewayResponse BindSubnetsToNatGateway(BindSubnetsToNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindSubnetsToNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindSubnetsToNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindSubnetsToNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BindSubnetsToNatGateway", BindSubnetsToNatGatewayResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCustomerGatewayResponse CreateCustomerGateway(CreateCustomerGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCustomerGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateCustomerGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCustomerGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateCustomerGateway", CreateCustomerGatewayResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDockerSubnetWithVlanResponse CreateDockerSubnetWithVlan(CreateDockerSubnetWithVlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDockerSubnetWithVlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDockerSubnetWithVlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDockerSubnetWithVlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDockerSubnetWithVlan", CreateDockerSubnetWithVlanResponse.class);
     }
 
     /**
@@ -196,18 +126,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateHostedInterfaceResponse CreateHostedInterface(CreateHostedInterfaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateHostedInterfaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateHostedInterfaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateHostedInterface");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateHostedInterface", CreateHostedInterfaceResponse.class);
     }
 
     /**
@@ -217,18 +137,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateInterfacesResponse CreateInterfaces(CreateInterfacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateInterfacesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateInterfacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateInterfaces");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateInterfaces", CreateInterfacesResponse.class);
     }
 
     /**
@@ -238,18 +148,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateNatGatewayResponse CreateNatGateway(CreateNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateNatGateway", CreateNatGatewayResponse.class);
     }
 
     /**
@@ -259,18 +159,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateRoutePoliciesResponse CreateRoutePolicies(CreateRoutePoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRoutePoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateRoutePoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateRoutePolicies");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateRoutePolicies", CreateRoutePoliciesResponse.class);
     }
 
     /**
@@ -281,18 +171,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSubnetResponse CreateSubnet(CreateSubnetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSubnetResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateSubnetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSubnet");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateSubnet", CreateSubnetResponse.class);
     }
 
     /**
@@ -302,18 +182,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateVirtualSubnetWithVlanResponse CreateVirtualSubnetWithVlan(CreateVirtualSubnetWithVlanRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateVirtualSubnetWithVlanResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateVirtualSubnetWithVlanResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateVirtualSubnetWithVlan");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateVirtualSubnetWithVlan", CreateVirtualSubnetWithVlanResponse.class);
     }
 
     /**
@@ -323,18 +193,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateVpcResponse CreateVpc(CreateVpcRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateVpcResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateVpcResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateVpc");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateVpc", CreateVpcResponse.class);
     }
 
     /**
@@ -344,18 +204,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateVpcPeerConnectionResponse CreateVpcPeerConnection(CreateVpcPeerConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateVpcPeerConnectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateVpcPeerConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateVpcPeerConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateVpcPeerConnection", CreateVpcPeerConnectionResponse.class);
     }
 
     /**
@@ -365,18 +215,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteCustomerGatewayResponse DeleteCustomerGateway(DeleteCustomerGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteCustomerGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteCustomerGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteCustomerGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteCustomerGateway", DeleteCustomerGatewayResponse.class);
     }
 
     /**
@@ -388,18 +228,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteHostedInterfaceResponse DeleteHostedInterface(DeleteHostedInterfaceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteHostedInterfaceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteHostedInterfaceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteHostedInterface");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteHostedInterface", DeleteHostedInterfaceResponse.class);
     }
 
     /**
@@ -409,18 +239,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteHostedInterfacesResponse DeleteHostedInterfaces(DeleteHostedInterfacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteHostedInterfacesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteHostedInterfacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteHostedInterfaces");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteHostedInterfaces", DeleteHostedInterfacesResponse.class);
     }
 
     /**
@@ -430,18 +250,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteInterfacesResponse DeleteInterfaces(DeleteInterfacesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteInterfacesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteInterfacesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteInterfaces");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteInterfaces", DeleteInterfacesResponse.class);
     }
 
     /**
@@ -451,18 +261,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteNatGatewayResponse DeleteNatGateway(DeleteNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteNatGateway", DeleteNatGatewayResponse.class);
     }
 
     /**
@@ -472,18 +272,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteRoutePolicyResponse DeleteRoutePolicy(DeleteRoutePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRoutePolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRoutePolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRoutePolicy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteRoutePolicy", DeleteRoutePolicyResponse.class);
     }
 
     /**
@@ -494,18 +284,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteSubnetResponse DeleteSubnet(DeleteSubnetRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSubnetResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSubnetResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSubnet");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteSubnet", DeleteSubnetResponse.class);
     }
 
     /**
@@ -515,18 +295,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteVirtualIpResponse DeleteVirtualIp(DeleteVirtualIpRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteVirtualIpResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteVirtualIpResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteVirtualIp");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteVirtualIp", DeleteVirtualIpResponse.class);
     }
 
     /**
@@ -538,18 +308,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteVpcResponse DeleteVpc(DeleteVpcRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteVpcResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteVpcResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteVpc");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteVpc", DeleteVpcResponse.class);
     }
 
     /**
@@ -559,18 +319,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteVpcPeerConnectionResponse DeleteVpcPeerConnection(DeleteVpcPeerConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteVpcPeerConnectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteVpcPeerConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteVpcPeerConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteVpcPeerConnection", DeleteVpcPeerConnectionResponse.class);
     }
 
     /**
@@ -580,18 +330,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteVpnConnectionResponse DeleteVpnConnection(DeleteVpnConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteVpnConnectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteVpnConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteVpnConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteVpnConnection", DeleteVpnConnectionResponse.class);
     }
 
     /**
@@ -601,18 +341,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteVpnGatewayResponse DeleteVpnGateway(DeleteVpnGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteVpnGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteVpnGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteVpnGateway", DeleteVpnGatewayResponse.class);
     }
 
     /**
@@ -622,18 +352,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeregisterIpsResponse DeregisterIps(DeregisterIpsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeregisterIpsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeregisterIpsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeregisterIps");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeregisterIps", DeregisterIpsResponse.class);
     }
 
     /**
@@ -643,18 +363,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCustomerGatewaysResponse DescribeCustomerGateways(DescribeCustomerGatewaysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCustomerGatewaysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCustomerGatewaysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCustomerGateways");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeCustomerGateways", DescribeCustomerGatewaysResponse.class);
     }
 
     /**
@@ -664,18 +374,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeNatGatewaysResponse DescribeNatGateways(DescribeNatGatewaysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeNatGatewaysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeNatGatewaysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeNatGateways");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeNatGateways", DescribeNatGatewaysResponse.class);
     }
 
     /**
@@ -685,18 +385,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeNatSubnetsResponse DescribeNatSubnets(DescribeNatSubnetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeNatSubnetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeNatSubnetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeNatSubnets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeNatSubnets", DescribeNatSubnetsResponse.class);
     }
 
     /**
@@ -706,18 +396,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRoutePoliciesResponse DescribeRoutePolicies(DescribeRoutePoliciesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRoutePoliciesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRoutePoliciesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRoutePolicies");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRoutePolicies", DescribeRoutePoliciesResponse.class);
     }
 
     /**
@@ -727,18 +407,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRouteTablesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRouteTablesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRouteTables");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeRouteTables", DescribeRouteTablesResponse.class);
     }
 
     /**
@@ -748,18 +418,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSubnetAvailableIpsResponse DescribeSubnetAvailableIps(DescribeSubnetAvailableIpsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSubnetAvailableIpsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubnetAvailableIpsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubnetAvailableIps");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeSubnetAvailableIps", DescribeSubnetAvailableIpsResponse.class);
     }
 
     /**
@@ -769,18 +429,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSubnetByDeviceResponse DescribeSubnetByDevice(DescribeSubnetByDeviceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSubnetByDeviceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubnetByDeviceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubnetByDevice");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeSubnetByDevice", DescribeSubnetByDeviceResponse.class);
     }
 
     /**
@@ -790,18 +440,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSubnetByHostedDeviceResponse DescribeSubnetByHostedDevice(DescribeSubnetByHostedDeviceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSubnetByHostedDeviceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubnetByHostedDeviceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubnetByHostedDevice");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeSubnetByHostedDevice", DescribeSubnetByHostedDeviceResponse.class);
     }
 
     /**
@@ -811,18 +451,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSubnetsResponse DescribeSubnets(DescribeSubnetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSubnetsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSubnetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSubnets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeSubnets", DescribeSubnetsResponse.class);
     }
 
     /**
@@ -832,18 +462,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTaskStatus", DescribeTaskStatusResponse.class);
     }
 
     /**
@@ -853,18 +473,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVpcPeerConnectionsResponse DescribeVpcPeerConnections(DescribeVpcPeerConnectionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpcPeerConnectionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpcPeerConnectionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpcPeerConnections");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVpcPeerConnections", DescribeVpcPeerConnectionsResponse.class);
     }
 
     /**
@@ -874,18 +484,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVpcQuotaResponse DescribeVpcQuota(DescribeVpcQuotaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpcQuotaResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpcQuotaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpcQuota");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVpcQuota", DescribeVpcQuotaResponse.class);
     }
 
     /**
@@ -895,18 +495,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVpcResourceResponse DescribeVpcResource(DescribeVpcResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpcResourceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpcResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpcResource");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVpcResource", DescribeVpcResourceResponse.class);
     }
 
     /**
@@ -916,18 +506,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVpcViewResponse DescribeVpcView(DescribeVpcViewRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpcViewResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpcViewResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpcView");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVpcView", DescribeVpcViewResponse.class);
     }
 
     /**
@@ -938,18 +518,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVpcsResponse DescribeVpcs(DescribeVpcsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpcsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpcsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpcs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVpcs", DescribeVpcsResponse.class);
     }
 
     /**
@@ -959,18 +529,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVpnConnectionsResponse DescribeVpnConnections(DescribeVpnConnectionsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpnConnectionsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpnConnectionsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpnConnections");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVpnConnections", DescribeVpnConnectionsResponse.class);
     }
 
     /**
@@ -980,18 +540,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeVpnGatewaysResponse DescribeVpnGateways(DescribeVpnGatewaysRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpnGatewaysResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewaysResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpnGateways");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeVpnGateways", DescribeVpnGatewaysResponse.class);
     }
 
     /**
@@ -1001,18 +551,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DownloadCustomerGatewayConfigurationResponse DownloadCustomerGatewayConfiguration(DownloadCustomerGatewayConfigurationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownloadCustomerGatewayConfigurationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DownloadCustomerGatewayConfigurationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DownloadCustomerGatewayConfiguration");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DownloadCustomerGatewayConfiguration", DownloadCustomerGatewayConfigurationResponse.class);
     }
 
     /**
@@ -1022,18 +562,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyCustomerGatewayAttributeResponse ModifyCustomerGatewayAttribute(ModifyCustomerGatewayAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCustomerGatewayAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCustomerGatewayAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCustomerGatewayAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyCustomerGatewayAttribute", ModifyCustomerGatewayAttributeResponse.class);
     }
 
     /**
@@ -1043,18 +573,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyRoutePolicyResponse ModifyRoutePolicy(ModifyRoutePolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRoutePolicyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRoutePolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRoutePolicy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyRoutePolicy", ModifyRoutePolicyResponse.class);
     }
 
     /**
@@ -1064,18 +584,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyRouteTableResponse ModifyRouteTable(ModifyRouteTableRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRouteTableResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRouteTableResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRouteTable");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyRouteTable", ModifyRouteTableResponse.class);
     }
 
     /**
@@ -1085,18 +595,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifySubnetAttributeResponse ModifySubnetAttribute(ModifySubnetAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySubnetAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubnetAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubnetAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifySubnetAttribute", ModifySubnetAttributeResponse.class);
     }
 
     /**
@@ -1106,18 +606,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifySubnetDHCPRelayResponse ModifySubnetDHCPRelay(ModifySubnetDHCPRelayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySubnetDHCPRelayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifySubnetDHCPRelayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySubnetDHCPRelay");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifySubnetDHCPRelay", ModifySubnetDHCPRelayResponse.class);
     }
 
     /**
@@ -1127,18 +617,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyVpcAttributeResponse ModifyVpcAttribute(ModifyVpcAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyVpcAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyVpcAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyVpcAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyVpcAttribute", ModifyVpcAttributeResponse.class);
     }
 
     /**
@@ -1148,18 +628,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyVpcPeerConnectionResponse ModifyVpcPeerConnection(ModifyVpcPeerConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyVpcPeerConnectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyVpcPeerConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyVpcPeerConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyVpcPeerConnection", ModifyVpcPeerConnectionResponse.class);
     }
 
     /**
@@ -1169,18 +639,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyVpnConnectionAttributeResponse ModifyVpnConnectionAttribute(ModifyVpnConnectionAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyVpnConnectionAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyVpnConnectionAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyVpnConnectionAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyVpnConnectionAttribute", ModifyVpnConnectionAttributeResponse.class);
     }
 
     /**
@@ -1190,18 +650,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyVpnGatewayAttributeResponse ModifyVpnGatewayAttribute(ModifyVpnGatewayAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyVpnGatewayAttributeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyVpnGatewayAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyVpnGatewayAttribute", ModifyVpnGatewayAttributeResponse.class);
     }
 
     /**
@@ -1211,18 +661,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RejectVpcPeerConnectionResponse RejectVpcPeerConnection(RejectVpcPeerConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RejectVpcPeerConnectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RejectVpcPeerConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RejectVpcPeerConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RejectVpcPeerConnection", RejectVpcPeerConnectionResponse.class);
     }
 
     /**
@@ -1232,18 +672,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ResetVpnConnectionResponse ResetVpnConnection(ResetVpnConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetVpnConnectionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ResetVpnConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetVpnConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ResetVpnConnection", ResetVpnConnectionResponse.class);
     }
 
     /**
@@ -1254,18 +684,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UnbindEipsFromNatGatewayResponse UnbindEipsFromNatGateway(UnbindEipsFromNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnbindEipsFromNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnbindEipsFromNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnbindEipsFromNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnbindEipsFromNatGateway", UnbindEipsFromNatGatewayResponse.class);
     }
 
     /**
@@ -1275,18 +695,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UnbindIpsFromNatGatewayResponse UnbindIpsFromNatGateway(UnbindIpsFromNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnbindIpsFromNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnbindIpsFromNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnbindIpsFromNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnbindIpsFromNatGateway", UnbindIpsFromNatGatewayResponse.class);
     }
 
     /**
@@ -1296,18 +706,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UnbindSubnetsFromNatGatewayResponse UnbindSubnetsFromNatGateway(UnbindSubnetsFromNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UnbindSubnetsFromNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UnbindSubnetsFromNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UnbindSubnetsFromNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UnbindSubnetsFromNatGateway", UnbindSubnetsFromNatGatewayResponse.class);
     }
 
     /**
@@ -1318,18 +718,8 @@ public class BmvpcClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpgradeNatGatewayResponse UpgradeNatGateway(UpgradeNatGatewayRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeNatGatewayResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeNatGatewayResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeNatGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpgradeNatGateway", UpgradeNatGatewayResponse.class);
     }
 
 }

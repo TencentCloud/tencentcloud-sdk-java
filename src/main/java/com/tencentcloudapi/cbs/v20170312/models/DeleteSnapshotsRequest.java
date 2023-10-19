@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSnapshotsRequest extends AbstractModel{
+public class DeleteSnapshotsRequest extends AbstractModel {
 
     /**
     * 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。

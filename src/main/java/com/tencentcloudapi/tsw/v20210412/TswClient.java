@@ -45,18 +45,8 @@ public class TswClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeComponentAlertObjectResponse DescribeComponentAlertObject(DescribeComponentAlertObjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeComponentAlertObjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeComponentAlertObjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeComponentAlertObject");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeComponentAlertObject", DescribeComponentAlertObjectResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TswClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeServiceAlertObjectResponse DescribeServiceAlertObject(DescribeServiceAlertObjectRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeServiceAlertObjectResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeServiceAlertObjectResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeServiceAlertObject");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeServiceAlertObject", DescribeServiceAlertObjectResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TswClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTokenResponse DescribeToken(DescribeTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTokenResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeToken");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeToken", DescribeTokenResponse.class);
     }
 
 }

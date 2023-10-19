@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mgobe.v20201014.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Player extends AbstractModel{
+public class Player extends AbstractModel {
 
     /**
     * 玩家 OpenId。最长不超过64个字符。

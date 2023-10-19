@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vms.v20200902.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendTtsVoiceResponse extends AbstractModel{
+public class SendTtsVoiceResponse extends AbstractModel {
 
     /**
     * 语音通知发送状态。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Internet extends AbstractModel{
+public class Internet extends AbstractModel {
 
     /**
     * 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。

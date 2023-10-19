@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGraphDataResponse extends AbstractModel{
+public class DescribeGraphDataResponse extends AbstractModel {
 
     /**
     * 开始时间, 会根据数据的统计周期进行取整.

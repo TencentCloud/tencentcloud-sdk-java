@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePPTCheckTaskResponse extends AbstractModel{
+public class CreatePPTCheckTaskResponse extends AbstractModel {
 
     /**
     * 检测任务的唯一标识Id，用于查询该任务的进度以及检测结果

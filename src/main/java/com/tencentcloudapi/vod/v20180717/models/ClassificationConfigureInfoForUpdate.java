@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassificationConfigureInfoForUpdate extends AbstractModel{
+public class ClassificationConfigureInfoForUpdate extends AbstractModel {
 
     /**
     * 智能分类任务开关，可选值：

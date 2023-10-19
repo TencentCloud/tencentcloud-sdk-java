@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRollbackTimeRangeResponse extends AbstractModel{
+public class DescribeRollbackTimeRangeResponse extends AbstractModel {
 
     /**
     * 有效回归时间范围开始时间点（已废弃）

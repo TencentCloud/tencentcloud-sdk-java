@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eb.v20210416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputStructParam extends AbstractModel{
+public class OutputStructParam extends AbstractModel {
 
     /**
     * 对应输出json中的key

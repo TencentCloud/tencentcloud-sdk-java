@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceChargeParam extends AbstractModel{
+public class InstanceChargeParam extends AbstractModel {
 
     /**
     * 实例付费类型: PREPAID(包年包月), POSTPAID_BY_HOUR(按量付费)

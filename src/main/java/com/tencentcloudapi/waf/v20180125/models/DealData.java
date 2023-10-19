@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DealData extends AbstractModel{
+public class DealData extends AbstractModel {
 
     /**
     * 订单号列表，元素个数与请求包的goods数组的元素个数一致，商品详情与订单按顺序对应

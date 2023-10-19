@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bri.v20190328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BRIResponse extends AbstractModel{
+public class BRIResponse extends AbstractModel {
 
     /**
     * 风险分值，取值[0,100], 分值越高风险越高

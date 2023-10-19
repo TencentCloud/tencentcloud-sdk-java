@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWhiteboardPushCallbackResponse extends AbstractModel{
+public class DescribeWhiteboardPushCallbackResponse extends AbstractModel {
 
     /**
     * 白板推流事件回调地址，如果未设置回调地址，该字段为空字符串

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRecordBatchRequest extends AbstractModel{
+public class ModifyRecordBatchRequest extends AbstractModel {
 
     /**
     * 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId

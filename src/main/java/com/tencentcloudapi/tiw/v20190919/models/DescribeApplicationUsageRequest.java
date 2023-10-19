@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeApplicationUsageRequest extends AbstractModel{
+public class DescribeApplicationUsageRequest extends AbstractModel {
 
     /**
     * 用量开始时间（包括该时间点）

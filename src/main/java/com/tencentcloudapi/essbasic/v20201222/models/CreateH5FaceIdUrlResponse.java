@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20201222.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateH5FaceIdUrlResponse extends AbstractModel{
+public class CreateH5FaceIdUrlResponse extends AbstractModel {
 
     /**
     * 跳转到人脸核身页面的链接

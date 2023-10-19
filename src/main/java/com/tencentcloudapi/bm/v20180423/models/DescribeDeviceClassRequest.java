@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceClassRequest extends AbstractModel{
+public class DescribeDeviceClassRequest extends AbstractModel {
 
     /**
     * 是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1

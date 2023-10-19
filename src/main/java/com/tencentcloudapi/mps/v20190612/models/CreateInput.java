@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInput extends AbstractModel{
+public class CreateInput extends AbstractModel {
 
     /**
     * 输入名称，可填大小写、数字和下划线，长度为[1, 32]。

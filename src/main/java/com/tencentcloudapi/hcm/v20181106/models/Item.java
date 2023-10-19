@@ -16,11 +16,12 @@
 package com.tencentcloudapi.hcm.v20181106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Item extends AbstractModel{
+public class Item extends AbstractModel {
 
     /**
     * 识别的算式是否正确，算式运算结果:

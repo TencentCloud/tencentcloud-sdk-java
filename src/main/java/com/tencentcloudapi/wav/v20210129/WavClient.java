@@ -45,18 +45,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateChannelCodeResponse CreateChannelCode(CreateChannelCodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateChannelCodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateChannelCodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateChannelCode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateChannelCode", CreateChannelCodeResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCorpTagResponse CreateCorpTag(CreateCorpTagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCorpTagResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateCorpTagResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCorpTag");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateCorpTag", CreateCorpTagResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateLeadResponse CreateLead(CreateLeadRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLeadResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLeadResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLead");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateLead", CreateLeadResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryActivityJoinListResponse QueryActivityJoinList(QueryActivityJoinListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryActivityJoinListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryActivityJoinListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryActivityJoinList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryActivityJoinList", QueryActivityJoinListResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryActivityListResponse QueryActivityList(QueryActivityListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryActivityListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryActivityListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryActivityList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryActivityList", QueryActivityListResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryActivityLiveCodeListResponse QueryActivityLiveCodeList(QueryActivityLiveCodeListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryActivityLiveCodeListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryActivityLiveCodeListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryActivityLiveCodeList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryActivityLiveCodeList", QueryActivityLiveCodeListResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryArrivalListResponse QueryArrivalList(QueryArrivalListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryArrivalListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryArrivalListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryArrivalList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryArrivalList", QueryArrivalListResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryChannelCodeListResponse QueryChannelCodeList(QueryChannelCodeListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryChannelCodeListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryChannelCodeListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryChannelCodeList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryChannelCodeList", QueryChannelCodeListResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryChatArchivingListResponse QueryChatArchivingList(QueryChatArchivingListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryChatArchivingListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryChatArchivingListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryChatArchivingList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryChatArchivingList", QueryChatArchivingListResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryClueInfoListResponse QueryClueInfoList(QueryClueInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryClueInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryClueInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryClueInfoList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryClueInfoList", QueryClueInfoListResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryCrmStatisticsResponse QueryCrmStatistics(QueryCrmStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCrmStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryCrmStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryCrmStatistics");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryCrmStatistics", QueryCrmStatisticsResponse.class);
     }
 
     /**
@@ -276,18 +166,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryCustomerEventDetailStatisticsResponse QueryCustomerEventDetailStatistics(QueryCustomerEventDetailStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCustomerEventDetailStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryCustomerEventDetailStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryCustomerEventDetailStatistics");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryCustomerEventDetailStatistics", QueryCustomerEventDetailStatisticsResponse.class);
     }
 
     /**
@@ -297,18 +177,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryCustomerProfileListResponse QueryCustomerProfileList(QueryCustomerProfileListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCustomerProfileListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryCustomerProfileListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryCustomerProfileList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryCustomerProfileList", QueryCustomerProfileListResponse.class);
     }
 
     /**
@@ -318,18 +188,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryDealerInfoListResponse QueryDealerInfoList(QueryDealerInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryDealerInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryDealerInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryDealerInfoList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryDealerInfoList", QueryDealerInfoListResponse.class);
     }
 
     /**
@@ -339,18 +199,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryExternalContactDetailResponse QueryExternalContactDetail(QueryExternalContactDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryExternalContactDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryExternalContactDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryExternalContactDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryExternalContactDetail", QueryExternalContactDetailResponse.class);
     }
 
     /**
@@ -360,18 +210,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryExternalContactDetailByDateResponse QueryExternalContactDetailByDate(QueryExternalContactDetailByDateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryExternalContactDetailByDateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryExternalContactDetailByDateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryExternalContactDetailByDate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryExternalContactDetailByDate", QueryExternalContactDetailByDateResponse.class);
     }
 
     /**
@@ -381,18 +221,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryExternalContactListResponse QueryExternalContactList(QueryExternalContactListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryExternalContactListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryExternalContactListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryExternalContactList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryExternalContactList", QueryExternalContactListResponse.class);
     }
 
     /**
@@ -402,18 +232,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryExternalUserEventListResponse QueryExternalUserEventList(QueryExternalUserEventListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryExternalUserEventListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryExternalUserEventListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryExternalUserEventList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryExternalUserEventList", QueryExternalUserEventListResponse.class);
     }
 
     /**
@@ -423,18 +243,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryExternalUserMappingInfoResponse QueryExternalUserMappingInfo(QueryExternalUserMappingInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryExternalUserMappingInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryExternalUserMappingInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryExternalUserMappingInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryExternalUserMappingInfo", QueryExternalUserMappingInfoResponse.class);
     }
 
     /**
@@ -444,18 +254,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryFollowListResponse QueryFollowList(QueryFollowListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryFollowListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryFollowListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryFollowList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryFollowList", QueryFollowListResponse.class);
     }
 
     /**
@@ -465,18 +265,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryLicenseInfoResponse QueryLicenseInfo(QueryLicenseInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryLicenseInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryLicenseInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryLicenseInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryLicenseInfo", QueryLicenseInfoResponse.class);
     }
 
     /**
@@ -486,18 +276,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryMaterialListResponse QueryMaterialList(QueryMaterialListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryMaterialListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryMaterialListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryMaterialList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryMaterialList", QueryMaterialListResponse.class);
     }
 
     /**
@@ -507,18 +287,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryMiniAppCodeListResponse QueryMiniAppCodeList(QueryMiniAppCodeListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryMiniAppCodeListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryMiniAppCodeListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryMiniAppCodeList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryMiniAppCodeList", QueryMiniAppCodeListResponse.class);
     }
 
     /**
@@ -528,18 +298,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryStaffEventDetailStatisticsResponse QueryStaffEventDetailStatistics(QueryStaffEventDetailStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryStaffEventDetailStatisticsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryStaffEventDetailStatisticsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryStaffEventDetailStatistics");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryStaffEventDetailStatistics", QueryStaffEventDetailStatisticsResponse.class);
     }
 
     /**
@@ -549,18 +309,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryUserInfoListResponse QueryUserInfoList(QueryUserInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryUserInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryUserInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryUserInfoList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryUserInfoList", QueryUserInfoListResponse.class);
     }
 
     /**
@@ -570,18 +320,8 @@ public class WavClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryVehicleInfoListResponse QueryVehicleInfoList(QueryVehicleInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryVehicleInfoListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryVehicleInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryVehicleInfoList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryVehicleInfoList", QueryVehicleInfoListResponse.class);
     }
 
 }

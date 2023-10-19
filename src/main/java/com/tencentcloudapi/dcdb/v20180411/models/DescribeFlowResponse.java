@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowResponse extends AbstractModel{
+public class DescribeFlowResponse extends AbstractModel {
 
     /**
     * 流程状态，0：成功，1：失败，2：运行中

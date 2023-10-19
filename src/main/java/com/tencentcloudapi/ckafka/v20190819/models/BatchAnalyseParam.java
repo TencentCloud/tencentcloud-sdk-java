@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchAnalyseParam extends AbstractModel{
+public class BatchAnalyseParam extends AbstractModel {
 
     /**
     * ONE_BY_ONE单条输出，MERGE合并输出

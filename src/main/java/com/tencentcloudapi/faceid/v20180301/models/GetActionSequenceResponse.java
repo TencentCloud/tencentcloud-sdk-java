@@ -16,11 +16,12 @@
 package com.tencentcloudapi.faceid.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetActionSequenceResponse extends AbstractModel{
+public class GetActionSequenceResponse extends AbstractModel {
 
     /**
     * 动作顺序(2,1 or 1,2) 。1代表张嘴，2代表闭眼。

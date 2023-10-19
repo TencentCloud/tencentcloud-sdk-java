@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKeysRequest extends AbstractModel{
+public class DescribeKeysRequest extends AbstractModel {
 
     /**
     * 查询CMK的ID列表，批量查询一次最多支持100个KeyId

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AcknowledgeMessageRequest extends AbstractModel{
+public class AcknowledgeMessageRequest extends AbstractModel {
 
     /**
     * 用作标识消息的唯一的ID（可从 receiveMessage 的返回值中获得）

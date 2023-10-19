@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sslpod.v20190605.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDomainRequest extends AbstractModel{
+public class CreateDomainRequest extends AbstractModel {
 
     /**
     * 监控的服务器类型（0：web，1：smtp，2：imap，3：pops）

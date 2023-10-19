@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShieldResultResponse extends AbstractModel{
+public class DescribeShieldResultResponse extends AbstractModel {
 
     /**
     * 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时

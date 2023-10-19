@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcPeeringConnectionsResponse extends AbstractModel{
+public class DescribeVpcPeeringConnectionsResponse extends AbstractModel {
 
     /**
     * 满足条件的对等连接实例个数。

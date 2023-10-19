@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20220401.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterRequest extends AbstractModel{
+public class CreateClusterRequest extends AbstractModel {
 
     /**
     * 集群中实例所在的位置。

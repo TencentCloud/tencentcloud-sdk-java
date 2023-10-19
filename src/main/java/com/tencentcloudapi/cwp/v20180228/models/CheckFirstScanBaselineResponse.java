@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckFirstScanBaselineResponse extends AbstractModel{
+public class CheckFirstScanBaselineResponse extends AbstractModel {
 
     /**
     * 是否是第一次检测 0：不是；1：是

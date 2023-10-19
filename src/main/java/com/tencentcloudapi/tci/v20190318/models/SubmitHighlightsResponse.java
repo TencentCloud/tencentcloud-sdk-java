@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitHighlightsResponse extends AbstractModel{
+public class SubmitHighlightsResponse extends AbstractModel {
 
     /**
     * 视频拆条任务ID，用来唯一标识视频拆条任务。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRemoteBackupConfigResponse extends AbstractModel{
+public class DescribeRemoteBackupConfigResponse extends AbstractModel {
 
     /**
     * 异地备份保留时间，单位为天

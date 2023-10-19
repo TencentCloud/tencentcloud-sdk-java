@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnterpriseTag extends AbstractModel{
+public class EnterpriseTag extends AbstractModel {
 
     /**
     * 该客户档案当前已成功关联的企业标签分组名称

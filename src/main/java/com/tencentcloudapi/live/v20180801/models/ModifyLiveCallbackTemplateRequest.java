@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
+public class ModifyLiveCallbackTemplateRequest extends AbstractModel {
 
     /**
     * DescribeLiveCallbackTemplates接口返回的模板 ID。

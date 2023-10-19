@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstanceGTIDResponse extends AbstractModel{
+public class DescribeDBInstanceGTIDResponse extends AbstractModel {
 
     /**
     * GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。

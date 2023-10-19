@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ft.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GradientInfo extends AbstractModel{
+public class GradientInfo extends AbstractModel {
 
     /**
     * 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片0.5s。最大取值1s。

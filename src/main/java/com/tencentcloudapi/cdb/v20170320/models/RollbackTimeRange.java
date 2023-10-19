@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RollbackTimeRange extends AbstractModel{
+public class RollbackTimeRange extends AbstractModel {
 
     /**
     * 实例可回档开始时间，时间格式：2016-10-29 01:06:04

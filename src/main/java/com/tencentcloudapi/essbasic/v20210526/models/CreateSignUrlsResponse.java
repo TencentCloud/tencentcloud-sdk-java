@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSignUrlsResponse extends AbstractModel{
+public class CreateSignUrlsResponse extends AbstractModel {
 
     /**
     * 签署参与者签署H5链接信息数组

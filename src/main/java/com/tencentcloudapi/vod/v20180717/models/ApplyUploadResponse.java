@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyUploadResponse extends AbstractModel{
+public class ApplyUploadResponse extends AbstractModel {
 
     /**
     * 存储桶，用于上传接口 URL 的 bucket_name。

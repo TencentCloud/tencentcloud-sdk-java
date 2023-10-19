@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HealthCheck extends AbstractModel{
+public class HealthCheck extends AbstractModel {
 
     /**
     * 是否开启健康检查：1（开启）、0（关闭）。

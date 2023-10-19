@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DislikeInfo extends AbstractModel{
+public class DislikeInfo extends AbstractModel {
 
     /**
     * 不喜欢的物料类别，对应物料上传协议中的字段名，如authorId，keyword，topic等

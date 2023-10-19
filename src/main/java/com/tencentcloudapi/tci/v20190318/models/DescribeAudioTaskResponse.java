@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tci.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAudioTaskResponse extends AbstractModel{
+public class DescribeAudioTaskResponse extends AbstractModel {
 
     /**
     * 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。

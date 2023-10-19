@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComputeNodeMetrics extends AbstractModel{
+public class ComputeNodeMetrics extends AbstractModel {
 
     /**
     * 已经完成提交的计算节点数量

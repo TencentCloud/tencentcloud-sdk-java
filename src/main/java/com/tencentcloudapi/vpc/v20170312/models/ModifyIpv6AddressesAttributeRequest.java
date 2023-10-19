@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyIpv6AddressesAttributeRequest extends AbstractModel{
+public class ModifyIpv6AddressesAttributeRequest extends AbstractModel {
 
     /**
     * 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。

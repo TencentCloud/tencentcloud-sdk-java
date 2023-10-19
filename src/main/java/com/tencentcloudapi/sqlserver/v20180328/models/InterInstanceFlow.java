@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InterInstanceFlow extends AbstractModel{
+public class InterInstanceFlow extends AbstractModel {
 
     /**
     * 实例ID，例如：mssql-sdf32n1d

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulDefenceSettingResponse extends AbstractModel{
+public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
     * 防御开关，0 关闭 1 开启

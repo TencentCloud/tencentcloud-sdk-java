@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sslpod.v20190605.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDomainRequest extends AbstractModel{
+public class DeleteDomainRequest extends AbstractModel {
 
     /**
     * 域名ID，可通过<a href="https://cloud.tencent.com/document/api/1084/49339">搜索域名</a>接口获得

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeletePublishSubscribeRequest extends AbstractModel{
+public class DeletePublishSubscribeRequest extends AbstractModel {
 
     /**
     * 发布订阅ID，可通过DescribePublishSubscribe接口获得

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MountDataDisk extends AbstractModel{
+public class MountDataDisk extends AbstractModel {
 
     /**
     * 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"

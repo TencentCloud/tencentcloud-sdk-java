@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDomainListRequest extends AbstractModel{
+public class DescribeDomainListRequest extends AbstractModel {
 
     /**
     * 起始，从0开始(只支持32位)

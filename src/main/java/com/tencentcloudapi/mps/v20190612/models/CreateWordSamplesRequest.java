@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateWordSamplesRequest extends AbstractModel{
+public class CreateWordSamplesRequest extends AbstractModel {
 
     /**
     * <b>关键词应用场景，可选值：</b>

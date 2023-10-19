@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Ipv6SubnetCidrBlock extends AbstractModel{
+public class Ipv6SubnetCidrBlock extends AbstractModel {
 
     /**
     * 子网实例`ID`。形如：`subnet-pxir56ns`。	

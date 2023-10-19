@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEKSClusterRequest extends AbstractModel{
+public class CreateEKSClusterRequest extends AbstractModel {
 
     /**
     * k8s版本号。可为1.18.4 1.20.6。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteContentReviewTemplateRequest extends AbstractModel{
+public class DeleteContentReviewTemplateRequest extends AbstractModel {
 
     /**
     * 内容审核模板唯一标识。

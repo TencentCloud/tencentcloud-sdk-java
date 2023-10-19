@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StrategyForAntiInfoLeak extends AbstractModel{
+public class StrategyForAntiInfoLeak extends AbstractModel {
 
     /**
     * 匹配条件，returncode（响应码）、keywords（关键字）、information（敏感信息）

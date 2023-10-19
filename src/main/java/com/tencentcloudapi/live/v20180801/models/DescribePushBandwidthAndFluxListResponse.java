@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePushBandwidthAndFluxListResponse extends AbstractModel{
+public class DescribePushBandwidthAndFluxListResponse extends AbstractModel {
 
     /**
     * 峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。

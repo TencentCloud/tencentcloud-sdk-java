@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesRequest extends AbstractModel{
+public class DescribeInstancesRequest extends AbstractModel {
 
     /**
     * 每页输出实例的数量，参数默认值20，最大值为1000。

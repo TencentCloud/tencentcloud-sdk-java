@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionTimer extends AbstractModel{
+public class ActionTimer extends AbstractModel {
 
     /**
     * 定时器动作，目前仅支持销毁一个值：TerminateInstances。

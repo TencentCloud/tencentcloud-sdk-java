@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dc.v20180410.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BGPStatus extends AbstractModel{
+public class BGPStatus extends AbstractModel {
 
     /**
     * 腾讯侧主互联IP BGP状态

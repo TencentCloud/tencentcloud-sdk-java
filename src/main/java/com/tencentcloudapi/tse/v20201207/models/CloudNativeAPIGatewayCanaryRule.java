@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloudNativeAPIGatewayCanaryRule extends AbstractModel{
+public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
 
     /**
     * 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复

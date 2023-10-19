@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cms.v20190321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextOutputComm extends AbstractModel{
+public class TextOutputComm extends AbstractModel {
 
     /**
     * 接口唯一ID，旁路调用接口返回有该字段，标识唯一接口

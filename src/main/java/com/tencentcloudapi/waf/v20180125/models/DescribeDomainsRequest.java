@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDomainsRequest extends AbstractModel{
+public class DescribeDomainsRequest extends AbstractModel {
 
     /**
     * 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整

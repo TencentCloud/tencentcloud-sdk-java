@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddEditAccessControlRuleRequest extends AbstractModel{
+public class AddEditAccessControlRuleRequest extends AbstractModel {
 
     /**
     * 增加策略信息，策略id为空，编辑策略是id不能为空

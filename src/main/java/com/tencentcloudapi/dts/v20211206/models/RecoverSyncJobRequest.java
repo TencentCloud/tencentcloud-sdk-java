@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecoverSyncJobRequest extends AbstractModel{
+public class RecoverSyncJobRequest extends AbstractModel {
 
     /**
     * 同步实例id（即标识一个同步作业），形如sync-werwfs23

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL7RulesBySSLCertIdRequest extends AbstractModel{
+public class DescribeL7RulesBySSLCertIdRequest extends AbstractModel {
 
     /**
     * 域名状态，可取bindable, binded, opened, closed, all，all表示全部状态

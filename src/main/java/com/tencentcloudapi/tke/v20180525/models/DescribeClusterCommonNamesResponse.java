@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterCommonNamesResponse extends AbstractModel{
+public class DescribeClusterCommonNamesResponse extends AbstractModel {
 
     /**
     * 子账户Uin与其客户端证书的CN字段映射

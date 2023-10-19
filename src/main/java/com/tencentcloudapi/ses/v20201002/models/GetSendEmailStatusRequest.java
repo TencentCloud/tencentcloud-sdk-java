@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSendEmailStatusRequest extends AbstractModel{
+public class GetSendEmailStatusRequest extends AbstractModel {
 
     /**
     * 发送的日期，必填。仅支持查询某个日期，不支持范围查询。

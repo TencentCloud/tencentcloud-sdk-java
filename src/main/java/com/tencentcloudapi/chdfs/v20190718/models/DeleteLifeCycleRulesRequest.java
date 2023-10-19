@@ -16,11 +16,12 @@
 package com.tencentcloudapi.chdfs.v20190718.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLifeCycleRulesRequest extends AbstractModel{
+public class DeleteLifeCycleRulesRequest extends AbstractModel {
 
     /**
     * 多个生命周期规则ID，上限为10

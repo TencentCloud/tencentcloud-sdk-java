@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionAndPriceRequest extends AbstractModel{
+public class DescribeRegionAndPriceRequest extends AbstractModel {
 
     /**
     * IP版本，可取值：IPv4、IPv6，默认值IPv4

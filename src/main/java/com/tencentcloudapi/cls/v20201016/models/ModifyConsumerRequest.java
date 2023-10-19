@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyConsumerRequest extends AbstractModel{
+public class ModifyConsumerRequest extends AbstractModel {
 
     /**
     * 投递任务绑定的日志主题 ID

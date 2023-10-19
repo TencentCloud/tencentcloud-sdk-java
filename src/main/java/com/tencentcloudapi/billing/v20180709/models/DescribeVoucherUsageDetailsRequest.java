@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVoucherUsageDetailsRequest extends AbstractModel{
+public class DescribeVoucherUsageDetailsRequest extends AbstractModel {
 
     /**
     * 一页多少条数据，默认是20条，最大不超过1000

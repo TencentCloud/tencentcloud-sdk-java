@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateIpv6AddressesBandwidthResponse extends AbstractModel{
+public class AllocateIpv6AddressesBandwidthResponse extends AbstractModel {
 
     /**
     * 弹性公网 IPV6 的唯一 ID 列表。

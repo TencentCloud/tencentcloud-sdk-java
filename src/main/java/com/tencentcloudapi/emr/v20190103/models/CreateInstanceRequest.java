@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceRequest extends AbstractModel{
+public class CreateInstanceRequest extends AbstractModel {
 
     /**
     * 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：

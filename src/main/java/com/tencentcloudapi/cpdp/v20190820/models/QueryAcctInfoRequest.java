@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryAcctInfoRequest extends AbstractModel{
+public class QueryAcctInfoRequest extends AbstractModel {
 
     /**
     * 聚鑫平台分配的支付MidasAppId

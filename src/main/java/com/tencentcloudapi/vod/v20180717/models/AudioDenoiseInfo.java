@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioDenoiseInfo extends AbstractModel{
+public class AudioDenoiseInfo extends AbstractModel {
 
     /**
     * 音频降噪控制开关，可选值：

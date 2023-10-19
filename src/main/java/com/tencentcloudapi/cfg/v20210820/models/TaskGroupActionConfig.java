@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfg.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskGroupActionConfig extends AbstractModel{
+public class TaskGroupActionConfig extends AbstractModel {
 
     /**
     * 该动作在动作组中的顺序，从1开始，不填或填错将匹配不到经验中要修改参数的动作

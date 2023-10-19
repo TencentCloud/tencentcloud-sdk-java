@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncAssetScanRequest extends AbstractModel{
+public class SyncAssetScanRequest extends AbstractModel {
 
     /**
     * 是否同步：true-是 false-否；默认false

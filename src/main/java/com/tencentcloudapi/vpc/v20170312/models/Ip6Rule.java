@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Ip6Rule extends AbstractModel{
+public class Ip6Rule extends AbstractModel {
 
     /**
     * IPV6转换规则唯一ID，形如rule6-xxxxxxxx

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListPoliciesRequest extends AbstractModel{
+public class ListPoliciesRequest extends AbstractModel {
 
     /**
     * 每页数量，默认值是 20，必须大于 0 且小于或等于 200

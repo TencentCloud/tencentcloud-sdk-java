@@ -16,11 +16,12 @@
 package com.tencentcloudapi.irp.v20220324.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecommendContentRequest extends AbstractModel{
+public class RecommendContentRequest extends AbstractModel {
 
     /**
     * 业务id

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Configuration extends AbstractModel{
+public class Configuration extends AbstractModel {
 
     /**
     * 配置文件名，支持SPARK、HIVE、HDFS、YARN的部分配置文件自定义。

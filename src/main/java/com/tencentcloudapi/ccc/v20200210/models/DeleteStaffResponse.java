@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ccc.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteStaffResponse extends AbstractModel{
+public class DeleteStaffResponse extends AbstractModel {
 
     /**
     * 无法删除的状态为在线的客服列表

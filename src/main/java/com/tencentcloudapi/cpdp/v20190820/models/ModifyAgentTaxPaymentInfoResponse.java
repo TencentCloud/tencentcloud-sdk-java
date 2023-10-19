@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAgentTaxPaymentInfoResponse extends AbstractModel{
+public class ModifyAgentTaxPaymentInfoResponse extends AbstractModel {
 
     /**
     * 代理商完税证明批次信息

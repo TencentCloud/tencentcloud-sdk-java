@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDeviceAutoRenewFlagRequest extends AbstractModel{
+public class ModifyDeviceAutoRenewFlagRequest extends AbstractModel {
 
     /**
     * 自动续费标志位。0: 不自动续费; 1: 自动续费

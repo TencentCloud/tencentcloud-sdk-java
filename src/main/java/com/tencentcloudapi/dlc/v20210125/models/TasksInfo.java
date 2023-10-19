@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TasksInfo extends AbstractModel{
+public class TasksInfo extends AbstractModel {
 
     /**
     * 任务类型，SQLTask：SQL查询任务。SparkSQLTask：Spark SQL查询任务

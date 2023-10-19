@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ie.v20200304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMediaProcessTaskResponse extends AbstractModel{
+public class CreateMediaProcessTaskResponse extends AbstractModel {
 
     /**
     * 编辑任务 ID，可以通过该 ID 查询任务状态和结果。

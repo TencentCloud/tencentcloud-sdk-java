@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateRoleConsoleLoginRequest extends AbstractModel{
+public class UpdateRoleConsoleLoginRequest extends AbstractModel {
 
     /**
     * 是否可登录，可登录：1，不可登录：0

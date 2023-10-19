@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityConfig extends AbstractModel{
+public class SecurityConfig extends AbstractModel {
 
     /**
     * 托管规则。如果为null，默认使用历史配置。

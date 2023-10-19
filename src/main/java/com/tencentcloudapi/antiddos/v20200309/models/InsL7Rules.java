@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InsL7Rules extends AbstractModel{
+public class InsL7Rules extends AbstractModel {
 
     /**
     * 规则在中间状态态不可修改，只可在（0， 2， 8）状态可编辑。

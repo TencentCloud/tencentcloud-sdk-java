@@ -45,18 +45,8 @@ public class EisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeEisConnectorConfigResponse DescribeEisConnectorConfig(DescribeEisConnectorConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeEisConnectorConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeEisConnectorConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeEisConnectorConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeEisConnectorConfig", DescribeEisConnectorConfigResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class EisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListEisConnectorOperationsResponse ListEisConnectorOperations(ListEisConnectorOperationsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEisConnectorOperationsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListEisConnectorOperationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEisConnectorOperations");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListEisConnectorOperations", ListEisConnectorOperationsResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class EisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ListEisConnectorsResponse ListEisConnectors(ListEisConnectorsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListEisConnectorsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListEisConnectorsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListEisConnectors");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ListEisConnectors", ListEisConnectorsResponse.class);
     }
 
 }

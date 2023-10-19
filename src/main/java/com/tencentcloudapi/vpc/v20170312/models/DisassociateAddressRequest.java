@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisassociateAddressRequest extends AbstractModel{
+public class DisassociateAddressRequest extends AbstractModel {
 
     /**
     * 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.facefusion.v20181201.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceFusionLiteRequest extends AbstractModel{
+public class FaceFusionLiteRequest extends AbstractModel {
 
     /**
     * 活动 ID，请在人脸融合控制台查看。

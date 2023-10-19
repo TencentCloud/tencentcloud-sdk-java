@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListAlgorithmsResponse extends AbstractModel{
+public class ListAlgorithmsResponse extends AbstractModel {
 
     /**
     * 本地区支持的对称加密算法

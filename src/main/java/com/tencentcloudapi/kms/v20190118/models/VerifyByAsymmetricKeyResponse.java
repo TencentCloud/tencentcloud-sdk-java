@@ -16,11 +16,12 @@
 package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyByAsymmetricKeyResponse extends AbstractModel{
+public class VerifyByAsymmetricKeyResponse extends AbstractModel {
 
     /**
     * 签名是否有效。true：签名有效，false：签名无效。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamMonitorOutputInfo extends AbstractModel{
+public class LiveStreamMonitorOutputInfo extends AbstractModel {
 
     /**
     * 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeCarResponse extends AbstractModel{
+public class RecognizeCarResponse extends AbstractModel {
 
     /**
     * 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。

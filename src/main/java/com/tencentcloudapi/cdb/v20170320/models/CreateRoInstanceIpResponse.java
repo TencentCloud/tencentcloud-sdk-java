@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRoInstanceIpResponse extends AbstractModel{
+public class CreateRoInstanceIpResponse extends AbstractModel {
 
     /**
     * 只读实例的私有网络的ID。

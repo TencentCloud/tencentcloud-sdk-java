@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
+public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
     /**
     * 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址

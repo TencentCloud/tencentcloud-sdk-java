@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpHeaderRule extends AbstractModel{
+public class HttpHeaderRule extends AbstractModel {
 
     /**
     * http头部设置方式，支持add，set或del，分别表示新增，设置或删除头部。

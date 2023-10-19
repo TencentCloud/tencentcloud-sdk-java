@@ -45,18 +45,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBrandCommentCountResponse DescribeBrandCommentCount(DescribeBrandCommentCountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBrandCommentCountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBrandCommentCountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBrandCommentCount");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBrandCommentCount", DescribeBrandCommentCountResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBrandExposureResponse DescribeBrandExposure(DescribeBrandExposureRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBrandExposureResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBrandExposureResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBrandExposure");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBrandExposure", DescribeBrandExposureResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBrandMediaReportResponse DescribeBrandMediaReport(DescribeBrandMediaReportRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBrandMediaReportResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBrandMediaReportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBrandMediaReport");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBrandMediaReport", DescribeBrandMediaReportResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBrandNegCommentsResponse DescribeBrandNegComments(DescribeBrandNegCommentsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBrandNegCommentsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBrandNegCommentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBrandNegComments");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBrandNegComments", DescribeBrandNegCommentsResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBrandPosCommentsResponse DescribeBrandPosComments(DescribeBrandPosCommentsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBrandPosCommentsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBrandPosCommentsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBrandPosComments");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBrandPosComments", DescribeBrandPosCommentsResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBrandSocialOpinionResponse DescribeBrandSocialOpinion(DescribeBrandSocialOpinionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBrandSocialOpinionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBrandSocialOpinionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBrandSocialOpinion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBrandSocialOpinion", DescribeBrandSocialOpinionResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBrandSocialReportResponse DescribeBrandSocialReport(DescribeBrandSocialReportRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBrandSocialReportResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBrandSocialReportResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBrandSocialReport");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBrandSocialReport", DescribeBrandSocialReportResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIndustryNewsResponse DescribeIndustryNews(DescribeIndustryNewsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIndustryNewsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIndustryNewsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIndustryNews");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeIndustryNews", DescribeIndustryNewsResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class TbmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeUserPortraitResponse DescribeUserPortrait(DescribeUserPortraitRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserPortraitResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserPortraitResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserPortrait");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeUserPortrait", DescribeUserPortraitResponse.class);
     }
 
 }

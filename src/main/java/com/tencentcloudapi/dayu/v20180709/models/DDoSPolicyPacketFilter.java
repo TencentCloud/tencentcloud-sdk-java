@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDoSPolicyPacketFilter extends AbstractModel{
+public class DDoSPolicyPacketFilter extends AbstractModel {
 
     /**
     * 协议，取值范围[tcp,udp,icmp,all]

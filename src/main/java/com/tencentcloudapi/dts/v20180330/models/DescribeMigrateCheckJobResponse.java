@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20180330.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMigrateCheckJobResponse extends AbstractModel{
+public class DescribeMigrateCheckJobResponse extends AbstractModel {
 
     /**
     * 校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWafInfoRequest extends AbstractModel{
+public class DescribeWafInfoRequest extends AbstractModel {
 
     /**
     * CLB回调WAF接口（获取、删除）的参数

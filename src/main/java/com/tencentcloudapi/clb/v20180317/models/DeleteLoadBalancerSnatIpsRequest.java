@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLoadBalancerSnatIpsRequest extends AbstractModel{
+public class DeleteLoadBalancerSnatIpsRequest extends AbstractModel {
 
     /**
     * 负载均衡唯一ID，例如：lb-12345678。

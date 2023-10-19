@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tic.v20201117.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteStackVersionRequest extends AbstractModel{
+public class DeleteStackVersionRequest extends AbstractModel {
 
     /**
     * 待删除的版本ID

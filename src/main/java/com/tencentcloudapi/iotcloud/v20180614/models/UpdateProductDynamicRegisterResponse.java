@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotcloud.v20180614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateProductDynamicRegisterResponse extends AbstractModel{
+public class UpdateProductDynamicRegisterResponse extends AbstractModel {
 
     /**
     * 动态注册类型，0-关闭 1-预创建设备 2-自动创建设备

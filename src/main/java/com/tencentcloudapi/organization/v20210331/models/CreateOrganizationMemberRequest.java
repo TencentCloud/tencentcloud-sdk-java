@@ -16,11 +16,12 @@
 package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOrganizationMemberRequest extends AbstractModel{
+public class CreateOrganizationMemberRequest extends AbstractModel {
 
     /**
     * 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageSpriteTemplatesRequest extends AbstractModel{
+public class DescribeImageSpriteTemplatesRequest extends AbstractModel {
 
     /**
     * 雪碧图模板唯一标识过滤条件，数组长度限制：100。

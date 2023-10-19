@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaOutputInfo extends AbstractModel{
+public class MediaOutputInfo extends AbstractModel {
 
     /**
     * 输出文件 Bucket 所属地域，如 ap-guangzhou  。

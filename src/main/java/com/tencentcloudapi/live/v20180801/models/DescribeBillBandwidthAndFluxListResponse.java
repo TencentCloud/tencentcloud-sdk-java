@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
+public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel {
 
     /**
     * 峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：

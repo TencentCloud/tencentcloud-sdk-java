@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trp.v20210515.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReportBatchCallbackStatusRequest extends AbstractModel{
+public class ReportBatchCallbackStatusRequest extends AbstractModel {
 
     /**
     * 业务加密入参。

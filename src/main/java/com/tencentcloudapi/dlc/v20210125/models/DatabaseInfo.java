@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatabaseInfo extends AbstractModel{
+public class DatabaseInfo extends AbstractModel {
 
     /**
     * 数据库名称，长度0~128，支持数字、字母下划线，不允许数字大头，统一转换为小写。

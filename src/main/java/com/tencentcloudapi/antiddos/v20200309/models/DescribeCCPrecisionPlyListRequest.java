@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCCPrecisionPlyListRequest extends AbstractModel{
+public class DescribeCCPrecisionPlyListRequest extends AbstractModel {
 
     /**
     * DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）

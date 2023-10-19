@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EmbedUrlOption extends AbstractModel{
+public class EmbedUrlOption extends AbstractModel {
 
     /**
     * 合同详情预览，允许展示控件信息

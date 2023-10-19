@@ -16,11 +16,12 @@
 package com.tencentcloudapi.thpc.v20230321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SystemDisk extends AbstractModel{
+public class SystemDisk extends AbstractModel {
 
     /**
     * 系统盘类型。系统盘类型限制详见存储概述。取值范围：

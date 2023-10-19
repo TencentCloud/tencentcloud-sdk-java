@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDealRequest extends AbstractModel{
+public class CreateDealRequest extends AbstractModel {
 
     /**
     * 询价类型，1 新购，2 续费，3 套餐升级（增值服务暂时只支持新购）

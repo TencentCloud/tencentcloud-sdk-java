@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReviewAudioVideoTaskOutput extends AbstractModel{
+public class ReviewAudioVideoTaskOutput extends AbstractModel {
 
     /**
     * 音视频内容审核的结果建议，取值范围：

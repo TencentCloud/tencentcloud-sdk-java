@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimerConfiguration extends AbstractModel{
+public class TimerConfiguration extends AbstractModel {
 
     /**
     * 定时器重复周期类型（未定义0，单次1、按天2、按月3、按周4）

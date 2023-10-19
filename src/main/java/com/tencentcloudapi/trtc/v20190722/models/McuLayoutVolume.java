@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class McuLayoutVolume extends AbstractModel{
+public class McuLayoutVolume extends AbstractModel {
 
     /**
     * AppData的内容，会被写入自定义SEI中的app_data字段，长度需小于4096。

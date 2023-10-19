@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WSParams extends AbstractModel{
+public class WSParams extends AbstractModel {
 
     /**
     * 空闲超时时间, 单位秒，默认15s。可配置范围1~1800s。

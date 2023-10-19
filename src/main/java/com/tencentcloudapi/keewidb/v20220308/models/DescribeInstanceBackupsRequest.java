@@ -16,11 +16,12 @@
 package com.tencentcloudapi.keewidb.v20220308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceBackupsRequest extends AbstractModel{
+public class DescribeInstanceBackupsRequest extends AbstractModel {
 
     /**
     * 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。

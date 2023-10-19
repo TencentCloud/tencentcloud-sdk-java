@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStoreLocationRequest extends AbstractModel{
+public class CreateStoreLocationRequest extends AbstractModel {
 
     /**
     * 计算结果存储cos路径，如：cosn://bucketname/

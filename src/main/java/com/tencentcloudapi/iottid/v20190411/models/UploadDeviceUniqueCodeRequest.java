@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iottid.v20190411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadDeviceUniqueCodeRequest extends AbstractModel{
+public class UploadDeviceUniqueCodeRequest extends AbstractModel {
 
     /**
     * 硬件唯一标识码

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloudNativeAPIGatewayNodeConfig extends AbstractModel{
+public class CloudNativeAPIGatewayNodeConfig extends AbstractModel {
 
     /**
     * 节点配置, 1c2g|2c4g|4c8g|8c16g。

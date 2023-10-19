@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iot.v20180123.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateProductResponse extends AbstractModel{
+public class UpdateProductResponse extends AbstractModel {
 
     /**
     * 更新后的产品信息

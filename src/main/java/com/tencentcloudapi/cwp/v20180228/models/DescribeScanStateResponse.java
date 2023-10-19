@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanStateResponse extends AbstractModel{
+public class DescribeScanStateResponse extends AbstractModel {
 
     /**
     * 0 从未扫描过、 1 扫描中、 2扫描完成、 3停止中、 4停止完成

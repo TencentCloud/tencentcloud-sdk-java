@@ -16,11 +16,12 @@
 package com.tencentcloudapi.msp.v20180319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMigrationTaskStatusRequest extends AbstractModel{
+public class ModifyMigrationTaskStatusRequest extends AbstractModel {
 
     /**
     * 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败

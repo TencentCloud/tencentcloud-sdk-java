@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDataEngineDescriptionRequest extends AbstractModel{
+public class ModifyDataEngineDescriptionRequest extends AbstractModel {
 
     /**
     * 要修改的引擎的名称

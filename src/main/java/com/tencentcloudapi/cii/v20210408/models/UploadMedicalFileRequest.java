@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cii.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadMedicalFileRequest extends AbstractModel{
+public class UploadMedicalFileRequest extends AbstractModel {
 
     /**
     * 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CcnRegionBandwidthLimitInfo extends AbstractModel{
+public class CcnRegionBandwidthLimitInfo extends AbstractModel {
 
     /**
     * 源地域，例如：ap-shanghai

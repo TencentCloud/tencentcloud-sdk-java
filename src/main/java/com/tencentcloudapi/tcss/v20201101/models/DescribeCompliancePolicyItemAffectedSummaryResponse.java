@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCompliancePolicyItemAffectedSummaryResponse extends AbstractModel{
+public class DescribeCompliancePolicyItemAffectedSummaryResponse extends AbstractModel {
 
     /**
     * 返回各检测项影响的资产的汇总信息。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiems.v20190416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExposeInfo extends AbstractModel{
+public class ExposeInfo extends AbstractModel {
 
     /**
     * 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）

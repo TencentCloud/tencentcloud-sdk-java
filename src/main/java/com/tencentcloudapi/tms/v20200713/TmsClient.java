@@ -45,18 +45,8 @@ public class TmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AccountTipoffAccessResponse AccountTipoffAccess(AccountTipoffAccessRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AccountTipoffAccessResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AccountTipoffAccessResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AccountTipoffAccess");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AccountTipoffAccess", AccountTipoffAccessResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTextLibResponse DescribeTextLib(DescribeTextLibRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTextLibResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTextLibResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTextLib");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTextLib", DescribeTextLibResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTextStatResponse DescribeTextStat(DescribeTextStatRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTextStatResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTextStatResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTextStat");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTextStat", DescribeTextStatResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class TmsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public TextModerationResponse TextModeration(TextModerationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TextModerationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<TextModerationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "TextModeration");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "TextModeration", TextModerationResponse.class);
     }
 
 }

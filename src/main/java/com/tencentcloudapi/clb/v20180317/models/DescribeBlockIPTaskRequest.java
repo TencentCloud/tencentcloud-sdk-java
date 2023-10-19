@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBlockIPTaskRequest extends AbstractModel{
+public class DescribeBlockIPTaskRequest extends AbstractModel {
 
     /**
     * ModifyBlockIPList 接口返回的异步任务的ID。

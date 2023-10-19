@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eis.v20200715.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEisConnectorConfigResponse extends AbstractModel{
+public class DescribeEisConnectorConfigResponse extends AbstractModel {
 
     /**
     * 连接器配置参数描述（json结构），示例如下：

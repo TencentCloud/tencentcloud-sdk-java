@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamLinkEventResponse extends AbstractModel{
+public class DescribeStreamLinkEventResponse extends AbstractModel {
 
     /**
     * 媒体传输事件的配置信息。

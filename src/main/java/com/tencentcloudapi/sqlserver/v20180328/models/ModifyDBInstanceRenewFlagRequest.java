@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceRenewFlagRequest extends AbstractModel{
+public class ModifyDBInstanceRenewFlagRequest extends AbstractModel {
 
     /**
     * 实例续费状态标记信息

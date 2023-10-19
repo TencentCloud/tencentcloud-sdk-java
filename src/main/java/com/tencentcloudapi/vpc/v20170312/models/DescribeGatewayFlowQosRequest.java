@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGatewayFlowQosRequest extends AbstractModel{
+public class DescribeGatewayFlowQosRequest extends AbstractModel {
 
     /**
     * 网关实例ID，目前我们支持的网关实例类型有，

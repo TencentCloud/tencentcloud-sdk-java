@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iai.v20180301.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceQualityInfo extends AbstractModel{
+public class FaceQualityInfo extends AbstractModel {
 
     /**
     * 质量分: [0,100]，综合评价图像质量是否适合人脸识别，分数越高质量越好。 

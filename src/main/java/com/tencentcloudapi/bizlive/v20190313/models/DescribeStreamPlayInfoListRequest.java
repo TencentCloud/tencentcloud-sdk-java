@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bizlive.v20190313.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamPlayInfoListRequest extends AbstractModel{
+public class DescribeStreamPlayInfoListRequest extends AbstractModel {
 
     /**
     * 结束时间，北京时间，格式：2019-04-28 10:36:00

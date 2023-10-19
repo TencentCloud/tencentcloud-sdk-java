@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserTasksRequest extends AbstractModel{
+public class DescribeUserTasksRequest extends AbstractModel {
 
     /**
     * 任务的状态列表。0-任务启动中；1-任务运行中；2-任务成功；3-任务失败

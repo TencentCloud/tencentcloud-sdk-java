@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cii.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStructureResultRequest extends AbstractModel{
+public class DescribeStructureResultRequest extends AbstractModel {
 
     /**
     * 创建任务时返回的主任务ID

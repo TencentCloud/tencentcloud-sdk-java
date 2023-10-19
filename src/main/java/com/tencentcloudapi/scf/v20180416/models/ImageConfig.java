@@ -16,11 +16,12 @@
 package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageConfig extends AbstractModel{
+public class ImageConfig extends AbstractModel {
 
     /**
     * 镜像仓库类型，个人版或者企业版：personal/enterprise

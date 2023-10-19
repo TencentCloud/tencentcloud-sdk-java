@@ -45,18 +45,8 @@ public class TswClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAgentShellResponse DescribeAgentShell(DescribeAgentShellRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAgentShellResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAgentShellResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAgentShell");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAgentShell", DescribeAgentShellResponse.class);
     }
 
 }

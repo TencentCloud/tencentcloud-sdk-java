@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20201222.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSubOrganizationAndSealResponse extends AbstractModel{
+public class CreateSubOrganizationAndSealResponse extends AbstractModel {
 
     /**
     * 子机构在电子文件签署平台唯一标识

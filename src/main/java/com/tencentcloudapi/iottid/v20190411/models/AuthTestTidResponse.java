@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iottid.v20190411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuthTestTidResponse extends AbstractModel{
+public class AuthTestTidResponse extends AbstractModel {
 
     /**
     * 认证结果

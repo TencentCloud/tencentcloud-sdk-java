@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommonMixInputParam extends AbstractModel{
+public class CommonMixInputParam extends AbstractModel {
 
     /**
     * 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。

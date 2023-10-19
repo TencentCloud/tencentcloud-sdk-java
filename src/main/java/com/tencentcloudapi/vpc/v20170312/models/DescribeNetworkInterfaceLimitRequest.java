@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkInterfaceLimitRequest extends AbstractModel{
+public class DescribeNetworkInterfaceLimitRequest extends AbstractModel {
 
     /**
     * 要查询的CVM实例ID或弹性网卡ID。

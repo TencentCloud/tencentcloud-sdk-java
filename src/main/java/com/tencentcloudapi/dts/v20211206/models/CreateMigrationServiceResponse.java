@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMigrationServiceResponse extends AbstractModel{
+public class CreateMigrationServiceResponse extends AbstractModel {
 
     /**
     * 下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21

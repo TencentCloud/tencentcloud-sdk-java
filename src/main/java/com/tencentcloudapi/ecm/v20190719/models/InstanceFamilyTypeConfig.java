@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceFamilyTypeConfig extends AbstractModel{
+public class InstanceFamilyTypeConfig extends AbstractModel {
 
     /**
     * 实例机型系列类型Id

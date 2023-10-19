@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHistoryServiceResponse extends AbstractModel{
+public class DescribeHistoryServiceResponse extends AbstractModel {
 
     /**
     * 1 可购买 2 只能升降配 3 只能跳到续费管理页

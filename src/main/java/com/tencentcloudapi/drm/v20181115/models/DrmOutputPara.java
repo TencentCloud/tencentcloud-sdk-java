@@ -16,11 +16,12 @@
 package com.tencentcloudapi.drm.v20181115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DrmOutputPara extends AbstractModel{
+public class DrmOutputPara extends AbstractModel {
 
     /**
     * 内容类型。例:video，audio，mpd，m3u8

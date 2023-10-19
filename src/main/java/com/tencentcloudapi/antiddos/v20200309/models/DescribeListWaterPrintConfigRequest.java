@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeListWaterPrintConfigRequest extends AbstractModel{
+public class DescribeListWaterPrintConfigRequest extends AbstractModel {
 
     /**
     * 页起始偏移，取值为(页码-1)*一页条数

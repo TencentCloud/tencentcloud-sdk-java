@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVideoModerationTaskResponse extends AbstractModel{
+public class CreateVideoModerationTaskResponse extends AbstractModel {
 
     /**
     * 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。

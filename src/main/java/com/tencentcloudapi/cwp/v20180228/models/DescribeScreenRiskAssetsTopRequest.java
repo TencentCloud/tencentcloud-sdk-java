@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScreenRiskAssetsTopRequest extends AbstractModel{
+public class DescribeScreenRiskAssetsTopRequest extends AbstractModel {
 
     /**
     * 统计类型：0:潜在威胁 1:失陷 2:漏洞 3:基线

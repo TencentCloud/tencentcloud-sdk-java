@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateClassicalLoadBalancersRequest extends AbstractModel{
+public class MigrateClassicalLoadBalancersRequest extends AbstractModel {
 
     /**
     * 传统型负载均衡ID数组

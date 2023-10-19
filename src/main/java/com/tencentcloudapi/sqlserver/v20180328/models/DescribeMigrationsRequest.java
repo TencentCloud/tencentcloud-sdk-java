@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMigrationsRequest extends AbstractModel{
+public class DescribeMigrationsRequest extends AbstractModel {
 
     /**
     * 状态集合。只要符合集合中某一状态的迁移任务，就会查出来

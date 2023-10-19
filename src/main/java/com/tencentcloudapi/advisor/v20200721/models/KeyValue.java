@@ -16,11 +16,12 @@
 package com.tencentcloudapi.advisor.v20200721.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeyValue extends AbstractModel{
+public class KeyValue extends AbstractModel {
 
     /**
     * 键名

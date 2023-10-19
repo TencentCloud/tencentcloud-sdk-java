@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dataintegration.v20220613.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendMessageResponse extends AbstractModel{
+public class SendMessageResponse extends AbstractModel {
 
     /**
     * 消息ID

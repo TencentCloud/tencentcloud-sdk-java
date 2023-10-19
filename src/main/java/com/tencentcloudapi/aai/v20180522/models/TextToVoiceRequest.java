@@ -16,11 +16,12 @@
 package com.tencentcloudapi.aai.v20180522.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceRequest extends AbstractModel{
+public class TextToVoiceRequest extends AbstractModel {
 
     /**
     * 合成语音的源文本，按UTF-8编码统一计算。

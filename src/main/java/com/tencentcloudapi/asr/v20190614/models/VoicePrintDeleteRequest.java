@@ -16,11 +16,12 @@
 package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoicePrintDeleteRequest extends AbstractModel{
+public class VoicePrintDeleteRequest extends AbstractModel {
 
     /**
     * 说话人id，说话人唯一标识

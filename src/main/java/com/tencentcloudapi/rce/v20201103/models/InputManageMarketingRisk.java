@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rce.v20201103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InputManageMarketingRisk extends AbstractModel{
+public class InputManageMarketingRisk extends AbstractModel {
 
     /**
     * 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微

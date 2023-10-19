@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLeadResponse extends AbstractModel{
+public class CreateLeadResponse extends AbstractModel {
 
     /**
     * 线索处理状态码： 0-表示创建成功， 1-表示线索合并，2-表示线索重复

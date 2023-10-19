@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryAnchorContractInfoRequest extends AbstractModel{
+public class QueryAnchorContractInfoRequest extends AbstractModel {
 
     /**
     * 起始时间，格式为yyyy-MM-dd

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dasb.v20191018.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDeviceAccountResponse extends AbstractModel{
+public class CreateDeviceAccountResponse extends AbstractModel {
 
     /**
     * 新建成功后返回的记录ID

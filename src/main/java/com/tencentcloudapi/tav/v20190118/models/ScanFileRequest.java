@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tav.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanFileRequest extends AbstractModel{
+public class ScanFileRequest extends AbstractModel {
 
     /**
     * 购买服务后获得的授权信息，用于保证请求有效性

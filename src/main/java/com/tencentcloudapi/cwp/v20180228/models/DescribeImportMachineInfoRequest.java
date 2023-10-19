@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImportMachineInfoRequest extends AbstractModel{
+public class DescribeImportMachineInfoRequest extends AbstractModel {
 
     /**
     * 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 (最大 1000条)

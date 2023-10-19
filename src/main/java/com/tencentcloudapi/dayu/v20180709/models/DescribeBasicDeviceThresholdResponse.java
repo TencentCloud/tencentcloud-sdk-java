@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBasicDeviceThresholdResponse extends AbstractModel{
+public class DescribeBasicDeviceThresholdResponse extends AbstractModel {
 
     /**
     * 返回黑洞封堵值

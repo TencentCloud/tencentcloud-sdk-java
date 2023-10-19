@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaInfo extends AbstractModel{
+public class MediaInfo extends AbstractModel {
 
     /**
     * 基础信息。包括视频名称、分类、播放地址、封面图片等。

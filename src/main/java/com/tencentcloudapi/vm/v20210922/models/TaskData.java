@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vm.v20210922.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskData extends AbstractModel{
+public class TaskData extends AbstractModel {
 
     /**
     * 任务ID

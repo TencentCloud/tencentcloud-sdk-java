@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ame.v20190916.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAuthInfoRequest extends AbstractModel{
+public class DescribeAuthInfoRequest extends AbstractModel {
 
     /**
     * 偏移量：Offset=Offset+Limit

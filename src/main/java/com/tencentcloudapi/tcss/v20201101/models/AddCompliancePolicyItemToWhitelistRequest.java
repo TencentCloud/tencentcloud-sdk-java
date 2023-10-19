@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddCompliancePolicyItemToWhitelistRequest extends AbstractModel{
+public class AddCompliancePolicyItemToWhitelistRequest extends AbstractModel {
 
     /**
     * 要忽略的检测项的ID的列表

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomPersonsResponse extends AbstractModel{
+public class DescribeCustomPersonsResponse extends AbstractModel {
 
     /**
     * 满足过滤条件的自定义人物数量

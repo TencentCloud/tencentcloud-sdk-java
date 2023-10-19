@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePendingRiskInfoResponse extends AbstractModel{
+public class DescribePendingRiskInfoResponse extends AbstractModel {
 
     /**
     * 是否为付费用户，true：付费用户， false：普通用户

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ivld.v20210903.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomGroupResponse extends AbstractModel{
+public class DescribeCustomGroupResponse extends AbstractModel {
 
     /**
     * 自定义人物库所包含的人物个数

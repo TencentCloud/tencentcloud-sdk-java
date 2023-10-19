@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel{
+public class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel {
 
     /**
     * 删除成功后返回被删除策略的uuid

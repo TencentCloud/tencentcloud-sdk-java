@@ -16,11 +16,12 @@
 package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIndexListRequest extends AbstractModel{
+public class DescribeIndexListRequest extends AbstractModel {
 
     /**
     * 索引类型。auto：自治索引；normal：普通索引

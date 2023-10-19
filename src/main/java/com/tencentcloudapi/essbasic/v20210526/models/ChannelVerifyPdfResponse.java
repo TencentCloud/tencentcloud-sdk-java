@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelVerifyPdfResponse extends AbstractModel{
+public class ChannelVerifyPdfResponse extends AbstractModel {
 
     /**
     * 验签结果代码，代码的含义如下：

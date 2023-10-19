@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OwnershipVerification extends AbstractModel{
+public class OwnershipVerification extends AbstractModel {
 
     /**
     * CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证

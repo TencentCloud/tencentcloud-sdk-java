@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCfwEipsRequest extends AbstractModel{
+public class DescribeCfwEipsRequest extends AbstractModel {
 
     /**
     * 1：cfw接入模式，目前仅支持接入模式实例

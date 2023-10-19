@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PodSpecInfo extends AbstractModel{
+public class PodSpecInfo extends AbstractModel {
 
     /**
     * 使用Pod资源扩容时，指定的Pod规格以及来源等信息

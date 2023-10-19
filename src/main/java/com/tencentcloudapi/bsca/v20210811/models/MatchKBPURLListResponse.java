@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bsca.v20210811.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MatchKBPURLListResponse extends AbstractModel{
+public class MatchKBPURLListResponse extends AbstractModel {
 
     /**
     * 组件列表。

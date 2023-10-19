@@ -45,18 +45,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateAudioDepositResponse CreateAudioDeposit(CreateAudioDepositRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAudioDepositResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAudioDepositResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAudioDeposit");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateAudioDeposit", CreateAudioDepositResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDataDepositResponse CreateDataDeposit(CreateDataDepositRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDataDepositResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDataDepositResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDataDeposit");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDataDeposit", CreateDataDepositResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateDocDepositResponse CreateDocDeposit(CreateDocDepositRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDocDepositResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDocDepositResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDocDeposit");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateDocDeposit", CreateDocDepositResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateHashDepositResponse CreateHashDeposit(CreateHashDepositRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateHashDepositResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateHashDepositResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateHashDeposit");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateHashDeposit", CreateHashDepositResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateHashDepositNoCertResponse CreateHashDepositNoCert(CreateHashDepositNoCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateHashDepositNoCertResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateHashDepositNoCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateHashDepositNoCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateHashDepositNoCert", CreateHashDepositNoCertResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateHashDepositNoSealResponse CreateHashDepositNoSeal(CreateHashDepositNoSealRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateHashDepositNoSealResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateHashDepositNoSealResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateHashDepositNoSeal");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateHashDepositNoSeal", CreateHashDepositNoSealResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateImageDepositResponse CreateImageDeposit(CreateImageDepositRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateImageDepositResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateImageDepositResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateImageDeposit");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateImageDeposit", CreateImageDepositResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateVideoDepositResponse CreateVideoDeposit(CreateVideoDepositRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateVideoDepositResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateVideoDepositResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateVideoDeposit");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateVideoDeposit", CreateVideoDepositResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetDepositCertResponse GetDepositCert(GetDepositCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDepositCertResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDepositCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDepositCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetDepositCert", GetDepositCertResponse.class);
     }
 
     /**
@@ -235,18 +145,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetDepositFileResponse GetDepositFile(GetDepositFileRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDepositFileResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDepositFileResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDepositFile");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetDepositFile", GetDepositFileResponse.class);
     }
 
     /**
@@ -256,18 +156,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetDepositInfoResponse GetDepositInfo(GetDepositInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDepositInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDepositInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDepositInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetDepositInfo", GetDepositInfoResponse.class);
     }
 
     /**
@@ -277,18 +167,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public VerifyEvidenceBlockChainTxHashResponse VerifyEvidenceBlockChainTxHash(VerifyEvidenceBlockChainTxHashRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyEvidenceBlockChainTxHashResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<VerifyEvidenceBlockChainTxHashResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyEvidenceBlockChainTxHash");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "VerifyEvidenceBlockChainTxHash", VerifyEvidenceBlockChainTxHashResponse.class);
     }
 
     /**
@@ -298,18 +178,8 @@ public class BtoeClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public VerifyEvidenceHashResponse VerifyEvidenceHash(VerifyEvidenceHashRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyEvidenceHashResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<VerifyEvidenceHashResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyEvidenceHash");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "VerifyEvidenceHash", VerifyEvidenceHashResponse.class);
     }
 
 }

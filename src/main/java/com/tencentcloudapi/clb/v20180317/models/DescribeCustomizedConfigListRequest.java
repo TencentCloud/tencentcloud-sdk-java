@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomizedConfigListRequest extends AbstractModel{
+public class DescribeCustomizedConfigListRequest extends AbstractModel {
 
     /**
     * 配置类型:CLB 负载均衡维度。 SERVER 域名维度。 LOCATION 规则维度。

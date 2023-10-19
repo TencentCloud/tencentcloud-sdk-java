@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdwch.v20200915.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Charge extends AbstractModel{
+public class Charge extends AbstractModel {
 
     /**
     * 计费类型，“PREPAID” 预付费，“POSTPAID_BY_HOUR” 后付费

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdcpg.v20211118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourcesByDealNameRequest extends AbstractModel{
+public class DescribeResourcesByDealNameRequest extends AbstractModel {
 
     /**
     * 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）

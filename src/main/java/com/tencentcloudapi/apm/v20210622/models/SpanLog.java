@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apm.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpanLog extends AbstractModel{
+public class SpanLog extends AbstractModel {
 
     /**
     * 日志时间戳

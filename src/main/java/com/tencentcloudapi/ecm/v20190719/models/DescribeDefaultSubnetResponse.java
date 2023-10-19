@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDefaultSubnetResponse extends AbstractModel{
+public class DescribeDefaultSubnetResponse extends AbstractModel {
 
     /**
     * 默认子网信息，若无子网，则为空数据。

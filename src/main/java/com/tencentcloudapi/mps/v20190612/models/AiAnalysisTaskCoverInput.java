@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskCoverInput extends AbstractModel{
+public class AiAnalysisTaskCoverInput extends AbstractModel {
 
     /**
     * 视频智能封面模板 ID。

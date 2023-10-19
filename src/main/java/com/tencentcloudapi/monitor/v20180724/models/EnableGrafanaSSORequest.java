@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableGrafanaSSORequest extends AbstractModel{
+public class EnableGrafanaSSORequest extends AbstractModel {
 
     /**
     * 是否开启 SSO，true为开启，false 为不开启

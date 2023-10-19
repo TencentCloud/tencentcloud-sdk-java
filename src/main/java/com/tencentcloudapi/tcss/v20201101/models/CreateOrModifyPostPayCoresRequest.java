@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOrModifyPostPayCoresRequest extends AbstractModel{
+public class CreateOrModifyPostPayCoresRequest extends AbstractModel {
 
     /**
     * 弹性计费上限，最小值500

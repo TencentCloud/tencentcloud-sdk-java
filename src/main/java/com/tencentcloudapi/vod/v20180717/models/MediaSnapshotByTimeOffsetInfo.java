@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaSnapshotByTimeOffsetInfo extends AbstractModel{
+public class MediaSnapshotByTimeOffsetInfo extends AbstractModel {
 
     /**
     * 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstancesProjectRequest extends AbstractModel{
+public class ModifyDBInstancesProjectRequest extends AbstractModel {
 
     /**
     * 待修改的实例ID列表。实例 ID 形如：dcdbt-ow728lmc。

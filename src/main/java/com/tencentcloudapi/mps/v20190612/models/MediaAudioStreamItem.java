@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAudioStreamItem extends AbstractModel{
+public class MediaAudioStreamItem extends AbstractModel {
 
     /**
     * 音频流的码率，单位：bps。

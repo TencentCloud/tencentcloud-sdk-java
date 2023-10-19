@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iot.v20180123.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddProductRequest extends AbstractModel{
+public class AddProductRequest extends AbstractModel {
 
     /**
     * 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符

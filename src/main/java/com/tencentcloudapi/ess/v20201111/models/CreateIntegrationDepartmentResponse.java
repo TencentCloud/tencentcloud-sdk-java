@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateIntegrationDepartmentResponse extends AbstractModel{
+public class CreateIntegrationDepartmentResponse extends AbstractModel {
 
     /**
     * 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。

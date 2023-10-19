@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignIpv6SubnetCidrBlockResponse extends AbstractModel{
+public class AssignIpv6SubnetCidrBlockResponse extends AbstractModel {
 
     /**
     * 分配 `IPv6` 子网段列表。

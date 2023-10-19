@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
+public class UpdateGrafanaNotificationChannelRequest extends AbstractModel {
 
     /**
     * 通道 ID，例如：nchannel-abcd1234

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcex.v20200727.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInvocationResultRequest extends AbstractModel{
+public class DescribeInvocationResultRequest extends AbstractModel {
 
     /**
     * 调用id，为调用InvokeService接口返回的RequestId

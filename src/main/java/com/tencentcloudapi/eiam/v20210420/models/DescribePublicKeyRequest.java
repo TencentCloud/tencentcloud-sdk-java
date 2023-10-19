@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eiam.v20210420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePublicKeyRequest extends AbstractModel{
+public class DescribePublicKeyRequest extends AbstractModel {
 
     /**
     * 应用ID，是应用的全局唯一标识。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudaudit.v20190319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListCosEnableRegionRequest extends AbstractModel{
+public class ListCosEnableRegionRequest extends AbstractModel {
 
     /**
     * 站点类型。zh表示中国区，en表示国际区。默认中国区。

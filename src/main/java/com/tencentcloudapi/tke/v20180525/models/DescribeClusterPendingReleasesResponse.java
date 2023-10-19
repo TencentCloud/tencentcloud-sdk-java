@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterPendingReleasesResponse extends AbstractModel{
+public class DescribeClusterPendingReleasesResponse extends AbstractModel {
 
     /**
     * 正在安装中应用列表

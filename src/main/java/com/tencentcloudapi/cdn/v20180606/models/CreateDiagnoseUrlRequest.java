@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDiagnoseUrlRequest extends AbstractModel{
+public class CreateDiagnoseUrlRequest extends AbstractModel {
 
     /**
     * 需诊断的url，形如：http://www.test.com/test.txt。

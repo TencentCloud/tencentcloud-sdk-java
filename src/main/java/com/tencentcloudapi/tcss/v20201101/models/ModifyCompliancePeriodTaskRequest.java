@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCompliancePeriodTaskRequest extends AbstractModel{
+public class ModifyCompliancePeriodTaskRequest extends AbstractModel {
 
     /**
     * 要修改的定时任务的ID，由DescribeCompliancePeriodTaskList接口返回。

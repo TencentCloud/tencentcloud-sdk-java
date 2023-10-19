@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExtensionUploadInfoResponse extends AbstractModel{
+public class DescribeExtensionUploadInfoResponse extends AbstractModel {
 
     /**
     * 待上传文件的信息数组

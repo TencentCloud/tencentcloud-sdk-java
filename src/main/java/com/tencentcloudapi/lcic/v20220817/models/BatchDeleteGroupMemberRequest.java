@@ -16,11 +16,12 @@
 package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchDeleteGroupMemberRequest extends AbstractModel{
+public class BatchDeleteGroupMemberRequest extends AbstractModel {
 
     /**
     * 待添加群组ID列表，最大值100

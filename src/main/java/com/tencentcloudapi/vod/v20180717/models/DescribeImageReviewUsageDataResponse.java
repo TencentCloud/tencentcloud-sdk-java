@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageReviewUsageDataResponse extends AbstractModel{
+public class DescribeImageReviewUsageDataResponse extends AbstractModel {
 
     /**
     * 图片审核次数统计数据，展示查询时间范围内的图片审核次数的概览数据。

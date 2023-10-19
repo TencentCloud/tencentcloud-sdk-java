@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
+public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
     * 数据库引擎名称，本接口取值：dcdb。

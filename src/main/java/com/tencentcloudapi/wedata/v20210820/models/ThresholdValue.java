@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ThresholdValue extends AbstractModel{
+public class ThresholdValue extends AbstractModel {
 
     /**
     * 阈值类型  1.低阈值  2.高阈值   3.普通阈值  4.枚举值

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAssistantCidrRequest extends AbstractModel{
+public class ModifyAssistantCidrRequest extends AbstractModel {
 
     /**
     * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTenantCcnsRequest extends AbstractModel{
+public class DescribeTenantCcnsRequest extends AbstractModel {
 
     /**
     * 过滤条件，目前`value`值个数只支持一个，允许可支持的字段有：

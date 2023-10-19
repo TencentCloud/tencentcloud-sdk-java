@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiia.v20190529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Product extends AbstractModel{
+public class Product extends AbstractModel {
 
     /**
     * 图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者

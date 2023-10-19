@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDocumentResponse extends AbstractModel{
+public class CreateDocumentResponse extends AbstractModel {
 
     /**
     * 合同流程的底层电子文档ID，为32位字符串。

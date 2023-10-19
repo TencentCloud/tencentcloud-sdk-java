@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gme.v20180711.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserMicStatus extends AbstractModel{
+public class UserMicStatus extends AbstractModel {
 
     /**
     * 开麦状态。1表示关闭麦克风，2表示打开麦克风。

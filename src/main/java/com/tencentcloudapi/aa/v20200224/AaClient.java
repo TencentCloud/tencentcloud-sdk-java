@@ -45,18 +45,8 @@ public class AaClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public QueryActivityAntiRushResponse QueryActivityAntiRush(QueryActivityAntiRushRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryActivityAntiRushResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryActivityAntiRushResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryActivityAntiRush");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "QueryActivityAntiRush", QueryActivityAntiRushResponse.class);
     }
 
 }

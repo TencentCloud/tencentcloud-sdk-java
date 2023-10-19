@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignIpv6AddressesResponse extends AbstractModel{
+public class AssignIpv6AddressesResponse extends AbstractModel {
 
     /**
     * 分配给弹性网卡的IPv6地址列表。

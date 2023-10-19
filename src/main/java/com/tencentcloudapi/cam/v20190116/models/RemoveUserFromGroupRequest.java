@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveUserFromGroupRequest extends AbstractModel{
+public class RemoveUserFromGroupRequest extends AbstractModel {
 
     /**
     * 要删除的用户 UIN/UID和用户组 ID对应数组

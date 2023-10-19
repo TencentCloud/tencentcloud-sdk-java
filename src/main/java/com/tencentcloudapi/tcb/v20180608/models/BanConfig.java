@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BanConfig extends AbstractModel{
+public class BanConfig extends AbstractModel {
 
     /**
     * ip白名单，支持ipv4、ipv6，支持CIDR

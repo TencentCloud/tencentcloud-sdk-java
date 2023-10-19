@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBDiagEventsRequest extends AbstractModel{
+public class DescribeDBDiagEventsRequest extends AbstractModel {
 
     /**
     * 开始时间，如“2021-05-27 00:00:00”，支持的最早查询时间为当前时间的前30天。

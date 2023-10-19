@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bm.v20180423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSpotDeviceRequest extends AbstractModel{
+public class CreateSpotDeviceRequest extends AbstractModel {
 
     /**
     * 可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取

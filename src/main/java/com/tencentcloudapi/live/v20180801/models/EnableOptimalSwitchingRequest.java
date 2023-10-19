@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableOptimalSwitchingRequest extends AbstractModel{
+public class EnableOptimalSwitchingRequest extends AbstractModel {
 
     /**
     * 针对该流 ID 启用择优调度。

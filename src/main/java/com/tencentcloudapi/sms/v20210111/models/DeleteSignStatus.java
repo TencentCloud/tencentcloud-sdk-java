@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20210111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSignStatus extends AbstractModel{
+public class DeleteSignStatus extends AbstractModel {
 
     /**
     * 删除状态信息。

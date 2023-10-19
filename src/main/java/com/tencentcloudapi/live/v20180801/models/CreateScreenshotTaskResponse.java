@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScreenshotTaskResponse extends AbstractModel{
+public class CreateScreenshotTaskResponse extends AbstractModel {
 
     /**
     * 任务ID，全局唯一标识截图任务。返回TaskId字段说明截图任务创建成功。

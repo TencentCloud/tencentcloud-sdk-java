@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetRocketMQPublicAccessPointRequest extends AbstractModel{
+public class SetRocketMQPublicAccessPointRequest extends AbstractModel {
 
     /**
     * 集群ID，当前只支持专享集群

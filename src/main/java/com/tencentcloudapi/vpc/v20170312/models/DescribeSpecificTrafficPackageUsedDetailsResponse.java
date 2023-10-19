@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSpecificTrafficPackageUsedDetailsResponse extends AbstractModel{
+public class DescribeSpecificTrafficPackageUsedDetailsResponse extends AbstractModel {
 
     /**
     * 符合查询条件的共享流量包用量明细的总数

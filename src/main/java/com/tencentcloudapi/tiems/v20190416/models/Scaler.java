@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiems.v20190416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Scaler extends AbstractModel{
+public class Scaler extends AbstractModel {
 
     /**
     * 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值

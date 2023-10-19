@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimeRange extends AbstractModel{
+public class TimeRange extends AbstractModel {
 
     /**
     * 开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

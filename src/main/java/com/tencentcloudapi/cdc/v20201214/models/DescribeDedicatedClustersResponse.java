@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdc.v20201214.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDedicatedClustersResponse extends AbstractModel{
+public class DescribeDedicatedClustersResponse extends AbstractModel {
 
     /**
     * 符合查询条件的专用集群列表

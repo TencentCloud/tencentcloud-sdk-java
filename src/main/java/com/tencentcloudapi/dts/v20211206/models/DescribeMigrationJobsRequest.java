@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMigrationJobsRequest extends AbstractModel{
+public class DescribeMigrationJobsRequest extends AbstractModel {
 
     /**
     * 数据迁移任务ID，如：dts-amm1jw5q

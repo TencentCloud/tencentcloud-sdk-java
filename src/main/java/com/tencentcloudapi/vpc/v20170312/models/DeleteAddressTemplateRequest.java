@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAddressTemplateRequest extends AbstractModel{
+public class DeleteAddressTemplateRequest extends AbstractModel {
 
     /**
     * IP地址模板实例ID，例如：ipm-09o5m8kc。

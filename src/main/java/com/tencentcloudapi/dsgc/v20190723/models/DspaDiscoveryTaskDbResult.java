@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DspaDiscoveryTaskDbResult extends AbstractModel{
+public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
     * 扫描数据库结果ID

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BankSlipOCRResponse extends AbstractModel{
+public class BankSlipOCRResponse extends AbstractModel {
 
     /**
     * 银行回单识别结果，具体内容请点击左侧链接。

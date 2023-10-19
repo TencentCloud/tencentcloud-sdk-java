@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUserToGroupRequest extends AbstractModel{
+public class AddUserToGroupRequest extends AbstractModel {
 
     /**
     * 添加的子用户 UIN/UID 和用户组 ID 关联关系

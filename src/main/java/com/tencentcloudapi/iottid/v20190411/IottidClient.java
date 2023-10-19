@@ -45,18 +45,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AuthTestTidResponse AuthTestTid(AuthTestTidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AuthTestTidResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AuthTestTidResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AuthTestTid");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AuthTestTid", AuthTestTidResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public BurnTidNotifyResponse BurnTidNotify(BurnTidNotifyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BurnTidNotifyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<BurnTidNotifyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BurnTidNotify");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "BurnTidNotify", BurnTidNotifyResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeliverTidNotifyResponse DeliverTidNotify(DeliverTidNotifyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeliverTidNotifyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeliverTidNotifyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeliverTidNotify");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeliverTidNotify", DeliverTidNotifyResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeliverTidsResponse DeliverTids(DeliverTidsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeliverTidsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeliverTidsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeliverTids");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeliverTids", DeliverTidsResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAvailableLibCountResponse DescribeAvailableLibCount(DescribeAvailableLibCountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAvailableLibCountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAvailableLibCountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAvailableLibCount");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAvailableLibCount", DescribeAvailableLibCountResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribePermissionResponse DescribePermission(DescribePermissionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePermissionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePermissionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePermission");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribePermission", DescribePermissionResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DownloadTidsResponse DownloadTids(DownloadTidsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownloadTidsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DownloadTidsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DownloadTids");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DownloadTids", DownloadTidsResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UploadDeviceUniqueCodeResponse UploadDeviceUniqueCode(UploadDeviceUniqueCodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UploadDeviceUniqueCodeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UploadDeviceUniqueCodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UploadDeviceUniqueCode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UploadDeviceUniqueCode", UploadDeviceUniqueCodeResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class IottidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public VerifyChipBurnInfoResponse VerifyChipBurnInfo(VerifyChipBurnInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyChipBurnInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<VerifyChipBurnInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyChipBurnInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "VerifyChipBurnInfo", VerifyChipBurnInfoResponse.class);
     }
 
 }

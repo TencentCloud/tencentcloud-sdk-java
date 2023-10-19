@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InvoiceDetectInfo extends AbstractModel{
+public class InvoiceDetectInfo extends AbstractModel {
 
     /**
     * 识别出的图片在混贴票据图片中的旋转角度。

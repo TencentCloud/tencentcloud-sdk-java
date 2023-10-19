@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindRsResponse extends AbstractModel{
+public class BindRsResponse extends AbstractModel {
 
     /**
     * 绑定黑石物理机异步任务ID，可以通过DescribeEipTask查询任务状态

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccessHistogramRequest extends AbstractModel{
+public class DescribeAccessHistogramRequest extends AbstractModel {
 
     /**
     * 老版本查询的日志主题ID，新版本传空字符串即可

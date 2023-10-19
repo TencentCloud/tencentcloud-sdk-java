@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordCoordPoint extends AbstractModel{
+public class WordCoordPoint extends AbstractModel {
 
     /**
     * 英文OCR识别出的每个单词在原图中的四点坐标。

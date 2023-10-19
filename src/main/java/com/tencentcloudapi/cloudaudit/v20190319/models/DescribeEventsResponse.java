@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudaudit.v20190319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEventsResponse extends AbstractModel{
+public class DescribeEventsResponse extends AbstractModel {
 
     /**
     * 日志集合是否结束。true表示结束，无需进行翻页。

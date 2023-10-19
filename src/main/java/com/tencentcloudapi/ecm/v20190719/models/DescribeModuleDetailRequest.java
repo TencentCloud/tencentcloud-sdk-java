@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecm.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeModuleDetailRequest extends AbstractModel{
+public class DescribeModuleDetailRequest extends AbstractModel {
 
     /**
     * 模块ID，如em-qn46snq8。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CacheTagKey extends AbstractModel{
+public class CacheTagKey extends AbstractModel {
 
     /**
     * 使用CacheTag作为CacheKey的一部分配置开关，取值有

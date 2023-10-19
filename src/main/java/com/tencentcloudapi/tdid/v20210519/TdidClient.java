@@ -47,18 +47,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CheckChainResponse CheckChain(CheckChainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckChainResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CheckChainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CheckChain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CheckChain", CheckChainResponse.class);
     }
 
     /**
@@ -70,18 +60,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateCredentialResponse CreateCredential(CreateCredentialRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCredentialResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateCredentialResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCredential");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateCredential", CreateCredentialResponse.class);
     }
 
     /**
@@ -93,18 +73,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateSelectiveCredentialResponse CreateSelectiveCredential(CreateSelectiveCredentialRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSelectiveCredentialResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateSelectiveCredentialResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSelectiveCredential");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateSelectiveCredential", CreateSelectiveCredentialResponse.class);
     }
 
     /**
@@ -116,18 +86,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTDidResponse CreateTDid(CreateTDidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTDidResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateTDidResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTDid");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateTDid", CreateTDidResponse.class);
     }
 
     /**
@@ -139,18 +99,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTDidByPrivateKeyResponse CreateTDidByPrivateKey(CreateTDidByPrivateKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTDidByPrivateKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateTDidByPrivateKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTDidByPrivateKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateTDidByPrivateKey", CreateTDidByPrivateKeyResponse.class);
     }
 
     /**
@@ -162,18 +112,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateTDidByPublicKeyResponse CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateTDidByPublicKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateTDidByPublicKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateTDidByPublicKey", CreateTDidByPublicKeyResponse.class);
     }
 
     /**
@@ -185,18 +125,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetAuthorityIssuerResponse GetAuthorityIssuer(GetAuthorityIssuerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetAuthorityIssuerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetAuthorityIssuer");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetAuthorityIssuer", GetAuthorityIssuerResponse.class);
     }
 
     /**
@@ -208,18 +138,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetCptInfoResponse GetCptInfo(GetCptInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCptInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetCptInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCptInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetCptInfo", GetCptInfoResponse.class);
     }
 
     /**
@@ -231,18 +151,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetCredentialStatusResponse GetCredentialStatus(GetCredentialStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCredentialStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetCredentialStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCredentialStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetCredentialStatus", GetCredentialStatusResponse.class);
     }
 
     /**
@@ -255,18 +165,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public GetDidDocumentResponse GetDidDocument(GetDidDocumentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidDocumentResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDidDocumentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDidDocument");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "GetDidDocument", GetDidDocumentResponse.class);
     }
 
     /**
@@ -278,18 +178,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RegisterCptResponse RegisterCpt(RegisterCptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RegisterCptResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RegisterCptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RegisterCpt");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RegisterCpt", RegisterCptResponse.class);
     }
 
     /**
@@ -301,18 +191,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SetCredentialStatusResponse SetCredentialStatus(SetCredentialStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetCredentialStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SetCredentialStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SetCredentialStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SetCredentialStatus", SetCredentialStatusResponse.class);
     }
 
     /**
@@ -324,18 +204,8 @@ public class TdidClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public VerifyCredentialResponse VerifyCredential(VerifyCredentialRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyCredentialResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<VerifyCredentialResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyCredential");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "VerifyCredential", VerifyCredentialResponse.class);
     }
 
 }

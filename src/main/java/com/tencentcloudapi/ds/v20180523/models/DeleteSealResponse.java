@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ds.v20180523.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSealResponse extends AbstractModel{
+public class DeleteSealResponse extends AbstractModel {
 
     /**
     * 签章ID

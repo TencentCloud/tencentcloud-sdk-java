@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class McuWaterMarkImage extends AbstractModel{
+public class McuWaterMarkImage extends AbstractModel {
 
     /**
     * 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。

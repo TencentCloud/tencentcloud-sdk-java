@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel{
+public class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel {
 
     /**
     * 扫描任务id

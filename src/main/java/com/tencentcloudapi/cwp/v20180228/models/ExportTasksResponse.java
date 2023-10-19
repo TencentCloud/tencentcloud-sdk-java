@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportTasksResponse extends AbstractModel{
+public class ExportTasksResponse extends AbstractModel {
 
     /**
     * PENDING：正在生成下载链接，FINISHED：下载链接已生成，ERROR：网络异常等异常情况

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApiEnvironmentStrategyStatus extends AbstractModel{
+public class ApiEnvironmentStrategyStatus extends AbstractModel {
 
     /**
     * API绑定的限流策略数量。

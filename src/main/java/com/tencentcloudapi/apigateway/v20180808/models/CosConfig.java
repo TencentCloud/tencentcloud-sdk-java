@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apigateway.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosConfig extends AbstractModel{
+public class CosConfig extends AbstractModel {
 
     /**
     * API调用后端COS的方式，前端请求方法与Action的可选值为：

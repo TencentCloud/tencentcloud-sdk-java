@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProVersionInfoResponse extends AbstractModel{
+public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
     * 专业版开始时间，补充购买时才不为空

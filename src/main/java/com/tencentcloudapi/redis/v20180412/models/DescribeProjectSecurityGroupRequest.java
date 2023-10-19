@@ -16,11 +16,12 @@
 package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupRequest extends AbstractModel{
+public class DescribeProjectSecurityGroupRequest extends AbstractModel {
 
     /**
     * 0:默认项目；-1 所有项目; >0: 特定项目

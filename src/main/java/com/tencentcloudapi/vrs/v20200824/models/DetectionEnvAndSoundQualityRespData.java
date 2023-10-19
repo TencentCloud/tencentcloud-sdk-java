@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vrs.v20200824.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectionEnvAndSoundQualityRespData extends AbstractModel{
+public class DetectionEnvAndSoundQualityRespData extends AbstractModel {
 
     /**
     * 音频ID （用于创建任务接口AudioIds）,环境检测该值为空，仅在音质检测情况下返回

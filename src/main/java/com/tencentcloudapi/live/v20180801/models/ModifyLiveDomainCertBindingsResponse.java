@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLiveDomainCertBindingsResponse extends AbstractModel{
+public class ModifyLiveDomainCertBindingsResponse extends AbstractModel {
 
     /**
     * DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。

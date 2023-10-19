@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tan.v20220420.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBlockNodeRecordsRequest extends AbstractModel{
+public class CreateBlockNodeRecordsRequest extends AbstractModel {
 
     /**
     * 盘查组id，可在“盘查组概览”功能中获取。

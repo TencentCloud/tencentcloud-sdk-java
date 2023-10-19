@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sms.v20210111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsPackagesStatisticsResponse extends AbstractModel{
+public class SmsPackagesStatisticsResponse extends AbstractModel {
 
     /**
     * 发送数据统计响应包体。

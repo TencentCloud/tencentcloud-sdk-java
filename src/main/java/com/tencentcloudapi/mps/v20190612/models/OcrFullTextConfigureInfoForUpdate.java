@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OcrFullTextConfigureInfoForUpdate extends AbstractModel{
+public class OcrFullTextConfigureInfoForUpdate extends AbstractModel {
 
     /**
     * 文本全文识别任务开关，可选值：

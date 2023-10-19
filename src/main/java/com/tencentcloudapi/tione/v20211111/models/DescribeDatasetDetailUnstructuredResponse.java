@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatasetDetailUnstructuredResponse extends AbstractModel{
+public class DescribeDatasetDetailUnstructuredResponse extends AbstractModel {
 
     /**
     * 已标注数据量

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.memcached.v20190318.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceListInfo extends AbstractModel{
+public class InstanceListInfo extends AbstractModel {
 
     /**
     * 实例修改时间

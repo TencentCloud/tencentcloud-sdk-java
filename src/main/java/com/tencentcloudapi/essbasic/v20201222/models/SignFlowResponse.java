@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20201222.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SignFlowResponse extends AbstractModel{
+public class SignFlowResponse extends AbstractModel {
 
     /**
     * 签署任务状态。签署成功 - SUCCESS、提交审核 - REVIEW

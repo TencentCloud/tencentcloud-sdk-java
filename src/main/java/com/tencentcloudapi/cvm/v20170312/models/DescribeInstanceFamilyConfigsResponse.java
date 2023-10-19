@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceFamilyConfigsResponse extends AbstractModel{
+public class DescribeInstanceFamilyConfigsResponse extends AbstractModel {
 
     /**
     * 实例机型组配置的列表信息

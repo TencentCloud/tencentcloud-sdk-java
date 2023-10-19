@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestoreSecretRequest extends AbstractModel{
+public class RestoreSecretRequest extends AbstractModel {
 
     /**
     * 指定需要恢复的凭据名称。

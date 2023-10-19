@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBandwidthPackageResourcesResponse extends AbstractModel{
+public class DescribeBandwidthPackageResourcesResponse extends AbstractModel {
 
     /**
     * 符合条件的 共享带宽包内资源 数量。

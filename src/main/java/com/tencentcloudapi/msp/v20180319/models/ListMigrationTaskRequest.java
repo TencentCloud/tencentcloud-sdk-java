@@ -16,11 +16,12 @@
 package com.tencentcloudapi.msp.v20180319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListMigrationTaskRequest extends AbstractModel{
+public class ListMigrationTaskRequest extends AbstractModel {
 
     /**
     * 记录起始数，默认值为0

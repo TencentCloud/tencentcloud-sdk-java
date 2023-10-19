@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyIp6AddressesBandwidthRequest extends AbstractModel{
+public class ModifyIp6AddressesBandwidthRequest extends AbstractModel {
 
     /**
     * 修改的目标带宽，单位Mbps

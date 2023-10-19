@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tts.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Subtitle extends AbstractModel{
+public class Subtitle extends AbstractModel {
 
     /**
     * ⽂本信息。

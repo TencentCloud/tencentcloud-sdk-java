@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
+public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel {
 
     /**
     * 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值

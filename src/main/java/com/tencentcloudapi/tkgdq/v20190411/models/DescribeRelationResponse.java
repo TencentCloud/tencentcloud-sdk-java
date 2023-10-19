@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tkgdq.v20190411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRelationResponse extends AbstractModel{
+public class DescribeRelationResponse extends AbstractModel {
 
     /**
     * 返回查询实体间的关系

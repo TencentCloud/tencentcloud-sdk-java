@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OmittedDuration extends AbstractModel{
+public class OmittedDuration extends AbstractModel {
 
     /**
     * 录制暂停时间戳对应的视频播放时间(单位: 毫秒)

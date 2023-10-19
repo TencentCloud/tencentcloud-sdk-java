@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel{
+public class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel {
 
     /**
     * 指定时间点截图模板唯一标识。

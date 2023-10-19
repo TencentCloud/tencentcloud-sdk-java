@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAttackTrendsResponse extends AbstractModel{
+public class DescribeAttackTrendsResponse extends AbstractModel {
 
     /**
     * 攻击趋势统计数据（天）

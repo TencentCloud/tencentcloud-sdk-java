@@ -16,11 +16,12 @@
 package com.tencentcloudapi.drm.v20181115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddFairPlayPemResponse extends AbstractModel{
+public class AddFairPlayPemResponse extends AbstractModel {
 
     /**
     * 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。

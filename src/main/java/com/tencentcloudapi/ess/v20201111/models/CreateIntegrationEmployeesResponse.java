@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateIntegrationEmployeesResponse extends AbstractModel{
+public class CreateIntegrationEmployeesResponse extends AbstractModel {
 
     /**
     * 创建员工的结果。包含创建成功的数据与创建失败数据。

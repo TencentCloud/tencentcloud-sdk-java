@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScreenRiskAssetsTopResponse extends AbstractModel{
+public class DescribeScreenRiskAssetsTopResponse extends AbstractModel {
 
     /**
     * 统计详情图标数据 Name：展示主机ip 和地域， value：事件数量

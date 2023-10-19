@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStatusResponse extends AbstractModel{
+public class DescribeTaskStatusResponse extends AbstractModel {
 
     /**
     * 任务的当前状态。 0：成功，1：失败，2：进行中。

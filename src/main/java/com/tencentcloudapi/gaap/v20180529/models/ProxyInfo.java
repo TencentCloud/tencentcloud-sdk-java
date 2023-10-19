@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProxyInfo extends AbstractModel{
+public class ProxyInfo extends AbstractModel {
 
     /**
     * （旧参数，请使用ProxyId）通道实例ID。

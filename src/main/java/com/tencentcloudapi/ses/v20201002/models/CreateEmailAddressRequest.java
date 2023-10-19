@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEmailAddressRequest extends AbstractModel{
+public class CreateEmailAddressRequest extends AbstractModel {
 
     /**
     * 您的发信地址（发信地址总数上限为10个）

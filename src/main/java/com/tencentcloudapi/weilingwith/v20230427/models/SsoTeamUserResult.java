@@ -16,11 +16,12 @@
 package com.tencentcloudapi.weilingwith.v20230427.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SsoTeamUserResult extends AbstractModel{
+public class SsoTeamUserResult extends AbstractModel {
 
     /**
     * 总数

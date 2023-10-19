@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IOSInfo extends AbstractModel{
+public class IOSInfo extends AbstractModel {
 
     /**
     * info.plist的url，必须保证不用权限校验就可以下载

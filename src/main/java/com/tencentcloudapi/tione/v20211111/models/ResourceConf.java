@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceConf extends AbstractModel{
+public class ResourceConf extends AbstractModel {
 
     /**
     * cpu 处理器资源, 单位为1/1000核 (for预付费)

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBasicDeviceStatusResponse extends AbstractModel{
+public class DescribeBasicDeviceStatusResponse extends AbstractModel {
 
     /**
     * 返回资源及状态，状态码：

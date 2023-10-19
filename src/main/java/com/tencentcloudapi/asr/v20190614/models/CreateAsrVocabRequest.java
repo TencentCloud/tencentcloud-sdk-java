@@ -16,11 +16,12 @@
 package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAsrVocabRequest extends AbstractModel{
+public class CreateAsrVocabRequest extends AbstractModel {
 
     /**
     * 热词表名称，长度在1-255之间

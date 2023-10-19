@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddResourceTagRequest extends AbstractModel{
+public class AddResourceTagRequest extends AbstractModel {
 
     /**
     * 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354

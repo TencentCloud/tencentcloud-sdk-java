@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VulInfoList extends AbstractModel{
+public class VulInfoList extends AbstractModel {
 
     /**
     * 漏洞包含的事件id串，多个用“,”分割

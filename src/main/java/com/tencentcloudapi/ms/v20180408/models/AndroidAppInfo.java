@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AndroidAppInfo extends AbstractModel{
+public class AndroidAppInfo extends AbstractModel {
 
     /**
     * app文件的md5算法值，需要正确传递，在线加固必输。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccessValueInfo extends AbstractModel{
+public class AccessValueInfo extends AbstractModel {
 
     /**
     * 字段类型，目前支持的类型有：long、text、double

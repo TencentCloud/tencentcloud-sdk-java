@@ -16,11 +16,12 @@
 package com.tencentcloudapi.partners.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAgentClientGradeResponse extends AbstractModel{
+public class DescribeAgentClientGradeResponse extends AbstractModel {
 
     /**
     * 审核状态：0待审核，1，已审核

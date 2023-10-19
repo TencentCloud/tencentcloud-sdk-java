@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QuotaResource extends AbstractModel{
+public class QuotaResource extends AbstractModel {
 
     /**
     * 资源类型，1生成包、2服务部署、3别名、4游戏服务器队列、5实例

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cmq.v20190304.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyTopicAttributeRequest extends AbstractModel{
+public class ModifyTopicAttributeRequest extends AbstractModel {
 
     /**
     * 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。

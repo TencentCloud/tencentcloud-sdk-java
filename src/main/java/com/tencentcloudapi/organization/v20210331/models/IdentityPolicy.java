@@ -16,11 +16,12 @@
 package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IdentityPolicy extends AbstractModel{
+public class IdentityPolicy extends AbstractModel {
 
     /**
     * CAM预设策略ID。PolicyType 为预设策略时有效且必选

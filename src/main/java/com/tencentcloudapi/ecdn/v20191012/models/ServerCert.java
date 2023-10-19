@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServerCert extends AbstractModel{
+public class ServerCert extends AbstractModel {
 
     /**
     * 服务器证书id，当证书为腾讯云托管证书时必填。

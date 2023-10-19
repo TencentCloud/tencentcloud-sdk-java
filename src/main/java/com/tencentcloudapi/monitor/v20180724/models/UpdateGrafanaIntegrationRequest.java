@@ -16,11 +16,12 @@
 package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateGrafanaIntegrationRequest extends AbstractModel{
+public class UpdateGrafanaIntegrationRequest extends AbstractModel {
 
     /**
     * 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234

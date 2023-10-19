@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRunSyncAssetRequest extends AbstractModel{
+public class ModifyRunSyncAssetRequest extends AbstractModel {
 
     /**
     * 0: 互联网防火墙开关，1：vpc 防火墙开关

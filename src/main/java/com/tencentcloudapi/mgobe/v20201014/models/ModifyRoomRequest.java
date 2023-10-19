@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mgobe.v20201014.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRoomRequest extends AbstractModel{
+public class ModifyRoomRequest extends AbstractModel {
 
     /**
     * 游戏资源Id。

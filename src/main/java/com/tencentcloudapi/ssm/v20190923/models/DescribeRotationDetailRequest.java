@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ssm.v20190923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRotationDetailRequest extends AbstractModel{
+public class DescribeRotationDetailRequest extends AbstractModel {
 
     /**
     * 指定需要获取凭据轮转详细信息的凭据名称。

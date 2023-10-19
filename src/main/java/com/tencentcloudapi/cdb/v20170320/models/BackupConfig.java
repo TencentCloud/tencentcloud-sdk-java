@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackupConfig extends AbstractModel{
+public class BackupConfig extends AbstractModel {
 
     /**
     * 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步

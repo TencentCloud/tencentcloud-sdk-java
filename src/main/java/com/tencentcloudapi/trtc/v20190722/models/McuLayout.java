@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class McuLayout extends AbstractModel{
+public class McuLayout extends AbstractModel {
 
     /**
     * 用户媒体流参数。不填时腾讯云后台按照上行主播的进房顺序自动填充。

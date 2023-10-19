@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cr.v20180321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRecordsResponse extends AbstractModel{
+public class DescribeRecordsResponse extends AbstractModel {
 
     /**
     * 录音列表。

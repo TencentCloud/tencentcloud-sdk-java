@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRansomDefenseBackupListResponse extends AbstractModel{
+public class DescribeRansomDefenseBackupListResponse extends AbstractModel {
 
     /**
     * 备份列表

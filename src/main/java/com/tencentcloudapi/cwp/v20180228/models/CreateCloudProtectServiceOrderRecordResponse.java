@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel{
+public class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel {
 
     /**
     * 成功收货的资源ID

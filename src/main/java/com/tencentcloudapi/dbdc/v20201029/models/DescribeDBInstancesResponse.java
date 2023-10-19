@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dbdc.v20201029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstancesResponse extends AbstractModel{
+public class DescribeDBInstancesResponse extends AbstractModel {
 
     /**
     * 独享集群内的DB实例列表

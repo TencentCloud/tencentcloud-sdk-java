@@ -16,11 +16,12 @@
 package com.tencentcloudapi.eb.v20210416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRuleRequest extends AbstractModel{
+public class CreateRuleRequest extends AbstractModel {
 
     /**
     * 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)

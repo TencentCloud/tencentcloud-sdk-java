@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDisasterRecoverGroupRequest extends AbstractModel{
+public class CreateDisasterRecoverGroupRequest extends AbstractModel {
 
     /**
     * 分散置放群组名称，长度1-60个字符，支持中、英文。

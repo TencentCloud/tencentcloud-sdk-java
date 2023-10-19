@@ -16,11 +16,12 @@
 package com.tencentcloudapi.rce.v20201103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputManageMarketingRiskValue extends AbstractModel{
+public class OutputManageMarketingRiskValue extends AbstractModel {
 
     /**
     * 账号ID。对应输入参数：

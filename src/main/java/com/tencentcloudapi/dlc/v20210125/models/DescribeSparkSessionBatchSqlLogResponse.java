@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSparkSessionBatchSqlLogResponse extends AbstractModel{
+public class DescribeSparkSessionBatchSqlLogResponse extends AbstractModel {
 
     /**
     * 状态：0：运行中、1：成功、2：失败、3：取消、4：超时；

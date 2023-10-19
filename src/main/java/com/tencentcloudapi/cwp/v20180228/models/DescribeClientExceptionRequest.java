@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClientExceptionRequest extends AbstractModel{
+public class DescribeClientExceptionRequest extends AbstractModel {
 
     /**
     * 客户端异常类型 1:客户端离线，2:客户端卸载

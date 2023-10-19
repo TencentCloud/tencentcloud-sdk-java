@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20201222.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendSignInnerVerifyCodeResponse extends AbstractModel{
+public class SendSignInnerVerifyCodeResponse extends AbstractModel {
 
     /**
     * true: 验证码正确，false: 验证码错误

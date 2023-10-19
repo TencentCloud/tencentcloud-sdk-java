@@ -16,11 +16,12 @@
 package com.tencentcloudapi.taf.v20200210.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InputRecognizeTargetAudience extends AbstractModel{
+public class InputRecognizeTargetAudience extends AbstractModel {
 
     /**
     * 模型ID列表

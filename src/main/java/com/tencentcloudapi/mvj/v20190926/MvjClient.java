@@ -47,18 +47,8 @@ public class MvjClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public MarketingValueJudgementResponse MarketingValueJudgement(MarketingValueJudgementRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<MarketingValueJudgementResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<MarketingValueJudgementResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "MarketingValueJudgement");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "MarketingValueJudgement", MarketingValueJudgementResponse.class);
     }
 
 }

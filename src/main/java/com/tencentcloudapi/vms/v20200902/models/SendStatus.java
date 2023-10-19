@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vms.v20200902.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendStatus extends AbstractModel{
+public class SendStatus extends AbstractModel {
 
     /**
     * 标识本次发送 ID，标识一次下发记录。

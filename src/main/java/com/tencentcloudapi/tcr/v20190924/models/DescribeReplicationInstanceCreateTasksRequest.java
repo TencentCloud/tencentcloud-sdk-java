@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReplicationInstanceCreateTasksRequest extends AbstractModel{
+public class DescribeReplicationInstanceCreateTasksRequest extends AbstractModel {
 
     /**
     * 同步实例Id，见实例返回列表中的同步实例ID

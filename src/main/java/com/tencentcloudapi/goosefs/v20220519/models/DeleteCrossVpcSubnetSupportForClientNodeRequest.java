@@ -16,11 +16,12 @@
 package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCrossVpcSubnetSupportForClientNodeRequest extends AbstractModel{
+public class DeleteCrossVpcSubnetSupportForClientNodeRequest extends AbstractModel {
 
     /**
     * 文件系统ID

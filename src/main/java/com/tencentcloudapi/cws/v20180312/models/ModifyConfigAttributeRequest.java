@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cws.v20180312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyConfigAttributeRequest extends AbstractModel{
+public class ModifyConfigAttributeRequest extends AbstractModel {
 
     /**
     * 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComplianceAssetPolicyItemListResponse extends AbstractModel{
+public class DescribeComplianceAssetPolicyItemListResponse extends AbstractModel {
 
     /**
     * 返回检测项的总数。如果用户未启用基线检查，此处返回0。

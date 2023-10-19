@@ -16,11 +16,12 @@
 package com.tencentcloudapi.gse.v20191112.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RoutingStrategy extends AbstractModel{
+public class RoutingStrategy extends AbstractModel {
 
     /**
     * 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)

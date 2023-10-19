@@ -16,11 +16,12 @@
 package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelDescribeFlowComponentsResponse extends AbstractModel{
+public class ChannelDescribeFlowComponentsResponse extends AbstractModel {
 
     /**
     * 流程关联的填写控件信息，控件会按照参与方进行分类。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Detail extends AbstractModel{
+public class Detail extends AbstractModel {
 
     /**
     * 输入时间范围内所有慢sql执行的总时间，单位毫秒（ms）

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterRequest extends AbstractModel{
+public class CreateClusterRequest extends AbstractModel {
 
     /**
     * 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`

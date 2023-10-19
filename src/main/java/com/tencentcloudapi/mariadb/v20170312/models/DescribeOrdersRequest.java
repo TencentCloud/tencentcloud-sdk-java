@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrdersRequest extends AbstractModel{
+public class DescribeOrdersRequest extends AbstractModel {
 
     /**
     * 待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。

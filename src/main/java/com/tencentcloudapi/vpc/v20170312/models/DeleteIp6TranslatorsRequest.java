@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteIp6TranslatorsRequest extends AbstractModel{
+public class DeleteIp6TranslatorsRequest extends AbstractModel {
 
     /**
     * 待释放的IPV6转换实例的唯一ID，形如‘ip6-xxxxxxxx’

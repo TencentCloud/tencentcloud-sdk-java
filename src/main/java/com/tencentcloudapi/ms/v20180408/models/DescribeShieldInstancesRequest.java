@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ms.v20180408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShieldInstancesRequest extends AbstractModel{
+public class DescribeShieldInstancesRequest extends AbstractModel {
 
     /**
     * 支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。

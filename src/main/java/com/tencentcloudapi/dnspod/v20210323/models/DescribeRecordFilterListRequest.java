@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRecordFilterListRequest extends AbstractModel{
+public class DescribeRecordFilterListRequest extends AbstractModel {
 
     /**
     * 要获取的解析记录所属的域名。

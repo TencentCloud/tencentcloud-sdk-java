@@ -16,11 +16,12 @@
 package com.tencentcloudapi.trro.v20220325.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchDeletePolicyResponse extends AbstractModel{
+public class BatchDeletePolicyResponse extends AbstractModel {
 
     /**
     * 删除权限配置失败的远端设备ID列表

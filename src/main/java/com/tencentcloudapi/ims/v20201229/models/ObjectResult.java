@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ObjectResult extends AbstractModel{
+public class ObjectResult extends AbstractModel {
 
     /**
     * 该字段用于返回实体识别出的实体场景结果，如二维码、logo、图片OCR等场景。

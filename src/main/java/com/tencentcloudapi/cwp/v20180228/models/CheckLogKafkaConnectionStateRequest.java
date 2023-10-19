@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckLogKafkaConnectionStateRequest extends AbstractModel{
+public class CheckLogKafkaConnectionStateRequest extends AbstractModel {
 
     /**
     * 接入方式,1公网域名接入，2支撑环境接入

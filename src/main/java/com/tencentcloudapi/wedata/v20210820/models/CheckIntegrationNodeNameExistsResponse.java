@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckIntegrationNodeNameExistsResponse extends AbstractModel{
+public class CheckIntegrationNodeNameExistsResponse extends AbstractModel {
 
     /**
     * 返回true代表存在，返回false代表不存在

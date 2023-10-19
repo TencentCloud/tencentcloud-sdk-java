@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunjing.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceOpenProVersionPrepaidResponse extends AbstractModel{
+public class InquiryPriceOpenProVersionPrepaidResponse extends AbstractModel {
 
     /**
     * 预支费用的原价，单位：元。

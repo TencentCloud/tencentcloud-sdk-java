@@ -64,18 +64,8 @@ public class ImsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateImageModerationAsyncTaskResponse CreateImageModerationAsyncTask(CreateImageModerationAsyncTaskRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateImageModerationAsyncTaskResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateImageModerationAsyncTaskResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateImageModerationAsyncTask");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateImageModerationAsyncTask", CreateImageModerationAsyncTaskResponse.class);
     }
 
     /**
@@ -123,18 +113,8 @@ public class ImsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ImageModerationResponse ImageModeration(ImageModerationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ImageModerationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ImageModerationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ImageModeration");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ImageModeration", ImageModerationResponse.class);
     }
 
 }

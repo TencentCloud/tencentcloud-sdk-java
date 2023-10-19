@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRecordTaskResponse extends AbstractModel{
+public class CreateRecordTaskResponse extends AbstractModel {
 
     /**
     * 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。

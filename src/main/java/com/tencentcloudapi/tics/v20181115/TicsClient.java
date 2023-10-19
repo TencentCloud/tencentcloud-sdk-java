@@ -45,18 +45,8 @@ public class TicsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDomainInfoResponse DescribeDomainInfo(DescribeDomainInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDomainInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDomainInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDomainInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDomainInfo", DescribeDomainInfoResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class TicsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeFileInfoResponse DescribeFileInfo(DescribeFileInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFileInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFileInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFileInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeFileInfo", DescribeFileInfoResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class TicsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeIpInfoResponse DescribeIpInfo(DescribeIpInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeIpInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeIpInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeIpInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeIpInfo", DescribeIpInfoResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class TicsClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeThreatInfoResponse DescribeThreatInfo(DescribeThreatInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeThreatInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeThreatInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeThreatInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeThreatInfo", DescribeThreatInfoResponse.class);
     }
 
 }

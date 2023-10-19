@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iir.v20200417.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeProductRequest extends AbstractModel{
+public class RecognizeProductRequest extends AbstractModel {
 
     /**
     * 图片限制：内测版仅支持jpg、jpeg，图片大小不超过1M，分辨率在25万到100万之间。 

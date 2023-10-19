@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFwSyncStatusRequest extends AbstractModel{
+public class DescribeFwSyncStatusRequest extends AbstractModel {
 
     /**
     * 查询的同步状态类型：Route,同步路由状态

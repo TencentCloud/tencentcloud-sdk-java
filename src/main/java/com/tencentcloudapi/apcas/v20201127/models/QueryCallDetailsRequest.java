@@ -16,11 +16,12 @@
 package com.tencentcloudapi.apcas.v20201127.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCallDetailsRequest extends AbstractModel{
+public class QueryCallDetailsRequest extends AbstractModel {
 
     /**
     * 请求类型 1:人群特征洞察统计 2:购车意向预测统计

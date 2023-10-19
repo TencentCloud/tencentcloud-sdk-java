@@ -16,11 +16,12 @@
 package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRulesSettingResponse extends AbstractModel{
+public class DescribeRulesSettingResponse extends AbstractModel {
 
     /**
     * 规则引擎可应用匹配请求的设置列表及其详细建议配置信息。

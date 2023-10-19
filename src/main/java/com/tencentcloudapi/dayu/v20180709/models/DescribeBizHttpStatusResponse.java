@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBizHttpStatusResponse extends AbstractModel{
+public class DescribeBizHttpStatusResponse extends AbstractModel {
 
     /**
     * 业务流量http状态码统计数据

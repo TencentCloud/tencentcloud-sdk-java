@@ -16,11 +16,12 @@
 package com.tencentcloudapi.batch.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitJobRequest extends AbstractModel{
+public class SubmitJobRequest extends AbstractModel {
 
     /**
     * 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。

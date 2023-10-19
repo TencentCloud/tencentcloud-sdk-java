@@ -16,11 +16,12 @@
 package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BootstrapAction extends AbstractModel{
+public class BootstrapAction extends AbstractModel {
 
     /**
     * 脚本位置，支持cos上的文件，且只支持https协议。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.sts.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryApiKeyResponse extends AbstractModel{
+public class QueryApiKeyResponse extends AbstractModel {
 
     /**
     * 密钥ID列表

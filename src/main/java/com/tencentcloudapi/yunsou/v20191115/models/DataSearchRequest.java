@@ -16,11 +16,12 @@
 package com.tencentcloudapi.yunsou.v20191115.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataSearchRequest extends AbstractModel{
+public class DataSearchRequest extends AbstractModel {
 
     /**
     * 云搜的业务ID，用以表明当前数据请求的业务

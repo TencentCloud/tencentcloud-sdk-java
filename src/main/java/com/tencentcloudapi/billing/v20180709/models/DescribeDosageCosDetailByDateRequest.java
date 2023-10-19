@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDosageCosDetailByDateRequest extends AbstractModel{
+public class DescribeDosageCosDetailByDateRequest extends AbstractModel {
 
     /**
     * 查询用量开始时间，例如：2020-09-01

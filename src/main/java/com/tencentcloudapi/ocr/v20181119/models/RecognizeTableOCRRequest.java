@@ -16,11 +16,12 @@
 package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeTableOCRRequest extends AbstractModel{
+public class RecognizeTableOCRRequest extends AbstractModel {
 
     /**
     * 图片/PDF的 Base64 值。

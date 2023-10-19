@@ -16,11 +16,12 @@
 package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountBalanceResponse extends AbstractModel{
+public class DescribeAccountBalanceResponse extends AbstractModel {
 
     /**
     * 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分

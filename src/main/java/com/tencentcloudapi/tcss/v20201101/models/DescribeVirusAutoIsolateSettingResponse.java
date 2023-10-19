@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVirusAutoIsolateSettingResponse extends AbstractModel{
+public class DescribeVirusAutoIsolateSettingResponse extends AbstractModel {
 
     /**
     * 自动隔离开关(true:开 false:关)

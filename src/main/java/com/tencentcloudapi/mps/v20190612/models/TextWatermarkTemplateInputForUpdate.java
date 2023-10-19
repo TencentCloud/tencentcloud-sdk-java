@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextWatermarkTemplateInputForUpdate extends AbstractModel{
+public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
 
     /**
     * 字体类型，目前可以支持两种：

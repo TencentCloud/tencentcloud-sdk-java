@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportVulDefencePluginEventRequest extends AbstractModel{
+public class ExportVulDefencePluginEventRequest extends AbstractModel {
 
     /**
     * Keywords: ip或者主机名模糊匹配，Quuid，Exception、Status精确匹配

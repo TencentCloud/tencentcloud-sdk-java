@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cws.v20180312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MonitorsDetail extends AbstractModel{
+public class MonitorsDetail extends AbstractModel {
 
     /**
     * 监控任务基础信息。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iecp.v20210914.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OperationLog extends AbstractModel{
+public class OperationLog extends AbstractModel {
 
     /**
     * 操作时间

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSnapshotByTimeOffsetTemplateRequest extends AbstractModel{
+public class DeleteSnapshotByTimeOffsetTemplateRequest extends AbstractModel {
 
     /**
     * 指定时间点截图模板唯一标识。

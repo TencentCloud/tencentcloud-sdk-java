@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageSpriteTemplatesResponse extends AbstractModel{
+public class DescribeImageSpriteTemplatesResponse extends AbstractModel {
 
     /**
     * 符合过滤条件的记录总数。

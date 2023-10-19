@@ -16,11 +16,12 @@
 package com.tencentcloudapi.iotvideo.v20201215.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceCommLogRequest extends AbstractModel{
+public class DescribeDeviceCommLogRequest extends AbstractModel {
 
     /**
     * 开始时间 13位时间戳 单位毫秒

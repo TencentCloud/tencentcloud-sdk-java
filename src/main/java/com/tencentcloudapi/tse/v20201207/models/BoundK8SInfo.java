@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BoundK8SInfo extends AbstractModel{
+public class BoundK8SInfo extends AbstractModel {
 
     /**
     * 绑定的kubernetes集群ID

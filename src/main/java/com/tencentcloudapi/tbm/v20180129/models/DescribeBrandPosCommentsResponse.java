@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tbm.v20180129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBrandPosCommentsResponse extends AbstractModel{
+public class DescribeBrandPosCommentsResponse extends AbstractModel {
 
     /**
     * 评论列表

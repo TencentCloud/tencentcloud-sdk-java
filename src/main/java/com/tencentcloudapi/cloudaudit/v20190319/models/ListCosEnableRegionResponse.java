@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cloudaudit.v20190319.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListCosEnableRegionResponse extends AbstractModel{
+public class ListCosEnableRegionResponse extends AbstractModel {
 
     /**
     * 云审计支持的cos可用区

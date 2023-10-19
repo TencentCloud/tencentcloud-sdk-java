@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTmpInstancesRequest extends AbstractModel{
+public class CreateTmpInstancesRequest extends AbstractModel {
 
     /**
     * 回档实例的ID列表，形如：tdsql-ow728lmc。

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.wav.v20210129.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryActivityListRequest extends AbstractModel{
+public class QueryActivityListRequest extends AbstractModel {
 
     /**
     * 分页游标，对应结果返回的NextCursor,首次请求保持为空

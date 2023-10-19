@@ -45,18 +45,8 @@ public class HcmClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EvaluationResponse Evaluation(EvaluationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EvaluationResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<EvaluationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "Evaluation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "Evaluation", EvaluationResponse.class);
     }
 
 }

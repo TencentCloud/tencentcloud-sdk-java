@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cme.v20191029.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OtherMaterial extends AbstractModel{
+public class OtherMaterial extends AbstractModel {
 
     /**
     * 素材媒体文件的播放 URL 地址。

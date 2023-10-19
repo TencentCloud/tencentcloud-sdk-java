@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportImageRequest extends AbstractModel{
+public class ImportImageRequest extends AbstractModel {
 
     /**
     * 导入镜像的操作系统架构，`x86_64` 或 `i386`

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.tag.v20180813.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTagsRequest extends AbstractModel{
+public class GetTagsRequest extends AbstractModel {
 
     /**
     * 从上一页的响应中获取的下一页的Token值。

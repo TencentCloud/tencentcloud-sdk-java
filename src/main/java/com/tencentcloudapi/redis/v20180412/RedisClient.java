@@ -45,18 +45,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AddReplicationInstanceResponse AddReplicationInstance(AddReplicationInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddReplicationInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddReplicationInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddReplicationInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AddReplicationInstance", AddReplicationInstanceResponse.class);
     }
 
     /**
@@ -66,18 +56,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AllocateWanAddressResponse AllocateWanAddress(AllocateWanAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AllocateWanAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AllocateWanAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AllocateWanAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AllocateWanAddress", AllocateWanAddressResponse.class);
     }
 
     /**
@@ -87,18 +67,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ApplyParamsTemplateResponse ApplyParamsTemplate(ApplyParamsTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyParamsTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ApplyParamsTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyParamsTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ApplyParamsTemplate", ApplyParamsTemplateResponse.class);
     }
 
     /**
@@ -108,18 +78,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AssociateSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "AssociateSecurityGroups", AssociateSecurityGroupsResponse.class);
     }
 
     /**
@@ -129,18 +89,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ChangeInstanceRoleResponse ChangeInstanceRole(ChangeInstanceRoleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ChangeInstanceRoleResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ChangeInstanceRoleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ChangeInstanceRole");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ChangeInstanceRole", ChangeInstanceRoleResponse.class);
     }
 
     /**
@@ -150,18 +100,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ChangeMasterInstanceResponse ChangeMasterInstance(ChangeMasterInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ChangeMasterInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ChangeMasterInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ChangeMasterInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ChangeMasterInstance", ChangeMasterInstanceResponse.class);
     }
 
     /**
@@ -171,18 +111,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ChangeReplicaToMasterResponse ChangeReplicaToMaster(ChangeReplicaToMasterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ChangeReplicaToMasterResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ChangeReplicaToMaster");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ChangeReplicaToMaster", ChangeReplicaToMasterResponse.class);
     }
 
     /**
@@ -192,18 +122,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CleanUpInstanceResponse CleanUpInstance(CleanUpInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CleanUpInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CleanUpInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CleanUpInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CleanUpInstance", CleanUpInstanceResponse.class);
     }
 
     /**
@@ -213,18 +133,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ClearInstanceResponse ClearInstance(ClearInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ClearInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ClearInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ClearInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ClearInstance", ClearInstanceResponse.class);
     }
 
     /**
@@ -234,18 +144,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CloneInstancesResponse CloneInstances(CloneInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloneInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CloneInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CloneInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CloneInstances", CloneInstancesResponse.class);
     }
 
     /**
@@ -255,18 +155,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CloseSSLResponse CloseSSL(CloseSSLRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloseSSLResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CloseSSLResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CloseSSL");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CloseSSL", CloseSSLResponse.class);
     }
 
     /**
@@ -276,18 +166,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateInstanceAccountResponse CreateInstanceAccount(CreateInstanceAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateInstanceAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateInstanceAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateInstanceAccount");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateInstanceAccount", CreateInstanceAccountResponse.class);
     }
 
     /**
@@ -297,18 +177,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateInstances", CreateInstancesResponse.class);
     }
 
     /**
@@ -318,18 +188,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateParamTemplateResponse CreateParamTemplate(CreateParamTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateParamTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateParamTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateParamTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateParamTemplate", CreateParamTemplateResponse.class);
     }
 
     /**
@@ -339,18 +199,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public CreateReplicationGroupResponse CreateReplicationGroup(CreateReplicationGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateReplicationGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateReplicationGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateReplicationGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "CreateReplicationGroup", CreateReplicationGroupResponse.class);
     }
 
     /**
@@ -360,18 +210,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteInstanceAccountResponse DeleteInstanceAccount(DeleteInstanceAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteInstanceAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteInstanceAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteInstanceAccount");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteInstanceAccount", DeleteInstanceAccountResponse.class);
     }
 
     /**
@@ -381,18 +221,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteParamTemplateResponse DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteParamTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteParamTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteParamTemplate", DeleteParamTemplateResponse.class);
     }
 
     /**
@@ -402,18 +232,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DeleteReplicationInstanceResponse DeleteReplicationInstance(DeleteReplicationInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteReplicationInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteReplicationInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteReplicationInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DeleteReplicationInstance", DeleteReplicationInstanceResponse.class);
     }
 
     /**
@@ -423,18 +243,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(DescribeAutoBackupConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAutoBackupConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAutoBackupConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAutoBackupConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeAutoBackupConfig", DescribeAutoBackupConfigResponse.class);
     }
 
     /**
@@ -444,18 +254,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBackupDownloadRestriction");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBackupDownloadRestriction", DescribeBackupDownloadRestrictionResponse.class);
     }
 
     /**
@@ -465,18 +265,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBackupUrlResponse DescribeBackupUrl(DescribeBackupUrlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupUrlResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBackupUrl");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBackupUrl", DescribeBackupUrlResponse.class);
     }
 
     /**
@@ -486,18 +276,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeBandwidthRangeResponse DescribeBandwidthRange(DescribeBandwidthRangeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBandwidthRangeResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBandwidthRangeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBandwidthRange");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeBandwidthRange", DescribeBandwidthRangeResponse.class);
     }
 
     /**
@@ -507,18 +287,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeCommonDBInstancesResponse DescribeCommonDBInstances(DescribeCommonDBInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCommonDBInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCommonDBInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeCommonDBInstances", DescribeCommonDBInstancesResponse.class);
     }
 
     /**
@@ -528,18 +298,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
     }
 
     /**
@@ -549,18 +309,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceAccountResponse DescribeInstanceAccount(DescribeInstanceAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceAccount");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceAccount", DescribeInstanceAccountResponse.class);
     }
 
     /**
@@ -570,18 +320,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceBackupsResponse DescribeInstanceBackups(DescribeInstanceBackupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceBackupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceBackupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceBackups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceBackups", DescribeInstanceBackupsResponse.class);
     }
 
     /**
@@ -591,18 +331,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfo(DescribeInstanceDTSInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceDTSInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceDTSInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceDTSInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceDTSInfo", DescribeInstanceDTSInfoResponse.class);
     }
 
     /**
@@ -612,18 +342,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceDealDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceDealDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceDealDetail", DescribeInstanceDealDetailResponse.class);
     }
 
     /**
@@ -633,18 +353,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceMonitorBigKeyResponse DescribeInstanceMonitorBigKey(DescribeInstanceMonitorBigKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceMonitorBigKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceMonitorBigKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceMonitorBigKey", DescribeInstanceMonitorBigKeyResponse.class);
     }
 
     /**
@@ -654,18 +364,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceMonitorBigKeySizeDistResponse DescribeInstanceMonitorBigKeySizeDist(DescribeInstanceMonitorBigKeySizeDistRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceMonitorBigKeySizeDist");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceMonitorBigKeySizeDist", DescribeInstanceMonitorBigKeySizeDistResponse.class);
     }
 
     /**
@@ -675,18 +375,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceMonitorBigKeyTypeDistResponse DescribeInstanceMonitorBigKeyTypeDist(DescribeInstanceMonitorBigKeyTypeDistRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceMonitorBigKeyTypeDist");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceMonitorBigKeyTypeDist", DescribeInstanceMonitorBigKeyTypeDistResponse.class);
     }
 
     /**
@@ -696,18 +386,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceMonitorHotKeyResponse DescribeInstanceMonitorHotKey(DescribeInstanceMonitorHotKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceMonitorHotKeyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorHotKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceMonitorHotKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceMonitorHotKey", DescribeInstanceMonitorHotKeyResponse.class);
     }
 
     /**
@@ -717,18 +397,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceMonitorSIPResponse DescribeInstanceMonitorSIP(DescribeInstanceMonitorSIPRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceMonitorSIPResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorSIPResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceMonitorSIP");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceMonitorSIP", DescribeInstanceMonitorSIPResponse.class);
     }
 
     /**
@@ -738,18 +408,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceMonitorTookDistResponse DescribeInstanceMonitorTookDist(DescribeInstanceMonitorTookDistRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceMonitorTookDistResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTookDistResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceMonitorTookDist");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceMonitorTookDist", DescribeInstanceMonitorTookDistResponse.class);
     }
 
     /**
@@ -759,18 +419,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceMonitorTopNCmdResponse DescribeInstanceMonitorTopNCmd(DescribeInstanceMonitorTopNCmdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceMonitorTopNCmd");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceMonitorTopNCmd", DescribeInstanceMonitorTopNCmdResponse.class);
     }
 
     /**
@@ -780,18 +430,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceMonitorTopNCmdTookResponse DescribeInstanceMonitorTopNCmdTook(DescribeInstanceMonitorTopNCmdTookRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceMonitorTopNCmdTook");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceMonitorTopNCmdTook", DescribeInstanceMonitorTopNCmdTookResponse.class);
     }
 
     /**
@@ -801,18 +441,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceNodeInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceNodeInfo", DescribeInstanceNodeInfoResponse.class);
     }
 
     /**
@@ -822,18 +452,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceParamRecords");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceParamRecords", DescribeInstanceParamRecordsResponse.class);
     }
 
     /**
@@ -843,18 +463,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceParams");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceParams", DescribeInstanceParamsResponse.class);
     }
 
     /**
@@ -864,18 +474,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceSecurityGroupResponse DescribeInstanceSecurityGroup(DescribeInstanceSecurityGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceSecurityGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceSecurityGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceSecurityGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceSecurityGroup", DescribeInstanceSecurityGroupResponse.class);
     }
 
     /**
@@ -885,18 +485,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceShardsResponse DescribeInstanceShards(DescribeInstanceShardsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceShardsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceShardsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceShards");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceShards", DescribeInstanceShardsResponse.class);
     }
 
     /**
@@ -906,18 +496,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstanceZoneInfoResponse DescribeInstanceZoneInfo(DescribeInstanceZoneInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceZoneInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceZoneInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceZoneInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstanceZoneInfo", DescribeInstanceZoneInfoResponse.class);
     }
 
     /**
@@ -927,18 +507,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstancesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
     }
 
     /**
@@ -948,18 +518,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMaintenanceWindowResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeMaintenanceWindow");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeMaintenanceWindow", DescribeMaintenanceWindowResponse.class);
     }
 
     /**
@@ -969,18 +529,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(DescribeParamTemplateInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeParamTemplateInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeParamTemplateInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeParamTemplateInfo", DescribeParamTemplateInfoResponse.class);
     }
 
     /**
@@ -990,18 +540,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeParamTemplatesResponse DescribeParamTemplates(DescribeParamTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeParamTemplatesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeParamTemplates");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeParamTemplates", DescribeParamTemplatesResponse.class);
     }
 
     /**
@@ -1011,18 +551,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeProductInfoResponse DescribeProductInfo(DescribeProductInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProductInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProductInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProductInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeProductInfo", DescribeProductInfoResponse.class);
     }
 
     /**
@@ -1032,18 +562,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeProjectSecurityGroupResponse DescribeProjectSecurityGroup(DescribeProjectSecurityGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProjectSecurityGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProjectSecurityGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeProjectSecurityGroup", DescribeProjectSecurityGroupResponse.class);
     }
 
     /**
@@ -1053,18 +573,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProjectSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeProjectSecurityGroups", DescribeProjectSecurityGroupsResponse.class);
     }
 
     /**
@@ -1074,18 +584,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeProxySlowLogResponse DescribeProxySlowLog(DescribeProxySlowLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProxySlowLogResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProxySlowLog");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeProxySlowLog", DescribeProxySlowLogResponse.class);
     }
 
     /**
@@ -1095,18 +595,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeReplicationGroupResponse DescribeReplicationGroup(DescribeReplicationGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeReplicationGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReplicationGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReplicationGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeReplicationGroup", DescribeReplicationGroupResponse.class);
     }
 
     /**
@@ -1116,18 +606,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSSLStatusResponse DescribeSSLStatus(DescribeSSLStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSSLStatusResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSSLStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSSLStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeSSLStatus", DescribeSSLStatusResponse.class);
     }
 
     /**
@@ -1137,18 +617,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeSlowLogResponse DescribeSlowLog(DescribeSlowLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSlowLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSlowLog");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeSlowLog", DescribeSlowLogResponse.class);
     }
 
     /**
@@ -1158,18 +628,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTaskInfo", DescribeTaskInfoResponse.class);
     }
 
     /**
@@ -1179,18 +639,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskListResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTaskList", DescribeTaskListResponse.class);
     }
 
     /**
@@ -1200,18 +650,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DescribeTendisSlowLogResponse DescribeTendisSlowLog(DescribeTendisSlowLogRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTendisSlowLogResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTendisSlowLog");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DescribeTendisSlowLog", DescribeTendisSlowLogResponse.class);
     }
 
     /**
@@ -1221,18 +661,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DestroyPostpaidInstanceResponse DestroyPostpaidInstance(DestroyPostpaidInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyPostpaidInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DestroyPostpaidInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DestroyPostpaidInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DestroyPostpaidInstance", DestroyPostpaidInstanceResponse.class);
     }
 
     /**
@@ -1242,18 +672,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DestroyPrepaidInstanceResponse DestroyPrepaidInstance(DestroyPrepaidInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DestroyPrepaidInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DestroyPrepaidInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DestroyPrepaidInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DestroyPrepaidInstance", DestroyPrepaidInstanceResponse.class);
     }
 
     /**
@@ -1263,18 +683,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisableReplicaReadonlyResponse DisableReplicaReadonly(DisableReplicaReadonlyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableReplicaReadonlyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DisableReplicaReadonlyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableReplicaReadonly");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DisableReplicaReadonly", DisableReplicaReadonlyResponse.class);
     }
 
     /**
@@ -1284,18 +694,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisassociateSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "DisassociateSecurityGroups", DisassociateSecurityGroupsResponse.class);
     }
 
     /**
@@ -1305,18 +705,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public EnableReplicaReadonlyResponse EnableReplicaReadonly(EnableReplicaReadonlyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableReplicaReadonlyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<EnableReplicaReadonlyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableReplicaReadonly");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "EnableReplicaReadonly", EnableReplicaReadonlyResponse.class);
     }
 
     /**
@@ -1326,18 +716,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceCreateInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "InquiryPriceCreateInstance", InquiryPriceCreateInstanceResponse.class);
     }
 
     /**
@@ -1347,18 +727,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceRenewInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "InquiryPriceRenewInstance", InquiryPriceRenewInstanceResponse.class);
     }
 
     /**
@@ -1368,18 +738,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public InquiryPriceUpgradeInstanceResponse InquiryPriceUpgradeInstance(InquiryPriceUpgradeInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceUpgradeInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceUpgradeInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "InquiryPriceUpgradeInstance", InquiryPriceUpgradeInstanceResponse.class);
     }
 
     /**
@@ -1389,18 +749,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public KillMasterGroupResponse KillMasterGroup(KillMasterGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<KillMasterGroupResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<KillMasterGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "KillMasterGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "KillMasterGroup", KillMasterGroupResponse.class);
     }
 
     /**
@@ -1410,18 +760,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ManualBackupInstanceResponse ManualBackupInstance(ManualBackupInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ManualBackupInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ManualBackupInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ManualBackupInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ManualBackupInstance", ManualBackupInstanceResponse.class);
     }
 
     /**
@@ -1431,18 +771,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModfiyInstancePasswordResponse ModfiyInstancePassword(ModfiyInstancePasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModfiyInstancePasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModfiyInstancePasswordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModfiyInstancePassword");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModfiyInstancePassword", ModfiyInstancePasswordResponse.class);
     }
 
     /**
@@ -1452,18 +782,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyAutoBackupConfigResponse ModifyAutoBackupConfig(ModifyAutoBackupConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAutoBackupConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAutoBackupConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAutoBackupConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyAutoBackupConfig", ModifyAutoBackupConfigResponse.class);
     }
 
     /**
@@ -1473,18 +793,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyBackupDownloadRestriction");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyBackupDownloadRestriction", ModifyBackupDownloadRestrictionResponse.class);
     }
 
     /**
@@ -1494,18 +804,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyConnectionConfigResponse ModifyConnectionConfig(ModifyConnectionConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyConnectionConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyConnectionConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyConnectionConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyConnectionConfig", ModifyConnectionConfigResponse.class);
     }
 
     /**
@@ -1515,18 +815,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDBInstanceSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyDBInstanceSecurityGroups", ModifyDBInstanceSecurityGroupsResponse.class);
     }
 
     /**
@@ -1536,18 +826,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyInstance", ModifyInstanceResponse.class);
     }
 
     /**
@@ -1557,18 +837,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyInstanceAccountResponse ModifyInstanceAccount(ModifyInstanceAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstanceAccountResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstanceAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstanceAccount");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyInstanceAccount", ModifyInstanceAccountResponse.class);
     }
 
     /**
@@ -1578,18 +848,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstanceParamsResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstanceParams");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyInstanceParams", ModifyInstanceParamsResponse.class);
     }
 
     /**
@@ -1599,18 +859,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(ModifyInstanceReadOnlyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyInstanceReadOnlyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyInstanceReadOnlyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyInstanceReadOnly");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyInstanceReadOnly", ModifyInstanceReadOnlyResponse.class);
     }
 
     /**
@@ -1620,18 +870,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMaintenanceWindowResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMaintenanceWindow");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyMaintenanceWindow", ModifyMaintenanceWindowResponse.class);
     }
 
     /**
@@ -1641,18 +881,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyNetworkConfigResponse ModifyNetworkConfig(ModifyNetworkConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyNetworkConfigResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyNetworkConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyNetworkConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyNetworkConfig", ModifyNetworkConfigResponse.class);
     }
 
     /**
@@ -1662,18 +892,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ModifyParamTemplateResponse ModifyParamTemplate(ModifyParamTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyParamTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ModifyParamTemplate", ModifyParamTemplateResponse.class);
     }
 
     /**
@@ -1683,18 +903,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public OpenSSLResponse OpenSSL(OpenSSLRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OpenSSLResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<OpenSSLResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "OpenSSL");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "OpenSSL", OpenSSLResponse.class);
     }
 
     /**
@@ -1704,18 +914,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ReleaseWanAddressResponse ReleaseWanAddress(ReleaseWanAddressRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReleaseWanAddressResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ReleaseWanAddressResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ReleaseWanAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ReleaseWanAddress", ReleaseWanAddressResponse.class);
     }
 
     /**
@@ -1725,18 +925,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RemoveReplicationInstanceResponse RemoveReplicationInstance(RemoveReplicationInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RemoveReplicationInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RemoveReplicationInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveReplicationInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RemoveReplicationInstance", RemoveReplicationInstanceResponse.class);
     }
 
     /**
@@ -1746,18 +936,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RenewInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RenewInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RenewInstance", RenewInstanceResponse.class);
     }
 
     /**
@@ -1767,18 +947,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public ResetPasswordResponse ResetPassword(ResetPasswordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ResetPasswordResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ResetPasswordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ResetPassword");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "ResetPassword", ResetPasswordResponse.class);
     }
 
     /**
@@ -1788,18 +958,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RestoreInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<RestoreInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RestoreInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "RestoreInstance", RestoreInstanceResponse.class);
     }
 
     /**
@@ -1809,18 +969,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public StartupInstanceResponse StartupInstance(StartupInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartupInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartupInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartupInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "StartupInstance", StartupInstanceResponse.class);
     }
 
     /**
@@ -1830,18 +980,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SwitchInstanceVipResponse SwitchInstanceVip(SwitchInstanceVipRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SwitchInstanceVipResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SwitchInstanceVipResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SwitchInstanceVip");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SwitchInstanceVip", SwitchInstanceVipResponse.class);
     }
 
     /**
@@ -1851,18 +991,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public SwitchProxyResponse SwitchProxy(SwitchProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SwitchProxyResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<SwitchProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SwitchProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "SwitchProxy", SwitchProxyResponse.class);
     }
 
     /**
@@ -1872,18 +1002,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeInstanceResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpgradeInstance", UpgradeInstanceResponse.class);
     }
 
     /**
@@ -1893,18 +1013,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpgradeInstanceVersionResponse UpgradeInstanceVersion(UpgradeInstanceVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeInstanceVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeInstanceVersion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpgradeInstanceVersion", UpgradeInstanceVersionResponse.class);
     }
 
     /**
@@ -1914,18 +1024,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpgradeProxyVersionResponse UpgradeProxyVersion(UpgradeProxyVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeProxyVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeProxyVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeProxyVersion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpgradeProxyVersion", UpgradeProxyVersionResponse.class);
     }
 
     /**
@@ -1935,18 +1035,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpgradeSmallVersionResponse UpgradeSmallVersion(UpgradeSmallVersionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeSmallVersionResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeSmallVersionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeSmallVersion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpgradeSmallVersion", UpgradeSmallVersionResponse.class);
     }
 
     /**
@@ -1956,18 +1046,8 @@ public class RedisClient extends AbstractClient{
      * @throws TencentCloudSDKException
      */
     public UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(UpgradeVersionToMultiAvailabilityZonesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
-        String rspStr = "";
         req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeVersionToMultiAvailabilityZones");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
+        return this.internalRequest(req, "UpgradeVersionToMultiAvailabilityZones", UpgradeVersionToMultiAvailabilityZonesResponse.class);
     }
 
 }

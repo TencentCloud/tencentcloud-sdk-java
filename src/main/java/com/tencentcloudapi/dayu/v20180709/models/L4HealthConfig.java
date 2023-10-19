@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L4HealthConfig extends AbstractModel{
+public class L4HealthConfig extends AbstractModel {
 
     /**
     * 转发协议，取值[TCP, UDP]

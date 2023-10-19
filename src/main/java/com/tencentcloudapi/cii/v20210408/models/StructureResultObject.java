@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cii.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StructureResultObject extends AbstractModel{
+public class StructureResultObject extends AbstractModel {
 
     /**
     * 0表示正常返回；1代表结果未生成；2代表任务执行失败

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.bmeip.v20180625.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindRsListResponse extends AbstractModel{
+public class UnbindRsListResponse extends AbstractModel {
 
     /**
     * 解绑操作的异步任务ID，可以通过查询EIP任务状态查询任务状态

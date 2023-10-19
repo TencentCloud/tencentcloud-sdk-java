@@ -16,11 +16,12 @@
 package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancerResponse extends AbstractModel{
+public class CreateLoadBalancerResponse extends AbstractModel {
 
     /**
     * 由负载均衡实例唯一 ID 组成的数组。

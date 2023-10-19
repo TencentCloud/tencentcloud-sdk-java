@@ -16,11 +16,12 @@
 package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetAppCountRequest extends AbstractModel{
+public class DescribeAssetAppCountRequest extends AbstractModel {
 
     /**
     * 搜索条件：搜索返回所有软件名包含Name的进程列表

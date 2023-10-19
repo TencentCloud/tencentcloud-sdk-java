@@ -16,11 +16,12 @@
 package com.tencentcloudapi.dsgc.v20190723.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDSPAAssessmentHighRiskTop10OverviewResponse extends AbstractModel{
+public class DescribeDSPAAssessmentHighRiskTop10OverviewResponse extends AbstractModel {
 
     /**
     * 含高风险资产TOP10的列表数据

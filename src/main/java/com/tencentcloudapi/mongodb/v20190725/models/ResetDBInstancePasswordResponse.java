@@ -16,11 +16,12 @@
 package com.tencentcloudapi.mongodb.v20190725.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetDBInstancePasswordResponse extends AbstractModel{
+public class ResetDBInstancePasswordResponse extends AbstractModel {
 
     /**
     * 异步请求Id，用户查询该流程的运行状态

@@ -16,11 +16,12 @@
 package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveTimeShiftBillInfoListRequest extends AbstractModel{
+public class DescribeLiveTimeShiftBillInfoListRequest extends AbstractModel {
 
     /**
     * UTC开始时间，支持最近三个月的查询，查询时间最长跨度为一个月。
