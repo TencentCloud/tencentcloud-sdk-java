@@ -52,6 +52,14 @@ public class ISPCounter extends AbstractModel {
     private ZoneInstanceInfo [] ZoneInstanceInfoSet;
 
     /**
+    * 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProviderInstanceNum")
+    @Expose
+    private Long ProviderInstanceNum;
+
+    /**
      * Get 运营商名称 
      * @return ProviderName 运营商名称
      */
@@ -86,7 +94,9 @@ public class ISPCounter extends AbstractModel {
     /**
      * Get 实例数量 
      * @return ProvederInstanceNum 实例数量
+     * @deprecated
      */
+    @Deprecated
     public Long getProvederInstanceNum() {
         return this.ProvederInstanceNum;
     }
@@ -94,7 +104,9 @@ public class ISPCounter extends AbstractModel {
     /**
      * Set 实例数量
      * @param ProvederInstanceNum 实例数量
+     * @deprecated
      */
+    @Deprecated
     public void setProvederInstanceNum(Long ProvederInstanceNum) {
         this.ProvederInstanceNum = ProvederInstanceNum;
     }
@@ -113,6 +125,26 @@ public class ISPCounter extends AbstractModel {
      */
     public void setZoneInstanceInfoSet(ZoneInstanceInfo [] ZoneInstanceInfoSet) {
         this.ZoneInstanceInfoSet = ZoneInstanceInfoSet;
+    }
+
+    /**
+     * Get 实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProviderInstanceNum 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProviderInstanceNum() {
+        return this.ProviderInstanceNum;
+    }
+
+    /**
+     * Set 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProviderInstanceNum 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProviderInstanceNum(Long ProviderInstanceNum) {
+        this.ProviderInstanceNum = ProviderInstanceNum;
     }
 
     public ISPCounter() {
@@ -138,6 +170,9 @@ public class ISPCounter extends AbstractModel {
                 this.ZoneInstanceInfoSet[i] = new ZoneInstanceInfo(source.ZoneInstanceInfoSet[i]);
             }
         }
+        if (source.ProviderInstanceNum != null) {
+            this.ProviderInstanceNum = new Long(source.ProviderInstanceNum);
+        }
     }
 
 
@@ -149,6 +184,7 @@ public class ISPCounter extends AbstractModel {
         this.setParamSimple(map, prefix + "ProviderNodeNum", this.ProviderNodeNum);
         this.setParamSimple(map, prefix + "ProvederInstanceNum", this.ProvederInstanceNum);
         this.setParamArrayObj(map, prefix + "ZoneInstanceInfoSet.", this.ZoneInstanceInfoSet);
+        this.setParamSimple(map, prefix + "ProviderInstanceNum", this.ProviderInstanceNum);
 
     }
 }

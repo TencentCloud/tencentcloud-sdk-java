@@ -215,6 +215,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *项目内-用户角色列表
+     * @param req DescribeUserRoleProjectListRequest
+     * @return DescribeUserRoleProjectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserRoleProjectListResponse DescribeUserRoleProjectList(DescribeUserRoleProjectListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserRoleProjectList", DescribeUserRoleProjectListResponse.class);
+    }
+
+    /**
      *更新数据源
      * @param req ModifyDatasourceRequest
      * @return ModifyDatasourceResponse

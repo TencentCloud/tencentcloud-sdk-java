@@ -59,7 +59,7 @@ public class AdvancedAuthenticationTypeA extends AbstractModel {
     private Boolean ExpireTimeRequired;
 
     /**
-    * Url组成格式，如：${private_key}${schema}${host}${full_uri。
+    * URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
     */
     @SerializedName("Format")
     @Expose
@@ -181,16 +181,16 @@ public class AdvancedAuthenticationTypeA extends AbstractModel {
     }
 
     /**
-     * Get Url组成格式，如：${private_key}${schema}${host}${full_uri。 
-     * @return Format Url组成格式，如：${private_key}${schema}${host}${full_uri。
+     * Get URL 组成格式，如：${private_key}${schema}${host}${full_uri}。 
+     * @return Format URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Url组成格式，如：${private_key}${schema}${host}${full_uri。
-     * @param Format Url组成格式，如：${private_key}${schema}${host}${full_uri。
+     * Set URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
+     * @param Format URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
      */
     public void setFormat(String Format) {
         this.Format = Format;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateChannelOrganizationInfoChangeUrlResponse extends AbstractModel {
 
     /**
-    * 创建的企业信息变更链接。
+    * 创建的企业信息变更链接。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。
     */
     @SerializedName("Url")
     @Expose
@@ -45,16 +45,16 @@ public class CreateChannelOrganizationInfoChangeUrlResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 创建的企业信息变更链接。 
-     * @return Url 创建的企业信息变更链接。
+     * Get 创建的企业信息变更链接。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。 
+     * @return Url 创建的企业信息变更链接。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 创建的企业信息变更链接。
-     * @param Url 创建的企业信息变更链接。
+     * Set 创建的企业信息变更链接。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。
+     * @param Url 创建的企业信息变更链接。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。
      */
     public void setUrl(String Url) {
         this.Url = Url;

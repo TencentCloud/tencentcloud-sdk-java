@@ -66,6 +66,14 @@ public class Target extends AbstractModel {
     private String EniIp;
 
     /**
+    * 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
      * Get 后端服务的监听端口。
 注意：绑定CVM（云服务器）或ENI（弹性网卡）时必传此参数
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -173,6 +181,26 @@ public class Target extends AbstractModel {
         this.EniIp = EniIp;
     }
 
+    /**
+     * Get 标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public Target() {
     }
 
@@ -196,6 +224,9 @@ public class Target extends AbstractModel {
         if (source.EniIp != null) {
             this.EniIp = new String(source.EniIp);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -208,6 +239,7 @@ public class Target extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "EniIp", this.EniIp);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

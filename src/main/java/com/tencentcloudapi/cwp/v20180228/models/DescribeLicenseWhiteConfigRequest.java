@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeLicenseWhiteConfigRequest extends AbstractModel {
 
+    /**
+    * 规则名称,例如: cwp
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
+     * Get 规则名称,例如: cwp 
+     * @return RuleName 规则名称,例如: cwp
+     */
+    public String getRuleName() {
+        return this.RuleName;
+    }
+
+    /**
+     * Set 规则名称,例如: cwp
+     * @param RuleName 规则名称,例如: cwp
+     */
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
+    }
+
     public DescribeLicenseWhiteConfigRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeLicenseWhiteConfigRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLicenseWhiteConfigRequest(DescribeLicenseWhiteConfigRequest source) {
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeLicenseWhiteConfigRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
 
     }
 }

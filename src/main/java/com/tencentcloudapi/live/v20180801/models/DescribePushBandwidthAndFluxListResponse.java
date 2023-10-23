@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class DescribePushBandwidthAndFluxListResponse extends AbstractModel {
 
     /**
-    * 峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+    * 峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("PeakBandwidthTime")
     @Expose
@@ -38,7 +41,10 @@ public class DescribePushBandwidthAndFluxListResponse extends AbstractModel {
     private Float PeakBandwidth;
 
     /**
-    * 95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+    * 95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("P95PeakBandwidthTime")
     @Expose
@@ -73,16 +79,28 @@ public class DescribePushBandwidthAndFluxListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。 
-     * @return PeakBandwidthTime 峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * Get 峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return PeakBandwidthTime 峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getPeakBandwidthTime() {
         return this.PeakBandwidthTime;
     }
 
     /**
-     * Set 峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
-     * @param PeakBandwidthTime 峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * Set 峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param PeakBandwidthTime 峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setPeakBandwidthTime(String PeakBandwidthTime) {
         this.PeakBandwidthTime = PeakBandwidthTime;
@@ -105,16 +123,28 @@ public class DescribePushBandwidthAndFluxListResponse extends AbstractModel {
     }
 
     /**
-     * Get 95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。 
-     * @return P95PeakBandwidthTime 95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * Get 95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return P95PeakBandwidthTime 95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getP95PeakBandwidthTime() {
         return this.P95PeakBandwidthTime;
     }
 
     /**
-     * Set 95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
-     * @param P95PeakBandwidthTime 95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * Set 95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param P95PeakBandwidthTime 95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setP95PeakBandwidthTime(String P95PeakBandwidthTime) {
         this.P95PeakBandwidthTime = P95PeakBandwidthTime;

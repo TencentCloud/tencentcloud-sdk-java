@@ -31,7 +31,7 @@ public class CreateHiveTableRequest extends AbstractModel {
     private String DatasourceId;
 
     /**
-    * 数据库
+    * 数据库名称
     */
     @SerializedName("Database")
     @Expose
@@ -82,16 +82,16 @@ public class CreateHiveTableRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库 
-     * @return Database 数据库
+     * Get 数据库名称 
+     * @return Database 数据库名称
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set 数据库
-     * @param Database 数据库
+     * Set 数据库名称
+     * @param Database 数据库名称
      */
     public void setDatabase(String Database) {
         this.Database = Database;

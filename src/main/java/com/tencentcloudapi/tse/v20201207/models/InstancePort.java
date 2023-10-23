@@ -40,6 +40,22 @@ public class InstancePort extends AbstractModel {
     private String HttpsPort;
 
     /**
+    * 监听的 tcp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TcpPort")
+    @Expose
+    private String TcpPort;
+
+    /**
+    * 监听的 udp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UdpPort")
+    @Expose
+    private String UdpPort;
+
+    /**
      * Get 监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HttpPort 监听的 http 端口范围。
@@ -79,6 +95,46 @@ public class InstancePort extends AbstractModel {
         this.HttpsPort = HttpsPort;
     }
 
+    /**
+     * Get 监听的 tcp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TcpPort 监听的 tcp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTcpPort() {
+        return this.TcpPort;
+    }
+
+    /**
+     * Set 监听的 tcp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TcpPort 监听的 tcp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTcpPort(String TcpPort) {
+        this.TcpPort = TcpPort;
+    }
+
+    /**
+     * Get 监听的 udp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UdpPort 监听的 udp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUdpPort() {
+        return this.UdpPort;
+    }
+
+    /**
+     * Set 监听的 udp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UdpPort 监听的 udp 端口范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUdpPort(String UdpPort) {
+        this.UdpPort = UdpPort;
+    }
+
     public InstancePort() {
     }
 
@@ -93,6 +149,12 @@ public class InstancePort extends AbstractModel {
         if (source.HttpsPort != null) {
             this.HttpsPort = new String(source.HttpsPort);
         }
+        if (source.TcpPort != null) {
+            this.TcpPort = new String(source.TcpPort);
+        }
+        if (source.UdpPort != null) {
+            this.UdpPort = new String(source.UdpPort);
+        }
     }
 
 
@@ -102,6 +164,8 @@ public class InstancePort extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HttpPort", this.HttpPort);
         this.setParamSimple(map, prefix + "HttpsPort", this.HttpsPort);
+        this.setParamSimple(map, prefix + "TcpPort", this.TcpPort);
+        this.setParamSimple(map, prefix + "UdpPort", this.UdpPort);
 
     }
 }

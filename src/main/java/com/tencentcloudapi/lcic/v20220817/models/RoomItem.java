@@ -170,6 +170,30 @@ public class RoomItem extends AbstractModel {
     private Long EndDelayTime;
 
     /**
+    * 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LiveType")
+    @Expose
+    private Long LiveType;
+
+    /**
+    * 伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordLiveUrl")
+    @Expose
+    private String RecordLiveUrl;
+
+    /**
+    * 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableAutoStart")
+    @Expose
+    private Long EnableAutoStart;
+
+    /**
      * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 名称
@@ -537,6 +561,66 @@ public class RoomItem extends AbstractModel {
         this.EndDelayTime = EndDelayTime;
     }
 
+    /**
+     * Get 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLiveType() {
+        return this.LiveType;
+    }
+
+    /**
+     * Set 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLiveType(Long LiveType) {
+        this.LiveType = LiveType;
+    }
+
+    /**
+     * Get 伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordLiveUrl 伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordLiveUrl() {
+        return this.RecordLiveUrl;
+    }
+
+    /**
+     * Set 伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordLiveUrl 伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordLiveUrl(String RecordLiveUrl) {
+        this.RecordLiveUrl = RecordLiveUrl;
+    }
+
+    /**
+     * Get 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableAutoStart() {
+        return this.EnableAutoStart;
+    }
+
+    /**
+     * Set 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableAutoStart(Long EnableAutoStart) {
+        this.EnableAutoStart = EnableAutoStart;
+    }
+
     public RoomItem() {
     }
 
@@ -599,6 +683,15 @@ public class RoomItem extends AbstractModel {
         if (source.EndDelayTime != null) {
             this.EndDelayTime = new Long(source.EndDelayTime);
         }
+        if (source.LiveType != null) {
+            this.LiveType = new Long(source.LiveType);
+        }
+        if (source.RecordLiveUrl != null) {
+            this.RecordLiveUrl = new String(source.RecordLiveUrl);
+        }
+        if (source.EnableAutoStart != null) {
+            this.EnableAutoStart = new Long(source.EnableAutoStart);
+        }
     }
 
 
@@ -624,6 +717,9 @@ public class RoomItem extends AbstractModel {
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
         this.setParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
+        this.setParamSimple(map, prefix + "LiveType", this.LiveType);
+        this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
+        this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
 
     }
 }

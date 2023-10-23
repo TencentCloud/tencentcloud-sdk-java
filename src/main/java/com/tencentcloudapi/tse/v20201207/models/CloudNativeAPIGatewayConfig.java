@@ -109,12 +109,20 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
     private String Description;
 
     /**
-    * 负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+    * 负载均衡的规格类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaType")
     @Expose
     private String SlaType;
+
+    /**
+    * clb规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaName")
+    @Expose
+    private String SlaName;
 
     /**
     * clb vip
@@ -389,9 +397,9 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+     * Get 负载均衡的规格类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaType 负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+     * @return SlaType 负载均衡的规格类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaType() {
@@ -399,13 +407,33 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
     }
 
     /**
-     * Set 负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+     * Set 负载均衡的规格类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaType 负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+     * @param SlaType 负载均衡的规格类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
+    }
+
+    /**
+     * Get clb规格名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaName clb规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSlaName() {
+        return this.SlaName;
+    }
+
+    /**
+     * Set clb规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaName clb规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaName(String SlaName) {
+        this.SlaName = SlaName;
     }
 
     /**
@@ -612,6 +640,9 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
         if (source.SlaType != null) {
             this.SlaType = new String(source.SlaType);
         }
+        if (source.SlaName != null) {
+            this.SlaName = new String(source.SlaName);
+        }
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
@@ -655,6 +686,7 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "SlaType", this.SlaType);
+        this.setParamSimple(map, prefix + "SlaName", this.SlaName);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "MultiZoneFlag", this.MultiZoneFlag);

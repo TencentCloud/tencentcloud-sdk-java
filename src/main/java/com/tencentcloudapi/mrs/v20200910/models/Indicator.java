@@ -32,6 +32,14 @@ public class Indicator extends AbstractModel {
     private IndicatorItem [] Indicators;
 
     /**
+    * 检验报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BlockTitle")
+    @Expose
+    private BlockTitle [] BlockTitle;
+
+    /**
      * Get 检验指标项
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Indicators 检验指标项
@@ -51,6 +59,26 @@ public class Indicator extends AbstractModel {
         this.Indicators = Indicators;
     }
 
+    /**
+     * Get 检验报告块标题
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BlockTitle 检验报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockTitle [] getBlockTitle() {
+        return this.BlockTitle;
+    }
+
+    /**
+     * Set 检验报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockTitle 检验报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBlockTitle(BlockTitle [] BlockTitle) {
+        this.BlockTitle = BlockTitle;
+    }
+
     public Indicator() {
     }
 
@@ -65,6 +93,12 @@ public class Indicator extends AbstractModel {
                 this.Indicators[i] = new IndicatorItem(source.Indicators[i]);
             }
         }
+        if (source.BlockTitle != null) {
+            this.BlockTitle = new BlockTitle[source.BlockTitle.length];
+            for (int i = 0; i < source.BlockTitle.length; i++) {
+                this.BlockTitle[i] = new BlockTitle(source.BlockTitle[i]);
+            }
+        }
     }
 
 
@@ -73,6 +107,7 @@ public class Indicator extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Indicators.", this.Indicators);
+        this.setParamArrayObj(map, prefix + "BlockTitle.", this.BlockTitle);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 实例组ID
+    * 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例组ID 
-     * @return InstanceId 实例组ID
+     * Get 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。 
+     * @return InstanceId 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例组ID
-     * @param InstanceId 实例组ID
+     * Set 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
+     * @param InstanceId 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

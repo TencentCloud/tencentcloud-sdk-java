@@ -39,7 +39,7 @@ public class DetectAuthRequest extends AbstractModel {
 
     /**
     * 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
     */
     @SerializedName("IdCard")
     @Expose
@@ -143,9 +143,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 
     /**
      * Get 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。 
+规则：a-z，A-Z，0-9组合。最长长度32位。 
      * @return IdCard 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
      */
     public String getIdCard() {
         return this.IdCard;
@@ -153,9 +153,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 
     /**
      * Set 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
      * @param IdCard 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;

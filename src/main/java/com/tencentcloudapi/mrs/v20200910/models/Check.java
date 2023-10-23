@@ -40,6 +40,14 @@ public class Check extends AbstractModel {
     private Summary Summary;
 
     /**
+    * 检查报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BlockTitle")
+    @Expose
+    private BlockTitle [] BlockTitle;
+
+    /**
      * Get 描述
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Desc 描述
@@ -79,6 +87,26 @@ public class Check extends AbstractModel {
         this.Summary = Summary;
     }
 
+    /**
+     * Get 检查报告块标题
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BlockTitle 检查报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockTitle [] getBlockTitle() {
+        return this.BlockTitle;
+    }
+
+    /**
+     * Set 检查报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockTitle 检查报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBlockTitle(BlockTitle [] BlockTitle) {
+        this.BlockTitle = BlockTitle;
+    }
+
     public Check() {
     }
 
@@ -93,6 +121,12 @@ public class Check extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new Summary(source.Summary);
         }
+        if (source.BlockTitle != null) {
+            this.BlockTitle = new BlockTitle[source.BlockTitle.length];
+            for (int i = 0; i < source.BlockTitle.length; i++) {
+                this.BlockTitle[i] = new BlockTitle(source.BlockTitle[i]);
+            }
+        }
     }
 
 
@@ -102,6 +136,7 @@ public class Check extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Desc.", this.Desc);
         this.setParamObj(map, prefix + "Summary.", this.Summary);
+        this.setParamArrayObj(map, prefix + "BlockTitle.", this.BlockTitle);
 
     }
 }

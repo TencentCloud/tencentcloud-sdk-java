@@ -31,14 +31,14 @@ public class DescribeCdnDomainLogsRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 开始时间，如 2019-09-04 00:00:00
+    * 开始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，如 2019-09-04 12:00:00
+    * 结束时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -59,19 +59,18 @@ public class DescribeCdnDomainLogsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
+    * 指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志
+    * 指定下载日志的类型，可取值有：
+<li>access：访问日志</li>
     */
     @SerializedName("LogType")
     @Expose
@@ -94,32 +93,32 @@ access：访问日志
     }
 
     /**
-     * Get 开始时间，如 2019-09-04 00:00:00 
-     * @return StartTime 开始时间，如 2019-09-04 00:00:00
+     * Get 开始时间 
+     * @return StartTime 开始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，如 2019-09-04 00:00:00
-     * @param StartTime 开始时间，如 2019-09-04 00:00:00
+     * Set 开始时间
+     * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，如 2019-09-04 12:00:00 
-     * @return EndTime 结束时间，如 2019-09-04 12:00:00
+     * Get 结束时间 
+     * @return EndTime 结束时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，如 2019-09-04 12:00:00
-     * @param EndTime 结束时间，如 2019-09-04 12:00:00
+     * Set 结束时间
+     * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -158,52 +157,48 @@ access：访问日志
     }
 
     /**
-     * Get 指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland 
-     * @return Area 指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
+     * Get 指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li> 
+     * @return Area 指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
-     * @param Area 指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
+     * Set 指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
+     * @param Area 指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志 
-     * @return LogType 指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志
+     * Get 指定下载日志的类型，可取值有：
+<li>access：访问日志</li> 
+     * @return LogType 指定下载日志的类型，可取值有：
+<li>access：访问日志</li>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志
-     * @param LogType 指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志
+     * Set 指定下载日志的类型，可取值有：
+<li>access：访问日志</li>
+     * @param LogType 指定下载日志的类型，可取值有：
+<li>access：访问日志</li>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

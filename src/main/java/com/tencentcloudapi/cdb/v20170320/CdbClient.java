@@ -707,6 +707,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBInstanceLogToCLS)用于查询实例慢日志、错误日志投递CLS的配置，通过appId、Region以及实例ID过滤出当前实例日志投递CLS的配置。
+     * @param req DescribeDBInstanceLogToCLSRequest
+     * @return DescribeDBInstanceLogToCLSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceLogToCLSResponse DescribeDBInstanceLogToCLS(DescribeDBInstanceLogToCLSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceLogToCLS", DescribeDBInstanceLogToCLSResponse.class);
+    }
+
+    /**
      *本接口(DescribeDBInstanceRebootTime)用于查询云数据库实例重启预计所需的时间。
      * @param req DescribeDBInstanceRebootTimeRequest
      * @return DescribeDBInstanceRebootTimeResponse
@@ -1263,6 +1274,17 @@ public class CdbClient extends AbstractClient{
     public ModifyCdbProxyParamResponse ModifyCdbProxyParam(ModifyCdbProxyParamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCdbProxyParam", ModifyCdbProxyParamResponse.class);
+    }
+
+    /**
+     *开启/关闭CDB慢日志、错误日志投递CLS
+     * @param req ModifyDBInstanceLogToCLSRequest
+     * @return ModifyDBInstanceLogToCLSResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceLogToCLSResponse ModifyDBInstanceLogToCLS(ModifyDBInstanceLogToCLSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceLogToCLS", ModifyDBInstanceLogToCLSResponse.class);
     }
 
     /**

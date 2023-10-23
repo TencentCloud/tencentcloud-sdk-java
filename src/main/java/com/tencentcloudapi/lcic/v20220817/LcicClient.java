@@ -613,6 +613,28 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *1、按照指定身份发送消息，目前支持表情消息、图片消息、文本消息。
+     * @param req SendRoomNormalMessageRequest
+     * @return SendRoomNormalMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendRoomNormalMessageResponse SendRoomNormalMessage(SendRoomNormalMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendRoomNormalMessage", SendRoomNormalMessageResponse.class);
+    }
+
+    /**
+     *App 管理员可以通过该接口在群组中发送通知、公告等。目前仅支持文本消息。
+     * @param req SendRoomNotificationMessageRequest
+     * @return SendRoomNotificationMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendRoomNotificationMessageResponse SendRoomNotificationMessage(SendRoomNotificationMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendRoomNotificationMessage", SendRoomNotificationMessageResponse.class);
+    }
+
+    /**
      *设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
      * @param req SetAppCustomContentRequest
      * @return SetAppCustomContentResponse

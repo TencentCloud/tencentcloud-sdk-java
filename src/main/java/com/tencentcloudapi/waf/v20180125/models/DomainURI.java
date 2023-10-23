@@ -38,6 +38,14 @@ public class DomainURI extends AbstractModel {
     private String Edition;
 
     /**
+    * 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -69,6 +77,26 @@ public class DomainURI extends AbstractModel {
         this.Edition = Edition;
     }
 
+    /**
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceID 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceID 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
     public DomainURI() {
     }
 
@@ -83,6 +111,9 @@ public class DomainURI extends AbstractModel {
         if (source.Edition != null) {
             this.Edition = new String(source.Edition);
         }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class DomainURI extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
 
     }
 }

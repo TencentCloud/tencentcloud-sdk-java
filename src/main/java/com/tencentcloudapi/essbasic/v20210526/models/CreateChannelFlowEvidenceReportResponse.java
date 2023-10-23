@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
 
     /**
-    * 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
-
+    * 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportId")
@@ -33,11 +32,11 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
     private String ReportId;
 
     /**
-    * 出征任务的执行状态,状态列表如下
+    * 出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -59,11 +58,9 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
-
+     * Get 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReportId 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
-
+     * @return ReportId 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportId() {
@@ -71,11 +68,9 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
     }
 
     /**
-     * Set 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
-
+     * Set 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReportId 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
-
+     * @param ReportId 出证报告 ID，可用于<a href="https://qian.tencent.com/developers/partnerApis/certificate/DescribeChannelFlowEvidenceReport" target="_blank">获取出证报告任务执行结果</a>查询出证任务结果和出证PDF的下载URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportId(String ReportId) {
@@ -83,32 +78,32 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel {
     }
 
     /**
-     * Get 出征任务的执行状态,状态列表如下
+     * Get 出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败 
-     * @return Status 出征任务的执行状态,状态列表如下
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul> 
+     * @return Status 出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 出征任务的执行状态,状态列表如下
+     * Set 出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败
-     * @param Status 出征任务的执行状态,状态列表如下
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+     * @param Status 出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

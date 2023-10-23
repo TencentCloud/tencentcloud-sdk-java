@@ -399,6 +399,14 @@ pause
     private ResourcePackage [] ResourcePackages;
 
     /**
+    * 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceIndexMode")
+    @Expose
+    private String InstanceIndexMode;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1274,6 +1282,26 @@ pause
         this.ResourcePackages = ResourcePackages;
     }
 
+    /**
+     * Get 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceIndexMode() {
+        return this.InstanceIndexMode;
+    }
+
+    /**
+     * Set 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceIndexMode(String InstanceIndexMode) {
+        this.InstanceIndexMode = InstanceIndexMode;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1453,6 +1481,9 @@ pause
                 this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
             }
         }
+        if (source.InstanceIndexMode != null) {
+            this.InstanceIndexMode = new String(source.InstanceIndexMode);
+        }
     }
 
 
@@ -1512,6 +1543,7 @@ pause
         this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
         this.setParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+        this.setParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
 
     }
 }

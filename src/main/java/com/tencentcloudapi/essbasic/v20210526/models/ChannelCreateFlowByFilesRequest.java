@@ -106,9 +106,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel {
     * 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
     */
     @SerializedName("Unordered")
     @Expose
@@ -178,9 +176,7 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
     * 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件`
+**注**: `发起后添加控件功能不支持添加签批控件`
     */
     @SerializedName("SignBeanTag")
     @Expose
@@ -442,15 +438,11 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
      * Get 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序` 
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序` 
      * @return Unordered 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
      */
     public Boolean getUnordered() {
         return this.Unordered;
@@ -460,15 +452,11 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
      * Set 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
      * @param Unordered 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;
@@ -658,15 +646,11 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
      * Get 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件` 
+**注**: `发起后添加控件功能不支持添加签批控件` 
      * @return SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件`
+**注**: `发起后添加控件功能不支持添加签批控件`
      */
     public Long getSignBeanTag() {
         return this.SignBeanTag;
@@ -676,15 +660,11 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
      * Set 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件`
+**注**: `发起后添加控件功能不支持添加签批控件`
      * @param SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件`
+**注**: `发起后添加控件功能不支持添加签批控件`
      */
     public void setSignBeanTag(Long SignBeanTag) {
         this.SignBeanTag = SignBeanTag;

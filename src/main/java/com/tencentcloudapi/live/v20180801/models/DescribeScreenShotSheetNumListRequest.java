@@ -36,7 +36,7 @@ public class DescribeScreenShotSheetNumListRequest extends AbstractModel {
     * 结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -91,11 +91,11 @@ public class DescribeScreenShotSheetNumListRequest extends AbstractModel {
      * Get 结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。 
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。 
      * @return EndTime 结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -105,11 +105,11 @@ public class DescribeScreenShotSheetNumListRequest extends AbstractModel {
      * Set 结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。
      * @param EndTime 结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

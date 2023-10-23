@@ -39,7 +39,6 @@ public class SendChatMessageRequest extends AbstractModel {
 
     /**
     * 会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。
     */
@@ -99,11 +98,9 @@ public class SendChatMessageRequest extends AbstractModel {
 
     /**
      * Get 会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。 
      * @return ModelVersion 会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。
      */
@@ -113,11 +110,9 @@ public class SendChatMessageRequest extends AbstractModel {
 
     /**
      * Set 会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。
      * @param ModelVersion 会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。
      */

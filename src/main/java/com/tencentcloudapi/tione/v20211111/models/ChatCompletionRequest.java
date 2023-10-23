@@ -25,7 +25,6 @@ public class ChatCompletionRequest extends AbstractModel {
 
     /**
     * 对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
     */
     @SerializedName("Model")
@@ -62,10 +61,8 @@ public class ChatCompletionRequest extends AbstractModel {
 
     /**
      * Get 对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。 
      * @return Model 对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
      */
     public String getModel() {
@@ -74,10 +71,8 @@ public class ChatCompletionRequest extends AbstractModel {
 
     /**
      * Set 对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
      * @param Model 对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
      */
     public void setModel(String Model) {

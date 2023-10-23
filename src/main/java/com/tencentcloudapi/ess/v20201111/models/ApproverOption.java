@@ -54,6 +54,20 @@ public class ApproverOption extends AbstractModel {
     private Long FillType;
 
     /**
+    * 签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
+    */
+    @SerializedName("FlowReadLimit")
+    @Expose
+    private String FlowReadLimit;
+
+    /**
      * Get 签署方是否可以拒签
 
 <ul><li> **false** : ( 默认)可以拒签</li>
@@ -137,6 +151,50 @@ public class ApproverOption extends AbstractModel {
         this.FillType = FillType;
     }
 
+    /**
+     * Get 签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul> 
+     * @return FlowReadLimit 签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
+     */
+    public String getFlowReadLimit() {
+        return this.FlowReadLimit;
+    }
+
+    /**
+     * Set 签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
+     * @param FlowReadLimit 签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
+     */
+    public void setFlowReadLimit(String FlowReadLimit) {
+        this.FlowReadLimit = FlowReadLimit;
+    }
+
     public ApproverOption() {
     }
 
@@ -154,6 +212,9 @@ public class ApproverOption extends AbstractModel {
         if (source.FillType != null) {
             this.FillType = new Long(source.FillType);
         }
+        if (source.FlowReadLimit != null) {
+            this.FlowReadLimit = new String(source.FlowReadLimit);
+        }
     }
 
 
@@ -164,6 +225,7 @@ public class ApproverOption extends AbstractModel {
         this.setParamSimple(map, prefix + "NoRefuse", this.NoRefuse);
         this.setParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
 
     }
 }

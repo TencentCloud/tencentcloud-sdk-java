@@ -95,6 +95,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *添加组织身份
+     * @param req CreateOrganizationIdentityRequest
+     * @return CreateOrganizationIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationIdentityResponse CreateOrganizationIdentity(CreateOrganizationIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganizationIdentity", CreateOrganizationIdentityResponse.class);
+    }
+
+    /**
      *创建组织成员
      * @param req CreateOrganizationMemberRequest
      * @return CreateOrganizationMemberResponse
@@ -128,6 +139,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *创建组织成员访问策略
+     * @param req CreateOrganizationMembersPolicyRequest
+     * @return CreateOrganizationMembersPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationMembersPolicyResponse CreateOrganizationMembersPolicy(CreateOrganizationMembersPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganizationMembersPolicy", CreateOrganizationMembersPolicyResponse.class);
+    }
+
+    /**
      *删除企业组织
      * @param req DeleteOrganizationRequest
      * @return DeleteOrganizationResponse
@@ -136,6 +158,17 @@ public class OrganizationClient extends AbstractClient{
     public DeleteOrganizationResponse DeleteOrganization(DeleteOrganizationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOrganization", DeleteOrganizationResponse.class);
+    }
+
+    /**
+     *删除组织身份
+     * @param req DeleteOrganizationIdentityRequest
+     * @return DeleteOrganizationIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationIdentityResponse DeleteOrganizationIdentity(DeleteOrganizationIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOrganizationIdentity", DeleteOrganizationIdentityResponse.class);
     }
 
     /**
@@ -334,6 +367,17 @@ public class OrganizationClient extends AbstractClient{
     public QuitOrganizationResponse QuitOrganization(QuitOrganizationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QuitOrganization", QuitOrganizationResponse.class);
+    }
+
+    /**
+     *更新组织身份
+     * @param req UpdateOrganizationIdentityRequest
+     * @return UpdateOrganizationIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationIdentityResponse UpdateOrganizationIdentity(UpdateOrganizationIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOrganizationIdentity", UpdateOrganizationIdentityResponse.class);
     }
 
     /**

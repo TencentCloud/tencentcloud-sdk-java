@@ -577,4 +577,15 @@ public class TseClient extends AbstractClient{
         return this.internalRequest(req, "UpdateEngineInternetAccess", UpdateEngineInternetAccessResponse.class);
     }
 
+    /**
+     *更新网关上游实例列表，仅支持IPList服务类型
+     * @param req UpdateUpstreamTargetsRequest
+     * @return UpdateUpstreamTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUpstreamTargetsResponse UpdateUpstreamTargets(UpdateUpstreamTargetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateUpstreamTargets", UpdateUpstreamTargetsResponse.class);
+    }
+
 }

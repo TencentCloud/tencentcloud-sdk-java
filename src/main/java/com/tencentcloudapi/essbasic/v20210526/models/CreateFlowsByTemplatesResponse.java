@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateFlowsByTemplatesResponse extends AbstractModel {
 
     /**
-    * 多个合同ID
+    * 生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
     */
     @SerializedName("FlowIds")
     @Expose
@@ -46,7 +47,9 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel {
     private String [] ErrorMessages;
 
     /**
-    * 预览模式下返回的预览文件url数组
+    * 合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
     */
     @SerializedName("PreviewUrls")
     @Expose
@@ -75,16 +78,20 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 多个合同ID 
-     * @return FlowIds 多个合同ID
+     * Get 生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。 
+     * @return FlowIds 生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 多个合同ID
-     * @param FlowIds 多个合同ID
+     * Set 生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+     * @param FlowIds 生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
@@ -127,16 +134,24 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get 预览模式下返回的预览文件url数组 
-     * @return PreviewUrls 预览模式下返回的预览文件url数组
+     * Get 合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL 
+     * @return PreviewUrls 合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
      */
     public String [] getPreviewUrls() {
         return this.PreviewUrls;
     }
 
     /**
-     * Set 预览模式下返回的预览文件url数组
-     * @param PreviewUrls 预览模式下返回的预览文件url数组
+     * Set 合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+     * @param PreviewUrls 合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
      */
     public void setPreviewUrls(String [] PreviewUrls) {
         this.PreviewUrls = PreviewUrls;

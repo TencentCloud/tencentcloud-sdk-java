@@ -127,6 +127,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *删除自定义DNS Host
+     * @param req DeleteCustomDnsHostRequest
+     * @return DeleteCustomDnsHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomDnsHostResponse DeleteCustomDnsHost(DeleteCustomDnsHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomDnsHost", DeleteCustomDnsHostResponse.class);
+    }
+
+    /**
      *此接口用于删除已验证的手机邮箱
      * @param req DeletePhoneEmailRequest
      * @return DeletePhoneEmailResponse
@@ -168,6 +179,17 @@ public class DomainClient extends AbstractClient{
     public DescribeBatchOperationLogsResponse DescribeBatchOperationLogs(DescribeBatchOperationLogsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBatchOperationLogs", DescribeBatchOperationLogsResponse.class);
+    }
+
+    /**
+     *查询自定义DNS Host
+     * @param req DescribeCustomDnsHostSetRequest
+     * @return DescribeCustomDnsHostSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomDnsHostSetResponse DescribeCustomDnsHostSet(DescribeCustomDnsHostSetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomDnsHostSet", DescribeCustomDnsHostSetResponse.class);
     }
 
     /**
@@ -250,6 +272,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *修改自定义DNS Host
+     * @param req ModifyCustomDnsHostRequest
+     * @return ModifyCustomDnsHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomDnsHostResponse ModifyCustomDnsHost(ModifyCustomDnsHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCustomDnsHost", ModifyCustomDnsHostResponse.class);
+    }
+
+    /**
      *本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
      * @param req ModifyDomainDNSBatchRequest
      * @return ModifyDomainDNSBatchResponse
@@ -269,6 +302,17 @@ public class DomainClient extends AbstractClient{
     public ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(ModifyDomainOwnerBatchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDomainOwnerBatch", ModifyDomainOwnerBatchResponse.class);
+    }
+
+    /**
+     *国际站-修改DNS Host
+     * @param req ModifyIntlCustomDnsHostRequest
+     * @return ModifyIntlCustomDnsHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIntlCustomDnsHostResponse ModifyIntlCustomDnsHost(ModifyIntlCustomDnsHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIntlCustomDnsHost", ModifyIntlCustomDnsHostResponse.class);
     }
 
     /**
@@ -303,6 +347,17 @@ public class DomainClient extends AbstractClient{
     public SetDomainAutoRenewResponse SetDomainAutoRenew(SetDomainAutoRenewRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetDomainAutoRenew", SetDomainAutoRenewResponse.class);
+    }
+
+    /**
+     *同步自定义DNS Host
+     * @param req SyncCustomDnsHostRequest
+     * @return SyncCustomDnsHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncCustomDnsHostResponse SyncCustomDnsHost(SyncCustomDnsHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SyncCustomDnsHost", SyncCustomDnsHostResponse.class);
     }
 
     /**

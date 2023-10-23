@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeExtendedServiceAuthInfoResponse extends AbstractModel {
 
     /**
-    * 企业扩展服务授权信息
+    * 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthInfo")
@@ -39,9 +39,9 @@ public class DescribeExtendedServiceAuthInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 企业扩展服务授权信息
+     * Get 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuthInfo 企业扩展服务授权信息
+     * @return AuthInfo 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtentServiceAuthInfo [] getAuthInfo() {
@@ -49,9 +49,9 @@ public class DescribeExtendedServiceAuthInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 企业扩展服务授权信息
+     * Set 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuthInfo 企业扩展服务授权信息
+     * @param AuthInfo 服务开通和授权的信息列表，根据查询类型返回所有支持的扩展服务开通和授权状况，或者返回特定扩展服务的开通和授权状况。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthInfo(ExtentServiceAuthInfo [] AuthInfo) {

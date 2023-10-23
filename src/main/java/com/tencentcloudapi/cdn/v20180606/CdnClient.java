@@ -232,7 +232,7 @@ CreateDiagnoseUrl 用于添加域名诊断任务URL。
 
     /**
      *DescribeCdnIp 用于查询 CDN IP 归属。
-（注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）  
+（注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）
      * @param req DescribeCdnIpRequest
      * @return DescribeCdnIpResponse
      * @throws TencentCloudSDKException

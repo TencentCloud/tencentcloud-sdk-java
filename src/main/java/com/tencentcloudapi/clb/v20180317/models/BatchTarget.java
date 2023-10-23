@@ -67,6 +67,13 @@ public class BatchTarget extends AbstractModel {
     private String LocationId;
 
     /**
+    * 标签。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
      * Get 监听器 ID。 
      * @return ListenerId 监听器 ID。
      */
@@ -166,6 +173,22 @@ public class BatchTarget extends AbstractModel {
         this.LocationId = LocationId;
     }
 
+    /**
+     * Get 标签。 
+     * @return Tag 标签。
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签。
+     * @param Tag 标签。
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public BatchTarget() {
     }
 
@@ -192,6 +215,9 @@ public class BatchTarget extends AbstractModel {
         if (source.LocationId != null) {
             this.LocationId = new String(source.LocationId);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class BatchTarget extends AbstractModel {
         this.setParamSimple(map, prefix + "EniIp", this.EniIp);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

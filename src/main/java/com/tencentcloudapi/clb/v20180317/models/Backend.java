@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Backend extends AbstractModel {
 
     /**
-    * 后端服务的类型，可取：CVM、ENI
+    * 后端服务的类型，可取：CVM、ENI、CCN
     */
     @SerializedName("Type")
     @Expose
@@ -92,16 +92,24 @@ public class Backend extends AbstractModel {
     private String EniId;
 
     /**
-     * Get 后端服务的类型，可取：CVM、ENI 
-     * @return Type 后端服务的类型，可取：CVM、ENI
+    * 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
+     * Get 后端服务的类型，可取：CVM、ENI、CCN 
+     * @return Type 后端服务的类型，可取：CVM、ENI、CCN
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 后端服务的类型，可取：CVM、ENI
-     * @param Type 后端服务的类型，可取：CVM、ENI
+     * Set 后端服务的类型，可取：CVM、ENI、CCN
+     * @param Type 后端服务的类型，可取：CVM、ENI、CCN
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -255,6 +263,26 @@ public class Backend extends AbstractModel {
         this.EniId = EniId;
     }
 
+    /**
+     * Get 标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public Backend() {
     }
 
@@ -296,6 +324,9 @@ public class Backend extends AbstractModel {
         if (source.EniId != null) {
             this.EniId = new String(source.EniId);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -312,6 +343,7 @@ public class Backend extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
         this.setParamSimple(map, prefix + "EniId", this.EniId);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

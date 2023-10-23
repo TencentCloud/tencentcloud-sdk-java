@@ -116,6 +116,39 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *创建工作空间
+     * @param req CreateWorkSpaceRequest
+     * @return CreateWorkSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkSpaceResponse CreateWorkSpace(CreateWorkSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWorkSpace", CreateWorkSpaceResponse.class);
+    }
+
+    /**
+     *作业列表删除文件夹
+     * @param req DeleteFoldersRequest
+     * @return DeleteFoldersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFoldersResponse DeleteFolders(DeleteFoldersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFolders", DeleteFoldersResponse.class);
+    }
+
+    /**
+     *删除作业配置
+     * @param req DeleteJobConfigsRequest
+     * @return DeleteJobConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJobConfigsResponse DeleteJobConfigs(DeleteJobConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteJobConfigs", DeleteJobConfigsResponse.class);
+    }
+
+    /**
      *批量删除作业接口，批量操作数量上限20
      * @param req DeleteJobsRequest
      * @return DeleteJobsResponse
@@ -157,6 +190,17 @@ public class OceanusClient extends AbstractClient{
     public DeleteTableConfigResponse DeleteTableConfig(DeleteTableConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTableConfig", DeleteTableConfigResponse.class);
+    }
+
+    /**
+     *删除工作空间
+     * @param req DeleteWorkSpaceRequest
+     * @return DeleteWorkSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWorkSpaceResponse DeleteWorkSpace(DeleteWorkSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWorkSpace", DeleteWorkSpaceResponse.class);
     }
 
     /**
@@ -303,6 +347,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *自定义树状结构页面拖拽文件夹
+     * @param req ModifyFolderRequest
+     * @return ModifyFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFolderResponse ModifyFolder(ModifyFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFolder", ModifyFolderResponse.class);
+    }
+
+    /**
      *更新作业属性，仅允许以下3种操作，不支持组合操作：
 (1)	更新作业名称
 (2)	更新作业备注 
@@ -321,6 +376,17 @@ public class OceanusClient extends AbstractClient{
     public ModifyJobResponse ModifyJob(ModifyJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyJob", ModifyJobResponse.class);
+    }
+
+    /**
+     *修改工作空间
+     * @param req ModifyWorkSpaceRequest
+     * @return ModifyWorkSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWorkSpaceResponse ModifyWorkSpace(ModifyWorkSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWorkSpace", ModifyWorkSpaceResponse.class);
     }
 
     /**

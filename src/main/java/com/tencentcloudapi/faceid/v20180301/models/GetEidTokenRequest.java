@@ -32,7 +32,7 @@ public class GetEidTokenRequest extends AbstractModel {
 
     /**
     * 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
     */
     @SerializedName("IdCard")
     @Expose
@@ -91,9 +91,9 @@ public class GetEidTokenRequest extends AbstractModel {
 
     /**
      * Get 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。 
+规则：a-z，A-Z，0-9组合。最长长度32位。 
      * @return IdCard 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
      */
     public String getIdCard() {
         return this.IdCard;
@@ -101,9 +101,9 @@ public class GetEidTokenRequest extends AbstractModel {
 
     /**
      * Set 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
      * @param IdCard 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;

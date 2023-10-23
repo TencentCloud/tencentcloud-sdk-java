@@ -39,6 +39,14 @@ public class BooleanResponse extends AbstractModel {
     private String Message;
 
     /**
+    * 基线Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BaselineId")
+    @Expose
+    private Long BaselineId;
+
+    /**
      * Get 是否成功 
      * @return Success 是否成功
      */
@@ -74,6 +82,26 @@ public class BooleanResponse extends AbstractModel {
         this.Message = Message;
     }
 
+    /**
+     * Get 基线Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BaselineId 基线Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBaselineId() {
+        return this.BaselineId;
+    }
+
+    /**
+     * Set 基线Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BaselineId 基线Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBaselineId(Long BaselineId) {
+        this.BaselineId = BaselineId;
+    }
+
     public BooleanResponse() {
     }
 
@@ -88,6 +116,9 @@ public class BooleanResponse extends AbstractModel {
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.BaselineId != null) {
+            this.BaselineId = new Long(source.BaselineId);
+        }
     }
 
 
@@ -97,6 +128,7 @@ public class BooleanResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Success", this.Success);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "BaselineId", this.BaselineId);
 
     }
 }

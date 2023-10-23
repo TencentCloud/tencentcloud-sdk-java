@@ -118,6 +118,14 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
     private String CacheTime;
 
     /**
+    * 关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TSE")
+    @Expose
+    private TSEInstanceList [] TSE;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -357,6 +365,26 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
     }
 
     /**
+     * Get 关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TSE 关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TSEInstanceList [] getTSE() {
+        return this.TSE;
+    }
+
+    /**
+     * Set 关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TSE 关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTSE(TSEInstanceList [] TSE) {
+        this.TSE = TSE;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -446,6 +474,12 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
         if (source.CacheTime != null) {
             this.CacheTime = new String(source.CacheTime);
         }
+        if (source.TSE != null) {
+            this.TSE = new TSEInstanceList[source.TSE.length];
+            for (int i = 0; i < source.TSE.length; i++) {
+                this.TSE[i] = new TSEInstanceList(source.TSE[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -468,6 +502,7 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
         this.setParamArrayObj(map, prefix + "TEO.", this.TEO);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CacheTime", this.CacheTime);
+        this.setParamArrayObj(map, prefix + "TSE.", this.TSE);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

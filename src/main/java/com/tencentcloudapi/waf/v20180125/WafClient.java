@@ -759,6 +759,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *waf斯巴达-获取防护域名信息
+     * @param req DescribeSpartaProtectionInfoRequest
+     * @return DescribeSpartaProtectionInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpartaProtectionInfoResponse DescribeSpartaProtectionInfo(DescribeSpartaProtectionInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSpartaProtectionInfo", DescribeSpartaProtectionInfoResponse.class);
+    }
+
+    /**
      *查询用户TLS版本
      * @param req DescribeTlsVersionRequest
      * @return DescribeTlsVersionResponse
@@ -811,6 +822,17 @@ public class WafClient extends AbstractClient{
     public DescribeUserDomainInfoResponse DescribeUserDomainInfo(DescribeUserDomainInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUserDomainInfo", DescribeUserDomainInfoResponse.class);
+    }
+
+    /**
+     *获取用户防护规则等级
+     * @param req DescribeUserLevelRequest
+     * @return DescribeUserLevelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserLevelResponse DescribeUserLevel(DescribeUserLevelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserLevel", DescribeUserLevelResponse.class);
     }
 
     /**
@@ -880,6 +902,17 @@ public class WafClient extends AbstractClient{
     public DescribeWafThreatenIntelligenceResponse DescribeWafThreatenIntelligence(DescribeWafThreatenIntelligenceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWafThreatenIntelligence", DescribeWafThreatenIntelligenceResponse.class);
+    }
+
+    /**
+     *获取域名的webshell状态
+     * @param req DescribeWebshellStatusRequest
+     * @return DescribeWebshellStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebshellStatusResponse DescribeWebshellStatus(DescribeWebshellStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebshellStatus", DescribeWebshellStatusResponse.class);
     }
 
     /**

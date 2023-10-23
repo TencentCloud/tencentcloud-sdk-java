@@ -203,6 +203,27 @@ video 纯视频
     private Long EndDelayTime;
 
     /**
+    * 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+    */
+    @SerializedName("LiveType")
+    @Expose
+    private Long LiveType;
+
+    /**
+    * 伪直播链接
+    */
+    @SerializedName("RecordLiveUrl")
+    @Expose
+    private String RecordLiveUrl;
+
+    /**
+    * 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+    */
+    @SerializedName("EnableAutoStart")
+    @Expose
+    private Long EnableAutoStart;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -650,6 +671,54 @@ video 纯视频
     }
 
     /**
+     * Get 直播方式：0 常规模式（默认）1 回放直播模式（伪直播） 
+     * @return LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     */
+    public Long getLiveType() {
+        return this.LiveType;
+    }
+
+    /**
+     * Set 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * @param LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     */
+    public void setLiveType(Long LiveType) {
+        this.LiveType = LiveType;
+    }
+
+    /**
+     * Get 伪直播链接 
+     * @return RecordLiveUrl 伪直播链接
+     */
+    public String getRecordLiveUrl() {
+        return this.RecordLiveUrl;
+    }
+
+    /**
+     * Set 伪直播链接
+     * @param RecordLiveUrl 伪直播链接
+     */
+    public void setRecordLiveUrl(String RecordLiveUrl) {
+        this.RecordLiveUrl = RecordLiveUrl;
+    }
+
+    /**
+     * Get 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效 
+     * @return EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     */
+    public Long getEnableAutoStart() {
+        return this.EnableAutoStart;
+    }
+
+    /**
+     * Set 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     * @param EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     */
+    public void setEnableAutoStart(Long EnableAutoStart) {
+        this.EnableAutoStart = EnableAutoStart;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -745,6 +814,15 @@ video 纯视频
         if (source.EndDelayTime != null) {
             this.EndDelayTime = new Long(source.EndDelayTime);
         }
+        if (source.LiveType != null) {
+            this.LiveType = new Long(source.LiveType);
+        }
+        if (source.RecordLiveUrl != null) {
+            this.RecordLiveUrl = new String(source.RecordLiveUrl);
+        }
+        if (source.EnableAutoStart != null) {
+            this.EnableAutoStart = new Long(source.EnableAutoStart);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -778,6 +856,9 @@ video 纯视频
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
         this.setParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
         this.setParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
+        this.setParamSimple(map, prefix + "LiveType", this.LiveType);
+        this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
+        this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -534,6 +534,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询sql查询界面高级设置
+     * @param req DescribeAdvancedStoreLocationRequest
+     * @return DescribeAdvancedStoreLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(DescribeAdvancedStoreLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAdvancedStoreLocation", DescribeAdvancedStoreLocationResponse.class);
+    }
+
+    /**
      *DMS元数据获取库
      * @param req DescribeDMSDatabaseRequest
      * @return DescribeDMSDatabaseResponse
@@ -685,6 +696,17 @@ public class DlcClient extends AbstractClient{
     public DescribeLakeFsInfoResponse DescribeLakeFsInfo(DescribeLakeFsInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLakeFsInfo", DescribeLakeFsInfoResponse.class);
+    }
+
+    /**
+     *获取LakeFs上task执行结果访问信息
+     * @param req DescribeLakeFsTaskResultRequest
+     * @return DescribeLakeFsTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResult(DescribeLakeFsTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLakeFsTaskResult", DescribeLakeFsTaskResultResponse.class);
     }
 
     /**
@@ -1070,6 +1092,17 @@ public class DlcClient extends AbstractClient{
     public LockMetaDataResponse LockMetaData(LockMetaDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "LockMetaData", LockMetaDataResponse.class);
+    }
+
+    /**
+     *修改sql查询界面高级设置。
+     * @param req ModifyAdvancedStoreLocationRequest
+     * @return ModifyAdvancedStoreLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAdvancedStoreLocationResponse ModifyAdvancedStoreLocation(ModifyAdvancedStoreLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAdvancedStoreLocation", ModifyAdvancedStoreLocationResponse.class);
     }
 
     /**

@@ -72,6 +72,17 @@ public class CdwpgClient extends AbstractClient{
     }
 
     /**
+     *获取云原生实例列表
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
+    }
+
+    /**
      *获取集群实例列表
      * @param req DescribeSimpleInstancesRequest
      * @return DescribeSimpleInstancesResponse
