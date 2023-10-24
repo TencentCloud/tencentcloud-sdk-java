@@ -257,9 +257,10 @@ SIGN_PAGING_SEAL - 可以指定印章ID，于控制台查询获取
     private String ComponentValue;
 
     /**
-    * NORMAL 正常模式，使用坐标制定签署控件位置
-FIELD 表单域，需使用ComponentName指定表单域名称
-KEYWORD 关键字，使用ComponentId指定关键字
+    * 控件生成的方式：
+NORMAL - 普通控件
+FIELD - 表单域
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
     */
     @SerializedName("GenerateMode")
     @Expose
@@ -1126,24 +1127,28 @@ SIGN_PAGING_SEAL - 可以指定印章ID，于控制台查询获取
     }
 
     /**
-     * Get NORMAL 正常模式，使用坐标制定签署控件位置
-FIELD 表单域，需使用ComponentName指定表单域名称
-KEYWORD 关键字，使用ComponentId指定关键字 
-     * @return GenerateMode NORMAL 正常模式，使用坐标制定签署控件位置
-FIELD 表单域，需使用ComponentName指定表单域名称
-KEYWORD 关键字，使用ComponentId指定关键字
+     * Get 控件生成的方式：
+NORMAL - 普通控件
+FIELD - 表单域
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找） 
+     * @return GenerateMode 控件生成的方式：
+NORMAL - 普通控件
+FIELD - 表单域
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
      */
     public String getGenerateMode() {
         return this.GenerateMode;
     }
 
     /**
-     * Set NORMAL 正常模式，使用坐标制定签署控件位置
-FIELD 表单域，需使用ComponentName指定表单域名称
-KEYWORD 关键字，使用ComponentId指定关键字
-     * @param GenerateMode NORMAL 正常模式，使用坐标制定签署控件位置
-FIELD 表单域，需使用ComponentName指定表单域名称
-KEYWORD 关键字，使用ComponentId指定关键字
+     * Set 控件生成的方式：
+NORMAL - 普通控件
+FIELD - 表单域
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
+     * @param GenerateMode 控件生成的方式：
+NORMAL - 普通控件
+FIELD - 表单域
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
      */
     public void setGenerateMode(String GenerateMode) {
         this.GenerateMode = GenerateMode;

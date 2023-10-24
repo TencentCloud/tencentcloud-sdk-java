@@ -213,6 +213,38 @@ public class JobConfig extends AbstractModel {
     private ExpertModeConfiguration ExpertModeConfiguration;
 
     /**
+    * trace链路
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TraceModeOn")
+    @Expose
+    private Boolean TraceModeOn;
+
+    /**
+    * trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TraceModeConfiguration")
+    @Expose
+    private TraceModeConfiguration TraceModeConfiguration;
+
+    /**
+    * checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckpointRetainedNum")
+    @Expose
+    private Long CheckpointRetainedNum;
+
+    /**
+    * 算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobGraph")
+    @Expose
+    private JobGraph JobGraph;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -680,6 +712,86 @@ public class JobConfig extends AbstractModel {
         this.ExpertModeConfiguration = ExpertModeConfiguration;
     }
 
+    /**
+     * Get trace链路
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TraceModeOn trace链路
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTraceModeOn() {
+        return this.TraceModeOn;
+    }
+
+    /**
+     * Set trace链路
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TraceModeOn trace链路
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTraceModeOn(Boolean TraceModeOn) {
+        this.TraceModeOn = TraceModeOn;
+    }
+
+    /**
+     * Get trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TraceModeConfiguration trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TraceModeConfiguration getTraceModeConfiguration() {
+        return this.TraceModeConfiguration;
+    }
+
+    /**
+     * Set trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TraceModeConfiguration trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTraceModeConfiguration(TraceModeConfiguration TraceModeConfiguration) {
+        this.TraceModeConfiguration = TraceModeConfiguration;
+    }
+
+    /**
+     * Get checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckpointRetainedNum checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCheckpointRetainedNum() {
+        return this.CheckpointRetainedNum;
+    }
+
+    /**
+     * Set checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckpointRetainedNum checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckpointRetainedNum(Long CheckpointRetainedNum) {
+        this.CheckpointRetainedNum = CheckpointRetainedNum;
+    }
+
+    /**
+     * Get 算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobGraph 算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public JobGraph getJobGraph() {
+        return this.JobGraph;
+    }
+
+    /**
+     * Set 算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobGraph 算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobGraph(JobGraph JobGraph) {
+        this.JobGraph = JobGraph;
+    }
+
     public JobConfig() {
     }
 
@@ -769,6 +881,18 @@ public class JobConfig extends AbstractModel {
         if (source.ExpertModeConfiguration != null) {
             this.ExpertModeConfiguration = new ExpertModeConfiguration(source.ExpertModeConfiguration);
         }
+        if (source.TraceModeOn != null) {
+            this.TraceModeOn = new Boolean(source.TraceModeOn);
+        }
+        if (source.TraceModeConfiguration != null) {
+            this.TraceModeConfiguration = new TraceModeConfiguration(source.TraceModeConfiguration);
+        }
+        if (source.CheckpointRetainedNum != null) {
+            this.CheckpointRetainedNum = new Long(source.CheckpointRetainedNum);
+        }
+        if (source.JobGraph != null) {
+            this.JobGraph = new JobGraph(source.JobGraph);
+        }
     }
 
 
@@ -800,6 +924,10 @@ public class JobConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ClazzLevels.", this.ClazzLevels);
         this.setParamSimple(map, prefix + "ExpertModeOn", this.ExpertModeOn);
         this.setParamObj(map, prefix + "ExpertModeConfiguration.", this.ExpertModeConfiguration);
+        this.setParamSimple(map, prefix + "TraceModeOn", this.TraceModeOn);
+        this.setParamObj(map, prefix + "TraceModeConfiguration.", this.TraceModeConfiguration);
+        this.setParamSimple(map, prefix + "CheckpointRetainedNum", this.CheckpointRetainedNum);
+        this.setParamObj(map, prefix + "JobGraph.", this.JobGraph);
 
     }
 }

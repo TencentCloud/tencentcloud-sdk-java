@@ -100,7 +100,7 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     * 控件生成的方式：
 NORMAL - 普通控件
 FIELD - 表单域
-KEYWORD - 关键字
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
     */
     @SerializedName("GenerateMode")
     @Expose
@@ -601,11 +601,11 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
      * Get 控件生成的方式：
 NORMAL - 普通控件
 FIELD - 表单域
-KEYWORD - 关键字 
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找） 
      * @return GenerateMode 控件生成的方式：
 NORMAL - 普通控件
 FIELD - 表单域
-KEYWORD - 关键字
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
      */
     public String getGenerateMode() {
         return this.GenerateMode;
@@ -615,11 +615,11 @@ KEYWORD - 关键字
      * Set 控件生成的方式：
 NORMAL - 普通控件
 FIELD - 表单域
-KEYWORD - 关键字
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
      * @param GenerateMode 控件生成的方式：
 NORMAL - 普通控件
 FIELD - 表单域
-KEYWORD - 关键字
+KEYWORD - 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）
      */
     public void setGenerateMode(String GenerateMode) {
         this.GenerateMode = GenerateMode;

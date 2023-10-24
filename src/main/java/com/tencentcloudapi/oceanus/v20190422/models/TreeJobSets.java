@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdwpg.v20201230.models;
+package com.tencentcloudapi.oceanus.v20190422.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,170 +21,170 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChargeProperties extends AbstractModel {
+public class TreeJobSets extends AbstractModel {
 
     /**
-    * 1-需要自动续期
+    * 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RenewFlag")
+    @SerializedName("JobId")
     @Expose
-    private Long RenewFlag;
+    private String JobId;
 
     /**
-    * 订单时间范围
+    * 作业名
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TimeSpan")
+    @SerializedName("Name")
     @Expose
-    private Long TimeSpan;
+    private String Name;
 
     /**
-    * 时间单位，一般为h和m
+    * 作业类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TimeUnit")
+    @SerializedName("JobType")
     @Expose
-    private String TimeUnit;
+    private Long JobType;
 
     /**
-    * 计费类型0-按量计费，1-包年包月
+    * 作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("PayMode")
+    @SerializedName("RunningCu")
     @Expose
-    private Long PayMode;
+    private Float RunningCu;
 
     /**
-    * PREPAID、POSTPAID_BY_HOUR
+    * 作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ChargeType")
+    @SerializedName("Status")
     @Expose
-    private String ChargeType;
+    private Long Status;
 
     /**
-     * Get 1-需要自动续期
+     * Get 作业Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenewFlag 1-需要自动续期
+     * @return JobId 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRenewFlag() {
-        return this.RenewFlag;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 1-需要自动续期
+     * Set 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenewFlag 1-需要自动续期
+     * @param JobId 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRenewFlag(Long RenewFlag) {
-        this.RenewFlag = RenewFlag;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
-     * Get 订单时间范围
+     * Get 作业名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeSpan 订单时间范围
+     * @return Name 作业名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTimeSpan() {
-        return this.TimeSpan;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 订单时间范围
+     * Set 作业名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeSpan 订单时间范围
+     * @param Name 作业名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTimeSpan(Long TimeSpan) {
-        this.TimeSpan = TimeSpan;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 时间单位，一般为h和m
+     * Get 作业类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeUnit 时间单位，一般为h和m
+     * @return JobType 作业类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTimeUnit() {
-        return this.TimeUnit;
+    public Long getJobType() {
+        return this.JobType;
     }
 
     /**
-     * Set 时间单位，一般为h和m
+     * Set 作业类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeUnit 时间单位，一般为h和m
+     * @param JobType 作业类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTimeUnit(String TimeUnit) {
-        this.TimeUnit = TimeUnit;
+    public void setJobType(Long JobType) {
+        this.JobType = JobType;
     }
 
     /**
-     * Get 计费类型0-按量计费，1-包年包月
+     * Get 作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayMode 计费类型0-按量计费，1-包年包月
+     * @return RunningCu 作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getPayMode() {
-        return this.PayMode;
+    public Float getRunningCu() {
+        return this.RunningCu;
     }
 
     /**
-     * Set 计费类型0-按量计费，1-包年包月
+     * Set 作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayMode 计费类型0-按量计费，1-包年包月
+     * @param RunningCu 作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPayMode(Long PayMode) {
-        this.PayMode = PayMode;
+    public void setRunningCu(Float RunningCu) {
+        this.RunningCu = RunningCu;
     }
 
     /**
-     * Get PREPAID、POSTPAID_BY_HOUR
+     * Get 作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeType PREPAID、POSTPAID_BY_HOUR
+     * @return Status 作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getChargeType() {
-        return this.ChargeType;
+    public Long getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set PREPAID、POSTPAID_BY_HOUR
+     * Set 作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeType PREPAID、POSTPAID_BY_HOUR
+     * @param Status 作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setChargeType(String ChargeType) {
-        this.ChargeType = ChargeType;
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
-    public ChargeProperties() {
+    public TreeJobSets() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChargeProperties(ChargeProperties source) {
-        if (source.RenewFlag != null) {
-            this.RenewFlag = new Long(source.RenewFlag);
+    public TreeJobSets(TreeJobSets source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
-        if (source.TimeSpan != null) {
-            this.TimeSpan = new Long(source.TimeSpan);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.TimeUnit != null) {
-            this.TimeUnit = new String(source.TimeUnit);
+        if (source.JobType != null) {
+            this.JobType = new Long(source.JobType);
         }
-        if (source.PayMode != null) {
-            this.PayMode = new Long(source.PayMode);
+        if (source.RunningCu != null) {
+            this.RunningCu = new Float(source.RunningCu);
         }
-        if (source.ChargeType != null) {
-            this.ChargeType = new String(source.ChargeType);
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
     }
 
@@ -193,11 +193,11 @@ public class ChargeProperties extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
-        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-        this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
-        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

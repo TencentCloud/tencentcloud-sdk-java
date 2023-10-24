@@ -24,8 +24,12 @@ import java.util.HashMap;
 public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
-    * 应用相关信息。 
-此接口Agent.AppId必填。
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
     */
     @SerializedName("Agent")
     @Expose
@@ -33,24 +37,27 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
     * 操作类型，
-查询:"SELECT"，
-删除:"DELETE"，
-更新:"UPDATE"
+<ul>
+<li>查询:"SELECT"</li>
+<li>删除:"DELETE"</li>
+<li>更新:"UPDATE"</li>
+</ul>
     */
     @SerializedName("OperateType")
     @Expose
     private String OperateType;
 
     /**
-    * 第三方应用平台模板库模板唯一标识
+    * 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 合作企业方第三方机构唯一标识数据.
-支持多个， 用","进行分隔
+    * 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
     */
     @SerializedName("ProxyOrganizationOpenIds")
     @Expose
@@ -58,8 +65,10 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
     * 模板可见性, 
-全部可见-"all",
- 部分可见-"part"
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul>
     */
     @SerializedName("AuthTag")
     @Expose
@@ -67,10 +76,14 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
     * 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-若此字段值为0，则不会修改模板Available，
-1为启用模板，
-2为停用模板。
-启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
+<ul>
+<li>若此字段值为0，则不会修改模板Available</li>
+<li>1为启用模板</li>
+<li>2为停用模板</li>
+</ul>
+启用后模板可以正常领取。
+停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
+如果Available更新失败，会直接返回错误。
     */
     @SerializedName("Available")
     @Expose
@@ -84,20 +97,36 @@ public class OperateChannelTemplateRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-     * Get 应用相关信息。 
-此接口Agent.AppId必填。 
-     * @return Agent 应用相关信息。 
-此接口Agent.AppId必填。
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul> 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 
-此接口Agent.AppId必填。
-     * @param Agent 应用相关信息。 
-此接口Agent.AppId必填。
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -105,13 +134,17 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
      * Get 操作类型，
-查询:"SELECT"，
-删除:"DELETE"，
-更新:"UPDATE" 
+<ul>
+<li>查询:"SELECT"</li>
+<li>删除:"DELETE"</li>
+<li>更新:"UPDATE"</li>
+</ul> 
      * @return OperateType 操作类型，
-查询:"SELECT"，
-删除:"DELETE"，
-更新:"UPDATE"
+<ul>
+<li>查询:"SELECT"</li>
+<li>删除:"DELETE"</li>
+<li>更新:"UPDATE"</li>
+</ul>
      */
     public String getOperateType() {
         return this.OperateType;
@@ -119,49 +152,57 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
      * Set 操作类型，
-查询:"SELECT"，
-删除:"DELETE"，
-更新:"UPDATE"
+<ul>
+<li>查询:"SELECT"</li>
+<li>删除:"DELETE"</li>
+<li>更新:"UPDATE"</li>
+</ul>
      * @param OperateType 操作类型，
-查询:"SELECT"，
-删除:"DELETE"，
-更新:"UPDATE"
+<ul>
+<li>查询:"SELECT"</li>
+<li>删除:"DELETE"</li>
+<li>更新:"UPDATE"</li>
+</ul>
      */
     public void setOperateType(String OperateType) {
         this.OperateType = OperateType;
     }
 
     /**
-     * Get 第三方应用平台模板库模板唯一标识 
-     * @return TemplateId 第三方应用平台模板库模板唯一标识
+     * Get 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。 
+     * @return TemplateId 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 第三方应用平台模板库模板唯一标识
-     * @param TemplateId 第三方应用平台模板库模板唯一标识
+     * Set 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
+     * @param TemplateId 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 合作企业方第三方机构唯一标识数据.
-支持多个， 用","进行分隔 
-     * @return ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据.
-支持多个， 用","进行分隔
+     * Get 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。 
+     * @return ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
      */
     public String getProxyOrganizationOpenIds() {
         return this.ProxyOrganizationOpenIds;
     }
 
     /**
-     * Set 合作企业方第三方机构唯一标识数据.
-支持多个， 用","进行分隔
-     * @param ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据.
-支持多个， 用","进行分隔
+     * Set 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
+     * @param ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
      */
     public void setProxyOrganizationOpenIds(String ProxyOrganizationOpenIds) {
         this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;
@@ -169,11 +210,15 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
      * Get 模板可见性, 
-全部可见-"all",
- 部分可见-"part" 
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul> 
      * @return AuthTag 模板可见性, 
-全部可见-"all",
- 部分可见-"part"
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul>
      */
     public String getAuthTag() {
         return this.AuthTag;
@@ -181,11 +226,15 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
      * Set 模板可见性, 
-全部可见-"all",
- 部分可见-"part"
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul>
      * @param AuthTag 模板可见性, 
-全部可见-"all",
- 部分可见-"part"
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul>
      */
     public void setAuthTag(String AuthTag) {
         this.AuthTag = AuthTag;
@@ -193,15 +242,23 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
      * Get 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-若此字段值为0，则不会修改模板Available，
-1为启用模板，
-2为停用模板。
-启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。 
+<ul>
+<li>若此字段值为0，则不会修改模板Available</li>
+<li>1为启用模板</li>
+<li>2为停用模板</li>
+</ul>
+启用后模板可以正常领取。
+停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
+如果Available更新失败，会直接返回错误。 
      * @return Available 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-若此字段值为0，则不会修改模板Available，
-1为启用模板，
-2为停用模板。
-启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
+<ul>
+<li>若此字段值为0，则不会修改模板Available</li>
+<li>1为启用模板</li>
+<li>2为停用模板</li>
+</ul>
+启用后模板可以正常领取。
+停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
+如果Available更新失败，会直接返回错误。
      */
     public Long getAvailable() {
         return this.Available;
@@ -209,15 +266,23 @@ public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
      * Set 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-若此字段值为0，则不会修改模板Available，
-1为启用模板，
-2为停用模板。
-启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
+<ul>
+<li>若此字段值为0，则不会修改模板Available</li>
+<li>1为启用模板</li>
+<li>2为停用模板</li>
+</ul>
+启用后模板可以正常领取。
+停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
+如果Available更新失败，会直接返回错误。
      * @param Available 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-若此字段值为0，则不会修改模板Available，
-1为启用模板，
-2为停用模板。
-启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
+<ul>
+<li>若此字段值为0，则不会修改模板Available</li>
+<li>1为启用模板</li>
+<li>2为停用模板</li>
+</ul>
+启用后模板可以正常领取。
+停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
+如果Available更新失败，会直接返回错误。
      */
     public void setAvailable(Long Available) {
         this.Available = Available;

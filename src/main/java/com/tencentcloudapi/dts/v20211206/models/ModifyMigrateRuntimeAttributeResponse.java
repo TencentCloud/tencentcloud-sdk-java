@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,22 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSparkSessionBatchSQLResponse extends AbstractModel {
-
-    /**
-    * 批任务唯一标识
-    */
-    @SerializedName("BatchId")
-    @Expose
-    private String BatchId;
-
-    /**
-    * Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Statements")
-    @Expose
-    private StatementInformation [] Statements;
+public class ModifyMigrateRuntimeAttributeResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,42 +29,6 @@ public class CreateSparkSessionBatchSQLResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 批任务唯一标识 
-     * @return BatchId 批任务唯一标识
-     */
-    public String getBatchId() {
-        return this.BatchId;
-    }
-
-    /**
-     * Set 批任务唯一标识
-     * @param BatchId 批任务唯一标识
-     */
-    public void setBatchId(String BatchId) {
-        this.BatchId = BatchId;
-    }
-
-    /**
-     * Get Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Statements Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public StatementInformation [] getStatements() {
-        return this.Statements;
-    }
-
-    /**
-     * Set Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Statements Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStatements(StatementInformation [] Statements) {
-        this.Statements = Statements;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -97,23 +46,14 @@ public class CreateSparkSessionBatchSQLResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateSparkSessionBatchSQLResponse() {
+    public ModifyMigrateRuntimeAttributeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSparkSessionBatchSQLResponse(CreateSparkSessionBatchSQLResponse source) {
-        if (source.BatchId != null) {
-            this.BatchId = new String(source.BatchId);
-        }
-        if (source.Statements != null) {
-            this.Statements = new StatementInformation[source.Statements.length];
-            for (int i = 0; i < source.Statements.length; i++) {
-                this.Statements[i] = new StatementInformation(source.Statements[i]);
-            }
-        }
+    public ModifyMigrateRuntimeAttributeResponse(ModifyMigrateRuntimeAttributeResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -124,8 +64,6 @@ public class CreateSparkSessionBatchSQLResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
-        this.setParamArrayObj(map, prefix + "Statements.", this.Statements);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

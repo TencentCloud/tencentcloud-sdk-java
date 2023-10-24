@@ -366,6 +366,17 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *修改任务运行时属性，此接口不同于配置类接口，不会进行状态机判断。
+     * @param req ModifyMigrateRuntimeAttributeRequest
+     * @return ModifyMigrateRuntimeAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMigrateRuntimeAttributeResponse ModifyMigrateRuntimeAttribute(ModifyMigrateRuntimeAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMigrateRuntimeAttribute", ModifyMigrateRuntimeAttributeResponse.class);
+    }
+
+    /**
      *配置迁移服务，配置成功后可通过`CreateMigrationCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
      * @param req ModifyMigrationJobRequest
      * @return ModifyMigrationJobResponse

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeTreeJobsRequest extends AbstractModel {
 
     /**
+    * 筛选条件字段
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * 工作空间 Serialid
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
+
+    /**
+     * Get 筛选条件字段 
+     * @return Filters 筛选条件字段
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 筛选条件字段
+     * @param Filters 筛选条件字段
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
 
     /**
      * Get 工作空间 Serialid 
@@ -54,6 +77,12 @@ public class DescribeTreeJobsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTreeJobsRequest(DescribeTreeJobsRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
@@ -64,6 +93,7 @@ public class DescribeTreeJobsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }

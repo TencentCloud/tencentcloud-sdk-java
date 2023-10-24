@@ -61,6 +61,17 @@ public class CdwpgClient extends AbstractClient{
     }
 
     /**
+     *获取集群信息
+     * @param req DescribeInstanceInfoRequest
+     * @return DescribeInstanceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceInfoResponse DescribeInstanceInfo(DescribeInstanceInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceInfo", DescribeInstanceInfoResponse.class);
+    }
+
+    /**
      *集群详情页中显示集群状态、流程进度等
      * @param req DescribeInstanceStateRequest
      * @return DescribeInstanceStateResponse

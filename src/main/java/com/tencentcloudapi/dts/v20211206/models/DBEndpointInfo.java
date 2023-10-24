@@ -48,7 +48,7 @@ public class DBEndpointInfo extends AbstractModel {
     private String DatabaseType;
 
     /**
-    * 节点类型，为空或者"simple":表示普通节点，"cluster": 集群节点
+    * 节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeType")
@@ -149,9 +149,9 @@ public class DBEndpointInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点类型，为空或者"simple":表示普通节点，"cluster": 集群节点
+     * Get 节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeType 节点类型，为空或者"simple":表示普通节点，"cluster": 集群节点
+     * @return NodeType 节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeType() {
@@ -159,9 +159,9 @@ public class DBEndpointInfo extends AbstractModel {
     }
 
     /**
-     * Set 节点类型，为空或者"simple":表示普通节点，"cluster": 集群节点
+     * Set 节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeType 节点类型，为空或者"simple":表示普通节点，"cluster": 集群节点
+     * @param NodeType 节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeType(String NodeType) {

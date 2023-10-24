@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SignUrl extends AbstractModel {
 
     /**
-    * 小程序签署链接
+    * 跳转至电子签名小程序签署的链接地址。 适用于客户端APP及小程序直接唤起电子签名小程序。	
     */
     @SerializedName("AppSignUrl")
     @Expose
     private String AppSignUrl;
 
     /**
-    * 签署链接有效时间
+    * 签署链接有效时间，格式类似"2022-08-05 15:55:01"	
     */
     @SerializedName("EffectiveTime")
     @Expose
     private String EffectiveTime;
 
     /**
-    * 移动端签署链接
+    * 跳转至电子签名小程序签署的链接地址，格式类似于https://essurl.cn/xxx。 打开此链接将会展示H5中间页面，随后唤起电子签名小程序以进行合同签署。	
     */
     @SerializedName("HttpSignUrl")
     @Expose
     private String HttpSignUrl;
 
     /**
-     * Get 小程序签署链接 
-     * @return AppSignUrl 小程序签署链接
+     * Get 跳转至电子签名小程序签署的链接地址。 适用于客户端APP及小程序直接唤起电子签名小程序。	 
+     * @return AppSignUrl 跳转至电子签名小程序签署的链接地址。 适用于客户端APP及小程序直接唤起电子签名小程序。	
      */
     public String getAppSignUrl() {
         return this.AppSignUrl;
     }
 
     /**
-     * Set 小程序签署链接
-     * @param AppSignUrl 小程序签署链接
+     * Set 跳转至电子签名小程序签署的链接地址。 适用于客户端APP及小程序直接唤起电子签名小程序。	
+     * @param AppSignUrl 跳转至电子签名小程序签署的链接地址。 适用于客户端APP及小程序直接唤起电子签名小程序。	
      */
     public void setAppSignUrl(String AppSignUrl) {
         this.AppSignUrl = AppSignUrl;
     }
 
     /**
-     * Get 签署链接有效时间 
-     * @return EffectiveTime 签署链接有效时间
+     * Get 签署链接有效时间，格式类似"2022-08-05 15:55:01"	 
+     * @return EffectiveTime 签署链接有效时间，格式类似"2022-08-05 15:55:01"	
      */
     public String getEffectiveTime() {
         return this.EffectiveTime;
     }
 
     /**
-     * Set 签署链接有效时间
-     * @param EffectiveTime 签署链接有效时间
+     * Set 签署链接有效时间，格式类似"2022-08-05 15:55:01"	
+     * @param EffectiveTime 签署链接有效时间，格式类似"2022-08-05 15:55:01"	
      */
     public void setEffectiveTime(String EffectiveTime) {
         this.EffectiveTime = EffectiveTime;
     }
 
     /**
-     * Get 移动端签署链接 
-     * @return HttpSignUrl 移动端签署链接
+     * Get 跳转至电子签名小程序签署的链接地址，格式类似于https://essurl.cn/xxx。 打开此链接将会展示H5中间页面，随后唤起电子签名小程序以进行合同签署。	 
+     * @return HttpSignUrl 跳转至电子签名小程序签署的链接地址，格式类似于https://essurl.cn/xxx。 打开此链接将会展示H5中间页面，随后唤起电子签名小程序以进行合同签署。	
      */
     public String getHttpSignUrl() {
         return this.HttpSignUrl;
     }
 
     /**
-     * Set 移动端签署链接
-     * @param HttpSignUrl 移动端签署链接
+     * Set 跳转至电子签名小程序签署的链接地址，格式类似于https://essurl.cn/xxx。 打开此链接将会展示H5中间页面，随后唤起电子签名小程序以进行合同签署。	
+     * @param HttpSignUrl 跳转至电子签名小程序签署的链接地址，格式类似于https://essurl.cn/xxx。 打开此链接将会展示H5中间页面，随后唤起电子签名小程序以进行合同签署。	
      */
     public void setHttpSignUrl(String HttpSignUrl) {
         this.HttpSignUrl = HttpSignUrl;

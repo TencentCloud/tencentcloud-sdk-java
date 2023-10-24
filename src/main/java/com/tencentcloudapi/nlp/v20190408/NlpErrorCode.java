@@ -115,7 +115,10 @@ public enum NlpErrorCode {
      RESOURCEUNAVAILABLE_SERVICENOTOPENEDERROR("ResourceUnavailable.ServiceNotOpenedError"),
      
     // 账号已停服。
-     RESOURCEUNAVAILABLE_STOPUSING("ResourceUnavailable.StopUsing");
+     RESOURCEUNAVAILABLE_STOPUSING("ResourceUnavailable.StopUsing"),
+     
+    // 资源包余量已用尽。
+     UNSUPPORTEDOPERATION_PKGEXHAUSTED("UnsupportedOperation.PkgExhausted");
      
     private String value;
     private NlpErrorCode (String value){

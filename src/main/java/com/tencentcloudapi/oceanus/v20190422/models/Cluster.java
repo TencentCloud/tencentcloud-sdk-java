@@ -327,6 +327,14 @@ public class Cluster extends AbstractModel {
     private SqlGatewayItem [] SqlGateways;
 
     /**
+    * 0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebUIType")
+    @Expose
+    private Long WebUIType;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1058,6 +1066,26 @@ public class Cluster extends AbstractModel {
         this.SqlGateways = SqlGateways;
     }
 
+    /**
+     * Get 0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebUIType 0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWebUIType() {
+        return this.WebUIType;
+    }
+
+    /**
+     * Set 0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebUIType 0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebUIType(Long WebUIType) {
+        this.WebUIType = WebUIType;
+    }
+
     public Cluster() {
     }
 
@@ -1204,6 +1232,9 @@ public class Cluster extends AbstractModel {
                 this.SqlGateways[i] = new SqlGatewayItem(source.SqlGateways[i]);
             }
         }
+        if (source.WebUIType != null) {
+            this.WebUIType = new Long(source.WebUIType);
+        }
     }
 
 
@@ -1251,6 +1282,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamArrayObj(map, prefix + "Orders.", this.Orders);
         this.setParamArrayObj(map, prefix + "SqlGateways.", this.SqlGateways);
+        this.setParamSimple(map, prefix + "WebUIType", this.WebUIType);
 
     }
 }

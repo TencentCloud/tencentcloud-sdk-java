@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTreeJobsResponse extends AbstractModel {
+public class DescribeTreeJobsRsp extends AbstractModel {
 
     /**
     * 父节点ID
@@ -48,7 +48,7 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     private String Name;
 
     /**
-    * 当前文件夹下的作业列表
+    * 当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobSet")
@@ -64,7 +64,8 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     private DescribeTreeJobsRsp [] Children;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestId")
     @Expose
@@ -131,9 +132,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前文件夹下的作业列表
+     * Get 当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobSet 当前文件夹下的作业列表
+     * @return JobSet 当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TreeJobSets [] getJobSet() {
@@ -141,9 +142,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Set 当前文件夹下的作业列表
+     * Set 当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobSet 当前文件夹下的作业列表
+     * @param JobSet 当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobSet(TreeJobSets [] JobSet) {
@@ -171,29 +172,33 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 请求ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestId 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestId 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
     }
 
-    public DescribeTreeJobsResponse() {
+    public DescribeTreeJobsRsp() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTreeJobsResponse(DescribeTreeJobsResponse source) {
+    public DescribeTreeJobsRsp(DescribeTreeJobsRsp source) {
         if (source.ParentId != null) {
             this.ParentId = new String(source.ParentId);
         }

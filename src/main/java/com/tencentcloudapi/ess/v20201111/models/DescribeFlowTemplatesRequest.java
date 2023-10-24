@@ -108,6 +108,13 @@ Key：template-id Values：需要查询的模板Id列表
     private Long GenerateSource;
 
     /**
+    * 是否获取模板预览链接
+    */
+    @SerializedName("WithPreviewUrl")
+    @Expose
+    private Boolean WithPreviewUrl;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -335,6 +342,22 @@ Key：template-id Values：需要查询的模板Id列表
         this.GenerateSource = GenerateSource;
     }
 
+    /**
+     * Get 是否获取模板预览链接 
+     * @return WithPreviewUrl 是否获取模板预览链接
+     */
+    public Boolean getWithPreviewUrl() {
+        return this.WithPreviewUrl;
+    }
+
+    /**
+     * Set 是否获取模板预览链接
+     * @param WithPreviewUrl 是否获取模板预览链接
+     */
+    public void setWithPreviewUrl(Boolean WithPreviewUrl) {
+        this.WithPreviewUrl = WithPreviewUrl;
+    }
+
     public DescribeFlowTemplatesRequest() {
     }
 
@@ -376,6 +399,9 @@ Key：template-id Values：需要查询的模板Id列表
         if (source.GenerateSource != null) {
             this.GenerateSource = new Long(source.GenerateSource);
         }
+        if (source.WithPreviewUrl != null) {
+            this.WithPreviewUrl = new Boolean(source.WithPreviewUrl);
+        }
     }
 
 
@@ -393,6 +419,7 @@ Key：template-id Values：需要查询的模板Id列表
         this.setParamSimple(map, prefix + "IsChannel", this.IsChannel);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
+        this.setParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
 
     }
 }

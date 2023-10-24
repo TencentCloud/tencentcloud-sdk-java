@@ -84,6 +84,9 @@ public enum LiveErrorCode {
     // 免费证书数量超出限制。
      FAILEDOPERATION_EXCEEDSFREELIMIT("FailedOperation.ExceedsFreeLimit"),
      
+    // 获取数据失败。
+     FAILEDOPERATION_GETDATAFAILED("FailedOperation.GetDataFailed"),
+     
     // 无法获取水印 url。
      FAILEDOPERATION_GETPICTUREURLERROR("FailedOperation.GetPictureUrlError"),
      

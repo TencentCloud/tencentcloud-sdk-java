@@ -38,14 +38,16 @@ public class DescribeIntegrationVersionNodesInfoRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * task version path
+    * 该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
     */
     @SerializedName("TaskVersionPath")
     @Expose
     private String TaskVersionPath;
 
     /**
-    * task version
+    * 该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
     */
     @SerializedName("TaskVersion")
     @Expose
@@ -84,32 +86,40 @@ public class DescribeIntegrationVersionNodesInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get task version path 
-     * @return TaskVersionPath task version path
+     * Get 该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值 
+     * @return TaskVersionPath 该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
      */
     public String getTaskVersionPath() {
         return this.TaskVersionPath;
     }
 
     /**
-     * Set task version path
-     * @param TaskVersionPath task version path
+     * Set 该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
+     * @param TaskVersionPath 该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
      */
     public void setTaskVersionPath(String TaskVersionPath) {
         this.TaskVersionPath = TaskVersionPath;
     }
 
     /**
-     * Get task version 
-     * @return TaskVersion task version
+     * Get 该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值 
+     * @return TaskVersion 该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
      */
     public String getTaskVersion() {
         return this.TaskVersion;
     }
 
     /**
-     * Set task version
-     * @param TaskVersion task version
+     * Set 该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
+     * @param TaskVersion 该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
      */
     public void setTaskVersion(String TaskVersion) {
         this.TaskVersion = TaskVersion;

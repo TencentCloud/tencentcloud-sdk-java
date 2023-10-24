@@ -129,6 +129,20 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
     private String Operator;
 
     /**
+    * 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+    */
+    @SerializedName("VoucherMainType")
+    @Expose
+    private String VoucherMainType;
+
+    /**
+    * 代金券副类型 discount 为折扣券 deduct 为抵扣券
+    */
+    @SerializedName("VoucherSubType")
+    @Expose
+    private String VoucherSubType;
+
+    /**
      * Get 一页多少条数据，默认是20条，最大不超过1000 
      * @return Limit 一页多少条数据，默认是20条，最大不超过1000
      */
@@ -368,6 +382,38 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 代金券主类型 has_price 为有价现金券 no_price 为无价代金券 
+     * @return VoucherMainType 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+     */
+    public String getVoucherMainType() {
+        return this.VoucherMainType;
+    }
+
+    /**
+     * Set 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+     * @param VoucherMainType 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+     */
+    public void setVoucherMainType(String VoucherMainType) {
+        this.VoucherMainType = VoucherMainType;
+    }
+
+    /**
+     * Get 代金券副类型 discount 为折扣券 deduct 为抵扣券 
+     * @return VoucherSubType 代金券副类型 discount 为折扣券 deduct 为抵扣券
+     */
+    public String getVoucherSubType() {
+        return this.VoucherSubType;
+    }
+
+    /**
+     * Set 代金券副类型 discount 为折扣券 deduct 为抵扣券
+     * @param VoucherSubType 代金券副类型 discount 为折扣券 deduct 为抵扣券
+     */
+    public void setVoucherSubType(String VoucherSubType) {
+        this.VoucherSubType = VoucherSubType;
+    }
+
     public DescribeVoucherInfoRequest() {
     }
 
@@ -421,6 +467,12 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
+        if (source.VoucherMainType != null) {
+            this.VoucherMainType = new String(source.VoucherMainType);
+        }
+        if (source.VoucherSubType != null) {
+            this.VoucherSubType = new String(source.VoucherSubType);
+        }
     }
 
 
@@ -443,6 +495,8 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "PayScene", this.PayScene);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "VoucherMainType", this.VoucherMainType);
+        this.setParamSimple(map, prefix + "VoucherSubType", this.VoucherSubType);
 
     }
 }

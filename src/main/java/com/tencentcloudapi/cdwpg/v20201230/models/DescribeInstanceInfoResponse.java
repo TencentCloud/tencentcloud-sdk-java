@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.cdwpg.v20201230.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,22 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSparkSessionBatchSQLResponse extends AbstractModel {
+public class DescribeInstanceInfoResponse extends AbstractModel {
 
     /**
-    * 批任务唯一标识
+    * 1
     */
-    @SerializedName("BatchId")
+    @SerializedName("SimpleInstanceInfo")
     @Expose
-    private String BatchId;
+    private SimpleInstanceInfo SimpleInstanceInfo;
 
     /**
-    * Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 1
     */
-    @SerializedName("Statements")
+    @SerializedName("ErrorMsg")
     @Expose
-    private StatementInformation [] Statements;
+    private String ErrorMsg;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,39 +45,35 @@ public class CreateSparkSessionBatchSQLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批任务唯一标识 
-     * @return BatchId 批任务唯一标识
+     * Get 1 
+     * @return SimpleInstanceInfo 1
      */
-    public String getBatchId() {
-        return this.BatchId;
+    public SimpleInstanceInfo getSimpleInstanceInfo() {
+        return this.SimpleInstanceInfo;
     }
 
     /**
-     * Set 批任务唯一标识
-     * @param BatchId 批任务唯一标识
+     * Set 1
+     * @param SimpleInstanceInfo 1
      */
-    public void setBatchId(String BatchId) {
-        this.BatchId = BatchId;
+    public void setSimpleInstanceInfo(SimpleInstanceInfo SimpleInstanceInfo) {
+        this.SimpleInstanceInfo = SimpleInstanceInfo;
     }
 
     /**
-     * Get Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Statements Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 1 
+     * @return ErrorMsg 1
      */
-    public StatementInformation [] getStatements() {
-        return this.Statements;
+    public String getErrorMsg() {
+        return this.ErrorMsg;
     }
 
     /**
-     * Set Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Statements Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 1
+     * @param ErrorMsg 1
      */
-    public void setStatements(StatementInformation [] Statements) {
-        this.Statements = Statements;
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
     }
 
     /**
@@ -97,22 +92,19 @@ public class CreateSparkSessionBatchSQLResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateSparkSessionBatchSQLResponse() {
+    public DescribeInstanceInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSparkSessionBatchSQLResponse(CreateSparkSessionBatchSQLResponse source) {
-        if (source.BatchId != null) {
-            this.BatchId = new String(source.BatchId);
+    public DescribeInstanceInfoResponse(DescribeInstanceInfoResponse source) {
+        if (source.SimpleInstanceInfo != null) {
+            this.SimpleInstanceInfo = new SimpleInstanceInfo(source.SimpleInstanceInfo);
         }
-        if (source.Statements != null) {
-            this.Statements = new StatementInformation[source.Statements.length];
-            for (int i = 0; i < source.Statements.length; i++) {
-                this.Statements[i] = new StatementInformation(source.Statements[i]);
-            }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -124,8 +116,8 @@ public class CreateSparkSessionBatchSQLResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
-        this.setParamArrayObj(map, prefix + "Statements.", this.Statements);
+        this.setParamObj(map, prefix + "SimpleInstanceInfo.", this.SimpleInstanceInfo);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
