@@ -24,14 +24,18 @@ import java.util.HashMap;
 public class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel {
 
     /**
-    * 合同组ID
+    * 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
     */
     @SerializedName("FlowGroupId")
     @Expose
     private String FlowGroupId;
 
     /**
-    * 子合同ID列表
+    * 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致`
     */
     @SerializedName("FlowIds")
     @Expose
@@ -53,32 +57,48 @@ public class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同组ID 
-     * @return FlowGroupId 合同组ID
+     * Get 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。 
+     * @return FlowGroupId 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID
-     * @param FlowGroupId 合同组ID
+     * Set 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+     * @param FlowGroupId 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 子合同ID列表 
-     * @return FlowIds 子合同ID列表
+     * Get 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致` 
+     * @return FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致`
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 子合同ID列表
-     * @param FlowIds 子合同ID列表
+     * Set 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致`
+     * @param FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致`
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

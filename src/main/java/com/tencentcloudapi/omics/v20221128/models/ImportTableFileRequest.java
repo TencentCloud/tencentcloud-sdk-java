@@ -31,7 +31,7 @@ public class ImportTableFileRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 表格名称，支持20个字符内的英文字符、数字和下划线。
+    * 表格名称。最多支持200个字符。
     */
     @SerializedName("Name")
     @Expose
@@ -52,7 +52,7 @@ public class ImportTableFileRequest extends AbstractModel {
     private String [] DataType;
 
     /**
-    * 表格描述。
+    * 表格描述。最多支持500个字符。
     */
     @SerializedName("Description")
     @Expose
@@ -75,16 +75,16 @@ public class ImportTableFileRequest extends AbstractModel {
     }
 
     /**
-     * Get 表格名称，支持20个字符内的英文字符、数字和下划线。 
-     * @return Name 表格名称，支持20个字符内的英文字符、数字和下划线。
+     * Get 表格名称。最多支持200个字符。 
+     * @return Name 表格名称。最多支持200个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 表格名称，支持20个字符内的英文字符、数字和下划线。
-     * @param Name 表格名称，支持20个字符内的英文字符、数字和下划线。
+     * Set 表格名称。最多支持200个字符。
+     * @param Name 表格名称。最多支持200个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -123,16 +123,16 @@ public class ImportTableFileRequest extends AbstractModel {
     }
 
     /**
-     * Get 表格描述。 
-     * @return Description 表格描述。
+     * Get 表格描述。最多支持500个字符。 
+     * @return Description 表格描述。最多支持500个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 表格描述。
-     * @param Description 表格描述。
+     * Set 表格描述。最多支持500个字符。
+     * @param Description 表格描述。最多支持500个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;

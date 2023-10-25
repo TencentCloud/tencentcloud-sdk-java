@@ -24,76 +24,66 @@ import java.util.HashMap;
 public class FlowGroupOptions extends AbstractModel {
 
     /**
-    * 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。
+    * 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
     */
     @SerializedName("SelfOrganizationApproverSignEach")
     @Expose
     private Boolean SelfOrganizationApproverSignEach;
 
     /**
-    * 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。
+    * 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
     */
     @SerializedName("OtherApproverSignEach")
     @Expose
     private Boolean OtherApproverSignEach;
 
     /**
-     * Get 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。 
-     * @return SelfOrganizationApproverSignEach 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。
+     * Get 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul> 
+     * @return SelfOrganizationApproverSignEach 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      */
     public Boolean getSelfOrganizationApproverSignEach() {
         return this.SelfOrganizationApproverSignEach;
     }
 
     /**
-     * Set 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。
-     * @param SelfOrganizationApproverSignEach 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。
+     * Set 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
+     * @param SelfOrganizationApproverSignEach 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      */
     public void setSelfOrganizationApproverSignEach(Boolean SelfOrganizationApproverSignEach) {
         this.SelfOrganizationApproverSignEach = SelfOrganizationApproverSignEach;
     }
 
     /**
-     * Get 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。 
-     * @return OtherApproverSignEach 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。
+     * Get 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul> 
+     * @return OtherApproverSignEach 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      */
     public Boolean getOtherApproverSignEach() {
         return this.OtherApproverSignEach;
     }
 
     /**
-     * Set 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。
-     * @param OtherApproverSignEach 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。
+     * Set 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
+     * @param OtherApproverSignEach 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      */
     public void setOtherApproverSignEach(Boolean OtherApproverSignEach) {
         this.OtherApproverSignEach = OtherApproverSignEach;

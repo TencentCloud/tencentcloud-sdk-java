@@ -52,6 +52,13 @@ public class DescribeScheduledSqlInfoRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    * <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 分页的偏移量，默认值为0。 
      * @return Offset 分页的偏移量，默认值为0。
      */
@@ -115,6 +122,22 @@ public class DescribeScheduledSqlInfoRequest extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。 
+     * @return Filters <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @param Filters <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeScheduledSqlInfoRequest() {
     }
 
@@ -135,6 +158,12 @@ public class DescribeScheduledSqlInfoRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class DescribeScheduledSqlInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -142,6 +142,13 @@ AnalyzeTaskType_MediaStream：音视频体验
     private String [] City;
 
     /**
+    * es scroll查询id
+    */
+    @SerializedName("ScrollID")
+    @Expose
+    private String ScrollID;
+
+    /**
      * Get 开始时间戳（毫秒级） 
      * @return BeginTime 开始时间戳（毫秒级）
      */
@@ -457,6 +464,22 @@ AnalyzeTaskType_MediaStream：音视频体验
         this.City = City;
     }
 
+    /**
+     * Get es scroll查询id 
+     * @return ScrollID es scroll查询id
+     */
+    public String getScrollID() {
+        return this.ScrollID;
+    }
+
+    /**
+     * Set es scroll查询id
+     * @param ScrollID es scroll查询id
+     */
+    public void setScrollID(String ScrollID) {
+        this.ScrollID = ScrollID;
+    }
+
     public DescribeDetailedSingleProbeDataRequest() {
     }
 
@@ -522,6 +545,9 @@ AnalyzeTaskType_MediaStream：音视频体验
                 this.City[i] = new String(source.City[i]);
             }
         }
+        if (source.ScrollID != null) {
+            this.ScrollID = new String(source.ScrollID);
+        }
     }
 
 
@@ -542,6 +568,7 @@ AnalyzeTaskType_MediaStream：音视频体验
         this.setParamArraySimple(map, prefix + "Districts.", this.Districts);
         this.setParamArraySimple(map, prefix + "ErrorTypes.", this.ErrorTypes);
         this.setParamArraySimple(map, prefix + "City.", this.City);
+        this.setParamSimple(map, prefix + "ScrollID", this.ScrollID);
 
     }
 }

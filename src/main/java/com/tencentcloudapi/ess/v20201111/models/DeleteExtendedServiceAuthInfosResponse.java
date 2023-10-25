@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateFlowRemindsResponse extends AbstractModel {
-
-    /**
-    * 合同催办结果的详细信息列表。
-    */
-    @SerializedName("RemindFlowRecords")
-    @Expose
-    private RemindFlowRecords [] RemindFlowRecords;
+public class DeleteExtendedServiceAuthInfosResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class ChannelCreateFlowRemindsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 合同催办结果的详细信息列表。 
-     * @return RemindFlowRecords 合同催办结果的详细信息列表。
-     */
-    public RemindFlowRecords [] getRemindFlowRecords() {
-        return this.RemindFlowRecords;
-    }
-
-    /**
-     * Set 合同催办结果的详细信息列表。
-     * @param RemindFlowRecords 合同催办结果的详细信息列表。
-     */
-    public void setRemindFlowRecords(RemindFlowRecords [] RemindFlowRecords) {
-        this.RemindFlowRecords = RemindFlowRecords;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -69,20 +46,14 @@ public class ChannelCreateFlowRemindsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ChannelCreateFlowRemindsResponse() {
+    public DeleteExtendedServiceAuthInfosResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChannelCreateFlowRemindsResponse(ChannelCreateFlowRemindsResponse source) {
-        if (source.RemindFlowRecords != null) {
-            this.RemindFlowRecords = new RemindFlowRecords[source.RemindFlowRecords.length];
-            for (int i = 0; i < source.RemindFlowRecords.length; i++) {
-                this.RemindFlowRecords[i] = new RemindFlowRecords(source.RemindFlowRecords[i]);
-            }
-        }
+    public DeleteExtendedServiceAuthInfosResponse(DeleteExtendedServiceAuthInfosResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,7 +64,6 @@ public class ChannelCreateFlowRemindsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RemindFlowRecords.", this.RemindFlowRecords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

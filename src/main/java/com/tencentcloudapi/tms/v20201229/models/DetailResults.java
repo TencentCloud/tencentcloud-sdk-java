@@ -95,6 +95,14 @@ public class DetailResults extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 该字段用于返回违规文本命中信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HitInfos")
+    @Expose
+    private HitInfo [] HitInfos;
+
+    /**
      * Get 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。 
      * @return Label 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
@@ -270,6 +278,26 @@ public class DetailResults extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 该字段用于返回违规文本命中信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HitInfos 该字段用于返回违规文本命中信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HitInfo [] getHitInfos() {
+        return this.HitInfos;
+    }
+
+    /**
+     * Set 该字段用于返回违规文本命中信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HitInfos 该字段用于返回违规文本命中信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHitInfos(HitInfo [] HitInfos) {
+        this.HitInfos = HitInfos;
+    }
+
     public DetailResults() {
     }
 
@@ -311,6 +339,12 @@ public class DetailResults extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.HitInfos != null) {
+            this.HitInfos = new HitInfo[source.HitInfos.length];
+            for (int i = 0; i < source.HitInfos.length; i++) {
+                this.HitInfos[i] = new HitInfo(source.HitInfos[i]);
+            }
+        }
     }
 
 
@@ -327,6 +361,7 @@ public class DetailResults extends AbstractModel {
         this.setParamSimple(map, prefix + "LibName", this.LibName);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "HitInfos.", this.HitInfos);
 
     }
 }

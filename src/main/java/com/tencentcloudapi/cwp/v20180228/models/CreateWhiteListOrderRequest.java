@@ -52,6 +52,13 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
     private String RuleName;
 
     /**
+    * 订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private Long SourceType;
+
+    /**
     * 地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9
     */
     @SerializedName("RegionId")
@@ -130,6 +137,22 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
     }
 
     /**
+     * Get 订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送 
+     * @return SourceType 订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
+     */
+    public Long getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set 订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
+     * @param SourceType 订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
+     */
+    public void setSourceType(Long SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
      * Get 地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9 
      * @return RegionId 地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9
      */
@@ -181,6 +204,9 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
+        if (source.SourceType != null) {
+            this.SourceType = new Long(source.SourceType);
+        }
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
         }
@@ -198,6 +224,7 @@ public class CreateWhiteListOrderRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LicenseNum", this.LicenseNum);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
 

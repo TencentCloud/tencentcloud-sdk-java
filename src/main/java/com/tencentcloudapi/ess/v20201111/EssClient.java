@@ -123,13 +123,13 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *此接口（CreateConvertTaskApi）用来将word、excel、图片、txt类型文件转换为PDF文件。<br />
+     *此接口（CreateConvertTaskApi）用来将word、excel、html、图片、txt类型文件转换为PDF文件。<br />
 前提条件：源文件已经通过 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">文件上传接口</a>完成上传，并得到了源文件的资源Id。<br />
 适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同
 适用场景2：已经上传了一个jpg图片文件，希望将该图片文件转换成pdf文件后发起合同<br />
 转换文件是一个耗时操作，若想查看转换任务是否完成，可以通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态</a>接口获取任务状态。<br />
 注: 
-1. `支持的文件类型有doc、docx、xls、xlsx、jpg、jpeg、png、bmp、txt`
+1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
 2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
      * @param req CreateConvertTaskApiRequest
      * @return CreateConvertTaskApiResponse
@@ -173,6 +173,19 @@ public class EssClient extends AbstractClient{
     public CreateEmbedWebUrlResponse CreateEmbedWebUrl(CreateEmbedWebUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateEmbedWebUrl", CreateEmbedWebUrlResponse.class);
+    }
+
+    /**
+     *创建企业扩展服务授权，当前仅支持授权 “企业自动签” 给企业员工。
+
+注：支持集团代子企业操作，请联系运营开通此功能。
+     * @param req CreateExtendedServiceAuthInfosRequest
+     * @return CreateExtendedServiceAuthInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExtendedServiceAuthInfosResponse CreateExtendedServiceAuthInfos(CreateExtendedServiceAuthInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExtendedServiceAuthInfos", CreateExtendedServiceAuthInfosResponse.class);
     }
 
     /**
@@ -609,6 +622,19 @@ public class EssClient extends AbstractClient{
     public CreateWebThemeConfigResponse CreateWebThemeConfig(CreateWebThemeConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateWebThemeConfig", CreateWebThemeConfigResponse.class);
+    }
+
+    /**
+     *删除企业扩展服务授权，当前仅支持 “企业自动签” 取消授权。
+
+注：支持集团代子企业操作，请联系运营开通此功能。
+     * @param req DeleteExtendedServiceAuthInfosRequest
+     * @return DeleteExtendedServiceAuthInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExtendedServiceAuthInfosResponse DeleteExtendedServiceAuthInfos(DeleteExtendedServiceAuthInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteExtendedServiceAuthInfos", DeleteExtendedServiceAuthInfosResponse.class);
     }
 
     /**

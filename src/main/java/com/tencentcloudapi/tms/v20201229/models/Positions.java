@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.tms.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,51 +21,77 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HlsSpecialParam extends AbstractModel {
+public class Positions extends AbstractModel {
 
     /**
-    * HLS续流超时时间。
-取值范围[0，1800]。
+    * 关键词起始位置
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FlowContinueDuration")
+    @SerializedName("Start")
     @Expose
-    private Long FlowContinueDuration;
+    private Long Start;
 
     /**
-     * Get HLS续流超时时间。
-取值范围[0，1800]。
+    * 关键词结束位置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("End")
+    @Expose
+    private Long End;
+
+    /**
+     * Get 关键词起始位置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowContinueDuration HLS续流超时时间。
-取值范围[0，1800]。
+     * @return Start 关键词起始位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getFlowContinueDuration() {
-        return this.FlowContinueDuration;
+    public Long getStart() {
+        return this.Start;
     }
 
     /**
-     * Set HLS续流超时时间。
-取值范围[0，1800]。
+     * Set 关键词起始位置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowContinueDuration HLS续流超时时间。
-取值范围[0，1800]。
+     * @param Start 关键词起始位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFlowContinueDuration(Long FlowContinueDuration) {
-        this.FlowContinueDuration = FlowContinueDuration;
+    public void setStart(Long Start) {
+        this.Start = Start;
     }
 
-    public HlsSpecialParam() {
+    /**
+     * Get 关键词结束位置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return End 关键词结束位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnd() {
+        return this.End;
+    }
+
+    /**
+     * Set 关键词结束位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param End 关键词结束位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnd(Long End) {
+        this.End = End;
+    }
+
+    public Positions() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HlsSpecialParam(HlsSpecialParam source) {
-        if (source.FlowContinueDuration != null) {
-            this.FlowContinueDuration = new Long(source.FlowContinueDuration);
+    public Positions(Positions source) {
+        if (source.Start != null) {
+            this.Start = new Long(source.Start);
+        }
+        if (source.End != null) {
+            this.End = new Long(source.End);
         }
     }
 
@@ -74,7 +100,8 @@ public class HlsSpecialParam extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowContinueDuration", this.FlowContinueDuration);
+        this.setParamSimple(map, prefix + "Start", this.Start);
+        this.setParamSimple(map, prefix + "End", this.End);
 
     }
 }

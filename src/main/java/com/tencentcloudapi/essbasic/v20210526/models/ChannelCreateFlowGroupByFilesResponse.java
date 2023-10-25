@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
 
     /**
-    * 合同组ID
+    * 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowGroupId")
@@ -32,7 +33,10 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     private String FlowGroupId;
 
     /**
-    * 子合同ID列表
+    * 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowIds")
@@ -47,9 +51,11 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同组ID
+     * Get 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowGroupId 合同组ID
+     * @return FlowGroupId 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowGroupId() {
@@ -57,9 +63,11 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     }
 
     /**
-     * Set 合同组ID
+     * Set 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowGroupId 合同组ID
+     * @param FlowGroupId 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowGroupId(String FlowGroupId) {
@@ -67,9 +75,15 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     }
 
     /**
-     * Get 子合同ID列表
+     * Get 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowIds 子合同ID列表
+     * @return FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFlowIds() {
@@ -77,9 +91,15 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     }
 
     /**
-     * Set 子合同ID列表
+     * Set 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowIds 子合同ID列表
+     * @param FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowIds(String [] FlowIds) {

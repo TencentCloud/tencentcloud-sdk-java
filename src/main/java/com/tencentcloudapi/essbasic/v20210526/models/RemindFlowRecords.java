@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class RemindFlowRecords extends AbstractModel {
 
     /**
-    * 是否能够催办，true-是，false-否
+    * 合同流程是否可以催办： true - 可以，false - 不可以。 若无法催办，将返回RemindMessage以解释原因。	
     */
     @SerializedName("CanRemind")
     @Expose
     private Boolean CanRemind;
 
     /**
-    * 合同id
+    * 合同流程ID，为32位字符串。	
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 催办详情信息
+    * 在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。	
     */
     @SerializedName("RemindMessage")
     @Expose
     private String RemindMessage;
 
     /**
-     * Get 是否能够催办，true-是，false-否 
-     * @return CanRemind 是否能够催办，true-是，false-否
+     * Get 合同流程是否可以催办： true - 可以，false - 不可以。 若无法催办，将返回RemindMessage以解释原因。	 
+     * @return CanRemind 合同流程是否可以催办： true - 可以，false - 不可以。 若无法催办，将返回RemindMessage以解释原因。	
      */
     public Boolean getCanRemind() {
         return this.CanRemind;
     }
 
     /**
-     * Set 是否能够催办，true-是，false-否
-     * @param CanRemind 是否能够催办，true-是，false-否
+     * Set 合同流程是否可以催办： true - 可以，false - 不可以。 若无法催办，将返回RemindMessage以解释原因。	
+     * @param CanRemind 合同流程是否可以催办： true - 可以，false - 不可以。 若无法催办，将返回RemindMessage以解释原因。	
      */
     public void setCanRemind(Boolean CanRemind) {
         this.CanRemind = CanRemind;
     }
 
     /**
-     * Get 合同id 
-     * @return FlowId 合同id
+     * Get 合同流程ID，为32位字符串。	 
+     * @return FlowId 合同流程ID，为32位字符串。	
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同id
-     * @param FlowId 合同id
+     * Set 合同流程ID，为32位字符串。	
+     * @param FlowId 合同流程ID，为32位字符串。	
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 催办详情信息 
-     * @return RemindMessage 催办详情信息
+     * Get 在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。	 
+     * @return RemindMessage 在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。	
      */
     public String getRemindMessage() {
         return this.RemindMessage;
     }
 
     /**
-     * Set 催办详情信息
-     * @param RemindMessage 催办详情信息
+     * Set 在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。	
+     * @param RemindMessage 在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。	
      */
     public void setRemindMessage(String RemindMessage) {
         this.RemindMessage = RemindMessage;

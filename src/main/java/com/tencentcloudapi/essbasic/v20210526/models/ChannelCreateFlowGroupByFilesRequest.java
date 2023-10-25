@@ -24,38 +24,49 @@ import java.util.HashMap;
 public class ChannelCreateFlowGroupByFilesRequest extends AbstractModel {
 
     /**
-    * 每个子合同的发起所需的信息，数量限制2-50
+    * 合同组中每个合同签署流程的信息，合同组中最少包含2个合同，不能超过50个合同。
     */
     @SerializedName("FlowFileInfos")
     @Expose
     private FlowFileInfo [] FlowFileInfos;
 
     /**
-    * 合同组名称，长度不超过200个字符
+    * 合同组的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
     */
     @SerializedName("FlowGroupName")
     @Expose
     private String FlowGroupName;
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+
+子客企业和子客企业中的员工比较走完创建和实名过程
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+    * 合同组中签署人校验和认证的方式：
+<ul><li>**VerifyCheck**：人脸识别（默认）</li>
+<li>**MobileCheck**：手机号验证</li></ul>
+注意：
+`1. MobileCheck 方式，未实名的个人/自然人签署方无需进行人脸识别实名认证即可查看合同（但签署合同时仍然需要人脸实名），企业签署方需经过人脸认证。`
+`2. 合同组的校验和认证的方式会优先使用，会覆盖合同组中单个合同和合同签署方认证方式的限制配置。`
     */
     @SerializedName("ApproverVerifyType")
     @Expose
     private String ApproverVerifyType;
 
     /**
-    * 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+    * 合同组的签署配置项信息，例如在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
     */
     @SerializedName("FlowGroupOptions")
     @Expose
@@ -69,92 +80,136 @@ MobileCheck：手机号验证
     private UserInfo Operator;
 
     /**
-     * Get 每个子合同的发起所需的信息，数量限制2-50 
-     * @return FlowFileInfos 每个子合同的发起所需的信息，数量限制2-50
+     * Get 合同组中每个合同签署流程的信息，合同组中最少包含2个合同，不能超过50个合同。 
+     * @return FlowFileInfos 合同组中每个合同签署流程的信息，合同组中最少包含2个合同，不能超过50个合同。
      */
     public FlowFileInfo [] getFlowFileInfos() {
         return this.FlowFileInfos;
     }
 
     /**
-     * Set 每个子合同的发起所需的信息，数量限制2-50
-     * @param FlowFileInfos 每个子合同的发起所需的信息，数量限制2-50
+     * Set 合同组中每个合同签署流程的信息，合同组中最少包含2个合同，不能超过50个合同。
+     * @param FlowFileInfos 合同组中每个合同签署流程的信息，合同组中最少包含2个合同，不能超过50个合同。
      */
     public void setFlowFileInfos(FlowFileInfo [] FlowFileInfos) {
         this.FlowFileInfos = FlowFileInfos;
     }
 
     /**
-     * Get 合同组名称，长度不超过200个字符 
-     * @return FlowGroupName 合同组名称，长度不超过200个字符
+     * Get 合同组的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 
+     * @return FlowGroupName 合同组的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public String getFlowGroupName() {
         return this.FlowGroupName;
     }
 
     /**
-     * Set 合同组名称，长度不超过200个字符
-     * @param FlowGroupName 合同组名称，长度不超过200个字符
+     * Set 合同组的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param FlowGroupName 合同组的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public void setFlowGroupName(String FlowGroupName) {
         this.FlowGroupName = FlowGroupName;
     }
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+
+子客企业和子客企业中的员工比较走完创建和实名过程 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+
+子客企业和子客企业中的员工比较走完创建和实名过程
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+
+子客企业和子客企业中的员工比较走完创建和实名过程
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+
+子客企业和子客企业中的员工比较走完创建和实名过程
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。 
-     * @return ApproverVerifyType 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+     * Get 合同组中签署人校验和认证的方式：
+<ul><li>**VerifyCheck**：人脸识别（默认）</li>
+<li>**MobileCheck**：手机号验证</li></ul>
+注意：
+`1. MobileCheck 方式，未实名的个人/自然人签署方无需进行人脸识别实名认证即可查看合同（但签署合同时仍然需要人脸实名），企业签署方需经过人脸认证。`
+`2. 合同组的校验和认证的方式会优先使用，会覆盖合同组中单个合同和合同签署方认证方式的限制配置。` 
+     * @return ApproverVerifyType 合同组中签署人校验和认证的方式：
+<ul><li>**VerifyCheck**：人脸识别（默认）</li>
+<li>**MobileCheck**：手机号验证</li></ul>
+注意：
+`1. MobileCheck 方式，未实名的个人/自然人签署方无需进行人脸识别实名认证即可查看合同（但签署合同时仍然需要人脸实名），企业签署方需经过人脸认证。`
+`2. 合同组的校验和认证的方式会优先使用，会覆盖合同组中单个合同和合同签署方认证方式的限制配置。`
      */
     public String getApproverVerifyType() {
         return this.ApproverVerifyType;
     }
 
     /**
-     * Set 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
-     * @param ApproverVerifyType 签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
-参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+     * Set 合同组中签署人校验和认证的方式：
+<ul><li>**VerifyCheck**：人脸识别（默认）</li>
+<li>**MobileCheck**：手机号验证</li></ul>
+注意：
+`1. MobileCheck 方式，未实名的个人/自然人签署方无需进行人脸识别实名认证即可查看合同（但签署合同时仍然需要人脸实名），企业签署方需经过人脸认证。`
+`2. 合同组的校验和认证的方式会优先使用，会覆盖合同组中单个合同和合同签署方认证方式的限制配置。`
+     * @param ApproverVerifyType 合同组中签署人校验和认证的方式：
+<ul><li>**VerifyCheck**：人脸识别（默认）</li>
+<li>**MobileCheck**：手机号验证</li></ul>
+注意：
+`1. MobileCheck 方式，未实名的个人/自然人签署方无需进行人脸识别实名认证即可查看合同（但签署合同时仍然需要人脸实名），企业签署方需经过人脸认证。`
+`2. 合同组的校验和认证的方式会优先使用，会覆盖合同组中单个合同和合同签署方认证方式的限制配置。`
      */
     public void setApproverVerifyType(String ApproverVerifyType) {
         this.ApproverVerifyType = ApproverVerifyType;
     }
 
     /**
-     * Get 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。 
-     * @return FlowGroupOptions 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+     * Get 合同组的签署配置项信息，例如在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。 
+     * @return FlowGroupOptions 合同组的签署配置项信息，例如在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
      */
     public FlowGroupOptions getFlowGroupOptions() {
         return this.FlowGroupOptions;
     }
 
     /**
-     * Set 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
-     * @param FlowGroupOptions 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+     * Set 合同组的签署配置项信息，例如在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+     * @param FlowGroupOptions 合同组的签署配置项信息，例如在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
      */
     public void setFlowGroupOptions(FlowGroupOptions FlowGroupOptions) {
         this.FlowGroupOptions = FlowGroupOptions;
