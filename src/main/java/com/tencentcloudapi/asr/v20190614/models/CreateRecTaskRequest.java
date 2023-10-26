@@ -191,7 +191,7 @@ public class CreateRecTaskRequest extends AbstractModel {
     private String CustomizationId;
 
     /**
-    * **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+    * **【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
@@ -794,7 +794,7 @@ public class CreateRecTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+     * Get **【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
@@ -805,7 +805,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
 2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值1或2，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
 3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源 
-     * @return EmotionRecognition **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+     * @return EmotionRecognition **【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
@@ -822,7 +822,7 @@ public class CreateRecTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+     * Set **【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
@@ -833,7 +833,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
 2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值1或2，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
 3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
-     * @param EmotionRecognition **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+     * @param EmotionRecognition **【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）

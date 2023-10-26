@@ -24,9 +24,14 @@ import java.util.HashMap;
 public class ModifyExtendedServiceRequest extends AbstractModel {
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
-注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
     */
     @SerializedName("Agent")
     @Expose
@@ -35,11 +40,11 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
     /**
     *   扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
     */
@@ -58,32 +63,54 @@ CLOSE:关闭
 
     /**
     * 链接跳转类型，支持以下类型
-<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+<ul>
+<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li>
+</ul>
     */
     @SerializedName("Endpoint")
     @Expose
     private String Endpoint;
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
-注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul> 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
-注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
-注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
-注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -92,20 +119,20 @@ CLOSE:关闭
     /**
      * Get   扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul> 
      * @return ServiceType   扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
      */
@@ -116,20 +143,20 @@ CLOSE:关闭
     /**
      * Set   扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
      * @param ServiceType   扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
      */
@@ -163,11 +190,15 @@ CLOSE:关闭
 
     /**
      * Get 链接跳转类型，支持以下类型
-<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul> 
+<ul>
+<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li>
+</ul> 
      * @return Endpoint 链接跳转类型，支持以下类型
-<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+<ul>
+<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li>
+</ul>
      */
     public String getEndpoint() {
         return this.Endpoint;
@@ -175,11 +206,15 @@ CLOSE:关闭
 
     /**
      * Set 链接跳转类型，支持以下类型
-<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+<ul>
+<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li>
+</ul>
      * @param Endpoint 链接跳转类型，支持以下类型
-<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
-<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+<ul>
+<li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li>
+</ul>
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;

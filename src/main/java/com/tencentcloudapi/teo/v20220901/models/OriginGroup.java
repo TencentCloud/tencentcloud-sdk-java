@@ -24,59 +24,48 @@ import java.util.HashMap;
 public class OriginGroup extends AbstractModel {
 
     /**
-    * 站点ID。
-    */
-    @SerializedName("ZoneId")
-    @Expose
-    private String ZoneId;
-
-    /**
-    * 站点名称。
-    */
-    @SerializedName("ZoneName")
-    @Expose
-    private String ZoneName;
-
-    /**
     * 源站组ID。
     */
-    @SerializedName("OriginGroupId")
+    @SerializedName("GroupId")
     @Expose
-    private String OriginGroupId;
-
-    /**
-    * 源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li>
-    */
-    @SerializedName("OriginType")
-    @Expose
-    private String OriginType;
+    private String GroupId;
 
     /**
     * 源站组名称。
     */
-    @SerializedName("OriginGroupName")
+    @SerializedName("Name")
     @Expose
-    private String OriginGroupName;
+    private String Name;
 
     /**
-    * 源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
+    * 源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li>
     */
-    @SerializedName("ConfigurationType")
+    @SerializedName("Type")
     @Expose
-    private String ConfigurationType;
+    private String Type;
 
     /**
     * 源站记录信息。
     */
-    @SerializedName("OriginRecords")
+    @SerializedName("Records")
     @Expose
-    private OriginRecord [] OriginRecords;
+    private OriginRecord [] Records;
+
+    /**
+    * 源站组被引用实例列表。	
+    */
+    @SerializedName("References")
+    @Expose
+    private OriginGroupReference [] References;
+
+    /**
+    * 源站组创建时间。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
 
     /**
     * 源站组更新时间。
@@ -86,147 +75,107 @@ public class OriginGroup extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("HostHeader")
-    @Expose
-    private String HostHeader;
-
-    /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
-     */
-    public String getZoneId() {
-        return this.ZoneId;
-    }
-
-    /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
-     */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
-    }
-
-    /**
-     * Get 站点名称。 
-     * @return ZoneName 站点名称。
-     */
-    public String getZoneName() {
-        return this.ZoneName;
-    }
-
-    /**
-     * Set 站点名称。
-     * @param ZoneName 站点名称。
-     */
-    public void setZoneName(String ZoneName) {
-        this.ZoneName = ZoneName;
-    }
-
-    /**
      * Get 源站组ID。 
-     * @return OriginGroupId 源站组ID。
+     * @return GroupId 源站组ID。
      */
-    public String getOriginGroupId() {
-        return this.OriginGroupId;
+    public String getGroupId() {
+        return this.GroupId;
     }
 
     /**
      * Set 源站组ID。
-     * @param OriginGroupId 源站组ID。
+     * @param GroupId 源站组ID。
      */
-    public void setOriginGroupId(String OriginGroupId) {
-        this.OriginGroupId = OriginGroupId;
-    }
-
-    /**
-     * Get 源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li> 
-     * @return OriginType 源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li>
-     */
-    public String getOriginType() {
-        return this.OriginType;
-    }
-
-    /**
-     * Set 源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li>
-     * @param OriginType 源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li>
-     */
-    public void setOriginType(String OriginType) {
-        this.OriginType = OriginType;
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
      * Get 源站组名称。 
-     * @return OriginGroupName 源站组名称。
+     * @return Name 源站组名称。
      */
-    public String getOriginGroupName() {
-        return this.OriginGroupName;
+    public String getName() {
+        return this.Name;
     }
 
     /**
      * Set 源站组名称。
-     * @param OriginGroupName 源站组名称。
+     * @param Name 源站组名称。
      */
-    public void setOriginGroupName(String OriginGroupName) {
-        this.OriginGroupName = OriginGroupName;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。 
-     * @return ConfigurationType 源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
+     * Get 源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li> 
+     * @return Type 源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li>
      */
-    public String getConfigurationType() {
-        return this.ConfigurationType;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set 源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
-     * @param ConfigurationType 源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
+     * Set 源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li>
+     * @param Type 源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li>
      */
-    public void setConfigurationType(String ConfigurationType) {
-        this.ConfigurationType = ConfigurationType;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
      * Get 源站记录信息。 
-     * @return OriginRecords 源站记录信息。
+     * @return Records 源站记录信息。
      */
-    public OriginRecord [] getOriginRecords() {
-        return this.OriginRecords;
+    public OriginRecord [] getRecords() {
+        return this.Records;
     }
 
     /**
      * Set 源站记录信息。
-     * @param OriginRecords 源站记录信息。
+     * @param Records 源站记录信息。
      */
-    public void setOriginRecords(OriginRecord [] OriginRecords) {
-        this.OriginRecords = OriginRecords;
+    public void setRecords(OriginRecord [] Records) {
+        this.Records = Records;
+    }
+
+    /**
+     * Get 源站组被引用实例列表。	 
+     * @return References 源站组被引用实例列表。	
+     */
+    public OriginGroupReference [] getReferences() {
+        return this.References;
+    }
+
+    /**
+     * Set 源站组被引用实例列表。	
+     * @param References 源站组被引用实例列表。	
+     */
+    public void setReferences(OriginGroupReference [] References) {
+        this.References = References;
+    }
+
+    /**
+     * Get 源站组创建时间。 
+     * @return CreateTime 源站组创建时间。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 源站组创建时间。
+     * @param CreateTime 源站组创建时间。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
@@ -245,26 +194,6 @@ public class OriginGroup extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
-    /**
-     * Get 当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostHeader 当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getHostHeader() {
-        return this.HostHeader;
-    }
-
-    /**
-     * Set 当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostHeader 当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setHostHeader(String HostHeader) {
-        this.HostHeader = HostHeader;
-    }
-
     public OriginGroup() {
     }
 
@@ -273,35 +202,32 @@ public class OriginGroup extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public OriginGroup(OriginGroup source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
         }
-        if (source.ZoneName != null) {
-            this.ZoneName = new String(source.ZoneName);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.OriginGroupId != null) {
-            this.OriginGroupId = new String(source.OriginGroupId);
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
-        if (source.OriginType != null) {
-            this.OriginType = new String(source.OriginType);
-        }
-        if (source.OriginGroupName != null) {
-            this.OriginGroupName = new String(source.OriginGroupName);
-        }
-        if (source.ConfigurationType != null) {
-            this.ConfigurationType = new String(source.ConfigurationType);
-        }
-        if (source.OriginRecords != null) {
-            this.OriginRecords = new OriginRecord[source.OriginRecords.length];
-            for (int i = 0; i < source.OriginRecords.length; i++) {
-                this.OriginRecords[i] = new OriginRecord(source.OriginRecords[i]);
+        if (source.Records != null) {
+            this.Records = new OriginRecord[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new OriginRecord(source.Records[i]);
             }
+        }
+        if (source.References != null) {
+            this.References = new OriginGroupReference[source.References.length];
+            for (int i = 0; i < source.References.length; i++) {
+                this.References[i] = new OriginGroupReference(source.References[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
-        }
-        if (source.HostHeader != null) {
-            this.HostHeader = new String(source.HostHeader);
         }
     }
 
@@ -310,15 +236,13 @@ public class OriginGroup extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
-        this.setParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
-        this.setParamSimple(map, prefix + "OriginType", this.OriginType);
-        this.setParamSimple(map, prefix + "OriginGroupName", this.OriginGroupName);
-        this.setParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
-        this.setParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
+        this.setParamArrayObj(map, prefix + "References.", this.References);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }
 }

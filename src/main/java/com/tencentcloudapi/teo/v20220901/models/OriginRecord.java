@@ -31,6 +31,16 @@ public class OriginRecord extends AbstractModel {
     private String Record;
 
     /**
+    * 源站类型，取值有：
+<li>IP_DOMAIN：IPV4、IPV6、域名类型源站；</li>
+<li>COS：COS源。</li>
+<li>AWS_S3：AWS S3对象存储源站。</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 源站记录ID。
     */
     @SerializedName("RecordId")
@@ -38,57 +48,25 @@ public class OriginRecord extends AbstractModel {
     private String RecordId;
 
     /**
-    * 源站端口，取值范围：[1-65535]。
-    */
-    @SerializedName("Port")
-    @Expose
-    private Long Port;
-
-    /**
-    * 当源站配置类型ConfigurationType=weight时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，多个源站权重总和应为100，表示多个源站按照权重回源。
-当源站配置类型ConfigurationType=proto时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，源站组内Proto相同的多个源站权重总和应为100，表示多个源站按照权重回源。
+    * 源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 当源站配置类型ConfigurationType=proto时，表示源站的协议类型，将按照客户端请求协议回到相应的源站，取值有：
-<li>http：HTTP协议源站；</li>
-<li>https：HTTPS协议源站。</li>
-    */
-    @SerializedName("Proto")
-    @Expose
-    private String Proto;
-
-    /**
-    * 当源站配置类型ConfigurationType=area时，表示区域，为空表示全部地区。取值为iso-3166中alpha-2编码或者大洲区域代码。大洲区域代码取值为：
-<li>Asia：亚洲；</li>
-<li>Europe：欧洲；</li>
-<li>Africa：非洲；</li>
-<li>Oceania：大洋洲；</li>
-<li>Americas：美洲。</li>源站组记录中，至少需要有一项为全部地区。
-    */
-    @SerializedName("Area")
-    @Expose
-    private String [] Area;
-
-    /**
-    * 当源站类型OriginType=third_part时有效
-是否私有鉴权，取值有：
+    * 是否私有鉴权，当源站类型 RecordType=COS/AWS_S3 时生效，取值有：
 <li>true：使用私有鉴权；</li>
 <li>false：不使用私有鉴权。</li>不填写，默认值为：false。
+
     */
     @SerializedName("Private")
     @Expose
     private Boolean Private;
 
     /**
-    * 当源站类型Private=true时有效，表示私有鉴权使用参数。
+    * 私有鉴权参数，当源站类型Private=true时有效。
     */
     @SerializedName("PrivateParameters")
     @Expose
@@ -111,6 +89,34 @@ public class OriginRecord extends AbstractModel {
     }
 
     /**
+     * Get 源站类型，取值有：
+<li>IP_DOMAIN：IPV4、IPV6、域名类型源站；</li>
+<li>COS：COS源。</li>
+<li>AWS_S3：AWS S3对象存储源站。</li> 
+     * @return Type 源站类型，取值有：
+<li>IP_DOMAIN：IPV4、IPV6、域名类型源站；</li>
+<li>COS：COS源。</li>
+<li>AWS_S3：AWS S3对象存储源站。</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 源站类型，取值有：
+<li>IP_DOMAIN：IPV4、IPV6、域名类型源站；</li>
+<li>COS：COS源。</li>
+<li>AWS_S3：AWS S3对象存储源站。</li>
+     * @param Type 源站类型，取值有：
+<li>IP_DOMAIN：IPV4、IPV6、域名类型源站；</li>
+<li>COS：COS源。</li>
+<li>AWS_S3：AWS S3对象存储源站。</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Get 源站记录ID。 
      * @return RecordId 源站记录ID。
      */
@@ -127,156 +133,64 @@ public class OriginRecord extends AbstractModel {
     }
 
     /**
-     * Get 源站端口，取值范围：[1-65535]。 
-     * @return Port 源站端口，取值范围：[1-65535]。
-     */
-    public Long getPort() {
-        return this.Port;
-    }
-
-    /**
-     * Set 源站端口，取值范围：[1-65535]。
-     * @param Port 源站端口，取值范围：[1-65535]。
-     */
-    public void setPort(Long Port) {
-        this.Port = Port;
-    }
-
-    /**
-     * Get 当源站配置类型ConfigurationType=weight时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，多个源站权重总和应为100，表示多个源站按照权重回源。
-当源站配置类型ConfigurationType=proto时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，源站组内Proto相同的多个源站权重总和应为100，表示多个源站按照权重回源。 
-     * @return Weight 当源站配置类型ConfigurationType=weight时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，多个源站权重总和应为100，表示多个源站按照权重回源。
-当源站配置类型ConfigurationType=proto时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，源站组内Proto相同的多个源站权重总和应为100，表示多个源站按照权重回源。
+     * Get 源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Weight 源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 当源站配置类型ConfigurationType=weight时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，多个源站权重总和应为100，表示多个源站按照权重回源。
-当源站配置类型ConfigurationType=proto时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，源站组内Proto相同的多个源站权重总和应为100，表示多个源站按照权重回源。
-     * @param Weight 当源站配置类型ConfigurationType=weight时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，多个源站权重总和应为100，表示多个源站按照权重回源。
-当源站配置类型ConfigurationType=proto时，表示权重。
-不配置权重信息时，所有源站组记录统一填写为0或者不填写，表示多个源站轮询回源。
-配置权重信息时，取值为[1-100]，源站组内Proto相同的多个源站权重总和应为100，表示多个源站按照权重回源。
+     * Set 源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Weight 源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 当源站配置类型ConfigurationType=proto时，表示源站的协议类型，将按照客户端请求协议回到相应的源站，取值有：
-<li>http：HTTP协议源站；</li>
-<li>https：HTTPS协议源站。</li> 
-     * @return Proto 当源站配置类型ConfigurationType=proto时，表示源站的协议类型，将按照客户端请求协议回到相应的源站，取值有：
-<li>http：HTTP协议源站；</li>
-<li>https：HTTPS协议源站。</li>
-     */
-    public String getProto() {
-        return this.Proto;
-    }
-
-    /**
-     * Set 当源站配置类型ConfigurationType=proto时，表示源站的协议类型，将按照客户端请求协议回到相应的源站，取值有：
-<li>http：HTTP协议源站；</li>
-<li>https：HTTPS协议源站。</li>
-     * @param Proto 当源站配置类型ConfigurationType=proto时，表示源站的协议类型，将按照客户端请求协议回到相应的源站，取值有：
-<li>http：HTTP协议源站；</li>
-<li>https：HTTPS协议源站。</li>
-     */
-    public void setProto(String Proto) {
-        this.Proto = Proto;
-    }
-
-    /**
-     * Get 当源站配置类型ConfigurationType=area时，表示区域，为空表示全部地区。取值为iso-3166中alpha-2编码或者大洲区域代码。大洲区域代码取值为：
-<li>Asia：亚洲；</li>
-<li>Europe：欧洲；</li>
-<li>Africa：非洲；</li>
-<li>Oceania：大洋洲；</li>
-<li>Americas：美洲。</li>源站组记录中，至少需要有一项为全部地区。 
-     * @return Area 当源站配置类型ConfigurationType=area时，表示区域，为空表示全部地区。取值为iso-3166中alpha-2编码或者大洲区域代码。大洲区域代码取值为：
-<li>Asia：亚洲；</li>
-<li>Europe：欧洲；</li>
-<li>Africa：非洲；</li>
-<li>Oceania：大洋洲；</li>
-<li>Americas：美洲。</li>源站组记录中，至少需要有一项为全部地区。
-     */
-    public String [] getArea() {
-        return this.Area;
-    }
-
-    /**
-     * Set 当源站配置类型ConfigurationType=area时，表示区域，为空表示全部地区。取值为iso-3166中alpha-2编码或者大洲区域代码。大洲区域代码取值为：
-<li>Asia：亚洲；</li>
-<li>Europe：欧洲；</li>
-<li>Africa：非洲；</li>
-<li>Oceania：大洋洲；</li>
-<li>Americas：美洲。</li>源站组记录中，至少需要有一项为全部地区。
-     * @param Area 当源站配置类型ConfigurationType=area时，表示区域，为空表示全部地区。取值为iso-3166中alpha-2编码或者大洲区域代码。大洲区域代码取值为：
-<li>Asia：亚洲；</li>
-<li>Europe：欧洲；</li>
-<li>Africa：非洲；</li>
-<li>Oceania：大洋洲；</li>
-<li>Americas：美洲。</li>源站组记录中，至少需要有一项为全部地区。
-     */
-    public void setArea(String [] Area) {
-        this.Area = Area;
-    }
-
-    /**
-     * Get 当源站类型OriginType=third_part时有效
-是否私有鉴权，取值有：
-<li>true：使用私有鉴权；</li>
-<li>false：不使用私有鉴权。</li>不填写，默认值为：false。 
-     * @return Private 当源站类型OriginType=third_part时有效
-是否私有鉴权，取值有：
+     * Get 是否私有鉴权，当源站类型 RecordType=COS/AWS_S3 时生效，取值有：
 <li>true：使用私有鉴权；</li>
 <li>false：不使用私有鉴权。</li>不填写，默认值为：false。
+ 
+     * @return Private 是否私有鉴权，当源站类型 RecordType=COS/AWS_S3 时生效，取值有：
+<li>true：使用私有鉴权；</li>
+<li>false：不使用私有鉴权。</li>不填写，默认值为：false。
+
      */
     public Boolean getPrivate() {
         return this.Private;
     }
 
     /**
-     * Set 当源站类型OriginType=third_part时有效
-是否私有鉴权，取值有：
+     * Set 是否私有鉴权，当源站类型 RecordType=COS/AWS_S3 时生效，取值有：
 <li>true：使用私有鉴权；</li>
 <li>false：不使用私有鉴权。</li>不填写，默认值为：false。
-     * @param Private 当源站类型OriginType=third_part时有效
-是否私有鉴权，取值有：
+
+     * @param Private 是否私有鉴权，当源站类型 RecordType=COS/AWS_S3 时生效，取值有：
 <li>true：使用私有鉴权；</li>
 <li>false：不使用私有鉴权。</li>不填写，默认值为：false。
+
      */
     public void setPrivate(Boolean Private) {
         this.Private = Private;
     }
 
     /**
-     * Get 当源站类型Private=true时有效，表示私有鉴权使用参数。 
-     * @return PrivateParameters 当源站类型Private=true时有效，表示私有鉴权使用参数。
+     * Get 私有鉴权参数，当源站类型Private=true时有效。 
+     * @return PrivateParameters 私有鉴权参数，当源站类型Private=true时有效。
      */
     public PrivateParameter [] getPrivateParameters() {
         return this.PrivateParameters;
     }
 
     /**
-     * Set 当源站类型Private=true时有效，表示私有鉴权使用参数。
-     * @param PrivateParameters 当源站类型Private=true时有效，表示私有鉴权使用参数。
+     * Set 私有鉴权参数，当源站类型Private=true时有效。
+     * @param PrivateParameters 私有鉴权参数，当源站类型Private=true时有效。
      */
     public void setPrivateParameters(PrivateParameter [] PrivateParameters) {
         this.PrivateParameters = PrivateParameters;
@@ -293,23 +207,14 @@ public class OriginRecord extends AbstractModel {
         if (source.Record != null) {
             this.Record = new String(source.Record);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.RecordId != null) {
             this.RecordId = new String(source.RecordId);
         }
-        if (source.Port != null) {
-            this.Port = new Long(source.Port);
-        }
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
-        }
-        if (source.Proto != null) {
-            this.Proto = new String(source.Proto);
-        }
-        if (source.Area != null) {
-            this.Area = new String[source.Area.length];
-            for (int i = 0; i < source.Area.length; i++) {
-                this.Area[i] = new String(source.Area[i]);
-            }
         }
         if (source.Private != null) {
             this.Private = new Boolean(source.Private);
@@ -328,11 +233,9 @@ public class OriginRecord extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Record", this.Record);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
-        this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
-        this.setParamSimple(map, prefix + "Proto", this.Proto);
-        this.setParamArraySimple(map, prefix + "Area.", this.Area);
         this.setParamSimple(map, prefix + "Private", this.Private);
         this.setParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
 

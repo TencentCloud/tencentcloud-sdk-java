@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,15 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScanMalwareSettingResponse extends AbstractModel {
-
-    /**
-    * 任务id
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private Long TaskId;
+public class DeleteOriginGroupResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,26 +29,6 @@ public class CreateScanMalwareSettingResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 任务id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 任务id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -74,17 +46,14 @@ public class CreateScanMalwareSettingResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateScanMalwareSettingResponse() {
+    public DeleteOriginGroupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateScanMalwareSettingResponse(CreateScanMalwareSettingResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
-        }
+    public DeleteOriginGroupResponse(DeleteOriginGroupResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,7 +64,6 @@ public class CreateScanMalwareSettingResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

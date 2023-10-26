@@ -66,7 +66,7 @@ public class CallBackTemplateInfo extends AbstractModel {
     private String StreamEndNotifyUrl;
 
     /**
-    * 录制回调 URL。
+    * 录制文件回调 URL。
     */
     @SerializedName("RecordNotifyUrl")
     @Expose
@@ -206,16 +206,16 @@ public class CallBackTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 录制回调 URL。 
-     * @return RecordNotifyUrl 录制回调 URL。
+     * Get 录制文件回调 URL。 
+     * @return RecordNotifyUrl 录制文件回调 URL。
      */
     public String getRecordNotifyUrl() {
         return this.RecordNotifyUrl;
     }
 
     /**
-     * Set 录制回调 URL。
-     * @param RecordNotifyUrl 录制回调 URL。
+     * Set 录制文件回调 URL。
+     * @param RecordNotifyUrl 录制文件回调 URL。
      */
     public void setRecordNotifyUrl(String RecordNotifyUrl) {
         this.RecordNotifyUrl = RecordNotifyUrl;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,15 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScanMalwareSettingResponse extends AbstractModel {
+public class CreateOriginGroupResponse extends AbstractModel {
 
     /**
-    * 任务id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 源站组ID。
     */
-    @SerializedName("TaskId")
+    @SerializedName("OriginGroupId")
     @Expose
-    private Long TaskId;
+    private String OriginGroupId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -39,23 +38,19 @@ public class CreateScanMalwareSettingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 源站组ID。 
+     * @return OriginGroupId 源站组ID。
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public String getOriginGroupId() {
+        return this.OriginGroupId;
     }
 
     /**
-     * Set 任务id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 源站组ID。
+     * @param OriginGroupId 源站组ID。
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setOriginGroupId(String OriginGroupId) {
+        this.OriginGroupId = OriginGroupId;
     }
 
     /**
@@ -74,16 +69,16 @@ public class CreateScanMalwareSettingResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateScanMalwareSettingResponse() {
+    public CreateOriginGroupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateScanMalwareSettingResponse(CreateScanMalwareSettingResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+    public CreateOriginGroupResponse(CreateOriginGroupResponse source) {
+        if (source.OriginGroupId != null) {
+            this.OriginGroupId = new String(source.OriginGroupId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -95,7 +90,7 @@ public class CreateScanMalwareSettingResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

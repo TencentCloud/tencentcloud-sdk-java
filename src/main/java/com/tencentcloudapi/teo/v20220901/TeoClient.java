@@ -107,6 +107,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *创建源站组
+     * @param req CreateOriginGroupRequest
+     * @return CreateOriginGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOriginGroupResponse CreateOriginGroup(CreateOriginGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOriginGroup", CreateOriginGroupResponse.class);
+    }
+
+    /**
      *为未购买套餐的站点购买套餐
      * @param req CreatePlanForZoneRequest
      * @return CreatePlanForZoneResponse
@@ -229,6 +240,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteApplicationProxyRule", DeleteApplicationProxyRuleResponse.class);
+    }
+
+    /**
+     *删除源站组，若源站组仍然被服务（例如：四层代理，域名服务，负载均衡，规则引起）引用，将不允许删除。
+     * @param req DeleteOriginGroupRequest
+     * @return DeleteOriginGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOriginGroupResponse DeleteOriginGroup(DeleteOriginGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOriginGroup", DeleteOriginGroupResponse.class);
     }
 
     /**
@@ -671,6 +693,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyHostsCertificateResponse ModifyHostsCertificate(ModifyHostsCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyHostsCertificate", ModifyHostsCertificateResponse.class);
+    }
+
+    /**
+     *修改源站组
+     * @param req ModifyOriginGroupRequest
+     * @return ModifyOriginGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOriginGroupResponse ModifyOriginGroup(ModifyOriginGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOriginGroup", ModifyOriginGroupResponse.class);
     }
 
     /**

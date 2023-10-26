@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,72 +21,77 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScanMalwareSettingResponse extends AbstractModel {
+public class ProductInfo extends AbstractModel {
 
     /**
-    * 任务id
+    * 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TaskId")
+    @SerializedName("Name")
     @Expose
-    private Long TaskId;
+    private String Name;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 版本
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RequestId")
+    @SerializedName("Value")
     @Expose
-    private String RequestId;
+    private String Value;
 
     /**
-     * Get 任务id
+     * Get 产品名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
+     * @return Name 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 任务id
+     * Set 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
+     * @param Name 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Value 版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value 版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
-    public CreateScanMalwareSettingResponse() {
+    public ProductInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateScanMalwareSettingResponse(CreateScanMalwareSettingResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+    public ProductInfo(ProductInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -95,8 +100,8 @@ public class CreateScanMalwareSettingResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

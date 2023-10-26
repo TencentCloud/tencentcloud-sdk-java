@@ -40,7 +40,7 @@ public class DescribeCallDetailInfoRequest extends AbstractModel {
 
     /**
     * 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。
     */
     @SerializedName("EndTime")
     @Expose
@@ -136,9 +136,9 @@ DataType 为null，UserIds长度不超过100，PageSize最大不超过100。
 
     /**
      * Get 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。 
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。 
      * @return EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -146,9 +146,9 @@ DataType 为null，UserIds长度不超过100，PageSize最大不超过100。
 
     /**
      * Set 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。
      * @param EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

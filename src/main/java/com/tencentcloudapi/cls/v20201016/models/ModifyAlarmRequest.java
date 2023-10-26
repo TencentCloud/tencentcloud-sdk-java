@@ -133,6 +133,29 @@ public class ModifyAlarmRequest extends AbstractModel {
     private AnalysisDimensional [] Analysis;
 
     /**
+    * 分组触发状态。true：开启，false：关闭（默认）
+    */
+    @SerializedName("GroupTriggerStatus")
+    @Expose
+    private Boolean GroupTriggerStatus;
+
+    /**
+    * 分组触发条件。
+    */
+    @SerializedName("GroupTriggerCondition")
+    @Expose
+    private String [] GroupTriggerCondition;
+
+    /**
+    * 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+    */
+    @SerializedName("MonitorObjectType")
+    @Expose
+    private Long MonitorObjectType;
+
+    /**
      * Get 告警策略ID。 
      * @return AlarmId 告警策略ID。
      */
@@ -400,6 +423,62 @@ public class ModifyAlarmRequest extends AbstractModel {
         this.Analysis = Analysis;
     }
 
+    /**
+     * Get 分组触发状态。true：开启，false：关闭（默认） 
+     * @return GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
+     */
+    public Boolean getGroupTriggerStatus() {
+        return this.GroupTriggerStatus;
+    }
+
+    /**
+     * Set 分组触发状态。true：开启，false：关闭（默认）
+     * @param GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
+     */
+    public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
+        this.GroupTriggerStatus = GroupTriggerStatus;
+    }
+
+    /**
+     * Get 分组触发条件。 
+     * @return GroupTriggerCondition 分组触发条件。
+     */
+    public String [] getGroupTriggerCondition() {
+        return this.GroupTriggerCondition;
+    }
+
+    /**
+     * Set 分组触发条件。
+     * @param GroupTriggerCondition 分组触发条件。
+     */
+    public void setGroupTriggerCondition(String [] GroupTriggerCondition) {
+        this.GroupTriggerCondition = GroupTriggerCondition;
+    }
+
+    /**
+     * Get 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+ 
+     * @return MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+     */
+    public Long getMonitorObjectType() {
+        return this.MonitorObjectType;
+    }
+
+    /**
+     * Set 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+     * @param MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+     */
+    public void setMonitorObjectType(Long MonitorObjectType) {
+        this.MonitorObjectType = MonitorObjectType;
+    }
+
     public ModifyAlarmRequest() {
     }
 
@@ -462,6 +541,18 @@ public class ModifyAlarmRequest extends AbstractModel {
                 this.Analysis[i] = new AnalysisDimensional(source.Analysis[i]);
             }
         }
+        if (source.GroupTriggerStatus != null) {
+            this.GroupTriggerStatus = new Boolean(source.GroupTriggerStatus);
+        }
+        if (source.GroupTriggerCondition != null) {
+            this.GroupTriggerCondition = new String[source.GroupTriggerCondition.length];
+            for (int i = 0; i < source.GroupTriggerCondition.length; i++) {
+                this.GroupTriggerCondition[i] = new String(source.GroupTriggerCondition[i]);
+            }
+        }
+        if (source.MonitorObjectType != null) {
+            this.MonitorObjectType = new Long(source.MonitorObjectType);
+        }
     }
 
 
@@ -483,6 +574,9 @@ public class ModifyAlarmRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
         this.setParamObj(map, prefix + "CallBack.", this.CallBack);
         this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+        this.setParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
+        this.setParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+        this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
 
     }
 }

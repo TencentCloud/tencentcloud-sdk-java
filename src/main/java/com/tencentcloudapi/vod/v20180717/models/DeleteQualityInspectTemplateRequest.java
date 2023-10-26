@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteQualityInspectTemplateRequest extends AbstractModel {
 
     /**
-    * 音画质检测模板号。
+    * 音画质检测模板 ID。
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteQualityInspectTemplateRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-     * Get 音画质检测模板号。 
-     * @return Definition 音画质检测模板号。
+     * Get 音画质检测模板 ID。 
+     * @return Definition 音画质检测模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 音画质检测模板号。
-     * @param Definition 音画质检测模板号。
+     * Set 音画质检测模板 ID。
+     * @param Definition 音画质检测模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

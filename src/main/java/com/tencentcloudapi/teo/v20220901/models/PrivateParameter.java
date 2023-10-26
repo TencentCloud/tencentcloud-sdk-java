@@ -26,7 +26,9 @@ public class PrivateParameter extends AbstractModel {
     /**
     * 私有鉴权参数名称，取值有：
 <li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key。</li>
+<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>Region：存储桶地域。</li>
     */
     @SerializedName("Name")
     @Expose
@@ -42,10 +44,14 @@ public class PrivateParameter extends AbstractModel {
     /**
      * Get 私有鉴权参数名称，取值有：
 <li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key。</li> 
+<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>Region：存储桶地域。</li> 
      * @return Name 私有鉴权参数名称，取值有：
 <li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key。</li>
+<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>Region：存储桶地域。</li>
      */
     public String getName() {
         return this.Name;
@@ -54,10 +60,14 @@ public class PrivateParameter extends AbstractModel {
     /**
      * Set 私有鉴权参数名称，取值有：
 <li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key。</li>
+<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>Region：存储桶地域。</li>
      * @param Name 私有鉴权参数名称，取值有：
 <li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key。</li>
+<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>Region：存储桶地域。</li>
      */
     public void setName(String Name) {
         this.Name = Name;

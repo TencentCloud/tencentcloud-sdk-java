@@ -104,6 +104,14 @@ public class WhoisInfo extends AbstractModel {
     private String UpdatedDate;
 
     /**
+    * dnssec
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Dnssec")
+    @Expose
+    private String Dnssec;
+
+    /**
      * Get 联系信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Contacts 联系信息
@@ -303,6 +311,26 @@ public class WhoisInfo extends AbstractModel {
         this.UpdatedDate = UpdatedDate;
     }
 
+    /**
+     * Get dnssec
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Dnssec dnssec
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDnssec() {
+        return this.Dnssec;
+    }
+
+    /**
+     * Set dnssec
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Dnssec dnssec
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDnssec(String Dnssec) {
+        this.Dnssec = Dnssec;
+    }
+
     public WhoisInfo() {
     }
 
@@ -353,6 +381,9 @@ public class WhoisInfo extends AbstractModel {
         if (source.UpdatedDate != null) {
             this.UpdatedDate = new String(source.UpdatedDate);
         }
+        if (source.Dnssec != null) {
+            this.Dnssec = new String(source.Dnssec);
+        }
     }
 
 
@@ -370,6 +401,7 @@ public class WhoisInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Registrar.", this.Registrar);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamSimple(map, prefix + "UpdatedDate", this.UpdatedDate);
+        this.setParamSimple(map, prefix + "Dnssec", this.Dnssec);
 
     }
 }

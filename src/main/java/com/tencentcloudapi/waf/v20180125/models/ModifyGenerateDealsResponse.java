@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,25 +21,30 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSealByImageResponse extends AbstractModel {
+public class ModifyGenerateDealsResponse extends AbstractModel {
 
     /**
-    * 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-    */
-    @SerializedName("SealId")
-    @Expose
-    private String SealId;
-
-    /**
-    * 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
+    * 计费下单响应结构体
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ImageUrl")
+    @SerializedName("Data")
     @Expose
-    private String ImageUrl;
+    private DealData Data;
+
+    /**
+    * 1:成功，0:失败
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 返回message
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReturnMessage")
+    @Expose
+    private String ReturnMessage;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,51 +54,59 @@ public class CreateSealByImageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。 
-     * @return SealId 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-     */
-    public String getSealId() {
-        return this.SealId;
-    }
-
-    /**
-     * Set 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-     * @param SealId 电子印章ID，为32位字符串。
-建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
-     */
-    public void setSealId(String SealId) {
-        this.SealId = SealId;
-    }
-
-    /**
-     * Get 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
+     * Get 计费下单响应结构体
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageUrl 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
+     * @return Data 计费下单响应结构体
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getImageUrl() {
-        return this.ImageUrl;
+    public DealData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
+     * Set 计费下单响应结构体
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageUrl 电子印章预览链接地址，地址默认失效时间为24小时。
-
-注:`图片上传生成的电子印章无预览链接地址`
+     * @param Data 计费下单响应结构体
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setImageUrl(String ImageUrl) {
-        this.ImageUrl = ImageUrl;
+    public void setData(DealData Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get 1:成功，0:失败 
+     * @return Status 1:成功，0:失败
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 1:成功，0:失败
+     * @param Status 1:成功，0:失败
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 返回message
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReturnMessage 返回message
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReturnMessage() {
+        return this.ReturnMessage;
+    }
+
+    /**
+     * Set 返回message
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReturnMessage 返回message
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReturnMessage(String ReturnMessage) {
+        this.ReturnMessage = ReturnMessage;
     }
 
     /**
@@ -112,19 +125,22 @@ public class CreateSealByImageResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateSealByImageResponse() {
+    public ModifyGenerateDealsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSealByImageResponse(CreateSealByImageResponse source) {
-        if (source.SealId != null) {
-            this.SealId = new String(source.SealId);
+    public ModifyGenerateDealsResponse(ModifyGenerateDealsResponse source) {
+        if (source.Data != null) {
+            this.Data = new DealData(source.Data);
         }
-        if (source.ImageUrl != null) {
-            this.ImageUrl = new String(source.ImageUrl);
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ReturnMessage != null) {
+            this.ReturnMessage = new String(source.ReturnMessage);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -136,8 +152,9 @@ public class CreateSealByImageResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SealId", this.SealId);
-        this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

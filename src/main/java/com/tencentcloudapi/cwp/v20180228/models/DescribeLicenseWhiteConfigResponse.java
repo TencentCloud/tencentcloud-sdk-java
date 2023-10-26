@@ -24,11 +24,80 @@ import java.util.HashMap;
 public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
 
     /**
+    * 旗舰版 配置信息
+    */
+    @SerializedName("FlagShip")
+    @Expose
+    private VersionWhiteConfig FlagShip;
+
+    /**
+    * 专业版 配置信息
+    */
+    @SerializedName("Professional")
+    @Expose
+    private VersionWhiteConfig Professional;
+
+    /**
+    * 普惠版 配置信息
+    */
+    @SerializedName("PrattWhitney")
+    @Expose
+    private VersionWhiteConfig PrattWhitney;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 旗舰版 配置信息 
+     * @return FlagShip 旗舰版 配置信息
+     */
+    public VersionWhiteConfig getFlagShip() {
+        return this.FlagShip;
+    }
+
+    /**
+     * Set 旗舰版 配置信息
+     * @param FlagShip 旗舰版 配置信息
+     */
+    public void setFlagShip(VersionWhiteConfig FlagShip) {
+        this.FlagShip = FlagShip;
+    }
+
+    /**
+     * Get 专业版 配置信息 
+     * @return Professional 专业版 配置信息
+     */
+    public VersionWhiteConfig getProfessional() {
+        return this.Professional;
+    }
+
+    /**
+     * Set 专业版 配置信息
+     * @param Professional 专业版 配置信息
+     */
+    public void setProfessional(VersionWhiteConfig Professional) {
+        this.Professional = Professional;
+    }
+
+    /**
+     * Get 普惠版 配置信息 
+     * @return PrattWhitney 普惠版 配置信息
+     */
+    public VersionWhiteConfig getPrattWhitney() {
+        return this.PrattWhitney;
+    }
+
+    /**
+     * Set 普惠版 配置信息
+     * @param PrattWhitney 普惠版 配置信息
+     */
+    public void setPrattWhitney(VersionWhiteConfig PrattWhitney) {
+        this.PrattWhitney = PrattWhitney;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +123,15 @@ public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLicenseWhiteConfigResponse(DescribeLicenseWhiteConfigResponse source) {
+        if (source.FlagShip != null) {
+            this.FlagShip = new VersionWhiteConfig(source.FlagShip);
+        }
+        if (source.Professional != null) {
+            this.Professional = new VersionWhiteConfig(source.Professional);
+        }
+        if (source.PrattWhitney != null) {
+            this.PrattWhitney = new VersionWhiteConfig(source.PrattWhitney);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +142,9 @@ public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "FlagShip.", this.FlagShip);
+        this.setParamObj(map, prefix + "Professional.", this.Professional);
+        this.setParamObj(map, prefix + "PrattWhitney.", this.PrattWhitney);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

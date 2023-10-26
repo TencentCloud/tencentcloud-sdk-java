@@ -1158,6 +1158,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单，计费侧接口：https://tcb.woa.com/magical-brush/docs/754661947
+     * @param req ModifyGenerateDealsRequest
+     * @return ModifyGenerateDealsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGenerateDealsResponse ModifyGenerateDeals(ModifyGenerateDealsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGenerateDeals", ModifyGenerateDealsResponse.class);
+    }
+
+    /**
      *clb-waf编辑防护域名配置
      * @param req ModifyHostRequest
      * @return ModifyHostResponse

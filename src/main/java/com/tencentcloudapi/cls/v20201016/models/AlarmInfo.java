@@ -125,6 +125,38 @@ public class AlarmInfo extends AbstractModel {
     private AnalysisDimensional [] Analysis;
 
     /**
+    * 分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupTriggerStatus")
+    @Expose
+    private Boolean GroupTriggerStatus;
+
+    /**
+    * 分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupTriggerCondition")
+    @Expose
+    private String [] GroupTriggerCondition;
+
+    /**
+    * 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorObjectType")
+    @Expose
+    private Long MonitorObjectType;
+
+    /**
+    * 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
     * 多触发条件。
 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -370,6 +402,86 @@ public class AlarmInfo extends AbstractModel {
     }
 
     /**
+     * Get 分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupTriggerStatus 分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getGroupTriggerStatus() {
+        return this.GroupTriggerStatus;
+    }
+
+    /**
+     * Set 分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupTriggerStatus 分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
+        this.GroupTriggerStatus = GroupTriggerStatus;
+    }
+
+    /**
+     * Get 分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupTriggerCondition 分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getGroupTriggerCondition() {
+        return this.GroupTriggerCondition;
+    }
+
+    /**
+     * Set 分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupTriggerCondition 分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupTriggerCondition(String [] GroupTriggerCondition) {
+        this.GroupTriggerCondition = GroupTriggerCondition;
+    }
+
+    /**
+     * Get 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMonitorObjectType() {
+        return this.MonitorObjectType;
+    }
+
+    /**
+     * Set 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorObjectType(Long MonitorObjectType) {
+        this.MonitorObjectType = MonitorObjectType;
+    }
+
+    /**
+     * Get 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
      * Get 多触发条件。
 
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -452,6 +564,21 @@ public class AlarmInfo extends AbstractModel {
                 this.Analysis[i] = new AnalysisDimensional(source.Analysis[i]);
             }
         }
+        if (source.GroupTriggerStatus != null) {
+            this.GroupTriggerStatus = new Boolean(source.GroupTriggerStatus);
+        }
+        if (source.GroupTriggerCondition != null) {
+            this.GroupTriggerCondition = new String[source.GroupTriggerCondition.length];
+            for (int i = 0; i < source.GroupTriggerCondition.length; i++) {
+                this.GroupTriggerCondition[i] = new String(source.GroupTriggerCondition[i]);
+            }
+        }
+        if (source.MonitorObjectType != null) {
+            this.MonitorObjectType = new Long(source.MonitorObjectType);
+        }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
         if (source.MultiConditions != null) {
             this.MultiConditions = new MultiCondition[source.MultiConditions.length];
             for (int i = 0; i < source.MultiConditions.length; i++) {
@@ -479,6 +606,10 @@ public class AlarmInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
         this.setParamObj(map, prefix + "CallBack.", this.CallBack);
         this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
+        this.setParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
+        this.setParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+        this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
         this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
 
     }

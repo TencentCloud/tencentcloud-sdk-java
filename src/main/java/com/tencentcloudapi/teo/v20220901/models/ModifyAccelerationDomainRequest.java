@@ -45,6 +45,42 @@ public class ModifyAccelerationDomainRequest extends AbstractModel {
     private OriginInfo OriginInfo;
 
     /**
+    * 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填保持原有配置。</li>
+    */
+    @SerializedName("OriginProtocol")
+    @Expose
+    private String OriginProtocol;
+
+    /**
+    * HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填保持原有配置。
+    */
+    @SerializedName("HttpOriginPort")
+    @Expose
+    private Long HttpOriginPort;
+
+    /**
+    * HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填保持原有配置。
+    */
+    @SerializedName("HttpsOriginPort")
+    @Expose
+    private Long HttpsOriginPort;
+
+    /**
+    * IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填保持原有配置。</li>
+    */
+    @SerializedName("IPv6Status")
+    @Expose
+    private String IPv6Status;
+
+    /**
      * Get 加速域名所属站点ID。 
      * @return ZoneId 加速域名所属站点ID。
      */
@@ -92,6 +128,102 @@ public class ModifyAccelerationDomainRequest extends AbstractModel {
         this.OriginInfo = OriginInfo;
     }
 
+    /**
+     * Get 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填保持原有配置。</li> 
+     * @return OriginProtocol 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填保持原有配置。</li>
+     */
+    public String getOriginProtocol() {
+        return this.OriginProtocol;
+    }
+
+    /**
+     * Set 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填保持原有配置。</li>
+     * @param OriginProtocol 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填保持原有配置。</li>
+     */
+    public void setOriginProtocol(String OriginProtocol) {
+        this.OriginProtocol = OriginProtocol;
+    }
+
+    /**
+     * Get HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填保持原有配置。 
+     * @return HttpOriginPort HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填保持原有配置。
+     */
+    public Long getHttpOriginPort() {
+        return this.HttpOriginPort;
+    }
+
+    /**
+     * Set HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填保持原有配置。
+     * @param HttpOriginPort HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填保持原有配置。
+     */
+    public void setHttpOriginPort(Long HttpOriginPort) {
+        this.HttpOriginPort = HttpOriginPort;
+    }
+
+    /**
+     * Get HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填保持原有配置。 
+     * @return HttpsOriginPort HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填保持原有配置。
+     */
+    public Long getHttpsOriginPort() {
+        return this.HttpsOriginPort;
+    }
+
+    /**
+     * Set HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填保持原有配置。
+     * @param HttpsOriginPort HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填保持原有配置。
+     */
+    public void setHttpsOriginPort(Long HttpsOriginPort) {
+        this.HttpsOriginPort = HttpsOriginPort;
+    }
+
+    /**
+     * Get IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填保持原有配置。</li> 
+     * @return IPv6Status IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填保持原有配置。</li>
+     */
+    public String getIPv6Status() {
+        return this.IPv6Status;
+    }
+
+    /**
+     * Set IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填保持原有配置。</li>
+     * @param IPv6Status IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填保持原有配置。</li>
+     */
+    public void setIPv6Status(String IPv6Status) {
+        this.IPv6Status = IPv6Status;
+    }
+
     public ModifyAccelerationDomainRequest() {
     }
 
@@ -109,6 +241,18 @@ public class ModifyAccelerationDomainRequest extends AbstractModel {
         if (source.OriginInfo != null) {
             this.OriginInfo = new OriginInfo(source.OriginInfo);
         }
+        if (source.OriginProtocol != null) {
+            this.OriginProtocol = new String(source.OriginProtocol);
+        }
+        if (source.HttpOriginPort != null) {
+            this.HttpOriginPort = new Long(source.HttpOriginPort);
+        }
+        if (source.HttpsOriginPort != null) {
+            this.HttpsOriginPort = new Long(source.HttpsOriginPort);
+        }
+        if (source.IPv6Status != null) {
+            this.IPv6Status = new String(source.IPv6Status);
+        }
     }
 
 
@@ -119,6 +263,10 @@ public class ModifyAccelerationDomainRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamObj(map, prefix + "OriginInfo.", this.OriginInfo);
+        this.setParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+        this.setParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
+        this.setParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
+        this.setParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
 
     }
 }

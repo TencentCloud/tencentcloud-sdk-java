@@ -59,11 +59,18 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel {
     private String StreamEndNotifyUrl;
 
     /**
-    * 录制回调 URL。
+    * 录制文件回调 URL。
     */
     @SerializedName("RecordNotifyUrl")
     @Expose
     private String RecordNotifyUrl;
+
+    /**
+    * 录制状态回调 URL 。
+    */
+    @SerializedName("RecordStatusNotifyUrl")
+    @Expose
+    private String RecordStatusNotifyUrl;
 
     /**
     * 截图回调 URL。
@@ -182,19 +189,35 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 录制回调 URL。 
-     * @return RecordNotifyUrl 录制回调 URL。
+     * Get 录制文件回调 URL。 
+     * @return RecordNotifyUrl 录制文件回调 URL。
      */
     public String getRecordNotifyUrl() {
         return this.RecordNotifyUrl;
     }
 
     /**
-     * Set 录制回调 URL。
-     * @param RecordNotifyUrl 录制回调 URL。
+     * Set 录制文件回调 URL。
+     * @param RecordNotifyUrl 录制文件回调 URL。
      */
     public void setRecordNotifyUrl(String RecordNotifyUrl) {
         this.RecordNotifyUrl = RecordNotifyUrl;
+    }
+
+    /**
+     * Get 录制状态回调 URL 。 
+     * @return RecordStatusNotifyUrl 录制状态回调 URL 。
+     */
+    public String getRecordStatusNotifyUrl() {
+        return this.RecordStatusNotifyUrl;
+    }
+
+    /**
+     * Set 录制状态回调 URL 。
+     * @param RecordStatusNotifyUrl 录制状态回调 URL 。
+     */
+    public void setRecordStatusNotifyUrl(String RecordStatusNotifyUrl) {
+        this.RecordStatusNotifyUrl = RecordStatusNotifyUrl;
     }
 
     /**
@@ -307,6 +330,9 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel {
         if (source.RecordNotifyUrl != null) {
             this.RecordNotifyUrl = new String(source.RecordNotifyUrl);
         }
+        if (source.RecordStatusNotifyUrl != null) {
+            this.RecordStatusNotifyUrl = new String(source.RecordStatusNotifyUrl);
+        }
         if (source.SnapshotNotifyUrl != null) {
             this.SnapshotNotifyUrl = new String(source.SnapshotNotifyUrl);
         }
@@ -335,6 +361,7 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StreamBeginNotifyUrl", this.StreamBeginNotifyUrl);
         this.setParamSimple(map, prefix + "StreamEndNotifyUrl", this.StreamEndNotifyUrl);
         this.setParamSimple(map, prefix + "RecordNotifyUrl", this.RecordNotifyUrl);
+        this.setParamSimple(map, prefix + "RecordStatusNotifyUrl", this.RecordStatusNotifyUrl);
         this.setParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);

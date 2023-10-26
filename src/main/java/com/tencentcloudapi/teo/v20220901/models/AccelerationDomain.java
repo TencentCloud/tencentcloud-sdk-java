@@ -58,6 +58,44 @@ public class AccelerationDomain extends AbstractModel {
     private OriginDetail OriginDetail;
 
     /**
+    * 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginProtocol")
+    @Expose
+    private String OriginProtocol;
+
+    /**
+    * HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HttpOriginPort")
+    @Expose
+    private Long HttpOriginPort;
+
+    /**
+    * HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HttpsOriginPort")
+    @Expose
+    private Long HttpsOriginPort;
+
+    /**
+    * IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPv6Status")
+    @Expose
+    private String IPv6Status;
+
+    /**
     * CNAME 地址。
     */
     @SerializedName("Cname")
@@ -191,6 +229,110 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
+     * Get 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginProtocol 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginProtocol() {
+        return this.OriginProtocol;
+    }
+
+    /**
+     * Set 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginProtocol 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginProtocol(String OriginProtocol) {
+        this.OriginProtocol = OriginProtocol;
+    }
+
+    /**
+     * Get HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HttpOriginPort HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHttpOriginPort() {
+        return this.HttpOriginPort;
+    }
+
+    /**
+     * Set HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpOriginPort HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttpOriginPort(Long HttpOriginPort) {
+        this.HttpOriginPort = HttpOriginPort;
+    }
+
+    /**
+     * Get HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HttpsOriginPort HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHttpsOriginPort() {
+        return this.HttpsOriginPort;
+    }
+
+    /**
+     * Set HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpsOriginPort HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttpsOriginPort(Long HttpsOriginPort) {
+        this.HttpsOriginPort = HttpsOriginPort;
+    }
+
+    /**
+     * Get IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPv6Status IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIPv6Status() {
+        return this.IPv6Status;
+    }
+
+    /**
+     * Set IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPv6Status IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPv6Status(String IPv6Status) {
+        this.IPv6Status = IPv6Status;
+    }
+
+    /**
      * Get CNAME 地址。 
      * @return Cname CNAME 地址。
      */
@@ -318,6 +460,18 @@ public class AccelerationDomain extends AbstractModel {
         if (source.OriginDetail != null) {
             this.OriginDetail = new OriginDetail(source.OriginDetail);
         }
+        if (source.OriginProtocol != null) {
+            this.OriginProtocol = new String(source.OriginProtocol);
+        }
+        if (source.HttpOriginPort != null) {
+            this.HttpOriginPort = new Long(source.HttpOriginPort);
+        }
+        if (source.HttpsOriginPort != null) {
+            this.HttpsOriginPort = new Long(source.HttpsOriginPort);
+        }
+        if (source.IPv6Status != null) {
+            this.IPv6Status = new String(source.IPv6Status);
+        }
         if (source.Cname != null) {
             this.Cname = new String(source.Cname);
         }
@@ -347,6 +501,10 @@ public class AccelerationDomain extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
         this.setParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
+        this.setParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+        this.setParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
+        this.setParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
+        this.setParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
         this.setParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
