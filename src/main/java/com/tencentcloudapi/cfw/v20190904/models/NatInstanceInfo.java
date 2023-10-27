@@ -176,6 +176,30 @@ public class NatInstanceInfo extends AbstractModel {
     private Long NeedProbeEngineUpdate;
 
     /**
+    * 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrafficMode")
+    @Expose
+    private String TrafficMode;
+
+    /**
+    * 实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneBak")
+    @Expose
+    private String ZoneBak;
+
+    /**
      * Get nat实例id 
      * @return NatinsId nat实例id
      */
@@ -543,6 +567,66 @@ public class NatInstanceInfo extends AbstractModel {
         this.NeedProbeEngineUpdate = NeedProbeEngineUpdate;
     }
 
+    /**
+     * Get 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTrafficMode() {
+        return this.TrafficMode;
+    }
+
+    /**
+     * Set 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrafficMode(String TrafficMode) {
+        this.TrafficMode = TrafficMode;
+    }
+
+    /**
+     * Get 实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneBak 实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneBak() {
+        return this.ZoneBak;
+    }
+
+    /**
+     * Set 实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneBak 实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneBak(String ZoneBak) {
+        this.ZoneBak = ZoneBak;
+    }
+
     public NatInstanceInfo() {
     }
 
@@ -620,6 +704,15 @@ public class NatInstanceInfo extends AbstractModel {
         if (source.NeedProbeEngineUpdate != null) {
             this.NeedProbeEngineUpdate = new Long(source.NeedProbeEngineUpdate);
         }
+        if (source.TrafficMode != null) {
+            this.TrafficMode = new String(source.TrafficMode);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ZoneBak != null) {
+            this.ZoneBak = new String(source.ZoneBak);
+        }
     }
 
 
@@ -647,6 +740,9 @@ public class NatInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
         this.setParamSimple(map, prefix + "NeedProbeEngineUpdate", this.NeedProbeEngineUpdate);
+        this.setParamSimple(map, prefix + "TrafficMode", this.TrafficMode);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ZoneBak", this.ZoneBak);
 
     }
 }

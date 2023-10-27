@@ -80,6 +80,22 @@ public class VpcFwCvmInsInfo extends AbstractModel {
     private Long BandWidth;
 
     /**
+    * 实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 实例备机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneBak")
+    @Expose
+    private String ZoneBak;
+
+    /**
      * Get VPC防火墙实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FwInsId VPC防火墙实例ID
@@ -219,6 +235,46 @@ public class VpcFwCvmInsInfo extends AbstractModel {
         this.BandWidth = BandWidth;
     }
 
+    /**
+     * Get 实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 实例备机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneBak 实例备机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneBak() {
+        return this.ZoneBak;
+    }
+
+    /**
+     * Set 实例备机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneBak 实例备机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneBak(String ZoneBak) {
+        this.ZoneBak = ZoneBak;
+    }
+
     public VpcFwCvmInsInfo() {
     }
 
@@ -248,6 +304,12 @@ public class VpcFwCvmInsInfo extends AbstractModel {
         if (source.BandWidth != null) {
             this.BandWidth = new Long(source.BandWidth);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.ZoneBak != null) {
+            this.ZoneBak = new String(source.ZoneBak);
+        }
     }
 
 
@@ -262,6 +324,8 @@ public class VpcFwCvmInsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneZh", this.ZoneZh);
         this.setParamSimple(map, prefix + "ZoneZhBack", this.ZoneZhBack);
         this.setParamSimple(map, prefix + "BandWidth", this.BandWidth);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ZoneBak", this.ZoneBak);
 
     }
 }

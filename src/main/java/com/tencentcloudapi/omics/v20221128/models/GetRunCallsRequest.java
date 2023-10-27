@@ -31,18 +31,18 @@ public class GetRunCallsRequest extends AbstractModel {
     private String RunUuid;
 
     /**
-    * 项目ID。
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private String ProjectId;
-
-    /**
     * 作业路径
     */
     @SerializedName("Path")
     @Expose
     private String Path;
+
+    /**
+    * 项目ID。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
 
     /**
      * Get 任务Uuid。 
@@ -61,22 +61,6 @@ public class GetRunCallsRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
-     */
-    public String getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
-     */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
      * Get 作业路径 
      * @return Path 作业路径
      */
@@ -92,6 +76,22 @@ public class GetRunCallsRequest extends AbstractModel {
         this.Path = Path;
     }
 
+    /**
+     * Get 项目ID。 
+     * @return ProjectId 项目ID。
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID。
+     * @param ProjectId 项目ID。
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public GetRunCallsRequest() {
     }
 
@@ -103,11 +103,11 @@ public class GetRunCallsRequest extends AbstractModel {
         if (source.RunUuid != null) {
             this.RunUuid = new String(source.RunUuid);
         }
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
-        }
         if (source.Path != null) {
             this.Path = new String(source.Path);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
         }
     }
 
@@ -117,8 +117,8 @@ public class GetRunCallsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RunUuid", this.RunUuid);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

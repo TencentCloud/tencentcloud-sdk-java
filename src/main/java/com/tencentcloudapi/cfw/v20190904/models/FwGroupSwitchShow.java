@@ -142,7 +142,7 @@ public class FwGroupSwitchShow extends AbstractModel {
     private String [] FwInsRegion;
 
     /**
-    * 0 观察 1 拦截 2 严格 3 关闭
+    * 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpsAction")
@@ -460,9 +460,9 @@ public class FwGroupSwitchShow extends AbstractModel {
     }
 
     /**
-     * Get 0 观察 1 拦截 2 严格 3 关闭
+     * Get 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpsAction 0 观察 1 拦截 2 严格 3 关闭
+     * @return IpsAction 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpsAction() {
@@ -470,9 +470,9 @@ public class FwGroupSwitchShow extends AbstractModel {
     }
 
     /**
-     * Set 0 观察 1 拦截 2 严格 3 关闭
+     * Set 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpsAction 0 观察 1 拦截 2 严格 3 关闭
+     * @param IpsAction 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpsAction(Long IpsAction) {

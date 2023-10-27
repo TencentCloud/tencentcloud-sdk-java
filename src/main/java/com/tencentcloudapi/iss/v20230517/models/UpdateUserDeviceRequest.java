@@ -80,6 +80,13 @@ public class UpdateUserDeviceRequest extends AbstractModel {
     private String Username;
 
     /**
+    * 网关设备接入协议（仅网关接入支持）
+    */
+    @SerializedName("ProtocolType")
+    @Expose
+    private Long ProtocolType;
+
+    /**
      * Get 设备ID（从获取设备列表接口ListDevices中获取） 
      * @return DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
      */
@@ -207,6 +214,22 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.Username = Username;
     }
 
+    /**
+     * Get 网关设备接入协议（仅网关接入支持） 
+     * @return ProtocolType 网关设备接入协议（仅网关接入支持）
+     */
+    public Long getProtocolType() {
+        return this.ProtocolType;
+    }
+
+    /**
+     * Set 网关设备接入协议（仅网关接入支持）
+     * @param ProtocolType 网关设备接入协议（仅网关接入支持）
+     */
+    public void setProtocolType(Long ProtocolType) {
+        this.ProtocolType = ProtocolType;
+    }
+
     public UpdateUserDeviceRequest() {
     }
 
@@ -239,6 +262,9 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
+        if (source.ProtocolType != null) {
+            this.ProtocolType = new Long(source.ProtocolType);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
 
     }
 }

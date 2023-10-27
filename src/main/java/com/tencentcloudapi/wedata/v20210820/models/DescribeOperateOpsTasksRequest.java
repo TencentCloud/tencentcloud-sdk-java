@@ -171,6 +171,13 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
     private String ExecutorGroupIdList;
 
     /**
+    * 任务标签
+    */
+    @SerializedName("TaskTags")
+    @Expose
+    private TaskTag [] TaskTags;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -506,6 +513,22 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.ExecutorGroupIdList = ExecutorGroupIdList;
     }
 
+    /**
+     * Get 任务标签 
+     * @return TaskTags 任务标签
+     */
+    public TaskTag [] getTaskTags() {
+        return this.TaskTags;
+    }
+
+    /**
+     * Set 任务标签
+     * @param TaskTags 任务标签
+     */
+    public void setTaskTags(TaskTag [] TaskTags) {
+        this.TaskTags = TaskTags;
+    }
+
     public DescribeOperateOpsTasksRequest() {
     }
 
@@ -577,6 +600,12 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         if (source.ExecutorGroupIdList != null) {
             this.ExecutorGroupIdList = new String(source.ExecutorGroupIdList);
         }
+        if (source.TaskTags != null) {
+            this.TaskTags = new TaskTag[source.TaskTags.length];
+            for (int i = 0; i < source.TaskTags.length; i++) {
+                this.TaskTags[i] = new TaskTag(source.TaskTags[i]);
+            }
+        }
     }
 
 
@@ -605,6 +634,7 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
         this.setParamSimple(map, prefix + "AlarmType", this.AlarmType);
         this.setParamSimple(map, prefix + "ExecutorGroupIdList", this.ExecutorGroupIdList);
+        this.setParamArrayObj(map, prefix + "TaskTags.", this.TaskTags);
 
     }
 }

@@ -107,7 +107,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *创建源站组
+     *创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
      * @param req CreateOriginGroupRequest
      * @return CreateOriginGroupResponse
      * @throws TencentCloudSDKException
@@ -485,6 +485,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *查询指定策略模板的绑定关系列表。
+     * @param req DescribeSecurityTemplateBindingsRequest
+     * @return DescribeSecurityTemplateBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindings(DescribeSecurityTemplateBindingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityTemplateBindings", DescribeSecurityTemplateBindingsResponse.class);
+    }
+
+    /**
      *本接口（DescribeTimingL4Data）用于查询四层时序流量数据列表。
      * @param req DescribeTimingL4DataRequest
      * @return DescribeTimingL4DataResponse
@@ -696,7 +707,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *修改源站组
+     *修改源站组配置，新提交的源站记录将会覆盖原有源站组中的源站记录。
      * @param req ModifyOriginGroupRequest
      * @return ModifyOriginGroupResponse
      * @throws TencentCloudSDKException

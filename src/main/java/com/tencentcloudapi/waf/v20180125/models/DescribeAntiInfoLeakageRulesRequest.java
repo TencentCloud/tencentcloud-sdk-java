@@ -31,6 +31,35 @@ public class DescribeAntiInfoLeakageRulesRequest extends AbstractModel {
     private String Domain;
 
     /**
+    * 翻页支持，读取偏移
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 翻页支持，读取长度限制
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 排序方式，asc或者desc
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status
+    */
+    @SerializedName("Filters")
+    @Expose
+    private FiltersItemNew [] Filters;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -46,6 +75,74 @@ public class DescribeAntiInfoLeakageRulesRequest extends AbstractModel {
         this.Domain = Domain;
     }
 
+    /**
+     * Get 翻页支持，读取偏移 
+     * @return Offset 翻页支持，读取偏移
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 翻页支持，读取偏移
+     * @param Offset 翻页支持，读取偏移
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 翻页支持，读取长度限制 
+     * @return Limit 翻页支持，读取长度限制
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 翻页支持，读取长度限制
+     * @param Limit 翻页支持，读取长度限制
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 排序方式，asc或者desc 
+     * @return Order 排序方式，asc或者desc
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式，asc或者desc
+     * @param Order 排序方式，asc或者desc
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status 
+     * @return Filters 过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status
+     */
+    public FiltersItemNew [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status
+     * @param Filters 过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status
+     */
+    public void setFilters(FiltersItemNew [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeAntiInfoLeakageRulesRequest() {
     }
 
@@ -57,6 +154,21 @@ public class DescribeAntiInfoLeakageRulesRequest extends AbstractModel {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.Filters != null) {
+            this.Filters = new FiltersItemNew[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new FiltersItemNew(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -65,6 +177,10 @@ public class DescribeAntiInfoLeakageRulesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

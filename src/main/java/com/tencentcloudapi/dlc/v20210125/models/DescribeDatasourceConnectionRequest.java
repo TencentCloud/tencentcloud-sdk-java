@@ -95,6 +95,13 @@ DatasourceConnectionType   （数据源连接连接类型）
     private String [] DatasourceConnectionTypes;
 
     /**
+    * 返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
+    */
+    @SerializedName("HiveVersion")
+    @Expose
+    private String [] HiveVersion;
+
+    /**
      * Get 连接ID列表，指定要查询的连接ID 
      * @return DatasourceConnectionIds 连接ID列表，指定要查询的连接ID
      */
@@ -258,6 +265,22 @@ DatasourceConnectionType   （数据源连接连接类型）
         this.DatasourceConnectionTypes = DatasourceConnectionTypes;
     }
 
+    /**
+     * Get 返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回 
+     * @return HiveVersion 返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
+     */
+    public String [] getHiveVersion() {
+        return this.HiveVersion;
+    }
+
+    /**
+     * Set 返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
+     * @param HiveVersion 返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
+     */
+    public void setHiveVersion(String [] HiveVersion) {
+        this.HiveVersion = HiveVersion;
+    }
+
     public DescribeDatasourceConnectionRequest() {
     }
 
@@ -308,6 +331,12 @@ DatasourceConnectionType   （数据源连接连接类型）
                 this.DatasourceConnectionTypes[i] = new String(source.DatasourceConnectionTypes[i]);
             }
         }
+        if (source.HiveVersion != null) {
+            this.HiveVersion = new String[source.HiveVersion.length];
+            for (int i = 0; i < source.HiveVersion.length; i++) {
+                this.HiveVersion[i] = new String(source.HiveVersion[i]);
+            }
+        }
     }
 
 
@@ -325,6 +354,7 @@ DatasourceConnectionType   （数据源连接连接类型）
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "DatasourceConnectionNames.", this.DatasourceConnectionNames);
         this.setParamArraySimple(map, prefix + "DatasourceConnectionTypes.", this.DatasourceConnectionTypes);
+        this.setParamArraySimple(map, prefix + "HiveVersion.", this.HiveVersion);
 
     }
 }

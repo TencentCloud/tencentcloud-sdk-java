@@ -45,6 +45,20 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
     private Long IgnoreAsset;
 
     /**
+    * 资产标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private AssetTag [] Tags;
+
+    /**
+    * 删除类型，取值： ALL， 删除全部，将直接忽略Content的内容；                                           其他值 ,非全部，则Centent必填，  默认为其他值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get - 
      * @return Content -
      */
@@ -92,6 +106,38 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
         this.IgnoreAsset = IgnoreAsset;
     }
 
+    /**
+     * Get 资产标签 
+     * @return Tags 资产标签
+     */
+    public AssetTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资产标签
+     * @param Tags 资产标签
+     */
+    public void setTags(AssetTag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 删除类型，取值： ALL， 删除全部，将直接忽略Content的内容；                                           其他值 ,非全部，则Centent必填，  默认为其他值。 
+     * @return Type 删除类型，取值： ALL， 删除全部，将直接忽略Content的内容；                                           其他值 ,非全部，则Centent必填，  默认为其他值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 删除类型，取值： ALL， 删除全部，将直接忽略Content的内容；                                           其他值 ,非全部，则Centent必填，  默认为其他值。
+     * @param Type 删除类型，取值： ALL， 删除全部，将直接忽略Content的内容；                                           其他值 ,非全部，则Centent必填，  默认为其他值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DeleteDomainAndIpRequest() {
     }
 
@@ -112,6 +158,15 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
         if (source.IgnoreAsset != null) {
             this.IgnoreAsset = new Long(source.IgnoreAsset);
         }
+        if (source.Tags != null) {
+            this.Tags = new AssetTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new AssetTag(source.Tags[i]);
+            }
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -122,6 +177,8 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "RetainPath", this.RetainPath);
         this.setParamSimple(map, prefix + "IgnoreAsset", this.IgnoreAsset);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

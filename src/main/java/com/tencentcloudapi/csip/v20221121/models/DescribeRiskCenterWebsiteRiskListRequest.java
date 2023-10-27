@@ -31,6 +31,13 @@ public class DescribeRiskCenterWebsiteRiskListRequest extends AbstractModel {
     private Filter Filter;
 
     /**
+    * 资产标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private AssetTag [] Tags;
+
+    /**
      * Get 过滤内容 
      * @return Filter 过滤内容
      */
@@ -46,6 +53,22 @@ public class DescribeRiskCenterWebsiteRiskListRequest extends AbstractModel {
         this.Filter = Filter;
     }
 
+    /**
+     * Get 资产标签 
+     * @return Tags 资产标签
+     */
+    public AssetTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资产标签
+     * @param Tags 资产标签
+     */
+    public void setTags(AssetTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeRiskCenterWebsiteRiskListRequest() {
     }
 
@@ -57,6 +80,12 @@ public class DescribeRiskCenterWebsiteRiskListRequest extends AbstractModel {
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
+        if (source.Tags != null) {
+            this.Tags = new AssetTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new AssetTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class DescribeRiskCenterWebsiteRiskListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

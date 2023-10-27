@@ -371,6 +371,17 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *查询安心计划二维码列表
+     * @param req DescribePlanQRCodesRequest
+     * @return DescribePlanQRCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlanQRCodesResponse DescribePlanQRCodes(DescribePlanQRCodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlanQRCodes", DescribePlanQRCodesResponse.class);
+    }
+
+    /**
      *查询商品信息
      * @param req DescribeProductByIdRequest
      * @return DescribeProductByIdResponse

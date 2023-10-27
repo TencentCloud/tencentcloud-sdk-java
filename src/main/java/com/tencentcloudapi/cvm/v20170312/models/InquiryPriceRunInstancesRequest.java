@@ -124,7 +124,7 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     private EnhancedService EnhancedService;
 
     /**
-    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
     */
     @SerializedName("ClientToken")
     @Expose
@@ -157,6 +157,13 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     @SerializedName("HpcClusterId")
     @Expose
     private String HpcClusterId;
+
+    /**
+    * 实例启动模板。
+    */
+    @SerializedName("LaunchTemplate")
+    @Expose
+    private LaunchTemplate LaunchTemplate;
 
     /**
      * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -391,16 +398,16 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。 
-     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
+     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
-     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
@@ -468,6 +475,22 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
+    }
+
+    /**
+     * Get 实例启动模板。 
+     * @return LaunchTemplate 实例启动模板。
+     */
+    public LaunchTemplate getLaunchTemplate() {
+        return this.LaunchTemplate;
+    }
+
+    /**
+     * Set 实例启动模板。
+     * @param LaunchTemplate 实例启动模板。
+     */
+    public void setLaunchTemplate(LaunchTemplate LaunchTemplate) {
+        this.LaunchTemplate = LaunchTemplate;
     }
 
     public InquiryPriceRunInstancesRequest() {
@@ -544,6 +567,9 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         if (source.HpcClusterId != null) {
             this.HpcClusterId = new String(source.HpcClusterId);
         }
+        if (source.LaunchTemplate != null) {
+            this.LaunchTemplate = new LaunchTemplate(source.LaunchTemplate);
+        }
     }
 
 
@@ -570,6 +596,7 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+        this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
 
     }
 }

@@ -184,6 +184,14 @@ public class RunMetadata extends AbstractModel {
     private String Stderr;
 
     /**
+    * 其他信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Meta")
+    @Expose
+    private String Meta;
+
+    /**
      * Get 任务类型。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RunType 任务类型。
@@ -583,6 +591,26 @@ public class RunMetadata extends AbstractModel {
         this.Stderr = Stderr;
     }
 
+    /**
+     * Get 其他信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Meta 其他信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMeta() {
+        return this.Meta;
+    }
+
+    /**
+     * Set 其他信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Meta 其他信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMeta(String Meta) {
+        this.Meta = Meta;
+    }
+
     public RunMetadata() {
     }
 
@@ -651,6 +679,9 @@ public class RunMetadata extends AbstractModel {
         if (source.Stderr != null) {
             this.Stderr = new String(source.Stderr);
         }
+        if (source.Meta != null) {
+            this.Meta = new String(source.Meta);
+        }
     }
 
 
@@ -678,6 +709,7 @@ public class RunMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "CallCached", this.CallCached);
         this.setParamSimple(map, prefix + "Stdout", this.Stdout);
         this.setParamSimple(map, prefix + "Stderr", this.Stderr);
+        this.setParamSimple(map, prefix + "Meta", this.Meta);
 
     }
 }

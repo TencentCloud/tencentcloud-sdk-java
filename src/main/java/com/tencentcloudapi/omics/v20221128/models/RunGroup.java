@@ -116,11 +116,19 @@ public class RunGroup extends AbstractModel {
     private String Input;
 
     /**
-    * 运行选项。
+    * WDL运行选项。
     */
     @SerializedName("Option")
     @Expose
     private RunOption Option;
+
+    /**
+    * Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NFOption")
+    @Expose
+    private NFOption NFOption;
 
     /**
     * 任务总数量。
@@ -163,6 +171,38 @@ public class RunGroup extends AbstractModel {
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * 创建者。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
+    * 创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatorId")
+    @Expose
+    private String CreatorId;
+
+    /**
+    * 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResultNotify")
+    @Expose
+    private String ResultNotify;
+
+    /**
+    * 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationVersion")
+    @Expose
+    private ApplicationVersion ApplicationVersion;
 
     /**
      * Get 任务批次ID。 
@@ -377,19 +417,39 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
-     * Get 运行选项。 
-     * @return Option 运行选项。
+     * Get WDL运行选项。 
+     * @return Option WDL运行选项。
      */
     public RunOption getOption() {
         return this.Option;
     }
 
     /**
-     * Set 运行选项。
-     * @param Option 运行选项。
+     * Set WDL运行选项。
+     * @param Option WDL运行选项。
      */
     public void setOption(RunOption Option) {
         this.Option = Option;
+    }
+
+    /**
+     * Get Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NFOption Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NFOption getNFOption() {
+        return this.NFOption;
+    }
+
+    /**
+     * Set Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NFOption Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNFOption(NFOption NFOption) {
+        this.NFOption = NFOption;
     }
 
     /**
@@ -488,6 +548,86 @@ public class RunGroup extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 创建者。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Creator 创建者。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set 创建者。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Creator 创建者。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
+    /**
+     * Get 创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatorId 创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatorId() {
+        return this.CreatorId;
+    }
+
+    /**
+     * Set 创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatorId 创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatorId(String CreatorId) {
+        this.CreatorId = CreatorId;
+    }
+
+    /**
+     * Get 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResultNotify 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResultNotify() {
+        return this.ResultNotify;
+    }
+
+    /**
+     * Set 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultNotify 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResultNotify(String ResultNotify) {
+        this.ResultNotify = ResultNotify;
+    }
+
+    /**
+     * Get 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationVersion 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ApplicationVersion getApplicationVersion() {
+        return this.ApplicationVersion;
+    }
+
+    /**
+     * Set 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationVersion 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationVersion(ApplicationVersion ApplicationVersion) {
+        this.ApplicationVersion = ApplicationVersion;
+    }
+
     public RunGroup() {
     }
 
@@ -538,6 +678,9 @@ public class RunGroup extends AbstractModel {
         if (source.Option != null) {
             this.Option = new RunOption(source.Option);
         }
+        if (source.NFOption != null) {
+            this.NFOption = new NFOption(source.NFOption);
+        }
         if (source.TotalRun != null) {
             this.TotalRun = new Long(source.TotalRun);
         }
@@ -558,6 +701,18 @@ public class RunGroup extends AbstractModel {
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
+        if (source.CreatorId != null) {
+            this.CreatorId = new String(source.CreatorId);
+        }
+        if (source.ResultNotify != null) {
+            this.ResultNotify = new String(source.ResultNotify);
+        }
+        if (source.ApplicationVersion != null) {
+            this.ApplicationVersion = new ApplicationVersion(source.ApplicationVersion);
         }
     }
 
@@ -580,12 +735,17 @@ public class RunGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Input", this.Input);
         this.setParamObj(map, prefix + "Option.", this.Option);
+        this.setParamObj(map, prefix + "NFOption.", this.NFOption);
         this.setParamSimple(map, prefix + "TotalRun", this.TotalRun);
         this.setParamArrayObj(map, prefix + "RunStatusCounts.", this.RunStatusCounts);
         this.setParamObj(map, prefix + "ExecutionTime.", this.ExecutionTime);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
+        this.setParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
+        this.setParamObj(map, prefix + "ApplicationVersion.", this.ApplicationVersion);
 
     }
 }

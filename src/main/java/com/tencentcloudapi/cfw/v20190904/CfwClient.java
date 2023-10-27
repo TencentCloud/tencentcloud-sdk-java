@@ -116,6 +116,39 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *用户告警中心-封隔离处置按钮
+     * @param req CreateAlertCenterIsolateRequest
+     * @return CreateAlertCenterIsolateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlertCenterIsolateResponse CreateAlertCenterIsolate(CreateAlertCenterIsolateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAlertCenterIsolate", CreateAlertCenterIsolateResponse.class);
+    }
+
+    /**
+     *用户告警中心-忽略处置按钮
+     * @param req CreateAlertCenterOmitRequest
+     * @return CreateAlertCenterOmitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlertCenterOmitResponse CreateAlertCenterOmit(CreateAlertCenterOmitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAlertCenterOmit", CreateAlertCenterOmitResponse.class);
+    }
+
+    /**
+     *用户告警中心-封禁、放通处置按钮
+     * @param req CreateAlertCenterRuleRequest
+     * @return CreateAlertCenterRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlertCenterRuleResponse CreateAlertCenterRule(CreateAlertCenterRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAlertCenterRule", CreateAlertCenterRuleResponse.class);
+    }
+
+    /**
      *批量添加入侵防御封禁列表、放通列表规则
      * @param req CreateBlockIgnoreRuleListRequest
      * @return CreateBlockIgnoreRuleListResponse

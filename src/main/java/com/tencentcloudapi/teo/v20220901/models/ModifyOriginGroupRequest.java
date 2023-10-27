@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyOriginGroupRequest extends AbstractModel {
 
     /**
-    * 站点ID。
+    * 站点 ID
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 源站组ID，此参数必填。
+    * 源站组 ID，此参数必填。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 源站组名称，不填保持原有配置，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。	
+    * 源站组名称，不填保持原有配置，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。	
     */
     @SerializedName("Name")
     @Expose
@@ -61,48 +61,55 @@ public class ModifyOriginGroupRequest extends AbstractModel {
     private OriginRecord [] Records;
 
     /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
+    * 回源 Host Header，仅 Type = HTTP 时生效， 不填或者填空表示不配置回源Host，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
+     * Get 站点 ID 
+     * @return ZoneId 站点 ID
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
+     * Set 站点 ID
+     * @param ZoneId 站点 ID
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 源站组ID，此参数必填。 
-     * @return GroupId 源站组ID，此参数必填。
+     * Get 源站组 ID，此参数必填。 
+     * @return GroupId 源站组 ID，此参数必填。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 源站组ID，此参数必填。
-     * @param GroupId 源站组ID，此参数必填。
+     * Set 源站组 ID，此参数必填。
+     * @param GroupId 源站组 ID，此参数必填。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 源站组名称，不填保持原有配置，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。	 
-     * @return Name 源站组名称，不填保持原有配置，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。	
+     * Get 源站组名称，不填保持原有配置，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。	 
+     * @return Name 源站组名称，不填保持原有配置，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。	
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 源站组名称，不填保持原有配置，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。	
-     * @param Name 源站组名称，不填保持原有配置，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。	
+     * Set 源站组名称，不填保持原有配置，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。	
+     * @param Name 源站组名称，不填保持原有配置，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。	
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -148,6 +155,22 @@ public class ModifyOriginGroupRequest extends AbstractModel {
         this.Records = Records;
     }
 
+    /**
+     * Get 回源 Host Header，仅 Type = HTTP 时生效， 不填或者填空表示不配置回源Host，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。 
+     * @return HostHeader 回源 Host Header，仅 Type = HTTP 时生效， 不填或者填空表示不配置回源Host，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set 回源 Host Header，仅 Type = HTTP 时生效， 不填或者填空表示不配置回源Host，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
+     * @param HostHeader 回源 Host Header，仅 Type = HTTP 时生效， 不填或者填空表示不配置回源Host，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
+    }
+
     public ModifyOriginGroupRequest() {
     }
 
@@ -174,6 +197,9 @@ public class ModifyOriginGroupRequest extends AbstractModel {
                 this.Records[i] = new OriginRecord(source.Records[i]);
             }
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
     }
 
 
@@ -186,6 +212,7 @@ public class ModifyOriginGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Records.", this.Records);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }
 }

@@ -31,6 +31,13 @@ public class DescribeDomainAssetsRequest extends AbstractModel {
     private Filter Filter;
 
     /**
+    * 安全中心自定义标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private AssetTag [] Tags;
+
+    /**
      * Get - 
      * @return Filter -
      */
@@ -46,6 +53,22 @@ public class DescribeDomainAssetsRequest extends AbstractModel {
         this.Filter = Filter;
     }
 
+    /**
+     * Get 安全中心自定义标签 
+     * @return Tags 安全中心自定义标签
+     */
+    public AssetTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 安全中心自定义标签
+     * @param Tags 安全中心自定义标签
+     */
+    public void setTags(AssetTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeDomainAssetsRequest() {
     }
 
@@ -57,6 +80,12 @@ public class DescribeDomainAssetsRequest extends AbstractModel {
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
+        if (source.Tags != null) {
+            this.Tags = new AssetTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new AssetTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class DescribeDomainAssetsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

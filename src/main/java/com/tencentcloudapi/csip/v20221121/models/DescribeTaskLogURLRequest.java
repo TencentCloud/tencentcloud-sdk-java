@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeTaskLogURLRequest extends AbstractModel {
 
     /**
+    * 0: 预览， 1: 下载
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
     * 任务报告Id 列表
     */
     @SerializedName("ReportItemKeyList")
@@ -31,11 +38,27 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
     private ReportItemKey [] ReportItemKeyList;
 
     /**
-    * 0: 预览， 1: 下载
+    * 报告中任务id列表
     */
-    @SerializedName("Type")
+    @SerializedName("ReportTaskIdList")
     @Expose
-    private Long Type;
+    private ReportTaskIdList [] ReportTaskIdList;
+
+    /**
+     * Get 0: 预览， 1: 下载 
+     * @return Type 0: 预览， 1: 下载
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 0: 预览， 1: 下载
+     * @param Type 0: 预览， 1: 下载
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
 
     /**
      * Get 任务报告Id 列表 
@@ -54,19 +77,19 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
     }
 
     /**
-     * Get 0: 预览， 1: 下载 
-     * @return Type 0: 预览， 1: 下载
+     * Get 报告中任务id列表 
+     * @return ReportTaskIdList 报告中任务id列表
      */
-    public Long getType() {
-        return this.Type;
+    public ReportTaskIdList [] getReportTaskIdList() {
+        return this.ReportTaskIdList;
     }
 
     /**
-     * Set 0: 预览， 1: 下载
-     * @param Type 0: 预览， 1: 下载
+     * Set 报告中任务id列表
+     * @param ReportTaskIdList 报告中任务id列表
      */
-    public void setType(Long Type) {
-        this.Type = Type;
+    public void setReportTaskIdList(ReportTaskIdList [] ReportTaskIdList) {
+        this.ReportTaskIdList = ReportTaskIdList;
     }
 
     public DescribeTaskLogURLRequest() {
@@ -77,14 +100,20 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTaskLogURLRequest(DescribeTaskLogURLRequest source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
         if (source.ReportItemKeyList != null) {
             this.ReportItemKeyList = new ReportItemKey[source.ReportItemKeyList.length];
             for (int i = 0; i < source.ReportItemKeyList.length; i++) {
                 this.ReportItemKeyList[i] = new ReportItemKey(source.ReportItemKeyList[i]);
             }
         }
-        if (source.Type != null) {
-            this.Type = new Long(source.Type);
+        if (source.ReportTaskIdList != null) {
+            this.ReportTaskIdList = new ReportTaskIdList[source.ReportTaskIdList.length];
+            for (int i = 0; i < source.ReportTaskIdList.length; i++) {
+                this.ReportTaskIdList[i] = new ReportTaskIdList(source.ReportTaskIdList[i]);
+            }
         }
     }
 
@@ -93,8 +122,9 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ReportItemKeyList.", this.ReportItemKeyList);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "ReportItemKeyList.", this.ReportItemKeyList);
+        this.setParamArrayObj(map, prefix + "ReportTaskIdList.", this.ReportTaskIdList);
 
     }
 }

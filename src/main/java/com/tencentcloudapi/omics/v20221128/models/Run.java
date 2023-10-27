@@ -111,6 +111,14 @@ public class Run extends AbstractModel {
     private ExecutionTime ExecutionTime;
 
     /**
+    * 缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cache")
+    @Expose
+    private CacheInfo Cache;
+
+    /**
     * 错误信息。
     */
     @SerializedName("ErrorMessage")
@@ -336,6 +344,26 @@ public class Run extends AbstractModel {
     }
 
     /**
+     * Get 缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cache 缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CacheInfo getCache() {
+        return this.Cache;
+    }
+
+    /**
+     * Set 缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cache 缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCache(CacheInfo Cache) {
+        this.Cache = Cache;
+    }
+
+    /**
      * Get 错误信息。 
      * @return ErrorMessage 错误信息。
      */
@@ -427,6 +455,9 @@ public class Run extends AbstractModel {
         if (source.ExecutionTime != null) {
             this.ExecutionTime = new ExecutionTime(source.ExecutionTime);
         }
+        if (source.Cache != null) {
+            this.Cache = new CacheInfo(source.Cache);
+        }
         if (source.ErrorMessage != null) {
             this.ErrorMessage = new String(source.ErrorMessage);
         }
@@ -455,6 +486,7 @@ public class Run extends AbstractModel {
         this.setParamSimple(map, prefix + "Input", this.Input);
         this.setParamObj(map, prefix + "Option.", this.Option);
         this.setParamObj(map, prefix + "ExecutionTime.", this.ExecutionTime);
+        this.setParamObj(map, prefix + "Cache.", this.Cache);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

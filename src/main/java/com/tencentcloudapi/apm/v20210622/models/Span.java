@@ -112,6 +112,14 @@ public class Span extends AbstractModel {
     private Long StartTimeMillis;
 
     /**
+    * Parent Span Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentSpanID")
+    @Expose
+    private String ParentSpanID;
+
+    /**
      * Get Trace Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TraceID Trace Id
@@ -331,6 +339,26 @@ public class Span extends AbstractModel {
         this.StartTimeMillis = StartTimeMillis;
     }
 
+    /**
+     * Get Parent Span Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentSpanID Parent Span Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentSpanID() {
+        return this.ParentSpanID;
+    }
+
+    /**
+     * Set Parent Span Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentSpanID Parent Span Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentSpanID(String ParentSpanID) {
+        this.ParentSpanID = ParentSpanID;
+    }
+
     public Span() {
     }
 
@@ -381,6 +409,9 @@ public class Span extends AbstractModel {
         if (source.StartTimeMillis != null) {
             this.StartTimeMillis = new Long(source.StartTimeMillis);
         }
+        if (source.ParentSpanID != null) {
+            this.ParentSpanID = new String(source.ParentSpanID);
+        }
     }
 
 
@@ -399,6 +430,7 @@ public class Span extends AbstractModel {
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "SpanID", this.SpanID);
         this.setParamSimple(map, prefix + "StartTimeMillis", this.StartTimeMillis);
+        this.setParamSimple(map, prefix + "ParentSpanID", this.ParentSpanID);
 
     }
 }

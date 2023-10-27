@@ -688,6 +688,28 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *查询RabbitMQ队列详情
+     * @param req DescribeRabbitMQQueueDetailRequest
+     * @return DescribeRabbitMQQueueDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQQueueDetailResponse DescribeRabbitMQQueueDetail(DescribeRabbitMQQueueDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQQueueDetail", DescribeRabbitMQQueueDetailResponse.class);
+    }
+
+    /**
+     *查询RabbitMQ队列列表
+     * @param req DescribeRabbitMQQueuesRequest
+     * @return DescribeRabbitMQQueuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQQueuesResponse DescribeRabbitMQQueues(DescribeRabbitMQQueuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQQueues", DescribeRabbitMQQueuesResponse.class);
+    }
+
+    /**
      *查询RabbitMQ用户列表
      * @param req DescribeRabbitMQUserRequest
      * @return DescribeRabbitMQUserResponse

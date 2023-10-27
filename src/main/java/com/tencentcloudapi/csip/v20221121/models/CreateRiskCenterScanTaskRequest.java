@@ -94,6 +94,13 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     private Long TaskMode;
 
     /**
+    * 资产标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private AssetTag Tags;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -253,6 +260,22 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         this.TaskMode = TaskMode;
     }
 
+    /**
+     * Get 资产标签 
+     * @return Tags 资产标签
+     */
+    public AssetTag getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资产标签
+     * @param Tags 资产标签
+     */
+    public void setTags(AssetTag Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateRiskCenterScanTaskRequest() {
     }
 
@@ -300,6 +323,9 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         if (source.TaskMode != null) {
             this.TaskMode = new Long(source.TaskMode);
         }
+        if (source.Tags != null) {
+            this.Tags = new AssetTag(source.Tags);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanFrom", this.ScanFrom);
         this.setParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
         this.setParamSimple(map, prefix + "TaskMode", this.TaskMode);
+        this.setParamObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

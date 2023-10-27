@@ -31,6 +31,13 @@ public class DescribeScanTaskListRequest extends AbstractModel {
     private Filter Filter;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
      * Get 过滤内容 
      * @return Filter 过滤内容
      */
@@ -46,6 +53,22 @@ public class DescribeScanTaskListRequest extends AbstractModel {
         this.Filter = Filter;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeScanTaskListRequest() {
     }
 
@@ -57,6 +80,12 @@ public class DescribeScanTaskListRequest extends AbstractModel {
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class DescribeScanTaskListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

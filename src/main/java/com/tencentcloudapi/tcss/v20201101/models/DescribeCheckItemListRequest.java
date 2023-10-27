@@ -38,7 +38,13 @@ public class DescribeCheckItemListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Name 可取值：risk_level风险等级, risk_target检查对象，风险对象,risk_type风险类别,risk_attri检测项所属的风险类型
+    * Name 可取值：
+Name: 检查项名称
+RiskType: 风险类别
+RiskLevel: 风险等级
+RiskTarget: 检查对象
+RiskAttribute: 检测项所属分型线类型
+Enable: 检查项是否开启(0:关闭 1:开启)
     */
     @SerializedName("Filters")
     @Expose
@@ -77,16 +83,40 @@ public class DescribeCheckItemListRequest extends AbstractModel {
     }
 
     /**
-     * Get Name 可取值：risk_level风险等级, risk_target检查对象，风险对象,risk_type风险类别,risk_attri检测项所属的风险类型 
-     * @return Filters Name 可取值：risk_level风险等级, risk_target检查对象，风险对象,risk_type风险类别,risk_attri检测项所属的风险类型
+     * Get Name 可取值：
+Name: 检查项名称
+RiskType: 风险类别
+RiskLevel: 风险等级
+RiskTarget: 检查对象
+RiskAttribute: 检测项所属分型线类型
+Enable: 检查项是否开启(0:关闭 1:开启) 
+     * @return Filters Name 可取值：
+Name: 检查项名称
+RiskType: 风险类别
+RiskLevel: 风险等级
+RiskTarget: 检查对象
+RiskAttribute: 检测项所属分型线类型
+Enable: 检查项是否开启(0:关闭 1:开启)
      */
     public ComplianceFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Name 可取值：risk_level风险等级, risk_target检查对象，风险对象,risk_type风险类别,risk_attri检测项所属的风险类型
-     * @param Filters Name 可取值：risk_level风险等级, risk_target检查对象，风险对象,risk_type风险类别,risk_attri检测项所属的风险类型
+     * Set Name 可取值：
+Name: 检查项名称
+RiskType: 风险类别
+RiskLevel: 风险等级
+RiskTarget: 检查对象
+RiskAttribute: 检测项所属分型线类型
+Enable: 检查项是否开启(0:关闭 1:开启)
+     * @param Filters Name 可取值：
+Name: 检查项名称
+RiskType: 风险类别
+RiskLevel: 风险等级
+RiskTarget: 检查对象
+RiskAttribute: 检测项所属分型线类型
+Enable: 检查项是否开启(0:关闭 1:开启)
      */
     public void setFilters(ComplianceFilters [] Filters) {
         this.Filters = Filters;

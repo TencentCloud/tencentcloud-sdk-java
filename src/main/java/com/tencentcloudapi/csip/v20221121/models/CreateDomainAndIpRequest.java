@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class CreateDomainAndIpRequest extends AbstractModel {
 
     /**
-    * -
+    * 公网IP/域名
     */
     @SerializedName("Content")
     @Expose
     private String [] Content;
 
     /**
-     * Get - 
-     * @return Content -
+    * 资产标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private AssetTag [] Tags;
+
+    /**
+     * Get 公网IP/域名 
+     * @return Content 公网IP/域名
      */
     public String [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set -
-     * @param Content -
+     * Set 公网IP/域名
+     * @param Content 公网IP/域名
      */
     public void setContent(String [] Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get 资产标签 
+     * @return Tags 资产标签
+     */
+    public AssetTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 资产标签
+     * @param Tags 资产标签
+     */
+    public void setTags(AssetTag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateDomainAndIpRequest() {
@@ -60,6 +83,12 @@ public class CreateDomainAndIpRequest extends AbstractModel {
                 this.Content[i] = new String(source.Content[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new AssetTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new AssetTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class CreateDomainAndIpRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Content.", this.Content);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

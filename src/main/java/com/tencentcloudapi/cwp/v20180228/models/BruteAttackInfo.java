@@ -207,6 +207,14 @@ public class BruteAttackInfo extends AbstractModel {
     private String Location;
 
     /**
+    * 威胁等级：0低危，1中危，2高危
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private Long RiskLevel;
+
+    /**
      * Get 唯一Id 
      * @return Id 唯一Id
      */
@@ -662,6 +670,26 @@ public class BruteAttackInfo extends AbstractModel {
         this.Location = Location;
     }
 
+    /**
+     * Get 威胁等级：0低危，1中危，2高危
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskLevel 威胁等级：0低危，1中危，2高危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set 威胁等级：0低危，1中危，2高危
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskLevel 威胁等级：0低危，1中危，2高危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskLevel(Long RiskLevel) {
+        this.RiskLevel = RiskLevel;
+    }
+
     public BruteAttackInfo() {
     }
 
@@ -739,6 +767,9 @@ public class BruteAttackInfo extends AbstractModel {
         if (source.Location != null) {
             this.Location = new String(source.Location);
         }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new Long(source.RiskLevel);
+        }
     }
 
 
@@ -769,6 +800,7 @@ public class BruteAttackInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DataStatus", this.DataStatus);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
 
     }
 }

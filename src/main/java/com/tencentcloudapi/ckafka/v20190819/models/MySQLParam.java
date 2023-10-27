@@ -25,6 +25,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * MySQL的数据库名称，"*"为全数据库
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -32,6 +33,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -39,6 +41,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 该MySQL在连接管理内的Id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -46,6 +49,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 复制存量信息(schema_only不复制, initial全量)，默认位initial
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotMode")
     @Expose
@@ -53,6 +57,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 存放MySQL的Ddl信息的Topic，为空则默认不存放
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdlTopic")
     @Expose
@@ -60,6 +65,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * "TABLE" 表示读取项为 table，"QUERY" 表示读取项为 query
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceMonitorMode")
     @Expose
@@ -67,6 +73,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 当 "DataMonitorMode"="TABLE" 时，传入需要读取的 Table；当 "DataMonitorMode"="QUERY" 时，传入需要读取的查询 sql 语句
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceMonitorResource")
     @Expose
@@ -74,6 +81,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * "TIMESTAMP" 表示增量列为时间戳类型，"INCREMENT" 表示增量列为自增 id 类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceIncrementMode")
     @Expose
@@ -81,6 +89,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 传入需要监听的列名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceIncrementColumn")
     @Expose
@@ -88,6 +97,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * "HEAD" 表示复制存量 + 增量数据，"TAIL" 表示只复制增量数据
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceStartFrom")
     @Expose
@@ -95,6 +105,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataTargetInsertMode")
     @Expose
@@ -102,6 +113,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataTargetPrimaryKeyField")
     @Expose
@@ -109,6 +121,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 表与消息间的映射关系
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataTargetRecordMapping")
     @Expose
@@ -116,6 +129,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 事件路由到特定主题的正则表达式，默认为(.*)
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicRegex")
     @Expose
@@ -123,6 +137,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * TopicRegex的引用组，指定$1、$2等
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicReplacement")
     @Expose
@@ -130,6 +145,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyColumns")
     @Expose
@@ -137,6 +153,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * Mysql 是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropInvalidMessage")
     @Expose
@@ -144,6 +161,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropCls")
     @Expose
@@ -151,6 +169,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 输出格式，DEFAULT、CANAL_1、CANAL_2
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputFormat")
     @Expose
@@ -158,6 +177,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 当Table输入的是前缀时，该项值为true，否则为false
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsTablePrefix")
     @Expose
@@ -165,6 +185,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeContentChanges")
     @Expose
@@ -172,6 +193,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeQuery")
     @Expose
@@ -179,6 +201,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordWithSchema")
     @Expose
@@ -186,6 +209,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 存放信令表的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignalDatabase")
     @Expose
@@ -193,6 +217,7 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsTableRegular")
     @Expose
@@ -200,14 +225,33 @@ public class MySQLParam extends AbstractModel {
 
     /**
     * 信号表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignalTable")
     @Expose
     private String SignalTable;
 
     /**
-     * Get MySQL的数据库名称，"*"为全数据库 
+    * datetime 类型字段转换为时间戳的时区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DateTimeZone")
+    @Expose
+    private String DateTimeZone;
+
+    /**
+    * 自建
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SelfBuilt")
+    @Expose
+    private Boolean SelfBuilt;
+
+    /**
+     * Get MySQL的数据库名称，"*"为全数据库
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Database MySQL的数据库名称，"*"为全数据库
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -215,15 +259,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set MySQL的数据库名称，"*"为全数据库
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Database MySQL的数据库名称，"*"为全数据库
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名" 
+     * Get MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -231,15 +279,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 该MySQL在连接管理内的Id 
+     * Get 该MySQL在连接管理内的Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Resource 该MySQL在连接管理内的Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -247,15 +299,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 该MySQL在连接管理内的Id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 该MySQL在连接管理内的Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 复制存量信息(schema_only不复制, initial全量)，默认位initial 
+     * Get 复制存量信息(schema_only不复制, initial全量)，默认位initial
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认位initial
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotMode() {
         return this.SnapshotMode;
@@ -263,15 +319,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 复制存量信息(schema_only不复制, initial全量)，默认位initial
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认位initial
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotMode(String SnapshotMode) {
         this.SnapshotMode = SnapshotMode;
     }
 
     /**
-     * Get 存放MySQL的Ddl信息的Topic，为空则默认不存放 
+     * Get 存放MySQL的Ddl信息的Topic，为空则默认不存放
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DdlTopic 存放MySQL的Ddl信息的Topic，为空则默认不存放
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDdlTopic() {
         return this.DdlTopic;
@@ -279,15 +339,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 存放MySQL的Ddl信息的Topic，为空则默认不存放
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DdlTopic 存放MySQL的Ddl信息的Topic，为空则默认不存放
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdlTopic(String DdlTopic) {
         this.DdlTopic = DdlTopic;
     }
 
     /**
-     * Get "TABLE" 表示读取项为 table，"QUERY" 表示读取项为 query 
+     * Get "TABLE" 表示读取项为 table，"QUERY" 表示读取项为 query
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataSourceMonitorMode "TABLE" 表示读取项为 table，"QUERY" 表示读取项为 query
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceMonitorMode() {
         return this.DataSourceMonitorMode;
@@ -295,15 +359,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set "TABLE" 表示读取项为 table，"QUERY" 表示读取项为 query
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceMonitorMode "TABLE" 表示读取项为 table，"QUERY" 表示读取项为 query
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceMonitorMode(String DataSourceMonitorMode) {
         this.DataSourceMonitorMode = DataSourceMonitorMode;
     }
 
     /**
-     * Get 当 "DataMonitorMode"="TABLE" 时，传入需要读取的 Table；当 "DataMonitorMode"="QUERY" 时，传入需要读取的查询 sql 语句 
+     * Get 当 "DataMonitorMode"="TABLE" 时，传入需要读取的 Table；当 "DataMonitorMode"="QUERY" 时，传入需要读取的查询 sql 语句
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataSourceMonitorResource 当 "DataMonitorMode"="TABLE" 时，传入需要读取的 Table；当 "DataMonitorMode"="QUERY" 时，传入需要读取的查询 sql 语句
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceMonitorResource() {
         return this.DataSourceMonitorResource;
@@ -311,15 +379,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 当 "DataMonitorMode"="TABLE" 时，传入需要读取的 Table；当 "DataMonitorMode"="QUERY" 时，传入需要读取的查询 sql 语句
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceMonitorResource 当 "DataMonitorMode"="TABLE" 时，传入需要读取的 Table；当 "DataMonitorMode"="QUERY" 时，传入需要读取的查询 sql 语句
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceMonitorResource(String DataSourceMonitorResource) {
         this.DataSourceMonitorResource = DataSourceMonitorResource;
     }
 
     /**
-     * Get "TIMESTAMP" 表示增量列为时间戳类型，"INCREMENT" 表示增量列为自增 id 类型 
+     * Get "TIMESTAMP" 表示增量列为时间戳类型，"INCREMENT" 表示增量列为自增 id 类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataSourceIncrementMode "TIMESTAMP" 表示增量列为时间戳类型，"INCREMENT" 表示增量列为自增 id 类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceIncrementMode() {
         return this.DataSourceIncrementMode;
@@ -327,15 +399,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set "TIMESTAMP" 表示增量列为时间戳类型，"INCREMENT" 表示增量列为自增 id 类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceIncrementMode "TIMESTAMP" 表示增量列为时间戳类型，"INCREMENT" 表示增量列为自增 id 类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceIncrementMode(String DataSourceIncrementMode) {
         this.DataSourceIncrementMode = DataSourceIncrementMode;
     }
 
     /**
-     * Get 传入需要监听的列名称 
+     * Get 传入需要监听的列名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataSourceIncrementColumn 传入需要监听的列名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceIncrementColumn() {
         return this.DataSourceIncrementColumn;
@@ -343,15 +419,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 传入需要监听的列名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceIncrementColumn 传入需要监听的列名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceIncrementColumn(String DataSourceIncrementColumn) {
         this.DataSourceIncrementColumn = DataSourceIncrementColumn;
     }
 
     /**
-     * Get "HEAD" 表示复制存量 + 增量数据，"TAIL" 表示只复制增量数据 
+     * Get "HEAD" 表示复制存量 + 增量数据，"TAIL" 表示只复制增量数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataSourceStartFrom "HEAD" 表示复制存量 + 增量数据，"TAIL" 表示只复制增量数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceStartFrom() {
         return this.DataSourceStartFrom;
@@ -359,15 +439,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set "HEAD" 表示复制存量 + 增量数据，"TAIL" 表示只复制增量数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceStartFrom "HEAD" 表示复制存量 + 增量数据，"TAIL" 表示只复制增量数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceStartFrom(String DataSourceStartFrom) {
         this.DataSourceStartFrom = DataSourceStartFrom;
     }
 
     /**
-     * Get "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入 
+     * Get "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataTargetInsertMode "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataTargetInsertMode() {
         return this.DataTargetInsertMode;
@@ -375,15 +459,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTargetInsertMode "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataTargetInsertMode(String DataTargetInsertMode) {
         this.DataTargetInsertMode = DataTargetInsertMode;
     }
 
     /**
-     * Get 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键 
+     * Get 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataTargetPrimaryKeyField() {
         return this.DataTargetPrimaryKeyField;
@@ -391,15 +479,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataTargetPrimaryKeyField(String DataTargetPrimaryKeyField) {
         this.DataTargetPrimaryKeyField = DataTargetPrimaryKeyField;
     }
 
     /**
-     * Get 表与消息间的映射关系 
+     * Get 表与消息间的映射关系
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataTargetRecordMapping 表与消息间的映射关系
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecordMapping [] getDataTargetRecordMapping() {
         return this.DataTargetRecordMapping;
@@ -407,15 +499,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 表与消息间的映射关系
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTargetRecordMapping 表与消息间的映射关系
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataTargetRecordMapping(RecordMapping [] DataTargetRecordMapping) {
         this.DataTargetRecordMapping = DataTargetRecordMapping;
     }
 
     /**
-     * Get 事件路由到特定主题的正则表达式，默认为(.*) 
+     * Get 事件路由到特定主题的正则表达式，默认为(.*)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicRegex 事件路由到特定主题的正则表达式，默认为(.*)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicRegex() {
         return this.TopicRegex;
@@ -423,15 +519,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 事件路由到特定主题的正则表达式，默认为(.*)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicRegex 事件路由到特定主题的正则表达式，默认为(.*)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicRegex(String TopicRegex) {
         this.TopicRegex = TopicRegex;
     }
 
     /**
-     * Get TopicRegex的引用组，指定$1、$2等 
+     * Get TopicRegex的引用组，指定$1、$2等
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicReplacement TopicRegex的引用组，指定$1、$2等
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicReplacement() {
         return this.TopicReplacement;
@@ -439,15 +539,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set TopicRegex的引用组，指定$1、$2等
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicReplacement TopicRegex的引用组，指定$1、$2等
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicReplacement(String TopicReplacement) {
         this.TopicReplacement = TopicReplacement;
     }
 
     /**
-     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键 
+     * Get 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyColumns() {
         return this.KeyColumns;
@@ -455,15 +559,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyColumns(String KeyColumns) {
         this.KeyColumns = KeyColumns;
     }
 
     /**
-     * Get Mysql 是否抛弃解析失败的消息，默认为true 
+     * Get Mysql 是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DropInvalidMessage Mysql 是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDropInvalidMessage() {
         return this.DropInvalidMessage;
@@ -471,15 +579,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set Mysql 是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DropInvalidMessage Mysql 是否抛弃解析失败的消息，默认为true
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropInvalidMessage(Boolean DropInvalidMessage) {
         this.DropInvalidMessage = DropInvalidMessage;
     }
 
     /**
-     * Get 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效 
+     * Get 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DropCls getDropCls() {
         return this.DropCls;
@@ -487,15 +599,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropCls(DropCls DropCls) {
         this.DropCls = DropCls;
     }
 
     /**
-     * Get 输出格式，DEFAULT、CANAL_1、CANAL_2 
+     * Get 输出格式，DEFAULT、CANAL_1、CANAL_2
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputFormat() {
         return this.OutputFormat;
@@ -503,15 +619,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 输出格式，DEFAULT、CANAL_1、CANAL_2
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputFormat(String OutputFormat) {
         this.OutputFormat = OutputFormat;
     }
 
     /**
-     * Get 当Table输入的是前缀时，该项值为true，否则为false 
+     * Get 当Table输入的是前缀时，该项值为true，否则为false
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsTablePrefix() {
         return this.IsTablePrefix;
@@ -519,15 +639,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 当Table输入的是前缀时，该项值为true，否则为false
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsTablePrefix(Boolean IsTablePrefix) {
         this.IsTablePrefix = IsTablePrefix;
     }
 
     /**
-     * Get 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic 
+     * Get 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncludeContentChanges() {
         return this.IncludeContentChanges;
@@ -535,15 +659,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeContentChanges(String IncludeContentChanges) {
         this.IncludeContentChanges = IncludeContentChanges;
     }
 
     /**
-     * Get 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句 
+     * Get 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIncludeQuery() {
         return this.IncludeQuery;
@@ -551,15 +679,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeQuery(Boolean IncludeQuery) {
         this.IncludeQuery = IncludeQuery;
     }
 
     /**
-     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带 
+     * Get 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRecordWithSchema() {
         return this.RecordWithSchema;
@@ -567,15 +699,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordWithSchema(Boolean RecordWithSchema) {
         this.RecordWithSchema = RecordWithSchema;
     }
 
     /**
-     * Get 存放信令表的数据库名称 
+     * Get 存放信令表的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SignalDatabase 存放信令表的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignalDatabase() {
         return this.SignalDatabase;
@@ -583,15 +719,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 存放信令表的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SignalDatabase 存放信令表的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignalDatabase(String SignalDatabase) {
         this.SignalDatabase = SignalDatabase;
     }
 
     /**
-     * Get 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix 
+     * Get 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsTableRegular 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsTableRegular() {
         return this.IsTableRegular;
@@ -599,15 +739,19 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsTableRegular 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsTableRegular(Boolean IsTableRegular) {
         this.IsTableRegular = IsTableRegular;
     }
 
     /**
-     * Get 信号表 
+     * Get 信号表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SignalTable 信号表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignalTable() {
         return this.SignalTable;
@@ -615,10 +759,52 @@ public class MySQLParam extends AbstractModel {
 
     /**
      * Set 信号表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SignalTable 信号表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignalTable(String SignalTable) {
         this.SignalTable = SignalTable;
+    }
+
+    /**
+     * Get datetime 类型字段转换为时间戳的时区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DateTimeZone datetime 类型字段转换为时间戳的时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDateTimeZone() {
+        return this.DateTimeZone;
+    }
+
+    /**
+     * Set datetime 类型字段转换为时间戳的时区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DateTimeZone datetime 类型字段转换为时间戳的时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDateTimeZone(String DateTimeZone) {
+        this.DateTimeZone = DateTimeZone;
+    }
+
+    /**
+     * Get 自建
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SelfBuilt 自建
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSelfBuilt() {
+        return this.SelfBuilt;
+    }
+
+    /**
+     * Set 自建
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SelfBuilt 自建
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSelfBuilt(Boolean SelfBuilt) {
+        this.SelfBuilt = SelfBuilt;
     }
 
     public MySQLParam() {
@@ -710,6 +896,12 @@ public class MySQLParam extends AbstractModel {
         if (source.SignalTable != null) {
             this.SignalTable = new String(source.SignalTable);
         }
+        if (source.DateTimeZone != null) {
+            this.DateTimeZone = new String(source.DateTimeZone);
+        }
+        if (source.SelfBuilt != null) {
+            this.SelfBuilt = new Boolean(source.SelfBuilt);
+        }
     }
 
 
@@ -743,6 +935,8 @@ public class MySQLParam extends AbstractModel {
         this.setParamSimple(map, prefix + "SignalDatabase", this.SignalDatabase);
         this.setParamSimple(map, prefix + "IsTableRegular", this.IsTableRegular);
         this.setParamSimple(map, prefix + "SignalTable", this.SignalTable);
+        this.setParamSimple(map, prefix + "DateTimeZone", this.DateTimeZone);
+        this.setParamSimple(map, prefix + "SelfBuilt", this.SelfBuilt);
 
     }
 }

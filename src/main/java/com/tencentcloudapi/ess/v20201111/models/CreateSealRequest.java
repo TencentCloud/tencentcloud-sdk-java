@@ -149,8 +149,8 @@ public class CreateSealRequest extends AbstractModel {
 
     /**
     * 印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li>
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul>
     */
     @SerializedName("SealStyle")
     @Expose
@@ -496,11 +496,11 @@ public class CreateSealRequest extends AbstractModel {
 
     /**
      * Get 印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li> 
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul> 
      * @return SealStyle 印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li>
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul>
      */
     public String getSealStyle() {
         return this.SealStyle;
@@ -508,11 +508,11 @@ public class CreateSealRequest extends AbstractModel {
 
     /**
      * Set 印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li>
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul>
      * @param SealStyle 印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li>
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul>
      */
     public void setSealStyle(String SealStyle) {
         this.SealStyle = SealStyle;

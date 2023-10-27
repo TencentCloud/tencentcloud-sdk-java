@@ -207,6 +207,14 @@ public class VpcFwInstanceInfo extends AbstractModel {
     private Long UpdateEnable;
 
     /**
+    * 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrafficMode")
+    @Expose
+    private String TrafficMode;
+
+    /**
      * Get VPC防火墙实例名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FwInsName VPC防火墙实例名称
@@ -662,6 +670,26 @@ public class VpcFwInstanceInfo extends AbstractModel {
         this.UpdateEnable = UpdateEnable;
     }
 
+    /**
+     * Get 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTrafficMode() {
+        return this.TrafficMode;
+    }
+
+    /**
+     * Set 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrafficMode(String TrafficMode) {
+        this.TrafficMode = TrafficMode;
+    }
+
     public VpcFwInstanceInfo() {
     }
 
@@ -763,6 +791,9 @@ public class VpcFwInstanceInfo extends AbstractModel {
         if (source.UpdateEnable != null) {
             this.UpdateEnable = new Long(source.UpdateEnable);
         }
+        if (source.TrafficMode != null) {
+            this.TrafficMode = new String(source.TrafficMode);
+        }
     }
 
 
@@ -793,6 +824,7 @@ public class VpcFwInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowMax", this.FlowMax);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
+        this.setParamSimple(map, prefix + "TrafficMode", this.TrafficMode);
 
     }
 }

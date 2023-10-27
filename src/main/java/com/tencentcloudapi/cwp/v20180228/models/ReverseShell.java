@@ -157,7 +157,7 @@ public class ReverseShell extends AbstractModel {
     private String ProcTree;
 
     /**
-    * 检测方法
+    * 检测方法: 0行为分析; 1命令特征检测
     */
     @SerializedName("DetectBy")
     @Expose
@@ -178,6 +178,14 @@ public class ReverseShell extends AbstractModel {
     @SerializedName("Pid")
     @Expose
     private Long Pid;
+
+    /**
+    * 威胁等级：0中危，1高危
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private Long RiskLevel;
 
     /**
      * Get ID 主键 
@@ -484,16 +492,16 @@ public class ReverseShell extends AbstractModel {
     }
 
     /**
-     * Get 检测方法 
-     * @return DetectBy 检测方法
+     * Get 检测方法: 0行为分析; 1命令特征检测 
+     * @return DetectBy 检测方法: 0行为分析; 1命令特征检测
      */
     public Long getDetectBy() {
         return this.DetectBy;
     }
 
     /**
-     * Set 检测方法
-     * @param DetectBy 检测方法
+     * Set 检测方法: 0行为分析; 1命令特征检测
+     * @param DetectBy 检测方法: 0行为分析; 1命令特征检测
      */
     public void setDetectBy(Long DetectBy) {
         this.DetectBy = DetectBy;
@@ -537,6 +545,26 @@ public class ReverseShell extends AbstractModel {
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
+    }
+
+    /**
+     * Get 威胁等级：0中危，1高危
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskLevel 威胁等级：0中危，1高危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set 威胁等级：0中危，1高危
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskLevel 威胁等级：0中危，1高危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskLevel(Long RiskLevel) {
+        this.RiskLevel = RiskLevel;
     }
 
     public ReverseShell() {
@@ -613,6 +641,9 @@ public class ReverseShell extends AbstractModel {
         if (source.Pid != null) {
             this.Pid = new Long(source.Pid);
         }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new Long(source.RiskLevel);
+        }
     }
 
 
@@ -642,6 +673,7 @@ public class ReverseShell extends AbstractModel {
         this.setParamSimple(map, prefix + "DetectBy", this.DetectBy);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
 
     }
 }

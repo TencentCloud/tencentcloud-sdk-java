@@ -59,6 +59,13 @@ public class ModifyDataTransformRequest extends AbstractModel {
     private DataTransformResouceInfo [] DstResources;
 
     /**
+    * 是否开启投递服务日志。1关闭，2开启
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
      * Get 加工任务id 
      * @return TaskId 加工任务id
      */
@@ -138,6 +145,22 @@ public class ModifyDataTransformRequest extends AbstractModel {
         this.DstResources = DstResources;
     }
 
+    /**
+     * Get 是否开启投递服务日志。1关闭，2开启 
+     * @return HasServicesLog 是否开启投递服务日志。1关闭，2开启
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set 是否开启投递服务日志。1关闭，2开启
+     * @param HasServicesLog 是否开启投递服务日志。1关闭，2开启
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
     public ModifyDataTransformRequest() {
     }
 
@@ -164,6 +187,9 @@ public class ModifyDataTransformRequest extends AbstractModel {
                 this.DstResources[i] = new DataTransformResouceInfo(source.DstResources[i]);
             }
         }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyDataTransformRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
         this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
 
     }
 }

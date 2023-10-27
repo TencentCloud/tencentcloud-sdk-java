@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateOriginGroupRequest extends AbstractModel {
 
     /**
-    * 站点ID。
+    * 站点 ID
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 源站组名称，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。
+    * 源站组名称，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。
     */
     @SerializedName("Name")
     @Expose
@@ -39,8 +39,8 @@ public class CreateOriginGroupRequest extends AbstractModel {
 
     /**
     * 源站组类型，此参数必填，取值有：
-<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡引用；</li>
-<li>HTTP： HTTP专用型源站组，支持添加 IP/域名、对象存储源站，无法被四层代理引用。</li>
+<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡、HTTP 专用型负载均衡引用；</li>
+<li>HTTP： HTTP 专用型源站组，支持添加 IP/域名、对象存储源站作为源站，无法被四层代理引用，仅支持被添加加速域名、规则引擎-修改源站、HTTP 专用型负载均衡引用。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -54,32 +54,39 @@ public class CreateOriginGroupRequest extends AbstractModel {
     private OriginRecord [] Records;
 
     /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
+    * 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
+     * Get 站点 ID 
+     * @return ZoneId 站点 ID
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
+     * Set 站点 ID
+     * @param ZoneId 站点 ID
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 源站组名称，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。 
-     * @return Name 源站组名称，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。
+     * Get 源站组名称，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。 
+     * @return Name 源站组名称，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 源站组名称，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。
-     * @param Name 源站组名称，可输入1-200个字符，允许的字符为 a-z, A-Z, 0-9, _, - 。
+     * Set 源站组名称，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。
+     * @param Name 源站组名称，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -87,11 +94,11 @@ public class CreateOriginGroupRequest extends AbstractModel {
 
     /**
      * Get 源站组类型，此参数必填，取值有：
-<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡引用；</li>
-<li>HTTP： HTTP专用型源站组，支持添加 IP/域名、对象存储源站，无法被四层代理引用。</li> 
+<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡、HTTP 专用型负载均衡引用；</li>
+<li>HTTP： HTTP 专用型源站组，支持添加 IP/域名、对象存储源站作为源站，无法被四层代理引用，仅支持被添加加速域名、规则引擎-修改源站、HTTP 专用型负载均衡引用。</li> 
      * @return Type 源站组类型，此参数必填，取值有：
-<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡引用；</li>
-<li>HTTP： HTTP专用型源站组，支持添加 IP/域名、对象存储源站，无法被四层代理引用。</li>
+<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡、HTTP 专用型负载均衡引用；</li>
+<li>HTTP： HTTP 专用型源站组，支持添加 IP/域名、对象存储源站作为源站，无法被四层代理引用，仅支持被添加加速域名、规则引擎-修改源站、HTTP 专用型负载均衡引用。</li>
      */
     public String getType() {
         return this.Type;
@@ -99,11 +106,11 @@ public class CreateOriginGroupRequest extends AbstractModel {
 
     /**
      * Set 源站组类型，此参数必填，取值有：
-<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡引用；</li>
-<li>HTTP： HTTP专用型源站组，支持添加 IP/域名、对象存储源站，无法被四层代理引用。</li>
+<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡、HTTP 专用型负载均衡引用；</li>
+<li>HTTP： HTTP 专用型源站组，支持添加 IP/域名、对象存储源站作为源站，无法被四层代理引用，仅支持被添加加速域名、规则引擎-修改源站、HTTP 专用型负载均衡引用。</li>
      * @param Type 源站组类型，此参数必填，取值有：
-<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡引用；</li>
-<li>HTTP： HTTP专用型源站组，支持添加 IP/域名、对象存储源站，无法被四层代理引用。</li>
+<li>GENERAL：通用型源站组，仅支持添加 IP/域名 源站，可以被域名服务、规则引擎、四层代理、通用型负载均衡、HTTP 专用型负载均衡引用；</li>
+<li>HTTP： HTTP 专用型源站组，支持添加 IP/域名、对象存储源站作为源站，无法被四层代理引用，仅支持被添加加速域名、规则引擎-修改源站、HTTP 专用型负载均衡引用。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -123,6 +130,22 @@ public class CreateOriginGroupRequest extends AbstractModel {
      */
     public void setRecords(OriginRecord [] Records) {
         this.Records = Records;
+    }
+
+    /**
+     * Get 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。 
+     * @return HostHeader 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
+     * @param HostHeader 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
     }
 
     public CreateOriginGroupRequest() {
@@ -148,6 +171,9 @@ public class CreateOriginGroupRequest extends AbstractModel {
                 this.Records[i] = new OriginRecord(source.Records[i]);
             }
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
     }
 
 
@@ -159,6 +185,7 @@ public class CreateOriginGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Records.", this.Records);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }
 }
