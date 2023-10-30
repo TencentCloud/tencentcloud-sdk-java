@@ -175,7 +175,7 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-    * DCN同步模式，0：普通DCN同步，1：一致性同步
+    * DCN同步模式，0：异步， 1：强同步
     */
     @SerializedName("DcnSyncMode")
     @Expose
@@ -534,16 +534,16 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get DCN同步模式，0：普通DCN同步，1：一致性同步 
-     * @return DcnSyncMode DCN同步模式，0：普通DCN同步，1：一致性同步
+     * Get DCN同步模式，0：异步， 1：强同步 
+     * @return DcnSyncMode DCN同步模式，0：异步， 1：强同步
      */
     public Long getDcnSyncMode() {
         return this.DcnSyncMode;
     }
 
     /**
-     * Set DCN同步模式，0：普通DCN同步，1：一致性同步
-     * @param DcnSyncMode DCN同步模式，0：普通DCN同步，1：一致性同步
+     * Set DCN同步模式，0：异步， 1：强同步
+     * @param DcnSyncMode DCN同步模式，0：异步， 1：强同步
      */
     public void setDcnSyncMode(Long DcnSyncMode) {
         this.DcnSyncMode = DcnSyncMode;

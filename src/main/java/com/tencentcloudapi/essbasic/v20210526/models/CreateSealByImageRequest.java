@@ -28,9 +28,9 @@ public class CreateSealByImageRequest extends AbstractModel {
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
     */
@@ -79,7 +79,7 @@ public class CreateSealByImageRequest extends AbstractModel {
     * 电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
@@ -123,18 +123,18 @@ public class CreateSealByImageRequest extends AbstractModel {
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证 
      * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
      */
@@ -147,18 +147,18 @@ public class CreateSealByImageRequest extends AbstractModel {
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
      * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
      */
@@ -274,14 +274,14 @@ public class CreateSealByImageRequest extends AbstractModel {
      * Get 电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错` 
      * @return SealType 电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
@@ -294,14 +294,14 @@ public class CreateSealByImageRequest extends AbstractModel {
      * Set 电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
      * @param SealType 电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`

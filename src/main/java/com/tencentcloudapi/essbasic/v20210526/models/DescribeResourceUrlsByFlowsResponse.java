@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class DescribeResourceUrlsByFlowsResponse extends AbstractModel {
 
     /**
-    * 签署流程资源对应链接信息
+    * 合同流程PDF下载链接
     */
     @SerializedName("FlowResourceUrlInfos")
     @Expose
     private FlowResourceUrlInfo [] FlowResourceUrlInfos;
 
     /**
-    * 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+    * 如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
     */
     @SerializedName("ErrorMessages")
     @Expose
@@ -46,36 +46,36 @@ public class DescribeResourceUrlsByFlowsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 签署流程资源对应链接信息 
-     * @return FlowResourceUrlInfos 签署流程资源对应链接信息
+     * Get 合同流程PDF下载链接 
+     * @return FlowResourceUrlInfos 合同流程PDF下载链接
      */
     public FlowResourceUrlInfo [] getFlowResourceUrlInfos() {
         return this.FlowResourceUrlInfos;
     }
 
     /**
-     * Set 签署流程资源对应链接信息
-     * @param FlowResourceUrlInfos 签署流程资源对应链接信息
+     * Set 合同流程PDF下载链接
+     * @param FlowResourceUrlInfos 合同流程PDF下载链接
      */
     public void setFlowResourceUrlInfos(FlowResourceUrlInfo [] FlowResourceUrlInfos) {
         this.FlowResourceUrlInfos = FlowResourceUrlInfos;
     }
 
     /**
-     * Get 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息 
-     * @return ErrorMessages 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+     * Get 如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因 
+     * @return ErrorMessages 如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
      */
     public String [] getErrorMessages() {
         return this.ErrorMessages;
     }
 
     /**
-     * Set 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
-     * @param ErrorMessages 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+     * Set 如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
+     * @param ErrorMessages 如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
      */
     public void setErrorMessages(String [] ErrorMessages) {
         this.ErrorMessages = ErrorMessages;

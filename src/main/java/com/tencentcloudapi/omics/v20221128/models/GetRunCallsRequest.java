@@ -39,6 +39,7 @@ public class GetRunCallsRequest extends AbstractModel {
 
     /**
     * 项目ID。
+（不填使用指定地域下的默认项目）
     */
     @SerializedName("ProjectId")
     @Expose
@@ -77,8 +78,10 @@ public class GetRunCallsRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目ID。 
+     * Get 项目ID。
+（不填使用指定地域下的默认项目） 
      * @return ProjectId 项目ID。
+（不填使用指定地域下的默认项目）
      */
     public String getProjectId() {
         return this.ProjectId;
@@ -86,7 +89,9 @@ public class GetRunCallsRequest extends AbstractModel {
 
     /**
      * Set 项目ID。
+（不填使用指定地域下的默认项目）
      * @param ProjectId 项目ID。
+（不填使用指定地域下的默认项目）
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

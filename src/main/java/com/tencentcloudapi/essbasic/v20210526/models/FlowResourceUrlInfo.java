@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FlowResourceUrlInfo extends AbstractModel {
 
     /**
-    * 流程对应Id
+    * 合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
@@ -32,7 +32,7 @@ public class FlowResourceUrlInfo extends AbstractModel {
     private String FlowId;
 
     /**
-    * 流程对应资源链接信息数组
+    * 对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceUrlInfos")
@@ -40,9 +40,9 @@ public class FlowResourceUrlInfo extends AbstractModel {
     private ResourceUrlInfo [] ResourceUrlInfos;
 
     /**
-     * Get 流程对应Id
+     * Get 合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowId 流程对应Id
+     * @return FlowId 合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
@@ -50,9 +50,9 @@ public class FlowResourceUrlInfo extends AbstractModel {
     }
 
     /**
-     * Set 流程对应Id
+     * Set 合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowId 流程对应Id
+     * @param FlowId 合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {
@@ -60,9 +60,9 @@ public class FlowResourceUrlInfo extends AbstractModel {
     }
 
     /**
-     * Get 流程对应资源链接信息数组
+     * Get 对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceUrlInfos 流程对应资源链接信息数组
+     * @return ResourceUrlInfos 对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceUrlInfo [] getResourceUrlInfos() {
@@ -70,9 +70,9 @@ public class FlowResourceUrlInfo extends AbstractModel {
     }
 
     /**
-     * Set 流程对应资源链接信息数组
+     * Set 对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceUrlInfos 流程对应资源链接信息数组
+     * @param ResourceUrlInfos 对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceUrlInfos(ResourceUrlInfo [] ResourceUrlInfos) {

@@ -336,6 +336,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询漏洞风险高级配置
+     * @param req DescribeVULRiskAdvanceCFGListRequest
+     * @return DescribeVULRiskAdvanceCFGListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVULRiskAdvanceCFGListResponse DescribeVULRiskAdvanceCFGList(DescribeVULRiskAdvanceCFGListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVULRiskAdvanceCFGList", DescribeVULRiskAdvanceCFGListResponse.class);
+    }
+
+    /**
      *获取vpc列表
      * @param req DescribeVpcAssetsRequest
      * @return DescribeVpcAssetsResponse

@@ -173,6 +173,69 @@ public class DcnDetailItem extends AbstractModel {
     private Long EncryptStatus;
 
     /**
+    * 实例DCN状态描述信息
+    */
+    @SerializedName("DcnStatusDesc")
+    @Expose
+    private String DcnStatusDesc;
+
+    /**
+    * DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+    */
+    @SerializedName("PolarisInstanceId")
+    @Expose
+    private String PolarisInstanceId;
+
+    /**
+    * DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+    */
+    @SerializedName("PolarisInstanceName")
+    @Expose
+    private String PolarisInstanceName;
+
+    /**
+    * DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+    */
+    @SerializedName("PolarisNamespace")
+    @Expose
+    private String PolarisNamespace;
+
+    /**
+    * DCN实例绑定的北极星服务，若未绑定则为空
+    */
+    @SerializedName("PolarisService")
+    @Expose
+    private String PolarisService;
+
+    /**
+    * DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+    */
+    @SerializedName("PolarisServiceStatus")
+    @Expose
+    private Long PolarisServiceStatus;
+
+    /**
+    * DCN实例在北极星服务中的状态的描述信息
+    */
+    @SerializedName("PolarisServiceStatusDesc")
+    @Expose
+    private String PolarisServiceStatusDesc;
+
+    /**
+    * 北极星管控地址
+    */
+    @SerializedName("PolarisRegion")
+    @Expose
+    private String PolarisRegion;
+
+    /**
+    * 是否支持DCN切换
+    */
+    @SerializedName("IsDcnSwitchSupported")
+    @Expose
+    private Long IsDcnSwitchSupported;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -516,6 +579,150 @@ public class DcnDetailItem extends AbstractModel {
         this.EncryptStatus = EncryptStatus;
     }
 
+    /**
+     * Get 实例DCN状态描述信息 
+     * @return DcnStatusDesc 实例DCN状态描述信息
+     */
+    public String getDcnStatusDesc() {
+        return this.DcnStatusDesc;
+    }
+
+    /**
+     * Set 实例DCN状态描述信息
+     * @param DcnStatusDesc 实例DCN状态描述信息
+     */
+    public void setDcnStatusDesc(String DcnStatusDesc) {
+        this.DcnStatusDesc = DcnStatusDesc;
+    }
+
+    /**
+     * Get DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空 
+     * @return PolarisInstanceId DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+     */
+    public String getPolarisInstanceId() {
+        return this.PolarisInstanceId;
+    }
+
+    /**
+     * Set DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+     * @param PolarisInstanceId DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+     */
+    public void setPolarisInstanceId(String PolarisInstanceId) {
+        this.PolarisInstanceId = PolarisInstanceId;
+    }
+
+    /**
+     * Get DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空 
+     * @return PolarisInstanceName DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+     */
+    public String getPolarisInstanceName() {
+        return this.PolarisInstanceName;
+    }
+
+    /**
+     * Set DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+     * @param PolarisInstanceName DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+     */
+    public void setPolarisInstanceName(String PolarisInstanceName) {
+        this.PolarisInstanceName = PolarisInstanceName;
+    }
+
+    /**
+     * Get DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空 
+     * @return PolarisNamespace DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+     */
+    public String getPolarisNamespace() {
+        return this.PolarisNamespace;
+    }
+
+    /**
+     * Set DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+     * @param PolarisNamespace DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+     */
+    public void setPolarisNamespace(String PolarisNamespace) {
+        this.PolarisNamespace = PolarisNamespace;
+    }
+
+    /**
+     * Get DCN实例绑定的北极星服务，若未绑定则为空 
+     * @return PolarisService DCN实例绑定的北极星服务，若未绑定则为空
+     */
+    public String getPolarisService() {
+        return this.PolarisService;
+    }
+
+    /**
+     * Set DCN实例绑定的北极星服务，若未绑定则为空
+     * @param PolarisService DCN实例绑定的北极星服务，若未绑定则为空
+     */
+    public void setPolarisService(String PolarisService) {
+        this.PolarisService = PolarisService;
+    }
+
+    /**
+     * Get DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中 
+     * @return PolarisServiceStatus DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+     */
+    public Long getPolarisServiceStatus() {
+        return this.PolarisServiceStatus;
+    }
+
+    /**
+     * Set DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+     * @param PolarisServiceStatus DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+     */
+    public void setPolarisServiceStatus(Long PolarisServiceStatus) {
+        this.PolarisServiceStatus = PolarisServiceStatus;
+    }
+
+    /**
+     * Get DCN实例在北极星服务中的状态的描述信息 
+     * @return PolarisServiceStatusDesc DCN实例在北极星服务中的状态的描述信息
+     */
+    public String getPolarisServiceStatusDesc() {
+        return this.PolarisServiceStatusDesc;
+    }
+
+    /**
+     * Set DCN实例在北极星服务中的状态的描述信息
+     * @param PolarisServiceStatusDesc DCN实例在北极星服务中的状态的描述信息
+     */
+    public void setPolarisServiceStatusDesc(String PolarisServiceStatusDesc) {
+        this.PolarisServiceStatusDesc = PolarisServiceStatusDesc;
+    }
+
+    /**
+     * Get 北极星管控地址 
+     * @return PolarisRegion 北极星管控地址
+     */
+    public String getPolarisRegion() {
+        return this.PolarisRegion;
+    }
+
+    /**
+     * Set 北极星管控地址
+     * @param PolarisRegion 北极星管控地址
+     */
+    public void setPolarisRegion(String PolarisRegion) {
+        this.PolarisRegion = PolarisRegion;
+    }
+
+    /**
+     * Get 是否支持DCN切换 
+     * @return IsDcnSwitchSupported 是否支持DCN切换
+     */
+    public Long getIsDcnSwitchSupported() {
+        return this.IsDcnSwitchSupported;
+    }
+
+    /**
+     * Set 是否支持DCN切换
+     * @param IsDcnSwitchSupported 是否支持DCN切换
+     */
+    public void setIsDcnSwitchSupported(Long IsDcnSwitchSupported) {
+        this.IsDcnSwitchSupported = IsDcnSwitchSupported;
+    }
+
     public DcnDetailItem() {
     }
 
@@ -587,6 +794,33 @@ public class DcnDetailItem extends AbstractModel {
         if (source.EncryptStatus != null) {
             this.EncryptStatus = new Long(source.EncryptStatus);
         }
+        if (source.DcnStatusDesc != null) {
+            this.DcnStatusDesc = new String(source.DcnStatusDesc);
+        }
+        if (source.PolarisInstanceId != null) {
+            this.PolarisInstanceId = new String(source.PolarisInstanceId);
+        }
+        if (source.PolarisInstanceName != null) {
+            this.PolarisInstanceName = new String(source.PolarisInstanceName);
+        }
+        if (source.PolarisNamespace != null) {
+            this.PolarisNamespace = new String(source.PolarisNamespace);
+        }
+        if (source.PolarisService != null) {
+            this.PolarisService = new String(source.PolarisService);
+        }
+        if (source.PolarisServiceStatus != null) {
+            this.PolarisServiceStatus = new Long(source.PolarisServiceStatus);
+        }
+        if (source.PolarisServiceStatusDesc != null) {
+            this.PolarisServiceStatusDesc = new String(source.PolarisServiceStatusDesc);
+        }
+        if (source.PolarisRegion != null) {
+            this.PolarisRegion = new String(source.PolarisRegion);
+        }
+        if (source.IsDcnSwitchSupported != null) {
+            this.IsDcnSwitchSupported = new Long(source.IsDcnSwitchSupported);
+        }
     }
 
 
@@ -615,6 +849,15 @@ public class DcnDetailItem extends AbstractModel {
         this.setParamObj(map, prefix + "ReplicaConfig.", this.ReplicaConfig);
         this.setParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
         this.setParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
+        this.setParamSimple(map, prefix + "DcnStatusDesc", this.DcnStatusDesc);
+        this.setParamSimple(map, prefix + "PolarisInstanceId", this.PolarisInstanceId);
+        this.setParamSimple(map, prefix + "PolarisInstanceName", this.PolarisInstanceName);
+        this.setParamSimple(map, prefix + "PolarisNamespace", this.PolarisNamespace);
+        this.setParamSimple(map, prefix + "PolarisService", this.PolarisService);
+        this.setParamSimple(map, prefix + "PolarisServiceStatus", this.PolarisServiceStatus);
+        this.setParamSimple(map, prefix + "PolarisServiceStatusDesc", this.PolarisServiceStatusDesc);
+        this.setParamSimple(map, prefix + "PolarisRegion", this.PolarisRegion);
+        this.setParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
 
     }
 }

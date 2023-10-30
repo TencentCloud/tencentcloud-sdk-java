@@ -24,30 +24,33 @@ import java.util.HashMap;
 public class CreateConsoleLoginUrlResponse extends AbstractModel {
 
     /**
-    * 子客企业Web控制台url注意事项：
-1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
-2. 若企业认证完成且员工认证完成后，重新获取pc端的链接在5分钟之内有效，且只能访问一次
-3. 若企业认证完成且员工认证完成后，重新获取CHANNEL/APP的链接只要在有效期内（一年）都可以访问
-4. 此链接仅单次有效，每次登录需要需要重新创建新的链接，尽量不要做链接存储，多次使用。
-5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
+    * 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
+<table> <thead> <tr> <th>子客企业状态</th> <th>子客企业员工状态</th> <th>Endpoint</th> <th>链接有效期限</th> </tr> </thead>  <tbody> <tr> <td>企业未激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>PC</td> <td>5分钟</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>CHANNEL/APP</td> <td>一年</td>  </tr> </tbody> </table>
+注： 
+`1.链接仅单次有效，每次登录需要需要重新创建新的链接`
+`2.创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义`
+
     */
     @SerializedName("ConsoleUrl")
     @Expose
     private String ConsoleUrl;
 
     /**
-    * 子客企业是否已开通腾讯电子签，true-是，false-否
-注意：
-1、企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码
+    * 子客企业是否已开通腾讯电子签，
+<ul><li> **true** :已经开通腾讯电子签</li>
+<li> **false** :还未开通腾讯电子签</li></ul>
+
+注：`企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码`
     */
     @SerializedName("IsActivated")
     @Expose
     private Boolean IsActivated;
 
     /**
-    * 当前经办人是否已认证，true-是，false-否
-注意：
-1、经办人是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名
+    * 当前经办人是否已认证并加入功能
+<ul><li> **true** : 已经认证加入公司</li>
+<li> **false** : 还未认证加入公司</li></ul>
+注意：**员工是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名**
     */
     @SerializedName("ProxyOperatorIsVerified")
     @Expose
@@ -61,84 +64,96 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 子客企业Web控制台url注意事项：
-1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
-2. 若企业认证完成且员工认证完成后，重新获取pc端的链接在5分钟之内有效，且只能访问一次
-3. 若企业认证完成且员工认证完成后，重新获取CHANNEL/APP的链接只要在有效期内（一年）都可以访问
-4. 此链接仅单次有效，每次登录需要需要重新创建新的链接，尽量不要做链接存储，多次使用。
-5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义 
-     * @return ConsoleUrl 子客企业Web控制台url注意事项：
-1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
-2. 若企业认证完成且员工认证完成后，重新获取pc端的链接在5分钟之内有效，且只能访问一次
-3. 若企业认证完成且员工认证完成后，重新获取CHANNEL/APP的链接只要在有效期内（一年）都可以访问
-4. 此链接仅单次有效，每次登录需要需要重新创建新的链接，尽量不要做链接存储，多次使用。
-5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
+     * Get 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
+<table> <thead> <tr> <th>子客企业状态</th> <th>子客企业员工状态</th> <th>Endpoint</th> <th>链接有效期限</th> </tr> </thead>  <tbody> <tr> <td>企业未激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>PC</td> <td>5分钟</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>CHANNEL/APP</td> <td>一年</td>  </tr> </tbody> </table>
+注： 
+`1.链接仅单次有效，每次登录需要需要重新创建新的链接`
+`2.创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义`
+ 
+     * @return ConsoleUrl 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
+<table> <thead> <tr> <th>子客企业状态</th> <th>子客企业员工状态</th> <th>Endpoint</th> <th>链接有效期限</th> </tr> </thead>  <tbody> <tr> <td>企业未激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>PC</td> <td>5分钟</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>CHANNEL/APP</td> <td>一年</td>  </tr> </tbody> </table>
+注： 
+`1.链接仅单次有效，每次登录需要需要重新创建新的链接`
+`2.创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义`
+
      */
     public String getConsoleUrl() {
         return this.ConsoleUrl;
     }
 
     /**
-     * Set 子客企业Web控制台url注意事项：
-1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
-2. 若企业认证完成且员工认证完成后，重新获取pc端的链接在5分钟之内有效，且只能访问一次
-3. 若企业认证完成且员工认证完成后，重新获取CHANNEL/APP的链接只要在有效期内（一年）都可以访问
-4. 此链接仅单次有效，每次登录需要需要重新创建新的链接，尽量不要做链接存储，多次使用。
-5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
-     * @param ConsoleUrl 子客企业Web控制台url注意事项：
-1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
-2. 若企业认证完成且员工认证完成后，重新获取pc端的链接在5分钟之内有效，且只能访问一次
-3. 若企业认证完成且员工认证完成后，重新获取CHANNEL/APP的链接只要在有效期内（一年）都可以访问
-4. 此链接仅单次有效，每次登录需要需要重新创建新的链接，尽量不要做链接存储，多次使用。
-5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
+     * Set 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
+<table> <thead> <tr> <th>子客企业状态</th> <th>子客企业员工状态</th> <th>Endpoint</th> <th>链接有效期限</th> </tr> </thead>  <tbody> <tr> <td>企业未激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>PC</td> <td>5分钟</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>CHANNEL/APP</td> <td>一年</td>  </tr> </tbody> </table>
+注： 
+`1.链接仅单次有效，每次登录需要需要重新创建新的链接`
+`2.创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义`
+
+     * @param ConsoleUrl 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
+<table> <thead> <tr> <th>子客企业状态</th> <th>子客企业员工状态</th> <th>Endpoint</th> <th>链接有效期限</th> </tr> </thead>  <tbody> <tr> <td>企业未激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工未认证</td> <td>PC/CHANNEL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>PC</td> <td>5分钟</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>CHANNEL/APP</td> <td>一年</td>  </tr> </tbody> </table>
+注： 
+`1.链接仅单次有效，每次登录需要需要重新创建新的链接`
+`2.创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义`
+
      */
     public void setConsoleUrl(String ConsoleUrl) {
         this.ConsoleUrl = ConsoleUrl;
     }
 
     /**
-     * Get 子客企业是否已开通腾讯电子签，true-是，false-否
-注意：
-1、企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码 
-     * @return IsActivated 子客企业是否已开通腾讯电子签，true-是，false-否
-注意：
-1、企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码
+     * Get 子客企业是否已开通腾讯电子签，
+<ul><li> **true** :已经开通腾讯电子签</li>
+<li> **false** :还未开通腾讯电子签</li></ul>
+
+注：`企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码` 
+     * @return IsActivated 子客企业是否已开通腾讯电子签，
+<ul><li> **true** :已经开通腾讯电子签</li>
+<li> **false** :还未开通腾讯电子签</li></ul>
+
+注：`企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码`
      */
     public Boolean getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set 子客企业是否已开通腾讯电子签，true-是，false-否
-注意：
-1、企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码
-     * @param IsActivated 子客企业是否已开通腾讯电子签，true-是，false-否
-注意：
-1、企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码
+     * Set 子客企业是否已开通腾讯电子签，
+<ul><li> **true** :已经开通腾讯电子签</li>
+<li> **false** :还未开通腾讯电子签</li></ul>
+
+注：`企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码`
+     * @param IsActivated 子客企业是否已开通腾讯电子签，
+<ul><li> **true** :已经开通腾讯电子签</li>
+<li> **false** :还未开通腾讯电子签</li></ul>
+
+注：`企业是否实名根据传参Agent.ProxyOrganizationOpenId进行判断，非企业名称或者社会信用代码`
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;
     }
 
     /**
-     * Get 当前经办人是否已认证，true-是，false-否
-注意：
-1、经办人是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名 
-     * @return ProxyOperatorIsVerified 当前经办人是否已认证，true-是，false-否
-注意：
-1、经办人是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名
+     * Get 当前经办人是否已认证并加入功能
+<ul><li> **true** : 已经认证加入公司</li>
+<li> **false** : 还未认证加入公司</li></ul>
+注意：**员工是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名** 
+     * @return ProxyOperatorIsVerified 当前经办人是否已认证并加入功能
+<ul><li> **true** : 已经认证加入公司</li>
+<li> **false** : 还未认证加入公司</li></ul>
+注意：**员工是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名**
      */
     public Boolean getProxyOperatorIsVerified() {
         return this.ProxyOperatorIsVerified;
     }
 
     /**
-     * Set 当前经办人是否已认证，true-是，false-否
-注意：
-1、经办人是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名
-     * @param ProxyOperatorIsVerified 当前经办人是否已认证，true-是，false-否
-注意：
-1、经办人是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名
+     * Set 当前经办人是否已认证并加入功能
+<ul><li> **true** : 已经认证加入公司</li>
+<li> **false** : 还未认证加入公司</li></ul>
+注意：**员工是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名**
+     * @param ProxyOperatorIsVerified 当前经办人是否已认证并加入功能
+<ul><li> **true** : 已经认证加入公司</li>
+<li> **false** : 还未认证加入公司</li></ul>
+注意：**员工是否实名是根据Agent.ProxyOperator.OpenId判断，非经办人姓名**
      */
     public void setProxyOperatorIsVerified(Boolean ProxyOperatorIsVerified) {
         this.ProxyOperatorIsVerified = ProxyOperatorIsVerified;

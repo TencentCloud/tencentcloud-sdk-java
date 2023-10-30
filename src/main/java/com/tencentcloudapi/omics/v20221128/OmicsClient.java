@@ -127,6 +127,17 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *查询任务详情文件。
+     * @param req GetRunMetadataFileRequest
+     * @return GetRunMetadataFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRunMetadataFileResponse GetRunMetadataFile(GetRunMetadataFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRunMetadataFile", GetRunMetadataFileResponse.class);
+    }
+
+    /**
      *查询任务详情。
      * @param req GetRunStatusRequest
      * @return GetRunStatusResponse
@@ -168,6 +179,28 @@ public class OmicsClient extends AbstractClient{
     public RunApplicationResponse RunApplication(RunApplicationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RunApplication", RunApplicationResponse.class);
+    }
+
+    /**
+     *运行工作流。
+     * @param req RunWorkflowRequest
+     * @return RunWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunWorkflowResponse RunWorkflow(RunWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunWorkflow", RunWorkflowResponse.class);
+    }
+
+    /**
+     *终止任务批次。
+     * @param req TerminateRunGroupRequest
+     * @return TerminateRunGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateRunGroupResponse TerminateRunGroup(TerminateRunGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateRunGroup", TerminateRunGroupResponse.class);
     }
 
 }

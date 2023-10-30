@@ -314,7 +314,9 @@ public class Run extends AbstractModel {
     /**
      * Get 运行选项。 
      * @return Option 运行选项。
+     * @deprecated
      */
+    @Deprecated
     public RunOption getOption() {
         return this.Option;
     }
@@ -322,7 +324,9 @@ public class Run extends AbstractModel {
     /**
      * Set 运行选项。
      * @param Option 运行选项。
+     * @deprecated
      */
+    @Deprecated
     public void setOption(RunOption Option) {
         this.Option = Option;
     }

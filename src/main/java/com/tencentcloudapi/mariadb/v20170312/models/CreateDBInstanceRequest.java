@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDBInstanceRequest extends AbstractModel {
 
     /**
-    * 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+    * 实例节点可用区分布，可填写多个可用区。
     */
     @SerializedName("Zones")
     @Expose
@@ -167,16 +167,23 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String DcnInstanceId;
 
     /**
-     * Get 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。 
-     * @return Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+    * DCN同步模式，0：异步， 1：强同步
+    */
+    @SerializedName("DcnSyncMode")
+    @Expose
+    private Long DcnSyncMode;
+
+    /**
+     * Get 实例节点可用区分布，可填写多个可用区。 
+     * @return Zones 实例节点可用区分布，可填写多个可用区。
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
-     * @param Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * Set 实例节点可用区分布，可填写多个可用区。
+     * @param Zones 实例节点可用区分布，可填写多个可用区。
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
@@ -498,6 +505,22 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.DcnInstanceId = DcnInstanceId;
     }
 
+    /**
+     * Get DCN同步模式，0：异步， 1：强同步 
+     * @return DcnSyncMode DCN同步模式，0：异步， 1：强同步
+     */
+    public Long getDcnSyncMode() {
+        return this.DcnSyncMode;
+    }
+
+    /**
+     * Set DCN同步模式，0：异步， 1：强同步
+     * @param DcnSyncMode DCN同步模式，0：异步， 1：强同步
+     */
+    public void setDcnSyncMode(Long DcnSyncMode) {
+        this.DcnSyncMode = DcnSyncMode;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -581,6 +604,9 @@ public class CreateDBInstanceRequest extends AbstractModel {
         if (source.DcnInstanceId != null) {
             this.DcnInstanceId = new String(source.DcnInstanceId);
         }
+        if (source.DcnSyncMode != null) {
+            this.DcnSyncMode = new Long(source.DcnSyncMode);
+        }
     }
 
 
@@ -608,6 +634,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "InitParams.", this.InitParams);
         this.setParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
         this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
+        this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
 
     }
 }

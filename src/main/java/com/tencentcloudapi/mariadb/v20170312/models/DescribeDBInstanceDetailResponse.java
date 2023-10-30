@@ -442,6 +442,20 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private Boolean IsPhysicalReplicationSupported;
 
     /**
+    * 是否支持强同步DCN
+    */
+    @SerializedName("IsDcnStrongSyncSupported")
+    @Expose
+    private Long IsDcnStrongSyncSupported;
+
+    /**
+    * 是否支持DCN切换
+    */
+    @SerializedName("IsDcnSwitchSupported")
+    @Expose
+    private Long IsDcnSwitchSupported;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1437,6 +1451,38 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否支持强同步DCN 
+     * @return IsDcnStrongSyncSupported 是否支持强同步DCN
+     */
+    public Long getIsDcnStrongSyncSupported() {
+        return this.IsDcnStrongSyncSupported;
+    }
+
+    /**
+     * Set 是否支持强同步DCN
+     * @param IsDcnStrongSyncSupported 是否支持强同步DCN
+     */
+    public void setIsDcnStrongSyncSupported(Long IsDcnStrongSyncSupported) {
+        this.IsDcnStrongSyncSupported = IsDcnStrongSyncSupported;
+    }
+
+    /**
+     * Get 是否支持DCN切换 
+     * @return IsDcnSwitchSupported 是否支持DCN切换
+     */
+    public Long getIsDcnSwitchSupported() {
+        return this.IsDcnSwitchSupported;
+    }
+
+    /**
+     * Set 是否支持DCN切换
+     * @param IsDcnSwitchSupported 是否支持DCN切换
+     */
+    public void setIsDcnSwitchSupported(Long IsDcnSwitchSupported) {
+        this.IsDcnSwitchSupported = IsDcnSwitchSupported;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1643,6 +1689,12 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         if (source.IsPhysicalReplicationSupported != null) {
             this.IsPhysicalReplicationSupported = new Boolean(source.IsPhysicalReplicationSupported);
         }
+        if (source.IsDcnStrongSyncSupported != null) {
+            this.IsDcnStrongSyncSupported = new Long(source.IsDcnStrongSyncSupported);
+        }
+        if (source.IsDcnSwitchSupported != null) {
+            this.IsDcnSwitchSupported = new Long(source.IsDcnSwitchSupported);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1710,6 +1762,8 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
         this.setParamArrayObj(map, prefix + "ReservedNetResources.", this.ReservedNetResources);
         this.setParamSimple(map, prefix + "IsPhysicalReplicationSupported", this.IsPhysicalReplicationSupported);
+        this.setParamSimple(map, prefix + "IsDcnStrongSyncSupported", this.IsDcnStrongSyncSupported);
+        this.setParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

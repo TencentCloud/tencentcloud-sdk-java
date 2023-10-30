@@ -50,6 +50,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *创建节省计划订单，创建订单完成需调用PayDeals接口完成订单支付
+     * @param req CreateSavingPlanOrderRequest
+     * @return CreateSavingPlanOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSavingPlanOrderResponse CreateSavingPlanOrder(CreateSavingPlanOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSavingPlanOrder", CreateSavingPlanOrderResponse.class);
+    }
+
+    /**
      *批量取消设置分账标签
      * @param req DeleteAllocationTagRequest
      * @return DeleteAllocationTagResponse
@@ -304,6 +315,39 @@ public class BillingClient extends AbstractClient{
     public DescribeDosageDetailByDateResponse DescribeDosageDetailByDate(DescribeDosageDetailByDateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDosageDetailByDate", DescribeDosageDetailByDateResponse.class);
+    }
+
+    /**
+     *查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
+     * @param req DescribeSavingPlanCoverageRequest
+     * @return DescribeSavingPlanCoverageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSavingPlanCoverageResponse DescribeSavingPlanCoverage(DescribeSavingPlanCoverageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSavingPlanCoverage", DescribeSavingPlanCoverageResponse.class);
+    }
+
+    /**
+     *查用当前用户明细节省计划总览查询时段内的使用情况
+     * @param req DescribeSavingPlanOverviewRequest
+     * @return DescribeSavingPlanOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSavingPlanOverviewResponse DescribeSavingPlanOverview(DescribeSavingPlanOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSavingPlanOverview", DescribeSavingPlanOverviewResponse.class);
+    }
+
+    /**
+     *查用当前用户明细节省计划查询时段内的使用情况
+     * @param req DescribeSavingPlanUsageRequest
+     * @return DescribeSavingPlanUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSavingPlanUsageResponse DescribeSavingPlanUsage(DescribeSavingPlanUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSavingPlanUsage", DescribeSavingPlanUsageResponse.class);
     }
 
     /**

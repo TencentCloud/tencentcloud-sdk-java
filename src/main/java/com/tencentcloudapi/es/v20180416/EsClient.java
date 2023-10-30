@@ -116,6 +116,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *查询智能运维诊断结果报告
+     * @param req DescribeDiagnoseRequest
+     * @return DescribeDiagnoseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiagnoseResponse DescribeDiagnose(DescribeDiagnoseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDiagnose", DescribeDiagnoseResponse.class);
+    }
+
+    /**
      *获取索引列表
      * @param req DescribeIndexListRequest
      * @return DescribeIndexListResponse
@@ -157,6 +168,17 @@ public class EsClient extends AbstractClient{
     public DescribeInstanceOperationsResponse DescribeInstanceOperations(DescribeInstanceOperationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceOperations", DescribeInstanceOperationsResponse.class);
+    }
+
+    /**
+     *查询实例插件列表
+     * @param req DescribeInstancePluginListRequest
+     * @return DescribeInstancePluginListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancePluginListResponse DescribeInstancePluginList(DescribeInstancePluginListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancePluginList", DescribeInstancePluginListResponse.class);
     }
 
     /**
@@ -234,6 +256,17 @@ public class EsClient extends AbstractClient{
     public DiagnoseInstanceResponse DiagnoseInstance(DiagnoseInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DiagnoseInstance", DiagnoseInstanceResponse.class);
+    }
+
+    /**
+     *查看智能运维配置
+     * @param req GetDiagnoseSettingsRequest
+     * @return GetDiagnoseSettingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDiagnoseSettingsResponse GetDiagnoseSettings(GetDiagnoseSettingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDiagnoseSettings", GetDiagnoseSettingsResponse.class);
     }
 
     /**

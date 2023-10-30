@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DriverLicenseOCRResponse extends AbstractModel {
 
     /**
-    * 姓名
+    * 驾驶证正页姓名
     */
     @SerializedName("Name")
     @Expose
@@ -88,7 +88,7 @@ public class DriverLicenseOCRResponse extends AbstractModel {
     private String EndDate;
 
     /**
-    * 证号
+    * 驾驶证正页证号
     */
     @SerializedName("CardCode")
     @Expose
@@ -164,6 +164,20 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     private String GenerateTime;
 
     /**
+    * 驾驶证副页姓名
+    */
+    @SerializedName("BackPageName")
+    @Expose
+    private String BackPageName;
+
+    /**
+    * 驾驶证副页证号
+    */
+    @SerializedName("BackPageCardCode")
+    @Expose
+    private String BackPageCardCode;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -171,16 +185,16 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     private String RequestId;
 
     /**
-     * Get 姓名 
-     * @return Name 姓名
+     * Get 驾驶证正页姓名 
+     * @return Name 驾驶证正页姓名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名
-     * @param Name 姓名
+     * Set 驾驶证正页姓名
+     * @param Name 驾驶证正页姓名
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -320,16 +334,16 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     }
 
     /**
-     * Get 证号 
-     * @return CardCode 证号
+     * Get 驾驶证正页证号 
+     * @return CardCode 驾驶证正页证号
      */
     public String getCardCode() {
         return this.CardCode;
     }
 
     /**
-     * Set 证号
-     * @param CardCode 证号
+     * Set 驾驶证正页证号
+     * @param CardCode 驾驶证正页证号
      */
     public void setCardCode(String CardCode) {
         this.CardCode = CardCode;
@@ -504,6 +518,38 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     }
 
     /**
+     * Get 驾驶证副页姓名 
+     * @return BackPageName 驾驶证副页姓名
+     */
+    public String getBackPageName() {
+        return this.BackPageName;
+    }
+
+    /**
+     * Set 驾驶证副页姓名
+     * @param BackPageName 驾驶证副页姓名
+     */
+    public void setBackPageName(String BackPageName) {
+        this.BackPageName = BackPageName;
+    }
+
+    /**
+     * Get 驾驶证副页证号 
+     * @return BackPageCardCode 驾驶证副页证号
+     */
+    public String getBackPageCardCode() {
+        return this.BackPageCardCode;
+    }
+
+    /**
+     * Set 驾驶证副页证号
+     * @param BackPageCardCode 驾驶证副页证号
+     */
+    public void setBackPageCardCode(String BackPageCardCode) {
+        this.BackPageCardCode = BackPageCardCode;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -590,6 +636,12 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
         if (source.GenerateTime != null) {
             this.GenerateTime = new String(source.GenerateTime);
         }
+        if (source.BackPageName != null) {
+            this.BackPageName = new String(source.BackPageName);
+        }
+        if (source.BackPageCardCode != null) {
+            this.BackPageCardCode = new String(source.BackPageCardCode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -619,6 +671,8 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
         this.setParamSimple(map, prefix + "CumulativeScore", this.CumulativeScore);
         this.setParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
         this.setParamSimple(map, prefix + "GenerateTime", this.GenerateTime);
+        this.setParamSimple(map, prefix + "BackPageName", this.BackPageName);
+        this.setParamSimple(map, prefix + "BackPageCardCode", this.BackPageCardCode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

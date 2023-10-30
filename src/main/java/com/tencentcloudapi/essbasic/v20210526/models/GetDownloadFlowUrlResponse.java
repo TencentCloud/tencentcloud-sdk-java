@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class GetDownloadFlowUrlResponse extends AbstractModel {
 
     /**
-    * 合同（流程）下载地址
+    * 跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+
     */
     @SerializedName("DownLoadUrl")
     @Expose
@@ -38,16 +39,20 @@ public class GetDownloadFlowUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同（流程）下载地址 
-     * @return DownLoadUrl 合同（流程）下载地址
+     * Get 跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+ 
+     * @return DownLoadUrl 跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+
      */
     public String getDownLoadUrl() {
         return this.DownLoadUrl;
     }
 
     /**
-     * Set 合同（流程）下载地址
-     * @param DownLoadUrl 合同（流程）下载地址
+     * Set 跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+
+     * @param DownLoadUrl 跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+
      */
     public void setDownLoadUrl(String DownLoadUrl) {
         this.DownLoadUrl = DownLoadUrl;

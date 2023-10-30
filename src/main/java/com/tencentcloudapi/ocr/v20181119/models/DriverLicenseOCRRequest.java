@@ -42,6 +42,7 @@ public class DriverLicenseOCRRequest extends AbstractModel {
     /**
     * FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。
     */
     @SerializedName("CardSide")
@@ -91,9 +92,11 @@ BACK 为驾驶证副页正面（有档案编号的一面）。
     /**
      * Get FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。 
      * @return CardSide FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。
      */
     public String getCardSide() {
@@ -103,9 +106,11 @@ BACK 为驾驶证副页正面（有档案编号的一面）。
     /**
      * Set FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。
      * @param CardSide FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。
      */
     public void setCardSide(String CardSide) {

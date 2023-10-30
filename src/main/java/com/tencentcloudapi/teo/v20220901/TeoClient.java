@@ -39,6 +39,17 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *操作安全策略模板，支持将域名绑定或换绑到指定的策略模板，或者从指定的策略模板解绑。
+     * @param req BindSecurityTemplateToEntityRequest
+     * @return BindSecurityTemplateToEntityResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindSecurityTemplateToEntityResponse BindSecurityTemplateToEntity(BindSecurityTemplateToEntityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindSecurityTemplateToEntity", BindSecurityTemplateToEntityResponse.class);
+    }
+
+    /**
      *将未绑定套餐的站点绑定到已有套餐
      * @param req BindZoneToPlanRequest
      * @return BindZoneToPlanResponse

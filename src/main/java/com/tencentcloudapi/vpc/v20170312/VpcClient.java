@@ -3395,6 +3395,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口用于修改 SSL-VPN 服务端属性
+     * @param req ModifyVpnGatewaySslServerRequest
+     * @return ModifyVpnGatewaySslServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpnGatewaySslServerResponse ModifyVpnGatewaySslServer(ModifyVpnGatewaySslServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVpnGatewaySslServer", ModifyVpnGatewaySslServerResponse.class);
+    }
+
+    /**
      *本接口（NotifyRoutes）用于路由表列表页操作增加“发布到云联网”，发布路由到云联网。
      * @param req NotifyRoutesRequest
      * @return NotifyRoutesResponse

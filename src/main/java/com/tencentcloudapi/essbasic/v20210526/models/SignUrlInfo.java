@@ -88,9 +88,9 @@ public class SignUrlInfo extends AbstractModel {
     private String OrganizationName;
 
     /**
-    * 参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+    * 参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverType")
@@ -302,13 +302,13 @@ PERSON 自然人
     }
 
     /**
-     * Get 参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+     * Get 参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproverType 参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+     * @return ApproverType 参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverType() {
@@ -316,13 +316,13 @@ PERSON 自然人
     }
 
     /**
-     * Set 参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+     * Set 参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproverType 参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+     * @param ApproverType 参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverType(String ApproverType) {

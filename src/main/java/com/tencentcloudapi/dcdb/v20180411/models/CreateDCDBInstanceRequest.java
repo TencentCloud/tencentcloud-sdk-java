@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDCDBInstanceRequest extends AbstractModel {
 
     /**
-    * 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+    * 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
     */
     @SerializedName("Zones")
@@ -182,9 +182,16 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-     * Get 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+    * DCN同步模式，0：异步， 1：强同步 
+    */
+    @SerializedName("DcnSyncMode")
+    @Expose
+    private Long DcnSyncMode;
+
+    /**
+     * Get 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。 
-     * @return Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * @return Zones 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      */
     public String [] getZones() {
@@ -192,9 +199,9 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * Set 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
-     * @param Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * @param Zones 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      */
     public void setZones(String [] Zones) {
@@ -549,6 +556,22 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get DCN同步模式，0：异步， 1：强同步  
+     * @return DcnSyncMode DCN同步模式，0：异步， 1：强同步 
+     */
+    public Long getDcnSyncMode() {
+        return this.DcnSyncMode;
+    }
+
+    /**
+     * Set DCN同步模式，0：异步， 1：强同步 
+     * @param DcnSyncMode DCN同步模式，0：异步， 1：强同步 
+     */
+    public void setDcnSyncMode(Long DcnSyncMode) {
+        this.DcnSyncMode = DcnSyncMode;
+    }
+
     public CreateDCDBInstanceRequest() {
     }
 
@@ -638,6 +661,9 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.DcnSyncMode != null) {
+            this.DcnSyncMode = new Long(source.DcnSyncMode);
+        }
     }
 
 
@@ -667,6 +693,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
 
     }
 }

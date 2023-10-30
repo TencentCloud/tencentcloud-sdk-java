@@ -25,20 +25,23 @@ public class UploadFilesResponse extends AbstractModel {
 
     /**
     * 上传成功文件数量
+注: `如果一个文件上传失败, 则全部文件皆上传失败`
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+    * 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注:`有效期一个小时, 有效期内此文件id可以反复使用, 超过有效期无法使用`
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 文件Url
+    * 对应上传文件的下载链接，过期时间5分钟
     */
     @SerializedName("FileUrls")
     @Expose
@@ -52,8 +55,10 @@ public class UploadFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 上传成功文件数量 
+     * Get 上传成功文件数量
+注: `如果一个文件上传失败, 则全部文件皆上传失败` 
      * @return TotalCount 上传成功文件数量
+注: `如果一个文件上传失败, 则全部文件皆上传失败`
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -61,39 +66,49 @@ public class UploadFilesResponse extends AbstractModel {
 
     /**
      * Set 上传成功文件数量
+注: `如果一个文件上传失败, 则全部文件皆上传失败`
      * @param TotalCount 上传成功文件数量
+注: `如果一个文件上传失败, 则全部文件皆上传失败`
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 文件id数组，有效期一个小时；有效期内此文件id可以反复使用 
-     * @return FileIds 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+     * Get 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注:`有效期一个小时, 有效期内此文件id可以反复使用, 超过有效期无法使用` 
+     * @return FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注:`有效期一个小时, 有效期内此文件id可以反复使用, 超过有效期无法使用`
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
-     * @param FileIds 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+     * Set 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注:`有效期一个小时, 有效期内此文件id可以反复使用, 超过有效期无法使用`
+     * @param FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
+建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注:`有效期一个小时, 有效期内此文件id可以反复使用, 超过有效期无法使用`
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get 文件Url 
-     * @return FileUrls 文件Url
+     * Get 对应上传文件的下载链接，过期时间5分钟 
+     * @return FileUrls 对应上传文件的下载链接，过期时间5分钟
      */
     public String [] getFileUrls() {
         return this.FileUrls;
     }
 
     /**
-     * Set 文件Url
-     * @param FileUrls 文件Url
+     * Set 对应上传文件的下载链接，过期时间5分钟
+     * @param FileUrls 对应上传文件的下载链接，过期时间5分钟
      */
     public void setFileUrls(String [] FileUrls) {
         this.FileUrls = FileUrls;
