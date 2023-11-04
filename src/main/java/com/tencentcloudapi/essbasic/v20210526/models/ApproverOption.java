@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ApproverOption extends AbstractModel {
 
     /**
+    * 是否可以拒签 默认false-可以拒签 true-不可以拒签
+    */
+    @SerializedName("NoRefuse")
+    @Expose
+    private Boolean NoRefuse;
+
+    /**
     * 是否隐藏一键签署 默认false-不隐藏true-隐藏
     */
     @SerializedName("HideOneKeySign")
@@ -53,6 +60,22 @@ public class ApproverOption extends AbstractModel {
     @SerializedName("FlowReadLimit")
     @Expose
     private String FlowReadLimit;
+
+    /**
+     * Get 是否可以拒签 默认false-可以拒签 true-不可以拒签 
+     * @return NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
+     */
+    public Boolean getNoRefuse() {
+        return this.NoRefuse;
+    }
+
+    /**
+     * Set 是否可以拒签 默认false-可以拒签 true-不可以拒签
+     * @param NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
+     */
+    public void setNoRefuse(Boolean NoRefuse) {
+        this.NoRefuse = NoRefuse;
+    }
 
     /**
      * Get 是否隐藏一键签署 默认false-不隐藏true-隐藏 
@@ -150,6 +173,9 @@ public class ApproverOption extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ApproverOption(ApproverOption source) {
+        if (source.NoRefuse != null) {
+            this.NoRefuse = new Boolean(source.NoRefuse);
+        }
         if (source.HideOneKeySign != null) {
             this.HideOneKeySign = new Boolean(source.HideOneKeySign);
         }
@@ -166,6 +192,7 @@ public class ApproverOption extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "NoRefuse", this.NoRefuse);
         this.setParamSimple(map, prefix + "HideOneKeySign", this.HideOneKeySign);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);

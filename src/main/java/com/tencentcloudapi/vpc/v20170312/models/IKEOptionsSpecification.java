@@ -25,6 +25,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PropoEncryAlgorithm")
     @Expose
@@ -32,6 +33,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PropoAuthenAlgorithm")
     @Expose
@@ -39,6 +41,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExchangeMode")
     @Expose
@@ -46,6 +49,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalIdentity")
     @Expose
@@ -53,6 +57,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteIdentity")
     @Expose
@@ -60,6 +65,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalAddress")
     @Expose
@@ -67,6 +73,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteAddress")
     @Expose
@@ -74,6 +81,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalFqdnName")
     @Expose
@@ -81,6 +89,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteFqdnName")
     @Expose
@@ -88,6 +97,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DhGroupName")
     @Expose
@@ -95,6 +105,7 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IKESaLifetimeSeconds")
     @Expose
@@ -102,14 +113,17 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
     * IKE版本
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IKEVersion")
     @Expose
     private String IKEVersion;
 
     /**
-     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC 
+     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPropoEncryAlgorithm() {
         return this.PropoEncryAlgorithm;
@@ -117,15 +131,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPropoEncryAlgorithm(String PropoEncryAlgorithm) {
         this.PropoEncryAlgorithm = PropoEncryAlgorithm;
     }
 
     /**
-     * Get 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5 
+     * Get 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPropoAuthenAlgorithm() {
         return this.PropoAuthenAlgorithm;
@@ -133,15 +151,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPropoAuthenAlgorithm(String PropoAuthenAlgorithm) {
         this.PropoAuthenAlgorithm = PropoAuthenAlgorithm;
     }
 
     /**
-     * Get 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN 
+     * Get 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExchangeMode() {
         return this.ExchangeMode;
@@ -149,15 +171,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExchangeMode(String ExchangeMode) {
         this.ExchangeMode = ExchangeMode;
     }
 
     /**
-     * Get 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS 
+     * Get 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalIdentity() {
         return this.LocalIdentity;
@@ -165,15 +191,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalIdentity(String LocalIdentity) {
         this.LocalIdentity = LocalIdentity;
     }
 
     /**
-     * Get 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS 
+     * Get 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RemoteIdentity 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteIdentity() {
         return this.RemoteIdentity;
@@ -181,15 +211,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteIdentity 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteIdentity(String RemoteIdentity) {
         this.RemoteIdentity = RemoteIdentity;
     }
 
     /**
-     * Get 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP 
+     * Get 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LocalAddress 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalAddress() {
         return this.LocalAddress;
@@ -197,15 +231,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalAddress 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalAddress(String LocalAddress) {
         this.LocalAddress = LocalAddress;
     }
 
     /**
-     * Get 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填 
+     * Get 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RemoteAddress 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteAddress() {
         return this.RemoteAddress;
@@ -213,15 +251,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteAddress 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteAddress(String RemoteAddress) {
         this.RemoteAddress = RemoteAddress;
     }
 
     /**
-     * Get 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填 
+     * Get 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LocalFqdnName 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalFqdnName() {
         return this.LocalFqdnName;
@@ -229,15 +271,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalFqdnName 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalFqdnName(String LocalFqdnName) {
         this.LocalFqdnName = LocalFqdnName;
     }
 
     /**
-     * Get 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填 
+     * Get 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RemoteFqdnName 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteFqdnName() {
         return this.RemoteFqdnName;
@@ -245,15 +291,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteFqdnName 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteFqdnName(String RemoteFqdnName) {
         this.RemoteFqdnName = RemoteFqdnName;
     }
 
     /**
-     * Get DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'， 
+     * Get DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDhGroupName() {
         return this.DhGroupName;
@@ -261,15 +311,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDhGroupName(String DhGroupName) {
         this.DhGroupName = DhGroupName;
     }
 
     /**
-     * Get IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800 
+     * Get IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIKESaLifetimeSeconds() {
         return this.IKESaLifetimeSeconds;
@@ -277,15 +331,19 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIKESaLifetimeSeconds(Long IKESaLifetimeSeconds) {
         this.IKESaLifetimeSeconds = IKESaLifetimeSeconds;
     }
 
     /**
-     * Get IKE版本 
+     * Get IKE版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IKEVersion IKE版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIKEVersion() {
         return this.IKEVersion;
@@ -293,7 +351,9 @@ public class IKEOptionsSpecification extends AbstractModel {
 
     /**
      * Set IKE版本
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IKEVersion IKE版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIKEVersion(String IKEVersion) {
         this.IKEVersion = IKEVersion;

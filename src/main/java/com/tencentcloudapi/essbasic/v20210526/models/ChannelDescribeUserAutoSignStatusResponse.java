@@ -24,28 +24,34 @@ import java.util.HashMap;
 public class ChannelDescribeUserAutoSignStatusResponse extends AbstractModel {
 
     /**
-    * 是否开通
+    * 查询用户是否已开通自动签
     */
     @SerializedName("IsOpen")
     @Expose
     private Boolean IsOpen;
 
     /**
-    * 自动签许可生效时间。当且仅当已开通自动签时有值。
+    * 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
     */
     @SerializedName("LicenseFrom")
     @Expose
     private Long LicenseFrom;
 
     /**
-    * 自动签许可到期时间。当且仅当已开通自动签时有值。
+    * 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
     */
     @SerializedName("LicenseTo")
     @Expose
     private Long LicenseTo;
 
     /**
-    * 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+    * 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
     */
     @SerializedName("LicenseType")
     @Expose
@@ -59,64 +65,88 @@ public class ChannelDescribeUserAutoSignStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否开通 
-     * @return IsOpen 是否开通
+     * Get 查询用户是否已开通自动签 
+     * @return IsOpen 查询用户是否已开通自动签
      */
     public Boolean getIsOpen() {
         return this.IsOpen;
     }
 
     /**
-     * Set 是否开通
-     * @param IsOpen 是否开通
+     * Set 查询用户是否已开通自动签
+     * @param IsOpen 查询用户是否已开通自动签
      */
     public void setIsOpen(Boolean IsOpen) {
         this.IsOpen = IsOpen;
     }
 
     /**
-     * Get 自动签许可生效时间。当且仅当已开通自动签时有值。 
-     * @return LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+     * Get 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。 
+     * @return LicenseFrom 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public Long getLicenseFrom() {
         return this.LicenseFrom;
     }
 
     /**
-     * Set 自动签许可生效时间。当且仅当已开通自动签时有值。
-     * @param LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+     * Set 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
+     * @param LicenseFrom 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public void setLicenseFrom(Long LicenseFrom) {
         this.LicenseFrom = LicenseFrom;
     }
 
     /**
-     * Get 自动签许可到期时间。当且仅当已开通自动签时有值。 
-     * @return LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+     * Get 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。 
+     * @return LicenseTo 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public Long getLicenseTo() {
         return this.LicenseTo;
     }
 
     /**
-     * Set 自动签许可到期时间。当且仅当已开通自动签时有值。
-     * @param LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+     * Set 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
+     * @param LicenseTo 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public void setLicenseTo(Long LicenseTo) {
         this.LicenseTo = LicenseTo;
     }
 
     /**
-     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 
-     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul> 
+     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;

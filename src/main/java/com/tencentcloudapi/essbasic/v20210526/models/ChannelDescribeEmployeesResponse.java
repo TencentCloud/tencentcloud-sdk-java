@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChannelDescribeEmployeesResponse extends AbstractModel {
 
     /**
-    * 员工数据列表
+    * 员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Employees")
@@ -32,7 +32,7 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
     private Staff [] Employees;
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+    * 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
@@ -40,14 +40,14 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
     private Long Offset;
 
     /**
-    * 指定每页多少条数据，单页最大20
+    * 指定分页每页返回的数据条数，单页最大支持 20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 符合条件的员工数量
+    * 符合条件的员工数量。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -61,9 +61,9 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 员工数据列表
+     * Get 员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Employees 员工数据列表
+     * @return Employees 员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Staff [] getEmployees() {
@@ -71,9 +71,9 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
     }
 
     /**
-     * Set 员工数据列表
+     * Set 员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Employees 员工数据列表
+     * @param Employees 员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmployees(Staff [] Employees) {
@@ -81,9 +81,9 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
     }
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+     * Get 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+     * @return Offset 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
@@ -91,9 +91,9 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+     * Set 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+     * @param Offset 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {
@@ -101,32 +101,32 @@ public class ChannelDescribeEmployeesResponse extends AbstractModel {
     }
 
     /**
-     * Get 指定每页多少条数据，单页最大20 
-     * @return Limit 指定每页多少条数据，单页最大20
+     * Get 指定分页每页返回的数据条数，单页最大支持 20。 
+     * @return Limit 指定分页每页返回的数据条数，单页最大支持 20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页多少条数据，单页最大20
-     * @param Limit 指定每页多少条数据，单页最大20
+     * Set 指定分页每页返回的数据条数，单页最大支持 20。
+     * @param Limit 指定分页每页返回的数据条数，单页最大支持 20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 符合条件的员工数量 
-     * @return TotalCount 符合条件的员工数量
+     * Get 符合条件的员工数量。 
+     * @return TotalCount 符合条件的员工数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的员工数量
-     * @param TotalCount 符合条件的员工数量
+     * Set 符合条件的员工数量。
+     * @param TotalCount 符合条件的员工数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

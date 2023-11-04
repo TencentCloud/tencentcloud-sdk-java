@@ -194,9 +194,13 @@ public class FlowApproverInfo extends AbstractModel {
     private Boolean ApproverNeedSignReview;
 
     /**
-    * 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+    * 指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
     */
     @SerializedName("ApproverVerifyTypes")
     @Expose
@@ -204,7 +208,13 @@ public class FlowApproverInfo extends AbstractModel {
 
     /**
     * 签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+<ul><li> **1** :人脸认证</li>
+<li> **2** :签署密码</li>
+<li> **3** :运营商三要素</li></ul>
+
+默认为1(人脸认证 ),2(签署密码)
+
+注: `用模版创建合同场景, 签署人的认证方式需要在配置模板的时候指定, 在此创建合同指定无效`
     */
     @SerializedName("ApproverSignTypes")
     @Expose
@@ -240,7 +250,9 @@ public class FlowApproverInfo extends AbstractModel {
     private ComponentLimit [] AddSignComponentsLimits;
 
     /**
-    * 自定义签署人角色名，如收款人、开具人、见证人等
+    * 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
     */
     @SerializedName("ApproverRoleName")
     @Expose
@@ -715,24 +727,40 @@ public class FlowApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证） 
-     * @return ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     * Get 指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul> 
+     * @return ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
      */
     public Long [] getApproverVerifyTypes() {
         return this.ApproverVerifyTypes;
     }
 
     /**
-     * Set 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
-     * @param ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     * Set 指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
+     * @param ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
      */
     public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
         this.ApproverVerifyTypes = ApproverVerifyTypes;
@@ -740,9 +768,21 @@ public class FlowApproverInfo extends AbstractModel {
 
     /**
      * Get 签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2) 
+<ul><li> **1** :人脸认证</li>
+<li> **2** :签署密码</li>
+<li> **3** :运营商三要素</li></ul>
+
+默认为1(人脸认证 ),2(签署密码)
+
+注: `用模版创建合同场景, 签署人的认证方式需要在配置模板的时候指定, 在此创建合同指定无效` 
      * @return ApproverSignTypes 签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+<ul><li> **1** :人脸认证</li>
+<li> **2** :签署密码</li>
+<li> **3** :运营商三要素</li></ul>
+
+默认为1(人脸认证 ),2(签署密码)
+
+注: `用模版创建合同场景, 签署人的认证方式需要在配置模板的时候指定, 在此创建合同指定无效`
      */
     public Long [] getApproverSignTypes() {
         return this.ApproverSignTypes;
@@ -750,9 +790,21 @@ public class FlowApproverInfo extends AbstractModel {
 
     /**
      * Set 签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+<ul><li> **1** :人脸认证</li>
+<li> **2** :签署密码</li>
+<li> **3** :运营商三要素</li></ul>
+
+默认为1(人脸认证 ),2(签署密码)
+
+注: `用模版创建合同场景, 签署人的认证方式需要在配置模板的时候指定, 在此创建合同指定无效`
      * @param ApproverSignTypes 签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+<ul><li> **1** :人脸认证</li>
+<li> **2** :签署密码</li>
+<li> **3** :运营商三要素</li></ul>
+
+默认为1(人脸认证 ),2(签署密码)
+
+注: `用模版创建合同场景, 签署人的认证方式需要在配置模板的时候指定, 在此创建合同指定无效`
      */
     public void setApproverSignTypes(Long [] ApproverSignTypes) {
         this.ApproverSignTypes = ApproverSignTypes;
@@ -839,16 +891,24 @@ public class FlowApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 自定义签署人角色名，如收款人、开具人、见证人等 
-     * @return ApproverRoleName 自定义签署人角色名，如收款人、开具人、见证人等
+     * Get 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的` 
+     * @return ApproverRoleName 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
      */
     public String getApproverRoleName() {
         return this.ApproverRoleName;
     }
 
     /**
-     * Set 自定义签署人角色名，如收款人、开具人、见证人等
-     * @param ApproverRoleName 自定义签署人角色名，如收款人、开具人、见证人等
+     * Set 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
+     * @param ApproverRoleName 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
      */
     public void setApproverRoleName(String ApproverRoleName) {
         this.ApproverRoleName = ApproverRoleName;

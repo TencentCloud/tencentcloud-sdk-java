@@ -27,6 +27,12 @@ public enum LighthouseErrorCode {
     // 查询镜像失败，请稍后再试。
      FAILEDOPERATION_DESCRIBEBLUEPRINTSFAILED("FailedOperation.DescribeBlueprintsFailed"),
      
+    // 查询套餐折扣失败
+     FAILEDOPERATION_DESCRIBEBUNDLEDISCOUNTFAILED("FailedOperation.DescribeBundleDiscountFailed"),
+     
+    // 查询套餐失败
+     FAILEDOPERATION_DESCRIBEBUNDLESFAILED("FailedOperation.DescribeBundlesFailed"),
+     
     // 查询实例状态错误。
      FAILEDOPERATION_DESCRIBEINSTANCESTATUS("FailedOperation.DescribeInstanceStatus"),
      
@@ -359,6 +365,9 @@ public enum LighthouseErrorCode {
      
     // 参数取值过长，超过最大长度。
      INVALIDPARAMETERVALUE_TOOLONG("InvalidParameterValue.TooLong"),
+     
+    // 参数值非法，小于有效值。
+     INVALIDPARAMETERVALUE_TOOSMALL("InvalidParameterValue.TooSmall"),
      
     // 非法的可用区。
      INVALIDPARAMETERVALUE_ZONEINVALID("InvalidParameterValue.ZoneInvalid"),

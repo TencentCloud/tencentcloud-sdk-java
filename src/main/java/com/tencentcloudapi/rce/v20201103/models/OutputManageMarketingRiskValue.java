@@ -114,6 +114,14 @@ reject：拒绝，高风险恶意
     private String ConstId;
 
     /**
+    * 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskInformation")
+    @Expose
+    private String RiskInformation;
+
+    /**
      * Get 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
@@ -389,6 +397,26 @@ reject：拒绝，高风险恶意
         this.ConstId = ConstId;
     }
 
+    /**
+     * Get 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskInformation 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRiskInformation() {
+        return this.RiskInformation;
+    }
+
+    /**
+     * Set 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskInformation 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskInformation(String RiskInformation) {
+        this.RiskInformation = RiskInformation;
+    }
+
     public OutputManageMarketingRiskValue() {
     }
 
@@ -421,6 +449,9 @@ reject：拒绝，高风险恶意
         if (source.ConstId != null) {
             this.ConstId = new String(source.ConstId);
         }
+        if (source.RiskInformation != null) {
+            this.RiskInformation = new String(source.RiskInformation);
+        }
     }
 
 
@@ -435,6 +466,7 @@ reject：拒绝，高风险恶意
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamArraySimple(map, prefix + "RiskType.", this.RiskType);
         this.setParamSimple(map, prefix + "ConstId", this.ConstId);
+        this.setParamSimple(map, prefix + "RiskInformation", this.RiskInformation);
 
     }
 }

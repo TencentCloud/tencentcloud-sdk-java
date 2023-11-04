@@ -787,6 +787,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取消费详情列表
+     * @param req DescribeRocketMQConsumeStatsRequest
+     * @return DescribeRocketMQConsumeStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQConsumeStatsResponse DescribeRocketMQConsumeStats(DescribeRocketMQConsumeStatsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQConsumeStats", DescribeRocketMQConsumeStatsResponse.class);
+    }
+
+    /**
      *获取指定消费组下当前客户端的连接情况
      * @param req DescribeRocketMQConsumerConnectionsRequest
      * @return DescribeRocketMQConsumerConnectionsResponse
@@ -908,6 +919,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *用于获取RocketMQ消费组订阅关系数据
+     * @param req DescribeRocketMQSubscriptionsRequest
+     * @return DescribeRocketMQSubscriptionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptions(DescribeRocketMQSubscriptionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQSubscriptions", DescribeRocketMQSubscriptionsResponse.class);
+    }
+
+    /**
      *rocketmq 消息查询
      * @param req DescribeRocketMQTopicMsgsRequest
      * @return DescribeRocketMQTopicMsgsResponse
@@ -971,6 +993,17 @@ public class TdmqClient extends AbstractClient{
     public DescribeSubscriptionsResponse DescribeSubscriptions(DescribeSubscriptionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSubscriptions", DescribeSubscriptionsResponse.class);
+    }
+
+    /**
+     *消息查询
+     * @param req DescribeTopicMsgsRequest
+     * @return DescribeTopicMsgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicMsgsResponse DescribeTopicMsgs(DescribeTopicMsgsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicMsgs", DescribeTopicMsgsResponse.class);
     }
 
     /**
@@ -1357,6 +1390,17 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public UnbindCmqDeadLetterResponse UnbindCmqDeadLetter(UnbindCmqDeadLetterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindCmqDeadLetter", UnbindCmqDeadLetterResponse.class);
+    }
+
+    /**
+     *Rocketmq消费验证
+     * @param req VerifyRocketMQConsumeRequest
+     * @return VerifyRocketMQConsumeResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyRocketMQConsumeResponse VerifyRocketMQConsume(VerifyRocketMQConsumeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyRocketMQConsume", VerifyRocketMQConsumeResponse.class);
     }
 
 }

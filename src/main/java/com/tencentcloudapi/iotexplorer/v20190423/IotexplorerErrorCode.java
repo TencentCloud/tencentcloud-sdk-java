@@ -141,6 +141,9 @@ public enum IotexplorerErrorCode {
     // 转发重定向被拒绝。
      INVALIDPARAMETERVALUE_FORWARDREDIRECTDENIED("InvalidParameterValue.ForwardRedirectDenied"),
      
+    // 拉取产品列表失败。
+     INVALIDPARAMETERVALUE_GETPRODUCTSLISTERROR("InvalidParameterValue.GetProductsListError"),
+     
     // SQL语句含有非法字符。
      INVALIDPARAMETERVALUE_INVALIDSQL("InvalidParameterValue.InvalidSQL"),
      

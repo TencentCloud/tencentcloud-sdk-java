@@ -105,6 +105,13 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
     private Boolean EnableCutImage;
 
     /**
+    * 是否打开字段坐标返回。默认为false。
+    */
+    @SerializedName("EnableItemPolygon")
+    @Expose
+    private Boolean EnableItemPolygon;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 8M。图片下载时间不超过 3 秒。
@@ -332,6 +339,22 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         this.EnableCutImage = EnableCutImage;
     }
 
+    /**
+     * Get 是否打开字段坐标返回。默认为false。 
+     * @return EnableItemPolygon 是否打开字段坐标返回。默认为false。
+     */
+    public Boolean getEnableItemPolygon() {
+        return this.EnableItemPolygon;
+    }
+
+    /**
+     * Set 是否打开字段坐标返回。默认为false。
+     * @param EnableItemPolygon 是否打开字段坐标返回。默认为false。
+     */
+    public void setEnableItemPolygon(Boolean EnableItemPolygon) {
+        this.EnableItemPolygon = EnableItemPolygon;
+    }
+
     public RecognizeGeneralInvoiceRequest() {
     }
 
@@ -367,6 +390,9 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         if (source.EnableCutImage != null) {
             this.EnableCutImage = new Boolean(source.EnableCutImage);
         }
+        if (source.EnableItemPolygon != null) {
+            this.EnableItemPolygon = new Boolean(source.EnableItemPolygon);
+        }
     }
 
 
@@ -382,6 +408,7 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamSimple(map, prefix + "EnableMultiplePage", this.EnableMultiplePage);
         this.setParamSimple(map, prefix + "EnableCutImage", this.EnableCutImage);
+        this.setParamSimple(map, prefix + "EnableItemPolygon", this.EnableItemPolygon);
 
     }
 }

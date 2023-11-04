@@ -31,6 +31,13 @@ public class DescribeEscapeEventDetailRequest extends AbstractModel {
     private String EventId;
 
     /**
+    * 事件类型
+    */
+    @SerializedName("EventType")
+    @Expose
+    private String EventType;
+
+    /**
      * Get 事件唯一id 
      * @return EventId 事件唯一id
      */
@@ -46,6 +53,22 @@ public class DescribeEscapeEventDetailRequest extends AbstractModel {
         this.EventId = EventId;
     }
 
+    /**
+     * Get 事件类型 
+     * @return EventType 事件类型
+     */
+    public String getEventType() {
+        return this.EventType;
+    }
+
+    /**
+     * Set 事件类型
+     * @param EventType 事件类型
+     */
+    public void setEventType(String EventType) {
+        this.EventType = EventType;
+    }
+
     public DescribeEscapeEventDetailRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeEscapeEventDetailRequest extends AbstractModel {
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
+        if (source.EventType != null) {
+            this.EventType = new String(source.EventType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeEscapeEventDetailRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamSimple(map, prefix + "EventType", this.EventType);
 
     }
 }

@@ -75,6 +75,17 @@ public class SeatUserInfo extends AbstractModel {
     private String [] SkillGroupNameList;
 
     /**
+    * 1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Role")
+    @Expose
+    private Long Role;
+
+    /**
      * Get 坐席名称 
      * @return Name 坐席名称
      */
@@ -194,6 +205,38 @@ public class SeatUserInfo extends AbstractModel {
         this.SkillGroupNameList = SkillGroupNameList;
     }
 
+    /**
+     * Get 1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Role 1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set 1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Role 1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRole(Long Role) {
+        this.Role = Role;
+    }
+
     public SeatUserInfo() {
     }
 
@@ -226,6 +269,9 @@ public class SeatUserInfo extends AbstractModel {
                 this.SkillGroupNameList[i] = new String(source.SkillGroupNameList[i]);
             }
         }
+        if (source.Role != null) {
+            this.Role = new Long(source.Role);
+        }
     }
 
 
@@ -240,6 +286,7 @@ public class SeatUserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

@@ -48,6 +48,14 @@ public class DescribeTaskLogListResponse extends AbstractModel {
     private Long NotViewNumber;
 
     /**
+    * 报告模板数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportTemplateNumber")
+    @Expose
+    private Long ReportTemplateNumber;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -115,6 +123,26 @@ public class DescribeTaskLogListResponse extends AbstractModel {
     }
 
     /**
+     * Get 报告模板数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportTemplateNumber 报告模板数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReportTemplateNumber() {
+        return this.ReportTemplateNumber;
+    }
+
+    /**
+     * Set 报告模板数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportTemplateNumber 报告模板数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportTemplateNumber(Long ReportTemplateNumber) {
+        this.ReportTemplateNumber = ReportTemplateNumber;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -150,6 +178,9 @@ public class DescribeTaskLogListResponse extends AbstractModel {
         if (source.NotViewNumber != null) {
             this.NotViewNumber = new Long(source.NotViewNumber);
         }
+        if (source.ReportTemplateNumber != null) {
+            this.ReportTemplateNumber = new Long(source.ReportTemplateNumber);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -163,6 +194,7 @@ public class DescribeTaskLogListResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "NotViewNumber", this.NotViewNumber);
+        this.setParamSimple(map, prefix + "ReportTemplateNumber", this.ReportTemplateNumber);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

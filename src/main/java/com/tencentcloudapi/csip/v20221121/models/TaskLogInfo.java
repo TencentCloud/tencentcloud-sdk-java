@@ -119,6 +119,22 @@ public class TaskLogInfo extends AbstractModel {
     private String UserName;
 
     /**
+    * 报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportType")
+    @Expose
+    private Long ReportType;
+
+    /**
+    * 报告模板id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private Long TemplateId;
+
+    /**
      * Get 报告名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskLogName 报告名称
@@ -354,6 +370,46 @@ public class TaskLogInfo extends AbstractModel {
         this.UserName = UserName;
     }
 
+    /**
+     * Get 报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportType 报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReportType() {
+        return this.ReportType;
+    }
+
+    /**
+     * Set 报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportType 报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportType(Long ReportType) {
+        this.ReportType = ReportType;
+    }
+
+    /**
+     * Get 报告模板id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateId 报告模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 报告模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateId 报告模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateId(Long TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public TaskLogInfo() {
     }
 
@@ -398,6 +454,12 @@ public class TaskLogInfo extends AbstractModel {
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
+        if (source.ReportType != null) {
+            this.ReportType = new Long(source.ReportType);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
     }
 
 
@@ -417,6 +479,8 @@ public class TaskLogInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "UIN", this.UIN);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "ReportType", this.ReportType);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

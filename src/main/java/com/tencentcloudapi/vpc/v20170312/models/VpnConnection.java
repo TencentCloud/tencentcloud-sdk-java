@@ -196,6 +196,14 @@ public class VpnConnection extends AbstractModel {
     private String NegotiationType;
 
     /**
+    * Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BgpConfig")
+    @Expose
+    private BgpConfigAndAsn BgpConfig;
+
+    /**
      * Get 通道实例ID。 
      * @return VpnConnectionId 通道实例ID。
      */
@@ -595,6 +603,26 @@ public class VpnConnection extends AbstractModel {
         this.NegotiationType = NegotiationType;
     }
 
+    /**
+     * Get Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BgpConfig Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BgpConfigAndAsn getBgpConfig() {
+        return this.BgpConfig;
+    }
+
+    /**
+     * Set Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BgpConfig Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBgpConfig(BgpConfigAndAsn BgpConfig) {
+        this.BgpConfig = BgpConfig;
+    }
+
     public VpnConnection() {
     }
 
@@ -681,6 +709,9 @@ public class VpnConnection extends AbstractModel {
         if (source.NegotiationType != null) {
             this.NegotiationType = new String(source.NegotiationType);
         }
+        if (source.BgpConfig != null) {
+            this.BgpConfig = new BgpConfigAndAsn(source.BgpConfig);
+        }
     }
 
 
@@ -712,6 +743,7 @@ public class VpnConnection extends AbstractModel {
         this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
+        this.setParamObj(map, prefix + "BgpConfig.", this.BgpConfig);
 
     }
 }

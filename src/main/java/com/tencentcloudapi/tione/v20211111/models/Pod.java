@@ -88,6 +88,14 @@ public class Pod extends AbstractModel {
     private Container [] ContainerInfos;
 
     /**
+    * 容器调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CrossTenantENIInfo")
+    @Expose
+    private CrossTenantENIInfo CrossTenantENIInfo;
+
+    /**
      * Get pod名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name pod名
@@ -247,6 +255,26 @@ public class Pod extends AbstractModel {
         this.ContainerInfos = ContainerInfos;
     }
 
+    /**
+     * Get 容器调用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CrossTenantENIInfo 容器调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CrossTenantENIInfo getCrossTenantENIInfo() {
+        return this.CrossTenantENIInfo;
+    }
+
+    /**
+     * Set 容器调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CrossTenantENIInfo 容器调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCrossTenantENIInfo(CrossTenantENIInfo CrossTenantENIInfo) {
+        this.CrossTenantENIInfo = CrossTenantENIInfo;
+    }
+
     public Pod() {
     }
 
@@ -282,6 +310,9 @@ public class Pod extends AbstractModel {
                 this.ContainerInfos[i] = new Container(source.ContainerInfos[i]);
             }
         }
+        if (source.CrossTenantENIInfo != null) {
+            this.CrossTenantENIInfo = new CrossTenantENIInfo(source.CrossTenantENIInfo);
+        }
     }
 
 
@@ -297,6 +328,7 @@ public class Pod extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamObj(map, prefix + "Containers.", this.Containers);
         this.setParamArrayObj(map, prefix + "ContainerInfos.", this.ContainerInfos);
+        this.setParamObj(map, prefix + "CrossTenantENIInfo.", this.CrossTenantENIInfo);
 
     }
 }

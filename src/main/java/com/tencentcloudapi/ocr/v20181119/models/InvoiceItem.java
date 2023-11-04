@@ -84,14 +84,14 @@ FailedOperation.UnKnowError：表示识别失败；
     private Long Page;
 
     /**
-    * 发票详细类型，详见上方 SubType 返回值说明
+    * 发票详细类型，详见票据识别（高级版）接口文档说明中 SubType 返回值说明
     */
     @SerializedName("SubType")
     @Expose
     private String SubType;
 
     /**
-    * 发票类型描述，详见上方 TypeDescription  返回值说明
+    * 发票类型描述，详见票据识别（高级版）接口文档说明中 TypeDescription  返回值说明
     */
     @SerializedName("TypeDescription")
     @Expose
@@ -110,6 +110,13 @@ FailedOperation.UnKnowError：表示识别失败；
     @SerializedName("SubTypeDescription")
     @Expose
     private String SubTypeDescription;
+
+    /**
+    * 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+    */
+    @SerializedName("ItemPolygon")
+    @Expose
+    private ItemPolygonInfo [] ItemPolygon;
 
     /**
      * Get 识别结果。
@@ -280,32 +287,32 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * Get 发票详细类型，详见上方 SubType 返回值说明 
-     * @return SubType 发票详细类型，详见上方 SubType 返回值说明
+     * Get 发票详细类型，详见票据识别（高级版）接口文档说明中 SubType 返回值说明 
+     * @return SubType 发票详细类型，详见票据识别（高级版）接口文档说明中 SubType 返回值说明
      */
     public String getSubType() {
         return this.SubType;
     }
 
     /**
-     * Set 发票详细类型，详见上方 SubType 返回值说明
-     * @param SubType 发票详细类型，详见上方 SubType 返回值说明
+     * Set 发票详细类型，详见票据识别（高级版）接口文档说明中 SubType 返回值说明
+     * @param SubType 发票详细类型，详见票据识别（高级版）接口文档说明中 SubType 返回值说明
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get 发票类型描述，详见上方 TypeDescription  返回值说明 
-     * @return TypeDescription 发票类型描述，详见上方 TypeDescription  返回值说明
+     * Get 发票类型描述，详见票据识别（高级版）接口文档说明中 TypeDescription  返回值说明 
+     * @return TypeDescription 发票类型描述，详见票据识别（高级版）接口文档说明中 TypeDescription  返回值说明
      */
     public String getTypeDescription() {
         return this.TypeDescription;
     }
 
     /**
-     * Set 发票类型描述，详见上方 TypeDescription  返回值说明
-     * @param TypeDescription 发票类型描述，详见上方 TypeDescription  返回值说明
+     * Set 发票类型描述，详见票据识别（高级版）接口文档说明中 TypeDescription  返回值说明
+     * @param TypeDescription 发票类型描述，详见票据识别（高级版）接口文档说明中 TypeDescription  返回值说明
      */
     public void setTypeDescription(String TypeDescription) {
         this.TypeDescription = TypeDescription;
@@ -341,6 +348,22 @@ FailedOperation.UnKnowError：表示识别失败；
      */
     public void setSubTypeDescription(String SubTypeDescription) {
         this.SubTypeDescription = SubTypeDescription;
+    }
+
+    /**
+     * Get 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。 
+     * @return ItemPolygon 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+     */
+    public ItemPolygonInfo [] getItemPolygon() {
+        return this.ItemPolygon;
+    }
+
+    /**
+     * Set 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+     * @param ItemPolygon 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+     */
+    public void setItemPolygon(ItemPolygonInfo [] ItemPolygon) {
+        this.ItemPolygon = ItemPolygon;
     }
 
     public InvoiceItem() {
@@ -381,6 +404,12 @@ FailedOperation.UnKnowError：表示识别失败；
         if (source.SubTypeDescription != null) {
             this.SubTypeDescription = new String(source.SubTypeDescription);
         }
+        if (source.ItemPolygon != null) {
+            this.ItemPolygon = new ItemPolygonInfo[source.ItemPolygon.length];
+            for (int i = 0; i < source.ItemPolygon.length; i++) {
+                this.ItemPolygon[i] = new ItemPolygonInfo(source.ItemPolygon[i]);
+            }
+        }
     }
 
 
@@ -398,6 +427,7 @@ FailedOperation.UnKnowError：表示识别失败；
         this.setParamSimple(map, prefix + "TypeDescription", this.TypeDescription);
         this.setParamSimple(map, prefix + "CutImage", this.CutImage);
         this.setParamSimple(map, prefix + "SubTypeDescription", this.SubTypeDescription);
+        this.setParamArrayObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
 
     }
 }

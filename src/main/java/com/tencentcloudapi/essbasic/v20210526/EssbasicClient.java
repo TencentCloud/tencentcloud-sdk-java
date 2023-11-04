@@ -39,18 +39,16 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *指定需要批量撤销的签署流程Id，批量撤销合同
-客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
+     *通过合同编号批量撤销合同，单次最多支持撤销100份合同。
 
-可以撤回：未全部签署完成
- 不可以撤回：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
+适用场景：如果某个合同当前**至少还有一方没有签署**，则可通过该接口取消该合同流程。常用于合同发错、内容填错，需要及时撤销的场景。
 
-**满足撤销条件的合同会发起异步撤销流程，不满足撤销条件的合同返回失败原因。**
+- **可撤回合同状态**：未全部签署完成
+- **不撤回合同状态**：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
 
-**合同撤销成功后，会通过合同状态为 CANCEL 的回调消息通知调用方 [具体可参考回调消息](https://qian.tencent.com/developers/scenes/partner/callback_data_types#-%E5%90%88%E5%90%8C%E7%8A%B6%E6%80%81%E9%80%9A%E7%9F%A5---flowstatuschange)**
-
-**注意:
-能撤回合同的只能是合同的发起人或者发起企业的超管、法人**
+注:
+- 有对应合同撤销权限的人:  <font color='red'>**合同的发起人或者发起人所在企业的超管、法人**</font>
+- 签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>
      * @param req ChannelBatchCancelFlowsRequest
      * @return ChannelBatchCancelFlowsResponse
      * @throws TencentCloudSDKException
@@ -64,11 +62,13 @@ public class EssbasicClient extends AbstractClient{
      *撤销签署流程接口
 
 适用场景：如果某个合同流程当前至少还有一方没有签署，则可通过该接口取消该合同流程。常用于合同发错、内容填错，需要及时撤销的场景。
-<ul><li> `可撤回合同状态` ：未全部签署完成</li>
-<li> `不撤回合同状态` ：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。</li></ul>
+
+- **可撤回合同状态**：未全部签署完成
+- **不撤回合同状态**：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
+
 注:
-<ul><li>能撤回合同的只能是 `合同的发起人或者发起方企业的超管、法人`  </li>
-<li>签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>。</li></ul>
+- 有对应合同撤销权限的人:  <font color='red'>**合同的发起人或者发起人所在企业的超管、法人**</font>
+- 签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>
      * @param req ChannelCancelFlowRequest
      * @return ChannelCancelFlowResponse
      * @throws TencentCloudSDKException
@@ -103,15 +103,15 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *指定需要批量撤销的签署流程Id，获取批量撤销链接 - 不建议使用此接口，可使用ChannelBatchCancelFlows
-客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
-接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
+     *通过合同编号生成批量撤销合同的链接，单次最多支持撤销100份合同,   返回的链接需要有此权限的人<font color='red'>**合同的发起人或者发起人所在企业的超管、法人**</font>在<font color='red'>**手机端**</font>打开,  跳转到腾讯电子签小程序输入撤销原因来进行撤销合同
 
-可以撤回：未全部签署完成
- 不可以撤回：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
+适用场景：如果某个合同当前**至少还有一方没有签署**，则可通过该接口取消该合同流程。常用于合同发错、内容填错，需要及时撤销的场景。
 
-注意:
-能撤回合同的只能是合同的发起人或者发起企业的超管、法人
+- **可撤回合同状态**：未全部签署完成
+- **不撤回合同状态**：已全部签署完成、已拒签、已过期、已撤回、拒绝填写、已解除等合同状态。
+
+注:
+- 签署完毕的合同需要双方走解除流程将合同作废，可以参考<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateReleaseFlow" target="_blank">发起解除合同流程接口</a>
      * @param req ChannelCreateBatchCancelFlowUrlRequest
      * @return ChannelCreateBatchCancelFlowUrlResponse
      * @throws TencentCloudSDKException
@@ -119,6 +119,24 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateBatchCancelFlowUrlResponse ChannelCreateBatchCancelFlowUrl(ChannelCreateBatchCancelFlowUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ChannelCreateBatchCancelFlowUrl", ChannelCreateBatchCancelFlowUrlResponse.class);
+    }
+
+    /**
+     *该接口用于发起合同后，生成个人用户的批量签署链接, 暂时不支持企业端签署 <br/>
+`注意：`<br/>
+`1. 该接口目前仅支持签署人类型是个人签署方的批量签署场景(ApproverType=PERSON)。` <br/>
+`2. 该接口可生成批量签署链接的C端签署人必须仅有手写签名和时间类型的签署控件，不支持填写控件 。` <br/>
+`3. 请确保C端签署人在批量签署合同中为待签署状态，如需顺序签署请待前一位参与人签署完成后，再创建该C端用户的签署链接。` <br/>
+`4. 该签署链接有效期为30分钟，过期后将失效，如需签署可重新创建批量签署链接 。` <br/>
+`5. 该接口返回的签署链接适用于APP集成的场景，支持APP打开或浏览器直接打开，不支持微信小程序嵌入。`<br/>
+跳转到小程序的实现，参考微信官方文档(分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式)，如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>
+     * @param req ChannelCreateBatchQuickSignUrlRequest
+     * @return ChannelCreateBatchQuickSignUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateBatchQuickSignUrlResponse ChannelCreateBatchQuickSignUrl(ChannelCreateBatchQuickSignUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChannelCreateBatchQuickSignUrl", ChannelCreateBatchQuickSignUrlResponse.class);
     }
 
     /**
@@ -150,7 +168,14 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *上传了word、excel、图片文件后，通过该接口发起文件转换任务，将word、excel、图片文件转换为pdf文件。
+     *此接口（ChannelCreateConvertTaskApi）用来将word、excel、html、图片、txt类型文件转换为PDF文件。<br />
+前提条件：源文件已经通过 <a href="https://qian.tencent.com/developers/partnerApis/files/UploadFiles" target="_blank">文件上传接口</a>完成上传，并得到了源文件的资源Id。<br />
+适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同
+适用场景2：已经上传了一个jpg图片文件，希望将该图片文件转换成pdf文件后发起合同<br />
+转换文件是一个耗时操作，若想查看转换任务是否完成，可以通过<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">查询转换任务状态</a>接口获取任务状态。<br />
+注: 
+1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
+2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
      * @param req ChannelCreateConvertTaskApiRequest
      * @return ChannelCreateConvertTaskApiResponse
      * @throws TencentCloudSDKException
@@ -430,8 +455,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *创建个人签署H5签署链接，请联系客户经理申请使用<br/>
-该接口用于发起合同后，生成C端签署人的签署链接<br/>
+     *该接口用于发起合同后，生成C端签署人的签署链接<br/>
 注意：该接口目前签署人类型仅支持个人签署方（PERSON）<br/>
 注意：该接口可生成签署链接的C端签署人必须仅有手写签名和时间类型的签署控件<br/>
 注意：该接口返回的签署链接是用于APP集成的场景，支持APP打开或浏览器直接打开，不支持微信小程序嵌入。微信小程序请使用小程序跳转或半屏弹窗的方式<br/>
@@ -524,8 +548,16 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
-合同发起人必须在电子签已经进行实名。
+     *发起解除协议的主要应用场景为：基于一份已经签署的合同(签署流程)，进行解除操作。
+解除协议的模板是官方提供，经过提供法务审核，暂不支持自定义。
+
+注意：
+<ul><li><code>原合同必须签署完</code>成后才能发起解除协议。</li>
+<li>只有原合同企业类型的参与人才能发起解除协议，<code>个人参与方不能发起解除协议</code>。</li>
+<li>原合同个人类型参与人必须是解除协议的参与人，<code>不能更换其他第三方个人</code>参与解除协议。</li>
+<li>如果原合同企业参与人无法参与解除协议，可以指定同企业具有同等权限的<code>企业员工代为处理</code>。</li>
+<li>发起解除协议同发起其他企业合同一样，也会参与合同<code>扣费</code>，扣费标准同其他类型合同。</li>
+<li>在解除协议发起之后，原合同的状态将转变为解除中。一旦解除协议签署完毕，原合同及解除协议均变为已解除状态。</li></ul>
      * @param req ChannelCreateReleaseFlowRequest
      * @return ChannelCreateReleaseFlowResponse
      * @throws TencentCloudSDKException
@@ -562,7 +594,9 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *企业方可以通过此接口获取个人用户开启自动签的跳转链接
+     *获取个人用户自动签的开通链接。
+
+注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param req ChannelCreateUserAutoSignEnableUrlRequest
      * @return ChannelCreateUserAutoSignEnableUrlResponse
      * @throws TencentCloudSDKException
@@ -649,7 +683,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *查询企业员工列表
+     *用于分页查询企业员工信息列表，支持设置过滤条件以筛选员工查询结果。
      * @param req ChannelDescribeEmployeesRequest
      * @return ChannelDescribeEmployeesResponse
      * @throws TencentCloudSDKException
@@ -695,7 +729,9 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *企业方可以通过此接口查询个人用户自动签开启状态
+     *通过此接口获取个人用户自动签的开通状态。
+
+注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param req ChannelDescribeUserAutoSignStatusRequest
      * @return ChannelDescribeUserAutoSignStatusResponse
      * @throws TencentCloudSDKException
@@ -706,7 +742,13 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *企业方可以通过此接口关闭个人的自动签功能
+     *通过此接口可以关闭个人用户自动签功能。
+无需对应的用户刷脸等方式同意即可关闭。
+
+注意: 
+
+<ul><li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。</li>
+<li>如果此用户在开通时候绑定过个人自动签账号许可,  关闭此用户的自动签不会归还个人自动签账号许可的额度。</li></ul>
      * @param req ChannelDisableUserAutoSignRequest
      * @return ChannelDisableUserAutoSignResponse
      * @throws TencentCloudSDKException
@@ -717,8 +759,12 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *查询转换任务的状态。转换任务Id通过发起转换任务接口（ChannelCreateConvertTaskApi）获取。
-注意：大文件转换所需的时间可能会比较长。
+     *此接口（ChannelGetTaskResultApi）用来查询转换任务的状态。如需发起转换任务，请使用<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelCreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>进行资源文件的转换操作<br />
+前提条件：已调用 <a href="https://qian.tencent.com/developers/partnerApis/files/ChannelCreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>进行文件转换，并得到了返回的转换任务Id。<br />
+
+适用场景：已创建一个文件转换任务，想查询该文件转换任务的状态，或获取转换后的文件资源Id。<br />
+注：
+1. `大文件转换所需的时间可能会比较长`
      * @param req ChannelGetTaskResultApiRequest
      * @return ChannelGetTaskResultApiResponse
      * @throws TencentCloudSDKException
@@ -953,7 +999,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     /**
      *创建跳转小程序查看或签署的链接
 
-**腾讯电子签小程序的的AppID 和 原始Id如下:**
+**腾讯电子签小程序的AppID 和 原始Id如下:**
 
 | 小程序 | AppID | 原始ID |
 | ------------ | ------------ | ------------ |
@@ -964,10 +1010,10 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 |EndPoint| 场景| 说明和示例|
 |  ----  | ----  | --- |
-|  WEIXINAPP  | 短链跳转腾讯电子签签署场景  |  点击链接打开电子签小程序（与腾讯电子签官方短信提醒用户签署形式一样）<br> 示例: https://essurl.cn/x9nvWU8fTg|
-|  LONGURL2WEIXINAPP  | 长链跳转腾讯电子签签署场景  |  点击链接打开电子签小程序, 是WEIXINAPP生成短链代表的那个长链|
+|  WEIXINAPP  | 短链跳转腾讯电子签小程序签署场景  |  点击链接打开电子签小程序（与腾讯电子签官方短信提醒用户签署形式一样）<br> 示例: https://essurl.cn/x9nvWU8fTg|
+|  LONGURL2WEIXINAPP  | 长链跳转腾讯电子签小程序签署场景  |  点击链接打开电子签小程序, 是WEIXINAPP生成短链代表的那个长链|
 |  CHANNEL  | 带有H5引导页的跳转腾讯电子签小程序签署场景 |  点击链接打开一个H5引导页面, 页面中有个"前往小程序"的按钮, 点击后会跳转到腾讯电子签小程序签署场景;  签署完成会回到H5引导页面, 然后跳转到指定创建链接指定的JumpUrl<br>示例: https://res.ess.tencent.cn/cdn/h5-activity-beta/jump-mp.html?use=channel-guide&type=warning&token=uIFKIU8fTd |
-|APP| 贵方APP跳转腾讯电子签小程序签署场景|  贵方App直接跳转到小程序后, 在腾讯电子签小程序签署完成后返回贵方App的场景<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a> <br> 示例: pages/guide?from=default&where=mini& to=CONTRACT_DETAIL& id=yDwiBUUc*duRvquCSX8wd& shortKey=yDwivUA**W1yRsTre3 |
+|APP| 贵方App跳转腾讯电子签小程序签署场景|  贵方App直接跳转到小程序后, 在腾讯电子签小程序签署完成后返回贵方App的场景<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a> <br> 示例: pages/guide?from=default&where=mini& to=CONTRACT_DETAIL& id=yDwiBUUc*duRvquCSX8wd& shortKey=yDwivUA**W1yRsTre3 |
 |APP| 贵方小程序跳转腾讯电子签小程序签署场景|  贵方App直接跳转到小程序后, 在腾讯电子签小程序签署完成后返回贵方小程序的场景<br>跳转到腾讯电子签小程序的实现可以参考微信官方文档<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html" target="_blank">全屏方式</a>和<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html " target="_blank">半屏方式</a><br>此时返回的SignUrl就是官方文档中的path<br> 示例:pages/guide?from=default&where=mini& to=CONTRACT_DETAIL& id=yDwiBUUc*duRvquCSX8wd& shortKey=yDwivUA**W1yRsTre3  |
      * @param req CreateSignUrlsRequest
      * @return CreateSignUrlsResponse
@@ -1044,15 +1090,27 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     /**
      *通过此接口（DescribeTemplates）查询该第三方平台子客企业在电子签拥有的有效模板，不包括第三方平台模板。
 
-> **适用场景** 
->
->  该接口常用来配合“使用模板创建签署流程”接口作为前置的接口使用。 
->  一个模板通常会包含以下结构信息
->- 模板基本信息
->- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
->- 填写控件 Components
->- 签署控件 SignComponents
->- 生成模板的文件基础信息 FileInfos
+**一个模板通常会包含以下结构信息** 
+
+- 模板模版ID, 模板名字等基本信息
+- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
+- 发起方和签署方的填写控件 Components
+- 签署方的签署控件 SignComponents
+
+**适用场景**
+ 该接口常用来配合<a href="https://qian.tencent.com/developers/partnerApis/startFlows/CreateFlowsByTemplates" target="_blank">用模板创建签署流程</a>和<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates" target="_blank">通过多模板创建合同组签署流程</a>接口，作为创建合同的前置接口使用。 
+通过此接口查询到模板信息后，再通过调用创建合同的接口，指定模板ID，指定模板中需要的填写控件内容等，完成合同文档的的创建。
+
+**模版的来源**
+子客企业的模板有两种途径获取
+- 渠道方(平台方)配置完成后, 分发给同应用的各个子企业
+- 子客企业通过CreateConsoleLoginUrl创建的链接登录子客控制台自己创建
+
+
+**注意**
+
+>1. 查询条件TemplateId、TemplateName与ChannelTemplateId可同时存在，即可查询同时满足这些条件的模板。
+>2. TemplateId 和TemplateIds互为独立，若两个参数都传入，则以TemplateId为准
      * @param req DescribeTemplatesRequest
      * @return DescribeTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1159,7 +1217,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     /**
      *该接口 (PrepareFlows) 用于创建待发起文件
 用户通过该接口进入签署流程发起的确认页面，进行发起信息二次确认， 如果确认则进行正常发起。
-目前该接口只支持B2C，不建议使用，将会废弃。
+目前该接口只支持B2C，<font color='red'> **不建议使用，将会废弃**</font>。
      * @param req PrepareFlowsRequest
      * @return PrepareFlowsResponse
      * @throws TencentCloudSDKException

@@ -48,7 +48,9 @@ LOCAL_GATEWAY：本地网关。
 
     /**
     * 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。
     */
     @SerializedName("GatewayId")
     @Expose
@@ -96,6 +98,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
     * 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationIpv6CidrBlock")
     @Expose
@@ -193,9 +196,13 @@ LOCAL_GATEWAY：本地网关。
 
     /**
      * Get 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。 
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。 
      * @return GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -203,9 +210,13 @@ LOCAL_GATEWAY：本地网关。
 
     /**
      * Set 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。
      * @param GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
@@ -312,8 +323,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * Get 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。 
+     * Get 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestinationIpv6CidrBlock() {
         return this.DestinationIpv6CidrBlock;
@@ -321,7 +334,9 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * Set 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationIpv6CidrBlock(String DestinationIpv6CidrBlock) {
         this.DestinationIpv6CidrBlock = DestinationIpv6CidrBlock;

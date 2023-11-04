@@ -351,6 +351,9 @@ public enum EssbasicErrorCode {
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
      
+    // 相关资源已经存证, 无法在创建新的相关资源
+     OPERATIONDENIED_ALREADYHAS("OperationDenied.AlreadyHas"),
+     
     // 参与人信息有重复
      OPERATIONDENIED_APPROVERREPEAT("OperationDenied.ApproverRepeat"),
      

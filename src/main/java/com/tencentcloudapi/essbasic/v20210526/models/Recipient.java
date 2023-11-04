@@ -24,31 +24,31 @@ import java.util.HashMap;
 public class Recipient extends AbstractModel {
 
     /**
-    * 签署人唯一标识，在通过模板发起合同的时候对应签署方ID
+    * 合同参与方的角色ID
     */
     @SerializedName("RecipientId")
     @Expose
     private String RecipientId;
 
     /**
-    * 参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方
+    * 参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul>
     */
     @SerializedName("RecipientType")
     @Expose
     private String RecipientType;
 
     /**
-    * 描述信息	
+    * 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 角色名称	
+    * 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
     */
     @SerializedName("RoleName")
     @Expose
@@ -96,76 +96,76 @@ false-否
     private Boolean IsPromoter;
 
     /**
-     * Get 签署人唯一标识，在通过模板发起合同的时候对应签署方ID 
-     * @return RecipientId 签署人唯一标识，在通过模板发起合同的时候对应签署方ID
+     * Get 合同参与方的角色ID 
+     * @return RecipientId 合同参与方的角色ID
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 签署人唯一标识，在通过模板发起合同的时候对应签署方ID
-     * @param RecipientId 签署人唯一标识，在通过模板发起合同的时候对应签署方ID
+     * Set 合同参与方的角色ID
+     * @param RecipientId 合同参与方的角色ID
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
     }
 
     /**
-     * Get 参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方 
-     * @return RecipientType 参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方
+     * Get 参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul> 
+     * @return RecipientType 参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul>
      */
     public String getRecipientType() {
         return this.RecipientType;
     }
 
     /**
-     * Set 参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方
-     * @param RecipientType 参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方
+     * Set 参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul>
+     * @param RecipientType 参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul>
      */
     public void setRecipientType(String RecipientType) {
         this.RecipientType = RecipientType;
     }
 
     /**
-     * Get 描述信息	 
-     * @return Description 描述信息	
+     * Get 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。 
+     * @return Description 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息	
-     * @param Description 描述信息	
+     * Set 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+     * @param Description 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 角色名称	 
-     * @return RoleName 角色名称	
+     * Get 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。 
+     * @return RoleName 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 角色名称	
-     * @param RoleName 角色名称	
+     * Set 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
+     * @param RoleName 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;

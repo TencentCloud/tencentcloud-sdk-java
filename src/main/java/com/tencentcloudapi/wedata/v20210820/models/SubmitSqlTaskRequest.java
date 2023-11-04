@@ -115,6 +115,13 @@ public class SubmitSqlTaskRequest extends AbstractModel {
     private String ConfParams;
 
     /**
+    * 脚本内容是否base64加密
+    */
+    @SerializedName("ScriptEncryption")
+    @Expose
+    private Boolean ScriptEncryption;
+
+    /**
      * Get 数据库类型 
      * @return DatabaseType 数据库类型
      */
@@ -322,6 +329,22 @@ public class SubmitSqlTaskRequest extends AbstractModel {
         this.ConfParams = ConfParams;
     }
 
+    /**
+     * Get 脚本内容是否base64加密 
+     * @return ScriptEncryption 脚本内容是否base64加密
+     */
+    public Boolean getScriptEncryption() {
+        return this.ScriptEncryption;
+    }
+
+    /**
+     * Set 脚本内容是否base64加密
+     * @param ScriptEncryption 脚本内容是否base64加密
+     */
+    public void setScriptEncryption(Boolean ScriptEncryption) {
+        this.ScriptEncryption = ScriptEncryption;
+    }
+
     public SubmitSqlTaskRequest() {
     }
 
@@ -369,6 +392,9 @@ public class SubmitSqlTaskRequest extends AbstractModel {
         if (source.ConfParams != null) {
             this.ConfParams = new String(source.ConfParams);
         }
+        if (source.ScriptEncryption != null) {
+            this.ScriptEncryption = new Boolean(source.ScriptEncryption);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class SubmitSqlTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ComputeResource", this.ComputeResource);
         this.setParamSimple(map, prefix + "RunParams", this.RunParams);
         this.setParamSimple(map, prefix + "ConfParams", this.ConfParams);
+        this.setParamSimple(map, prefix + "ScriptEncryption", this.ScriptEncryption);
 
     }
 }

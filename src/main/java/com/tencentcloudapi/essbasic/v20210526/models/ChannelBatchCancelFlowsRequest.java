@@ -24,33 +24,49 @@ import java.util.HashMap;
 public class ChannelBatchCancelFlowsRequest extends AbstractModel {
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 签署流程Id数组，最多100个，超过100不处理
+    * 要撤销的合同流程ID列表，最多100个，超过100不处理
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * 撤销理由,不超过200个字符
+    * 撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+
+备注:`如果不传递撤回原因，那么默认撤回原因是 "自动撤销（通过接口实现）"`
     */
     @SerializedName("CancelMessage")
     @Expose
     private String CancelMessage;
 
     /**
-    * 撤销理由自定义格式；选项：
+    * 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+
+
     */
     @SerializedName("CancelMessageFormat")
     @Expose
@@ -64,84 +80,148 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 签署流程Id数组，最多100个，超过100不处理 
-     * @return FlowIds 签署流程Id数组，最多100个，超过100不处理
+     * Get 要撤销的合同流程ID列表，最多100个，超过100不处理 
+     * @return FlowIds 要撤销的合同流程ID列表，最多100个，超过100不处理
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 签署流程Id数组，最多100个，超过100不处理
-     * @param FlowIds 签署流程Id数组，最多100个，超过100不处理
+     * Set 要撤销的合同流程ID列表，最多100个，超过100不处理
+     * @param FlowIds 要撤销的合同流程ID列表，最多100个，超过100不处理
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 撤销理由,不超过200个字符 
-     * @return CancelMessage 撤销理由,不超过200个字符
+     * Get 撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+
+备注:`如果不传递撤回原因，那么默认撤回原因是 "自动撤销（通过接口实现）"` 
+     * @return CancelMessage 撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+
+备注:`如果不传递撤回原因，那么默认撤回原因是 "自动撤销（通过接口实现）"`
      */
     public String getCancelMessage() {
         return this.CancelMessage;
     }
 
     /**
-     * Set 撤销理由,不超过200个字符
-     * @param CancelMessage 撤销理由,不超过200个字符
+     * Set 撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+
+备注:`如果不传递撤回原因，那么默认撤回原因是 "自动撤销（通过接口实现）"`
+     * @param CancelMessage 撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+
+备注:`如果不传递撤回原因，那么默认撤回原因是 "自动撤销（通过接口实现）"`
      */
     public void setCancelMessage(String CancelMessage) {
         this.CancelMessage = CancelMessage;
     }
 
     /**
-     * Get 撤销理由自定义格式；选项：
+     * Get 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】 
-     * @return CancelMessageFormat 撤销理由自定义格式；选项：
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+
+ 
+     * @return CancelMessageFormat 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
+
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+
+
      */
     public Long getCancelMessageFormat() {
         return this.CancelMessageFormat;
     }
 
     /**
-     * Set 撤销理由自定义格式；选项：
+     * Set 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
-     * @param CancelMessageFormat 撤销理由自定义格式；选项：
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+
+
+     * @param CancelMessageFormat 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
+
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+
+
      */
     public void setCancelMessageFormat(Long CancelMessageFormat) {
         this.CancelMessageFormat = CancelMessageFormat;

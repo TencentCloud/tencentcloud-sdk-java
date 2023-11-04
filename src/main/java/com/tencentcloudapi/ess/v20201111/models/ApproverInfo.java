@@ -117,7 +117,9 @@ public class ApproverInfo extends AbstractModel {
     private Long ApproverRole;
 
     /**
-    * 自定义签署人角色名：收款人、开具人、见证人
+    * 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
     */
     @SerializedName("ApproverRoleName")
     @Expose
@@ -185,7 +187,7 @@ public class ApproverInfo extends AbstractModel {
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul>
+<li>此字段可传多个校验方式</li></ul>
     */
     @SerializedName("ApproverVerifyTypes")
     @Expose
@@ -499,16 +501,24 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 自定义签署人角色名：收款人、开具人、见证人 
-     * @return ApproverRoleName 自定义签署人角色名：收款人、开具人、见证人
+     * Get 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的` 
+     * @return ApproverRoleName 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
      */
     public String getApproverRoleName() {
         return this.ApproverRoleName;
     }
 
     /**
-     * Set 自定义签署人角色名：收款人、开具人、见证人
-     * @param ApproverRoleName 自定义签署人角色名：收款人、开具人、见证人
+     * Set 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
+     * @param ApproverRoleName 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
      */
     public void setApproverRoleName(String ApproverRoleName) {
         this.ApproverRoleName = ApproverRoleName;
@@ -669,14 +679,14 @@ public class ApproverInfo extends AbstractModel {
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul> 
+<li>此字段可传多个校验方式</li></ul> 
      * @return ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul>
+<li>此字段可传多个校验方式</li></ul>
      */
     public Long [] getApproverVerifyTypes() {
         return this.ApproverVerifyTypes;
@@ -689,14 +699,14 @@ public class ApproverInfo extends AbstractModel {
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul>
+<li>此字段可传多个校验方式</li></ul>
      * @param ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul>
+<li>此字段可传多个校验方式</li></ul>
      */
     public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
         this.ApproverVerifyTypes = ApproverVerifyTypes;

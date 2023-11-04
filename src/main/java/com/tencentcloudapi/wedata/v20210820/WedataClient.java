@@ -1097,6 +1097,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询数据库列表
+     * @param req DescribeDatabaseMetasRequest
+     * @return DescribeDatabaseMetasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseMetasResponse DescribeDatabaseMetas(DescribeDatabaseMetasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseMetas", DescribeDatabaseMetasResponse.class);
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 数据源详情
      * @param req DescribeDatasourceRequest

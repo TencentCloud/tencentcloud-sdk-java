@@ -68,7 +68,6 @@ public class Zone extends AbstractModel {
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
 <li> noDomainAccess：无域名接入；</li>
-<li> vodeo：vodeo默认站点。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -299,13 +298,11 @@ public class Zone extends AbstractModel {
      * Get 站点接入方式，取值有：
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入；</li>
-<li> vodeo：vodeo默认站点。</li> 
+<li> noDomainAccess：无域名接入；</li> 
      * @return Type 站点接入方式，取值有：
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
 <li> noDomainAccess：无域名接入；</li>
-<li> vodeo：vodeo默认站点。</li>
      */
     public String getType() {
         return this.Type;
@@ -316,12 +313,10 @@ public class Zone extends AbstractModel {
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
 <li> noDomainAccess：无域名接入；</li>
-<li> vodeo：vodeo默认站点。</li>
      * @param Type 站点接入方式，取值有：
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
 <li> noDomainAccess：无域名接入；</li>
-<li> vodeo：vodeo默认站点。</li>
      */
     public void setType(String Type) {
         this.Type = Type;

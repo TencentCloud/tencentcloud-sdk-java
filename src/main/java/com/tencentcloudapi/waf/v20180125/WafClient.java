@@ -237,7 +237,9 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *删除访问日志下载记录
+     *废弃接口，无有效调用
+
+删除访问日志下载记录
      * @param req DeleteDownloadRecordRequest
      * @return DeleteDownloadRecordResponse
      * @throws TencentCloudSDKException
@@ -348,7 +350,9 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *获取防篡改url
+     *废弃接口
+
+获取防篡改url
      * @param req DescribeAntiFakeUrlRequest
      * @return DescribeAntiFakeUrlResponse
      * @throws TencentCloudSDKException
@@ -440,7 +444,9 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *Waf  CC V2 Query接口
+     *没有在使用。
+
+Waf  CC V2 Query接口
      * @param req DescribeCCRuleRequest
      * @return DescribeCCRuleResponse
      * @throws TencentCloudSDKException

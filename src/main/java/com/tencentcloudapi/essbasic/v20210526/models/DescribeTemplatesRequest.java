@@ -24,63 +24,104 @@ import java.util.HashMap;
 public class DescribeTemplatesRequest extends AbstractModel {
 
     /**
-    * 应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 模板唯一标识，查询单个模板时使用
+    * 合同模板ID，为32位字符串。
+
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表
+    * 查询模版的内容
+
+<ul><li>**0**：（默认）模板列表及详情</li>
+<li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
     private Long ContentType;
 
     /**
-    * 指定每页多少条数据，如果不传默认为20，单页最大100。
+    * 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+
+注意: 
+1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
+2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
+4. `若传递此参数，分页参数(Limit,Offset)无效`
+
+    */
+    @SerializedName("TemplateIds")
+    @Expose
+    private String [] TemplateIds;
+
+    /**
+    * 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+    * 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件
-    */
-    @SerializedName("QueryAllComponents")
-    @Expose
-    private Boolean QueryAllComponents;
-
-    /**
-    * 模糊搜索模板名称，最大长度200
+    * 模糊搜索的模板名称，注意是模板名的连续部分，长度不能超过200，可支持由中文、字母、数字和下划线组成字符串。
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 是否获取模板预览链接，
-默认false-不获取
-true-获取
+    * 对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+    */
+    @SerializedName("ChannelTemplateId")
+    @Expose
+    private String ChannelTemplateId;
+
+    /**
+    * 返回控件的范围, 是只返回发起方自己的还是所有参与方的
+
+<ul><li>**false**：（默认）只返回发起方控件</li>
+<li>**true**：返回所有参与方(包括发起方和签署方)控件</li></ul>
+    */
+    @SerializedName("QueryAllComponents")
+    @Expose
+    private Boolean QueryAllComponents;
+
+    /**
+    * 是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,  有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
     */
     @SerializedName("WithPreviewUrl")
     @Expose
@@ -88,20 +129,17 @@ true-获取
 
     /**
     * 是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
     */
     @SerializedName("WithPdfUrl")
     @Expose
     private Boolean WithPdfUrl;
-
-    /**
-    * 对应第三方应用平台企业的模板ID
-    */
-    @SerializedName("ChannelTemplateId")
-    @Expose
-    private String ChannelTemplateId;
 
     /**
     * 操作者的信息
@@ -111,156 +149,296 @@ true-获取
     private UserInfo Operator;
 
     /**
-     * Get 应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。 
-     * @return Agent 应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
-     * @param Agent 应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 模板唯一标识，查询单个模板时使用 
-     * @return TemplateId 模板唯一标识，查询单个模板时使用
+     * Get 合同模板ID，为32位字符串。
+
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。 
+     * @return TemplateId 合同模板ID，为32位字符串。
+
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板唯一标识，查询单个模板时使用
-     * @param TemplateId 模板唯一标识，查询单个模板时使用
+     * Set 合同模板ID，为32位字符串。
+
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
+     * @param TemplateId 合同模板ID，为32位字符串。
+
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表 
-     * @return ContentType 查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表
+     * Get 查询模版的内容
+
+<ul><li>**0**：（默认）模板列表及详情</li>
+<li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul> 
+     * @return ContentType 查询模版的内容
+
+<ul><li>**0**：（默认）模板列表及详情</li>
+<li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
      */
     public Long getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表
-     * @param ContentType 查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表
+     * Set 查询模版的内容
+
+<ul><li>**0**：（默认）模板列表及详情</li>
+<li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
+     * @param ContentType 查询模版的内容
+
+<ul><li>**0**：（默认）模板列表及详情</li>
+<li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
      */
     public void setContentType(Long ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get 指定每页多少条数据，如果不传默认为20，单页最大100。 
-     * @return Limit 指定每页多少条数据，如果不传默认为20，单页最大100。
+     * Get 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+
+注意: 
+1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
+2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
+4. `若传递此参数，分页参数(Limit,Offset)无效`
+ 
+     * @return TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+
+注意: 
+1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
+2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
+4. `若传递此参数，分页参数(Limit,Offset)无效`
+
+     */
+    public String [] getTemplateIds() {
+        return this.TemplateIds;
+    }
+
+    /**
+     * Set 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+
+注意: 
+1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
+2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
+4. `若传递此参数，分页参数(Limit,Offset)无效`
+
+     * @param TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+
+注意: 
+1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
+2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
+4. `若传递此参数，分页参数(Limit,Offset)无效`
+
+     */
+    public void setTemplateIds(String [] TemplateIds) {
+        this.TemplateIds = TemplateIds;
+    }
+
+    /**
+     * Get 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。` 
+     * @return Limit 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页多少条数据，如果不传默认为20，单页最大100。
-     * @param Limit 指定每页多少条数据，如果不传默认为20，单页最大100。
+     * Set 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
+     * @param Limit 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+     * Get 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。` 
+     * @return Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+     * Set 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
+     * @param Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件 
-     * @return QueryAllComponents 是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件
-     */
-    public Boolean getQueryAllComponents() {
-        return this.QueryAllComponents;
-    }
-
-    /**
-     * Set 是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件
-     * @param QueryAllComponents 是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件
-     */
-    public void setQueryAllComponents(Boolean QueryAllComponents) {
-        this.QueryAllComponents = QueryAllComponents;
-    }
-
-    /**
-     * Get 模糊搜索模板名称，最大长度200 
-     * @return TemplateName 模糊搜索模板名称，最大长度200
+     * Get 模糊搜索的模板名称，注意是模板名的连续部分，长度不能超过200，可支持由中文、字母、数字和下划线组成字符串。 
+     * @return TemplateName 模糊搜索的模板名称，注意是模板名的连续部分，长度不能超过200，可支持由中文、字母、数字和下划线组成字符串。
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模糊搜索模板名称，最大长度200
-     * @param TemplateName 模糊搜索模板名称，最大长度200
+     * Set 模糊搜索的模板名称，注意是模板名的连续部分，长度不能超过200，可支持由中文、字母、数字和下划线组成字符串。
+     * @param TemplateName 模糊搜索的模板名称，注意是模板名的连续部分，长度不能超过200，可支持由中文、字母、数字和下划线组成字符串。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 是否获取模板预览链接，
-默认false-不获取
-true-获取 
-     * @return WithPreviewUrl 是否获取模板预览链接，
-默认false-不获取
-true-获取
+     * Get 对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。 
+     * @return ChannelTemplateId 对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+     */
+    public String getChannelTemplateId() {
+        return this.ChannelTemplateId;
+    }
+
+    /**
+     * Set 对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+     * @param ChannelTemplateId 对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+     */
+    public void setChannelTemplateId(String ChannelTemplateId) {
+        this.ChannelTemplateId = ChannelTemplateId;
+    }
+
+    /**
+     * Get 返回控件的范围, 是只返回发起方自己的还是所有参与方的
+
+<ul><li>**false**：（默认）只返回发起方控件</li>
+<li>**true**：返回所有参与方(包括发起方和签署方)控件</li></ul> 
+     * @return QueryAllComponents 返回控件的范围, 是只返回发起方自己的还是所有参与方的
+
+<ul><li>**false**：（默认）只返回发起方控件</li>
+<li>**true**：返回所有参与方(包括发起方和签署方)控件</li></ul>
+     */
+    public Boolean getQueryAllComponents() {
+        return this.QueryAllComponents;
+    }
+
+    /**
+     * Set 返回控件的范围, 是只返回发起方自己的还是所有参与方的
+
+<ul><li>**false**：（默认）只返回发起方控件</li>
+<li>**true**：返回所有参与方(包括发起方和签署方)控件</li></ul>
+     * @param QueryAllComponents 返回控件的范围, 是只返回发起方自己的还是所有参与方的
+
+<ul><li>**false**：（默认）只返回发起方控件</li>
+<li>**true**：返回所有参与方(包括发起方和签署方)控件</li></ul>
+     */
+    public void setQueryAllComponents(Boolean QueryAllComponents) {
+        this.QueryAllComponents = QueryAllComponents;
+    }
+
+    /**
+     * Get 是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,  有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。` 
+     * @return WithPreviewUrl 是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,  有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public Boolean getWithPreviewUrl() {
         return this.WithPreviewUrl;
     }
 
     /**
-     * Set 是否获取模板预览链接，
-默认false-不获取
-true-获取
-     * @param WithPreviewUrl 是否获取模板预览链接，
-默认false-不获取
-true-获取
+     * Set 是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,  有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
+     * @param WithPreviewUrl 是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,  有效期5分钟。可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public void setWithPreviewUrl(Boolean WithPreviewUrl) {
         this.WithPreviewUrl = WithPreviewUrl;
@@ -268,13 +446,21 @@ true-获取
 
     /**
      * Get 是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。 
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。` 
      * @return WithPdfUrl 是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public Boolean getWithPdfUrl() {
         return this.WithPdfUrl;
@@ -282,32 +468,24 @@ true-获取
 
     /**
      * Set 是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param WithPdfUrl 是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
+
+注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public void setWithPdfUrl(Boolean WithPdfUrl) {
         this.WithPdfUrl = WithPdfUrl;
-    }
-
-    /**
-     * Get 对应第三方应用平台企业的模板ID 
-     * @return ChannelTemplateId 对应第三方应用平台企业的模板ID
-     */
-    public String getChannelTemplateId() {
-        return this.ChannelTemplateId;
-    }
-
-    /**
-     * Set 对应第三方应用平台企业的模板ID
-     * @param ChannelTemplateId 对应第三方应用平台企业的模板ID
-     */
-    public void setChannelTemplateId(String ChannelTemplateId) {
-        this.ChannelTemplateId = ChannelTemplateId;
     }
 
     /**
@@ -347,26 +525,32 @@ true-获取
         if (source.ContentType != null) {
             this.ContentType = new Long(source.ContentType);
         }
+        if (source.TemplateIds != null) {
+            this.TemplateIds = new String[source.TemplateIds.length];
+            for (int i = 0; i < source.TemplateIds.length; i++) {
+                this.TemplateIds[i] = new String(source.TemplateIds[i]);
+            }
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
-        if (source.QueryAllComponents != null) {
-            this.QueryAllComponents = new Boolean(source.QueryAllComponents);
-        }
         if (source.TemplateName != null) {
             this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.ChannelTemplateId != null) {
+            this.ChannelTemplateId = new String(source.ChannelTemplateId);
+        }
+        if (source.QueryAllComponents != null) {
+            this.QueryAllComponents = new Boolean(source.QueryAllComponents);
         }
         if (source.WithPreviewUrl != null) {
             this.WithPreviewUrl = new Boolean(source.WithPreviewUrl);
         }
         if (source.WithPdfUrl != null) {
             this.WithPdfUrl = new Boolean(source.WithPdfUrl);
-        }
-        if (source.ChannelTemplateId != null) {
-            this.ChannelTemplateId = new String(source.ChannelTemplateId);
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
@@ -381,13 +565,14 @@ true-获取
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
+        this.setParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
+        this.setParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
         this.setParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
         this.setParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
-        this.setParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

@@ -96,4 +96,26 @@ public class MrsClient extends AbstractClient{
         return this.internalRequest(req, "TurnPDFToObject", TurnPDFToObjectResponse.class);
     }
 
+    /**
+     *体检报告PDF文件结构化-异步接口
+     * @param req TurnPDFToObjectAsyncRequest
+     * @return TurnPDFToObjectAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public TurnPDFToObjectAsyncResponse TurnPDFToObjectAsync(TurnPDFToObjectAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TurnPDFToObjectAsync", TurnPDFToObjectAsyncResponse.class);
+    }
+
+    /**
+     *体检报告PDF文件结构化异步获取结果接口
+     * @param req TurnPDFToObjectAsyncGetResultRequest
+     * @return TurnPDFToObjectAsyncGetResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public TurnPDFToObjectAsyncGetResultResponse TurnPDFToObjectAsyncGetResult(TurnPDFToObjectAsyncGetResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TurnPDFToObjectAsyncGetResult", TurnPDFToObjectAsyncGetResultResponse.class);
+    }
+
 }

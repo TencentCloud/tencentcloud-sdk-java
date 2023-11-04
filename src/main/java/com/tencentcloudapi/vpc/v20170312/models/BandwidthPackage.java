@@ -38,7 +38,8 @@ public class BandwidthPackage extends AbstractModel {
     private String NetworkType;
 
     /**
-    * 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+    * 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+
     */
     @SerializedName("ChargeType")
     @Expose
@@ -88,6 +89,14 @@ public class BandwidthPackage extends AbstractModel {
     private String Egress;
 
     /**
+    * 带宽包到期时间，只有预付费会返回，按量计费返回为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private String Deadline;
+
+    /**
      * Get 带宽包唯一标识Id 
      * @return BandwidthPackageId 带宽包唯一标识Id
      */
@@ -120,16 +129,20 @@ public class BandwidthPackage extends AbstractModel {
     }
 
     /**
-     * Get 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH' 
-     * @return ChargeType 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+     * Get 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+ 
+     * @return ChargeType 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
-     * @param ChargeType 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+     * Set 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+
+     * @param ChargeType 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
@@ -235,6 +248,26 @@ public class BandwidthPackage extends AbstractModel {
         this.Egress = Egress;
     }
 
+    /**
+     * Get 带宽包到期时间，只有预付费会返回，按量计费返回为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deadline 带宽包到期时间，只有预付费会返回，按量计费返回为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 带宽包到期时间，只有预付费会返回，按量计费返回为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deadline 带宽包到期时间，只有预付费会返回，按量计费返回为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeadline(String Deadline) {
+        this.Deadline = Deadline;
+    }
+
     public BandwidthPackage() {
     }
 
@@ -273,6 +306,9 @@ public class BandwidthPackage extends AbstractModel {
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
     }
 
 
@@ -289,6 +325,7 @@ public class BandwidthPackage extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }

@@ -36,7 +36,7 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     * 合同组中每个合同流程ID，每个ID均为32位字符串。
 
 注:
-`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
+`此数组的顺序和入参中的FlowGroupInfos顺序一致`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowIds")
@@ -78,12 +78,12 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
      * Get 合同组中每个合同流程ID，每个ID均为32位字符串。
 
 注:
-`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
+`此数组的顺序和入参中的FlowGroupInfos顺序一致`
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
 
 注:
-`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
+`此数组的顺序和入参中的FlowGroupInfos顺序一致`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFlowIds() {
@@ -94,12 +94,12 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
      * Set 合同组中每个合同流程ID，每个ID均为32位字符串。
 
 注:
-`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
+`此数组的顺序和入参中的FlowGroupInfos顺序一致`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
 
 注:
-`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
+`此数组的顺序和入参中的FlowGroupInfos顺序一致`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowIds(String [] FlowIds) {

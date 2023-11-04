@@ -80,6 +80,13 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
     private Long CPU;
 
     /**
+    * 专用集群ID。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
      * Get 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。 
      * @return InquiryType 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
      */
@@ -207,6 +214,22 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
         this.CPU = CPU;
     }
 
+    /**
+     * Get 专用集群ID。 
+     * @return DedicatedClusterId 专用集群ID。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 专用集群ID。
+     * @param DedicatedClusterId 专用集群ID。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public DescribeDiskConfigQuotaRequest() {
     }
 
@@ -248,6 +271,9 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
         if (source.CPU != null) {
             this.CPU = new Long(source.CPU);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -263,6 +289,7 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamSimple(map, prefix + "CPU", this.CPU);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

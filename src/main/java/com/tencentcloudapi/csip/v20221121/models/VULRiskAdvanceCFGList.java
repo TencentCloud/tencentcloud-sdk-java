@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
+    * 风险ID
+    */
+    @SerializedName("RiskId")
+    @Expose
+    private String RiskId;
+
+    /**
     * 漏洞名称
     */
     @SerializedName("VULName")
@@ -120,6 +127,22 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     @SerializedName("ImpactComponent")
     @Expose
     private String ImpactComponent;
+
+    /**
+     * Get 风险ID 
+     * @return RiskId 风险ID
+     */
+    public String getRiskId() {
+        return this.RiskId;
+    }
+
+    /**
+     * Set 风险ID
+     * @param RiskId 风险ID
+     */
+    public void setRiskId(String RiskId) {
+        this.RiskId = RiskId;
+    }
 
     /**
      * Get 漏洞名称 
@@ -365,6 +388,9 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public VULRiskAdvanceCFGList(VULRiskAdvanceCFGList source) {
+        if (source.RiskId != null) {
+            this.RiskId = new String(source.RiskId);
+        }
         if (source.VULName != null) {
             this.VULName = new String(source.VULName);
         }
@@ -417,6 +443,7 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RiskId", this.RiskId);
         this.setParamSimple(map, prefix + "VULName", this.VULName);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamSimple(map, prefix + "CheckFrom", this.CheckFrom);

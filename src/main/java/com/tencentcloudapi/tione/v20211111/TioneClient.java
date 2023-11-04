@@ -314,6 +314,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *查询资源组节点运行中的任务
+     * @param req DescribeBillingResourceInstanceRunningJobsRequest
+     * @return DescribeBillingResourceInstanceRunningJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingResourceInstanceRunningJobsResponse DescribeBillingResourceInstanceRunningJobs(DescribeBillingResourceInstanceRunningJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillingResourceInstanceRunningJobs", DescribeBillingResourceInstanceRunningJobsResponse.class);
+    }
+
+    /**
      *本接口(DescribeBillingSpecs)用于查询计费项列表
      * @param req DescribeBillingSpecsRequest
      * @return DescribeBillingSpecsResponse

@@ -75,6 +75,14 @@ public class OriginGroup extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
      * Get 源站组ID。 
      * @return GroupId 源站组ID。
      */
@@ -194,6 +202,26 @@ public class OriginGroup extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostHeader 回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set 回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostHeader 回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
+    }
+
     public OriginGroup() {
     }
 
@@ -229,6 +257,9 @@ public class OriginGroup extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
     }
 
 
@@ -243,6 +274,7 @@ public class OriginGroup extends AbstractModel {
         this.setParamArrayObj(map, prefix + "References.", this.References);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }
 }

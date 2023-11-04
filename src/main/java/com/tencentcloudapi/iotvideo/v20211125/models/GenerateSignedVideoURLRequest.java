@@ -38,6 +38,13 @@ public class GenerateSignedVideoURLRequest extends AbstractModel {
     private Long ExpireTime;
 
     /**
+    * 通道ID 非NVR设备不填 NVR设备必填 默认为无	
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
      * Get 视频播放原始URL地址 
      * @return VideoURL 视频播放原始URL地址
      */
@@ -69,6 +76,22 @@ public class GenerateSignedVideoURLRequest extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 通道ID 非NVR设备不填 NVR设备必填 默认为无	 
+     * @return ChannelId 通道ID 非NVR设备不填 NVR设备必填 默认为无	
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID 非NVR设备不填 NVR设备必填 默认为无	
+     * @param ChannelId 通道ID 非NVR设备不填 NVR设备必填 默认为无	
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public GenerateSignedVideoURLRequest() {
     }
 
@@ -83,6 +106,9 @@ public class GenerateSignedVideoURLRequest extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class GenerateSignedVideoURLRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoURL", this.VideoURL);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

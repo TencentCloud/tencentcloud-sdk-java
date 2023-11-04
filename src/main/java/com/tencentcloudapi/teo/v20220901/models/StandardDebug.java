@@ -33,7 +33,7 @@ public class StandardDebug extends AbstractModel {
     private String Switch;
 
     /**
-    * 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段，不填则表示允许任意客户端 IP。
+    * 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
     */
     @SerializedName("AllowClientIPList")
     @Expose
@@ -71,16 +71,16 @@ public class StandardDebug extends AbstractModel {
     }
 
     /**
-     * Get 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段，不填则表示允许任意客户端 IP。 
-     * @return AllowClientIPList 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段，不填则表示允许任意客户端 IP。
+     * Get 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。 
+     * @return AllowClientIPList 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
      */
     public String [] getAllowClientIPList() {
         return this.AllowClientIPList;
     }
 
     /**
-     * Set 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段，不填则表示允许任意客户端 IP。
-     * @param AllowClientIPList 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段，不填则表示允许任意客户端 IP。
+     * Set 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
+     * @param AllowClientIPList 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
      */
     public void setAllowClientIPList(String [] AllowClientIPList) {
         this.AllowClientIPList = AllowClientIPList;

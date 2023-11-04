@@ -24,28 +24,43 @@ import java.util.HashMap;
 public class ChannelCreateReleaseFlowRequest extends AbstractModel {
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 待解除的流程编号（即原流程的编号）
+    * 待解除的签署流程编号(即原签署流程的编号)。
     */
     @SerializedName("NeedRelievedFlowId")
     @Expose
     private String NeedRelievedFlowId;
 
     /**
-    * 解除协议内容
+    * 解除协议内容, 包括解除理由等信息。
     */
     @SerializedName("ReliveInfo")
     @Expose
     private RelieveInfo ReliveInfo;
 
     /**
-    * 非必须，解除协议的本企业签署人列表，默认使用原流程的签署人列表；当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业的其他签署人来替换原流程中的原签署人，注意需要指明ApproverNumber来代表需要替换哪一个签署人，已转发的签署人不包含在内，解除协议的签署人数量不能多于原流程的签署人数量
+    * 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+
+注意：
+<ul>
+<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人, 使用原流程的签署人</li>
+</ul>
     */
     @SerializedName("ReleasedApprovers")
     @Expose
@@ -73,71 +88,143 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+    * 合同流程的签署截止时间，格式为Unix标准时间戳(秒)，如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
     */
     @SerializedName("Deadline")
     @Expose
     private Long Deadline;
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 待解除的流程编号（即原流程的编号） 
-     * @return NeedRelievedFlowId 待解除的流程编号（即原流程的编号）
+     * Get 待解除的签署流程编号(即原签署流程的编号)。 
+     * @return NeedRelievedFlowId 待解除的签署流程编号(即原签署流程的编号)。
      */
     public String getNeedRelievedFlowId() {
         return this.NeedRelievedFlowId;
     }
 
     /**
-     * Set 待解除的流程编号（即原流程的编号）
-     * @param NeedRelievedFlowId 待解除的流程编号（即原流程的编号）
+     * Set 待解除的签署流程编号(即原签署流程的编号)。
+     * @param NeedRelievedFlowId 待解除的签署流程编号(即原签署流程的编号)。
      */
     public void setNeedRelievedFlowId(String NeedRelievedFlowId) {
         this.NeedRelievedFlowId = NeedRelievedFlowId;
     }
 
     /**
-     * Get 解除协议内容 
-     * @return ReliveInfo 解除协议内容
+     * Get 解除协议内容, 包括解除理由等信息。 
+     * @return ReliveInfo 解除协议内容, 包括解除理由等信息。
      */
     public RelieveInfo getReliveInfo() {
         return this.ReliveInfo;
     }
 
     /**
-     * Set 解除协议内容
-     * @param ReliveInfo 解除协议内容
+     * Set 解除协议内容, 包括解除理由等信息。
+     * @param ReliveInfo 解除协议内容, 包括解除理由等信息。
      */
     public void setReliveInfo(RelieveInfo ReliveInfo) {
         this.ReliveInfo = ReliveInfo;
     }
 
     /**
-     * Get 非必须，解除协议的本企业签署人列表，默认使用原流程的签署人列表；当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业的其他签署人来替换原流程中的原签署人，注意需要指明ApproverNumber来代表需要替换哪一个签署人，已转发的签署人不包含在内，解除协议的签署人数量不能多于原流程的签署人数量 
-     * @return ReleasedApprovers 非必须，解除协议的本企业签署人列表，默认使用原流程的签署人列表；当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业的其他签署人来替换原流程中的原签署人，注意需要指明ApproverNumber来代表需要替换哪一个签署人，已转发的签署人不包含在内，解除协议的签署人数量不能多于原流程的签署人数量
+     * Get 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+
+注意：
+<ul>
+<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人, 使用原流程的签署人</li>
+</ul> 
+     * @return ReleasedApprovers 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+
+注意：
+<ul>
+<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人, 使用原流程的签署人</li>
+</ul>
      */
     public ReleasedApprover [] getReleasedApprovers() {
         return this.ReleasedApprovers;
     }
 
     /**
-     * Set 非必须，解除协议的本企业签署人列表，默认使用原流程的签署人列表；当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业的其他签署人来替换原流程中的原签署人，注意需要指明ApproverNumber来代表需要替换哪一个签署人，已转发的签署人不包含在内，解除协议的签署人数量不能多于原流程的签署人数量
-     * @param ReleasedApprovers 非必须，解除协议的本企业签署人列表，默认使用原流程的签署人列表；当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业的其他签署人来替换原流程中的原签署人，注意需要指明ApproverNumber来代表需要替换哪一个签署人，已转发的签署人不包含在内，解除协议的签署人数量不能多于原流程的签署人数量
+     * Set 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+
+注意：
+<ul>
+<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人, 使用原流程的签署人</li>
+</ul>
+     * @param ReleasedApprovers 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+
+注意：
+<ul>
+<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人, 使用原流程的签署人</li>
+</ul>
      */
     public void setReleasedApprovers(ReleasedApprover [] ReleasedApprovers) {
         this.ReleasedApprovers = ReleasedApprovers;
@@ -146,7 +233,9 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     /**
      * Get 签署完回调url，最大长度1000个字符 
      * @return CallbackUrl 签署完回调url，最大长度1000个字符
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
@@ -154,7 +243,9 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     /**
      * Set 签署完回调url，最大长度1000个字符
      * @param CallbackUrl 签署完回调url，最大长度1000个字符
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
@@ -200,19 +291,55 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后 
-     * @return Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     * Get 合同流程的签署截止时间，格式为Unix标准时间戳(秒)，如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。 
+     * @return Deadline 合同流程的签署截止时间，格式为Unix标准时间戳(秒)，如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
-     * @param Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     * Set 合同流程的签署截止时间，格式为Unix标准时间戳(秒)，如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     * @param Deadline 合同流程的签署截止时间，格式为Unix标准时间戳(秒)，如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
+    }
+
+    /**
+     * Get 调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。 
+     * @return UserData 调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     * @param UserData 调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
     }
 
     public ChannelCreateReleaseFlowRequest() {
@@ -250,6 +377,9 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
         if (source.Deadline != null) {
             this.Deadline = new Long(source.Deadline);
         }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
     }
 
 
@@ -265,6 +395,7 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

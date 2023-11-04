@@ -31,7 +31,10 @@ public class StartOnlineRecordRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * 需要录制的房间号，取值范围: (1, 4294967295)
+    * 需要录制的白板房间号，取值范围: (1, 4294967295)。
+
+1. 在没有指定`GroupId`的情况下，实时录制默认以`RoomId`的字符串表达形式作为同步白板信令的IM群组ID（比如`RoomId`为1234，则IM群组ID为"1234"），并加群进行信令同步，请在开始录制前确保相应IM群组已创建完成，否则会导致录制失败。
+2. 在没有指定`TRTCRoomId`和`TRTCRoomIdStr`的情况下，默认会以`RoomId`作为TRTC房间号进房拉流进行录制。
     */
     @SerializedName("RoomId")
     @Expose
@@ -46,14 +49,16 @@ public class StartOnlineRecordRequest extends AbstractModel {
     private String RecordUserId;
 
     /**
-    * 与RecordUserId对应的签名
+    * 与`RecordUserId`对应的IM签名
     */
     @SerializedName("RecordUserSig")
     @Expose
     private String RecordUserSig;
 
     /**
-    * （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
+    * 白板进行信令同步的 IM 群组 ID。
+在没有指定`GroupId`的情况下，实时录制服务将使用 `RoomId` 的字符串形式作为同步白板信令的IM群组ID。
+在指定了`GroupId`的情况下，实时录制将优先使用`GroupId`作为同步白板信令的群组ID。请在开始录制前确保相应的IM群组已创建完成，否则会导致录制失败。
     */
     @SerializedName("GroupId")
     @Expose
@@ -142,6 +147,26 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     private String ExtraData;
 
     /**
+    * TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了`RoomId`与`TRTCRoomId`的情况下，优先使用`TRTCRoomId`作为实时录制拉TRTC流的TRTC房间号。
+
+当指定了`TRTCRoomIdStr`的情况下，此字段将被忽略。
+    */
+    @SerializedName("TRTCRoomId")
+    @Expose
+    private Long TRTCRoomId;
+
+    /**
+    * TRTC字符串类型房间号。
+
+在指定了`TRTCRoomIdStr`的情况下，会优先使用`TRTCRoomIdStr`作为实时录制拉TRTC流的TRTC房间号。
+    */
+    @SerializedName("TRTCRoomIdStr")
+    @Expose
+    private String TRTCRoomIdStr;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -158,16 +183,28 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     }
 
     /**
-     * Get 需要录制的房间号，取值范围: (1, 4294967295) 
-     * @return RoomId 需要录制的房间号，取值范围: (1, 4294967295)
+     * Get 需要录制的白板房间号，取值范围: (1, 4294967295)。
+
+1. 在没有指定`GroupId`的情况下，实时录制默认以`RoomId`的字符串表达形式作为同步白板信令的IM群组ID（比如`RoomId`为1234，则IM群组ID为"1234"），并加群进行信令同步，请在开始录制前确保相应IM群组已创建完成，否则会导致录制失败。
+2. 在没有指定`TRTCRoomId`和`TRTCRoomIdStr`的情况下，默认会以`RoomId`作为TRTC房间号进房拉流进行录制。 
+     * @return RoomId 需要录制的白板房间号，取值范围: (1, 4294967295)。
+
+1. 在没有指定`GroupId`的情况下，实时录制默认以`RoomId`的字符串表达形式作为同步白板信令的IM群组ID（比如`RoomId`为1234，则IM群组ID为"1234"），并加群进行信令同步，请在开始录制前确保相应IM群组已创建完成，否则会导致录制失败。
+2. 在没有指定`TRTCRoomId`和`TRTCRoomIdStr`的情况下，默认会以`RoomId`作为TRTC房间号进房拉流进行录制。
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 需要录制的房间号，取值范围: (1, 4294967295)
-     * @param RoomId 需要录制的房间号，取值范围: (1, 4294967295)
+     * Set 需要录制的白板房间号，取值范围: (1, 4294967295)。
+
+1. 在没有指定`GroupId`的情况下，实时录制默认以`RoomId`的字符串表达形式作为同步白板信令的IM群组ID（比如`RoomId`为1234，则IM群组ID为"1234"），并加群进行信令同步，请在开始录制前确保相应IM群组已创建完成，否则会导致录制失败。
+2. 在没有指定`TRTCRoomId`和`TRTCRoomIdStr`的情况下，默认会以`RoomId`作为TRTC房间号进房拉流进行录制。
+     * @param RoomId 需要录制的白板房间号，取值范围: (1, 4294967295)。
+
+1. 在没有指定`GroupId`的情况下，实时录制默认以`RoomId`的字符串表达形式作为同步白板信令的IM群组ID（比如`RoomId`为1234，则IM群组ID为"1234"），并加群进行信令同步，请在开始录制前确保相应IM群组已创建完成，否则会导致录制失败。
+2. 在没有指定`TRTCRoomId`和`TRTCRoomIdStr`的情况下，默认会以`RoomId`作为TRTC房间号进房拉流进行录制。
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;
@@ -194,32 +231,40 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
     }
 
     /**
-     * Get 与RecordUserId对应的签名 
-     * @return RecordUserSig 与RecordUserId对应的签名
+     * Get 与`RecordUserId`对应的IM签名 
+     * @return RecordUserSig 与`RecordUserId`对应的IM签名
      */
     public String getRecordUserSig() {
         return this.RecordUserSig;
     }
 
     /**
-     * Set 与RecordUserId对应的签名
-     * @param RecordUserSig 与RecordUserId对应的签名
+     * Set 与`RecordUserId`对应的IM签名
+     * @param RecordUserSig 与`RecordUserId`对应的IM签名
      */
     public void setRecordUserSig(String RecordUserSig) {
         this.RecordUserSig = RecordUserSig;
     }
 
     /**
-     * Get （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号 
-     * @return GroupId （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
+     * Get 白板进行信令同步的 IM 群组 ID。
+在没有指定`GroupId`的情况下，实时录制服务将使用 `RoomId` 的字符串形式作为同步白板信令的IM群组ID。
+在指定了`GroupId`的情况下，实时录制将优先使用`GroupId`作为同步白板信令的群组ID。请在开始录制前确保相应的IM群组已创建完成，否则会导致录制失败。 
+     * @return GroupId 白板进行信令同步的 IM 群组 ID。
+在没有指定`GroupId`的情况下，实时录制服务将使用 `RoomId` 的字符串形式作为同步白板信令的IM群组ID。
+在指定了`GroupId`的情况下，实时录制将优先使用`GroupId`作为同步白板信令的群组ID。请在开始录制前确保相应的IM群组已创建完成，否则会导致录制失败。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
-     * @param GroupId （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
+     * Set 白板进行信令同步的 IM 群组 ID。
+在没有指定`GroupId`的情况下，实时录制服务将使用 `RoomId` 的字符串形式作为同步白板信令的IM群组ID。
+在指定了`GroupId`的情况下，实时录制将优先使用`GroupId`作为同步白板信令的群组ID。请在开始录制前确保相应的IM群组已创建完成，否则会导致录制失败。
+     * @param GroupId 白板进行信令同步的 IM 群组 ID。
+在没有指定`GroupId`的情况下，实时录制服务将使用 `RoomId` 的字符串形式作为同步白板信令的IM群组ID。
+在指定了`GroupId`的情况下，实时录制将优先使用`GroupId`作为同步白板信令的群组ID。请在开始录制前确保相应的IM群组已创建完成，否则会导致录制失败。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -433,6 +478,62 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
         this.ExtraData = ExtraData;
     }
 
+    /**
+     * Get TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了`RoomId`与`TRTCRoomId`的情况下，优先使用`TRTCRoomId`作为实时录制拉TRTC流的TRTC房间号。
+
+当指定了`TRTCRoomIdStr`的情况下，此字段将被忽略。 
+     * @return TRTCRoomId TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了`RoomId`与`TRTCRoomId`的情况下，优先使用`TRTCRoomId`作为实时录制拉TRTC流的TRTC房间号。
+
+当指定了`TRTCRoomIdStr`的情况下，此字段将被忽略。
+     */
+    public Long getTRTCRoomId() {
+        return this.TRTCRoomId;
+    }
+
+    /**
+     * Set TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了`RoomId`与`TRTCRoomId`的情况下，优先使用`TRTCRoomId`作为实时录制拉TRTC流的TRTC房间号。
+
+当指定了`TRTCRoomIdStr`的情况下，此字段将被忽略。
+     * @param TRTCRoomId TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了`RoomId`与`TRTCRoomId`的情况下，优先使用`TRTCRoomId`作为实时录制拉TRTC流的TRTC房间号。
+
+当指定了`TRTCRoomIdStr`的情况下，此字段将被忽略。
+     */
+    public void setTRTCRoomId(Long TRTCRoomId) {
+        this.TRTCRoomId = TRTCRoomId;
+    }
+
+    /**
+     * Get TRTC字符串类型房间号。
+
+在指定了`TRTCRoomIdStr`的情况下，会优先使用`TRTCRoomIdStr`作为实时录制拉TRTC流的TRTC房间号。 
+     * @return TRTCRoomIdStr TRTC字符串类型房间号。
+
+在指定了`TRTCRoomIdStr`的情况下，会优先使用`TRTCRoomIdStr`作为实时录制拉TRTC流的TRTC房间号。
+     */
+    public String getTRTCRoomIdStr() {
+        return this.TRTCRoomIdStr;
+    }
+
+    /**
+     * Set TRTC字符串类型房间号。
+
+在指定了`TRTCRoomIdStr`的情况下，会优先使用`TRTCRoomIdStr`作为实时录制拉TRTC流的TRTC房间号。
+     * @param TRTCRoomIdStr TRTC字符串类型房间号。
+
+在指定了`TRTCRoomIdStr`的情况下，会优先使用`TRTCRoomIdStr`作为实时录制拉TRTC流的TRTC房间号。
+     */
+    public void setTRTCRoomIdStr(String TRTCRoomIdStr) {
+        this.TRTCRoomIdStr = TRTCRoomIdStr;
+    }
+
     public StartOnlineRecordRequest() {
     }
 
@@ -489,6 +590,12 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
         if (source.ExtraData != null) {
             this.ExtraData = new String(source.ExtraData);
         }
+        if (source.TRTCRoomId != null) {
+            this.TRTCRoomId = new Long(source.TRTCRoomId);
+        }
+        if (source.TRTCRoomIdStr != null) {
+            this.TRTCRoomIdStr = new String(source.TRTCRoomIdStr);
+        }
     }
 
 
@@ -511,6 +618,8 @@ VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通�
         this.setParamSimple(map, prefix + "ChatGroupId", this.ChatGroupId);
         this.setParamSimple(map, prefix + "AutoStopTimeout", this.AutoStopTimeout);
         this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
+        this.setParamSimple(map, prefix + "TRTCRoomId", this.TRTCRoomId);
+        this.setParamSimple(map, prefix + "TRTCRoomIdStr", this.TRTCRoomIdStr);
 
     }
 }

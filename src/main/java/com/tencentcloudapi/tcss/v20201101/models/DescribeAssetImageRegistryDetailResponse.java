@@ -288,6 +288,13 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel {
     private Long SensitiveInfoCnt;
 
     /**
+    * Id
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -959,6 +966,22 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get Id 
+     * @return Id Id
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Id
+     * @param Id Id
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1081,6 +1104,9 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel {
         if (source.SensitiveInfoCnt != null) {
             this.SensitiveInfoCnt = new Long(source.SensitiveInfoCnt);
         }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1124,6 +1150,7 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
         this.setParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

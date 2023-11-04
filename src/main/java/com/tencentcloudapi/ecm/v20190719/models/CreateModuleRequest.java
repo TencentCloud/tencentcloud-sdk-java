@@ -31,14 +31,14 @@ public class CreateModuleRequest extends AbstractModel {
     private String ModuleName;
 
     /**
-    * 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+    * 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
     */
     @SerializedName("DefaultBandWidth")
     @Expose
     private Long DefaultBandWidth;
 
     /**
-    * 默认镜像，如img-qsdf3ff2。
+    * 默认镜像。
     */
     @SerializedName("DefaultImageId")
     @Expose
@@ -52,14 +52,14 @@ public class CreateModuleRequest extends AbstractModel {
     private String InstanceType;
 
     /**
-    * 默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
+    * 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
     */
     @SerializedName("DefaultSystemDiskSize")
     @Expose
     private Long DefaultSystemDiskSize;
 
     /**
-    * 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+    * 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
     */
     @SerializedName("DefaultDataDiskSize")
     @Expose
@@ -89,7 +89,7 @@ false：表示开通IP直通
     private String [] SecurityGroups;
 
     /**
-    * 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+    * 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
     */
     @SerializedName("DefaultBandWidthIn")
     @Expose
@@ -133,32 +133,32 @@ false：表示开通IP直通
     }
 
     /**
-     * Get 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。 
-     * @return DefaultBandWidth 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+     * Get 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。 
+     * @return DefaultBandWidth 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public Long getDefaultBandWidth() {
         return this.DefaultBandWidth;
     }
 
     /**
-     * Set 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
-     * @param DefaultBandWidth 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+     * Set 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+     * @param DefaultBandWidth 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public void setDefaultBandWidth(Long DefaultBandWidth) {
         this.DefaultBandWidth = DefaultBandWidth;
     }
 
     /**
-     * Get 默认镜像，如img-qsdf3ff2。 
-     * @return DefaultImageId 默认镜像，如img-qsdf3ff2。
+     * Get 默认镜像。 
+     * @return DefaultImageId 默认镜像。
      */
     public String getDefaultImageId() {
         return this.DefaultImageId;
     }
 
     /**
-     * Set 默认镜像，如img-qsdf3ff2。
-     * @param DefaultImageId 默认镜像，如img-qsdf3ff2。
+     * Set 默认镜像。
+     * @param DefaultImageId 默认镜像。
      */
     public void setDefaultImageId(String DefaultImageId) {
         this.DefaultImageId = DefaultImageId;
@@ -181,32 +181,32 @@ false：表示开通IP直通
     }
 
     /**
-     * Get 默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。 
-     * @return DefaultSystemDiskSize 默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
+     * Get 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。 
+     * @return DefaultSystemDiskSize 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public Long getDefaultSystemDiskSize() {
         return this.DefaultSystemDiskSize;
     }
 
     /**
-     * Set 默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
-     * @param DefaultSystemDiskSize 默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
+     * Set 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+     * @param DefaultSystemDiskSize 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public void setDefaultSystemDiskSize(Long DefaultSystemDiskSize) {
         this.DefaultSystemDiskSize = DefaultSystemDiskSize;
     }
 
     /**
-     * Get 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。 
-     * @return DefaultDataDiskSize 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+     * Get 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。 
+     * @return DefaultDataDiskSize 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public Long getDefaultDataDiskSize() {
         return this.DefaultDataDiskSize;
     }
 
     /**
-     * Set 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
-     * @param DefaultDataDiskSize 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+     * Set 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+     * @param DefaultDataDiskSize 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public void setDefaultDataDiskSize(Long DefaultDataDiskSize) {
         this.DefaultDataDiskSize = DefaultDataDiskSize;
@@ -269,16 +269,16 @@ false：表示开通IP直通
     }
 
     /**
-     * Get 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。 
-     * @return DefaultBandWidthIn 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+     * Get 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。 
+     * @return DefaultBandWidthIn 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public Long getDefaultBandWidthIn() {
         return this.DefaultBandWidthIn;
     }
 
     /**
-     * Set 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
-     * @param DefaultBandWidthIn 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+     * Set 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+     * @param DefaultBandWidthIn 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public void setDefaultBandWidthIn(Long DefaultBandWidthIn) {
         this.DefaultBandWidthIn = DefaultBandWidthIn;

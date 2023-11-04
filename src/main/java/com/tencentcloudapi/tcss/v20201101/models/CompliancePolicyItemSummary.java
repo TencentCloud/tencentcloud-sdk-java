@@ -152,6 +152,22 @@ RESULT_FAILED: 未通过
     private String ApplicableVersion;
 
     /**
+    * 检查项描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 检查项审计方法
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AuditProcedure")
+    @Expose
+    private String AuditProcedure;
+
+    /**
      * Get 为客户分配的唯一的检测项的ID。 
      * @return CustomerPolicyItemId 为客户分配的唯一的检测项的ID。
      */
@@ -471,6 +487,46 @@ RESULT_FAILED: 未通过
         this.ApplicableVersion = ApplicableVersion;
     }
 
+    /**
+     * Get 检查项描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 检查项描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 检查项描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 检查项描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 检查项审计方法
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AuditProcedure 检查项审计方法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAuditProcedure() {
+        return this.AuditProcedure;
+    }
+
+    /**
+     * Set 检查项审计方法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AuditProcedure 检查项审计方法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAuditProcedure(String AuditProcedure) {
+        this.AuditProcedure = AuditProcedure;
+    }
+
     public CompliancePolicyItemSummary() {
     }
 
@@ -527,6 +583,12 @@ RESULT_FAILED: 未通过
         if (source.ApplicableVersion != null) {
             this.ApplicableVersion = new String(source.ApplicableVersion);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.AuditProcedure != null) {
+            this.AuditProcedure = new String(source.AuditProcedure);
+        }
     }
 
 
@@ -550,6 +612,8 @@ RESULT_FAILED: 未通过
         this.setParamSimple(map, prefix + "FixSuggestion", this.FixSuggestion);
         this.setParamSimple(map, prefix + "BenchmarkStandardId", this.BenchmarkStandardId);
         this.setParamSimple(map, prefix + "ApplicableVersion", this.ApplicableVersion);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AuditProcedure", this.AuditProcedure);
 
     }
 }

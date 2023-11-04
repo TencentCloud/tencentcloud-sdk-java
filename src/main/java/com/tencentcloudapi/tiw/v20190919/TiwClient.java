@@ -221,7 +221,7 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *查询PPT检测任务的执行进度或结果
+     *查询PPT检测任务的执行进度或结果，支持查询最近半年内的任务结果
      * @param req DescribePPTCheckRequest
      * @return DescribePPTCheckResponse
      * @throws TencentCloudSDKException

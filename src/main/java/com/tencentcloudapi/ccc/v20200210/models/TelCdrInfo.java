@@ -66,6 +66,14 @@ public class TelCdrInfo extends AbstractModel {
     private String RecordURL;
 
     /**
+    * 录音 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private String RecordId;
+
+    /**
     * 坐席信息
     */
     @SerializedName("SeatUser")
@@ -470,6 +478,26 @@ public class TelCdrInfo extends AbstractModel {
      */
     public void setRecordURL(String RecordURL) {
         this.RecordURL = RecordURL;
+    }
+
+    /**
+     * Get 录音 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordId 录音 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set 录音 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordId 录音 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordId(String RecordId) {
+        this.RecordId = RecordId;
     }
 
     /**
@@ -1398,6 +1426,9 @@ public class TelCdrInfo extends AbstractModel {
         if (source.RecordURL != null) {
             this.RecordURL = new String(source.RecordURL);
         }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
+        }
         if (source.SeatUser != null) {
             this.SeatUser = new SeatUserInfo(source.SeatUser);
         }
@@ -1516,6 +1547,7 @@ public class TelCdrInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Direction", this.Direction);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "RecordURL", this.RecordURL);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamObj(map, prefix + "SeatUser.", this.SeatUser);
         this.setParamSimple(map, prefix + "EndStatus", this.EndStatus);
         this.setParamSimple(map, prefix + "SkillGroup", this.SkillGroup);

@@ -99,6 +99,18 @@ public class DrmClient extends AbstractClient{
     }
 
     /**
+     *开发者需要指定使用的DRM类型取值 NORMALAES、和需要加密的Track类型取值 SD,ContentType取值 LiveVideo
+
+     * @param req DescribeDRMLicenseRequest
+     * @return DescribeDRMLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDRMLicenseResponse DescribeDRMLicense(DescribeDRMLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDRMLicense", DescribeDRMLicenseResponse.class);
+    }
+
+    /**
      *该接口用来查询设置的FairPlay私钥校验信息。可用该接口校验设置的私钥与本身的私钥是否一致。
      * @param req DescribeFairPlayPemRequest
      * @return DescribeFairPlayPemResponse

@@ -89,11 +89,26 @@ public class CreateVRSTaskRequest extends AbstractModel {
     private String CallbackUrl;
 
     /**
-    * 任务类型 1:在线 2:离线  默认为1
+    * 模型类型 1:在线 2:离线  默认为1
     */
     @SerializedName("ModelType")
     @Expose
     private Long ModelType;
+
+    /**
+    * 任务类型 0:默认类型 1:轻量级复刻
+默认为0
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+    * 校验音频ID
+    */
+    @SerializedName("VPRAudioId")
+    @Expose
+    private String VPRAudioId;
 
     /**
      * Get 唯一请求 ID 
@@ -260,19 +275,55 @@ public class CreateVRSTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务类型 1:在线 2:离线  默认为1 
-     * @return ModelType 任务类型 1:在线 2:离线  默认为1
+     * Get 模型类型 1:在线 2:离线  默认为1 
+     * @return ModelType 模型类型 1:在线 2:离线  默认为1
      */
     public Long getModelType() {
         return this.ModelType;
     }
 
     /**
-     * Set 任务类型 1:在线 2:离线  默认为1
-     * @param ModelType 任务类型 1:在线 2:离线  默认为1
+     * Set 模型类型 1:在线 2:离线  默认为1
+     * @param ModelType 模型类型 1:在线 2:离线  默认为1
      */
     public void setModelType(Long ModelType) {
         this.ModelType = ModelType;
+    }
+
+    /**
+     * Get 任务类型 0:默认类型 1:轻量级复刻
+默认为0 
+     * @return TaskType 任务类型 0:默认类型 1:轻量级复刻
+默认为0
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型 0:默认类型 1:轻量级复刻
+默认为0
+     * @param TaskType 任务类型 0:默认类型 1:轻量级复刻
+默认为0
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 校验音频ID 
+     * @return VPRAudioId 校验音频ID
+     */
+    public String getVPRAudioId() {
+        return this.VPRAudioId;
+    }
+
+    /**
+     * Set 校验音频ID
+     * @param VPRAudioId 校验音频ID
+     */
+    public void setVPRAudioId(String VPRAudioId) {
+        this.VPRAudioId = VPRAudioId;
     }
 
     public CreateVRSTaskRequest() {
@@ -313,6 +364,12 @@ public class CreateVRSTaskRequest extends AbstractModel {
         if (source.ModelType != null) {
             this.ModelType = new Long(source.ModelType);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.VPRAudioId != null) {
+            this.VPRAudioId = new String(source.VPRAudioId);
+        }
     }
 
 
@@ -329,6 +386,8 @@ public class CreateVRSTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AudioIdList.", this.AudioIdList);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "VPRAudioId", this.VPRAudioId);
 
     }
 }

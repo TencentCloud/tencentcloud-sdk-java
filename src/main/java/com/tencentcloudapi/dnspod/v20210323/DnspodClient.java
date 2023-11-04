@@ -105,6 +105,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *创建域名的自定义线路
+     * @param req CreateDomainCustomLineRequest
+     * @return CreateDomainCustomLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDomainCustomLineResponse CreateDomainCustomLine(CreateDomainCustomLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDomainCustomLine", CreateDomainCustomLineResponse.class);
+    }
+
+    /**
      *创建域名分组
      * @param req CreateDomainGroupRequest
      * @return CreateDomainGroupResponse
@@ -190,6 +201,17 @@ public class DnspodClient extends AbstractClient{
     public DeleteDomainBatchResponse DeleteDomainBatch(DeleteDomainBatchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDomainBatch", DeleteDomainBatchResponse.class);
+    }
+
+    /**
+     *删除域名的自定义线路
+     * @param req DeleteDomainCustomLineRequest
+     * @return DeleteDomainCustomLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDomainCustomLineResponse DeleteDomainCustomLine(DeleteDomainCustomLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDomainCustomLine", DeleteDomainCustomLineResponse.class);
     }
 
     /**
@@ -289,6 +311,17 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainAnalyticsResponse DescribeDomainAnalytics(DescribeDomainAnalyticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDomainAnalytics", DescribeDomainAnalyticsResponse.class);
+    }
+
+    /**
+     *获取域名的自定义线路列表
+     * @param req DescribeDomainCustomLineListRequest
+     * @return DescribeDomainCustomLineListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainCustomLineListResponse DescribeDomainCustomLineList(DescribeDomainCustomLineListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDomainCustomLineList", DescribeDomainCustomLineListResponse.class);
     }
 
     /**
@@ -564,6 +597,17 @@ public class DnspodClient extends AbstractClient{
     public DownloadSnapshotResponse DownloadSnapshot(DownloadSnapshotRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DownloadSnapshot", DownloadSnapshotResponse.class);
+    }
+
+    /**
+     *修改域名的自定义线路
+     * @param req ModifyDomainCustomLineRequest
+     * @return ModifyDomainCustomLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainCustomLineResponse ModifyDomainCustomLine(ModifyDomainCustomLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDomainCustomLine", ModifyDomainCustomLineResponse.class);
     }
 
     /**

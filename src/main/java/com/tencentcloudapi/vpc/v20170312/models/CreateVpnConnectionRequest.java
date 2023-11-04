@@ -144,6 +144,20 @@ CCN VPN 形的通道 可以不传VPCID
     private String DpdAction;
 
     /**
+    * 创建通道路由信息。
+    */
+    @SerializedName("Route")
+    @Expose
+    private CreateVpnConnRoute Route;
+
+    /**
+    * BGP配置。
+    */
+    @SerializedName("BgpConfig")
+    @Expose
+    private BgpConfig BgpConfig;
+
+    /**
      * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
@@ -419,6 +433,38 @@ CCN VPN 形的通道 可以不传VPCID
         this.DpdAction = DpdAction;
     }
 
+    /**
+     * Get 创建通道路由信息。 
+     * @return Route 创建通道路由信息。
+     */
+    public CreateVpnConnRoute getRoute() {
+        return this.Route;
+    }
+
+    /**
+     * Set 创建通道路由信息。
+     * @param Route 创建通道路由信息。
+     */
+    public void setRoute(CreateVpnConnRoute Route) {
+        this.Route = Route;
+    }
+
+    /**
+     * Get BGP配置。 
+     * @return BgpConfig BGP配置。
+     */
+    public BgpConfig getBgpConfig() {
+        return this.BgpConfig;
+    }
+
+    /**
+     * Set BGP配置。
+     * @param BgpConfig BGP配置。
+     */
+    public void setBgpConfig(BgpConfig BgpConfig) {
+        this.BgpConfig = BgpConfig;
+    }
+
     public CreateVpnConnectionRequest() {
     }
 
@@ -484,6 +530,12 @@ CCN VPN 形的通道 可以不传VPCID
         if (source.DpdAction != null) {
             this.DpdAction = new String(source.DpdAction);
         }
+        if (source.Route != null) {
+            this.Route = new CreateVpnConnRoute(source.Route);
+        }
+        if (source.BgpConfig != null) {
+            this.BgpConfig = new BgpConfig(source.BgpConfig);
+        }
     }
 
 
@@ -508,6 +560,8 @@ CCN VPN 形的通道 可以不传VPCID
         this.setParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
         this.setParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
         this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
+        this.setParamObj(map, prefix + "Route.", this.Route);
+        this.setParamObj(map, prefix + "BgpConfig.", this.BgpConfig);
 
     }
 }
