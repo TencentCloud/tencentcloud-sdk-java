@@ -1,109 +1,33 @@
 # 本版本更新包含以下内容：
 
-## 费用中心(billing) 版本：2018-07-09
+## 腾讯电子签（基础版）(essbasic) 版本：2021-05-26
 
-### 第 49 次发布
+### 第 127 次发布
 
-发布时间：2023-10-27 15:51:05
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [CreateSavingPlanOrder](https://cloud.tencent.com/document/api/555/100825)
-* [DescribeSavingPlanCoverage](https://cloud.tencent.com/document/api/555/100824)
-* [DescribeSavingPlanOverview](https://cloud.tencent.com/document/api/555/100823)
-* [DescribeSavingPlanUsage](https://cloud.tencent.com/document/api/555/100822)
-
-新增数据结构：
-
-* [SavingPlanCoverageDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanCoverageDetail)
-* [SavingPlanCoverageRate](https://cloud.tencent.com/document/api/555/19183#SavingPlanCoverageRate)
-* [SavingPlanOverviewDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanOverviewDetail)
-* [SavingPlanUsageDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanUsageDetail)
-
-
-
-## 云安全一体化平台(csip) 版本：2022-11-21
-
-### 第 18 次发布
-
-发布时间：2023-10-30 00:24:02
+发布时间：2023-11-07 01:42:44
 
 本次发布包含了以下内容：
 
 改善已有的文档。
-
-新增接口：
-
-* [DescribeVULRiskAdvanceCFGList](https://cloud.tencent.com/document/api/664/100951)
-
-新增数据结构：
-
-* [VULRiskAdvanceCFGList](https://cloud.tencent.com/document/api/664/90825#VULRiskAdvanceCFGList)
-
-
-
-## 云服务器(cvm) 版本：2017-03-12
-
-### 第 119 次发布
-
-发布时间：2023-10-30 00:24:37
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [ImportKeyPair](https://cloud.tencent.com/document/api/213/15703)
-
-	* <font color="#dd0000">**修改出参**：</font>KeyId
-
-
-
-
-## TDSQL MySQL 版(dcdb) 版本：2018-04-11
-
-### 第 67 次发布
-
-发布时间：2023-10-30 00:33:47
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [CreateDCDBInstance](https://cloud.tencent.com/document/api/557/16135)
-
-	* 新增入参：DcnSyncMode
-
-* [CreateDedicatedClusterDCDBInstance](https://cloud.tencent.com/document/api/557/61369)
-
-	* 新增入参：DcnSyncMode
-
-* [DescribeDCDBInstanceDetail](https://cloud.tencent.com/document/api/557/89385)
-
-	* 新增出参：IsDcnStrongSyncSupported, IsDcnSwitchSupported
-
 
 修改数据结构：
 
-* [DcnDetailItem](https://cloud.tencent.com/document/api/557/16142#DcnDetailItem)
+* [FlowApproverUrlInfo](https://cloud.tencent.com/document/api/1420/61525#FlowApproverUrlInfo)
 
-	* 新增成员：DcnStatusDesc, PolarisInstanceId, PolarisInstanceName, PolarisNamespace, PolarisService, PolarisServiceStatus, PolarisServiceStatusDesc, PolarisRegion, IsDcnSwitchSupported
-
-
+	* <font color="#dd0000">**修改成员**：</font>LongUrl
 
 
-## Elasticsearch Service(es) 版本：2018-04-16
 
-### 第 49 次发布
 
-发布时间：2023-10-30 00:42:05
+## 腾讯电子签（基础版）(essbasic) 版本：2020-12-22
+
+
+
+## 轻量应用服务器(lighthouse) 版本：2020-03-24
+
+### 第 55 次发布
+
+发布时间：2023-11-07 01:54:12
 
 本次发布包含了以下内容：
 
@@ -111,30 +35,16 @@
 
 新增接口：
 
-* [DescribeDiagnose](https://cloud.tencent.com/document/api/845/100954)
-* [DescribeInstancePluginList](https://cloud.tencent.com/document/api/845/100953)
-* [GetDiagnoseSettings](https://cloud.tencent.com/document/api/845/100952)
-
-新增数据结构：
-
-* [DescribeInstancePluginInfo](https://cloud.tencent.com/document/api/845/30634#DescribeInstancePluginInfo)
-* [DiagnoseJobMeta](https://cloud.tencent.com/document/api/845/30634#DiagnoseJobMeta)
-* [DiagnoseJobResult](https://cloud.tencent.com/document/api/845/30634#DiagnoseJobResult)
-* [DiagnoseResult](https://cloud.tencent.com/document/api/845/30634#DiagnoseResult)
-* [Dimension](https://cloud.tencent.com/document/api/845/30634#Dimension)
-* [JobParam](https://cloud.tencent.com/document/api/845/30634#JobParam)
-* [LogDetail](https://cloud.tencent.com/document/api/845/30634#LogDetail)
-* [Metric](https://cloud.tencent.com/document/api/845/30634#Metric)
-* [MetricDetail](https://cloud.tencent.com/document/api/845/30634#MetricDetail)
-* [SettingDetail](https://cloud.tencent.com/document/api/845/30634#SettingDetail)
+* [CancelShareBlueprintAcrossAccounts](https://cloud.tencent.com/document/api/1207/101339)
+* [ShareBlueprintAcrossAccounts](https://cloud.tencent.com/document/api/1207/101338)
 
 
 
-## 云数据库 MariaDB(mariadb) 版本：2017-03-12
+## TI-ONE 训练平台(tione) 版本：2021-11-11
 
-### 第 59 次发布
+### 第 41 次发布
 
-发布时间：2023-10-30 00:58:10
+发布时间：2023-11-07 02:22:04
 
 本次发布包含了以下内容：
 
@@ -142,33 +52,53 @@
 
 修改接口：
 
-* [CreateDBInstance](https://cloud.tencent.com/document/api/237/16180)
+* [DescribeTrainingTaskPods](https://cloud.tencent.com/document/api/851/75088)
 
-	* 新增入参：DcnSyncMode
+	* <font color="#dd0000">**修改出参**：</font>PodInfoList
 
-* [CreateDedicatedClusterDBInstance](https://cloud.tencent.com/document/api/237/61370)
 
-	* 新增入参：DcnSyncMode
 
-* [DescribeDBInstanceDetail](https://cloud.tencent.com/document/api/237/89390)
 
-	* 新增出参：IsDcnStrongSyncSupported, IsDcnSwitchSupported
+## TI-ONE 训练平台(tione) 版本：2019-10-22
 
+
+
+## Web 应用防火墙(waf) 版本：2018-01-25
+
+### 第 70 次发布
+
+发布时间：2023-11-07 02:47:21
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeModuleStatus](https://cloud.tencent.com/document/api/627/101340)
+
+新增数据结构：
+
+* [ApiPkg](https://cloud.tencent.com/document/api/627/53609#ApiPkg)
 
 修改数据结构：
 
-* [DcnDetailItem](https://cloud.tencent.com/document/api/237/16191#DcnDetailItem)
+* [BotPkg](https://cloud.tencent.com/document/api/627/53609#BotPkg)
 
-	* 新增成员：DcnStatusDesc, PolarisInstanceId, PolarisInstanceName, PolarisNamespace, PolarisService, PolarisServiceStatus, PolarisServiceStatusDesc, PolarisRegion, IsDcnSwitchSupported
+	* 新增成员：IsBotTrial
+
+* [InstanceInfo](https://cloud.tencent.com/document/api/627/53609#InstanceInfo)
+
+	* 新增成员：ApiPkg
 
 
 
 
-## 文字识别(ocr) 版本：2018-11-19
+## 数据开发治理平台 WeData(wedata) 版本：2021-08-20
 
-### 第 114 次发布
+### 第 55 次发布
 
-发布时间：2023-10-30 01:04:20
+发布时间：2023-11-07 02:48:57
 
 本次发布包含了以下内容：
 
@@ -176,73 +106,18 @@
 
 修改接口：
 
-* [DriverLicenseOCR](https://cloud.tencent.com/document/api/866/36213)
+* [DeleteDataSources](https://cloud.tencent.com/document/api/1267/80761)
 
-	* 新增出参：BackPageName, BackPageCardCode
+	* 新增入参：ProjectId
 
+* [DescribeDsFolderTree](https://cloud.tencent.com/document/api/1267/100212)
 
+	* 新增入参：IncludeVirtualTask
 
+* [ModifyDataSource](https://cloud.tencent.com/document/api/1267/80760)
 
-## 腾讯健康组学平台(omics) 版本：2022-11-28
+	* 新增入参：ProjectId
 
-### 第 7 次发布
-
-发布时间：2023-10-27 16:07:10
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [GetRunMetadataFile](https://cloud.tencent.com/document/api/1643/100858)
-* [RunWorkflow](https://cloud.tencent.com/document/api/1643/100857)
-* [TerminateRunGroup](https://cloud.tencent.com/document/api/1643/100856)
-
-新增数据结构：
-
-* [GitInfo](https://cloud.tencent.com/document/api/1643/89100#GitInfo)
-
-修改数据结构：
-
-* [Run](https://cloud.tencent.com/document/api/1643/89100#Run)
-
-
-
-
-## 边缘安全加速平台(teo) 版本：2022-09-01
-
-### 第 61 次发布
-
-发布时间：2023-10-27 10:26:11
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [BindSecurityTemplateToEntity](https://cloud.tencent.com/document/api/1552/100814)
-
-
-
-## 边缘安全加速平台(teo) 版本：2022-01-06
-
-
-
-## 私有网络(vpc) 版本：2017-03-12
-
-### 第 176 次发布
-
-发布时间：2023-10-30 01:36:36
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [ModifyVpnGatewaySslServer](https://cloud.tencent.com/document/api/215/100955)
 
 
 
@@ -8517,17 +8392,17 @@
 
 新增接口：
 
-* [[CreateSavingPlanOrder](https://cloud.tencent.com/document/api/555/100825)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeSavingPlanCoverage](https://cloud.tencent.com/document/api/555/100824)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeSavingPlanOverview](https://cloud.tencent.com/document/api/555/100823)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeSavingPlanUsage](https://cloud.tencent.com/document/api/555/100822)](https://cloud.tencent.com/document/api/#/#)
+* [CreateSavingPlanOrder](https://cloud.tencent.com/document/api/555/100825)
+* [DescribeSavingPlanCoverage](https://cloud.tencent.com/document/api/555/100824)
+* [DescribeSavingPlanOverview](https://cloud.tencent.com/document/api/555/100823)
+* [DescribeSavingPlanUsage](https://cloud.tencent.com/document/api/555/100822)
 
 新增数据结构：
 
-* [[SavingPlanCoverageDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanCoverageDetail)](https://cloud.tencent.com/document/api/555/19183#[SavingPlanCoverageDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanCoverageDetail))
-* [[SavingPlanCoverageRate](https://cloud.tencent.com/document/api/555/19183#SavingPlanCoverageRate)](https://cloud.tencent.com/document/api/555/19183#[SavingPlanCoverageRate](https://cloud.tencent.com/document/api/555/19183#SavingPlanCoverageRate))
-* [[SavingPlanOverviewDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanOverviewDetail)](https://cloud.tencent.com/document/api/555/19183#[SavingPlanOverviewDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanOverviewDetail))
-* [[SavingPlanUsageDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanUsageDetail)](https://cloud.tencent.com/document/api/555/19183#[SavingPlanUsageDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanUsageDetail))
+* [SavingPlanCoverageDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanCoverageDetail)
+* [SavingPlanCoverageRate](https://cloud.tencent.com/document/api/555/19183#SavingPlanCoverageRate)
+* [SavingPlanOverviewDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanOverviewDetail)
+* [SavingPlanUsageDetail](https://cloud.tencent.com/document/api/555/19183#SavingPlanUsageDetail)
 
 ### 第 48 次发布
 
@@ -13170,6 +13045,21 @@
 
 ## 云硬盘(cbs) 版本：2017-03-12
 
+### 第 53 次发布
+
+发布时间：2023-11-01 01:07:57
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeDiskConfigQuota](https://cloud.tencent.com/document/api/362/16318)
+
+	* 新增入参：DedicatedClusterId
+
+
 ### 第 52 次发布
 
 发布时间：2023-09-20 01:08:08
@@ -14215,6 +14105,25 @@
 
 
 ## 云联络中心(ccc) 版本：2020-02-10
+
+### 第 58 次发布
+
+发布时间：2023-11-03 01:08:07
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [SeatUserInfo](https://cloud.tencent.com/document/api/679/47715#SeatUserInfo)
+
+	* 新增成员：Role
+
+* [TelCdrInfo](https://cloud.tencent.com/document/api/679/47715#TelCdrInfo)
+
+	* 新增成员：RecordId
+
 
 ### 第 57 次发布
 
@@ -26250,6 +26159,36 @@
 
 ## 负载均衡(clb) 版本：2018-03-17
 
+### 第 100 次发布
+
+发布时间：2023-11-01 01:09:28
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateLoadBalancer](https://cloud.tencent.com/document/api/214/30692)
+
+	* 新增入参：ClusterIds
+
+
+### 第 99 次发布
+
+发布时间：2023-10-31 01:23:38
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [ModifyLoadBalancerSla](https://cloud.tencent.com/document/api/214/63892)
+
+	* 新增入参：Force
+
+
 ### 第 98 次发布
 
 发布时间：2023-10-20 01:09:37
@@ -32229,8 +32168,8 @@
 
 新增接口：
 
-* [ApplyFlexWechatPreAuth](https://cloud.tencent.com/document/api/1122/90752)
-* [QueryFlexWechatAuthResult](https://cloud.tencent.com/document/api/1122/90751)
+* [ApplyFlexWechatPreAuth](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexWechatAuthResult](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -32262,9 +32201,9 @@
 
 新增接口：
 
-* [AddFlexFundingAccount](https://cloud.tencent.com/document/api/1122/84594)
-* [ModifyFlexFundingAccount](https://cloud.tencent.com/document/api/1122/84593)
-* [QueryFlexServiceProviderAccountBalance](https://cloud.tencent.com/document/api/1122/84592)
+* [AddFlexFundingAccount](https://cloud.tencent.com/document/api/#/#)
+* [ModifyFlexFundingAccount](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexServiceProviderAccountBalance](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -32281,7 +32220,7 @@
 
 新增接口：
 
-* [QueryFlexPlatformAccountBalance](https://cloud.tencent.com/document/api/1122/84021)
+* [QueryFlexPlatformAccountBalance](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -32316,7 +32255,7 @@
 
 修改接口：
 
-* [QueryFlexPayeeAccountBalance](https://cloud.tencent.com/document/api/1122/74969)
+* [QueryFlexPayeeAccountBalance](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：SnapshotDate
 
@@ -32357,7 +32296,7 @@
 
 修改接口：
 
-* [UnifiedCloudOrder](https://cloud.tencent.com/document/api/1122/72599)
+* [UnifiedCloudOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：ExternalAttachmentDataList
 
@@ -32383,28 +32322,28 @@
 
 新增接口：
 
-* [BindOpenBankProfitSharePayee](https://cloud.tencent.com/document/api/1122/81884)
-* [QueryOpenBankProfitSharePayee](https://cloud.tencent.com/document/api/1122/81883)
+* [BindOpenBankProfitSharePayee](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankProfitSharePayee](https://cloud.tencent.com/document/api/#/#)
 
 修改接口：
 
-* [ApplyOpenBankSettleOrder](https://cloud.tencent.com/document/api/1122/79773)
+* [ApplyOpenBankSettleOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Remark, ExternalSettleData, Environment
 
-* [CreateCloudSubMerchant](https://cloud.tencent.com/document/api/1122/72604)
+* [CreateCloudSubMerchant](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增出参：ChannelAppId
 
-* [DownloadBill](https://cloud.tencent.com/document/api/1122/40672)
+* [DownloadBill](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增出参：StateType
 
-* [QueryOpenBankSettleOrder](https://cloud.tencent.com/document/api/1122/79771)
+* [QueryOpenBankSettleOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryRefund](https://cloud.tencent.com/document/api/1122/40660)
+* [QueryRefund](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增出参：ChannelExternalOrderId, ChannelExternalRefundId, ChannelOrderId, TotalRefundAmt, CurrencyType, OutTradeNo, RefundId, MidasAppId, UsedRefundId, SubRefundList
 
@@ -32447,7 +32386,7 @@
 
 修改接口：
 
-* [CreateOpenBankGlobalPaymentOrder](https://cloud.tencent.com/document/api/1122/81542)
+* [CreateOpenBankGlobalPaymentOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
@@ -32462,7 +32401,7 @@
 
 新增接口：
 
-* [CreateOpenBankGlobalPaymentOrder](https://cloud.tencent.com/document/api/1122/81542)
+* [CreateOpenBankGlobalPaymentOrder](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -32507,7 +32446,7 @@
 
 新增接口：
 
-* [QueryCompanyTitle](https://cloud.tencent.com/document/api/1122/81311)
+* [QueryCompanyTitle](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -32523,7 +32462,7 @@
 
 新增接口：
 
-* [QueryFinancialDataUrl](https://cloud.tencent.com/document/api/1122/81046)
+* [QueryFinancialDataUrl](https://cloud.tencent.com/document/api/#/#)
 
 修改数据结构：
 
@@ -32561,7 +32500,7 @@
 
 修改接口：
 
-* [CreateAcct](https://cloud.tencent.com/document/api/1122/40674)
+* [CreateAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：SubMerchantIdType, SubMerchantIdCode
 
@@ -32576,18 +32515,18 @@
 
 新增接口：
 
-* [ApplyOpenBankSettleOrder](https://cloud.tencent.com/document/api/1122/79773)
-* [ApplyOpenBankSubMerchantSignOnline](https://cloud.tencent.com/document/api/1122/79772)
-* [QueryOpenBankSettleOrder](https://cloud.tencent.com/document/api/1122/79771)
-* [QueryOpenBankSubMerchantSignOnline](https://cloud.tencent.com/document/api/1122/79770)
+* [ApplyOpenBankSettleOrder](https://cloud.tencent.com/document/api/#/#)
+* [ApplyOpenBankSubMerchantSignOnline](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankSettleOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankSubMerchantSignOnline](https://cloud.tencent.com/document/api/#/#)
 
 修改接口：
 
-* [AddFlexIdInfo](https://cloud.tencent.com/document/api/1122/76412)
+* [AddFlexIdInfo](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Name
 
-* [RefundOpenBankOrder](https://cloud.tencent.com/document/api/1122/76089)
+* [RefundOpenBankOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：ProfitShareInfoList
 
@@ -32621,7 +32560,7 @@
 
 修改接口：
 
-* [CreateOpenBankPaymentOrder](https://cloud.tencent.com/document/api/1122/70182)
+* [CreateOpenBankPaymentOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：SettlementRulesInfo, ExternalPaymentData
 
@@ -32640,7 +32579,7 @@
 
 修改接口：
 
-* [UnifiedCloudOrder](https://cloud.tencent.com/document/api/1122/72599)
+* [UnifiedCloudOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：ExternalUserInfoList
 
@@ -32659,7 +32598,7 @@
 
 修改接口：
 
-* [ApplyFlexPayment](https://cloud.tencent.com/document/api/1122/74976)
+* [ApplyFlexPayment](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：NotifyUrl
 
@@ -32723,9 +32662,9 @@
 
 新增接口：
 
-* [CreateOpenBankVerificationOrder](https://cloud.tencent.com/document/api/1122/76709)
-* [QueryOpenBankVerificationOrder](https://cloud.tencent.com/document/api/1122/76708)
-* [VerifyOpenBankAccount](https://cloud.tencent.com/document/api/1122/76707)
+* [CreateOpenBankVerificationOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankVerificationOrder](https://cloud.tencent.com/document/api/#/#)
+* [VerifyOpenBankAccount](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -32750,7 +32689,7 @@
 
 修改接口：
 
-* [QueryFlexPaymentOrderList](https://cloud.tencent.com/document/api/1122/74965)
+* [QueryFlexPaymentOrderList](https://cloud.tencent.com/document/api/#/#)
 
 	* <font color="#dd0000">**修改入参**：</font>PayeeId
 
@@ -32784,10 +32723,10 @@
 
 新增接口：
 
-* [AddFlexIdInfo](https://cloud.tencent.com/document/api/1122/76412)
-* [AddFlexPhoneNo](https://cloud.tencent.com/document/api/1122/76411)
-* [QueryFlexBillDownloadUrl](https://cloud.tencent.com/document/api/1122/76410)
-* [QueryFlexOrderSummaryList](https://cloud.tencent.com/document/api/1122/76409)
+* [AddFlexIdInfo](https://cloud.tencent.com/document/api/#/#)
+* [AddFlexPhoneNo](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexBillDownloadUrl](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexOrderSummaryList](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -32805,59 +32744,59 @@
 
 修改接口：
 
-* [ApplyFlexPayment](https://cloud.tencent.com/document/api/1122/74976)
+* [ApplyFlexPayment](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [ApplyFlexSettlement](https://cloud.tencent.com/document/api/1122/74975)
+* [ApplyFlexSettlement](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [CreateFlexPayee](https://cloud.tencent.com/document/api/1122/74974)
+* [CreateFlexPayee](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：PhoneNo, Environment
 
-* [FreezeFlexBalance](https://cloud.tencent.com/document/api/1122/74973)
+* [FreezeFlexBalance](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [ModifyFlexPayeeAccountRightStatus](https://cloud.tencent.com/document/api/1122/74972)
+* [ModifyFlexPayeeAccountRightStatus](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexAmountBeforeTax](https://cloud.tencent.com/document/api/1122/74971)
+* [QueryFlexAmountBeforeTax](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexFreezeOrderList](https://cloud.tencent.com/document/api/1122/74970)
+* [QueryFlexFreezeOrderList](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexPayeeAccountBalance](https://cloud.tencent.com/document/api/1122/74969)
+* [QueryFlexPayeeAccountBalance](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexPayeeAccountInfo](https://cloud.tencent.com/document/api/1122/74968)
+* [QueryFlexPayeeAccountInfo](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexPayeeAccountList](https://cloud.tencent.com/document/api/1122/74967)
+* [QueryFlexPayeeAccountList](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexPayeeInfo](https://cloud.tencent.com/document/api/1122/74966)
+* [QueryFlexPayeeInfo](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexPaymentOrderList](https://cloud.tencent.com/document/api/1122/74965)
+* [QueryFlexPaymentOrderList](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexPaymentOrderStatus](https://cloud.tencent.com/document/api/1122/74964)
+* [QueryFlexPaymentOrderStatus](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryFlexSettlementOrderList](https://cloud.tencent.com/document/api/1122/74963)
+* [QueryFlexSettlementOrderList](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：OperationType, Environment
 
@@ -32898,15 +32837,15 @@
 
 新增接口：
 
-* [CreateOpenBankAggregatedSubMerchantRegistration](https://cloud.tencent.com/document/api/1122/76096)
-* [CreateOpenBankSubMerchantRateConfigure](https://cloud.tencent.com/document/api/1122/76095)
-* [CreateOpenBankUnifiedOrder](https://cloud.tencent.com/document/api/1122/76094)
-* [QueryOpenBankBillDataPage](https://cloud.tencent.com/document/api/1122/76093)
-* [QueryOpenBankRefundOrder](https://cloud.tencent.com/document/api/1122/76092)
-* [QueryOpenBankSubMerchantCredential](https://cloud.tencent.com/document/api/1122/76091)
-* [QueryOpenBankSubMerchantRateConfigure](https://cloud.tencent.com/document/api/1122/76090)
-* [RefundOpenBankOrder](https://cloud.tencent.com/document/api/1122/76089)
-* [UploadOpenBankSubMerchantCredential](https://cloud.tencent.com/document/api/1122/76088)
+* [CreateOpenBankAggregatedSubMerchantRegistration](https://cloud.tencent.com/document/api/#/#)
+* [CreateOpenBankSubMerchantRateConfigure](https://cloud.tencent.com/document/api/#/#)
+* [CreateOpenBankUnifiedOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankBillDataPage](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankRefundOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankSubMerchantCredential](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankSubMerchantRateConfigure](https://cloud.tencent.com/document/api/#/#)
+* [RefundOpenBankOrder](https://cloud.tencent.com/document/api/#/#)
+* [UploadOpenBankSubMerchantCredential](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -32980,23 +32919,23 @@
 
 修改接口：
 
-* [ApplyOpenBankOrderDetailReceipt](https://cloud.tencent.com/document/api/1122/73065)
+* [ApplyOpenBankOrderDetailReceipt](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [CreateOpenBankExternalSubMerchantAccountBook](https://cloud.tencent.com/document/api/1122/73064)
+* [CreateOpenBankExternalSubMerchantAccountBook](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [CreateOpenBankRechargeOrder](https://cloud.tencent.com/document/api/1122/73063)
+* [CreateOpenBankRechargeOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryOpenBankExternalSubAccountBookBalance](https://cloud.tencent.com/document/api/1122/73062)
+* [QueryOpenBankExternalSubAccountBookBalance](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
-* [QueryOpenBankOrderDetailReceiptInfo](https://cloud.tencent.com/document/api/1122/73061)
+* [QueryOpenBankOrderDetailReceiptInfo](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Environment
 
@@ -33011,20 +32950,20 @@
 
 新增接口：
 
-* [ApplyFlexPayment](https://cloud.tencent.com/document/api/1122/74976)
-* [ApplyFlexSettlement](https://cloud.tencent.com/document/api/1122/74975)
-* [CreateFlexPayee](https://cloud.tencent.com/document/api/1122/74974)
-* [FreezeFlexBalance](https://cloud.tencent.com/document/api/1122/74973)
-* [ModifyFlexPayeeAccountRightStatus](https://cloud.tencent.com/document/api/1122/74972)
-* [QueryFlexAmountBeforeTax](https://cloud.tencent.com/document/api/1122/74971)
-* [QueryFlexFreezeOrderList](https://cloud.tencent.com/document/api/1122/74970)
-* [QueryFlexPayeeAccountBalance](https://cloud.tencent.com/document/api/1122/74969)
-* [QueryFlexPayeeAccountInfo](https://cloud.tencent.com/document/api/1122/74968)
-* [QueryFlexPayeeAccountList](https://cloud.tencent.com/document/api/1122/74967)
-* [QueryFlexPayeeInfo](https://cloud.tencent.com/document/api/1122/74966)
-* [QueryFlexPaymentOrderList](https://cloud.tencent.com/document/api/1122/74965)
-* [QueryFlexPaymentOrderStatus](https://cloud.tencent.com/document/api/1122/74964)
-* [QueryFlexSettlementOrderList](https://cloud.tencent.com/document/api/1122/74963)
+* [ApplyFlexPayment](https://cloud.tencent.com/document/api/#/#)
+* [ApplyFlexSettlement](https://cloud.tencent.com/document/api/#/#)
+* [CreateFlexPayee](https://cloud.tencent.com/document/api/#/#)
+* [FreezeFlexBalance](https://cloud.tencent.com/document/api/#/#)
+* [ModifyFlexPayeeAccountRightStatus](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexAmountBeforeTax](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexFreezeOrderList](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexPayeeAccountBalance](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexPayeeAccountInfo](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexPayeeAccountList](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexPayeeInfo](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexPaymentOrderList](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexPaymentOrderStatus](https://cloud.tencent.com/document/api/#/#)
+* [QueryFlexSettlementOrderList](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33060,12 +32999,12 @@
 
 新增接口：
 
-* [CreatePayRollPreOrder](https://cloud.tencent.com/document/api/1122/74068)
-* [CreatePayRollPreOrderWithAuth](https://cloud.tencent.com/document/api/1122/74067)
-* [CreatePayRollToken](https://cloud.tencent.com/document/api/1122/74066)
-* [GetPayRollAuth](https://cloud.tencent.com/document/api/1122/74065)
-* [GetPayRollAuthList](https://cloud.tencent.com/document/api/1122/74064)
-* [GetPayRollAuthResult](https://cloud.tencent.com/document/api/1122/74063)
+* [CreatePayRollPreOrder](https://cloud.tencent.com/document/api/#/#)
+* [CreatePayRollPreOrderWithAuth](https://cloud.tencent.com/document/api/#/#)
+* [CreatePayRollToken](https://cloud.tencent.com/document/api/#/#)
+* [GetPayRollAuth](https://cloud.tencent.com/document/api/#/#)
+* [GetPayRollAuthList](https://cloud.tencent.com/document/api/#/#)
+* [GetPayRollAuthResult](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33081,7 +33020,7 @@
 
 新增接口：
 
-* [GetDistributeBillDownloadUrl](https://cloud.tencent.com/document/api/1122/73392)
+* [GetDistributeBillDownloadUrl](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 64 次发布
 
@@ -33093,15 +33032,15 @@
 
 新增接口：
 
-* [ApplyOpenBankOrderDetailReceipt](https://cloud.tencent.com/document/api/1122/73065)
-* [CreateOpenBankExternalSubMerchantAccountBook](https://cloud.tencent.com/document/api/1122/73064)
-* [CreateOpenBankRechargeOrder](https://cloud.tencent.com/document/api/1122/73063)
-* [QueryOpenBankExternalSubAccountBookBalance](https://cloud.tencent.com/document/api/1122/73062)
-* [QueryOpenBankOrderDetailReceiptInfo](https://cloud.tencent.com/document/api/1122/73061)
+* [ApplyOpenBankOrderDetailReceipt](https://cloud.tencent.com/document/api/#/#)
+* [CreateOpenBankExternalSubMerchantAccountBook](https://cloud.tencent.com/document/api/#/#)
+* [CreateOpenBankRechargeOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankExternalSubAccountBookBalance](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankOrderDetailReceiptInfo](https://cloud.tencent.com/document/api/#/#)
 
 修改接口：
 
-* [QueryOpenBankDownLoadUrl](https://cloud.tencent.com/document/api/1122/70180)
+* [QueryOpenBankDownLoadUrl](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：ChannelName, PaymentMethod
 
@@ -33145,13 +33084,13 @@
 
 新增接口：
 
-* [CloseCloudOrder](https://cloud.tencent.com/document/api/1122/72605)
-* [CreateCloudSubMerchant](https://cloud.tencent.com/document/api/1122/72604)
-* [QueryCloudChannelData](https://cloud.tencent.com/document/api/1122/72603)
-* [QueryCloudOrder](https://cloud.tencent.com/document/api/1122/72602)
-* [QueryCloudRefundOrder](https://cloud.tencent.com/document/api/1122/72601)
-* [RefundCloudOrder](https://cloud.tencent.com/document/api/1122/72600)
-* [UnifiedCloudOrder](https://cloud.tencent.com/document/api/1122/72599)
+* [CloseCloudOrder](https://cloud.tencent.com/document/api/#/#)
+* [CreateCloudSubMerchant](https://cloud.tencent.com/document/api/#/#)
+* [QueryCloudChannelData](https://cloud.tencent.com/document/api/#/#)
+* [QueryCloudOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryCloudRefundOrder](https://cloud.tencent.com/document/api/#/#)
+* [RefundCloudOrder](https://cloud.tencent.com/document/api/#/#)
+* [UnifiedCloudOrder](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33180,7 +33119,7 @@
 
 新增接口：
 
-* [GetBillDownloadUrl](https://cloud.tencent.com/document/api/1122/71727)
+* [GetBillDownloadUrl](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33234,8 +33173,8 @@
 
 新增接口：
 
-* [QueryOpenBankBankAccountBalance](https://cloud.tencent.com/document/api/1122/70774)
-* [QueryOpenBankDailyReceiptDownloadUrl](https://cloud.tencent.com/document/api/1122/70773)
+* [QueryOpenBankBankAccountBalance](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankDailyReceiptDownloadUrl](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33252,8 +33191,8 @@
 
 新增接口：
 
-* [QueryOpenBankBankBranchList](https://cloud.tencent.com/document/api/1122/70730)
-* [QueryOpenBankSupportBankList](https://cloud.tencent.com/document/api/1122/70729)
+* [QueryOpenBankBankBranchList](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankSupportBankList](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33279,10 +33218,10 @@
 
 新增接口：
 
-* [ApplyReconciliationFile](https://cloud.tencent.com/document/api/1122/70650)
-* [QueryFundsTransactionDetails](https://cloud.tencent.com/document/api/1122/70649)
-* [QueryMemberTransactionDetails](https://cloud.tencent.com/document/api/1122/70648)
-* [QueryReconciliationFileApplyInfo](https://cloud.tencent.com/document/api/1122/70647)
+* [ApplyReconciliationFile](https://cloud.tencent.com/document/api/#/#)
+* [QueryFundsTransactionDetails](https://cloud.tencent.com/document/api/#/#)
+* [QueryMemberTransactionDetails](https://cloud.tencent.com/document/api/#/#)
+* [QueryReconciliationFileApplyInfo](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33303,7 +33242,7 @@
 
 新增接口：
 
-* [QueryExceedingInfo](https://cloud.tencent.com/document/api/1122/70343)
+* [QueryExceedingInfo](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33321,18 +33260,18 @@
 
 新增接口：
 
-* [BindOpenBankExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/1122/70186)
-* [CloseOpenBankPaymentOrder](https://cloud.tencent.com/document/api/1122/70185)
-* [CreateOpenBankExternalSubMerchantRegistration](https://cloud.tencent.com/document/api/1122/70184)
-* [CreateOpenBankMerchant](https://cloud.tencent.com/document/api/1122/70183)
-* [CreateOpenBankPaymentOrder](https://cloud.tencent.com/document/api/1122/70182)
-* [QueryOpenBankBindExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/1122/70181)
-* [QueryOpenBankDownLoadUrl](https://cloud.tencent.com/document/api/1122/70180)
-* [QueryOpenBankExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/1122/70179)
-* [QueryOpenBankExternalSubMerchantRegistration](https://cloud.tencent.com/document/api/1122/70178)
-* [QueryOpenBankPaymentOrder](https://cloud.tencent.com/document/api/1122/70177)
-* [QueryOpenBankUnbindExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/1122/70176)
-* [UnbindOpenBankExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/1122/70175)
+* [BindOpenBankExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/#/#)
+* [CloseOpenBankPaymentOrder](https://cloud.tencent.com/document/api/#/#)
+* [CreateOpenBankExternalSubMerchantRegistration](https://cloud.tencent.com/document/api/#/#)
+* [CreateOpenBankMerchant](https://cloud.tencent.com/document/api/#/#)
+* [CreateOpenBankPaymentOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankBindExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankDownLoadUrl](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankExternalSubMerchantRegistration](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankPaymentOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryOpenBankUnbindExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/#/#)
+* [UnbindOpenBankExternalSubMerchantBankAccount](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33366,7 +33305,7 @@
 
 修改接口：
 
-* [UnifiedTlinxOrder](https://cloud.tencent.com/document/api/1122/62611)
+* [UnifiedTlinxOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Jsapi, SubAppId, SubOpenId
 
@@ -33388,8 +33327,8 @@
 
 新增接口：
 
-* [DeduceQuota](https://cloud.tencent.com/document/api/1122/65437)
-* [QueryAssignment](https://cloud.tencent.com/document/api/1122/65436)
+* [DeduceQuota](https://cloud.tencent.com/document/api/#/#)
+* [QueryAssignment](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33405,28 +33344,28 @@
 
 新增接口：
 
-* [AddContract](https://cloud.tencent.com/document/api/1122/64089)
-* [AddMerchant](https://cloud.tencent.com/document/api/1122/64088)
-* [AddShop](https://cloud.tencent.com/document/api/1122/64087)
-* [DistributeAccreditQuery](https://cloud.tencent.com/document/api/1122/64086)
-* [DistributeAccreditTlinx](https://cloud.tencent.com/document/api/1122/64085)
-* [DistributeAddReceiver](https://cloud.tencent.com/document/api/1122/64084)
-* [DistributeApply](https://cloud.tencent.com/document/api/1122/64083)
-* [DistributeCancel](https://cloud.tencent.com/document/api/1122/64082)
-* [DistributeQuery](https://cloud.tencent.com/document/api/1122/64081)
-* [DistributeQueryReceiver](https://cloud.tencent.com/document/api/1122/64080)
-* [DistributeRemoveReceiver](https://cloud.tencent.com/document/api/1122/64079)
-* [DownloadOrgFile](https://cloud.tencent.com/document/api/1122/64078)
-* [QueryCityCode](https://cloud.tencent.com/document/api/1122/64077)
-* [QueryContractPayFee](https://cloud.tencent.com/document/api/1122/64076)
-* [QueryContractPayWayList](https://cloud.tencent.com/document/api/1122/64075)
-* [QueryContractRelateShop](https://cloud.tencent.com/document/api/1122/64074)
-* [QueryMerchantClassification](https://cloud.tencent.com/document/api/1122/64073)
-* [QueryShopOpenId](https://cloud.tencent.com/document/api/1122/64072)
-* [UploadOrgFile](https://cloud.tencent.com/document/api/1122/64071)
-* [ViewContract](https://cloud.tencent.com/document/api/1122/64070)
-* [ViewMerchant](https://cloud.tencent.com/document/api/1122/64069)
-* [ViewShop](https://cloud.tencent.com/document/api/1122/64068)
+* [AddContract](https://cloud.tencent.com/document/api/#/#)
+* [AddMerchant](https://cloud.tencent.com/document/api/#/#)
+* [AddShop](https://cloud.tencent.com/document/api/#/#)
+* [DistributeAccreditQuery](https://cloud.tencent.com/document/api/#/#)
+* [DistributeAccreditTlinx](https://cloud.tencent.com/document/api/#/#)
+* [DistributeAddReceiver](https://cloud.tencent.com/document/api/#/#)
+* [DistributeApply](https://cloud.tencent.com/document/api/#/#)
+* [DistributeCancel](https://cloud.tencent.com/document/api/#/#)
+* [DistributeQuery](https://cloud.tencent.com/document/api/#/#)
+* [DistributeQueryReceiver](https://cloud.tencent.com/document/api/#/#)
+* [DistributeRemoveReceiver](https://cloud.tencent.com/document/api/#/#)
+* [DownloadOrgFile](https://cloud.tencent.com/document/api/#/#)
+* [QueryCityCode](https://cloud.tencent.com/document/api/#/#)
+* [QueryContractPayFee](https://cloud.tencent.com/document/api/#/#)
+* [QueryContractPayWayList](https://cloud.tencent.com/document/api/#/#)
+* [QueryContractRelateShop](https://cloud.tencent.com/document/api/#/#)
+* [QueryMerchantClassification](https://cloud.tencent.com/document/api/#/#)
+* [QueryShopOpenId](https://cloud.tencent.com/document/api/#/#)
+* [UploadOrgFile](https://cloud.tencent.com/document/api/#/#)
+* [ViewContract](https://cloud.tencent.com/document/api/#/#)
+* [ViewMerchant](https://cloud.tencent.com/document/api/#/#)
+* [ViewShop](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33465,8 +33404,8 @@
 
 新增接口：
 
-* [CreateAnchor](https://cloud.tencent.com/document/api/1122/63932)
-* [UploadFile](https://cloud.tencent.com/document/api/1122/63931)
+* [CreateAnchor](https://cloud.tencent.com/document/api/#/#)
+* [UploadFile](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33482,11 +33421,11 @@
 
 新增接口：
 
-* [QueryMaliciousRegistration](https://cloud.tencent.com/document/api/1122/63688)
+* [QueryMaliciousRegistration](https://cloud.tencent.com/document/api/#/#)
 
 修改接口：
 
-* [UnifiedTlinxOrder](https://cloud.tencent.com/document/api/1122/62611)
+* [UnifiedTlinxOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Royalty
 
@@ -33507,9 +33446,9 @@
 
 新增接口：
 
-* [QueryOrderStatus](https://cloud.tencent.com/document/api/1122/62613)
-* [RefundTlinxOrder](https://cloud.tencent.com/document/api/1122/62612)
-* [UnifiedTlinxOrder](https://cloud.tencent.com/document/api/1122/62611)
+* [QueryOrderStatus](https://cloud.tencent.com/document/api/#/#)
+* [RefundTlinxOrder](https://cloud.tencent.com/document/api/#/#)
+* [UnifiedTlinxOrder](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33527,7 +33466,7 @@
 
 新增接口：
 
-* [QueryMerchantPayWayList](https://cloud.tencent.com/document/api/1122/62394)
+* [QueryMerchantPayWayList](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33573,7 +33512,7 @@
 
 修改接口：
 
-* [CreateExternalAnchor](https://cloud.tencent.com/document/api/1122/60300)
+* [CreateExternalAnchor](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：AgentId
 
@@ -33588,7 +33527,7 @@
 
 新增接口：
 
-* [DownloadReconciliationUrl](https://cloud.tencent.com/document/api/1122/60690)
+* [DownloadReconciliationUrl](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 42 次发布
 
@@ -33600,10 +33539,10 @@
 
 新增接口：
 
-* [CreateBatchPayment](https://cloud.tencent.com/document/api/1122/60360)
-* [CreateSinglePayment](https://cloud.tencent.com/document/api/1122/60359)
-* [QueryBatchPaymentResult](https://cloud.tencent.com/document/api/1122/60358)
-* [QuerySinglePaymentResult](https://cloud.tencent.com/document/api/1122/60357)
+* [CreateBatchPayment](https://cloud.tencent.com/document/api/#/#)
+* [CreateSinglePayment](https://cloud.tencent.com/document/api/#/#)
+* [QueryBatchPaymentResult](https://cloud.tencent.com/document/api/#/#)
+* [QuerySinglePaymentResult](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33625,10 +33564,10 @@
 
 新增接口：
 
-* [BindAccount](https://cloud.tencent.com/document/api/1122/60301)
-* [CreateExternalAnchor](https://cloud.tencent.com/document/api/1122/60300)
-* [ModifyBindedAccount](https://cloud.tencent.com/document/api/1122/60299)
-* [UploadExternalAnchorInfo](https://cloud.tencent.com/document/api/1122/60298)
+* [BindAccount](https://cloud.tencent.com/document/api/#/#)
+* [CreateExternalAnchor](https://cloud.tencent.com/document/api/#/#)
+* [ModifyBindedAccount](https://cloud.tencent.com/document/api/#/#)
+* [UploadExternalAnchorInfo](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33644,7 +33583,7 @@
 
 新增接口：
 
-* [QueryDownloadBillURL](https://cloud.tencent.com/document/api/1122/60011)
+* [QueryDownloadBillURL](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 39 次发布
 
@@ -33656,13 +33595,13 @@
 
 新增接口：
 
-* [ConfirmOrder](https://cloud.tencent.com/document/api/1122/59520)
-* [CreateOrder](https://cloud.tencent.com/document/api/1122/59519)
-* [CreatePayMerchant](https://cloud.tencent.com/document/api/1122/59518)
-* [ModifyMerchant](https://cloud.tencent.com/document/api/1122/59517)
-* [QueryMerchant](https://cloud.tencent.com/document/api/1122/59516)
-* [QueryMerchantOrder](https://cloud.tencent.com/document/api/1122/59515)
-* [RefundOrder](https://cloud.tencent.com/document/api/1122/59514)
+* [ConfirmOrder](https://cloud.tencent.com/document/api/#/#)
+* [CreateOrder](https://cloud.tencent.com/document/api/#/#)
+* [CreatePayMerchant](https://cloud.tencent.com/document/api/#/#)
+* [ModifyMerchant](https://cloud.tencent.com/document/api/#/#)
+* [QueryMerchant](https://cloud.tencent.com/document/api/#/#)
+* [QueryMerchantOrder](https://cloud.tencent.com/document/api/#/#)
+* [RefundOrder](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 38 次发布
 
@@ -33674,11 +33613,11 @@
 
 修改接口：
 
-* [QueryContract](https://cloud.tencent.com/document/api/1122/56398)
+* [QueryContract](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MigrateMode, ContractMethod
 
-* [TerminateContract](https://cloud.tencent.com/document/api/1122/56396)
+* [TerminateContract](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：ContractMethod, MigrateMode
 
@@ -33693,15 +33632,15 @@
 
 新增接口：
 
-* [RegisterBehavior](https://cloud.tencent.com/document/api/1122/56525)
+* [RegisterBehavior](https://cloud.tencent.com/document/api/#/#)
 
 修改接口：
 
-* [BindAcct](https://cloud.tencent.com/document/api/1122/40681)
+* [BindAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：AgencyClientInfo
 
-* [CreateAcct](https://cloud.tencent.com/document/api/1122/40674)
+* [CreateAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：SubMerchantStoreName, OrganizationInfo
 
@@ -33722,10 +33661,10 @@
 
 新增接口：
 
-* [ContractOrder](https://cloud.tencent.com/document/api/1122/56399)
-* [QueryContract](https://cloud.tencent.com/document/api/1122/56398)
-* [SyncContractData](https://cloud.tencent.com/document/api/1122/56397)
-* [TerminateContract](https://cloud.tencent.com/document/api/1122/56396)
+* [ContractOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryContract](https://cloud.tencent.com/document/api/#/#)
+* [SyncContractData](https://cloud.tencent.com/document/api/#/#)
+* [TerminateContract](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33752,8 +33691,8 @@
 
 新增接口：
 
-* [UploadTaxList](https://cloud.tencent.com/document/api/1122/54761)
-* [UploadTaxPayment](https://cloud.tencent.com/document/api/1122/54760)
+* [UploadTaxList](https://cloud.tencent.com/document/api/#/#)
+* [UploadTaxPayment](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 34 次发布
 
@@ -33765,9 +33704,9 @@
 
 新增接口：
 
-* [CreateInvoiceV2](https://cloud.tencent.com/document/api/1122/54633)
-* [CreateRedInvoiceV2](https://cloud.tencent.com/document/api/1122/54632)
-* [QueryInvoiceV2](https://cloud.tencent.com/document/api/1122/54631)
+* [CreateInvoiceV2](https://cloud.tencent.com/document/api/#/#)
+* [CreateRedInvoiceV2](https://cloud.tencent.com/document/api/#/#)
+* [QueryInvoiceV2](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33784,7 +33723,7 @@
 
 修改接口：
 
-* [UnifiedOrder](https://cloud.tencent.com/document/api/1122/40649)
+* [UnifiedOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：PaymentNotifyUrl
 
@@ -33799,7 +33738,7 @@
 
 新增接口：
 
-* [QueryBillDownloadURL](https://cloud.tencent.com/document/api/1122/51793)
+* [QueryBillDownloadURL](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33815,8 +33754,8 @@
 
 新增接口：
 
-* [QueryTransferResult](https://cloud.tencent.com/document/api/1122/50920)
-* [TransferSinglePay](https://cloud.tencent.com/document/api/1122/50919)
+* [QueryTransferResult](https://cloud.tencent.com/document/api/#/#)
+* [TransferSinglePay](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33833,7 +33772,7 @@
 
 修改接口：
 
-* [UnifiedOrder](https://cloud.tencent.com/document/api/1122/40649)
+* [UnifiedOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：WxAppId, WxSubAppId
 
@@ -33848,7 +33787,7 @@
 
 修改接口：
 
-* [MigrateOrderRefund](https://cloud.tencent.com/document/api/1122/47061)
+* [MigrateOrderRefund](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：RefundReason
 
@@ -33863,9 +33802,9 @@
 
 新增接口：
 
-* [CreateTransferBatch](https://cloud.tencent.com/document/api/1122/47420)
-* [QueryTransferBatch](https://cloud.tencent.com/document/api/1122/47419)
-* [QueryTransferDetail](https://cloud.tencent.com/document/api/1122/47418)
+* [CreateTransferBatch](https://cloud.tencent.com/document/api/#/#)
+* [QueryTransferBatch](https://cloud.tencent.com/document/api/#/#)
+* [QueryTransferDetail](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -33882,8 +33821,8 @@
 
 新增接口：
 
-* [MigrateOrderRefund](https://cloud.tencent.com/document/api/1122/47061)
-* [MigrateOrderRefundQuery](https://cloud.tencent.com/document/api/1122/47060)
+* [MigrateOrderRefund](https://cloud.tencent.com/document/api/#/#)
+* [MigrateOrderRefundQuery](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 26 次发布
 
@@ -33934,7 +33873,7 @@
 
 修改接口：
 
-* [DownloadBill](https://cloud.tencent.com/document/api/1122/40672)
+* [DownloadBill](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
@@ -33949,7 +33888,7 @@
 
 修改接口：
 
-* [ApplyWithdrawal](https://cloud.tencent.com/document/api/1122/40682)
+* [ApplyWithdrawal](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：WithdrawOrderId
 
@@ -33964,7 +33903,7 @@
 
 新增接口：
 
-* [DescribeOrderStatus](https://cloud.tencent.com/document/api/1122/45963)
+* [DescribeOrderStatus](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 21 次发布
 
@@ -33976,7 +33915,7 @@
 
 修改接口：
 
-* [QueryInvoice](https://cloud.tencent.com/document/api/1122/43187)
+* [QueryInvoice](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：SellerTaxpayerNum
 
@@ -33991,12 +33930,12 @@
 
 新增接口：
 
-* [DescribeChargeDetail](https://cloud.tencent.com/document/api/1122/45630)
-* [ExecuteMemberTransaction](https://cloud.tencent.com/document/api/1122/45629)
-* [QueryAnchorContractInfo](https://cloud.tencent.com/document/api/1122/45810)
-* [RechargeByThirdPay](https://cloud.tencent.com/document/api/1122/45628)
-* [RefundMemberTransaction](https://cloud.tencent.com/document/api/1122/45627)
-* [RevokeRechargeByThirdPay](https://cloud.tencent.com/document/api/1122/45626)
+* [DescribeChargeDetail](https://cloud.tencent.com/document/api/#/#)
+* [ExecuteMemberTransaction](https://cloud.tencent.com/document/api/#/#)
+* [QueryAnchorContractInfo](https://cloud.tencent.com/document/api/#/#)
+* [RechargeByThirdPay](https://cloud.tencent.com/document/api/#/#)
+* [RefundMemberTransaction](https://cloud.tencent.com/document/api/#/#)
+* [RevokeRechargeByThirdPay](https://cloud.tencent.com/document/api/#/#)
 
 <font color="#dd0000">**删除接口**：</font>
 
@@ -34004,23 +33943,23 @@
 
 修改接口：
 
-* [ApplyWithdrawal](https://cloud.tencent.com/document/api/1122/40682)
+* [ApplyWithdrawal](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：CommissionAmount
 
-* [CreateInvoice](https://cloud.tencent.com/document/api/1122/43190)
+* [CreateInvoice](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：InvoiceChannel
 
-* [CreateRedInvoice](https://cloud.tencent.com/document/api/1122/43188)
+* [CreateRedInvoice](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：InvoiceChannel
 
-* [QueryInvoice](https://cloud.tencent.com/document/api/1122/43187)
+* [QueryInvoice](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：InvoiceChannel
 
-* [RegisterBill](https://cloud.tencent.com/document/api/1122/44397)
+* [RegisterBill](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
@@ -34039,27 +33978,27 @@
 
 修改接口：
 
-* [CloseOrder](https://cloud.tencent.com/document/api/1122/40675)
+* [CloseOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
-* [CreateInvoice](https://cloud.tencent.com/document/api/1122/43190)
+* [CreateInvoice](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：OrderDate, Discount, StoreNo
 
-* [QueryOrder](https://cloud.tencent.com/document/api/1122/40662)
+* [QueryOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
-* [QueryRefund](https://cloud.tencent.com/document/api/1122/40660)
+* [QueryRefund](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
-* [Refund](https://cloud.tencent.com/document/api/1122/40656)
+* [Refund](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
-* [UnifiedOrder](https://cloud.tencent.com/document/api/1122/40649)
+* [UnifiedOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
@@ -34081,75 +34020,75 @@
 
 修改接口：
 
-* [BindRelateAccReUnionPay](https://cloud.tencent.com/document/api/1122/40680)
+* [BindRelateAccReUnionPay](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [BindRelateAcctSmallAmount](https://cloud.tencent.com/document/api/1122/40679)
+* [BindRelateAcctSmallAmount](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [BindRelateAcctUnionPay](https://cloud.tencent.com/document/api/1122/40678)
+* [BindRelateAcctUnionPay](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [CheckAmount](https://cloud.tencent.com/document/api/1122/40676)
+* [CheckAmount](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [CreateCustAcctId](https://cloud.tencent.com/document/api/1122/40673)
+* [CreateCustAcctId](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [ModifyMntMbrBindRelateAcctBankCode](https://cloud.tencent.com/document/api/1122/40671)
+* [ModifyMntMbrBindRelateAcctBankCode](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryBankClear](https://cloud.tencent.com/document/api/1122/40669)
+* [QueryBankClear](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryBankTransactionDetails](https://cloud.tencent.com/document/api/1122/40668)
+* [QueryBankTransactionDetails](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryBankWithdrawCashDetails](https://cloud.tencent.com/document/api/1122/40667)
+* [QueryBankWithdrawCashDetails](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryCommonTransferRecharge](https://cloud.tencent.com/document/api/1122/40666)
+* [QueryCommonTransferRecharge](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryCustAcctIdBalance](https://cloud.tencent.com/document/api/1122/40665)
+* [QueryCustAcctIdBalance](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryMemberBind](https://cloud.tencent.com/document/api/1122/40664)
+* [QueryMemberBind](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryMemberTransaction](https://cloud.tencent.com/document/api/1122/40663)
+* [QueryMemberTransaction](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryReconciliationDocument](https://cloud.tencent.com/document/api/1122/40661)
+* [QueryReconciliationDocument](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QuerySingleTransactionStatus](https://cloud.tencent.com/document/api/1122/40659)
+* [QuerySingleTransactionStatus](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QuerySmallAmountTransfer](https://cloud.tencent.com/document/api/1122/40658)
+* [QuerySmallAmountTransfer](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [RechargeMemberThirdPay](https://cloud.tencent.com/document/api/1122/40657)
+* [RechargeMemberThirdPay](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [RegisterBillSupportWithdraw](https://cloud.tencent.com/document/api/1122/40655)
+* [RegisterBillSupportWithdraw](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
@@ -34157,19 +34096,19 @@
 
 	* 新增入参：Profile
 
-* [ReviseMbrProperty](https://cloud.tencent.com/document/api/1122/40653)
+* [ReviseMbrProperty](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [RevokeMemberRechargeThirdPay](https://cloud.tencent.com/document/api/1122/40652)
+* [RevokeMemberRechargeThirdPay](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [UnbindRelateAcct](https://cloud.tencent.com/document/api/1122/40650)
+* [UnbindRelateAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [WithdrawCashMembership](https://cloud.tencent.com/document/api/1122/40648)
+* [WithdrawCashMembership](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
@@ -34184,7 +34123,7 @@
 
 修改接口：
 
-* [ApplyReWithdrawal](https://cloud.tencent.com/document/api/1122/43408)
+* [ApplyReWithdrawal](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
@@ -34199,43 +34138,43 @@
 
 新增接口：
 
-* [QueryAgentStatements](https://cloud.tencent.com/document/api/1122/44968)
+* [QueryAgentStatements](https://cloud.tencent.com/document/api/#/#)
 
 修改接口：
 
-* [ApplyWithdrawal](https://cloud.tencent.com/document/api/1122/40682)
+* [ApplyWithdrawal](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：EncryptType, MidasEnvironment
 
-* [BindAcct](https://cloud.tencent.com/document/api/1122/40681)
+* [BindAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
-* [CheckAcct](https://cloud.tencent.com/document/api/1122/40677)
+* [CheckAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：EncryptType, MidasEnvironment
 
-* [CreateAcct](https://cloud.tencent.com/document/api/1122/40674)
+* [CreateAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
-* [QueryAcctBinding](https://cloud.tencent.com/document/api/1122/42434)
+* [QueryAcctBinding](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：EncryptType, MidasEnvironment
 
-* [QueryAcctInfo](https://cloud.tencent.com/document/api/1122/43407)
+* [QueryAcctInfo](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：EncryptType, MidasEnvironment
 
-* [QueryAcctInfoList](https://cloud.tencent.com/document/api/1122/43406)
+* [QueryAcctInfoList](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：EncryptType, MidasEnvironment
 
-* [QueryBalance](https://cloud.tencent.com/document/api/1122/40670)
+* [QueryBalance](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：MidasEnvironment
 
-* [UnBindAcct](https://cloud.tencent.com/document/api/1122/40651)
+* [UnBindAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：EncryptType, MidasEnvironment
 
@@ -34250,7 +34189,7 @@
 
 新增接口：
 
-* [QueryMerchantInfoForManagement](https://cloud.tencent.com/document/api/1122/45631)
+* [QueryMerchantInfoForManagement](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -34267,11 +34206,11 @@
 
 修改接口：
 
-* [BindAcct](https://cloud.tencent.com/document/api/1122/40681)
+* [BindAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：EncryptType
 
-* [CreateAcct](https://cloud.tencent.com/document/api/1122/40674)
+* [CreateAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：SubMerchantKey, SubMerchantPrivateKey, EncryptType, SubAcctNo
 
@@ -34286,7 +34225,7 @@
 
 新增接口：
 
-* [RegisterBill](https://cloud.tencent.com/document/api/1122/44397)
+* [RegisterBill](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 12 次发布
 
@@ -34298,19 +34237,19 @@
 
 修改接口：
 
-* [CreateAgentTaxPaymentInfos](https://cloud.tencent.com/document/api/1122/44272)
+* [CreateAgentTaxPaymentInfos](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [DeleteAgentTaxPaymentInfo](https://cloud.tencent.com/document/api/1122/44684)
+* [DeleteAgentTaxPaymentInfo](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [ModifyAgentTaxPaymentInfo](https://cloud.tencent.com/document/api/1122/44275)
+* [ModifyAgentTaxPaymentInfo](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
-* [QueryAgentTaxPaymentBatch](https://cloud.tencent.com/document/api/1122/44274)
+* [QueryAgentTaxPaymentBatch](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：Profile
 
@@ -34325,11 +34264,11 @@
 
 新增接口：
 
-* [CreateAgentTaxPaymentInfos](https://cloud.tencent.com/document/api/1122/44272)
-* [DeleteAgentTaxPaymentInfo](https://cloud.tencent.com/document/api/1122/44684)
-* [DeleteAgentTaxPaymentInfos](https://cloud.tencent.com/document/api/1122/44276)
-* [ModifyAgentTaxPaymentInfo](https://cloud.tencent.com/document/api/1122/44275)
-* [QueryAgentTaxPaymentBatch](https://cloud.tencent.com/document/api/1122/44274)
+* [CreateAgentTaxPaymentInfos](https://cloud.tencent.com/document/api/#/#)
+* [DeleteAgentTaxPaymentInfo](https://cloud.tencent.com/document/api/#/#)
+* [DeleteAgentTaxPaymentInfos](https://cloud.tencent.com/document/api/#/#)
+* [ModifyAgentTaxPaymentInfo](https://cloud.tencent.com/document/api/#/#)
+* [QueryAgentTaxPaymentBatch](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -34346,7 +34285,7 @@
 
 修改接口：
 
-* [CreateInvoice](https://cloud.tencent.com/document/api/1122/43190)
+* [CreateInvoice](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：UndoPart
 
@@ -34381,16 +34320,16 @@
 
 新增接口：
 
-* [ApplyApplicationMaterial](https://cloud.tencent.com/document/api/1122/43524)
-* [ApplyOutwardOrder](https://cloud.tencent.com/document/api/1122/43523)
-* [ApplyPayerInfo](https://cloud.tencent.com/document/api/1122/43522)
-* [ApplyTrade](https://cloud.tencent.com/document/api/1122/43521)
-* [QueryApplicationMaterial](https://cloud.tencent.com/document/api/1122/43520)
-* [QueryExchangeRate](https://cloud.tencent.com/document/api/1122/43519)
-* [QueryMerchantBalance](https://cloud.tencent.com/document/api/1122/43518)
-* [QueryOutwardOrder](https://cloud.tencent.com/document/api/1122/43517)
-* [QueryPayerInfo](https://cloud.tencent.com/document/api/1122/43516)
-* [QueryTrade](https://cloud.tencent.com/document/api/1122/43515)
+* [ApplyApplicationMaterial](https://cloud.tencent.com/document/api/#/#)
+* [ApplyOutwardOrder](https://cloud.tencent.com/document/api/#/#)
+* [ApplyPayerInfo](https://cloud.tencent.com/document/api/#/#)
+* [ApplyTrade](https://cloud.tencent.com/document/api/#/#)
+* [QueryApplicationMaterial](https://cloud.tencent.com/document/api/#/#)
+* [QueryExchangeRate](https://cloud.tencent.com/document/api/#/#)
+* [QueryMerchantBalance](https://cloud.tencent.com/document/api/#/#)
+* [QueryOutwardOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryPayerInfo](https://cloud.tencent.com/document/api/#/#)
+* [QueryTrade](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -34425,9 +34364,9 @@
 
 新增接口：
 
-* [ApplyReWithdrawal](https://cloud.tencent.com/document/api/1122/43408)
-* [QueryAcctInfo](https://cloud.tencent.com/document/api/1122/43407)
-* [QueryAcctInfoList](https://cloud.tencent.com/document/api/1122/43406)
+* [ApplyReWithdrawal](https://cloud.tencent.com/document/api/#/#)
+* [QueryAcctInfo](https://cloud.tencent.com/document/api/#/#)
+* [QueryAcctInfoList](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -34444,17 +34383,17 @@
 
 新增接口：
 
-* [CreateInvoice](https://cloud.tencent.com/document/api/1122/43190)
-* [CreateMerchant](https://cloud.tencent.com/document/api/1122/43189)
-* [CreateRedInvoice](https://cloud.tencent.com/document/api/1122/43188)
-* [QueryInvoice](https://cloud.tencent.com/document/api/1122/43187)
+* [CreateInvoice](https://cloud.tencent.com/document/api/#/#)
+* [CreateMerchant](https://cloud.tencent.com/document/api/#/#)
+* [CreateRedInvoice](https://cloud.tencent.com/document/api/#/#)
+* [QueryInvoice](https://cloud.tencent.com/document/api/#/#)
 * [QueryInvoiceForManagement](https://cloud.tencent.com/document/api/1122/43186)
-* [QueryMerchantInfoForManagement](https://cloud.tencent.com/document/api/1122/45631)
+* [QueryMerchantInfoForManagement](https://cloud.tencent.com/document/api/#/#)
 * [RevResigterBillSupportWithdraw](https://cloud.tencent.com/document/api/1122/40654)
 
 修改接口：
 
-* [CreateAcct](https://cloud.tencent.com/document/api/1122/40674)
+* [CreateAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：SubMerchantMemberType
 
@@ -34486,7 +34425,7 @@
 
 修改接口：
 
-* [Refund](https://cloud.tencent.com/document/api/1122/40656)
+* [Refund](https://cloud.tencent.com/document/api/#/#)
 
 	* <font color="#dd0000">**修改入参**：</font>SubOrderRefundList
 
@@ -34501,7 +34440,7 @@
 
 修改接口：
 
-* [UnifiedOrder](https://cloud.tencent.com/document/api/1122/40649)
+* [UnifiedOrder](https://cloud.tencent.com/document/api/#/#)
 
 	* <font color="#dd0000">**修改入参**：</font>SubOrderList
 
@@ -34516,11 +34455,11 @@
 
 修改接口：
 
-* [CreateAcct](https://cloud.tencent.com/document/api/1122/40674)
+* [CreateAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* <font color="#dd0000">**删除入参**：</font>PlatformId
 
-* [QueryAcctBinding](https://cloud.tencent.com/document/api/1122/42434)
+* [QueryAcctBinding](https://cloud.tencent.com/document/api/#/#)
 
 	* <font color="#dd0000">**删除入参**：</font>PlatformId
 
@@ -34535,11 +34474,11 @@
 
 新增接口：
 
-* [QueryAcctBinding](https://cloud.tencent.com/document/api/1122/42434)
+* [QueryAcctBinding](https://cloud.tencent.com/document/api/#/#)
 
 修改接口：
 
-* [CreateAcct](https://cloud.tencent.com/document/api/1122/40674)
+* [CreateAcct](https://cloud.tencent.com/document/api/#/#)
 
 	* 新增入参：PlatformId
 
@@ -34558,41 +34497,41 @@
 
 新增接口：
 
-* [ApplyWithdrawal](https://cloud.tencent.com/document/api/1122/40682)
-* [BindAcct](https://cloud.tencent.com/document/api/1122/40681)
-* [BindRelateAccReUnionPay](https://cloud.tencent.com/document/api/1122/40680)
-* [BindRelateAcctSmallAmount](https://cloud.tencent.com/document/api/1122/40679)
-* [BindRelateAcctUnionPay](https://cloud.tencent.com/document/api/1122/40678)
-* [CheckAcct](https://cloud.tencent.com/document/api/1122/40677)
-* [CheckAmount](https://cloud.tencent.com/document/api/1122/40676)
-* [CloseOrder](https://cloud.tencent.com/document/api/1122/40675)
-* [CreateAcct](https://cloud.tencent.com/document/api/1122/40674)
-* [CreateCustAcctId](https://cloud.tencent.com/document/api/1122/40673)
-* [DownloadBill](https://cloud.tencent.com/document/api/1122/40672)
-* [ModifyMntMbrBindRelateAcctBankCode](https://cloud.tencent.com/document/api/1122/40671)
-* [QueryBalance](https://cloud.tencent.com/document/api/1122/40670)
-* [QueryBankClear](https://cloud.tencent.com/document/api/1122/40669)
-* [QueryBankTransactionDetails](https://cloud.tencent.com/document/api/1122/40668)
-* [QueryBankWithdrawCashDetails](https://cloud.tencent.com/document/api/1122/40667)
-* [QueryCommonTransferRecharge](https://cloud.tencent.com/document/api/1122/40666)
-* [QueryCustAcctIdBalance](https://cloud.tencent.com/document/api/1122/40665)
-* [QueryMemberBind](https://cloud.tencent.com/document/api/1122/40664)
-* [QueryMemberTransaction](https://cloud.tencent.com/document/api/1122/40663)
-* [QueryOrder](https://cloud.tencent.com/document/api/1122/40662)
-* [QueryReconciliationDocument](https://cloud.tencent.com/document/api/1122/40661)
-* [QueryRefund](https://cloud.tencent.com/document/api/1122/40660)
-* [QuerySingleTransactionStatus](https://cloud.tencent.com/document/api/1122/40659)
-* [QuerySmallAmountTransfer](https://cloud.tencent.com/document/api/1122/40658)
-* [RechargeMemberThirdPay](https://cloud.tencent.com/document/api/1122/40657)
-* [Refund](https://cloud.tencent.com/document/api/1122/40656)
-* [RegisterBillSupportWithdraw](https://cloud.tencent.com/document/api/1122/40655)
+* [ApplyWithdrawal](https://cloud.tencent.com/document/api/#/#)
+* [BindAcct](https://cloud.tencent.com/document/api/#/#)
+* [BindRelateAccReUnionPay](https://cloud.tencent.com/document/api/#/#)
+* [BindRelateAcctSmallAmount](https://cloud.tencent.com/document/api/#/#)
+* [BindRelateAcctUnionPay](https://cloud.tencent.com/document/api/#/#)
+* [CheckAcct](https://cloud.tencent.com/document/api/#/#)
+* [CheckAmount](https://cloud.tencent.com/document/api/#/#)
+* [CloseOrder](https://cloud.tencent.com/document/api/#/#)
+* [CreateAcct](https://cloud.tencent.com/document/api/#/#)
+* [CreateCustAcctId](https://cloud.tencent.com/document/api/#/#)
+* [DownloadBill](https://cloud.tencent.com/document/api/#/#)
+* [ModifyMntMbrBindRelateAcctBankCode](https://cloud.tencent.com/document/api/#/#)
+* [QueryBalance](https://cloud.tencent.com/document/api/#/#)
+* [QueryBankClear](https://cloud.tencent.com/document/api/#/#)
+* [QueryBankTransactionDetails](https://cloud.tencent.com/document/api/#/#)
+* [QueryBankWithdrawCashDetails](https://cloud.tencent.com/document/api/#/#)
+* [QueryCommonTransferRecharge](https://cloud.tencent.com/document/api/#/#)
+* [QueryCustAcctIdBalance](https://cloud.tencent.com/document/api/#/#)
+* [QueryMemberBind](https://cloud.tencent.com/document/api/#/#)
+* [QueryMemberTransaction](https://cloud.tencent.com/document/api/#/#)
+* [QueryOrder](https://cloud.tencent.com/document/api/#/#)
+* [QueryReconciliationDocument](https://cloud.tencent.com/document/api/#/#)
+* [QueryRefund](https://cloud.tencent.com/document/api/#/#)
+* [QuerySingleTransactionStatus](https://cloud.tencent.com/document/api/#/#)
+* [QuerySmallAmountTransfer](https://cloud.tencent.com/document/api/#/#)
+* [RechargeMemberThirdPay](https://cloud.tencent.com/document/api/#/#)
+* [Refund](https://cloud.tencent.com/document/api/#/#)
+* [RegisterBillSupportWithdraw](https://cloud.tencent.com/document/api/#/#)
 * [RevRegisterBillSupportWithdraw](https://cloud.tencent.com/document/api/1122/40654)
-* [ReviseMbrProperty](https://cloud.tencent.com/document/api/1122/40653)
-* [RevokeMemberRechargeThirdPay](https://cloud.tencent.com/document/api/1122/40652)
-* [UnBindAcct](https://cloud.tencent.com/document/api/1122/40651)
-* [UnbindRelateAcct](https://cloud.tencent.com/document/api/1122/40650)
-* [UnifiedOrder](https://cloud.tencent.com/document/api/1122/40649)
-* [WithdrawCashMembership](https://cloud.tencent.com/document/api/1122/40648)
+* [ReviseMbrProperty](https://cloud.tencent.com/document/api/#/#)
+* [RevokeMemberRechargeThirdPay](https://cloud.tencent.com/document/api/#/#)
+* [UnBindAcct](https://cloud.tencent.com/document/api/#/#)
+* [UnbindRelateAcct](https://cloud.tencent.com/document/api/#/#)
+* [UnifiedOrder](https://cloud.tencent.com/document/api/#/#)
+* [WithdrawCashMembership](https://cloud.tencent.com/document/api/#/#)
 
 新增数据结构：
 
@@ -34937,6 +34876,45 @@
 
 ## 云安全一体化平台(csip) 版本：2022-11-21
 
+### 第 20 次发布
+
+发布时间：2023-11-03 01:10:39
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeTaskLogList](https://cloud.tencent.com/document/api/664/97682)
+
+	* 新增出参：ReportTemplateNumber
+
+
+修改数据结构：
+
+* [TaskLogInfo](https://cloud.tencent.com/document/api/664/90825#TaskLogInfo)
+
+	* 新增成员：ReportType, TemplateId
+
+	* <font color="#dd0000">**修改成员**：</font>TaskLogName, TaskLogId, AssetsNumber, RiskNumber, Time, Status, TaskName, StartTime, TaskCenterTaskId, AppId, UIN, UserName
+
+
+### 第 19 次发布
+
+发布时间：2023-10-31 01:30:05
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [VULRiskAdvanceCFGList](https://cloud.tencent.com/document/api/664/90825#VULRiskAdvanceCFGList)
+
+	* 新增成员：RiskId
+
+
 ### 第 18 次发布
 
 发布时间：2023-10-30 00:24:02
@@ -34947,11 +34925,11 @@
 
 新增接口：
 
-* [[DescribeVULRiskAdvanceCFGList](https://cloud.tencent.com/document/api/664/100951)](https://cloud.tencent.com/document/api/#/#)
+* [DescribeVULRiskAdvanceCFGList](https://cloud.tencent.com/document/api/664/100951)
 
 新增数据结构：
 
-* [[VULRiskAdvanceCFGList](https://cloud.tencent.com/document/api/664/90825#VULRiskAdvanceCFGList)](https://cloud.tencent.com/document/api/664/90825#[VULRiskAdvanceCFGList](https://cloud.tencent.com/document/api/664/90825#VULRiskAdvanceCFGList))
+* [VULRiskAdvanceCFGList](https://cloud.tencent.com/document/api/664/90825#VULRiskAdvanceCFGList)
 
 ### 第 17 次发布
 
@@ -47884,6 +47862,25 @@
 
 ## DNSPod(dnspod) 版本：2021-03-23
 
+### 第 26 次发布
+
+发布时间：2023-11-03 01:13:17
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [CreateDomainCustomLine](https://cloud.tencent.com/document/api/1427/101085)
+* [DeleteDomainCustomLine](https://cloud.tencent.com/document/api/1427/101084)
+* [DescribeDomainCustomLineList](https://cloud.tencent.com/document/api/1427/101083)
+* [ModifyDomainCustomLine](https://cloud.tencent.com/document/api/1427/101082)
+
+新增数据结构：
+
+* [CustomLineInfo](https://cloud.tencent.com/document/api/1427/56185#CustomLineInfo)
+
 ### 第 25 次发布
 
 发布时间：2023-10-26 01:13:41
@@ -48858,6 +48855,18 @@
 
 
 ## 数字版权管理(drm) 版本：2018-11-15
+
+### 第 5 次发布
+
+发布时间：2023-11-02 01:38:44
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeDRMLicense](https://cloud.tencent.com/document/api/1000/101057)
 
 ### 第 4 次发布
 
@@ -54479,22 +54488,22 @@
 
 新增接口：
 
-* [[DescribeDiagnose](https://cloud.tencent.com/document/api/845/100954)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeInstancePluginList](https://cloud.tencent.com/document/api/845/100953)](https://cloud.tencent.com/document/api/#/#)
-* [[GetDiagnoseSettings](https://cloud.tencent.com/document/api/845/100952)](https://cloud.tencent.com/document/api/#/#)
+* [DescribeDiagnose](https://cloud.tencent.com/document/api/845/100954)
+* [DescribeInstancePluginList](https://cloud.tencent.com/document/api/845/100953)
+* [GetDiagnoseSettings](https://cloud.tencent.com/document/api/845/100952)
 
 新增数据结构：
 
-* [[DescribeInstancePluginInfo](https://cloud.tencent.com/document/api/845/30634#DescribeInstancePluginInfo)](https://cloud.tencent.com/document/api/845/30634#[DescribeInstancePluginInfo](https://cloud.tencent.com/document/api/845/30634#DescribeInstancePluginInfo))
-* [[DiagnoseJobMeta](https://cloud.tencent.com/document/api/845/30634#DiagnoseJobMeta)](https://cloud.tencent.com/document/api/845/30634#[DiagnoseJobMeta](https://cloud.tencent.com/document/api/845/30634#DiagnoseJobMeta))
-* [[DiagnoseJobResult](https://cloud.tencent.com/document/api/845/30634#DiagnoseJobResult)](https://cloud.tencent.com/document/api/845/30634#[DiagnoseJobResult](https://cloud.tencent.com/document/api/845/30634#DiagnoseJobResult))
-* [[DiagnoseResult](https://cloud.tencent.com/document/api/845/30634#DiagnoseResult)](https://cloud.tencent.com/document/api/845/30634#[DiagnoseResult](https://cloud.tencent.com/document/api/845/30634#DiagnoseResult))
-* [[Dimension](https://cloud.tencent.com/document/api/845/30634#Dimension)](https://cloud.tencent.com/document/api/845/30634#[Dimension](https://cloud.tencent.com/document/api/845/30634#Dimension))
-* [[JobParam](https://cloud.tencent.com/document/api/845/30634#JobParam)](https://cloud.tencent.com/document/api/845/30634#[JobParam](https://cloud.tencent.com/document/api/845/30634#JobParam))
-* [[LogDetail](https://cloud.tencent.com/document/api/845/30634#LogDetail)](https://cloud.tencent.com/document/api/845/30634#[LogDetail](https://cloud.tencent.com/document/api/845/30634#LogDetail))
-* [[Metric](https://cloud.tencent.com/document/api/845/30634#Metric)](https://cloud.tencent.com/document/api/845/30634#[Metric](https://cloud.tencent.com/document/api/845/30634#Metric))
-* [[MetricDetail](https://cloud.tencent.com/document/api/845/30634#MetricDetail)](https://cloud.tencent.com/document/api/845/30634#[MetricDetail](https://cloud.tencent.com/document/api/845/30634#MetricDetail))
-* [[SettingDetail](https://cloud.tencent.com/document/api/845/30634#SettingDetail)](https://cloud.tencent.com/document/api/845/30634#[SettingDetail](https://cloud.tencent.com/document/api/845/30634#SettingDetail))
+* [DescribeInstancePluginInfo](https://cloud.tencent.com/document/api/845/30634#DescribeInstancePluginInfo)
+* [DiagnoseJobMeta](https://cloud.tencent.com/document/api/845/30634#DiagnoseJobMeta)
+* [DiagnoseJobResult](https://cloud.tencent.com/document/api/845/30634#DiagnoseJobResult)
+* [DiagnoseResult](https://cloud.tencent.com/document/api/845/30634#DiagnoseResult)
+* [Dimension](https://cloud.tencent.com/document/api/845/30634#Dimension)
+* [JobParam](https://cloud.tencent.com/document/api/845/30634#JobParam)
+* [LogDetail](https://cloud.tencent.com/document/api/845/30634#LogDetail)
+* [Metric](https://cloud.tencent.com/document/api/845/30634#Metric)
+* [MetricDetail](https://cloud.tencent.com/document/api/845/30634#MetricDetail)
+* [SettingDetail](https://cloud.tencent.com/document/api/845/30634#SettingDetail)
 
 ### 第 48 次发布
 
@@ -55558,6 +55567,18 @@
 
 
 ## 腾讯电子签企业版(ess) 版本：2020-11-11
+
+### 第 132 次发布
+
+发布时间：2023-11-02 01:44:45
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [CreateBatchQuickSignUrl](https://cloud.tencent.com/document/api/1323/101058)
 
 ### 第 131 次发布
 
@@ -58127,6 +58148,81 @@
 
 
 ## 腾讯电子签（基础版）(essbasic) 版本：2021-05-26
+
+### 第 127 次发布
+
+发布时间：2023-11-07 01:42:44
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [FlowApproverUrlInfo](https://cloud.tencent.com/document/api/1420/61525#FlowApproverUrlInfo)
+
+	* <font color="#dd0000">**修改成员**：</font>LongUrl
+
+
+### 第 126 次发布
+
+发布时间：2023-11-06 00:09:55
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [FlowDetailInfo](https://cloud.tencent.com/document/api/1420/61525#FlowDetailInfo)
+
+	* <font color="#dd0000">**修改成员**：</font>CcInfos, NeedCreateReview
+
+* [ReleasedApprover](https://cloud.tencent.com/document/api/1420/61525#ReleasedApprover)
+
+	* <font color="#dd0000">**修改成员**：</font>OrganizationName
+
+
+### 第 125 次发布
+
+发布时间：2023-11-03 01:15:04
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [ChannelCreateReleaseFlow](https://cloud.tencent.com/document/api/1420/83461)
+
+	* 新增入参：UserData
+
+
+### 第 124 次发布
+
+发布时间：2023-11-02 01:45:47
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [ChannelCreateBatchQuickSignUrl](https://cloud.tencent.com/document/api/1420/101059)
+
+修改接口：
+
+* [DescribeTemplates](https://cloud.tencent.com/document/api/1420/61521)
+
+	* 新增入参：TemplateIds
+
+
+修改数据结构：
+
+* [ApproverOption](https://cloud.tencent.com/document/api/1420/61525#ApproverOption)
+
+	* 新增成员：NoRefuse
+
 
 ### 第 123 次发布
 
@@ -70167,6 +70263,21 @@
 
 ## 物联网智能视频服务(iotvideo) 版本：2021-11-25
 
+### 第 22 次发布
+
+发布时间：2023-10-31 01:58:13
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [GenerateSignedVideoURL](https://cloud.tencent.com/document/api/1131/77494)
+
+	* 新增入参：ChannelId
+
+
 ### 第 21 次发布
 
 发布时间：2023-10-25 01:19:12
@@ -73486,6 +73597,19 @@
 
 
 ## 轻量应用服务器(lighthouse) 版本：2020-03-24
+
+### 第 55 次发布
+
+发布时间：2023-11-07 01:54:12
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[CancelShareBlueprintAcrossAccounts](https://cloud.tencent.com/document/api/1207/101339)](https://cloud.tencent.com/document/api/#/#)
+* [[ShareBlueprintAcrossAccounts](https://cloud.tencent.com/document/api/1207/101338)](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 54 次发布
 
@@ -83844,6 +83968,19 @@
 
 ## 医疗报告结构化(mrs) 版本：2020-09-10
 
+### 第 19 次发布
+
+发布时间：2023-11-01 01:18:18
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [TurnPDFToObjectAsync](https://cloud.tencent.com/document/api/1314/101007)
+* [TurnPDFToObjectAsyncGetResult](https://cloud.tencent.com/document/api/1314/101006)
+
 ### 第 18 次发布
 
 发布时间：2023-10-23 00:16:02
@@ -86494,6 +86631,32 @@
 
 ## 文字识别(ocr) 版本：2018-11-19
 
+### 第 115 次发布
+
+发布时间：2023-10-31 02:11:36
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [RecognizeGeneralInvoice](https://cloud.tencent.com/document/api/866/90802)
+
+	* 新增入参：EnableItemPolygon
+
+
+新增数据结构：
+
+* [ItemPolygonInfo](https://cloud.tencent.com/document/api/866/33527#ItemPolygonInfo)
+
+修改数据结构：
+
+* [InvoiceItem](https://cloud.tencent.com/document/api/866/33527#InvoiceItem)
+
+	* 新增成员：ItemPolygon
+
+
 ### 第 114 次发布
 
 发布时间：2023-10-30 01:04:20
@@ -88707,13 +88870,13 @@
 
 新增接口：
 
-* [[GetRunMetadataFile](https://cloud.tencent.com/document/api/1643/100858)](https://cloud.tencent.com/document/api/#/#)
-* [[RunWorkflow](https://cloud.tencent.com/document/api/1643/100857)](https://cloud.tencent.com/document/api/#/#)
-* [[TerminateRunGroup](https://cloud.tencent.com/document/api/1643/100856)](https://cloud.tencent.com/document/api/#/#)
+* [GetRunMetadataFile](https://cloud.tencent.com/document/api/1643/100858)
+* [RunWorkflow](https://cloud.tencent.com/document/api/1643/100857)
+* [TerminateRunGroup](https://cloud.tencent.com/document/api/1643/100856)
 
 新增数据结构：
 
-* [[GitInfo](https://cloud.tencent.com/document/api/1643/89100#GitInfo)](https://cloud.tencent.com/document/api/1643/89100#[GitInfo](https://cloud.tencent.com/document/api/1643/89100#GitInfo))
+* [GitInfo](https://cloud.tencent.com/document/api/1643/89100#GitInfo)
 
 修改数据结构：
 
@@ -91509,6 +91672,21 @@
 
 
 ## 全栈式风控引擎(rce) 版本：2020-11-03
+
+### 第 8 次发布
+
+发布时间：2023-10-31 02:15:24
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [OutputManageMarketingRiskValue](https://cloud.tencent.com/document/api/1343/52566#OutputManageMarketingRiskValue)
+
+	* 新增成员：RiskInformation
+
 
 ### 第 7 次发布
 
@@ -95982,6 +96160,46 @@
 
 
 ## 云数据库 SQL Server(sqlserver) 版本：2018-03-28
+
+### 第 53 次发布
+
+发布时间：2023-11-06 00:18:16
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeSlowlogs](https://cloud.tencent.com/document/api/238/19936)
+
+	* 新增出参：SlowLogs
+
+* [DescribeUploadBackupInfo](https://cloud.tencent.com/document/api/238/53185)
+
+	* 新增出参：CosSecurityToken
+
+* [DescribeUploadIncrementalInfo](https://cloud.tencent.com/document/api/238/53184)
+
+	* 新增出参：CosSecurityToken
+
+* [ModifyBackupStrategy](https://cloud.tencent.com/document/api/238/46288)
+
+	* 新增出参：Code
+
+
+新增数据结构：
+
+* [SlowLog](https://cloud.tencent.com/document/api/238/19976#SlowLog)
+
+修改数据结构：
+
+* [DbNormalDetail](https://cloud.tencent.com/document/api/238/19976#DbNormalDetail)
+
+	* 新增成员：IsFullTextEnabled
+
+	* <font color="#dd0000">**修改成员**：</font>CreateTime
+
 
 ### 第 52 次发布
 
@@ -105265,6 +105483,43 @@
 
 ## 容器安全服务(tcss) 版本：2020-11-01
 
+### 第 54 次发布
+
+发布时间：2023-11-01 01:21:35
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeAssetImageRegistryDetail](https://cloud.tencent.com/document/api/1285/65501)
+
+	* 新增出参：Id
+
+
+### 第 53 次发布
+
+发布时间：2023-10-31 02:25:36
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeEscapeEventDetail](https://cloud.tencent.com/document/api/1285/65538)
+
+	* 新增入参：EventType
+
+
+修改数据结构：
+
+* [CompliancePolicyItemSummary](https://cloud.tencent.com/document/api/1285/65614#CompliancePolicyItemSummary)
+
+	* 新增成员：Description, AuditProcedure
+
+
 ### 第 52 次发布
 
 发布时间：2023-09-22 02:29:25
@@ -107537,6 +107792,85 @@
 
 
 ## 消息队列 TDMQ(tdmq) 版本：2020-02-17
+
+### 第 87 次发布
+
+发布时间：2023-11-06 00:20:48
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeMsgTrace](https://cloud.tencent.com/document/api/1179/101114)
+
+新增数据结构：
+
+* [ConsumerLog](https://cloud.tencent.com/document/api/1179/46089#ConsumerLog)
+* [ConsumerLogs](https://cloud.tencent.com/document/api/1179/46089#ConsumerLogs)
+* [ProducerLog](https://cloud.tencent.com/document/api/1179/46089#ProducerLog)
+* [ServerLog](https://cloud.tencent.com/document/api/1179/46089#ServerLog)
+
+### 第 86 次发布
+
+发布时间：2023-11-03 01:22:53
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeTopicMsgs](https://cloud.tencent.com/document/api/1179/101086)
+
+新增数据结构：
+
+* [MsgLog](https://cloud.tencent.com/document/api/1179/46089#MsgLog)
+
+### 第 85 次发布
+
+发布时间：2023-11-02 02:24:43
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeRocketMQConsumeStats](https://cloud.tencent.com/document/api/1179/101060)
+* [VerifyRocketMQConsume](https://cloud.tencent.com/document/api/1179/101061)
+
+新增数据结构：
+
+* [ConsumerStats](https://cloud.tencent.com/document/api/1179/46089#ConsumerStats)
+
+### 第 84 次发布
+
+发布时间：2023-11-01 01:22:25
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [RabbitMQClusterInfo](https://cloud.tencent.com/document/api/1179/46089#RabbitMQClusterInfo)
+
+	* 新增成员：AutoRenewFlag, MirrorQueuePolicyFlag
+
+
+### 第 83 次发布
+
+发布时间：2023-10-31 02:29:08
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeRocketMQSubscriptions](https://cloud.tencent.com/document/api/1179/100975)
 
 ### 第 82 次发布
 
@@ -111681,6 +112015,21 @@
 
 ## 边缘安全加速平台(teo) 版本：2022-09-01
 
+### 第 62 次发布
+
+发布时间：2023-11-01 11:21:19
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [OriginGroup](https://cloud.tencent.com/document/api/1552/80721#OriginGroup)
+
+	* 新增成员：HostHeader
+
+
 ### 第 61 次发布
 
 发布时间：2023-10-27 10:26:11
@@ -111691,7 +112040,7 @@
 
 新增接口：
 
-* [[BindSecurityTemplateToEntity](https://cloud.tencent.com/document/api/1552/100814)](https://cloud.tencent.com/document/api/#/#)
+* [BindSecurityTemplateToEntity](https://cloud.tencent.com/document/api/1552/100814)
 
 ### 第 60 次发布
 
@@ -113915,6 +114264,21 @@
 
 ## 高性能计算平台(thpc) 版本：2023-03-21
 
+### 第 13 次发布
+
+发布时间：2023-11-06 00:21:33
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [ManagerNode](https://cloud.tencent.com/document/api/1527/89579#ManagerNode)
+
+	* 新增成员：EnhancedService
+
+
 ### 第 12 次发布
 
 发布时间：2023-09-21 06:17:00
@@ -115573,6 +115937,64 @@
 
 ## TI-ONE 训练平台(tione) 版本：2021-11-11
 
+### 第 41 次发布
+
+发布时间：2023-11-07 02:22:04
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeTrainingTaskPods](https://cloud.tencent.com/document/api/851/75088)
+
+	* <font color="#dd0000">**修改出参**：</font>PodInfoList
+
+
+### 第 40 次发布
+
+发布时间：2023-11-03 01:24:08
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增数据结构：
+
+* [CrossTenantENIInfo](https://cloud.tencent.com/document/api/851/75051#CrossTenantENIInfo)
+
+修改数据结构：
+
+* [Container](https://cloud.tencent.com/document/api/851/75051#Container)
+
+	* <font color="#dd0000">**修改成员**：</font>Name, ContainerId, Image, Status
+
+* [ContainerStatus](https://cloud.tencent.com/document/api/851/75051#ContainerStatus)
+
+	* <font color="#dd0000">**修改成员**：</font>RestartCount, State, Ready, Reason, Message
+
+* [Pod](https://cloud.tencent.com/document/api/851/75051#Pod)
+
+	* 新增成员：CrossTenantENIInfo
+
+
+### 第 39 次发布
+
+发布时间：2023-11-01 01:23:17
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeBillingResourceInstanceRunningJobs](https://cloud.tencent.com/document/api/851/101008)
+
+新增数据结构：
+
+* [ResourceInstanceRunningJobInfo](https://cloud.tencent.com/document/api/851/75051#ResourceInstanceRunningJobInfo)
+
 ### 第 38 次发布
 
 发布时间：2023-09-22 02:38:16
@@ -116620,6 +117042,47 @@
 
 
 ## 互动白板(tiw) 版本：2019-09-19
+
+### 第 36 次发布
+
+发布时间：2023-11-01 01:23:35
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribePPTCheck](https://cloud.tencent.com/document/api/1137/90053)
+
+	* 新增出参：Errs
+
+
+修改数据结构：
+
+* [PPTErr](https://cloud.tencent.com/document/api/1137/40068#PPTErr)
+
+	* <font color="#dd0000">**修改成员**：</font>Name, Type, Detail
+
+
+### 第 35 次发布
+
+发布时间：2023-10-31 02:34:57
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [StartOnlineRecord](https://cloud.tencent.com/document/api/1137/40063)
+
+	* 新增入参：TRTCRoomId, TRTCRoomIdStr
+
+* [StartWhiteboardPush](https://cloud.tencent.com/document/api/1137/52081)
+
+	* 新增入参：GroupId
+
 
 ### 第 34 次发布
 
@@ -131871,6 +132334,57 @@
 
 ## 私有网络(vpc) 版本：2017-03-12
 
+### 第 178 次发布
+
+发布时间：2023-11-02 02:40:08
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [BandwidthPackage](https://cloud.tencent.com/document/api/215/15824#BandwidthPackage)
+
+	* 新增成员：Deadline
+
+
+### 第 177 次发布
+
+发布时间：2023-10-31 02:45:47
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateCustomerGateway](https://cloud.tencent.com/document/api/215/17523)
+
+	* 新增入参：BgpAsn
+
+* [CreateVpnConnection](https://cloud.tencent.com/document/api/215/17522)
+
+	* 新增入参：Route, BgpConfig
+
+
+新增数据结构：
+
+* [BgpConfig](https://cloud.tencent.com/document/api/215/15824#BgpConfig)
+* [BgpConfigAndAsn](https://cloud.tencent.com/document/api/215/15824#BgpConfigAndAsn)
+* [CreateVpnConnRoute](https://cloud.tencent.com/document/api/215/15824#CreateVpnConnRoute)
+
+修改数据结构：
+
+* [CustomerGateway](https://cloud.tencent.com/document/api/215/15824#CustomerGateway)
+
+	* 新增成员：BgpAsn
+
+* [VpnConnection](https://cloud.tencent.com/document/api/215/15824#VpnConnection)
+
+	* 新增成员：BgpConfig
+
+
 ### 第 176 次发布
 
 发布时间：2023-10-30 01:36:36
@@ -131881,7 +132395,7 @@
 
 新增接口：
 
-* [[ModifyVpnGatewaySslServer](https://cloud.tencent.com/document/api/215/100955)](https://cloud.tencent.com/document/api/#/#)
+* [ModifyVpnGatewaySslServer](https://cloud.tencent.com/document/api/215/100955)
 
 ### 第 175 次发布
 
@@ -135823,6 +136337,21 @@
 
 ## 声音复刻(vrs) 版本：2020-08-24
 
+### 第 3 次发布
+
+发布时间：2023-11-03 01:27:03
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateVRSTask](https://cloud.tencent.com/document/api/1283/90064)
+
+	* 新增入参：TaskType, VPRAudioId
+
+
 ### 第 2 次发布
 
 发布时间：2023-07-18 01:58:58
@@ -135876,6 +136405,58 @@
 
 
 ## Web 应用防火墙(waf) 版本：2018-01-25
+
+### 第 70 次发布
+
+发布时间：2023-11-07 02:47:21
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeModuleStatus](https://cloud.tencent.com/document/api/627/101340)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[ApiPkg](https://cloud.tencent.com/document/api/627/53609#ApiPkg)](https://cloud.tencent.com/document/api/627/53609#[ApiPkg](https://cloud.tencent.com/document/api/627/53609#ApiPkg))
+
+修改数据结构：
+
+* [BotPkg](https://cloud.tencent.com/document/api/627/53609#BotPkg)
+
+	* 新增成员：IsBotTrial
+
+* [InstanceInfo](https://cloud.tencent.com/document/api/627/53609#InstanceInfo)
+
+	* 新增成员：ApiPkg
+
+
+### 第 69 次发布
+
+发布时间：2023-11-03 01:27:06
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+<font color="#dd0000">**预下线接口**：</font>
+
+* DescribeAntiFakeUrl
+* DescribeCCRule
+
+### 第 68 次发布
+
+发布时间：2023-11-01 01:26:18
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+<font color="#dd0000">**预下线接口**：</font>
+
+* DeleteDownloadRecord
 
 ### 第 67 次发布
 
@@ -137660,6 +138241,60 @@
 
 
 ## 数据开发治理平台 WeData(wedata) 版本：2021-08-20
+
+### 第 55 次发布
+
+发布时间：2023-11-07 02:48:57
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DeleteDataSources](https://cloud.tencent.com/document/api/1267/80761)
+
+	* 新增入参：ProjectId
+
+* [DescribeDsFolderTree](https://cloud.tencent.com/document/api/1267/100212)
+
+	* 新增入参：IncludeVirtualTask
+
+* [ModifyDataSource](https://cloud.tencent.com/document/api/1267/80760)
+
+	* 新增入参：ProjectId
+
+
+### 第 54 次发布
+
+发布时间：2023-11-01 01:26:43
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeDatabaseMetas](https://cloud.tencent.com/document/api/1267/101009)
+
+新增数据结构：
+
+* [DatabaseMeta](https://cloud.tencent.com/document/api/1267/76336#DatabaseMeta)
+
+### 第 53 次发布
+
+发布时间：2023-10-31 02:51:22
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [SubmitSqlTask](https://cloud.tencent.com/document/api/1267/95149)
+
+	* 新增入参：ScriptEncryption
+
 
 ### 第 52 次发布
 
