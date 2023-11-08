@@ -48,17 +48,19 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel {
     /**
     * 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
+注: `同名字的Key的过滤条件会冲突,  只能填写一个`
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+    * 指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。
     */
     @SerializedName("Offset")
     @Expose
@@ -138,16 +140,18 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel {
     /**
      * Get 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
-</ul> 
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
+</ul>
+注: `同名字的Key的过滤条件会冲突,  只能填写一个` 
      * @return Filters 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
+注: `同名字的Key的过滤条件会冲突,  只能填写一个`
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -156,32 +160,38 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel {
     /**
      * Set 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
+注: `同名字的Key的过滤条件会冲突,  只能填写一个`
      * @param Filters 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
+注: `同名字的Key的过滤条件会冲突,  只能填写一个`
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。 
-     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+     * Get 指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。 
+     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
-     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+     * Set 指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。
+     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -213,6 +213,36 @@ Y: 有清单 N：无清单
     private String TrafficFreeFlag;
 
     /**
+    * 是否为红票
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RedLetterInvoiceMark")
+    @Expose
+    private Boolean RedLetterInvoiceMark;
+
+    /**
+    * 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IssuingTypeMark")
+    @Expose
+    private Long IssuingTypeMark;
+
+    /**
+    * 代开销售方名称
+    */
+    @SerializedName("SellerAgentName")
+    @Expose
+    private String SellerAgentName;
+
+    /**
+    * 代开销售方税号
+    */
+    @SerializedName("SellerAgentTaxID")
+    @Expose
+    private String SellerAgentTaxID;
+
+    /**
      * Get 发票代码 
      * @return Code 发票代码
      */
@@ -668,6 +698,78 @@ Y: 有清单 N：无清单
         this.TrafficFreeFlag = TrafficFreeFlag;
     }
 
+    /**
+     * Get 是否为红票
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RedLetterInvoiceMark 是否为红票
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRedLetterInvoiceMark() {
+        return this.RedLetterInvoiceMark;
+    }
+
+    /**
+     * Set 是否为红票
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RedLetterInvoiceMark 是否为红票
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRedLetterInvoiceMark(Boolean RedLetterInvoiceMark) {
+        this.RedLetterInvoiceMark = RedLetterInvoiceMark;
+    }
+
+    /**
+     * Get 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IssuingTypeMark 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIssuingTypeMark() {
+        return this.IssuingTypeMark;
+    }
+
+    /**
+     * Set 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IssuingTypeMark 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIssuingTypeMark(Long IssuingTypeMark) {
+        this.IssuingTypeMark = IssuingTypeMark;
+    }
+
+    /**
+     * Get 代开销售方名称 
+     * @return SellerAgentName 代开销售方名称
+     */
+    public String getSellerAgentName() {
+        return this.SellerAgentName;
+    }
+
+    /**
+     * Set 代开销售方名称
+     * @param SellerAgentName 代开销售方名称
+     */
+    public void setSellerAgentName(String SellerAgentName) {
+        this.SellerAgentName = SellerAgentName;
+    }
+
+    /**
+     * Get 代开销售方税号 
+     * @return SellerAgentTaxID 代开销售方税号
+     */
+    public String getSellerAgentTaxID() {
+        return this.SellerAgentTaxID;
+    }
+
+    /**
+     * Set 代开销售方税号
+     * @param SellerAgentTaxID 代开销售方税号
+     */
+    public void setSellerAgentTaxID(String SellerAgentTaxID) {
+        this.SellerAgentTaxID = SellerAgentTaxID;
+    }
+
     public VatInvoice() {
     }
 
@@ -754,6 +856,18 @@ Y: 有清单 N：无清单
         if (source.TrafficFreeFlag != null) {
             this.TrafficFreeFlag = new String(source.TrafficFreeFlag);
         }
+        if (source.RedLetterInvoiceMark != null) {
+            this.RedLetterInvoiceMark = new Boolean(source.RedLetterInvoiceMark);
+        }
+        if (source.IssuingTypeMark != null) {
+            this.IssuingTypeMark = new Long(source.IssuingTypeMark);
+        }
+        if (source.SellerAgentName != null) {
+            this.SellerAgentName = new String(source.SellerAgentName);
+        }
+        if (source.SellerAgentTaxID != null) {
+            this.SellerAgentTaxID = new String(source.SellerAgentTaxID);
+        }
     }
 
 
@@ -786,6 +900,10 @@ Y: 有清单 N：无清单
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "TaxBureau", this.TaxBureau);
         this.setParamSimple(map, prefix + "TrafficFreeFlag", this.TrafficFreeFlag);
+        this.setParamSimple(map, prefix + "RedLetterInvoiceMark", this.RedLetterInvoiceMark);
+        this.setParamSimple(map, prefix + "IssuingTypeMark", this.IssuingTypeMark);
+        this.setParamSimple(map, prefix + "SellerAgentName", this.SellerAgentName);
+        this.setParamSimple(map, prefix + "SellerAgentTaxID", this.SellerAgentTaxID);
 
     }
 }

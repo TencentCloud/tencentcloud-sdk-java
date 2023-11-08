@@ -149,6 +149,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取单设备的实时流量统计指标
+     * @param req GetNetMonitorRequest
+     * @return GetNetMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetNetMonitorResponse GetNetMonitor(GetNetMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetNetMonitor", GetNetMonitorResponse.class);
+    }
+
+    /**
      *获取公钥用于验签
      * @param req GetPublicKeyRequest
      * @return GetPublicKeyResponse

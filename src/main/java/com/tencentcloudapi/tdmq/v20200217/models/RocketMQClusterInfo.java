@@ -154,6 +154,54 @@ public class RocketMQClusterInfo extends AbstractModel {
     private String HttpInternalEndpoint;
 
     /**
+    * 是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AclEnabled")
+    @Expose
+    private Boolean AclEnabled;
+
+    /**
+    * 公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicClbId")
+    @Expose
+    private String PublicClbId;
+
+    /**
+    * vip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+    * 所属VPC
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportMigration")
+    @Expose
+    private Boolean SupportMigration;
+
+    /**
+    * 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceStatus")
+    @Expose
+    private Long InstanceStatus;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -469,6 +517,126 @@ public class RocketMQClusterInfo extends AbstractModel {
         this.HttpInternalEndpoint = HttpInternalEndpoint;
     }
 
+    /**
+     * Get 是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AclEnabled 是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAclEnabled() {
+        return this.AclEnabled;
+    }
+
+    /**
+     * Set 是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AclEnabled 是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAclEnabled(Boolean AclEnabled) {
+        this.AclEnabled = AclEnabled;
+    }
+
+    /**
+     * Get 公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicClbId 公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicClbId() {
+        return this.PublicClbId;
+    }
+
+    /**
+     * Set 公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicClbId 公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicClbId(String PublicClbId) {
+        this.PublicClbId = PublicClbId;
+    }
+
+    /**
+     * Get vip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Vip vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set vip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Vip vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * Get 所属VPC
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId 所属VPC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 所属VPC
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId 所属VPC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportMigration 是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSupportMigration() {
+        return this.SupportMigration;
+    }
+
+    /**
+     * Set 是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportMigration 是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportMigration(Boolean SupportMigration) {
+        this.SupportMigration = SupportMigration;
+    }
+
+    /**
+     * Get 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceStatus() {
+        return this.InstanceStatus;
+    }
+
+    /**
+     * Set 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceStatus(Long InstanceStatus) {
+        this.InstanceStatus = InstanceStatus;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -531,6 +699,24 @@ public class RocketMQClusterInfo extends AbstractModel {
         if (source.HttpInternalEndpoint != null) {
             this.HttpInternalEndpoint = new String(source.HttpInternalEndpoint);
         }
+        if (source.AclEnabled != null) {
+            this.AclEnabled = new Boolean(source.AclEnabled);
+        }
+        if (source.PublicClbId != null) {
+            this.PublicClbId = new String(source.PublicClbId);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SupportMigration != null) {
+            this.SupportMigration = new Boolean(source.SupportMigration);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new Long(source.InstanceStatus);
+        }
     }
 
 
@@ -555,6 +741,12 @@ public class RocketMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
         this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
         this.setParamSimple(map, prefix + "HttpInternalEndpoint", this.HttpInternalEndpoint);
+        this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+        this.setParamSimple(map, prefix + "PublicClbId", this.PublicClbId);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SupportMigration", this.SupportMigration);
+        this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
 
     }
 }

@@ -31,8 +31,6 @@ public class ResultConfig extends AbstractModel {
 智能图生图支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）
 
 不传默认使用768:768
-
-示例值：768:768
     */
     @SerializedName("Resolution")
     @Expose
@@ -45,9 +43,7 @@ public class ResultConfig extends AbstractModel {
 
 智能图生图支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）
 
-不传默认使用768:768
-
-示例值：768:768 
+不传默认使用768:768 
      * @return Resolution 生成图分辨率
 
 智能文生图支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1）、720:1280（9:16）、1280:720（16:9）、768:1280（3:5）、1280:768（5:3）、1080:1920（9:16）、1920:1080（16:9）
@@ -55,8 +51,6 @@ public class ResultConfig extends AbstractModel {
 智能图生图支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）
 
 不传默认使用768:768
-
-示例值：768:768
      */
     public String getResolution() {
         return this.Resolution;
@@ -70,8 +64,6 @@ public class ResultConfig extends AbstractModel {
 智能图生图支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）
 
 不传默认使用768:768
-
-示例值：768:768
      * @param Resolution 生成图分辨率
 
 智能文生图支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）、1024:1024（1:1）、720:1280（9:16）、1280:720（16:9）、768:1280（3:5）、1280:768（5:3）、1080:1920（9:16）、1920:1080（16:9）
@@ -79,8 +71,6 @@ public class ResultConfig extends AbstractModel {
 智能图生图支持生成以下分辨率的图片：768:768（1:1）、768:1024（3:4）、1024:768（4:3）
 
 不传默认使用768:768
-
-示例值：768:768
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;

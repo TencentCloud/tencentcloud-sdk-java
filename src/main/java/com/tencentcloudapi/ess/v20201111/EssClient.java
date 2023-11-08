@@ -711,6 +711,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *查询企业使用情况
+     * @param req DescribeBillUsageDetailRequest
+     * @return DescribeBillUsageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillUsageDetailResponse DescribeBillUsageDetail(DescribeBillUsageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillUsageDetail", DescribeBillUsageDetailResponse.class);
+    }
+
+    /**
      *查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
 1. 企业自动签
 2. 企业与港澳台居民签署合同

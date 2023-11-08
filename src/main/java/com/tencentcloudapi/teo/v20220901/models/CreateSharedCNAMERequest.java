@@ -33,9 +33,9 @@ public class CreateSharedCNAMERequest extends AbstractModel {
     /**
     * 共享 CNAME 前缀。请输入合法的域名前缀，例如"test-api"、"test-api.com"，限制输入 50 个字符。
 
-共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.eo.dnse[0-5].com"。
+共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.dnse[0-5].com"。
 
-例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.eo.dnse2.com
+例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.dnse2.com。
     */
     @SerializedName("SharedCNAMEPrefix")
     @Expose
@@ -67,14 +67,14 @@ public class CreateSharedCNAMERequest extends AbstractModel {
     /**
      * Get 共享 CNAME 前缀。请输入合法的域名前缀，例如"test-api"、"test-api.com"，限制输入 50 个字符。
 
-共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.eo.dnse[0-5].com"。
+共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.dnse[0-5].com"。
 
-例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.eo.dnse2.com 
+例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.dnse2.com。 
      * @return SharedCNAMEPrefix 共享 CNAME 前缀。请输入合法的域名前缀，例如"test-api"、"test-api.com"，限制输入 50 个字符。
 
-共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.eo.dnse[0-5].com"。
+共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.dnse[0-5].com"。
 
-例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.eo.dnse2.com
+例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.dnse2.com。
      */
     public String getSharedCNAMEPrefix() {
         return this.SharedCNAMEPrefix;
@@ -83,14 +83,14 @@ public class CreateSharedCNAMERequest extends AbstractModel {
     /**
      * Set 共享 CNAME 前缀。请输入合法的域名前缀，例如"test-api"、"test-api.com"，限制输入 50 个字符。
 
-共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.eo.dnse[0-5].com"。
+共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.dnse[0-5].com"。
 
-例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.eo.dnse2.com
+例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.dnse2.com。
      * @param SharedCNAMEPrefix 共享 CNAME 前缀。请输入合法的域名前缀，例如"test-api"、"test-api.com"，限制输入 50 个字符。
 
-共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.eo.dnse[0-5].com"。
+共享 CNAME 完整格式为：<自定义前缀>+<zoneid中的12位随机字符串>+"share.dnse[0-5].com"。
 
-例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.eo.dnse2.com
+例如前缀传入 example.com，EO 会为您创建共享 CNAME：example.com.sai2ig51kaa5.share.dnse2.com。
      */
     public void setSharedCNAMEPrefix(String SharedCNAMEPrefix) {
         this.SharedCNAMEPrefix = SharedCNAMEPrefix;

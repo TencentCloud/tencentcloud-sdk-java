@@ -50,6 +50,17 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *用于加速域名绑定或解绑共享 CNAME，该功能白名单内测中。
+     * @param req BindSharedCNAMERequest
+     * @return BindSharedCNAMEResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindSharedCNAMEResponse BindSharedCNAME(BindSharedCNAMERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindSharedCNAME", BindSharedCNAMEResponse.class);
+    }
+
+    /**
      *将未绑定套餐的站点绑定到已有套餐
      * @param req BindZoneToPlanRequest
      * @return BindZoneToPlanResponse
@@ -186,7 +197,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *创建共享 CNAME
+     *用于创建共享 CNAME，该功能白名单内测中。
      * @param req CreateSharedCNAMERequest
      * @return CreateSharedCNAMEResponse
      * @throws TencentCloudSDKException
@@ -284,6 +295,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteSecurityIPGroupResponse DeleteSecurityIPGroup(DeleteSecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSecurityIPGroup", DeleteSecurityIPGroupResponse.class);
+    }
+
+    /**
+     *用于删除共享 CNAME，该功能白名单内测中。
+     * @param req DeleteSharedCNAMERequest
+     * @return DeleteSharedCNAMEResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSharedCNAMEResponse DeleteSharedCNAME(DeleteSharedCNAMERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSharedCNAME", DeleteSharedCNAMEResponse.class);
     }
 
     /**

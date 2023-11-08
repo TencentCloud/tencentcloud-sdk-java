@@ -95,6 +95,14 @@ public class RocketMQClusterConfig extends AbstractModel {
     private Long MaxQueuesPerTopic;
 
     /**
+    * topic分布
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicDistribution")
+    @Expose
+    private RocketMQTopicDistribution [] TopicDistribution;
+
+    /**
      * Get 单命名空间TPS上线 
      * @return MaxTpsPerNamespace 单命名空间TPS上线
      */
@@ -258,6 +266,26 @@ public class RocketMQClusterConfig extends AbstractModel {
         this.MaxQueuesPerTopic = MaxQueuesPerTopic;
     }
 
+    /**
+     * Get topic分布
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicDistribution topic分布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RocketMQTopicDistribution [] getTopicDistribution() {
+        return this.TopicDistribution;
+    }
+
+    /**
+     * Set topic分布
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicDistribution topic分布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicDistribution(RocketMQTopicDistribution [] TopicDistribution) {
+        this.TopicDistribution = TopicDistribution;
+    }
+
     public RocketMQClusterConfig() {
     }
 
@@ -296,6 +324,12 @@ public class RocketMQClusterConfig extends AbstractModel {
         if (source.MaxQueuesPerTopic != null) {
             this.MaxQueuesPerTopic = new Long(source.MaxQueuesPerTopic);
         }
+        if (source.TopicDistribution != null) {
+            this.TopicDistribution = new RocketMQTopicDistribution[source.TopicDistribution.length];
+            for (int i = 0; i < source.TopicDistribution.length; i++) {
+                this.TopicDistribution[i] = new RocketMQTopicDistribution(source.TopicDistribution[i]);
+            }
+        }
     }
 
 
@@ -313,6 +347,7 @@ public class RocketMQClusterConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRetentionTime", this.MaxRetentionTime);
         this.setParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
         this.setParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
+        this.setParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
 
     }
 }

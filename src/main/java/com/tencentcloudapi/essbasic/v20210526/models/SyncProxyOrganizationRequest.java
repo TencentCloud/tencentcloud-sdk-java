@@ -24,15 +24,22 @@ import java.util.HashMap;
 public class SyncProxyOrganizationRequest extends AbstractModel {
 
     /**
-    * 应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 第三方平台子客企业名称，最大长度64个字符
+    * 第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
     */
     @SerializedName("ProxyOrganizationName")
     @Expose
@@ -53,7 +60,7 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
     private String UniformSocialCreditCode;
 
     /**
-    * 第三方平台子客企业法人/负责人姓名
+    * 第三方平台子客企业法定代表人的名字
     */
     @SerializedName("ProxyLegalName")
     @Expose
@@ -67,50 +74,90 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+    * 第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型`
     */
     @SerializedName("ProxyLegalIdCardType")
     @Expose
     private String ProxyLegalIdCardType;
 
     /**
-    * 第三方平台子客企业法人/负责人证件号
+    * 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
     */
     @SerializedName("ProxyLegalIdCardNumber")
     @Expose
     private String ProxyLegalIdCardNumber;
 
     /**
-     * Get 应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填 
-     * @return Agent 应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
+    * 第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
+    */
+    @SerializedName("ProxyAddress")
+    @Expose
+    private String ProxyAddress;
+
+    /**
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+ 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
-     * @param Agent 应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 第三方平台子客企业名称，最大长度64个字符 
-     * @return ProxyOrganizationName 第三方平台子客企业名称，最大长度64个字符
+     * Get 第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。` 
+     * @return ProxyOrganizationName 第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
      */
     public String getProxyOrganizationName() {
         return this.ProxyOrganizationName;
     }
 
     /**
-     * Set 第三方平台子客企业名称，最大长度64个字符
-     * @param ProxyOrganizationName 第三方平台子客企业名称，最大长度64个字符
+     * Set 第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
+     * @param ProxyOrganizationName 第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
      */
     public void setProxyOrganizationName(String ProxyOrganizationName) {
         this.ProxyOrganizationName = ProxyOrganizationName;
@@ -149,16 +196,16 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
     }
 
     /**
-     * Get 第三方平台子客企业法人/负责人姓名 
-     * @return ProxyLegalName 第三方平台子客企业法人/负责人姓名
+     * Get 第三方平台子客企业法定代表人的名字 
+     * @return ProxyLegalName 第三方平台子客企业法定代表人的名字
      */
     public String getProxyLegalName() {
         return this.ProxyLegalName;
     }
 
     /**
-     * Set 第三方平台子客企业法人/负责人姓名
-     * @param ProxyLegalName 第三方平台子客企业法人/负责人姓名
+     * Set 第三方平台子客企业法定代表人的名字
+     * @param ProxyLegalName 第三方平台子客企业法定代表人的名字
      */
     public void setProxyLegalName(String ProxyLegalName) {
         this.ProxyLegalName = ProxyLegalName;
@@ -185,35 +232,71 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
     }
 
     /**
-     * Get 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型 
-     * @return ProxyLegalIdCardType 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+     * Get 第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型` 
+     * @return ProxyLegalIdCardType 第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型`
      */
     public String getProxyLegalIdCardType() {
         return this.ProxyLegalIdCardType;
     }
 
     /**
-     * Set 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
-     * @param ProxyLegalIdCardType 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+     * Set 第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型`
+     * @param ProxyLegalIdCardType 第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型`
      */
     public void setProxyLegalIdCardType(String ProxyLegalIdCardType) {
         this.ProxyLegalIdCardType = ProxyLegalIdCardType;
     }
 
     /**
-     * Get 第三方平台子客企业法人/负责人证件号 
-     * @return ProxyLegalIdCardNumber 第三方平台子客企业法人/负责人证件号
+     * Get 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li> 
+     * @return ProxyLegalIdCardNumber 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
      */
     public String getProxyLegalIdCardNumber() {
         return this.ProxyLegalIdCardNumber;
     }
 
     /**
-     * Set 第三方平台子客企业法人/负责人证件号
-     * @param ProxyLegalIdCardNumber 第三方平台子客企业法人/负责人证件号
+     * Set 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+     * @param ProxyLegalIdCardNumber 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
      */
     public void setProxyLegalIdCardNumber(String ProxyLegalIdCardNumber) {
         this.ProxyLegalIdCardNumber = ProxyLegalIdCardNumber;
+    }
+
+    /**
+     * Get 第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址` 
+     * @return ProxyAddress 第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
+     */
+    public String getProxyAddress() {
+        return this.ProxyAddress;
+    }
+
+    /**
+     * Set 第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
+     * @param ProxyAddress 第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
+     */
+    public void setProxyAddress(String ProxyAddress) {
+        this.ProxyAddress = ProxyAddress;
     }
 
     public SyncProxyOrganizationRequest() {
@@ -248,6 +331,9 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
         if (source.ProxyLegalIdCardNumber != null) {
             this.ProxyLegalIdCardNumber = new String(source.ProxyLegalIdCardNumber);
         }
+        if (source.ProxyAddress != null) {
+            this.ProxyAddress = new String(source.ProxyAddress);
+        }
     }
 
 
@@ -263,6 +349,7 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ProxyLegalIdCardType", this.ProxyLegalIdCardType);
         this.setParamSimple(map, prefix + "ProxyLegalIdCardNumber", this.ProxyLegalIdCardNumber);
+        this.setParamSimple(map, prefix + "ProxyAddress", this.ProxyAddress);
 
     }
 }

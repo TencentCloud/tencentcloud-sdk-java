@@ -61,6 +61,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于数据加工DSL函数的语法校验。
+     * @param req CheckFunctionRequest
+     * @return CheckFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckFunctionResponse CheckFunction(CheckFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckFunction", CheckFunctionResponse.class);
+    }
+
+    /**
      *本接口用于校验Kafka服务集群是否可以正常访问
      * @param req CheckRechargeKafkaServerRequest
      * @return CheckRechargeKafkaServerResponse

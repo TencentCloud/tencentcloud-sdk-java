@@ -309,6 +309,12 @@ public enum EssErrorCode {
     // 无效的手机号
      INVALIDPARAMETERVALUE_INVALIDMOBILE("InvalidParameterValue.InvalidMobile"),
      
+    // 非法的套餐类型
+     INVALIDPARAMETERVALUE_INVALIDQUOTATYPE("InvalidParameterValue.InvalidQuotaType"),
+     
+    // 非法的时间参数
+     INVALIDPARAMETERVALUE_INVALIDTIME("InvalidParameterValue.InvalidTime"),
+     
     // 需要屏蔽的告警。
      INVALIDPARAMETERVALUE_MASK("InvalidParameterValue.Mask"),
      
@@ -557,6 +563,9 @@ public enum EssErrorCode {
      
     // 签署流程的签署人不存在，请检查后重试。
      RESOURCENOTFOUND_FLOWAPPROVER("ResourceNotFound.FlowApprover"),
+     
+    // 应用号不存在。
+     RESOURCENOTFOUND_NOTEXISTAPPLICATION("ResourceNotFound.NotExistApplication"),
      
     // 电子文档不存在。
      RESOURCENOTFOUND_NOTEXISTDOCUMENT("ResourceNotFound.NotExistDocument"),
