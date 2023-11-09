@@ -138,6 +138,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建专业集群——预付费，仅通过api调用
+     * @param req CreateProClusterRequest
+     * @return CreateProClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProClusterResponse CreateProCluster(CreateProClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProCluster", CreateProClusterResponse.class);
+    }
+
+    /**
      *创建RabbitMQ的用户
      * @param req CreateRabbitMQUserRequest
      * @return CreateRabbitMQUserResponse

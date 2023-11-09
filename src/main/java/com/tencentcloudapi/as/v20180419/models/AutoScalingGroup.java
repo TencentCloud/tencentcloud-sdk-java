@@ -258,6 +258,14 @@ public class AutoScalingGroup extends AbstractModel {
     private Boolean CapacityRebalance;
 
     /**
+    * 实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceNameIndexSettings")
+    @Expose
+    private InstanceNameIndexSettings InstanceNameIndexSettings;
+
+    /**
      * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -821,6 +829,26 @@ public class AutoScalingGroup extends AbstractModel {
         this.CapacityRebalance = CapacityRebalance;
     }
 
+    /**
+     * Get 实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceNameIndexSettings 实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceNameIndexSettings getInstanceNameIndexSettings() {
+        return this.InstanceNameIndexSettings;
+    }
+
+    /**
+     * Set 实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceNameIndexSettings 实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceNameIndexSettings(InstanceNameIndexSettings InstanceNameIndexSettings) {
+        this.InstanceNameIndexSettings = InstanceNameIndexSettings;
+    }
+
     public AutoScalingGroup() {
     }
 
@@ -940,6 +968,9 @@ public class AutoScalingGroup extends AbstractModel {
         if (source.CapacityRebalance != null) {
             this.CapacityRebalance = new Boolean(source.CapacityRebalance);
         }
+        if (source.InstanceNameIndexSettings != null) {
+            this.InstanceNameIndexSettings = new InstanceNameIndexSettings(source.InstanceNameIndexSettings);
+        }
     }
 
 
@@ -978,6 +1009,7 @@ public class AutoScalingGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
         this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
         this.setParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
+        this.setParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
 
     }
 }

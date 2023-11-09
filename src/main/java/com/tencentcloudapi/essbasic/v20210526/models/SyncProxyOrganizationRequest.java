@@ -84,7 +84,7 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
 
     /**
     * 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
     */
     @SerializedName("ProxyLegalIdCardNumber")
     @Expose
@@ -257,9 +257,9 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
 
     /**
      * Get 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li> 
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul> 
      * @return ProxyLegalIdCardNumber 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
      */
     public String getProxyLegalIdCardNumber() {
         return this.ProxyLegalIdCardNumber;
@@ -267,9 +267,9 @@ public class SyncProxyOrganizationRequest extends AbstractModel {
 
     /**
      * Set 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
      * @param ProxyLegalIdCardNumber 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
      */
     public void setProxyLegalIdCardNumber(String ProxyLegalIdCardNumber) {
         this.ProxyLegalIdCardNumber = ProxyLegalIdCardNumber;

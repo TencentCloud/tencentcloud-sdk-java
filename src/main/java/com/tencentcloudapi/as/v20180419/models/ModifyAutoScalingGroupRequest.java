@@ -202,6 +202,13 @@ INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加�
     private Boolean CapacityRebalance;
 
     /**
+    * 实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+    */
+    @SerializedName("InstanceNameIndexSettings")
+    @Expose
+    private InstanceNameIndexSettings InstanceNameIndexSettings;
+
+    /**
      * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -649,6 +656,22 @@ INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加�
         this.CapacityRebalance = CapacityRebalance;
     }
 
+    /**
+     * Get 实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。 
+     * @return InstanceNameIndexSettings 实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+     */
+    public InstanceNameIndexSettings getInstanceNameIndexSettings() {
+        return this.InstanceNameIndexSettings;
+    }
+
+    /**
+     * Set 实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+     * @param InstanceNameIndexSettings 实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+     */
+    public void setInstanceNameIndexSettings(InstanceNameIndexSettings InstanceNameIndexSettings) {
+        this.InstanceNameIndexSettings = InstanceNameIndexSettings;
+    }
+
     public ModifyAutoScalingGroupRequest() {
     }
 
@@ -732,6 +755,9 @@ INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加�
         if (source.CapacityRebalance != null) {
             this.CapacityRebalance = new Boolean(source.CapacityRebalance);
         }
+        if (source.InstanceNameIndexSettings != null) {
+            this.InstanceNameIndexSettings = new InstanceNameIndexSettings(source.InstanceNameIndexSettings);
+        }
     }
 
 
@@ -761,6 +787,7 @@ INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加�
         this.setParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
         this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
         this.setParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
+        this.setParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
 
     }
 }

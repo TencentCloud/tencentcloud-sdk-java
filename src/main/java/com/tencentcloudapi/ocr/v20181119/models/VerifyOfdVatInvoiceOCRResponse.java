@@ -147,6 +147,20 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel {
     private VatInvoiceGoodsInfo [] GoodsInfos;
 
     /**
+    * 航空运输电子客票行程单信息
+    */
+    @SerializedName("AirTicketInfo")
+    @Expose
+    private AirTicketInfo AirTicketInfo;
+
+    /**
+    * 铁路电子客票
+    */
+    @SerializedName("RailwayTicketInfo")
+    @Expose
+    private RailwayTicketInfo RailwayTicketInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -442,6 +456,38 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 航空运输电子客票行程单信息 
+     * @return AirTicketInfo 航空运输电子客票行程单信息
+     */
+    public AirTicketInfo getAirTicketInfo() {
+        return this.AirTicketInfo;
+    }
+
+    /**
+     * Set 航空运输电子客票行程单信息
+     * @param AirTicketInfo 航空运输电子客票行程单信息
+     */
+    public void setAirTicketInfo(AirTicketInfo AirTicketInfo) {
+        this.AirTicketInfo = AirTicketInfo;
+    }
+
+    /**
+     * Get 铁路电子客票 
+     * @return RailwayTicketInfo 铁路电子客票
+     */
+    public RailwayTicketInfo getRailwayTicketInfo() {
+        return this.RailwayTicketInfo;
+    }
+
+    /**
+     * Set 铁路电子客票
+     * @param RailwayTicketInfo 铁路电子客票
+     */
+    public void setRailwayTicketInfo(RailwayTicketInfo RailwayTicketInfo) {
+        this.RailwayTicketInfo = RailwayTicketInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -519,6 +565,12 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel {
                 this.GoodsInfos[i] = new VatInvoiceGoodsInfo(source.GoodsInfos[i]);
             }
         }
+        if (source.AirTicketInfo != null) {
+            this.AirTicketInfo = new AirTicketInfo(source.AirTicketInfo);
+        }
+        if (source.RailwayTicketInfo != null) {
+            this.RailwayTicketInfo = new RailwayTicketInfo(source.RailwayTicketInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -546,6 +598,8 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TaxExclusiveTotalAmount", this.TaxExclusiveTotalAmount);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamArrayObj(map, prefix + "GoodsInfos.", this.GoodsInfos);
+        this.setParamObj(map, prefix + "AirTicketInfo.", this.AirTicketInfo);
+        this.setParamObj(map, prefix + "RailwayTicketInfo.", this.RailwayTicketInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

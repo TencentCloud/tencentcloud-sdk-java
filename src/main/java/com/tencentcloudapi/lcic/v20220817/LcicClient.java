@@ -415,6 +415,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *根据房间ID获取群组中被禁言的用户列表。
+     * @param req DescribeRoomForbiddenUserRequest
+     * @return DescribeRoomForbiddenUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoomForbiddenUserResponse DescribeRoomForbiddenUser(DescribeRoomForbiddenUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRoomForbiddenUser", DescribeRoomForbiddenUserResponse.class);
+    }
+
+    /**
      *获取房间统计信息，仅可在房间结束后调用。
      * @param req DescribeRoomStatisticsRequest
      * @return DescribeRoomStatisticsResponse
@@ -478,6 +489,19 @@ public class LcicClient extends AbstractClient{
     public EndRoomResponse EndRoom(EndRoomRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EndRoom", EndRoomResponse.class);
+    }
+
+    /**
+     *禁止指定房间中某些用户在一段时间内发言。
+取消对某些用户的禁言。
+被禁言用户退出房间之后再进入同一房间，禁言仍然有效。
+     * @param req ForbidSendMsgRequest
+     * @return ForbidSendMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForbidSendMsgResponse ForbidSendMsg(ForbidSendMsgRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ForbidSendMsg", ForbidSendMsgResponse.class);
     }
 
     /**

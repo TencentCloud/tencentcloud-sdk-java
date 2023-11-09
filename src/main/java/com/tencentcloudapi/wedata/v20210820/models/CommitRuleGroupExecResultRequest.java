@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CommitRuleGroupExecResultRequest extends AbstractModel {
 
     /**
-    * preject id
+    * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * rule group exec id
+    * 规则组执行ID
     */
     @SerializedName("RuleGroupExecId")
     @Expose
     private Long RuleGroupExecId;
 
     /**
-    * group exec state
+    * 规则组执行状态
     */
     @SerializedName("RuleGroupState")
     @Expose
     private String RuleGroupState;
 
     /**
-    * runner rule exec result list
+    * 规则执行结果集合
     */
     @SerializedName("RuleExecResults")
     @Expose
     private RunnerRuleExecResult [] RuleExecResults;
 
     /**
-     * Get preject id 
-     * @return ProjectId preject id
+     * Get 项目ID 
+     * @return ProjectId 项目ID
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set preject id
-     * @param ProjectId preject id
+     * Set 项目ID
+     * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get rule group exec id 
-     * @return RuleGroupExecId rule group exec id
+     * Get 规则组执行ID 
+     * @return RuleGroupExecId 规则组执行ID
      */
     public Long getRuleGroupExecId() {
         return this.RuleGroupExecId;
     }
 
     /**
-     * Set rule group exec id
-     * @param RuleGroupExecId rule group exec id
+     * Set 规则组执行ID
+     * @param RuleGroupExecId 规则组执行ID
      */
     public void setRuleGroupExecId(Long RuleGroupExecId) {
         this.RuleGroupExecId = RuleGroupExecId;
     }
 
     /**
-     * Get group exec state 
-     * @return RuleGroupState group exec state
+     * Get 规则组执行状态 
+     * @return RuleGroupState 规则组执行状态
      */
     public String getRuleGroupState() {
         return this.RuleGroupState;
     }
 
     /**
-     * Set group exec state
-     * @param RuleGroupState group exec state
+     * Set 规则组执行状态
+     * @param RuleGroupState 规则组执行状态
      */
     public void setRuleGroupState(String RuleGroupState) {
         this.RuleGroupState = RuleGroupState;
     }
 
     /**
-     * Get runner rule exec result list 
-     * @return RuleExecResults runner rule exec result list
+     * Get 规则执行结果集合 
+     * @return RuleExecResults 规则执行结果集合
      */
     public RunnerRuleExecResult [] getRuleExecResults() {
         return this.RuleExecResults;
     }
 
     /**
-     * Set runner rule exec result list
-     * @param RuleExecResults runner rule exec result list
+     * Set 规则执行结果集合
+     * @param RuleExecResults 规则执行结果集合
      */
     public void setRuleExecResults(RunnerRuleExecResult [] RuleExecResults) {
         this.RuleExecResults = RuleExecResults;

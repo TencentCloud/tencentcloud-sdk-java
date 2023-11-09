@@ -58,6 +58,14 @@ Block 确认违规
     private Long Score;
 
     /**
+    * 命中的二级标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
      * Get 命中的标签
 Porn 色情
 Sexy 性感
@@ -157,6 +165,26 @@ Block 确认违规
         this.Score = Score;
     }
 
+    /**
+     * Get 命中的二级标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubLabel 命中的二级标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 命中的二级标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubLabel 命中的二级标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
     public TaskLabel() {
     }
 
@@ -174,6 +202,9 @@ Block 确认违规
         if (source.Score != null) {
             this.Score = new Long(source.Score);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
     }
 
 
@@ -184,6 +215,7 @@ Block 确认违规
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
 
     }
 }

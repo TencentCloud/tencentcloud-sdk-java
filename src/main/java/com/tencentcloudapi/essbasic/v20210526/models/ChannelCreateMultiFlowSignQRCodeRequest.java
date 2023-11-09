@@ -28,10 +28,11 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
+第三方平台子客企业和员工必须已经经过实名认证
     */
     @SerializedName("Agent")
     @Expose
@@ -39,7 +40,6 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
 
     /**
     * 合同模板ID，为32位字符串。
-建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -115,18 +115,20 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
-</ul> 
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证 
      * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public Agent getAgent() {
         return this.Agent;
@@ -137,28 +139,28 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
+第三方平台子客企业和员工必须已经经过实名认证
      * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 合同模板ID，为32位字符串。
-建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。 
+     * Get 合同模板ID，为32位字符串。 
      * @return TemplateId 合同模板ID，为32位字符串。
-建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -166,9 +168,7 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
 
     /**
      * Set 合同模板ID，为32位字符串。
-建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
      * @param TemplateId 合同模板ID，为32位字符串。
-建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

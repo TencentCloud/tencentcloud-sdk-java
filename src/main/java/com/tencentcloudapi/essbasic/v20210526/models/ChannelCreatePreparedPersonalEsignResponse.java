@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ChannelCreatePreparedPersonalEsignResponse extends AbstractModel {
 
     /**
-    * 导入的印章 ID
+    * 电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
     */
     @SerializedName("SealId")
     @Expose
@@ -38,16 +40,24 @@ public class ChannelCreatePreparedPersonalEsignResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 导入的印章 ID 
-     * @return SealId 导入的印章 ID
+     * Get 电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。 
+     * @return SealId 电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
      */
     public String getSealId() {
         return this.SealId;
     }
 
     /**
-     * Set 导入的印章 ID
-     * @param SealId 导入的印章 ID
+     * Set 电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
+     * @param SealId 电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;

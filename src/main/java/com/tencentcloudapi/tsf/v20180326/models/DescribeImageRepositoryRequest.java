@@ -66,6 +66,13 @@ public class DescribeImageRepositoryRequest extends AbstractModel {
     private TcrRepoInfo TcrRepoInfo;
 
     /**
+    * 镜像仓库
+    */
+    @SerializedName("RepoName")
+    @Expose
+    private String RepoName;
+
+    /**
      * Get 仓库名，搜索关键字,不带命名空间的 
      * @return SearchWord 仓库名，搜索关键字,不带命名空间的
      */
@@ -161,6 +168,22 @@ public class DescribeImageRepositoryRequest extends AbstractModel {
         this.TcrRepoInfo = TcrRepoInfo;
     }
 
+    /**
+     * Get 镜像仓库 
+     * @return RepoName 镜像仓库
+     */
+    public String getRepoName() {
+        return this.RepoName;
+    }
+
+    /**
+     * Set 镜像仓库
+     * @param RepoName 镜像仓库
+     */
+    public void setRepoName(String RepoName) {
+        this.RepoName = RepoName;
+    }
+
     public DescribeImageRepositoryRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeImageRepositoryRequest extends AbstractModel {
         if (source.TcrRepoInfo != null) {
             this.TcrRepoInfo = new TcrRepoInfo(source.TcrRepoInfo);
         }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeImageRepositoryRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RepoType", this.RepoType);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
+        this.setParamSimple(map, prefix + "RepoName", this.RepoName);
 
     }
 }

@@ -1262,7 +1262,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *镜像仓库列表 
+     *查询镜像仓库列表
      * @param req DescribeImageRepositoryRequest
      * @return DescribeImageRepositoryResponse
      * @throws TencentCloudSDKException

@@ -59,6 +59,13 @@ public class SendRoomNormalMessageRequest extends AbstractModel {
     private String CloudCustomData;
 
     /**
+    * 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+    */
+    @SerializedName("NickName")
+    @Expose
+    private String NickName;
+
+    /**
      * Get 低代码互动课堂的SdkAppId。 
      * @return SdkAppId 低代码互动课堂的SdkAppId。
      */
@@ -138,6 +145,22 @@ public class SendRoomNormalMessageRequest extends AbstractModel {
         this.CloudCustomData = CloudCustomData;
     }
 
+    /**
+     * Get 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义 
+     * @return NickName 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+     */
+    public String getNickName() {
+        return this.NickName;
+    }
+
+    /**
+     * Set 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+     * @param NickName 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+     */
+    public void setNickName(String NickName) {
+        this.NickName = NickName;
+    }
+
     public SendRoomNormalMessageRequest() {
     }
 
@@ -164,6 +187,9 @@ public class SendRoomNormalMessageRequest extends AbstractModel {
         if (source.CloudCustomData != null) {
             this.CloudCustomData = new String(source.CloudCustomData);
         }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class SendRoomNormalMessageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FromAccount", this.FromAccount);
         this.setParamArrayObj(map, prefix + "MsgBody.", this.MsgBody);
         this.setParamSimple(map, prefix + "CloudCustomData", this.CloudCustomData);
+        this.setParamSimple(map, prefix + "NickName", this.NickName);
 
     }
 }

@@ -32,13 +32,13 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
 
     /**
     * 过滤器列表。
-<li>template-id</li>按照【防火墙模版所属的ID】进行过滤。
+<li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
 类型：String
 必选：否
-<li>template-name</li>按照【防火墙模版所属的名称】进行过滤。
+<li>template-name</li>按照【防火墙模板所属的名称】进行过滤。
 类型：String
 必选：否
-<li>template-type</li>按照【防火墙模版的类型】进行过滤。
+<li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。
@@ -79,24 +79,24 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
 
     /**
      * Get 过滤器列表。
-<li>template-id</li>按照【防火墙模版所属的ID】进行过滤。
+<li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
 类型：String
 必选：否
-<li>template-name</li>按照【防火墙模版所属的名称】进行过滤。
+<li>template-name</li>按照【防火墙模板所属的名称】进行过滤。
 类型：String
 必选：否
-<li>template-type</li>按照【防火墙模版的类型】进行过滤。
+<li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。 
      * @return Filters 过滤器列表。
-<li>template-id</li>按照【防火墙模版所属的ID】进行过滤。
+<li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
 类型：String
 必选：否
-<li>template-name</li>按照【防火墙模版所属的名称】进行过滤。
+<li>template-name</li>按照【防火墙模板所属的名称】进行过滤。
 类型：String
 必选：否
-<li>template-type</li>按照【防火墙模版的类型】进行过滤。
+<li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。
@@ -107,24 +107,24 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
 
     /**
      * Set 过滤器列表。
-<li>template-id</li>按照【防火墙模版所属的ID】进行过滤。
+<li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
 类型：String
 必选：否
-<li>template-name</li>按照【防火墙模版所属的名称】进行过滤。
+<li>template-name</li>按照【防火墙模板所属的名称】进行过滤。
 类型：String
 必选：否
-<li>template-type</li>按照【防火墙模版的类型】进行过滤。
+<li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。
      * @param Filters 过滤器列表。
-<li>template-id</li>按照【防火墙模版所属的ID】进行过滤。
+<li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
 类型：String
 必选：否
-<li>template-name</li>按照【防火墙模版所属的名称】进行过滤。
+<li>template-name</li>按照【防火墙模板所属的名称】进行过滤。
 类型：String
 必选：否
-<li>template-type</li>按照【防火墙模版的类型】进行过滤。
+<li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。

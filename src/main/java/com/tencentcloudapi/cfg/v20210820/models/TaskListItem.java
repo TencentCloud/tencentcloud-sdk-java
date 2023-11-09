@@ -114,6 +114,22 @@ public class TaskListItem extends AbstractModel {
     private String ApplicationName;
 
     /**
+    * 验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VerifyId")
+    @Expose
+    private Long VerifyId;
+
+    /**
+    * 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskStatusType")
+    @Expose
+    private Long TaskStatusType;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -329,6 +345,46 @@ public class TaskListItem extends AbstractModel {
         this.ApplicationName = ApplicationName;
     }
 
+    /**
+     * Get 验证项ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VerifyId 验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVerifyId() {
+        return this.VerifyId;
+    }
+
+    /**
+     * Set 验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VerifyId 验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerifyId(Long VerifyId) {
+        this.VerifyId = VerifyId;
+    }
+
+    /**
+     * Get 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskStatusType() {
+        return this.TaskStatusType;
+    }
+
+    /**
+     * Set 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskStatusType(Long TaskStatusType) {
+        this.TaskStatusType = TaskStatusType;
+    }
+
     public TaskListItem() {
     }
 
@@ -373,6 +429,12 @@ public class TaskListItem extends AbstractModel {
         if (source.ApplicationName != null) {
             this.ApplicationName = new String(source.ApplicationName);
         }
+        if (source.VerifyId != null) {
+            this.VerifyId = new Long(source.VerifyId);
+        }
+        if (source.TaskStatusType != null) {
+            this.TaskStatusType = new Long(source.TaskStatusType);
+        }
     }
 
 
@@ -392,6 +454,8 @@ public class TaskListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskExpect", this.TaskExpect);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+        this.setParamSimple(map, prefix + "VerifyId", this.VerifyId);
+        this.setParamSimple(map, prefix + "TaskStatusType", this.TaskStatusType);
 
     }
 }

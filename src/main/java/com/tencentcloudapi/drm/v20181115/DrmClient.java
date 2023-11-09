@@ -135,6 +135,17 @@ public class DrmClient extends AbstractClient{
     }
 
     /**
+     *开发者需要指定使用的DRM类型取值 NORMALAES、和需要加密的Track类型取值 SD,ContentType取值 LiveVideo
+     * @param req GenerateTDRMKeyRequest
+     * @return GenerateTDRMKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateTDRMKeyResponse GenerateTDRMKey(GenerateTDRMKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateTDRMKey", GenerateTDRMKeyResponse.class);
+    }
+
+    /**
      *本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
 如需使用fairplay方案，请务必先设置私钥。
      * @param req ModifyFairPlayPemRequest

@@ -58,14 +58,14 @@ public class FileSystemInfo extends AbstractModel {
     private String LifeCycleState;
 
     /**
-    * 文件系统已使用容量,单位Byte
+    * 文件系统已使用容量。单位：Byte
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * 文件系统最大空间限制,GiB
+    * 文件系统最大空间限制。单位:GiB
     */
     @SerializedName("SizeLimit")
     @Expose
@@ -157,6 +157,7 @@ public class FileSystemInfo extends AbstractModel {
 
     /**
     * 文件系统总容量
+单位:GiB
     */
     @SerializedName("Capacity")
     @Expose
@@ -275,32 +276,32 @@ Available:可用
     }
 
     /**
-     * Get 文件系统已使用容量,单位Byte 
-     * @return SizeByte 文件系统已使用容量,单位Byte
+     * Get 文件系统已使用容量。单位：Byte 
+     * @return SizeByte 文件系统已使用容量。单位：Byte
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set 文件系统已使用容量,单位Byte
-     * @param SizeByte 文件系统已使用容量,单位Byte
+     * Set 文件系统已使用容量。单位：Byte
+     * @param SizeByte 文件系统已使用容量。单位：Byte
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get 文件系统最大空间限制,GiB 
-     * @return SizeLimit 文件系统最大空间限制,GiB
+     * Get 文件系统最大空间限制。单位:GiB 
+     * @return SizeLimit 文件系统最大空间限制。单位:GiB
      */
     public Long getSizeLimit() {
         return this.SizeLimit;
     }
 
     /**
-     * Set 文件系统最大空间限制,GiB
-     * @param SizeLimit 文件系统最大空间限制,GiB
+     * Set 文件系统最大空间限制。单位:GiB
+     * @param SizeLimit 文件系统最大空间限制。单位:GiB
      */
     public void setSizeLimit(Long SizeLimit) {
         this.SizeLimit = SizeLimit;
@@ -499,8 +500,10 @@ Available:可用
     }
 
     /**
-     * Get 文件系统总容量 
+     * Get 文件系统总容量
+单位:GiB 
      * @return Capacity 文件系统总容量
+单位:GiB
      */
     public Long getCapacity() {
         return this.Capacity;
@@ -508,7 +511,9 @@ Available:可用
 
     /**
      * Set 文件系统总容量
+单位:GiB
      * @param Capacity 文件系统总容量
+单位:GiB
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;

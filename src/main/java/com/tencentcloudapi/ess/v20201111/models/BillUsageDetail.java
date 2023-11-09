@@ -25,17 +25,15 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
     * 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 经办人名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 合同经办人名称
+如果有多个经办人用分号隔开。
     */
     @SerializedName("OperatorName")
     @Expose
@@ -43,32 +41,58 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
     * 发起方组织机构名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateOrganizationName")
     @Expose
     private String CreateOrganizationName;
 
     /**
-    * 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 合同流程的名称。
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 0 还没有发起 1等待签署 2部分签署 3拒签 4已签署 5已过期 6已撤销 7还没有预发起 8等待填写 9部分填写 10拒填 11已解除
-注意：此字段可能返回 null，表示取不到有效值。
+    * 当前合同状态,如下是状态码对应的状态。
+<ul>
+<li>**0**: 还没有发起</li>
+<li>**1**: 等待签署</li>
+<li>**2**: 部分签署 </li>
+<li>**3**: 拒签</li>
+<li>**4**: 已签署 </li>
+<li>**5**: 已过期 </li>
+<li>**6**: 已撤销 </li>
+<li>**7**: 还没有预发起</li>
+<li>**8**: 等待填写</li>
+<li>**9**: 部分填写 </li>
+<li>**10**: 拒填</li>
+<li>**11**: 已解除</li>
+</ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
+    * 查询的套餐类型
+对应关系如下:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
     */
     @SerializedName("QuotaType")
     @Expose
@@ -76,31 +100,30 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
     * 合同使用量
-注意：此字段可能返回 null，表示取不到有效值。
+注: `如果消耗类型是撤销返还，此值为负值代表返还的合同数量`
     */
     @SerializedName("UseCount")
     @Expose
     private Long UseCount;
 
     /**
-    * 消耗的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+    * 消耗的时间戳，格式为Unix标准时间戳（秒）。
     */
     @SerializedName("CostTime")
     @Expose
     private Long CostTime;
 
     /**
-    * 套餐名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 消耗的套餐名称
     */
     @SerializedName("QuotaName")
     @Expose
     private String QuotaName;
 
     /**
-    *  消耗类型	1.扣费 2.撤销返还
-注意：此字段可能返回 null，表示取不到有效值。
+    * 消耗类型
+**1**.扣费
+**2**.撤销返还
     */
     @SerializedName("CostType")
     @Expose
@@ -108,7 +131,6 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -116,13 +138,9 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
      * Get 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-注意：此字段可能返回 null，表示取不到有效值。 
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。 
      * @return FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -130,43 +148,37 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
      * Set 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 经办人名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorName 经办人名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 合同经办人名称
+如果有多个经办人用分号隔开。 
+     * @return OperatorName 合同经办人名称
+如果有多个经办人用分号隔开。
      */
     public String getOperatorName() {
         return this.OperatorName;
     }
 
     /**
-     * Set 经办人名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorName 经办人名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 合同经办人名称
+如果有多个经办人用分号隔开。
+     * @param OperatorName 合同经办人名称
+如果有多个经办人用分号隔开。
      */
     public void setOperatorName(String OperatorName) {
         this.OperatorName = OperatorName;
     }
 
     /**
-     * Get 发起方组织机构名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发起方组织机构名称 
      * @return CreateOrganizationName 发起方组织机构名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateOrganizationName() {
         return this.CreateOrganizationName;
@@ -174,73 +186,179 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
      * Set 发起方组织机构名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateOrganizationName 发起方组织机构名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateOrganizationName(String CreateOrganizationName) {
         this.CreateOrganizationName = CreateOrganizationName;
     }
 
     /**
-     * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 合同流程的名称。 
+     * @return FlowName 合同流程的名称。
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-该名称还将用于合同签署完成后的下载文件名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 合同流程的名称。
+     * @param FlowName 合同流程的名称。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 0 还没有发起 1等待签署 2部分签署 3拒签 4已签署 5已过期 6已撤销 7还没有预发起 8等待填写 9部分填写 10拒填 11已解除
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 0 还没有发起 1等待签署 2部分签署 3拒签 4已签署 5已过期 6已撤销 7还没有预发起 8等待填写 9部分填写 10拒填 11已解除
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当前合同状态,如下是状态码对应的状态。
+<ul>
+<li>**0**: 还没有发起</li>
+<li>**1**: 等待签署</li>
+<li>**2**: 部分签署 </li>
+<li>**3**: 拒签</li>
+<li>**4**: 已签署 </li>
+<li>**5**: 已过期 </li>
+<li>**6**: 已撤销 </li>
+<li>**7**: 还没有预发起</li>
+<li>**8**: 等待填写</li>
+<li>**9**: 部分填写 </li>
+<li>**10**: 拒填</li>
+<li>**11**: 已解除</li>
+</ul> 
+     * @return Status 当前合同状态,如下是状态码对应的状态。
+<ul>
+<li>**0**: 还没有发起</li>
+<li>**1**: 等待签署</li>
+<li>**2**: 部分签署 </li>
+<li>**3**: 拒签</li>
+<li>**4**: 已签署 </li>
+<li>**5**: 已过期 </li>
+<li>**6**: 已撤销 </li>
+<li>**7**: 还没有预发起</li>
+<li>**8**: 等待填写</li>
+<li>**9**: 部分填写 </li>
+<li>**10**: 拒填</li>
+<li>**11**: 已解除</li>
+</ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0 还没有发起 1等待签署 2部分签署 3拒签 4已签署 5已过期 6已撤销 7还没有预发起 8等待填写 9部分填写 10拒填 11已解除
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 0 还没有发起 1等待签署 2部分签署 3拒签 4已签署 5已过期 6已撤销 7还没有预发起 8等待填写 9部分填写 10拒填 11已解除
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 当前合同状态,如下是状态码对应的状态。
+<ul>
+<li>**0**: 还没有发起</li>
+<li>**1**: 等待签署</li>
+<li>**2**: 部分签署 </li>
+<li>**3**: 拒签</li>
+<li>**4**: 已签署 </li>
+<li>**5**: 已过期 </li>
+<li>**6**: 已撤销 </li>
+<li>**7**: 还没有预发起</li>
+<li>**8**: 等待填写</li>
+<li>**9**: 部分填写 </li>
+<li>**10**: 拒填</li>
+<li>**11**: 已解除</li>
+</ul>
+     * @param Status 当前合同状态,如下是状态码对应的状态。
+<ul>
+<li>**0**: 还没有发起</li>
+<li>**1**: 等待签署</li>
+<li>**2**: 部分签署 </li>
+<li>**3**: 拒签</li>
+<li>**4**: 已签署 </li>
+<li>**5**: 已过期 </li>
+<li>**6**: 已撤销 </li>
+<li>**7**: 还没有预发起</li>
+<li>**8**: 等待填写</li>
+<li>**9**: 部分填写 </li>
+<li>**10**: 拒填</li>
+<li>**11**: 已解除</li>
+</ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 套餐类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuotaType 套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 查询的套餐类型
+对应关系如下:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul> 
+     * @return QuotaType 查询的套餐类型
+对应关系如下:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
      */
     public String getQuotaType() {
         return this.QuotaType;
     }
 
     /**
-     * Set 套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuotaType 套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 查询的套餐类型
+对应关系如下:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
+     * @param QuotaType 查询的套餐类型
+对应关系如下:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
      */
     public void setQuotaType(String QuotaType) {
         this.QuotaType = QuotaType;
@@ -248,9 +366,9 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
      * Get 合同使用量
-注意：此字段可能返回 null，表示取不到有效值。 
+注: `如果消耗类型是撤销返还，此值为负值代表返还的合同数量` 
      * @return UseCount 合同使用量
-注意：此字段可能返回 null，表示取不到有效值。
+注: `如果消耗类型是撤销返还，此值为负值代表返还的合同数量`
      */
     public Long getUseCount() {
         return this.UseCount;
@@ -258,79 +376,73 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
      * Set 合同使用量
-注意：此字段可能返回 null，表示取不到有效值。
+注: `如果消耗类型是撤销返还，此值为负值代表返还的合同数量`
      * @param UseCount 合同使用量
-注意：此字段可能返回 null，表示取不到有效值。
+注: `如果消耗类型是撤销返还，此值为负值代表返还的合同数量`
      */
     public void setUseCount(Long UseCount) {
         this.UseCount = UseCount;
     }
 
     /**
-     * Get 消耗的时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CostTime 消耗的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 消耗的时间戳，格式为Unix标准时间戳（秒）。 
+     * @return CostTime 消耗的时间戳，格式为Unix标准时间戳（秒）。
      */
     public Long getCostTime() {
         return this.CostTime;
     }
 
     /**
-     * Set 消耗的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CostTime 消耗的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 消耗的时间戳，格式为Unix标准时间戳（秒）。
+     * @param CostTime 消耗的时间戳，格式为Unix标准时间戳（秒）。
      */
     public void setCostTime(Long CostTime) {
         this.CostTime = CostTime;
     }
 
     /**
-     * Get 套餐名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuotaName 套餐名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 消耗的套餐名称 
+     * @return QuotaName 消耗的套餐名称
      */
     public String getQuotaName() {
         return this.QuotaName;
     }
 
     /**
-     * Set 套餐名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuotaName 套餐名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 消耗的套餐名称
+     * @param QuotaName 消耗的套餐名称
      */
     public void setQuotaName(String QuotaName) {
         this.QuotaName = QuotaName;
     }
 
     /**
-     * Get  消耗类型	1.扣费 2.撤销返还
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CostType  消耗类型	1.扣费 2.撤销返还
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 消耗类型
+**1**.扣费
+**2**.撤销返还 
+     * @return CostType 消耗类型
+**1**.扣费
+**2**.撤销返还
      */
     public Long getCostType() {
         return this.CostType;
     }
 
     /**
-     * Set  消耗类型	1.扣费 2.撤销返还
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CostType  消耗类型	1.扣费 2.撤销返还
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 消耗类型
+**1**.扣费
+**2**.撤销返还
+     * @param CostType 消耗类型
+**1**.扣费
+**2**.撤销返还
      */
     public void setCostType(Long CostType) {
         this.CostType = CostType;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -338,9 +450,7 @@ public class BillUsageDetail extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

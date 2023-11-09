@@ -328,6 +328,30 @@ public class ContainerGroupDeploy extends AbstractModel {
     private GatewayConfig GatewayConfig;
 
     /**
+    * 容器名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerName")
+    @Expose
+    private String ContainerName;
+
+    /**
+    * 附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdditionalContainerList")
+    @Expose
+    private GroupContainerInfo [] AdditionalContainerList;
+
+    /**
+    * 内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternalContainerList")
+    @Expose
+    private GroupContainerInfo [] InternalContainerList;
+
+    /**
      * Get 部署组id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组id
@@ -1087,6 +1111,66 @@ public class ContainerGroupDeploy extends AbstractModel {
         this.GatewayConfig = GatewayConfig;
     }
 
+    /**
+     * Get 容器名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerName 容器名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerName() {
+        return this.ContainerName;
+    }
+
+    /**
+     * Set 容器名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerName 容器名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerName(String ContainerName) {
+        this.ContainerName = ContainerName;
+    }
+
+    /**
+     * Get 附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdditionalContainerList 附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GroupContainerInfo [] getAdditionalContainerList() {
+        return this.AdditionalContainerList;
+    }
+
+    /**
+     * Set 附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdditionalContainerList 附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdditionalContainerList(GroupContainerInfo [] AdditionalContainerList) {
+        this.AdditionalContainerList = AdditionalContainerList;
+    }
+
+    /**
+     * Get 内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternalContainerList 内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GroupContainerInfo [] getInternalContainerList() {
+        return this.InternalContainerList;
+    }
+
+    /**
+     * Set 内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternalContainerList 内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternalContainerList(GroupContainerInfo [] InternalContainerList) {
+        this.InternalContainerList = InternalContainerList;
+    }
+
     public ContainerGroupDeploy() {
     }
 
@@ -1221,6 +1305,21 @@ public class ContainerGroupDeploy extends AbstractModel {
         if (source.GatewayConfig != null) {
             this.GatewayConfig = new GatewayConfig(source.GatewayConfig);
         }
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.AdditionalContainerList != null) {
+            this.AdditionalContainerList = new GroupContainerInfo[source.AdditionalContainerList.length];
+            for (int i = 0; i < source.AdditionalContainerList.length; i++) {
+                this.AdditionalContainerList[i] = new GroupContainerInfo(source.AdditionalContainerList[i]);
+            }
+        }
+        if (source.InternalContainerList != null) {
+            this.InternalContainerList = new GroupContainerInfo[source.InternalContainerList.length];
+            for (int i = 0; i < source.InternalContainerList.length; i++) {
+                this.InternalContainerList[i] = new GroupContainerInfo(source.InternalContainerList[i]);
+            }
+        }
     }
 
 
@@ -1266,6 +1365,9 @@ public class ContainerGroupDeploy extends AbstractModel {
         this.setParamSimple(map, prefix + "RepoType", this.RepoType);
         this.setParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
         this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
+        this.setParamSimple(map, prefix + "ContainerName", this.ContainerName);
+        this.setParamArrayObj(map, prefix + "AdditionalContainerList.", this.AdditionalContainerList);
+        this.setParamArrayObj(map, prefix + "InternalContainerList.", this.InternalContainerList);
 
     }
 }

@@ -226,7 +226,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *创建虚拟节点
+     *创建按量计费超级节点
      * @param req CreateClusterVirtualNodeRequest
      * @return CreateClusterVirtualNodeResponse
      * @throws TencentCloudSDKException
@@ -237,7 +237,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *创建虚拟节点池
+     *创建超级节点池
      * @param req CreateClusterVirtualNodePoolRequest
      * @return CreateClusterVirtualNodePoolResponse
      * @throws TencentCloudSDKException
@@ -545,7 +545,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *删除虚拟节点
+     *删除超级节点
      * @param req DeleteClusterVirtualNodeRequest
      * @return DeleteClusterVirtualNodeResponse
      * @throws TencentCloudSDKException
@@ -556,7 +556,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *删除虚拟节点池
+     *删除超级节点池
      * @param req DeleteClusterVirtualNodePoolRequest
      * @return DeleteClusterVirtualNodePoolResponse
      * @throws TencentCloudSDKException
@@ -1062,7 +1062,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *查看虚拟节点列表
+     *查看超级节点列表
      * @param req DescribeClusterVirtualNodeRequest
      * @return DescribeClusterVirtualNodeResponse
      * @throws TencentCloudSDKException
@@ -1073,7 +1073,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *查看虚拟节点池列表
+     *查看超级节点池列表
      * @param req DescribeClusterVirtualNodePoolsRequest
      * @return DescribeClusterVirtualNodePoolsResponse
      * @throws TencentCloudSDKException
@@ -1733,7 +1733,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *驱逐虚拟节点
+     *驱逐超级节点
      * @param req DrainClusterVirtualNodeRequest
      * @return DrainClusterVirtualNodeResponse
      * @throws TencentCloudSDKException
@@ -1986,7 +1986,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *修改虚拟节点池
+     *修改超级节点池
      * @param req ModifyClusterVirtualNodePoolRequest
      * @return ModifyClusterVirtualNodePoolResponse
      * @throws TencentCloudSDKException

@@ -157,7 +157,25 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *此接口（ChannelCreateBoundFlows）用于子客领取合同，经办人需要有相应的角色，合同不能重复领取。
+     *此接口（ChannelCreateBoundFlows）用于子客企业领取未归属给员工的合同，将合同领取给当前员工，合同不能重复领取。
+
+
+**未归属合同发起方式**
+ 指定对应企业的OrganizationOpenId和OrganizationName而不指定具体的参与人(OpenId/名字/手机号等),  则合同进入待领取状态, 示例代码如下
+```
+		FlowApprovers: []*essbasic.FlowApproverInfo{
+			{
+				ApproverType:       common.StringPtr("ORGANIZATION"),
+				OrganizationOpenId: common.StringPtr("org_dianziqian"),
+				OrganizationName:   common.StringPtr("典子谦示例企业"),
+			}
+		},
+```
+
+可以<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录控制台查看带领取的合同
+![image](https://qcloudimg.tencent-cloud.cn/raw/a34d0cc56ec871613e94dfc6252bc072.png)
+
+注: `支持批量领取,  如果有一个合同流程无法领取会导致接口报错,  使得所有合同都领取失败`
      * @param req ChannelCreateBoundFlowsRequest
      * @return ChannelCreateBoundFlowsResponse
      * @throws TencentCloudSDKException
@@ -424,12 +442,16 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *指定需要批量催办的签署流程ID，批量催办合同，最多100个。需要符合以下条件的合同才可被催办：
+     *指定需要批量催办的签署流程ID，批量催办合同，最多100个。需要符合以下条件的合同才可被催办
+1. 合同中当前状态为 **待签署** 的签署人是催办的对象
+2. **每个合同只能催办一次**
 
-1. 合同中当前状态为“待签署”的签署人是催办的对象
-2. 每个合同只能催办一次
+**催办的效果**: 对方会收到如下的短信通知
 
-注意：该接口无法直接调用，请联系客户经理申请使用。
+![image](https://qcloudimg.tencent-cloud.cn/raw/3caf94b7f540fa5736270d38528d3a7b.png)
+
+
+**注**：`合同催办是白名单功能，请联系客户经理申请开白后使用`
      * @param req ChannelCreateFlowRemindsRequest
      * @return ChannelCreateFlowRemindsResponse
      * @throws TencentCloudSDKException
@@ -474,21 +496,21 @@ public class EssbasicClient extends AbstractClient{
 
     /**
      *此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。 
-适用场景：无需填写签署人信息，可通过模板id生成签署二维码，签署人可通过扫描二维码补充签署信息进行实名签署。
-常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
 
-**本接口适用于发起方没有填写控件的 B2C或者单C模板**
+**适用场景**:
+签署人可通过扫描二维码补充签署信息进行实名签署。常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
 
-**若是B2C模板,还要满足以下任意一个条件**
-
-- 模板中配置的签署顺序是无序
-- B端企业的签署方式是静默签署
-- B端企业是非首位签署
-
-通过一码多扫二维码发起的合同，合同涉及到的回调消息可参考文档[合同发起及签署相关回调
+**注意**:
+1. 本接口适用于**发起方没有填写控件的 B2C或者单C模板**,  若是B2C模板,还要满足以下任意一个条件
+    - 模板中配置的签署顺序是无序
+    - B端企业的签署方式是静默签署
+    - B端企业是非首位签署
+2. 通过一码多扫二维码发起的合同，合同涉及到的回调消息可参考文档[合同发起及签署相关回调
 ]( https://qian.tencent.com/developers/partner/callback_types_contracts_sign)
+3. 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档[签署二维码相关回调](https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83)
 
-用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档[签署二维码相关回调](https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83)
+二维码的样式如下图:
+![image](https://qcloudimg.tencent-cloud.cn/raw/27317cf5aacb094fb1dc6f94179a5148.png )
      * @param req ChannelCreateMultiFlowSignQRCodeRequest
      * @return ChannelCreateMultiFlowSignQRCodeResponse
      * @throws TencentCloudSDKException
@@ -499,12 +521,12 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *通过此接口，创建小程序批量签署链接，可以创建企业批量签署链接，员工只需点击链接即可跳转至控制台进行批量签署。
+     *通过此接口，可以创建企业批量签署链接，员工只需点击链接即可跳转至控制台进行批量签署。
 
 注：
 - 员工必须在企业下完成实名认证，且需作为批量签署合同的签署方或者领取方。
 - 仅支持传入待签署或者待领取的合同，待填写暂不支持。
-- 员工批量签署，支持多种签名方式，包括手写签名、临摹签名、系统签名、个人印章，暂不支持签批控件
+- 员工批量签署，支持多种签名方式，包括手写签名、临摹签名、系统签名、个人印章、签批控件等。
      * @param req ChannelCreateOrganizationBatchSignUrlRequest
      * @return ChannelCreateOrganizationBatchSignUrlResponse
      * @throws TencentCloudSDKException
@@ -687,6 +709,17 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *通过此接口（ChannelDescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。
+     * @param req ChannelDescribeBillUsageDetailRequest
+     * @return ChannelDescribeBillUsageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelDescribeBillUsageDetailResponse ChannelDescribeBillUsageDetail(ChannelDescribeBillUsageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChannelDescribeBillUsageDetail", ChannelDescribeBillUsageDetailResponse.class);
+    }
+
+    /**
      *获取企业员工信息, 可以获取员工的名字,OpenId,UserId和简述的角色等信息，支持设置过滤条件以筛选员工查询结果。
 
 **注**:通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/SyncProxyOrganizationOperators" target="_blank">企业员工新增或离职</a>接口增加的新员工或者离职的员工也会在列表中。
@@ -700,7 +733,21 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *查询流程填写控件内容，可以根据流程Id查询该流程相关联的填写控件信息和填写内容。 注意：使用此接口前，需要在【企业应用管理】-【应用集成】-【第三方应用管理】中开通【下载应用内全量合同文件及内容数据】功能。
+     *用于获取合同中填写控件填写状态和填写的内容。 
+
+**注意**: `附件控件不会出现在结果列表中`
+
+
+**授权**:   
+此接口需要授权,  有两种开通权限的途径
+
+**第一种**:   需第三方应用的子企业登录控制台进行授权,  授权在**企业中心**的**授权管理**区域,  界面如下图
+授权过程需要**子企业超管**扫描跳转到电子签小程序签署<<渠道端下载渠道子客合同功能授权委托书>>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/8b483dfebdeafac85051279406944048.png)
+
+**第二种**: 第三方应用的配置接口打开全第三个应用下的所有自己起开通, 需要**渠道方企业的超管**扫描二维码跳转到电子签小程序签署 <<渠道端下载渠道子客合同功能开通知情同意书>>
+![image](https://qcloudimg.tencent-cloud.cn/raw/238979ef51dd381ccbdbc755a593debc/channel_DescribeResourceUrlsByFlows_appilications2.png)
      * @param req ChannelDescribeFlowComponentsRequest
      * @return ChannelDescribeFlowComponentsResponse
      * @throws TencentCloudSDKException
@@ -915,6 +962,9 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 1. 若在激活过程中，**更换用户OpenID重新生成链接，之前的认证会被清理**。因此不要在企业认证过程生成多个链接给多人同时操作，会导致认证过程互相影响。
 2. 若您认证中发现信息有误需要重新认证，**可通过更换用户OpenID重新生成链接的方式，来清理掉已有的流程**。
+
+系统的渠道企业, 应用, 子客企业, 子客员工的组织形式
+![image](https://qcloudimg.tencent-cloud.cn/raw/bee4b7375fe7a097f3573b18a1c1e30b.png)
      * @param req CreateConsoleLoginUrlRequest
      * @return CreateConsoleLoginUrlResponse
      * @throws TencentCloudSDKException
@@ -1032,6 +1082,17 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     }
 
     /**
+     *通过此接口（DescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。
+     * @param req DescribeBillUsageDetailRequest
+     * @return DescribeBillUsageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillUsageDetailResponse DescribeBillUsageDetail(DescribeBillUsageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillUsageDetail", DescribeBillUsageDetailResponse.class);
+    }
+
+    /**
      *获取出证报告任务执行结果，返回报告 URL。
 
 注意：
@@ -1092,10 +1153,10 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 **第一种**:   需第三方应用的子企业登录控制台进行授权,  授权在**企业中心**的**授权管理**区域,  界面如下图
 授权过程需要**子企业超管**扫描跳转到电子签小程序签署<<渠道端下载渠道子客合同功能授权委托书>>
 
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeResourceUrlsByFlows2.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/8b483dfebdeafac85051279406944048.png)
 
 **第二种**: 第三方应用的配置接口打开全第三个应用下的所有自己起开通, 需要**渠道方企业的超管**扫描二维码跳转到电子签小程序签署 <<渠道端下载渠道子客合同功能开通知情同意书>>
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeResourceUrlsByFlows_appilications2.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/238979ef51dd381ccbdbc755a593debc/channel_DescribeResourceUrlsByFlows_appilications2.png)
      * @param req DescribeResourceUrlsByFlowsRequest
      * @return DescribeResourceUrlsByFlowsResponse
      * @throws TencentCloudSDKException
@@ -1108,6 +1169,15 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     /**
      *通过此接口（DescribeTemplates）查询该第三方平台子客企业在电子签拥有的有效模板，不包括第三方平台模板。
 
+**适用场景**
+ 该接口常用来配合<a href="https://qian.tencent.com/developers/partnerApis/startFlows/CreateFlowsByTemplates" target="_blank">用模板创建签署流程</a>和<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates" target="_blank">通过多模板创建合同组签署流程</a>接口，作为创建合同的前置接口使用。 
+通过此接口查询到模板信息后，再通过调用创建合同的接口，指定模板ID，指定模板中需要的填写控件内容等，完成合同文档的的创建。
+
+**模版的来源**
+子客企业的模板有两种途径获取
+- 渠道方(平台方)配置完成后, 分发给同应用的各个子企业
+- 子客企业通过CreateConsoleLoginUrl创建的链接登录子客控制台自己创建
+
 **一个模板通常会包含以下结构信息** 
 
 - 模板模版ID, 模板名字等基本信息
@@ -1117,14 +1187,9 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 ![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeTemplates.png)
 
-**适用场景**
- 该接口常用来配合<a href="https://qian.tencent.com/developers/partnerApis/startFlows/CreateFlowsByTemplates" target="_blank">用模板创建签署流程</a>和<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates" target="_blank">通过多模板创建合同组签署流程</a>接口，作为创建合同的前置接口使用。 
-通过此接口查询到模板信息后，再通过调用创建合同的接口，指定模板ID，指定模板中需要的填写控件内容等，完成合同文档的的创建。
+模版中各元素的层级关系, 所有的填写控件和签署控件都归属某一个角色(通过控件的ComponentRecipientId来关联)
 
-**模版的来源**
-子客企业的模板有两种途径获取
-- 渠道方(平台方)配置完成后, 分发给同应用的各个子企业
-- 子客企业通过CreateConsoleLoginUrl创建的链接登录子客控制台自己创建
+![image](https://qcloudimg.tencent-cloud.cn/raw/45c638bd93f9c8024763add9ab47c27f.png)
 
 
 **注意**
@@ -1141,8 +1206,9 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     }
 
     /**
-     *此接口（DescribeUsage）用于获取第三方平台所有合作企业流量消耗情况。
- 注: 此接口每日限频50次，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
+     *此接口（DescribeUsage）用于获取此应用下子客企业的合同消耗数量。
+
+注: 此接口**每日限频50次**，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
      * @param req DescribeUsageRequest
      * @return DescribeUsageResponse
      * @throws TencentCloudSDKException
@@ -1158,8 +1224,8 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 注:
 <ul>
-<li>仅支持下载 **本企业** 下合同，链接会 **登录企业控制台** </li>
-<li> **链接仅可使用一次**，不可重复使用</li>
+<li>仅支持下载 <b>本企业</b> 下合同，链接会 <b>登录企业控制台</b> </li>
+<li> <b>链接仅可使用一次</b>，不可重复使用</li>
 </ul>
      * @param req GetDownloadFlowUrlRequest
      * @return GetDownloadFlowUrlResponse

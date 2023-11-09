@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeModuleStatusRequest extends AbstractModel {
 
+    /**
+    * 要查询状态的域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+     * Get 要查询状态的域名 
+     * @return Domain 要查询状态的域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 要查询状态的域名
+     * @param Domain 要查询状态的域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public DescribeModuleStatusRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeModuleStatusRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeModuleStatusRequest(DescribeModuleStatusRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeModuleStatusRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

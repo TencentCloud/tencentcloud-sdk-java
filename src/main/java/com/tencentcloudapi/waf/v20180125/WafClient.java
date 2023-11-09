@@ -420,9 +420,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *接口已废弃
-
-描述WAF自动封禁IP详情,对齐自动封堵状态
+     *描述WAF自动封禁IP详情,对齐自动封堵状态
      * @param req DescribeAutoDenyIPRequest
      * @return DescribeAutoDenyIPResponse
      * @throws TencentCloudSDKException

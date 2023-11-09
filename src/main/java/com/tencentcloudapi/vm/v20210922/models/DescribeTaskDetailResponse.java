@@ -145,9 +145,14 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private AudioSegments [] AudioSegments;
 
     /**
-    * 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+    * 当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorType")
@@ -185,6 +190,14 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     @SerializedName("Asrs")
     @Expose
     private RcbAsr [] Asrs;
+
+    /**
+    * 该字段用于返回检测结果明细数据相关的cos url	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SegmentCosUrlList")
+    @Expose
+    private SegmentCosUrlList SegmentCosUrlList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -498,13 +511,23 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+     * Get 当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorType 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+     * @return ErrorType 当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorType() {
@@ -512,13 +535,23 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+     * Set 当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorType 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+     * @param ErrorType 当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorType(String ErrorType) {
@@ -603,6 +636,26 @@ public class DescribeTaskDetailResponse extends AbstractModel {
      */
     public void setAsrs(RcbAsr [] Asrs) {
         this.Asrs = Asrs;
+    }
+
+    /**
+     * Get 该字段用于返回检测结果明细数据相关的cos url	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SegmentCosUrlList 该字段用于返回检测结果明细数据相关的cos url	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SegmentCosUrlList getSegmentCosUrlList() {
+        return this.SegmentCosUrlList;
+    }
+
+    /**
+     * Set 该字段用于返回检测结果明细数据相关的cos url	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentCosUrlList 该字段用于返回检测结果明细数据相关的cos url	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSegmentCosUrlList(SegmentCosUrlList SegmentCosUrlList) {
+        this.SegmentCosUrlList = SegmentCosUrlList;
     }
 
     /**
@@ -701,6 +754,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
                 this.Asrs[i] = new RcbAsr(source.Asrs[i]);
             }
         }
+        if (source.SegmentCosUrlList != null) {
+            this.SegmentCosUrlList = new SegmentCosUrlList(source.SegmentCosUrlList);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -731,6 +787,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "AudioText", this.AudioText);
         this.setParamArrayObj(map, prefix + "Asrs.", this.Asrs);
+        this.setParamObj(map, prefix + "SegmentCosUrlList.", this.SegmentCosUrlList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

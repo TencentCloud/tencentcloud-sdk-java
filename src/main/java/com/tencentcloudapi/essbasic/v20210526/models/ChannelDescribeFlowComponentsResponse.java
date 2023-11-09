@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ChannelDescribeFlowComponentsResponse extends AbstractModel {
 
     /**
-    * 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 合同填写控件信息列表，填写控件会按照参与方角色进行分类。
     */
     @SerializedName("RecipientComponentInfos")
     @Expose
@@ -39,20 +38,16 @@ public class ChannelDescribeFlowComponentsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecipientComponentInfos 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 合同填写控件信息列表，填写控件会按照参与方角色进行分类。 
+     * @return RecipientComponentInfos 合同填写控件信息列表，填写控件会按照参与方角色进行分类。
      */
     public RecipientComponentInfo [] getRecipientComponentInfos() {
         return this.RecipientComponentInfos;
     }
 
     /**
-     * Set 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecipientComponentInfos 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 合同填写控件信息列表，填写控件会按照参与方角色进行分类。
+     * @param RecipientComponentInfos 合同填写控件信息列表，填写控件会按照参与方角色进行分类。
      */
     public void setRecipientComponentInfos(RecipientComponentInfo [] RecipientComponentInfos) {
         this.RecipientComponentInfos = RecipientComponentInfos;

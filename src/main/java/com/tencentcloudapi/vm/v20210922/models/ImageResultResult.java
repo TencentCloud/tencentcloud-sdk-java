@@ -84,7 +84,7 @@ Block 确认违规
     private Long Score;
 
     /**
-    * 如果命中场景为涉政，则该数据为人物姓名列表，否则null
+    * 人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Names")
@@ -276,9 +276,9 @@ Block 确认违规
     }
 
     /**
-     * Get 如果命中场景为涉政，则该数据为人物姓名列表，否则null
+     * Get 人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Names 如果命中场景为涉政，则该数据为人物姓名列表，否则null
+     * @return Names 人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNames() {
@@ -286,9 +286,9 @@ Block 确认违规
     }
 
     /**
-     * Set 如果命中场景为涉政，则该数据为人物姓名列表，否则null
+     * Set 人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Names 如果命中场景为涉政，则该数据为人物姓名列表，否则null
+     * @param Names 人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNames(String [] Names) {

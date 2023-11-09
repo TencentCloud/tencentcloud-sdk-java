@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyRuleTemplateRequest extends AbstractModel {
 
     /**
-    * 模版ID
+    * 模板ID
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 模版类型  1.系统模版   2.自定义模版
+    * 模板类型  1.系统模板   2.自定义模板
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 模版名称
+    * 模板名称
     */
     @SerializedName("Name")
     @Expose
@@ -101,48 +101,48 @@ public class ModifyRuleTemplateRequest extends AbstractModel {
     private Boolean WhereFlag;
 
     /**
-     * Get 模版ID 
-     * @return TemplateId 模版ID
+     * Get 模板ID 
+     * @return TemplateId 模板ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版ID
-     * @param TemplateId 模版ID
+     * Set 模板ID
+     * @param TemplateId 模板ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模版类型  1.系统模版   2.自定义模版 
-     * @return Type 模版类型  1.系统模版   2.自定义模版
+     * Get 模板类型  1.系统模板   2.自定义模板 
+     * @return Type 模板类型  1.系统模板   2.自定义模板
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 模版类型  1.系统模版   2.自定义模版
-     * @param Type 模版类型  1.系统模版   2.自定义模版
+     * Set 模板类型  1.系统模板   2.自定义模板
+     * @param Type 模板类型  1.系统模板   2.自定义模板
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 模版名称 
-     * @return Name 模版名称
+     * Get 模板名称 
+     * @return Name 模板名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模版名称
-     * @param Name 模版名称
+     * Set 模板名称
+     * @param Name 模板名称
      */
     public void setName(String Name) {
         this.Name = Name;

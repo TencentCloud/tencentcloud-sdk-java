@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class FilledComponent extends AbstractModel {
 
     /**
-    * 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 填写控件ID
     */
     @SerializedName("ComponentId")
     @Expose
@@ -33,15 +32,15 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentName")
     @Expose
     private String ComponentName;
 
     /**
-    * 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
+    * 此填写控件的填写状态
+ **0** : 此填写控件**未填写**
+**1** : 此填写控件**已填写**
     */
     @SerializedName("ComponentFillStatus")
     @Expose
@@ -49,7 +48,6 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentValue")
     @Expose
@@ -57,37 +55,32 @@ public class FilledComponent extends AbstractModel {
 
     /**
     * 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
+
+注: `链接不是永久链接,  默认有效期5分钟后, 到期后链接失效`
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-     * Get 控件Id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComponentId 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 填写控件ID 
+     * @return ComponentId 填写控件ID
      */
     public String getComponentId() {
         return this.ComponentId;
     }
 
     /**
-     * Set 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComponentId 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 填写控件ID
+     * @param ComponentId 填写控件ID
      */
     public void setComponentId(String ComponentId) {
         this.ComponentId = ComponentId;
     }
 
     /**
-     * Get 控件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控件名称 
      * @return ComponentName 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentName() {
         return this.ComponentName;
@@ -95,39 +88,39 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentName 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComponentFillStatus 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 此填写控件的填写状态
+ **0** : 此填写控件**未填写**
+**1** : 此填写控件**已填写** 
+     * @return ComponentFillStatus 此填写控件的填写状态
+ **0** : 此填写控件**未填写**
+**1** : 此填写控件**已填写**
      */
     public String getComponentFillStatus() {
         return this.ComponentFillStatus;
     }
 
     /**
-     * Set 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComponentFillStatus 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 此填写控件的填写状态
+ **0** : 此填写控件**未填写**
+**1** : 此填写控件**已填写**
+     * @param ComponentFillStatus 此填写控件的填写状态
+ **0** : 此填写控件**未填写**
+**1** : 此填写控件**已填写**
      */
     public void setComponentFillStatus(String ComponentFillStatus) {
         this.ComponentFillStatus = ComponentFillStatus;
     }
 
     /**
-     * Get 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 控件填写内容 
      * @return ComponentValue 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentValue() {
         return this.ComponentValue;
@@ -135,9 +128,7 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentValue 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentValue(String ComponentValue) {
         this.ComponentValue = ComponentValue;
@@ -145,9 +136,11 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Get 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。 
+
+注: `链接不是永久链接,  默认有效期5分钟后, 到期后链接失效` 
      * @return ImageUrl 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
+
+注: `链接不是永久链接,  默认有效期5分钟后, 到期后链接失效`
      */
     public String getImageUrl() {
         return this.ImageUrl;
@@ -155,9 +148,11 @@ public class FilledComponent extends AbstractModel {
 
     /**
      * Set 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
+
+注: `链接不是永久链接,  默认有效期5分钟后, 到期后链接失效`
      * @param ImageUrl 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
+
+注: `链接不是永久链接,  默认有效期5分钟后, 到期后链接失效`
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

@@ -25,6 +25,8 @@ public class SignQrCode extends AbstractModel {
 
     /**
     * 二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
     */
     @SerializedName("QrCodeId")
     @Expose
@@ -38,15 +40,20 @@ public class SignQrCode extends AbstractModel {
     private String QrCodeUrl;
 
     /**
-    * 二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
+    * 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-     * Get 二维码ID，为32位字符串。	 
+     * Get 二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	 
      * @return QrCodeId 二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
      */
     public String getQrCodeId() {
         return this.QrCodeId;
@@ -54,7 +61,11 @@ public class SignQrCode extends AbstractModel {
 
     /**
      * Set 二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
      * @param QrCodeId 二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
      */
     public void setQrCodeId(String QrCodeId) {
         this.QrCodeId = QrCodeId;
@@ -77,16 +88,20 @@ public class SignQrCode extends AbstractModel {
     }
 
     /**
-     * Get 二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	 
-     * @return ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
+     * Get 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	 
+     * @return ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
-     * @param ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
+     * Set 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	
+     * @param ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

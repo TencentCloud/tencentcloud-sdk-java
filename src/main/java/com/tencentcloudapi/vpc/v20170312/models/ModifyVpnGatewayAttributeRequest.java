@@ -45,6 +45,13 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
+    * BGP ASN。ASN取值范围为1- 4294967295，默认值64551，其中139341、45090和58835不可用。
+    */
+    @SerializedName("BgpAsn")
+    @Expose
+    private Long BgpAsn;
+
+    /**
      * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
@@ -92,6 +99,22 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    /**
+     * Get BGP ASN。ASN取值范围为1- 4294967295，默认值64551，其中139341、45090和58835不可用。 
+     * @return BgpAsn BGP ASN。ASN取值范围为1- 4294967295，默认值64551，其中139341、45090和58835不可用。
+     */
+    public Long getBgpAsn() {
+        return this.BgpAsn;
+    }
+
+    /**
+     * Set BGP ASN。ASN取值范围为1- 4294967295，默认值64551，其中139341、45090和58835不可用。
+     * @param BgpAsn BGP ASN。ASN取值范围为1- 4294967295，默认值64551，其中139341、45090和58835不可用。
+     */
+    public void setBgpAsn(Long BgpAsn) {
+        this.BgpAsn = BgpAsn;
+    }
+
     public ModifyVpnGatewayAttributeRequest() {
     }
 
@@ -109,6 +132,9 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.BgpAsn != null) {
+            this.BgpAsn = new Long(source.BgpAsn);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
         this.setParamSimple(map, prefix + "VpnGatewayName", this.VpnGatewayName);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
 
     }
 }

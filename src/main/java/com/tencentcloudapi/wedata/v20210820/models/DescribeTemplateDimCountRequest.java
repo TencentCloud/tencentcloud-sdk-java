@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTemplateDimCountRequest extends AbstractModel {
 
     /**
-    * 模版类型
+    * 模板类型
     */
     @SerializedName("Type")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTemplateDimCountRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-     * Get 模版类型 
-     * @return Type 模版类型
+     * Get 模板类型 
+     * @return Type 模板类型
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 模版类型
-     * @param Type 模版类型
+     * Set 模板类型
+     * @param Type 模板类型
      */
     public void setType(Long Type) {
         this.Type = Type;

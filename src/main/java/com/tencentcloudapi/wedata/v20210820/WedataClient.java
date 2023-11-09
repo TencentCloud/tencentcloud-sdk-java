@@ -2496,7 +2496,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询规则模版维度分布情况
+     *查询规则模板维度分布情况
      * @param req DescribeTemplateDimCountRequest
      * @return DescribeTemplateDimCountResponse
      * @throws TencentCloudSDKException
@@ -2507,7 +2507,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询规则模版操作记录
+     *查询规则模板操作记录
      * @param req DescribeTemplateHistoryRequest
      * @return DescribeTemplateHistoryResponse
      * @throws TencentCloudSDKException
@@ -3013,7 +3013,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *编辑规则模版
+     *编辑规则模板
      * @param req ModifyRuleTemplateRequest
      * @return ModifyRuleTemplateResponse
      * @throws TencentCloudSDKException

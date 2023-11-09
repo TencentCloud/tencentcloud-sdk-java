@@ -120,6 +120,14 @@ public class SearchCommandResult extends AbstractModel {
     * 该命令所属会话的会话开始时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
+    @SerializedName("SessionTime")
+    @Expose
+    private String SessionTime;
+
+    /**
+    * 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
     @SerializedName("SessTime")
     @Expose
     private String SessTime;
@@ -383,19 +391,43 @@ public class SearchCommandResult extends AbstractModel {
     /**
      * Get 该命令所属会话的会话开始时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SessTime 该命令所属会话的会话开始时间
+     * @return SessionTime 该命令所属会话的会话开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getSessTime() {
-        return this.SessTime;
+    public String getSessionTime() {
+        return this.SessionTime;
     }
 
     /**
      * Set 该命令所属会话的会话开始时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessTime 该命令所属会话的会话开始时间
+     * @param SessionTime 该命令所属会话的会话开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
+    public void setSessionTime(String SessionTime) {
+        this.SessionTime = SessionTime;
+    }
+
+    /**
+     * Get 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public String getSessTime() {
+        return this.SessTime;
+    }
+
+    /**
+     * Set 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
     public void setSessTime(String SessTime) {
         this.SessTime = SessTime;
     }
@@ -547,6 +579,9 @@ public class SearchCommandResult extends AbstractModel {
         if (source.FromIp != null) {
             this.FromIp = new String(source.FromIp);
         }
+        if (source.SessionTime != null) {
+            this.SessionTime = new String(source.SessionTime);
+        }
         if (source.SessTime != null) {
             this.SessTime = new String(source.SessTime);
         }
@@ -585,6 +620,7 @@ public class SearchCommandResult extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeOffset", this.TimeOffset);
         this.setParamSimple(map, prefix + "Account", this.Account);
         this.setParamSimple(map, prefix + "FromIp", this.FromIp);
+        this.setParamSimple(map, prefix + "SessionTime", this.SessionTime);
         this.setParamSimple(map, prefix + "SessTime", this.SessTime);
         this.setParamSimple(map, prefix + "ConfirmTime", this.ConfirmTime);
         this.setParamSimple(map, prefix + "UserDepartmentId", this.UserDepartmentId);

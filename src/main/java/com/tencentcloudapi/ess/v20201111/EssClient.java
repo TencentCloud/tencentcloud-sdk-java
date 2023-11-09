@@ -405,19 +405,21 @@ public class EssClient extends AbstractClient{
 
     /**
      *此接口（CreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。
-适用场景：无需填写签署人信息，可通过模板id生成签署二维码，签署人可通过扫描二维码补充签署信息进行实名签署。
-常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
 
-**本接口适用于发起方没有填写控件的 B2C或者单C模板**
+**适用场景**:
+签署人可通过扫描二维码补充签署信息进行实名签署。常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
 
-**若是B2C模板,还要满足以下任意一个条件**
-- 模板中配置的签署顺序是无序
-- B端企业的签署方式是静默签署
-- B端企业是非首位签署
+**注意**:
+1. 本接口适用于**发起方没有填写控件的 B2C或者单C模板**,  若是B2C模板,还要满足以下任意一个条件
+    - 模板中配置的签署顺序是无序
+    - B端企业的签署方式是静默签署
+    - B端企业是非首位签署
+2. 通过一码多扫二维码发起的合同，合同涉及到的回调消息可参考文档[合同发起及签署相关回调
+]( https://qian.tencent.com/developers/company/callback_types_contracts_sign)
+3. 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档[签署二维码相关回调](https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83)
 
- 通过一码多扫二维码发起的合同，涉及到的合同回调消息可参考文档[合同发起以及签署相关回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign)
-
-用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档[签署二维码相关回调](https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83)
+二维码的样式如下图:
+![image](https://qcloudimg.tencent-cloud.cn/raw/27317cf5aacb094fb1dc6f94179a5148.png )
      * @param req CreateMultiFlowSignQRCodeRequest
      * @return CreateMultiFlowSignQRCodeResponse
      * @throws TencentCloudSDKException
@@ -711,7 +713,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *查询企业使用情况
+     *通过此接口（DescribeBillUsageDetail）查询该企业的套餐消耗详情。
      * @param req DescribeBillUsageDetailRequest
      * @return DescribeBillUsageDetailResponse
      * @throws TencentCloudSDKException
@@ -809,20 +811,23 @@ public class EssClient extends AbstractClient{
 
     /**
      *此接口（DescribeFlowTemplates）用于查询本企业模板列表信息。
->  一个模板通常会包含以下结构信息
->- 模板基本信息
->- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
->- 填写控件 Components
->- 签署控件 SignComponents
->- 生成模板的文件基础信息 FileInfos
+
+
+**适用场景**
+该接口常用来配合<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument" target="_blank">模板发起合同-创建电子文档</a>接口，作为创建电子文档的前置接口使用。
+通过此接口查询到模板信息后，再通过调用创建电子文档接口，指定模板ID，指定模板中需要的填写控件内容等，完成电子文档的创建。
+
+**一个模板通常会包含以下结构信息** 
+
+- 模板模版ID, 模板名字等基本信息
+- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
+- 发起方和签署方的填写控件 Components
+- 签署方的签署控件 SignComponents
 
 ![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeTemplates.png)
 
-当模板较多或模板中的控件较多时，可以通过查询模板接口更方便的获取模板列表，以及每个模板内的控件信息。
-
-适用场景：
-该接口常用来配合<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument" target="_blank">模板发起合同-创建电子文档</a>接口，作为创建电子文档的前置接口使用。
-通过此接口查询到模板信息后，再通过调用创建电子文档接口，指定模板ID，指定模板中需要的填写控件内容等，完成电子文档的创建。
+模版中各元素的层级关系, 所有的填写控件和签署控件都归属某一个角色(通过控件的ComponentRecipientId来关联)
+![image](https://qcloudimg.tencent-cloud.cn/raw/45c638bd93f9c8024763add9ab47c27f.png)
      * @param req DescribeFlowTemplatesRequest
      * @return DescribeFlowTemplatesResponse
      * @throws TencentCloudSDKException
@@ -856,8 +861,6 @@ public class EssClient extends AbstractClient{
 
     /**
      *此接口（DescribeIntegrationRoles）用于分页查询企业角色列表，列表按照角色创建时间升序排列。
-
-注：`法人角色是系统保留角色，因此返回列表中不含法人角色。`
      * @param req DescribeIntegrationRolesRequest
      * @return DescribeIntegrationRolesResponse
      * @throws TencentCloudSDKException

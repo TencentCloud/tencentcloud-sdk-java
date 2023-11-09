@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillUsageDetailRequest extends AbstractModel {
 
     /**
-    * 查询开始时间，时间跨度不能大于31天
+    * 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间，时间跨度不能大于31天
+    * 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
     */
     @SerializedName("EndTime")
     @Expose
@@ -53,61 +53,63 @@ public class DescribeBillUsageDetailRequest extends AbstractModel {
 
     /**
     * 查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
     */
     @SerializedName("QuotaType")
     @Expose
     private String QuotaType;
 
     /**
-    * 非必填，查询某个渠道企业的消耗情况。
-关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+    * 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 查询开始时间，时间跨度不能大于31天 
-     * @return StartTime 查询开始时间，时间跨度不能大于31天
+     * Get 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天 
+     * @return StartTime 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，时间跨度不能大于31天
-     * @param StartTime 查询开始时间，时间跨度不能大于31天
+     * Set 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
+     * @param StartTime 查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于31天
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，时间跨度不能大于31天 
-     * @return EndTime 查询结束时间，时间跨度不能大于31天
+     * Get 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天 
+     * @return EndTime 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，时间跨度不能大于31天
-     * @param EndTime 查询结束时间，时间跨度不能大于31天
+     * Set 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
+     * @param EndTime 查询结束时间字符串，格式为yyyymmdd,时间跨度不能大于31天
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -147,37 +149,41 @@ AuthService-企业工商信息查询
 
     /**
      * Get 查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询 
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul> 
      * @return QuotaType 查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
      */
     public String getQuotaType() {
         return this.QuotaType;
@@ -185,57 +191,61 @@ AuthService-企业工商信息查询
 
     /**
      * Set 查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
      * @param QuotaType 查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
      */
     public void setQuotaType(String QuotaType) {
         this.QuotaType = QuotaType;
     }
 
     /**
-     * Get 非必填，查询某个渠道企业的消耗情况。
-关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
-     * @return Agent 非必填，查询某个渠道企业的消耗情况。
-关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * Get 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
+     * @return Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 非必填，查询某个渠道企业的消耗情况。
-关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-     * @param Agent 非必填，查询某个渠道企业的消耗情况。
-关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * Set 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

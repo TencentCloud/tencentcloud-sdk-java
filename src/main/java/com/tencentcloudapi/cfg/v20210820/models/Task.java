@@ -229,6 +229,14 @@ public class Task extends AbstractModel {
     private ApmServiceInfo [] ApmServiceList;
 
     /**
+    * 关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VerifyId")
+    @Expose
+    private Long VerifyId;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -724,6 +732,26 @@ public class Task extends AbstractModel {
         this.ApmServiceList = ApmServiceList;
     }
 
+    /**
+     * Get 关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VerifyId 关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVerifyId() {
+        return this.VerifyId;
+    }
+
+    /**
+     * Set 关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VerifyId 关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerifyId(Long VerifyId) {
+        this.VerifyId = VerifyId;
+    }
+
     public Task() {
     }
 
@@ -828,6 +856,9 @@ public class Task extends AbstractModel {
                 this.ApmServiceList[i] = new ApmServiceInfo(source.ApmServiceList[i]);
             }
         }
+        if (source.VerifyId != null) {
+            this.VerifyId = new Long(source.VerifyId);
+        }
     }
 
 
@@ -862,6 +893,7 @@ public class Task extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
         this.setParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
+        this.setParamSimple(map, prefix + "VerifyId", this.VerifyId);
 
     }
 }

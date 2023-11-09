@@ -505,4 +505,16 @@ public class CfsClient extends AbstractClient{
         return this.internalRequest(req, "UpdateCfsSnapshotAttribute", UpdateCfsSnapshotAttributeResponse.class);
     }
 
+    /**
+     *更新文件系统带宽
+仅吞吐型支持此接口
+     * @param req UpdateFileSystemBandwidthLimitRequest
+     * @return UpdateFileSystemBandwidthLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFileSystemBandwidthLimitResponse UpdateFileSystemBandwidthLimit(UpdateFileSystemBandwidthLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateFileSystemBandwidthLimit", UpdateFileSystemBandwidthLimitResponse.class);
+    }
+
 }

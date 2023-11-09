@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class RecipientComponentInfo extends AbstractModel {
 
     /**
-    * 参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 参与方的角色ID
     */
     @SerializedName("RecipientId")
     @Expose
@@ -33,14 +32,19 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
     * 参与方填写状态
-注意：此字段可能返回 null，表示取不到有效值。
+
+<ul><li> **0** : 还没有填写</li>
+<li> **1** : 已经填写</li></ul>
     */
     @SerializedName("RecipientFillStatus")
     @Expose
     private String RecipientFillStatus;
 
     /**
-    * 是否发起方
+    * 此角色是否是发起方角色
+
+<ul><li> **true** : 是发起方角色</li>
+<li> **false** : 不是发起方角色</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPromoter")
@@ -48,7 +52,7 @@ public class RecipientComponentInfo extends AbstractModel {
     private Boolean IsPromoter;
 
     /**
-    * 填写控件内容
+    * 此角色的填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Components")
@@ -56,20 +60,16 @@ public class RecipientComponentInfo extends AbstractModel {
     private FilledComponent [] Components;
 
     /**
-     * Get 参与方Id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecipientId 参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 参与方的角色ID 
+     * @return RecipientId 参与方的角色ID
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecipientId 参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 参与方的角色ID
+     * @param RecipientId 参与方的角色ID
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
@@ -77,9 +77,13 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
      * Get 参与方填写状态
-注意：此字段可能返回 null，表示取不到有效值。 
+
+<ul><li> **0** : 还没有填写</li>
+<li> **1** : 已经填写</li></ul> 
      * @return RecipientFillStatus 参与方填写状态
-注意：此字段可能返回 null，表示取不到有效值。
+
+<ul><li> **0** : 还没有填写</li>
+<li> **1** : 已经填写</li></ul>
      */
     public String getRecipientFillStatus() {
         return this.RecipientFillStatus;
@@ -87,18 +91,28 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
      * Set 参与方填写状态
-注意：此字段可能返回 null，表示取不到有效值。
+
+<ul><li> **0** : 还没有填写</li>
+<li> **1** : 已经填写</li></ul>
      * @param RecipientFillStatus 参与方填写状态
-注意：此字段可能返回 null，表示取不到有效值。
+
+<ul><li> **0** : 还没有填写</li>
+<li> **1** : 已经填写</li></ul>
      */
     public void setRecipientFillStatus(String RecipientFillStatus) {
         this.RecipientFillStatus = RecipientFillStatus;
     }
 
     /**
-     * Get 是否发起方
+     * Get 此角色是否是发起方角色
+
+<ul><li> **true** : 是发起方角色</li>
+<li> **false** : 不是发起方角色</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsPromoter 是否发起方
+     * @return IsPromoter 此角色是否是发起方角色
+
+<ul><li> **true** : 是发起方角色</li>
+<li> **false** : 不是发起方角色</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPromoter() {
@@ -106,9 +120,15 @@ public class RecipientComponentInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否发起方
+     * Set 此角色是否是发起方角色
+
+<ul><li> **true** : 是发起方角色</li>
+<li> **false** : 不是发起方角色</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsPromoter 是否发起方
+     * @param IsPromoter 此角色是否是发起方角色
+
+<ul><li> **true** : 是发起方角色</li>
+<li> **false** : 不是发起方角色</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPromoter(Boolean IsPromoter) {
@@ -116,9 +136,9 @@ public class RecipientComponentInfo extends AbstractModel {
     }
 
     /**
-     * Get 填写控件内容
+     * Get 此角色的填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Components 填写控件内容
+     * @return Components 此角色的填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilledComponent [] getComponents() {
@@ -126,9 +146,9 @@ public class RecipientComponentInfo extends AbstractModel {
     }
 
     /**
-     * Set 填写控件内容
+     * Set 此角色的填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Components 填写控件内容
+     * @param Components 此角色的填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponents(FilledComponent [] Components) {

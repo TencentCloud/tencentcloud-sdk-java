@@ -53,13 +53,13 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     private RelieveInfo ReliveInfo;
 
     /**
-    * 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+    * 指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
     */
     @SerializedName("ReleasedApprovers")
@@ -187,21 +187,21 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * Get 指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul> 
-     * @return ReleasedApprovers 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @return ReleasedApprovers 指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
      */
     public ReleasedApprover [] getReleasedApprovers() {
@@ -209,21 +209,21 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * Set 指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
-     * @param ReleasedApprovers 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @param ReleasedApprovers 指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
      */
     public void setReleasedApprovers(ReleasedApprover [] ReleasedApprovers) {
