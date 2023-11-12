@@ -600,6 +600,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询数据引擎事件
+     * @param req DescribeDataEngineEventsRequest
+     * @return DescribeDataEngineEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEngineEventsResponse DescribeDataEngineEvents(DescribeDataEngineEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataEngineEvents", DescribeDataEngineEventsResponse.class);
+    }
+
+    /**
      *本接口（DescribeDataEngineImageVersions）用于获取独享集群大版本镜像列表。
      * @param req DescribeDataEngineImageVersionsRequest
      * @return DescribeDataEngineImageVersionsResponse

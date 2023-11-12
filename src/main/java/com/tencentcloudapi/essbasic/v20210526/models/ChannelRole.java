@@ -41,7 +41,6 @@ public class ChannelRole extends AbstractModel {
 
     /**
     * 角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleStatus")
     @Expose
@@ -96,10 +95,8 @@ public class ChannelRole extends AbstractModel {
     }
 
     /**
-     * Get 角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色状态：1-启用；2-禁用 
      * @return RoleStatus 角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoleStatus() {
         return this.RoleStatus;
@@ -107,9 +104,7 @@ public class ChannelRole extends AbstractModel {
 
     /**
      * Set 角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleStatus 角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleStatus(Long RoleStatus) {
         this.RoleStatus = RoleStatus;

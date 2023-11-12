@@ -627,6 +627,9 @@ public enum DlcErrorCode {
     // 子用户不是管理员，无权修改工作组信息。
      UNAUTHORIZEDOPERATION_MODIFYWORKGROUPINFO("UnauthorizedOperation.ModifyWorkgroupInfo"),
      
+    // 子用户无权查看引擎监控。
+     UNAUTHORIZEDOPERATION_MONITORCOMPUTINGENGINE("UnauthorizedOperation.MonitorComputingEngine"),
+     
     // 没有支付权限。
      UNAUTHORIZEDOPERATION_NOPAYMENTAUTHORITY("UnauthorizedOperation.NoPaymentAuthority"),
      

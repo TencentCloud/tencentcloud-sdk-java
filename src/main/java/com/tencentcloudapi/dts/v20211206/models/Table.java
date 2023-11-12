@@ -56,7 +56,7 @@ public class Table extends AbstractModel {
     private String ColumnMode;
 
     /**
-    * 同步的的列信息，当ColumnMode为Partial时，必填
+    * 同步的列信息，当ColumnMode为Partial时，必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Columns")
@@ -160,9 +160,9 @@ public class Table extends AbstractModel {
     }
 
     /**
-     * Get 同步的的列信息，当ColumnMode为Partial时，必填
+     * Get 同步的列信息，当ColumnMode为Partial时，必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Columns 同步的的列信息，当ColumnMode为Partial时，必填
+     * @return Columns 同步的列信息，当ColumnMode为Partial时，必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Column [] getColumns() {
@@ -170,9 +170,9 @@ public class Table extends AbstractModel {
     }
 
     /**
-     * Set 同步的的列信息，当ColumnMode为Partial时，必填
+     * Set 同步的列信息，当ColumnMode为Partial时，必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Columns 同步的的列信息，当ColumnMode为Partial时，必填
+     * @param Columns 同步的列信息，当ColumnMode为Partial时，必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumns(Column [] Columns) {

@@ -73,7 +73,7 @@ public class AudioResult extends AbstractModel {
     private String Url;
 
     /**
-    * 该字段用于返回音频文件的时长，单位为秒。
+    * 该字段用于返回音频文件的时长，单位为毫秒。
     */
     @SerializedName("Duration")
     @Expose
@@ -248,16 +248,16 @@ public class AudioResult extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回音频文件的时长，单位为秒。 
-     * @return Duration 该字段用于返回音频文件的时长，单位为秒。
+     * Get 该字段用于返回音频文件的时长，单位为毫秒。 
+     * @return Duration 该字段用于返回音频文件的时长，单位为毫秒。
      */
     public String getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 该字段用于返回音频文件的时长，单位为秒。
-     * @param Duration 该字段用于返回音频文件的时长，单位为秒。
+     * Set 该字段用于返回音频文件的时长，单位为毫秒。
+     * @param Duration 该字段用于返回音频文件的时长，单位为毫秒。
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;

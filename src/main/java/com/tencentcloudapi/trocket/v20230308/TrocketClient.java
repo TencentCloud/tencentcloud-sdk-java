@@ -138,6 +138,20 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *获取消费组列表，Filter参数使用说明如下：
+
+1. ConsumerGroupName，名称模糊查询
+2. ConsumeMessageOrderly，投递顺序性。"true":顺序投递；"false":并发投递
+     * @param req DescribeConsumerGroupListRequest
+     * @return DescribeConsumerGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerGroupListResponse DescribeConsumerGroupList(DescribeConsumerGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerGroupList", DescribeConsumerGroupListResponse.class);
+    }
+
+    /**
      *查询实例信息
      * @param req DescribeInstanceRequest
      * @return DescribeInstanceResponse

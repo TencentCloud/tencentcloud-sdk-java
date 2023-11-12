@@ -101,7 +101,7 @@ public class AssetViewPortRisk extends AbstractModel {
     private Long Status;
 
     /**
-    * 资产唯一id
+    * 风险ID
     */
     @SerializedName("Id")
     @Expose
@@ -152,7 +152,7 @@ public class AssetViewPortRisk extends AbstractModel {
     private String Uin;
 
     /**
-    * 来源
+    * 识别来源，详细看枚举返回。
     */
     @SerializedName("From")
     @Expose
@@ -335,16 +335,16 @@ public class AssetViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get 资产唯一id 
-     * @return Id 资产唯一id
+     * Get 风险ID 
+     * @return Id 风险ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 资产唯一id
-     * @param Id 资产唯一id
+     * Set 风险ID
+     * @param Id 风险ID
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -455,16 +455,16 @@ public class AssetViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get 来源 
-     * @return From 来源
+     * Get 识别来源，详细看枚举返回。 
+     * @return From 识别来源，详细看枚举返回。
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 来源
-     * @param From 来源
+     * Set 识别来源，详细看枚举返回。
+     * @param From 识别来源，详细看枚举返回。
      */
     public void setFrom(String From) {
         this.From = From;

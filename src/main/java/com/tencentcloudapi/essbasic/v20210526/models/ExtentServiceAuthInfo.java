@@ -26,11 +26,11 @@ public class ExtentServiceAuthInfo extends AbstractModel {
     /**
     * 扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
     */
@@ -46,7 +46,9 @@ public class ExtentServiceAuthInfo extends AbstractModel {
     private String Name;
 
     /**
-    * 扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	
+    * 扩展服务的开通状态
+**ENABLE**：开通 
+**DISABLE**：未开通	
     */
     @SerializedName("Status")
     @Expose
@@ -71,20 +73,20 @@ public class ExtentServiceAuthInfo extends AbstractModel {
     /**
      * Get 扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul> 
      * @return Type 扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
      */
@@ -95,20 +97,20 @@ public class ExtentServiceAuthInfo extends AbstractModel {
     /**
      * Set 扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
      * @param Type 扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业自动签（自动签署）</li>
+<li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
- <li> PAGING_SEAL           骑缝章</li>
- <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li> PAGING_SEAL           骑缝章</li>
+<li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
      */
@@ -133,16 +135,24 @@ public class ExtentServiceAuthInfo extends AbstractModel {
     }
 
     /**
-     * Get 扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	 
-     * @return Status 扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	
+     * Get 扩展服务的开通状态
+**ENABLE**：开通 
+**DISABLE**：未开通	 
+     * @return Status 扩展服务的开通状态
+**ENABLE**：开通 
+**DISABLE**：未开通	
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	
-     * @param Status 扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	
+     * Set 扩展服务的开通状态
+**ENABLE**：开通 
+**DISABLE**：未开通	
+     * @param Status 扩展服务的开通状态
+**ENABLE**：开通 
+**DISABLE**：未开通	
      */
     public void setStatus(String Status) {
         this.Status = Status;
