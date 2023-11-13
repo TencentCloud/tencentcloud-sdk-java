@@ -316,6 +316,14 @@ CrossBorder表示跨境通道。
     private Long FeatureBitmap;
 
     /**
+    * 是否是开启了auto scale的通道，0表示否，1表示是。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAutoScaleProxy")
+    @Expose
+    private Long IsAutoScaleProxy;
+
+    /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -1063,6 +1071,26 @@ CrossBorder表示跨境通道。
         this.FeatureBitmap = FeatureBitmap;
     }
 
+    /**
+     * Get 是否是开启了auto scale的通道，0表示否，1表示是。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAutoScaleProxy 是否是开启了auto scale的通道，0表示否，1表示是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsAutoScaleProxy() {
+        return this.IsAutoScaleProxy;
+    }
+
+    /**
+     * Set 是否是开启了auto scale的通道，0表示否，1表示是。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAutoScaleProxy 是否是开启了auto scale的通道，0表示否，1表示是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAutoScaleProxy(Long IsAutoScaleProxy) {
+        this.IsAutoScaleProxy = IsAutoScaleProxy;
+    }
+
     public ProxyInfo() {
     }
 
@@ -1191,6 +1219,9 @@ CrossBorder表示跨境通道。
         if (source.FeatureBitmap != null) {
             this.FeatureBitmap = new Long(source.FeatureBitmap);
         }
+        if (source.IsAutoScaleProxy != null) {
+            this.IsAutoScaleProxy = new Long(source.IsAutoScaleProxy);
+        }
     }
 
 
@@ -1233,6 +1264,7 @@ CrossBorder表示跨境通道。
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         this.setParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
         this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
+        this.setParamSimple(map, prefix + "IsAutoScaleProxy", this.IsAutoScaleProxy);
 
     }
 }

@@ -31,21 +31,21 @@ public class RemoveBackupsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
+    * 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
     */
     @SerializedName("BackupNames")
     @Expose
     private String [] BackupNames;
 
     /**
-    * 批量删除手动备份起始时间
+    * 批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 批量删除手动备份截止时间
+    * 批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
     */
     @SerializedName("EndTime")
     @Expose
@@ -68,48 +68,48 @@ public class RemoveBackupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。 
-     * @return BackupNames 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
+     * Get 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。 
+     * @return BackupNames 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
      */
     public String [] getBackupNames() {
         return this.BackupNames;
     }
 
     /**
-     * Set 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
-     * @param BackupNames 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
+     * Set 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
+     * @param BackupNames 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
      */
     public void setBackupNames(String [] BackupNames) {
         this.BackupNames = BackupNames;
     }
 
     /**
-     * Get 批量删除手动备份起始时间 
-     * @return StartTime 批量删除手动备份起始时间
+     * Get 批量删除手动备份起始时间。当BackupNames为空时，此字段必填。 
+     * @return StartTime 批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 批量删除手动备份起始时间
-     * @param StartTime 批量删除手动备份起始时间
+     * Set 批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
+     * @param StartTime 批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 批量删除手动备份截止时间 
-     * @return EndTime 批量删除手动备份截止时间
+     * Get 批量删除手动备份截止时间。当BackupNames为空时，此字段必填。 
+     * @return EndTime 批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 批量删除手动备份截止时间
-     * @param EndTime 批量删除手动备份截止时间
+     * Set 批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
+     * @param EndTime 批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

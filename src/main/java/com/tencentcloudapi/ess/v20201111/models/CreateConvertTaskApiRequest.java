@@ -33,6 +33,7 @@ public class CreateConvertTaskApiRequest extends AbstractModel {
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul>
     */
@@ -91,6 +92,7 @@ public class CreateConvertTaskApiRequest extends AbstractModel {
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul> 
      * @return ResourceType 需要进行转换的资源文件类型
@@ -102,6 +104,7 @@ public class CreateConvertTaskApiRequest extends AbstractModel {
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul>
      */
@@ -119,6 +122,7 @@ public class CreateConvertTaskApiRequest extends AbstractModel {
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul>
      * @param ResourceType 需要进行转换的资源文件类型
@@ -130,6 +134,7 @@ public class CreateConvertTaskApiRequest extends AbstractModel {
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul>
      */

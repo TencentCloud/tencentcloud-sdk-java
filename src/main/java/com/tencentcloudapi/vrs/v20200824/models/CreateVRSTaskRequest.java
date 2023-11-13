@@ -96,7 +96,7 @@ public class CreateVRSTaskRequest extends AbstractModel {
     private Long ModelType;
 
     /**
-    * 任务类型 0:默认类型 1:轻量级复刻
+    * 任务类型 0:轻量版复刻
 默认为0
     */
     @SerializedName("TaskType")
@@ -291,9 +291,9 @@ public class CreateVRSTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务类型 0:默认类型 1:轻量级复刻
+     * Get 任务类型 0:轻量版复刻
 默认为0 
-     * @return TaskType 任务类型 0:默认类型 1:轻量级复刻
+     * @return TaskType 任务类型 0:轻量版复刻
 默认为0
      */
     public Long getTaskType() {
@@ -301,9 +301,9 @@ public class CreateVRSTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set 任务类型 0:默认类型 1:轻量级复刻
+     * Set 任务类型 0:轻量版复刻
 默认为0
-     * @param TaskType 任务类型 0:默认类型 1:轻量级复刻
+     * @param TaskType 任务类型 0:轻量版复刻
 默认为0
      */
     public void setTaskType(Long TaskType) {

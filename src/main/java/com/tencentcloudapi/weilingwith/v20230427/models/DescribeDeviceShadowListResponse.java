@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeDeviceShadowListResponse extends AbstractModel {
 
     /**
+    * 获取设备影子结果
+    */
+    @SerializedName("Result")
+    @Expose
+    private DeviceShadowRes Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 获取设备影子结果 
+     * @return Result 获取设备影子结果
+     */
+    public DeviceShadowRes getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 获取设备影子结果
+     * @param Result 获取设备影子结果
+     */
+    public void setResult(DeviceShadowRes Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeDeviceShadowListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDeviceShadowListResponse(DescribeDeviceShadowListResponse source) {
+        if (source.Result != null) {
+            this.Result = new DeviceShadowRes(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeDeviceShadowListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

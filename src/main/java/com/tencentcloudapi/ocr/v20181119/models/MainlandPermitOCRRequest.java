@@ -52,6 +52,14 @@ public class MainlandPermitOCRRequest extends AbstractModel {
     private Boolean RetProfile;
 
     /**
+    * 图片正反面
+FRONT：正面、BACK：反面，默认为FRONT
+    */
+    @SerializedName("CardSide")
+    @Expose
+    private String CardSide;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -127,6 +135,26 @@ public class MainlandPermitOCRRequest extends AbstractModel {
         this.RetProfile = RetProfile;
     }
 
+    /**
+     * Get 图片正反面
+FRONT：正面、BACK：反面，默认为FRONT 
+     * @return CardSide 图片正反面
+FRONT：正面、BACK：反面，默认为FRONT
+     */
+    public String getCardSide() {
+        return this.CardSide;
+    }
+
+    /**
+     * Set 图片正反面
+FRONT：正面、BACK：反面，默认为FRONT
+     * @param CardSide 图片正反面
+FRONT：正面、BACK：反面，默认为FRONT
+     */
+    public void setCardSide(String CardSide) {
+        this.CardSide = CardSide;
+    }
+
     public MainlandPermitOCRRequest() {
     }
 
@@ -144,6 +172,9 @@ public class MainlandPermitOCRRequest extends AbstractModel {
         if (source.RetProfile != null) {
             this.RetProfile = new Boolean(source.RetProfile);
         }
+        if (source.CardSide != null) {
+            this.CardSide = new String(source.CardSide);
+        }
     }
 
 
@@ -154,6 +185,7 @@ public class MainlandPermitOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "RetProfile", this.RetProfile);
+        this.setParamSimple(map, prefix + "CardSide", this.CardSide);
 
     }
 }

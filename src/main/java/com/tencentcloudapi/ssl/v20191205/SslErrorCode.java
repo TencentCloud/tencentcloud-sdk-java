@@ -156,6 +156,9 @@ public enum SslErrorCode {
     // 权益包已过期。
      FAILEDOPERATION_PACKAGEEXPIRED("FailedOperation.PackageExpired"),
      
+    // 权益包不存在。
+     FAILEDOPERATION_PACKAGENOTFOUND("FailedOperation.PackageNotFound"),
+     
     // 证书吊销失败。
      FAILEDOPERATION_REVOKEFAILED("FailedOperation.RevokeFailed"),
      

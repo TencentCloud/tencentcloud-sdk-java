@@ -254,6 +254,13 @@ PullVodPushLive -点播。
     private String RecordTemplateId;
 
     /**
+    * 新的目标地址，用于任务同时推两路场景。
+    */
+    @SerializedName("BackupToUrl")
+    @Expose
+    private String BackupToUrl;
+
+    /**
      * Get 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播，
@@ -909,6 +916,22 @@ PullVodPushLive -点播。
         this.RecordTemplateId = RecordTemplateId;
     }
 
+    /**
+     * Get 新的目标地址，用于任务同时推两路场景。 
+     * @return BackupToUrl 新的目标地址，用于任务同时推两路场景。
+     */
+    public String getBackupToUrl() {
+        return this.BackupToUrl;
+    }
+
+    /**
+     * Set 新的目标地址，用于任务同时推两路场景。
+     * @param BackupToUrl 新的目标地址，用于任务同时推两路场景。
+     */
+    public void setBackupToUrl(String BackupToUrl) {
+        this.BackupToUrl = BackupToUrl;
+    }
+
     public CreateLivePullStreamTaskRequest() {
     }
 
@@ -992,6 +1015,9 @@ PullVodPushLive -点播。
         if (source.RecordTemplateId != null) {
             this.RecordTemplateId = new String(source.RecordTemplateId);
         }
+        if (source.BackupToUrl != null) {
+            this.BackupToUrl = new String(source.BackupToUrl);
+        }
     }
 
 
@@ -1021,6 +1047,7 @@ PullVodPushLive -点播。
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
         this.setParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
+        this.setParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
 
     }
 }

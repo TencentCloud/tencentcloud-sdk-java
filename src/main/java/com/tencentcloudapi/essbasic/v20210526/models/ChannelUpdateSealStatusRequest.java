@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class ChannelUpdateSealStatusRequest extends AbstractModel {
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 操作的印章状态，DISABLE-停用印章
+    * 印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -59,32 +60,36 @@ public class ChannelUpdateSealStatusRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 操作的印章状态，DISABLE-停用印章 
-     * @return Status 操作的印章状态，DISABLE-停用印章
+     * Get 印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul> 
+     * @return Status 印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 操作的印章状态，DISABLE-停用印章
-     * @param Status 操作的印章状态，DISABLE-停用印章
+     * Set 印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul>
+     * @param Status 印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

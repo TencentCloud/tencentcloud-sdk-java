@@ -31,6 +31,13 @@ public class ApproverOption extends AbstractModel {
     private Boolean NoRefuse;
 
     /**
+    * 是否可以转发 默认false-可以转发 true-不可以转发
+    */
+    @SerializedName("NoTransfer")
+    @Expose
+    private Boolean NoTransfer;
+
+    /**
     * 是否隐藏一键签署 默认false-不隐藏true-隐藏
     */
     @SerializedName("HideOneKeySign")
@@ -75,6 +82,22 @@ public class ApproverOption extends AbstractModel {
      */
     public void setNoRefuse(Boolean NoRefuse) {
         this.NoRefuse = NoRefuse;
+    }
+
+    /**
+     * Get 是否可以转发 默认false-可以转发 true-不可以转发 
+     * @return NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
+     */
+    public Boolean getNoTransfer() {
+        return this.NoTransfer;
+    }
+
+    /**
+     * Set 是否可以转发 默认false-可以转发 true-不可以转发
+     * @param NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
+     */
+    public void setNoTransfer(Boolean NoTransfer) {
+        this.NoTransfer = NoTransfer;
     }
 
     /**
@@ -176,6 +199,9 @@ public class ApproverOption extends AbstractModel {
         if (source.NoRefuse != null) {
             this.NoRefuse = new Boolean(source.NoRefuse);
         }
+        if (source.NoTransfer != null) {
+            this.NoTransfer = new Boolean(source.NoTransfer);
+        }
         if (source.HideOneKeySign != null) {
             this.HideOneKeySign = new Boolean(source.HideOneKeySign);
         }
@@ -193,6 +219,7 @@ public class ApproverOption extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NoRefuse", this.NoRefuse);
+        this.setParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
         this.setParamSimple(map, prefix + "HideOneKeySign", this.HideOneKeySign);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);

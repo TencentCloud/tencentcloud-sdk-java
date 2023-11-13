@@ -40,7 +40,7 @@ public class SsoTeamUser extends AbstractModel {
     private String RealName;
 
     /**
-    * 用户类型
+    * 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserType")
@@ -152,9 +152,9 @@ public class SsoTeamUser extends AbstractModel {
     }
 
     /**
-     * Get 用户类型
+     * Get 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserType 用户类型
+     * @return UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserType() {
@@ -162,9 +162,9 @@ public class SsoTeamUser extends AbstractModel {
     }
 
     /**
-     * Set 用户类型
+     * Set 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserType 用户类型
+     * @param UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserType(String UserType) {

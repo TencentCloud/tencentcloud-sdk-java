@@ -208,6 +208,14 @@ PullVodPushLive -点播。
     private Long VodLocalMode;
 
     /**
+    * 新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。
+    */
+    @SerializedName("BackupToUrl")
+    @Expose
+    private String BackupToUrl;
+
+    /**
      * Get 任务Id。 
      * @return TaskId 任务Id。
      */
@@ -715,6 +723,26 @@ PullVodPushLive -点播。
         this.VodLocalMode = VodLocalMode;
     }
 
+    /**
+     * Get 新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。 
+     * @return BackupToUrl 新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。
+     */
+    public String getBackupToUrl() {
+        return this.BackupToUrl;
+    }
+
+    /**
+     * Set 新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。
+     * @param BackupToUrl 新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。
+     */
+    public void setBackupToUrl(String BackupToUrl) {
+        this.BackupToUrl = BackupToUrl;
+    }
+
     public ModifyLivePullStreamTaskRequest() {
     }
 
@@ -789,6 +817,9 @@ PullVodPushLive -点播。
         if (source.VodLocalMode != null) {
             this.VodLocalMode = new Long(source.VodLocalMode);
         }
+        if (source.BackupToUrl != null) {
+            this.BackupToUrl = new String(source.BackupToUrl);
+        }
     }
 
 
@@ -815,6 +846,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
+        this.setParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
 
     }
 }

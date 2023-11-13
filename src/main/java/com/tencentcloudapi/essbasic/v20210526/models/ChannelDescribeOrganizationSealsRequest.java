@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
     */
     @SerializedName("Agent")
     @Expose
@@ -38,14 +38,18 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 偏移量，默认为0，最大为20000
+    * 分页查询偏移量，默认为0，最大为20000
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询信息类型，为1时返回授权用户，为其他值时不返回
+    * 查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul>
     */
     @SerializedName("InfoType")
     @Expose
@@ -53,35 +57,38 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
 
     /**
     * 印章id（没有输入返回所有）
+
+注:  `没有输入返回所有记录，最大返回100条。`
     */
     @SerializedName("SealId")
     @Expose
     private String SealId;
 
     /**
-    * 印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章
+    * 印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。`
     */
     @SerializedName("SealTypes")
     @Expose
     private String [] SealTypes;
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -104,40 +111,60 @@ LEGAL_PERSON_SEAL：法定代表人章
     }
 
     /**
-     * Get 偏移量，默认为0，最大为20000 
-     * @return Offset 偏移量，默认为0，最大为20000
+     * Get 分页查询偏移量，默认为0，最大为20000 
+     * @return Offset 分页查询偏移量，默认为0，最大为20000
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0，最大为20000
-     * @param Offset 偏移量，默认为0，最大为20000
+     * Set 分页查询偏移量，默认为0，最大为20000
+     * @param Offset 分页查询偏移量，默认为0，最大为20000
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询信息类型，为1时返回授权用户，为其他值时不返回 
-     * @return InfoType 查询信息类型，为1时返回授权用户，为其他值时不返回
+     * Get 查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul> 
+     * @return InfoType 查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul>
      */
     public Long getInfoType() {
         return this.InfoType;
     }
 
     /**
-     * Set 查询信息类型，为1时返回授权用户，为其他值时不返回
-     * @param InfoType 查询信息类型，为1时返回授权用户，为其他值时不返回
+     * Set 查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul>
+     * @param InfoType 查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul>
      */
     public void setInfoType(Long InfoType) {
         this.InfoType = InfoType;
     }
 
     /**
-     * Get 印章id（没有输入返回所有） 
+     * Get 印章id（没有输入返回所有）
+
+注:  `没有输入返回所有记录，最大返回100条。` 
      * @return SealId 印章id（没有输入返回所有）
+
+注:  `没有输入返回所有记录，最大返回100条。`
      */
     public String getSealId() {
         return this.SealId;
@@ -145,47 +172,55 @@ LEGAL_PERSON_SEAL：法定代表人章
 
     /**
      * Set 印章id（没有输入返回所有）
+
+注:  `没有输入返回所有记录，最大返回100条。`
      * @param SealId 印章id（没有输入返回所有）
+
+注:  `没有输入返回所有记录，最大返回100条。`
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;
     }
 
     /**
-     * Get 印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章 
-     * @return SealTypes 印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章
+     * Get 印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。` 
+     * @return SealTypes 印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。`
      */
     public String [] getSealTypes() {
         return this.SealTypes;
     }
 
     /**
-     * Set 印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章
-     * @param SealTypes 印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章
+     * Set 印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。`
+     * @param SealTypes 印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。`
      */
     public void setSealTypes(String [] SealTypes) {
         this.SealTypes = SealTypes;

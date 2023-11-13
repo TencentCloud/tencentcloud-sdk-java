@@ -24,6 +24,20 @@ import java.util.HashMap;
 public class VPCOption extends AbstractModel {
 
     /**
+    * 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+    */
+    @SerializedName("VPCId")
+    @Expose
+    private String VPCId;
+
+    /**
+    * 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
     * 子网可用区。
     */
     @SerializedName("SubnetZone")
@@ -43,6 +57,38 @@ public class VPCOption extends AbstractModel {
     @SerializedName("SubnetCIDRBlock")
     @Expose
     private String SubnetCIDRBlock;
+
+    /**
+     * Get 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络） 
+     * @return VPCId 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+     */
+    public String getVPCId() {
+        return this.VPCId;
+    }
+
+    /**
+     * Set 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+     * @param VPCId 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+     */
+    public void setVPCId(String VPCId) {
+        this.VPCId = VPCId;
+    }
+
+    /**
+     * Get 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网） 
+     * @return SubnetId 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+     * @param SubnetId 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
 
     /**
      * Get 子网可用区。 
@@ -100,6 +146,12 @@ public class VPCOption extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public VPCOption(VPCOption source) {
+        if (source.VPCId != null) {
+            this.VPCId = new String(source.VPCId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
         if (source.SubnetZone != null) {
             this.SubnetZone = new String(source.SubnetZone);
         }
@@ -116,6 +168,8 @@ public class VPCOption extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "VPCId", this.VPCId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "SubnetZone", this.SubnetZone);
         this.setParamSimple(map, prefix + "VPCCIDRBlock", this.VPCCIDRBlock);
         this.setParamSimple(map, prefix + "SubnetCIDRBlock", this.SubnetCIDRBlock);

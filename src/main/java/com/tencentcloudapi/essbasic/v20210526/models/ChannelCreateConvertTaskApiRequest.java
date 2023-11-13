@@ -49,6 +49,7 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel {
 <li>jpeg</li>
 <li>png</li>
 <li>bmp</li>
+<li>html</li>
 <li>txt</li></ul>
     */
     @SerializedName("ResourceType")
@@ -146,6 +147,7 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel {
 <li>jpeg</li>
 <li>png</li>
 <li>bmp</li>
+<li>html</li>
 <li>txt</li></ul> 
      * @return ResourceType 需要进行转换的资源文件类型
 支持的文件类型如下：
@@ -157,6 +159,7 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel {
 <li>jpeg</li>
 <li>png</li>
 <li>bmp</li>
+<li>html</li>
 <li>txt</li></ul>
      */
     public String getResourceType() {
@@ -174,6 +177,7 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel {
 <li>jpeg</li>
 <li>png</li>
 <li>bmp</li>
+<li>html</li>
 <li>txt</li></ul>
      * @param ResourceType 需要进行转换的资源文件类型
 支持的文件类型如下：
@@ -185,6 +189,7 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel {
 <li>jpeg</li>
 <li>png</li>
 <li>bmp</li>
+<li>html</li>
 <li>txt</li></ul>
      */
     public void setResourceType(String ResourceType) {

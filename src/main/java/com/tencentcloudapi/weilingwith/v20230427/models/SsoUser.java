@@ -48,7 +48,7 @@ public class SsoUser extends AbstractModel {
     private String RealName;
 
     /**
-    * 用户类型
+    * 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserType")
@@ -88,7 +88,7 @@ public class SsoUser extends AbstractModel {
     private String Phone;
 
     /**
-    * 用户状态
+    * 用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -112,7 +112,7 @@ public class SsoUser extends AbstractModel {
     private Long UpdateAt;
 
     /**
-    * 是否属于团队
+    * 是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BelongTeam")
@@ -120,7 +120,7 @@ public class SsoUser extends AbstractModel {
     private Long BelongTeam;
 
     /**
-    * ID
+    * 部门ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepartmentId")
@@ -128,7 +128,7 @@ public class SsoUser extends AbstractModel {
     private String DepartmentId;
 
     /**
-    * 名称
+    * 部门名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepartmentName")
@@ -212,9 +212,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Get 用户类型
+     * Get 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserType 用户类型
+     * @return UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserType() {
@@ -222,9 +222,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Set 用户类型
+     * Set 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserType 用户类型
+     * @param UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserType(String UserType) {
@@ -312,9 +312,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Get 用户状态
+     * Get 用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 用户状态
+     * @return Status 用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -322,9 +322,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Set 用户状态
+     * Set 用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 用户状态
+     * @param Status 用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -372,9 +372,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Get 是否属于团队
+     * Get 是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BelongTeam 是否属于团队
+     * @return BelongTeam 是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBelongTeam() {
@@ -382,9 +382,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Set 是否属于团队
+     * Set 是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BelongTeam 是否属于团队
+     * @param BelongTeam 是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBelongTeam(Long BelongTeam) {
@@ -392,9 +392,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Get ID
+     * Get 部门ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DepartmentId ID
+     * @return DepartmentId 部门ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartmentId() {
@@ -402,9 +402,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Set ID
+     * Set 部门ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DepartmentId ID
+     * @param DepartmentId 部门ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartmentId(String DepartmentId) {
@@ -412,9 +412,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Get 名称
+     * Get 部门名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DepartmentName 名称
+     * @return DepartmentName 部门名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartmentName() {
@@ -422,9 +422,9 @@ public class SsoUser extends AbstractModel {
     }
 
     /**
-     * Set 名称
+     * Set 部门名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DepartmentName 名称
+     * @param DepartmentName 部门名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartmentName(String DepartmentName) {

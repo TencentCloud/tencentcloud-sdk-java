@@ -45,6 +45,13 @@ public class CreateEnvironmentRequest extends AbstractModel {
     private String Description;
 
     /**
+    * 是否为默认环境。
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
      * Get 环境名称。 
      * @return Name 环境名称。
      */
@@ -92,6 +99,22 @@ public class CreateEnvironmentRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 是否为默认环境。 
+     * @return IsDefault 是否为默认环境。
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否为默认环境。
+     * @param IsDefault 是否为默认环境。
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
     public CreateEnvironmentRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateEnvironmentRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateEnvironmentRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }

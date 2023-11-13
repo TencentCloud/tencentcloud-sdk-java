@@ -31,7 +31,7 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 日志类型：errorLog/slowLog
+    * 日志类型：error/slowLog
     */
     @SerializedName("LogType")
     @Expose
@@ -103,16 +103,16 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志类型：errorLog/slowLog 
-     * @return LogType 日志类型：errorLog/slowLog
+     * Get 日志类型：error/slowLog 
+     * @return LogType 日志类型：error/slowLog
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 日志类型：errorLog/slowLog
-     * @param LogType 日志类型：errorLog/slowLog
+     * Set 日志类型：error/slowLog
+     * @param LogType 日志类型：error/slowLog
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

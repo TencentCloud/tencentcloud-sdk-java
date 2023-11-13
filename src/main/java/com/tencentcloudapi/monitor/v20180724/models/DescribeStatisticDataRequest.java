@@ -31,7 +31,7 @@ public class DescribeStatisticDataRequest extends AbstractModel {
     private String Module;
 
     /**
-    * 命名空间，目前只支持QCE/TKE2
+    * 命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP
     */
     @SerializedName("Namespace")
     @Expose
@@ -46,6 +46,7 @@ public class DescribeStatisticDataRequest extends AbstractModel {
 
     /**
     * 维度条件，操作符支持=、in
+配置文档参考：https://cloud.tencent.com/document/product/248/53821
     */
     @SerializedName("Conditions")
     @Expose
@@ -101,16 +102,16 @@ public class DescribeStatisticDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间，目前只支持QCE/TKE2 
-     * @return Namespace 命名空间，目前只支持QCE/TKE2
+     * Get 命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP 
+     * @return Namespace 命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间，目前只支持QCE/TKE2
-     * @param Namespace 命名空间，目前只支持QCE/TKE2
+     * Set 命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP
+     * @param Namespace 命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -133,8 +134,10 @@ public class DescribeStatisticDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 维度条件，操作符支持=、in 
+     * Get 维度条件，操作符支持=、in
+配置文档参考：https://cloud.tencent.com/document/product/248/53821 
      * @return Conditions 维度条件，操作符支持=、in
+配置文档参考：https://cloud.tencent.com/document/product/248/53821
      */
     public MidQueryCondition [] getConditions() {
         return this.Conditions;
@@ -142,7 +145,9 @@ public class DescribeStatisticDataRequest extends AbstractModel {
 
     /**
      * Set 维度条件，操作符支持=、in
+配置文档参考：https://cloud.tencent.com/document/product/248/53821
      * @param Conditions 维度条件，操作符支持=、in
+配置文档参考：https://cloud.tencent.com/document/product/248/53821
      */
     public void setConditions(MidQueryCondition [] Conditions) {
         this.Conditions = Conditions;

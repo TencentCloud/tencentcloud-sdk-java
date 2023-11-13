@@ -101,6 +101,13 @@ public class MainlandPermitOCRResponse extends AbstractModel {
     private String Profile;
 
     /**
+    * 背面字段信息
+    */
+    @SerializedName("MainlandTravelPermitBackInfos")
+    @Expose
+    private MainlandTravelPermitBackInfos MainlandTravelPermitBackInfos;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -284,6 +291,22 @@ public class MainlandPermitOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 背面字段信息 
+     * @return MainlandTravelPermitBackInfos 背面字段信息
+     */
+    public MainlandTravelPermitBackInfos getMainlandTravelPermitBackInfos() {
+        return this.MainlandTravelPermitBackInfos;
+    }
+
+    /**
+     * Set 背面字段信息
+     * @param MainlandTravelPermitBackInfos 背面字段信息
+     */
+    public void setMainlandTravelPermitBackInfos(MainlandTravelPermitBackInfos MainlandTravelPermitBackInfos) {
+        this.MainlandTravelPermitBackInfos = MainlandTravelPermitBackInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -340,6 +363,9 @@ public class MainlandPermitOCRResponse extends AbstractModel {
         if (source.Profile != null) {
             this.Profile = new String(source.Profile);
         }
+        if (source.MainlandTravelPermitBackInfos != null) {
+            this.MainlandTravelPermitBackInfos = new MainlandTravelPermitBackInfos(source.MainlandTravelPermitBackInfos);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -361,6 +387,7 @@ public class MainlandPermitOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IssueNumber", this.IssueNumber);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Profile", this.Profile);
+        this.setParamObj(map, prefix + "MainlandTravelPermitBackInfos.", this.MainlandTravelPermitBackInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

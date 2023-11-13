@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ChannelDescribeRolesResponse extends AbstractModel {
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+    * 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 指定每页多少条数据，单页最大200
+    * 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
     */
     @SerializedName("Limit")
     @Expose
@@ -45,7 +45,7 @@ public class ChannelDescribeRolesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 角色信息
+    * 查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelRoles")
@@ -60,32 +60,32 @@ public class ChannelDescribeRolesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * Get 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。 
+     * @return Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * Set 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+     * @param Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 指定每页多少条数据，单页最大200 
-     * @return Limit 指定每页多少条数据，单页最大200
+     * Get 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。 
+     * @return Limit 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页多少条数据，单页最大200
-     * @param Limit 指定每页多少条数据，单页最大200
+     * Set 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+     * @param Limit 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -108,9 +108,9 @@ public class ChannelDescribeRolesResponse extends AbstractModel {
     }
 
     /**
-     * Get 角色信息
+     * Get 查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelRoles 角色信息
+     * @return ChannelRoles 查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChannelRole [] getChannelRoles() {
@@ -118,9 +118,9 @@ public class ChannelDescribeRolesResponse extends AbstractModel {
     }
 
     /**
-     * Set 角色信息
+     * Set 查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelRoles 角色信息
+     * @param ChannelRoles 查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelRoles(ChannelRole [] ChannelRoles) {

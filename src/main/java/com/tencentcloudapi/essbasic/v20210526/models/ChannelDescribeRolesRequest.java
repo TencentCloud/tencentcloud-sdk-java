@@ -39,7 +39,9 @@ public class ChannelDescribeRolesRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * 指定每页多少条数据，单页最大200
+    * 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+
+注: `因为历史原因, 此字段为字符串类型`
     */
     @SerializedName("Limit")
     @Expose
@@ -47,16 +49,26 @@ public class ChannelDescribeRolesRequest extends AbstractModel {
 
     /**
     * 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
+Key:"**RoleType**",Values:["**1**"]查询系统角色，
+Key:"**RoleType**",Values:["**2**"]查询自定义角色
+Key:"**RoleStatus**",Values:["**1**"]查询启用角色
+Key:"**RoleStatus**",Values:["**2**"]查询禁用角色
+Key:"**IsReturnPermissionGroup**"，Values:["**0**"]表示接口不返回角色对应的权限树字段
+Key:"**IsReturnPermissionGroup**"，Values:["**1**"]表示接口返回角色对应的权限树字段
+
+注: `同名字的Key的过滤条件会冲突, 只能填写一个`
+
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+    * 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+
+注：
+1.`offset从0开始，即第一页为0。`
+2.`默认从第一页返回。`
     */
     @SerializedName("Offset")
     @Expose
@@ -118,16 +130,24 @@ Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应�
     }
 
     /**
-     * Get 指定每页多少条数据，单页最大200 
-     * @return Limit 指定每页多少条数据，单页最大200
+     * Get 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+
+注: `因为历史原因, 此字段为字符串类型` 
+     * @return Limit 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+
+注: `因为历史原因, 此字段为字符串类型`
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定每页多少条数据，单页最大200
-     * @param Limit 指定每页多少条数据，单页最大200
+     * Set 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+
+注: `因为历史原因, 此字段为字符串类型`
+     * @param Limit 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+
+注: `因为历史原因, 此字段为字符串类型`
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;
@@ -135,13 +155,25 @@ Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应�
 
     /**
      * Get 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段 
+Key:"**RoleType**",Values:["**1**"]查询系统角色，
+Key:"**RoleType**",Values:["**2**"]查询自定义角色
+Key:"**RoleStatus**",Values:["**1**"]查询启用角色
+Key:"**RoleStatus**",Values:["**2**"]查询禁用角色
+Key:"**IsReturnPermissionGroup**"，Values:["**0**"]表示接口不返回角色对应的权限树字段
+Key:"**IsReturnPermissionGroup**"，Values:["**1**"]表示接口返回角色对应的权限树字段
+
+注: `同名字的Key的过滤条件会冲突, 只能填写一个`
+ 
      * @return Filters 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
+Key:"**RoleType**",Values:["**1**"]查询系统角色，
+Key:"**RoleType**",Values:["**2**"]查询自定义角色
+Key:"**RoleStatus**",Values:["**1**"]查询启用角色
+Key:"**RoleStatus**",Values:["**2**"]查询禁用角色
+Key:"**IsReturnPermissionGroup**"，Values:["**0**"]表示接口不返回角色对应的权限树字段
+Key:"**IsReturnPermissionGroup**"，Values:["**1**"]表示接口返回角色对应的权限树字段
+
+注: `同名字的Key的过滤条件会冲突, 只能填写一个`
+
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -149,29 +181,57 @@ Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应�
 
     /**
      * Set 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
+Key:"**RoleType**",Values:["**1**"]查询系统角色，
+Key:"**RoleType**",Values:["**2**"]查询自定义角色
+Key:"**RoleStatus**",Values:["**1**"]查询启用角色
+Key:"**RoleStatus**",Values:["**2**"]查询禁用角色
+Key:"**IsReturnPermissionGroup**"，Values:["**0**"]表示接口不返回角色对应的权限树字段
+Key:"**IsReturnPermissionGroup**"，Values:["**1**"]表示接口返回角色对应的权限树字段
+
+注: `同名字的Key的过滤条件会冲突, 只能填写一个`
+
      * @param Filters 查询的关键字段:
-Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-Key:"IsReturnPermissionGroup"，Values:["0"]:表示接口不返回角色对应的权限树字段，Values:["1"]表示接口返回角色对应的权限树字段
+Key:"**RoleType**",Values:["**1**"]查询系统角色，
+Key:"**RoleType**",Values:["**2**"]查询自定义角色
+Key:"**RoleStatus**",Values:["**1**"]查询启用角色
+Key:"**RoleStatus**",Values:["**2**"]查询禁用角色
+Key:"**IsReturnPermissionGroup**"，Values:["**0**"]表示接口不返回角色对应的权限树字段
+Key:"**IsReturnPermissionGroup**"，Values:["**1**"]表示接口返回角色对应的权限树字段
+
+注: `同名字的Key的过滤条件会冲突, 只能填写一个`
+
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000 
-     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * Get 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+
+注：
+1.`offset从0开始，即第一页为0。`
+2.`默认从第一页返回。` 
+     * @return Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+
+注：
+1.`offset从0开始，即第一页为0。`
+2.`默认从第一页返回。`
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * Set 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+
+注：
+1.`offset从0开始，即第一页为0。`
+2.`默认从第一页返回。`
+     * @param Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+
+注：
+1.`offset从0开始，即第一页为0。`
+2.`默认从第一页返回。`
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
