@@ -88,6 +88,14 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     private IntentionActionResult IntentionActionResult;
 
     /**
+    * 加密后的数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptedBody")
+    @Expose
+    private String EncryptedBody;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -255,6 +263,26 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
+     * Get 加密后的数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptedBody 加密后的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptedBody() {
+        return this.EncryptedBody;
+    }
+
+    /**
+     * Set 加密后的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptedBody 加密后的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptedBody(String EncryptedBody) {
+        this.EncryptedBody = EncryptedBody;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -302,6 +330,9 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
         if (source.IntentionActionResult != null) {
             this.IntentionActionResult = new IntentionActionResult(source.IntentionActionResult);
         }
+        if (source.EncryptedBody != null) {
+            this.EncryptedBody = new String(source.EncryptedBody);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -320,6 +351,7 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
         this.setParamObj(map, prefix + "IntentionVerifyData.", this.IntentionVerifyData);
         this.setParamObj(map, prefix + "IntentionQuestionResult.", this.IntentionQuestionResult);
         this.setParamObj(map, prefix + "IntentionActionResult.", this.IntentionActionResult);
+        this.setParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

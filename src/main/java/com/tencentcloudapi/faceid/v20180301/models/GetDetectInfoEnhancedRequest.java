@@ -82,6 +82,13 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     private Encryption Encryption;
 
     /**
+    * 是否对回包整体进行加密
+    */
+    @SerializedName("IsEncryptResponse")
+    @Expose
+    private Boolean IsEncryptResponse;
+
+    /**
      * Get 人脸核身流程的标识，调用DetectAuth接口时生成。 
      * @return BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      */
@@ -217,6 +224,22 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
         this.Encryption = Encryption;
     }
 
+    /**
+     * Get 是否对回包整体进行加密 
+     * @return IsEncryptResponse 是否对回包整体进行加密
+     */
+    public Boolean getIsEncryptResponse() {
+        return this.IsEncryptResponse;
+    }
+
+    /**
+     * Set 是否对回包整体进行加密
+     * @param IsEncryptResponse 是否对回包整体进行加密
+     */
+    public void setIsEncryptResponse(Boolean IsEncryptResponse) {
+        this.IsEncryptResponse = IsEncryptResponse;
+    }
+
     public GetDetectInfoEnhancedRequest() {
     }
 
@@ -249,6 +272,9 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
         if (source.Encryption != null) {
             this.Encryption = new Encryption(source.Encryption);
         }
+        if (source.IsEncryptResponse != null) {
+            this.IsEncryptResponse = new Boolean(source.IsEncryptResponse);
+        }
     }
 
 
@@ -264,6 +290,7 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsNeedIdCardAvatar", this.IsNeedIdCardAvatar);
         this.setParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
+        this.setParamSimple(map, prefix + "IsEncryptResponse", this.IsEncryptResponse);
 
     }
 }
