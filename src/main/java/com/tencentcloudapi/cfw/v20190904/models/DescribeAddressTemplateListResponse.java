@@ -45,6 +45,27 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
     private String [] NameList;
 
     /**
+    * Ip地址模板数量
+    */
+    @SerializedName("IpTemplateCount")
+    @Expose
+    private Long IpTemplateCount;
+
+    /**
+    * 域名地址模板数量
+    */
+    @SerializedName("DomainTemplateCount")
+    @Expose
+    private Long DomainTemplateCount;
+
+    /**
+    * 协议端口模板数量
+    */
+    @SerializedName("PortTemplateCount")
+    @Expose
+    private Long PortTemplateCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +121,54 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
     }
 
     /**
+     * Get Ip地址模板数量 
+     * @return IpTemplateCount Ip地址模板数量
+     */
+    public Long getIpTemplateCount() {
+        return this.IpTemplateCount;
+    }
+
+    /**
+     * Set Ip地址模板数量
+     * @param IpTemplateCount Ip地址模板数量
+     */
+    public void setIpTemplateCount(Long IpTemplateCount) {
+        this.IpTemplateCount = IpTemplateCount;
+    }
+
+    /**
+     * Get 域名地址模板数量 
+     * @return DomainTemplateCount 域名地址模板数量
+     */
+    public Long getDomainTemplateCount() {
+        return this.DomainTemplateCount;
+    }
+
+    /**
+     * Set 域名地址模板数量
+     * @param DomainTemplateCount 域名地址模板数量
+     */
+    public void setDomainTemplateCount(Long DomainTemplateCount) {
+        this.DomainTemplateCount = DomainTemplateCount;
+    }
+
+    /**
+     * Get 协议端口模板数量 
+     * @return PortTemplateCount 协议端口模板数量
+     */
+    public Long getPortTemplateCount() {
+        return this.PortTemplateCount;
+    }
+
+    /**
+     * Set 协议端口模板数量
+     * @param PortTemplateCount 协议端口模板数量
+     */
+    public void setPortTemplateCount(Long PortTemplateCount) {
+        this.PortTemplateCount = PortTemplateCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -138,6 +207,15 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
                 this.NameList[i] = new String(source.NameList[i]);
             }
         }
+        if (source.IpTemplateCount != null) {
+            this.IpTemplateCount = new Long(source.IpTemplateCount);
+        }
+        if (source.DomainTemplateCount != null) {
+            this.DomainTemplateCount = new Long(source.DomainTemplateCount);
+        }
+        if (source.PortTemplateCount != null) {
+            this.PortTemplateCount = new Long(source.PortTemplateCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -151,6 +229,9 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamArraySimple(map, prefix + "NameList.", this.NameList);
+        this.setParamSimple(map, prefix + "IpTemplateCount", this.IpTemplateCount);
+        this.setParamSimple(map, prefix + "DomainTemplateCount", this.DomainTemplateCount);
+        this.setParamSimple(map, prefix + "PortTemplateCount", this.PortTemplateCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

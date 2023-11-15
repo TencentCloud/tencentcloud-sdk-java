@@ -64,7 +64,7 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel {
 
 注: `CancelMessage为撤销当前合同的理由`
 
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/f16cf37dbb3a09d6569877f093b92204/channel_ChannelCancelFlow.png)
 
 
     */
@@ -177,7 +177,7 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel {
 
 注: `CancelMessage为撤销当前合同的理由`
 
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/f16cf37dbb3a09d6569877f093b92204/channel_ChannelCancelFlow.png)
 
  
      * @return CancelMessageFormat 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
@@ -189,7 +189,7 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel {
 
 注: `CancelMessage为撤销当前合同的理由`
 
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/f16cf37dbb3a09d6569877f093b92204/channel_ChannelCancelFlow.png)
 
 
      */
@@ -207,7 +207,7 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel {
 
 注: `CancelMessage为撤销当前合同的理由`
 
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/f16cf37dbb3a09d6569877f093b92204/channel_ChannelCancelFlow.png)
 
 
      * @param CancelMessageFormat 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
@@ -219,7 +219,7 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel {
 
 注: `CancelMessage为撤销当前合同的理由`
 
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/f16cf37dbb3a09d6569877f093b92204/channel_ChannelCancelFlow.png)
 
 
      */

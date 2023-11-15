@@ -122,6 +122,13 @@ public class DescribeFraudUltimateResponse extends AbstractModel {
     private Long SuggestionLevel;
 
     /**
+    * 图灵盾统一ID
+    */
+    @SerializedName("Unionid")
+    @Expose
+    private String Unionid;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -353,6 +360,22 @@ public class DescribeFraudUltimateResponse extends AbstractModel {
     }
 
     /**
+     * Get 图灵盾统一ID 
+     * @return Unionid 图灵盾统一ID
+     */
+    public String getUnionid() {
+        return this.Unionid;
+    }
+
+    /**
+     * Set 图灵盾统一ID
+     * @param Unionid 图灵盾统一ID
+     */
+    public void setUnionid(String Unionid) {
+        this.Unionid = Unionid;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -427,6 +450,9 @@ public class DescribeFraudUltimateResponse extends AbstractModel {
         if (source.SuggestionLevel != null) {
             this.SuggestionLevel = new Long(source.SuggestionLevel);
         }
+        if (source.Unionid != null) {
+            this.Unionid = new String(source.Unionid);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -451,6 +477,7 @@ public class DescribeFraudUltimateResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Openid", this.Openid);
         this.setParamArrayObj(map, prefix + "SceneRiskInfos.", this.SceneRiskInfos);
         this.setParamSimple(map, prefix + "SuggestionLevel", this.SuggestionLevel);
+        this.setParamSimple(map, prefix + "Unionid", this.Unionid);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

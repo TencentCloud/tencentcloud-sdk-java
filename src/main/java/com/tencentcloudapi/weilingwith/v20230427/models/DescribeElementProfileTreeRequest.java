@@ -23,6 +23,144 @@ import java.util.HashMap;
 
 public class DescribeElementProfileTreeRequest extends AbstractModel {
 
+    /**
+    * 建筑id
+    */
+    @SerializedName("BuildingId")
+    @Expose
+    private String BuildingId;
+
+    /**
+    * 项目空间id
+    */
+    @SerializedName("WorkspaceId")
+    @Expose
+    private String WorkspaceId;
+
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+    * 父级构件id
+    */
+    @SerializedName("ElementId")
+    @Expose
+    private String ElementId;
+
+    /**
+    * 构件级别
+    */
+    @SerializedName("Level")
+    @Expose
+    private Long Level;
+
+    /**
+    * 空间分类代码
+    */
+    @SerializedName("SpaceTypeCode")
+    @Expose
+    private String SpaceTypeCode;
+
+    /**
+     * Get 建筑id 
+     * @return BuildingId 建筑id
+     */
+    public String getBuildingId() {
+        return this.BuildingId;
+    }
+
+    /**
+     * Set 建筑id
+     * @param BuildingId 建筑id
+     */
+    public void setBuildingId(String BuildingId) {
+        this.BuildingId = BuildingId;
+    }
+
+    /**
+     * Get 项目空间id 
+     * @return WorkspaceId 项目空间id
+     */
+    public String getWorkspaceId() {
+        return this.WorkspaceId;
+    }
+
+    /**
+     * Set 项目空间id
+     * @param WorkspaceId 项目空间id
+     */
+    public void setWorkspaceId(String WorkspaceId) {
+        this.WorkspaceId = WorkspaceId;
+    }
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
+    /**
+     * Get 父级构件id 
+     * @return ElementId 父级构件id
+     */
+    public String getElementId() {
+        return this.ElementId;
+    }
+
+    /**
+     * Set 父级构件id
+     * @param ElementId 父级构件id
+     */
+    public void setElementId(String ElementId) {
+        this.ElementId = ElementId;
+    }
+
+    /**
+     * Get 构件级别 
+     * @return Level 构件级别
+     */
+    public Long getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set 构件级别
+     * @param Level 构件级别
+     */
+    public void setLevel(Long Level) {
+        this.Level = Level;
+    }
+
+    /**
+     * Get 空间分类代码 
+     * @return SpaceTypeCode 空间分类代码
+     */
+    public String getSpaceTypeCode() {
+        return this.SpaceTypeCode;
+    }
+
+    /**
+     * Set 空间分类代码
+     * @param SpaceTypeCode 空间分类代码
+     */
+    public void setSpaceTypeCode(String SpaceTypeCode) {
+        this.SpaceTypeCode = SpaceTypeCode;
+    }
+
     public DescribeElementProfileTreeRequest() {
     }
 
@@ -31,6 +169,24 @@ public class DescribeElementProfileTreeRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeElementProfileTreeRequest(DescribeElementProfileTreeRequest source) {
+        if (source.BuildingId != null) {
+            this.BuildingId = new String(source.BuildingId);
+        }
+        if (source.WorkspaceId != null) {
+            this.WorkspaceId = new String(source.WorkspaceId);
+        }
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
+        if (source.ElementId != null) {
+            this.ElementId = new String(source.ElementId);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
+        if (source.SpaceTypeCode != null) {
+            this.SpaceTypeCode = new String(source.SpaceTypeCode);
+        }
     }
 
 
@@ -38,6 +194,12 @@ public class DescribeElementProfileTreeRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BuildingId", this.BuildingId);
+        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+        this.setParamSimple(map, prefix + "ElementId", this.ElementId);
+        this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "SpaceTypeCode", this.SpaceTypeCode);
 
     }
 }

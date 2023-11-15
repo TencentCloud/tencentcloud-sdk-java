@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class DescribeSpaceRelationByDeviceIdRequest extends AbstractModel {
 
+    /**
+    * 设备id
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private String DeviceId;
+
+    /**
+    * 工作空间id
+    */
+    @SerializedName("WorkspaceId")
+    @Expose
+    private String WorkspaceId;
+
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+     * Get 设备id 
+     * @return DeviceId 设备id
+     */
+    public String getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 设备id
+     * @param DeviceId 设备id
+     */
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    /**
+     * Get 工作空间id 
+     * @return WorkspaceId 工作空间id
+     */
+    public String getWorkspaceId() {
+        return this.WorkspaceId;
+    }
+
+    /**
+     * Set 工作空间id
+     * @param WorkspaceId 工作空间id
+     */
+    public void setWorkspaceId(String WorkspaceId) {
+        this.WorkspaceId = WorkspaceId;
+    }
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
     public DescribeSpaceRelationByDeviceIdRequest() {
     }
 
@@ -31,6 +100,15 @@ public class DescribeSpaceRelationByDeviceIdRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSpaceRelationByDeviceIdRequest(DescribeSpaceRelationByDeviceIdRequest source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.WorkspaceId != null) {
+            this.WorkspaceId = new String(source.WorkspaceId);
+        }
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class DescribeSpaceRelationByDeviceIdRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
 
     }
 }

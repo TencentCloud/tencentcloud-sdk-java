@@ -73,6 +73,13 @@ public class DescribeDeviceShadowListRequest extends AbstractModel {
     private Long [] ProductIdSet;
 
     /**
+    * 设备标签id
+    */
+    @SerializedName("TagIdSet")
+    @Expose
+    private Long [] TagIdSet;
+
+    /**
     * 空间层级，（支持空间多层，比如具体建筑、具体楼层）
     */
     @SerializedName("SpaceCodeSet")
@@ -199,6 +206,22 @@ public class DescribeDeviceShadowListRequest extends AbstractModel {
     }
 
     /**
+     * Get 设备标签id 
+     * @return TagIdSet 设备标签id
+     */
+    public Long [] getTagIdSet() {
+        return this.TagIdSet;
+    }
+
+    /**
+     * Set 设备标签id
+     * @param TagIdSet 设备标签id
+     */
+    public void setTagIdSet(Long [] TagIdSet) {
+        this.TagIdSet = TagIdSet;
+    }
+
+    /**
      * Get 空间层级，（支持空间多层，比如具体建筑、具体楼层） 
      * @return SpaceCodeSet 空间层级，（支持空间多层，比如具体建筑、具体楼层）
      */
@@ -268,6 +291,12 @@ public class DescribeDeviceShadowListRequest extends AbstractModel {
                 this.ProductIdSet[i] = new Long(source.ProductIdSet[i]);
             }
         }
+        if (source.TagIdSet != null) {
+            this.TagIdSet = new Long[source.TagIdSet.length];
+            for (int i = 0; i < source.TagIdSet.length; i++) {
+                this.TagIdSet[i] = new Long(source.TagIdSet[i]);
+            }
+        }
         if (source.SpaceCodeSet != null) {
             this.SpaceCodeSet = new String[source.SpaceCodeSet.length];
             for (int i = 0; i < source.SpaceCodeSet.length; i++) {
@@ -294,6 +323,7 @@ public class DescribeDeviceShadowListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
         this.setParamArraySimple(map, prefix + "DeviceTypeSet.", this.DeviceTypeSet);
         this.setParamArraySimple(map, prefix + "ProductIdSet.", this.ProductIdSet);
+        this.setParamArraySimple(map, prefix + "TagIdSet.", this.TagIdSet);
         this.setParamArraySimple(map, prefix + "SpaceCodeSet.", this.SpaceCodeSet);
         this.setParamArraySimple(map, prefix + "DeviceTagSet.", this.DeviceTagSet);
 

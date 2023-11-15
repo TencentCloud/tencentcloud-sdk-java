@@ -48,10 +48,18 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
     /**
     * 1 ip模板
 5 域名模板
+6 协议端口模板
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
+
+    /**
+    * 协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填
+    */
+    @SerializedName("ProtocolType")
+    @Expose
+    private String ProtocolType;
 
     /**
      * Get 模板名称 
@@ -107,9 +115,11 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
 
     /**
      * Get 1 ip模板
-5 域名模板 
+5 域名模板
+6 协议端口模板 
      * @return Type 1 ip模板
 5 域名模板
+6 协议端口模板
      */
     public Long getType() {
         return this.Type;
@@ -118,11 +128,29 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
     /**
      * Set 1 ip模板
 5 域名模板
+6 协议端口模板
      * @param Type 1 ip模板
 5 域名模板
+6 协议端口模板
      */
     public void setType(Long Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填 
+     * @return ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填
+     */
+    public String getProtocolType() {
+        return this.ProtocolType;
+    }
+
+    /**
+     * Set 协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填
+     * @param ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议，Type=6时必填
+     */
+    public void setProtocolType(String ProtocolType) {
+        this.ProtocolType = ProtocolType;
     }
 
     public CreateAddressTemplateRequest() {
@@ -145,6 +173,9 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.ProtocolType != null) {
+            this.ProtocolType = new String(source.ProtocolType);
+        }
     }
 
 
@@ -156,6 +187,7 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
         this.setParamSimple(map, prefix + "Detail", this.Detail);
         this.setParamSimple(map, prefix + "IpString", this.IpString);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
 
     }
 }

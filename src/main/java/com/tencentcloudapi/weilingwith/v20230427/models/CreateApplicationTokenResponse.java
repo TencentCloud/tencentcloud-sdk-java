@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateApplicationTokenResponse extends AbstractModel {
 
     /**
+    * 应用令牌信息
+    */
+    @SerializedName("Result")
+    @Expose
+    private ApplicationTokenInfo Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 应用令牌信息 
+     * @return Result 应用令牌信息
+     */
+    public ApplicationTokenInfo getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 应用令牌信息
+     * @param Result 应用令牌信息
+     */
+    public void setResult(ApplicationTokenInfo Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateApplicationTokenResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateApplicationTokenResponse(CreateApplicationTokenResponse source) {
+        if (source.Result != null) {
+            this.Result = new ApplicationTokenInfo(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateApplicationTokenResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

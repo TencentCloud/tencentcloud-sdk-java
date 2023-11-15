@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OperateChannelTemplateResponse extends AbstractModel {
 
     /**
-    * 腾讯电子签颁发给第三方应用平台的应用ID
+    * 第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -32,7 +32,7 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     private String AppId;
 
     /**
-    * 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
+    * 合同模板ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
@@ -40,11 +40,11 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     private String TemplateId;
 
     /**
-    * 描述模板可见性更改的结果，和参数中Available无关。
+    * 描述模板可见性更改的结果。
 <ul>
-<li>全部成功-"all-success"</li>
-<li>部分成功-"part-success"</li>
-<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+<li>all-success: 全部成功</li>
+<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
+<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -53,11 +53,9 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     private String OperateResult;
 
     /**
-    * 模板可见性, 
-<ul>
-<li>全部可见-"all"</li>
-<li>部分可见-"part"</li>
-</ul>
+    * 模板可见范围:
+**all**: 所有本第三方应用合作企业可见
+**part**: 指定的本第三方应用合作企业
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthTag")
@@ -65,9 +63,7 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     private String AuthTag;
 
     /**
-    * 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
-
-一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
+    * 第三方平台子客企业标识列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOrganizationOpenIds")
@@ -90,9 +86,9 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 腾讯电子签颁发给第三方应用平台的应用ID
+     * Get 第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 腾讯电子签颁发给第三方应用平台的应用ID
+     * @return AppId 第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
@@ -100,9 +96,9 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Set 腾讯电子签颁发给第三方应用平台的应用ID
+     * Set 第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 腾讯电子签颁发给第三方应用平台的应用ID
+     * @param AppId 第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
@@ -110,9 +106,9 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Get 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
+     * Get 合同模板ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateId 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
+     * @return TemplateId 合同模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
@@ -120,9 +116,9 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Set 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
+     * Set 合同模板ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateId 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
+     * @param TemplateId 合同模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
@@ -130,18 +126,18 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Get 描述模板可见性更改的结果，和参数中Available无关。
+     * Get 描述模板可见性更改的结果。
 <ul>
-<li>全部成功-"all-success"</li>
-<li>部分成功-"part-success"</li>
-<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+<li>all-success: 全部成功</li>
+<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
+<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperateResult 描述模板可见性更改的结果，和参数中Available无关。
+     * @return OperateResult 描述模板可见性更改的结果。
 <ul>
-<li>全部成功-"all-success"</li>
-<li>部分成功-"part-success"</li>
-<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+<li>all-success: 全部成功</li>
+<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
+<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -150,18 +146,18 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Set 描述模板可见性更改的结果，和参数中Available无关。
+     * Set 描述模板可见性更改的结果。
 <ul>
-<li>全部成功-"all-success"</li>
-<li>部分成功-"part-success"</li>
-<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+<li>all-success: 全部成功</li>
+<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
+<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperateResult 描述模板可见性更改的结果，和参数中Available无关。
+     * @param OperateResult 描述模板可见性更改的结果。
 <ul>
-<li>全部成功-"all-success"</li>
-<li>部分成功-"part-success"</li>
-<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+<li>all-success: 全部成功</li>
+<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
+<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
 </ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -170,17 +166,13 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Get 模板可见性, 
-<ul>
-<li>全部可见-"all"</li>
-<li>部分可见-"part"</li>
-</ul>
+     * Get 模板可见范围:
+**all**: 所有本第三方应用合作企业可见
+**part**: 指定的本第三方应用合作企业
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuthTag 模板可见性, 
-<ul>
-<li>全部可见-"all"</li>
-<li>部分可见-"part"</li>
-</ul>
+     * @return AuthTag 模板可见范围:
+**all**: 所有本第三方应用合作企业可见
+**part**: 指定的本第三方应用合作企业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthTag() {
@@ -188,17 +180,13 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Set 模板可见性, 
-<ul>
-<li>全部可见-"all"</li>
-<li>部分可见-"part"</li>
-</ul>
+     * Set 模板可见范围:
+**all**: 所有本第三方应用合作企业可见
+**part**: 指定的本第三方应用合作企业
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuthTag 模板可见性, 
-<ul>
-<li>全部可见-"all"</li>
-<li>部分可见-"part"</li>
-</ul>
+     * @param AuthTag 模板可见范围:
+**all**: 所有本第三方应用合作企业可见
+**part**: 指定的本第三方应用合作企业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthTag(String AuthTag) {
@@ -206,13 +194,9 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Get 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
-
-一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
+     * Get 第三方平台子客企业标识列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
-
-一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
+     * @return ProxyOrganizationOpenIds 第三方平台子客企业标识列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getProxyOrganizationOpenIds() {
@@ -220,13 +204,9 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Set 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
-
-一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
+     * Set 第三方平台子客企业标识列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
-
-一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
+     * @param ProxyOrganizationOpenIds 第三方平台子客企业标识列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOrganizationOpenIds(String [] ProxyOrganizationOpenIds) {

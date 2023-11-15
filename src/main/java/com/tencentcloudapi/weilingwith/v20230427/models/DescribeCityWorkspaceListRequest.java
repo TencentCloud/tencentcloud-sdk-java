@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeCityWorkspaceListRequest extends AbstractModel {
 
+    /**
+    * 行政区编码集合
+    */
+    @SerializedName("AdministrativeCodeSet")
+    @Expose
+    private String [] AdministrativeCodeSet;
+
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+     * Get 行政区编码集合 
+     * @return AdministrativeCodeSet 行政区编码集合
+     */
+    public String [] getAdministrativeCodeSet() {
+        return this.AdministrativeCodeSet;
+    }
+
+    /**
+     * Set 行政区编码集合
+     * @param AdministrativeCodeSet 行政区编码集合
+     */
+    public void setAdministrativeCodeSet(String [] AdministrativeCodeSet) {
+        this.AdministrativeCodeSet = AdministrativeCodeSet;
+    }
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
     public DescribeCityWorkspaceListRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DescribeCityWorkspaceListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCityWorkspaceListRequest(DescribeCityWorkspaceListRequest source) {
+        if (source.AdministrativeCodeSet != null) {
+            this.AdministrativeCodeSet = new String[source.AdministrativeCodeSet.length];
+            for (int i = 0; i < source.AdministrativeCodeSet.length; i++) {
+                this.AdministrativeCodeSet[i] = new String(source.AdministrativeCodeSet[i]);
+            }
+        }
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DescribeCityWorkspaceListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "AdministrativeCodeSet.", this.AdministrativeCodeSet);
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
 
     }
 }

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeActionListResponse extends AbstractModel {
 
     /**
+    * 动作列表查询结果
+    */
+    @SerializedName("Result")
+    @Expose
+    private DescribeActionListRes Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 动作列表查询结果 
+     * @return Result 动作列表查询结果
+     */
+    public DescribeActionListRes getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 动作列表查询结果
+     * @param Result 动作列表查询结果
+     */
+    public void setResult(DescribeActionListRes Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeActionListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeActionListResponse(DescribeActionListResponse source) {
+        if (source.Result != null) {
+            this.Result = new DescribeActionListRes(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeActionListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

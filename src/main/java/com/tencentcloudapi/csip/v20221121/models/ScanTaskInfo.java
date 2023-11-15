@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ScanTaskInfo extends AbstractModel {
 
     /**
-    * 任务日志Id
+    * 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ public class ScanTaskInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务日志名称
+    * 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -56,7 +56,7 @@ public class ScanTaskInfo extends AbstractModel {
     private Long Progress;
 
     /**
-    * 对应的展示时间
+    * 任务完成时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTime")
@@ -64,7 +64,7 @@ public class ScanTaskInfo extends AbstractModel {
     private String TaskTime;
 
     /**
-    * 报表id
+    * 报告ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportId")
@@ -72,7 +72,7 @@ public class ScanTaskInfo extends AbstractModel {
     private String ReportId;
 
     /**
-    * 报表名称
+    * 报告名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportName")
@@ -120,9 +120,9 @@ public class ScanTaskInfo extends AbstractModel {
     private String UserName;
 
     /**
-     * Get 任务日志Id
+     * Get 任务Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务日志Id
+     * @return TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -130,9 +130,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务日志Id
+     * Set 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务日志Id
+     * @param TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -140,9 +140,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务日志名称
+     * Get 任务名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务日志名称
+     * @return TaskName 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -150,9 +150,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务日志名称
+     * Set 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务日志名称
+     * @param TaskName 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -200,9 +200,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 对应的展示时间
+     * Get 任务完成时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTime 对应的展示时间
+     * @return TaskTime 任务完成时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTime() {
@@ -210,9 +210,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 对应的展示时间
+     * Set 任务完成时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTime 对应的展示时间
+     * @param TaskTime 任务完成时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTime(String TaskTime) {
@@ -220,9 +220,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 报表id
+     * Get 报告ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReportId 报表id
+     * @return ReportId 报告ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportId() {
@@ -230,9 +230,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 报表id
+     * Set 报告ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReportId 报表id
+     * @param ReportId 报告ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportId(String ReportId) {
@@ -240,9 +240,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 报表名称
+     * Get 报告名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReportName 报表名称
+     * @return ReportName 报告名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportName() {
@@ -250,9 +250,9 @@ public class ScanTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 报表名称
+     * Set 报告名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReportName 报表名称
+     * @param ReportName 报告名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportName(String ReportName) {

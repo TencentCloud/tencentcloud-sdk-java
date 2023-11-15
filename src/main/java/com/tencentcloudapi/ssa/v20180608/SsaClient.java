@@ -83,17 +83,6 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
-     *资产测绘-测绘列表
-     * @param req DescribeAssetsMappingListRequest
-     * @return DescribeAssetsMappingListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAssetsMappingListResponse DescribeAssetsMappingList(DescribeAssetsMappingListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAssetsMappingList", DescribeAssetsMappingListResponse.class);
-    }
-
-    /**
      *云安全配置管理资产组列表
      * @param req DescribeCheckConfigAssetListRequest
      * @return DescribeCheckConfigAssetListResponse
@@ -204,17 +193,6 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
-     *获取安全事件列表
-     * @param req DescribeSafetyEventListRequest
-     * @return DescribeSafetyEventListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSafetyEventListResponse DescribeSafetyEventList(DescribeSafetyEventListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSafetyEventList", DescribeSafetyEventListResponse.class);
-    }
-
-    /**
      *返回告警详情
      * @param req DescribeSocAlertDetailsRequest
      * @return DescribeSocAlertDetailsResponse
@@ -289,17 +267,6 @@ public class SsaClient extends AbstractClient{
     public DescribeVulListResponse DescribeVulList(DescribeVulListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVulList", DescribeVulListResponse.class);
-    }
-
-    /**
-     *查询【通用字段】【泄露监测数据列表】
-     * @param req SaDivulgeDataQueryPubRequest
-     * @return SaDivulgeDataQueryPubResponse
-     * @throws TencentCloudSDKException
-     */
-    public SaDivulgeDataQueryPubResponse SaDivulgeDataQueryPub(SaDivulgeDataQueryPubRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SaDivulgeDataQueryPub", SaDivulgeDataQueryPubResponse.class);
     }
 
     /**

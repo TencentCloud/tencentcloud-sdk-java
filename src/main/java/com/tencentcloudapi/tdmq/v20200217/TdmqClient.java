@@ -336,6 +336,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *删除专业集群——预付费，仅通过API 调用，支持同时删除多个集群
+     * @param req DeleteProClustersRequest
+     * @return DeleteProClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProClustersResponse DeleteProClusters(DeleteProClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProClusters", DeleteProClustersResponse.class);
+    }
+
+    /**
      *删除RabbitMQ的用户
      * @param req DeleteRabbitMQUserRequest
      * @return DeleteRabbitMQUserResponse

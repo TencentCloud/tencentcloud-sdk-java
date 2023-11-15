@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeTenantBuildingCountAndAreaResponse extends AbstractModel {
 
     /**
+    * 租户所有项目空间楼栋数量与建筑面积统计结果
+    */
+    @SerializedName("Result")
+    @Expose
+    private SpaceDataTotalStatsRes Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 租户所有项目空间楼栋数量与建筑面积统计结果 
+     * @return Result 租户所有项目空间楼栋数量与建筑面积统计结果
+     */
+    public SpaceDataTotalStatsRes getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 租户所有项目空间楼栋数量与建筑面积统计结果
+     * @param Result 租户所有项目空间楼栋数量与建筑面积统计结果
+     */
+    public void setResult(SpaceDataTotalStatsRes Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeTenantBuildingCountAndAreaResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTenantBuildingCountAndAreaResponse(DescribeTenantBuildingCountAndAreaResponse source) {
+        if (source.Result != null) {
+            this.Result = new SpaceDataTotalStatsRes(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeTenantBuildingCountAndAreaResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

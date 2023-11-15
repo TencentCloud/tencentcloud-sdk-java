@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeWorkspaceListRequest extends AbstractModel {
 
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+    * 工作空间id，非必填，填了则表示根据id进行批量查询
+    */
+    @SerializedName("WorkspaceId")
+    @Expose
+    private Long WorkspaceId;
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
+    /**
+     * Get 工作空间id，非必填，填了则表示根据id进行批量查询 
+     * @return WorkspaceId 工作空间id，非必填，填了则表示根据id进行批量查询
+     */
+    public Long getWorkspaceId() {
+        return this.WorkspaceId;
+    }
+
+    /**
+     * Set 工作空间id，非必填，填了则表示根据id进行批量查询
+     * @param WorkspaceId 工作空间id，非必填，填了则表示根据id进行批量查询
+     */
+    public void setWorkspaceId(Long WorkspaceId) {
+        this.WorkspaceId = WorkspaceId;
+    }
+
     public DescribeWorkspaceListRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DescribeWorkspaceListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeWorkspaceListRequest(DescribeWorkspaceListRequest source) {
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
+        if (source.WorkspaceId != null) {
+            this.WorkspaceId = new Long(source.WorkspaceId);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DescribeWorkspaceListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
 
     }
 }

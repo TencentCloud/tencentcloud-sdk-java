@@ -49,4 +49,15 @@ public class HaiClient extends AbstractClient{
         return this.internalRequest(req, "RunInstances", RunInstancesResponse.class);
     }
 
+    /**
+     *本接口 (TerminateInstances) 用于主动退还实例。
+     * @param req TerminateInstancesRequest
+     * @return TerminateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateInstancesResponse TerminateInstances(TerminateInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateInstances", TerminateInstancesResponse.class);
+    }
+
 }

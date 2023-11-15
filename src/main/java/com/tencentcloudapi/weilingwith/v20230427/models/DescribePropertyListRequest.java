@@ -23,6 +23,98 @@ import java.util.HashMap;
 
 public class DescribePropertyListRequest extends AbstractModel {
 
+    /**
+    * 建筑id
+    */
+    @SerializedName("BuildingId")
+    @Expose
+    private String BuildingId;
+
+    /**
+    * 构件id
+    */
+    @SerializedName("ElementId")
+    @Expose
+    private String ElementId;
+
+    /**
+    * 项目空间id
+    */
+    @SerializedName("WorkspaceId")
+    @Expose
+    private String WorkspaceId;
+
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+     * Get 建筑id 
+     * @return BuildingId 建筑id
+     */
+    public String getBuildingId() {
+        return this.BuildingId;
+    }
+
+    /**
+     * Set 建筑id
+     * @param BuildingId 建筑id
+     */
+    public void setBuildingId(String BuildingId) {
+        this.BuildingId = BuildingId;
+    }
+
+    /**
+     * Get 构件id 
+     * @return ElementId 构件id
+     */
+    public String getElementId() {
+        return this.ElementId;
+    }
+
+    /**
+     * Set 构件id
+     * @param ElementId 构件id
+     */
+    public void setElementId(String ElementId) {
+        this.ElementId = ElementId;
+    }
+
+    /**
+     * Get 项目空间id 
+     * @return WorkspaceId 项目空间id
+     */
+    public String getWorkspaceId() {
+        return this.WorkspaceId;
+    }
+
+    /**
+     * Set 项目空间id
+     * @param WorkspaceId 项目空间id
+     */
+    public void setWorkspaceId(String WorkspaceId) {
+        this.WorkspaceId = WorkspaceId;
+    }
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
     public DescribePropertyListRequest() {
     }
 
@@ -31,6 +123,18 @@ public class DescribePropertyListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePropertyListRequest(DescribePropertyListRequest source) {
+        if (source.BuildingId != null) {
+            this.BuildingId = new String(source.BuildingId);
+        }
+        if (source.ElementId != null) {
+            this.ElementId = new String(source.ElementId);
+        }
+        if (source.WorkspaceId != null) {
+            this.WorkspaceId = new String(source.WorkspaceId);
+        }
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
     }
 
 
@@ -38,6 +142,10 @@ public class DescribePropertyListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BuildingId", this.BuildingId);
+        this.setParamSimple(map, prefix + "ElementId", this.ElementId);
+        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
 
     }
 }

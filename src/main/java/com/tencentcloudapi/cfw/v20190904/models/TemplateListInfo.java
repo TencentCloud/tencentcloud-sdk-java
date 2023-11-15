@@ -88,6 +88,22 @@ public class TemplateListInfo extends AbstractModel {
     private Long RulesNum;
 
     /**
+    * 模板Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+    * 协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtocolType")
+    @Expose
+    private String ProtocolType;
+
+    /**
      * Get 模版ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uuid 模版ID
@@ -247,6 +263,46 @@ public class TemplateListInfo extends AbstractModel {
         this.RulesNum = RulesNum;
     }
 
+    /**
+     * Get 模板Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateId 模板Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateId 模板Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get 协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocolType() {
+        return this.ProtocolType;
+    }
+
+    /**
+     * Set 协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocolType(String ProtocolType) {
+        this.ProtocolType = ProtocolType;
+    }
+
     public TemplateListInfo() {
     }
 
@@ -279,6 +335,12 @@ public class TemplateListInfo extends AbstractModel {
         if (source.RulesNum != null) {
             this.RulesNum = new Long(source.RulesNum);
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.ProtocolType != null) {
+            this.ProtocolType = new String(source.ProtocolType);
+        }
     }
 
 
@@ -294,6 +356,8 @@ public class TemplateListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RulesNum", this.RulesNum);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
 
     }
 }

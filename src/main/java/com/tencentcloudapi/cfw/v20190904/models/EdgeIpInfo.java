@@ -205,6 +205,14 @@ public class EdgeIpInfo extends AbstractModel {
     private Long SwitchWeight;
 
     /**
+    * 域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 公网IP 
      * @return PublicIp 公网IP
      */
@@ -676,6 +684,26 @@ public class EdgeIpInfo extends AbstractModel {
         this.SwitchWeight = SwitchWeight;
     }
 
+    /**
+     * Get 域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public EdgeIpInfo() {
     }
 
@@ -747,6 +775,9 @@ public class EdgeIpInfo extends AbstractModel {
         if (source.SwitchWeight != null) {
             this.SwitchWeight = new Long(source.SwitchWeight);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -775,6 +806,7 @@ public class EdgeIpInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EndpointIp", this.EndpointIp);
         this.setParamSimple(map, prefix + "SwitchMode", this.SwitchMode);
         this.setParamSimple(map, prefix + "SwitchWeight", this.SwitchWeight);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

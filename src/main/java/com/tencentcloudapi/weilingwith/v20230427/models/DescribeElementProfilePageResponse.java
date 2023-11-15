@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeElementProfilePageResponse extends AbstractModel {
 
     /**
+    * 分页查询构件出参
+    */
+    @SerializedName("Result")
+    @Expose
+    private ElementProfilePageRes Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 分页查询构件出参 
+     * @return Result 分页查询构件出参
+     */
+    public ElementProfilePageRes getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 分页查询构件出参
+     * @param Result 分页查询构件出参
+     */
+    public void setResult(ElementProfilePageRes Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeElementProfilePageResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeElementProfilePageResponse(DescribeElementProfilePageResponse source) {
+        if (source.Result != null) {
+            this.Result = new ElementProfilePageRes(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeElementProfilePageResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

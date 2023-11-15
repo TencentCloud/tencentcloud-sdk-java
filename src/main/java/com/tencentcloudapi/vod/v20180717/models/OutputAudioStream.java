@@ -56,6 +56,14 @@ public class OutputAudioStream extends AbstractModel {
     private Long AudioChannel;
 
     /**
+    * 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
      * Get 音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
 默认值：libfdk_aac。 
@@ -147,6 +155,26 @@ public class OutputAudioStream extends AbstractModel {
         this.AudioChannel = AudioChannel;
     }
 
+    /**
+     * Get 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。 
+     * @return Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。
+     * @param Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
+
     public OutputAudioStream() {
     }
 
@@ -164,6 +192,9 @@ public class OutputAudioStream extends AbstractModel {
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
     }
 
 
@@ -174,6 +205,7 @@ public class OutputAudioStream extends AbstractModel {
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
 
     }
 }

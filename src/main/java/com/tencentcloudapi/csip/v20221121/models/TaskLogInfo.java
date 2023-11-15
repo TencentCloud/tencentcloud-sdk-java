@@ -55,7 +55,7 @@ public class TaskLogInfo extends AbstractModel {
     private Long RiskNumber;
 
     /**
-    * 报告生成时间,任务结束时间
+    * 报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
@@ -211,9 +211,9 @@ public class TaskLogInfo extends AbstractModel {
     }
 
     /**
-     * Get 报告生成时间,任务结束时间
+     * Get 报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Time 报告生成时间,任务结束时间
+     * @return Time 报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
@@ -221,9 +221,9 @@ public class TaskLogInfo extends AbstractModel {
     }
 
     /**
-     * Set 报告生成时间,任务结束时间
+     * Set 报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Time 报告生成时间,任务结束时间
+     * @param Time 报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {

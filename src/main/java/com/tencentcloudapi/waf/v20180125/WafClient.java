@@ -442,9 +442,18 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *没有在使用。
+     *Waf 斯巴达版本查询cc自动封堵状态
+     * @param req DescribeCCAutoStatusRequest
+     * @return DescribeCCAutoStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCAutoStatusResponse DescribeCCAutoStatus(DescribeCCAutoStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCCAutoStatus", DescribeCCAutoStatusResponse.class);
+    }
 
-Waf  CC V2 Query接口
+    /**
+     *Waf  CC V2 Query接口
      * @param req DescribeCCRuleRequest
      * @return DescribeCCRuleResponse
      * @throws TencentCloudSDKException
@@ -1361,17 +1370,6 @@ Waf  CC V2 Query接口
     }
 
     /**
-     *配置WAF自动封禁模块状态
-     * @param req ModifyWafAutoDenyStatusRequest
-     * @return ModifyWafAutoDenyStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyWafAutoDenyStatusResponse ModifyWafAutoDenyStatus(ModifyWafAutoDenyStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyWafAutoDenyStatus", ModifyWafAutoDenyStatusResponse.class);
-    }
-
-    /**
      *配置WAF威胁情报封禁模块详情
      * @param req ModifyWafThreatenIntelligenceRequest
      * @return ModifyWafThreatenIntelligenceResponse
@@ -1457,6 +1455,17 @@ Waf  CC V2 Query接口
     public SwitchElasticModeResponse SwitchElasticMode(SwitchElasticModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchElasticMode", SwitchElasticModeResponse.class);
+    }
+
+    /**
+     *Waf 斯巴达版本更新cc自动封堵状态
+     * @param req UpsertCCAutoStatusRequest
+     * @return UpsertCCAutoStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpsertCCAutoStatusResponse UpsertCCAutoStatus(UpsertCCAutoStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpsertCCAutoStatus", UpsertCCAutoStatusResponse.class);
     }
 
     /**

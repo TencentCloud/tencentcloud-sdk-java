@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeFileDownloadURLResponse extends AbstractModel {
 
     /**
+    * 文件下载URL地址
+    */
+    @SerializedName("Result")
+    @Expose
+    private FileDownloadURL Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 文件下载URL地址 
+     * @return Result 文件下载URL地址
+     */
+    public FileDownloadURL getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 文件下载URL地址
+     * @param Result 文件下载URL地址
+     */
+    public void setResult(FileDownloadURL Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeFileDownloadURLResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeFileDownloadURLResponse(DescribeFileDownloadURLResponse source) {
+        if (source.Result != null) {
+            this.Result = new FileDownloadURL(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeFileDownloadURLResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

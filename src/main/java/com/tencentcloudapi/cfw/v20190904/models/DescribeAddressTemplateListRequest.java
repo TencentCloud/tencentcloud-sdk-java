@@ -66,6 +66,20 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
     private String Uuid;
 
     /**
+    * 1：ip模板，5：域名模板，6：协议端口模板
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private String TemplateType;
+
+    /**
+    * 模板Id
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
      * Get 偏移量，分页用 
      * @return Offset 偏移量，分页用
      */
@@ -161,6 +175,38 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get 1：ip模板，5：域名模板，6：协议端口模板 
+     * @return TemplateType 1：ip模板，5：域名模板，6：协议端口模板
+     */
+    public String getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set 1：ip模板，5：域名模板，6：协议端口模板
+     * @param TemplateType 1：ip模板，5：域名模板，6：协议端口模板
+     */
+    public void setTemplateType(String TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
+    /**
+     * Get 模板Id 
+     * @return TemplateId 模板Id
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 模板Id
+     * @param TemplateId 模板Id
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public DescribeAddressTemplateListRequest() {
     }
 
@@ -187,6 +233,12 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new String(source.TemplateType);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "SearchValue", this.SearchValue);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

@@ -24,11 +24,39 @@ import java.util.HashMap;
 public class DescribeCCRuleListResponse extends AbstractModel {
 
     /**
+    * 查询到的CC规则的列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private CCRuleLists Data;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 查询到的CC规则的列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 查询到的CC规则的列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CCRuleLists getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 查询到的CC规则的列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 查询到的CC规则的列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(CCRuleLists Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +82,9 @@ public class DescribeCCRuleListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCCRuleListResponse(DescribeCCRuleListResponse source) {
+        if (source.Data != null) {
+            this.Data = new CCRuleLists(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +95,7 @@ public class DescribeCCRuleListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

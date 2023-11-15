@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeEdgeApplicationTokenRequest extends AbstractModel {
 
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+    * 是否刷新token，默认为false
+    */
+    @SerializedName("Refresh")
+    @Expose
+    private Boolean Refresh;
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
+    /**
+     * Get 是否刷新token，默认为false 
+     * @return Refresh 是否刷新token，默认为false
+     */
+    public Boolean getRefresh() {
+        return this.Refresh;
+    }
+
+    /**
+     * Set 是否刷新token，默认为false
+     * @param Refresh 是否刷新token，默认为false
+     */
+    public void setRefresh(Boolean Refresh) {
+        this.Refresh = Refresh;
+    }
+
     public DescribeEdgeApplicationTokenRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DescribeEdgeApplicationTokenRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeEdgeApplicationTokenRequest(DescribeEdgeApplicationTokenRequest source) {
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
+        if (source.Refresh != null) {
+            this.Refresh = new Boolean(source.Refresh);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DescribeEdgeApplicationTokenRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+        this.setParamSimple(map, prefix + "Refresh", this.Refresh);
 
     }
 }

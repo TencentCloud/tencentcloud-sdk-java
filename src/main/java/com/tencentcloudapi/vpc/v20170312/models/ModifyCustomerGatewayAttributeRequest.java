@@ -38,6 +38,13 @@ public class ModifyCustomerGatewayAttributeRequest extends AbstractModel {
     private String CustomerGatewayName;
 
     /**
+    * BGP ASN。只有开启BGP白名单才可以修改此参数。
+    */
+    @SerializedName("BgpAsn")
+    @Expose
+    private Long BgpAsn;
+
+    /**
      * Get 对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。 
      * @return CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。
      */
@@ -69,6 +76,22 @@ public class ModifyCustomerGatewayAttributeRequest extends AbstractModel {
         this.CustomerGatewayName = CustomerGatewayName;
     }
 
+    /**
+     * Get BGP ASN。只有开启BGP白名单才可以修改此参数。 
+     * @return BgpAsn BGP ASN。只有开启BGP白名单才可以修改此参数。
+     */
+    public Long getBgpAsn() {
+        return this.BgpAsn;
+    }
+
+    /**
+     * Set BGP ASN。只有开启BGP白名单才可以修改此参数。
+     * @param BgpAsn BGP ASN。只有开启BGP白名单才可以修改此参数。
+     */
+    public void setBgpAsn(Long BgpAsn) {
+        this.BgpAsn = BgpAsn;
+    }
+
     public ModifyCustomerGatewayAttributeRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ModifyCustomerGatewayAttributeRequest extends AbstractModel {
         if (source.CustomerGatewayName != null) {
             this.CustomerGatewayName = new String(source.CustomerGatewayName);
         }
+        if (source.BgpAsn != null) {
+            this.BgpAsn = new Long(source.BgpAsn);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyCustomerGatewayAttributeRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
         this.setParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
+        this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
 
     }
 }

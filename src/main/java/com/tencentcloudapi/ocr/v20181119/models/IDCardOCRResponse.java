@@ -102,6 +102,13 @@ WarnInfos，告警信息，Code 告警码列表和释义：
     private String AdvancedInfo;
 
     /**
+    * 反光点覆盖区域详情结果，具体内容请点击左侧链接
+    */
+    @SerializedName("ReflectDetailInfos")
+    @Expose
+    private ReflectDetailInfo [] ReflectDetailInfos;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -313,6 +320,22 @@ WarnInfos，告警信息，Code 告警码列表和释义：
     }
 
     /**
+     * Get 反光点覆盖区域详情结果，具体内容请点击左侧链接 
+     * @return ReflectDetailInfos 反光点覆盖区域详情结果，具体内容请点击左侧链接
+     */
+    public ReflectDetailInfo [] getReflectDetailInfos() {
+        return this.ReflectDetailInfos;
+    }
+
+    /**
+     * Set 反光点覆盖区域详情结果，具体内容请点击左侧链接
+     * @param ReflectDetailInfos 反光点覆盖区域详情结果，具体内容请点击左侧链接
+     */
+    public void setReflectDetailInfos(ReflectDetailInfo [] ReflectDetailInfos) {
+        this.ReflectDetailInfos = ReflectDetailInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -363,6 +386,12 @@ WarnInfos，告警信息，Code 告警码列表和释义：
         if (source.AdvancedInfo != null) {
             this.AdvancedInfo = new String(source.AdvancedInfo);
         }
+        if (source.ReflectDetailInfos != null) {
+            this.ReflectDetailInfos = new ReflectDetailInfo[source.ReflectDetailInfos.length];
+            for (int i = 0; i < source.ReflectDetailInfos.length; i++) {
+                this.ReflectDetailInfos[i] = new ReflectDetailInfo(source.ReflectDetailInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -382,6 +411,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
         this.setParamSimple(map, prefix + "Authority", this.Authority);
         this.setParamSimple(map, prefix + "ValidDate", this.ValidDate);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamArrayObj(map, prefix + "ReflectDetailInfos.", this.ReflectDetailInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

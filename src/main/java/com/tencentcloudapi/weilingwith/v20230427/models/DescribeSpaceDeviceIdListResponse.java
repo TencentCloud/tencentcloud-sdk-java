@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeSpaceDeviceIdListResponse extends AbstractModel {
 
     /**
+    * 设备ID列表
+    */
+    @SerializedName("Result")
+    @Expose
+    private SpaceDeviceIdListRes Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 设备ID列表 
+     * @return Result 设备ID列表
+     */
+    public SpaceDeviceIdListRes getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 设备ID列表
+     * @param Result 设备ID列表
+     */
+    public void setResult(SpaceDeviceIdListRes Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeSpaceDeviceIdListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSpaceDeviceIdListResponse(DescribeSpaceDeviceIdListResponse source) {
+        if (source.Result != null) {
+            this.Result = new SpaceDeviceIdListRes(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeSpaceDeviceIdListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

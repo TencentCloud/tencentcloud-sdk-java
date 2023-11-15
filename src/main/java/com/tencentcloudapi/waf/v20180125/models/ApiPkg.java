@@ -96,23 +96,6 @@ public class ApiPkg extends AbstractModel {
     private String BillingItem;
 
     /**
-    * 1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("APICPWaf")
-    @Expose
-    private Long APICPWaf;
-
-    /**
-    * 1 表示5折折扣
-2 表示4折折扣
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("APINPWaf")
-    @Expose
-    private Long APINPWaf;
-
-    /**
     * api安全7天试用标识。1试用。0没试用
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -301,50 +284,6 @@ public class ApiPkg extends AbstractModel {
     }
 
     /**
-     * Get 1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return APICPWaf 1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getAPICPWaf() {
-        return this.APICPWaf;
-    }
-
-    /**
-     * Set 1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param APICPWaf 1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAPICPWaf(Long APICPWaf) {
-        this.APICPWaf = APICPWaf;
-    }
-
-    /**
-     * Get 1 表示5折折扣
-2 表示4折折扣
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return APINPWaf 1 表示5折折扣
-2 表示4折折扣
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getAPINPWaf() {
-        return this.APINPWaf;
-    }
-
-    /**
-     * Set 1 表示5折折扣
-2 表示4折折扣
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param APINPWaf 1 表示5折折扣
-2 表示4折折扣
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAPINPWaf(Long APINPWaf) {
-        this.APINPWaf = APINPWaf;
-    }
-
-    /**
      * Get api安全7天试用标识。1试用。0没试用
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsAPISecurityTrial api安全7天试用标识。1试用。0没试用
@@ -399,12 +338,6 @@ public class ApiPkg extends AbstractModel {
         if (source.BillingItem != null) {
             this.BillingItem = new String(source.BillingItem);
         }
-        if (source.APICPWaf != null) {
-            this.APICPWaf = new Long(source.APICPWaf);
-        }
-        if (source.APINPWaf != null) {
-            this.APINPWaf = new Long(source.APINPWaf);
-        }
         if (source.IsAPISecurityTrial != null) {
             this.IsAPISecurityTrial = new Long(source.IsAPISecurityTrial);
         }
@@ -424,8 +357,6 @@ public class ApiPkg extends AbstractModel {
         this.setParamSimple(map, prefix + "UsedNum", this.UsedNum);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "BillingItem", this.BillingItem);
-        this.setParamSimple(map, prefix + "APICPWaf", this.APICPWaf);
-        this.setParamSimple(map, prefix + "APINPWaf", this.APINPWaf);
         this.setParamSimple(map, prefix + "IsAPISecurityTrial", this.IsAPISecurityTrial);
 
     }

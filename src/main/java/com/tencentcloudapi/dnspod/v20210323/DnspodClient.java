@@ -248,7 +248,7 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
-     *删除域名共享
+     *按账号删除域名共享
      * @param req DeleteShareDomainRequest
      * @return DeleteShareDomainResponse
      * @throws TencentCloudSDKException

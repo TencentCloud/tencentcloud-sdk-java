@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeWorkSpaceBuildingCountAndAreaRequest extends AbstractModel {
 
+    /**
+    * 工作空间ID列表
+    */
+    @SerializedName("WorkspaceIdList")
+    @Expose
+    private String [] WorkspaceIdList;
+
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+     * Get 工作空间ID列表 
+     * @return WorkspaceIdList 工作空间ID列表
+     */
+    public String [] getWorkspaceIdList() {
+        return this.WorkspaceIdList;
+    }
+
+    /**
+     * Set 工作空间ID列表
+     * @param WorkspaceIdList 工作空间ID列表
+     */
+    public void setWorkspaceIdList(String [] WorkspaceIdList) {
+        this.WorkspaceIdList = WorkspaceIdList;
+    }
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
     public DescribeWorkSpaceBuildingCountAndAreaRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DescribeWorkSpaceBuildingCountAndAreaRequest extends AbstractModel 
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeWorkSpaceBuildingCountAndAreaRequest(DescribeWorkSpaceBuildingCountAndAreaRequest source) {
+        if (source.WorkspaceIdList != null) {
+            this.WorkspaceIdList = new String[source.WorkspaceIdList.length];
+            for (int i = 0; i < source.WorkspaceIdList.length; i++) {
+                this.WorkspaceIdList[i] = new String(source.WorkspaceIdList[i]);
+            }
+        }
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DescribeWorkSpaceBuildingCountAndAreaRequest extends AbstractModel 
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "WorkspaceIdList.", this.WorkspaceIdList);
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
 
     }
 }

@@ -379,6 +379,22 @@ public class DataEngineInfo extends AbstractModel {
     private Boolean AutoAuthorization;
 
     /**
+    * 引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineGeneration")
+    @Expose
+    private String EngineGeneration;
+
+    /**
+    * 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineTypeDetail")
+    @Expose
+    private String EngineTypeDetail;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1246,6 +1262,46 @@ public class DataEngineInfo extends AbstractModel {
         this.AutoAuthorization = AutoAuthorization;
     }
 
+    /**
+     * Get 引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineGeneration 引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineGeneration() {
+        return this.EngineGeneration;
+    }
+
+    /**
+     * Set 引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineGeneration 引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineGeneration(String EngineGeneration) {
+        this.EngineGeneration = EngineGeneration;
+    }
+
+    /**
+     * Get 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineTypeDetail 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineTypeDetail() {
+        return this.EngineTypeDetail;
+    }
+
+    /**
+     * Set 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineTypeDetail 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineTypeDetail(String EngineTypeDetail) {
+        this.EngineTypeDetail = EngineTypeDetail;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1401,6 +1457,12 @@ public class DataEngineInfo extends AbstractModel {
         if (source.AutoAuthorization != null) {
             this.AutoAuthorization = new Boolean(source.AutoAuthorization);
         }
+        if (source.EngineGeneration != null) {
+            this.EngineGeneration = new String(source.EngineGeneration);
+        }
+        if (source.EngineTypeDetail != null) {
+            this.EngineTypeDetail = new String(source.EngineTypeDetail);
+        }
     }
 
 
@@ -1454,6 +1516,8 @@ public class DataEngineInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UserUin", this.UserUin);
         this.setParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
         this.setParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
+        this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
+        this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
 
     }
 }

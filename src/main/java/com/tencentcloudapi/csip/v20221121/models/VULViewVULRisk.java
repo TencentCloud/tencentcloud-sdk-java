@@ -66,21 +66,21 @@ public class VULViewVULRisk extends AbstractModel {
     private String FirstTime;
 
     /**
-    * 状态，0未处理、1已处置、2已忽略
+    * 影响资产数量
     */
     @SerializedName("AffectAssetCount")
     @Expose
     private Long AffectAssetCount;
 
     /**
-    * 资产唯一id
+    * 风险ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 资产子类型
+    * 扫描来源，具体看接口返回枚举类型
     */
     @SerializedName("From")
     @Expose
@@ -122,35 +122,35 @@ public class VULViewVULRisk extends AbstractModel {
     private String Describe;
 
     /**
-    * 负载
+    * 漏洞payload
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-    * 版本名
+    * 漏洞影响组件
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 相关引用
+    * 技术参考
     */
     @SerializedName("References")
     @Expose
     private String References;
 
     /**
-    * 版本
+    * 漏洞影响版本
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * 漏洞链接
+    * 风险点
     */
     @SerializedName("VULURL")
     @Expose
@@ -292,48 +292,48 @@ public class VULViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 状态，0未处理、1已处置、2已忽略 
-     * @return AffectAssetCount 状态，0未处理、1已处置、2已忽略
+     * Get 影响资产数量 
+     * @return AffectAssetCount 影响资产数量
      */
     public Long getAffectAssetCount() {
         return this.AffectAssetCount;
     }
 
     /**
-     * Set 状态，0未处理、1已处置、2已忽略
-     * @param AffectAssetCount 状态，0未处理、1已处置、2已忽略
+     * Set 影响资产数量
+     * @param AffectAssetCount 影响资产数量
      */
     public void setAffectAssetCount(Long AffectAssetCount) {
         this.AffectAssetCount = AffectAssetCount;
     }
 
     /**
-     * Get 资产唯一id 
-     * @return Id 资产唯一id
+     * Get 风险ID 
+     * @return Id 风险ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 资产唯一id
-     * @param Id 资产唯一id
+     * Set 风险ID
+     * @param Id 风险ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 资产子类型 
-     * @return From 资产子类型
+     * Get 扫描来源，具体看接口返回枚举类型 
+     * @return From 扫描来源，具体看接口返回枚举类型
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 资产子类型
-     * @param From 资产子类型
+     * Set 扫描来源，具体看接口返回枚举类型
+     * @param From 扫描来源，具体看接口返回枚举类型
      */
     public void setFrom(String From) {
         this.From = From;
@@ -420,80 +420,80 @@ public class VULViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 负载 
-     * @return Payload 负载
+     * Get 漏洞payload 
+     * @return Payload 漏洞payload
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 负载
-     * @param Payload 负载
+     * Set 漏洞payload
+     * @param Payload 漏洞payload
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
     }
 
     /**
-     * Get 版本名 
-     * @return AppName 版本名
+     * Get 漏洞影响组件 
+     * @return AppName 漏洞影响组件
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 版本名
-     * @param AppName 版本名
+     * Set 漏洞影响组件
+     * @param AppName 漏洞影响组件
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 相关引用 
-     * @return References 相关引用
+     * Get 技术参考 
+     * @return References 技术参考
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set 相关引用
-     * @param References 相关引用
+     * Set 技术参考
+     * @param References 技术参考
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get 版本 
-     * @return AppVersion 版本
+     * Get 漏洞影响版本 
+     * @return AppVersion 漏洞影响版本
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set 版本
-     * @param AppVersion 版本
+     * Set 漏洞影响版本
+     * @param AppVersion 漏洞影响版本
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get 漏洞链接 
-     * @return VULURL 漏洞链接
+     * Get 风险点 
+     * @return VULURL 风险点
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set 漏洞链接
-     * @param VULURL 漏洞链接
+     * Set 风险点
+     * @param VULURL 风险点
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;

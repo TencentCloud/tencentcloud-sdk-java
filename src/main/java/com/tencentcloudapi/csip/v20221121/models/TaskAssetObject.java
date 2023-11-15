@@ -32,7 +32,7 @@ public class TaskAssetObject extends AbstractModel {
     private String AssetName;
 
     /**
-    * 	资产类型
+    * 资产类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -91,9 +91,9 @@ public class TaskAssetObject extends AbstractModel {
     }
 
     /**
-     * Get 	资产类型
+     * Get 资产类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType 	资产类型
+     * @return InstanceType 资产类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -101,9 +101,9 @@ public class TaskAssetObject extends AbstractModel {
     }
 
     /**
-     * Set 	资产类型
+     * Set 资产类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType 	资产类型
+     * @param InstanceType 资产类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {

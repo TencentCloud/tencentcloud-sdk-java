@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class DescribeAdministrationByTagRequest extends AbstractModel {
 
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+    * 工作空间ID
+    */
+    @SerializedName("WorkspaceId")
+    @Expose
+    private Long WorkspaceId;
+
+    /**
+    * 标签值
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
+    /**
+     * Get 工作空间ID 
+     * @return WorkspaceId 工作空间ID
+     */
+    public Long getWorkspaceId() {
+        return this.WorkspaceId;
+    }
+
+    /**
+     * Set 工作空间ID
+     * @param WorkspaceId 工作空间ID
+     */
+    public void setWorkspaceId(Long WorkspaceId) {
+        this.WorkspaceId = WorkspaceId;
+    }
+
+    /**
+     * Get 标签值 
+     * @return Tag 标签值
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签值
+     * @param Tag 标签值
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public DescribeAdministrationByTagRequest() {
     }
 
@@ -31,6 +100,15 @@ public class DescribeAdministrationByTagRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAdministrationByTagRequest(DescribeAdministrationByTagRequest source) {
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
+        if (source.WorkspaceId != null) {
+            this.WorkspaceId = new Long(source.WorkspaceId);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class DescribeAdministrationByTagRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

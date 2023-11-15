@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeAlarmLevelListRequest extends AbstractModel {
 
+    /**
+    * 工作空间id
+    */
+    @SerializedName("WorkspaceId")
+    @Expose
+    private Long WorkspaceId;
+
+    /**
+    * 应用token
+    */
+    @SerializedName("ApplicationToken")
+    @Expose
+    private String ApplicationToken;
+
+    /**
+     * Get 工作空间id 
+     * @return WorkspaceId 工作空间id
+     */
+    public Long getWorkspaceId() {
+        return this.WorkspaceId;
+    }
+
+    /**
+     * Set 工作空间id
+     * @param WorkspaceId 工作空间id
+     */
+    public void setWorkspaceId(Long WorkspaceId) {
+        this.WorkspaceId = WorkspaceId;
+    }
+
+    /**
+     * Get 应用token 
+     * @return ApplicationToken 应用token
+     */
+    public String getApplicationToken() {
+        return this.ApplicationToken;
+    }
+
+    /**
+     * Set 应用token
+     * @param ApplicationToken 应用token
+     */
+    public void setApplicationToken(String ApplicationToken) {
+        this.ApplicationToken = ApplicationToken;
+    }
+
     public DescribeAlarmLevelListRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DescribeAlarmLevelListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAlarmLevelListRequest(DescribeAlarmLevelListRequest source) {
+        if (source.WorkspaceId != null) {
+            this.WorkspaceId = new Long(source.WorkspaceId);
+        }
+        if (source.ApplicationToken != null) {
+            this.ApplicationToken = new String(source.ApplicationToken);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DescribeAlarmLevelListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+        this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
 
     }
 }

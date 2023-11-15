@@ -358,6 +358,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *获取云原生网关服务详情下的Upstream列表
+     * @param req DescribeCloudNativeAPIGatewayUpstreamRequest
+     * @return DescribeCloudNativeAPIGatewayUpstreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayUpstreamResponse DescribeCloudNativeAPIGatewayUpstream(DescribeCloudNativeAPIGatewayUpstreamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayUpstream", DescribeCloudNativeAPIGatewayUpstreamResponse.class);
+    }
+
+    /**
      *获取云原生API网关实例列表
      * @param req DescribeCloudNativeAPIGatewaysRequest
      * @return DescribeCloudNativeAPIGatewaysResponse
@@ -432,6 +443,17 @@ public class TseClient extends AbstractClient{
     public DescribeSREInstancesResponse DescribeSREInstances(DescribeSREInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSREInstances", DescribeSREInstancesResponse.class);
+    }
+
+    /**
+     *获取云原生网关服务健康检查配置
+     * @param req DescribeUpstreamHealthCheckConfigRequest
+     * @return DescribeUpstreamHealthCheckConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpstreamHealthCheckConfigResponse DescribeUpstreamHealthCheckConfig(DescribeUpstreamHealthCheckConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpstreamHealthCheckConfig", DescribeUpstreamHealthCheckConfigResponse.class);
     }
 
     /**
@@ -545,6 +567,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *修改云原生网关上游实例节点健康状态
+     * @param req ModifyUpstreamNodeStatusRequest
+     * @return ModifyUpstreamNodeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(ModifyUpstreamNodeStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUpstreamNodeStatus", ModifyUpstreamNodeStatusResponse.class);
+    }
+
+    /**
      *修改云原生网关证书信息
      * @param req UpdateCloudNativeAPIGatewayCertificateInfoRequest
      * @return UpdateCloudNativeAPIGatewayCertificateInfoResponse
@@ -575,6 +608,17 @@ public class TseClient extends AbstractClient{
     public UpdateEngineInternetAccessResponse UpdateEngineInternetAccess(UpdateEngineInternetAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateEngineInternetAccess", UpdateEngineInternetAccessResponse.class);
+    }
+
+    /**
+     *更新云原生网关健康检查配置
+     * @param req UpdateUpstreamHealthCheckConfigRequest
+     * @return UpdateUpstreamHealthCheckConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUpstreamHealthCheckConfigResponse UpdateUpstreamHealthCheckConfig(UpdateUpstreamHealthCheckConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateUpstreamHealthCheckConfig", UpdateUpstreamHealthCheckConfigResponse.class);
     }
 
     /**
