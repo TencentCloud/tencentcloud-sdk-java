@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetVRSVoiceTypesResponse extends AbstractModel {
 
     /**
-    * 数据
+    * 复刻音色信息
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class GetVRSVoiceTypesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据 
-     * @return Data 数据
+     * Get 复刻音色信息 
+     * @return Data 复刻音色信息
      */
     public VoiceTypeListData getData() {
         return this.Data;
     }
 
     /**
-     * Set 数据
-     * @param Data 数据
+     * Set 复刻音色信息
+     * @param Data 复刻音色信息
      */
     public void setData(VoiceTypeListData Data) {
         this.Data = Data;

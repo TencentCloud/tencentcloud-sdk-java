@@ -5513,7 +5513,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     * 一键检测
+     *漏洞一键检测
      * @param req ScanVulRequest
      * @return ScanVulResponse
      * @throws TencentCloudSDKException

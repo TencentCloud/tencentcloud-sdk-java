@@ -145,6 +145,14 @@ DeadLetter 死信
     private Long MaxRetryTimes;
 
     /**
+    * 协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientProtocol")
+    @Expose
+    private String ClientProtocol;
+
+    /**
      * Get 主题名称 
      * @return Topic 主题名称
      */
@@ -460,6 +468,26 @@ DeadLetter 死信
         this.MaxRetryTimes = MaxRetryTimes;
     }
 
+    /**
+     * Get 协议类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientProtocol 协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClientProtocol() {
+        return this.ClientProtocol;
+    }
+
+    /**
+     * Set 协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientProtocol 协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientProtocol(String ClientProtocol) {
+        this.ClientProtocol = ClientProtocol;
+    }
+
     public RocketMQSubscription() {
     }
 
@@ -510,6 +538,9 @@ DeadLetter 死信
         if (source.MaxRetryTimes != null) {
             this.MaxRetryTimes = new Long(source.MaxRetryTimes);
         }
+        if (source.ClientProtocol != null) {
+            this.ClientProtocol = new String(source.ClientProtocol);
+        }
     }
 
 
@@ -531,6 +562,7 @@ DeadLetter 死信
         this.setParamSimple(map, prefix + "Consistency", this.Consistency);
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
+        this.setParamSimple(map, prefix + "ClientProtocol", this.ClientProtocol);
 
     }
 }

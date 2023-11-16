@@ -897,6 +897,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeTables）用于查询数据表名称列表
+     * @param req DescribeTablesNameRequest
+     * @return DescribeTablesNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTablesNameResponse DescribeTablesName(DescribeTablesNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTablesName", DescribeTablesNameResponse.class);
+    }
+
+    /**
      *查询任务结果
      * @param req DescribeTaskResultRequest
      * @return DescribeTaskResultResponse

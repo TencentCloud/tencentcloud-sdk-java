@@ -179,6 +179,13 @@ POSTPAID_BY_HOUR 按量计费
     private String CallbackUrl;
 
     /**
+    * 太极预训练模型ID
+    */
+    @SerializedName("PreTrainModel")
+    @Expose
+    private PreTrainModel PreTrainModel;
+
+    /**
      * Get 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
      * @return Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
@@ -534,6 +541,22 @@ POSTPAID_BY_HOUR 按量计费
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 太极预训练模型ID 
+     * @return PreTrainModel 太极预训练模型ID
+     */
+    public PreTrainModel getPreTrainModel() {
+        return this.PreTrainModel;
+    }
+
+    /**
+     * Set 太极预训练模型ID
+     * @param PreTrainModel 太极预训练模型ID
+     */
+    public void setPreTrainModel(PreTrainModel PreTrainModel) {
+        this.PreTrainModel = PreTrainModel;
+    }
+
     public CreateTrainingTaskRequest() {
     }
 
@@ -617,6 +640,9 @@ POSTPAID_BY_HOUR 按量计费
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.PreTrainModel != null) {
+            this.PreTrainModel = new PreTrainModel(source.PreTrainModel);
+        }
     }
 
 
@@ -646,6 +672,7 @@ POSTPAID_BY_HOUR 按量计费
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamObj(map, prefix + "PreTrainModel.", this.PreTrainModel);
 
     }
 }

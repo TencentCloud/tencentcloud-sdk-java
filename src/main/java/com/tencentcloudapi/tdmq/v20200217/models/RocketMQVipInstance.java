@@ -148,6 +148,22 @@ public class RocketMQVipInstance extends AbstractModel {
     private Long Retention;
 
     /**
+    * 是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AclEnabled")
+    @Expose
+    private Boolean AclEnabled;
+
+    /**
+    * 销毁时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DestroyTime")
+    @Expose
+    private Long DestroyTime;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -439,6 +455,46 @@ public class RocketMQVipInstance extends AbstractModel {
         this.Retention = Retention;
     }
 
+    /**
+     * Get 是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AclEnabled 是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAclEnabled() {
+        return this.AclEnabled;
+    }
+
+    /**
+     * Set 是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AclEnabled 是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAclEnabled(Boolean AclEnabled) {
+        this.AclEnabled = AclEnabled;
+    }
+
+    /**
+     * Get 销毁时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DestroyTime 销毁时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDestroyTime() {
+        return this.DestroyTime;
+    }
+
+    /**
+     * Set 销毁时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DestroyTime 销毁时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDestroyTime(Long DestroyTime) {
+        this.DestroyTime = DestroyTime;
+    }
+
     public RocketMQVipInstance() {
     }
 
@@ -498,6 +554,12 @@ public class RocketMQVipInstance extends AbstractModel {
         if (source.Retention != null) {
             this.Retention = new Long(source.Retention);
         }
+        if (source.AclEnabled != null) {
+            this.AclEnabled = new Boolean(source.AclEnabled);
+        }
+        if (source.DestroyTime != null) {
+            this.DestroyTime = new Long(source.DestroyTime);
+        }
     }
 
 
@@ -522,6 +584,8 @@ public class RocketMQVipInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
         this.setParamSimple(map, prefix + "MinRetention", this.MinRetention);
         this.setParamSimple(map, prefix + "Retention", this.Retention);
+        this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+        this.setParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
 
     }
 }

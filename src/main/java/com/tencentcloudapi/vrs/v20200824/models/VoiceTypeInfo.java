@@ -25,7 +25,6 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
     * 音色id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceType")
     @Expose
@@ -33,7 +32,6 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
     * 音色名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceName")
     @Expose
@@ -41,7 +39,6 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
     * 音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceGender")
     @Expose
@@ -49,7 +46,6 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
     * 复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
     @Expose
@@ -57,7 +53,6 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
     * 复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskID")
     @Expose
@@ -65,17 +60,14 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DateCreated")
     @Expose
     private String DateCreated;
 
     /**
-     * Get 音色id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音色id 
      * @return VoiceType 音色id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVoiceType() {
         return this.VoiceType;
@@ -83,19 +75,15 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
      * Set 音色id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceType 音色id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceType(Long VoiceType) {
         this.VoiceType = VoiceType;
     }
 
     /**
-     * Get 音色名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音色名称 
      * @return VoiceName 音色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoiceName() {
         return this.VoiceName;
@@ -103,19 +91,15 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
      * Set 音色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceName 音色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceName(String VoiceName) {
         this.VoiceName = VoiceName;
     }
 
     /**
-     * Get 音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 音色性别: 1-male 2-female 
      * @return VoiceGender 音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVoiceGender() {
         return this.VoiceGender;
@@ -123,19 +107,15 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
      * Set 音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceGender 音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceGender(Long VoiceGender) {
         this.VoiceGender = VoiceGender;
     }
 
     /**
-     * Get 复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复刻类型: 0-轻量版复刻 1-基础版复刻 
      * @return TaskType 复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskType() {
         return this.TaskType;
@@ -143,19 +123,15 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
      * Set 复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskType 复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复刻任务 ID 
      * @return TaskID 复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskID() {
         return this.TaskID;
@@ -163,19 +139,15 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
      * Set 复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskID 复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskID(String TaskID) {
         this.TaskID = TaskID;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return DateCreated 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDateCreated() {
         return this.DateCreated;
@@ -183,9 +155,7 @@ public class VoiceTypeInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DateCreated 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDateCreated(String DateCreated) {
         this.DateCreated = DateCreated;

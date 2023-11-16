@@ -224,7 +224,7 @@ public class DomainAssetVO extends AbstractModel {
     private String [] SeverIp;
 
     /**
-    * boi访问数量
+    * bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotCount")
@@ -328,7 +328,7 @@ public class DomainAssetVO extends AbstractModel {
     private Long VerifyStatus;
 
     /**
-    * bot访问数据
+    * bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotAccessCount")
@@ -836,9 +836,9 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Get boi访问数量
+     * Get bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BotCount boi访问数量
+     * @return BotCount bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBotCount() {
@@ -846,9 +846,9 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Set boi访问数量
+     * Set bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BotCount boi访问数量
+     * @param BotCount bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotCount(Long BotCount) {
@@ -1096,9 +1096,9 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Get bot访问数据
+     * Get bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BotAccessCount bot访问数据
+     * @return BotAccessCount bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBotAccessCount() {
@@ -1106,9 +1106,9 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Set bot访问数据
+     * Set bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BotAccessCount bot访问数据
+     * @param BotAccessCount bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotAccessCount(Long BotAccessCount) {

@@ -1,5 +1,8 @@
 package com.tencentcloudapi.vrs.v20200824;
 public enum VrsErrorCode {
+    // CAM权限错误。
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
     // 任务状态错误。
      FAILEDOPERATION_ERRORINVALIDTASKSTATUS("FailedOperation.ErrorInvalidTaskStatus"),
      

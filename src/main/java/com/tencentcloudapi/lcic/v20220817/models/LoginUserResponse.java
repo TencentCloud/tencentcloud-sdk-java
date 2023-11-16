@@ -31,7 +31,7 @@ public class LoginUserResponse extends AbstractModel {
     private String UserId;
 
     /**
-    * 登录/注册成功后返回登录态token。有效期7天。
+    * 注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
     */
     @SerializedName("Token")
     @Expose
@@ -61,16 +61,16 @@ public class LoginUserResponse extends AbstractModel {
     }
 
     /**
-     * Get 登录/注册成功后返回登录态token。有效期7天。 
-     * @return Token 登录/注册成功后返回登录态token。有效期7天。
+     * Get 注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。 
+     * @return Token 注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set 登录/注册成功后返回登录态token。有效期7天。
-     * @param Token 登录/注册成功后返回登录态token。有效期7天。
+     * Set 注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
+     * @param Token 注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
      */
     public void setToken(String Token) {
         this.Token = Token;

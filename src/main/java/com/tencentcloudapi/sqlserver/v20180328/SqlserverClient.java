@@ -391,6 +391,39 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBackupMonitor)用于查询备份空间使用详情。
+     * @param req DescribeBackupMonitorRequest
+     * @return DescribeBackupMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupMonitorResponse DescribeBackupMonitor(DescribeBackupMonitorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupMonitor", DescribeBackupMonitorResponse.class);
+    }
+
+    /**
+     *本接口(DescribeBackupStatistical)用于查询备份实时统计列表。
+     * @param req DescribeBackupStatisticalRequest
+     * @return DescribeBackupStatisticalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupStatisticalResponse DescribeBackupStatistical(DescribeBackupStatisticalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupStatistical", DescribeBackupStatisticalResponse.class);
+    }
+
+    /**
+     *本接口(DescribeBackupSummary)用于查询数据库备份概览信息。
+     * @param req DescribeBackupSummaryRequest
+     * @return DescribeBackupSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupSummaryResponse DescribeBackupSummary(DescribeBackupSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupSummary", DescribeBackupSummaryResponse.class);
+    }
+
+    /**
      *本接口（DescribeBackupUploadSize）用于查询上传的备份文件大小。在备份上传类型是COS_UPLOAD(备份放在业务的对象存储上)时有效。
      * @param req DescribeBackupUploadSizeRequest
      * @return DescribeBackupUploadSizeResponse
@@ -421,6 +454,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribeBusinessIntelligenceFileResponse DescribeBusinessIntelligenceFile(DescribeBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBusinessIntelligenceFile", DescribeBusinessIntelligenceFileResponse.class);
+    }
+
+    /**
+     *本接口(DescribeCrossBackupStatistical)用于查询跨地域备份实时统计列表。
+     * @param req DescribeCrossBackupStatisticalRequest
+     * @return DescribeCrossBackupStatisticalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossBackupStatisticalResponse DescribeCrossBackupStatistical(DescribeCrossBackupStatisticalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCrossBackupStatistical", DescribeCrossBackupStatisticalResponse.class);
     }
 
     /**
@@ -509,6 +553,28 @@ public class SqlserverClient extends AbstractClient{
     public DescribeDBsNormalResponse DescribeDBsNormal(DescribeDBsNormalRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBsNormal", DescribeDBsNormalResponse.class);
+    }
+
+    /**
+     *本接口（DescribeDatabases）用于查询数据库列表。
+     * @param req DescribeDatabasesRequest
+     * @return DescribeDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabases", DescribeDatabasesResponse.class);
+    }
+
+    /**
+     *本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
+     * @param req DescribeDatabasesNormalRequest
+     * @return DescribeDatabasesNormalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabasesNormalResponse DescribeDatabasesNormal(DescribeDatabasesNormalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabasesNormal", DescribeDatabasesNormalResponse.class);
     }
 
     /**
@@ -710,6 +776,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeRegularBackupPlan）用于查询实例定期备份保留计划
+     * @param req DescribeRegularBackupPlanRequest
+     * @return DescribeRegularBackupPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegularBackupPlanResponse DescribeRegularBackupPlan(DescribeRegularBackupPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRegularBackupPlan", DescribeRegularBackupPlanResponse.class);
+    }
+
+    /**
      *本接口（DescribeRollbackTime）用于查询实例可回档时间范围
      * @param req DescribeRollbackTimeRequest
      * @return DescribeRollbackTimeResponse
@@ -875,6 +952,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyCrossBackupStrategy)用于开启、关闭地域备份策略。
+     * @param req ModifyCrossBackupStrategyRequest
+     * @return ModifyCrossBackupStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCrossBackupStrategyResponse ModifyCrossBackupStrategy(ModifyCrossBackupStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCrossBackupStrategy", ModifyCrossBackupStrategyResponse.class);
+    }
+
+    /**
      *本接口（ModifyDBEncryptAttributes）用于开启、关闭数据库的TDE加密功能。
      * @param req ModifyDBEncryptAttributesRequest
      * @return ModifyDBEncryptAttributesResponse
@@ -993,6 +1081,17 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDatabaseMdfResponse ModifyDatabaseMdf(ModifyDatabaseMdfRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDatabaseMdf", ModifyDatabaseMdfResponse.class);
+    }
+
+    /**
+     *本接口(ModifyDatabaseShrinkDMF)用于收缩数据库mdf(Shrink mdf)。
+     * @param req ModifyDatabaseShrinkMDFRequest
+     * @return ModifyDatabaseShrinkMDFResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseShrinkMDFResponse ModifyDatabaseShrinkMDF(ModifyDatabaseShrinkMDFRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDatabaseShrinkMDF", ModifyDatabaseShrinkMDFResponse.class);
     }
 
     /**

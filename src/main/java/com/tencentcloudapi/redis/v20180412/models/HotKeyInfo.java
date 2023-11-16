@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class HotKeyInfo extends AbstractModel {
 
     /**
-    * 热Key
+    * 热 Key 的名称。
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 类型
+    * Key 类型。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 数量
+    * 某段时间内热 Key 的访问次数
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 热Key 
-     * @return Key 热Key
+     * Get 热 Key 的名称。 
+     * @return Key 热 Key 的名称。
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 热Key
-     * @param Key 热Key
+     * Set 热 Key 的名称。
+     * @param Key 热 Key 的名称。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get Key 类型。 
+     * @return Type Key 类型。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set Key 类型。
+     * @param Type Key 类型。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数量 
-     * @return Count 数量
+     * Get 某段时间内热 Key 的访问次数 
+     * @return Count 某段时间内热 Key 的访问次数
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 数量
-     * @param Count 数量
+     * Set 某段时间内热 Key 的访问次数
+     * @param Count 某段时间内热 Key 的访问次数
      */
     public void setCount(Long Count) {
         this.Count = Count;

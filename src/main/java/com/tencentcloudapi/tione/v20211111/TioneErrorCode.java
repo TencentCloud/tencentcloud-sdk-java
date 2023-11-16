@@ -195,6 +195,9 @@ public enum TioneErrorCode {
     // 绑定标签失败
      INTERNALERROR_BINDINGTAGSFAILED("InternalError.BindingTagsFailed"),
      
+    // 文件系统不存在
+     INTERNALERROR_CFSNOTFOUND("InternalError.CFSNotFound"),
+     
     // 创建JOB失败
      INTERNALERROR_CREATEJOBINSTANCEFAILED("InternalError.CreateJobInstanceFailed"),
      
@@ -203,6 +206,12 @@ public enum TioneErrorCode {
      
     // 冻结失败。
      INTERNALERROR_FREEZEBILLFAILED("InternalError.FreezeBillFailed"),
+     
+    // 查询文件系统信息失败
+     INTERNALERROR_GETCFSFILESYSTEMSFAILED("InternalError.GetCFSFileSystemsFailed"),
+     
+    // 查询文件系统挂载信息失败。
+     INTERNALERROR_GETCFSMOUNTINFOFAILED("InternalError.GetCFSMountInfoFailed"),
      
     // 余额不足。
      INTERNALERROR_INSUFFICIENTBALANCE("InternalError.InsufficientBalance"),
@@ -275,6 +284,9 @@ public enum TioneErrorCode {
      
     // 存储库不存在。
      INVALIDPARAMETERVALUE_CODEREPONOTFOUND("InvalidParameterValue.CodeRepoNotFound"),
+     
+    // COS路径不存在
+     INVALIDPARAMETERVALUE_COSPATHNOTEXIST("InvalidParameterValue.CosPathNotExist"),
      
     // 不支持的标注类型。
      INVALIDPARAMETERVALUE_DCANNOTATIONTYPE("InvalidParameterValue.DCAnnotationType"),

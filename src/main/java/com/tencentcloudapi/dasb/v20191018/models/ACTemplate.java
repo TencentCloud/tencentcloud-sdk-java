@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ACTemplate extends AbstractModel {
 
     /**
-    * 模版id
+    * 模板id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
@@ -32,7 +32,7 @@ public class ACTemplate extends AbstractModel {
     private String TemplateId;
 
     /**
-    * 模版名称
+    * 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
@@ -40,7 +40,7 @@ public class ACTemplate extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 模版描述
+    * 模板描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -48,9 +48,9 @@ public class ACTemplate extends AbstractModel {
     private String Description;
 
     /**
-     * Get 模版id
+     * Get 模板id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateId 模版id
+     * @return TemplateId 模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
@@ -58,9 +58,9 @@ public class ACTemplate extends AbstractModel {
     }
 
     /**
-     * Set 模版id
+     * Set 模板id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateId 模版id
+     * @param TemplateId 模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
@@ -68,9 +68,9 @@ public class ACTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模版名称
+     * Get 模板名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateName 模版名称
+     * @return TemplateName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
@@ -78,9 +78,9 @@ public class ACTemplate extends AbstractModel {
     }
 
     /**
-     * Set 模版名称
+     * Set 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateName 模版名称
+     * @param TemplateName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
@@ -88,9 +88,9 @@ public class ACTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模版描述
+     * Get 模板描述
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 模版描述
+     * @return Description 模板描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -98,9 +98,9 @@ public class ACTemplate extends AbstractModel {
     }
 
     /**
-     * Set 模版描述
+     * Set 模板描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 模版描述
+     * @param Description 模板描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
