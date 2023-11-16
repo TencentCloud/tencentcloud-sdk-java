@@ -122,6 +122,14 @@ public class APIDocInfo extends AbstractModel {
     private String [] ApiNames;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get API文档ID 
      * @return ApiDocId API文档ID
      */
@@ -345,6 +353,26 @@ public class APIDocInfo extends AbstractModel {
         this.ApiNames = ApiNames;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public APIDocInfo() {
     }
 
@@ -401,6 +429,12 @@ public class APIDocInfo extends AbstractModel {
                 this.ApiNames[i] = new String(source.ApiNames[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -422,6 +456,7 @@ public class APIDocInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamArraySimple(map, prefix + "ApiNames.", this.ApiNames);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class DescribeLogsRequest extends AbstractModel {
 
     /**
-    * 查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER）
+    * 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
+枚举值：
+- TRAIN
+- NOTEBOOK
+- INFER
+- BATCH
     */
     @SerializedName("Service")
     @Expose
@@ -52,7 +57,31 @@ public class DescribeLogsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 查询哪个Pod的日志（支持结尾通配符*)
+    * 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private String ServiceId;
+
+    /**
+    * Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
+注：支持结尾通配符*
     */
     @SerializedName("PodName")
     @Expose
@@ -91,16 +120,36 @@ public class DescribeLogsRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER） 
-     * @return Service 查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER）
+     * Get 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
+枚举值：
+- TRAIN
+- NOTEBOOK
+- INFER
+- BATCH 
+     * @return Service 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
+枚举值：
+- TRAIN
+- NOTEBOOK
+- INFER
+- BATCH
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set 查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER）
-     * @param Service 查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER）
+     * Set 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
+枚举值：
+- TRAIN
+- NOTEBOOK
+- INFER
+- BATCH
+     * @param Service 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
+枚举值：
+- TRAIN
+- NOTEBOOK
+- INFER
+- BATCH
      */
     public void setService(String Service) {
         this.Service = Service;
@@ -155,16 +204,100 @@ public class DescribeLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询哪个Pod的日志（支持结尾通配符*) 
-     * @return PodName 查询哪个Pod的日志（支持结尾通配符*)
+     * Get 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId 
+     * @return ServiceId 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+     */
+    public String getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+     * @param ServiceId 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+     */
+    public void setServiceId(String ServiceId) {
+        this.ServiceId = ServiceId;
+    }
+
+    /**
+     * Get Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
+注：支持结尾通配符* 
+     * @return PodName Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
+注：支持结尾通配符*
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set 查询哪个Pod的日志（支持结尾通配符*)
-     * @param PodName 查询哪个Pod的日志（支持结尾通配符*)
+     * Set Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
+注：支持结尾通配符*
+     * @param PodName Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
+- Service类型为TRAIN：
+  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
+- Service类型为NOTEBOOK：
+  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
+- Service类型为INFER：
+  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
+- Service类型为BATCH：
+  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
+注：支持结尾通配符*
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
@@ -270,6 +403,9 @@ public class DescribeLogsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
         if (source.PodName != null) {
             this.PodName = new String(source.PodName);
         }
@@ -299,6 +435,7 @@ public class DescribeLogsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);

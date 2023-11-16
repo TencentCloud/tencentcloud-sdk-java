@@ -101,6 +101,20 @@ public class DescribeDataEnginesRequest extends AbstractModel {
     private String [] DatasourceConnectionNameSet;
 
     /**
+    * 引擎版本，有效值：Native/SuperSQL，为空时默认获取SuperSQL引擎
+    */
+    @SerializedName("EngineGeneration")
+    @Expose
+    private String EngineGeneration;
+
+    /**
+    * 引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi
+    */
+    @SerializedName("EngineTypeDetail")
+    @Expose
+    private String EngineTypeDetail;
+
+    /**
      * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
@@ -276,6 +290,38 @@ public class DescribeDataEnginesRequest extends AbstractModel {
         this.DatasourceConnectionNameSet = DatasourceConnectionNameSet;
     }
 
+    /**
+     * Get 引擎版本，有效值：Native/SuperSQL，为空时默认获取SuperSQL引擎 
+     * @return EngineGeneration 引擎版本，有效值：Native/SuperSQL，为空时默认获取SuperSQL引擎
+     */
+    public String getEngineGeneration() {
+        return this.EngineGeneration;
+    }
+
+    /**
+     * Set 引擎版本，有效值：Native/SuperSQL，为空时默认获取SuperSQL引擎
+     * @param EngineGeneration 引擎版本，有效值：Native/SuperSQL，为空时默认获取SuperSQL引擎
+     */
+    public void setEngineGeneration(String EngineGeneration) {
+        this.EngineGeneration = EngineGeneration;
+    }
+
+    /**
+     * Get 引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi 
+     * @return EngineTypeDetail 引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi
+     */
+    public String getEngineTypeDetail() {
+        return this.EngineTypeDetail;
+    }
+
+    /**
+     * Set 引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi
+     * @param EngineTypeDetail 引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi
+     */
+    public void setEngineTypeDetail(String EngineTypeDetail) {
+        this.EngineTypeDetail = EngineTypeDetail;
+    }
+
     public DescribeDataEnginesRequest() {
     }
 
@@ -326,6 +372,12 @@ public class DescribeDataEnginesRequest extends AbstractModel {
                 this.DatasourceConnectionNameSet[i] = new String(source.DatasourceConnectionNameSet[i]);
             }
         }
+        if (source.EngineGeneration != null) {
+            this.EngineGeneration = new String(source.EngineGeneration);
+        }
+        if (source.EngineTypeDetail != null) {
+            this.EngineTypeDetail = new String(source.EngineTypeDetail);
+        }
     }
 
 
@@ -344,6 +396,8 @@ public class DescribeDataEnginesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineExecType", this.EngineExecType);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamArraySimple(map, prefix + "DatasourceConnectionNameSet.", this.DatasourceConnectionNameSet);
+        this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
+        this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
 
     }
 }

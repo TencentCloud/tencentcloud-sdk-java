@@ -31,7 +31,7 @@ public class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractMode
     private Long TotalCount;
 
     /**
-    * 资产视角的端口风险列表
+    * 端口视角的端口风险列表
     */
     @SerializedName("Data")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractMode
     }
 
     /**
-     * Get 资产视角的端口风险列表 
-     * @return Data 资产视角的端口风险列表
+     * Get 端口视角的端口风险列表 
+     * @return Data 端口视角的端口风险列表
      */
     public PortViewPortRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 资产视角的端口风险列表
-     * @param Data 资产视角的端口风险列表
+     * Set 端口视角的端口风险列表
+     * @param Data 端口视角的端口风险列表
      */
     public void setData(PortViewPortRisk [] Data) {
         this.Data = Data;

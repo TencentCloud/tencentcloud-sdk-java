@@ -144,6 +144,14 @@ public class ApiUsagePlan extends AbstractModel {
     private String ServiceName;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 服务唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceId 服务唯一ID。
@@ -443,6 +451,26 @@ public class ApiUsagePlan extends AbstractModel {
         this.ServiceName = ServiceName;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ApiUsagePlan() {
     }
 
@@ -496,6 +524,12 @@ public class ApiUsagePlan extends AbstractModel {
         if (source.ServiceName != null) {
             this.ServiceName = new String(source.ServiceName);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -518,6 +552,7 @@ public class ApiUsagePlan extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

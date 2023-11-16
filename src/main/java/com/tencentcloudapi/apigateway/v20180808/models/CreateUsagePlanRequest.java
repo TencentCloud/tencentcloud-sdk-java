@@ -52,6 +52,13 @@ public class CreateUsagePlanRequest extends AbstractModel {
     private Long MaxRequestNumPreSec;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 用户自定义的使用计划名称。 
      * @return UsagePlanName 用户自定义的使用计划名称。
      */
@@ -115,6 +122,22 @@ public class CreateUsagePlanRequest extends AbstractModel {
         this.MaxRequestNumPreSec = MaxRequestNumPreSec;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateUsagePlanRequest() {
     }
 
@@ -135,6 +158,12 @@ public class CreateUsagePlanRequest extends AbstractModel {
         if (source.MaxRequestNumPreSec != null) {
             this.MaxRequestNumPreSec = new Long(source.MaxRequestNumPreSec);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class CreateUsagePlanRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UsagePlanDesc", this.UsagePlanDesc);
         this.setParamSimple(map, prefix + "MaxRequestNum", this.MaxRequestNum);
         this.setParamSimple(map, prefix + "MaxRequestNumPreSec", this.MaxRequestNumPreSec);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

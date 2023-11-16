@@ -38,6 +38,14 @@ public class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel {
     private Long ComplianceId;
 
     /**
+    * 可信分排序，ASC-升序
+DESC降序
+    */
+    @SerializedName("CreditScore")
+    @Expose
+    private String CreditScore;
+
+    /**
      * Get DSPA实例Id 
      * @return DspaId DSPA实例Id
      */
@@ -69,6 +77,26 @@ public class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel {
         this.ComplianceId = ComplianceId;
     }
 
+    /**
+     * Get 可信分排序，ASC-升序
+DESC降序 
+     * @return CreditScore 可信分排序，ASC-升序
+DESC降序
+     */
+    public String getCreditScore() {
+        return this.CreditScore;
+    }
+
+    /**
+     * Set 可信分排序，ASC-升序
+DESC降序
+     * @param CreditScore 可信分排序，ASC-升序
+DESC降序
+     */
+    public void setCreditScore(String CreditScore) {
+        this.CreditScore = CreditScore;
+    }
+
     public DescribeDSPARDBDataAssetDetailRequest() {
     }
 
@@ -83,6 +111,9 @@ public class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel {
         if (source.ComplianceId != null) {
             this.ComplianceId = new Long(source.ComplianceId);
         }
+        if (source.CreditScore != null) {
+            this.CreditScore = new String(source.CreditScore);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+        this.setParamSimple(map, prefix + "CreditScore", this.CreditScore);
 
     }
 }

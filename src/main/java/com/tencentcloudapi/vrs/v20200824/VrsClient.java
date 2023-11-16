@@ -114,4 +114,15 @@ public class VrsClient extends AbstractClient{
         return this.internalRequest(req, "GetTrainingText", GetTrainingTextResponse.class);
     }
 
+    /**
+     *查询复刻音色
+     * @param req GetVRSVoiceTypesRequest
+     * @return GetVRSVoiceTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetVRSVoiceTypesResponse GetVRSVoiceTypes(GetVRSVoiceTypesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetVRSVoiceTypes", GetVRSVoiceTypesResponse.class);
+    }
+
 }

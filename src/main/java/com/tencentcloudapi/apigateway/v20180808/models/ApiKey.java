@@ -73,6 +73,14 @@ public class ApiKey extends AbstractModel {
     private String CreatedTime;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 创建的 API 密钥 ID 。 
      * @return AccessKeyId 创建的 API 密钥 ID 。
      */
@@ -184,6 +192,26 @@ public class ApiKey extends AbstractModel {
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ApiKey() {
     }
 
@@ -213,6 +241,12 @@ public class ApiKey extends AbstractModel {
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -227,6 +261,7 @@ public class ApiKey extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -80,7 +80,7 @@ public class ScanTaskInfoList extends AbstractModel {
     private String TaskId;
 
     /**
-    * 排除扫描资产信息
+    * 自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfDefiningAssets")
@@ -144,7 +144,7 @@ public class ScanTaskInfoList extends AbstractModel {
     private String ScanItem;
 
     /**
-    * 0-全扫，1-指定资产扫，2-排除资产扫
+    * 0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanAssetType")
@@ -484,9 +484,9 @@ public class ScanTaskInfoList extends AbstractModel {
     }
 
     /**
-     * Get 排除扫描资产信息
+     * Get 自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelfDefiningAssets 排除扫描资产信息
+     * @return SelfDefiningAssets 自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSelfDefiningAssets() {
@@ -494,9 +494,9 @@ public class ScanTaskInfoList extends AbstractModel {
     }
 
     /**
-     * Set 排除扫描资产信息
+     * Set 自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelfDefiningAssets 排除扫描资产信息
+     * @param SelfDefiningAssets 自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfDefiningAssets(String [] SelfDefiningAssets) {
@@ -644,9 +644,9 @@ public class ScanTaskInfoList extends AbstractModel {
     }
 
     /**
-     * Get 0-全扫，1-指定资产扫，2-排除资产扫
+     * Get 0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫
+     * @return ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanAssetType() {
@@ -654,9 +654,9 @@ public class ScanTaskInfoList extends AbstractModel {
     }
 
     /**
-     * Set 0-全扫，1-指定资产扫，2-排除资产扫
+     * Set 0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫
+     * @param ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanAssetType(Long ScanAssetType) {

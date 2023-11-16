@@ -234,6 +234,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建即时转码模板。
+     * @param req CreateJustInTimeTranscodeTemplateRequest
+     * @return CreateJustInTimeTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(CreateJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJustInTimeTranscodeTemplate", CreateJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
      *该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、不适宜视频识别等视频处理。
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -517,6 +528,17 @@ public class VodClient extends AbstractClient{
     public DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(DeleteImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteImageSpriteTemplate", DeleteImageSpriteTemplateResponse.class);
+    }
+
+    /**
+     *删除即时转码模板。
+     * @param req DeleteJustInTimeTranscodeTemplateRequest
+     * @return DeleteJustInTimeTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplate(DeleteJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteJustInTimeTranscodeTemplate", DeleteJustInTimeTranscodeTemplateResponse.class);
     }
 
     /**
@@ -969,6 +991,17 @@ public class VodClient extends AbstractClient{
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
+    }
+
+    /**
+     *获取即时转码模板列表。
+     * @param req DescribeJustInTimeTranscodeTemplatesRequest
+     * @return DescribeJustInTimeTranscodeTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJustInTimeTranscodeTemplates", DescribeJustInTimeTranscodeTemplatesResponse.class);
     }
 
     /**
@@ -1546,6 +1579,17 @@ public class VodClient extends AbstractClient{
     public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyImageSpriteTemplate", ModifyImageSpriteTemplateResponse.class);
+    }
+
+    /**
+     *修改即时转码模板。
+     * @param req ModifyJustInTimeTranscodeTemplateRequest
+     * @return ModifyJustInTimeTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplate(ModifyJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyJustInTimeTranscodeTemplate", ModifyJustInTimeTranscodeTemplateResponse.class);
     }
 
     /**

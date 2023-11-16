@@ -252,6 +252,9 @@ public enum VodErrorCode {
     // 参数错误：无效的结束时间。
      INVALIDPARAMETERVALUE_ENDTIMEOFFSET("InvalidParameterValue.EndTimeOffset"),
      
+    // 名字重复
+     INVALIDPARAMETERVALUE_EXISTEDNAME("InvalidParameterValue.ExistedName"),
+     
     // 参数值错误：ExpireTime 格式错误。
      INVALIDPARAMETERVALUE_EXPIRETIME("InvalidParameterValue.ExpireTime"),
      

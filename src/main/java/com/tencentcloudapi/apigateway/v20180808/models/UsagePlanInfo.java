@@ -112,6 +112,14 @@ public class UsagePlanInfo extends AbstractModel {
     private UsagePlanBindEnvironment [] BindEnvironments;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 使用计划唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UsagePlanId 使用计划唯一 ID。
@@ -331,6 +339,26 @@ public class UsagePlanInfo extends AbstractModel {
         this.BindEnvironments = BindEnvironments;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public UsagePlanInfo() {
     }
 
@@ -378,6 +406,12 @@ public class UsagePlanInfo extends AbstractModel {
                 this.BindEnvironments[i] = new UsagePlanBindEnvironment(source.BindEnvironments[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -396,6 +430,7 @@ public class UsagePlanInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "BindSecretIds.", this.BindSecretIds);
         this.setParamSimple(map, prefix + "BindEnvironmentTotalCount", this.BindEnvironmentTotalCount);
         this.setParamArrayObj(map, prefix + "BindEnvironments.", this.BindEnvironments);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

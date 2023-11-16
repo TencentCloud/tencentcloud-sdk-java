@@ -80,6 +80,13 @@ public class McuWaterMarkText extends AbstractModel {
     private String BackGroundColor;
 
     /**
+    * 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+    */
+    @SerializedName("DynamicPosType")
+    @Expose
+    private Long DynamicPosType;
+
+    /**
      * Get 文字水印内容。 
      * @return Text 文字水印内容。
      */
@@ -207,6 +214,22 @@ public class McuWaterMarkText extends AbstractModel {
         this.BackGroundColor = BackGroundColor;
     }
 
+    /**
+     * Get 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。 
+     * @return DynamicPosType 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+     */
+    public Long getDynamicPosType() {
+        return this.DynamicPosType;
+    }
+
+    /**
+     * Set 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+     * @param DynamicPosType 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+     */
+    public void setDynamicPosType(Long DynamicPosType) {
+        this.DynamicPosType = DynamicPosType;
+    }
+
     public McuWaterMarkText() {
     }
 
@@ -239,6 +262,9 @@ public class McuWaterMarkText extends AbstractModel {
         if (source.BackGroundColor != null) {
             this.BackGroundColor = new String(source.BackGroundColor);
         }
+        if (source.DynamicPosType != null) {
+            this.DynamicPosType = new Long(source.DynamicPosType);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class McuWaterMarkText extends AbstractModel {
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
+        this.setParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
 
     }
 }

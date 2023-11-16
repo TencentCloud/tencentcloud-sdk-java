@@ -73,6 +73,34 @@ public class ModifyDSPAESTaskResultRequest extends AbstractModel {
     private Long DestLevelId;
 
     /**
+    * 调整前的规则id（系统识别的id）
+    */
+    @SerializedName("SrcRuleId")
+    @Expose
+    private Long SrcRuleId;
+
+    /**
+    * 调整前的规则id（系统识别的id）
+    */
+    @SerializedName("SrcCategoryId")
+    @Expose
+    private Long SrcCategoryId;
+
+    /**
+    * 调整前的等级id
+    */
+    @SerializedName("SrcLevelId")
+    @Expose
+    private Long SrcLevelId;
+
+    /**
+    * 0系统识别，1人工打标
+    */
+    @SerializedName("IdentifyType")
+    @Expose
+    private Long IdentifyType;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -184,6 +212,70 @@ public class ModifyDSPAESTaskResultRequest extends AbstractModel {
         this.DestLevelId = DestLevelId;
     }
 
+    /**
+     * Get 调整前的规则id（系统识别的id） 
+     * @return SrcRuleId 调整前的规则id（系统识别的id）
+     */
+    public Long getSrcRuleId() {
+        return this.SrcRuleId;
+    }
+
+    /**
+     * Set 调整前的规则id（系统识别的id）
+     * @param SrcRuleId 调整前的规则id（系统识别的id）
+     */
+    public void setSrcRuleId(Long SrcRuleId) {
+        this.SrcRuleId = SrcRuleId;
+    }
+
+    /**
+     * Get 调整前的规则id（系统识别的id） 
+     * @return SrcCategoryId 调整前的规则id（系统识别的id）
+     */
+    public Long getSrcCategoryId() {
+        return this.SrcCategoryId;
+    }
+
+    /**
+     * Set 调整前的规则id（系统识别的id）
+     * @param SrcCategoryId 调整前的规则id（系统识别的id）
+     */
+    public void setSrcCategoryId(Long SrcCategoryId) {
+        this.SrcCategoryId = SrcCategoryId;
+    }
+
+    /**
+     * Get 调整前的等级id 
+     * @return SrcLevelId 调整前的等级id
+     */
+    public Long getSrcLevelId() {
+        return this.SrcLevelId;
+    }
+
+    /**
+     * Set 调整前的等级id
+     * @param SrcLevelId 调整前的等级id
+     */
+    public void setSrcLevelId(Long SrcLevelId) {
+        this.SrcLevelId = SrcLevelId;
+    }
+
+    /**
+     * Get 0系统识别，1人工打标 
+     * @return IdentifyType 0系统识别，1人工打标
+     */
+    public Long getIdentifyType() {
+        return this.IdentifyType;
+    }
+
+    /**
+     * Set 0系统识别，1人工打标
+     * @param IdentifyType 0系统识别，1人工打标
+     */
+    public void setIdentifyType(Long IdentifyType) {
+        this.IdentifyType = IdentifyType;
+    }
+
     public ModifyDSPAESTaskResultRequest() {
     }
 
@@ -213,6 +305,18 @@ public class ModifyDSPAESTaskResultRequest extends AbstractModel {
         if (source.DestLevelId != null) {
             this.DestLevelId = new Long(source.DestLevelId);
         }
+        if (source.SrcRuleId != null) {
+            this.SrcRuleId = new Long(source.SrcRuleId);
+        }
+        if (source.SrcCategoryId != null) {
+            this.SrcCategoryId = new Long(source.SrcCategoryId);
+        }
+        if (source.SrcLevelId != null) {
+            this.SrcLevelId = new Long(source.SrcLevelId);
+        }
+        if (source.IdentifyType != null) {
+            this.IdentifyType = new Long(source.IdentifyType);
+        }
     }
 
 
@@ -227,6 +331,10 @@ public class ModifyDSPAESTaskResultRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DestRuleId", this.DestRuleId);
         this.setParamSimple(map, prefix + "DestCategoryId", this.DestCategoryId);
         this.setParamSimple(map, prefix + "DestLevelId", this.DestLevelId);
+        this.setParamSimple(map, prefix + "SrcRuleId", this.SrcRuleId);
+        this.setParamSimple(map, prefix + "SrcCategoryId", this.SrcCategoryId);
+        this.setParamSimple(map, prefix + "SrcLevelId", this.SrcLevelId);
+        this.setParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
 
     }
 }

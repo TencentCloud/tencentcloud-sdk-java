@@ -31,7 +31,7 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 资产视角的端口风险列表
+    * 内容风险列表
     */
     @SerializedName("Data")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeRiskCenterWebsiteRiskListResponse extends AbstractModel {
     }
 
     /**
-     * Get 资产视角的端口风险列表 
-     * @return Data 资产视角的端口风险列表
+     * Get 内容风险列表 
+     * @return Data 内容风险列表
      */
     public WebsiteRisk [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 资产视角的端口风险列表
-     * @param Data 资产视角的端口风险列表
+     * Set 内容风险列表
+     * @param Data 内容风险列表
      */
     public void setData(WebsiteRisk [] Data) {
         this.Data = Data;

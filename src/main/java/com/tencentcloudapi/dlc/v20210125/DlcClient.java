@@ -919,6 +919,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询可更新配置的引擎列表
+     * @param req DescribeUpdatableDataEnginesRequest
+     * @return DescribeUpdatableDataEnginesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEngines(DescribeUpdatableDataEnginesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpdatableDataEngines", DescribeUpdatableDataEnginesResponse.class);
+    }
+
+    /**
      *查询用户自定义引擎参数
      * @param req DescribeUserDataEngineConfigRequest
      * @return DescribeUserDataEngineConfigResponse

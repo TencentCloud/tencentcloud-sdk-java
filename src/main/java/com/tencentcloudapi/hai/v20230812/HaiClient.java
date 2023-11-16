@@ -39,6 +39,83 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *查询应用
+     * @param req DescribeApplicationsRequest
+     * @return DescribeApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplications", DescribeApplicationsResponse.class);
+    }
+
+    /**
+     *查询实例的网络配置及消耗情况
+     * @param req DescribeInstanceNetworkStatusRequest
+     * @return DescribeInstanceNetworkStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNetworkStatusResponse DescribeInstanceNetworkStatus(DescribeInstanceNetworkStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceNetworkStatus", DescribeInstanceNetworkStatusResponse.class);
+    }
+
+    /**
+     *查询实例
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
+    }
+
+    /**
+     *查询地域列表
+     * @param req DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
+    }
+
+    /**
+     *查询场景
+     * @param req DescribeScenesRequest
+     * @return DescribeScenesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScenesResponse DescribeScenes(DescribeScenesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScenes", DescribeScenesResponse.class);
+    }
+
+    /**
+     *查询服务登录配置
+     * @param req DescribeServiceLoginSettingsRequest
+     * @return DescribeServiceLoginSettingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceLoginSettingsResponse DescribeServiceLoginSettings(DescribeServiceLoginSettingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceLoginSettings", DescribeServiceLoginSettingsResponse.class);
+    }
+
+    /**
+     *本接口 (InquirePriceRunInstances) 用于实例询价。
+     * @param req InquirePriceRunInstancesRequest
+     * @return InquirePriceRunInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRunInstancesResponse InquirePriceRunInstances(InquirePriceRunInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceRunInstances", InquirePriceRunInstancesResponse.class);
+    }
+
+    /**
      *本接口 (RunInstances) 用于创建一个或多个指定配置的实例。
      * @param req RunInstancesRequest
      * @return RunInstancesResponse

@@ -66,6 +66,13 @@ public class McuWaterMarkImage extends AbstractModel {
     private Long ZOrder;
 
     /**
+    * 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+    */
+    @SerializedName("DynamicPosType")
+    @Expose
+    private Long DynamicPosType;
+
+    /**
      * Get 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。 
      * @return WaterMarkUrl 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
      */
@@ -161,6 +168,22 @@ public class McuWaterMarkImage extends AbstractModel {
         this.ZOrder = ZOrder;
     }
 
+    /**
+     * Get 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。 
+     * @return DynamicPosType 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+     */
+    public Long getDynamicPosType() {
+        return this.DynamicPosType;
+    }
+
+    /**
+     * Set 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+     * @param DynamicPosType 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+     */
+    public void setDynamicPosType(Long DynamicPosType) {
+        this.DynamicPosType = DynamicPosType;
+    }
+
     public McuWaterMarkImage() {
     }
 
@@ -187,6 +210,9 @@ public class McuWaterMarkImage extends AbstractModel {
         if (source.ZOrder != null) {
             this.ZOrder = new Long(source.ZOrder);
         }
+        if (source.DynamicPosType != null) {
+            this.DynamicPosType = new Long(source.DynamicPosType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class McuWaterMarkImage extends AbstractModel {
         this.setParamSimple(map, prefix + "LocationX", this.LocationX);
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
         this.setParamSimple(map, prefix + "ZOrder", this.ZOrder);
+        this.setParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
 
     }
 }

@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class TextResult extends AbstractModel {
 
     /**
-    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+    * 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -97,15 +97,15 @@ public class TextResult extends AbstractModel {
     private String SubLabel;
 
     /**
-     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+     * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+     * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -113,15 +113,15 @@ public class TextResult extends AbstractModel {
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+     * Set 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+     * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {

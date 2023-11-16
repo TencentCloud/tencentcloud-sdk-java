@@ -59,6 +59,14 @@ public class DescribeDSPAESDataAssetDetailRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
+    * 可信分排序，ASC升序
+DESC降序
+    */
+    @SerializedName("CreditScore")
+    @Expose
+    private String CreditScore;
+
+    /**
      * Get dspa实例id 
      * @return DspaId dspa实例id
      */
@@ -138,6 +146,26 @@ public class DescribeDSPAESDataAssetDetailRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get 可信分排序，ASC升序
+DESC降序 
+     * @return CreditScore 可信分排序，ASC升序
+DESC降序
+     */
+    public String getCreditScore() {
+        return this.CreditScore;
+    }
+
+    /**
+     * Set 可信分排序，ASC升序
+DESC降序
+     * @param CreditScore 可信分排序，ASC升序
+DESC降序
+     */
+    public void setCreditScore(String CreditScore) {
+        this.CreditScore = CreditScore;
+    }
+
     public DescribeDSPAESDataAssetDetailRequest() {
     }
 
@@ -164,6 +192,9 @@ public class DescribeDSPAESDataAssetDetailRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.CreditScore != null) {
+            this.CreditScore = new String(source.CreditScore);
+        }
     }
 
 
@@ -176,6 +207,7 @@ public class DescribeDSPAESDataAssetDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "CreditScore", this.CreditScore);
 
     }
 }

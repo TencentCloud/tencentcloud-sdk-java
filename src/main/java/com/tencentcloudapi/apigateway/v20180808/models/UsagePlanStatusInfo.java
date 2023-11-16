@@ -80,6 +80,14 @@ public class UsagePlanStatusInfo extends AbstractModel {
     private String ModifiedTime;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 使用计划唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UsagePlanId 使用计划唯一 ID。
@@ -219,6 +227,26 @@ public class UsagePlanStatusInfo extends AbstractModel {
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public UsagePlanStatusInfo() {
     }
 
@@ -248,6 +276,12 @@ public class UsagePlanStatusInfo extends AbstractModel {
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new String(source.ModifiedTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -262,6 +296,7 @@ public class UsagePlanStatusInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRequestNum", this.MaxRequestNum);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -276,11 +276,25 @@ public class MotorVehicleSaleInvoice extends AbstractModel {
     private String Issuer;
 
     /**
-    * 完税凭证号码
+    * 进口证明书号
     */
     @SerializedName("TaxNum")
     @Expose
     private String TaxNum;
+
+    /**
+    * 完税凭证号码
+    */
+    @SerializedName("TaxPayNum")
+    @Expose
+    private String TaxPayNum;
+
+    /**
+    * 税控码
+    */
+    @SerializedName("TaxCode")
+    @Expose
+    private String TaxCode;
 
     /**
     * 限乘人数
@@ -894,19 +908,51 @@ public class MotorVehicleSaleInvoice extends AbstractModel {
     }
 
     /**
-     * Get 完税凭证号码 
-     * @return TaxNum 完税凭证号码
+     * Get 进口证明书号 
+     * @return TaxNum 进口证明书号
      */
     public String getTaxNum() {
         return this.TaxNum;
     }
 
     /**
-     * Set 完税凭证号码
-     * @param TaxNum 完税凭证号码
+     * Set 进口证明书号
+     * @param TaxNum 进口证明书号
      */
     public void setTaxNum(String TaxNum) {
         this.TaxNum = TaxNum;
+    }
+
+    /**
+     * Get 完税凭证号码 
+     * @return TaxPayNum 完税凭证号码
+     */
+    public String getTaxPayNum() {
+        return this.TaxPayNum;
+    }
+
+    /**
+     * Set 完税凭证号码
+     * @param TaxPayNum 完税凭证号码
+     */
+    public void setTaxPayNum(String TaxPayNum) {
+        this.TaxPayNum = TaxPayNum;
+    }
+
+    /**
+     * Get 税控码 
+     * @return TaxCode 税控码
+     */
+    public String getTaxCode() {
+        return this.TaxCode;
+    }
+
+    /**
+     * Set 税控码
+     * @param TaxCode 税控码
+     */
+    public void setTaxCode(String TaxCode) {
+        this.TaxCode = TaxCode;
     }
 
     /**
@@ -1108,6 +1154,12 @@ public class MotorVehicleSaleInvoice extends AbstractModel {
         if (source.TaxNum != null) {
             this.TaxNum = new String(source.TaxNum);
         }
+        if (source.TaxPayNum != null) {
+            this.TaxPayNum = new String(source.TaxPayNum);
+        }
+        if (source.TaxCode != null) {
+            this.TaxCode = new String(source.TaxCode);
+        }
         if (source.MaxPeopleNum != null) {
             this.MaxPeopleNum = new String(source.MaxPeopleNum);
         }
@@ -1167,6 +1219,8 @@ public class MotorVehicleSaleInvoice extends AbstractModel {
         this.setParamSimple(map, prefix + "FormName", this.FormName);
         this.setParamSimple(map, prefix + "Issuer", this.Issuer);
         this.setParamSimple(map, prefix + "TaxNum", this.TaxNum);
+        this.setParamSimple(map, prefix + "TaxPayNum", this.TaxPayNum);
+        this.setParamSimple(map, prefix + "TaxCode", this.TaxCode);
         this.setParamSimple(map, prefix + "MaxPeopleNum", this.MaxPeopleNum);
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "MachineCode", this.MachineCode);

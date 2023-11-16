@@ -160,6 +160,30 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
     private String CategoryFullPath;
 
     /**
+    * 0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdentifyType")
+    @Expose
+    private Long IdentifyType;
+
+    /**
+    * 0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckStatus")
+    @Expose
+    private Long CheckStatus;
+
+    /**
+    * 0非敏感，1敏感
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSensitiveData")
+    @Expose
+    private Long IsSensitiveData;
+
+    /**
      * Get 数据源ID 
      * @return DataSourceId 数据源ID
      */
@@ -487,6 +511,66 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
         this.CategoryFullPath = CategoryFullPath;
     }
 
+    /**
+     * Get 0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdentifyType 0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIdentifyType() {
+        return this.IdentifyType;
+    }
+
+    /**
+     * Set 0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdentifyType 0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdentifyType(Long IdentifyType) {
+        this.IdentifyType = IdentifyType;
+    }
+
+    /**
+     * Get 0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckStatus 0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCheckStatus() {
+        return this.CheckStatus;
+    }
+
+    /**
+     * Set 0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckStatus 0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckStatus(Long CheckStatus) {
+        this.CheckStatus = CheckStatus;
+    }
+
+    /**
+     * Get 0非敏感，1敏感
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSensitiveData 0非敏感，1敏感
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSensitiveData() {
+        return this.IsSensitiveData;
+    }
+
+    /**
+     * Set 0非敏感，1敏感
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSensitiveData 0非敏感，1敏感
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSensitiveData(Long IsSensitiveData) {
+        this.IsSensitiveData = IsSensitiveData;
+    }
+
     public DspaRDBDataAssetDetail() {
     }
 
@@ -549,6 +633,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
         if (source.CategoryFullPath != null) {
             this.CategoryFullPath = new String(source.CategoryFullPath);
         }
+        if (source.IdentifyType != null) {
+            this.IdentifyType = new Long(source.IdentifyType);
+        }
+        if (source.CheckStatus != null) {
+            this.CheckStatus = new Long(source.CheckStatus);
+        }
+        if (source.IsSensitiveData != null) {
+            this.IsSensitiveData = new Long(source.IsSensitiveData);
+        }
     }
 
 
@@ -574,6 +667,9 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
         this.setParamObj(map, prefix + "SafeGuard.", this.SafeGuard);
         this.setParamSimple(map, prefix + "CategoryFullPath", this.CategoryFullPath);
+        this.setParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
+        this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
+        this.setParamSimple(map, prefix + "IsSensitiveData", this.IsSensitiveData);
 
     }
 }

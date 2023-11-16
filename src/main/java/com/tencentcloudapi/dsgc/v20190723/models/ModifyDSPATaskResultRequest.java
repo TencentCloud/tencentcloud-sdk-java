@@ -73,6 +73,36 @@ public class ModifyDSPATaskResultRequest extends AbstractModel {
     private Long DestLevelId;
 
     /**
+    * 调整前的规则ID
+
+    */
+    @SerializedName("SrcRuleId")
+    @Expose
+    private Long SrcRuleId;
+
+    /**
+    * 调整之前的分类id
+    */
+    @SerializedName("SrcCategoryId")
+    @Expose
+    private Long SrcCategoryId;
+
+    /**
+    * 调整之前的分级id
+    */
+    @SerializedName("SrcLevelId")
+    @Expose
+    private Long SrcLevelId;
+
+    /**
+    * 识别方式
+0-系统识别，1-人工打标
+    */
+    @SerializedName("IdentifyType")
+    @Expose
+    private Long IdentifyType;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -184,6 +214,78 @@ public class ModifyDSPATaskResultRequest extends AbstractModel {
         this.DestLevelId = DestLevelId;
     }
 
+    /**
+     * Get 调整前的规则ID
+ 
+     * @return SrcRuleId 调整前的规则ID
+
+     */
+    public Long getSrcRuleId() {
+        return this.SrcRuleId;
+    }
+
+    /**
+     * Set 调整前的规则ID
+
+     * @param SrcRuleId 调整前的规则ID
+
+     */
+    public void setSrcRuleId(Long SrcRuleId) {
+        this.SrcRuleId = SrcRuleId;
+    }
+
+    /**
+     * Get 调整之前的分类id 
+     * @return SrcCategoryId 调整之前的分类id
+     */
+    public Long getSrcCategoryId() {
+        return this.SrcCategoryId;
+    }
+
+    /**
+     * Set 调整之前的分类id
+     * @param SrcCategoryId 调整之前的分类id
+     */
+    public void setSrcCategoryId(Long SrcCategoryId) {
+        this.SrcCategoryId = SrcCategoryId;
+    }
+
+    /**
+     * Get 调整之前的分级id 
+     * @return SrcLevelId 调整之前的分级id
+     */
+    public Long getSrcLevelId() {
+        return this.SrcLevelId;
+    }
+
+    /**
+     * Set 调整之前的分级id
+     * @param SrcLevelId 调整之前的分级id
+     */
+    public void setSrcLevelId(Long SrcLevelId) {
+        this.SrcLevelId = SrcLevelId;
+    }
+
+    /**
+     * Get 识别方式
+0-系统识别，1-人工打标 
+     * @return IdentifyType 识别方式
+0-系统识别，1-人工打标
+     */
+    public Long getIdentifyType() {
+        return this.IdentifyType;
+    }
+
+    /**
+     * Set 识别方式
+0-系统识别，1-人工打标
+     * @param IdentifyType 识别方式
+0-系统识别，1-人工打标
+     */
+    public void setIdentifyType(Long IdentifyType) {
+        this.IdentifyType = IdentifyType;
+    }
+
     public ModifyDSPATaskResultRequest() {
     }
 
@@ -213,6 +315,18 @@ public class ModifyDSPATaskResultRequest extends AbstractModel {
         if (source.DestLevelId != null) {
             this.DestLevelId = new Long(source.DestLevelId);
         }
+        if (source.SrcRuleId != null) {
+            this.SrcRuleId = new Long(source.SrcRuleId);
+        }
+        if (source.SrcCategoryId != null) {
+            this.SrcCategoryId = new Long(source.SrcCategoryId);
+        }
+        if (source.SrcLevelId != null) {
+            this.SrcLevelId = new Long(source.SrcLevelId);
+        }
+        if (source.IdentifyType != null) {
+            this.IdentifyType = new Long(source.IdentifyType);
+        }
     }
 
 
@@ -227,6 +341,10 @@ public class ModifyDSPATaskResultRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DestRuleId", this.DestRuleId);
         this.setParamSimple(map, prefix + "DestCategoryId", this.DestCategoryId);
         this.setParamSimple(map, prefix + "DestLevelId", this.DestLevelId);
+        this.setParamSimple(map, prefix + "SrcRuleId", this.SrcRuleId);
+        this.setParamSimple(map, prefix + "SrcCategoryId", this.SrcCategoryId);
+        this.setParamSimple(map, prefix + "SrcLevelId", this.SrcLevelId);
+        this.setParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
 
     }
 }

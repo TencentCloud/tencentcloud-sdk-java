@@ -523,6 +523,17 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *修改用户组
+     * @param req ModifyUserGroupRequest
+     * @return ModifyUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserGroupResponse ModifyUserGroup(ModifyUserGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserGroup", ModifyUserGroupResponse.class);
+    }
+
+    /**
      *清除设备账号绑定密码
      * @param req ResetDeviceAccountPasswordRequest
      * @return ResetDeviceAccountPasswordResponse

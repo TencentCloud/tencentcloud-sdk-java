@@ -80,7 +80,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private Long Status;
 
     /**
-    * 资产唯一id
+    * 风险ID
     */
     @SerializedName("Id")
     @Expose
@@ -145,35 +145,35 @@ public class AssetViewVULRisk extends AbstractModel {
     private String Port;
 
     /**
-    * 描述
+    * 漏洞描述
     */
     @SerializedName("Describe")
     @Expose
     private String Describe;
 
     /**
-    * 版本名
+    * 漏洞影响组件
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 相关信息
+    * 技术参考
     */
     @SerializedName("References")
     @Expose
     private String References;
 
     /**
-    * 版本
+    * 漏洞影响版本
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * 漏洞url
+    * 风险点
     */
     @SerializedName("VULURL")
     @Expose
@@ -194,7 +194,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private String CVE;
 
     /**
-    * 修复建议
+    * 修复方案
     */
     @SerializedName("Fix")
     @Expose
@@ -208,7 +208,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private String POCId;
 
     /**
-    * 来源
+    * 扫描来源
     */
     @SerializedName("From")
     @Expose
@@ -243,7 +243,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private String InstanceUUID;
 
     /**
-    * 负载
+    * 攻击载荷
     */
     @SerializedName("Payload")
     @Expose
@@ -386,16 +386,16 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 资产唯一id 
-     * @return Id 资产唯一id
+     * Get 风险ID 
+     * @return Id 风险ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 资产唯一id
-     * @param Id 资产唯一id
+     * Set 风险ID
+     * @param Id 风险ID
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -538,80 +538,80 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 描述 
-     * @return Describe 描述
+     * Get 漏洞描述 
+     * @return Describe 漏洞描述
      */
     public String getDescribe() {
         return this.Describe;
     }
 
     /**
-     * Set 描述
-     * @param Describe 描述
+     * Set 漏洞描述
+     * @param Describe 漏洞描述
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;
     }
 
     /**
-     * Get 版本名 
-     * @return AppName 版本名
+     * Get 漏洞影响组件 
+     * @return AppName 漏洞影响组件
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 版本名
-     * @param AppName 版本名
+     * Set 漏洞影响组件
+     * @param AppName 漏洞影响组件
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 相关信息 
-     * @return References 相关信息
+     * Get 技术参考 
+     * @return References 技术参考
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set 相关信息
-     * @param References 相关信息
+     * Set 技术参考
+     * @param References 技术参考
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get 版本 
-     * @return AppVersion 版本
+     * Get 漏洞影响版本 
+     * @return AppVersion 漏洞影响版本
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set 版本
-     * @param AppVersion 版本
+     * Set 漏洞影响版本
+     * @param AppVersion 漏洞影响版本
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get 漏洞url 
-     * @return VULURL 漏洞url
+     * Get 风险点 
+     * @return VULURL 风险点
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set 漏洞url
-     * @param VULURL 漏洞url
+     * Set 风险点
+     * @param VULURL 风险点
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;
@@ -650,16 +650,16 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 修复建议 
-     * @return Fix 修复建议
+     * Get 修复方案 
+     * @return Fix 修复方案
      */
     public String getFix() {
         return this.Fix;
     }
 
     /**
-     * Set 修复建议
-     * @param Fix 修复建议
+     * Set 修复方案
+     * @param Fix 修复方案
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
@@ -682,16 +682,16 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 来源 
-     * @return From 来源
+     * Get 扫描来源 
+     * @return From 扫描来源
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 来源
-     * @param From 来源
+     * Set 扫描来源
+     * @param From 扫描来源
      */
     public void setFrom(String From) {
         this.From = From;
@@ -762,16 +762,16 @@ public class AssetViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 负载 
-     * @return Payload 负载
+     * Get 攻击载荷 
+     * @return Payload 攻击载荷
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 负载
-     * @param Payload 负载
+     * Set 攻击载荷
+     * @param Payload 攻击载荷
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;

@@ -152,6 +152,20 @@ public class ESDataAssetDetail extends AbstractModel {
     private String RuleName;
 
     /**
+    * 0系统识别，1人工打标
+    */
+    @SerializedName("IdentifyType")
+    @Expose
+    private Long IdentifyType;
+
+    /**
+    * 0未核查，1已核查
+    */
+    @SerializedName("CheckStatus")
+    @Expose
+    private Long CheckStatus;
+
+    /**
      * Get id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FieldResultId id
@@ -471,6 +485,38 @@ public class ESDataAssetDetail extends AbstractModel {
         this.RuleName = RuleName;
     }
 
+    /**
+     * Get 0系统识别，1人工打标 
+     * @return IdentifyType 0系统识别，1人工打标
+     */
+    public Long getIdentifyType() {
+        return this.IdentifyType;
+    }
+
+    /**
+     * Set 0系统识别，1人工打标
+     * @param IdentifyType 0系统识别，1人工打标
+     */
+    public void setIdentifyType(Long IdentifyType) {
+        this.IdentifyType = IdentifyType;
+    }
+
+    /**
+     * Get 0未核查，1已核查 
+     * @return CheckStatus 0未核查，1已核查
+     */
+    public Long getCheckStatus() {
+        return this.CheckStatus;
+    }
+
+    /**
+     * Set 0未核查，1已核查
+     * @param CheckStatus 0未核查，1已核查
+     */
+    public void setCheckStatus(Long CheckStatus) {
+        this.CheckStatus = CheckStatus;
+    }
+
     public ESDataAssetDetail() {
     }
 
@@ -530,6 +576,12 @@ public class ESDataAssetDetail extends AbstractModel {
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
+        if (source.IdentifyType != null) {
+            this.IdentifyType = new Long(source.IdentifyType);
+        }
+        if (source.CheckStatus != null) {
+            this.CheckStatus = new Long(source.CheckStatus);
+        }
     }
 
 
@@ -553,6 +605,8 @@ public class ESDataAssetDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "TrustedScore", this.TrustedScore);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
+        this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
 
     }
 }

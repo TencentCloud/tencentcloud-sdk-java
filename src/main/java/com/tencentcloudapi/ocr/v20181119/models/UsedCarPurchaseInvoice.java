@@ -255,6 +255,76 @@ public class UsedCarPurchaseInvoice extends AbstractModel {
     private Long CompanySealMark;
 
     /**
+    * 经营拍卖单位
+    */
+    @SerializedName("AuctionOrgName")
+    @Expose
+    private String AuctionOrgName;
+
+    /**
+    * 经营拍卖单位地址
+    */
+    @SerializedName("AuctionOrgAddress")
+    @Expose
+    private String AuctionOrgAddress;
+
+    /**
+    * 经营拍卖单位纳税人识别号
+    */
+    @SerializedName("AuctionOrgTaxID")
+    @Expose
+    private String AuctionOrgTaxID;
+
+    /**
+    * 经营拍卖单位开户银行账号
+    */
+    @SerializedName("AuctionOrgBankAccount")
+    @Expose
+    private String AuctionOrgBankAccount;
+
+    /**
+    * 经营拍卖单位电话
+    */
+    @SerializedName("AuctionOrgPhone")
+    @Expose
+    private String AuctionOrgPhone;
+
+    /**
+    * 开票人
+    */
+    @SerializedName("Issuer")
+    @Expose
+    private String Issuer;
+
+    /**
+    * 税控码
+    */
+    @SerializedName("TaxCode")
+    @Expose
+    private String TaxCode;
+
+    /**
+    * 机器编号
+    */
+    @SerializedName("MachineSerialNumber")
+    @Expose
+    private String MachineSerialNumber;
+
+    /**
+    * 机打发票代码
+    */
+    @SerializedName("MachineCode")
+    @Expose
+    private String MachineCode;
+
+    /**
+    * 机打发票号码
+    */
+    @SerializedName("MachineNumber")
+    @Expose
+    private String MachineNumber;
+
+    /**
      * Get 发票名称 
      * @return Title 发票名称
      */
@@ -782,6 +852,166 @@ public class UsedCarPurchaseInvoice extends AbstractModel {
         this.CompanySealMark = CompanySealMark;
     }
 
+    /**
+     * Get 经营拍卖单位 
+     * @return AuctionOrgName 经营拍卖单位
+     */
+    public String getAuctionOrgName() {
+        return this.AuctionOrgName;
+    }
+
+    /**
+     * Set 经营拍卖单位
+     * @param AuctionOrgName 经营拍卖单位
+     */
+    public void setAuctionOrgName(String AuctionOrgName) {
+        this.AuctionOrgName = AuctionOrgName;
+    }
+
+    /**
+     * Get 经营拍卖单位地址 
+     * @return AuctionOrgAddress 经营拍卖单位地址
+     */
+    public String getAuctionOrgAddress() {
+        return this.AuctionOrgAddress;
+    }
+
+    /**
+     * Set 经营拍卖单位地址
+     * @param AuctionOrgAddress 经营拍卖单位地址
+     */
+    public void setAuctionOrgAddress(String AuctionOrgAddress) {
+        this.AuctionOrgAddress = AuctionOrgAddress;
+    }
+
+    /**
+     * Get 经营拍卖单位纳税人识别号 
+     * @return AuctionOrgTaxID 经营拍卖单位纳税人识别号
+     */
+    public String getAuctionOrgTaxID() {
+        return this.AuctionOrgTaxID;
+    }
+
+    /**
+     * Set 经营拍卖单位纳税人识别号
+     * @param AuctionOrgTaxID 经营拍卖单位纳税人识别号
+     */
+    public void setAuctionOrgTaxID(String AuctionOrgTaxID) {
+        this.AuctionOrgTaxID = AuctionOrgTaxID;
+    }
+
+    /**
+     * Get 经营拍卖单位开户银行账号 
+     * @return AuctionOrgBankAccount 经营拍卖单位开户银行账号
+     */
+    public String getAuctionOrgBankAccount() {
+        return this.AuctionOrgBankAccount;
+    }
+
+    /**
+     * Set 经营拍卖单位开户银行账号
+     * @param AuctionOrgBankAccount 经营拍卖单位开户银行账号
+     */
+    public void setAuctionOrgBankAccount(String AuctionOrgBankAccount) {
+        this.AuctionOrgBankAccount = AuctionOrgBankAccount;
+    }
+
+    /**
+     * Get 经营拍卖单位电话 
+     * @return AuctionOrgPhone 经营拍卖单位电话
+     */
+    public String getAuctionOrgPhone() {
+        return this.AuctionOrgPhone;
+    }
+
+    /**
+     * Set 经营拍卖单位电话
+     * @param AuctionOrgPhone 经营拍卖单位电话
+     */
+    public void setAuctionOrgPhone(String AuctionOrgPhone) {
+        this.AuctionOrgPhone = AuctionOrgPhone;
+    }
+
+    /**
+     * Get 开票人 
+     * @return Issuer 开票人
+     */
+    public String getIssuer() {
+        return this.Issuer;
+    }
+
+    /**
+     * Set 开票人
+     * @param Issuer 开票人
+     */
+    public void setIssuer(String Issuer) {
+        this.Issuer = Issuer;
+    }
+
+    /**
+     * Get 税控码 
+     * @return TaxCode 税控码
+     */
+    public String getTaxCode() {
+        return this.TaxCode;
+    }
+
+    /**
+     * Set 税控码
+     * @param TaxCode 税控码
+     */
+    public void setTaxCode(String TaxCode) {
+        this.TaxCode = TaxCode;
+    }
+
+    /**
+     * Get 机器编号 
+     * @return MachineSerialNumber 机器编号
+     */
+    public String getMachineSerialNumber() {
+        return this.MachineSerialNumber;
+    }
+
+    /**
+     * Set 机器编号
+     * @param MachineSerialNumber 机器编号
+     */
+    public void setMachineSerialNumber(String MachineSerialNumber) {
+        this.MachineSerialNumber = MachineSerialNumber;
+    }
+
+    /**
+     * Get 机打发票代码 
+     * @return MachineCode 机打发票代码
+     */
+    public String getMachineCode() {
+        return this.MachineCode;
+    }
+
+    /**
+     * Set 机打发票代码
+     * @param MachineCode 机打发票代码
+     */
+    public void setMachineCode(String MachineCode) {
+        this.MachineCode = MachineCode;
+    }
+
+    /**
+     * Get 机打发票号码 
+     * @return MachineNumber 机打发票号码
+     */
+    public String getMachineNumber() {
+        return this.MachineNumber;
+    }
+
+    /**
+     * Set 机打发票号码
+     * @param MachineNumber 机打发票号码
+     */
+    public void setMachineNumber(String MachineNumber) {
+        this.MachineNumber = MachineNumber;
+    }
+
     public UsedCarPurchaseInvoice() {
     }
 
@@ -889,6 +1119,36 @@ public class UsedCarPurchaseInvoice extends AbstractModel {
         if (source.CompanySealMark != null) {
             this.CompanySealMark = new Long(source.CompanySealMark);
         }
+        if (source.AuctionOrgName != null) {
+            this.AuctionOrgName = new String(source.AuctionOrgName);
+        }
+        if (source.AuctionOrgAddress != null) {
+            this.AuctionOrgAddress = new String(source.AuctionOrgAddress);
+        }
+        if (source.AuctionOrgTaxID != null) {
+            this.AuctionOrgTaxID = new String(source.AuctionOrgTaxID);
+        }
+        if (source.AuctionOrgBankAccount != null) {
+            this.AuctionOrgBankAccount = new String(source.AuctionOrgBankAccount);
+        }
+        if (source.AuctionOrgPhone != null) {
+            this.AuctionOrgPhone = new String(source.AuctionOrgPhone);
+        }
+        if (source.Issuer != null) {
+            this.Issuer = new String(source.Issuer);
+        }
+        if (source.TaxCode != null) {
+            this.TaxCode = new String(source.TaxCode);
+        }
+        if (source.MachineSerialNumber != null) {
+            this.MachineSerialNumber = new String(source.MachineSerialNumber);
+        }
+        if (source.MachineCode != null) {
+            this.MachineCode = new String(source.MachineCode);
+        }
+        if (source.MachineNumber != null) {
+            this.MachineNumber = new String(source.MachineNumber);
+        }
     }
 
 
@@ -929,6 +1189,16 @@ public class UsedCarPurchaseInvoice extends AbstractModel {
         this.setParamSimple(map, prefix + "FormType", this.FormType);
         this.setParamSimple(map, prefix + "FormName", this.FormName);
         this.setParamSimple(map, prefix + "CompanySealMark", this.CompanySealMark);
+        this.setParamSimple(map, prefix + "AuctionOrgName", this.AuctionOrgName);
+        this.setParamSimple(map, prefix + "AuctionOrgAddress", this.AuctionOrgAddress);
+        this.setParamSimple(map, prefix + "AuctionOrgTaxID", this.AuctionOrgTaxID);
+        this.setParamSimple(map, prefix + "AuctionOrgBankAccount", this.AuctionOrgBankAccount);
+        this.setParamSimple(map, prefix + "AuctionOrgPhone", this.AuctionOrgPhone);
+        this.setParamSimple(map, prefix + "Issuer", this.Issuer);
+        this.setParamSimple(map, prefix + "TaxCode", this.TaxCode);
+        this.setParamSimple(map, prefix + "MachineSerialNumber", this.MachineSerialNumber);
+        this.setParamSimple(map, prefix + "MachineCode", this.MachineCode);
+        this.setParamSimple(map, prefix + "MachineNumber", this.MachineNumber);
 
     }
 }

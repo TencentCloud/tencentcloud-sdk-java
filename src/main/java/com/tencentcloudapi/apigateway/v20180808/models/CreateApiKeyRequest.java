@@ -52,6 +52,13 @@ public class CreateApiKeyRequest extends AbstractModel {
     private String AccessKeySecret;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 用户自定义密钥名称。 
      * @return SecretName 用户自定义密钥名称。
      */
@@ -115,6 +122,22 @@ public class CreateApiKeyRequest extends AbstractModel {
         this.AccessKeySecret = AccessKeySecret;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateApiKeyRequest() {
     }
 
@@ -135,6 +158,12 @@ public class CreateApiKeyRequest extends AbstractModel {
         if (source.AccessKeySecret != null) {
             this.AccessKeySecret = new String(source.AccessKeySecret);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class CreateApiKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessKeyType", this.AccessKeyType);
         this.setParamSimple(map, prefix + "AccessKeyId", this.AccessKeyId);
         this.setParamSimple(map, prefix + "AccessKeySecret", this.AccessKeySecret);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

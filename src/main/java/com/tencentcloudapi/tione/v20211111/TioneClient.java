@@ -380,6 +380,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
+     * @param req DescribeEventsRequest
+     * @return DescribeEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventsResponse DescribeEvents(DescribeEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEvents", DescribeEventsResponse.class);
+    }
+
+    /**
      *查询推理镜像模板
      * @param req DescribeInferTemplatesRequest
      * @return DescribeInferTemplatesResponse
@@ -402,7 +413,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *获取训练、推理、Notebook服务的日志 API
+     *获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
      * @param req DescribeLogsRequest
      * @return DescribeLogsResponse
      * @throws TencentCloudSDKException
