@@ -73,6 +73,38 @@ public class SessionItem extends AbstractModel {
     private String TsVersion;
 
     /**
+    * SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private Long SessionId;
+
+    /**
+    * Session名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionName")
+    @Expose
+    private String SessionName;
+
+    /**
+    * Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionInUsed")
+    @Expose
+    private Boolean SessionInUsed;
+
+    /**
+    * Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RelatedRuleID")
+    @Expose
+    private Long [] RelatedRuleID;
+
+    /**
      * Get 匹配类型 
      * @return Category 匹配类型
      */
@@ -184,6 +216,86 @@ public class SessionItem extends AbstractModel {
         this.TsVersion = TsVersion;
     }
 
+    /**
+     * Get SessionID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionId SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(Long SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get Session名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionName Session名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionName() {
+        return this.SessionName;
+    }
+
+    /**
+     * Set Session名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionName Session名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionName(String SessionName) {
+        this.SessionName = SessionName;
+    }
+
+    /**
+     * Get Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionInUsed Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSessionInUsed() {
+        return this.SessionInUsed;
+    }
+
+    /**
+     * Set Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionInUsed Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionInUsed(Boolean SessionInUsed) {
+        this.SessionInUsed = SessionInUsed;
+    }
+
+    /**
+     * Get Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RelatedRuleID Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getRelatedRuleID() {
+        return this.RelatedRuleID;
+    }
+
+    /**
+     * Set Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RelatedRuleID Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRelatedRuleID(Long [] RelatedRuleID) {
+        this.RelatedRuleID = RelatedRuleID;
+    }
+
     public SessionItem() {
     }
 
@@ -213,6 +325,21 @@ public class SessionItem extends AbstractModel {
         if (source.TsVersion != null) {
             this.TsVersion = new String(source.TsVersion);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new Long(source.SessionId);
+        }
+        if (source.SessionName != null) {
+            this.SessionName = new String(source.SessionName);
+        }
+        if (source.SessionInUsed != null) {
+            this.SessionInUsed = new Boolean(source.SessionInUsed);
+        }
+        if (source.RelatedRuleID != null) {
+            this.RelatedRuleID = new Long[source.RelatedRuleID.length];
+            for (int i = 0; i < source.RelatedRuleID.length; i++) {
+                this.RelatedRuleID[i] = new Long(source.RelatedRuleID[i]);
+            }
+        }
     }
 
 
@@ -227,6 +354,10 @@ public class SessionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "EndOffset", this.EndOffset);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "TsVersion", this.TsVersion);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "SessionName", this.SessionName);
+        this.setParamSimple(map, prefix + "SessionInUsed", this.SessionInUsed);
+        this.setParamArraySimple(map, prefix + "RelatedRuleID.", this.RelatedRuleID);
 
     }
 }
