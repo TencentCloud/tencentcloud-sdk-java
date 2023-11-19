@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class MLIDPassportOCRResponse extends AbstractModel {
 
     /**
-    * 护照ID
+    * 护照ID（机读码区的解析结果）
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 姓名
+    * 姓名（机读码区的解析结果）
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 出生日期
+    * 出生日期（机读码区的解析结果）
     */
     @SerializedName("DateOfBirth")
     @Expose
     private String DateOfBirth;
 
     /**
-    * 性别（F女，M男）
+    * 性别（F女，M男）（机读码区的解析结果）
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 有效期
+    * 有效期（机读码区的解析结果）
     */
     @SerializedName("DateOfExpiration")
     @Expose
     private String DateOfExpiration;
 
     /**
-    * 发行国
+    * 发行国（机读码区的解析结果）
     */
     @SerializedName("IssuingCountry")
     @Expose
     private String IssuingCountry;
 
     /**
-    * 国家地区代码
+    * 国家地区代码（机读码区的解析结果）
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * 告警码
+    * 告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
@@ -119,7 +119,7 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private String CodeCrc;
 
     /**
-    * 姓
+    * 姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Surname")
@@ -127,12 +127,26 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private String Surname;
 
     /**
-    * 名
+    * 名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GivenName")
     @Expose
     private String GivenName;
+
+    /**
+    * 类型（机读码区的解析结果）
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 信息区证件内容
+    */
+    @SerializedName("PassportRecognizeInfos")
+    @Expose
+    private PassportRecognizeInfos PassportRecognizeInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -142,123 +156,123 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 护照ID 
-     * @return ID 护照ID
+     * Get 护照ID（机读码区的解析结果） 
+     * @return ID 护照ID（机读码区的解析结果）
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 护照ID
-     * @param ID 护照ID
+     * Set 护照ID（机读码区的解析结果）
+     * @param ID 护照ID（机读码区的解析结果）
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 姓名 
-     * @return Name 姓名
+     * Get 姓名（机读码区的解析结果） 
+     * @return Name 姓名（机读码区的解析结果）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名
-     * @param Name 姓名
+     * Set 姓名（机读码区的解析结果）
+     * @param Name 姓名（机读码区的解析结果）
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 出生日期 
-     * @return DateOfBirth 出生日期
+     * Get 出生日期（机读码区的解析结果） 
+     * @return DateOfBirth 出生日期（机读码区的解析结果）
      */
     public String getDateOfBirth() {
         return this.DateOfBirth;
     }
 
     /**
-     * Set 出生日期
-     * @param DateOfBirth 出生日期
+     * Set 出生日期（机读码区的解析结果）
+     * @param DateOfBirth 出生日期（机读码区的解析结果）
      */
     public void setDateOfBirth(String DateOfBirth) {
         this.DateOfBirth = DateOfBirth;
     }
 
     /**
-     * Get 性别（F女，M男） 
-     * @return Sex 性别（F女，M男）
+     * Get 性别（F女，M男）（机读码区的解析结果） 
+     * @return Sex 性别（F女，M男）（机读码区的解析结果）
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 性别（F女，M男）
-     * @param Sex 性别（F女，M男）
+     * Set 性别（F女，M男）（机读码区的解析结果）
+     * @param Sex 性别（F女，M男）（机读码区的解析结果）
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 有效期 
-     * @return DateOfExpiration 有效期
+     * Get 有效期（机读码区的解析结果） 
+     * @return DateOfExpiration 有效期（机读码区的解析结果）
      */
     public String getDateOfExpiration() {
         return this.DateOfExpiration;
     }
 
     /**
-     * Set 有效期
-     * @param DateOfExpiration 有效期
+     * Set 有效期（机读码区的解析结果）
+     * @param DateOfExpiration 有效期（机读码区的解析结果）
      */
     public void setDateOfExpiration(String DateOfExpiration) {
         this.DateOfExpiration = DateOfExpiration;
     }
 
     /**
-     * Get 发行国 
-     * @return IssuingCountry 发行国
+     * Get 发行国（机读码区的解析结果） 
+     * @return IssuingCountry 发行国（机读码区的解析结果）
      */
     public String getIssuingCountry() {
         return this.IssuingCountry;
     }
 
     /**
-     * Set 发行国
-     * @param IssuingCountry 发行国
+     * Set 发行国（机读码区的解析结果）
+     * @param IssuingCountry 发行国（机读码区的解析结果）
      */
     public void setIssuingCountry(String IssuingCountry) {
         this.IssuingCountry = IssuingCountry;
     }
 
     /**
-     * Get 国家地区代码 
-     * @return Nationality 国家地区代码
+     * Get 国家地区代码（机读码区的解析结果） 
+     * @return Nationality 国家地区代码（机读码区的解析结果）
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set 国家地区代码
-     * @param Nationality 国家地区代码
+     * Set 国家地区代码（机读码区的解析结果）
+     * @param Nationality 国家地区代码（机读码区的解析结果）
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get 告警码
+     * Get 告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警 
-     * @return Warn 告警码
+     * @return Warn 告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
@@ -268,11 +282,11 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 告警码
+     * Set 告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
-     * @param Warn 告警码
+     * @param Warn 告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
@@ -378,9 +392,9 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 姓
+     * Get 姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Surname 姓
+     * @return Surname 姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSurname() {
@@ -388,9 +402,9 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 姓
+     * Set 姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Surname 姓
+     * @param Surname 姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurname(String Surname) {
@@ -398,9 +412,9 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 名
+     * Get 名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GivenName 名
+     * @return GivenName 名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGivenName() {
@@ -408,13 +422,45 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 名
+     * Set 名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GivenName 名
+     * @param GivenName 名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGivenName(String GivenName) {
         this.GivenName = GivenName;
+    }
+
+    /**
+     * Get 类型（机读码区的解析结果） 
+     * @return Type 类型（机读码区的解析结果）
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 类型（机读码区的解析结果）
+     * @param Type 类型（机读码区的解析结果）
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 信息区证件内容 
+     * @return PassportRecognizeInfos 信息区证件内容
+     */
+    public PassportRecognizeInfos getPassportRecognizeInfos() {
+        return this.PassportRecognizeInfos;
+    }
+
+    /**
+     * Set 信息区证件内容
+     * @param PassportRecognizeInfos 信息区证件内容
+     */
+    public void setPassportRecognizeInfos(PassportRecognizeInfos PassportRecognizeInfos) {
+        this.PassportRecognizeInfos = PassportRecognizeInfos;
     }
 
     /**
@@ -486,6 +532,12 @@ public class MLIDPassportOCRResponse extends AbstractModel {
         if (source.GivenName != null) {
             this.GivenName = new String(source.GivenName);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.PassportRecognizeInfos != null) {
+            this.PassportRecognizeInfos = new PassportRecognizeInfos(source.PassportRecognizeInfos);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -510,6 +562,8 @@ public class MLIDPassportOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
         this.setParamSimple(map, prefix + "Surname", this.Surname);
         this.setParamSimple(map, prefix + "GivenName", this.GivenName);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamObj(map, prefix + "PassportRecognizeInfos.", this.PassportRecognizeInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

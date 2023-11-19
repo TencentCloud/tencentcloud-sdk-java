@@ -50,6 +50,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *批量创建任务版本Ds
+     * @param req BatchCreateTaskVersionDsRequest
+     * @return BatchCreateTaskVersionDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateTaskVersionDsResponse BatchCreateTaskVersionDs(BatchCreateTaskVersionDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchCreateTaskVersionDs", BatchCreateTaskVersionDsResponse.class);
+    }
+
+    /**
      *批量删除集成任务
      * @param req BatchDeleteIntegrationTasksRequest
      * @return BatchDeleteIntegrationTasksResponse
@@ -585,6 +596,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *创建任务版本
+     * @param req CreateTaskVersionDsRequest
+     * @return CreateTaskVersionDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskVersionDsResponse CreateTaskVersionDs(CreateTaskVersionDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskVersionDs", CreateTaskVersionDsResponse.class);
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建工作流
      * @param req CreateWorkflowRequest
@@ -894,6 +916,17 @@ public class WedataClient extends AbstractClient{
     public DescribeAllUsedVersionSonResponse DescribeAllUsedVersionSon(DescribeAllUsedVersionSonRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAllUsedVersionSon", DescribeAllUsedVersionSonResponse.class);
+    }
+
+    /**
+     *获取待审批列表
+     * @param req DescribeApproveListRequest
+     * @return DescribeApproveListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApproveListResponse DescribeApproveList(DescribeApproveListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApproveList", DescribeApproveListResponse.class);
     }
 
     /**
@@ -2887,6 +2920,17 @@ public class WedataClient extends AbstractClient{
     public MakeUpWorkflowNewResponse MakeUpWorkflowNew(MakeUpWorkflowNewRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "MakeUpWorkflowNew", MakeUpWorkflowNewResponse.class);
+    }
+
+    /**
+     *修改审批单状态
+     * @param req ModifyApproveStatusRequest
+     * @return ModifyApproveStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApproveStatusResponse ModifyApproveStatus(ModifyApproveStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApproveStatus", ModifyApproveStatusResponse.class);
     }
 
     /**
