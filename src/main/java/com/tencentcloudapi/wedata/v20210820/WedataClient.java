@@ -930,6 +930,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取审批分类列表
+     * @param req DescribeApproveTypeListRequest
+     * @return DescribeApproveTypeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApproveTypeListResponse DescribeApproveTypeList(DescribeApproveTypeListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApproveTypeList", DescribeApproveTypeListResponse.class);
+    }
+
+    /**
      *查询基线DAG
      * @param req DescribeBaselineAllTaskDagRequest
      * @return DescribeBaselineAllTaskDagResponse

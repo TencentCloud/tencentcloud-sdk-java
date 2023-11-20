@@ -38,6 +38,20 @@ public class RenewImageAuthorizeStateRequest extends AbstractModel {
     private String [] ImageIds;
 
     /**
+    * 是否授权后自动扫描
+    */
+    @SerializedName("NeedScan")
+    @Expose
+    private Boolean NeedScan;
+
+    /**
+    * 扫描类型
+    */
+    @SerializedName("ScanType")
+    @Expose
+    private String [] ScanType;
+
+    /**
      * Get 是否全部未授权镜像 
      * @return AllImages 是否全部未授权镜像
      */
@@ -69,6 +83,38 @@ public class RenewImageAuthorizeStateRequest extends AbstractModel {
         this.ImageIds = ImageIds;
     }
 
+    /**
+     * Get 是否授权后自动扫描 
+     * @return NeedScan 是否授权后自动扫描
+     */
+    public Boolean getNeedScan() {
+        return this.NeedScan;
+    }
+
+    /**
+     * Set 是否授权后自动扫描
+     * @param NeedScan 是否授权后自动扫描
+     */
+    public void setNeedScan(Boolean NeedScan) {
+        this.NeedScan = NeedScan;
+    }
+
+    /**
+     * Get 扫描类型 
+     * @return ScanType 扫描类型
+     */
+    public String [] getScanType() {
+        return this.ScanType;
+    }
+
+    /**
+     * Set 扫描类型
+     * @param ScanType 扫描类型
+     */
+    public void setScanType(String [] ScanType) {
+        this.ScanType = ScanType;
+    }
+
     public RenewImageAuthorizeStateRequest() {
     }
 
@@ -86,6 +132,15 @@ public class RenewImageAuthorizeStateRequest extends AbstractModel {
                 this.ImageIds[i] = new String(source.ImageIds[i]);
             }
         }
+        if (source.NeedScan != null) {
+            this.NeedScan = new Boolean(source.NeedScan);
+        }
+        if (source.ScanType != null) {
+            this.ScanType = new String[source.ScanType.length];
+            for (int i = 0; i < source.ScanType.length; i++) {
+                this.ScanType[i] = new String(source.ScanType[i]);
+            }
+        }
     }
 
 
@@ -95,6 +150,8 @@ public class RenewImageAuthorizeStateRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AllImages", this.AllImages);
         this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+        this.setParamSimple(map, prefix + "NeedScan", this.NeedScan);
+        this.setParamArraySimple(map, prefix + "ScanType.", this.ScanType);
 
     }
 }

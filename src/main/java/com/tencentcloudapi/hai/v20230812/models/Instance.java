@@ -183,7 +183,7 @@ FAILED：表示操作失败
     private String MaxOutBandwidth;
 
     /**
-    * 每月免费流量，默认1000G
+    * 每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxFreeTraffic")
@@ -627,9 +627,9 @@ FAILED：表示操作失败
     }
 
     /**
-     * Get 每月免费流量，默认1000G
+     * Get 每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxFreeTraffic 每月免费流量，默认1000G
+     * @return MaxFreeTraffic 每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxFreeTraffic() {
@@ -637,9 +637,9 @@ FAILED：表示操作失败
     }
 
     /**
-     * Set 每月免费流量，默认1000G
+     * Set 每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxFreeTraffic 每月免费流量，默认1000G
+     * @param MaxFreeTraffic 每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxFreeTraffic(String MaxFreeTraffic) {

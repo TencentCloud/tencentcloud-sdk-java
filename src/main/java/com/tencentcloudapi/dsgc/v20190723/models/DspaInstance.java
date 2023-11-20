@@ -115,7 +115,7 @@ public class DspaInstance extends AbstractModel {
     private Long CosTotalQuota;
 
     /**
-    * COS配额单位，比如TB。
+    * COS配额单位，例如:TB。
     */
     @SerializedName("CosQuotaUnit")
     @Expose
@@ -339,16 +339,16 @@ public class DspaInstance extends AbstractModel {
     }
 
     /**
-     * Get COS配额单位，比如TB。 
-     * @return CosQuotaUnit COS配额单位，比如TB。
+     * Get COS配额单位，例如:TB。 
+     * @return CosQuotaUnit COS配额单位，例如:TB。
      */
     public String getCosQuotaUnit() {
         return this.CosQuotaUnit;
     }
 
     /**
-     * Set COS配额单位，比如TB。
-     * @param CosQuotaUnit COS配额单位，比如TB。
+     * Set COS配额单位，例如:TB。
+     * @param CosQuotaUnit COS配额单位，例如:TB。
      */
     public void setCosQuotaUnit(String CosQuotaUnit) {
         this.CosQuotaUnit = CosQuotaUnit;

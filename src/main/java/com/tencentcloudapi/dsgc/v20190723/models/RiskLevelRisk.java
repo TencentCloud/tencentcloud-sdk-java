@@ -48,7 +48,7 @@ public class RiskLevelRisk extends AbstractModel {
     private String RiskLevelDescription;
 
     /**
-    * 引用的分类分级模版
+    * 引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyComplianceName")
@@ -124,9 +124,9 @@ public class RiskLevelRisk extends AbstractModel {
     }
 
     /**
-     * Get 引用的分类分级模版
+     * Get 引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdentifyComplianceName 引用的分类分级模版
+     * @return IdentifyComplianceName 引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifyComplianceName() {
@@ -134,9 +134,9 @@ public class RiskLevelRisk extends AbstractModel {
     }
 
     /**
-     * Set 引用的分类分级模版
+     * Set 引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdentifyComplianceName 引用的分类分级模版
+     * @param IdentifyComplianceName 引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyComplianceName(String IdentifyComplianceName) {

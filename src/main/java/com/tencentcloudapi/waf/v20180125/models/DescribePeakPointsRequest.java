@@ -59,7 +59,7 @@ public class DescribePeakPointsRequest extends AbstractModel {
     private String InstanceID;
 
     /**
-    * 十一个值可选：
+    * 十二个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
@@ -71,6 +71,7 @@ tamper-防篡改攻击总数趋势图
 leak-防泄露攻击总数趋势图
 acl-访问控制攻击总数趋势图
 http_status-状态码各次数趋势图
+wx_access-微信小程序峰值qps趋势图
     */
     @SerializedName("MetricName")
     @Expose
@@ -157,19 +158,7 @@ http_status-状态码各次数趋势图
     }
 
     /**
-     * Get 十一个值可选：
-access-峰值qps趋势图
-botAccess- bot峰值qps趋势图
-down-下行峰值带宽趋势图
-up-上行峰值带宽趋势图
-attack-Web攻击总数趋势图
-cc-CC攻击总数趋势图
-bw-黑IP攻击总数趋势图
-tamper-防篡改攻击总数趋势图
-leak-防泄露攻击总数趋势图
-acl-访问控制攻击总数趋势图
-http_status-状态码各次数趋势图 
-     * @return MetricName 十一个值可选：
+     * Get 十二个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
@@ -181,13 +170,27 @@ tamper-防篡改攻击总数趋势图
 leak-防泄露攻击总数趋势图
 acl-访问控制攻击总数趋势图
 http_status-状态码各次数趋势图
+wx_access-微信小程序峰值qps趋势图 
+     * @return MetricName 十二个值可选：
+access-峰值qps趋势图
+botAccess- bot峰值qps趋势图
+down-下行峰值带宽趋势图
+up-上行峰值带宽趋势图
+attack-Web攻击总数趋势图
+cc-CC攻击总数趋势图
+bw-黑IP攻击总数趋势图
+tamper-防篡改攻击总数趋势图
+leak-防泄露攻击总数趋势图
+acl-访问控制攻击总数趋势图
+http_status-状态码各次数趋势图
+wx_access-微信小程序峰值qps趋势图
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 十一个值可选：
+     * Set 十二个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
@@ -199,7 +202,8 @@ tamper-防篡改攻击总数趋势图
 leak-防泄露攻击总数趋势图
 acl-访问控制攻击总数趋势图
 http_status-状态码各次数趋势图
-     * @param MetricName 十一个值可选：
+wx_access-微信小程序峰值qps趋势图
+     * @param MetricName 十二个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
@@ -211,6 +215,7 @@ tamper-防篡改攻击总数趋势图
 leak-防泄露攻击总数趋势图
 acl-访问控制攻击总数趋势图
 http_status-状态码各次数趋势图
+wx_access-微信小程序峰值qps趋势图
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

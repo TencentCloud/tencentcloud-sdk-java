@@ -101,6 +101,13 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     private ConnDetectConfig [] ConnDetectConfig;
 
     /**
+    * ”授权&扫描"开关
+    */
+    @SerializedName("NeedScan")
+    @Expose
+    private Boolean NeedScan;
+
+    /**
      * Get 仓库名 
      * @return Name 仓库名
      */
@@ -276,6 +283,22 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
         this.ConnDetectConfig = ConnDetectConfig;
     }
 
+    /**
+     * Get ”授权&扫描"开关 
+     * @return NeedScan ”授权&扫描"开关
+     */
+    public Boolean getNeedScan() {
+        return this.NeedScan;
+    }
+
+    /**
+     * Set ”授权&扫描"开关
+     * @param NeedScan ”授权&扫描"开关
+     */
+    public void setNeedScan(Boolean NeedScan) {
+        this.NeedScan = NeedScan;
+    }
+
     public AddAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -320,6 +343,9 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
                 this.ConnDetectConfig[i] = new ConnDetectConfig(source.ConnDetectConfig[i]);
             }
         }
+        if (source.NeedScan != null) {
+            this.NeedScan = new Boolean(source.NeedScan);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
         this.setParamSimple(map, prefix + "Insecure", this.Insecure);
         this.setParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
+        this.setParamSimple(map, prefix + "NeedScan", this.NeedScan);
 
     }
 }

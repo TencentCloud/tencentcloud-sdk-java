@@ -102,6 +102,30 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
     private String EventId;
 
     /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
+    * 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValidStatus")
+    @Expose
+    private Long ValidStatus;
+
+    /**
+    * 来源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get 动作类型 
      * @return ActionType 动作类型
      */
@@ -281,6 +305,66 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.EventId = EventId;
     }
 
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * Get 生效状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValidStatus 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getValidStatus() {
+        return this.ValidStatus;
+    }
+
+    /**
+     * Set 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValidStatus 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValidStatus(Long ValidStatus) {
+        this.ValidStatus = ValidStatus;
+    }
+
+    /**
+     * Get 来源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Source 来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Source 来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public DescribeCustomRulesRspRuleListItem() {
     }
 
@@ -325,6 +409,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.ValidStatus != null) {
+            this.ValidStatus = new Long(source.ValidStatus);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -343,6 +436,9 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Strategies.", this.Strategies);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

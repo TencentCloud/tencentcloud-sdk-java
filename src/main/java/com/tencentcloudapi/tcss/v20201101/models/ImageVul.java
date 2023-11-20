@@ -184,6 +184,14 @@ public class ImageVul extends AbstractModel {
     private Long AttackLevel;
 
     /**
+    * 镜像层信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LayerInfos")
+    @Expose
+    private ImageVulLayerInfo [] LayerInfos;
+
+    /**
      * Get 漏洞id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CVEID 漏洞id
@@ -583,6 +591,26 @@ public class ImageVul extends AbstractModel {
         this.AttackLevel = AttackLevel;
     }
 
+    /**
+     * Get 镜像层信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LayerInfos 镜像层信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageVulLayerInfo [] getLayerInfos() {
+        return this.LayerInfos;
+    }
+
+    /**
+     * Set 镜像层信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LayerInfos 镜像层信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLayerInfos(ImageVulLayerInfo [] LayerInfos) {
+        this.LayerInfos = LayerInfos;
+    }
+
     public ImageVul() {
     }
 
@@ -657,6 +685,12 @@ public class ImageVul extends AbstractModel {
         if (source.AttackLevel != null) {
             this.AttackLevel = new Long(source.AttackLevel);
         }
+        if (source.LayerInfos != null) {
+            this.LayerInfos = new ImageVulLayerInfo[source.LayerInfos.length];
+            for (int i = 0; i < source.LayerInfos.length; i++) {
+                this.LayerInfos[i] = new ImageVulLayerInfo(source.LayerInfos[i]);
+            }
+        }
     }
 
 
@@ -684,6 +718,7 @@ public class ImageVul extends AbstractModel {
         this.setParamSimple(map, prefix + "Component", this.Component);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
+        this.setParamArrayObj(map, prefix + "LayerInfos.", this.LayerInfos);
 
     }
 }

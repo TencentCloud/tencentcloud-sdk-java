@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class SyncAssetImageRegistryAssetRequest extends AbstractModel {
 
+    /**
+    * 是否同步所有镜像仓库
+    */
+    @SerializedName("All")
+    @Expose
+    private Boolean All;
+
+    /**
+    * 需要同步的部分镜像仓库
+    */
+    @SerializedName("RegistryIds")
+    @Expose
+    private Long [] RegistryIds;
+
+    /**
+     * Get 是否同步所有镜像仓库 
+     * @return All 是否同步所有镜像仓库
+     */
+    public Boolean getAll() {
+        return this.All;
+    }
+
+    /**
+     * Set 是否同步所有镜像仓库
+     * @param All 是否同步所有镜像仓库
+     */
+    public void setAll(Boolean All) {
+        this.All = All;
+    }
+
+    /**
+     * Get 需要同步的部分镜像仓库 
+     * @return RegistryIds 需要同步的部分镜像仓库
+     */
+    public Long [] getRegistryIds() {
+        return this.RegistryIds;
+    }
+
+    /**
+     * Set 需要同步的部分镜像仓库
+     * @param RegistryIds 需要同步的部分镜像仓库
+     */
+    public void setRegistryIds(Long [] RegistryIds) {
+        this.RegistryIds = RegistryIds;
+    }
+
     public SyncAssetImageRegistryAssetRequest() {
     }
 
@@ -31,6 +77,15 @@ public class SyncAssetImageRegistryAssetRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SyncAssetImageRegistryAssetRequest(SyncAssetImageRegistryAssetRequest source) {
+        if (source.All != null) {
+            this.All = new Boolean(source.All);
+        }
+        if (source.RegistryIds != null) {
+            this.RegistryIds = new Long[source.RegistryIds.length];
+            for (int i = 0; i < source.RegistryIds.length; i++) {
+                this.RegistryIds[i] = new Long(source.RegistryIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class SyncAssetImageRegistryAssetRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "All", this.All);
+        this.setParamArraySimple(map, prefix + "RegistryIds.", this.RegistryIds);
 
     }
 }

@@ -73,6 +73,13 @@ public class ModifyModuleStatusRequest extends AbstractModel {
     private Long AntiLeakage;
 
     /**
+    * 限流模块开关，0或1
+    */
+    @SerializedName("RateLimit")
+    @Expose
+    private Long RateLimit;
+
+    /**
      * Get 需要设置的domain 
      * @return Domain 需要设置的domain
      */
@@ -184,6 +191,22 @@ public class ModifyModuleStatusRequest extends AbstractModel {
         this.AntiLeakage = AntiLeakage;
     }
 
+    /**
+     * Get 限流模块开关，0或1 
+     * @return RateLimit 限流模块开关，0或1
+     */
+    public Long getRateLimit() {
+        return this.RateLimit;
+    }
+
+    /**
+     * Set 限流模块开关，0或1
+     * @param RateLimit 限流模块开关，0或1
+     */
+    public void setRateLimit(Long RateLimit) {
+        this.RateLimit = RateLimit;
+    }
+
     public ModifyModuleStatusRequest() {
     }
 
@@ -213,6 +236,9 @@ public class ModifyModuleStatusRequest extends AbstractModel {
         if (source.AntiLeakage != null) {
             this.AntiLeakage = new Long(source.AntiLeakage);
         }
+        if (source.RateLimit != null) {
+            this.RateLimit = new Long(source.RateLimit);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ModifyModuleStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
         this.setParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
         this.setParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
+        this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
 
     }
 }

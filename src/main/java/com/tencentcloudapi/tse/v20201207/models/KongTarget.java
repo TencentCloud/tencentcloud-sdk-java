@@ -72,6 +72,22 @@ public class KongTarget extends AbstractModel {
     private String Source;
 
     /**
+    * CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CvmInstanceId")
+    @Expose
+    private String CvmInstanceId;
+
+    /**
+    * CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CvmInstanceName")
+    @Expose
+    private String CvmInstanceName;
+
+    /**
      * Get Host
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Host Host
@@ -191,6 +207,46 @@ public class KongTarget extends AbstractModel {
         this.Source = Source;
     }
 
+    /**
+     * Get CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CvmInstanceId CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCvmInstanceId() {
+        return this.CvmInstanceId;
+    }
+
+    /**
+     * Set CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CvmInstanceId CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvmInstanceId(String CvmInstanceId) {
+        this.CvmInstanceId = CvmInstanceId;
+    }
+
+    /**
+     * Get CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CvmInstanceName CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCvmInstanceName() {
+        return this.CvmInstanceName;
+    }
+
+    /**
+     * Set CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CvmInstanceName CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvmInstanceName(String CvmInstanceName) {
+        this.CvmInstanceName = CvmInstanceName;
+    }
+
     public KongTarget() {
     }
 
@@ -217,6 +273,12 @@ public class KongTarget extends AbstractModel {
         if (source.Source != null) {
             this.Source = new String(source.Source);
         }
+        if (source.CvmInstanceId != null) {
+            this.CvmInstanceId = new String(source.CvmInstanceId);
+        }
+        if (source.CvmInstanceName != null) {
+            this.CvmInstanceName = new String(source.CvmInstanceName);
+        }
     }
 
 
@@ -230,6 +292,8 @@ public class KongTarget extends AbstractModel {
         this.setParamSimple(map, prefix + "Health", this.Health);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
+        this.setParamSimple(map, prefix + "CvmInstanceName", this.CvmInstanceName);
 
     }
 }

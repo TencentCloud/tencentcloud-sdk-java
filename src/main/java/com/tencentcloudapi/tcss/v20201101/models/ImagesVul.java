@@ -145,6 +145,14 @@ public class ImagesVul extends AbstractModel {
     private String [] Tag;
 
     /**
+    * 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttackLevel")
+    @Expose
+    private Long AttackLevel;
+
+    /**
      * Get 漏洞id 
      * @return CVEID 漏洞id
      */
@@ -424,6 +432,26 @@ public class ImagesVul extends AbstractModel {
         this.Tag = Tag;
     }
 
+    /**
+     * Get 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttackLevel 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAttackLevel() {
+        return this.AttackLevel;
+    }
+
+    /**
+     * Set 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttackLevel 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttackLevel(Long AttackLevel) {
+        this.AttackLevel = AttackLevel;
+    }
+
     public ImagesVul() {
     }
 
@@ -486,6 +514,9 @@ public class ImagesVul extends AbstractModel {
                 this.Tag[i] = new String(source.Tag[i]);
             }
         }
+        if (source.AttackLevel != null) {
+            this.AttackLevel = new Long(source.AttackLevel);
+        }
     }
 
 
@@ -510,6 +541,7 @@ public class ImagesVul extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSuggest", this.IsSuggest);
         this.setParamSimple(map, prefix + "FixedVersions", this.FixedVersions);
         this.setParamArraySimple(map, prefix + "Tag.", this.Tag);
+        this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
 
     }
 }

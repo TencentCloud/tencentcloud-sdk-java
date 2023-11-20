@@ -108,6 +108,20 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     private String Ip;
 
     /**
+    * 有效时间最小时间戳
+    */
+    @SerializedName("ValidTimeStampMin")
+    @Expose
+    private Long ValidTimeStampMin;
+
+    /**
+    * 有效时间最大时间戳
+    */
+    @SerializedName("ValidTimeStampMax")
+    @Expose
+    private Long ValidTimeStampMax;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -158,7 +172,9 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     /**
      * Get 有效时间最小时间戳 
      * @return VtsMin 有效时间最小时间戳
+     * @deprecated
      */
+    @Deprecated
     public Long getVtsMin() {
         return this.VtsMin;
     }
@@ -166,7 +182,9 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     /**
      * Set 有效时间最小时间戳
      * @param VtsMin 有效时间最小时间戳
+     * @deprecated
      */
+    @Deprecated
     public void setVtsMin(Long VtsMin) {
         this.VtsMin = VtsMin;
     }
@@ -174,7 +192,9 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     /**
      * Get 有效时间最大时间戳 
      * @return VtsMax 有效时间最大时间戳
+     * @deprecated
      */
+    @Deprecated
     public Long getVtsMax() {
         return this.VtsMax;
     }
@@ -182,7 +202,9 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     /**
      * Set 有效时间最大时间戳
      * @param VtsMax 有效时间最大时间戳
+     * @deprecated
      */
+    @Deprecated
     public void setVtsMax(Long VtsMax) {
         this.VtsMax = VtsMax;
     }
@@ -299,6 +321,38 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
         this.Ip = Ip;
     }
 
+    /**
+     * Get 有效时间最小时间戳 
+     * @return ValidTimeStampMin 有效时间最小时间戳
+     */
+    public Long getValidTimeStampMin() {
+        return this.ValidTimeStampMin;
+    }
+
+    /**
+     * Set 有效时间最小时间戳
+     * @param ValidTimeStampMin 有效时间最小时间戳
+     */
+    public void setValidTimeStampMin(Long ValidTimeStampMin) {
+        this.ValidTimeStampMin = ValidTimeStampMin;
+    }
+
+    /**
+     * Get 有效时间最大时间戳 
+     * @return ValidTimeStampMax 有效时间最大时间戳
+     */
+    public Long getValidTimeStampMax() {
+        return this.ValidTimeStampMax;
+    }
+
+    /**
+     * Set 有效时间最大时间戳
+     * @param ValidTimeStampMax 有效时间最大时间戳
+     */
+    public void setValidTimeStampMax(Long ValidTimeStampMax) {
+        this.ValidTimeStampMax = ValidTimeStampMax;
+    }
+
     public DescribeIpHitItemsRequest() {
     }
 
@@ -343,6 +397,12 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
         }
+        if (source.ValidTimeStampMin != null) {
+            this.ValidTimeStampMin = new Long(source.ValidTimeStampMin);
+        }
+        if (source.ValidTimeStampMax != null) {
+            this.ValidTimeStampMax = new Long(source.ValidTimeStampMax);
+        }
     }
 
 
@@ -362,6 +422,8 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "ValidTimeStampMin", this.ValidTimeStampMin);
+        this.setParamSimple(map, prefix + "ValidTimeStampMax", this.ValidTimeStampMax);
 
     }
 }

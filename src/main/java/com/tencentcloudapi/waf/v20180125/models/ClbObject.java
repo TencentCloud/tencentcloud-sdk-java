@@ -129,6 +129,22 @@ public class ClbObject extends AbstractModel {
     private Long PostCKafkaStatus;
 
     /**
+    * 对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 对象地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 对象ID 
      * @return ObjectId 对象ID
      */
@@ -368,6 +384,46 @@ public class ClbObject extends AbstractModel {
         this.PostCKafkaStatus = PostCKafkaStatus;
     }
 
+    /**
+     * Get 对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 对象地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 对象地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 对象地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 对象地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
     public ClbObject() {
     }
 
@@ -430,6 +486,12 @@ public class ClbObject extends AbstractModel {
         if (source.PostCKafkaStatus != null) {
             this.PostCKafkaStatus = new Long(source.PostCKafkaStatus);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -452,6 +514,8 @@ public class ClbObject extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceLevel", this.InstanceLevel);
         this.setParamSimple(map, prefix + "PostCLSStatus", this.PostCLSStatus);
         this.setParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

@@ -85,6 +85,14 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
     private String SecurityGroup;
 
     /**
+    * 内网访问所属子网
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterIntranetSubnetId")
+    @Expose
+    private String ClusterIntranetSubnetId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -240,6 +248,26 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
     }
 
     /**
+     * Get 内网访问所属子网
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterIntranetSubnetId 内网访问所属子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterIntranetSubnetId() {
+        return this.ClusterIntranetSubnetId;
+    }
+
+    /**
+     * Set 内网访问所属子网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterIntranetSubnetId 内网访问所属子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterIntranetSubnetId(String ClusterIntranetSubnetId) {
+        this.ClusterIntranetSubnetId = ClusterIntranetSubnetId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -290,6 +318,9 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
         if (source.SecurityGroup != null) {
             this.SecurityGroup = new String(source.SecurityGroup);
         }
+        if (source.ClusterIntranetSubnetId != null) {
+            this.ClusterIntranetSubnetId = new String(source.ClusterIntranetSubnetId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -308,6 +339,7 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterExternalDomain", this.ClusterExternalDomain);
         this.setParamSimple(map, prefix + "ClusterIntranetDomain", this.ClusterIntranetDomain);
         this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "ClusterIntranetSubnetId", this.ClusterIntranetSubnetId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

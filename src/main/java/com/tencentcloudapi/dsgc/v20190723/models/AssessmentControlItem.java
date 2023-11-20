@@ -81,7 +81,7 @@ public class AssessmentControlItem extends AbstractModel {
     private String Status;
 
     /**
-    * 评估项关联的模版数量
+    * 评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateCount")
@@ -221,9 +221,9 @@ public class AssessmentControlItem extends AbstractModel {
     }
 
     /**
-     * Get 评估项关联的模版数量
+     * Get 评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateCount 评估项关联的模版数量
+     * @return TemplateCount 评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateCount() {
@@ -231,9 +231,9 @@ public class AssessmentControlItem extends AbstractModel {
     }
 
     /**
-     * Set 评估项关联的模版数量
+     * Set 评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateCount 评估项关联的模版数量
+     * @param TemplateCount 评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateCount(Long TemplateCount) {

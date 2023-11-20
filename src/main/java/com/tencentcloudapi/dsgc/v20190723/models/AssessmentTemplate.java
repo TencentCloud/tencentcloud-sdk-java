@@ -32,14 +32,14 @@ public class AssessmentTemplate extends AbstractModel {
     private Long Id;
 
     /**
-    * 评估模版Id
+    * 评估模板Id
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 评估模版名称
+    * 评估模板名称
     */
     @SerializedName("TemplateName")
     @Expose
@@ -54,42 +54,42 @@ public class AssessmentTemplate extends AbstractModel {
     private String Description;
 
     /**
-    * 模版来源，内置/用户自定，取值（system，user）
+    * 模板来源，内置/用户自定，取值（system，user）
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+    * 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
     */
     @SerializedName("UseType")
     @Expose
     private String UseType;
 
     /**
-    * 评估模版创建时间
+    * 评估模板创建时间
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 模版关联的评估项数量
+    * 模板关联的评估项数量
     */
     @SerializedName("ControlItemCount")
     @Expose
     private Long ControlItemCount;
 
     /**
-    * 模版已启用的评估项数量
+    * 模板已启用的评估项数量
     */
     @SerializedName("AppliedItemCount")
     @Expose
     private Long AppliedItemCount;
 
     /**
-    * 模版启用状态，草稿/已启用，取值draft / launched
+    * 模板启用状态，草稿/已启用，取值draft / launched
     */
     @SerializedName("Status")
     @Expose
@@ -140,32 +140,32 @@ public class AssessmentTemplate extends AbstractModel {
     }
 
     /**
-     * Get 评估模版Id 
-     * @return TemplateId 评估模版Id
+     * Get 评估模板Id 
+     * @return TemplateId 评估模板Id
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 评估模版Id
-     * @param TemplateId 评估模版Id
+     * Set 评估模板Id
+     * @param TemplateId 评估模板Id
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 评估模版名称 
-     * @return TemplateName 评估模版名称
+     * Get 评估模板名称 
+     * @return TemplateName 评估模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 评估模版名称
-     * @param TemplateName 评估模版名称
+     * Set 评估模板名称
+     * @param TemplateName 评估模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -192,96 +192,96 @@ public class AssessmentTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模版来源，内置/用户自定，取值（system，user） 
-     * @return Source 模版来源，内置/用户自定，取值（system，user）
+     * Get 模板来源，内置/用户自定，取值（system，user） 
+     * @return Source 模板来源，内置/用户自定，取值（system，user）
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 模版来源，内置/用户自定，取值（system，user）
-     * @param Source 模版来源，内置/用户自定，取值（system，user）
+     * Set 模板来源，内置/用户自定，取值（system，user）
+     * @param Source 模板来源，内置/用户自定，取值（system，user）
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等 
-     * @return UseType 模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+     * Get 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等 
+     * @return UseType 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
      */
     public String getUseType() {
         return this.UseType;
     }
 
     /**
-     * Set 模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
-     * @param UseType 模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+     * Set 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+     * @param UseType 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
      */
     public void setUseType(String UseType) {
         this.UseType = UseType;
     }
 
     /**
-     * Get 评估模版创建时间 
-     * @return CreatedTime 评估模版创建时间
+     * Get 评估模板创建时间 
+     * @return CreatedTime 评估模板创建时间
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 评估模版创建时间
-     * @param CreatedTime 评估模版创建时间
+     * Set 评估模板创建时间
+     * @param CreatedTime 评估模板创建时间
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 模版关联的评估项数量 
-     * @return ControlItemCount 模版关联的评估项数量
+     * Get 模板关联的评估项数量 
+     * @return ControlItemCount 模板关联的评估项数量
      */
     public Long getControlItemCount() {
         return this.ControlItemCount;
     }
 
     /**
-     * Set 模版关联的评估项数量
-     * @param ControlItemCount 模版关联的评估项数量
+     * Set 模板关联的评估项数量
+     * @param ControlItemCount 模板关联的评估项数量
      */
     public void setControlItemCount(Long ControlItemCount) {
         this.ControlItemCount = ControlItemCount;
     }
 
     /**
-     * Get 模版已启用的评估项数量 
-     * @return AppliedItemCount 模版已启用的评估项数量
+     * Get 模板已启用的评估项数量 
+     * @return AppliedItemCount 模板已启用的评估项数量
      */
     public Long getAppliedItemCount() {
         return this.AppliedItemCount;
     }
 
     /**
-     * Set 模版已启用的评估项数量
-     * @param AppliedItemCount 模版已启用的评估项数量
+     * Set 模板已启用的评估项数量
+     * @param AppliedItemCount 模板已启用的评估项数量
      */
     public void setAppliedItemCount(Long AppliedItemCount) {
         this.AppliedItemCount = AppliedItemCount;
     }
 
     /**
-     * Get 模版启用状态，草稿/已启用，取值draft / launched 
-     * @return Status 模版启用状态，草稿/已启用，取值draft / launched
+     * Get 模板启用状态，草稿/已启用，取值draft / launched 
+     * @return Status 模板启用状态，草稿/已启用，取值draft / launched
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 模版启用状态，草稿/已启用，取值draft / launched
-     * @param Status 模版启用状态，草稿/已启用，取值draft / launched
+     * Set 模板启用状态，草稿/已启用，取值draft / launched
+     * @param Status 模板启用状态，草稿/已启用，取值draft / launched
      */
     public void setStatus(String Status) {
         this.Status = Status;

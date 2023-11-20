@@ -340,6 +340,13 @@ public class ImageRepoInfo extends AbstractModel {
     private Long SensitiveInfoCnt;
 
     /**
+    * 是否推荐处置
+    */
+    @SerializedName("RecommendedFix")
+    @Expose
+    private Boolean RecommendedFix;
+
+    /**
      * Get 镜像Digest 
      * @return ImageDigest 镜像Digest
      */
@@ -1091,6 +1098,22 @@ public class ImageRepoInfo extends AbstractModel {
         this.SensitiveInfoCnt = SensitiveInfoCnt;
     }
 
+    /**
+     * Get 是否推荐处置 
+     * @return RecommendedFix 是否推荐处置
+     */
+    public Boolean getRecommendedFix() {
+        return this.RecommendedFix;
+    }
+
+    /**
+     * Set 是否推荐处置
+     * @param RecommendedFix 是否推荐处置
+     */
+    public void setRecommendedFix(Boolean RecommendedFix) {
+        this.RecommendedFix = RecommendedFix;
+    }
+
     public ImageRepoInfo() {
     }
 
@@ -1228,6 +1251,9 @@ public class ImageRepoInfo extends AbstractModel {
         if (source.SensitiveInfoCnt != null) {
             this.SensitiveInfoCnt = new Long(source.SensitiveInfoCnt);
         }
+        if (source.RecommendedFix != null) {
+            this.RecommendedFix = new Boolean(source.RecommendedFix);
+        }
     }
 
 
@@ -1278,6 +1304,7 @@ public class ImageRepoInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsRunning", this.IsRunning);
         this.setParamSimple(map, prefix + "HasNeedFixVul", this.HasNeedFixVul);
         this.setParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
+        this.setParamSimple(map, prefix + "RecommendedFix", this.RecommendedFix);
 
     }
 }

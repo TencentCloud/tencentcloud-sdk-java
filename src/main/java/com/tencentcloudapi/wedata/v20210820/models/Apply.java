@@ -111,6 +111,45 @@ public class Apply extends AbstractModel {
     private String ApproveTypeName;
 
     /**
+    * 审批异常或者失败信息
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
+
+    /**
+    * 申请名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplyName")
+    @Expose
+    private String ApplyName;
+
+    /**
+    * 审批人id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproverId")
+    @Expose
+    private String ApproverId;
+
+    /**
+    * 审批人名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproverName")
+    @Expose
+    private String ApproverName;
+
+    /**
+    * 审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproveProjectName")
+    @Expose
+    private String ApproveProjectName;
+
+    /**
      * Get 申请人id 
      * @return ApplicantId 申请人id
      */
@@ -314,6 +353,102 @@ public class Apply extends AbstractModel {
         this.ApproveTypeName = ApproveTypeName;
     }
 
+    /**
+     * Get 审批异常或者失败信息 
+     * @return ErrorMessage 审批异常或者失败信息
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set 审批异常或者失败信息
+     * @param ErrorMessage 审批异常或者失败信息
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
+    }
+
+    /**
+     * Get 申请名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplyName 申请名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplyName() {
+        return this.ApplyName;
+    }
+
+    /**
+     * Set 申请名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplyName 申请名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplyName(String ApplyName) {
+        this.ApplyName = ApplyName;
+    }
+
+    /**
+     * Get 审批人id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproverId 审批人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApproverId() {
+        return this.ApproverId;
+    }
+
+    /**
+     * Set 审批人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproverId 审批人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproverId(String ApproverId) {
+        this.ApproverId = ApproverId;
+    }
+
+    /**
+     * Get 审批人名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproverName 审批人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApproverName() {
+        return this.ApproverName;
+    }
+
+    /**
+     * Set 审批人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproverName 审批人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproverName(String ApproverName) {
+        this.ApproverName = ApproverName;
+    }
+
+    /**
+     * Get 审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproveProjectName 审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApproveProjectName() {
+        return this.ApproveProjectName;
+    }
+
+    /**
+     * Set 审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproveProjectName 审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproveProjectName(String ApproveProjectName) {
+        this.ApproveProjectName = ApproveProjectName;
+    }
+
     public Apply() {
     }
 
@@ -358,6 +493,21 @@ public class Apply extends AbstractModel {
         if (source.ApproveTypeName != null) {
             this.ApproveTypeName = new String(source.ApproveTypeName);
         }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
+        if (source.ApplyName != null) {
+            this.ApplyName = new String(source.ApplyName);
+        }
+        if (source.ApproverId != null) {
+            this.ApproverId = new String(source.ApproverId);
+        }
+        if (source.ApproverName != null) {
+            this.ApproverName = new String(source.ApproverName);
+        }
+        if (source.ApproveProjectName != null) {
+            this.ApproveProjectName = new String(source.ApproveProjectName);
+        }
     }
 
 
@@ -377,6 +527,11 @@ public class Apply extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproveClassificationName", this.ApproveClassificationName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ApproveTypeName", this.ApproveTypeName);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+        this.setParamSimple(map, prefix + "ApplyName", this.ApplyName);
+        this.setParamSimple(map, prefix + "ApproverId", this.ApproverId);
+        this.setParamSimple(map, prefix + "ApproverName", this.ApproverName);
+        this.setParamSimple(map, prefix + "ApproveProjectName", this.ApproveProjectName);
 
     }
 }

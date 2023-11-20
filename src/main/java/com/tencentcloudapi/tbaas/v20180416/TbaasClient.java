@@ -61,6 +61,28 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
+     *获取Fabric某区块的详细信息
+     * @param req DescribeFabricBlockRequest
+     * @return DescribeFabricBlockResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFabricBlockResponse DescribeFabricBlock(DescribeFabricBlockRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFabricBlock", DescribeFabricBlockResponse.class);
+    }
+
+    /**
+     *获取Fabric交易的详细信息
+     * @param req DescribeFabricTransactionRequest
+     * @return DescribeFabricTransactionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFabricTransactionResponse DescribeFabricTransaction(DescribeFabricTransactionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFabricTransaction", DescribeFabricTransactionResponse.class);
+    }
+
+    /**
      *下载用户证书
      * @param req DownloadUserCertRequest
      * @return DownloadUserCertResponse
@@ -182,6 +204,17 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
+     *调用Fabric用户合约执行交易
+     * @param req InvokeFabricChaincodeRequest
+     * @return InvokeFabricChaincodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeFabricChaincodeResponse InvokeFabricChaincode(InvokeFabricChaincodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InvokeFabricChaincode", InvokeFabricChaincodeResponse.class);
+    }
+
+    /**
      *查询交易
      * @param req QueryRequest
      * @return QueryResponse
@@ -256,6 +289,17 @@ public class TbaasClient extends AbstractClient{
     public QueryChainMakerTransactionResponse QueryChainMakerTransaction(QueryChainMakerTransactionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryChainMakerTransaction", QueryChainMakerTransactionResponse.class);
+    }
+
+    /**
+     *调用Fabric用户合约查询
+     * @param req QueryFabricChaincodeRequest
+     * @return QueryFabricChaincodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryFabricChaincodeResponse QueryFabricChaincode(QueryFabricChaincodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryFabricChaincode", QueryFabricChaincodeResponse.class);
     }
 
     /**

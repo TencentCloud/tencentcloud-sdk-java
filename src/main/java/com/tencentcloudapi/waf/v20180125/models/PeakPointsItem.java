@@ -161,6 +161,14 @@ public class PeakPointsItem extends AbstractModel {
     private Long ACL;
 
     /**
+    * 小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WxAccess")
+    @Expose
+    private Long WxAccess;
+
+    /**
      * Get 秒级别时间戳 
      * @return Time 秒级别时间戳
      */
@@ -492,6 +500,26 @@ public class PeakPointsItem extends AbstractModel {
         this.ACL = ACL;
     }
 
+    /**
+     * Get 小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WxAccess 小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWxAccess() {
+        return this.WxAccess;
+    }
+
+    /**
+     * Set 小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WxAccess 小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWxAccess(Long WxAccess) {
+        this.WxAccess = WxAccess;
+    }
+
     public PeakPointsItem() {
     }
 
@@ -554,6 +582,9 @@ public class PeakPointsItem extends AbstractModel {
         if (source.ACL != null) {
             this.ACL = new Long(source.ACL);
         }
+        if (source.WxAccess != null) {
+            this.WxAccess = new Long(source.WxAccess);
+        }
     }
 
 
@@ -579,6 +610,7 @@ public class PeakPointsItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Tamper", this.Tamper);
         this.setParamSimple(map, prefix + "Leak", this.Leak);
         this.setParamSimple(map, prefix + "ACL", this.ACL);
+        this.setParamSimple(map, prefix + "WxAccess", this.WxAccess);
 
     }
 }

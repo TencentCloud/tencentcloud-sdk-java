@@ -73,9 +73,32 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
     private String [] ExcludeImageIds;
 
     /**
+    * 镜像是否存在运行中的容器
+    */
+    @SerializedName("ContainerRunning")
+    @Expose
+    private Boolean ContainerRunning;
+
+    /**
+    * 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+    */
+    @SerializedName("ScanScope")
+    @Expose
+    private Long ScanScope;
+
+    /**
+    * 任务超时时长单位秒，默认1小时
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
      * Get 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。 
      * @return All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAll() {
         return this.All;
     }
@@ -83,7 +106,9 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
     /**
      * Set 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
      * @param All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @deprecated
      */
+    @Deprecated
     public void setAll(Boolean All) {
         this.All = All;
     }
@@ -184,6 +209,54 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
         this.ExcludeImageIds = ExcludeImageIds;
     }
 
+    /**
+     * Get 镜像是否存在运行中的容器 
+     * @return ContainerRunning 镜像是否存在运行中的容器
+     */
+    public Boolean getContainerRunning() {
+        return this.ContainerRunning;
+    }
+
+    /**
+     * Set 镜像是否存在运行中的容器
+     * @param ContainerRunning 镜像是否存在运行中的容器
+     */
+    public void setContainerRunning(Boolean ContainerRunning) {
+        this.ContainerRunning = ContainerRunning;
+    }
+
+    /**
+     * Get 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 
+     * @return ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     */
+    public Long getScanScope() {
+        return this.ScanScope;
+    }
+
+    /**
+     * Set 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * @param ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     */
+    public void setScanScope(Long ScanScope) {
+        this.ScanScope = ScanScope;
+    }
+
+    /**
+     * Get 任务超时时长单位秒，默认1小时 
+     * @return Timeout 任务超时时长单位秒，默认1小时
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set 任务超时时长单位秒，默认1小时
+     * @param Timeout 任务超时时长单位秒，默认1小时
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
     public CreateAssetImageScanTaskRequest() {
     }
 
@@ -222,6 +295,15 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
                 this.ExcludeImageIds[i] = new String(source.ExcludeImageIds[i]);
             }
         }
+        if (source.ContainerRunning != null) {
+            this.ContainerRunning = new Boolean(source.ContainerRunning);
+        }
+        if (source.ScanScope != null) {
+            this.ScanScope = new Long(source.ScanScope);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -236,6 +318,9 @@ public class CreateAssetImageScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanRisk", this.ScanRisk);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "ExcludeImageIds.", this.ExcludeImageIds);
+        this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+        this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

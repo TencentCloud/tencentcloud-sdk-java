@@ -231,6 +231,28 @@ ConsumerGroup，消费组名称过滤
     }
 
     /**
+     *导入消费者组列表
+     * @param req ImportSourceClusterConsumerGroupsRequest
+     * @return ImportSourceClusterConsumerGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportSourceClusterConsumerGroupsResponse ImportSourceClusterConsumerGroups(ImportSourceClusterConsumerGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportSourceClusterConsumerGroups", ImportSourceClusterConsumerGroupsResponse.class);
+    }
+
+    /**
+     *导入topic列表
+     * @param req ImportSourceClusterTopicsRequest
+     * @return ImportSourceClusterTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportSourceClusterTopicsResponse ImportSourceClusterTopics(ImportSourceClusterTopicsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportSourceClusterTopics", ImportSourceClusterTopicsResponse.class);
+    }
+
+    /**
      *修改消费组属性
      * @param req ModifyConsumerGroupRequest
      * @return ModifyConsumerGroupResponse

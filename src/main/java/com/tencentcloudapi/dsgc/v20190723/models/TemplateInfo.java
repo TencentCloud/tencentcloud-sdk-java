@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TemplateInfo extends AbstractModel {
 
     /**
-    * 模版id
+    * 模板id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
@@ -32,7 +32,7 @@ public class TemplateInfo extends AbstractModel {
     private Long TemplateId;
 
     /**
-    * 模版名称
+    * 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
@@ -40,9 +40,9 @@ public class TemplateInfo extends AbstractModel {
     private String TemplateName;
 
     /**
-     * Get 模版id
+     * Get 模板id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateId 模版id
+     * @return TemplateId 模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateId() {
@@ -50,9 +50,9 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set 模版id
+     * Set 模板id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateId 模版id
+     * @param TemplateId 模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(Long TemplateId) {
@@ -60,9 +60,9 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 模版名称
+     * Get 模板名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateName 模版名称
+     * @return TemplateName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
@@ -70,9 +70,9 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set 模版名称
+     * Set 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateName 模版名称
+     * @param TemplateName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {

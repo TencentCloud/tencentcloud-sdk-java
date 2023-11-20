@@ -38,6 +38,13 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
     private String ImageName;
 
     /**
+    * 镜像摘要
+    */
+    @SerializedName("ImageDigest")
+    @Expose
+    private String ImageDigest;
+
+    /**
     * 创建时间
     */
     @SerializedName("CreateTime")
@@ -277,6 +284,22 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
+    }
+
+    /**
+     * Get 镜像摘要 
+     * @return ImageDigest 镜像摘要
+     */
+    public String getImageDigest() {
+        return this.ImageDigest;
+    }
+
+    /**
+     * Set 镜像摘要
+     * @param ImageDigest 镜像摘要
+     */
+    public void setImageDigest(String ImageDigest) {
+        this.ImageDigest = ImageDigest;
     }
 
     /**
@@ -809,6 +832,9 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
         if (source.ImageName != null) {
             this.ImageName = new String(source.ImageName);
         }
+        if (source.ImageDigest != null) {
+            this.ImageDigest = new String(source.ImageDigest);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -899,6 +925,7 @@ public class DescribeAssetImageDetailResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageID", this.ImageID);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "HostCnt", this.HostCnt);

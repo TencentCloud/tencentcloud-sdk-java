@@ -498,6 +498,9 @@ public enum IotexplorerErrorCode {
     // 产品被绑定到网关产品。
      UNSUPPORTEDOPERATION_PRODUCTHASBINDEDGATEWAYPRODUCT("UnsupportedOperation.ProductHasBindedGateWayProduct"),
      
+    // 产品已被共享，请先解除共享。
+     UNSUPPORTEDOPERATION_PRODUCTHASSHARED("UnsupportedOperation.ProductHasShared"),
+     
     // 存在重复项目。
      UNSUPPORTEDOPERATION_PROJECTDUPKEYEXIST("UnsupportedOperation.ProjectDupKeyExist"),
      

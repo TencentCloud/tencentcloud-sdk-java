@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeScenesResponse extends AbstractModel {
 
     /**
-    * scene info
+    * 场景详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneSet")
@@ -39,9 +39,9 @@ public class DescribeScenesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get scene info
+     * Get 场景详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SceneSet scene info
+     * @return SceneSet 场景详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SceneInfo [] getSceneSet() {
@@ -49,9 +49,9 @@ public class DescribeScenesResponse extends AbstractModel {
     }
 
     /**
-     * Set scene info
+     * Set 场景详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SceneSet scene info
+     * @param SceneSet 场景详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneSet(SceneInfo [] SceneSet) {

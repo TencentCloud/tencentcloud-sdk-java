@@ -65,13 +65,6 @@ public class CreateProClusterRequest extends AbstractModel {
     private Long TimeSpan;
 
     /**
-    * 集群的标签列表(已废弃)
-    */
-    @SerializedName("Tags")
-    @Expose
-    private Tag [] Tags;
-
-    /**
     * 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
     */
     @SerializedName("ClusterName")
@@ -91,6 +84,13 @@ public class CreateProClusterRequest extends AbstractModel {
     @SerializedName("Vpcs")
     @Expose
     private VpcInfo Vpcs;
+
+    /**
+    * 集群的标签列表(已废弃)
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get 多可用区部署选择三个可用区，示例"200002","200003","200004"
@@ -197,22 +197,6 @@ public class CreateProClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群的标签列表(已废弃) 
-     * @return Tags 集群的标签列表(已废弃)
-     */
-    public Tag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 集群的标签列表(已废弃)
-     * @param Tags 集群的标签列表(已废弃)
-     */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
      * Get 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。 
      * @return ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      */
@@ -260,6 +244,22 @@ public class CreateProClusterRequest extends AbstractModel {
         this.Vpcs = Vpcs;
     }
 
+    /**
+     * Get 集群的标签列表(已废弃) 
+     * @return Tags 集群的标签列表(已废弃)
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 集群的标签列表(已废弃)
+     * @param Tags 集群的标签列表(已废弃)
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateProClusterRequest() {
     }
 
@@ -283,12 +283,6 @@ public class CreateProClusterRequest extends AbstractModel {
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
-        if (source.Tags != null) {
-            this.Tags = new Tag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new Tag(source.Tags[i]);
-            }
-        }
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
@@ -297,6 +291,12 @@ public class CreateProClusterRequest extends AbstractModel {
         }
         if (source.Vpcs != null) {
             this.Vpcs = new VpcInfo(source.Vpcs);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
     }
 
@@ -310,10 +310,10 @@ public class CreateProClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

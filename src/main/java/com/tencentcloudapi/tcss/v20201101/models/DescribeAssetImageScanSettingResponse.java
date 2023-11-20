@@ -80,6 +80,27 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     private String [] Images;
 
     /**
+    * 镜像是否存在运行中的容器
+    */
+    @SerializedName("ContainerRunning")
+    @Expose
+    private Boolean ContainerRunning;
+
+    /**
+    * 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+    */
+    @SerializedName("ScanScope")
+    @Expose
+    private Long ScanScope;
+
+    /**
+    * 扫描结束时间 02:00 时分
+    */
+    @SerializedName("ScanEndTime")
+    @Expose
+    private String ScanEndTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -185,7 +206,9 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     /**
      * Get 扫描全部镜像 
      * @return All 扫描全部镜像
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAll() {
         return this.All;
     }
@@ -193,7 +216,9 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     /**
      * Set 扫描全部镜像
      * @param All 扫描全部镜像
+     * @deprecated
      */
+    @Deprecated
     public void setAll(Boolean All) {
         this.All = All;
     }
@@ -212,6 +237,54 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
      */
     public void setImages(String [] Images) {
         this.Images = Images;
+    }
+
+    /**
+     * Get 镜像是否存在运行中的容器 
+     * @return ContainerRunning 镜像是否存在运行中的容器
+     */
+    public Boolean getContainerRunning() {
+        return this.ContainerRunning;
+    }
+
+    /**
+     * Set 镜像是否存在运行中的容器
+     * @param ContainerRunning 镜像是否存在运行中的容器
+     */
+    public void setContainerRunning(Boolean ContainerRunning) {
+        this.ContainerRunning = ContainerRunning;
+    }
+
+    /**
+     * Get 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描 
+     * @return ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     */
+    public Long getScanScope() {
+        return this.ScanScope;
+    }
+
+    /**
+     * Set 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * @param ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     */
+    public void setScanScope(Long ScanScope) {
+        this.ScanScope = ScanScope;
+    }
+
+    /**
+     * Get 扫描结束时间 02:00 时分 
+     * @return ScanEndTime 扫描结束时间 02:00 时分
+     */
+    public String getScanEndTime() {
+        return this.ScanEndTime;
+    }
+
+    /**
+     * Set 扫描结束时间 02:00 时分
+     * @param ScanEndTime 扫描结束时间 02:00 时分
+     */
+    public void setScanEndTime(String ScanEndTime) {
+        this.ScanEndTime = ScanEndTime;
     }
 
     /**
@@ -265,6 +338,15 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
                 this.Images[i] = new String(source.Images[i]);
             }
         }
+        if (source.ContainerRunning != null) {
+            this.ContainerRunning = new Boolean(source.ContainerRunning);
+        }
+        if (source.ScanScope != null) {
+            this.ScanScope = new Long(source.ScanScope);
+        }
+        if (source.ScanEndTime != null) {
+            this.ScanEndTime = new String(source.ScanEndTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -283,6 +365,9 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanVul", this.ScanVul);
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArraySimple(map, prefix + "Images.", this.Images);
+        this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+        this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
+        this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

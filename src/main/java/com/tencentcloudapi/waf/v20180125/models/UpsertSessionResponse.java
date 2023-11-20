@@ -32,6 +32,14 @@ public class UpsertSessionResponse extends AbstractModel {
     private String Data;
 
     /**
+    * SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionID")
+    @Expose
+    private Long SessionID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +64,26 @@ public class UpsertSessionResponse extends AbstractModel {
      */
     public void setData(String Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get SessionID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionID SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSessionID() {
+        return this.SessionID;
+    }
+
+    /**
+     * Set SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionID SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionID(Long SessionID) {
+        this.SessionID = SessionID;
     }
 
     /**
@@ -85,6 +113,9 @@ public class UpsertSessionResponse extends AbstractModel {
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
+        if (source.SessionID != null) {
+            this.SessionID = new Long(source.SessionID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -96,6 +127,7 @@ public class UpsertSessionResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "SessionID", this.SessionID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

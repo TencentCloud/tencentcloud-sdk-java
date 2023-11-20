@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeScenesRequest extends AbstractModel {
 
     /**
-    * ["sc-abcdefgh"]
+    * 场景id列表
     */
     @SerializedName("SceneIds")
     @Expose
     private String [] SceneIds;
 
     /**
-     * Get ["sc-abcdefgh"] 
-     * @return SceneIds ["sc-abcdefgh"]
+     * Get 场景id列表 
+     * @return SceneIds 场景id列表
      */
     public String [] getSceneIds() {
         return this.SceneIds;
     }
 
     /**
-     * Set ["sc-abcdefgh"]
-     * @param SceneIds ["sc-abcdefgh"]
+     * Set 场景id列表
+     * @param SceneIds 场景id列表
      */
     public void setSceneIds(String [] SceneIds) {
         this.SceneIds = SceneIds;

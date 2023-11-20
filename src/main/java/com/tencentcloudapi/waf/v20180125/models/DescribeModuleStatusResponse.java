@@ -66,6 +66,13 @@ public class DescribeModuleStatusResponse extends AbstractModel {
     private Long ApiProtection;
 
     /**
+    * 限流模块开关
+    */
+    @SerializedName("RateLimit")
+    @Expose
+    private Long RateLimit;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -169,6 +176,22 @@ public class DescribeModuleStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get 限流模块开关 
+     * @return RateLimit 限流模块开关
+     */
+    public Long getRateLimit() {
+        return this.RateLimit;
+    }
+
+    /**
+     * Set 限流模块开关
+     * @param RateLimit 限流模块开关
+     */
+    public void setRateLimit(Long RateLimit) {
+        this.RateLimit = RateLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -210,6 +233,9 @@ public class DescribeModuleStatusResponse extends AbstractModel {
         if (source.ApiProtection != null) {
             this.ApiProtection = new Long(source.ApiProtection);
         }
+        if (source.RateLimit != null) {
+            this.RateLimit = new Long(source.RateLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +252,7 @@ public class DescribeModuleStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
         this.setParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
         this.setParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
+        this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

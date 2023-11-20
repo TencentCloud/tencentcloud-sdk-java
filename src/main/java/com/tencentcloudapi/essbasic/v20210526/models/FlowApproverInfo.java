@@ -179,7 +179,7 @@ public class FlowApproverInfo extends AbstractModel {
     private String JumpUrl;
 
     /**
-    * 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+    * 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
     */
     @SerializedName("ApproverOption")
@@ -691,9 +691,9 @@ public class FlowApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+     * Get 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。 
-     * @return ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+     * @return ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
      */
     public ApproverOption getApproverOption() {
@@ -701,9 +701,9 @@ public class FlowApproverInfo extends AbstractModel {
     }
 
     /**
-     * Set 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+     * Set 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
-     * @param ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+     * @param ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
      */
     public void setApproverOption(ApproverOption ApproverOption) {

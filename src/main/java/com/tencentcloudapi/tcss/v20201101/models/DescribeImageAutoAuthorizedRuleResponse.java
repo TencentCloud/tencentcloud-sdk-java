@@ -63,6 +63,20 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
     private Long RuleId;
 
     /**
+    * 自动扫描开关，0：关闭，1：开启
+    */
+    @SerializedName("AutoScanEnabled")
+    @Expose
+    private Long AutoScanEnabled;
+
+    /**
+    * 自动扫描范围
+    */
+    @SerializedName("ScanType")
+    @Expose
+    private String [] ScanType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -166,6 +180,38 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
     }
 
     /**
+     * Get 自动扫描开关，0：关闭，1：开启 
+     * @return AutoScanEnabled 自动扫描开关，0：关闭，1：开启
+     */
+    public Long getAutoScanEnabled() {
+        return this.AutoScanEnabled;
+    }
+
+    /**
+     * Set 自动扫描开关，0：关闭，1：开启
+     * @param AutoScanEnabled 自动扫描开关，0：关闭，1：开启
+     */
+    public void setAutoScanEnabled(Long AutoScanEnabled) {
+        this.AutoScanEnabled = AutoScanEnabled;
+    }
+
+    /**
+     * Get 自动扫描范围 
+     * @return ScanType 自动扫描范围
+     */
+    public String [] getScanType() {
+        return this.ScanType;
+    }
+
+    /**
+     * Set 自动扫描范围
+     * @param ScanType 自动扫描范围
+     */
+    public void setScanType(String [] ScanType) {
+        this.ScanType = ScanType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -204,6 +250,15 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
         if (source.RuleId != null) {
             this.RuleId = new Long(source.RuleId);
         }
+        if (source.AutoScanEnabled != null) {
+            this.AutoScanEnabled = new Long(source.AutoScanEnabled);
+        }
+        if (source.ScanType != null) {
+            this.ScanType = new String[source.ScanType.length];
+            for (int i = 0; i < source.ScanType.length; i++) {
+                this.ScanType[i] = new String(source.ScanType[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -219,6 +274,8 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
         this.setParamSimple(map, prefix + "MaxDailyCount", this.MaxDailyCount);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "AutoScanEnabled", this.AutoScanEnabled);
+        this.setParamArraySimple(map, prefix + "ScanType.", this.ScanType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

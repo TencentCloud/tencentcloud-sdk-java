@@ -64,7 +64,7 @@ public class AssessmentRiskItem extends AbstractModel {
     private String RiskType;
 
     /**
-    * 关联模版个数
+    * 关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReferTemplateCount")
@@ -88,7 +88,7 @@ public class AssessmentRiskItem extends AbstractModel {
     private String RiskSide;
 
     /**
-    * 关联模版列表
+    * 关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReferTemplateList")
@@ -196,9 +196,9 @@ public class AssessmentRiskItem extends AbstractModel {
     }
 
     /**
-     * Get 关联模版个数
+     * Get 关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReferTemplateCount 关联模版个数
+     * @return ReferTemplateCount 关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReferTemplateCount() {
@@ -206,9 +206,9 @@ public class AssessmentRiskItem extends AbstractModel {
     }
 
     /**
-     * Set 关联模版个数
+     * Set 关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReferTemplateCount 关联模版个数
+     * @param ReferTemplateCount 关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferTemplateCount(Long ReferTemplateCount) {
@@ -256,9 +256,9 @@ public class AssessmentRiskItem extends AbstractModel {
     }
 
     /**
-     * Get 关联模版列表
+     * Get 关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReferTemplateList 关联模版列表
+     * @return ReferTemplateList 关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TemplateInfo [] getReferTemplateList() {
@@ -266,9 +266,9 @@ public class AssessmentRiskItem extends AbstractModel {
     }
 
     /**
-     * Set 关联模版列表
+     * Set 关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReferTemplateList 关联模版列表
+     * @param ReferTemplateList 关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferTemplateList(TemplateInfo [] ReferTemplateList) {

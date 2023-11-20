@@ -57,20 +57,20 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
     private FillApproverInfo [] Approvers;
 
     /**
+    * 签署人信息补充方式
+
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+    */
+    @SerializedName("FillApproverType")
+    @Expose
+    private Long FillApproverType;
+
+    /**
     * 操作人信息
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
-
-    /**
-    * 签署人信息补充方式
-
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-    */
-    @SerializedName("FillApproverType")
-    @Expose
-    private Long FillApproverType;
 
     /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
@@ -169,6 +169,30 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
     }
 
     /**
+     * Get 签署人信息补充方式
+
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul> 
+     * @return FillApproverType 签署人信息补充方式
+
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     */
+    public Long getFillApproverType() {
+        return this.FillApproverType;
+    }
+
+    /**
+     * Set 签署人信息补充方式
+
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     * @param FillApproverType 签署人信息补充方式
+
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     */
+    public void setFillApproverType(Long FillApproverType) {
+        this.FillApproverType = FillApproverType;
+    }
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -182,30 +206,6 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
-    }
-
-    /**
-     * Get 签署人信息补充方式
-
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul> 
-     * @return FillApproverType 签署人信息补充方式
-
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-     */
-    public Long getFillApproverType() {
-        return this.FillApproverType;
-    }
-
-    /**
-     * Set 签署人信息补充方式
-
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-     * @param FillApproverType 签署人信息补充方式
-
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-     */
-    public void setFillApproverType(Long FillApproverType) {
-        this.FillApproverType = FillApproverType;
     }
 
     public ChannelCreateFlowApproversRequest() {
@@ -228,11 +228,11 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
                 this.Approvers[i] = new FillApproverInfo(source.Approvers[i]);
             }
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.FillApproverType != null) {
             this.FillApproverType = new Long(source.FillApproverType);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -244,8 +244,8 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FillApproverType", this.FillApproverType);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

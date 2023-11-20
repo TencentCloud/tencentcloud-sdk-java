@@ -39,14 +39,14 @@ public class AssessmentRisk extends AbstractModel {
     private String RiskDescription;
 
     /**
-    * 评估模版Id
+    * 评估模板Id
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 评估模版名称
+    * 评估模板名称
     */
     @SerializedName("TemplateName")
     @Expose
@@ -208,32 +208,32 @@ public class AssessmentRisk extends AbstractModel {
     }
 
     /**
-     * Get 评估模版Id 
-     * @return TemplateId 评估模版Id
+     * Get 评估模板Id 
+     * @return TemplateId 评估模板Id
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 评估模版Id
-     * @param TemplateId 评估模版Id
+     * Set 评估模板Id
+     * @param TemplateId 评估模板Id
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 评估模版名称 
-     * @return TemplateName 评估模版名称
+     * Get 评估模板名称 
+     * @return TemplateName 评估模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 评估模版名称
-     * @param TemplateName 评估模版名称
+     * Set 评估模板名称
+     * @param TemplateName 评估模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

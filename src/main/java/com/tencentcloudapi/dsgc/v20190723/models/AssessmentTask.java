@@ -68,28 +68,28 @@ public class AssessmentTask extends AbstractModel {
     private String BusinessOwner;
 
     /**
-    * 评估模版Id
+    * 评估模板Id
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 评估模版名称
+    * 评估模板名称
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 分类分级模版Id
+    * 分类分级模板Id
     */
     @SerializedName("ComplianceGroupId")
     @Expose
     private Long ComplianceGroupId;
 
     /**
-    * 分类分级模版名称
+    * 分类分级模板名称
     */
     @SerializedName("ComplianceGroupName")
     @Expose
@@ -154,7 +154,7 @@ public class AssessmentTask extends AbstractModel {
     private String ErrorInfo;
 
     /**
-    * 模版主键id
+    * 模板主键id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateUid")
@@ -274,64 +274,64 @@ public class AssessmentTask extends AbstractModel {
     }
 
     /**
-     * Get 评估模版Id 
-     * @return TemplateId 评估模版Id
+     * Get 评估模板Id 
+     * @return TemplateId 评估模板Id
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 评估模版Id
-     * @param TemplateId 评估模版Id
+     * Set 评估模板Id
+     * @param TemplateId 评估模板Id
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 评估模版名称 
-     * @return TemplateName 评估模版名称
+     * Get 评估模板名称 
+     * @return TemplateName 评估模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 评估模版名称
-     * @param TemplateName 评估模版名称
+     * Set 评估模板名称
+     * @param TemplateName 评估模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 分类分级模版Id 
-     * @return ComplianceGroupId 分类分级模版Id
+     * Get 分类分级模板Id 
+     * @return ComplianceGroupId 分类分级模板Id
      */
     public Long getComplianceGroupId() {
         return this.ComplianceGroupId;
     }
 
     /**
-     * Set 分类分级模版Id
-     * @param ComplianceGroupId 分类分级模版Id
+     * Set 分类分级模板Id
+     * @param ComplianceGroupId 分类分级模板Id
      */
     public void setComplianceGroupId(Long ComplianceGroupId) {
         this.ComplianceGroupId = ComplianceGroupId;
     }
 
     /**
-     * Get 分类分级模版名称 
-     * @return ComplianceGroupName 分类分级模版名称
+     * Get 分类分级模板名称 
+     * @return ComplianceGroupName 分类分级模板名称
      */
     public String getComplianceGroupName() {
         return this.ComplianceGroupName;
     }
 
     /**
-     * Set 分类分级模版名称
-     * @param ComplianceGroupName 分类分级模版名称
+     * Set 分类分级模板名称
+     * @param ComplianceGroupName 分类分级模板名称
      */
     public void setComplianceGroupName(String ComplianceGroupName) {
         this.ComplianceGroupName = ComplianceGroupName;
@@ -474,9 +474,9 @@ public class AssessmentTask extends AbstractModel {
     }
 
     /**
-     * Get 模版主键id
+     * Get 模板主键id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateUid 模版主键id
+     * @return TemplateUid 模板主键id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateUid() {
@@ -484,9 +484,9 @@ public class AssessmentTask extends AbstractModel {
     }
 
     /**
-     * Set 模版主键id
+     * Set 模板主键id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateUid 模版主键id
+     * @param TemplateUid 模板主键id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateUid(Long TemplateUid) {

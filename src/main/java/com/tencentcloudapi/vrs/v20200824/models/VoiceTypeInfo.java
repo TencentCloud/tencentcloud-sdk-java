@@ -66,6 +66,13 @@ public class VoiceTypeInfo extends AbstractModel {
     private String DateCreated;
 
     /**
+    * 部署状态。若已部署，则可通过语音合成接口调用该音色
+    */
+    @SerializedName("IsDeployed")
+    @Expose
+    private Boolean IsDeployed;
+
+    /**
      * Get 音色id 
      * @return VoiceType 音色id
      */
@@ -161,6 +168,22 @@ public class VoiceTypeInfo extends AbstractModel {
         this.DateCreated = DateCreated;
     }
 
+    /**
+     * Get 部署状态。若已部署，则可通过语音合成接口调用该音色 
+     * @return IsDeployed 部署状态。若已部署，则可通过语音合成接口调用该音色
+     */
+    public Boolean getIsDeployed() {
+        return this.IsDeployed;
+    }
+
+    /**
+     * Set 部署状态。若已部署，则可通过语音合成接口调用该音色
+     * @param IsDeployed 部署状态。若已部署，则可通过语音合成接口调用该音色
+     */
+    public void setIsDeployed(Boolean IsDeployed) {
+        this.IsDeployed = IsDeployed;
+    }
+
     public VoiceTypeInfo() {
     }
 
@@ -187,6 +210,9 @@ public class VoiceTypeInfo extends AbstractModel {
         if (source.DateCreated != null) {
             this.DateCreated = new String(source.DateCreated);
         }
+        if (source.IsDeployed != null) {
+            this.IsDeployed = new Boolean(source.IsDeployed);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class VoiceTypeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "TaskID", this.TaskID);
         this.setParamSimple(map, prefix + "DateCreated", this.DateCreated);
+        this.setParamSimple(map, prefix + "IsDeployed", this.IsDeployed);
 
     }
 }

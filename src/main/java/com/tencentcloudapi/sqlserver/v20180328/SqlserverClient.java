@@ -50,6 +50,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（BalanceReadOnlyGroup）用于根据预定义的权重平衡每个只读实例的路由权重。预定义权重可根据接口DescribeReadOnlyGroupAutoWeight查询。
+     * @param req BalanceReadOnlyGroupRequest
+     * @return BalanceReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public BalanceReadOnlyGroupResponse BalanceReadOnlyGroup(BalanceReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BalanceReadOnlyGroup", BalanceReadOnlyGroupResponse.class);
+    }
+
+    /**
      *本接口（CloneDB）用于克隆数据库，只支持克隆到本实例，克隆时必须指定新库名称。
      * @param req CloneDBRequest
      * @return CloneDBResponse
@@ -336,6 +347,28 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DeleteRestoreTask)用于删除回档任务记录。
+     * @param req DeleteRestoreTaskRequest
+     * @return DeleteRestoreTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRestoreTaskResponse DeleteRestoreTask(DeleteRestoreTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRestoreTask", DeleteRestoreTaskResponse.class);
+    }
+
+    /**
+     *本接口(DescribeAccountPrivilegeByDB)用于查询数据库关联的账号和权限信息
+     * @param req DescribeAccountPrivilegeByDBRequest
+     * @return DescribeAccountPrivilegeByDBResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountPrivilegeByDBResponse DescribeAccountPrivilegeByDB(DescribeAccountPrivilegeByDBRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountPrivilegeByDB", DescribeAccountPrivilegeByDBResponse.class);
+    }
+
+    /**
      *本接口（DescribeAccounts）用于拉取实例账户列表。
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -457,6 +490,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeCollationTimeZone)用于查询实例支持的字符集和时区。
+     * @param req DescribeCollationTimeZoneRequest
+     * @return DescribeCollationTimeZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCollationTimeZoneResponse DescribeCollationTimeZone(DescribeCollationTimeZoneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCollationTimeZone", DescribeCollationTimeZoneResponse.class);
+    }
+
+    /**
      *本接口(DescribeCrossBackupStatistical)用于查询跨地域备份实时统计列表。
      * @param req DescribeCrossBackupStatisticalRequest
      * @return DescribeCrossBackupStatisticalResponse
@@ -476,6 +520,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribeCrossRegionZoneResponse DescribeCrossRegionZone(DescribeCrossRegionZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCrossRegionZone", DescribeCrossRegionZoneResponse.class);
+    }
+
+    /**
+     *本接口(DescribeCrossRegions)用于查询跨地域备份的目标地域。
+     * @param req DescribeCrossRegionsRequest
+     * @return DescribeCrossRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossRegionsResponse DescribeCrossRegions(DescribeCrossRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCrossRegions", DescribeCrossRegionsResponse.class);
     }
 
     /**
@@ -523,6 +578,28 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBPrivilegeByAccount)用于查询账号关联的数据库和权限信息
+     * @param req DescribeDBPrivilegeByAccountRequest
+     * @return DescribeDBPrivilegeByAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBPrivilegeByAccountResponse DescribeDBPrivilegeByAccount(DescribeDBPrivilegeByAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBPrivilegeByAccount", DescribeDBPrivilegeByAccountResponse.class);
+    }
+
+    /**
+     *本接口（DescribeDBRestoreTime）用于查询可回档的数据库
+     * @param req DescribeDBRestoreTimeRequest
+     * @return DescribeDBRestoreTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBRestoreTimeResponse DescribeDBRestoreTime(DescribeDBRestoreTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBRestoreTime", DescribeDBRestoreTimeResponse.class);
+    }
+
+    /**
      *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse
@@ -553,6 +630,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribeDBsNormalResponse DescribeDBsNormal(DescribeDBsNormalRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBsNormal", DescribeDBsNormalResponse.class);
+    }
+
+    /**
+     *本接口（DescribeDatabaseNames）查询账户关联的数据库名称。
+     * @param req DescribeDatabaseNamesRequest
+     * @return DescribeDatabaseNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseNamesResponse DescribeDatabaseNames(DescribeDatabaseNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseNames", DescribeDatabaseNamesResponse.class);
     }
 
     /**
@@ -611,6 +699,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInquiryPriceParameter）用于查询实例询价计费参数。当前接口查询实例新购的计费参数。内部接口用于活动页售卖场景。
+     * @param req DescribeInquiryPriceParameterRequest
+     * @return DescribeInquiryPriceParameterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInquiryPriceParameterResponse DescribeInquiryPriceParameter(DescribeInquiryPriceParameterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInquiryPriceParameter", DescribeInquiryPriceParameterResponse.class);
+    }
+
+    /**
      *本接口（DescribeInstanceByOrders）用于根据订单号查询资源ID
      * @param req DescribeInstanceByOrdersRequest
      * @return DescribeInstanceByOrdersResponse
@@ -641,6 +740,28 @@ public class SqlserverClient extends AbstractClient{
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceParams", DescribeInstanceParamsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeInstanceTasks）用于查询实例相关的异步任务列表。
+     * @param req DescribeInstanceTasksRequest
+     * @return DescribeInstanceTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceTasksResponse DescribeInstanceTasks(DescribeInstanceTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceTasks", DescribeInstanceTasksResponse.class);
+    }
+
+    /**
+     *本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数，当前接口默认返回创建实例时需要的计费参数。内部接口用于活动页售卖场景。
+     * @param req DescribeInstanceTradeParameterRequest
+     * @return DescribeInstanceTradeParameterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameter(DescribeInstanceTradeParameterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceTradeParameter", DescribeInstanceTradeParameterResponse.class);
     }
 
     /**
@@ -710,6 +831,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeProductSpec) 用于查询全地域售卖规格配置（内部前端使用不公开）
+     * @param req DescribeProductSpecRequest
+     * @return DescribeProductSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductSpecResponse DescribeProductSpec(DescribeProductSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProductSpec", DescribeProductSpecResponse.class);
+    }
+
+    /**
      *本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
      * @param req DescribeProjectSecurityGroupsRequest
      * @return DescribeProjectSecurityGroupsResponse
@@ -729,6 +861,17 @@ public class SqlserverClient extends AbstractClient{
     public DescribePublishSubscribeResponse DescribePublishSubscribe(DescribePublishSubscribeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePublishSubscribe", DescribePublishSubscribeResponse.class);
+    }
+
+    /**
+     *本接口（DescribeReadOnlyGroupAutoWeight）用于查询只读组的自动权重分配结果，在接口BalanceReadOnlyGroup接口中按照自动权重分配结果进行路由权重分配。
+     * @param req DescribeReadOnlyGroupAutoWeightRequest
+     * @return DescribeReadOnlyGroupAutoWeightResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupAutoWeightResponse DescribeReadOnlyGroupAutoWeight(DescribeReadOnlyGroupAutoWeightRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReadOnlyGroupAutoWeight", DescribeReadOnlyGroupAutoWeightResponse.class);
     }
 
     /**
@@ -787,6 +930,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeRestoreTask）用于查询回档任务列表。
+     * @param req DescribeRestoreTaskRequest
+     * @return DescribeRestoreTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRestoreTaskResponse DescribeRestoreTask(DescribeRestoreTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRestoreTask", DescribeRestoreTaskResponse.class);
+    }
+
+    /**
      *本接口（DescribeRollbackTime）用于查询实例可回档时间范围
      * @param req DescribeRollbackTimeRequest
      * @return DescribeRollbackTimeResponse
@@ -806,6 +960,28 @@ public class SqlserverClient extends AbstractClient{
     public DescribeSlowlogsResponse DescribeSlowlogs(DescribeSlowlogsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSlowlogs", DescribeSlowlogsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeSpecSellStatus）用于查询售卖规格状态信息，其中包括售卖状态，参考价格等(实际价格以询价接口为准)。
+     * @param req DescribeSpecSellStatusRequest
+     * @return DescribeSpecSellStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpecSellStatusResponse DescribeSpecSellStatus(DescribeSpecSellStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSpecSellStatus", DescribeSpecSellStatusResponse.class);
+    }
+
+    /**
+     *本接口（DescribeUpgradeInstanceCheck）用于在实例变配前，预检查实例变配的影响情况等。
+     * @param req DescribeUpgradeInstanceCheckRequest
+     * @return DescribeUpgradeInstanceCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpgradeInstanceCheckResponse DescribeUpgradeInstanceCheck(DescribeUpgradeInstanceCheckRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpgradeInstanceCheck", DescribeUpgradeInstanceCheckResponse.class);
     }
 
     /**
@@ -952,6 +1128,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyCloseWanIp)用于关闭实例外网。
+     * @param req ModifyCloseWanIpRequest
+     * @return ModifyCloseWanIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloseWanIpResponse ModifyCloseWanIp(ModifyCloseWanIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloseWanIp", ModifyCloseWanIpResponse.class);
+    }
+
+    /**
      *本接口(ModifyCrossBackupStrategy)用于开启、关闭地域备份策略。
      * @param req ModifyCrossBackupStrategyRequest
      * @return ModifyCrossBackupStrategyResponse
@@ -993,6 +1180,17 @@ public class SqlserverClient extends AbstractClient{
     public ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(ModifyDBInstanceNetworkRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstanceNetwork", ModifyDBInstanceNetworkResponse.class);
+    }
+
+    /**
+     *本接口（ModifyDBInstanceNote）用于修改实例备注信息。
+     * @param req ModifyDBInstanceNoteRequest
+     * @return ModifyDBInstanceNoteResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceNoteResponse ModifyDBInstanceNote(ModifyDBInstanceNoteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceNote", ModifyDBInstanceNoteResponse.class);
     }
 
     /**
@@ -1149,6 +1347,28 @@ public class SqlserverClient extends AbstractClient{
     public ModifyMigrationResponse ModifyMigration(ModifyMigrationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMigration", ModifyMigrationResponse.class);
+    }
+
+    /**
+     *本接口(ModifyOpenWanIp)用于开通实例外网。
+     * @param req ModifyOpenWanIpRequest
+     * @return ModifyOpenWanIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOpenWanIpResponse ModifyOpenWanIp(ModifyOpenWanIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOpenWanIp", ModifyOpenWanIpResponse.class);
+    }
+
+    /**
+     *本接口（ModifyPublishSubscribe）用于修改实例的发布订阅关系。
+     * @param req ModifyPublishSubscribeRequest
+     * @return ModifyPublishSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPublishSubscribeResponse ModifyPublishSubscribe(ModifyPublishSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPublishSubscribe", ModifyPublishSubscribeResponse.class);
     }
 
     /**

@@ -52,6 +52,17 @@ public class CreateFlowApproversRequest extends AbstractModel {
     private FillApproverInfo [] Approvers;
 
     /**
+    * 签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+    */
+    @SerializedName("FillApproverType")
+    @Expose
+    private Long FillApproverType;
+
+    /**
     * 在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
     */
     @SerializedName("Initiator")
@@ -65,16 +76,6 @@ public class CreateFlowApproversRequest extends AbstractModel {
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
-
-    /**
-    * 签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-    */
-    @SerializedName("FillApproverType")
-    @Expose
-    private Long FillApproverType;
 
     /**
      * Get 执行本接口操作的员工信息。
@@ -153,6 +154,38 @@ public class CreateFlowApproversRequest extends AbstractModel {
     }
 
     /**
+     * Get 签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul> 
+     * @return FillApproverType 签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     */
+    public Long getFillApproverType() {
+        return this.FillApproverType;
+    }
+
+    /**
+     * Set 签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     * @param FillApproverType 签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     */
+    public void setFillApproverType(Long FillApproverType) {
+        this.FillApproverType = FillApproverType;
+    }
+
+    /**
      * Get 在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。 
      * @return Initiator 在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
      */
@@ -188,34 +221,6 @@ public class CreateFlowApproversRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
-    /**
-     * Get 签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul> 
-     * @return FillApproverType 签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-     */
-    public Long getFillApproverType() {
-        return this.FillApproverType;
-    }
-
-    /**
-     * Set 签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-     * @param FillApproverType 签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-     */
-    public void setFillApproverType(Long FillApproverType) {
-        this.FillApproverType = FillApproverType;
-    }
-
     public CreateFlowApproversRequest() {
     }
 
@@ -236,14 +241,14 @@ public class CreateFlowApproversRequest extends AbstractModel {
                 this.Approvers[i] = new FillApproverInfo(source.Approvers[i]);
             }
         }
+        if (source.FillApproverType != null) {
+            this.FillApproverType = new Long(source.FillApproverType);
+        }
         if (source.Initiator != null) {
             this.Initiator = new String(source.Initiator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
-        }
-        if (source.FillApproverType != null) {
-            this.FillApproverType = new Long(source.FillApproverType);
         }
     }
 
@@ -255,9 +260,9 @@ public class CreateFlowApproversRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+        this.setParamSimple(map, prefix + "FillApproverType", this.FillApproverType);
         this.setParamSimple(map, prefix + "Initiator", this.Initiator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamSimple(map, prefix + "FillApproverType", this.FillApproverType);
 
     }
 }

@@ -38,9 +38,18 @@ public class AccessHistogramItem extends AbstractModel {
     private Long Count;
 
     /**
+    * 时间，单位ms
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private Long BeginTime;
+
+    /**
      * Get 时间，单位ms 
      * @return BTime 时间，单位ms
+     * @deprecated
      */
+    @Deprecated
     public Long getBTime() {
         return this.BTime;
     }
@@ -48,7 +57,9 @@ public class AccessHistogramItem extends AbstractModel {
     /**
      * Set 时间，单位ms
      * @param BTime 时间，单位ms
+     * @deprecated
      */
+    @Deprecated
     public void setBTime(Long BTime) {
         this.BTime = BTime;
     }
@@ -69,6 +80,22 @@ public class AccessHistogramItem extends AbstractModel {
         this.Count = Count;
     }
 
+    /**
+     * Get 时间，单位ms 
+     * @return BeginTime 时间，单位ms
+     */
+    public Long getBeginTime() {
+        return this.BeginTime;
+    }
+
+    /**
+     * Set 时间，单位ms
+     * @param BeginTime 时间，单位ms
+     */
+    public void setBeginTime(Long BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
     public AccessHistogramItem() {
     }
 
@@ -83,6 +110,9 @@ public class AccessHistogramItem extends AbstractModel {
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
+        if (source.BeginTime != null) {
+            this.BeginTime = new Long(source.BeginTime);
+        }
     }
 
 
@@ -92,6 +122,7 @@ public class AccessHistogramItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BTime", this.BTime);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
 
     }
 }

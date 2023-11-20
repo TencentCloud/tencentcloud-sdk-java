@@ -45,6 +45,13 @@ public class RenewDBInstanceRequest extends AbstractModel {
     private String ModifyPayType;
 
     /**
+    * 自动续费标记，0表示不自动续费，1表示进行自动续费
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
      * Get 待续费的实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。 
      * @return InstanceId 待续费的实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。
      */
@@ -92,6 +99,22 @@ public class RenewDBInstanceRequest extends AbstractModel {
         this.ModifyPayType = ModifyPayType;
     }
 
+    /**
+     * Get 自动续费标记，0表示不自动续费，1表示进行自动续费 
+     * @return AutoRenew 自动续费标记，0表示不自动续费，1表示进行自动续费
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set 自动续费标记，0表示不自动续费，1表示进行自动续费
+     * @param AutoRenew 自动续费标记，0表示不自动续费，1表示进行自动续费
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
     public RenewDBInstanceRequest() {
     }
 
@@ -109,6 +132,9 @@ public class RenewDBInstanceRequest extends AbstractModel {
         if (source.ModifyPayType != null) {
             this.ModifyPayType = new String(source.ModifyPayType);
         }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class RenewDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "ModifyPayType", this.ModifyPayType);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }
 }

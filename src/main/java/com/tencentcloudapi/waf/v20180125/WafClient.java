@@ -1006,7 +1006,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *本接口用于修改访问日志保存期限及大字段是否存储
+     *本接口用于修改访问日志保存期限等字段信息
      * @param req ModifyAccessPeriodRequest
      * @return ModifyAccessPeriodResponse
      * @throws TencentCloudSDKException

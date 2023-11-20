@@ -31,7 +31,7 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 描述键值对过滤器，用于条件过滤查询。
+    * 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
     */
     @SerializedName("Filters")
     @Expose
@@ -69,16 +69,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 描述键值对过滤器，用于条件过滤查询。 
-     * @return Filters 描述键值对过滤器，用于条件过滤查询。
+     * Get 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态 
+     * @return Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 描述键值对过滤器，用于条件过滤查询。
-     * @param Filters 描述键值对过滤器，用于条件过滤查询。
+     * Set 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
+     * @param Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

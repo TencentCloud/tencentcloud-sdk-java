@@ -897,6 +897,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询集群自定义参数
+     * @param req DescribeClusterExtraArgsRequest
+     * @return DescribeClusterExtraArgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterExtraArgsResponse DescribeClusterExtraArgs(DescribeClusterExtraArgsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterExtraArgs", DescribeClusterExtraArgsResponse.class);
+    }
+
+    /**
      *查询用户单个Region下的所有集群巡检结果概览信息
      * @param req DescribeClusterInspectionResultsOverviewRequest
      * @return DescribeClusterInspectionResultsOverviewResponse
@@ -1279,6 +1290,28 @@ public class TkeClient extends AbstractClient{
     public DescribeExternalClusterSpecResponse DescribeExternalClusterSpec(DescribeExternalClusterSpecRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeExternalClusterSpec", DescribeExternalClusterSpecResponse.class);
+    }
+
+    /**
+     *查看开启第三方节点池配置信息
+     * @param req DescribeExternalNodeSupportConfigRequest
+     * @return DescribeExternalNodeSupportConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfig(DescribeExternalNodeSupportConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExternalNodeSupportConfig", DescribeExternalNodeSupportConfigResponse.class);
+    }
+
+    /**
+     *获取eniipamd组件信息
+     * @param req DescribeIPAMDRequest
+     * @return DescribeIPAMDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPAMDResponse DescribeIPAMD(DescribeIPAMDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIPAMD", DescribeIPAMDResponse.class);
     }
 
     /**

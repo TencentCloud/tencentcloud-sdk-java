@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyAccessPeriodRequest extends AbstractModel {
 
     /**
-    * 访问日志保存期限，范围为[1, 30]
+    * 访问日志保存期限，范围为[1, 180]
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 日志主题
+    * 日志主题，新版本不需要再传
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get 访问日志保存期限，范围为[1, 30] 
-     * @return Period 访问日志保存期限，范围为[1, 30]
+     * Get 访问日志保存期限，范围为[1, 180] 
+     * @return Period 访问日志保存期限，范围为[1, 180]
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 访问日志保存期限，范围为[1, 30]
-     * @param Period 访问日志保存期限，范围为[1, 30]
+     * Set 访问日志保存期限，范围为[1, 180]
+     * @param Period 访问日志保存期限，范围为[1, 180]
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 日志主题 
-     * @return TopicId 日志主题
+     * Get 日志主题，新版本不需要再传 
+     * @return TopicId 日志主题，新版本不需要再传
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题
-     * @param TopicId 日志主题
+     * Set 日志主题，新版本不需要再传
+     * @param TopicId 日志主题，新版本不需要再传
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

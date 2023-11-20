@@ -73,6 +73,20 @@ public class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel {
     private String [] ExcludeHostIdSet;
 
     /**
+    * 自动扫描开关
+    */
+    @SerializedName("AutoScanEnabled")
+    @Expose
+    private Long AutoScanEnabled;
+
+    /**
+    * 自动扫描范围
+    */
+    @SerializedName("ScanType")
+    @Expose
+    private String [] ScanType;
+
+    /**
      * Get 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像 
      * @return RangeType 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
      */
@@ -184,6 +198,38 @@ public class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel {
         this.ExcludeHostIdSet = ExcludeHostIdSet;
     }
 
+    /**
+     * Get 自动扫描开关 
+     * @return AutoScanEnabled 自动扫描开关
+     */
+    public Long getAutoScanEnabled() {
+        return this.AutoScanEnabled;
+    }
+
+    /**
+     * Set 自动扫描开关
+     * @param AutoScanEnabled 自动扫描开关
+     */
+    public void setAutoScanEnabled(Long AutoScanEnabled) {
+        this.AutoScanEnabled = AutoScanEnabled;
+    }
+
+    /**
+     * Get 自动扫描范围 
+     * @return ScanType 自动扫描范围
+     */
+    public String [] getScanType() {
+        return this.ScanType;
+    }
+
+    /**
+     * Set 自动扫描范围
+     * @param ScanType 自动扫描范围
+     */
+    public void setScanType(String [] ScanType) {
+        this.ScanType = ScanType;
+    }
+
     public AddEditImageAutoAuthorizedRuleRequest() {
     }
 
@@ -222,6 +268,15 @@ public class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel {
                 this.ExcludeHostIdSet[i] = new String(source.ExcludeHostIdSet[i]);
             }
         }
+        if (source.AutoScanEnabled != null) {
+            this.AutoScanEnabled = new Long(source.AutoScanEnabled);
+        }
+        if (source.ScanType != null) {
+            this.ScanType = new String[source.ScanType.length];
+            for (int i = 0; i < source.ScanType.length; i++) {
+                this.ScanType[i] = new String(source.ScanType[i]);
+            }
+        }
     }
 
 
@@ -236,6 +291,8 @@ public class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "HostIdFilters.", this.HostIdFilters);
         this.setParamArraySimple(map, prefix + "ExcludeHostIdSet.", this.ExcludeHostIdSet);
+        this.setParamSimple(map, prefix + "AutoScanEnabled", this.AutoScanEnabled);
+        this.setParamArraySimple(map, prefix + "ScanType.", this.ScanType);
 
     }
 }
