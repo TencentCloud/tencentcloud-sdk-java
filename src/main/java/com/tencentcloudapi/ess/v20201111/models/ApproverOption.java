@@ -46,7 +46,7 @@ public class ApproverOption extends AbstractModel {
     /**
     * 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul>
     */
     @SerializedName("FillType")
@@ -126,11 +126,11 @@ public class ApproverOption extends AbstractModel {
     /**
      * Get 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul> 
      * @return FillType 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul>
      */
     public Long getFillType() {
@@ -140,11 +140,11 @@ public class ApproverOption extends AbstractModel {
     /**
      * Set 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul>
      * @param FillType 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul>
      */
     public void setFillType(Long FillType) {

@@ -94,6 +94,17 @@ public class CfgClient extends AbstractClient{
     }
 
     /**
+     *获取护栏触发日志
+     * @param req DescribeTaskPolicyTriggerLogRequest
+     * @return DescribeTaskPolicyTriggerLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskPolicyTriggerLogResponse DescribeTaskPolicyTriggerLog(DescribeTaskPolicyTriggerLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskPolicyTriggerLog", DescribeTaskPolicyTriggerLogResponse.class);
+    }
+
+    /**
      *查询经验库
      * @param req DescribeTemplateRequest
      * @return DescribeTemplateResponse
@@ -146,6 +157,17 @@ public class CfgClient extends AbstractClient{
     public ModifyTaskRunStatusResponse ModifyTaskRunStatus(ModifyTaskRunStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTaskRunStatus", ModifyTaskRunStatusResponse.class);
+    }
+
+    /**
+     *用于触发混沌演练护栏（类型为触发和恢复2种）
+     * @param req TriggerPolicyRequest
+     * @return TriggerPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public TriggerPolicyResponse TriggerPolicy(TriggerPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TriggerPolicy", TriggerPolicyResponse.class);
     }
 
 }

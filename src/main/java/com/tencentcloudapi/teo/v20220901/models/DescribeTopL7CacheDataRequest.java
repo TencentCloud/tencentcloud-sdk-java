@@ -49,7 +49,7 @@ public class DescribeTopL7CacheDataRequest extends AbstractModel {
     private String MetricName;
 
     /**
-    * 站点id集合，不填默认选择全部站点。
+    * 站点 ID 集合，此参数必填。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -162,16 +162,16 @@ public class DescribeTopL7CacheDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 站点id集合，不填默认选择全部站点。 
-     * @return ZoneIds 站点id集合，不填默认选择全部站点。
+     * Get 站点 ID 集合，此参数必填。 
+     * @return ZoneIds 站点 ID 集合，此参数必填。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点id集合，不填默认选择全部站点。
-     * @param ZoneIds 站点id集合，不填默认选择全部站点。
+     * Set 站点 ID 集合，此参数必填。
+     * @param ZoneIds 站点 ID 集合，此参数必填。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

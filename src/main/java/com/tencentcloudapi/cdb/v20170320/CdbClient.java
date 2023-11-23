@@ -105,6 +105,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *实例关闭审计服务
+     * @param req CloseAuditServiceRequest
+     * @return CloseAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseAuditService", CloseAuditServiceResponse.class);
+    }
+
+    /**
      *关闭数据库代理
      * @param req CloseCDBProxyRequest
      * @return CloseCDBProxyResponse
@@ -179,6 +190,17 @@ public class CdbClient extends AbstractClient{
     public CreateAuditRuleResponse CreateAuditRule(CreateAuditRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAuditRule", CreateAuditRuleResponse.class);
+    }
+
+    /**
+     *创建审计规则模板
+     * @param req CreateAuditRuleTemplateRequest
+     * @return CreateAuditRuleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(CreateAuditRuleTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditRuleTemplate", CreateAuditRuleTemplateResponse.class);
     }
 
     /**
@@ -366,6 +388,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *删除审计规则模版
+     * @param req DeleteAuditRuleTemplatesRequest
+     * @return DeleteAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(DeleteAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditRuleTemplates", DeleteAuditRuleTemplatesResponse.class);
+    }
+
+    /**
      *本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
      * @param req DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -374,6 +407,17 @@ public class CdbClient extends AbstractClient{
     public DeleteBackupResponse DeleteBackup(DeleteBackupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBackup", DeleteBackupResponse.class);
+    }
+
+    /**
+     *本接口(DeleteDatabase)用于在云数据库实例中删除数据库。
+     * @param req DeleteDatabaseRequest
+     * @return DeleteDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDatabase", DeleteDatabaseResponse.class);
     }
 
     /**
@@ -454,6 +498,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *获取审计实例列表
+     * @param req DescribeAuditInstanceListRequest
+     * @return DescribeAuditInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditInstanceListResponse DescribeAuditInstanceList(DescribeAuditInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditInstanceList", DescribeAuditInstanceListResponse.class);
+    }
+
+    /**
      *本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
      * @param req DescribeAuditLogFilesRequest
      * @return DescribeAuditLogFilesResponse
@@ -484,6 +539,28 @@ public class CdbClient extends AbstractClient{
     public DescribeAuditPoliciesResponse DescribeAuditPolicies(DescribeAuditPoliciesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditPolicies", DescribeAuditPoliciesResponse.class);
+    }
+
+    /**
+     *查询规则模板变更记录
+     * @param req DescribeAuditRuleTemplateModifyHistoryRequest
+     * @return DescribeAuditRuleTemplateModifyHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRuleTemplateModifyHistoryResponse DescribeAuditRuleTemplateModifyHistory(DescribeAuditRuleTemplateModifyHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditRuleTemplateModifyHistory", DescribeAuditRuleTemplateModifyHistoryResponse.class);
+    }
+
+    /**
+     *查询审计规则模板信息
+     * @param req DescribeAuditRuleTemplatesRequest
+     * @return DescribeAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(DescribeAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditRuleTemplates", DescribeAuditRuleTemplatesResponse.class);
     }
 
     /**
@@ -1197,6 +1274,28 @@ public class CdbClient extends AbstractClient{
     public ModifyAuditRuleResponse ModifyAuditRule(ModifyAuditRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAuditRule", ModifyAuditRuleResponse.class);
+    }
+
+    /**
+     *修改审计规则模板
+     * @param req ModifyAuditRuleTemplatesRequest
+     * @return ModifyAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(ModifyAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditRuleTemplates", ModifyAuditRuleTemplatesResponse.class);
+    }
+
+    /**
+     *本接口(ModifyAuditService)用于修改云数据库审计日志保存时长、审计规则等服务配置
+     * @param req ModifyAuditServiceRequest
+     * @return ModifyAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditService", ModifyAuditServiceResponse.class);
     }
 
     /**

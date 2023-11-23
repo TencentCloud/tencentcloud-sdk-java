@@ -1051,6 +1051,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询表的所有列元数据
+     * @param req DescribeColumnsMetaRequest
+     * @return DescribeColumnsMetaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeColumnsMetaResponse DescribeColumnsMeta(DescribeColumnsMetaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeColumnsMeta", DescribeColumnsMetaResponse.class);
+    }
+
+    /**
      *查询数据来源列表
      * @param req DescribeDataBasesRequest
      * @return DescribeDataBasesResponse

@@ -354,7 +354,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private ZoneDetail [] MultiZoneInfo;
 
     /**
-    * 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+    * 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployMode")
@@ -633,7 +633,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Float ProcessPercent;
 
     /**
-    * Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+    * Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaAlteringPublicAccess")
@@ -655,6 +655,22 @@ RENEW_FLAG_DEFAULT：不自动续费
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
+
+    /**
+    * kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KibanaPrivateVip")
+    @Expose
+    private String KibanaPrivateVip;
+
+    /**
+    * 自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomKibanaPrivateUrl")
+    @Expose
+    private String CustomKibanaPrivateUrl;
 
     /**
      * Get 实例ID 
@@ -1437,9 +1453,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+     * Get 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+     * @return DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeployMode() {
@@ -1447,9 +1463,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+     * Set 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+     * @param DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployMode(Long DeployMode) {
@@ -2133,9 +2149,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * Get Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaAlteringPublicAccess Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * @return KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaAlteringPublicAccess() {
@@ -2143,9 +2159,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * Set Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaAlteringPublicAccess Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
@@ -2190,6 +2206,46 @@ RENEW_FLAG_DEFAULT：不自动续费
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
+    }
+
+    /**
+     * Get kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KibanaPrivateVip kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKibanaPrivateVip() {
+        return this.KibanaPrivateVip;
+    }
+
+    /**
+     * Set kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaPrivateVip kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKibanaPrivateVip(String KibanaPrivateVip) {
+        this.KibanaPrivateVip = KibanaPrivateVip;
+    }
+
+    /**
+     * Get 自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomKibanaPrivateUrl 自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomKibanaPrivateUrl() {
+        return this.CustomKibanaPrivateUrl;
+    }
+
+    /**
+     * Set 自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomKibanaPrivateUrl 自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomKibanaPrivateUrl(String CustomKibanaPrivateUrl) {
+        this.CustomKibanaPrivateUrl = CustomKibanaPrivateUrl;
     }
 
     public InstanceInfo() {
@@ -2467,6 +2523,12 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.KibanaPrivateVip != null) {
+            this.KibanaPrivateVip = new String(source.KibanaPrivateVip);
+        }
+        if (source.CustomKibanaPrivateUrl != null) {
+            this.CustomKibanaPrivateUrl = new String(source.CustomKibanaPrivateUrl);
+        }
     }
 
 
@@ -2557,6 +2619,8 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
         this.setParamSimple(map, prefix + "HasKernelUpgrade", this.HasKernelUpgrade);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "KibanaPrivateVip", this.KibanaPrivateVip);
+        this.setParamSimple(map, prefix + "CustomKibanaPrivateUrl", this.CustomKibanaPrivateUrl);
 
     }
 }

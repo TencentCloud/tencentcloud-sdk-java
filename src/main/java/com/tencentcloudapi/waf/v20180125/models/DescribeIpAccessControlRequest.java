@@ -73,14 +73,14 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     private Long CtsMax;
 
     /**
-    * 分页开始条数
+    * 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
     */
     @SerializedName("OffSet")
     @Expose
     private Long OffSet;
 
     /**
-    * 每页的条数
+    * 每页返回的数量
     */
     @SerializedName("Limit")
     @Expose
@@ -249,32 +249,32 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页开始条数 
-     * @return OffSet 分页开始条数
+     * Get 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整 
+     * @return OffSet 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
      */
     public Long getOffSet() {
         return this.OffSet;
     }
 
     /**
-     * Set 分页开始条数
-     * @param OffSet 分页开始条数
+     * Set 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+     * @param OffSet 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
      */
     public void setOffSet(Long OffSet) {
         this.OffSet = OffSet;
     }
 
     /**
-     * Get 每页的条数 
-     * @return Limit 每页的条数
+     * Get 每页返回的数量 
+     * @return Limit 每页返回的数量
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页的条数
-     * @param Limit 每页的条数
+     * Set 每页返回的数量
+     * @param Limit 每页返回的数量
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

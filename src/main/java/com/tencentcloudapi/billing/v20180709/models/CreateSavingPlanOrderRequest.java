@@ -80,6 +80,13 @@ public class CreateSavingPlanOrderRequest extends AbstractModel {
     private String SpecifyEffectTime;
 
     /**
+    * 可重入ID
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
      * Get 地域编码 
      * @return RegionId 地域编码
      */
@@ -207,6 +214,22 @@ public class CreateSavingPlanOrderRequest extends AbstractModel {
         this.SpecifyEffectTime = SpecifyEffectTime;
     }
 
+    /**
+     * Get 可重入ID 
+     * @return ClientToken 可重入ID
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 可重入ID
+     * @param ClientToken 可重入ID
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
     public CreateSavingPlanOrderRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateSavingPlanOrderRequest extends AbstractModel {
         if (source.SpecifyEffectTime != null) {
             this.SpecifyEffectTime = new String(source.SpecifyEffectTime);
         }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateSavingPlanOrderRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CommodityCode", this.CommodityCode);
         this.setParamSimple(map, prefix + "PromiseUseAmount", this.PromiseUseAmount);
         this.setParamSimple(map, prefix + "SpecifyEffectTime", this.SpecifyEffectTime);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }

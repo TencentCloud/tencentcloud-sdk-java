@@ -108,6 +108,26 @@ public class CreateSignUrlsRequest extends AbstractModel {
     private String Mobile;
 
     /**
+    * 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+    */
+    @SerializedName("IdCardType")
+    @Expose
+    private String IdCardType;
+
+    /**
+    * 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+    */
+    @SerializedName("IdCardNumber")
+    @Expose
+    private String IdCardNumber;
+
+    /**
     * 第三方平台子客企业的企业的标识, 即OrganizationOpenId
 注: `GenerateType为"CHANNEL"时必填`
     */
@@ -407,6 +427,62 @@ public class CreateSignUrlsRequest extends AbstractModel {
     }
 
     /**
+     * Get 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul> 
+     * @return IdCardType 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     */
+    public String getIdCardType() {
+        return this.IdCardType;
+    }
+
+    /**
+     * Set 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     * @param IdCardType 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     */
+    public void setIdCardType(String IdCardType) {
+        this.IdCardType = IdCardType;
+    }
+
+    /**
+     * Get 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul> 
+     * @return IdCardNumber 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     */
+    public String getIdCardNumber() {
+        return this.IdCardNumber;
+    }
+
+    /**
+     * Set 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * @param IdCardNumber 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     */
+    public void setIdCardNumber(String IdCardNumber) {
+        this.IdCardNumber = IdCardNumber;
+    }
+
+    /**
      * Get 第三方平台子客企业的企业的标识, 即OrganizationOpenId
 注: `GenerateType为"CHANNEL"时必填` 
      * @return OrganizationOpenId 第三方平台子客企业的企业的标识, 即OrganizationOpenId
@@ -597,6 +673,12 @@ public class CreateSignUrlsRequest extends AbstractModel {
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
+        if (source.IdCardType != null) {
+            this.IdCardType = new String(source.IdCardType);
+        }
+        if (source.IdCardNumber != null) {
+            this.IdCardNumber = new String(source.IdCardNumber);
+        }
         if (source.OrganizationOpenId != null) {
             this.OrganizationOpenId = new String(source.OrganizationOpenId);
         }
@@ -639,6 +721,8 @@ public class CreateSignUrlsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
+        this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
         this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);

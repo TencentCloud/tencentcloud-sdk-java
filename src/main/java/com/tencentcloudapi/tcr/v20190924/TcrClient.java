@@ -94,7 +94,9 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *创建自定义账户
+     *接口未使用
+
+创建自定义账户
      * @param req CreateCustomAccountRequest
      * @return CreateCustomAccountResponse
      * @throws TencentCloudSDKException
@@ -336,7 +338,9 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *删除自定义账号
+     *接口未使用
+
+删除自定义账号
      * @param req DeleteCustomAccountRequest
      * @return DeleteCustomAccountResponse
      * @throws TencentCloudSDKException
@@ -613,7 +617,9 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *查询自定义账号
+     *接口未使用
+
+查询自定义账号
      * @param req DescribeCustomAccountsRequest
      * @return DescribeCustomAccountsResponse
      * @throws TencentCloudSDKException
@@ -1108,7 +1114,9 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *更新自定义账户
+     *接口未使用
+
+更新自定义账户
      * @param req ModifyCustomAccountRequest
      * @return ModifyCustomAccountResponse
      * @throws TencentCloudSDKException

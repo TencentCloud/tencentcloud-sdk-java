@@ -40,6 +40,14 @@ public class SystemDisk extends AbstractModel {
     private Long DiskSize;
 
     /**
+    * 系统盘分区盘符
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskName")
+    @Expose
+    private String DiskName;
+
+    /**
      * Get 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskType 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。	
@@ -79,6 +87,26 @@ public class SystemDisk extends AbstractModel {
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get 系统盘分区盘符
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskName 系统盘分区盘符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiskName() {
+        return this.DiskName;
+    }
+
+    /**
+     * Set 系统盘分区盘符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskName 系统盘分区盘符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskName(String DiskName) {
+        this.DiskName = DiskName;
+    }
+
     public SystemDisk() {
     }
 
@@ -93,6 +121,9 @@ public class SystemDisk extends AbstractModel {
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.DiskName != null) {
+            this.DiskName = new String(source.DiskName);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class SystemDisk extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DiskName", this.DiskName);
 
     }
 }

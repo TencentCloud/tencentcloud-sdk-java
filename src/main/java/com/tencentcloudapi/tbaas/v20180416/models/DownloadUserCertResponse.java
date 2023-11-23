@@ -38,6 +38,13 @@ public class DownloadUserCertResponse extends AbstractModel {
     private String CertCtx;
 
     /**
+    * 证书内容
+    */
+    @SerializedName("Cert")
+    @Expose
+    private String Cert;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -63,7 +70,9 @@ public class DownloadUserCertResponse extends AbstractModel {
     /**
      * Get 证书内容 
      * @return CertCtx 证书内容
+     * @deprecated
      */
+    @Deprecated
     public String getCertCtx() {
         return this.CertCtx;
     }
@@ -71,9 +80,27 @@ public class DownloadUserCertResponse extends AbstractModel {
     /**
      * Set 证书内容
      * @param CertCtx 证书内容
+     * @deprecated
      */
+    @Deprecated
     public void setCertCtx(String CertCtx) {
         this.CertCtx = CertCtx;
+    }
+
+    /**
+     * Get 证书内容 
+     * @return Cert 证书内容
+     */
+    public String getCert() {
+        return this.Cert;
+    }
+
+    /**
+     * Set 证书内容
+     * @param Cert 证书内容
+     */
+    public void setCert(String Cert) {
+        this.Cert = Cert;
     }
 
     /**
@@ -106,6 +133,9 @@ public class DownloadUserCertResponse extends AbstractModel {
         if (source.CertCtx != null) {
             this.CertCtx = new String(source.CertCtx);
         }
+        if (source.Cert != null) {
+            this.Cert = new String(source.Cert);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +148,7 @@ public class DownloadUserCertResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertName", this.CertName);
         this.setParamSimple(map, prefix + "CertCtx", this.CertCtx);
+        this.setParamSimple(map, prefix + "Cert", this.Cert);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

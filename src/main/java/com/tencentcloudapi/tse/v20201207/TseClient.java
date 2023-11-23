@@ -39,6 +39,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *关闭 WAF 防护
+     * @param req CloseWafProtectionRequest
+     * @return CloseWafProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseWafProtectionResponse CloseWafProtection(CloseWafProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseWafProtection", CloseWafProtectionResponse.class);
+    }
+
+    /**
      *创建云原生API网关实例
      * @param req CreateCloudNativeAPIGatewayRequest
      * @return CreateCloudNativeAPIGatewayResponse
@@ -138,6 +149,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *新建 WAF 防护域名
+     * @param req CreateWafDomainsRequest
+     * @return CreateWafDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWafDomainsResponse CreateWafDomains(CreateWafDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWafDomains", CreateWafDomainsResponse.class);
+    }
+
+    /**
      *删除云原生API网关实例
      * @param req DeleteCloudNativeAPIGatewayRequest
      * @return DeleteCloudNativeAPIGatewayResponse
@@ -234,6 +256,17 @@ public class TseClient extends AbstractClient{
     public DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroup(DeleteNativeGatewayServerGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteNativeGatewayServerGroup", DeleteNativeGatewayServerGroupResponse.class);
+    }
+
+    /**
+     *删除 WAF 防护域名
+     * @param req DeleteWafDomainsRequest
+     * @return DeleteWafDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWafDomainsResponse DeleteWafDomains(DeleteWafDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWafDomains", DeleteWafDomainsResponse.class);
     }
 
     /**
@@ -457,6 +490,28 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *获取 WAF 防护域名
+     * @param req DescribeWafDomainsRequest
+     * @return DescribeWafDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWafDomainsResponse DescribeWafDomains(DescribeWafDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWafDomains", DescribeWafDomainsResponse.class);
+    }
+
+    /**
+     *获取 WAF 防护状态
+     * @param req DescribeWafProtectionRequest
+     * @return DescribeWafProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWafProtectionResponse DescribeWafProtection(DescribeWafProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWafProtection", DescribeWafProtectionResponse.class);
+    }
+
+    /**
      *查询Zookeeper类型注册引擎实例副本信息
      * @param req DescribeZookeeperReplicasRequest
      * @return DescribeZookeeperReplicasResponse
@@ -575,6 +630,17 @@ public class TseClient extends AbstractClient{
     public ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(ModifyUpstreamNodeStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUpstreamNodeStatus", ModifyUpstreamNodeStatusResponse.class);
+    }
+
+    /**
+     *开启 WAF 防护
+     * @param req OpenWafProtectionRequest
+     * @return OpenWafProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenWafProtectionResponse OpenWafProtection(OpenWafProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenWafProtection", OpenWafProtectionResponse.class);
     }
 
     /**

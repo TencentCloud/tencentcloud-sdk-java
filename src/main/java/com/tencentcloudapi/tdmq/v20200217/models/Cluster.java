@@ -230,6 +230,22 @@ public class Cluster extends AbstractModel {
     private Long PayMode;
 
     /**
+    * 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
+    * 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
      * Get 集群Id。 
      * @return ClusterId 集群Id。
      */
@@ -729,6 +745,46 @@ public class Cluster extends AbstractModel {
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get 项目ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 项目名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectName 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectName 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
     public Cluster() {
     }
 
@@ -821,6 +877,12 @@ public class Cluster extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
     }
 
 
@@ -855,6 +917,8 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
 
     }
 }

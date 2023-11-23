@@ -67,11 +67,11 @@ public class FillApproverInfo extends AbstractModel {
     private String OrganizationOpenId;
 
     /**
-    * 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
+    * 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
     */
     @SerializedName("NotChannelOrganization")
     @Expose
-    private String NotChannelOrganization;
+    private Boolean NotChannelOrganization;
 
     /**
      * Get 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
@@ -174,18 +174,18 @@ public class FillApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传 
-     * @return NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
+     * Get 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传 
+     * @return NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
      */
-    public String getNotChannelOrganization() {
+    public Boolean getNotChannelOrganization() {
         return this.NotChannelOrganization;
     }
 
     /**
-     * Set 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
-     * @param NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
+     * Set 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
+     * @param NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
      */
-    public void setNotChannelOrganization(String NotChannelOrganization) {
+    public void setNotChannelOrganization(Boolean NotChannelOrganization) {
         this.NotChannelOrganization = NotChannelOrganization;
     }
 
@@ -216,7 +216,7 @@ public class FillApproverInfo extends AbstractModel {
             this.OrganizationOpenId = new String(source.OrganizationOpenId);
         }
         if (source.NotChannelOrganization != null) {
-            this.NotChannelOrganization = new String(source.NotChannelOrganization);
+            this.NotChannelOrganization = new Boolean(source.NotChannelOrganization);
         }
     }
 

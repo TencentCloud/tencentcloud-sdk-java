@@ -357,6 +357,14 @@ public class InstanceInfo extends AbstractModel {
     private String DiskType;
 
     /**
+    * 当前扩容的CPU核心数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpandCpu")
+    @Expose
+    private Long ExpandCpu;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -1136,6 +1144,26 @@ public class InstanceInfo extends AbstractModel {
         this.DiskType = DiskType;
     }
 
+    /**
+     * Get 当前扩容的CPU核心数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpandCpu 当前扩容的CPU核心数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExpandCpu() {
+        return this.ExpandCpu;
+    }
+
+    /**
+     * Set 当前扩容的CPU核心数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpandCpu 当前扩容的CPU核心数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpandCpu(Long ExpandCpu) {
+        this.ExpandCpu = ExpandCpu;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1291,6 +1319,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
+        if (source.ExpandCpu != null) {
+            this.ExpandCpu = new Long(source.ExpandCpu);
+        }
     }
 
 
@@ -1344,6 +1375,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
 
     }
 }

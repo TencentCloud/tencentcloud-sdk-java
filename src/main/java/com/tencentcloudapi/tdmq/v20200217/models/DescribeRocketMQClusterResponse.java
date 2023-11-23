@@ -38,7 +38,7 @@ public class DescribeRocketMQClusterResponse extends AbstractModel {
     private RocketMQClusterConfig ClusterConfig;
 
     /**
-    * 集群最近使用量，即将废弃，请使用云监控获取相关数据。
+    * 集群最近使用量，即将废弃，请使用腾讯云可观测平台获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterStats")
@@ -85,9 +85,9 @@ public class DescribeRocketMQClusterResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群最近使用量，即将废弃，请使用云监控获取相关数据。
+     * Get 集群最近使用量，即将废弃，请使用腾讯云可观测平台获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterStats 集群最近使用量，即将废弃，请使用云监控获取相关数据。
+     * @return ClusterStats 集群最近使用量，即将废弃，请使用腾讯云可观测平台获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RocketMQClusterRecentStats getClusterStats() {
@@ -95,9 +95,9 @@ public class DescribeRocketMQClusterResponse extends AbstractModel {
     }
 
     /**
-     * Set 集群最近使用量，即将废弃，请使用云监控获取相关数据。
+     * Set 集群最近使用量，即将废弃，请使用腾讯云可观测平台获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterStats 集群最近使用量，即将废弃，请使用云监控获取相关数据。
+     * @param ClusterStats 集群最近使用量，即将废弃，请使用腾讯云可观测平台获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterStats(RocketMQClusterRecentStats ClusterStats) {

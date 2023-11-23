@@ -38,7 +38,7 @@ public class DownloadL4LogsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 站点集合，此参数必填，不填默认查询为空。
+    * 站点 ID 集合，此参数必填。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -98,16 +98,16 @@ public class DownloadL4LogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 站点集合，此参数必填，不填默认查询为空。 
-     * @return ZoneIds 站点集合，此参数必填，不填默认查询为空。
+     * Get 站点 ID 集合，此参数必填。 
+     * @return ZoneIds 站点 ID 集合，此参数必填。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合，此参数必填，不填默认查询为空。
-     * @param ZoneIds 站点集合，此参数必填，不填默认查询为空。
+     * Set 站点 ID 集合，此参数必填。
+     * @param ZoneIds 站点 ID 集合，此参数必填。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

@@ -71,6 +71,14 @@ public class DescribeIPAMDResponse extends AbstractModel {
     private String [] SubnetIds;
 
     /**
+    * 固定ip回收时间，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClaimExpiredDuration")
+    @Expose
+    private String ClaimExpiredDuration;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -194,6 +202,26 @@ public class DescribeIPAMDResponse extends AbstractModel {
     }
 
     /**
+     * Get 固定ip回收时间，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClaimExpiredDuration 固定ip回收时间，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClaimExpiredDuration() {
+        return this.ClaimExpiredDuration;
+    }
+
+    /**
+     * Set 固定ip回收时间，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClaimExpiredDuration 固定ip回收时间，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClaimExpiredDuration(String ClaimExpiredDuration) {
+        this.ClaimExpiredDuration = ClaimExpiredDuration;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -238,6 +266,9 @@ public class DescribeIPAMDResponse extends AbstractModel {
                 this.SubnetIds[i] = new String(source.SubnetIds[i]);
             }
         }
+        if (source.ClaimExpiredDuration != null) {
+            this.ClaimExpiredDuration = new String(source.ClaimExpiredDuration);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -254,6 +285,7 @@ public class DescribeIPAMDResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Phase", this.Phase);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
+        this.setParamSimple(map, prefix + "ClaimExpiredDuration", this.ClaimExpiredDuration);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -81,9 +81,9 @@ public class CreateProClusterRequest extends AbstractModel {
     /**
     * vpc网络标签
     */
-    @SerializedName("Vpcs")
+    @SerializedName("Vpc")
     @Expose
-    private VpcInfo Vpcs;
+    private VpcInfo Vpc;
 
     /**
     * 集群的标签列表(已废弃)
@@ -230,18 +230,18 @@ public class CreateProClusterRequest extends AbstractModel {
 
     /**
      * Get vpc网络标签 
-     * @return Vpcs vpc网络标签
+     * @return Vpc vpc网络标签
      */
-    public VpcInfo getVpcs() {
-        return this.Vpcs;
+    public VpcInfo getVpc() {
+        return this.Vpc;
     }
 
     /**
      * Set vpc网络标签
-     * @param Vpcs vpc网络标签
+     * @param Vpc vpc网络标签
      */
-    public void setVpcs(VpcInfo Vpcs) {
-        this.Vpcs = Vpcs;
+    public void setVpc(VpcInfo Vpc) {
+        this.Vpc = Vpc;
     }
 
     /**
@@ -289,8 +289,8 @@ public class CreateProClusterRequest extends AbstractModel {
         if (source.AutoVoucher != null) {
             this.AutoVoucher = new Long(source.AutoVoucher);
         }
-        if (source.Vpcs != null) {
-            this.Vpcs = new VpcInfo(source.Vpcs);
+        if (source.Vpc != null) {
+            this.Vpc = new VpcInfo(source.Vpc);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -312,7 +312,7 @@ public class CreateProClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
-        this.setParamObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamObj(map, prefix + "Vpc.", this.Vpc);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

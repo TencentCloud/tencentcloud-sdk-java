@@ -60,6 +60,7 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 花括号 {} 表示由 A、B、C、D 4 个水印组成的大周期，可以看出每个大周期持续 20 秒。
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
 此配置项即用来描述单个水印的周期配置。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleConfig")
     @Expose
@@ -167,13 +168,15 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 例如，设置 A、B、C、D 4 个水印分别位于视频的左上角、右上角、右下角、左下角处，视频开始时，{ A 显示 5 秒 -> B 显示 5 秒 -> C 显示 5 秒 -> D 显示 5 秒 } -> A 显示 5 秒 -> B 显示 5 秒 -> ...，任何时刻只显示一处水印。
 花括号 {} 表示由 A、B、C、D 4 个水印组成的大周期，可以看出每个大周期持续 20 秒。
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
-此配置项即用来描述单个水印的周期配置。 
+此配置项即用来描述单个水印的周期配置。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CycleConfig 水印周期配置，用于配置水印周期性地显示与隐藏。
 主要使用场景是：为了视频防遮标，在视频多个地方设置水印，这些水印按固定顺序周期性地显示与隐藏。
 例如，设置 A、B、C、D 4 个水印分别位于视频的左上角、右上角、右下角、左下角处，视频开始时，{ A 显示 5 秒 -> B 显示 5 秒 -> C 显示 5 秒 -> D 显示 5 秒 } -> A 显示 5 秒 -> B 显示 5 秒 -> ...，任何时刻只显示一处水印。
 花括号 {} 表示由 A、B、C、D 4 个水印组成的大周期，可以看出每个大周期持续 20 秒。
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
 此配置项即用来描述单个水印的周期配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public WatermarkCycleConfigForUpdate getCycleConfig() {
         return this.CycleConfig;
@@ -186,12 +189,14 @@ public class SvgWatermarkInputForUpdate extends AbstractModel {
 花括号 {} 表示由 A、B、C、D 4 个水印组成的大周期，可以看出每个大周期持续 20 秒。
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
 此配置项即用来描述单个水印的周期配置。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CycleConfig 水印周期配置，用于配置水印周期性地显示与隐藏。
 主要使用场景是：为了视频防遮标，在视频多个地方设置水印，这些水印按固定顺序周期性地显示与隐藏。
 例如，设置 A、B、C、D 4 个水印分别位于视频的左上角、右上角、右下角、左下角处，视频开始时，{ A 显示 5 秒 -> B 显示 5 秒 -> C 显示 5 秒 -> D 显示 5 秒 } -> A 显示 5 秒 -> B 显示 5 秒 -> ...，任何时刻只显示一处水印。
 花括号 {} 表示由 A、B、C、D 4 个水印组成的大周期，可以看出每个大周期持续 20 秒。
 可以看出，A、B、C、D 都是周期性地显示 5 秒、隐藏 15 秒，且四者有固定的显示顺序。
 此配置项即用来描述单个水印的周期配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleConfig(WatermarkCycleConfigForUpdate CycleConfig) {
         this.CycleConfig = CycleConfig;

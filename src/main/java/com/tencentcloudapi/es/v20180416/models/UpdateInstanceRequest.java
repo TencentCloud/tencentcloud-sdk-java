@@ -266,6 +266,20 @@ CLOSE 关闭
     private String KibanaAlteringPublicAccess;
 
     /**
+    * kibana内网自定义域名
+    */
+    @SerializedName("KibanaPrivateDomain")
+    @Expose
+    private String KibanaPrivateDomain;
+
+    /**
+    * cerebro内网自定义域名
+    */
+    @SerializedName("CerebroPrivateDomain")
+    @Expose
+    private String CerebroPrivateDomain;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -849,6 +863,38 @@ CLOSE 关闭
         this.KibanaAlteringPublicAccess = KibanaAlteringPublicAccess;
     }
 
+    /**
+     * Get kibana内网自定义域名 
+     * @return KibanaPrivateDomain kibana内网自定义域名
+     */
+    public String getKibanaPrivateDomain() {
+        return this.KibanaPrivateDomain;
+    }
+
+    /**
+     * Set kibana内网自定义域名
+     * @param KibanaPrivateDomain kibana内网自定义域名
+     */
+    public void setKibanaPrivateDomain(String KibanaPrivateDomain) {
+        this.KibanaPrivateDomain = KibanaPrivateDomain;
+    }
+
+    /**
+     * Get cerebro内网自定义域名 
+     * @return CerebroPrivateDomain cerebro内网自定义域名
+     */
+    public String getCerebroPrivateDomain() {
+        return this.CerebroPrivateDomain;
+    }
+
+    /**
+     * Set cerebro内网自定义域名
+     * @param CerebroPrivateDomain cerebro内网自定义域名
+     */
+    public void setCerebroPrivateDomain(String CerebroPrivateDomain) {
+        this.CerebroPrivateDomain = CerebroPrivateDomain;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -959,6 +1005,12 @@ CLOSE 关闭
         if (source.KibanaAlteringPublicAccess != null) {
             this.KibanaAlteringPublicAccess = new String(source.KibanaAlteringPublicAccess);
         }
+        if (source.KibanaPrivateDomain != null) {
+            this.KibanaPrivateDomain = new String(source.KibanaPrivateDomain);
+        }
+        if (source.CerebroPrivateDomain != null) {
+            this.CerebroPrivateDomain = new String(source.CerebroPrivateDomain);
+        }
     }
 
 
@@ -998,6 +1050,8 @@ CLOSE 关闭
         this.setParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
+        this.setParamSimple(map, prefix + "KibanaPrivateDomain", this.KibanaPrivateDomain);
+        this.setParamSimple(map, prefix + "CerebroPrivateDomain", this.CerebroPrivateDomain);
 
     }
 }

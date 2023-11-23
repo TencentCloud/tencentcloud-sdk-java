@@ -1,6 +1,6 @@
 package com.tencentcloudapi.organization.v20210331;
 public enum OrganizationErrorCode {
-    // 该帐号已被注册。
+    // 该账号已被注册。
      FAILEDOPERATION_ACCOUNTALREADYREGISTER("FailedOperation.AccountAlreadyRegister"),
      
     // 用户未实名。

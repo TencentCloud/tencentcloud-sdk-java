@@ -42,17 +42,14 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 <li>l4Flow_connections: 访问连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li>
+<li>l4Flow_outFlux: 访问出流量。</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；
-若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+    * 站点 ID 集合，此参数必填。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -132,14 +129,12 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 <li>l4Flow_connections: 访问连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li> 
+<li>l4Flow_outFlux: 访问出流量。</li> 
      * @return MetricNames 查询指标，取值有：
 <li>l4Flow_connections: 访问连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li>
+<li>l4Flow_outFlux: 访问出流量。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
@@ -150,38 +145,28 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 <li>l4Flow_connections: 访问连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li>
+<li>l4Flow_outFlux: 访问出流量。</li>
      * @param MetricNames 查询指标，取值有：
 <li>l4Flow_connections: 访问连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
 <li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li>
+<li>l4Flow_outFlux: 访问出流量。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；
-若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。 
-     * @return ZoneIds 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；
-若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+     * Get 站点 ID 集合，此参数必填。 
+     * @return ZoneIds 站点 ID 集合，此参数必填。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；
-若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
-     * @param ZoneIds 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；
-若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+     * Set 站点 ID 集合，此参数必填。
+     * @param ZoneIds 站点 ID 集合，此参数必填。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

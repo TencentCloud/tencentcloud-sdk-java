@@ -35,11 +35,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li>RebuildMedia：音画质重生任务；</li>
+<li>RebuildMedia：音画质重生任务（不推荐使用）；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
 <li>ExtractCopyRightWatermark：提取版权水印任务；</li>
-<li>QualityInspect：音画质检测任务。</li>
+<li>QualityInspect：音画质检测任务；</li>
+<li>QualityEnhance：音画质重生任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -237,6 +238,14 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private QualityInspectTask QualityInspectTask;
 
     /**
+    * 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QualityEnhanceTask")
+    @Expose
+    private QualityEnhanceTask QualityEnhanceTask;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -255,11 +264,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li>RebuildMedia：音画质重生任务；</li>
+<li>RebuildMedia：音画质重生任务（不推荐使用）；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
 <li>ExtractCopyRightWatermark：提取版权水印任务；</li>
-<li>QualityInspect：音画质检测任务。</li> 
+<li>QualityInspect：音画质检测任务；</li>
+<li>QualityEnhance：音画质重生任务。</li> 
      * @return TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -271,11 +281,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li>RebuildMedia：音画质重生任务；</li>
+<li>RebuildMedia：音画质重生任务（不推荐使用）；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
 <li>ExtractCopyRightWatermark：提取版权水印任务；</li>
-<li>QualityInspect：音画质检测任务。</li>
+<li>QualityInspect：音画质检测任务；</li>
+<li>QualityEnhance：音画质重生任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -293,11 +304,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li>RebuildMedia：音画质重生任务；</li>
+<li>RebuildMedia：音画质重生任务（不推荐使用）；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
 <li>ExtractCopyRightWatermark：提取版权水印任务；</li>
-<li>QualityInspect：音画质检测任务。</li>
+<li>QualityInspect：音画质检测任务；</li>
+<li>QualityEnhance：音画质重生任务。</li>
      * @param TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -309,11 +321,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li>RebuildMedia：音画质重生任务；</li>
+<li>RebuildMedia：音画质重生任务（不推荐使用）；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
 <li>ExtractCopyRightWatermark：提取版权水印任务；</li>
-<li>QualityInspect：音画质检测任务。</li>
+<li>QualityInspect：音画质检测任务；</li>
+<li>QualityEnhance：音画质重生任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -796,6 +809,26 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualityEnhanceTask 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public QualityEnhanceTask getQualityEnhanceTask() {
+        return this.QualityEnhanceTask;
+    }
+
+    /**
+     * Set 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityEnhanceTask 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualityEnhanceTask(QualityEnhanceTask QualityEnhanceTask) {
+        this.QualityEnhanceTask = QualityEnhanceTask;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -894,6 +927,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         if (source.QualityInspectTask != null) {
             this.QualityInspectTask = new QualityInspectTask(source.QualityInspectTask);
         }
+        if (source.QualityEnhanceTask != null) {
+            this.QualityEnhanceTask = new QualityEnhanceTask(source.QualityEnhanceTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -929,6 +965,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
         this.setParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
         this.setParamObj(map, prefix + "QualityInspectTask.", this.QualityInspectTask);
+        this.setParamObj(map, prefix + "QualityEnhanceTask.", this.QualityEnhanceTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

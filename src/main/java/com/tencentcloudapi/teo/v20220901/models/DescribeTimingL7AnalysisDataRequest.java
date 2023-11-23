@@ -39,10 +39,10 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 
     /**
     * 指标列表，取值有:
-<li>l7Flow_outFlux: Edgeone响应流量；</li>
-<li>l7Flow_inFlux: Edgeone请求流量；</li>
-<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
-<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
+<li>l7Flow_outFlux: Edgeone 响应流量；</li>
+<li>l7Flow_inFlux: Edgeone 请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone 响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone 请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
 <li>l7Flow_flux: 访问请求上行+下行流量；</li>
 <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
@@ -52,8 +52,7 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String [] MetricNames;
 
     /**
-    * 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+    * 站点 ID 集合, 此参数必填。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -138,18 +137,18 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 
     /**
      * Get 指标列表，取值有:
-<li>l7Flow_outFlux: Edgeone响应流量；</li>
-<li>l7Flow_inFlux: Edgeone请求流量；</li>
-<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
-<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
+<li>l7Flow_outFlux: Edgeone 响应流量；</li>
+<li>l7Flow_inFlux: Edgeone 请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone 响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone 请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
 <li>l7Flow_flux: 访问请求上行+下行流量；</li>
 <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li> 
      * @return MetricNames 指标列表，取值有:
-<li>l7Flow_outFlux: Edgeone响应流量；</li>
-<li>l7Flow_inFlux: Edgeone请求流量；</li>
-<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
-<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
+<li>l7Flow_outFlux: Edgeone 响应流量；</li>
+<li>l7Flow_inFlux: Edgeone 请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone 响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone 请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
 <li>l7Flow_flux: 访问请求上行+下行流量；</li>
 <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
@@ -160,18 +159,18 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
 
     /**
      * Set 指标列表，取值有:
-<li>l7Flow_outFlux: Edgeone响应流量；</li>
-<li>l7Flow_inFlux: Edgeone请求流量；</li>
-<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
-<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
+<li>l7Flow_outFlux: Edgeone 响应流量；</li>
+<li>l7Flow_inFlux: Edgeone 请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone 响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone 请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
 <li>l7Flow_flux: 访问请求上行+下行流量；</li>
 <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
      * @param MetricNames 指标列表，取值有:
-<li>l7Flow_outFlux: Edgeone响应流量；</li>
-<li>l7Flow_inFlux: Edgeone请求流量；</li>
-<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
-<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
+<li>l7Flow_outFlux: Edgeone 响应流量；</li>
+<li>l7Flow_inFlux: Edgeone 请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone 响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone 请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
 <li>l7Flow_flux: 访问请求上行+下行流量；</li>
 <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
@@ -181,20 +180,16 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。 
-     * @return ZoneIds 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+     * Get 站点 ID 集合, 此参数必填。 
+     * @return ZoneIds 站点 ID 集合, 此参数必填。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
-     * @param ZoneIds 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+     * Set 站点 ID 集合, 此参数必填。
+     * @param ZoneIds 站点 ID 集合, 此参数必填。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

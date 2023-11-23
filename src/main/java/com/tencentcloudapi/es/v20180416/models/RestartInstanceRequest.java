@@ -45,6 +45,13 @@ public class RestartInstanceRequest extends AbstractModel {
     private Long RestartMode;
 
     /**
+    * 重启时选择是否升级内核patch版本
+    */
+    @SerializedName("UpgradeKernel")
+    @Expose
+    private Boolean UpgradeKernel;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -92,6 +99,22 @@ public class RestartInstanceRequest extends AbstractModel {
         this.RestartMode = RestartMode;
     }
 
+    /**
+     * Get 重启时选择是否升级内核patch版本 
+     * @return UpgradeKernel 重启时选择是否升级内核patch版本
+     */
+    public Boolean getUpgradeKernel() {
+        return this.UpgradeKernel;
+    }
+
+    /**
+     * Set 重启时选择是否升级内核patch版本
+     * @param UpgradeKernel 重启时选择是否升级内核patch版本
+     */
+    public void setUpgradeKernel(Boolean UpgradeKernel) {
+        this.UpgradeKernel = UpgradeKernel;
+    }
+
     public RestartInstanceRequest() {
     }
 
@@ -109,6 +132,9 @@ public class RestartInstanceRequest extends AbstractModel {
         if (source.RestartMode != null) {
             this.RestartMode = new Long(source.RestartMode);
         }
+        if (source.UpgradeKernel != null) {
+            this.UpgradeKernel = new Boolean(source.UpgradeKernel);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class RestartInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         this.setParamSimple(map, prefix + "RestartMode", this.RestartMode);
+        this.setParamSimple(map, prefix + "UpgradeKernel", this.UpgradeKernel);
 
     }
 }

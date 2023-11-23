@@ -53,15 +53,14 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     private String [] MetricNames;
 
     /**
-    * 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+    * 站点 ID 集合，此参数必填。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 查询的域名集合，不填默认查询所有子域名。
+    * 查询的域名集合，此参数已经废弃。
     */
     @SerializedName("Domains")
     @Expose
@@ -92,6 +91,7 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     /**
     * 过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
     */
@@ -190,36 +190,32 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     }
 
     /**
-     * Get 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。 
-     * @return ZoneIds 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+     * Get 站点 ID 集合，此参数必填。 
+     * @return ZoneIds 站点 ID 集合，此参数必填。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
-     * @param ZoneIds 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+     * Set 站点 ID 集合，此参数必填。
+     * @param ZoneIds 站点 ID 集合，此参数必填。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 查询的域名集合，不填默认查询所有子域名。 
-     * @return Domains 查询的域名集合，不填默认查询所有子域名。
+     * Get 查询的域名集合，此参数已经废弃。 
+     * @return Domains 查询的域名集合，此参数已经废弃。
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 查询的域名集合，不填默认查询所有子域名。
-     * @param Domains 查询的域名集合，不填默认查询所有子域名。
+     * Set 查询的域名集合，此参数已经废弃。
+     * @param Domains 查询的域名集合，此参数已经废弃。
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
@@ -292,10 +288,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     /**
      * Get 过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li> 
      * @return Filters 过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
      */
@@ -306,10 +304,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     /**
      * Set 过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
      * @param Filters 过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
      */
