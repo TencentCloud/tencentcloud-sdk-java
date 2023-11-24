@@ -220,6 +220,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *您可以查询转推任务的状态。
+     * @param req DescribeStreamIngestRequest
+     * @return DescribeStreamIngestResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamIngestResponse DescribeStreamIngest(DescribeStreamIngestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamIngest", DescribeStreamIngestResponse.class);
+    }
+
+    /**
      *查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
 joinSuccessRate：加入频道成功率。
 joinSuccessIn5sRate：5s内加入频道成功率。
@@ -679,6 +690,17 @@ ver：可以忽略。
     }
 
     /**
+     *将一个在线媒体流推到TRTC房间。
+     * @param req StartStreamIngestRequest
+     * @return StartStreamIngestResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartStreamIngestResponse StartStreamIngest(StartStreamIngestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartStreamIngest", StartStreamIngestResponse.class);
+    }
+
+    /**
      *接口说明：结束云端混流
      * @param req StopMCUMixTranscodeRequest
      * @return StopMCUMixTranscodeResponse
@@ -709,6 +731,17 @@ ver：可以忽略。
     public StopPublishCdnStreamResponse StopPublishCdnStream(StopPublishCdnStreamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopPublishCdnStream", StopPublishCdnStreamResponse.class);
+    }
+
+    /**
+     *停止一个拉流转推任务。
+     * @param req StopStreamIngestRequest
+     * @return StopStreamIngestResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopStreamIngestResponse StopStreamIngest(StopStreamIngestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopStreamIngest", StopStreamIngestResponse.class);
     }
 
     /**

@@ -56,7 +56,7 @@ public class CreateSchemeUrlRequest extends AbstractModel {
 
     /**
     * 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
     */
@@ -230,11 +230,11 @@ public class CreateSchemeUrlRequest extends AbstractModel {
 
     /**
      * Get 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul> 
      * @return IdCardType 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
@@ -244,11 +244,11 @@ public class CreateSchemeUrlRequest extends AbstractModel {
 
     /**
      * Set 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param IdCardType 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */

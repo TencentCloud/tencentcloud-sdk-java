@@ -117,6 +117,13 @@ public class CreateAlarmRequest extends AbstractModel {
     private Boolean Status;
 
     /**
+    * 是否开启告警策略。默认值为true
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Boolean Enable;
+
+    /**
     * 用户自定义告警内容
     */
     @SerializedName("MessageTemplate")
@@ -173,6 +180,19 @@ public class CreateAlarmRequest extends AbstractModel {
     @SerializedName("MonitorObjectType")
     @Expose
     private Long MonitorObjectType;
+
+    /**
+    * 告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。
+    */
+    @SerializedName("Classifications")
+    @Expose
+    private AlarmClassification [] Classifications;
 
     /**
      * Get 告警策略名称 
@@ -427,6 +447,22 @@ public class CreateAlarmRequest extends AbstractModel {
     }
 
     /**
+     * Get 是否开启告警策略。默认值为true 
+     * @return Enable 是否开启告警策略。默认值为true
+     */
+    public Boolean getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set 是否开启告警策略。默认值为true
+     * @param Enable 是否开启告警策略。默认值为true
+     */
+    public void setEnable(Boolean Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
      * Get 用户自定义告警内容 
      * @return MessageTemplate 用户自定义告警内容
      */
@@ -574,6 +610,46 @@ public class CreateAlarmRequest extends AbstractModel {
         this.MonitorObjectType = MonitorObjectType;
     }
 
+    /**
+     * Get 告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。 
+     * @return Classifications 告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。
+     */
+    public AlarmClassification [] getClassifications() {
+        return this.Classifications;
+    }
+
+    /**
+     * Set 告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。
+     * @param Classifications 告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。
+     */
+    public void setClassifications(AlarmClassification [] Classifications) {
+        this.Classifications = Classifications;
+    }
+
     public CreateAlarmRequest() {
     }
 
@@ -621,6 +697,9 @@ public class CreateAlarmRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Boolean(source.Status);
         }
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
         if (source.MessageTemplate != null) {
             this.MessageTemplate = new String(source.MessageTemplate);
         }
@@ -651,6 +730,12 @@ public class CreateAlarmRequest extends AbstractModel {
         if (source.MonitorObjectType != null) {
             this.MonitorObjectType = new Long(source.MonitorObjectType);
         }
+        if (source.Classifications != null) {
+            this.Classifications = new AlarmClassification[source.Classifications.length];
+            for (int i = 0; i < source.Classifications.length; i++) {
+                this.Classifications[i] = new AlarmClassification(source.Classifications[i]);
+            }
+        }
     }
 
 
@@ -668,6 +753,7 @@ public class CreateAlarmRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
         this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
         this.setParamObj(map, prefix + "CallBack.", this.CallBack);
         this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
@@ -675,6 +761,7 @@ public class CreateAlarmRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+        this.setParamArrayObj(map, prefix + "Classifications.", this.Classifications);
 
     }
 }

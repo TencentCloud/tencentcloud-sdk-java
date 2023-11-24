@@ -61,6 +61,14 @@ public class ProbeTask extends AbstractModel {
     private String [] Nodes;
 
     /**
+    * 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeIpType")
+    @Expose
+    private Long NodeIpType;
+
+    /**
     * 拨测间隔
     */
     @SerializedName("Interval")
@@ -256,6 +264,26 @@ public class ProbeTask extends AbstractModel {
      */
     public void setNodes(String [] Nodes) {
         this.Nodes = Nodes;
+    }
+
+    /**
+     * Get 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeIpType 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNodeIpType() {
+        return this.NodeIpType;
+    }
+
+    /**
+     * Set 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeIpType 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeIpType(Long NodeIpType) {
+        this.NodeIpType = NodeIpType;
     }
 
     /**
@@ -541,6 +569,9 @@ public class ProbeTask extends AbstractModel {
                 this.Nodes[i] = new String(source.Nodes[i]);
             }
         }
+        if (source.NodeIpType != null) {
+            this.NodeIpType = new Long(source.NodeIpType);
+        }
         if (source.Interval != null) {
             this.Interval = new Long(source.Interval);
         }
@@ -588,6 +619,7 @@ public class ProbeTask extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamArraySimple(map, prefix + "Nodes.", this.Nodes);
+        this.setParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamSimple(map, prefix + "Status", this.Status);

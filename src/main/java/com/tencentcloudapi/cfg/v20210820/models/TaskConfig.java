@@ -66,6 +66,13 @@ public class TaskConfig extends AbstractModel {
     private TagWithCreate [] Tags;
 
     /**
+    * 护栏处理方式，1--顺序回滚，2--演练暂停
+    */
+    @SerializedName("PolicyDealType")
+    @Expose
+    private Long PolicyDealType;
+
+    /**
      * Get 动作组配置，需要保证配置个数和经验中的动作组个数一致 
      * @return TaskGroupsConfig 动作组配置，需要保证配置个数和经验中的动作组个数一致
      */
@@ -161,6 +168,22 @@ public class TaskConfig extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 护栏处理方式，1--顺序回滚，2--演练暂停 
+     * @return PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
+     */
+    public Long getPolicyDealType() {
+        return this.PolicyDealType;
+    }
+
+    /**
+     * Set 护栏处理方式，1--顺序回滚，2--演练暂停
+     * @param PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
+     */
+    public void setPolicyDealType(Long PolicyDealType) {
+        this.PolicyDealType = PolicyDealType;
+    }
+
     public TaskConfig() {
     }
 
@@ -193,6 +216,9 @@ public class TaskConfig extends AbstractModel {
                 this.Tags[i] = new TagWithCreate(source.Tags[i]);
             }
         }
+        if (source.PolicyDealType != null) {
+            this.PolicyDealType = new Long(source.PolicyDealType);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class TaskConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskMode", this.TaskMode);
         this.setParamSimple(map, prefix + "TaskPauseDuration", this.TaskPauseDuration);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
 
     }
 }

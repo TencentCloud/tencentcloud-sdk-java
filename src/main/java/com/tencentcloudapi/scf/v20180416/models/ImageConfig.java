@@ -79,9 +79,9 @@ public class ImageConfig extends AbstractModel {
 
     /**
     * 镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImagePort")
@@ -222,14 +222,14 @@ public class ImageConfig extends AbstractModel {
 
     /**
      * Get 镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImagePort 镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getImagePort() {
@@ -238,14 +238,14 @@ public class ImageConfig extends AbstractModel {
 
     /**
      * Set 镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImagePort 镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImagePort(Long ImagePort) {

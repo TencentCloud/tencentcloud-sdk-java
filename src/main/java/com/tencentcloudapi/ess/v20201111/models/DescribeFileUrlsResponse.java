@@ -25,7 +25,7 @@ public class DescribeFileUrlsResponse extends AbstractModel {
 
     /**
     * 文件URL信息；
-链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
     */
     @SerializedName("FileUrls")
     @Expose
@@ -47,9 +47,9 @@ public class DescribeFileUrlsResponse extends AbstractModel {
 
     /**
      * Get 文件URL信息；
-链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。 
+链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。 
      * @return FileUrls 文件URL信息；
-链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
      */
     public FileUrl [] getFileUrls() {
         return this.FileUrls;
@@ -57,9 +57,9 @@ public class DescribeFileUrlsResponse extends AbstractModel {
 
     /**
      * Set 文件URL信息；
-链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
      * @param FileUrls 文件URL信息；
-链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
+链接不是永久链接,  过期时间受UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
      */
     public void setFileUrls(FileUrl [] FileUrls) {
         this.FileUrls = FileUrls;

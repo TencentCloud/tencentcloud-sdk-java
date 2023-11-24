@@ -32,7 +32,7 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
     * 合同流程ID，为32位字符串。
-此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。
+此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
     */
     @SerializedName("FlowId")
     @Expose
@@ -54,7 +54,7 @@ public class CreateDocumentRequest extends AbstractModel {
     private String [] FileNames;
 
     /**
-    * 电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。
+    * 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
     */
     @SerializedName("FormFields")
     @Expose
@@ -72,7 +72,7 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
     * 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
 注: `1.此参数在NeedPreview 为true时有效`
 `2.动态表格控件不支持H5链接方式预览`
@@ -114,9 +114,9 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
      * Get 合同流程ID，为32位字符串。
-此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。 
+此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。 
      * @return FlowId 合同流程ID，为32位字符串。
-此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。
+此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
      */
     public String getFlowId() {
         return this.FlowId;
@@ -124,9 +124,9 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
      * Set 合同流程ID，为32位字符串。
-此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。
+此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
      * @param FlowId 合同流程ID，为32位字符串。
-此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。
+此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
@@ -169,16 +169,16 @@ public class CreateDocumentRequest extends AbstractModel {
     }
 
     /**
-     * Get 电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。 
-     * @return FormFields 电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。
+     * Get 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。 
+     * @return FormFields 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
      */
     public FormField [] getFormFields() {
         return this.FormFields;
     }
 
     /**
-     * Set 电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。
-     * @param FormFields 电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。
+     * Set 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+     * @param FormFields 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
      */
     public void setFormFields(FormField [] FormFields) {
         this.FormFields = FormFields;
@@ -214,12 +214,12 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
      * Get 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
 注: `1.此参数在NeedPreview 为true时有效`
 `2.动态表格控件不支持H5链接方式预览` 
      * @return PreviewType 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
 注: `1.此参数在NeedPreview 为true时有效`
 `2.动态表格控件不支持H5链接方式预览`
@@ -230,12 +230,12 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
      * Set 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
 注: `1.此参数在NeedPreview 为true时有效`
 `2.动态表格控件不支持H5链接方式预览`
      * @param PreviewType 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子。</li></ul>
 注: `1.此参数在NeedPreview 为true时有效`
 `2.动态表格控件不支持H5链接方式预览`

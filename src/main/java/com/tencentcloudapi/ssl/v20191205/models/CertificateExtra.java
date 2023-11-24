@@ -72,6 +72,14 @@ public class CertificateExtra extends AbstractModel {
     private Long SMCert;
 
     /**
+    * 公司类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CompanyType")
+    @Expose
+    private Long CompanyType;
+
+    /**
      * Get 证书可配置域名数量。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DomainNumber 证书可配置域名数量。
@@ -191,6 +199,26 @@ public class CertificateExtra extends AbstractModel {
         this.SMCert = SMCert;
     }
 
+    /**
+     * Get 公司类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CompanyType 公司类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCompanyType() {
+        return this.CompanyType;
+    }
+
+    /**
+     * Set 公司类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompanyType 公司类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompanyType(Long CompanyType) {
+        this.CompanyType = CompanyType;
+    }
+
     public CertificateExtra() {
     }
 
@@ -217,6 +245,9 @@ public class CertificateExtra extends AbstractModel {
         if (source.SMCert != null) {
             this.SMCert = new Long(source.SMCert);
         }
+        if (source.CompanyType != null) {
+            this.CompanyType = new Long(source.CompanyType);
+        }
     }
 
 
@@ -230,6 +261,7 @@ public class CertificateExtra extends AbstractModel {
         this.setParamSimple(map, prefix + "ReplacedFor", this.ReplacedFor);
         this.setParamSimple(map, prefix + "RenewOrder", this.RenewOrder);
         this.setParamSimple(map, prefix + "SMCert", this.SMCert);
+        this.setParamSimple(map, prefix + "CompanyType", this.CompanyType);
 
     }
 }

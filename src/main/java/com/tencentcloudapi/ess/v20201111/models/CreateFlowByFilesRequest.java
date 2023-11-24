@@ -52,7 +52,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private ApproverInfo [] Approvers;
 
     /**
-    * 本合同流程需包含的PDF文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取PDF文件资源编号。
+    * 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
     */
@@ -115,7 +115,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 
     /**
     * 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
 
@@ -187,7 +187,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     /**
     * 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
 
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
     */
     @SerializedName("UserData")
     @Expose
@@ -305,10 +305,10 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 本合同流程需包含的PDF文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取PDF文件资源编号。
+     * Get 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。` 
-     * @return FileIds 本合同流程需包含的PDF文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取PDF文件资源编号。
+     * @return FileIds 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
      */
@@ -317,10 +317,10 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
-     * Set 本合同流程需包含的PDF文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取PDF文件资源编号。
+     * Set 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
-     * @param FileIds 本合同流程需包含的PDF文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取PDF文件资源编号。
+     * @param FileIds 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
      */
@@ -470,12 +470,12 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 
     /**
      * Get 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
  
      * @return PreviewType 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
 
@@ -486,12 +486,12 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 
     /**
      * Set 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
 
      * @param PreviewType 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
 
@@ -683,10 +683,10 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     /**
      * Get 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
 
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。 
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。 
      * @return UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
 
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
      */
     public String getUserData() {
         return this.UserData;
@@ -695,10 +695,10 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     /**
      * Set 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
 
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
      * @param UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
 
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;

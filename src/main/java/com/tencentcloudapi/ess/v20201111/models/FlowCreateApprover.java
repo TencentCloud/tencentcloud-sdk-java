@@ -175,7 +175,7 @@ public class FlowCreateApprover extends AbstractModel {
     private RegisterInfo RegisterInfo;
 
     /**
-    * 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
+    * 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
     */
     @SerializedName("ApproverOption")
     @Expose
@@ -699,16 +699,16 @@ public class FlowCreateApprover extends AbstractModel {
     }
 
     /**
-     * Get 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。 
-     * @return ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
+     * Get 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。 
+     * @return ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
      */
     public ApproverOption getApproverOption() {
         return this.ApproverOption;
     }
 
     /**
-     * Set 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
-     * @param ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
+     * Set 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
+     * @param ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
      */
     public void setApproverOption(ApproverOption ApproverOption) {
         this.ApproverOption = ApproverOption;

@@ -47,6 +47,13 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
     private Long AutoRepurchaseRenewSwitch;
 
     /**
+    * 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+    */
+    @SerializedName("RepurchaseRenewSwitch")
+    @Expose
+    private Long RepurchaseRenewSwitch;
+
+    /**
      * Get 设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li> 
@@ -102,6 +109,22 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         this.AutoRepurchaseRenewSwitch = AutoRepurchaseRenewSwitch;
     }
 
+    /**
+     * Get 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启 
+     * @return RepurchaseRenewSwitch 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+     */
+    public Long getRepurchaseRenewSwitch() {
+        return this.RepurchaseRenewSwitch;
+    }
+
+    /**
+     * Set 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+     * @param RepurchaseRenewSwitch 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+     */
+    public void setRepurchaseRenewSwitch(Long RepurchaseRenewSwitch) {
+        this.RepurchaseRenewSwitch = RepurchaseRenewSwitch;
+    }
+
     public ModifyAutoOpenProVersionConfigRequest() {
     }
 
@@ -119,6 +142,9 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         if (source.AutoRepurchaseRenewSwitch != null) {
             this.AutoRepurchaseRenewSwitch = new Long(source.AutoRepurchaseRenewSwitch);
         }
+        if (source.RepurchaseRenewSwitch != null) {
+            this.RepurchaseRenewSwitch = new Long(source.RepurchaseRenewSwitch);
+        }
     }
 
 
@@ -129,6 +155,7 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
         this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
+        this.setParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
 
     }
 }

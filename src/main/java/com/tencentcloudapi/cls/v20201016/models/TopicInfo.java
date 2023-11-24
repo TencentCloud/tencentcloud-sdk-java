@@ -146,6 +146,26 @@ public class TopicInfo extends AbstractModel {
     private Long HotPeriod;
 
     /**
+    * 主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BizType")
+    @Expose
+    private Long BizType;
+
+    /**
+    * 免鉴权开关。
+- false: 关闭
+- true: 开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsWebTracking")
+    @Expose
+    private Boolean IsWebTracking;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -441,6 +461,62 @@ public class TopicInfo extends AbstractModel {
         this.HotPeriod = HotPeriod;
     }
 
+    /**
+     * Get 主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BizType 主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set 主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BizType 主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
+    }
+
+    /**
+     * Get 免鉴权开关。
+- false: 关闭
+- true: 开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsWebTracking 免鉴权开关。
+- false: 关闭
+- true: 开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsWebTracking() {
+        return this.IsWebTracking;
+    }
+
+    /**
+     * Set 免鉴权开关。
+- false: 关闭
+- true: 开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsWebTracking 免鉴权开关。
+- false: 关闭
+- true: 开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsWebTracking(Boolean IsWebTracking) {
+        this.IsWebTracking = IsWebTracking;
+    }
+
     public TopicInfo() {
     }
 
@@ -500,6 +576,12 @@ public class TopicInfo extends AbstractModel {
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
+        }
+        if (source.IsWebTracking != null) {
+            this.IsWebTracking = new Boolean(source.IsWebTracking);
+        }
     }
 
 
@@ -523,6 +605,8 @@ public class TopicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
+        this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
 
     }
 }

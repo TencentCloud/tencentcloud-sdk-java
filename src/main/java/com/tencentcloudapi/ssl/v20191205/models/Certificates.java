@@ -226,7 +226,7 @@ null = 用户上传证书（没有套餐类型），
     private Boolean IsVulnerability;
 
     /**
-    * 是否可重颁发证书。
+    * 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewAble")
@@ -352,6 +352,70 @@ null = 用户上传证书（没有套餐类型），
     @SerializedName("HostingRenewCertId")
     @Expose
     private String HostingRenewCertId;
+
+    /**
+    * 存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasRenewOrder")
+    @Expose
+    private String HasRenewOrder;
+
+    /**
+    * 重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplaceOriCertIsDelete")
+    @Expose
+    private Boolean ReplaceOriCertIsDelete;
+
+    /**
+    * 是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsExpiring")
+    @Expose
+    private Boolean IsExpiring;
+
+    /**
+    * DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DVAuthDeadline")
+    @Expose
+    private String DVAuthDeadline;
+
+    /**
+    * 域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValidationPassedTime")
+    @Expose
+    private String ValidationPassedTime;
+
+    /**
+    * 证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertSANs")
+    @Expose
+    private String [] CertSANs;
+
+    /**
+    * 域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AwaitingValidationMsg")
+    @Expose
+    private String AwaitingValidationMsg;
+
+    /**
+    * 是否允许下载
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowDownload")
+    @Expose
+    private Boolean AllowDownload;
 
     /**
      * Get 用户 UIN。
@@ -862,9 +926,9 @@ null = 用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 是否可重颁发证书。
+     * Get 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenewAble 是否可重颁发证书。
+     * @return RenewAble 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRenewAble() {
@@ -872,9 +936,9 @@ null = 用户上传证书（没有套餐类型），
     }
 
     /**
-     * Set 是否可重颁发证书。
+     * Set 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenewAble 是否可重颁发证书。
+     * @param RenewAble 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewAble(Boolean RenewAble) {
@@ -1181,6 +1245,166 @@ null = 用户上传证书（没有套餐类型），
         this.HostingRenewCertId = HostingRenewCertId;
     }
 
+    /**
+     * Get 存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasRenewOrder 存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHasRenewOrder() {
+        return this.HasRenewOrder;
+    }
+
+    /**
+     * Set 存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasRenewOrder 存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasRenewOrder(String HasRenewOrder) {
+        this.HasRenewOrder = HasRenewOrder;
+    }
+
+    /**
+     * Get 重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplaceOriCertIsDelete 重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getReplaceOriCertIsDelete() {
+        return this.ReplaceOriCertIsDelete;
+    }
+
+    /**
+     * Set 重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplaceOriCertIsDelete 重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplaceOriCertIsDelete(Boolean ReplaceOriCertIsDelete) {
+        this.ReplaceOriCertIsDelete = ReplaceOriCertIsDelete;
+    }
+
+    /**
+     * Get 是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsExpiring 是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsExpiring() {
+        return this.IsExpiring;
+    }
+
+    /**
+     * Set 是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsExpiring 是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsExpiring(Boolean IsExpiring) {
+        this.IsExpiring = IsExpiring;
+    }
+
+    /**
+     * Get DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DVAuthDeadline DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDVAuthDeadline() {
+        return this.DVAuthDeadline;
+    }
+
+    /**
+     * Set DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DVAuthDeadline DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDVAuthDeadline(String DVAuthDeadline) {
+        this.DVAuthDeadline = DVAuthDeadline;
+    }
+
+    /**
+     * Get 域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValidationPassedTime 域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getValidationPassedTime() {
+        return this.ValidationPassedTime;
+    }
+
+    /**
+     * Set 域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValidationPassedTime 域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValidationPassedTime(String ValidationPassedTime) {
+        this.ValidationPassedTime = ValidationPassedTime;
+    }
+
+    /**
+     * Get 证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertSANs 证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCertSANs() {
+        return this.CertSANs;
+    }
+
+    /**
+     * Set 证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertSANs 证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertSANs(String [] CertSANs) {
+        this.CertSANs = CertSANs;
+    }
+
+    /**
+     * Get 域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AwaitingValidationMsg 域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAwaitingValidationMsg() {
+        return this.AwaitingValidationMsg;
+    }
+
+    /**
+     * Set 域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AwaitingValidationMsg 域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAwaitingValidationMsg(String AwaitingValidationMsg) {
+        this.AwaitingValidationMsg = AwaitingValidationMsg;
+    }
+
+    /**
+     * Get 是否允许下载
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowDownload 是否允许下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllowDownload() {
+        return this.AllowDownload;
+    }
+
+    /**
+     * Set 是否允许下载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowDownload 是否允许下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowDownload(Boolean AllowDownload) {
+        this.AllowDownload = AllowDownload;
+    }
+
     public Certificates() {
     }
 
@@ -1330,6 +1554,33 @@ null = 用户上传证书（没有套餐类型），
         if (source.HostingRenewCertId != null) {
             this.HostingRenewCertId = new String(source.HostingRenewCertId);
         }
+        if (source.HasRenewOrder != null) {
+            this.HasRenewOrder = new String(source.HasRenewOrder);
+        }
+        if (source.ReplaceOriCertIsDelete != null) {
+            this.ReplaceOriCertIsDelete = new Boolean(source.ReplaceOriCertIsDelete);
+        }
+        if (source.IsExpiring != null) {
+            this.IsExpiring = new Boolean(source.IsExpiring);
+        }
+        if (source.DVAuthDeadline != null) {
+            this.DVAuthDeadline = new String(source.DVAuthDeadline);
+        }
+        if (source.ValidationPassedTime != null) {
+            this.ValidationPassedTime = new String(source.ValidationPassedTime);
+        }
+        if (source.CertSANs != null) {
+            this.CertSANs = new String[source.CertSANs.length];
+            for (int i = 0; i < source.CertSANs.length; i++) {
+                this.CertSANs[i] = new String(source.CertSANs[i]);
+            }
+        }
+        if (source.AwaitingValidationMsg != null) {
+            this.AwaitingValidationMsg = new String(source.AwaitingValidationMsg);
+        }
+        if (source.AllowDownload != null) {
+            this.AllowDownload = new Boolean(source.AllowDownload);
+        }
     }
 
 
@@ -1378,6 +1629,14 @@ null = 用户上传证书（没有套餐类型），
         this.setParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
         this.setParamSimple(map, prefix + "HostingCompleteTime", this.HostingCompleteTime);
         this.setParamSimple(map, prefix + "HostingRenewCertId", this.HostingRenewCertId);
+        this.setParamSimple(map, prefix + "HasRenewOrder", this.HasRenewOrder);
+        this.setParamSimple(map, prefix + "ReplaceOriCertIsDelete", this.ReplaceOriCertIsDelete);
+        this.setParamSimple(map, prefix + "IsExpiring", this.IsExpiring);
+        this.setParamSimple(map, prefix + "DVAuthDeadline", this.DVAuthDeadline);
+        this.setParamSimple(map, prefix + "ValidationPassedTime", this.ValidationPassedTime);
+        this.setParamArraySimple(map, prefix + "CertSANs.", this.CertSANs);
+        this.setParamSimple(map, prefix + "AwaitingValidationMsg", this.AwaitingValidationMsg);
+        this.setParamSimple(map, prefix + "AllowDownload", this.AllowDownload);
 
     }
 }

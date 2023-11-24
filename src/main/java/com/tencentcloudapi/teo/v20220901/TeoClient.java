@@ -129,6 +129,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *在版本管理模式下，用于创建指定配置组的新版本。版本管理功能内测中，当前仅白名单开放。
+     * @param req CreateConfigGroupVersionRequest
+     * @return CreateConfigGroupVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConfigGroupVersionResponse CreateConfigGroupVersion(CreateConfigGroupVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConfigGroupVersion", CreateConfigGroupVersionResponse.class);
+    }
+
+    /**
      *创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
      * @param req CreateOriginGroupRequest
      * @return CreateOriginGroupResponse
@@ -320,6 +331,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *在版本管理模式下，用于版本发布，可通过 EnvId 将版本发布至测试环境或生产环境。版本管理功能内测中，当前仅白名单开放。
+     * @param req DeployConfigGroupVersionRequest
+     * @return DeployConfigGroupVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployConfigGroupVersionResponse DeployConfigGroupVersion(DeployConfigGroupVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeployConfigGroupVersion", DeployConfigGroupVersionResponse.class);
+    }
+
+    /**
      *您可以通过本接口查看站点下的域名信息，包括加速域名、源站以及域名状态等信息。您可以查看站点下全部域名的信息，也可以指定过滤条件查询对应的域名信息。
      * @param req DescribeAccelerationDomainsRequest
      * @return DescribeAccelerationDomainsResponse
@@ -361,6 +383,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeAvailablePlansResponse DescribeAvailablePlans(DescribeAvailablePlansRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAvailablePlans", DescribeAvailablePlansResponse.class);
+    }
+
+    /**
+     *在版本管理模式下，用于获取版本的详细信息，包括版本 ID、描述、状态、创建时间、所属配置组信息以及版本配置文件的内容。版本管理功能内测中，当前仅白名单开放。
+     * @param req DescribeConfigGroupVersionDetailRequest
+     * @return DescribeConfigGroupVersionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigGroupVersionDetailResponse DescribeConfigGroupVersionDetail(DescribeConfigGroupVersionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigGroupVersionDetail", DescribeConfigGroupVersionDetailResponse.class);
+    }
+
+    /**
+     *在版本管理模式下，用于查询指定配置组的版本列表。版本管理功能内测中，当前仅白名单开放。
+     * @param req DescribeConfigGroupVersionsRequest
+     * @return DescribeConfigGroupVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigGroupVersionsResponse DescribeConfigGroupVersions(DescribeConfigGroupVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigGroupVersions", DescribeConfigGroupVersionsResponse.class);
     }
 
     /**
@@ -416,6 +460,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeDefaultCertificatesResponse DescribeDefaultCertificates(DescribeDefaultCertificatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDefaultCertificates", DescribeDefaultCertificatesResponse.class);
+    }
+
+    /**
+     *在版本管理模式下，用于查询生产/测试环境的版本发布历史。版本管理功能内测中，当前仅白名单开放。
+     * @param req DescribeDeployHistoryRequest
+     * @return DescribeDeployHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeployHistoryResponse DescribeDeployHistory(DescribeDeployHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeployHistory", DescribeDeployHistoryResponse.class);
+    }
+
+    /**
+     *在版本管理模式下，用于查询环境信息，可获取环境 ID、类型、当前生效版本等。版本管理功能内测中，当前仅白名单开放。
+     * @param req DescribeEnvironmentsRequest
+     * @return DescribeEnvironmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEnvironments", DescribeEnvironmentsResponse.class);
     }
 
     /**

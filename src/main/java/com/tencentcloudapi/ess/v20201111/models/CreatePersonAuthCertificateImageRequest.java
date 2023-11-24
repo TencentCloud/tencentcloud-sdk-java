@@ -41,8 +41,6 @@ public class CreatePersonAuthCertificateImageRequest extends AbstractModel {
     /**
     * 证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
     */
@@ -67,6 +65,16 @@ public class CreatePersonAuthCertificateImageRequest extends AbstractModel {
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
+
+    /**
+    * 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+    */
+    @SerializedName("SceneKey")
+    @Expose
+    private String SceneKey;
 
     /**
      * Get 执行本接口操作的员工信息。
@@ -107,14 +115,10 @@ public class CreatePersonAuthCertificateImageRequest extends AbstractModel {
     /**
      * Get 证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul> 
      * @return IdCardType 证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
@@ -125,14 +129,10 @@ public class CreatePersonAuthCertificateImageRequest extends AbstractModel {
     /**
      * Set 证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param IdCardType 证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
@@ -188,6 +188,34 @@ public class CreatePersonAuthCertificateImageRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN` 
+     * @return SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+     */
+    public String getSceneKey() {
+        return this.SceneKey;
+    }
+
+    /**
+     * Set 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+     * @param SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+     */
+    public void setSceneKey(String SceneKey) {
+        this.SceneKey = SceneKey;
+    }
+
     public CreatePersonAuthCertificateImageRequest() {
     }
 
@@ -211,6 +239,9 @@ public class CreatePersonAuthCertificateImageRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.SceneKey != null) {
+            this.SceneKey = new String(source.SceneKey);
+        }
     }
 
 
@@ -223,6 +254,7 @@ public class CreatePersonAuthCertificateImageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
 
     }
 }

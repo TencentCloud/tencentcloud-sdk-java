@@ -33,9 +33,7 @@ public class CancelUserAutoSignEnableUrlRequest extends AbstractModel {
 
     /**
     * 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
-
-注: `现在仅支持电子处方场景`
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
     */
     @SerializedName("SceneKey")
     @Expose
@@ -79,13 +77,9 @@ public class CancelUserAutoSignEnableUrlRequest extends AbstractModel {
 
     /**
      * Get 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
-
-注: `现在仅支持电子处方场景` 
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul> 
      * @return SceneKey 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
-
-注: `现在仅支持电子处方场景`
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */
     public String getSceneKey() {
         return this.SceneKey;
@@ -93,13 +87,9 @@ public class CancelUserAutoSignEnableUrlRequest extends AbstractModel {
 
     /**
      * Set 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
-
-注: `现在仅支持电子处方场景`
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      * @param SceneKey 自动签使用的场景值, 可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
-
-注: `现在仅支持电子处方场景`
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */
     public void setSceneKey(String SceneKey) {
         this.SceneKey = SceneKey;

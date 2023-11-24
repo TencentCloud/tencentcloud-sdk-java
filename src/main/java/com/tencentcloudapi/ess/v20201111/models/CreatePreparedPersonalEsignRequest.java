@@ -144,6 +144,16 @@ BLUE 蓝色。
     private Long LicenseType;
 
     /**
+    * 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+    */
+    @SerializedName("SceneKey")
+    @Expose
+    private String SceneKey;
+
+    /**
      * Get 个人用户姓名 
      * @return UserName 个人用户姓名
      */
@@ -459,6 +469,34 @@ BLUE 蓝色。
         this.LicenseType = LicenseType;
     }
 
+    /**
+     * Get 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN` 
+     * @return SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+     */
+    public String getSceneKey() {
+        return this.SceneKey;
+    }
+
+    /**
+     * Set 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+     * @param SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+     */
+    public void setSceneKey(String SceneKey) {
+        this.SceneKey = SceneKey;
+    }
+
     public CreatePreparedPersonalEsignRequest() {
     }
 
@@ -509,6 +547,9 @@ BLUE 蓝色。
         if (source.LicenseType != null) {
             this.LicenseType = new Long(source.LicenseType);
         }
+        if (source.SceneKey != null) {
+            this.SceneKey = new String(source.SceneKey);
+        }
     }
 
 
@@ -530,6 +571,7 @@ BLUE 蓝色。
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
 
     }
 }

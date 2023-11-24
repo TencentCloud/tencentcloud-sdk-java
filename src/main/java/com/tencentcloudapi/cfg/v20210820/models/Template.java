@@ -156,6 +156,14 @@ public class Template extends AbstractModel {
     private String [] AlarmPolicy;
 
     /**
+    * 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyDealType")
+    @Expose
+    private Long PolicyDealType;
+
+    /**
      * Get 经验库ID 
      * @return TemplateId 经验库ID
      */
@@ -467,6 +475,26 @@ public class Template extends AbstractModel {
         this.AlarmPolicy = AlarmPolicy;
     }
 
+    /**
+     * Get 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPolicyDealType() {
+        return this.PolicyDealType;
+    }
+
+    /**
+     * Set 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyDealType(Long PolicyDealType) {
+        this.PolicyDealType = PolicyDealType;
+    }
+
     public Template() {
     }
 
@@ -544,6 +572,9 @@ public class Template extends AbstractModel {
                 this.AlarmPolicy[i] = new String(source.AlarmPolicy[i]);
             }
         }
+        if (source.PolicyDealType != null) {
+            this.PolicyDealType = new Long(source.PolicyDealType);
+        }
     }
 
 
@@ -569,6 +600,7 @@ public class Template extends AbstractModel {
         this.setParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
         this.setParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
         this.setParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
+        this.setParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
 
     }
 }

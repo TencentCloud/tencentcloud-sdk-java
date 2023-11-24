@@ -42,6 +42,14 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
     private String BelongTo;
 
     /**
+    * 集团主企业id，当前企业为集团子企业时，该字段有值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MainOrganizationId")
+    @Expose
+    private String MainOrganizationId;
+
+    /**
      * Get 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
@@ -89,6 +97,26 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
         this.BelongTo = BelongTo;
     }
 
+    /**
+     * Get 集团主企业id，当前企业为集团子企业时，该字段有值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MainOrganizationId 集团主企业id，当前企业为集团子企业时，该字段有值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMainOrganizationId() {
+        return this.MainOrganizationId;
+    }
+
+    /**
+     * Set 集团主企业id，当前企业为集团子企业时，该字段有值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MainOrganizationId 集团主企业id，当前企业为集团子企业时，该字段有值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMainOrganizationId(String MainOrganizationId) {
+        this.MainOrganizationId = MainOrganizationId;
+    }
+
     public HasAuthUser() {
     }
 
@@ -103,6 +131,9 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
         if (source.BelongTo != null) {
             this.BelongTo = new String(source.BelongTo);
         }
+        if (source.MainOrganizationId != null) {
+            this.MainOrganizationId = new String(source.MainOrganizationId);
+        }
     }
 
 
@@ -112,6 +143,7 @@ CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场�
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "BelongTo", this.BelongTo);
+        this.setParamSimple(map, prefix + "MainOrganizationId", this.MainOrganizationId);
 
     }
 }

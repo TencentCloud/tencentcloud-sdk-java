@@ -27,7 +27,7 @@ public class CreateDocumentResponse extends AbstractModel {
     * 合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
     */
     @SerializedName("DocumentId")
     @Expose
@@ -63,11 +63,11 @@ public class CreateDocumentResponse extends AbstractModel {
      * Get 合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节 
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节 
      * @return DocumentId 合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
      */
     public String getDocumentId() {
         return this.DocumentId;
@@ -77,11 +77,11 @@ public class CreateDocumentResponse extends AbstractModel {
      * Set 合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
      * @param DocumentId 合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
      */
     public void setDocumentId(String DocumentId) {
         this.DocumentId = DocumentId;

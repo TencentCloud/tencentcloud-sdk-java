@@ -72,6 +72,17 @@ public class CatClient extends AbstractClient{
     }
 
     /**
+     *获取历史即时拨测任务
+     * @param req DescribeInstantTasksRequest
+     * @return DescribeInstantTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstantTasksResponse DescribeInstantTasks(DescribeInstantTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstantTasks", DescribeInstantTasksResponse.class);
+    }
+
+    /**
      *获取拨测节点
      * @param req DescribeNodesRequest
      * @return DescribeNodesResponse

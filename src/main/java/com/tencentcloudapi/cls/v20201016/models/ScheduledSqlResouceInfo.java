@@ -52,6 +52,35 @@ public class ScheduledSqlResouceInfo extends AbstractModel {
     private String MetricName;
 
     /**
+    * 指标名称
+BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+    */
+    @SerializedName("MetricNames")
+    @Expose
+    private String [] MetricNames;
+
+    /**
+    * 指标项
+    */
+    @SerializedName("MetricLabels")
+    @Expose
+    private String [] MetricLabels;
+
+    /**
+    * 自定义时间
+    */
+    @SerializedName("CustomTime")
+    @Expose
+    private String CustomTime;
+
+    /**
+    * 自定义标签
+    */
+    @SerializedName("CustomMetricLabels")
+    @Expose
+    private MetricLabel [] CustomMetricLabels;
+
+    /**
      * Get 目标主题id 
      * @return TopicId 目标主题id
      */
@@ -115,6 +144,74 @@ public class ScheduledSqlResouceInfo extends AbstractModel {
         this.MetricName = MetricName;
     }
 
+    /**
+     * Get 指标名称
+BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段 
+     * @return MetricNames 指标名称
+BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+     */
+    public String [] getMetricNames() {
+        return this.MetricNames;
+    }
+
+    /**
+     * Set 指标名称
+BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+     * @param MetricNames 指标名称
+BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+     */
+    public void setMetricNames(String [] MetricNames) {
+        this.MetricNames = MetricNames;
+    }
+
+    /**
+     * Get 指标项 
+     * @return MetricLabels 指标项
+     */
+    public String [] getMetricLabels() {
+        return this.MetricLabels;
+    }
+
+    /**
+     * Set 指标项
+     * @param MetricLabels 指标项
+     */
+    public void setMetricLabels(String [] MetricLabels) {
+        this.MetricLabels = MetricLabels;
+    }
+
+    /**
+     * Get 自定义时间 
+     * @return CustomTime 自定义时间
+     */
+    public String getCustomTime() {
+        return this.CustomTime;
+    }
+
+    /**
+     * Set 自定义时间
+     * @param CustomTime 自定义时间
+     */
+    public void setCustomTime(String CustomTime) {
+        this.CustomTime = CustomTime;
+    }
+
+    /**
+     * Get 自定义标签 
+     * @return CustomMetricLabels 自定义标签
+     */
+    public MetricLabel [] getCustomMetricLabels() {
+        return this.CustomMetricLabels;
+    }
+
+    /**
+     * Set 自定义标签
+     * @param CustomMetricLabels 自定义标签
+     */
+    public void setCustomMetricLabels(MetricLabel [] CustomMetricLabels) {
+        this.CustomMetricLabels = CustomMetricLabels;
+    }
+
     public ScheduledSqlResouceInfo() {
     }
 
@@ -135,6 +232,27 @@ public class ScheduledSqlResouceInfo extends AbstractModel {
         if (source.MetricName != null) {
             this.MetricName = new String(source.MetricName);
         }
+        if (source.MetricNames != null) {
+            this.MetricNames = new String[source.MetricNames.length];
+            for (int i = 0; i < source.MetricNames.length; i++) {
+                this.MetricNames[i] = new String(source.MetricNames[i]);
+            }
+        }
+        if (source.MetricLabels != null) {
+            this.MetricLabels = new String[source.MetricLabels.length];
+            for (int i = 0; i < source.MetricLabels.length; i++) {
+                this.MetricLabels[i] = new String(source.MetricLabels[i]);
+            }
+        }
+        if (source.CustomTime != null) {
+            this.CustomTime = new String(source.CustomTime);
+        }
+        if (source.CustomMetricLabels != null) {
+            this.CustomMetricLabels = new MetricLabel[source.CustomMetricLabels.length];
+            for (int i = 0; i < source.CustomMetricLabels.length; i++) {
+                this.CustomMetricLabels[i] = new MetricLabel(source.CustomMetricLabels[i]);
+            }
+        }
     }
 
 
@@ -146,6 +264,10 @@ public class ScheduledSqlResouceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
+        this.setParamArraySimple(map, prefix + "MetricLabels.", this.MetricLabels);
+        this.setParamSimple(map, prefix + "CustomTime", this.CustomTime);
+        this.setParamArrayObj(map, prefix + "CustomMetricLabels.", this.CustomMetricLabels);
 
     }
 }

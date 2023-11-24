@@ -123,6 +123,13 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
     private String [] SpecFeatures;
 
     /**
+    * 纳管cvmid
+    */
+    @SerializedName("CvmInstanceId")
+    @Expose
+    private String CvmInstanceId;
+
+    /**
      * Get 资源组节点id 
      * @return InstanceId 资源组节点id
      */
@@ -386,6 +393,22 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
         this.SpecFeatures = SpecFeatures;
     }
 
+    /**
+     * Get 纳管cvmid 
+     * @return CvmInstanceId 纳管cvmid
+     */
+    public String getCvmInstanceId() {
+        return this.CvmInstanceId;
+    }
+
+    /**
+     * Set 纳管cvmid
+     * @param CvmInstanceId 纳管cvmid
+     */
+    public void setCvmInstanceId(String CvmInstanceId) {
+        this.CvmInstanceId = CvmInstanceId;
+    }
+
     public Instance() {
     }
 
@@ -430,6 +453,9 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
                 this.SpecFeatures[i] = new String(source.SpecFeatures[i]);
             }
         }
+        if (source.CvmInstanceId != null) {
+            this.CvmInstanceId = new String(source.CvmInstanceId);
+        }
     }
 
 
@@ -448,6 +474,7 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
         this.setParamSimple(map, prefix + "SpecId", this.SpecId);
         this.setParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
         this.setParamArraySimple(map, prefix + "SpecFeatures.", this.SpecFeatures);
+        this.setParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
 
     }
 }

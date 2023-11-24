@@ -4828,7 +4828,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     * 用于设置新增主机自动开通专业防护配置。
+     *用于设置新增主机自动开通专业防护配置。
      * @param req ModifyAutoOpenProVersionConfigRequest
      * @return ModifyAutoOpenProVersionConfigResponse
      * @throws TencentCloudSDKException

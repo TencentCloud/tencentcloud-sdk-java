@@ -23,6 +23,80 @@ import java.util.HashMap;
 
 public class DTSParams extends AbstractModel {
 
+    /**
+    * Consumer Group Name
+    */
+    @SerializedName("ConsumerGroupName")
+    @Expose
+    private String ConsumerGroupName;
+
+    /**
+    * 账户名
+    */
+    @SerializedName("Account")
+    @Expose
+    private String Account;
+
+    /**
+    * 密码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
+     * Get Consumer Group Name 
+     * @return ConsumerGroupName Consumer Group Name
+     */
+    public String getConsumerGroupName() {
+        return this.ConsumerGroupName;
+    }
+
+    /**
+     * Set Consumer Group Name
+     * @param ConsumerGroupName Consumer Group Name
+     */
+    public void setConsumerGroupName(String ConsumerGroupName) {
+        this.ConsumerGroupName = ConsumerGroupName;
+    }
+
+    /**
+     * Get 账户名 
+     * @return Account 账户名
+     */
+    public String getAccount() {
+        return this.Account;
+    }
+
+    /**
+     * Set 账户名
+     * @param Account 账户名
+     */
+    public void setAccount(String Account) {
+        this.Account = Account;
+    }
+
+    /**
+     * Get 密码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Password 密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set 密码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Password 密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
     public DTSParams() {
     }
 
@@ -31,6 +105,15 @@ public class DTSParams extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DTSParams(DTSParams source) {
+        if (source.ConsumerGroupName != null) {
+            this.ConsumerGroupName = new String(source.ConsumerGroupName);
+        }
+        if (source.Account != null) {
+            this.Account = new String(source.Account);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
     }
 
 
@@ -38,6 +121,9 @@ public class DTSParams extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
+        this.setParamSimple(map, prefix + "Account", this.Account);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

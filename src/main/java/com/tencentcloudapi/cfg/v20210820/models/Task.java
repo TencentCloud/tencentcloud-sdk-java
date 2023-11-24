@@ -237,6 +237,14 @@ public class Task extends AbstractModel {
     private Long VerifyId;
 
     /**
+    * 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyDealType")
+    @Expose
+    private Long PolicyDealType;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -752,6 +760,26 @@ public class Task extends AbstractModel {
         this.VerifyId = VerifyId;
     }
 
+    /**
+     * Get 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPolicyDealType() {
+        return this.PolicyDealType;
+    }
+
+    /**
+     * Set 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyDealType(Long PolicyDealType) {
+        this.PolicyDealType = PolicyDealType;
+    }
+
     public Task() {
     }
 
@@ -859,6 +887,9 @@ public class Task extends AbstractModel {
         if (source.VerifyId != null) {
             this.VerifyId = new Long(source.VerifyId);
         }
+        if (source.PolicyDealType != null) {
+            this.PolicyDealType = new Long(source.PolicyDealType);
+        }
     }
 
 
@@ -894,6 +925,7 @@ public class Task extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
         this.setParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
         this.setParamSimple(map, prefix + "VerifyId", this.VerifyId);
+        this.setParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
 
     }
 }

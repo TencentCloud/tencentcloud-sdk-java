@@ -150,6 +150,13 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     private Long DestroyOrderNum;
 
     /**
+    * 是否自动续费开关,true 开启,false 关闭
+    */
+    @SerializedName("RepurchaseRenewSwitch")
+    @Expose
+    private Boolean RepurchaseRenewSwitch;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -445,6 +452,22 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否自动续费开关,true 开启,false 关闭 
+     * @return RepurchaseRenewSwitch 是否自动续费开关,true 开启,false 关闭
+     */
+    public Boolean getRepurchaseRenewSwitch() {
+        return this.RepurchaseRenewSwitch;
+    }
+
+    /**
+     * Set 是否自动续费开关,true 开启,false 关闭
+     * @param RepurchaseRenewSwitch 是否自动续费开关,true 开启,false 关闭
+     */
+    public void setRepurchaseRenewSwitch(Boolean RepurchaseRenewSwitch) {
+        this.RepurchaseRenewSwitch = RepurchaseRenewSwitch;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -522,6 +545,9 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
         if (source.DestroyOrderNum != null) {
             this.DestroyOrderNum = new Long(source.DestroyOrderNum);
         }
+        if (source.RepurchaseRenewSwitch != null) {
+            this.RepurchaseRenewSwitch = new Boolean(source.RepurchaseRenewSwitch);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -550,6 +576,7 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
         this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "DestroyOrderNum", this.DestroyOrderNum);
+        this.setParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

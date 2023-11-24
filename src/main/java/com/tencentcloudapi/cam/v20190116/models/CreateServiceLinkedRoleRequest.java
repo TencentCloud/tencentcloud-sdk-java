@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateServiceLinkedRoleRequest extends AbstractModel {
 
     /**
-    * 授权服务，附加了此角色的腾讯云服务主体。
+    * 填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165
     */
     @SerializedName("QCSServiceName")
     @Expose
@@ -52,16 +53,20 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel {
     private RoleTags [] Tags;
 
     /**
-     * Get 授权服务，附加了此角色的腾讯云服务主体。 
-     * @return QCSServiceName 授权服务，附加了此角色的腾讯云服务主体。
+     * Get 填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165 
+     * @return QCSServiceName 填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165
      */
     public String [] getQCSServiceName() {
         return this.QCSServiceName;
     }
 
     /**
-     * Set 授权服务，附加了此角色的腾讯云服务主体。
-     * @param QCSServiceName 授权服务，附加了此角色的腾讯云服务主体。
+     * Set 填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165
+     * @param QCSServiceName 填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165
      */
     public void setQCSServiceName(String [] QCSServiceName) {
         this.QCSServiceName = QCSServiceName;

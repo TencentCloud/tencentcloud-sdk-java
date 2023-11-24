@@ -31,14 +31,14 @@ public class CreateProbeTasksRequest extends AbstractModel {
     private ProbeTaskBasicConfiguration [] BatchTasks;
 
     /**
-    * 任务类型
+    * 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 拨测节点
+    * 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
     */
     @SerializedName("Nodes")
     @Expose
@@ -52,7 +52,7 @@ public class CreateProbeTasksRequest extends AbstractModel {
     private Long Interval;
 
     /**
-    * 拨测参数
+    * 拨测参数，如{}，详细可参考云拨测官方文档。
     */
     @SerializedName("Parameters")
     @Expose
@@ -82,14 +82,14 @@ public class CreateProbeTasksRequest extends AbstractModel {
     private Tag [] Tag;
 
     /**
-    * 测试类型，包含定时测试与即时测试
+    * 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
     */
     @SerializedName("ProbeType")
     @Expose
     private Long ProbeType;
 
     /**
-    * 插件类型
+    * 插件类型，如CDN，详情参考云拨测官方文档。
     */
     @SerializedName("PluginSource")
     @Expose
@@ -101,6 +101,13 @@ public class CreateProbeTasksRequest extends AbstractModel {
     @SerializedName("ClientNum")
     @Expose
     private String ClientNum;
+
+    /**
+    * 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+    */
+    @SerializedName("NodeIpType")
+    @Expose
+    private Long NodeIpType;
 
     /**
      * Get 批量任务名-地址 
@@ -119,32 +126,32 @@ public class CreateProbeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务类型 
-     * @return TaskType 任务类型
+     * Get 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois 
+     * @return TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-     * @param TaskType 任务类型
+     * Set 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
+     * @param TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 拨测节点 
-     * @return Nodes 拨测节点
+     * Get 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。 
+     * @return Nodes 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
      */
     public String [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 拨测节点
-     * @param Nodes 拨测节点
+     * Set 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
+     * @param Nodes 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
      */
     public void setNodes(String [] Nodes) {
         this.Nodes = Nodes;
@@ -167,16 +174,16 @@ public class CreateProbeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 拨测参数 
-     * @return Parameters 拨测参数
+     * Get 拨测参数，如{}，详细可参考云拨测官方文档。 
+     * @return Parameters 拨测参数，如{}，详细可参考云拨测官方文档。
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 拨测参数
-     * @param Parameters 拨测参数
+     * Set 拨测参数，如{}，详细可参考云拨测官方文档。
+     * @param Parameters 拨测参数，如{}，详细可参考云拨测官方文档。
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
@@ -239,32 +246,32 @@ public class CreateProbeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 测试类型，包含定时测试与即时测试 
-     * @return ProbeType 测试类型，包含定时测试与即时测试
+     * Get 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。 
+     * @return ProbeType 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
      */
     public Long getProbeType() {
         return this.ProbeType;
     }
 
     /**
-     * Set 测试类型，包含定时测试与即时测试
-     * @param ProbeType 测试类型，包含定时测试与即时测试
+     * Set 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+     * @param ProbeType 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
      */
     public void setProbeType(Long ProbeType) {
         this.ProbeType = ProbeType;
     }
 
     /**
-     * Get 插件类型 
-     * @return PluginSource 插件类型
+     * Get 插件类型，如CDN，详情参考云拨测官方文档。 
+     * @return PluginSource 插件类型，如CDN，详情参考云拨测官方文档。
      */
     public String getPluginSource() {
         return this.PluginSource;
     }
 
     /**
-     * Set 插件类型
-     * @param PluginSource 插件类型
+     * Set 插件类型，如CDN，详情参考云拨测官方文档。
+     * @param PluginSource 插件类型，如CDN，详情参考云拨测官方文档。
      */
     public void setPluginSource(String PluginSource) {
         this.PluginSource = PluginSource;
@@ -284,6 +291,22 @@ public class CreateProbeTasksRequest extends AbstractModel {
      */
     public void setClientNum(String ClientNum) {
         this.ClientNum = ClientNum;
+    }
+
+    /**
+     * Get 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6 
+     * @return NodeIpType 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+     */
+    public Long getNodeIpType() {
+        return this.NodeIpType;
+    }
+
+    /**
+     * Set 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+     * @param NodeIpType 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+     */
+    public void setNodeIpType(Long NodeIpType) {
+        this.NodeIpType = NodeIpType;
     }
 
     public CreateProbeTasksRequest() {
@@ -336,6 +359,9 @@ public class CreateProbeTasksRequest extends AbstractModel {
         if (source.ClientNum != null) {
             this.ClientNum = new String(source.ClientNum);
         }
+        if (source.NodeIpType != null) {
+            this.NodeIpType = new Long(source.NodeIpType);
+        }
     }
 
 
@@ -354,6 +380,7 @@ public class CreateProbeTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProbeType", this.ProbeType);
         this.setParamSimple(map, prefix + "PluginSource", this.PluginSource);
         this.setParamSimple(map, prefix + "ClientNum", this.ClientNum);
+        this.setParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
 
     }
 }

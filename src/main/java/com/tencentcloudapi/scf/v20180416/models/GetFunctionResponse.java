@@ -327,6 +327,14 @@ public class GetFunctionResponse extends AbstractModel {
     private String TraceEnable;
 
     /**
+    * 镜像配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageConfig")
+    @Expose
+    private ImageConfig ImageConfig;
+
+    /**
     * HTTP函数支持的访问协议。当前支持WebSockets协议。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -341,6 +349,22 @@ public class GetFunctionResponse extends AbstractModel {
     @SerializedName("ProtocolParams")
     @Expose
     private ProtocolParams ProtocolParams;
+
+    /**
+    * 是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DnsCache")
+    @Expose
+    private String DnsCache;
+
+    /**
+    * 内网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntranetConfig")
+    @Expose
+    private IntranetConfigOut IntranetConfig;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -1058,6 +1082,26 @@ public class GetFunctionResponse extends AbstractModel {
     }
 
     /**
+     * Get 镜像配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageConfig 镜像配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageConfig getImageConfig() {
+        return this.ImageConfig;
+    }
+
+    /**
+     * Set 镜像配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageConfig 镜像配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageConfig(ImageConfig ImageConfig) {
+        this.ImageConfig = ImageConfig;
+    }
+
+    /**
      * Get HTTP函数支持的访问协议。当前支持WebSockets协议。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProtocolType HTTP函数支持的访问协议。当前支持WebSockets协议。
@@ -1095,6 +1139,46 @@ public class GetFunctionResponse extends AbstractModel {
      */
     public void setProtocolParams(ProtocolParams ProtocolParams) {
         this.ProtocolParams = ProtocolParams;
+    }
+
+    /**
+     * Get 是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DnsCache 是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDnsCache() {
+        return this.DnsCache;
+    }
+
+    /**
+     * Set 是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DnsCache 是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDnsCache(String DnsCache) {
+        this.DnsCache = DnsCache;
+    }
+
+    /**
+     * Get 内网访问配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntranetConfig 内网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IntranetConfigOut getIntranetConfig() {
+        return this.IntranetConfig;
+    }
+
+    /**
+     * Set 内网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntranetConfig 内网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntranetConfig(IntranetConfigOut IntranetConfig) {
+        this.IntranetConfig = IntranetConfig;
     }
 
     /**
@@ -1259,11 +1343,20 @@ public class GetFunctionResponse extends AbstractModel {
         if (source.TraceEnable != null) {
             this.TraceEnable = new String(source.TraceEnable);
         }
+        if (source.ImageConfig != null) {
+            this.ImageConfig = new ImageConfig(source.ImageConfig);
+        }
         if (source.ProtocolType != null) {
             this.ProtocolType = new String(source.ProtocolType);
         }
         if (source.ProtocolParams != null) {
             this.ProtocolParams = new ProtocolParams(source.ProtocolParams);
+        }
+        if (source.DnsCache != null) {
+            this.DnsCache = new String(source.DnsCache);
+        }
+        if (source.IntranetConfig != null) {
+            this.IntranetConfig = new IntranetConfigOut(source.IntranetConfig);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -1317,8 +1410,11 @@ public class GetFunctionResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
         this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
         this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+        this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
+        this.setParamSimple(map, prefix + "DnsCache", this.DnsCache);
+        this.setParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
