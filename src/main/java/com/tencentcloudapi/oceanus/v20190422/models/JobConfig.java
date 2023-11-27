@@ -245,6 +245,22 @@ public class JobConfig extends AbstractModel {
     private JobGraph JobGraph;
 
     /**
+    * es索引
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsServerlessIndex")
+    @Expose
+    private String EsServerlessIndex;
+
+    /**
+    * es空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsServerlessSpace")
+    @Expose
+    private String EsServerlessSpace;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -792,6 +808,46 @@ public class JobConfig extends AbstractModel {
         this.JobGraph = JobGraph;
     }
 
+    /**
+     * Get es索引
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsServerlessIndex es索引
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEsServerlessIndex() {
+        return this.EsServerlessIndex;
+    }
+
+    /**
+     * Set es索引
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsServerlessIndex es索引
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsServerlessIndex(String EsServerlessIndex) {
+        this.EsServerlessIndex = EsServerlessIndex;
+    }
+
+    /**
+     * Get es空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsServerlessSpace es空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEsServerlessSpace() {
+        return this.EsServerlessSpace;
+    }
+
+    /**
+     * Set es空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsServerlessSpace es空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsServerlessSpace(String EsServerlessSpace) {
+        this.EsServerlessSpace = EsServerlessSpace;
+    }
+
     public JobConfig() {
     }
 
@@ -893,6 +949,12 @@ public class JobConfig extends AbstractModel {
         if (source.JobGraph != null) {
             this.JobGraph = new JobGraph(source.JobGraph);
         }
+        if (source.EsServerlessIndex != null) {
+            this.EsServerlessIndex = new String(source.EsServerlessIndex);
+        }
+        if (source.EsServerlessSpace != null) {
+            this.EsServerlessSpace = new String(source.EsServerlessSpace);
+        }
     }
 
 
@@ -928,6 +990,8 @@ public class JobConfig extends AbstractModel {
         this.setParamObj(map, prefix + "TraceModeConfiguration.", this.TraceModeConfiguration);
         this.setParamSimple(map, prefix + "CheckpointRetainedNum", this.CheckpointRetainedNum);
         this.setParamObj(map, prefix + "JobGraph.", this.JobGraph);
+        this.setParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
+        this.setParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
 
     }
 }

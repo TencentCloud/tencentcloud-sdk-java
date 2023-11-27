@@ -66,7 +66,7 @@ public class CreateSavingPlanOrderRequest extends AbstractModel {
     private String CommodityCode;
 
     /**
-    * 承诺时长内的小额金额（单位：分）
+    * 承诺时长内的小额金额（单位：元）
     */
     @SerializedName("PromiseUseAmount")
     @Expose
@@ -183,16 +183,16 @@ public class CreateSavingPlanOrderRequest extends AbstractModel {
     }
 
     /**
-     * Get 承诺时长内的小额金额（单位：分） 
-     * @return PromiseUseAmount 承诺时长内的小额金额（单位：分）
+     * Get 承诺时长内的小额金额（单位：元） 
+     * @return PromiseUseAmount 承诺时长内的小额金额（单位：元）
      */
     public Long getPromiseUseAmount() {
         return this.PromiseUseAmount;
     }
 
     /**
-     * Set 承诺时长内的小额金额（单位：分）
-     * @param PromiseUseAmount 承诺时长内的小额金额（单位：分）
+     * Set 承诺时长内的小额金额（单位：元）
+     * @param PromiseUseAmount 承诺时长内的小额金额（单位：元）
      */
     public void setPromiseUseAmount(Long PromiseUseAmount) {
         this.PromiseUseAmount = PromiseUseAmount;

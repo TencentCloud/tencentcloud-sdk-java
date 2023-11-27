@@ -94,19 +94,6 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *接口未使用
-
-创建自定义账户
-     * @param req CreateCustomAccountRequest
-     * @return CreateCustomAccountResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCustomAccountResponse CreateCustomAccount(CreateCustomAccountRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCustomAccount", CreateCustomAccountResponse.class);
-    }
-
-    /**
      *创建镜像加速服务
      * @param req CreateImageAccelerationServiceRequest
      * @return CreateImageAccelerationServiceResponse
@@ -335,19 +322,6 @@ public class TcrClient extends AbstractClient{
     public DeleteApplicationTriggerPersonalResponse DeleteApplicationTriggerPersonal(DeleteApplicationTriggerPersonalRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteApplicationTriggerPersonal", DeleteApplicationTriggerPersonalResponse.class);
-    }
-
-    /**
-     *接口未使用
-
-删除自定义账号
-     * @param req DeleteCustomAccountRequest
-     * @return DeleteCustomAccountResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteCustomAccountResponse DeleteCustomAccount(DeleteCustomAccountRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteCustomAccount", DeleteCustomAccountResponse.class);
     }
 
     /**
@@ -1111,19 +1085,6 @@ public class TcrClient extends AbstractClient{
     public ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonal(ModifyApplicationTriggerPersonalRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApplicationTriggerPersonal", ModifyApplicationTriggerPersonalResponse.class);
-    }
-
-    /**
-     *接口未使用
-
-更新自定义账户
-     * @param req ModifyCustomAccountRequest
-     * @return ModifyCustomAccountResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCustomAccountResponse ModifyCustomAccount(ModifyCustomAccountRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyCustomAccount", ModifyCustomAccountResponse.class);
     }
 
     /**

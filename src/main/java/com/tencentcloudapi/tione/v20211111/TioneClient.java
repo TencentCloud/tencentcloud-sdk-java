@@ -303,6 +303,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *查询资源组节点列表
+     * @param req DescribeBillingResourceGroupRequest
+     * @return DescribeBillingResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingResourceGroupResponse DescribeBillingResourceGroup(DescribeBillingResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillingResourceGroup", DescribeBillingResourceGroupResponse.class);
+    }
+
+    /**
      *查询资源组详情
      * @param req DescribeBillingResourceGroupsRequest
      * @return DescribeBillingResourceGroupsResponse

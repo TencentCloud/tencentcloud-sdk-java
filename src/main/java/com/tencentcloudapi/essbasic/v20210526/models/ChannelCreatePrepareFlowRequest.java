@@ -24,35 +24,43 @@ import java.util.HashMap;
 public class ChannelCreatePrepareFlowRequest extends AbstractModel {
 
     /**
-    * 资源id，与ResourceType对应
+    * 合同模板ID，为32位字符串。
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源类型，与ResourceId对应1：模板   2: 文件
+    * 资源类型，此接口固定为**1**表示为用模板发起
     */
     @SerializedName("ResourceType")
     @Expose
     private Long ResourceType;
 
     /**
-    * 合同流程基础信息
+    * 要创建的合同信息
     */
     @SerializedName("FlowInfo")
     @Expose
     private BaseFlowInfo FlowInfo;
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 合同流程配置信息，用于配置发起合同时定制化
+    * 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
     */
     @SerializedName("FlowOption")
     @Expose
@@ -66,7 +74,7 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     private CommonFlowApprover [] FlowApproverList;
 
     /**
-    * 通过flowid快速获得之前成功通过页面发起的合同生成链接
+    * 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
     */
     @SerializedName("FlowId")
     @Expose
@@ -94,80 +102,112 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-     * Get 资源id，与ResourceType对应 
-     * @return ResourceId 资源id，与ResourceType对应
+     * Get 合同模板ID，为32位字符串。 
+     * @return ResourceId 合同模板ID，为32位字符串。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源id，与ResourceType对应
-     * @param ResourceId 资源id，与ResourceType对应
+     * Set 合同模板ID，为32位字符串。
+     * @param ResourceId 合同模板ID，为32位字符串。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源类型，与ResourceId对应1：模板   2: 文件 
-     * @return ResourceType 资源类型，与ResourceId对应1：模板   2: 文件
+     * Get 资源类型，此接口固定为**1**表示为用模板发起 
+     * @return ResourceType 资源类型，此接口固定为**1**表示为用模板发起
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，与ResourceId对应1：模板   2: 文件
-     * @param ResourceType 资源类型，与ResourceId对应1：模板   2: 文件
+     * Set 资源类型，此接口固定为**1**表示为用模板发起
+     * @param ResourceType 资源类型，此接口固定为**1**表示为用模板发起
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 合同流程基础信息 
-     * @return FlowInfo 合同流程基础信息
+     * Get 要创建的合同信息 
+     * @return FlowInfo 要创建的合同信息
      */
     public BaseFlowInfo getFlowInfo() {
         return this.FlowInfo;
     }
 
     /**
-     * Set 合同流程基础信息
-     * @param FlowInfo 合同流程基础信息
+     * Set 要创建的合同信息
+     * @param FlowInfo 要创建的合同信息
      */
     public void setFlowInfo(BaseFlowInfo FlowInfo) {
         this.FlowInfo = FlowInfo;
     }
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证 
+     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 合同流程配置信息，用于配置发起合同时定制化 
-     * @return FlowOption 合同流程配置信息，用于配置发起合同时定制化
+     * Get 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑 
+     * @return FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
      */
     public CreateFlowOption getFlowOption() {
         return this.FlowOption;
     }
 
     /**
-     * Set 合同流程配置信息，用于配置发起合同时定制化
-     * @param FlowOption 合同流程配置信息，用于配置发起合同时定制化
+     * Set 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
+     * @param FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
      */
     public void setFlowOption(CreateFlowOption FlowOption) {
         this.FlowOption = FlowOption;
@@ -190,16 +230,16 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 通过flowid快速获得之前成功通过页面发起的合同生成链接 
-     * @return FlowId 通过flowid快速获得之前成功通过页面发起的合同生成链接
+     * Get 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接 
+     * @return FlowId 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 通过flowid快速获得之前成功通过页面发起的合同生成链接
-     * @param FlowId 通过flowid快速获得之前成功通过页面发起的合同生成链接
+     * Set 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
+     * @param FlowId 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ChannelCreatePrepareFlowResponse extends AbstractModel {
 
     /**
-    * 预发起的合同链接， 可以直接点击进入进行合同发起
+    * 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
     */
     @SerializedName("PrepareFlowUrl")
     @Expose
     private String PrepareFlowUrl;
 
     /**
-    * 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
+    * 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
     */
     @SerializedName("PreviewFlowUrl")
     @Expose
@@ -45,32 +45,32 @@ public class ChannelCreatePrepareFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 预发起的合同链接， 可以直接点击进入进行合同发起 
-     * @return PrepareFlowUrl 预发起的合同链接， 可以直接点击进入进行合同发起
+     * Get 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟 
+     * @return PrepareFlowUrl 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
      */
     public String getPrepareFlowUrl() {
         return this.PrepareFlowUrl;
     }
 
     /**
-     * Set 预发起的合同链接， 可以直接点击进入进行合同发起
-     * @param PrepareFlowUrl 预发起的合同链接， 可以直接点击进入进行合同发起
+     * Set 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
+     * @param PrepareFlowUrl 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
      */
     public void setPrepareFlowUrl(String PrepareFlowUrl) {
         this.PrepareFlowUrl = PrepareFlowUrl;
     }
 
     /**
-     * Get 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果 
-     * @return PreviewFlowUrl 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
+     * Get 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟 
+     * @return PreviewFlowUrl 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
      */
     public String getPreviewFlowUrl() {
         return this.PreviewFlowUrl;
     }
 
     /**
-     * Set 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
-     * @param PreviewFlowUrl 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
+     * Set 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
+     * @param PreviewFlowUrl 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
      */
     public void setPreviewFlowUrl(String PreviewFlowUrl) {
         this.PreviewFlowUrl = PreviewFlowUrl;

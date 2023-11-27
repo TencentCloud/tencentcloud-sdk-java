@@ -72,7 +72,7 @@ public class WeilingwithClient extends AbstractClient{
     }
 
     /**
-     *批量消息上报
+     *批量上报应用消息
      * @param req BatchReportAppMessageRequest
      * @return BatchReportAppMessageResponse
      * @throws TencentCloudSDKException
@@ -633,7 +633,7 @@ public class WeilingwithClient extends AbstractClient{
     }
 
     /**
-     *单条消息上报
+     *上报应用消息
      * @param req ReportAppMessageRequest
      * @return ReportAppMessageResponse
      * @throws TencentCloudSDKException

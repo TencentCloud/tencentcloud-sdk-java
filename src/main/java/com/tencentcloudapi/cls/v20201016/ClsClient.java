@@ -171,6 +171,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建投递SCF任务
+     * @param req CreateDeliverCloudFunctionRequest
+     * @return CreateDeliverCloudFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeliverCloudFunctionResponse CreateDeliverCloudFunction(CreateDeliverCloudFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeliverCloudFunction", CreateDeliverCloudFunctionResponse.class);
+    }
+
+    /**
      *本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
      * @param req CreateExportRequest
      * @return CreateExportResponse

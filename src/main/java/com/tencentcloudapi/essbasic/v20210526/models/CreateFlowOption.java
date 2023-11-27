@@ -24,141 +24,229 @@ import java.util.HashMap;
 public class CreateFlowOption extends AbstractModel {
 
     /**
-    * 是否允许修改合同信息，true-是，false-否
+    * 是否允许修改合同信息，
+**true**：可以
+**false**：（默认）不可以
     */
     @SerializedName("CanEditFlow")
     @Expose
     private Boolean CanEditFlow;
 
     /**
-    * 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
+    * 是否允许发起合同弹窗隐藏合同名称
+**true**：允许
+**false**：（默认）不允许
     */
     @SerializedName("HideShowFlowName")
     @Expose
     private Boolean HideShowFlowName;
 
     /**
-    * 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
+    * 是否允许发起合同弹窗隐藏合同类型，
+**true**：允许
+**false**：（默认）不允许
     */
     @SerializedName("HideShowFlowType")
     @Expose
     private Boolean HideShowFlowType;
 
     /**
-    * 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
+    * 是否允许发起合同弹窗隐藏合同到期时间
+**true**：允许
+**false**：（默认）不允许
     */
     @SerializedName("HideShowDeadline")
     @Expose
     private Boolean HideShowDeadline;
 
     /**
-    * 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
+    * 是否允许发起合同步骤跳过指定签署方步骤
+**true**：允许
+**false**：（默认）不允许
     */
     @SerializedName("CanSkipAddApprover")
     @Expose
     private Boolean CanSkipAddApprover;
 
     /**
-    * 定制化发起合同弹窗的描述信息，描述信息最长500
+    * 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
     */
     @SerializedName("CustomCreateFlowDescription")
     @Expose
     private String CustomCreateFlowDescription;
 
     /**
-     * Get 是否允许修改合同信息，true-是，false-否 
-     * @return CanEditFlow 是否允许修改合同信息，true-是，false-否
+    * 禁止编辑填写控件
+
+**true**：禁止编辑填写控件
+**false**：（默认）允许编辑填写控件
+    */
+    @SerializedName("ForbidEditFillComponent")
+    @Expose
+    private Boolean ForbidEditFillComponent;
+
+    /**
+     * Get 是否允许修改合同信息，
+**true**：可以
+**false**：（默认）不可以 
+     * @return CanEditFlow 是否允许修改合同信息，
+**true**：可以
+**false**：（默认）不可以
      */
     public Boolean getCanEditFlow() {
         return this.CanEditFlow;
     }
 
     /**
-     * Set 是否允许修改合同信息，true-是，false-否
-     * @param CanEditFlow 是否允许修改合同信息，true-是，false-否
+     * Set 是否允许修改合同信息，
+**true**：可以
+**false**：（默认）不可以
+     * @param CanEditFlow 是否允许修改合同信息，
+**true**：可以
+**false**：（默认）不可以
      */
     public void setCanEditFlow(Boolean CanEditFlow) {
         this.CanEditFlow = CanEditFlow;
     }
 
     /**
-     * Get 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许 
-     * @return HideShowFlowName 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
+     * Get 是否允许发起合同弹窗隐藏合同名称
+**true**：允许
+**false**：（默认）不允许 
+     * @return HideShowFlowName 是否允许发起合同弹窗隐藏合同名称
+**true**：允许
+**false**：（默认）不允许
      */
     public Boolean getHideShowFlowName() {
         return this.HideShowFlowName;
     }
 
     /**
-     * Set 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
-     * @param HideShowFlowName 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
+     * Set 是否允许发起合同弹窗隐藏合同名称
+**true**：允许
+**false**：（默认）不允许
+     * @param HideShowFlowName 是否允许发起合同弹窗隐藏合同名称
+**true**：允许
+**false**：（默认）不允许
      */
     public void setHideShowFlowName(Boolean HideShowFlowName) {
         this.HideShowFlowName = HideShowFlowName;
     }
 
     /**
-     * Get 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许 
-     * @return HideShowFlowType 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
+     * Get 是否允许发起合同弹窗隐藏合同类型，
+**true**：允许
+**false**：（默认）不允许 
+     * @return HideShowFlowType 是否允许发起合同弹窗隐藏合同类型，
+**true**：允许
+**false**：（默认）不允许
      */
     public Boolean getHideShowFlowType() {
         return this.HideShowFlowType;
     }
 
     /**
-     * Set 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
-     * @param HideShowFlowType 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
+     * Set 是否允许发起合同弹窗隐藏合同类型，
+**true**：允许
+**false**：（默认）不允许
+     * @param HideShowFlowType 是否允许发起合同弹窗隐藏合同类型，
+**true**：允许
+**false**：（默认）不允许
      */
     public void setHideShowFlowType(Boolean HideShowFlowType) {
         this.HideShowFlowType = HideShowFlowType;
     }
 
     /**
-     * Get 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许 
-     * @return HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
+     * Get 是否允许发起合同弹窗隐藏合同到期时间
+**true**：允许
+**false**：（默认）不允许 
+     * @return HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间
+**true**：允许
+**false**：（默认）不允许
      */
     public Boolean getHideShowDeadline() {
         return this.HideShowDeadline;
     }
 
     /**
-     * Set 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
-     * @param HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
+     * Set 是否允许发起合同弹窗隐藏合同到期时间
+**true**：允许
+**false**：（默认）不允许
+     * @param HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间
+**true**：允许
+**false**：（默认）不允许
      */
     public void setHideShowDeadline(Boolean HideShowDeadline) {
         this.HideShowDeadline = HideShowDeadline;
     }
 
     /**
-     * Get 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许 
-     * @return CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
+     * Get 是否允许发起合同步骤跳过指定签署方步骤
+**true**：允许
+**false**：（默认）不允许 
+     * @return CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤
+**true**：允许
+**false**：（默认）不允许
      */
     public Boolean getCanSkipAddApprover() {
         return this.CanSkipAddApprover;
     }
 
     /**
-     * Set 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
-     * @param CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
+     * Set 是否允许发起合同步骤跳过指定签署方步骤
+**true**：允许
+**false**：（默认）不允许
+     * @param CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤
+**true**：允许
+**false**：（默认）不允许
      */
     public void setCanSkipAddApprover(Boolean CanSkipAddApprover) {
         this.CanSkipAddApprover = CanSkipAddApprover;
     }
 
     /**
-     * Get 定制化发起合同弹窗的描述信息，描述信息最长500 
-     * @return CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500
+     * Get 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。 
+     * @return CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
      */
     public String getCustomCreateFlowDescription() {
         return this.CustomCreateFlowDescription;
     }
 
     /**
-     * Set 定制化发起合同弹窗的描述信息，描述信息最长500
-     * @param CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500
+     * Set 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
+     * @param CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，长度不能超过500，只能由中文、字母、数字和标点组成。
      */
     public void setCustomCreateFlowDescription(String CustomCreateFlowDescription) {
         this.CustomCreateFlowDescription = CustomCreateFlowDescription;
+    }
+
+    /**
+     * Get 禁止编辑填写控件
+
+**true**：禁止编辑填写控件
+**false**：（默认）允许编辑填写控件 
+     * @return ForbidEditFillComponent 禁止编辑填写控件
+
+**true**：禁止编辑填写控件
+**false**：（默认）允许编辑填写控件
+     */
+    public Boolean getForbidEditFillComponent() {
+        return this.ForbidEditFillComponent;
+    }
+
+    /**
+     * Set 禁止编辑填写控件
+
+**true**：禁止编辑填写控件
+**false**：（默认）允许编辑填写控件
+     * @param ForbidEditFillComponent 禁止编辑填写控件
+
+**true**：禁止编辑填写控件
+**false**：（默认）允许编辑填写控件
+     */
+    public void setForbidEditFillComponent(Boolean ForbidEditFillComponent) {
+        this.ForbidEditFillComponent = ForbidEditFillComponent;
     }
 
     public CreateFlowOption() {
@@ -187,6 +275,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.CustomCreateFlowDescription != null) {
             this.CustomCreateFlowDescription = new String(source.CustomCreateFlowDescription);
         }
+        if (source.ForbidEditFillComponent != null) {
+            this.ForbidEditFillComponent = new Boolean(source.ForbidEditFillComponent);
+        }
     }
 
 
@@ -200,6 +291,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "HideShowDeadline", this.HideShowDeadline);
         this.setParamSimple(map, prefix + "CanSkipAddApprover", this.CanSkipAddApprover);
         this.setParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
+        this.setParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
 
     }
 }

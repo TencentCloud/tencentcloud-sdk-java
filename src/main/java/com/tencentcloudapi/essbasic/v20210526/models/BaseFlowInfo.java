@@ -24,37 +24,37 @@ import java.util.HashMap;
 public class BaseFlowInfo extends AbstractModel {
 
     /**
-    * 合同流程名称
+    * 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * 合同流程类型
-<br/>客户自定义，用于合同分类展示
+    * 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
     */
     @SerializedName("FlowType")
     @Expose
     private String FlowType;
 
     /**
-    * 合同流程描述信息
+    * 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
     */
     @SerializedName("FlowDescription")
     @Expose
     private String FlowDescription;
 
     /**
-    * 合同流程截止时间，unix时间戳，单位秒
+    * 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
     */
     @SerializedName("Deadline")
     @Expose
     private Long Deadline;
 
     /**
-    * 是否顺序签署(true:无序签,false:顺序签)
-<br/>默认false，有序签署合同
+    * 合同流程的签署顺序类型：
+**false**：(默认)有序签署, 本合同多个参与人需要依次签署
+**true**：无序签署, 本合同多个参与人没有先后签署限制
     */
     @SerializedName("Unordered")
     @Expose
@@ -68,41 +68,49 @@ public class BaseFlowInfo extends AbstractModel {
     private String IntelligentStatus;
 
     /**
-    * 填写控件内容
+    * 填写控件内容， 填写的控制的ID-填写的内容对列表
     */
     @SerializedName("FormFields")
     @Expose
     private FormField [] FormFields;
 
     /**
-    * 本企业(发起方企业)是否需要签署审批
-<br/>true：开启发起方签署审批
-<br/>false：不开启发起方签署审批
-<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+    * 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
     */
     @SerializedName("NeedSignReview")
     @Expose
     private Boolean NeedSignReview;
 
     /**
-    * 用户流程自定义数据参数
+    * 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为1000长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的回调通知模块。
     */
     @SerializedName("UserData")
     @Expose
     private String UserData;
 
     /**
-    * 抄送人信息
+    * 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
     */
     @SerializedName("CcInfos")
     @Expose
     private CcInfo [] CcInfos;
 
     /**
-    * 是否需要开启发起方发起前审核
-<br/>true：开启发起方发起前审核
-<br/>false：不开启发起方发起前审核
-<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+    * 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+
+若设置为true，发起审核结果需通过接口 [提交企业签署流程审批结果](https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignReview)通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+
+
     */
     @SerializedName("NeedCreateReview")
     @Expose
@@ -116,88 +124,88 @@ public class BaseFlowInfo extends AbstractModel {
     private Component [] Components;
 
     /**
-     * Get 合同流程名称 
-     * @return FlowName 合同流程名称
+     * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 
+     * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set 合同流程名称
-     * @param FlowName 合同流程名称
+     * Set 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 合同流程类型
-<br/>客户自定义，用于合同分类展示 
-     * @return FlowType 合同流程类型
-<br/>客户自定义，用于合同分类展示
+     * Get 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。 
+     * @return FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
      */
     public String getFlowType() {
         return this.FlowType;
     }
 
     /**
-     * Set 合同流程类型
-<br/>客户自定义，用于合同分类展示
-     * @param FlowType 合同流程类型
-<br/>客户自定义，用于合同分类展示
+     * Set 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
+     * @param FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;
     }
 
     /**
-     * Get 合同流程描述信息 
-     * @return FlowDescription 合同流程描述信息
+     * Get 合同流程描述信息(可自定义此描述)，最大长度1000个字符。 
+     * @return FlowDescription 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
      */
     public String getFlowDescription() {
         return this.FlowDescription;
     }
 
     /**
-     * Set 合同流程描述信息
-     * @param FlowDescription 合同流程描述信息
+     * Set 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
+     * @param FlowDescription 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
      */
     public void setFlowDescription(String FlowDescription) {
         this.FlowDescription = FlowDescription;
     }
 
     /**
-     * Get 合同流程截止时间，unix时间戳，单位秒 
-     * @return Deadline 合同流程截止时间，unix时间戳，单位秒
+     * Get 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。 
+     * @return Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 合同流程截止时间，unix时间戳，单位秒
-     * @param Deadline 合同流程截止时间，unix时间戳，单位秒
+     * Set 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     * @param Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 是否顺序签署(true:无序签,false:顺序签)
-<br/>默认false，有序签署合同 
-     * @return Unordered 是否顺序签署(true:无序签,false:顺序签)
-<br/>默认false，有序签署合同
+     * Get 合同流程的签署顺序类型：
+**false**：(默认)有序签署, 本合同多个参与人需要依次签署
+**true**：无序签署, 本合同多个参与人没有先后签署限制 
+     * @return Unordered 合同流程的签署顺序类型：
+**false**：(默认)有序签署, 本合同多个参与人需要依次签署
+**true**：无序签署, 本合同多个参与人没有先后签署限制
      */
     public Boolean getUnordered() {
         return this.Unordered;
     }
 
     /**
-     * Set 是否顺序签署(true:无序签,false:顺序签)
-<br/>默认false，有序签署合同
-     * @param Unordered 是否顺序签署(true:无序签,false:顺序签)
-<br/>默认false，有序签署合同
+     * Set 合同流程的签署顺序类型：
+**false**：(默认)有序签署, 本合同多个参与人需要依次签署
+**true**：无序签署, 本合同多个参与人没有先后签署限制
+     * @param Unordered 合同流程的签署顺序类型：
+**false**：(默认)有序签署, 本合同多个参与人需要依次签署
+**true**：无序签署, 本合同多个参与人没有先后签署限制
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;
@@ -220,104 +228,136 @@ public class BaseFlowInfo extends AbstractModel {
     }
 
     /**
-     * Get 填写控件内容 
-     * @return FormFields 填写控件内容
+     * Get 填写控件内容， 填写的控制的ID-填写的内容对列表 
+     * @return FormFields 填写控件内容， 填写的控制的ID-填写的内容对列表
      */
     public FormField [] getFormFields() {
         return this.FormFields;
     }
 
     /**
-     * Set 填写控件内容
-     * @param FormFields 填写控件内容
+     * Set 填写控件内容， 填写的控制的ID-填写的内容对列表
+     * @param FormFields 填写控件内容， 填写的控制的ID-填写的内容对列表
      */
     public void setFormFields(FormField [] FormFields) {
         this.FormFields = FormFields;
     }
 
     /**
-     * Get 本企业(发起方企业)是否需要签署审批
-<br/>true：开启发起方签署审批
-<br/>false：不开启发起方签署审批
-<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署 
-     * @return NeedSignReview 本企业(发起方企业)是否需要签署审批
-<br/>true：开启发起方签署审批
-<br/>false：不开启发起方签署审批
-<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+     * Get 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同` 
+     * @return NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
      */
     public Boolean getNeedSignReview() {
         return this.NeedSignReview;
     }
 
     /**
-     * Set 本企业(发起方企业)是否需要签署审批
-<br/>true：开启发起方签署审批
-<br/>false：不开启发起方签署审批
-<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
-     * @param NeedSignReview 本企业(发起方企业)是否需要签署审批
-<br/>true：开启发起方签署审批
-<br/>false：不开启发起方签署审批
-<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+     * Set 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+     * @param NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
      */
     public void setNeedSignReview(Boolean NeedSignReview) {
         this.NeedSignReview = NeedSignReview;
     }
 
     /**
-     * Get 用户流程自定义数据参数 
-     * @return UserData 用户流程自定义数据参数
+     * Get 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为1000长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的回调通知模块。 
+     * @return UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为1000长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的回调通知模块。
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set 用户流程自定义数据参数
-     * @param UserData 用户流程自定义数据参数
+     * Set 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为1000长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的回调通知模块。
+     * @param UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为1000长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的回调通知模块。
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
     }
 
     /**
-     * Get 抄送人信息 
-     * @return CcInfos 抄送人信息
+     * Get 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。` 
+     * @return CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public CcInfo [] getCcInfos() {
         return this.CcInfos;
     }
 
     /**
-     * Set 抄送人信息
-     * @param CcInfos 抄送人信息
+     * Set 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
+     * @param CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public void setCcInfos(CcInfo [] CcInfos) {
         this.CcInfos = CcInfos;
     }
 
     /**
-     * Get 是否需要开启发起方发起前审核
-<br/>true：开启发起方发起前审核
-<br/>false：不开启发起方发起前审核
-<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同 
-     * @return NeedCreateReview 是否需要开启发起方发起前审核
-<br/>true：开启发起方发起前审核
-<br/>false：不开启发起方发起前审核
-<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     * Get 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+
+若设置为true，发起审核结果需通过接口 [提交企业签署流程审批结果](https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignReview)通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+
+ 
+     * @return NeedCreateReview 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+
+若设置为true，发起审核结果需通过接口 [提交企业签署流程审批结果](https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignReview)通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+
+
      */
     public Boolean getNeedCreateReview() {
         return this.NeedCreateReview;
     }
 
     /**
-     * Set 是否需要开启发起方发起前审核
-<br/>true：开启发起方发起前审核
-<br/>false：不开启发起方发起前审核
-<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
-     * @param NeedCreateReview 是否需要开启发起方发起前审核
-<br/>true：开启发起方发起前审核
-<br/>false：不开启发起方发起前审核
-<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     * Set 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+
+若设置为true，发起审核结果需通过接口 [提交企业签署流程审批结果](https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignReview)通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+
+
+     * @param NeedCreateReview 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+
+若设置为true，发起审核结果需通过接口 [提交企业签署流程审批结果](https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignReview)通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+
+
      */
     public void setNeedCreateReview(Boolean NeedCreateReview) {
         this.NeedCreateReview = NeedCreateReview;

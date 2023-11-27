@@ -60,4 +60,15 @@ public class ConfigClient extends AbstractClient{
         return this.internalRequest(req, "ListConfigRules", ListConfigRulesResponse.class);
     }
 
+    /**
+     *上报自定义规则评估结果
+     * @param req PutEvaluationsRequest
+     * @return PutEvaluationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutEvaluationsResponse PutEvaluations(PutEvaluationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PutEvaluations", PutEvaluationsResponse.class);
+    }
+
 }

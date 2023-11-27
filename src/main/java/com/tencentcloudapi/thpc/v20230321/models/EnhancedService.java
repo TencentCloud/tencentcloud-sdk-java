@@ -32,7 +32,7 @@ public class EnhancedService extends AbstractModel {
     private RunSecurityServiceEnabled SecurityService;
 
     /**
-    * 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+    * 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorService")
@@ -68,9 +68,9 @@ public class EnhancedService extends AbstractModel {
     }
 
     /**
-     * Get 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+     * Get 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+     * @return MonitorService 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RunMonitorServiceEnabled getMonitorService() {
@@ -78,9 +78,9 @@ public class EnhancedService extends AbstractModel {
     }
 
     /**
-     * Set 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+     * Set 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
+     * @param MonitorService 开启腾讯云可观测平台服务。若不指定该参数，则默认开启腾讯云可观测平台服务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorService(RunMonitorServiceEnabled MonitorService) {

@@ -4,7 +4,13 @@ public enum ConfigErrorCode {
      INVALIDPARAMETER("InvalidParameter"),
      
     // 账号组不存在。
-     RESOURCENOTFOUND_ACCOUNTGROUPISNOTEXIST("ResourceNotFound.AccountGroupIsNotExist");
+     RESOURCENOTFOUND_ACCOUNTGROUPISNOTEXIST("ResourceNotFound.AccountGroupIsNotExist"),
+     
+    // 资源不存在。
+     RESOURCENOTFOUND_RESOURCENOTEXIST("ResourceNotFound.ResourceNotExist"),
+     
+    // 规则不存在。
+     RESOURCENOTFOUND_RULEISNOTEXIST("ResourceNotFound.RuleIsNotExist");
      
     private String value;
     private ConfigErrorCode (String value){
