@@ -224,6 +224,22 @@ public class SingleInvoiceItem extends AbstractModel {
     private VatInvoiceInfo VatSalesList;
 
     /**
+    * 电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElectronicTrainTicketFull")
+    @Expose
+    private ElectronicTrainTicketFull ElectronicTrainTicketFull;
+
+    /**
+    * 电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElectronicFlightTicketFull")
+    @Expose
+    private ElectronicFlightTicketFull ElectronicFlightTicketFull;
+
+    /**
      * Get 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VatSpecialInvoice 增值税专用发票
@@ -723,6 +739,46 @@ public class SingleInvoiceItem extends AbstractModel {
         this.VatSalesList = VatSalesList;
     }
 
+    /**
+     * Get 电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElectronicTrainTicketFull 电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ElectronicTrainTicketFull getElectronicTrainTicketFull() {
+        return this.ElectronicTrainTicketFull;
+    }
+
+    /**
+     * Set 电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElectronicTrainTicketFull 电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElectronicTrainTicketFull(ElectronicTrainTicketFull ElectronicTrainTicketFull) {
+        this.ElectronicTrainTicketFull = ElectronicTrainTicketFull;
+    }
+
+    /**
+     * Get 电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElectronicFlightTicketFull 电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ElectronicFlightTicketFull getElectronicFlightTicketFull() {
+        return this.ElectronicFlightTicketFull;
+    }
+
+    /**
+     * Set 电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElectronicFlightTicketFull 电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElectronicFlightTicketFull(ElectronicFlightTicketFull ElectronicFlightTicketFull) {
+        this.ElectronicFlightTicketFull = ElectronicFlightTicketFull;
+    }
+
     public SingleInvoiceItem() {
     }
 
@@ -806,6 +862,12 @@ public class SingleInvoiceItem extends AbstractModel {
         if (source.VatSalesList != null) {
             this.VatSalesList = new VatInvoiceInfo(source.VatSalesList);
         }
+        if (source.ElectronicTrainTicketFull != null) {
+            this.ElectronicTrainTicketFull = new ElectronicTrainTicketFull(source.ElectronicTrainTicketFull);
+        }
+        if (source.ElectronicFlightTicketFull != null) {
+            this.ElectronicFlightTicketFull = new ElectronicFlightTicketFull(source.ElectronicFlightTicketFull);
+        }
     }
 
 
@@ -838,6 +900,8 @@ public class SingleInvoiceItem extends AbstractModel {
         this.setParamObj(map, prefix + "MedicalOutpatientInvoice.", this.MedicalOutpatientInvoice);
         this.setParamObj(map, prefix + "MedicalHospitalizedInvoice.", this.MedicalHospitalizedInvoice);
         this.setParamObj(map, prefix + "VatSalesList.", this.VatSalesList);
+        this.setParamObj(map, prefix + "ElectronicTrainTicketFull.", this.ElectronicTrainTicketFull);
+        this.setParamObj(map, prefix + "ElectronicFlightTicketFull.", this.ElectronicFlightTicketFull);
 
     }
 }

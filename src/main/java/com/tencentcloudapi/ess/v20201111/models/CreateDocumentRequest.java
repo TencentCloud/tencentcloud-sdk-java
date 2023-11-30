@@ -55,6 +55,9 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
     * 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul>
     */
     @SerializedName("FormFields")
     @Expose
@@ -169,8 +172,14 @@ public class CreateDocumentRequest extends AbstractModel {
     }
 
     /**
-     * Get 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。 
+     * Get 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul> 
      * @return FormFields 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul>
      */
     public FormField [] getFormFields() {
         return this.FormFields;
@@ -178,7 +187,13 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
      * Set 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul>
      * @param FormFields 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul>
      */
     public void setFormFields(FormField [] FormFields) {
         this.FormFields = FormFields;

@@ -24,13 +24,13 @@ import java.util.HashMap;
 public class CreateProClusterRequest extends AbstractModel {
 
     /**
-    * 多可用区部署选择三个可用区，示例"200002","200003","200004"
+    * 多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002"
+单可用区部署选择一个可用区，示例[200002]
     */
     @SerializedName("ZoneIds")
     @Expose
-    private String ZoneIds;
+    private Long [] ZoneIds;
 
     /**
     * 集群规格代号
@@ -93,26 +93,26 @@ public class CreateProClusterRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 多可用区部署选择三个可用区，示例"200002","200003","200004"
+     * Get 多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002" 
-     * @return ZoneIds 多可用区部署选择三个可用区，示例"200002","200003","200004"
+单可用区部署选择一个可用区，示例[200002] 
+     * @return ZoneIds 多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002"
+单可用区部署选择一个可用区，示例[200002]
      */
-    public String getZoneIds() {
+    public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 多可用区部署选择三个可用区，示例"200002","200003","200004"
+     * Set 多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002"
-     * @param ZoneIds 多可用区部署选择三个可用区，示例"200002","200003","200004"
+单可用区部署选择一个可用区，示例[200002]
+     * @param ZoneIds 多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002"
+单可用区部署选择一个可用区，示例[200002]
      */
-    public void setZoneIds(String ZoneIds) {
+    public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
@@ -269,7 +269,10 @@ public class CreateProClusterRequest extends AbstractModel {
      */
     public CreateProClusterRequest(CreateProClusterRequest source) {
         if (source.ZoneIds != null) {
-            this.ZoneIds = new String(source.ZoneIds);
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
         }
         if (source.ProductName != null) {
             this.ProductName = new String(source.ProductName);
@@ -305,7 +308,7 @@ public class CreateProClusterRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneIds", this.ZoneIds);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);

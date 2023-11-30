@@ -666,7 +666,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *获取制定机器组下的机器状态
+     *获取指定机器组下的机器状态
      * @param req DescribeMachinesRequest
      * @return DescribeMachinesResponse
      * @throws TencentCloudSDKException

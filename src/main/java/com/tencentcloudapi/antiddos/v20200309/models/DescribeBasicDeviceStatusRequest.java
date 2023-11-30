@@ -45,6 +45,13 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
     private Long FilterRegion;
 
     /**
+    * cnameWaf资源
+    */
+    @SerializedName("CnameWafIdList")
+    @Expose
+    private String [] CnameWafIdList;
+
+    /**
      * Get IP 资源列表 
      * @return IpList IP 资源列表
      */
@@ -92,6 +99,22 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
         this.FilterRegion = FilterRegion;
     }
 
+    /**
+     * Get cnameWaf资源 
+     * @return CnameWafIdList cnameWaf资源
+     */
+    public String [] getCnameWafIdList() {
+        return this.CnameWafIdList;
+    }
+
+    /**
+     * Set cnameWaf资源
+     * @param CnameWafIdList cnameWaf资源
+     */
+    public void setCnameWafIdList(String [] CnameWafIdList) {
+        this.CnameWafIdList = CnameWafIdList;
+    }
+
     public DescribeBasicDeviceStatusRequest() {
     }
 
@@ -115,6 +138,12 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
         if (source.FilterRegion != null) {
             this.FilterRegion = new Long(source.FilterRegion);
         }
+        if (source.CnameWafIdList != null) {
+            this.CnameWafIdList = new String[source.CnameWafIdList.length];
+            for (int i = 0; i < source.CnameWafIdList.length; i++) {
+                this.CnameWafIdList[i] = new String(source.CnameWafIdList[i]);
+            }
+        }
     }
 
 
@@ -125,6 +154,7 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
         this.setParamArraySimple(map, prefix + "IdList.", this.IdList);
         this.setParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
+        this.setParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
 
     }
 }

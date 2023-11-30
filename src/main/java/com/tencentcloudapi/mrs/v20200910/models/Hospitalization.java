@@ -88,6 +88,14 @@ public class Hospitalization extends AbstractModel {
     private String DischargeInstruction;
 
     /**
+    * 入院诊断
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdmissionDiagnosis")
+    @Expose
+    private String AdmissionDiagnosis;
+
+    /**
      * Get 入院时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdmissionTime 入院时间
@@ -152,7 +160,9 @@ public class Hospitalization extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdmissionDignosis 入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getAdmissionDignosis() {
         return this.AdmissionDignosis;
     }
@@ -162,7 +172,9 @@ public class Hospitalization extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionDignosis 入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setAdmissionDignosis(String AdmissionDignosis) {
         this.AdmissionDignosis = AdmissionDignosis;
     }
@@ -247,6 +259,26 @@ public class Hospitalization extends AbstractModel {
         this.DischargeInstruction = DischargeInstruction;
     }
 
+    /**
+     * Get 入院诊断
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdmissionDiagnosis 入院诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAdmissionDiagnosis() {
+        return this.AdmissionDiagnosis;
+    }
+
+    /**
+     * Set 入院诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdmissionDiagnosis 入院诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdmissionDiagnosis(String AdmissionDiagnosis) {
+        this.AdmissionDiagnosis = AdmissionDiagnosis;
+    }
+
     public Hospitalization() {
     }
 
@@ -279,6 +311,9 @@ public class Hospitalization extends AbstractModel {
         if (source.DischargeInstruction != null) {
             this.DischargeInstruction = new String(source.DischargeInstruction);
         }
+        if (source.AdmissionDiagnosis != null) {
+            this.AdmissionDiagnosis = new String(source.AdmissionDiagnosis);
+        }
     }
 
 
@@ -294,6 +329,7 @@ public class Hospitalization extends AbstractModel {
         this.setParamSimple(map, prefix + "DiagnosisTreatment", this.DiagnosisTreatment);
         this.setParamSimple(map, prefix + "DischargeDiagnosis", this.DischargeDiagnosis);
         this.setParamSimple(map, prefix + "DischargeInstruction", this.DischargeInstruction);
+        this.setParamSimple(map, prefix + "AdmissionDiagnosis", this.AdmissionDiagnosis);
 
     }
 }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractModel {
 
     /**
-    * 模版id
+    * 模板id
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 模版名称
+    * 模板名称
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 模版的描述
+    * 模板的描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateDescription")
@@ -91,41 +91,41 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 模版id 
-     * @return TemplateId 模版id
+     * Get 模板id 
+     * @return TemplateId 模板id
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版id
-     * @param TemplateId 模版id
+     * Set 模板id
+     * @param TemplateId 模板id
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模版名称 
-     * @return TemplateName 模版名称
+     * Get 模板名称 
+     * @return TemplateName 模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模版名称
-     * @param TemplateName 模版名称
+     * Set 模板名称
+     * @param TemplateName 模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 模版的描述
+     * Get 模板的描述
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateDescription 模版的描述
+     * @return TemplateDescription 模板的描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateDescription() {
@@ -133,9 +133,9 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
     }
 
     /**
-     * Set 模版的描述
+     * Set 模板的描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateDescription 模版的描述
+     * @param TemplateDescription 模板的描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateDescription(String TemplateDescription) {

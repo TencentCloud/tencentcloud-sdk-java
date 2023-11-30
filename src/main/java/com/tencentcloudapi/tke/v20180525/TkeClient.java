@@ -1337,6 +1337,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询集群日志（审计、事件、普通日志）开关列表
+     * @param req DescribeLogSwitchesRequest
+     * @return DescribeLogSwitchesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogSwitchesResponse DescribeLogSwitches(DescribeLogSwitchesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogSwitches", DescribeLogSwitchesResponse.class);
+    }
+
+    /**
      *查询各个规格的 Pod 的抵扣率
      * @param req DescribePodDeductionRateRequest
      * @return DescribePodDeductionRateResponse

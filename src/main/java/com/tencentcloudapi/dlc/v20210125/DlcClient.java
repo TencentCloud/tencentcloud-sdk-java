@@ -94,6 +94,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *分配原生表表属性
+     * @param req AssignMangedTablePropertiesRequest
+     * @return AssignMangedTablePropertiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignMangedTablePropertiesResponse AssignMangedTableProperties(AssignMangedTablePropertiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssignMangedTableProperties", AssignMangedTablePropertiesResponse.class);
+    }
+
+    /**
      *绑定鉴权策略到用户
      * @param req AttachUserPolicyRequest
      * @return AttachUserPolicyResponse

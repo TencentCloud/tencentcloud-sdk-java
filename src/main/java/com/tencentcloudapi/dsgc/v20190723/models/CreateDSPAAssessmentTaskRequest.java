@@ -38,7 +38,7 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 评估模版Id，格式“template-xxxxxxxx”
+    * 评估模板Id，格式“template-xxxxxxxx”
     */
     @SerializedName("TemplateId")
     @Expose
@@ -66,7 +66,7 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel {
     private String BusinessOwner;
 
     /**
-    * 分类分级模版Id
+    * 分类分级模板Id
     */
     @SerializedName("ComplianceId")
     @Expose
@@ -119,16 +119,16 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 评估模版Id，格式“template-xxxxxxxx” 
-     * @return TemplateId 评估模版Id，格式“template-xxxxxxxx”
+     * Get 评估模板Id，格式“template-xxxxxxxx” 
+     * @return TemplateId 评估模板Id，格式“template-xxxxxxxx”
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 评估模版Id，格式“template-xxxxxxxx”
-     * @param TemplateId 评估模版Id，格式“template-xxxxxxxx”
+     * Set 评估模板Id，格式“template-xxxxxxxx”
+     * @param TemplateId 评估模板Id，格式“template-xxxxxxxx”
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
@@ -195,16 +195,16 @@ public class CreateDSPAAssessmentTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 分类分级模版Id 
-     * @return ComplianceId 分类分级模版Id
+     * Get 分类分级模板Id 
+     * @return ComplianceId 分类分级模板Id
      */
     public Long getComplianceId() {
         return this.ComplianceId;
     }
 
     /**
-     * Set 分类分级模版Id
-     * @param ComplianceId 分类分级模版Id
+     * Set 分类分级模板Id
+     * @param ComplianceId 分类分级模板Id
      */
     public void setComplianceId(Long ComplianceId) {
         this.ComplianceId = ComplianceId;

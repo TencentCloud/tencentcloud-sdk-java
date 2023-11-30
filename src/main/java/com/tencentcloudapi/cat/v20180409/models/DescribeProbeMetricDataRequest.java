@@ -36,14 +36,14 @@ AnalyzeTaskType_MediaStream：音视频体验
     private String AnalyzeTaskType;
 
     /**
-    * 指标类型，指标查询默认传gauge
+    * 指标类型（counter、gauge以及histogram），指标查询默认传gauge
     */
     @SerializedName("MetricType")
     @Expose
     private String MetricType;
 
     /**
-    * 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
+    * 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。
     */
     @SerializedName("Field")
     @Expose
@@ -108,32 +108,32 @@ AnalyzeTaskType_MediaStream：音视频体验
     }
 
     /**
-     * Get 指标类型，指标查询默认传gauge 
-     * @return MetricType 指标类型，指标查询默认传gauge
+     * Get 指标类型（counter、gauge以及histogram），指标查询默认传gauge 
+     * @return MetricType 指标类型（counter、gauge以及histogram），指标查询默认传gauge
      */
     public String getMetricType() {
         return this.MetricType;
     }
 
     /**
-     * Set 指标类型，指标查询默认传gauge
-     * @param MetricType 指标类型，指标查询默认传gauge
+     * Set 指标类型（counter、gauge以及histogram），指标查询默认传gauge
+     * @param MetricType 指标类型（counter、gauge以及histogram），指标查询默认传gauge
      */
     public void setMetricType(String MetricType) {
         this.MetricType = MetricType;
     }
 
     /**
-     * Get 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms) 
-     * @return Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
+     * Get 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。 
+     * @return Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
-     * @param Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
+     * Set 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。
+     * @param Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。
      */
     public void setField(String Field) {
         this.Field = Field;

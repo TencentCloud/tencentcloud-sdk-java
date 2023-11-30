@@ -40,11 +40,21 @@ public class IndicatorV3 extends AbstractModel {
     private String Version;
 
     /**
+    * 检验报告V3结论
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableIndicators")
+    @Expose
+    private TableIndicators [] TableIndicators;
+
+    /**
      * Get 检验报告V3结论
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableIndictors 检验报告V3结论
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public TableIndicators [] getTableIndictors() {
         return this.TableIndictors;
     }
@@ -54,7 +64,9 @@ public class IndicatorV3 extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableIndictors 检验报告V3结论
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setTableIndictors(TableIndicators [] TableIndictors) {
         this.TableIndictors = TableIndictors;
     }
@@ -79,6 +91,26 @@ public class IndicatorV3 extends AbstractModel {
         this.Version = Version;
     }
 
+    /**
+     * Get 检验报告V3结论
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableIndicators 检验报告V3结论
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TableIndicators [] getTableIndicators() {
+        return this.TableIndicators;
+    }
+
+    /**
+     * Set 检验报告V3结论
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableIndicators 检验报告V3结论
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableIndicators(TableIndicators [] TableIndicators) {
+        this.TableIndicators = TableIndicators;
+    }
+
     public IndicatorV3() {
     }
 
@@ -96,6 +128,12 @@ public class IndicatorV3 extends AbstractModel {
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.TableIndicators != null) {
+            this.TableIndicators = new TableIndicators[source.TableIndicators.length];
+            for (int i = 0; i < source.TableIndicators.length; i++) {
+                this.TableIndicators[i] = new TableIndicators(source.TableIndicators[i]);
+            }
+        }
     }
 
 
@@ -105,6 +143,7 @@ public class IndicatorV3 extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TableIndictors.", this.TableIndictors);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamArrayObj(map, prefix + "TableIndicators.", this.TableIndicators);
 
     }
 }

@@ -52,11 +52,7 @@ public class CreateAlarmRequest extends AbstractModel {
     private Long TriggerCount;
 
     /**
-    * 告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。
+    * 告警重复的周期，单位是分钟。取值范围是0~1440。
     */
     @SerializedName("AlarmPeriod")
     @Expose
@@ -70,10 +66,8 @@ public class CreateAlarmRequest extends AbstractModel {
     private String [] AlarmNoticeIds;
 
     /**
-    * 触发条件。
-
+    * 触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
     */
@@ -82,10 +76,8 @@ public class CreateAlarmRequest extends AbstractModel {
     private String Condition;
 
     /**
-    * 告警级别。
-
+    * 告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
@@ -95,8 +87,7 @@ public class CreateAlarmRequest extends AbstractModel {
     private Long AlarmLevel;
 
     /**
-    * 多触发条件。
-
+    * 多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
@@ -109,7 +100,6 @@ public class CreateAlarmRequest extends AbstractModel {
 
     /**
     * 是否开启告警策略。
-
 默认值为true
     */
     @SerializedName("Status")
@@ -117,7 +107,7 @@ public class CreateAlarmRequest extends AbstractModel {
     private Boolean Status;
 
     /**
-    * 是否开启告警策略。默认值为true
+    * 该参数已废弃，请使用Status参数控制是否开启告警策略。
     */
     @SerializedName("Enable")
     @Expose
@@ -146,7 +136,6 @@ public class CreateAlarmRequest extends AbstractModel {
 
     /**
     * 分组触发状态。
-
 默认值false
     */
     @SerializedName("GroupTriggerStatus")
@@ -171,9 +160,7 @@ public class CreateAlarmRequest extends AbstractModel {
 
     /**
     * 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
     */
@@ -183,11 +170,8 @@ public class CreateAlarmRequest extends AbstractModel {
 
     /**
     * 告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。
     */
     @SerializedName("Classifications")
@@ -259,32 +243,16 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。 
-     * @return AlarmPeriod 告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。
+     * Get 告警重复的周期，单位是分钟。取值范围是0~1440。 
+     * @return AlarmPeriod 告警重复的周期，单位是分钟。取值范围是0~1440。
      */
     public Long getAlarmPeriod() {
         return this.AlarmPeriod;
     }
 
     /**
-     * Set 告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。
-     * @param AlarmPeriod 告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。
+     * Set 告警重复的周期，单位是分钟。取值范围是0~1440。
+     * @param AlarmPeriod 告警重复的周期，单位是分钟。取值范围是0~1440。
      */
     public void setAlarmPeriod(Long AlarmPeriod) {
         this.AlarmPeriod = AlarmPeriod;
@@ -307,16 +275,12 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 触发条件。
-
+     * Get 触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
  
-     * @return Condition 触发条件。
-
+     * @return Condition 触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
      */
@@ -325,16 +289,12 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Set 触发条件。
-
+     * Set 触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
-     * @param Condition 触发条件。
-
+     * @param Condition 触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
      */
@@ -343,17 +303,13 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 告警级别。
-
+     * Get 告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。 
-     * @return AlarmLevel 告警级别。
-
+     * @return AlarmLevel 告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
@@ -363,17 +319,13 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Set 告警级别。
-
+     * Set 告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param AlarmLevel 告警级别。
-
+     * @param AlarmLevel 告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
@@ -383,15 +335,13 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 多触发条件。
-
+     * Get 多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
 
  
-     * @return MultiConditions 多触发条件。
-
+     * @return MultiConditions 多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
@@ -403,15 +353,13 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Set 多触发条件。
-
+     * Set 多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
 
 
-     * @param MultiConditions 多触发条件。
-
+     * @param MultiConditions 多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
@@ -424,10 +372,8 @@ Classifications元素的Value长度不能超过200个字符。
 
     /**
      * Get 是否开启告警策略。
-
 默认值为true 
      * @return Status 是否开启告警策略。
-
 默认值为true
      */
     public Boolean getStatus() {
@@ -436,10 +382,8 @@ Classifications元素的Value长度不能超过200个字符。
 
     /**
      * Set 是否开启告警策略。
-
 默认值为true
      * @param Status 是否开启告警策略。
-
 默认值为true
      */
     public void setStatus(Boolean Status) {
@@ -447,16 +391,16 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 是否开启告警策略。默认值为true 
-     * @return Enable 是否开启告警策略。默认值为true
+     * Get 该参数已废弃，请使用Status参数控制是否开启告警策略。 
+     * @return Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否开启告警策略。默认值为true
-     * @param Enable 是否开启告警策略。默认值为true
+     * Set 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * @param Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
@@ -512,10 +456,8 @@ Classifications元素的Value长度不能超过200个字符。
 
     /**
      * Get 分组触发状态。
-
 默认值false 
      * @return GroupTriggerStatus 分组触发状态。
-
 默认值false
      */
     public Boolean getGroupTriggerStatus() {
@@ -524,10 +466,8 @@ Classifications元素的Value长度不能超过200个字符。
 
     /**
      * Set 分组触发状态。
-
 默认值false
      * @param GroupTriggerStatus 分组触发状态。
-
 默认值false
      */
     public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
@@ -576,15 +516,11 @@ Classifications元素的Value长度不能超过200个字符。
 
     /**
      * Get 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
  
      * @return MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
      */
@@ -594,15 +530,11 @@ Classifications元素的Value长度不能超过200个字符。
 
     /**
      * Set 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
      * @param MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
      */
@@ -612,18 +544,12 @@ Classifications元素的Value长度不能超过200个字符。
 
     /**
      * Get 告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。 
      * @return Classifications 告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。
      */
     public AlarmClassification [] getClassifications() {
@@ -632,18 +558,12 @@ Classifications元素的Value长度不能超过200个字符。
 
     /**
      * Set 告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。
      * @param Classifications 告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。
      */
     public void setClassifications(AlarmClassification [] Classifications) {

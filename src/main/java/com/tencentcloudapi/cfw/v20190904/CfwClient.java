@@ -705,7 +705,6 @@ public class CfwClient extends AbstractClient{
 
     /**
      *DescribeUnHandleEventTabList 告警中心伪攻击链事件未处置接口
-
      * @param req DescribeUnHandleEventTabListRequest
      * @return DescribeUnHandleEventTabListResponse
      * @throws TencentCloudSDKException

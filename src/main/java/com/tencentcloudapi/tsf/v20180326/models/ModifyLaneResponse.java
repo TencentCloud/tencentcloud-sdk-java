@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLaneResponse extends AbstractModel {
 
     /**
-    * 操作状态
+    * 编辑成功: true / 编辑失败: false
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyLaneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作状态 
-     * @return Result 操作状态
+     * Get 编辑成功: true / 编辑失败: false 
+     * @return Result 编辑成功: true / 编辑失败: false
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 操作状态
-     * @param Result 操作状态
+     * Set 编辑成功: true / 编辑失败: false
+     * @param Result 编辑成功: true / 编辑失败: false
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

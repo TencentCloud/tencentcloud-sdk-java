@@ -39,6 +39,14 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     private Long DeployStatus;
 
     /**
+    * 更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateSyncProgress")
+    @Expose
+    private UpdateSyncProgress [] UpdateSyncProgress;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -82,6 +90,26 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     }
 
     /**
+     * Get 更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateSyncProgress 更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UpdateSyncProgress [] getUpdateSyncProgress() {
+        return this.UpdateSyncProgress;
+    }
+
+    /**
+     * Set 更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateSyncProgress 更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateSyncProgress(UpdateSyncProgress [] UpdateSyncProgress) {
+        this.UpdateSyncProgress = UpdateSyncProgress;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -111,6 +139,12 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
         if (source.DeployStatus != null) {
             this.DeployStatus = new Long(source.DeployStatus);
         }
+        if (source.UpdateSyncProgress != null) {
+            this.UpdateSyncProgress = new UpdateSyncProgress[source.UpdateSyncProgress.length];
+            for (int i = 0; i < source.UpdateSyncProgress.length; i++) {
+                this.UpdateSyncProgress[i] = new UpdateSyncProgress(source.UpdateSyncProgress[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,6 +157,7 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeployRecordId", this.DeployRecordId);
         this.setParamSimple(map, prefix + "DeployStatus", this.DeployStatus);
+        this.setParamArrayObj(map, prefix + "UpdateSyncProgress.", this.UpdateSyncProgress);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -51,6 +51,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎
     */
     @SerializedName("EngineModelType")
@@ -309,6 +310,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎 
      * @return EngineModelType 引擎模型类型
 
@@ -337,6 +339,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎
      */
     public String getEngineModelType() {
@@ -371,6 +374,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎
      * @param EngineModelType 引擎模型类型
 
@@ -399,6 +403,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎
      */
     public void setEngineModelType(String EngineModelType) {

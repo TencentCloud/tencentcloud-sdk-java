@@ -31,14 +31,14 @@ public class CreateRegisterCodeRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 注册实列名称前缀。
+    * 注册实例名称前缀。
     */
     @SerializedName("InstanceNamePrefix")
     @Expose
     private String InstanceNamePrefix;
 
     /**
-    * 该注册码允许注册的实列数目。默认限制为10个。
+    * 该注册码允许注册的实例数目。默认限制为10个。
     */
     @SerializedName("RegisterLimit")
     @Expose
@@ -75,32 +75,32 @@ public class CreateRegisterCodeRequest extends AbstractModel {
     }
 
     /**
-     * Get 注册实列名称前缀。 
-     * @return InstanceNamePrefix 注册实列名称前缀。
+     * Get 注册实例名称前缀。 
+     * @return InstanceNamePrefix 注册实例名称前缀。
      */
     public String getInstanceNamePrefix() {
         return this.InstanceNamePrefix;
     }
 
     /**
-     * Set 注册实列名称前缀。
-     * @param InstanceNamePrefix 注册实列名称前缀。
+     * Set 注册实例名称前缀。
+     * @param InstanceNamePrefix 注册实例名称前缀。
      */
     public void setInstanceNamePrefix(String InstanceNamePrefix) {
         this.InstanceNamePrefix = InstanceNamePrefix;
     }
 
     /**
-     * Get 该注册码允许注册的实列数目。默认限制为10个。 
-     * @return RegisterLimit 该注册码允许注册的实列数目。默认限制为10个。
+     * Get 该注册码允许注册的实例数目。默认限制为10个。 
+     * @return RegisterLimit 该注册码允许注册的实例数目。默认限制为10个。
      */
     public Long getRegisterLimit() {
         return this.RegisterLimit;
     }
 
     /**
-     * Set 该注册码允许注册的实列数目。默认限制为10个。
-     * @param RegisterLimit 该注册码允许注册的实列数目。默认限制为10个。
+     * Set 该注册码允许注册的实例数目。默认限制为10个。
+     * @param RegisterLimit 该注册码允许注册的实例数目。默认限制为10个。
      */
     public void setRegisterLimit(Long RegisterLimit) {
         this.RegisterLimit = RegisterLimit;

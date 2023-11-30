@@ -661,7 +661,8 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *通过此接口，绑定员工角色，支持以电子签userId、客户系统userId两种方式调用。
+     *使用此接口，用来绑定企业实名员工的角色，
+支持以电子签userId、客户系统openId两种方式进行绑定。
      * @param req ChannelCreateUserRolesRequest
      * @return ChannelCreateUserRolesResponse
      * @throws TencentCloudSDKException
@@ -1137,6 +1138,17 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     public DescribeChannelFlowEvidenceReportResponse DescribeChannelFlowEvidenceReport(DescribeChannelFlowEvidenceReportRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeChannelFlowEvidenceReport", DescribeChannelFlowEvidenceReportResponse.class);
+    }
+
+    /**
+     *生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转的方式查看）
+     * @param req DescribeChannelSealPolicyWorkflowUrlRequest
+     * @return DescribeChannelSealPolicyWorkflowUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrl(DescribeChannelSealPolicyWorkflowUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeChannelSealPolicyWorkflowUrl", DescribeChannelSealPolicyWorkflowUrlResponse.class);
     }
 
     /**

@@ -206,6 +206,20 @@ public class CreateJobConfigRequest extends AbstractModel {
     private JobGraph JobGraph;
 
     /**
+    * es索引名称
+    */
+    @SerializedName("EsServerlessIndex")
+    @Expose
+    private String EsServerlessIndex;
+
+    /**
+    * es索引空间
+    */
+    @SerializedName("EsServerlessSpace")
+    @Expose
+    private String EsServerlessSpace;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -621,6 +635,38 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.JobGraph = JobGraph;
     }
 
+    /**
+     * Get es索引名称 
+     * @return EsServerlessIndex es索引名称
+     */
+    public String getEsServerlessIndex() {
+        return this.EsServerlessIndex;
+    }
+
+    /**
+     * Set es索引名称
+     * @param EsServerlessIndex es索引名称
+     */
+    public void setEsServerlessIndex(String EsServerlessIndex) {
+        this.EsServerlessIndex = EsServerlessIndex;
+    }
+
+    /**
+     * Get es索引空间 
+     * @return EsServerlessSpace es索引空间
+     */
+    public String getEsServerlessSpace() {
+        return this.EsServerlessSpace;
+    }
+
+    /**
+     * Set es索引空间
+     * @param EsServerlessSpace es索引空间
+     */
+    public void setEsServerlessSpace(String EsServerlessSpace) {
+        this.EsServerlessSpace = EsServerlessSpace;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -716,6 +762,12 @@ public class CreateJobConfigRequest extends AbstractModel {
         if (source.JobGraph != null) {
             this.JobGraph = new JobGraph(source.JobGraph);
         }
+        if (source.EsServerlessIndex != null) {
+            this.EsServerlessIndex = new String(source.EsServerlessIndex);
+        }
+        if (source.EsServerlessSpace != null) {
+            this.EsServerlessSpace = new String(source.EsServerlessSpace);
+        }
     }
 
 
@@ -749,6 +801,8 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TraceModeConfiguration.", this.TraceModeConfiguration);
         this.setParamSimple(map, prefix + "CheckpointRetainedNum", this.CheckpointRetainedNum);
         this.setParamObj(map, prefix + "JobGraph.", this.JobGraph);
+        this.setParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
+        this.setParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
 
     }
 }

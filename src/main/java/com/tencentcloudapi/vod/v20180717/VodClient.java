@@ -2077,6 +2077,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *设置点播域名 HTTPS 证书。
+     * @param req SetVodDomainCertificateRequest
+     * @return SetVodDomainCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetVodDomainCertificateResponse SetVodDomainCertificate(SetVodDomainCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetVodDomainCertificate", SetVodDomainCertificateResponse.class);
+    }
+
+    /**
      *对 HLS 视频进行按时间段裁剪，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种剪辑模式：

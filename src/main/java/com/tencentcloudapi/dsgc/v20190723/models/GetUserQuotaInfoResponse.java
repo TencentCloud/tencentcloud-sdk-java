@@ -59,7 +59,7 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
     private Float CosRemainQuota;
 
     /**
-    * COS存储量单位，比如TB。
+    * COS存储量单位，例如TB。
     */
     @SerializedName("CosQuotaUnit")
     @Expose
@@ -153,16 +153,16 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get COS存储量单位，比如TB。 
-     * @return CosQuotaUnit COS存储量单位，比如TB。
+     * Get COS存储量单位，例如TB。 
+     * @return CosQuotaUnit COS存储量单位，例如TB。
      */
     public String getCosQuotaUnit() {
         return this.CosQuotaUnit;
     }
 
     /**
-     * Set COS存储量单位，比如TB。
-     * @param CosQuotaUnit COS存储量单位，比如TB。
+     * Set COS存储量单位，例如TB。
+     * @param CosQuotaUnit COS存储量单位，例如TB。
      */
     public void setCosQuotaUnit(String CosQuotaUnit) {
         this.CosQuotaUnit = CosQuotaUnit;

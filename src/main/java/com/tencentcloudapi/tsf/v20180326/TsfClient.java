@@ -1625,7 +1625,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *查询简单命名空间列表 
+     *查询简单命名空间列表
      * @param req DescribeSimpleNamespacesRequest
      * @return DescribeSimpleNamespacesResponse
      * @throws TencentCloudSDKException

@@ -227,6 +227,20 @@ public class CreateFunctionRequest extends AbstractModel {
     private InstanceConcurrencyConfig InstanceConcurrencyConfig;
 
     /**
+    * 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+    */
+    @SerializedName("DnsCache")
+    @Expose
+    private String DnsCache;
+
+    /**
+    * 内网访问配置
+    */
+    @SerializedName("IntranetConfig")
+    @Expose
+    private IntranetConfigIn IntranetConfig;
+
+    /**
      * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
@@ -690,6 +704,38 @@ public class CreateFunctionRequest extends AbstractModel {
         this.InstanceConcurrencyConfig = InstanceConcurrencyConfig;
     }
 
+    /**
+     * Get 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭 
+     * @return DnsCache 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+     */
+    public String getDnsCache() {
+        return this.DnsCache;
+    }
+
+    /**
+     * Set 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+     * @param DnsCache 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+     */
+    public void setDnsCache(String DnsCache) {
+        this.DnsCache = DnsCache;
+    }
+
+    /**
+     * Get 内网访问配置 
+     * @return IntranetConfig 内网访问配置
+     */
+    public IntranetConfigIn getIntranetConfig() {
+        return this.IntranetConfig;
+    }
+
+    /**
+     * Set 内网访问配置
+     * @param IntranetConfig 内网访问配置
+     */
+    public void setIntranetConfig(IntranetConfigIn IntranetConfig) {
+        this.IntranetConfig = IntranetConfig;
+    }
+
     public CreateFunctionRequest() {
     }
 
@@ -791,6 +837,12 @@ public class CreateFunctionRequest extends AbstractModel {
         if (source.InstanceConcurrencyConfig != null) {
             this.InstanceConcurrencyConfig = new InstanceConcurrencyConfig(source.InstanceConcurrencyConfig);
         }
+        if (source.DnsCache != null) {
+            this.DnsCache = new String(source.DnsCache);
+        }
+        if (source.IntranetConfig != null) {
+            this.IntranetConfig = new IntranetConfigIn(source.IntranetConfig);
+        }
     }
 
 
@@ -827,6 +879,8 @@ public class CreateFunctionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
         this.setParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
+        this.setParamSimple(map, prefix + "DnsCache", this.DnsCache);
+        this.setParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
 
     }
 }

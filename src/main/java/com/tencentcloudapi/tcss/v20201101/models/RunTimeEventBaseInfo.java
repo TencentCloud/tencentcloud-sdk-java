@@ -261,6 +261,20 @@ MountNamespace逃逸、
     private String HostID;
 
     /**
+    * Namespace
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * WorkloadType
+    */
+    @SerializedName("WorkloadType")
+    @Expose
+    private String WorkloadType;
+
+    /**
      * Get 事件唯一ID 
      * @return EventId 事件唯一ID
      */
@@ -860,6 +874,38 @@ MountNamespace逃逸、
         this.HostID = HostID;
     }
 
+    /**
+     * Get Namespace 
+     * @return Namespace Namespace
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set Namespace
+     * @param Namespace Namespace
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get WorkloadType 
+     * @return WorkloadType WorkloadType
+     */
+    public String getWorkloadType() {
+        return this.WorkloadType;
+    }
+
+    /**
+     * Set WorkloadType
+     * @param WorkloadType WorkloadType
+     */
+    public void setWorkloadType(String WorkloadType) {
+        this.WorkloadType = WorkloadType;
+    }
+
     public RunTimeEventBaseInfo() {
     }
 
@@ -955,6 +1001,12 @@ MountNamespace逃逸、
         if (source.HostID != null) {
             this.HostID = new String(source.HostID);
         }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.WorkloadType != null) {
+            this.WorkloadType = new String(source.WorkloadType);
+        }
     }
 
 
@@ -991,6 +1043,8 @@ MountNamespace逃逸、
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
         this.setParamSimple(map, prefix + "HostID", this.HostID);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
 
     }
 }

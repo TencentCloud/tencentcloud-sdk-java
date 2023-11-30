@@ -39,6 +39,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *激活硬件设备
+     * @param req ActivateHardwareRequest
+     * @return ActivateHardwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateHardwareResponse ActivateHardware(ActivateHardwareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateHardware", ActivateHardwareResponse.class);
+    }
+
+    /**
      *新建设备记录
      * @param req AddDeviceRequest
      * @return AddDeviceResponse
@@ -47,6 +58,17 @@ public class MnaClient extends AbstractClient{
     public AddDeviceResponse AddDevice(AddDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AddDevice", AddDeviceResponse.class);
+    }
+
+    /**
+     *添加硬件设备，生成未激活的硬件设备，可支持批量添加
+     * @param req AddHardwareRequest
+     * @return AddHardwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddHardwareResponse AddHardware(AddHardwareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddHardware", AddHardwareResponse.class);
     }
 
     /**
@@ -138,6 +160,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *租户获取厂商硬件列表
+     * @param req GetHardwareListRequest
+     * @return GetHardwareListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetHardwareListResponse GetHardwareList(GetHardwareListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetHardwareList", GetHardwareListResponse.class);
+    }
+
+    /**
      *批量获取设备流量统计曲线
      * @param req GetMultiFlowStatisticRequest
      * @return GetMultiFlowStatisticResponse
@@ -182,6 +215,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取厂商硬件设备列表
+     * @param req GetVendorHardwareRequest
+     * @return GetVendorHardwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetVendorHardwareResponse GetVendorHardware(GetVendorHardwareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetVendorHardware", GetVendorHardwareResponse.class);
+    }
+
+    /**
      *更新设备信息
      * @param req UpdateDeviceRequest
      * @return UpdateDeviceResponse
@@ -190,6 +234,17 @@ public class MnaClient extends AbstractClient{
     public UpdateDeviceResponse UpdateDevice(UpdateDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateDevice", UpdateDeviceResponse.class);
+    }
+
+    /**
+     *更新硬件信息
+     * @param req UpdateHardwareRequest
+     * @return UpdateHardwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateHardwareResponse UpdateHardware(UpdateHardwareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateHardware", UpdateHardwareResponse.class);
     }
 
 }

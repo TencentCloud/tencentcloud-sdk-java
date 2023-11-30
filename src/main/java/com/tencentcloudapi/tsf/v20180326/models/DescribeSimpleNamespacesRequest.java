@@ -87,7 +87,7 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel {
     private String NamespaceName;
 
     /**
-    * 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+    * 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
     */
     @SerializedName("IsDefault")
     @Expose
@@ -245,16 +245,16 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel {
     }
 
     /**
-     * Get 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间 
-     * @return IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+     * Get 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间 
+     * @return IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
      */
     public String getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
-     * @param IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+     * Set 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
+     * @param IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
      */
     public void setIsDefault(String IsDefault) {
         this.IsDefault = IsDefault;

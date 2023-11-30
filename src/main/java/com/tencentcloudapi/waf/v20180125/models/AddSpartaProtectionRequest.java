@@ -246,10 +246,10 @@ cdn-waf：CDN上的Web防护能力
 
     /**
     * 加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
     */
     @SerializedName("CipherTemplate")
     @Expose
@@ -865,15 +865,15 @@ cdn-waf：CDN上的Web防护能力
 
     /**
      * Get 加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版 
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板 
      * @return CipherTemplate 加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
      */
     public Long getCipherTemplate() {
         return this.CipherTemplate;
@@ -881,15 +881,15 @@ cdn-waf：CDN上的Web防护能力
 
     /**
      * Set 加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
      * @param CipherTemplate 加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
      */
     public void setCipherTemplate(Long CipherTemplate) {
         this.CipherTemplate = CipherTemplate;

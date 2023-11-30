@@ -418,6 +418,38 @@ null = 用户上传证书（没有套餐类型），
     private Boolean AllowDownload;
 
     /**
+    * 证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDNSPODResolve")
+    @Expose
+    private Boolean IsDNSPODResolve;
+
+    /**
+    * 是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsPackage")
+    @Expose
+    private Boolean IsPackage;
+
+    /**
+    * 是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeyPasswordCustomFlag")
+    @Expose
+    private Boolean KeyPasswordCustomFlag;
+
+    /**
+    * 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportDownloadType")
+    @Expose
+    private SupportDownloadType SupportDownloadType;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -1405,6 +1437,86 @@ null = 用户上传证书（没有套餐类型），
         this.AllowDownload = AllowDownload;
     }
 
+    /**
+     * Get 证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDNSPODResolve 证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDNSPODResolve() {
+        return this.IsDNSPODResolve;
+    }
+
+    /**
+     * Set 证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDNSPODResolve 证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDNSPODResolve(Boolean IsDNSPODResolve) {
+        this.IsDNSPODResolve = IsDNSPODResolve;
+    }
+
+    /**
+     * Get 是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsPackage 是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsPackage() {
+        return this.IsPackage;
+    }
+
+    /**
+     * Set 是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsPackage 是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsPackage(Boolean IsPackage) {
+        this.IsPackage = IsPackage;
+    }
+
+    /**
+     * Get 是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeyPasswordCustomFlag 是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getKeyPasswordCustomFlag() {
+        return this.KeyPasswordCustomFlag;
+    }
+
+    /**
+     * Set 是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeyPasswordCustomFlag 是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeyPasswordCustomFlag(Boolean KeyPasswordCustomFlag) {
+        this.KeyPasswordCustomFlag = KeyPasswordCustomFlag;
+    }
+
+    /**
+     * Get 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SupportDownloadType getSupportDownloadType() {
+        return this.SupportDownloadType;
+    }
+
+    /**
+     * Set 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportDownloadType(SupportDownloadType SupportDownloadType) {
+        this.SupportDownloadType = SupportDownloadType;
+    }
+
     public Certificates() {
     }
 
@@ -1581,6 +1693,18 @@ null = 用户上传证书（没有套餐类型），
         if (source.AllowDownload != null) {
             this.AllowDownload = new Boolean(source.AllowDownload);
         }
+        if (source.IsDNSPODResolve != null) {
+            this.IsDNSPODResolve = new Boolean(source.IsDNSPODResolve);
+        }
+        if (source.IsPackage != null) {
+            this.IsPackage = new Boolean(source.IsPackage);
+        }
+        if (source.KeyPasswordCustomFlag != null) {
+            this.KeyPasswordCustomFlag = new Boolean(source.KeyPasswordCustomFlag);
+        }
+        if (source.SupportDownloadType != null) {
+            this.SupportDownloadType = new SupportDownloadType(source.SupportDownloadType);
+        }
     }
 
 
@@ -1637,6 +1761,10 @@ null = 用户上传证书（没有套餐类型），
         this.setParamArraySimple(map, prefix + "CertSANs.", this.CertSANs);
         this.setParamSimple(map, prefix + "AwaitingValidationMsg", this.AwaitingValidationMsg);
         this.setParamSimple(map, prefix + "AllowDownload", this.AllowDownload);
+        this.setParamSimple(map, prefix + "IsDNSPODResolve", this.IsDNSPODResolve);
+        this.setParamSimple(map, prefix + "IsPackage", this.IsPackage);
+        this.setParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
+        this.setParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
 
     }
 }

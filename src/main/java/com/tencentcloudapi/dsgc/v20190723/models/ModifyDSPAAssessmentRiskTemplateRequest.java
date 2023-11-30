@@ -31,21 +31,21 @@ public class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     private String DspaId;
 
     /**
-    * 模版名称
+    * 模板名称
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 模版的描述
+    * 模板的描述
     */
     @SerializedName("TemplateDescription")
     @Expose
     private String TemplateDescription;
 
     /**
-    * 模版id
+    * 模板id
     */
     @SerializedName("TemplateId")
     @Expose
@@ -82,48 +82,48 @@ public class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 模版名称 
-     * @return TemplateName 模版名称
+     * Get 模板名称 
+     * @return TemplateName 模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模版名称
-     * @param TemplateName 模版名称
+     * Set 模板名称
+     * @param TemplateName 模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 模版的描述 
-     * @return TemplateDescription 模版的描述
+     * Get 模板的描述 
+     * @return TemplateDescription 模板的描述
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
     }
 
     /**
-     * Set 模版的描述
-     * @param TemplateDescription 模版的描述
+     * Set 模板的描述
+     * @param TemplateDescription 模板的描述
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;
     }
 
     /**
-     * Get 模版id 
-     * @return TemplateId 模版id
+     * Get 模板id 
+     * @return TemplateId 模板id
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版id
-     * @param TemplateId 模版id
+     * Set 模板id
+     * @param TemplateId 模板id
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

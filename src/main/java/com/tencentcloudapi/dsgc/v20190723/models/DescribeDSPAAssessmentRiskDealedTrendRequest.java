@@ -45,7 +45,7 @@ public class DescribeDSPAAssessmentRiskDealedTrendRequest extends AbstractModel 
     private String EndTime;
 
     /**
-    * 评估模版id
+    * 评估模板id
     */
     @SerializedName("TemplateId")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeDSPAAssessmentRiskDealedTrendRequest extends AbstractModel 
     }
 
     /**
-     * Get 评估模版id 
-     * @return TemplateId 评估模版id
+     * Get 评估模板id 
+     * @return TemplateId 评估模板id
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 评估模版id
-     * @param TemplateId 评估模版id
+     * Set 评估模板id
+     * @param TemplateId 评估模板id
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

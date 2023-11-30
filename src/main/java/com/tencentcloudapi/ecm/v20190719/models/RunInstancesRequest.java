@@ -92,7 +92,7 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     private String ClientToken;
 
     /**
-    * 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认公共镜像开启云监控、云安全服务
+    * 增强服务。通过该参数可以指定是否开启云安全、腾讯云可观测平台等服务。若不指定该参数，则默认公共镜像开启腾讯云可观测平台、云安全服务
     */
     @SerializedName("EnhancedService")
     @Expose
@@ -370,16 +370,16 @@ Windows 实例：名字符长度为[2, 15]，允许字母（不限制大小写�
     }
 
     /**
-     * Get 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认公共镜像开启云监控、云安全服务 
-     * @return EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认公共镜像开启云监控、云安全服务
+     * Get 增强服务。通过该参数可以指定是否开启云安全、腾讯云可观测平台等服务。若不指定该参数，则默认公共镜像开启腾讯云可观测平台、云安全服务 
+     * @return EnhancedService 增强服务。通过该参数可以指定是否开启云安全、腾讯云可观测平台等服务。若不指定该参数，则默认公共镜像开启腾讯云可观测平台、云安全服务
      */
     public EnhancedService getEnhancedService() {
         return this.EnhancedService;
     }
 
     /**
-     * Set 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认公共镜像开启云监控、云安全服务
-     * @param EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认公共镜像开启云监控、云安全服务
+     * Set 增强服务。通过该参数可以指定是否开启云安全、腾讯云可观测平台等服务。若不指定该参数，则默认公共镜像开启腾讯云可观测平台、云安全服务
+     * @param EnhancedService 增强服务。通过该参数可以指定是否开启云安全、腾讯云可观测平台等服务。若不指定该参数，则默认公共镜像开启腾讯云可观测平台、云安全服务
      */
     public void setEnhancedService(EnhancedService EnhancedService) {
         this.EnhancedService = EnhancedService;

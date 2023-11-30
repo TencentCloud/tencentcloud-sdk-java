@@ -201,6 +201,15 @@ public class Address extends AbstractModel {
     private String AntiDDoSPackageId;
 
     /**
+    * 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
+<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private String RenewFlag;
+
+    /**
      * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -632,6 +641,30 @@ public class Address extends AbstractModel {
         this.AntiDDoSPackageId = AntiDDoSPackageId;
     }
 
+    /**
+     * Get 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
+<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+ 
+     * @return RenewFlag 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
+<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+
+     */
+    public String getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
+<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+
+     * @param RenewFlag 当前EIP是否自动续费，只有按月带宽预付费的EIP才会显示该字段，具体值示例如下:
+<li>NOTIFY_AND_MANUAL_RENEW:正常续费</li><li>NOTIFY_AND_AUTO_RENEW:自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW:到期不续费 </li>
+
+     */
+    public void setRenewFlag(String RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
     public Address() {
     }
 
@@ -712,6 +745,9 @@ public class Address extends AbstractModel {
         if (source.AntiDDoSPackageId != null) {
             this.AntiDDoSPackageId = new String(source.AntiDDoSPackageId);
         }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
     }
 
 
@@ -742,6 +778,7 @@ public class Address extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

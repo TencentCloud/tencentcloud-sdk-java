@@ -31,7 +31,7 @@ public class DescribeDSPAAssessmentTemplateControlItemsRequest extends AbstractM
     private String DspaId;
 
     /**
-    * 评估模版Id。格式“template-xxxxxxxx”
+    * 评估模板Id。格式“template-xxxxxxxx”
     */
     @SerializedName("TemplateId")
     @Expose
@@ -81,16 +81,16 @@ Status：评估项启用状态，draft / launched
     }
 
     /**
-     * Get 评估模版Id。格式“template-xxxxxxxx” 
-     * @return TemplateId 评估模版Id。格式“template-xxxxxxxx”
+     * Get 评估模板Id。格式“template-xxxxxxxx” 
+     * @return TemplateId 评估模板Id。格式“template-xxxxxxxx”
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 评估模版Id。格式“template-xxxxxxxx”
-     * @param TemplateId 评估模版Id。格式“template-xxxxxxxx”
+     * Set 评估模板Id。格式“template-xxxxxxxx”
+     * @param TemplateId 评估模板Id。格式“template-xxxxxxxx”
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

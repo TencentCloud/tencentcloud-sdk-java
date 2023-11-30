@@ -348,6 +348,9 @@ public enum DlcErrorCode {
     // 不支持的排序类型。
      INVALIDPARAMETER_INVALIDSORTBYTYPE("InvalidParameter.InvalidSortByType"),
      
+    // Invalid Sorting
+     INVALIDPARAMETER_INVALIDSORTING("InvalidParameter.InvalidSorting"),
+     
     // SparkAppParam无效。
      INVALIDPARAMETER_INVALIDSPARKAPPPARAM("InvalidParameter.InvalidSparkAppParam"),
      

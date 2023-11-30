@@ -47,7 +47,7 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
     private Long IdentifyComplianceId;
 
     /**
-    * 分类分级模版名称
+    * 分类分级模板名称
     */
     @SerializedName("IdentifyComplianceName")
     @Expose
@@ -125,16 +125,16 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
     }
 
     /**
-     * Get 分类分级模版名称 
-     * @return IdentifyComplianceName 分类分级模版名称
+     * Get 分类分级模板名称 
+     * @return IdentifyComplianceName 分类分级模板名称
      */
     public String getIdentifyComplianceName() {
         return this.IdentifyComplianceName;
     }
 
     /**
-     * Set 分类分级模版名称
-     * @param IdentifyComplianceName 分类分级模版名称
+     * Set 分类分级模板名称
+     * @param IdentifyComplianceName 分类分级模板名称
      */
     public void setIdentifyComplianceName(String IdentifyComplianceName) {
         this.IdentifyComplianceName = IdentifyComplianceName;

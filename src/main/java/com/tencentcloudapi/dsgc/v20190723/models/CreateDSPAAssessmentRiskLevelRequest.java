@@ -38,7 +38,7 @@ public class CreateDSPAAssessmentRiskLevelRequest extends AbstractModel {
     private String RiskLevelName;
 
     /**
-    * 识别模版
+    * 识别模板
     */
     @SerializedName("IdentifyComplianceId")
     @Expose
@@ -91,16 +91,16 @@ public class CreateDSPAAssessmentRiskLevelRequest extends AbstractModel {
     }
 
     /**
-     * Get 识别模版 
-     * @return IdentifyComplianceId 识别模版
+     * Get 识别模板 
+     * @return IdentifyComplianceId 识别模板
      */
     public Long getIdentifyComplianceId() {
         return this.IdentifyComplianceId;
     }
 
     /**
-     * Set 识别模版
-     * @param IdentifyComplianceId 识别模版
+     * Set 识别模板
+     * @param IdentifyComplianceId 识别模板
      */
     public void setIdentifyComplianceId(Long IdentifyComplianceId) {
         this.IdentifyComplianceId = IdentifyComplianceId;

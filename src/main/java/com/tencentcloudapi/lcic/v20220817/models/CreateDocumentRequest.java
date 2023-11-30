@@ -53,8 +53,8 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
     * 转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
     */
@@ -162,13 +162,13 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
      * Get 转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus 
      * @return TranscodeType 转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
      */
@@ -178,13 +178,13 @@ public class CreateDocumentRequest extends AbstractModel {
 
     /**
      * Set 转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
      * @param TranscodeType 转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
      */

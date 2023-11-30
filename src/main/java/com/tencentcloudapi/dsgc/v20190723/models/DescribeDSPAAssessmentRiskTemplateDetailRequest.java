@@ -31,7 +31,7 @@ public class DescribeDSPAAssessmentRiskTemplateDetailRequest extends AbstractMod
     private String DspaId;
 
     /**
-    * 模版id
+    * 模板id
     */
     @SerializedName("TemplateId")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeDSPAAssessmentRiskTemplateDetailRequest extends AbstractMod
     }
 
     /**
-     * Get 模版id 
-     * @return TemplateId 模版id
+     * Get 模板id 
+     * @return TemplateId 模板id
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版id
-     * @param TemplateId 模版id
+     * Set 模板id
+     * @param TemplateId 模板id
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

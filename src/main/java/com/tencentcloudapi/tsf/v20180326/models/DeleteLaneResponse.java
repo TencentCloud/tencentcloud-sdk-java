@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteLaneResponse extends AbstractModel {
 
     /**
-    * true / false
+    * 删除成功: true / 删除失败: false
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteLaneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true / false 
-     * @return Result true / false
+     * Get 删除成功: true / 删除失败: false 
+     * @return Result 删除成功: true / 删除失败: false
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set true / false
-     * @param Result true / false
+     * Set 删除成功: true / 删除失败: false
+     * @param Result 删除成功: true / 删除失败: false
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

@@ -48,7 +48,7 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
     private String AssetName;
 
     /**
-    * 风险评估模版id
+    * 风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssessmentTemplateId")
@@ -56,7 +56,7 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
     private Long AssessmentTemplateId;
 
     /**
-    * 分类分级的模版id
+    * 分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyTemplateId")
@@ -243,9 +243,9 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
     }
 
     /**
-     * Get 风险评估模版id
+     * Get 风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AssessmentTemplateId 风险评估模版id
+     * @return AssessmentTemplateId 风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssessmentTemplateId() {
@@ -253,9 +253,9 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
     }
 
     /**
-     * Set 风险评估模版id
+     * Set 风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AssessmentTemplateId 风险评估模版id
+     * @param AssessmentTemplateId 风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssessmentTemplateId(Long AssessmentTemplateId) {
@@ -263,9 +263,9 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
     }
 
     /**
-     * Get 分类分级的模版id
+     * Get 分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdentifyTemplateId 分类分级的模版id
+     * @return IdentifyTemplateId 分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentifyTemplateId() {
@@ -273,9 +273,9 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
     }
 
     /**
-     * Set 分类分级的模版id
+     * Set 分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdentifyTemplateId 分类分级的模版id
+     * @param IdentifyTemplateId 分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyTemplateId(Long IdentifyTemplateId) {

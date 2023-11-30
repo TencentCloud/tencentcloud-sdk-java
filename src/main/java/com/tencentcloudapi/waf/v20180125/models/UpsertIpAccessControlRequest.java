@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class UpsertIpAccessControlRequest extends AbstractModel {
 
     /**
-    * 域名
+    * 具体域名如：test.qcloudwaf.com
+全局域名为：global
     */
     @SerializedName("Domain")
     @Expose
@@ -59,16 +60,20 @@ public class UpsertIpAccessControlRequest extends AbstractModel {
     private String SourceType;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get 具体域名如：test.qcloudwaf.com
+全局域名为：global 
+     * @return Domain 具体域名如：test.qcloudwaf.com
+全局域名为：global
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set 具体域名如：test.qcloudwaf.com
+全局域名为：global
+     * @param Domain 具体域名如：test.qcloudwaf.com
+全局域名为：global
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

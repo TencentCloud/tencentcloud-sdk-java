@@ -42,6 +42,14 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
     private KeyValue [] CLBData;
 
     /**
+    * cnamewaf资源状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CnameWafData")
+    @Expose
+    private KeyValue [] CnameWafData;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -97,6 +105,26 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get cnamewaf资源状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CnameWafData cnamewaf资源状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KeyValue [] getCnameWafData() {
+        return this.CnameWafData;
+    }
+
+    /**
+     * Set cnamewaf资源状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CnameWafData cnamewaf资源状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCnameWafData(KeyValue [] CnameWafData) {
+        this.CnameWafData = CnameWafData;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +160,12 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
                 this.CLBData[i] = new KeyValue(source.CLBData[i]);
             }
         }
+        if (source.CnameWafData != null) {
+            this.CnameWafData = new KeyValue[source.CnameWafData.length];
+            for (int i = 0; i < source.CnameWafData.length; i++) {
+                this.CnameWafData[i] = new KeyValue(source.CnameWafData[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +178,7 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamArrayObj(map, prefix + "CLBData.", this.CLBData);
+        this.setParamArrayObj(map, prefix + "CnameWafData.", this.CnameWafData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

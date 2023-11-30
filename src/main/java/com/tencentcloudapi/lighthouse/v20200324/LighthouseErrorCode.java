@@ -570,6 +570,9 @@ public enum LighthouseErrorCode {
     // TAT 服务错误。
      RESOURCEUNAVAILABLE_TATSERVICEERROR("ResourceUnavailable.TATServiceError"),
      
+    // 套餐已售罄。
+     RESOURCESSOLDOUT_BUNDLESOLDOUT("ResourcesSoldOut.BundleSoldOut"),
+     
     // 套餐无可用配置。
      RESOURCESSOLDOUT_PURCHASESOURCEHASNOBUNDLECONFIGS("ResourcesSoldOut.PurchaseSourceHasNoBundleConfigs"),
      

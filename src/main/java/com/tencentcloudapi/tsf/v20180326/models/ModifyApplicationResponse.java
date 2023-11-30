@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ModifyApplicationResponse extends AbstractModel {
 
     /**
-    * true/false
+    * true：操作成功
+false：操作失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -39,9 +40,11 @@ public class ModifyApplicationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true/false
+     * Get true：操作成功
+false：操作失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result true/false
+     * @return Result true：操作成功
+false：操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
@@ -49,9 +52,11 @@ public class ModifyApplicationResponse extends AbstractModel {
     }
 
     /**
-     * Set true/false
+     * Set true：操作成功
+false：操作失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result true/false
+     * @param Result true：操作成功
+false：操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {

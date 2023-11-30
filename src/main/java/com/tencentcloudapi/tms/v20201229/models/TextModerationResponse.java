@@ -108,6 +108,14 @@ public class TextModerationResponse extends AbstractModel {
     private String ContextText;
 
     /**
+    * 情感分析结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SentimentAnalysis")
+    @Expose
+    private SentimentAnalysis SentimentAnalysis;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -319,6 +327,26 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
+     * Get 情感分析结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SentimentAnalysis 情感分析结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SentimentAnalysis getSentimentAnalysis() {
+        return this.SentimentAnalysis;
+    }
+
+    /**
+     * Set 情感分析结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SentimentAnalysis 情感分析结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSentimentAnalysis(SentimentAnalysis SentimentAnalysis) {
+        this.SentimentAnalysis = SentimentAnalysis;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -384,6 +412,9 @@ public class TextModerationResponse extends AbstractModel {
         if (source.ContextText != null) {
             this.ContextText = new String(source.ContextText);
         }
+        if (source.SentimentAnalysis != null) {
+            this.SentimentAnalysis = new SentimentAnalysis(source.SentimentAnalysis);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -405,6 +436,7 @@ public class TextModerationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamSimple(map, prefix + "ContextText", this.ContextText);
+        this.setParamObj(map, prefix + "SentimentAnalysis.", this.SentimentAnalysis);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

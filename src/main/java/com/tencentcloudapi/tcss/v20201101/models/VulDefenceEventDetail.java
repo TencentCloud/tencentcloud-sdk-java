@@ -366,6 +366,20 @@ public class VulDefenceEventDetail extends AbstractModel {
     private String ClusterName;
 
     /**
+    * Namespace
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * 工作负载
+    */
+    @SerializedName("WorkloadType")
+    @Expose
+    private String WorkloadType;
+
+    /**
      * Get 漏洞CVEID 
      * @return CVEID 漏洞CVEID
      */
@@ -1205,6 +1219,38 @@ public class VulDefenceEventDetail extends AbstractModel {
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get Namespace 
+     * @return Namespace Namespace
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set Namespace
+     * @param Namespace Namespace
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get 工作负载 
+     * @return WorkloadType 工作负载
+     */
+    public String getWorkloadType() {
+        return this.WorkloadType;
+    }
+
+    /**
+     * Set 工作负载
+     * @param WorkloadType 工作负载
+     */
+    public void setWorkloadType(String WorkloadType) {
+        this.WorkloadType = WorkloadType;
+    }
+
     public VulDefenceEventDetail() {
     }
 
@@ -1351,6 +1397,12 @@ public class VulDefenceEventDetail extends AbstractModel {
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.WorkloadType != null) {
+            this.WorkloadType = new String(source.WorkloadType);
+        }
     }
 
 
@@ -1402,6 +1454,8 @@ public class VulDefenceEventDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
 
     }
 }

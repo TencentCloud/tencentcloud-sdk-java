@@ -31,7 +31,7 @@ public class DescribeDSPAAssessmentTemplateControlItemsResponse extends Abstract
     private Long TotalCount;
 
     /**
-    * 模版关联的评估项列表
+    * 模板关联的评估项列表
     */
     @SerializedName("Items")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeDSPAAssessmentTemplateControlItemsResponse extends Abstract
     }
 
     /**
-     * Get 模版关联的评估项列表 
-     * @return Items 模版关联的评估项列表
+     * Get 模板关联的评估项列表 
+     * @return Items 模板关联的评估项列表
      */
     public AssessmentControlItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 模版关联的评估项列表
-     * @param Items 模版关联的评估项列表
+     * Set 模板关联的评估项列表
+     * @param Items 模板关联的评估项列表
      */
     public void setItems(AssessmentControlItem [] Items) {
         this.Items = Items;

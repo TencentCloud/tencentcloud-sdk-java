@@ -172,6 +172,20 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
     private InstanceConcurrencyConfig InstanceConcurrencyConfig;
 
     /**
+    * 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+    */
+    @SerializedName("DnsCache")
+    @Expose
+    private String DnsCache;
+
+    /**
+    * 内网访问配置
+    */
+    @SerializedName("IntranetConfig")
+    @Expose
+    private IntranetConfigIn IntranetConfig;
+
+    /**
      * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
@@ -511,6 +525,38 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
         this.InstanceConcurrencyConfig = InstanceConcurrencyConfig;
     }
 
+    /**
+     * Get 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭 
+     * @return DnsCache 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+     */
+    public String getDnsCache() {
+        return this.DnsCache;
+    }
+
+    /**
+     * Set 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+     * @param DnsCache 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+     */
+    public void setDnsCache(String DnsCache) {
+        this.DnsCache = DnsCache;
+    }
+
+    /**
+     * Get 内网访问配置 
+     * @return IntranetConfig 内网访问配置
+     */
+    public IntranetConfigIn getIntranetConfig() {
+        return this.IntranetConfig;
+    }
+
+    /**
+     * Set 内网访问配置
+     * @param IntranetConfig 内网访问配置
+     */
+    public void setIntranetConfig(IntranetConfigIn IntranetConfig) {
+        this.IntranetConfig = IntranetConfig;
+    }
+
     public UpdateFunctionConfigurationRequest() {
     }
 
@@ -585,6 +631,12 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
         if (source.InstanceConcurrencyConfig != null) {
             this.InstanceConcurrencyConfig = new InstanceConcurrencyConfig(source.InstanceConcurrencyConfig);
         }
+        if (source.DnsCache != null) {
+            this.DnsCache = new String(source.DnsCache);
+        }
+        if (source.IntranetConfig != null) {
+            this.IntranetConfig = new IntranetConfigIn(source.IntranetConfig);
+        }
     }
 
 
@@ -613,6 +665,8 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
         this.setParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
+        this.setParamSimple(map, prefix + "DnsCache", this.DnsCache);
+        this.setParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
 
     }
 }

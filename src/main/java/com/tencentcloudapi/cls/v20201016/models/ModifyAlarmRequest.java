@@ -112,7 +112,7 @@ public class ModifyAlarmRequest extends AbstractModel {
     private Boolean Status;
 
     /**
-    * 是否开启告警策略。默认值为true
+    * 该参数已废弃，请使用Status参数控制是否开启告警策略。
     */
     @SerializedName("Enable")
     @Expose
@@ -400,16 +400,16 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 是否开启告警策略。默认值为true 
-     * @return Enable 是否开启告警策略。默认值为true
+     * Get 该参数已废弃，请使用Status参数控制是否开启告警策略。 
+     * @return Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否开启告警策略。默认值为true
-     * @param Enable 是否开启告警策略。默认值为true
+     * Set 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * @param Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;

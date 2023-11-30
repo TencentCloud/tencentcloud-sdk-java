@@ -3476,6 +3476,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *事件管理-触发事件
+     * @param req TriggerDsEventRequest
+     * @return TriggerDsEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public TriggerDsEventResponse TriggerDsEvent(TriggerDsEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TriggerDsEvent", TriggerDsEventResponse.class);
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 触发事件
      * @param req TriggerEventRequest

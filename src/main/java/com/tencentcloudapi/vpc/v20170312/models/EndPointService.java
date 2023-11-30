@@ -103,6 +103,22 @@ public class EndPointService extends AbstractModel {
     private String ServiceType;
 
     /**
+    * Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceUin")
+    @Expose
+    private String ServiceUin;
+
+    /**
+    * 服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BusinessIpType")
+    @Expose
+    private Long BusinessIpType;
+
+    /**
      * Get 终端节点服务ID 
      * @return EndPointServiceId 终端节点服务ID
      */
@@ -286,6 +302,46 @@ public class EndPointService extends AbstractModel {
         this.ServiceType = ServiceType;
     }
 
+    /**
+     * Get Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceUin Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServiceUin() {
+        return this.ServiceUin;
+    }
+
+    /**
+     * Set Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceUin Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceUin(String ServiceUin) {
+        this.ServiceUin = ServiceUin;
+    }
+
+    /**
+     * Get 服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BusinessIpType 服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBusinessIpType() {
+        return this.BusinessIpType;
+    }
+
+    /**
+     * Set 服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BusinessIpType 服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusinessIpType(Long BusinessIpType) {
+        this.BusinessIpType = BusinessIpType;
+    }
+
     public EndPointService() {
     }
 
@@ -330,6 +386,12 @@ public class EndPointService extends AbstractModel {
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
+        if (source.ServiceUin != null) {
+            this.ServiceUin = new String(source.ServiceUin);
+        }
+        if (source.BusinessIpType != null) {
+            this.BusinessIpType = new Long(source.BusinessIpType);
+        }
     }
 
 
@@ -348,6 +410,8 @@ public class EndPointService extends AbstractModel {
         this.setParamArrayObj(map, prefix + "EndPointSet.", this.EndPointSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamSimple(map, prefix + "ServiceUin", this.ServiceUin);
+        this.setParamSimple(map, prefix + "BusinessIpType", this.BusinessIpType);
 
     }
 }

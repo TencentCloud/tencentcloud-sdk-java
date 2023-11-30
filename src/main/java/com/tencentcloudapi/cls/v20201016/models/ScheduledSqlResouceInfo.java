@@ -53,28 +53,28 @@ public class ScheduledSqlResouceInfo extends AbstractModel {
 
     /**
     * 指标名称
-BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 指标项
+    * 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
     */
     @SerializedName("MetricLabels")
     @Expose
     private String [] MetricLabels;
 
     /**
-    * 自定义时间
+    * 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
     */
     @SerializedName("CustomTime")
     @Expose
     private String CustomTime;
 
     /**
-    * 自定义标签
+    * 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
     */
     @SerializedName("CustomMetricLabels")
     @Expose
@@ -146,9 +146,9 @@ BizType为1时，优先使用MetricNames字段信息。多指标只能填充到M
 
     /**
      * Get 指标名称
-BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段 
+BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段 
      * @return MetricNames 指标名称
-BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
      */
     public String [] getMetricNames() {
         return this.MetricNames;
@@ -156,57 +156,57 @@ BizType为1时，优先使用MetricNames字段信息。多指标只能填充到M
 
     /**
      * Set 指标名称
-BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
      * @param MetricNames 指标名称
-BizType为1时，优先使用MetricNames字段信息。多指标只能填充到MetricNames字段，单指标建议填充到MetricNames字段
+BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 指标项 
-     * @return MetricLabels 指标项
+     * Get 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。 
+     * @return MetricLabels 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
      */
     public String [] getMetricLabels() {
         return this.MetricLabels;
     }
 
     /**
-     * Set 指标项
-     * @param MetricLabels 指标项
+     * Set 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
+     * @param MetricLabels 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
      */
     public void setMetricLabels(String [] MetricLabels) {
         this.MetricLabels = MetricLabels;
     }
 
     /**
-     * Get 自定义时间 
-     * @return CustomTime 自定义时间
+     * Get 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。 
+     * @return CustomTime 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
      */
     public String getCustomTime() {
         return this.CustomTime;
     }
 
     /**
-     * Set 自定义时间
-     * @param CustomTime 自定义时间
+     * Set 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
+     * @param CustomTime 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
      */
     public void setCustomTime(String CustomTime) {
         this.CustomTime = CustomTime;
     }
 
     /**
-     * Get 自定义标签 
-     * @return CustomMetricLabels 自定义标签
+     * Get 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。 
+     * @return CustomMetricLabels 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
      */
     public MetricLabel [] getCustomMetricLabels() {
         return this.CustomMetricLabels;
     }
 
     /**
-     * Set 自定义标签
-     * @param CustomMetricLabels 自定义标签
+     * Set 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
+     * @param CustomMetricLabels 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
      */
     public void setCustomMetricLabels(MetricLabel [] CustomMetricLabels) {
         this.CustomMetricLabels = CustomMetricLabels;

@@ -38,11 +38,27 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
     private Long OutNetLimit;
 
     /**
-    * 单分片连接数限制。
+    * 实例当前单分片连接数限制。
     */
     @SerializedName("ClientLimit")
     @Expose
     private Long ClientLimit;
+
+    /**
+    * 单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientLimitMin")
+    @Expose
+    private Long ClientLimitMin;
+
+    /**
+    * 单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientLimitMax")
+    @Expose
+    private Long ClientLimitMax;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -84,19 +100,59 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 单分片连接数限制。 
-     * @return ClientLimit 单分片连接数限制。
+     * Get 实例当前单分片连接数限制。 
+     * @return ClientLimit 实例当前单分片连接数限制。
      */
     public Long getClientLimit() {
         return this.ClientLimit;
     }
 
     /**
-     * Set 单分片连接数限制。
-     * @param ClientLimit 单分片连接数限制。
+     * Set 实例当前单分片连接数限制。
+     * @param ClientLimit 实例当前单分片连接数限制。
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;
+    }
+
+    /**
+     * Get 单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientLimitMin 单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClientLimitMin() {
+        return this.ClientLimitMin;
+    }
+
+    /**
+     * Set 单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientLimitMin 单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientLimitMin(Long ClientLimitMin) {
+        this.ClientLimitMin = ClientLimitMin;
+    }
+
+    /**
+     * Get 单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientLimitMax 单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClientLimitMax() {
+        return this.ClientLimitMax;
+    }
+
+    /**
+     * Set 单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientLimitMax 单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientLimitMax(Long ClientLimitMax) {
+        this.ClientLimitMax = ClientLimitMax;
     }
 
     /**
@@ -132,6 +188,12 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
         if (source.ClientLimit != null) {
             this.ClientLimit = new Long(source.ClientLimit);
         }
+        if (source.ClientLimitMin != null) {
+            this.ClientLimitMin = new Long(source.ClientLimitMin);
+        }
+        if (source.ClientLimitMax != null) {
+            this.ClientLimitMax = new Long(source.ClientLimitMax);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +207,8 @@ public class DescribeConnectionConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "InNetLimit", this.InNetLimit);
         this.setParamSimple(map, prefix + "OutNetLimit", this.OutNetLimit);
         this.setParamSimple(map, prefix + "ClientLimit", this.ClientLimit);
+        this.setParamSimple(map, prefix + "ClientLimitMin", this.ClientLimitMin);
+        this.setParamSimple(map, prefix + "ClientLimitMax", this.ClientLimitMax);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

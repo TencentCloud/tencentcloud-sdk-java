@@ -31,6 +31,23 @@ public class DescribeAssetSyncLastTimeResponse extends AbstractModel {
     private String AssetSyncLastTime;
 
     /**
+    * 任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成
+    */
+    @SerializedName("TaskStatus")
+    @Expose
+    private String TaskStatus;
+
+    /**
+    * 任务进度(百分比)
+    */
+    @SerializedName("TaskProcess")
+    @Expose
+    private Long TaskProcess;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +68,50 @@ public class DescribeAssetSyncLastTimeResponse extends AbstractModel {
      */
     public void setAssetSyncLastTime(String AssetSyncLastTime) {
         this.AssetSyncLastTime = AssetSyncLastTime;
+    }
+
+    /**
+     * Get 任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成 
+     * @return TaskStatus 任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成
+     */
+    public String getTaskStatus() {
+        return this.TaskStatus;
+    }
+
+    /**
+     * Set 任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成
+     * @param TaskStatus 任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成
+     */
+    public void setTaskStatus(String TaskStatus) {
+        this.TaskStatus = TaskStatus;
+    }
+
+    /**
+     * Get 任务进度(百分比) 
+     * @return TaskProcess 任务进度(百分比)
+     */
+    public Long getTaskProcess() {
+        return this.TaskProcess;
+    }
+
+    /**
+     * Set 任务进度(百分比)
+     * @param TaskProcess 任务进度(百分比)
+     */
+    public void setTaskProcess(Long TaskProcess) {
+        this.TaskProcess = TaskProcess;
     }
 
     /**
@@ -80,6 +141,12 @@ public class DescribeAssetSyncLastTimeResponse extends AbstractModel {
         if (source.AssetSyncLastTime != null) {
             this.AssetSyncLastTime = new String(source.AssetSyncLastTime);
         }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new String(source.TaskStatus);
+        }
+        if (source.TaskProcess != null) {
+            this.TaskProcess = new Long(source.TaskProcess);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +158,8 @@ public class DescribeAssetSyncLastTimeResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AssetSyncLastTime", this.AssetSyncLastTime);
+        this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamSimple(map, prefix + "TaskProcess", this.TaskProcess);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

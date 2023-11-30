@@ -52,6 +52,13 @@ public class ModifyNetworkConfigResponse extends AbstractModel {
     private String Vip;
 
     /**
+    * 任务ID。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class ModifyNetworkConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get 任务ID。 
+     * @return TaskId 任务ID。
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID。
+     * @param TaskId 任务ID。
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class ModifyNetworkConfigResponse extends AbstractModel {
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class ModifyNetworkConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

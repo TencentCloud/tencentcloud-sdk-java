@@ -505,6 +505,20 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     private String ClusterName;
 
     /**
+    * Namespace
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * 工作负载类型
+    */
+    @SerializedName("WorkloadType")
+    @Expose
+    private String WorkloadType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1728,6 +1742,38 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
+     * Get Namespace 
+     * @return Namespace Namespace
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set Namespace
+     * @param Namespace Namespace
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get 工作负载类型 
+     * @return WorkloadType 工作负载类型
+     */
+    public String getWorkloadType() {
+        return this.WorkloadType;
+    }
+
+    /**
+     * Set 工作负载类型
+     * @param WorkloadType 工作负载类型
+     */
+    public void setWorkloadType(String WorkloadType) {
+        this.WorkloadType = WorkloadType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1934,6 +1980,12 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.WorkloadType != null) {
+            this.WorkloadType = new String(source.WorkloadType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -2003,6 +2055,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "NodeID", this.NodeID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

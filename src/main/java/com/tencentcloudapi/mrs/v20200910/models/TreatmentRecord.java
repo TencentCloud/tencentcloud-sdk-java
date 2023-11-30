@@ -240,11 +240,21 @@ public class TreatmentRecord extends AbstractModel {
     private String ObservationDays;
 
     /**
+    * 入院
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdmissionCondition")
+    @Expose
+    private String AdmissionCondition;
+
+    /**
      * Get 入院
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DmissionCondition 入院
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getDmissionCondition() {
         return this.DmissionCondition;
     }
@@ -254,7 +264,9 @@ public class TreatmentRecord extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DmissionCondition 入院
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDmissionCondition(String DmissionCondition) {
         this.DmissionCondition = DmissionCondition;
     }
@@ -779,6 +791,26 @@ public class TreatmentRecord extends AbstractModel {
         this.ObservationDays = ObservationDays;
     }
 
+    /**
+     * Get 入院
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdmissionCondition 入院
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAdmissionCondition() {
+        return this.AdmissionCondition;
+    }
+
+    /**
+     * Set 入院
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdmissionCondition 入院
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdmissionCondition(String AdmissionCondition) {
+        this.AdmissionCondition = AdmissionCondition;
+    }
+
     public TreatmentRecord() {
     }
 
@@ -868,6 +900,9 @@ public class TreatmentRecord extends AbstractModel {
         if (source.ObservationDays != null) {
             this.ObservationDays = new String(source.ObservationDays);
         }
+        if (source.AdmissionCondition != null) {
+            this.AdmissionCondition = new String(source.AdmissionCondition);
+        }
     }
 
 
@@ -902,6 +937,7 @@ public class TreatmentRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "DeathDate", this.DeathDate);
         this.setParamSimple(map, prefix + "RelapseDate", this.RelapseDate);
         this.setParamSimple(map, prefix + "ObservationDays", this.ObservationDays);
+        this.setParamSimple(map, prefix + "AdmissionCondition", this.AdmissionCondition);
 
     }
 }

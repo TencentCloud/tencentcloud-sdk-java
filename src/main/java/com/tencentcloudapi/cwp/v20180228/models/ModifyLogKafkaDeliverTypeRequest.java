@@ -31,7 +31,7 @@ public class ModifyLogKafkaDeliverTypeRequest extends AbstractModel {
     private Long SecurityType;
 
     /**
-    * 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+    * 安全模块下的日志类型，
     */
     @SerializedName("LogType")
     @Expose
@@ -75,16 +75,16 @@ public class ModifyLogKafkaDeliverTypeRequest extends AbstractModel {
     }
 
     /**
-     * Get 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905 
-     * @return LogType 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+     * Get 安全模块下的日志类型， 
+     * @return LogType 安全模块下的日志类型，
      */
     public Long [] getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
-     * @param LogType 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+     * Set 安全模块下的日志类型，
+     * @param LogType 安全模块下的日志类型，
      */
     public void setLogType(Long [] LogType) {
         this.LogType = LogType;
