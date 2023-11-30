@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDataSourceInfoListRequest extends AbstractModel {
 
     /**
-    * 工作空间id
+    * 项目id
     */
     @SerializedName("ProjectId")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeDataSourceInfoListRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+    * 过滤条件（暂不支持）
     */
     @SerializedName("Filters")
     @Expose
@@ -59,30 +59,30 @@ public class DescribeDataSourceInfoListRequest extends AbstractModel {
     private OrderField OrderFields;
 
     /**
-    * 数据源类型
+    * 数据源类型，必选（如MYSQL、DLC等）
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 数据源名称过滤用
+    * 数据源名称过滤
     */
     @SerializedName("DatasourceName")
     @Expose
     private String DatasourceName;
 
     /**
-     * Get 工作空间id 
-     * @return ProjectId 工作空间id
+     * Get 项目id 
+     * @return ProjectId 项目id
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 工作空间id
-     * @param ProjectId 工作空间id
+     * Set 项目id
+     * @param ProjectId 项目id
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
@@ -121,16 +121,16 @@ public class DescribeDataSourceInfoListRequest extends AbstractModel {
     }
 
     /**
-     * Get 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" } 
-     * @return Filters 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+     * Get 过滤条件（暂不支持） 
+     * @return Filters 过滤条件（暂不支持）
      */
     public Filter getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
-     * @param Filters 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+     * Set 过滤条件（暂不支持）
+     * @param Filters 过滤条件（暂不支持）
      */
     public void setFilters(Filter Filters) {
         this.Filters = Filters;
@@ -153,32 +153,32 @@ public class DescribeDataSourceInfoListRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据源类型 
-     * @return Type 数据源类型
+     * Get 数据源类型，必选（如MYSQL、DLC等） 
+     * @return Type 数据源类型，必选（如MYSQL、DLC等）
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 数据源类型
-     * @param Type 数据源类型
+     * Set 数据源类型，必选（如MYSQL、DLC等）
+     * @param Type 数据源类型，必选（如MYSQL、DLC等）
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数据源名称过滤用 
-     * @return DatasourceName 数据源名称过滤用
+     * Get 数据源名称过滤 
+     * @return DatasourceName 数据源名称过滤
      */
     public String getDatasourceName() {
         return this.DatasourceName;
     }
 
     /**
-     * Set 数据源名称过滤用
-     * @param DatasourceName 数据源名称过滤用
+     * Set 数据源名称过滤
+     * @param DatasourceName 数据源名称过滤
      */
     public void setDatasourceName(String DatasourceName) {
         this.DatasourceName = DatasourceName;

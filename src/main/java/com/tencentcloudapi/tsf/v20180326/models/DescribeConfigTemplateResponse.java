@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConfigTemplateResponse extends AbstractModel {
 
     /**
-    * Result
+    * 导入结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -39,9 +39,9 @@ public class DescribeConfigTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Result
+     * Get 导入结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result Result
+     * @return Result 导入结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConfigTemplate getResult() {
@@ -49,9 +49,9 @@ public class DescribeConfigTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Set Result
+     * Set 导入结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result Result
+     * @param Result 导入结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ConfigTemplate Result) {

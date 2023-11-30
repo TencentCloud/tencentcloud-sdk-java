@@ -86,6 +86,16 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean ForbidEditFillComponent;
 
     /**
+    * 跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId
+    */
+    @SerializedName("SkipUploadFile")
+    @Expose
+    private String SkipUploadFile;
+
+    /**
      * Get 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以 
@@ -249,6 +259,34 @@ public class CreateFlowOption extends AbstractModel {
         this.ForbidEditFillComponent = ForbidEditFillComponent;
     }
 
+    /**
+     * Get 跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId 
+     * @return SkipUploadFile 跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId
+     */
+    public String getSkipUploadFile() {
+        return this.SkipUploadFile;
+    }
+
+    /**
+     * Set 跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId
+     * @param SkipUploadFile 跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId
+     */
+    public void setSkipUploadFile(String SkipUploadFile) {
+        this.SkipUploadFile = SkipUploadFile;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -278,6 +316,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.ForbidEditFillComponent != null) {
             this.ForbidEditFillComponent = new Boolean(source.ForbidEditFillComponent);
         }
+        if (source.SkipUploadFile != null) {
+            this.SkipUploadFile = new String(source.SkipUploadFile);
+        }
     }
 
 
@@ -292,6 +333,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "CanSkipAddApprover", this.CanSkipAddApprover);
         this.setParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
         this.setParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
+        this.setParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
 
     }
 }

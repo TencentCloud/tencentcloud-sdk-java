@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateConfigTemplateResponse extends AbstractModel {
 
     /**
-    * 结果true：成功；false：失败；
+    * 更新成功: true / 更新失败: false
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateConfigTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果true：成功；false：失败； 
-     * @return Result 结果true：成功；false：失败；
+     * Get 更新成功: true / 更新失败: false 
+     * @return Result 更新成功: true / 更新失败: false
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 结果true：成功；false：失败；
-     * @param Result 结果true：成功；false：失败；
+     * Set 更新成功: true / 更新失败: false
+     * @param Result 更新成功: true / 更新失败: false
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

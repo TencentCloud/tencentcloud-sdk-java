@@ -38,6 +38,13 @@ public class TriggerDsEventRequest extends AbstractModel {
     private EventCaseDTO [] EventCaseList;
 
     /**
+    * 事件实例信息(连续时间)
+    */
+    @SerializedName("EventBatchCaseList")
+    @Expose
+    private EventBatchCaseDTO [] EventBatchCaseList;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -69,6 +76,22 @@ public class TriggerDsEventRequest extends AbstractModel {
         this.EventCaseList = EventCaseList;
     }
 
+    /**
+     * Get 事件实例信息(连续时间) 
+     * @return EventBatchCaseList 事件实例信息(连续时间)
+     */
+    public EventBatchCaseDTO [] getEventBatchCaseList() {
+        return this.EventBatchCaseList;
+    }
+
+    /**
+     * Set 事件实例信息(连续时间)
+     * @param EventBatchCaseList 事件实例信息(连续时间)
+     */
+    public void setEventBatchCaseList(EventBatchCaseDTO [] EventBatchCaseList) {
+        this.EventBatchCaseList = EventBatchCaseList;
+    }
+
     public TriggerDsEventRequest() {
     }
 
@@ -86,6 +109,12 @@ public class TriggerDsEventRequest extends AbstractModel {
                 this.EventCaseList[i] = new EventCaseDTO(source.EventCaseList[i]);
             }
         }
+        if (source.EventBatchCaseList != null) {
+            this.EventBatchCaseList = new EventBatchCaseDTO[source.EventBatchCaseList.length];
+            for (int i = 0; i < source.EventBatchCaseList.length; i++) {
+                this.EventBatchCaseList[i] = new EventBatchCaseDTO(source.EventBatchCaseList[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class TriggerDsEventRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "EventCaseList.", this.EventCaseList);
+        this.setParamArrayObj(map, prefix + "EventBatchCaseList.", this.EventBatchCaseList);
 
     }
 }

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeAlarmStatusListResponse extends AbstractModel {
 
     /**
+    * 告警状态返回结构
+    */
+    @SerializedName("Result")
+    @Expose
+    private DescribeAlarmStatusListRes Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 告警状态返回结构 
+     * @return Result 告警状态返回结构
+     */
+    public DescribeAlarmStatusListRes getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 告警状态返回结构
+     * @param Result 告警状态返回结构
+     */
+    public void setResult(DescribeAlarmStatusListRes Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeAlarmStatusListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAlarmStatusListResponse(DescribeAlarmStatusListResponse source) {
+        if (source.Result != null) {
+            this.Result = new DescribeAlarmStatusListRes(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeAlarmStatusListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -87,6 +87,13 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     private TDEConfigAttribute TDEConfig;
 
     /**
+    * SSL加密
+    */
+    @SerializedName("SSLConfig")
+    @Expose
+    private SSLConfig SSLConfig;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -238,6 +245,22 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     }
 
     /**
+     * Get SSL加密 
+     * @return SSLConfig SSL加密
+     */
+    public SSLConfig getSSLConfig() {
+        return this.SSLConfig;
+    }
+
+    /**
+     * Set SSL加密
+     * @param SSLConfig SSL加密
+     */
+    public void setSSLConfig(SSLConfig SSLConfig) {
+        this.SSLConfig = SSLConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -288,6 +311,9 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         if (source.TDEConfig != null) {
             this.TDEConfig = new TDEConfigAttribute(source.TDEConfig);
         }
+        if (source.SSLConfig != null) {
+            this.SSLConfig = new SSLConfig(source.SSLConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -307,6 +333,7 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "BlockedThreshold", this.BlockedThreshold);
         this.setParamSimple(map, prefix + "EventSaveDays", this.EventSaveDays);
         this.setParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
+        this.setParamObj(map, prefix + "SSLConfig.", this.SSLConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

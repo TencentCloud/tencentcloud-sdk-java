@@ -83,6 +83,16 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
     private String CamRoleType;
 
     /**
+    * 修改实例主机名是否自动重启实例，不传默认自动重启。
+- true: 修改主机名，并自动重启实例；
+- false: 修改主机名，不自动重启实例，需要手动重启使新主机名生效。
+注意点：本参数仅对修改主机名生效。
+    */
+    @SerializedName("AutoReboot")
+    @Expose
+    private Boolean AutoReboot;
+
+    /**
      * Get 一个或多个待操作的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。 
      * @return InstanceIds 一个或多个待操作的实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
      */
@@ -222,6 +232,34 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
         this.CamRoleType = CamRoleType;
     }
 
+    /**
+     * Get 修改实例主机名是否自动重启实例，不传默认自动重启。
+- true: 修改主机名，并自动重启实例；
+- false: 修改主机名，不自动重启实例，需要手动重启使新主机名生效。
+注意点：本参数仅对修改主机名生效。 
+     * @return AutoReboot 修改实例主机名是否自动重启实例，不传默认自动重启。
+- true: 修改主机名，并自动重启实例；
+- false: 修改主机名，不自动重启实例，需要手动重启使新主机名生效。
+注意点：本参数仅对修改主机名生效。
+     */
+    public Boolean getAutoReboot() {
+        return this.AutoReboot;
+    }
+
+    /**
+     * Set 修改实例主机名是否自动重启实例，不传默认自动重启。
+- true: 修改主机名，并自动重启实例；
+- false: 修改主机名，不自动重启实例，需要手动重启使新主机名生效。
+注意点：本参数仅对修改主机名生效。
+     * @param AutoReboot 修改实例主机名是否自动重启实例，不传默认自动重启。
+- true: 修改主机名，并自动重启实例；
+- false: 修改主机名，不自动重启实例，需要手动重启使新主机名生效。
+注意点：本参数仅对修改主机名生效。
+     */
+    public void setAutoReboot(Boolean AutoReboot) {
+        this.AutoReboot = AutoReboot;
+    }
+
     public ModifyInstancesAttributeRequest() {
     }
 
@@ -260,6 +298,9 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
         if (source.CamRoleType != null) {
             this.CamRoleType = new String(source.CamRoleType);
         }
+        if (source.AutoReboot != null) {
+            this.AutoReboot = new Boolean(source.AutoReboot);
+        }
     }
 
 
@@ -275,6 +316,7 @@ public class ModifyInstancesAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
+        this.setParamSimple(map, prefix + "AutoReboot", this.AutoReboot);
 
     }
 }

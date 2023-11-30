@@ -31,7 +31,11 @@ public class DescribeEventCasesRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 事件实例目录
+    * 事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+
     */
     @SerializedName("Category")
     @Expose
@@ -80,7 +84,11 @@ public class DescribeEventCasesRequest extends AbstractModel {
     private String EventBroadcastType;
 
     /**
-    * 事件实例状态
+    * 事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING
     */
     @SerializedName("Status")
     @Expose
@@ -136,6 +144,27 @@ public class DescribeEventCasesRequest extends AbstractModel {
     private String Dimension;
 
     /**
+    * 事件实例有效时间
+    */
+    @SerializedName("TimeToLive")
+    @Expose
+    private String TimeToLive;
+
+    /**
+    * 排序字段
+    */
+    @SerializedName("SortItem")
+    @Expose
+    private String SortItem;
+
+    /**
+    * 排序顺序
+    */
+    @SerializedName("SortType")
+    @Expose
+    private String SortType;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -152,16 +181,32 @@ public class DescribeEventCasesRequest extends AbstractModel {
     }
 
     /**
-     * Get 事件实例目录 
-     * @return Category 事件实例目录
+     * Get 事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+ 
+     * @return Category 事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 事件实例目录
-     * @param Category 事件实例目录
+     * Set 事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+
+     * @param Category 事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+
      */
     public void setCategory(String Category) {
         this.Category = Category;
@@ -218,7 +263,9 @@ public class DescribeEventCasesRequest extends AbstractModel {
     /**
      * Get 事件类型 
      * @return EventType 事件类型
+     * @deprecated
      */
+    @Deprecated
     public String getEventType() {
         return this.EventType;
     }
@@ -226,7 +273,9 @@ public class DescribeEventCasesRequest extends AbstractModel {
     /**
      * Set 事件类型
      * @param EventType 事件类型
+     * @deprecated
      */
+    @Deprecated
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
@@ -250,7 +299,9 @@ public class DescribeEventCasesRequest extends AbstractModel {
     /**
      * Get 事件广播类型 
      * @return EventBroadcastType 事件广播类型
+     * @deprecated
      */
+    @Deprecated
     public String getEventBroadcastType() {
         return this.EventBroadcastType;
     }
@@ -258,23 +309,45 @@ public class DescribeEventCasesRequest extends AbstractModel {
     /**
      * Set 事件广播类型
      * @param EventBroadcastType 事件广播类型
+     * @deprecated
      */
+    @Deprecated
     public void setEventBroadcastType(String EventBroadcastType) {
         this.EventBroadcastType = EventBroadcastType;
     }
 
     /**
-     * Get 事件实例状态 
-     * @return Status 事件实例状态
+     * Get 事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING 
+     * @return Status 事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING
+     * @deprecated
      */
+    @Deprecated
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 事件实例状态
-     * @param Status 事件实例状态
+     * Set 事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING
+     * @param Status 事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING
+     * @deprecated
      */
+    @Deprecated
     public void setStatus(String Status) {
         this.Status = Status;
     }
@@ -391,6 +464,54 @@ public class DescribeEventCasesRequest extends AbstractModel {
         this.Dimension = Dimension;
     }
 
+    /**
+     * Get 事件实例有效时间 
+     * @return TimeToLive 事件实例有效时间
+     */
+    public String getTimeToLive() {
+        return this.TimeToLive;
+    }
+
+    /**
+     * Set 事件实例有效时间
+     * @param TimeToLive 事件实例有效时间
+     */
+    public void setTimeToLive(String TimeToLive) {
+        this.TimeToLive = TimeToLive;
+    }
+
+    /**
+     * Get 排序字段 
+     * @return SortItem 排序字段
+     */
+    public String getSortItem() {
+        return this.SortItem;
+    }
+
+    /**
+     * Set 排序字段
+     * @param SortItem 排序字段
+     */
+    public void setSortItem(String SortItem) {
+        this.SortItem = SortItem;
+    }
+
+    /**
+     * Get 排序顺序 
+     * @return SortType 排序顺序
+     */
+    public String getSortType() {
+        return this.SortType;
+    }
+
+    /**
+     * Set 排序顺序
+     * @param SortType 排序顺序
+     */
+    public void setSortType(String SortType) {
+        this.SortType = SortType;
+    }
+
     public DescribeEventCasesRequest() {
     }
 
@@ -447,6 +568,15 @@ public class DescribeEventCasesRequest extends AbstractModel {
         if (source.Dimension != null) {
             this.Dimension = new String(source.Dimension);
         }
+        if (source.TimeToLive != null) {
+            this.TimeToLive = new String(source.TimeToLive);
+        }
+        if (source.SortItem != null) {
+            this.SortItem = new String(source.SortItem);
+        }
+        if (source.SortType != null) {
+            this.SortType = new String(source.SortType);
+        }
     }
 
 
@@ -470,6 +600,9 @@ public class DescribeEventCasesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogTimeStart", this.LogTimeStart);
         this.setParamSimple(map, prefix + "LogTimeEnd", this.LogTimeEnd);
         this.setParamSimple(map, prefix + "Dimension", this.Dimension);
+        this.setParamSimple(map, prefix + "TimeToLive", this.TimeToLive);
+        this.setParamSimple(map, prefix + "SortItem", this.SortItem);
+        this.setParamSimple(map, prefix + "SortType", this.SortType);
 
     }
 }

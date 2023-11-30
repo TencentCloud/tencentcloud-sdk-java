@@ -24,14 +24,20 @@ import java.util.HashMap;
 public class ChannelCreatePrepareFlowRequest extends AbstractModel {
 
     /**
-    * 合同模板ID，为32位字符串。
+    * 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源类型，此接口固定为**1**表示为用模板发起
+    * 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
     */
     @SerializedName("ResourceType")
     @Expose
@@ -74,7 +80,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     private CommonFlowApprover [] FlowApproverList;
 
     /**
-    * 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
+    * 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
+注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
     */
     @SerializedName("FlowId")
     @Expose
@@ -102,32 +109,56 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-     * Get 合同模板ID，为32位字符串。 
-     * @return ResourceId 合同模板ID，为32位字符串。
+     * Get 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul> 
+     * @return ResourceId 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 合同模板ID，为32位字符串。
-     * @param ResourceId 合同模板ID，为32位字符串。
+     * Set 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
+     * @param ResourceId 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源类型，此接口固定为**1**表示为用模板发起 
-     * @return ResourceType 资源类型，此接口固定为**1**表示为用模板发起
+     * Get 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul> 
+     * @return ResourceType 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，此接口固定为**1**表示为用模板发起
-     * @param ResourceType 资源类型，此接口固定为**1**表示为用模板发起
+     * Set 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
+     * @param ResourceType 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
@@ -230,16 +261,20 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接 
-     * @return FlowId 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
+     * Get 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
+注: `该参数必须是一个待发起审核的合同id，并且还未审核通过` 
+     * @return FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
+注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
-     * @param FlowId 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
+     * Set 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
+注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
+     * @param FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
+注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

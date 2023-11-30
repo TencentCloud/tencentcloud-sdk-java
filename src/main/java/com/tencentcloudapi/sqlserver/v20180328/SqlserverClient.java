@@ -1216,6 +1216,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBInstancesAttribute）用于开启\关闭\更新SSL加密
+     * @param req ModifyDBInstanceSSLRequest
+     * @return ModifyDBInstanceSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSSLResponse ModifyDBInstanceSSL(ModifyDBInstanceSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceSSL", ModifyDBInstanceSSLResponse.class);
+    }
+
+    /**
      *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse

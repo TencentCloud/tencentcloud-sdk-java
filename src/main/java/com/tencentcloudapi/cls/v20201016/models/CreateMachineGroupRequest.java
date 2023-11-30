@@ -80,7 +80,7 @@ public class CreateMachineGroupRequest extends AbstractModel {
     private MetaTagInfo [] MetaTags;
 
     /**
-    * 系统类型，默认0，0：Linux，1: windows
+    * 系统类型，默认0，0：Linux，1: Windows
     */
     @SerializedName("OSType")
     @Expose
@@ -215,16 +215,16 @@ public class CreateMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 系统类型，默认0，0：Linux，1: windows 
-     * @return OSType 系统类型，默认0，0：Linux，1: windows
+     * Get 系统类型，默认0，0：Linux，1: Windows 
+     * @return OSType 系统类型，默认0，0：Linux，1: Windows
      */
     public Long getOSType() {
         return this.OSType;
     }
 
     /**
-     * Set 系统类型，默认0，0：Linux，1: windows
-     * @param OSType 系统类型，默认0，0：Linux，1: windows
+     * Set 系统类型，默认0，0：Linux，1: Windows
+     * @param OSType 系统类型，默认0，0：Linux，1: Windows
      */
     public void setOSType(Long OSType) {
         this.OSType = OSType;

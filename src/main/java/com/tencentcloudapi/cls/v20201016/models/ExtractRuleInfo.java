@@ -171,7 +171,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     private MetaTagInfo [] MetaTags;
 
     /**
-    * windows事件日志采集
+    * Windows事件日志采集
     */
     @SerializedName("EventLogRules")
     @Expose
@@ -550,16 +550,16 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get windows事件日志采集 
-     * @return EventLogRules windows事件日志采集
+     * Get Windows事件日志采集 
+     * @return EventLogRules Windows事件日志采集
      */
     public EventLog [] getEventLogRules() {
         return this.EventLogRules;
     }
 
     /**
-     * Set windows事件日志采集
-     * @param EventLogRules windows事件日志采集
+     * Set Windows事件日志采集
+     * @param EventLogRules Windows事件日志采集
      */
     public void setEventLogRules(EventLog [] EventLogRules) {
         this.EventLogRules = EventLogRules;

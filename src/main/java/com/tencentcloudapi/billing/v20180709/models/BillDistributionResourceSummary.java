@@ -285,6 +285,14 @@ public class BillDistributionResourceSummary extends AbstractModel {
     private String OriginalCostWithSP;
 
     /**
+    * 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
      * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
      * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
@@ -888,6 +896,26 @@ public class BillDistributionResourceSummary extends AbstractModel {
         this.OriginalCostWithSP = OriginalCostWithSP;
     }
 
+    /**
+     * Get 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillMonth 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillMonth 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
     public BillDistributionResourceSummary() {
     }
 
@@ -1010,6 +1038,9 @@ public class BillDistributionResourceSummary extends AbstractModel {
         if (source.OriginalCostWithSP != null) {
             this.OriginalCostWithSP = new String(source.OriginalCostWithSP);
         }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
     }
 
 
@@ -1054,6 +1085,7 @@ public class BillDistributionResourceSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
         this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
         this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
 
     }
 }

@@ -115,6 +115,13 @@ tar.gz： 生成`.tar.gz`压缩包
     private Boolean AutoHandleUnsupportedElement;
 
     /**
+    * Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
+    */
+    @SerializedName("ExcelParam")
+    @Expose
+    private ExcelParam ExcelParam;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -358,6 +365,22 @@ tar.gz： 生成`.tar.gz`压缩包
         this.AutoHandleUnsupportedElement = AutoHandleUnsupportedElement;
     }
 
+    /**
+     * Get Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效） 
+     * @return ExcelParam Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
+     */
+    public ExcelParam getExcelParam() {
+        return this.ExcelParam;
+    }
+
+    /**
+     * Set Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
+     * @param ExcelParam Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
+     */
+    public void setExcelParam(ExcelParam ExcelParam) {
+        this.ExcelParam = ExcelParam;
+    }
+
     public CreateTranscodeRequest() {
     }
 
@@ -396,6 +419,9 @@ tar.gz： 生成`.tar.gz`压缩包
         if (source.AutoHandleUnsupportedElement != null) {
             this.AutoHandleUnsupportedElement = new Boolean(source.AutoHandleUnsupportedElement);
         }
+        if (source.ExcelParam != null) {
+            this.ExcelParam = new ExcelParam(source.ExcelParam);
+        }
     }
 
 
@@ -413,6 +439,7 @@ tar.gz： 生成`.tar.gz`压缩包
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
         this.setParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
+        this.setParamObj(map, prefix + "ExcelParam.", this.ExcelParam);
 
     }
 }

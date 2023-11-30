@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tiw.v20190919.models;
+package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOfflineRecordCallbackRequest extends AbstractModel {
+public class ModifyPackageRenewFlagResponse extends AbstractModel {
 
     /**
-    * 应用的SdkAppId
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("SdkAppId")
+    @SerializedName("RequestId")
     @Expose
-    private Long SdkAppId;
+    private String RequestId;
 
     /**
-     * Get 应用的SdkAppId 
-     * @return SdkAppId 应用的SdkAppId
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 应用的SdkAppId
-     * @param SdkAppId 应用的SdkAppId
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeOfflineRecordCallbackRequest() {
+    public ModifyPackageRenewFlagResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOfflineRecordCallbackRequest(DescribeOfflineRecordCallbackRequest source) {
-        if (source.SdkAppId != null) {
-            this.SdkAppId = new Long(source.SdkAppId);
+    public ModifyPackageRenewFlagResponse(ModifyPackageRenewFlagResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeOfflineRecordCallbackRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

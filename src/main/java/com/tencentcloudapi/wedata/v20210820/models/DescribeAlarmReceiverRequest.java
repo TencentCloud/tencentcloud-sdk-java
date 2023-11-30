@@ -87,6 +87,13 @@ public class DescribeAlarmReceiverRequest extends AbstractModel {
     private String AlarmTime;
 
     /**
+    * 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+    */
+    @SerializedName("MonitorType")
+    @Expose
+    private Long MonitorType;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -230,6 +237,22 @@ public class DescribeAlarmReceiverRequest extends AbstractModel {
         this.AlarmTime = AlarmTime;
     }
 
+    /**
+     * Get 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组) 
+     * @return MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     */
+    public Long getMonitorType() {
+        return this.MonitorType;
+    }
+
+    /**
+     * Set 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     * @param MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     */
+    public void setMonitorType(Long MonitorType) {
+        this.MonitorType = MonitorType;
+    }
+
     public DescribeAlarmReceiverRequest() {
     }
 
@@ -265,6 +288,9 @@ public class DescribeAlarmReceiverRequest extends AbstractModel {
         if (source.AlarmTime != null) {
             this.AlarmTime = new String(source.AlarmTime);
         }
+        if (source.MonitorType != null) {
+            this.MonitorType = new Long(source.MonitorType);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class DescribeAlarmReceiverRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmRecipient", this.AlarmRecipient);
         this.setParamSimple(map, prefix + "AlarmRecipientName", this.AlarmRecipientName);
         this.setParamSimple(map, prefix + "AlarmTime", this.AlarmTime);
+        this.setParamSimple(map, prefix + "MonitorType", this.MonitorType);
 
     }
 }

@@ -59,6 +59,13 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel {
     private Long TaskType;
 
     /**
+    * 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+    */
+    @SerializedName("MonitorType")
+    @Expose
+    private Long MonitorType;
+
+    /**
      * Get 项目名称 
      * @return ProjectId 项目名称
      */
@@ -142,6 +149,22 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel {
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组) 
+     * @return MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     */
+    public Long getMonitorType() {
+        return this.MonitorType;
+    }
+
+    /**
+     * Set 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     * @param MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     */
+    public void setMonitorType(Long MonitorType) {
+        this.MonitorType = MonitorType;
+    }
+
     public CheckAlarmRegularNameExistRequest() {
     }
 
@@ -165,6 +188,9 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
+        if (source.MonitorType != null) {
+            this.MonitorType = new Long(source.MonitorType);
+        }
     }
 
 
@@ -177,6 +203,7 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "MonitorType", this.MonitorType);
 
     }
 }

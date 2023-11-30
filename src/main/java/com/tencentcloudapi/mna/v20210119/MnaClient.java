@@ -138,6 +138,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取设备付费模式
+     * @param req GetDevicePayModeRequest
+     * @return GetDevicePayModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDevicePayModeResponse GetDevicePayMode(GetDevicePayModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDevicePayMode", GetDevicePayModeResponse.class);
+    }
+
+    /**
      *获取设备信息列表
      * @param req GetDevicesRequest
      * @return GetDevicesResponse
@@ -146,6 +157,17 @@ public class MnaClient extends AbstractClient{
     public GetDevicesResponse GetDevices(GetDevicesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetDevices", GetDevicesResponse.class);
+    }
+
+    /**
+     *获取流量包列表
+     * @param req GetFlowPackagesRequest
+     * @return GetFlowPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFlowPackagesResponse GetFlowPackages(GetFlowPackagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFlowPackages", GetFlowPackagesResponse.class);
     }
 
     /**
@@ -160,7 +182,7 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
-     *租户获取厂商硬件列表
+     *获取厂商硬件列表
      * @param req GetHardwareListRequest
      * @return GetHardwareListResponse
      * @throws TencentCloudSDKException
@@ -223,6 +245,28 @@ public class MnaClient extends AbstractClient{
     public GetVendorHardwareResponse GetVendorHardware(GetVendorHardwareRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetVendorHardware", GetVendorHardwareResponse.class);
+    }
+
+    /**
+     *可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
+     * @param req ModifyPackageRenewFlagRequest
+     * @return ModifyPackageRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPackageRenewFlagResponse ModifyPackageRenewFlag(ModifyPackageRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPackageRenewFlag", ModifyPackageRenewFlagResponse.class);
+    }
+
+    /**
+     *购买预付费流量包
+     * @param req OrderFlowPackageRequest
+     * @return OrderFlowPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public OrderFlowPackageResponse OrderFlowPackage(OrderFlowPackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OrderFlowPackage", OrderFlowPackageResponse.class);
     }
 
     /**

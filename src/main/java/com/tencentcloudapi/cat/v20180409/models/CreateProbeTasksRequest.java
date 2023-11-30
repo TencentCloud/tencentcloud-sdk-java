@@ -82,7 +82,7 @@ public class CreateProbeTasksRequest extends AbstractModel {
     private Tag [] Tag;
 
     /**
-    * 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+    * 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
     */
     @SerializedName("ProbeType")
     @Expose
@@ -246,16 +246,16 @@ public class CreateProbeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。 
-     * @return ProbeType 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+     * Get 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。 
+     * @return ProbeType 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
      */
     public Long getProbeType() {
         return this.ProbeType;
     }
 
     /**
-     * Set 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
-     * @param ProbeType 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+     * Set 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+     * @param ProbeType 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
      */
     public void setProbeType(Long ProbeType) {
         this.ProbeType = ProbeType;

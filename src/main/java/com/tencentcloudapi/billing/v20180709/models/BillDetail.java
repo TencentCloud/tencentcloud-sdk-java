@@ -229,6 +229,22 @@ public class BillDetail extends AbstractModel {
     private String FormulaUrl;
 
     /**
+    * 账单归属日
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillDay")
+    @Expose
+    private String BillDay;
+
+    /**
+    * 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
      * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
      * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
@@ -712,6 +728,46 @@ public class BillDetail extends AbstractModel {
         this.FormulaUrl = FormulaUrl;
     }
 
+    /**
+     * Get 账单归属日
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillDay 账单归属日
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillDay() {
+        return this.BillDay;
+    }
+
+    /**
+     * Set 账单归属日
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillDay 账单归属日
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillDay(String BillDay) {
+        this.BillDay = BillDay;
+    }
+
+    /**
+     * Get 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillMonth 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillMonth 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
     public BillDetail() {
     }
 
@@ -813,6 +869,12 @@ public class BillDetail extends AbstractModel {
         if (source.FormulaUrl != null) {
             this.FormulaUrl = new String(source.FormulaUrl);
         }
+        if (source.BillDay != null) {
+            this.BillDay = new String(source.BillDay);
+        }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
     }
 
 
@@ -848,6 +910,8 @@ public class BillDetail extends AbstractModel {
         this.setParamObj(map, prefix + "AssociatedOrder.", this.AssociatedOrder);
         this.setParamSimple(map, prefix + "Formula", this.Formula);
         this.setParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
+        this.setParamSimple(map, prefix + "BillDay", this.BillDay);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
 
     }
 }

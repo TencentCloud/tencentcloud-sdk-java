@@ -24,6 +24,27 @@ import java.util.HashMap;
 public class DescribeAlarmEventsRequest extends AbstractModel {
 
     /**
+    * 项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+    * 当前页
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
+
+    /**
+    * 每页记录数
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
     * 过滤条件(key可以是：AlarmLevel,AlarmIndicator,KeyWord)
     */
     @SerializedName("Filters")
@@ -59,25 +80,59 @@ public class DescribeAlarmEventsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 项目ID
+    * 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
     */
-    @SerializedName("ProjectId")
+    @SerializedName("MonitorType")
     @Expose
-    private String ProjectId;
+    private Long MonitorType;
 
     /**
-    * 当前页
-    */
-    @SerializedName("PageNumber")
-    @Expose
-    private Long PageNumber;
+     * Get 项目ID 
+     * @return ProjectId 项目ID
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
 
     /**
-    * 每页记录数
-    */
-    @SerializedName("PageSize")
-    @Expose
-    private Long PageSize;
+     * Set 项目ID
+     * @param ProjectId 项目ID
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 当前页 
+     * @return PageNumber 当前页
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set 当前页
+     * @param PageNumber 当前页
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
+    }
+
+    /**
+     * Get 每页记录数 
+     * @return PageSize 每页记录数
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 每页记录数
+     * @param PageSize 每页记录数
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
 
     /**
      * Get 过滤条件(key可以是：AlarmLevel,AlarmIndicator,KeyWord) 
@@ -160,51 +215,19 @@ public class DescribeAlarmEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组) 
+     * @return MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
      */
-    public String getProjectId() {
-        return this.ProjectId;
+    public Long getMonitorType() {
+        return this.MonitorType;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     * @param MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
      */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get 当前页 
-     * @return PageNumber 当前页
-     */
-    public Long getPageNumber() {
-        return this.PageNumber;
-    }
-
-    /**
-     * Set 当前页
-     * @param PageNumber 当前页
-     */
-    public void setPageNumber(Long PageNumber) {
-        this.PageNumber = PageNumber;
-    }
-
-    /**
-     * Get 每页记录数 
-     * @return PageSize 每页记录数
-     */
-    public Long getPageSize() {
-        return this.PageSize;
-    }
-
-    /**
-     * Set 每页记录数
-     * @param PageSize 每页记录数
-     */
-    public void setPageSize(Long PageSize) {
-        this.PageSize = PageSize;
+    public void setMonitorType(Long MonitorType) {
+        this.MonitorType = MonitorType;
     }
 
     public DescribeAlarmEventsRequest() {
@@ -215,6 +238,15 @@ public class DescribeAlarmEventsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAlarmEventsRequest(DescribeAlarmEventsRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -236,14 +268,8 @@ public class DescribeAlarmEventsRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
-        }
-        if (source.PageNumber != null) {
-            this.PageNumber = new Long(source.PageNumber);
-        }
-        if (source.PageSize != null) {
-            this.PageSize = new Long(source.PageSize);
+        if (source.MonitorType != null) {
+            this.MonitorType = new Long(source.MonitorType);
         }
     }
 
@@ -252,14 +278,15 @@ public class DescribeAlarmEventsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
-        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "MonitorType", this.MonitorType);
 
     }
 }

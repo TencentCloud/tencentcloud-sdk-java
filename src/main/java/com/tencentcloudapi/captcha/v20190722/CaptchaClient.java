@@ -138,6 +138,17 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
+     *Rce融合验证核查验证码票据结果(Web及APP)
+     * @param req DescribeCaptchaRceResultRequest
+     * @return DescribeCaptchaRceResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCaptchaRceResultResponse DescribeCaptchaRceResult(DescribeCaptchaRceResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCaptchaRceResult", DescribeCaptchaRceResultResponse.class);
+    }
+
+    /**
      *核查验证码票据结果(Web及APP)
      * @param req DescribeCaptchaResultRequest
      * @return DescribeCaptchaResultResponse

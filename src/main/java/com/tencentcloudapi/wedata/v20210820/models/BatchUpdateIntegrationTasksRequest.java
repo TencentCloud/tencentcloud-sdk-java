@@ -52,6 +52,13 @@ public class BatchUpdateIntegrationTasksRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 责任人Id（多个责任人用小写分号隔开）
+    */
+    @SerializedName("InchargeIds")
+    @Expose
+    private String InchargeIds;
+
+    /**
      * Get 任务id 
      * @return TaskIds 任务id
      */
@@ -115,6 +122,22 @@ public class BatchUpdateIntegrationTasksRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 责任人Id（多个责任人用小写分号隔开） 
+     * @return InchargeIds 责任人Id（多个责任人用小写分号隔开）
+     */
+    public String getInchargeIds() {
+        return this.InchargeIds;
+    }
+
+    /**
+     * Set 责任人Id（多个责任人用小写分号隔开）
+     * @param InchargeIds 责任人Id（多个责任人用小写分号隔开）
+     */
+    public void setInchargeIds(String InchargeIds) {
+        this.InchargeIds = InchargeIds;
+    }
+
     public BatchUpdateIntegrationTasksRequest() {
     }
 
@@ -138,6 +161,9 @@ public class BatchUpdateIntegrationTasksRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.InchargeIds != null) {
+            this.InchargeIds = new String(source.InchargeIds);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class BatchUpdateIntegrationTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Incharge", this.Incharge);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "InchargeIds", this.InchargeIds);
 
     }
 }

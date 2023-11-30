@@ -61,19 +61,6 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
-     *课后录制服务已下线
-
-创建课后录制任务
-     * @param req CreateOfflineRecordRequest
-     * @return CreateOfflineRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateOfflineRecordResponse CreateOfflineRecord(CreateOfflineRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateOfflineRecord", CreateOfflineRecordResponse.class);
-    }
-
-    /**
      *检测PPT文件，识别PPT中包含的动态转码任务（Transcode）不支持的元素
      * @param req CreatePPTCheckTaskRequest
      * @return CreatePPTCheckTaskResponse
@@ -170,32 +157,6 @@ public class TiwClient extends AbstractClient{
     public DescribeIMApplicationsResponse DescribeIMApplications(DescribeIMApplicationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIMApplications", DescribeIMApplicationsResponse.class);
-    }
-
-    /**
-     *课后录制服务已下线
-
-查询课后录制任务的进度与录制结果等相关信息
-     * @param req DescribeOfflineRecordRequest
-     * @return DescribeOfflineRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineRecordResponse DescribeOfflineRecord(DescribeOfflineRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineRecord", DescribeOfflineRecordResponse.class);
-    }
-
-    /**
-     *课后录制服务已下线
-
-查询课后录制回调地址
-     * @param req DescribeOfflineRecordCallbackRequest
-     * @return DescribeOfflineRecordCallbackResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineRecordCallbackResponse DescribeOfflineRecordCallback(DescribeOfflineRecordCallbackRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineRecordCallback", DescribeOfflineRecordCallbackResponse.class);
     }
 
     /**
@@ -577,19 +538,6 @@ public class TiwClient extends AbstractClient{
     public ResumeOnlineRecordResponse ResumeOnlineRecord(ResumeOnlineRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResumeOnlineRecord", ResumeOnlineRecordResponse.class);
-    }
-
-    /**
-     *课后录制服务已下线
-
-设置课后录制回调地址
-     * @param req SetOfflineRecordCallbackRequest
-     * @return SetOfflineRecordCallbackResponse
-     * @throws TencentCloudSDKException
-     */
-    public SetOfflineRecordCallbackResponse SetOfflineRecordCallback(SetOfflineRecordCallbackRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SetOfflineRecordCallback", SetOfflineRecordCallbackResponse.class);
     }
 
     /**

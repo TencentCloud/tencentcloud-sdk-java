@@ -59,7 +59,7 @@ public class RunApplicationRequest extends AbstractModel {
     private String InputBase64;
 
     /**
-    * 任务缓存清理时间。不填表示不清理。
+    * 任务缓存清理时间（小时）。不填表示不清理。
     */
     @SerializedName("CacheClearDelay")
     @Expose
@@ -181,16 +181,16 @@ public class RunApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务缓存清理时间。不填表示不清理。 
-     * @return CacheClearDelay 任务缓存清理时间。不填表示不清理。
+     * Get 任务缓存清理时间（小时）。不填表示不清理。 
+     * @return CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
      */
     public Long getCacheClearDelay() {
         return this.CacheClearDelay;
     }
 
     /**
-     * Set 任务缓存清理时间。不填表示不清理。
-     * @param CacheClearDelay 任务缓存清理时间。不填表示不清理。
+     * Set 任务缓存清理时间（小时）。不填表示不清理。
+     * @param CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
      */
     public void setCacheClearDelay(Long CacheClearDelay) {
         this.CacheClearDelay = CacheClearDelay;

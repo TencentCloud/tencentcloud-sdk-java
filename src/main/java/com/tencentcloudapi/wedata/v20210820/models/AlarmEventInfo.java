@@ -183,6 +183,30 @@ public class AlarmEventInfo extends AbstractModel {
     private String SendResult;
 
     /**
+    * 监控对象id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorObjectId")
+    @Expose
+    private String MonitorObjectId;
+
+    /**
+    * 监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorObjectName")
+    @Expose
+    private String MonitorObjectName;
+
+    /**
+    * 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Threshold")
+    @Expose
+    private Float Threshold;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -566,6 +590,66 @@ public class AlarmEventInfo extends AbstractModel {
         this.SendResult = SendResult;
     }
 
+    /**
+     * Get 监控对象id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorObjectId 监控对象id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMonitorObjectId() {
+        return this.MonitorObjectId;
+    }
+
+    /**
+     * Set 监控对象id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorObjectId 监控对象id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorObjectId(String MonitorObjectId) {
+        this.MonitorObjectId = MonitorObjectId;
+    }
+
+    /**
+     * Get 监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorObjectName 监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMonitorObjectName() {
+        return this.MonitorObjectName;
+    }
+
+    /**
+     * Set 监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorObjectName 监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorObjectName(String MonitorObjectName) {
+        this.MonitorObjectName = MonitorObjectName;
+    }
+
+    /**
+     * Get 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Threshold 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getThreshold() {
+        return this.Threshold;
+    }
+
+    /**
+     * Set 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Threshold 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThreshold(Float Threshold) {
+        this.Threshold = Threshold;
+    }
+
     public AlarmEventInfo() {
     }
 
@@ -637,6 +721,15 @@ public class AlarmEventInfo extends AbstractModel {
         if (source.SendResult != null) {
             this.SendResult = new String(source.SendResult);
         }
+        if (source.MonitorObjectId != null) {
+            this.MonitorObjectId = new String(source.MonitorObjectId);
+        }
+        if (source.MonitorObjectName != null) {
+            this.MonitorObjectName = new String(source.MonitorObjectName);
+        }
+        if (source.Threshold != null) {
+            this.Threshold = new Float(source.Threshold);
+        }
     }
 
 
@@ -665,6 +758,9 @@ public class AlarmEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmRecipientName", this.AlarmRecipientName);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "SendResult", this.SendResult);
+        this.setParamSimple(map, prefix + "MonitorObjectId", this.MonitorObjectId);
+        this.setParamSimple(map, prefix + "MonitorObjectName", this.MonitorObjectName);
+        this.setParamSimple(map, prefix + "Threshold", this.Threshold);
 
     }
 }

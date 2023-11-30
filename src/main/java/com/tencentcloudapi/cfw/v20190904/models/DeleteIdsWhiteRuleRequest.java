@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tiw.v20190919.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetOfflineRecordCallbackResponse extends AbstractModel {
+public class DeleteIdsWhiteRuleRequest extends AbstractModel {
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段
     */
-    @SerializedName("RequestId")
+    @SerializedName("Id")
     @Expose
-    private String RequestId;
+    private Long Id;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段 
+     * @return Id 入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public Long getId() {
+        return this.Id;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段
+     * @param Id 入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
-    public SetOfflineRecordCallbackResponse() {
+    public DeleteIdsWhiteRuleRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SetOfflineRecordCallbackResponse(SetOfflineRecordCallbackResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public DeleteIdsWhiteRuleRequest(DeleteIdsWhiteRuleRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
         }
     }
 
@@ -64,7 +69,7 @@ public class SetOfflineRecordCallbackResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

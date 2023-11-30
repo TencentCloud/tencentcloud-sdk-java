@@ -182,6 +182,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *创建入侵防御规则白名单接口
+     * @param req CreateIdsWhiteRuleRequest
+     * @return CreateIdsWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIdsWhiteRuleResponse CreateIdsWhiteRule(CreateIdsWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIdsWhiteRule", CreateIdsWhiteRuleResponse.class);
+    }
+
+    /**
      *创建NAT防火墙实例（Region参数必填）
      * @param req CreateNatFwInstanceRequest
      * @return CreateNatFwInstanceResponse
@@ -267,6 +278,17 @@ public class CfwClient extends AbstractClient{
     public DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleList(DeleteBlockIgnoreRuleListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBlockIgnoreRuleList", DeleteBlockIgnoreRuleListResponse.class);
+    }
+
+    /**
+     *删除入侵防御规则白名单接口
+     * @param req DeleteIdsWhiteRuleRequest
+     * @return DeleteIdsWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIdsWhiteRuleResponse DeleteIdsWhiteRule(DeleteIdsWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIdsWhiteRule", DeleteIdsWhiteRuleResponse.class);
     }
 
     /**
@@ -511,6 +533,17 @@ public class CfwClient extends AbstractClient{
     public DescribeIPStatusListResponse DescribeIPStatusList(DescribeIPStatusListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIPStatusList", DescribeIPStatusListResponse.class);
+    }
+
+    /**
+     *查询入侵防御规则白名单接口
+     * @param req DescribeIdsWhiteRuleRequest
+     * @return DescribeIdsWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIdsWhiteRuleResponse DescribeIdsWhiteRule(DescribeIdsWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIdsWhiteRule", DescribeIdsWhiteRuleResponse.class);
     }
 
     /**
