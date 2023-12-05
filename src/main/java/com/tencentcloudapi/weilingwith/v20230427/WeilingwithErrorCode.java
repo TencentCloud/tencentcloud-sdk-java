@@ -96,6 +96,9 @@ public enum WeilingwithErrorCode {
     // 状态与处理类型不符
      INVALIDPARAMETER_STATUSNOTMATCHPROCESSTYPE("InvalidParameter.StatusNotMatchProcessType"),
      
+    // 未找到token字段
+     INVALIDPARAMETER_TOKENFIELDNOTFOUND("InvalidParameter.TokenFieldNotFound"),
+     
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      

@@ -38,18 +38,18 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 告警通道名称，例如：test
-    */
-    @SerializedName("ChannelName")
-    @Expose
-    private String ChannelName;
-
-    /**
     * 接受告警通道 ID 数组
     */
     @SerializedName("Receivers")
     @Expose
     private String [] Receivers;
+
+    /**
+    * 告警通道名称，已废弃，名称不可修改。
+    */
+    @SerializedName("ChannelName")
+    @Expose
+    private String ChannelName;
 
     /**
     * 已废弃，请使用 OrganizationIds
@@ -98,22 +98,6 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel {
     }
 
     /**
-     * Get 告警通道名称，例如：test 
-     * @return ChannelName 告警通道名称，例如：test
-     */
-    public String getChannelName() {
-        return this.ChannelName;
-    }
-
-    /**
-     * Set 告警通道名称，例如：test
-     * @param ChannelName 告警通道名称，例如：test
-     */
-    public void setChannelName(String ChannelName) {
-        this.ChannelName = ChannelName;
-    }
-
-    /**
      * Get 接受告警通道 ID 数组 
      * @return Receivers 接受告警通道 ID 数组
      */
@@ -127,6 +111,22 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel {
      */
     public void setReceivers(String [] Receivers) {
         this.Receivers = Receivers;
+    }
+
+    /**
+     * Get 告警通道名称，已废弃，名称不可修改。 
+     * @return ChannelName 告警通道名称，已废弃，名称不可修改。
+     */
+    public String getChannelName() {
+        return this.ChannelName;
+    }
+
+    /**
+     * Set 告警通道名称，已废弃，名称不可修改。
+     * @param ChannelName 告警通道名称，已废弃，名称不可修改。
+     */
+    public void setChannelName(String ChannelName) {
+        this.ChannelName = ChannelName;
     }
 
     /**
@@ -175,14 +175,14 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.ChannelName != null) {
-            this.ChannelName = new String(source.ChannelName);
-        }
         if (source.Receivers != null) {
             this.Receivers = new String[source.Receivers.length];
             for (int i = 0; i < source.Receivers.length; i++) {
                 this.Receivers[i] = new String(source.Receivers[i]);
             }
+        }
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
         }
         if (source.ExtraOrgIds != null) {
             this.ExtraOrgIds = new String[source.ExtraOrgIds.length];
@@ -205,8 +205,8 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
         this.setParamArraySimple(map, prefix + "Receivers.", this.Receivers);
+        this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
         this.setParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
         this.setParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
 

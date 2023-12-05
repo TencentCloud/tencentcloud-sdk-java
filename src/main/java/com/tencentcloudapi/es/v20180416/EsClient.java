@@ -281,6 +281,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *集群续费询价接口，续费前通过调用该接口，可获取集群续费的价格。
+     * @param req InquirePriceRenewInstanceRequest
+     * @return InquirePriceRenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRenewInstanceResponse InquirePriceRenewInstance(InquirePriceRenewInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceRenewInstance", InquirePriceRenewInstanceResponse.class);
+    }
+
+    /**
      *修改绑定VIP的安全组，传安全组id列表
      * @param req ModifyEsVipSecurityGroupRequest
      * @return ModifyEsVipSecurityGroupResponse

@@ -104,7 +104,7 @@ public class CreateInstanceRequest extends AbstractModel {
 
     /**
     * 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
     */
     @SerializedName("DiskType")
     @Expose
@@ -179,7 +179,7 @@ public class CreateInstanceRequest extends AbstractModel {
     private String ClusterNameInConf;
 
     /**
-    * 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
+    * 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
     */
     @SerializedName("DeployMode")
     @Expose
@@ -462,9 +462,9 @@ public class CreateInstanceRequest extends AbstractModel {
 
     /**
      * Get 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD 
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD 
      * @return DiskType 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
      */
     public String getDiskType() {
         return this.DiskType;
@@ -472,9 +472,9 @@ public class CreateInstanceRequest extends AbstractModel {
 
     /**
      * Set 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
      * @param DiskType 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -645,16 +645,16 @@ public class CreateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0 
-     * @return DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
+     * Get 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0 
+     * @return DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
-     * @param DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
+     * Set 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
+     * @param DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;

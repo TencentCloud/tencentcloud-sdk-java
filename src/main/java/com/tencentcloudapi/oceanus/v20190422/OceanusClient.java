@@ -215,6 +215,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *查询指定文件夹及其相应的子文件夹信息
+     * @param req DescribeFolderRequest
+     * @return DescribeFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFolderResponse DescribeFolder(DescribeFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFolder", DescribeFolderResponse.class);
+    }
+
+    /**
      *查询作业配置列表，一次最多查询100个
      * @param req DescribeJobConfigsRequest
      * @return DescribeJobConfigsResponse

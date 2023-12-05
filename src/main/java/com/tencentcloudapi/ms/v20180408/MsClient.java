@@ -256,6 +256,18 @@ public class MsClient extends AbstractClient{
     }
 
     /**
+     *渠道合作资源销毁
+安卓应用加固-按年收费资源销毁，其他类型暂不支持
+     * @param req DestroyResourceInstancesRequest
+     * @return DestroyResourceInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyResourceInstancesResponse DestroyResourceInstances(DestroyResourceInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyResourceInstances", DestroyResourceInstancesResponse.class);
+    }
+
+    /**
      *client任务请求
      * @param req RequestLocalTaskRequest
      * @return RequestLocalTaskResponse

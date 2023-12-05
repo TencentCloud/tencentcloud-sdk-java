@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class HostInfo extends AbstractModel {
 
     /**
-    * 宿主机IP
+    * 宿主机IP（废弃）
     */
     @SerializedName("HostIp")
     @Expose
@@ -102,16 +102,16 @@ public class HostInfo extends AbstractModel {
     private String HostId;
 
     /**
-     * Get 宿主机IP 
-     * @return HostIp 宿主机IP
+     * Get 宿主机IP（废弃） 
+     * @return HostIp 宿主机IP（废弃）
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set 宿主机IP
-     * @param HostIp 宿主机IP
+     * Set 宿主机IP（废弃）
+     * @param HostIp 宿主机IP（废弃）
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;

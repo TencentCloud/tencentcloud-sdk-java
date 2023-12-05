@@ -21,6 +21,9 @@ public enum WafErrorCode {
     // 操作CH数据库失败
      FAILEDOPERATION_CLICKHOUSEOPERATIONFAILED("FailedOperation.ClickHouseOperationFailed"),
      
+    // 操作Mongo数据库失败
+     FAILEDOPERATION_MONGOOPERATIONFAILED("FailedOperation.MongoOperationFailed"),
+     
     // 操作Mysql数据库失败
      FAILEDOPERATION_MYSQLDBOPERATIONFAILED("FailedOperation.MysqlDBOperationFailed"),
      

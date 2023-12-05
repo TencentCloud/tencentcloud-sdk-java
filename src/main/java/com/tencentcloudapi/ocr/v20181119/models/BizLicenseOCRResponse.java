@@ -126,6 +126,15 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
     private String RegistrationDate;
 
     /**
+    *  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+
+    */
+    @SerializedName("Angle")
+    @Expose
+    private Float Angle;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -373,6 +382,30 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
     }
 
     /**
+     * Get  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+ 
+     * @return Angle  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+
+     */
+    public Float getAngle() {
+        return this.Angle;
+    }
+
+    /**
+     * Set  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+
+     * @param Angle  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+
+     */
+    public void setAngle(Float Angle) {
+        this.Angle = Angle;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -444,6 +477,9 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
         if (source.RegistrationDate != null) {
             this.RegistrationDate = new String(source.RegistrationDate);
         }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -468,6 +504,7 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
         this.setParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
         this.setParamSimple(map, prefix + "IsDuplication", this.IsDuplication);
         this.setParamSimple(map, prefix + "RegistrationDate", this.RegistrationDate);
+        this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -160,7 +160,7 @@ public class DBInfo extends AbstractModel {
     private String AccountMode;
 
     /**
-    * 临时密钥Id
+    * 临时密钥Id，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpSecretId")
@@ -168,7 +168,7 @@ public class DBInfo extends AbstractModel {
     private String TmpSecretId;
 
     /**
-    * 临时密钥Key
+    * 临时密钥Key，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpSecretKey")
@@ -176,7 +176,7 @@ public class DBInfo extends AbstractModel {
     private String TmpSecretKey;
 
     /**
-    * 临时Token
+    * 临时Token，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TmpToken")
@@ -524,9 +524,9 @@ public class DBInfo extends AbstractModel {
     }
 
     /**
-     * Get 临时密钥Id
+     * Get 临时密钥Id，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TmpSecretId 临时密钥Id
+     * @return TmpSecretId 临时密钥Id，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpSecretId() {
@@ -534,9 +534,9 @@ public class DBInfo extends AbstractModel {
     }
 
     /**
-     * Set 临时密钥Id
+     * Set 临时密钥Id，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TmpSecretId 临时密钥Id
+     * @param TmpSecretId 临时密钥Id，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpSecretId(String TmpSecretId) {
@@ -544,9 +544,9 @@ public class DBInfo extends AbstractModel {
     }
 
     /**
-     * Get 临时密钥Key
+     * Get 临时密钥Key，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TmpSecretKey 临时密钥Key
+     * @return TmpSecretKey 临时密钥Key，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpSecretKey() {
@@ -554,9 +554,9 @@ public class DBInfo extends AbstractModel {
     }
 
     /**
-     * Set 临时密钥Key
+     * Set 临时密钥Key，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TmpSecretKey 临时密钥Key
+     * @param TmpSecretKey 临时密钥Key，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpSecretKey(String TmpSecretKey) {
@@ -564,9 +564,9 @@ public class DBInfo extends AbstractModel {
     }
 
     /**
-     * Get 临时Token
+     * Get 临时Token，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TmpToken 临时Token
+     * @return TmpToken 临时Token，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTmpToken() {
@@ -574,9 +574,9 @@ public class DBInfo extends AbstractModel {
     }
 
     /**
-     * Set 临时Token
+     * Set 临时Token，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TmpToken 临时Token
+     * @param TmpToken 临时Token，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTmpToken(String TmpToken) {

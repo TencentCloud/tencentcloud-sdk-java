@@ -38,18 +38,18 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel {
     private String ChannelName;
 
     /**
-    * 默认为1，建议使用 OrganizationIds
-    */
-    @SerializedName("OrgId")
-    @Expose
-    private Long OrgId;
-
-    /**
     * 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
     */
     @SerializedName("Receivers")
     @Expose
     private String [] Receivers;
+
+    /**
+    * 默认为1，建议使用 OrganizationIds
+    */
+    @SerializedName("OrgId")
+    @Expose
+    private Long OrgId;
 
     /**
     * 额外组织 ID 数组，已废弃，请使用 OrganizationIds
@@ -98,22 +98,6 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel {
     }
 
     /**
-     * Get 默认为1，建议使用 OrganizationIds 
-     * @return OrgId 默认为1，建议使用 OrganizationIds
-     */
-    public Long getOrgId() {
-        return this.OrgId;
-    }
-
-    /**
-     * Set 默认为1，建议使用 OrganizationIds
-     * @param OrgId 默认为1，建议使用 OrganizationIds
-     */
-    public void setOrgId(Long OrgId) {
-        this.OrgId = OrgId;
-    }
-
-    /**
      * Get 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID  
      * @return Receivers 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
      */
@@ -127,6 +111,22 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel {
      */
     public void setReceivers(String [] Receivers) {
         this.Receivers = Receivers;
+    }
+
+    /**
+     * Get 默认为1，建议使用 OrganizationIds 
+     * @return OrgId 默认为1，建议使用 OrganizationIds
+     */
+    public Long getOrgId() {
+        return this.OrgId;
+    }
+
+    /**
+     * Set 默认为1，建议使用 OrganizationIds
+     * @param OrgId 默认为1，建议使用 OrganizationIds
+     */
+    public void setOrgId(Long OrgId) {
+        this.OrgId = OrgId;
     }
 
     /**
@@ -175,14 +175,14 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel {
         if (source.ChannelName != null) {
             this.ChannelName = new String(source.ChannelName);
         }
-        if (source.OrgId != null) {
-            this.OrgId = new Long(source.OrgId);
-        }
         if (source.Receivers != null) {
             this.Receivers = new String[source.Receivers.length];
             for (int i = 0; i < source.Receivers.length; i++) {
                 this.Receivers[i] = new String(source.Receivers[i]);
             }
+        }
+        if (source.OrgId != null) {
+            this.OrgId = new Long(source.OrgId);
         }
         if (source.ExtraOrgIds != null) {
             this.ExtraOrgIds = new String[source.ExtraOrgIds.length];
@@ -205,8 +205,8 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
-        this.setParamSimple(map, prefix + "OrgId", this.OrgId);
         this.setParamArraySimple(map, prefix + "Receivers.", this.Receivers);
+        this.setParamSimple(map, prefix + "OrgId", this.OrgId);
         this.setParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
         this.setParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
 

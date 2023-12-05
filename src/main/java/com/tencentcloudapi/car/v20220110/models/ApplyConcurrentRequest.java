@@ -45,7 +45,7 @@ public class ApplyConcurrentRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 应用版本ID
+    * 应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。
     */
     @SerializedName("ApplicationVersionId")
     @Expose
@@ -107,16 +107,16 @@ public class ApplyConcurrentRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用版本ID 
-     * @return ApplicationVersionId 应用版本ID
+     * Get 应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。 
+     * @return ApplicationVersionId 应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。
      */
     public String getApplicationVersionId() {
         return this.ApplicationVersionId;
     }
 
     /**
-     * Set 应用版本ID
-     * @param ApplicationVersionId 应用版本ID
+     * Set 应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。
+     * @param ApplicationVersionId 应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。
      */
     public void setApplicationVersionId(String ApplicationVersionId) {
         this.ApplicationVersionId = ApplicationVersionId;
