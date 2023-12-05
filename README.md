@@ -440,7 +440,7 @@ Credential credential = provider.getCredentials();
 Credential cred = new DefaultCredentialsProvider().getCredentials();
 ```
 
-凭证管理详细使用请参阅示例：[使用凭证提供链](./examples/common/credential_manager/CredentialManager.java)
+凭证管理详细使用请参阅示例：[使用凭证提供链](https://github.com/TencentCloud/tencentcloud-sdk-java/blob/master/examples/common/CredentialManager.java)
 
 # 自定义 SSLSocketFactory 和 X509TrustManager
 ```java
