@@ -164,6 +164,13 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
     private String DataOriginDatasourceId;
 
     /**
+    * 集群id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
      * Get 后端提供字典：域类型，1、腾讯云，2、本地 
      * @return ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
      */
@@ -483,6 +490,22 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
         this.DataOriginDatasourceId = DataOriginDatasourceId;
     }
 
+    /**
+     * Get 集群id 
+     * @return ClusterId 集群id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群id
+     * @param ClusterId 集群id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public ModifyDatasourceCloudRequest() {
     }
 
@@ -551,6 +574,9 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
         if (source.DataOriginDatasourceId != null) {
             this.DataOriginDatasourceId = new String(source.DataOriginDatasourceId);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -578,6 +604,7 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataOrigin", this.DataOrigin);
         this.setParamSimple(map, prefix + "DataOriginProjectId", this.DataOriginProjectId);
         this.setParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

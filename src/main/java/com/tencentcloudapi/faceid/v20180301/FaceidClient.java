@@ -293,6 +293,17 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *传入照片和身份信息，判断该照片与权威库的证件照是否属于同一个人。
+     * @param req ImageRecognitionV2Request
+     * @return ImageRecognitionV2Response
+     * @throws TencentCloudSDKException
+     */
+    public ImageRecognitionV2Response ImageRecognitionV2(ImageRecognitionV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImageRecognitionV2", ImageRecognitionV2Response.class);
+    }
+
+    /**
      *活体检测
      * @param req LivenessRequest
      * @return LivenessResponse

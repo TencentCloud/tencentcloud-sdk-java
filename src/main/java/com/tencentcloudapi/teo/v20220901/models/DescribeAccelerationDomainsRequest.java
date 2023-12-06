@@ -52,6 +52,9 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
 <li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -139,7 +142,10 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
 <li>origin：按照主源站地址进行过滤；</li>
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
-<li>share-cname：按照共享 CNAME 进行过滤；</li> 
+<li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li> 
      * @return Filters 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：
 <li>domain-name：按照加速域名进行过滤；</li>
 <li>origin-type：按照源站类型进行过滤；</li>
@@ -147,6 +153,9 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
 <li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
@@ -160,6 +169,9 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
 <li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
      * @param Filters 过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：
 <li>domain-name：按照加速域名进行过滤；</li>
 <li>origin-type：按照源站类型进行过滤；</li>
@@ -167,6 +179,9 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel {
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
 <li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

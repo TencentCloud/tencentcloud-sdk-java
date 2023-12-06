@@ -88,7 +88,7 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
     * 用户自定义参数
 <ul>
 <li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
-<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>指定后，创建，编辑，删除模板时，回调都会携带该userData</li>
 <li>支持的格式：json字符串的BASE64编码字符串</li>
 <li>示例：<ul>
                  <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
@@ -293,7 +293,7 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
      * Get 用户自定义参数
 <ul>
 <li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
-<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>指定后，创建，编辑，删除模板时，回调都会携带该userData</li>
 <li>支持的格式：json字符串的BASE64编码字符串</li>
 <li>示例：<ul>
                  <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
@@ -304,7 +304,7 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
      * @return UserData 用户自定义参数
 <ul>
 <li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
-<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>指定后，创建，编辑，删除模板时，回调都会携带该userData</li>
 <li>支持的格式：json字符串的BASE64编码字符串</li>
 <li>示例：<ul>
                  <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
@@ -321,7 +321,7 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
      * Set 用户自定义参数
 <ul>
 <li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
-<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>指定后，创建，编辑，删除模板时，回调都会携带该userData</li>
 <li>支持的格式：json字符串的BASE64编码字符串</li>
 <li>示例：<ul>
                  <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
@@ -332,7 +332,7 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
      * @param UserData 用户自定义参数
 <ul>
 <li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
-<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>指定后，创建，编辑，删除模板时，回调都会携带该userData</li>
 <li>支持的格式：json字符串的BASE64编码字符串</li>
 <li>示例：<ul>
                  <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>

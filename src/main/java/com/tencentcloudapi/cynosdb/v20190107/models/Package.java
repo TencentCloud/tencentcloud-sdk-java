@@ -128,6 +128,14 @@ refund-已退费。
     private String ExpireTime;
 
     /**
+    * 资源包历史绑定（已解绑）实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HistoryBindResourceInfos")
+    @Expose
+    private BindInstanceInfo [] HistoryBindResourceInfos;
+
+    /**
      * Get AppID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId AppID
@@ -399,6 +407,26 @@ refund-已退费。
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 资源包历史绑定（已解绑）实例信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HistoryBindResourceInfos 资源包历史绑定（已解绑）实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BindInstanceInfo [] getHistoryBindResourceInfos() {
+        return this.HistoryBindResourceInfos;
+    }
+
+    /**
+     * Set 资源包历史绑定（已解绑）实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HistoryBindResourceInfos 资源包历史绑定（已解绑）实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHistoryBindResourceInfos(BindInstanceInfo [] HistoryBindResourceInfos) {
+        this.HistoryBindResourceInfos = HistoryBindResourceInfos;
+    }
+
     public Package() {
     }
 
@@ -446,6 +474,12 @@ refund-已退费。
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.HistoryBindResourceInfos != null) {
+            this.HistoryBindResourceInfos = new BindInstanceInfo[source.HistoryBindResourceInfos.length];
+            for (int i = 0; i < source.HistoryBindResourceInfos.length; i++) {
+                this.HistoryBindResourceInfos[i] = new BindInstanceInfo(source.HistoryBindResourceInfos[i]);
+            }
+        }
     }
 
 
@@ -465,6 +499,7 @@ refund-已退费。
         this.setParamArrayObj(map, prefix + "BindInstanceInfos.", this.BindInstanceInfos);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamArrayObj(map, prefix + "HistoryBindResourceInfos.", this.HistoryBindResourceInfos);
 
     }
 }

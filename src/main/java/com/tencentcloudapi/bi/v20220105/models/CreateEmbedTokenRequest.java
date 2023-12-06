@@ -73,6 +73,13 @@ public class CreateEmbedTokenRequest extends AbstractModel {
     private String UserId;
 
     /**
+    * 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+    */
+    @SerializedName("TicketNum")
+    @Expose
+    private Long TicketNum;
+
+    /**
      * Get 分享项目id 
      * @return ProjectId 分享项目id
      */
@@ -184,6 +191,22 @@ public class CreateEmbedTokenRequest extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 访问次数限制，限制范围1-99999，为空则不设置访问次数限制 
+     * @return TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+     */
+    public Long getTicketNum() {
+        return this.TicketNum;
+    }
+
+    /**
+     * Set 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+     * @param TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+     */
+    public void setTicketNum(Long TicketNum) {
+        this.TicketNum = TicketNum;
+    }
+
     public CreateEmbedTokenRequest() {
     }
 
@@ -213,6 +236,9 @@ public class CreateEmbedTokenRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.TicketNum != null) {
+            this.TicketNum = new Long(source.TicketNum);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class CreateEmbedTokenRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         this.setParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "TicketNum", this.TicketNum);
 
     }
 }

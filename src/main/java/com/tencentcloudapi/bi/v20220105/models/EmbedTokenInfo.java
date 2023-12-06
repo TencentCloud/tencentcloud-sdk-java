@@ -128,6 +128,14 @@ public class EmbedTokenInfo extends AbstractModel {
     private String UserId;
 
     /**
+    * 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TicketNum")
+    @Expose
+    private Long TicketNum;
+
+    /**
      * Get 信息标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 信息标识
@@ -387,6 +395,26 @@ public class EmbedTokenInfo extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTicketNum() {
+        return this.TicketNum;
+    }
+
+    /**
+     * Set 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTicketNum(Long TicketNum) {
+        this.TicketNum = TicketNum;
+    }
+
     public EmbedTokenInfo() {
     }
 
@@ -434,6 +462,9 @@ public class EmbedTokenInfo extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.TicketNum != null) {
+            this.TicketNum = new Long(source.TicketNum);
+        }
     }
 
 
@@ -454,6 +485,7 @@ public class EmbedTokenInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "TicketNum", this.TicketNum);
 
     }
 }

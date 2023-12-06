@@ -67,6 +67,27 @@ public class OriginInfo extends AbstractModel {
     private PrivateParameter [] PrivateParameters;
 
     /**
+    * MO 子应用 ID
+    */
+    @SerializedName("VodeoSubAppId")
+    @Expose
+    private Long VodeoSubAppId;
+
+    /**
+    * MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+    */
+    @SerializedName("VodeoDistributionRange")
+    @Expose
+    private String VodeoDistributionRange;
+
+    /**
+    * MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
+    */
+    @SerializedName("VodeoBucketId")
+    @Expose
+    private String VodeoBucketId;
+
+    /**
      * Get 源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6 或域名类型源站；</li>
 <li>COS：COS 源；</li>
@@ -178,6 +199,54 @@ public class OriginInfo extends AbstractModel {
         this.PrivateParameters = PrivateParameters;
     }
 
+    /**
+     * Get MO 子应用 ID 
+     * @return VodeoSubAppId MO 子应用 ID
+     */
+    public Long getVodeoSubAppId() {
+        return this.VodeoSubAppId;
+    }
+
+    /**
+     * Set MO 子应用 ID
+     * @param VodeoSubAppId MO 子应用 ID
+     */
+    public void setVodeoSubAppId(Long VodeoSubAppId) {
+        this.VodeoSubAppId = VodeoSubAppId;
+    }
+
+    /**
+     * Get MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li> 
+     * @return VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     */
+    public String getVodeoDistributionRange() {
+        return this.VodeoDistributionRange;
+    }
+
+    /**
+     * Set MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     * @param VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     */
+    public void setVodeoDistributionRange(String VodeoDistributionRange) {
+        this.VodeoDistributionRange = VodeoDistributionRange;
+    }
+
+    /**
+     * Get MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	 
+     * @return VodeoBucketId MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
+     */
+    public String getVodeoBucketId() {
+        return this.VodeoBucketId;
+    }
+
+    /**
+     * Set MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
+     * @param VodeoBucketId MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
+     */
+    public void setVodeoBucketId(String VodeoBucketId) {
+        this.VodeoBucketId = VodeoBucketId;
+    }
+
     public OriginInfo() {
     }
 
@@ -204,6 +273,15 @@ public class OriginInfo extends AbstractModel {
                 this.PrivateParameters[i] = new PrivateParameter(source.PrivateParameters[i]);
             }
         }
+        if (source.VodeoSubAppId != null) {
+            this.VodeoSubAppId = new Long(source.VodeoSubAppId);
+        }
+        if (source.VodeoDistributionRange != null) {
+            this.VodeoDistributionRange = new String(source.VodeoDistributionRange);
+        }
+        if (source.VodeoBucketId != null) {
+            this.VodeoBucketId = new String(source.VodeoBucketId);
+        }
     }
 
 
@@ -216,6 +294,9 @@ public class OriginInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupOrigin", this.BackupOrigin);
         this.setParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
         this.setParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+        this.setParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
+        this.setParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
+        this.setParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
 
     }
 }
