@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * id
+    * 实例唯一ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Name
+    * 实例名称
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 资源id
+    * 实例对应资源ID，计费使用
     */
     @SerializedName("ResourceIds")
     @Expose
     private String ResourceIds;
 
     /**
-    * 地域
+    * 实例所属地域
     */
     @SerializedName("Region")
     @Expose
@@ -59,84 +59,94 @@ public class InstanceInfo extends AbstractModel {
     private Long PayMode;
 
     /**
-    * 自动续费
+    * 自动续费标识。
+0：关闭
+1：开启
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 弹性计费
+    * 弹性计费开关。
+0：关闭
+1：开启
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 套餐版本
+    * 实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * 过期时间
+    * 实例过期时间
     */
     @SerializedName("ValidTime")
     @Expose
     private String ValidTime;
 
     /**
-    * 开始时间
+    * 实例开始时间
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 已用
+    * 已配置域名个数
     */
     @SerializedName("DomainCount")
     @Expose
     private Long DomainCount;
 
     /**
-    * 上限
+    * 域名数量上限
     */
     @SerializedName("SubDomainLimit")
     @Expose
     private Long SubDomainLimit;
 
     /**
-    * 已用
+    * 已配置主域名个数
     */
     @SerializedName("MainDomainCount")
     @Expose
     private Long MainDomainCount;
 
     /**
-    * 上限
+    * 主域名数量上限
     */
     @SerializedName("MainDomainLimit")
     @Expose
     private Long MainDomainLimit;
 
     /**
-    * 峰值
+    * 实例30天内QPS峰值
     */
     @SerializedName("MaxQPS")
     @Expose
     private Long MaxQPS;
 
     /**
-    * qps套餐
+    * qps扩展包信息
     */
     @SerializedName("QPS")
     @Expose
     private QPSPackageNew QPS;
 
     /**
-    * 域名套餐
+    * 域名扩展包信息
     */
     @SerializedName("DomainPkg")
     @Expose
@@ -236,7 +246,7 @@ public class InstanceInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * 实例沙箱值
+    * 实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SandboxQps")
@@ -276,64 +286,88 @@ public class InstanceInfo extends AbstractModel {
     private ApiPkg ApiPkg;
 
     /**
-     * Get id 
-     * @return InstanceId id
+    * 小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MiniPkg")
+    @Expose
+    private MiniPkg MiniPkg;
+
+    /**
+    * 小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MiniQpsStandard")
+    @Expose
+    private Long MiniQpsStandard;
+
+    /**
+    * 小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MiniMaxQPS")
+    @Expose
+    private Long MiniMaxQPS;
+
+    /**
+     * Get 实例唯一ID 
+     * @return InstanceId 实例唯一ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set id
-     * @param InstanceId id
+     * Set 实例唯一ID
+     * @param InstanceId 实例唯一ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Name 
-     * @return InstanceName Name
+     * Get 实例名称 
+     * @return InstanceName 实例名称
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Name
-     * @param InstanceName Name
+     * Set 实例名称
+     * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 资源id 
-     * @return ResourceIds 资源id
+     * Get 实例对应资源ID，计费使用 
+     * @return ResourceIds 实例对应资源ID，计费使用
      */
     public String getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源id
-     * @param ResourceIds 资源id
+     * Set 实例对应资源ID，计费使用
+     * @param ResourceIds 实例对应资源ID，计费使用
      */
     public void setResourceIds(String ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get 实例所属地域 
+     * @return Region 实例所属地域
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set 实例所属地域
+     * @param Region 实例所属地域
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -356,192 +390,232 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 自动续费 
-     * @return RenewFlag 自动续费
+     * Get 自动续费标识。
+0：关闭
+1：开启 
+     * @return RenewFlag 自动续费标识。
+0：关闭
+1：开启
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费
-     * @param RenewFlag 自动续费
+     * Set 自动续费标识。
+0：关闭
+1：开启
+     * @param RenewFlag 自动续费标识。
+0：关闭
+1：开启
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 弹性计费 
-     * @return Mode 弹性计费
+     * Get 弹性计费开关。
+0：关闭
+1：开启 
+     * @return Mode 弹性计费开关。
+0：关闭
+1：开启
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 弹性计费
-     * @param Mode 弹性计费
+     * Set 弹性计费开关。
+0：关闭
+1：开启
+     * @param Mode 弹性计费开关。
+0：关闭
+1：开启
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 套餐版本 
-     * @return Level 套餐版本
+     * Get 实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版 
+     * @return Level 实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 套餐版本
-     * @param Level 套餐版本
+     * Set 实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
+     * @param Level 实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 过期时间 
-     * @return ValidTime 过期时间
+     * Get 实例过期时间 
+     * @return ValidTime 实例过期时间
      */
     public String getValidTime() {
         return this.ValidTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ValidTime 过期时间
+     * Set 实例过期时间
+     * @param ValidTime 实例过期时间
      */
     public void setValidTime(String ValidTime) {
         this.ValidTime = ValidTime;
     }
 
     /**
-     * Get 开始时间 
-     * @return BeginTime 开始时间
+     * Get 实例开始时间 
+     * @return BeginTime 实例开始时间
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间
-     * @param BeginTime 开始时间
+     * Set 实例开始时间
+     * @param BeginTime 实例开始时间
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 已用 
-     * @return DomainCount 已用
+     * Get 已配置域名个数 
+     * @return DomainCount 已配置域名个数
      */
     public Long getDomainCount() {
         return this.DomainCount;
     }
 
     /**
-     * Set 已用
-     * @param DomainCount 已用
+     * Set 已配置域名个数
+     * @param DomainCount 已配置域名个数
      */
     public void setDomainCount(Long DomainCount) {
         this.DomainCount = DomainCount;
     }
 
     /**
-     * Get 上限 
-     * @return SubDomainLimit 上限
+     * Get 域名数量上限 
+     * @return SubDomainLimit 域名数量上限
      */
     public Long getSubDomainLimit() {
         return this.SubDomainLimit;
     }
 
     /**
-     * Set 上限
-     * @param SubDomainLimit 上限
+     * Set 域名数量上限
+     * @param SubDomainLimit 域名数量上限
      */
     public void setSubDomainLimit(Long SubDomainLimit) {
         this.SubDomainLimit = SubDomainLimit;
     }
 
     /**
-     * Get 已用 
-     * @return MainDomainCount 已用
+     * Get 已配置主域名个数 
+     * @return MainDomainCount 已配置主域名个数
      */
     public Long getMainDomainCount() {
         return this.MainDomainCount;
     }
 
     /**
-     * Set 已用
-     * @param MainDomainCount 已用
+     * Set 已配置主域名个数
+     * @param MainDomainCount 已配置主域名个数
      */
     public void setMainDomainCount(Long MainDomainCount) {
         this.MainDomainCount = MainDomainCount;
     }
 
     /**
-     * Get 上限 
-     * @return MainDomainLimit 上限
+     * Get 主域名数量上限 
+     * @return MainDomainLimit 主域名数量上限
      */
     public Long getMainDomainLimit() {
         return this.MainDomainLimit;
     }
 
     /**
-     * Set 上限
-     * @param MainDomainLimit 上限
+     * Set 主域名数量上限
+     * @param MainDomainLimit 主域名数量上限
      */
     public void setMainDomainLimit(Long MainDomainLimit) {
         this.MainDomainLimit = MainDomainLimit;
     }
 
     /**
-     * Get 峰值 
-     * @return MaxQPS 峰值
+     * Get 实例30天内QPS峰值 
+     * @return MaxQPS 实例30天内QPS峰值
      */
     public Long getMaxQPS() {
         return this.MaxQPS;
     }
 
     /**
-     * Set 峰值
-     * @param MaxQPS 峰值
+     * Set 实例30天内QPS峰值
+     * @param MaxQPS 实例30天内QPS峰值
      */
     public void setMaxQPS(Long MaxQPS) {
         this.MaxQPS = MaxQPS;
     }
 
     /**
-     * Get qps套餐 
-     * @return QPS qps套餐
+     * Get qps扩展包信息 
+     * @return QPS qps扩展包信息
      */
     public QPSPackageNew getQPS() {
         return this.QPS;
     }
 
     /**
-     * Set qps套餐
-     * @param QPS qps套餐
+     * Set qps扩展包信息
+     * @param QPS qps扩展包信息
      */
     public void setQPS(QPSPackageNew QPS) {
         this.QPS = QPS;
     }
 
     /**
-     * Get 域名套餐 
-     * @return DomainPkg 域名套餐
+     * Get 域名扩展包信息 
+     * @return DomainPkg 域名扩展包信息
      */
     public DomainPackageNew getDomainPkg() {
         return this.DomainPkg;
     }
 
     /**
-     * Set 域名套餐
-     * @param DomainPkg 域名套餐
+     * Set 域名扩展包信息
+     * @param DomainPkg 域名扩展包信息
      */
     public void setDomainPkg(DomainPackageNew DomainPkg) {
         this.DomainPkg = DomainPkg;
@@ -776,9 +850,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例沙箱值
+     * Get 实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SandboxQps 实例沙箱值
+     * @return SandboxQps 实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSandboxQps() {
@@ -786,9 +860,9 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 实例沙箱值
+     * Set 实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SandboxQps 实例沙箱值
+     * @param SandboxQps 实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSandboxQps(Long SandboxQps) {
@@ -873,6 +947,66 @@ public class InstanceInfo extends AbstractModel {
      */
     public void setApiPkg(ApiPkg ApiPkg) {
         this.ApiPkg = ApiPkg;
+    }
+
+    /**
+     * Get 小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MiniPkg 小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MiniPkg getMiniPkg() {
+        return this.MiniPkg;
+    }
+
+    /**
+     * Set 小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MiniPkg 小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMiniPkg(MiniPkg MiniPkg) {
+        this.MiniPkg = MiniPkg;
+    }
+
+    /**
+     * Get 小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MiniQpsStandard 小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMiniQpsStandard() {
+        return this.MiniQpsStandard;
+    }
+
+    /**
+     * Set 小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MiniQpsStandard 小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMiniQpsStandard(Long MiniQpsStandard) {
+        this.MiniQpsStandard = MiniQpsStandard;
+    }
+
+    /**
+     * Get 小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MiniMaxQPS 小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMiniMaxQPS() {
+        return this.MiniMaxQPS;
+    }
+
+    /**
+     * Set 小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MiniMaxQPS 小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMiniMaxQPS(Long MiniMaxQPS) {
+        this.MiniMaxQPS = MiniMaxQPS;
     }
 
     public InstanceInfo() {
@@ -985,6 +1119,15 @@ public class InstanceInfo extends AbstractModel {
         if (source.ApiPkg != null) {
             this.ApiPkg = new ApiPkg(source.ApiPkg);
         }
+        if (source.MiniPkg != null) {
+            this.MiniPkg = new MiniPkg(source.MiniPkg);
+        }
+        if (source.MiniQpsStandard != null) {
+            this.MiniQpsStandard = new Long(source.MiniQpsStandard);
+        }
+        if (source.MiniMaxQPS != null) {
+            this.MiniMaxQPS = new Long(source.MiniMaxQPS);
+        }
     }
 
 
@@ -1026,6 +1169,9 @@ public class InstanceInfo extends AbstractModel {
         this.setParamObj(map, prefix + "MajorEventsPkg.", this.MajorEventsPkg);
         this.setParamObj(map, prefix + "HybridPkg.", this.HybridPkg);
         this.setParamObj(map, prefix + "ApiPkg.", this.ApiPkg);
+        this.setParamObj(map, prefix + "MiniPkg.", this.MiniPkg);
+        this.setParamSimple(map, prefix + "MiniQpsStandard", this.MiniQpsStandard);
+        this.setParamSimple(map, prefix + "MiniMaxQPS", this.MiniMaxQPS);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BgpPeer extends AbstractModel {
 
     /**
-    * 用户侧，BGP Asn
+    * 用户侧BGP ASN
     */
     @SerializedName("Asn")
     @Expose
@@ -38,16 +38,16 @@ public class BgpPeer extends AbstractModel {
     private String AuthKey;
 
     /**
-     * Get 用户侧，BGP Asn 
-     * @return Asn 用户侧，BGP Asn
+     * Get 用户侧BGP ASN 
+     * @return Asn 用户侧BGP ASN
      */
     public Long getAsn() {
         return this.Asn;
     }
 
     /**
-     * Set 用户侧，BGP Asn
-     * @param Asn 用户侧，BGP Asn
+     * Set 用户侧BGP ASN
+     * @param Asn 用户侧BGP ASN
      */
     public void setAsn(Long Asn) {
         this.Asn = Asn;

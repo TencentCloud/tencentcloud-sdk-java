@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class LakeFileSystemToken extends AbstractModel {
 
     /**
-    * Token使用的临时秘钥的ID
+    * Token使用的临时密钥的ID
     */
     @SerializedName("SecretId")
     @Expose
     private String SecretId;
 
     /**
-    * Token使用的临时秘钥
+    * Token使用的临时密钥
     */
     @SerializedName("SecretKey")
     @Expose
@@ -59,32 +59,32 @@ public class LakeFileSystemToken extends AbstractModel {
     private Long IssueTime;
 
     /**
-     * Get Token使用的临时秘钥的ID 
-     * @return SecretId Token使用的临时秘钥的ID
+     * Get Token使用的临时密钥的ID 
+     * @return SecretId Token使用的临时密钥的ID
      */
     public String getSecretId() {
         return this.SecretId;
     }
 
     /**
-     * Set Token使用的临时秘钥的ID
-     * @param SecretId Token使用的临时秘钥的ID
+     * Set Token使用的临时密钥的ID
+     * @param SecretId Token使用的临时密钥的ID
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get Token使用的临时秘钥 
-     * @return SecretKey Token使用的临时秘钥
+     * Get Token使用的临时密钥 
+     * @return SecretKey Token使用的临时密钥
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set Token使用的临时秘钥
-     * @param SecretKey Token使用的临时秘钥
+     * Set Token使用的临时密钥
+     * @param SecretKey Token使用的临时密钥
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

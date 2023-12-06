@@ -80,7 +80,7 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     private Long ProcessPeriod;
 
     /**
-    * 单次查询的时间窗口
+    * 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
     */
     @SerializedName("ProcessTimeWindow")
     @Expose
@@ -243,16 +243,16 @@ public class CreateScheduledSqlRequest extends AbstractModel {
     }
 
     /**
-     * Get 单次查询的时间窗口 
-     * @return ProcessTimeWindow 单次查询的时间窗口
+     * Get 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。  
+     * @return ProcessTimeWindow 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
      */
     public String getProcessTimeWindow() {
         return this.ProcessTimeWindow;
     }
 
     /**
-     * Set 单次查询的时间窗口
-     * @param ProcessTimeWindow 单次查询的时间窗口
+     * Set 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
+     * @param ProcessTimeWindow 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
      */
     public void setProcessTimeWindow(String ProcessTimeWindow) {
         this.ProcessTimeWindow = ProcessTimeWindow;

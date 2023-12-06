@@ -52,6 +52,13 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    *  classification:分类展示  catalog:目录展示
+    */
+    @SerializedName("DisplayType")
+    @Expose
+    private String DisplayType;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -115,6 +122,22 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get  classification:分类展示  catalog:目录展示 
+     * @return DisplayType  classification:分类展示  catalog:目录展示
+     */
+    public String getDisplayType() {
+        return this.DisplayType;
+    }
+
+    /**
+     * Set  classification:分类展示  catalog:目录展示
+     * @param DisplayType  classification:分类展示  catalog:目录展示
+     */
+    public void setDisplayType(String DisplayType) {
+        this.DisplayType = DisplayType;
+    }
+
     public DescribeDsParentFolderTreeRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.DisplayType != null) {
+            this.DisplayType = new String(source.DisplayType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FolderId", this.FolderId);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "DisplayType", this.DisplayType);
 
     }
 }

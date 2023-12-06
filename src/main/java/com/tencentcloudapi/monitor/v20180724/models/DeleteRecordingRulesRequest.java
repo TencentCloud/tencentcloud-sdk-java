@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteRecordingRulesRequest extends AbstractModel {
 
     /**
-    * 规则 ID 列表
+    * 规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
     */
     @SerializedName("RuleIds")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteRecordingRulesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-     * Get 规则 ID 列表 
-     * @return RuleIds 规则 ID 列表
+     * Get 规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取) 
+     * @return RuleIds 规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
      */
     public String [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set 规则 ID 列表
-     * @param RuleIds 规则 ID 列表
+     * Set 规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
+     * @param RuleIds 规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
      */
     public void setRuleIds(String [] RuleIds) {
         this.RuleIds = RuleIds;

@@ -60,7 +60,7 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     private String [] MetricNames;
 
     /**
-    * 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
+    * 指标维度，不接受时间类型。
     */
     @SerializedName("MetricLabels")
     @Expose
@@ -74,7 +74,8 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     private String CustomTime;
 
     /**
-    * 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
+    * 除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
     */
     @SerializedName("CustomMetricLabels")
     @Expose
@@ -165,16 +166,16 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     }
 
     /**
-     * Get 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。 
-     * @return MetricLabels 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
+     * Get 指标维度，不接受时间类型。 
+     * @return MetricLabels 指标维度，不接受时间类型。
      */
     public String [] getMetricLabels() {
         return this.MetricLabels;
     }
 
     /**
-     * Set 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
-     * @param MetricLabels 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
+     * Set 指标维度，不接受时间类型。
+     * @param MetricLabels 指标维度，不接受时间类型。
      */
     public void setMetricLabels(String [] MetricLabels) {
         this.MetricLabels = MetricLabels;
@@ -197,16 +198,20 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     }
 
     /**
-     * Get 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。 
-     * @return CustomMetricLabels 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
+     * Get 除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节 
+     * @return CustomMetricLabels 除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
      */
     public MetricLabel [] getCustomMetricLabels() {
         return this.CustomMetricLabels;
     }
 
     /**
-     * Set 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
-     * @param CustomMetricLabels 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
+     * Set 除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
+     * @param CustomMetricLabels 除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
      */
     public void setCustomMetricLabels(MetricLabel [] CustomMetricLabels) {
         this.CustomMetricLabels = CustomMetricLabels;

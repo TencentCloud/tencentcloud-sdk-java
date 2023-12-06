@@ -111,6 +111,14 @@ public class TableResponseInfo extends AbstractModel {
     private String MapMaterializedViewName;
 
     /**
+    * 访问热点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeatValue")
+    @Expose
+    private Long HeatValue;
+
+    /**
      * Get 数据表基本信息。 
      * @return TableBaseInfo 数据表基本信息。
      */
@@ -326,6 +334,26 @@ public class TableResponseInfo extends AbstractModel {
         this.MapMaterializedViewName = MapMaterializedViewName;
     }
 
+    /**
+     * Get 访问热点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HeatValue 访问热点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHeatValue() {
+        return this.HeatValue;
+    }
+
+    /**
+     * Set 访问热点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeatValue 访问热点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeatValue(Long HeatValue) {
+        this.HeatValue = HeatValue;
+    }
+
     public TableResponseInfo() {
     }
 
@@ -376,6 +404,9 @@ public class TableResponseInfo extends AbstractModel {
         if (source.MapMaterializedViewName != null) {
             this.MapMaterializedViewName = new String(source.MapMaterializedViewName);
         }
+        if (source.HeatValue != null) {
+            this.HeatValue = new Long(source.HeatValue);
+        }
     }
 
 
@@ -394,6 +425,7 @@ public class TableResponseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamSimple(map, prefix + "RecordCount", this.RecordCount);
         this.setParamSimple(map, prefix + "MapMaterializedViewName", this.MapMaterializedViewName);
+        this.setParamSimple(map, prefix + "HeatValue", this.HeatValue);
 
     }
 }

@@ -38,14 +38,14 @@ public class UpdateRecordingRuleRequest extends AbstractModel {
     private String Group;
 
     /**
-    * Prometheus 实例 ID
+    * Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Prometheus 聚合规则 ID
+    * Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
     */
     @SerializedName("RuleId")
     @Expose
@@ -95,32 +95,32 @@ public class UpdateRecordingRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get Prometheus 实例 ID 
-     * @return InstanceId Prometheus 实例 ID
+     * Get Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取) 
+     * @return InstanceId Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Prometheus 实例 ID
-     * @param InstanceId Prometheus 实例 ID
+     * Set Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
+     * @param InstanceId Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Prometheus 聚合规则 ID 
-     * @return RuleId Prometheus 聚合规则 ID
+     * Get Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取) 
+     * @return RuleId Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Prometheus 聚合规则 ID
-     * @param RuleId Prometheus 聚合规则 ID
+     * Set Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
+     * @param RuleId Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

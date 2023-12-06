@@ -24,130 +24,130 @@ import java.util.HashMap;
 public class UpdateExporterIntegrationRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * Prometheus 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 类型
+    * 类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * 配置内容
+    * 配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * Kubernetes 集群类型，取值如下：
+    * Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
     */
     @SerializedName("KubeType")
     @Expose
     private Long KubeType;
 
     /**
-    * 集群 ID
+    * 集群 ID，可不填
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Prometheus 实例 ID 
+     * @return InstanceId Prometheus 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Prometheus 实例 ID
+     * @param InstanceId Prometheus 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 类型 
-     * @return Kind 类型
+     * Get 类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind) 
+     * @return Kind 类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 类型
-     * @param Kind 类型
+     * Set 类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
+     * @param Kind 类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 配置内容 
-     * @return Content 配置内容
+     * Get 配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改) 
+     * @return Content 配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 配置内容
-     * @param Content 配置内容
+     * Set 配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
+     * @param Content 配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Kubernetes 集群类型，取值如下：
+     * Get Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li> 
-     * @return KubeType Kubernetes 集群类型，取值如下：
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li> 
+     * @return KubeType Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
      */
     public Long getKubeType() {
         return this.KubeType;
     }
 
     /**
-     * Set Kubernetes 集群类型，取值如下：
+     * Set Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
-     * @param KubeType Kubernetes 集群类型，取值如下：
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+     * @param KubeType Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
      */
     public void setKubeType(Long KubeType) {
         this.KubeType = KubeType;
     }
 
     /**
-     * Get 集群 ID 
-     * @return ClusterId 集群 ID
+     * Get 集群 ID，可不填 
+     * @return ClusterId 集群 ID，可不填
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID
-     * @param ClusterId 集群 ID
+     * Set 集群 ID，可不填
+     * @param ClusterId 集群 ID，可不填
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

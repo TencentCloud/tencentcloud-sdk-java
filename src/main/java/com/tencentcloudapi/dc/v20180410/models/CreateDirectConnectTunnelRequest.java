@@ -24,505 +24,470 @@ import java.util.HashMap;
 public class CreateDirectConnectTunnelRequest extends AbstractModel {
 
     /**
-    * 专线 ID，例如：dc-kd7d06of
+    * 物理专线ID，例如：dc-kd7d06of。
     */
     @SerializedName("DirectConnectId")
     @Expose
     private String DirectConnectId;
 
     /**
-    * 专用通道名称
+    * 专用通道名称。
     */
     @SerializedName("DirectConnectTunnelName")
     @Expose
     private String DirectConnectTunnelName;
 
     /**
-    * 物理专线 owner，缺省为当前客户（物理专线 owner）
-共享专线时这里需要填写共享专线的开发商账号 ID
+    * 物理专线owner，缺省为当前客户（物理专线 owner）
+共享专线时这里需要填写共享专线的开发商账号 ID。
     */
     @SerializedName("DirectConnectOwnerAccount")
     @Expose
     private String DirectConnectOwnerAccount;
 
     /**
-    * 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
-VPC：私有网络
-BMVPC：黑石网络
-CCN：云联网
+    * 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 网络地域
+    * 网络地域。
     */
     @SerializedName("NetworkRegion")
     @Expose
     private String NetworkRegion;
 
     /**
-    * 私有网络统一 ID 或者黑石网络统一 ID
+    * 私有网络统一ID或黑石网络统一ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 专线网关 ID，例如 dcg-d545ddf
+    * 专线网关ID，例如 dcg-d545ddf。
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-    * 专线带宽，单位：Mbps
-默认是物理专线带宽值
+    * 专线带宽，单位：Mbps；默认是物理专线带宽值。
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * BGP ：BGP路由
-STATIC：静态
-默认为 BGP 路由
+    * 路由类型，枚举：BGP、STATIC；默认为BGP 。（BGP ：BGP路由；STATIC：静态）。
     */
     @SerializedName("RouteType")
     @Expose
     private String RouteType;
 
     /**
-    * BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+    * BgpPeer，用户侧bgp信息，包括Asn和AuthKey。
     */
     @SerializedName("BgpPeer")
     @Expose
     private BgpPeer BgpPeer;
 
     /**
-    * 静态路由，用户IDC的网段地址
+    * 静态路由，用户IDC的网段地址。
     */
     @SerializedName("RouteFilterPrefixes")
     @Expose
     private RouteFilterPrefix [] RouteFilterPrefixes;
 
     /**
-    * vlan，范围：0 ~ 3000
-0：不开启子接口
-默认值是非0
+    * vlan，范围：0 ~ 3000。
+0：不开启子接口，默认值是非0。
     */
     @SerializedName("Vlan")
     @Expose
     private Long Vlan;
 
     /**
-    * TencentAddress，腾讯侧互联 IP
+    * TencentAddress，腾讯侧互联 IP。
     */
     @SerializedName("TencentAddress")
     @Expose
     private String TencentAddress;
 
     /**
-    * CustomerAddress，用户侧互联 IP
+    * CustomerAddress，用户侧互联 IP。
     */
     @SerializedName("CustomerAddress")
     @Expose
     private String CustomerAddress;
 
     /**
-    * TencentBackupAddress，腾讯侧备用互联 IP
+    * TencentBackupAddress，腾讯侧备用互联 IP。
     */
     @SerializedName("TencentBackupAddress")
     @Expose
     private String TencentBackupAddress;
 
     /**
-    * 高速上云服务ID
+    * 高速上云服务ID。
     */
     @SerializedName("CloudAttachId")
     @Expose
     private String CloudAttachId;
 
     /**
-    * 是否开启BFD
+    * 是否开启BFD。
     */
     @SerializedName("BfdEnable")
     @Expose
     private Long BfdEnable;
 
     /**
-    * 是否开启NQA
+    * 是否开启NQA。
     */
     @SerializedName("NqaEnable")
     @Expose
     private Long NqaEnable;
 
     /**
-    * BFD配置信息
+    * BFD配置信息。
     */
     @SerializedName("BfdInfo")
     @Expose
     private BFDInfo BfdInfo;
 
     /**
-    * NQA配置信息
+    * NQA配置信息。
     */
     @SerializedName("NqaInfo")
     @Expose
     private NQAInfo NqaInfo;
 
     /**
-     * Get 专线 ID，例如：dc-kd7d06of 
-     * @return DirectConnectId 专线 ID，例如：dc-kd7d06of
+     * Get 物理专线ID，例如：dc-kd7d06of。 
+     * @return DirectConnectId 物理专线ID，例如：dc-kd7d06of。
      */
     public String getDirectConnectId() {
         return this.DirectConnectId;
     }
 
     /**
-     * Set 专线 ID，例如：dc-kd7d06of
-     * @param DirectConnectId 专线 ID，例如：dc-kd7d06of
+     * Set 物理专线ID，例如：dc-kd7d06of。
+     * @param DirectConnectId 物理专线ID，例如：dc-kd7d06of。
      */
     public void setDirectConnectId(String DirectConnectId) {
         this.DirectConnectId = DirectConnectId;
     }
 
     /**
-     * Get 专用通道名称 
-     * @return DirectConnectTunnelName 专用通道名称
+     * Get 专用通道名称。 
+     * @return DirectConnectTunnelName 专用通道名称。
      */
     public String getDirectConnectTunnelName() {
         return this.DirectConnectTunnelName;
     }
 
     /**
-     * Set 专用通道名称
-     * @param DirectConnectTunnelName 专用通道名称
+     * Set 专用通道名称。
+     * @param DirectConnectTunnelName 专用通道名称。
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
         this.DirectConnectTunnelName = DirectConnectTunnelName;
     }
 
     /**
-     * Get 物理专线 owner，缺省为当前客户（物理专线 owner）
-共享专线时这里需要填写共享专线的开发商账号 ID 
-     * @return DirectConnectOwnerAccount 物理专线 owner，缺省为当前客户（物理专线 owner）
-共享专线时这里需要填写共享专线的开发商账号 ID
+     * Get 物理专线owner，缺省为当前客户（物理专线 owner）
+共享专线时这里需要填写共享专线的开发商账号 ID。 
+     * @return DirectConnectOwnerAccount 物理专线owner，缺省为当前客户（物理专线 owner）
+共享专线时这里需要填写共享专线的开发商账号 ID。
      */
     public String getDirectConnectOwnerAccount() {
         return this.DirectConnectOwnerAccount;
     }
 
     /**
-     * Set 物理专线 owner，缺省为当前客户（物理专线 owner）
-共享专线时这里需要填写共享专线的开发商账号 ID
-     * @param DirectConnectOwnerAccount 物理专线 owner，缺省为当前客户（物理专线 owner）
-共享专线时这里需要填写共享专线的开发商账号 ID
+     * Set 物理专线owner，缺省为当前客户（物理专线 owner）
+共享专线时这里需要填写共享专线的开发商账号 ID。
+     * @param DirectConnectOwnerAccount 物理专线owner，缺省为当前客户（物理专线 owner）
+共享专线时这里需要填写共享专线的开发商账号 ID。
      */
     public void setDirectConnectOwnerAccount(String DirectConnectOwnerAccount) {
         this.DirectConnectOwnerAccount = DirectConnectOwnerAccount;
     }
 
     /**
-     * Get 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
-VPC：私有网络
-BMVPC：黑石网络
-CCN：云联网 
-     * @return NetworkType 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
-VPC：私有网络
-BMVPC：黑石网络
-CCN：云联网
+     * Get 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。 
+     * @return NetworkType 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
-VPC：私有网络
-BMVPC：黑石网络
-CCN：云联网
-     * @param NetworkType 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
-VPC：私有网络
-BMVPC：黑石网络
-CCN：云联网
+     * Set 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
+     * @param NetworkType 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 网络地域 
-     * @return NetworkRegion 网络地域
+     * Get 网络地域。 
+     * @return NetworkRegion 网络地域。
      */
     public String getNetworkRegion() {
         return this.NetworkRegion;
     }
 
     /**
-     * Set 网络地域
-     * @param NetworkRegion 网络地域
+     * Set 网络地域。
+     * @param NetworkRegion 网络地域。
      */
     public void setNetworkRegion(String NetworkRegion) {
         this.NetworkRegion = NetworkRegion;
     }
 
     /**
-     * Get 私有网络统一 ID 或者黑石网络统一 ID 
-     * @return VpcId 私有网络统一 ID 或者黑石网络统一 ID
+     * Get 私有网络统一ID或黑石网络统一ID。 
+     * @return VpcId 私有网络统一ID或黑石网络统一ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络统一 ID 或者黑石网络统一 ID
-     * @param VpcId 私有网络统一 ID 或者黑石网络统一 ID
+     * Set 私有网络统一ID或黑石网络统一ID。
+     * @param VpcId 私有网络统一ID或黑石网络统一ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 专线网关 ID，例如 dcg-d545ddf 
-     * @return DirectConnectGatewayId 专线网关 ID，例如 dcg-d545ddf
+     * Get 专线网关ID，例如 dcg-d545ddf。 
+     * @return DirectConnectGatewayId 专线网关ID，例如 dcg-d545ddf。
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set 专线网关 ID，例如 dcg-d545ddf
-     * @param DirectConnectGatewayId 专线网关 ID，例如 dcg-d545ddf
+     * Set 专线网关ID，例如 dcg-d545ddf。
+     * @param DirectConnectGatewayId 专线网关ID，例如 dcg-d545ddf。
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
     /**
-     * Get 专线带宽，单位：Mbps
-默认是物理专线带宽值 
-     * @return Bandwidth 专线带宽，单位：Mbps
-默认是物理专线带宽值
+     * Get 专线带宽，单位：Mbps；默认是物理专线带宽值。 
+     * @return Bandwidth 专线带宽，单位：Mbps；默认是物理专线带宽值。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 专线带宽，单位：Mbps
-默认是物理专线带宽值
-     * @param Bandwidth 专线带宽，单位：Mbps
-默认是物理专线带宽值
+     * Set 专线带宽，单位：Mbps；默认是物理专线带宽值。
+     * @param Bandwidth 专线带宽，单位：Mbps；默认是物理专线带宽值。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get BGP ：BGP路由
-STATIC：静态
-默认为 BGP 路由 
-     * @return RouteType BGP ：BGP路由
-STATIC：静态
-默认为 BGP 路由
+     * Get 路由类型，枚举：BGP、STATIC；默认为BGP 。（BGP ：BGP路由；STATIC：静态）。 
+     * @return RouteType 路由类型，枚举：BGP、STATIC；默认为BGP 。（BGP ：BGP路由；STATIC：静态）。
      */
     public String getRouteType() {
         return this.RouteType;
     }
 
     /**
-     * Set BGP ：BGP路由
-STATIC：静态
-默认为 BGP 路由
-     * @param RouteType BGP ：BGP路由
-STATIC：静态
-默认为 BGP 路由
+     * Set 路由类型，枚举：BGP、STATIC；默认为BGP 。（BGP ：BGP路由；STATIC：静态）。
+     * @param RouteType 路由类型，枚举：BGP、STATIC；默认为BGP 。（BGP ：BGP路由；STATIC：静态）。
      */
     public void setRouteType(String RouteType) {
         this.RouteType = RouteType;
     }
 
     /**
-     * Get BgpPeer，用户侧bgp信息，包括Asn和AuthKey 
-     * @return BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+     * Get BgpPeer，用户侧bgp信息，包括Asn和AuthKey。 
+     * @return BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey。
      */
     public BgpPeer getBgpPeer() {
         return this.BgpPeer;
     }
 
     /**
-     * Set BgpPeer，用户侧bgp信息，包括Asn和AuthKey
-     * @param BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+     * Set BgpPeer，用户侧bgp信息，包括Asn和AuthKey。
+     * @param BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey。
      */
     public void setBgpPeer(BgpPeer BgpPeer) {
         this.BgpPeer = BgpPeer;
     }
 
     /**
-     * Get 静态路由，用户IDC的网段地址 
-     * @return RouteFilterPrefixes 静态路由，用户IDC的网段地址
+     * Get 静态路由，用户IDC的网段地址。 
+     * @return RouteFilterPrefixes 静态路由，用户IDC的网段地址。
      */
     public RouteFilterPrefix [] getRouteFilterPrefixes() {
         return this.RouteFilterPrefixes;
     }
 
     /**
-     * Set 静态路由，用户IDC的网段地址
-     * @param RouteFilterPrefixes 静态路由，用户IDC的网段地址
+     * Set 静态路由，用户IDC的网段地址。
+     * @param RouteFilterPrefixes 静态路由，用户IDC的网段地址。
      */
     public void setRouteFilterPrefixes(RouteFilterPrefix [] RouteFilterPrefixes) {
         this.RouteFilterPrefixes = RouteFilterPrefixes;
     }
 
     /**
-     * Get vlan，范围：0 ~ 3000
-0：不开启子接口
-默认值是非0 
-     * @return Vlan vlan，范围：0 ~ 3000
-0：不开启子接口
-默认值是非0
+     * Get vlan，范围：0 ~ 3000。
+0：不开启子接口，默认值是非0。 
+     * @return Vlan vlan，范围：0 ~ 3000。
+0：不开启子接口，默认值是非0。
      */
     public Long getVlan() {
         return this.Vlan;
     }
 
     /**
-     * Set vlan，范围：0 ~ 3000
-0：不开启子接口
-默认值是非0
-     * @param Vlan vlan，范围：0 ~ 3000
-0：不开启子接口
-默认值是非0
+     * Set vlan，范围：0 ~ 3000。
+0：不开启子接口，默认值是非0。
+     * @param Vlan vlan，范围：0 ~ 3000。
+0：不开启子接口，默认值是非0。
      */
     public void setVlan(Long Vlan) {
         this.Vlan = Vlan;
     }
 
     /**
-     * Get TencentAddress，腾讯侧互联 IP 
-     * @return TencentAddress TencentAddress，腾讯侧互联 IP
+     * Get TencentAddress，腾讯侧互联 IP。 
+     * @return TencentAddress TencentAddress，腾讯侧互联 IP。
      */
     public String getTencentAddress() {
         return this.TencentAddress;
     }
 
     /**
-     * Set TencentAddress，腾讯侧互联 IP
-     * @param TencentAddress TencentAddress，腾讯侧互联 IP
+     * Set TencentAddress，腾讯侧互联 IP。
+     * @param TencentAddress TencentAddress，腾讯侧互联 IP。
      */
     public void setTencentAddress(String TencentAddress) {
         this.TencentAddress = TencentAddress;
     }
 
     /**
-     * Get CustomerAddress，用户侧互联 IP 
-     * @return CustomerAddress CustomerAddress，用户侧互联 IP
+     * Get CustomerAddress，用户侧互联 IP。 
+     * @return CustomerAddress CustomerAddress，用户侧互联 IP。
      */
     public String getCustomerAddress() {
         return this.CustomerAddress;
     }
 
     /**
-     * Set CustomerAddress，用户侧互联 IP
-     * @param CustomerAddress CustomerAddress，用户侧互联 IP
+     * Set CustomerAddress，用户侧互联 IP。
+     * @param CustomerAddress CustomerAddress，用户侧互联 IP。
      */
     public void setCustomerAddress(String CustomerAddress) {
         this.CustomerAddress = CustomerAddress;
     }
 
     /**
-     * Get TencentBackupAddress，腾讯侧备用互联 IP 
-     * @return TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
+     * Get TencentBackupAddress，腾讯侧备用互联 IP。 
+     * @return TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP。
      */
     public String getTencentBackupAddress() {
         return this.TencentBackupAddress;
     }
 
     /**
-     * Set TencentBackupAddress，腾讯侧备用互联 IP
-     * @param TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
+     * Set TencentBackupAddress，腾讯侧备用互联 IP。
+     * @param TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP。
      */
     public void setTencentBackupAddress(String TencentBackupAddress) {
         this.TencentBackupAddress = TencentBackupAddress;
     }
 
     /**
-     * Get 高速上云服务ID 
-     * @return CloudAttachId 高速上云服务ID
+     * Get 高速上云服务ID。 
+     * @return CloudAttachId 高速上云服务ID。
      */
     public String getCloudAttachId() {
         return this.CloudAttachId;
     }
 
     /**
-     * Set 高速上云服务ID
-     * @param CloudAttachId 高速上云服务ID
+     * Set 高速上云服务ID。
+     * @param CloudAttachId 高速上云服务ID。
      */
     public void setCloudAttachId(String CloudAttachId) {
         this.CloudAttachId = CloudAttachId;
     }
 
     /**
-     * Get 是否开启BFD 
-     * @return BfdEnable 是否开启BFD
+     * Get 是否开启BFD。 
+     * @return BfdEnable 是否开启BFD。
      */
     public Long getBfdEnable() {
         return this.BfdEnable;
     }
 
     /**
-     * Set 是否开启BFD
-     * @param BfdEnable 是否开启BFD
+     * Set 是否开启BFD。
+     * @param BfdEnable 是否开启BFD。
      */
     public void setBfdEnable(Long BfdEnable) {
         this.BfdEnable = BfdEnable;
     }
 
     /**
-     * Get 是否开启NQA 
-     * @return NqaEnable 是否开启NQA
+     * Get 是否开启NQA。 
+     * @return NqaEnable 是否开启NQA。
      */
     public Long getNqaEnable() {
         return this.NqaEnable;
     }
 
     /**
-     * Set 是否开启NQA
-     * @param NqaEnable 是否开启NQA
+     * Set 是否开启NQA。
+     * @param NqaEnable 是否开启NQA。
      */
     public void setNqaEnable(Long NqaEnable) {
         this.NqaEnable = NqaEnable;
     }
 
     /**
-     * Get BFD配置信息 
-     * @return BfdInfo BFD配置信息
+     * Get BFD配置信息。 
+     * @return BfdInfo BFD配置信息。
      */
     public BFDInfo getBfdInfo() {
         return this.BfdInfo;
     }
 
     /**
-     * Set BFD配置信息
-     * @param BfdInfo BFD配置信息
+     * Set BFD配置信息。
+     * @param BfdInfo BFD配置信息。
      */
     public void setBfdInfo(BFDInfo BfdInfo) {
         this.BfdInfo = BfdInfo;
     }
 
     /**
-     * Get NQA配置信息 
-     * @return NqaInfo NQA配置信息
+     * Get NQA配置信息。 
+     * @return NqaInfo NQA配置信息。
      */
     public NQAInfo getNqaInfo() {
         return this.NqaInfo;
     }
 
     /**
-     * Set NQA配置信息
-     * @param NqaInfo NQA配置信息
+     * Set NQA配置信息。
+     * @param NqaInfo NQA配置信息。
      */
     public void setNqaInfo(NQAInfo NqaInfo) {
         this.NqaInfo = NqaInfo;

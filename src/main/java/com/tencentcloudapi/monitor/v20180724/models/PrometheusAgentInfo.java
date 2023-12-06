@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class PrometheusAgentInfo extends AbstractModel {
 
     /**
-    * 集群类型
+    * 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集群id
+    * 集成容器服务中关联的集群ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 备注
+    * 该参数未使用，不需要填写
     */
     @SerializedName("Describe")
     @Expose
     private String Describe;
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群 
+     * @return ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
+     * @param ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get 集成容器服务中关联的集群ID 
+     * @return ClusterId 集成容器服务中关联的集群ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set 集成容器服务中关联的集群ID
+     * @param ClusterId 集成容器服务中关联的集群ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 备注 
-     * @return Describe 备注
+     * Get 该参数未使用，不需要填写 
+     * @return Describe 该参数未使用，不需要填写
      */
     public String getDescribe() {
         return this.Describe;
     }
 
     /**
-     * Set 备注
-     * @param Describe 备注
+     * Set 该参数未使用，不需要填写
+     * @param Describe 该参数未使用，不需要填写
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;

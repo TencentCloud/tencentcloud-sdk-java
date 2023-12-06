@@ -45,6 +45,14 @@ public class AddSpecifyPrivateZoneVpcResponse extends AbstractModel {
     private AccountVpcInfo [] AccountVpcSet;
 
     /**
+    * 唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UniqId")
+    @Expose
+    private String UniqId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +108,26 @@ public class AddSpecifyPrivateZoneVpcResponse extends AbstractModel {
     }
 
     /**
+     * Get 唯一id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UniqId 唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUniqId() {
+        return this.UniqId;
+    }
+
+    /**
+     * Set 唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UniqId 唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUniqId(String UniqId) {
+        this.UniqId = UniqId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -138,6 +166,9 @@ public class AddSpecifyPrivateZoneVpcResponse extends AbstractModel {
                 this.AccountVpcSet[i] = new AccountVpcInfo(source.AccountVpcSet[i]);
             }
         }
+        if (source.UniqId != null) {
+            this.UniqId = new String(source.UniqId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -151,6 +182,7 @@ public class AddSpecifyPrivateZoneVpcResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
         this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+        this.setParamSimple(map, prefix + "UniqId", this.UniqId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

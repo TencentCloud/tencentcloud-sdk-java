@@ -30,6 +30,8 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li>
     */
     @SerializedName("Type")
     @Expose
@@ -84,18 +86,30 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskDelLogoResult DeLogoTask;
 
     /**
+    * 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DescriptionTask")
+    @Expose
+    private AiAnalysisTaskDescriptionResult DescriptionTask;
+
+    /**
      * Get 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
-<li>Highlight：智能精彩集锦</li> 
+<li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li>
      */
     public String getType() {
         return this.Type;
@@ -108,12 +122,16 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -239,6 +257,26 @@ public class AiAnalysisResult extends AbstractModel {
         this.DeLogoTask = DeLogoTask;
     }
 
+    /**
+     * Get 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DescriptionTask 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskDescriptionResult getDescriptionTask() {
+        return this.DescriptionTask;
+    }
+
+    /**
+     * Set 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescriptionTask 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescriptionTask(AiAnalysisTaskDescriptionResult DescriptionTask) {
+        this.DescriptionTask = DescriptionTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -268,6 +306,9 @@ public class AiAnalysisResult extends AbstractModel {
         if (source.DeLogoTask != null) {
             this.DeLogoTask = new AiAnalysisTaskDelLogoResult(source.DeLogoTask);
         }
+        if (source.DescriptionTask != null) {
+            this.DescriptionTask = new AiAnalysisTaskDescriptionResult(source.DescriptionTask);
+        }
     }
 
 
@@ -282,6 +323,7 @@ public class AiAnalysisResult extends AbstractModel {
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
         this.setParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
         this.setParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
+        this.setParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
 
     }
 }

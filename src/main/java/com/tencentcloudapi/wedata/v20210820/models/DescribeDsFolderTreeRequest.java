@@ -80,6 +80,27 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
     private Boolean IncludeVirtualTask;
 
     /**
+    * 任务目录id
+    */
+    @SerializedName("TaskFolderId")
+    @Expose
+    private String TaskFolderId;
+
+    /**
+    * classification.分类展示  catalog.目录展示
+    */
+    @SerializedName("DisplayType")
+    @Expose
+    private String DisplayType;
+
+    /**
+    * 是否包含任务目录
+    */
+    @SerializedName("IncludeTaskFolder")
+    @Expose
+    private Boolean IncludeTaskFolder;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -207,6 +228,54 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
         this.IncludeVirtualTask = IncludeVirtualTask;
     }
 
+    /**
+     * Get 任务目录id 
+     * @return TaskFolderId 任务目录id
+     */
+    public String getTaskFolderId() {
+        return this.TaskFolderId;
+    }
+
+    /**
+     * Set 任务目录id
+     * @param TaskFolderId 任务目录id
+     */
+    public void setTaskFolderId(String TaskFolderId) {
+        this.TaskFolderId = TaskFolderId;
+    }
+
+    /**
+     * Get classification.分类展示  catalog.目录展示 
+     * @return DisplayType classification.分类展示  catalog.目录展示
+     */
+    public String getDisplayType() {
+        return this.DisplayType;
+    }
+
+    /**
+     * Set classification.分类展示  catalog.目录展示
+     * @param DisplayType classification.分类展示  catalog.目录展示
+     */
+    public void setDisplayType(String DisplayType) {
+        this.DisplayType = DisplayType;
+    }
+
+    /**
+     * Get 是否包含任务目录 
+     * @return IncludeTaskFolder 是否包含任务目录
+     */
+    public Boolean getIncludeTaskFolder() {
+        return this.IncludeTaskFolder;
+    }
+
+    /**
+     * Set 是否包含任务目录
+     * @param IncludeTaskFolder 是否包含任务目录
+     */
+    public void setIncludeTaskFolder(Boolean IncludeTaskFolder) {
+        this.IncludeTaskFolder = IncludeTaskFolder;
+    }
+
     public DescribeDsFolderTreeRequest() {
     }
 
@@ -239,6 +308,15 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
         if (source.IncludeVirtualTask != null) {
             this.IncludeVirtualTask = new Boolean(source.IncludeVirtualTask);
         }
+        if (source.TaskFolderId != null) {
+            this.TaskFolderId = new String(source.TaskFolderId);
+        }
+        if (source.DisplayType != null) {
+            this.DisplayType = new String(source.DisplayType);
+        }
+        if (source.IncludeTaskFolder != null) {
+            this.IncludeTaskFolder = new Boolean(source.IncludeTaskFolder);
+        }
     }
 
 
@@ -254,6 +332,9 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IncludeWorkflow", this.IncludeWorkflow);
         this.setParamSimple(map, prefix + "IncludeTask", this.IncludeTask);
         this.setParamSimple(map, prefix + "IncludeVirtualTask", this.IncludeVirtualTask);
+        this.setParamSimple(map, prefix + "TaskFolderId", this.TaskFolderId);
+        this.setParamSimple(map, prefix + "DisplayType", this.DisplayType);
+        this.setParamSimple(map, prefix + "IncludeTaskFolder", this.IncludeTaskFolder);
 
     }
 }

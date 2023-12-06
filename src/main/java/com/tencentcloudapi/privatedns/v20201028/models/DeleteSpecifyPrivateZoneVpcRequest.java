@@ -45,6 +45,13 @@ public class DeleteSpecifyPrivateZoneVpcRequest extends AbstractModel {
     private AccountVpcInfo [] AccountVpcSet;
 
     /**
+    * 是否为同步操作
+    */
+    @SerializedName("Sync")
+    @Expose
+    private Boolean Sync;
+
+    /**
      * Get 私有域id 
      * @return ZoneId 私有域id
      */
@@ -92,6 +99,22 @@ public class DeleteSpecifyPrivateZoneVpcRequest extends AbstractModel {
         this.AccountVpcSet = AccountVpcSet;
     }
 
+    /**
+     * Get 是否为同步操作 
+     * @return Sync 是否为同步操作
+     */
+    public Boolean getSync() {
+        return this.Sync;
+    }
+
+    /**
+     * Set 是否为同步操作
+     * @param Sync 是否为同步操作
+     */
+    public void setSync(Boolean Sync) {
+        this.Sync = Sync;
+    }
+
     public DeleteSpecifyPrivateZoneVpcRequest() {
     }
 
@@ -115,6 +138,9 @@ public class DeleteSpecifyPrivateZoneVpcRequest extends AbstractModel {
                 this.AccountVpcSet[i] = new AccountVpcInfo(source.AccountVpcSet[i]);
             }
         }
+        if (source.Sync != null) {
+            this.Sync = new Boolean(source.Sync);
+        }
     }
 
 
@@ -125,6 +151,7 @@ public class DeleteSpecifyPrivateZoneVpcRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
         this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+        this.setParamSimple(map, prefix + "Sync", this.Sync);
 
     }
 }

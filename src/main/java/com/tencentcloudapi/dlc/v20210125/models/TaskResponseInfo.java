@@ -329,6 +329,14 @@ public class TaskResponseInfo extends AbstractModel {
     private PrestoMonitorMetrics PrestoMonitorMetrics;
 
     /**
+    * 结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResultFormat")
+    @Expose
+    private String ResultFormat;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -1068,6 +1076,26 @@ public class TaskResponseInfo extends AbstractModel {
         this.PrestoMonitorMetrics = PrestoMonitorMetrics;
     }
 
+    /**
+     * Get 结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResultFormat 结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResultFormat() {
+        return this.ResultFormat;
+    }
+
+    /**
+     * Set 结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultFormat 结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResultFormat(String ResultFormat) {
+        this.ResultFormat = ResultFormat;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -1196,6 +1224,9 @@ public class TaskResponseInfo extends AbstractModel {
         if (source.PrestoMonitorMetrics != null) {
             this.PrestoMonitorMetrics = new PrestoMonitorMetrics(source.PrestoMonitorMetrics);
         }
+        if (source.ResultFormat != null) {
+            this.ResultFormat = new String(source.ResultFormat);
+        }
     }
 
 
@@ -1243,6 +1274,7 @@ public class TaskResponseInfo extends AbstractModel {
         this.setParamObj(map, prefix + "CommonMetrics.", this.CommonMetrics);
         this.setParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
         this.setParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
+        this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
 
     }
 }

@@ -75,7 +75,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *用于创建专用通道的接口
+     *创建专用通道。
      * @param req CreateDirectConnectTunnelRequest
      * @return CreateDirectConnectTunnelResponse
      * @throws TencentCloudSDKException

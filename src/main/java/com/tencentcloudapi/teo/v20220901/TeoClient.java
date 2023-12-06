@@ -496,6 +496,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *该接口可用于查询 IP 是否为 EdgeOne IP。
+     * @param req DescribeIPRegionRequest
+     * @return DescribeIPRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPRegionResponse DescribeIPRegion(DescribeIPRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIPRegion", DescribeIPRegionResponse.class);
+    }
+
+    /**
      *查询站点的验证信息。
      * @param req DescribeIdentificationsRequest
      * @return DescribeIdentificationsResponse

@@ -707,7 +707,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *查询 exporter 集成列表
+     *查询集成中心 exporter 集成列表
      * @param req DescribeExporterIntegrationsRequest
      * @return DescribeExporterIntegrationsResponse
      * @throws TencentCloudSDKException
@@ -1534,7 +1534,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *更新 Prometheus 的报警规则。
+     *更新 Prometheus 的告警规则。
 
 请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
      * @param req UpdateAlertRuleRequest
@@ -1646,7 +1646,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *更新 Prometheus 抓取任务
+     *更新 Prometheus Agent 抓取任务
      * @param req UpdatePrometheusScrapeJobRequest
      * @return UpdatePrometheusScrapeJobResponse
      * @throws TencentCloudSDKException

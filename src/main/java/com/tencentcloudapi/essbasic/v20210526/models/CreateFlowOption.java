@@ -93,7 +93,7 @@ public class CreateFlowOption extends AbstractModel {
     */
     @SerializedName("SkipUploadFile")
     @Expose
-    private String SkipUploadFile;
+    private Boolean SkipUploadFile;
 
     /**
      * Get 是否允许修改合同信息，
@@ -269,7 +269,7 @@ public class CreateFlowOption extends AbstractModel {
 **true**：跳过
 **false**：（默认）不跳过，需要传ResourceId
      */
-    public String getSkipUploadFile() {
+    public Boolean getSkipUploadFile() {
         return this.SkipUploadFile;
     }
 
@@ -283,7 +283,7 @@ public class CreateFlowOption extends AbstractModel {
 **true**：跳过
 **false**：（默认）不跳过，需要传ResourceId
      */
-    public void setSkipUploadFile(String SkipUploadFile) {
+    public void setSkipUploadFile(Boolean SkipUploadFile) {
         this.SkipUploadFile = SkipUploadFile;
     }
 
@@ -317,7 +317,7 @@ public class CreateFlowOption extends AbstractModel {
             this.ForbidEditFillComponent = new Boolean(source.ForbidEditFillComponent);
         }
         if (source.SkipUploadFile != null) {
-            this.SkipUploadFile = new String(source.SkipUploadFile);
+            this.SkipUploadFile = new Boolean(source.SkipUploadFile);
         }
     }
 
