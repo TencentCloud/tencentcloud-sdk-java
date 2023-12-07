@@ -41,6 +41,7 @@ public class StatDataItem extends AbstractModel {
 <li>直播剪辑数据，单位是秒。</li>
 <li>轮播数据，单位是秒。</li>
 <li>子应用数量数据，单位是个。</li>
+<li>日志服务用量数据，单位是条。</li>
     */
     @SerializedName("Value")
     @Expose
@@ -78,7 +79,8 @@ public class StatDataItem extends AbstractModel {
 <li>带宽数据，单位是比特每秒。</li>
 <li>直播剪辑数据，单位是秒。</li>
 <li>轮播数据，单位是秒。</li>
-<li>子应用数量数据，单位是个。</li> 
+<li>子应用数量数据，单位是个。</li>
+<li>日志服务用量数据，单位是条。</li> 
      * @return Value 数据大小。
 <li>存储空间的数据，单位是字节。</li>
 <li>转码时长的数据，单位是秒。</li>
@@ -87,6 +89,7 @@ public class StatDataItem extends AbstractModel {
 <li>直播剪辑数据，单位是秒。</li>
 <li>轮播数据，单位是秒。</li>
 <li>子应用数量数据，单位是个。</li>
+<li>日志服务用量数据，单位是条。</li>
      */
     public Long getValue() {
         return this.Value;
@@ -101,6 +104,7 @@ public class StatDataItem extends AbstractModel {
 <li>直播剪辑数据，单位是秒。</li>
 <li>轮播数据，单位是秒。</li>
 <li>子应用数量数据，单位是个。</li>
+<li>日志服务用量数据，单位是条。</li>
      * @param Value 数据大小。
 <li>存储空间的数据，单位是字节。</li>
 <li>转码时长的数据，单位是秒。</li>
@@ -109,6 +113,7 @@ public class StatDataItem extends AbstractModel {
 <li>直播剪辑数据，单位是秒。</li>
 <li>轮播数据，单位是秒。</li>
 <li>子应用数量数据，单位是个。</li>
+<li>日志服务用量数据，单位是条。</li>
      */
     public void setValue(Long Value) {
         this.Value = Value;

@@ -143,6 +143,15 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private String [] CustomShowTags;
 
     /**
+    * 修改计费模式
+1为预付费
+0为按量付费
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -414,6 +423,30 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.CustomShowTags = CustomShowTags;
     }
 
+    /**
+     * Get 修改计费模式
+1为预付费
+0为按量付费 
+     * @return PayMode 修改计费模式
+1为预付费
+0为按量付费
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 修改计费模式
+1为预付费
+0为按量付费
+     * @param PayMode 修改计费模式
+1为预付费
+0为按量付费
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -479,6 +512,9 @@ public class ModifyApmInstanceRequest extends AbstractModel {
                 this.CustomShowTags[i] = new String(source.CustomShowTags[i]);
             }
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
     }
 
 
@@ -503,6 +539,7 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogSet", this.LogSet);
         this.setParamSimple(map, prefix + "LogSource", this.LogSource);
         this.setParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

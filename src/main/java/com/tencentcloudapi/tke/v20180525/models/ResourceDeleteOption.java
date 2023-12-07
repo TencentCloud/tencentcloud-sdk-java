@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ResourceDeleteOption extends AbstractModel {
 
     /**
-    * 资源类型，例如CBS
+    * 资源类型，例如CBS、CLB、CVM
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 集群删除时资源的删除模式：terminate（销毁），retain （保留）
+    * 集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
     */
     @SerializedName("DeleteMode")
     @Expose
     private String DeleteMode;
 
     /**
-     * Get 资源类型，例如CBS 
-     * @return ResourceType 资源类型，例如CBS
+    * 是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
+    */
+    @SerializedName("SkipDeletionProtection")
+    @Expose
+    private Boolean SkipDeletionProtection;
+
+    /**
+     * Get 资源类型，例如CBS、CLB、CVM 
+     * @return ResourceType 资源类型，例如CBS、CLB、CVM
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，例如CBS
-     * @param ResourceType 资源类型，例如CBS
+     * Set 资源类型，例如CBS、CLB、CVM
+     * @param ResourceType 资源类型，例如CBS、CLB、CVM
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 集群删除时资源的删除模式：terminate（销毁），retain （保留） 
-     * @return DeleteMode 集群删除时资源的删除模式：terminate（销毁），retain （保留）
+     * Get 集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。 
+     * @return DeleteMode 集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
      */
     public String getDeleteMode() {
         return this.DeleteMode;
     }
 
     /**
-     * Set 集群删除时资源的删除模式：terminate（销毁），retain （保留）
-     * @param DeleteMode 集群删除时资源的删除模式：terminate（销毁），retain （保留）
+     * Set 集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
+     * @param DeleteMode 集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
      */
     public void setDeleteMode(String DeleteMode) {
         this.DeleteMode = DeleteMode;
+    }
+
+    /**
+     * Get 是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。 
+     * @return SkipDeletionProtection 是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
+     */
+    public Boolean getSkipDeletionProtection() {
+        return this.SkipDeletionProtection;
+    }
+
+    /**
+     * Set 是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
+     * @param SkipDeletionProtection 是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
+     */
+    public void setSkipDeletionProtection(Boolean SkipDeletionProtection) {
+        this.SkipDeletionProtection = SkipDeletionProtection;
     }
 
     public ResourceDeleteOption() {
@@ -83,6 +106,9 @@ public class ResourceDeleteOption extends AbstractModel {
         if (source.DeleteMode != null) {
             this.DeleteMode = new String(source.DeleteMode);
         }
+        if (source.SkipDeletionProtection != null) {
+            this.SkipDeletionProtection = new Boolean(source.SkipDeletionProtection);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ResourceDeleteOption extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "DeleteMode", this.DeleteMode);
+        this.setParamSimple(map, prefix + "SkipDeletionProtection", this.SkipDeletionProtection);
 
     }
 }

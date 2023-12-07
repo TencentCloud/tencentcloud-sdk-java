@@ -39,6 +39,17 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
+     *医疗报告图片脱敏接口
+     * @param req ImageMaskRequest
+     * @return ImageMaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageMaskResponse ImageMask(ImageMaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImageMask", ImageMaskResponse.class);
+    }
+
+    /**
      *图片分类
      * @param req ImageToClassRequest
      * @return ImageToClassResponse

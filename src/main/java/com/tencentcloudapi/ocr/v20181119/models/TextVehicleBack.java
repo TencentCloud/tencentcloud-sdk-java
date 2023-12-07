@@ -112,6 +112,15 @@ public class TextVehicleBack extends AbstractModel {
     private String SubPageCode;
 
     /**
+    * 燃料种类
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FuelType")
+    @Expose
+    private String FuelType;
+
+    /**
      * Get 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlateNo 号牌号码
@@ -331,6 +340,30 @@ public class TextVehicleBack extends AbstractModel {
         this.SubPageCode = SubPageCode;
     }
 
+    /**
+     * Get 燃料种类
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FuelType 燃料种类
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFuelType() {
+        return this.FuelType;
+    }
+
+    /**
+     * Set 燃料种类
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FuelType 燃料种类
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFuelType(String FuelType) {
+        this.FuelType = FuelType;
+    }
+
     public TextVehicleBack() {
     }
 
@@ -372,6 +405,9 @@ public class TextVehicleBack extends AbstractModel {
         if (source.SubPageCode != null) {
             this.SubPageCode = new String(source.SubPageCode);
         }
+        if (source.FuelType != null) {
+            this.FuelType = new String(source.FuelType);
+        }
     }
 
 
@@ -390,6 +426,7 @@ public class TextVehicleBack extends AbstractModel {
         this.setParamSimple(map, prefix + "Record", this.Record);
         this.setParamSimple(map, prefix + "TotalQuasiMass", this.TotalQuasiMass);
         this.setParamSimple(map, prefix + "SubPageCode", this.SubPageCode);
+        this.setParamSimple(map, prefix + "FuelType", this.FuelType);
 
     }
 }

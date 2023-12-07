@@ -38,7 +38,7 @@ public class RuleInput extends AbstractModel {
     private String Domain;
 
     /**
-    * 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+    * 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
     */
     @SerializedName("SessionExpireTime")
     @Expose
@@ -162,16 +162,16 @@ public class RuleInput extends AbstractModel {
     }
 
     /**
-     * Get 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。 
-     * @return SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+     * Get 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。 
+     * @return SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
-     * @param SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+     * Set 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
+     * @param SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;

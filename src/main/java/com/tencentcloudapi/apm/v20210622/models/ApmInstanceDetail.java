@@ -238,6 +238,24 @@ public class ApmInstanceDetail extends AbstractModel {
     private String [] CustomShowTags;
 
     /**
+    * 实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * 实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayModeEffective")
+    @Expose
+    private Boolean PayModeEffective;
+
+    /**
      * Get 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AmountOfUsedStorage 存储使用量(MB)
@@ -769,6 +787,54 @@ public class ApmInstanceDetail extends AbstractModel {
         this.CustomShowTags = CustomShowTags;
     }
 
+    /**
+     * Get 实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMode 实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMode 实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayModeEffective 实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPayModeEffective() {
+        return this.PayModeEffective;
+    }
+
+    /**
+     * Set 实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayModeEffective 实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayModeEffective(Boolean PayModeEffective) {
+        this.PayModeEffective = PayModeEffective;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -864,6 +930,12 @@ public class ApmInstanceDetail extends AbstractModel {
                 this.CustomShowTags[i] = new String(source.CustomShowTags[i]);
             }
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.PayModeEffective != null) {
+            this.PayModeEffective = new Boolean(source.PayModeEffective);
+        }
     }
 
 
@@ -898,6 +970,8 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "LogSet", this.LogSet);
         this.setParamSimple(map, prefix + "MetricDuration", this.MetricDuration);
         this.setParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "PayModeEffective", this.PayModeEffective);
 
     }
 }

@@ -96,6 +96,26 @@ false-否
     private Boolean IsPromoter;
 
     /**
+    * 签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul>
+    */
+    @SerializedName("ApproverVerifyTypes")
+    @Expose
+    private Long [] ApproverVerifyTypes;
+
+    /**
+    * 签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul>
+    */
+    @SerializedName("ApproverSignTypes")
+    @Expose
+    private Long [] ApproverSignTypes;
+
+    /**
      * Get 合同参与方的角色ID 
      * @return RecipientId 合同参与方的角色ID
      */
@@ -275,6 +295,62 @@ false-否
         this.IsPromoter = IsPromoter;
     }
 
+    /**
+     * Get 签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul> 
+     * @return ApproverVerifyTypes 签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul>
+     */
+    public Long [] getApproverVerifyTypes() {
+        return this.ApproverVerifyTypes;
+    }
+
+    /**
+     * Set 签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul>
+     * @param ApproverVerifyTypes 签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul>
+     */
+    public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
+        this.ApproverVerifyTypes = ApproverVerifyTypes;
+    }
+
+    /**
+     * Get 签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul> 
+     * @return ApproverSignTypes 签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul>
+     */
+    public Long [] getApproverSignTypes() {
+        return this.ApproverSignTypes;
+    }
+
+    /**
+     * Set 签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul>
+     * @param ApproverSignTypes 签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul>
+     */
+    public void setApproverSignTypes(Long [] ApproverSignTypes) {
+        this.ApproverSignTypes = ApproverSignTypes;
+    }
+
     public Recipient() {
     }
 
@@ -310,6 +386,18 @@ false-否
         if (source.IsPromoter != null) {
             this.IsPromoter = new Boolean(source.IsPromoter);
         }
+        if (source.ApproverVerifyTypes != null) {
+            this.ApproverVerifyTypes = new Long[source.ApproverVerifyTypes.length];
+            for (int i = 0; i < source.ApproverVerifyTypes.length; i++) {
+                this.ApproverVerifyTypes[i] = new Long(source.ApproverVerifyTypes[i]);
+            }
+        }
+        if (source.ApproverSignTypes != null) {
+            this.ApproverSignTypes = new Long[source.ApproverSignTypes.length];
+            for (int i = 0; i < source.ApproverSignTypes.length; i++) {
+                this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
+            }
+        }
     }
 
 
@@ -326,6 +414,8 @@ false-否
         this.setParamSimple(map, prefix + "SignType", this.SignType);
         this.setParamSimple(map, prefix + "RoutingOrder", this.RoutingOrder);
         this.setParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
+        this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+        this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
 
     }
 }

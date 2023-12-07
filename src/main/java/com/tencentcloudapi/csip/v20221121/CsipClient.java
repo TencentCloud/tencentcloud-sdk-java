@@ -160,6 +160,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取网关列表
+     * @param req DescribeGatewayAssetsRequest
+     * @return DescribeGatewayAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayAssetsResponse DescribeGatewayAssets(DescribeGatewayAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGatewayAssets", DescribeGatewayAssetsResponse.class);
+    }
+
+    /**
      *查询clb监听器列表
      * @param req DescribeListenerListRequest
      * @return DescribeListenerListResponse

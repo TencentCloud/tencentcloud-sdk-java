@@ -59,6 +59,13 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private Long SpanDailyCounters;
 
     /**
+    * 实例的计费模式
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
      * Get 实例名 
      * @return Name 实例名
      */
@@ -138,6 +145,22 @@ public class CreateApmInstanceRequest extends AbstractModel {
         this.SpanDailyCounters = SpanDailyCounters;
     }
 
+    /**
+     * Get 实例的计费模式 
+     * @return PayMode 实例的计费模式
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 实例的计费模式
+     * @param PayMode 实例的计费模式
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
     public CreateApmInstanceRequest() {
     }
 
@@ -164,6 +187,9 @@ public class CreateApmInstanceRequest extends AbstractModel {
         if (source.SpanDailyCounters != null) {
             this.SpanDailyCounters = new Long(source.SpanDailyCounters);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class CreateApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TraceDuration", this.TraceDuration);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SpanDailyCounters", this.SpanDailyCounters);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }
