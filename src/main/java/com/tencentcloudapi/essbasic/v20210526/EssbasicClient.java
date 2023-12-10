@@ -1140,6 +1140,17 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     }
 
     /**
+     *查询渠道子客企业信息
+     * @param req DescribeChannelOrganizationsRequest
+     * @return DescribeChannelOrganizationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChannelOrganizationsResponse DescribeChannelOrganizations(DescribeChannelOrganizationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeChannelOrganizations", DescribeChannelOrganizationsResponse.class);
+    }
+
+    /**
      *生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转的方式查看）
      * @param req DescribeChannelSealPolicyWorkflowUrlRequest
      * @return DescribeChannelSealPolicyWorkflowUrlResponse

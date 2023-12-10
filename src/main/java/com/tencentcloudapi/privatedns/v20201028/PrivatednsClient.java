@@ -292,6 +292,17 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *查询异步绑定vpc操作状态
+     * @param req QueryAsyncBindVpcStatusRequest
+     * @return QueryAsyncBindVpcStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAsyncBindVpcStatusResponse QueryAsyncBindVpcStatus(QueryAsyncBindVpcStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryAsyncBindVpcStatus", QueryAsyncBindVpcStatusResponse.class);
+    }
+
+    /**
      *开通私有域解析
      * @param req SubscribePrivateZoneServiceRequest
      * @return SubscribePrivateZoneServiceResponse

@@ -259,6 +259,22 @@ public class AlarmPolicy extends AbstractModel {
     private TagInstance [] TagInstances;
 
     /**
+    * 过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Filter")
+    @Expose
+    private AlarmConditionFilter Filter;
+
+    /**
+    * 聚合条件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private AlarmGroupByItem [] GroupBy;
+
+    /**
     * 策略关联的过滤维度信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -907,6 +923,46 @@ public class AlarmPolicy extends AbstractModel {
     }
 
     /**
+     * Get 过滤条件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Filter 过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlarmConditionFilter getFilter() {
+        return this.Filter;
+    }
+
+    /**
+     * Set 过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Filter 过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilter(AlarmConditionFilter Filter) {
+        this.Filter = Filter;
+    }
+
+    /**
+     * Get 聚合条件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupBy 聚合条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlarmGroupByItem [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set 聚合条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupBy 聚合条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupBy(AlarmGroupByItem [] GroupBy) {
+        this.GroupBy = GroupBy;
+    }
+
+    /**
      * Get 策略关联的过滤维度信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FilterDimensionsParam 策略关联的过滤维度信息
@@ -1156,6 +1212,15 @@ public class AlarmPolicy extends AbstractModel {
                 this.TagInstances[i] = new TagInstance(source.TagInstances[i]);
             }
         }
+        if (source.Filter != null) {
+            this.Filter = new AlarmConditionFilter(source.Filter);
+        }
+        if (source.GroupBy != null) {
+            this.GroupBy = new AlarmGroupByItem[source.GroupBy.length];
+            for (int i = 0; i < source.GroupBy.length; i++) {
+                this.GroupBy[i] = new AlarmGroupByItem(source.GroupBy[i]);
+            }
+        }
         if (source.FilterDimensionsParam != null) {
             this.FilterDimensionsParam = new String(source.FilterDimensionsParam);
         }
@@ -1216,6 +1281,8 @@ public class AlarmPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "OriginId", this.OriginId);
         this.setParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
+        this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArrayObj(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
         this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
         this.setParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);

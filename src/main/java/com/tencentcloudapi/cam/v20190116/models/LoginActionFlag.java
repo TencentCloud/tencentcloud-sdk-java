@@ -59,6 +59,13 @@ public class LoginActionFlag extends AbstractModel {
     private Long Custom;
 
     /**
+    * 邮箱
+    */
+    @SerializedName("Mail")
+    @Expose
+    private Long Mail;
+
+    /**
      * Get 手机 
      * @return Phone 手机
      */
@@ -138,6 +145,22 @@ public class LoginActionFlag extends AbstractModel {
         this.Custom = Custom;
     }
 
+    /**
+     * Get 邮箱 
+     * @return Mail 邮箱
+     */
+    public Long getMail() {
+        return this.Mail;
+    }
+
+    /**
+     * Set 邮箱
+     * @param Mail 邮箱
+     */
+    public void setMail(Long Mail) {
+        this.Mail = Mail;
+    }
+
     public LoginActionFlag() {
     }
 
@@ -161,6 +184,9 @@ public class LoginActionFlag extends AbstractModel {
         if (source.Custom != null) {
             this.Custom = new Long(source.Custom);
         }
+        if (source.Mail != null) {
+            this.Mail = new Long(source.Mail);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class LoginActionFlag extends AbstractModel {
         this.setParamSimple(map, prefix + "Stoken", this.Stoken);
         this.setParamSimple(map, prefix + "Wechat", this.Wechat);
         this.setParamSimple(map, prefix + "Custom", this.Custom);
+        this.setParamSimple(map, prefix + "Mail", this.Mail);
 
     }
 }

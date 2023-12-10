@@ -490,6 +490,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstanceSupportFeature）用于查询实例支持的功能特性。
+     * @param req DescribeInstanceSupportFeatureRequest
+     * @return DescribeInstanceSupportFeatureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSupportFeatureResponse DescribeInstanceSupportFeature(DescribeInstanceSupportFeatureRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSupportFeature", DescribeInstanceSupportFeatureResponse.class);
+    }
+
+    /**
      *本接口（DescribeInstanceZoneInfo）用于查询 Redis 节点详细信息。
      * @param req DescribeInstanceZoneInfoRequest
      * @return DescribeInstanceZoneInfoResponse
@@ -842,6 +853,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyInstanceAvailabilityZones）用于变更实例可用区
+     * @param req ModifyInstanceAvailabilityZonesRequest
+     * @return ModifyInstanceAvailabilityZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZones(ModifyInstanceAvailabilityZonesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceAvailabilityZones", ModifyInstanceAvailabilityZonesResponse.class);
+    }
+
+    /**
      *本接口(ModifyInstanceParams)用于修改Redis实例的参数配置。
      * @param req ModifyInstanceParamsRequest
      * @return ModifyInstanceParamsResponse
@@ -971,6 +993,17 @@ public class RedisClient extends AbstractClient{
     public StartupInstanceResponse StartupInstance(StartupInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartupInstance", StartupInstanceResponse.class);
+    }
+
+    /**
+     *本接口（SwitchAccessNewInstance）针对处于时间窗口中待切换操作的实例，用户可主动发起该操作。
+     * @param req SwitchAccessNewInstanceRequest
+     * @return SwitchAccessNewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchAccessNewInstanceResponse SwitchAccessNewInstance(SwitchAccessNewInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchAccessNewInstance", SwitchAccessNewInstanceResponse.class);
     }
 
     /**

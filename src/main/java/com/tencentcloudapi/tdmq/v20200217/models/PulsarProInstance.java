@@ -140,6 +140,22 @@ public class PulsarProInstance extends AbstractModel {
     private Long MaxBandWidth;
 
     /**
+    * 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -411,6 +427,46 @@ public class PulsarProInstance extends AbstractModel {
         this.MaxBandWidth = MaxBandWidth;
     }
 
+    /**
+     * Get 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public PulsarProInstance() {
     }
 
@@ -467,6 +523,15 @@ public class PulsarProInstance extends AbstractModel {
         if (source.MaxBandWidth != null) {
             this.MaxBandWidth = new Long(source.MaxBandWidth);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -490,6 +555,8 @@ public class PulsarProInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "MaxBandWidth", this.MaxBandWidth);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }
