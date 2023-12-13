@@ -127,6 +127,28 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口 (StartInstance) 用于主动启动实例。
+     * @param req StartInstanceRequest
+     * @return StartInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartInstanceResponse StartInstance(StartInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartInstance", StartInstanceResponse.class);
+    }
+
+    /**
+     *本接口 (StopInstance) 用于主动关闭实例。
+     * @param req StopInstanceRequest
+     * @return StopInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopInstanceResponse StopInstance(StopInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopInstance", StopInstanceResponse.class);
+    }
+
+    /**
      *本接口 (TerminateInstances) 用于主动退还实例。
      * @param req TerminateInstancesRequest
      * @return TerminateInstancesResponse

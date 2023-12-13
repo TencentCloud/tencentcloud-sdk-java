@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSampleBatchQueryRequest extends AbstractModel {
 
     /**
-    * job id
+    * 压测任务的 ID
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 场景id
+    * 场景的 ID
     */
     @SerializedName("ScenarioId")
     @Expose
@@ -45,39 +45,39 @@ public class DescribeSampleBatchQueryRequest extends AbstractModel {
     private InternalMetricQuery [] Queries;
 
     /**
-    * 项目ID
+    * 项目的 ID
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get job id 
-     * @return JobId job id
+     * Get 压测任务的 ID 
+     * @return JobId 压测任务的 ID
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set job id
-     * @param JobId job id
+     * Set 压测任务的 ID
+     * @param JobId 压测任务的 ID
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 场景id 
-     * @return ScenarioId 场景id
+     * Get 场景的 ID 
+     * @return ScenarioId 场景的 ID
      */
     public String getScenarioId() {
         return this.ScenarioId;
     }
 
     /**
-     * Set 场景id
-     * @param ScenarioId 场景id
+     * Set 场景的 ID
+     * @param ScenarioId 场景的 ID
      */
     public void setScenarioId(String ScenarioId) {
         this.ScenarioId = ScenarioId;
@@ -100,16 +100,16 @@ public class DescribeSampleBatchQueryRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 项目的 ID 
+     * @return ProjectId 项目的 ID
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 项目的 ID
+     * @param ProjectId 项目的 ID
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

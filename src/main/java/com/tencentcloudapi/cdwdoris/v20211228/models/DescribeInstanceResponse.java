@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.cdwdoris.v20211228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,22 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomAccountsResponse extends AbstractModel {
+public class DescribeInstanceResponse extends AbstractModel {
 
     /**
-    * 自定义账户列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 实例描述信息
     */
-    @SerializedName("CustomAccounts")
+    @SerializedName("InstanceInfo")
     @Expose
-    private CustomAccount [] CustomAccounts;
-
-    /**
-    * 自定义账户数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private InstanceInfo InstanceInfo;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,39 +38,19 @@ public class DescribeCustomAccountsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 自定义账户列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomAccounts 自定义账户列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例描述信息 
+     * @return InstanceInfo 实例描述信息
      */
-    public CustomAccount [] getCustomAccounts() {
-        return this.CustomAccounts;
+    public InstanceInfo getInstanceInfo() {
+        return this.InstanceInfo;
     }
 
     /**
-     * Set 自定义账户列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomAccounts 自定义账户列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 实例描述信息
+     * @param InstanceInfo 实例描述信息
      */
-    public void setCustomAccounts(CustomAccount [] CustomAccounts) {
-        this.CustomAccounts = CustomAccounts;
-    }
-
-    /**
-     * Get 自定义账户数量 
-     * @return TotalCount 自定义账户数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 自定义账户数量
-     * @param TotalCount 自定义账户数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setInstanceInfo(InstanceInfo InstanceInfo) {
+        this.InstanceInfo = InstanceInfo;
     }
 
     /**
@@ -97,22 +69,16 @@ public class DescribeCustomAccountsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeCustomAccountsResponse() {
+    public DescribeInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCustomAccountsResponse(DescribeCustomAccountsResponse source) {
-        if (source.CustomAccounts != null) {
-            this.CustomAccounts = new CustomAccount[source.CustomAccounts.length];
-            for (int i = 0; i < source.CustomAccounts.length; i++) {
-                this.CustomAccounts[i] = new CustomAccount(source.CustomAccounts[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeInstanceResponse(DescribeInstanceResponse source) {
+        if (source.InstanceInfo != null) {
+            this.InstanceInfo = new InstanceInfo(source.InstanceInfo);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -124,8 +90,7 @@ public class DescribeCustomAccountsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "CustomAccounts.", this.CustomAccounts);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamObj(map, prefix + "InstanceInfo.", this.InstanceInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

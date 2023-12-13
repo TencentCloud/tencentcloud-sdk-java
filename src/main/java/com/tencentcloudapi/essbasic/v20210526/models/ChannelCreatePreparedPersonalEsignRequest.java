@@ -114,6 +114,13 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private Long LicenseType;
 
     /**
+    * <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+    */
+    @SerializedName("SceneKey")
+    @Expose
+    private String SceneKey;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
      * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
@@ -341,6 +348,22 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
         this.LicenseType = LicenseType;
     }
 
+    /**
+     * Get <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul> 
+     * @return SceneKey <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     */
+    public String getSceneKey() {
+        return this.SceneKey;
+    }
+
+    /**
+     * Set <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     * @param SceneKey <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     */
+    public void setSceneKey(String SceneKey) {
+        this.SceneKey = SceneKey;
+    }
+
     public ChannelCreatePreparedPersonalEsignRequest() {
     }
 
@@ -382,6 +405,9 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
         if (source.LicenseType != null) {
             this.LicenseType = new Long(source.LicenseType);
         }
+        if (source.SceneKey != null) {
+            this.SceneKey = new String(source.SceneKey);
+        }
     }
 
 
@@ -400,6 +426,7 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
 
     }
 }

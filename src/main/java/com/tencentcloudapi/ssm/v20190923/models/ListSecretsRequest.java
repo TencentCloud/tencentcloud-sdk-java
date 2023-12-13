@@ -85,9 +85,10 @@ public class ListSecretsRequest extends AbstractModel {
     /**
     * 此参数仅在SecretType参数值为1时生效，
 当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据
-如果ProductName值为Mysql，则表示查询Mysql数据库凭据
-如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+如果ProductName值为空，则表示查询所有类型的云产品凭据；
+如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
+如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
+支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
     */
     @SerializedName("ProductName")
     @Expose
@@ -248,14 +249,16 @@ public class ListSecretsRequest extends AbstractModel {
     /**
      * Get 此参数仅在SecretType参数值为1时生效，
 当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据
-如果ProductName值为Mysql，则表示查询Mysql数据库凭据
-如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据 
+如果ProductName值为空，则表示查询所有类型的云产品凭据；
+如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
+如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
+支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。 
      * @return ProductName 此参数仅在SecretType参数值为1时生效，
 当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据
-如果ProductName值为Mysql，则表示查询Mysql数据库凭据
-如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+如果ProductName值为空，则表示查询所有类型的云产品凭据；
+如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
+如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
+支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
      */
     public String getProductName() {
         return this.ProductName;
@@ -264,14 +267,16 @@ public class ListSecretsRequest extends AbstractModel {
     /**
      * Set 此参数仅在SecretType参数值为1时生效，
 当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据
-如果ProductName值为Mysql，则表示查询Mysql数据库凭据
-如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+如果ProductName值为空，则表示查询所有类型的云产品凭据；
+如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
+如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
+支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
      * @param ProductName 此参数仅在SecretType参数值为1时生效，
 当SecretType值为1时：
-如果ProductName值为空，则表示查询所有类型的云产品凭据
-如果ProductName值为Mysql，则表示查询Mysql数据库凭据
-如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+如果ProductName值为空，则表示查询所有类型的云产品凭据；
+如果ProductName值为某个指定的云产品值如Mysql时，则表示查询Mysql数据库凭据；
+如果ProductName值为多个云产品值，如：Mysql,Tdsql-mysql,Tdsql_C_Mysql（多个值以英文逗号,分隔开）则表示查询三种云产品类型的凭据；
+支持的云产品列表请通过接口：DescribeSupportedProducts进行查询。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;

@@ -116,7 +116,7 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *新建cc防护的地域封禁配置
+     *新建CC防护的地域封禁配置
      * @param req CreateCcGeoIPBlockConfigRequest
      * @return CreateCcGeoIPBlockConfigResponse
      * @throws TencentCloudSDKException
@@ -643,6 +643,17 @@ public class AntiddosClient extends AbstractClient{
     public DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(DescribeDefaultAlarmThresholdRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDefaultAlarmThreshold", DescribeDefaultAlarmThresholdResponse.class);
+    }
+
+    /**
+     *获取IP封堵列表
+     * @param req DescribeIpBlockListRequest
+     * @return DescribeIpBlockListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpBlockListResponse DescribeIpBlockList(DescribeIpBlockListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpBlockList", DescribeIpBlockListResponse.class);
     }
 
     /**

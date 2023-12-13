@@ -31,14 +31,14 @@ public class DeletePrometheusScrapeJobsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Agent ID
+    * Agent ID(可通过 DescribePrometheusAgents 接口获取)
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 任务 ID 列表
+    * 任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
     */
     @SerializedName("JobIds")
     @Expose
@@ -61,32 +61,32 @@ public class DeletePrometheusScrapeJobsRequest extends AbstractModel {
     }
 
     /**
-     * Get Agent ID 
-     * @return AgentId Agent ID
+     * Get Agent ID(可通过 DescribePrometheusAgents 接口获取) 
+     * @return AgentId Agent ID(可通过 DescribePrometheusAgents 接口获取)
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent ID
-     * @param AgentId Agent ID
+     * Set Agent ID(可通过 DescribePrometheusAgents 接口获取)
+     * @param AgentId Agent ID(可通过 DescribePrometheusAgents 接口获取)
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 任务 ID 列表 
-     * @return JobIds 任务 ID 列表
+     * Get 任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取) 
+     * @return JobIds 任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
      */
     public String [] getJobIds() {
         return this.JobIds;
     }
 
     /**
-     * Set 任务 ID 列表
-     * @param JobIds 任务 ID 列表
+     * Set 任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
+     * @param JobIds 任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
      */
     public void setJobIds(String [] JobIds) {
         this.JobIds = JobIds;

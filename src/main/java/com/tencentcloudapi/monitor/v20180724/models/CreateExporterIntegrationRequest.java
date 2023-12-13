@@ -31,7 +31,7 @@ public class CreateExporterIntegrationRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 类型
+    * 类型(可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
     */
     @SerializedName("Kind")
     @Expose
@@ -45,17 +45,17 @@ public class CreateExporterIntegrationRequest extends AbstractModel {
     private String Content;
 
     /**
-    * Kubernetes 集群类型，取值如下：
+    * Kubernetes 集群类型，可不填，取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
     */
     @SerializedName("KubeType")
     @Expose
     private Long KubeType;
 
     /**
-    * 集群 ID
+    * 集群 ID，可不填
     */
     @SerializedName("ClusterId")
     @Expose
@@ -78,16 +78,16 @@ public class CreateExporterIntegrationRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型 
-     * @return Kind 类型
+     * Get 类型(可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段) 
+     * @return Kind 类型(可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 类型
-     * @param Kind 类型
+     * Set 类型(可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
+     * @param Kind 类型(可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
@@ -110,44 +110,44 @@ public class CreateExporterIntegrationRequest extends AbstractModel {
     }
 
     /**
-     * Get Kubernetes 集群类型，取值如下：
+     * Get Kubernetes 集群类型，可不填，取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li> 
-     * @return KubeType Kubernetes 集群类型，取值如下：
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li> 
+     * @return KubeType Kubernetes 集群类型，可不填，取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
      */
     public Long getKubeType() {
         return this.KubeType;
     }
 
     /**
-     * Set Kubernetes 集群类型，取值如下：
+     * Set Kubernetes 集群类型，可不填，取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
-     * @param KubeType Kubernetes 集群类型，取值如下：
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+     * @param KubeType Kubernetes 集群类型，可不填，取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
      */
     public void setKubeType(Long KubeType) {
         this.KubeType = KubeType;
     }
 
     /**
-     * Get 集群 ID 
-     * @return ClusterId 集群 ID
+     * Get 集群 ID，可不填 
+     * @return ClusterId 集群 ID，可不填
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID
-     * @param ClusterId 集群 ID
+     * Set 集群 ID，可不填
+     * @param ClusterId 集群 ID，可不填
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

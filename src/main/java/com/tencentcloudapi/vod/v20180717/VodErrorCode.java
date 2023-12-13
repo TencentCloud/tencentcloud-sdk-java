@@ -651,6 +651,9 @@ public enum VodErrorCode {
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
+    // 域名解析验证失败
+     UNAUTHORIZEDOPERATION_DOMAINRECORDNOTVERIFIED("UnauthorizedOperation.DomainRecordNotVerified"),
+     
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),
      

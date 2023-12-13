@@ -45,7 +45,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private Long Status;
 
     /**
-    * 高级模式
+    * 高级模式（是否使用Session检测），0表示不启用，1表示启用
     */
     @SerializedName("Advance")
     @Expose
@@ -73,14 +73,14 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private String Url;
 
     /**
-    * 匹配方法
+    * 匹配方法，0表示等于，1表示前缀匹配，2表示包含
     */
     @SerializedName("MatchFunc")
     @Expose
     private Long MatchFunc;
 
     /**
-    * 动作
+    * 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
     */
     @SerializedName("ActionType")
     @Expose
@@ -108,7 +108,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private String OptionsArr;
 
     /**
-    * waf版本
+    * waf版本，sparta-waf或者clb-waf
     */
     @SerializedName("Edition")
     @Expose
@@ -191,16 +191,16 @@ public class UpsertCCRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 高级模式 
-     * @return Advance 高级模式
+     * Get 高级模式（是否使用Session检测），0表示不启用，1表示启用 
+     * @return Advance 高级模式（是否使用Session检测），0表示不启用，1表示启用
      */
     public String getAdvance() {
         return this.Advance;
     }
 
     /**
-     * Set 高级模式
-     * @param Advance 高级模式
+     * Set 高级模式（是否使用Session检测），0表示不启用，1表示启用
+     * @param Advance 高级模式（是否使用Session检测），0表示不启用，1表示启用
      */
     public void setAdvance(String Advance) {
         this.Advance = Advance;
@@ -255,32 +255,32 @@ public class UpsertCCRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 匹配方法 
-     * @return MatchFunc 匹配方法
+     * Get 匹配方法，0表示等于，1表示前缀匹配，2表示包含 
+     * @return MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含
      */
     public Long getMatchFunc() {
         return this.MatchFunc;
     }
 
     /**
-     * Set 匹配方法
-     * @param MatchFunc 匹配方法
+     * Set 匹配方法，0表示等于，1表示前缀匹配，2表示包含
+     * @param MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含
      */
     public void setMatchFunc(Long MatchFunc) {
         this.MatchFunc = MatchFunc;
     }
 
     /**
-     * Get 动作 
-     * @return ActionType 动作
+     * Get 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截 
+     * @return ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作
-     * @param ActionType 动作
+     * Set 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+     * @param ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -335,16 +335,16 @@ public class UpsertCCRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get waf版本 
-     * @return Edition waf版本
+     * Get waf版本，sparta-waf或者clb-waf 
+     * @return Edition waf版本，sparta-waf或者clb-waf
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set waf版本
-     * @param Edition waf版本
+     * Set waf版本，sparta-waf或者clb-waf
+     * @param Edition waf版本，sparta-waf或者clb-waf
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;

@@ -31,6 +31,14 @@ public class GetRunMetadataFileResponse extends AbstractModel {
     private String CosSignedUrl;
 
     /**
+    * 批量文件预签名链接，一分钟内有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosSignedUrls")
+    @Expose
+    private String [] CosSignedUrls;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class GetRunMetadataFileResponse extends AbstractModel {
      */
     public void setCosSignedUrl(String CosSignedUrl) {
         this.CosSignedUrl = CosSignedUrl;
+    }
+
+    /**
+     * Get 批量文件预签名链接，一分钟内有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosSignedUrls 批量文件预签名链接，一分钟内有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCosSignedUrls() {
+        return this.CosSignedUrls;
+    }
+
+    /**
+     * Set 批量文件预签名链接，一分钟内有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosSignedUrls 批量文件预签名链接，一分钟内有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosSignedUrls(String [] CosSignedUrls) {
+        this.CosSignedUrls = CosSignedUrls;
     }
 
     /**
@@ -80,6 +108,12 @@ public class GetRunMetadataFileResponse extends AbstractModel {
         if (source.CosSignedUrl != null) {
             this.CosSignedUrl = new String(source.CosSignedUrl);
         }
+        if (source.CosSignedUrls != null) {
+            this.CosSignedUrls = new String[source.CosSignedUrls.length];
+            for (int i = 0; i < source.CosSignedUrls.length; i++) {
+                this.CosSignedUrls[i] = new String(source.CosSignedUrls[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +125,7 @@ public class GetRunMetadataFileResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosSignedUrl", this.CosSignedUrl);
+        this.setParamArraySimple(map, prefix + "CosSignedUrls.", this.CosSignedUrls);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

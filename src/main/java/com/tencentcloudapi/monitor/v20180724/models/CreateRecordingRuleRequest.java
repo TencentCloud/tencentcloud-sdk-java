@@ -31,7 +31,7 @@ public class CreateRecordingRuleRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 聚合规则组内容，格式为 yaml
+    * 聚合规则组内容，格式为 yaml，通过 base64 进行编码。
     */
     @SerializedName("Group")
     @Expose
@@ -72,16 +72,16 @@ public class CreateRecordingRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 聚合规则组内容，格式为 yaml 
-     * @return Group 聚合规则组内容，格式为 yaml
+     * Get 聚合规则组内容，格式为 yaml，通过 base64 进行编码。 
+     * @return Group 聚合规则组内容，格式为 yaml，通过 base64 进行编码。
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 聚合规则组内容，格式为 yaml
-     * @param Group 聚合规则组内容，格式为 yaml
+     * Set 聚合规则组内容，格式为 yaml，通过 base64 进行编码。
+     * @param Group 聚合规则组内容，格式为 yaml，通过 base64 进行编码。
      */
     public void setGroup(String Group) {
         this.Group = Group;

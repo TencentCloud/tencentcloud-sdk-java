@@ -182,6 +182,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取网卡列表
+     * @param req DescribeNICAssetsRequest
+     * @return DescribeNICAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNICAssetsResponse DescribeNICAssets(DescribeNICAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNICAssets", DescribeNICAssetsResponse.class);
+    }
+
+    /**
      *ip公网列表
      * @param req DescribePublicIpAssetsRequest
      * @return DescribePublicIpAssetsResponse

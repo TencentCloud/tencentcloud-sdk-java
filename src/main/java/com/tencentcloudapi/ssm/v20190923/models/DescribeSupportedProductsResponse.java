@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class DescribeSupportedProductsResponse extends AbstractModel {
 
     /**
-    * 支持的产品列表。
+    * 支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。
     */
     @SerializedName("Products")
     @Expose
@@ -45,16 +50,36 @@ public class DescribeSupportedProductsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 支持的产品列表。 
-     * @return Products 支持的产品列表。
+     * Get 支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。 
+     * @return Products 支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。
      */
     public String [] getProducts() {
         return this.Products;
     }
 
     /**
-     * Set 支持的产品列表。
-     * @param Products 支持的产品列表。
+     * Set 支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。
+     * @param Products 支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。
      */
     public void setProducts(String [] Products) {
         this.Products = Products;

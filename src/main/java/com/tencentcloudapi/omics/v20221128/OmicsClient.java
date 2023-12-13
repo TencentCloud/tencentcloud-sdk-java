@@ -127,7 +127,7 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
-     *查询任务详情文件。
+     *获取任务详情文件。
      * @param req GetRunMetadataFileRequest
      * @return GetRunMetadataFileResponse
      * @throws TencentCloudSDKException

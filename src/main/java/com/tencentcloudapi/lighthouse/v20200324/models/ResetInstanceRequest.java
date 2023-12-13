@@ -38,6 +38,20 @@ public class ResetInstanceRequest extends AbstractModel {
     private String BlueprintId;
 
     /**
+    * 要创建的容器配置列表。
+    */
+    @SerializedName("Containers")
+    @Expose
+    private DockerContainerConfiguration [] Containers;
+
+    /**
+    * 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
+    */
+    @SerializedName("LoginConfiguration")
+    @Expose
+    private LoginConfiguration LoginConfiguration;
+
+    /**
      * Get 实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 
      * @return InstanceId 实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      */
@@ -69,6 +83,38 @@ public class ResetInstanceRequest extends AbstractModel {
         this.BlueprintId = BlueprintId;
     }
 
+    /**
+     * Get 要创建的容器配置列表。 
+     * @return Containers 要创建的容器配置列表。
+     */
+    public DockerContainerConfiguration [] getContainers() {
+        return this.Containers;
+    }
+
+    /**
+     * Set 要创建的容器配置列表。
+     * @param Containers 要创建的容器配置列表。
+     */
+    public void setContainers(DockerContainerConfiguration [] Containers) {
+        this.Containers = Containers;
+    }
+
+    /**
+     * Get 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。 
+     * @return LoginConfiguration 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
+     */
+    public LoginConfiguration getLoginConfiguration() {
+        return this.LoginConfiguration;
+    }
+
+    /**
+     * Set 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
+     * @param LoginConfiguration 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
+     */
+    public void setLoginConfiguration(LoginConfiguration LoginConfiguration) {
+        this.LoginConfiguration = LoginConfiguration;
+    }
+
     public ResetInstanceRequest() {
     }
 
@@ -83,6 +129,15 @@ public class ResetInstanceRequest extends AbstractModel {
         if (source.BlueprintId != null) {
             this.BlueprintId = new String(source.BlueprintId);
         }
+        if (source.Containers != null) {
+            this.Containers = new DockerContainerConfiguration[source.Containers.length];
+            for (int i = 0; i < source.Containers.length; i++) {
+                this.Containers[i] = new DockerContainerConfiguration(source.Containers[i]);
+            }
+        }
+        if (source.LoginConfiguration != null) {
+            this.LoginConfiguration = new LoginConfiguration(source.LoginConfiguration);
+        }
     }
 
 
@@ -92,6 +147,8 @@ public class ResetInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BlueprintId", this.BlueprintId);
+        this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
+        this.setParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
 
     }
 }

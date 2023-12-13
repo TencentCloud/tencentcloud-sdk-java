@@ -40,7 +40,7 @@ public class RoomItem extends AbstractModel {
     private Long RoomId;
 
     /**
-    * 房间状态。0 未开始 ；1进行中  ；2 已结束
+    * 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -194,6 +194,14 @@ public class RoomItem extends AbstractModel {
     private Long EnableAutoStart;
 
     /**
+    * 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordBackground")
+    @Expose
+    private String RecordBackground;
+
+    /**
      * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 名称
@@ -234,9 +242,9 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Get 房间状态。0 未开始 ；1进行中  ；2 已结束
+     * Get 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 房间状态。0 未开始 ；1进行中  ；2 已结束
+     * @return Status 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -244,9 +252,9 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Set 房间状态。0 未开始 ；1进行中  ；2 已结束
+     * Set 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 房间状态。0 未开始 ；1进行中  ；2 已结束
+     * @param Status 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -621,6 +629,26 @@ public class RoomItem extends AbstractModel {
         this.EnableAutoStart = EnableAutoStart;
     }
 
+    /**
+     * Get 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordBackground() {
+        return this.RecordBackground;
+    }
+
+    /**
+     * Set 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordBackground(String RecordBackground) {
+        this.RecordBackground = RecordBackground;
+    }
+
     public RoomItem() {
     }
 
@@ -692,6 +720,9 @@ public class RoomItem extends AbstractModel {
         if (source.EnableAutoStart != null) {
             this.EnableAutoStart = new Long(source.EnableAutoStart);
         }
+        if (source.RecordBackground != null) {
+            this.RecordBackground = new String(source.RecordBackground);
+        }
     }
 
 
@@ -720,6 +751,7 @@ public class RoomItem extends AbstractModel {
         this.setParamSimple(map, prefix + "LiveType", this.LiveType);
         this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+        this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
 
     }
 }

@@ -45,21 +45,21 @@ public class DescribeSampleMatrixQueryRequest extends AbstractModel {
     private String ScenarioId;
 
     /**
-    * 指标名字
+    * 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
-    * 聚合函数
+    * 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
     */
     @SerializedName("Aggregation")
     @Expose
     private String Aggregation;
 
     /**
-    * 指标过滤
+    * 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
     */
     @SerializedName("Filters")
     @Expose
@@ -121,48 +121,48 @@ public class DescribeSampleMatrixQueryRequest extends AbstractModel {
     }
 
     /**
-     * Get 指标名字 
-     * @return Metric 指标名字
+     * Get 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名 
+     * @return Metric 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set 指标名字
-     * @param Metric 指标名字
+     * Set 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+     * @param Metric 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get 聚合函数 
-     * @return Aggregation 聚合函数
+     * Get 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge 
+     * @return Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public String getAggregation() {
         return this.Aggregation;
     }
 
     /**
-     * Set 聚合函数
-     * @param Aggregation 聚合函数
+     * Set 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
+     * @param Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public void setAggregation(String Aggregation) {
         this.Aggregation = Aggregation;
     }
 
     /**
-     * Get 指标过滤 
-     * @return Filters 指标过滤
+     * Get 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等） 
+     * @return Filters 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 指标过滤
-     * @param Filters 指标过滤
+     * Set 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
+     * @param Filters 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

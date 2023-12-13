@@ -25,7 +25,7 @@ public class QueryAsyncBindVpcStatusResponse extends AbstractModel {
 
     /**
     * processing 处理中，success 执行成功，
-fail 执行失败
+failed 执行失败
     */
     @SerializedName("Status")
     @Expose
@@ -48,9 +48,9 @@ fail 执行失败
 
     /**
      * Get processing 处理中，success 执行成功，
-fail 执行失败 
+failed 执行失败 
      * @return Status processing 处理中，success 执行成功，
-fail 执行失败
+failed 执行失败
      */
     public String getStatus() {
         return this.Status;
@@ -58,9 +58,9 @@ fail 执行失败
 
     /**
      * Set processing 处理中，success 执行成功，
-fail 执行失败
+failed 执行失败
      * @param Status processing 处理中，success 执行成功，
-fail 执行失败
+failed 执行失败
      */
     public void setStatus(String Status) {
         this.Status = Status;

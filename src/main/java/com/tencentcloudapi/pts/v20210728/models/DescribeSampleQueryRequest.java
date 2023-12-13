@@ -38,14 +38,14 @@ public class DescribeSampleQueryRequest extends AbstractModel {
     private String ScenarioId;
 
     /**
-    * 指标名
+    * 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
-    * 聚合条件
+    * 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
     */
     @SerializedName("Aggregation")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeSampleQueryRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 过滤条件
+    * 标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
     */
     @SerializedName("Labels")
     @Expose
@@ -98,32 +98,32 @@ public class DescribeSampleQueryRequest extends AbstractModel {
     }
 
     /**
-     * Get 指标名 
-     * @return Metric 指标名
+     * Get 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名 
+     * @return Metric 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set 指标名
-     * @param Metric 指标名
+     * Set 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+     * @param Metric 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get 聚合条件 
-     * @return Aggregation 聚合条件
+     * Get 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge 
+     * @return Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public String getAggregation() {
         return this.Aggregation;
     }
 
     /**
-     * Set 聚合条件
-     * @param Aggregation 聚合条件
+     * Set 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
+     * @param Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public void setAggregation(String Aggregation) {
         this.Aggregation = Aggregation;
@@ -146,16 +146,16 @@ public class DescribeSampleQueryRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件 
-     * @return Labels 过滤条件
+     * Get 标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签 
+     * @return Labels 标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 过滤条件
-     * @param Labels 过滤条件
+     * Set 标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
+     * @param Labels 标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;

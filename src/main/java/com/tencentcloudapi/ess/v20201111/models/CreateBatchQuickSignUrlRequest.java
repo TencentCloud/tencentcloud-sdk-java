@@ -24,14 +24,6 @@ import java.util.HashMap;
 public class CreateBatchQuickSignUrlRequest extends AbstractModel {
 
     /**
-    * 批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
-    */
-    @SerializedName("FlowIds")
-    @Expose
-    private String [] FlowIds;
-
-    /**
     * 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 注:
 `1. ApproverType目前只支持个人类型的签署人。`
@@ -57,6 +49,22 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+    */
+    @SerializedName("FlowIds")
+    @Expose
+    private String [] FlowIds;
+
+    /**
+    * 合同组编号
+注：`该参数和合同流程ID数组必须二选一`
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
 
     /**
     * 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
@@ -89,26 +97,6 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     @SerializedName("ApproverSignTypes")
     @Expose
     private Long [] ApproverSignTypes;
-
-    /**
-     * Get 批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。` 
-     * @return FlowIds 批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
-     */
-    public String [] getFlowIds() {
-        return this.FlowIds;
-    }
-
-    /**
-     * Set 批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
-     * @param FlowIds 批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
-     */
-    public void setFlowIds(String [] FlowIds) {
-        this.FlowIds = FlowIds;
-    }
 
     /**
      * Get 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
@@ -180,6 +168,46 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。` 
+     * @return FlowIds 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+     */
+    public String [] getFlowIds() {
+        return this.FlowIds;
+    }
+
+    /**
+     * Set 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+     * @param FlowIds 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+     */
+    public void setFlowIds(String [] FlowIds) {
+        this.FlowIds = FlowIds;
+    }
+
+    /**
+     * Get 合同组编号
+注：`该参数和合同流程ID数组必须二选一` 
+     * @return FlowGroupId 合同组编号
+注：`该参数和合同流程ID数组必须二选一`
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组编号
+注：`该参数和合同流程ID数组必须二选一`
+     * @param FlowGroupId 合同组编号
+注：`该参数和合同流程ID数组必须二选一`
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
     }
 
     /**
@@ -282,12 +310,6 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateBatchQuickSignUrlRequest(CreateBatchQuickSignUrlRequest source) {
-        if (source.FlowIds != null) {
-            this.FlowIds = new String[source.FlowIds.length];
-            for (int i = 0; i < source.FlowIds.length; i++) {
-                this.FlowIds[i] = new String(source.FlowIds[i]);
-            }
-        }
         if (source.FlowApproverInfo != null) {
             this.FlowApproverInfo = new FlowCreateApprover(source.FlowApproverInfo);
         }
@@ -296,6 +318,15 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
+        }
+        if (source.FlowIds != null) {
+            this.FlowIds = new String[source.FlowIds.length];
+            for (int i = 0; i < source.FlowIds.length; i++) {
+                this.FlowIds[i] = new String(source.FlowIds[i]);
+            }
+        }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
         }
         if (source.JumpUrl != null) {
             this.JumpUrl = new String(source.JumpUrl);
@@ -319,10 +350,11 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamObj(map, prefix + "FlowApproverInfo.", this.FlowApproverInfo);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamArraySimple(map, prefix + "SignatureTypes.", this.SignatureTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);

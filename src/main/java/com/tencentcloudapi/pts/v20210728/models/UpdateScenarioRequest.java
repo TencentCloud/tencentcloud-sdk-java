@@ -45,7 +45,7 @@ public class UpdateScenarioRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 压测引擎类型
+    * 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
     */
     @SerializedName("Type")
     @Expose
@@ -226,16 +226,16 @@ public class UpdateScenarioRequest extends AbstractModel {
     }
 
     /**
-     * Get 压测引擎类型 
-     * @return Type 压测引擎类型
+     * Get 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。 
+     * @return Type 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 压测引擎类型
-     * @param Type 压测引擎类型
+     * Set 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
+     * @param Type 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
      */
     public void setType(String Type) {
         this.Type = Type;

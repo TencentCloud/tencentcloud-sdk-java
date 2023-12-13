@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Label extends AbstractModel {
 
     /**
-    * label名字
+    * 标签名
     */
     @SerializedName("LabelName")
     @Expose
     private String LabelName;
 
     /**
-    * label值
+    * 标签值
     */
     @SerializedName("LabelValue")
     @Expose
     private String LabelValue;
 
     /**
-     * Get label名字 
-     * @return LabelName label名字
+     * Get 标签名 
+     * @return LabelName 标签名
      */
     public String getLabelName() {
         return this.LabelName;
     }
 
     /**
-     * Set label名字
-     * @param LabelName label名字
+     * Set 标签名
+     * @param LabelName 标签名
      */
     public void setLabelName(String LabelName) {
         this.LabelName = LabelName;
     }
 
     /**
-     * Get label值 
-     * @return LabelValue label值
+     * Get 标签值 
+     * @return LabelValue 标签值
      */
     public String getLabelValue() {
         return this.LabelValue;
     }
 
     /**
-     * Set label值
-     * @param LabelValue label值
+     * Set 标签值
+     * @param LabelValue 标签值
      */
     public void setLabelValue(String LabelValue) {
         this.LabelValue = LabelValue;

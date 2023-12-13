@@ -64,6 +64,17 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
     private Long RouteType;
 
     /**
+    * 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationType")
+    @Expose
+    private Long OperationType;
+
+    /**
      * Get vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId vpc的id，支撑网和公网接入点，该字段为空
@@ -163,6 +174,38 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.RouteType = RouteType;
     }
 
+    /**
+     * Get 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationType 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOperationType() {
+        return this.OperationType;
+    }
+
+    /**
+     * Set 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationType 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationType(Long OperationType) {
+        this.OperationType = OperationType;
+    }
+
     public PulsarNetworkAccessPointInfo() {
     }
 
@@ -186,6 +229,9 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         if (source.RouteType != null) {
             this.RouteType = new Long(source.RouteType);
         }
+        if (source.OperationType != null) {
+            this.OperationType = new Long(source.OperationType);
+        }
     }
 
 
@@ -198,6 +244,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
+        this.setParamSimple(map, prefix + "OperationType", this.OperationType);
 
     }
 }

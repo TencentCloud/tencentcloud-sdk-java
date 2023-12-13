@@ -32,6 +32,13 @@ public class UpgradeGrafanaDashboardRequest extends AbstractModel {
 
     /**
     * Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -49,6 +56,8 @@ public class UpgradeGrafanaDashboardRequest extends AbstractModel {
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+<li>pts</li>
+<li>kong</li>
     */
     @SerializedName("IntegrationCodes")
     @Expose
@@ -72,24 +81,13 @@ public class UpgradeGrafanaDashboardRequest extends AbstractModel {
 
     /**
      * Get Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
-<li>spring_mvc</li>
-<li>mysql</li>
-<li>go</li>
-<li>redis</li>
-<li>jvm</li>
-<li>pgsql</li>
-<li>mongo</li>
-<li>kafka</li>
-<li>es</li>
-<li>flink</li>
-<li>blackbox</li>
-<li>consule</li>
-<li>memcached</li>
-<li>zk</li>
-<li>tps</li>
-<li>istio</li>
-<li>etcd</li> 
-     * @return IntegrationCodes Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -107,6 +105,35 @@ public class UpgradeGrafanaDashboardRequest extends AbstractModel {
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+<li>pts</li>
+<li>kong</li> 
+     * @return IntegrationCodes Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
+<li>spring_mvc</li>
+<li>mysql</li>
+<li>go</li>
+<li>redis</li>
+<li>jvm</li>
+<li>pgsql</li>
+<li>mongo</li>
+<li>kafka</li>
+<li>es</li>
+<li>flink</li>
+<li>blackbox</li>
+<li>consule</li>
+<li>memcached</li>
+<li>zk</li>
+<li>tps</li>
+<li>istio</li>
+<li>etcd</li>
+<li>pts</li>
+<li>kong</li>
      */
     public String [] getIntegrationCodes() {
         return this.IntegrationCodes;
@@ -114,6 +141,13 @@ public class UpgradeGrafanaDashboardRequest extends AbstractModel {
 
     /**
      * Set Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -131,7 +165,16 @@ public class UpgradeGrafanaDashboardRequest extends AbstractModel {
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+<li>pts</li>
+<li>kong</li>
      * @param IntegrationCodes Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -149,6 +192,8 @@ public class UpgradeGrafanaDashboardRequest extends AbstractModel {
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+<li>pts</li>
+<li>kong</li>
      */
     public void setIntegrationCodes(String [] IntegrationCodes) {
         this.IntegrationCodes = IntegrationCodes;

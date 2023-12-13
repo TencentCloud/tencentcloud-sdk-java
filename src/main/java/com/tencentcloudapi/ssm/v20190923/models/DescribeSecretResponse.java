@@ -73,7 +73,7 @@ public class DescribeSecretResponse extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+    * 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretType")
@@ -272,9 +272,9 @@ public class DescribeSecretResponse extends AbstractModel {
     }
 
     /**
-     * Get 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+     * Get 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+     * @return SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecretType() {
@@ -282,9 +282,9 @@ public class DescribeSecretResponse extends AbstractModel {
     }
 
     /**
-     * Set 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+     * Set 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+     * @param SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretType(Long SecretType) {

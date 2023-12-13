@@ -31,7 +31,7 @@ public class InternalMetricQuery extends AbstractModel {
     private String Metric;
 
     /**
-    * 聚合函数
+    * 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
     */
     @SerializedName("Aggregation")
     @Expose
@@ -45,7 +45,7 @@ public class InternalMetricQuery extends AbstractModel {
     private Label [] Labels;
 
     /**
-    * 指标过滤
+    * 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
     */
     @SerializedName("Filters")
     @Expose
@@ -75,16 +75,16 @@ public class InternalMetricQuery extends AbstractModel {
     }
 
     /**
-     * Get 聚合函数 
-     * @return Aggregation 聚合函数
+     * Get 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge 
+     * @return Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public String getAggregation() {
         return this.Aggregation;
     }
 
     /**
-     * Set 聚合函数
-     * @param Aggregation 聚合函数
+     * Set 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
+     * @param Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public void setAggregation(String Aggregation) {
         this.Aggregation = Aggregation;
@@ -107,16 +107,16 @@ public class InternalMetricQuery extends AbstractModel {
     }
 
     /**
-     * Get 指标过滤 
-     * @return Filters 指标过滤
+     * Get 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等） 
+     * @return Filters 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 指标过滤
-     * @param Filters 指标过滤
+     * Set 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
+     * @param Filters 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -591,19 +591,6 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *接口未使用
-
-查询自定义账号
-     * @param req DescribeCustomAccountsRequest
-     * @return DescribeCustomAccountsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCustomAccountsResponse DescribeCustomAccounts(DescribeCustomAccountsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCustomAccounts", DescribeCustomAccountsResponse.class);
-    }
-
-    /**
      *查询实例公网访问入口状态
      * @param req DescribeExternalEndpointStatusRequest
      * @return DescribeExternalEndpointStatusResponse

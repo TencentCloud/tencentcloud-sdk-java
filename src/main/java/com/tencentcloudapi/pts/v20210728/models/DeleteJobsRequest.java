@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteJobsRequest extends AbstractModel {
 
     /**
-    * 任务ID数组
+    * 待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
     */
     @SerializedName("JobIds")
     @Expose
@@ -45,16 +45,16 @@ public class DeleteJobsRequest extends AbstractModel {
     private String [] ScenarioIds;
 
     /**
-     * Get 任务ID数组 
-     * @return JobIds 任务ID数组
+     * Get 待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取） 
+     * @return JobIds 待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
      */
     public String [] getJobIds() {
         return this.JobIds;
     }
 
     /**
-     * Set 任务ID数组
-     * @param JobIds 任务ID数组
+     * Set 待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
+     * @param JobIds 待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
      */
     public void setJobIds(String [] JobIds) {
         this.JobIds = JobIds;

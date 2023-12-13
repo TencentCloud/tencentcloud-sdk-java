@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreatePrometheusScrapeJobRequest extends AbstractModel {
 
     /**
-    * Prometheus 实例 ID，例如：prom-abcd1234
+    * Prometheus 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+    * Agent ID(可通过DescribePrometheusAgents 接口获取)
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 抓取任务配置，格式：job_name:xx
+    * 抓取任务配置
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-     * Get Prometheus 实例 ID，例如：prom-abcd1234 
-     * @return InstanceId Prometheus 实例 ID，例如：prom-abcd1234
+     * Get Prometheus 实例 ID 
+     * @return InstanceId Prometheus 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Prometheus 实例 ID，例如：prom-abcd1234
-     * @param InstanceId Prometheus 实例 ID，例如：prom-abcd1234
+     * Set Prometheus 实例 ID
+     * @param InstanceId Prometheus 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取 
-     * @return AgentId Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+     * Get Agent ID(可通过DescribePrometheusAgents 接口获取) 
+     * @return AgentId Agent ID(可通过DescribePrometheusAgents 接口获取)
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
-     * @param AgentId Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+     * Set Agent ID(可通过DescribePrometheusAgents 接口获取)
+     * @param AgentId Agent ID(可通过DescribePrometheusAgents 接口获取)
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 抓取任务配置，格式：job_name:xx 
-     * @return Config 抓取任务配置，格式：job_name:xx
+     * Get 抓取任务配置 
+     * @return Config 抓取任务配置
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 抓取任务配置，格式：job_name:xx
-     * @param Config 抓取任务配置，格式：job_name:xx
+     * Set 抓取任务配置
+     * @param Config 抓取任务配置
      */
     public void setConfig(String Config) {
         this.Config = Config;

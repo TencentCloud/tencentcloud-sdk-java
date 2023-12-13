@@ -31,6 +31,14 @@ public class GetRunMetadataFileRequest extends AbstractModel {
     private String RunUuid;
 
     /**
+    * 项目ID。
+（不填使用指定地域下的默认项目）
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
     * 需要获取的文件名。
 
 默认支持以下文件：
@@ -47,12 +55,20 @@ public class GetRunMetadataFileRequest extends AbstractModel {
     private String Key;
 
     /**
-    * 项目ID。
-（不填使用指定地域下的默认项目）
+    * 需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html
     */
-    @SerializedName("ProjectId")
+    @SerializedName("Keys")
     @Expose
-    private String ProjectId;
+    private String [] Keys;
 
     /**
      * Get 任务Uuid。 
@@ -68,6 +84,26 @@ public class GetRunMetadataFileRequest extends AbstractModel {
      */
     public void setRunUuid(String RunUuid) {
         this.RunUuid = RunUuid;
+    }
+
+    /**
+     * Get 项目ID。
+（不填使用指定地域下的默认项目） 
+     * @return ProjectId 项目ID。
+（不填使用指定地域下的默认项目）
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID。
+（不填使用指定地域下的默认项目）
+     * @param ProjectId 项目ID。
+（不填使用指定地域下的默认项目）
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -123,23 +159,55 @@ public class GetRunMetadataFileRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目ID。
-（不填使用指定地域下的默认项目） 
-     * @return ProjectId 项目ID。
-（不填使用指定地域下的默认项目）
+     * Get 需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html 
+     * @return Keys 需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html
      */
-    public String getProjectId() {
-        return this.ProjectId;
+    public String [] getKeys() {
+        return this.Keys;
     }
 
     /**
-     * Set 项目ID。
-（不填使用指定地域下的默认项目）
-     * @param ProjectId 项目ID。
-（不填使用指定地域下的默认项目）
+     * Set 需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html
+     * @param Keys 需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html
      */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
+    public void setKeys(String [] Keys) {
+        this.Keys = Keys;
     }
 
     public GetRunMetadataFileRequest() {
@@ -153,11 +221,17 @@ public class GetRunMetadataFileRequest extends AbstractModel {
         if (source.RunUuid != null) {
             this.RunUuid = new String(source.RunUuid);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
         if (source.Key != null) {
             this.Key = new String(source.Key);
         }
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
+        if (source.Keys != null) {
+            this.Keys = new String[source.Keys.length];
+            for (int i = 0; i < source.Keys.length; i++) {
+                this.Keys[i] = new String(source.Keys[i]);
+            }
         }
     }
 
@@ -167,8 +241,9 @@ public class GetRunMetadataFileRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RunUuid", this.RunUuid);
-        this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamArraySimple(map, prefix + "Keys.", this.Keys);
 
     }
 }

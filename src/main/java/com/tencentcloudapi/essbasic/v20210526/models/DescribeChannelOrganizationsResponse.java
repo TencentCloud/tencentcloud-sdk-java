@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeChannelOrganizationsResponse extends AbstractModel {
 
     /**
-    * 企业企业信息列表。
+    * 满足查询条件的企业信息列表。
     */
     @SerializedName("ChannelOrganizationInfos")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeChannelOrganizationsResponse extends AbstractModel {
     private Long Limit;
 
     /**
-    * 符合条件的企业数量。
+    * 满足查询条件的企业总数量。
     */
     @SerializedName("Total")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeChannelOrganizationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 企业企业信息列表。 
-     * @return ChannelOrganizationInfos 企业企业信息列表。
+     * Get 满足查询条件的企业信息列表。 
+     * @return ChannelOrganizationInfos 满足查询条件的企业信息列表。
      */
     public ChannelOrganizationInfo [] getChannelOrganizationInfos() {
         return this.ChannelOrganizationInfos;
     }
 
     /**
-     * Set 企业企业信息列表。
-     * @param ChannelOrganizationInfos 企业企业信息列表。
+     * Set 满足查询条件的企业信息列表。
+     * @param ChannelOrganizationInfos 满足查询条件的企业信息列表。
      */
     public void setChannelOrganizationInfos(ChannelOrganizationInfo [] ChannelOrganizationInfos) {
         this.ChannelOrganizationInfos = ChannelOrganizationInfos;
@@ -107,16 +107,16 @@ public class DescribeChannelOrganizationsResponse extends AbstractModel {
     }
 
     /**
-     * Get 符合条件的企业数量。 
-     * @return Total 符合条件的企业数量。
+     * Get 满足查询条件的企业总数量。 
+     * @return Total 满足查询条件的企业总数量。
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 符合条件的企业数量。
-     * @param Total 符合条件的企业数量。
+     * Set 满足查询条件的企业总数量。
+     * @param Total 满足查询条件的企业总数量。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

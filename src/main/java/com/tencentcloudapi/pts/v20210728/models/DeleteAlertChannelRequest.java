@@ -31,7 +31,7 @@ public class DeleteAlertChannelRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * Notice ID
+    * 待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
     */
     @SerializedName("NoticeId")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteAlertChannelRequest extends AbstractModel {
     }
 
     /**
-     * Get Notice ID 
-     * @return NoticeId Notice ID
+     * Get 待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取） 
+     * @return NoticeId 待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
      */
     public String getNoticeId() {
         return this.NoticeId;
     }
 
     /**
-     * Set Notice ID
-     * @param NoticeId Notice ID
+     * Set 待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
+     * @param NoticeId 待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
      */
     public void setNoticeId(String NoticeId) {
         this.NoticeId = NoticeId;

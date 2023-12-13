@@ -138,6 +138,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建日志采集配置
+     * @param req CreateCLSLogConfigRequest
+     * @return CreateCLSLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSLogConfigResponse CreateCLSLogConfig(CreateCLSLogConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSLogConfig", CreateCLSLogConfigResponse.class);
+    }
+
+    /**
      *创建集群
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
@@ -300,6 +311,17 @@ public class TkeClient extends AbstractClient{
     public CreateEdgeLogConfigResponse CreateEdgeLogConfig(CreateEdgeLogConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateEdgeLogConfig", CreateEdgeLogConfigResponse.class);
+    }
+
+    /**
+     *为弹性集群创建日志采集配置
+     * @param req CreateEksLogConfigRequest
+     * @return CreateEksLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEksLogConfigResponse CreateEksLogConfig(CreateEksLogConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEksLogConfig", CreateEksLogConfigResponse.class);
     }
 
     /**

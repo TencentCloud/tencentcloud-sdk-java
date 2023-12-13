@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AbortJobRequest extends AbstractModel {
 
     /**
-    * 任务ID
+    * 待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
     */
     @SerializedName("JobId")
     @Expose
@@ -52,16 +52,16 @@ public class AbortJobRequest extends AbstractModel {
     private Long AbortReason;
 
     /**
-     * Get 任务ID 
-     * @return JobId 任务ID
+     * Get 待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取） 
+     * @return JobId 待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID
-     * @param JobId 任务ID
+     * Set 待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
+     * @param JobId 待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
