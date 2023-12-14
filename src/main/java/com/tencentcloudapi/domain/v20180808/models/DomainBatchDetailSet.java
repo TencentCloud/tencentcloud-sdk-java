@@ -31,6 +31,13 @@ public class DomainBatchDetailSet extends AbstractModel {
     private Long Id;
 
     /**
+    * 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
+
+    /**
     * 域名
     */
     @SerializedName("Domain")
@@ -70,6 +77,14 @@ success  操作成功。
     private String UpdatedOn;
 
     /**
+    * 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BigDealId")
+    @Expose
+    private String BigDealId;
+
+    /**
      * Get 详情ID 
      * @return Id 详情ID
      */
@@ -83,6 +98,22 @@ success  操作成功。
      */
     public void setId(Long Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新 
+     * @return Action 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+     * @param Action 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
     }
 
     /**
@@ -181,6 +212,26 @@ success  操作成功。
         this.UpdatedOn = UpdatedOn;
     }
 
+    /**
+     * Get 订单号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BigDealId 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBigDealId() {
+        return this.BigDealId;
+    }
+
+    /**
+     * Set 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BigDealId 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBigDealId(String BigDealId) {
+        this.BigDealId = BigDealId;
+    }
+
     public DomainBatchDetailSet() {
     }
 
@@ -191,6 +242,9 @@ success  操作成功。
     public DomainBatchDetailSet(DomainBatchDetailSet source) {
         if (source.Id != null) {
             this.Id = new Long(source.Id);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
         }
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
@@ -207,6 +261,9 @@ success  操作成功。
         if (source.UpdatedOn != null) {
             this.UpdatedOn = new String(source.UpdatedOn);
         }
+        if (source.BigDealId != null) {
+            this.BigDealId = new String(source.BigDealId);
+        }
     }
 
 
@@ -215,11 +272,13 @@ success  操作成功。
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
+        this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
 
     }
 }

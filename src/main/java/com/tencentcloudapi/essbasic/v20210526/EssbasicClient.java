@@ -887,6 +887,33 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateBatchOrganizationRegistrationTasks）用于批量创建企业认证链接
+该接口为异步提交任务接口,需要跟查询企业批量认证链接(DescribeBatchOrganizationRegistrationUrls) 配合使用.
+
+批量创建链接有以下限制：
+1. 单次最多创建10个子客。
+2. 一天同一家企业最多创建8000个子客。
+3. 同一批创建的子客不能重复 其中包括 企业名称，企业统一信用代码，子客经办人openId。
+4. 跳转到小程序的实现，参考微信官方文档（分为全屏、半屏两种方式），如何配置也可以请参考: 跳转电子签小程序配置
+
+注： 1. 如果生成的链接是APP链接，跳转到小程序的实现，参考微信官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式），如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>
+
+**腾讯电子签小程序的AppID 和 原始Id如下:**
+
+| 小程序 | AppID | 原始ID |
+| ------------ | ------------ | ------------ |
+| 腾讯电子签（正式版） | wxa023b292fd19d41d | gh_da88f6188665 |
+| 腾讯电子签Demo | wx371151823f6f3edf | gh_39a5d3de69fa |
+     * @param req CreateBatchOrganizationRegistrationTasksRequest
+     * @return CreateBatchOrganizationRegistrationTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBatchOrganizationRegistrationTasksResponse CreateBatchOrganizationRegistrationTasks(CreateBatchOrganizationRegistrationTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBatchOrganizationRegistrationTasks", CreateBatchOrganizationRegistrationTasksResponse.class);
+    }
+
+    /**
      *提交申请出证报告任务并返回报告ID。
 
 注意：
@@ -1106,6 +1133,21 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     public CreateSignUrlsResponse CreateSignUrls(CreateSignUrlsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSignUrls", CreateSignUrlsResponse.class);
+    }
+
+    /**
+     *此接口用于获取企业批量认证异步任务的状态及结果。
+
+前提条件：已调用 CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口，并得到了任务Id。
+
+异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间
+     * @param req DescribeBatchOrganizationRegistrationUrlsRequest
+     * @return DescribeBatchOrganizationRegistrationUrlsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchOrganizationRegistrationUrlsResponse DescribeBatchOrganizationRegistrationUrls(DescribeBatchOrganizationRegistrationUrlsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchOrganizationRegistrationUrls", DescribeBatchOrganizationRegistrationUrlsResponse.class);
     }
 
     /**

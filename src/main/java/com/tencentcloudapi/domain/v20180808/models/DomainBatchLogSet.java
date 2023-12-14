@@ -54,6 +54,27 @@ done 执行完成。
     private String CreatedOn;
 
     /**
+    * 批量操作成功个数
+    */
+    @SerializedName("Success")
+    @Expose
+    private Long Success;
+
+    /**
+    * 批量操作处理中个数
+    */
+    @SerializedName("Doing")
+    @Expose
+    private Long Doing;
+
+    /**
+    * 批量操作失败个数
+    */
+    @SerializedName("Failed")
+    @Expose
+    private Long Failed;
+
+    /**
      * Get 日志ID 
      * @return LogId 日志ID
      */
@@ -125,6 +146,54 @@ done 执行完成。
         this.CreatedOn = CreatedOn;
     }
 
+    /**
+     * Get 批量操作成功个数 
+     * @return Success 批量操作成功个数
+     */
+    public Long getSuccess() {
+        return this.Success;
+    }
+
+    /**
+     * Set 批量操作成功个数
+     * @param Success 批量操作成功个数
+     */
+    public void setSuccess(Long Success) {
+        this.Success = Success;
+    }
+
+    /**
+     * Get 批量操作处理中个数 
+     * @return Doing 批量操作处理中个数
+     */
+    public Long getDoing() {
+        return this.Doing;
+    }
+
+    /**
+     * Set 批量操作处理中个数
+     * @param Doing 批量操作处理中个数
+     */
+    public void setDoing(Long Doing) {
+        this.Doing = Doing;
+    }
+
+    /**
+     * Get 批量操作失败个数 
+     * @return Failed 批量操作失败个数
+     */
+    public Long getFailed() {
+        return this.Failed;
+    }
+
+    /**
+     * Set 批量操作失败个数
+     * @param Failed 批量操作失败个数
+     */
+    public void setFailed(Long Failed) {
+        this.Failed = Failed;
+    }
+
     public DomainBatchLogSet() {
     }
 
@@ -145,6 +214,15 @@ done 执行完成。
         if (source.CreatedOn != null) {
             this.CreatedOn = new String(source.CreatedOn);
         }
+        if (source.Success != null) {
+            this.Success = new Long(source.Success);
+        }
+        if (source.Doing != null) {
+            this.Doing = new Long(source.Doing);
+        }
+        if (source.Failed != null) {
+            this.Failed = new Long(source.Failed);
+        }
     }
 
 
@@ -156,6 +234,9 @@ done 执行完成。
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "Success", this.Success);
+        this.setParamSimple(map, prefix + "Doing", this.Doing);
+        this.setParamSimple(map, prefix + "Failed", this.Failed);
 
     }
 }

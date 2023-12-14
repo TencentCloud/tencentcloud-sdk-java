@@ -194,7 +194,6 @@ public class DomainClient extends AbstractClient{
 
     /**
      *本接口 (  DescribeDomainBaseInfo) 获取域名基本信息。
-
      * @param req DescribeDomainBaseInfoRequest
      * @return DescribeDomainBaseInfoResponse
      * @throws TencentCloudSDKException
@@ -206,7 +205,6 @@ public class DomainClient extends AbstractClient{
 
     /**
      *本接口 (  DescribeDomainNameList ) 我的域名列表。
-
      * @param req DescribeDomainNameListRequest
      * @return DescribeDomainNameListResponse
      * @throws TencentCloudSDKException

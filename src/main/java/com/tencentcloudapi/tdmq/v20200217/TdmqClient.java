@@ -844,6 +844,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取在线消费端详情
+     * @param req DescribeRocketMQConsumerConnectionDetailRequest
+     * @return DescribeRocketMQConsumerConnectionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQConsumerConnectionDetailResponse DescribeRocketMQConsumerConnectionDetail(DescribeRocketMQConsumerConnectionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQConsumerConnectionDetail", DescribeRocketMQConsumerConnectionDetailResponse.class);
+    }
+
+    /**
      *获取指定消费组下当前客户端的连接情况
      * @param req DescribeRocketMQConsumerConnectionsRequest
      * @return DescribeRocketMQConsumerConnectionsResponse
