@@ -59,7 +59,7 @@ public class CreateConnectionRequest extends AbstractModel {
     private Boolean Enable;
 
     /**
-    * 类型
+    * 连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
     */
     @SerializedName("Type")
     @Expose
@@ -146,16 +146,16 @@ public class CreateConnectionRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get 连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq 
+     * @return Type 连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set 连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
+     * @param Type 连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
      */
     public void setType(String Type) {
         this.Type = Type;

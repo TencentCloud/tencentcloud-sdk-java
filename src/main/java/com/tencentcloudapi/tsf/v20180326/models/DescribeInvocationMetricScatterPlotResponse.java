@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInvocationMetricScatterPlotResponse extends AbstractModel {
 
     /**
-    * 多值时间抽统计指标
+    * 多值时间统计指标
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -39,9 +39,9 @@ public class DescribeInvocationMetricScatterPlotResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 多值时间抽统计指标
+     * Get 多值时间统计指标
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 多值时间抽统计指标
+     * @return Result 多值时间统计指标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InvocationMetricScatterPlot getResult() {
@@ -49,9 +49,9 @@ public class DescribeInvocationMetricScatterPlotResponse extends AbstractModel {
     }
 
     /**
-     * Set 多值时间抽统计指标
+     * Set 多值时间统计指标
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 多值时间抽统计指标
+     * @param Result 多值时间统计指标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(InvocationMetricScatterPlot Result) {

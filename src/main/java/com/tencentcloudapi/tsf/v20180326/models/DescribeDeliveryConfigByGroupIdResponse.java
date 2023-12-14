@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDeliveryConfigByGroupIdResponse extends AbstractModel {
 
     /**
-    * 投递kafak配置项
+    * 投递kafka配置项
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDeliveryConfigByGroupIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 投递kafak配置项 
-     * @return Result 投递kafak配置项
+     * Get 投递kafka配置项 
+     * @return Result 投递kafka配置项
      */
     public SimpleKafkaDeliveryConfig getResult() {
         return this.Result;
     }
 
     /**
-     * Set 投递kafak配置项
-     * @param Result 投递kafak配置项
+     * Set 投递kafka配置项
+     * @param Result 投递kafka配置项
      */
     public void setResult(SimpleKafkaDeliveryConfig Result) {
         this.Result = Result;

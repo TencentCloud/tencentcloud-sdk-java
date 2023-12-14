@@ -61,7 +61,7 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
-     *获取实例列表
+     *获取集群列表
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException

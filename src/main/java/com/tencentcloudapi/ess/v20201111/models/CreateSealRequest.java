@@ -64,6 +64,7 @@ public class CreateSealRequest extends AbstractModel {
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
     */
@@ -160,11 +161,21 @@ public class CreateSealRequest extends AbstractModel {
     * 印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
     */
     @SerializedName("SealSize")
     @Expose
     private String SealSize;
+
+    /**
+    * 企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+    */
+    @SerializedName("TaxIdentifyCode")
+    @Expose
+    private String TaxIdentifyCode;
 
     /**
      * Get 执行本接口操作的员工信息。
@@ -264,6 +275,7 @@ public class CreateSealRequest extends AbstractModel {
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错` 
      * @return SealType 电子印章类型 , 可选类型如下: 
@@ -271,6 +283,7 @@ public class CreateSealRequest extends AbstractModel {
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
      */
@@ -284,6 +297,7 @@ public class CreateSealRequest extends AbstractModel {
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
      * @param SealType 电子印章类型 , 可选类型如下: 
@@ -291,6 +305,7 @@ public class CreateSealRequest extends AbstractModel {
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
      */
@@ -522,11 +537,13 @@ public class CreateSealRequest extends AbstractModel {
      * Get 印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul> 
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul> 
      * @return SealSize 印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
      */
     public String getSealSize() {
         return this.SealSize;
@@ -536,14 +553,40 @@ public class CreateSealRequest extends AbstractModel {
      * Set 印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
      * @param SealSize 印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
      */
     public void setSealSize(String SealSize) {
         this.SealSize = SealSize;
+    }
+
+    /**
+     * Get 企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号` 
+     * @return TaxIdentifyCode 企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+     */
+    public String getTaxIdentifyCode() {
+        return this.TaxIdentifyCode;
+    }
+
+    /**
+     * Set 企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+     * @param TaxIdentifyCode 企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+     */
+    public void setTaxIdentifyCode(String TaxIdentifyCode) {
+        this.TaxIdentifyCode = TaxIdentifyCode;
     }
 
     public CreateSealRequest() {
@@ -602,6 +645,9 @@ public class CreateSealRequest extends AbstractModel {
         if (source.SealSize != null) {
             this.SealSize = new String(source.SealSize);
         }
+        if (source.TaxIdentifyCode != null) {
+            this.TaxIdentifyCode = new String(source.TaxIdentifyCode);
+        }
     }
 
 
@@ -625,6 +671,7 @@ public class CreateSealRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileToken", this.FileToken);
         this.setParamSimple(map, prefix + "SealStyle", this.SealStyle);
         this.setParamSimple(map, prefix + "SealSize", this.SealSize);
+        this.setParamSimple(map, prefix + "TaxIdentifyCode", this.TaxIdentifyCode);
 
     }
 }

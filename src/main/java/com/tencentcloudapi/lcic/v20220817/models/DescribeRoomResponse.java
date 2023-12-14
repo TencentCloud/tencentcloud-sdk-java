@@ -224,6 +224,13 @@ video 纯视频
     private Long EnableAutoStart;
 
     /**
+    * 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+    */
+    @SerializedName("RecordBackground")
+    @Expose
+    private String RecordBackground;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -719,6 +726,22 @@ video 纯视频
     }
 
     /**
+     * Get 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道 
+     * @return RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     */
+    public String getRecordBackground() {
+        return this.RecordBackground;
+    }
+
+    /**
+     * Set 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     * @param RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     */
+    public void setRecordBackground(String RecordBackground) {
+        this.RecordBackground = RecordBackground;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -823,6 +846,9 @@ video 纯视频
         if (source.EnableAutoStart != null) {
             this.EnableAutoStart = new Long(source.EnableAutoStart);
         }
+        if (source.RecordBackground != null) {
+            this.RecordBackground = new String(source.RecordBackground);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -859,6 +885,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "LiveType", this.LiveType);
         this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+        this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

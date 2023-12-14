@@ -224,6 +224,13 @@ video 纯视频
     private Long EnableAutoStart;
 
     /**
+    * 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+    */
+    @SerializedName("RecordBackground")
+    @Expose
+    private String RecordBackground;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -711,6 +718,22 @@ video 纯视频
         this.EnableAutoStart = EnableAutoStart;
     }
 
+    /**
+     * Get 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道 
+     * @return RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     */
+    public String getRecordBackground() {
+        return this.RecordBackground;
+    }
+
+    /**
+     * Set 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     * @param RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     */
+    public void setRecordBackground(String RecordBackground) {
+        this.RecordBackground = RecordBackground;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -800,6 +823,9 @@ video 纯视频
         if (source.EnableAutoStart != null) {
             this.EnableAutoStart = new Long(source.EnableAutoStart);
         }
+        if (source.RecordBackground != null) {
+            this.RecordBackground = new String(source.RecordBackground);
+        }
     }
 
 
@@ -833,6 +859,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "LiveType", this.LiveType);
         this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+        this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
 
     }
 }
