@@ -108,6 +108,13 @@ public class PreExecuteFileSettings extends AbstractModel {
     private String AppId;
 
     /**
+    * 备注
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 脚本在COS上路径，已废弃 
      * @return Path 脚本在COS上路径，已废弃
      */
@@ -299,6 +306,22 @@ public class PreExecuteFileSettings extends AbstractModel {
         this.AppId = AppId;
     }
 
+    /**
+     * Get 备注 
+     * @return Remark 备注
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+     * @param Remark 备注
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public PreExecuteFileSettings() {
     }
 
@@ -346,6 +369,9 @@ public class PreExecuteFileSettings extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class PreExecuteFileSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "CosSecretId", this.CosSecretId);
         this.setParamSimple(map, prefix + "CosSecretKey", this.CosSecretKey);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

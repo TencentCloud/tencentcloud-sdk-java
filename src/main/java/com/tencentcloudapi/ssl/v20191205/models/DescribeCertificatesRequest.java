@@ -122,6 +122,20 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private Long Hostable;
 
     /**
+    * 筛选指定标签的证书
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
+    * //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+    */
+    @SerializedName("IsPendingIssue")
+    @Expose
+    private Long IsPendingIssue;
+
+    /**
      * Get 分页偏移量，从0开始。 
      * @return Offset 分页偏移量，从0开始。
      */
@@ -345,6 +359,38 @@ public class DescribeCertificatesRequest extends AbstractModel {
         this.Hostable = Hostable;
     }
 
+    /**
+     * Get 筛选指定标签的证书 
+     * @return Tags 筛选指定标签的证书
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 筛选指定标签的证书
+     * @param Tags 筛选指定标签的证书
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get //是否筛选等待签发的证书，传1是筛选，0和null不筛选 
+     * @return IsPendingIssue //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     */
+    public Long getIsPendingIssue() {
+        return this.IsPendingIssue;
+    }
+
+    /**
+     * Set //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     * @param IsPendingIssue //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     */
+    public void setIsPendingIssue(Long IsPendingIssue) {
+        this.IsPendingIssue = IsPendingIssue;
+    }
+
     public DescribeCertificatesRequest() {
     }
 
@@ -398,6 +444,15 @@ public class DescribeCertificatesRequest extends AbstractModel {
         if (source.Hostable != null) {
             this.Hostable = new Long(source.Hostable);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
+        if (source.IsPendingIssue != null) {
+            this.IsPendingIssue = new Long(source.IsPendingIssue);
+        }
     }
 
 
@@ -419,6 +474,8 @@ public class DescribeCertificatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSM", this.IsSM);
         this.setParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
         this.setParamSimple(map, prefix + "Hostable", this.Hostable);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsPendingIssue", this.IsPendingIssue);
 
     }
 }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeletePrometheusAlertPolicyRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * 实例ID(可通过 DescribePrometheusInstances 接口获取)
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 告警策略id列表
+    * 告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
     */
     @SerializedName("AlertIds")
     @Expose
     private String [] AlertIds;
 
     /**
-    * 告警策略名称
+    * 告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例ID(可通过 DescribePrometheusInstances 接口获取) 
+     * @return InstanceId 实例ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例ID(可通过 DescribePrometheusInstances 接口获取)
+     * @param InstanceId 实例ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 告警策略id列表 
-     * @return AlertIds 告警策略id列表
+     * Get 告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取) 
+     * @return AlertIds 告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
      */
     public String [] getAlertIds() {
         return this.AlertIds;
     }
 
     /**
-     * Set 告警策略id列表
-     * @param AlertIds 告警策略id列表
+     * Set 告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
+     * @param AlertIds 告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
      */
     public void setAlertIds(String [] AlertIds) {
         this.AlertIds = AlertIds;
     }
 
     /**
-     * Get 告警策略名称 
-     * @return Names 告警策略名称
+     * Get 告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除 
+     * @return Names 告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 告警策略名称
-     * @param Names 告警策略名称
+     * Set 告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
+     * @param Names 告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
      */
     public void setNames(String [] Names) {
         this.Names = Names;

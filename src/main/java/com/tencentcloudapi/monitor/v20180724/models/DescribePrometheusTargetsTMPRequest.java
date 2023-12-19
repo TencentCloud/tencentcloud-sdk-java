@@ -31,18 +31,19 @@ public class DescribePrometheusTargetsTMPRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 集群类型
-    */
-    @SerializedName("ClusterType")
-    @Expose
-    private String ClusterType;
-
-    /**
-    * 集群id
+    * 集成容器服务填绑定的集群id；
+集成中心填 non-cluster
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
+
+    /**
+    * 集群类型(可不填)
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
 
     /**
     * 过滤条件，当前支持
@@ -70,35 +71,39 @@ Value=up, down, unknown
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
-     */
-    public String getClusterType() {
-        return this.ClusterType;
-    }
-
-    /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
-     */
-    public void setClusterType(String ClusterType) {
-        this.ClusterType = ClusterType;
-    }
-
-    /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get 集成容器服务填绑定的集群id；
+集成中心填 non-cluster 
+     * @return ClusterId 集成容器服务填绑定的集群id；
+集成中心填 non-cluster
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set 集成容器服务填绑定的集群id；
+集成中心填 non-cluster
+     * @param ClusterId 集成容器服务填绑定的集群id；
+集成中心填 non-cluster
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 集群类型(可不填) 
+     * @return ClusterType 集群类型(可不填)
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型(可不填)
+     * @param ClusterType 集群类型(可不填)
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
     }
 
     /**
@@ -136,11 +141,11 @@ Value=up, down, unknown
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.ClusterType != null) {
-            this.ClusterType = new String(source.ClusterType);
-        }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -156,8 +161,8 @@ Value=up, down, unknown
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

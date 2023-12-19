@@ -38,11 +38,18 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * 是否为首次绑定，需要安装预聚合规则
+    * 是否为首次绑定，如果是首次绑定则需要安装预聚合规则
     */
     @SerializedName("IsFirstBind")
     @Expose
     private Boolean IsFirstBind;
+
+    /**
+    * 实例组件是否需要更新镜像版本
+    */
+    @SerializedName("ImageNeedUpdate")
+    @Expose
+    private Boolean ImageNeedUpdate;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -84,19 +91,35 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否为首次绑定，需要安装预聚合规则 
-     * @return IsFirstBind 是否为首次绑定，需要安装预聚合规则
+     * Get 是否为首次绑定，如果是首次绑定则需要安装预聚合规则 
+     * @return IsFirstBind 是否为首次绑定，如果是首次绑定则需要安装预聚合规则
      */
     public Boolean getIsFirstBind() {
         return this.IsFirstBind;
     }
 
     /**
-     * Set 是否为首次绑定，需要安装预聚合规则
-     * @param IsFirstBind 是否为首次绑定，需要安装预聚合规则
+     * Set 是否为首次绑定，如果是首次绑定则需要安装预聚合规则
+     * @param IsFirstBind 是否为首次绑定，如果是首次绑定则需要安装预聚合规则
      */
     public void setIsFirstBind(Boolean IsFirstBind) {
         this.IsFirstBind = IsFirstBind;
+    }
+
+    /**
+     * Get 实例组件是否需要更新镜像版本 
+     * @return ImageNeedUpdate 实例组件是否需要更新镜像版本
+     */
+    public Boolean getImageNeedUpdate() {
+        return this.ImageNeedUpdate;
+    }
+
+    /**
+     * Set 实例组件是否需要更新镜像版本
+     * @param ImageNeedUpdate 实例组件是否需要更新镜像版本
+     */
+    public void setImageNeedUpdate(Boolean ImageNeedUpdate) {
+        this.ImageNeedUpdate = ImageNeedUpdate;
     }
 
     /**
@@ -135,6 +158,9 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel {
         if (source.IsFirstBind != null) {
             this.IsFirstBind = new Boolean(source.IsFirstBind);
         }
+        if (source.ImageNeedUpdate != null) {
+            this.ImageNeedUpdate = new Boolean(source.ImageNeedUpdate);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Agents.", this.Agents);
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "IsFirstBind", this.IsFirstBind);
+        this.setParamSimple(map, prefix + "ImageNeedUpdate", this.ImageNeedUpdate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

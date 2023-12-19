@@ -59,6 +59,13 @@ public class DescribePrometheusConfigResponse extends AbstractModel {
     private PrometheusConfigItem [] Probes;
 
     /**
+    * 实例组件是否需要升级
+    */
+    @SerializedName("ImageNeedUpdate")
+    @Expose
+    private Boolean ImageNeedUpdate;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class DescribePrometheusConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get 实例组件是否需要升级 
+     * @return ImageNeedUpdate 实例组件是否需要升级
+     */
+    public Boolean getImageNeedUpdate() {
+        return this.ImageNeedUpdate;
+    }
+
+    /**
+     * Set 实例组件是否需要升级
+     * @param ImageNeedUpdate 实例组件是否需要升级
+     */
+    public void setImageNeedUpdate(Boolean ImageNeedUpdate) {
+        this.ImageNeedUpdate = ImageNeedUpdate;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -196,6 +219,9 @@ public class DescribePrometheusConfigResponse extends AbstractModel {
                 this.Probes[i] = new PrometheusConfigItem(source.Probes[i]);
             }
         }
+        if (source.ImageNeedUpdate != null) {
+            this.ImageNeedUpdate = new Boolean(source.ImageNeedUpdate);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -211,6 +237,7 @@ public class DescribePrometheusConfigResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
         this.setParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
         this.setParamArrayObj(map, prefix + "Probes.", this.Probes);
+        this.setParamSimple(map, prefix + "ImageNeedUpdate", this.ImageNeedUpdate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

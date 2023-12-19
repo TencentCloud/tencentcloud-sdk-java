@@ -50,6 +50,12 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 按照【注册码ID】进行过滤。
 类型：String
 必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
+类型：String
+必选：否
     */
     @SerializedName("Filters")
     @Expose
@@ -104,6 +110,12 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 
 按照【注册码ID】进行过滤。
 类型：String
+必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
+类型：String
 必选：否 
      * @return Filters 过滤器列表。
 
@@ -122,6 +134,12 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 - register-code-id
 
 按照【注册码ID】进行过滤。
+类型：String
+必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
      */
@@ -149,6 +167,12 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 按照【注册码ID】进行过滤。
 类型：String
 必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
+类型：String
+必选：否
      * @param Filters 过滤器列表。
 
 - instance-name
@@ -166,6 +190,12 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 - register-code-id
 
 按照【注册码ID】进行过滤。
+类型：String
+必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
      */

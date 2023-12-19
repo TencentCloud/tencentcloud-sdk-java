@@ -59,14 +59,14 @@ public class SearchLogRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 筛选条件
+    * 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
     */
     @SerializedName("Filter")
     @Expose
     private LogFilter [] Filter;
 
     /**
-    * 排序数组
+    * 事件查询结果排序，["timestamp","subject"]
     */
     @SerializedName("OrderFields")
     @Expose
@@ -160,32 +160,32 @@ public class SearchLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 筛选条件 
-     * @return Filter 筛选条件
+     * Get 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}] 
+     * @return Filter 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
      */
     public LogFilter [] getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 筛选条件
-     * @param Filter 筛选条件
+     * Set 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
+     * @param Filter 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
      */
     public void setFilter(LogFilter [] Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get 排序数组 
-     * @return OrderFields 排序数组
+     * Get 事件查询结果排序，["timestamp","subject"] 
+     * @return OrderFields 事件查询结果排序，["timestamp","subject"]
      */
     public String [] getOrderFields() {
         return this.OrderFields;
     }
 
     /**
-     * Set 排序数组
-     * @param OrderFields 排序数组
+     * Set 事件查询结果排序，["timestamp","subject"]
+     * @param OrderFields 事件查询结果排序，["timestamp","subject"]
      */
     public void setOrderFields(String [] OrderFields) {
         this.OrderFields = OrderFields;

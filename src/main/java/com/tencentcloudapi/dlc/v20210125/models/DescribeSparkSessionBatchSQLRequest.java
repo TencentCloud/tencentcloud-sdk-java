@@ -31,6 +31,13 @@ public class DescribeSparkSessionBatchSQLRequest extends AbstractModel {
     private String BatchId;
 
     /**
+    * 用户自定义主键, 若不为空，则按照该值查询
+    */
+    @SerializedName("CustomKey")
+    @Expose
+    private String CustomKey;
+
+    /**
      * Get SparkSQL唯一标识 
      * @return BatchId SparkSQL唯一标识
      */
@@ -46,6 +53,22 @@ public class DescribeSparkSessionBatchSQLRequest extends AbstractModel {
         this.BatchId = BatchId;
     }
 
+    /**
+     * Get 用户自定义主键, 若不为空，则按照该值查询 
+     * @return CustomKey 用户自定义主键, 若不为空，则按照该值查询
+     */
+    public String getCustomKey() {
+        return this.CustomKey;
+    }
+
+    /**
+     * Set 用户自定义主键, 若不为空，则按照该值查询
+     * @param CustomKey 用户自定义主键, 若不为空，则按照该值查询
+     */
+    public void setCustomKey(String CustomKey) {
+        this.CustomKey = CustomKey;
+    }
+
     public DescribeSparkSessionBatchSQLRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeSparkSessionBatchSQLRequest extends AbstractModel {
         if (source.BatchId != null) {
             this.BatchId = new String(source.BatchId);
         }
+        if (source.CustomKey != null) {
+            this.CustomKey = new String(source.CustomKey);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeSparkSessionBatchSQLRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamSimple(map, prefix + "CustomKey", this.CustomKey);
 
     }
 }

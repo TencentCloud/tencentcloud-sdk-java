@@ -39,18 +39,19 @@ public class SendChatMessageRequest extends AbstractModel {
 
     /**
     * 会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * 使用模式(仅多场景客服大模型支持)。
+    * 使用模式。
 通用问答：填写General。
 搜索增强问答：填写WithSearchPlugin。
 默认为General，即通用问答。
+当前可体验模型仅支持General。
     */
     @SerializedName("Mode")
     @Expose
@@ -98,11 +99,11 @@ public class SendChatMessageRequest extends AbstractModel {
 
     /**
      * Get 会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。 
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。 
      * @return ModelVersion 会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。
      */
     public String getModelVersion() {
         return this.ModelVersion;
@@ -110,39 +111,43 @@ public class SendChatMessageRequest extends AbstractModel {
 
     /**
      * Set 会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。
      * @param ModelVersion 会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get 使用模式(仅多场景客服大模型支持)。
-通用问答：填写General。
-搜索增强问答：填写WithSearchPlugin。
-默认为General，即通用问答。 
-     * @return Mode 使用模式(仅多场景客服大模型支持)。
+     * Get 使用模式。
 通用问答：填写General。
 搜索增强问答：填写WithSearchPlugin。
 默认为General，即通用问答。
+当前可体验模型仅支持General。 
+     * @return Mode 使用模式。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
+当前可体验模型仅支持General。
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 使用模式(仅多场景客服大模型支持)。
+     * Set 使用模式。
 通用问答：填写General。
 搜索增强问答：填写WithSearchPlugin。
 默认为General，即通用问答。
-     * @param Mode 使用模式(仅多场景客服大模型支持)。
+当前可体验模型仅支持General。
+     * @param Mode 使用模式。
 通用问答：填写General。
 搜索增强问答：填写WithSearchPlugin。
 默认为General，即通用问答。
+当前可体验模型仅支持General。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;

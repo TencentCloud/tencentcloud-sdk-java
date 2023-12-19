@@ -99,6 +99,17 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     private Long [] ApproverSignTypes;
 
     /**
+    * 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+    */
+    @SerializedName("SignTypeSelector")
+    @Expose
+    private Long SignTypeSelector;
+
+    /**
      * Get 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 注:
 `1. ApproverType目前只支持个人类型的签署人。`
@@ -302,6 +313,38 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.ApproverSignTypes = ApproverSignTypes;
     }
 
+    /**
+     * Get 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。` 
+     * @return SignTypeSelector 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+     */
+    public Long getSignTypeSelector() {
+        return this.SignTypeSelector;
+    }
+
+    /**
+     * Set 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+     * @param SignTypeSelector 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+     */
+    public void setSignTypeSelector(Long SignTypeSelector) {
+        this.SignTypeSelector = SignTypeSelector;
+    }
+
     public CreateBatchQuickSignUrlRequest() {
     }
 
@@ -343,6 +386,9 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
                 this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
             }
         }
+        if (source.SignTypeSelector != null) {
+            this.SignTypeSelector = new Long(source.SignTypeSelector);
+        }
     }
 
 
@@ -358,6 +404,7 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamArraySimple(map, prefix + "SignatureTypes.", this.SignatureTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
+        this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
 
     }
 }

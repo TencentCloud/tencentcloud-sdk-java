@@ -75,7 +75,7 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     /**
     * 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果法人作为超管管理组织机构,超管姓名就是法人姓名
     */
     @SerializedName("AdminName")
     @Expose
@@ -229,10 +229,10 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     /**
      * Get 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名 
+如果法人作为超管管理组织机构,超管姓名就是法人姓名 
      * @return AdminName 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果法人作为超管管理组织机构,超管姓名就是法人姓名
      */
     public String getAdminName() {
         return this.AdminName;
@@ -241,10 +241,10 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     /**
      * Set 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果法人作为超管管理组织机构,超管姓名就是法人姓名
      * @param AdminName 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果法人作为超管管理组织机构,超管姓名就是法人姓名
      */
     public void setAdminName(String AdminName) {
         this.AdminName = AdminName;

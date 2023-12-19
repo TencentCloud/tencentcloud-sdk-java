@@ -780,6 +780,9 @@ public enum VpcErrorCode {
     // 不支持创建流日志：当前弹性网卡未绑定实例。
      UNSUPPORTEDOPERATION_FLOWLOGSNOTSUPPORTNULLINSTANCEENI("UnsupportedOperation.FlowLogsNotSupportNullInstanceEni"),
      
+    // TGW还没有投放IPv6网段
+     UNSUPPORTEDOPERATION_IPV6CIDRNOTDEPLOYED("UnsupportedOperation.IPV6CidrNotDeployed"),
+     
     // 指定的客户令牌已经被使用。
      UNSUPPORTEDOPERATION_IDEMPOTENTPARAMETERMISMATCH("UnsupportedOperation.IdempotentParameterMismatch"),
      

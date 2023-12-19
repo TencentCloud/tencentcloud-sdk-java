@@ -287,6 +287,17 @@ public class FlowCreateApprover extends AbstractModel {
     private Long [] ApproverSignTypes;
 
     /**
+    * 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+    */
+    @SerializedName("SignTypeSelector")
+    @Expose
+    private Long SignTypeSelector;
+
+    /**
      * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
@@ -1042,6 +1053,38 @@ public class FlowCreateApprover extends AbstractModel {
         this.ApproverSignTypes = ApproverSignTypes;
     }
 
+    /**
+     * Get 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。` 
+     * @return SignTypeSelector 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+     */
+    public Long getSignTypeSelector() {
+        return this.SignTypeSelector;
+    }
+
+    /**
+     * Set 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+     * @param SignTypeSelector 生成H5签署链接时，您可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+     */
+    public void setSignTypeSelector(Long SignTypeSelector) {
+        this.SignTypeSelector = SignTypeSelector;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -1143,6 +1186,9 @@ public class FlowCreateApprover extends AbstractModel {
                 this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
             }
         }
+        if (source.SignTypeSelector != null) {
+            this.SignTypeSelector = new Long(source.SignTypeSelector);
+        }
     }
 
 
@@ -1175,6 +1221,7 @@ public class FlowCreateApprover extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
         this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
+        this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
 
     }
 }

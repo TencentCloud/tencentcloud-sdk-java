@@ -88,6 +88,14 @@ public class AlarmReceiverInfo extends AbstractModel {
     private Long WecomGroup;
 
     /**
+    * 飞书群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LarkGroup")
+    @Expose
+    private Long LarkGroup;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -235,6 +243,26 @@ public class AlarmReceiverInfo extends AbstractModel {
         this.WecomGroup = WecomGroup;
     }
 
+    /**
+     * Get 飞书群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LarkGroup 飞书群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLarkGroup() {
+        return this.LarkGroup;
+    }
+
+    /**
+     * Set 飞书群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LarkGroup 飞书群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLarkGroup(Long LarkGroup) {
+        this.LarkGroup = LarkGroup;
+    }
+
     public AlarmReceiverInfo() {
     }
 
@@ -270,6 +298,9 @@ public class AlarmReceiverInfo extends AbstractModel {
         if (source.WecomGroup != null) {
             this.WecomGroup = new Long(source.WecomGroup);
         }
+        if (source.LarkGroup != null) {
+            this.LarkGroup = new Long(source.LarkGroup);
+        }
     }
 
 
@@ -286,6 +317,7 @@ public class AlarmReceiverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Wecom", this.Wecom);
         this.setParamSimple(map, prefix + "Http", this.Http);
         this.setParamSimple(map, prefix + "WecomGroup", this.WecomGroup);
+        this.setParamSimple(map, prefix + "LarkGroup", this.LarkGroup);
 
     }
 }

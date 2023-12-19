@@ -45,6 +45,13 @@ public class BatchSuspendIntegrationTasksRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	
+    */
+    @SerializedName("Event")
+    @Expose
+    private String Event;
+
+    /**
      * Get 任务id 
      * @return TaskIds 任务id
      */
@@ -92,6 +99,22 @@ public class BatchSuspendIntegrationTasksRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	 
+     * @return Event 事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	
+     */
+    public String getEvent() {
+        return this.Event;
+    }
+
+    /**
+     * Set 事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	
+     * @param Event 事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	
+     */
+    public void setEvent(String Event) {
+        this.Event = Event;
+    }
+
     public BatchSuspendIntegrationTasksRequest() {
     }
 
@@ -112,6 +135,9 @@ public class BatchSuspendIntegrationTasksRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.Event != null) {
+            this.Event = new String(source.Event);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class BatchSuspendIntegrationTasksRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Event", this.Event);
 
     }
 }

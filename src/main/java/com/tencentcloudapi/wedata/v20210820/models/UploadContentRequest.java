@@ -31,6 +31,13 @@ public class UploadContentRequest extends AbstractModel {
     private ScriptRequestInfo ScriptRequestInfo;
 
     /**
+    * 请求来源，WEB 前端；CLIENT 客户端
+    */
+    @SerializedName("RequestFromSource")
+    @Expose
+    private String RequestFromSource;
+
+    /**
      * Get 脚本上传信息 
      * @return ScriptRequestInfo 脚本上传信息
      */
@@ -46,6 +53,22 @@ public class UploadContentRequest extends AbstractModel {
         this.ScriptRequestInfo = ScriptRequestInfo;
     }
 
+    /**
+     * Get 请求来源，WEB 前端；CLIENT 客户端 
+     * @return RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public String getRequestFromSource() {
+        return this.RequestFromSource;
+    }
+
+    /**
+     * Set 请求来源，WEB 前端；CLIENT 客户端
+     * @param RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public void setRequestFromSource(String RequestFromSource) {
+        this.RequestFromSource = RequestFromSource;
+    }
+
     public UploadContentRequest() {
     }
 
@@ -57,6 +80,9 @@ public class UploadContentRequest extends AbstractModel {
         if (source.ScriptRequestInfo != null) {
             this.ScriptRequestInfo = new ScriptRequestInfo(source.ScriptRequestInfo);
         }
+        if (source.RequestFromSource != null) {
+            this.RequestFromSource = new String(source.RequestFromSource);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class UploadContentRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ScriptRequestInfo.", this.ScriptRequestInfo);
+        this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
 
     }
 }

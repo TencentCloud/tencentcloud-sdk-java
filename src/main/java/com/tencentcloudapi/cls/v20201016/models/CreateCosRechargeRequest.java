@@ -74,7 +74,7 @@ public class CreateCosRechargeRequest extends AbstractModel {
     private String LogType;
 
     /**
-    * supported: "", "gzip", "lzop", "snappy”; 默认空
+    * supported: "", "gzip", "lzop", "snappy"; 默认空
     */
     @SerializedName("Compress")
     @Expose
@@ -204,16 +204,16 @@ public class CreateCosRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get supported: "", "gzip", "lzop", "snappy”; 默认空 
-     * @return Compress supported: "", "gzip", "lzop", "snappy”; 默认空
+     * Get supported: "", "gzip", "lzop", "snappy"; 默认空 
+     * @return Compress supported: "", "gzip", "lzop", "snappy"; 默认空
      */
     public String getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set supported: "", "gzip", "lzop", "snappy”; 默认空
-     * @param Compress supported: "", "gzip", "lzop", "snappy”; 默认空
+     * Set supported: "", "gzip", "lzop", "snappy"; 默认空
+     * @param Compress supported: "", "gzip", "lzop", "snappy"; 默认空
      */
     public void setCompress(String Compress) {
         this.Compress = Compress;

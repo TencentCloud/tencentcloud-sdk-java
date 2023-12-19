@@ -238,6 +238,22 @@ public class DescAcItem extends AbstractModel {
     private String InternetBorderUuid;
 
     /**
+    * 协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParamTemplateName")
+    @Expose
+    private String ParamTemplateName;
+
+    /**
+    * 协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private String ParamTemplateId;
+
+    /**
      * Get 访问源
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceContent 访问源
@@ -769,6 +785,46 @@ public class DescAcItem extends AbstractModel {
         this.InternetBorderUuid = InternetBorderUuid;
     }
 
+    /**
+     * Get 协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParamTemplateName 协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParamTemplateName() {
+        return this.ParamTemplateName;
+    }
+
+    /**
+     * Set 协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParamTemplateName 协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParamTemplateName(String ParamTemplateName) {
+        this.ParamTemplateName = ParamTemplateName;
+    }
+
+    /**
+     * Get 协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParamTemplateId 协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParamTemplateId 协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParamTemplateId(String ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
     public DescAcItem() {
     }
 
@@ -861,6 +917,12 @@ public class DescAcItem extends AbstractModel {
         if (source.InternetBorderUuid != null) {
             this.InternetBorderUuid = new String(source.InternetBorderUuid);
         }
+        if (source.ParamTemplateName != null) {
+            this.ParamTemplateName = new String(source.ParamTemplateName);
+        }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new String(source.ParamTemplateId);
+        }
     }
 
 
@@ -895,6 +957,8 @@ public class DescAcItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "BetaList.", this.BetaList);
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "InternetBorderUuid", this.InternetBorderUuid);
+        this.setParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
 
     }
 }

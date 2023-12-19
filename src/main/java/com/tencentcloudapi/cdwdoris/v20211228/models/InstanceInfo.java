@@ -318,6 +318,14 @@ Modify 集群变更中；
     private String Components;
 
     /**
+    * 判断审计日志表是否有catalog字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IfExistCatalog")
+    @Expose
+    private Long IfExistCatalog;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1061,6 +1069,26 @@ Modify 集群变更中；
         this.Components = Components;
     }
 
+    /**
+     * Get 判断审计日志表是否有catalog字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IfExistCatalog 判断审计日志表是否有catalog字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIfExistCatalog() {
+        return this.IfExistCatalog;
+    }
+
+    /**
+     * Set 判断审计日志表是否有catalog字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IfExistCatalog 判断审计日志表是否有catalog字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIfExistCatalog(Long IfExistCatalog) {
+        this.IfExistCatalog = IfExistCatalog;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1180,6 +1208,9 @@ Modify 集群变更中；
         if (source.Components != null) {
             this.Components = new String(source.Components);
         }
+        if (source.IfExistCatalog != null) {
+            this.IfExistCatalog = new Long(source.IfExistCatalog);
+        }
     }
 
 
@@ -1223,6 +1254,7 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "CanAttachCbs", this.CanAttachCbs);
         this.setParamSimple(map, prefix + "BuildVersion", this.BuildVersion);
         this.setParamSimple(map, prefix + "Components", this.Components);
+        this.setParamSimple(map, prefix + "IfExistCatalog", this.IfExistCatalog);
 
     }
 }

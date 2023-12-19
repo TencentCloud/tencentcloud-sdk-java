@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RateLimitOption extends AbstractModel {
 
     /**
-    * 当前生效的全量导出线程数
+    * 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentDumpThread")
@@ -32,7 +32,7 @@ public class RateLimitOption extends AbstractModel {
     private Long CurrentDumpThread;
 
     /**
-    * 默认的全量导出线程数
+    * 默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultDumpThread")
@@ -40,7 +40,7 @@ public class RateLimitOption extends AbstractModel {
     private Long DefaultDumpThread;
 
     /**
-    * 当前生效的全量导出Rps	
+    * 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentDumpRps")
@@ -48,7 +48,7 @@ public class RateLimitOption extends AbstractModel {
     private Long CurrentDumpRps;
 
     /**
-    * 默认的全量导出Rps	
+    * 默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultDumpRps")
@@ -56,7 +56,7 @@ public class RateLimitOption extends AbstractModel {
     private Long DefaultDumpRps;
 
     /**
-    * 当前生效的全量导入线程数
+    * 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentLoadThread")
@@ -64,7 +64,7 @@ public class RateLimitOption extends AbstractModel {
     private Long CurrentLoadThread;
 
     /**
-    * 默认的全量导入线程数
+    * 默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultLoadThread")
@@ -72,7 +72,7 @@ public class RateLimitOption extends AbstractModel {
     private Long DefaultLoadThread;
 
     /**
-    * 当前生效的全量导入Rps	
+    * 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentLoadRps")
@@ -80,7 +80,7 @@ public class RateLimitOption extends AbstractModel {
     private Long CurrentLoadRps;
 
     /**
-    * 默认的全量导入Rps	
+    * 默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultLoadRps")
@@ -88,7 +88,7 @@ public class RateLimitOption extends AbstractModel {
     private Long DefaultLoadRps;
 
     /**
-    * 当前生效的增量导入线程数
+    * 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentSinkerThread")
@@ -96,7 +96,7 @@ public class RateLimitOption extends AbstractModel {
     private Long CurrentSinkerThread;
 
     /**
-    * 默认的增量导入线程数
+    * 默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultSinkerThread")
@@ -104,7 +104,7 @@ public class RateLimitOption extends AbstractModel {
     private Long DefaultSinkerThread;
 
     /**
-    * enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+    * enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasUserSetRateLimit")
@@ -112,9 +112,9 @@ public class RateLimitOption extends AbstractModel {
     private String HasUserSetRateLimit;
 
     /**
-     * Get 当前生效的全量导出线程数
+     * Get 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentDumpThread 当前生效的全量导出线程数
+     * @return CurrentDumpThread 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentDumpThread() {
@@ -122,9 +122,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 当前生效的全量导出线程数
+     * Set 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentDumpThread 当前生效的全量导出线程数
+     * @param CurrentDumpThread 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentDumpThread(Long CurrentDumpThread) {
@@ -132,9 +132,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 默认的全量导出线程数
+     * Get 默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultDumpThread 默认的全量导出线程数
+     * @return DefaultDumpThread 默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultDumpThread() {
@@ -142,9 +142,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 默认的全量导出线程数
+     * Set 默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultDumpThread 默认的全量导出线程数
+     * @param DefaultDumpThread 默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultDumpThread(Long DefaultDumpThread) {
@@ -152,9 +152,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 当前生效的全量导出Rps	
+     * Get 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentDumpRps 当前生效的全量导出Rps	
+     * @return CurrentDumpRps 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentDumpRps() {
@@ -162,9 +162,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 当前生效的全量导出Rps	
+     * Set 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentDumpRps 当前生效的全量导出Rps	
+     * @param CurrentDumpRps 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentDumpRps(Long CurrentDumpRps) {
@@ -172,9 +172,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 默认的全量导出Rps	
+     * Get 默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultDumpRps 默认的全量导出Rps	
+     * @return DefaultDumpRps 默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultDumpRps() {
@@ -182,9 +182,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 默认的全量导出Rps	
+     * Set 默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultDumpRps 默认的全量导出Rps	
+     * @param DefaultDumpRps 默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultDumpRps(Long DefaultDumpRps) {
@@ -192,9 +192,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 当前生效的全量导入线程数
+     * Get 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentLoadThread 当前生效的全量导入线程数
+     * @return CurrentLoadThread 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentLoadThread() {
@@ -202,9 +202,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 当前生效的全量导入线程数
+     * Set 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentLoadThread 当前生效的全量导入线程数
+     * @param CurrentLoadThread 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentLoadThread(Long CurrentLoadThread) {
@@ -212,9 +212,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 默认的全量导入线程数
+     * Get 默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultLoadThread 默认的全量导入线程数
+     * @return DefaultLoadThread 默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultLoadThread() {
@@ -222,9 +222,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 默认的全量导入线程数
+     * Set 默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultLoadThread 默认的全量导入线程数
+     * @param DefaultLoadThread 默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultLoadThread(Long DefaultLoadThread) {
@@ -232,9 +232,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 当前生效的全量导入Rps	
+     * Get 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentLoadRps 当前生效的全量导入Rps	
+     * @return CurrentLoadRps 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentLoadRps() {
@@ -242,9 +242,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 当前生效的全量导入Rps	
+     * Set 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentLoadRps 当前生效的全量导入Rps	
+     * @param CurrentLoadRps 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentLoadRps(Long CurrentLoadRps) {
@@ -252,9 +252,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 默认的全量导入Rps	
+     * Get 默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultLoadRps 默认的全量导入Rps	
+     * @return DefaultLoadRps 默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultLoadRps() {
@@ -262,9 +262,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 默认的全量导入Rps	
+     * Set 默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultLoadRps 默认的全量导入Rps	
+     * @param DefaultLoadRps 默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultLoadRps(Long DefaultLoadRps) {
@@ -272,9 +272,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 当前生效的增量导入线程数
+     * Get 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentSinkerThread 当前生效的增量导入线程数
+     * @return CurrentSinkerThread 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentSinkerThread() {
@@ -282,9 +282,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 当前生效的增量导入线程数
+     * Set 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentSinkerThread 当前生效的增量导入线程数
+     * @param CurrentSinkerThread 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentSinkerThread(Long CurrentSinkerThread) {
@@ -292,9 +292,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get 默认的增量导入线程数
+     * Get 默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultSinkerThread 默认的增量导入线程数
+     * @return DefaultSinkerThread 默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultSinkerThread() {
@@ -302,9 +302,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set 默认的增量导入线程数
+     * Set 默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultSinkerThread 默认的增量导入线程数
+     * @param DefaultSinkerThread 默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultSinkerThread(Long DefaultSinkerThread) {
@@ -312,9 +312,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Get enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+     * Get enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HasUserSetRateLimit enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+     * @return HasUserSetRateLimit enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHasUserSetRateLimit() {
@@ -322,9 +322,9 @@ public class RateLimitOption extends AbstractModel {
     }
 
     /**
-     * Set enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+     * Set enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HasUserSetRateLimit enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+     * @param HasUserSetRateLimit enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasUserSetRateLimit(String HasUserSetRateLimit) {

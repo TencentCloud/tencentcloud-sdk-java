@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreatePrometheusGlobalNotificationRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID(可通过 DescribePrometheusInstances 接口获取)
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class CreatePrometheusGlobalNotificationRequest extends AbstractModel {
     private PrometheusNotificationItem Notification;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID(可通过 DescribePrometheusInstances 接口获取) 
+     * @return InstanceId 实例ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID(可通过 DescribePrometheusInstances 接口获取)
+     * @param InstanceId 实例ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

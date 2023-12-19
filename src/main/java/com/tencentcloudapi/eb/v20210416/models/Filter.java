@@ -31,7 +31,7 @@ public class Filter extends AbstractModel {
     private String [] Values;
 
     /**
-    * 过滤键的名称。
+    * 过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
     */
     @SerializedName("Name")
     @Expose
@@ -54,16 +54,16 @@ public class Filter extends AbstractModel {
     }
 
     /**
-     * Get 过滤键的名称。 
-     * @return Name 过滤键的名称。
+     * Get 过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键) 
+     * @return Name 过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 过滤键的名称。
-     * @param Name 过滤键的名称。
+     * Set 过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
+     * @param Name 过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -88,7 +88,7 @@ public class Options extends AbstractModel {
     private KafkaOption KafkaOption;
 
     /**
-    * 任务限速信息、该字段仅用作出参、入参该字段无效
+    * 任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitOption")
@@ -264,9 +264,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Get 任务限速信息、该字段仅用作出参、入参该字段无效
+     * Get 任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RateLimitOption 任务限速信息、该字段仅用作出参、入参该字段无效
+     * @return RateLimitOption 任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitOption getRateLimitOption() {
@@ -274,9 +274,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Set 任务限速信息、该字段仅用作出参、入参该字段无效
+     * Set 任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RateLimitOption 任务限速信息、该字段仅用作出参、入参该字段无效
+     * @param RateLimitOption 任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitOption(RateLimitOption RateLimitOption) {

@@ -88,6 +88,22 @@ public class ColumnMeta extends AbstractModel {
     private Pair [] ColumnFamiliesFieldSet;
 
     /**
+    * 对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DictionaryId")
+    @Expose
+    private String DictionaryId;
+
+    /**
+    * 对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DictionaryName")
+    @Expose
+    private String DictionaryName;
+
+    /**
      * Get 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NameEn 字段英文名称
@@ -247,6 +263,46 @@ public class ColumnMeta extends AbstractModel {
         this.ColumnFamiliesFieldSet = ColumnFamiliesFieldSet;
     }
 
+    /**
+     * Get 对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DictionaryId 对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDictionaryId() {
+        return this.DictionaryId;
+    }
+
+    /**
+     * Set 对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DictionaryId 对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDictionaryId(String DictionaryId) {
+        this.DictionaryId = DictionaryId;
+    }
+
+    /**
+     * Get 对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DictionaryName 对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDictionaryName() {
+        return this.DictionaryName;
+    }
+
+    /**
+     * Set 对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DictionaryName 对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDictionaryName(String DictionaryName) {
+        this.DictionaryName = DictionaryName;
+    }
+
     public ColumnMeta() {
     }
 
@@ -282,6 +338,12 @@ public class ColumnMeta extends AbstractModel {
                 this.ColumnFamiliesFieldSet[i] = new Pair(source.ColumnFamiliesFieldSet[i]);
             }
         }
+        if (source.DictionaryId != null) {
+            this.DictionaryId = new String(source.DictionaryId);
+        }
+        if (source.DictionaryName != null) {
+            this.DictionaryName = new String(source.DictionaryName);
+        }
     }
 
 
@@ -297,6 +359,8 @@ public class ColumnMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPartition", this.IsPartition);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "ColumnFamiliesFieldSet.", this.ColumnFamiliesFieldSet);
+        this.setParamSimple(map, prefix + "DictionaryId", this.DictionaryId);
+        this.setParamSimple(map, prefix + "DictionaryName", this.DictionaryName);
 
     }
 }

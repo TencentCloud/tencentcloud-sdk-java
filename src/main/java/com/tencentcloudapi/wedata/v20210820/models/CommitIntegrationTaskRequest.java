@@ -73,6 +73,13 @@ public class CommitIntegrationTaskRequest extends AbstractModel {
     private Long InstanceVersion;
 
     /**
+    * 前端操作类型描述
+    */
+    @SerializedName("EventDesc")
+    @Expose
+    private String EventDesc;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -184,6 +191,22 @@ public class CommitIntegrationTaskRequest extends AbstractModel {
         this.InstanceVersion = InstanceVersion;
     }
 
+    /**
+     * Get 前端操作类型描述 
+     * @return EventDesc 前端操作类型描述
+     */
+    public String getEventDesc() {
+        return this.EventDesc;
+    }
+
+    /**
+     * Set 前端操作类型描述
+     * @param EventDesc 前端操作类型描述
+     */
+    public void setEventDesc(String EventDesc) {
+        this.EventDesc = EventDesc;
+    }
+
     public CommitIntegrationTaskRequest() {
     }
 
@@ -216,6 +239,9 @@ public class CommitIntegrationTaskRequest extends AbstractModel {
         if (source.InstanceVersion != null) {
             this.InstanceVersion = new Long(source.InstanceVersion);
         }
+        if (source.EventDesc != null) {
+            this.EventDesc = new String(source.EventDesc);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CommitIntegrationTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExtConfig.", this.ExtConfig);
         this.setParamSimple(map, prefix + "VersionDesc", this.VersionDesc);
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+        this.setParamSimple(map, prefix + "EventDesc", this.EventDesc);
 
     }
 }

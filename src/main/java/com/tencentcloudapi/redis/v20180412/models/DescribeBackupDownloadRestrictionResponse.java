@@ -59,7 +59,7 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
     private BackupLimitVpcItem [] LimitVpc;
 
     /**
-    * 自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，显示该参数。
+    * 自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。
     */
     @SerializedName("LimitIp")
     @Expose
@@ -165,16 +165,16 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
     }
 
     /**
-     * Get 自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，显示该参数。 
-     * @return LimitIp 自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，显示该参数。
+     * Get 自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。 
+     * @return LimitIp 自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。
      */
     public String [] getLimitIp() {
         return this.LimitIp;
     }
 
     /**
-     * Set 自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，显示该参数。
-     * @param LimitIp 自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，显示该参数。
+     * Set 自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。
+     * @param LimitIp 自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。
      */
     public void setLimitIp(String [] LimitIp) {
         this.LimitIp = LimitIp;

@@ -32,8 +32,8 @@ public class RunCommandRequest extends AbstractModel {
 
     /**
     * 待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -76,8 +76,8 @@ public class RunCommandRequest extends AbstractModel {
 
     /**
     * 是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。
     */
     @SerializedName("SaveCommand")
@@ -88,9 +88,9 @@ public class RunCommandRequest extends AbstractModel {
     * 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。 
     */
     @SerializedName("EnableParameter")
     @Expose
@@ -175,11 +175,11 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Get 待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE 
+<li> CVM </li>
+<li> LIGHTHOUSE </li> 
      * @return InstanceIds 待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -187,11 +187,11 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Set 待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      * @param InstanceIds 待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -279,12 +279,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Get 是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。 
      * @return SaveCommand 是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。
      */
     public Boolean getSaveCommand() {
@@ -293,12 +293,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * Set 是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。
      * @param SaveCommand 是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。
      */
     public void setSaveCommand(Boolean SaveCommand) {
@@ -309,15 +309,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * Get 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。 
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。  
      * @return EnableParameter 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。 
      */
     public Boolean getEnableParameter() {
         return this.EnableParameter;
@@ -327,15 +327,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * Set 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。 
      * @param EnableParameter 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。 
      */
     public void setEnableParameter(Boolean EnableParameter) {
         this.EnableParameter = EnableParameter;

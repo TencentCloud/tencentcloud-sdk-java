@@ -193,6 +193,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询集团账号用户列表
+     * @param req DescribeOrganizationUserInfoRequest
+     * @return DescribeOrganizationUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationUserInfoResponse DescribeOrganizationUserInfo(DescribeOrganizationUserInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationUserInfo", DescribeOrganizationUserInfoResponse.class);
+    }
+
+    /**
      *ip公网列表
      * @param req DescribePublicIpAssetsRequest
      * @return DescribePublicIpAssetsResponse

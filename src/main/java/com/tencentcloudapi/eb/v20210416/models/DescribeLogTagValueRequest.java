@@ -45,7 +45,7 @@ public class DescribeLogTagValueRequest extends AbstractModel {
     private String EventBusId;
 
     /**
-    * 聚合字段
+    * 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
     */
     @SerializedName("GroupField")
     @Expose
@@ -121,16 +121,16 @@ public class DescribeLogTagValueRequest extends AbstractModel {
     }
 
     /**
-     * Get 聚合字段 
-     * @return GroupField 聚合字段
+     * Get 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域) 
+     * @return GroupField 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
      */
     public String getGroupField() {
         return this.GroupField;
     }
 
     /**
-     * Set 聚合字段
-     * @param GroupField 聚合字段
+     * Set 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
+     * @param GroupField 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
      */
     public void setGroupField(String GroupField) {
         this.GroupField = GroupField;

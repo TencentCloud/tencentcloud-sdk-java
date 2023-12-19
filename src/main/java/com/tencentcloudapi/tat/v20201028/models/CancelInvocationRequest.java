@@ -32,8 +32,8 @@ public class CancelInvocationRequest extends AbstractModel {
 
     /**
     * 实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -57,11 +57,11 @@ public class CancelInvocationRequest extends AbstractModel {
 
     /**
      * Get 实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE 
+<li> CVM </li>
+<li> LIGHTHOUSE </li> 
      * @return InstanceIds 实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -69,11 +69,11 @@ public class CancelInvocationRequest extends AbstractModel {
 
     /**
      * Set 实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      * @param InstanceIds 实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

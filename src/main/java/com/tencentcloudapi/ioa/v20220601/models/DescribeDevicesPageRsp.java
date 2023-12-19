@@ -32,6 +32,14 @@ public class DescribeDevicesPageRsp extends AbstractModel {
     private Paging Paging;
 
     /**
+    * 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Items")
+    @Expose
+    private DeviceDetail [] Items;
+
+    /**
      * Get 数据分页信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Paging 数据分页信息
@@ -51,6 +59,26 @@ public class DescribeDevicesPageRsp extends AbstractModel {
         this.Paging = Paging;
     }
 
+    /**
+     * Get 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeviceDetail [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItems(DeviceDetail [] Items) {
+        this.Items = Items;
+    }
+
     public DescribeDevicesPageRsp() {
     }
 
@@ -62,6 +90,12 @@ public class DescribeDevicesPageRsp extends AbstractModel {
         if (source.Paging != null) {
             this.Paging = new Paging(source.Paging);
         }
+        if (source.Items != null) {
+            this.Items = new DeviceDetail[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new DeviceDetail(source.Items[i]);
+            }
+        }
     }
 
 
@@ -70,6 +104,7 @@ public class DescribeDevicesPageRsp extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Paging.", this.Paging);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
 
     }
 }

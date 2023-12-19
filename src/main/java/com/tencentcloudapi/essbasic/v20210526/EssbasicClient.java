@@ -145,6 +145,7 @@ public class EssbasicClient extends AbstractClient{
 请确保生成链接时候的身份信息和签署合同参与方的信息保持一致。
 
 注：
+- 使用此接口生成链接，需要提前开通 `使用手机号验证签署方身份` 功能，在 `腾讯电子签网页端-企业设置-拓展服务` 中可以找到。
 - 参与人点击链接后需短信验证码才能查看合同内容。
 - 企业用户批量签署，需要传OrganizationName（参与方所在企业名称）参数生成签署链接，`请确保此企业已完成腾讯电子签企业认证`。若为子客企业，请确保员工已经加入企业。
 - 个人批量签署，签名区`仅支持手写签名`。
@@ -1093,6 +1094,24 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     }
 
     /**
+     *创建他方自动签授权链接，通过该链接可进入小程序进行合作方企业的自动签授权，若当前企业未开通企业自动签，通过该链接会先引导开通本企业自动签。
+该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权
+
+
+
+注: 
+1. <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
+2. 已经在授权中或者授权成功的企业，无法重复授权
+     * @param req CreatePartnerAutoSignAuthUrlRequest
+     * @return CreatePartnerAutoSignAuthUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(CreatePartnerAutoSignAuthUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePartnerAutoSignAuthUrl", CreatePartnerAutoSignAuthUrlResponse.class);
+    }
+
+    /**
      *1. 可以**通过图片**为子客企业代创建印章，图片最大5MB
 
 2. 可以**系统创建**子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
@@ -1204,6 +1223,23 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     public DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrl(DescribeChannelSealPolicyWorkflowUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeChannelSealPolicyWorkflowUrl", DescribeChannelSealPolicyWorkflowUrlResponse.class);
+    }
+
+    /**
+     *查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
+
+1. **企业自动签**
+2. **批量签署**
+
+
+注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
+     * @param req DescribeExtendedServiceAuthDetailRequest
+     * @return DescribeExtendedServiceAuthDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetail(DescribeExtendedServiceAuthDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExtendedServiceAuthDetail", DescribeExtendedServiceAuthDetailResponse.class);
     }
 
     /**

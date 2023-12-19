@@ -52,6 +52,13 @@ public class ResumeIntegrationTaskRequest extends AbstractModel {
     private RecordField [] ExtConfig;
 
     /**
+    * 前端操作类型描述
+    */
+    @SerializedName("EventDesc")
+    @Expose
+    private String EventDesc;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -115,6 +122,22 @@ public class ResumeIntegrationTaskRequest extends AbstractModel {
         this.ExtConfig = ExtConfig;
     }
 
+    /**
+     * Get 前端操作类型描述 
+     * @return EventDesc 前端操作类型描述
+     */
+    public String getEventDesc() {
+        return this.EventDesc;
+    }
+
+    /**
+     * Set 前端操作类型描述
+     * @param EventDesc 前端操作类型描述
+     */
+    public void setEventDesc(String EventDesc) {
+        this.EventDesc = EventDesc;
+    }
+
     public ResumeIntegrationTaskRequest() {
     }
 
@@ -138,6 +161,9 @@ public class ResumeIntegrationTaskRequest extends AbstractModel {
                 this.ExtConfig[i] = new RecordField(source.ExtConfig[i]);
             }
         }
+        if (source.EventDesc != null) {
+            this.EventDesc = new String(source.EventDesc);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class ResumeIntegrationTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Event", this.Event);
         this.setParamArrayObj(map, prefix + "ExtConfig.", this.ExtConfig);
+        this.setParamSimple(map, prefix + "EventDesc", this.EventDesc);
 
     }
 }

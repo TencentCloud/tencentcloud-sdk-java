@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LogFilters extends AbstractModel {
 
     /**
-    * 过滤字段名称
+    * 过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
     */
     @SerializedName("Key")
     @Expose
@@ -46,16 +46,16 @@ public class LogFilters extends AbstractModel {
     private String Value;
 
     /**
-     * Get 过滤字段名称 
-     * @return Key 过滤字段名称
+     * Get 过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态) 
+     * @return Key 过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 过滤字段名称
-     * @param Key 过滤字段名称
+     * Set 过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
+     * @param Key 过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
      */
     public void setKey(String Key) {
         this.Key = Key;

@@ -45,14 +45,14 @@ public class MergeInfo extends AbstractModel {
     private FaceRect InputImageFaceRect;
 
     /**
-    * 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。
+    * 素材人脸ID，不填默认取最大人脸。
     */
     @SerializedName("TemplateFaceID")
     @Expose
     private String TemplateFaceID;
 
     /**
-    * 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。
+    * 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
     */
     @SerializedName("TemplateFaceRect")
     @Expose
@@ -107,32 +107,32 @@ public class MergeInfo extends AbstractModel {
     }
 
     /**
-     * Get 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。 
-     * @return TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。
+     * Get 素材人脸ID，不填默认取最大人脸。 
+     * @return TemplateFaceID 素材人脸ID，不填默认取最大人脸。
      */
     public String getTemplateFaceID() {
         return this.TemplateFaceID;
     }
 
     /**
-     * Set 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。
-     * @param TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸。此字段仅适用于控制台上传素材的有素材场景。
+     * Set 素材人脸ID，不填默认取最大人脸。
+     * @param TemplateFaceID 素材人脸ID，不填默认取最大人脸。
      */
     public void setTemplateFaceID(String TemplateFaceID) {
         this.TemplateFaceID = TemplateFaceID;
     }
 
     /**
-     * Get 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。 
-     * @return TemplateFaceRect 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。
+     * Get 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。 
+     * @return TemplateFaceRect 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
      */
     public FaceRect getTemplateFaceRect() {
         return this.TemplateFaceRect;
     }
 
     /**
-     * Set 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。
-     * @param TemplateFaceRect 模版图片人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于自定义模版素材场景。
+     * Set 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
+     * @param TemplateFaceRect 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
      */
     public void setTemplateFaceRect(FaceRect TemplateFaceRect) {
         this.TemplateFaceRect = TemplateFaceRect;

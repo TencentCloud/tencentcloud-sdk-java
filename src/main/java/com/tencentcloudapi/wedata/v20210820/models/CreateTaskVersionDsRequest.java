@@ -52,6 +52,13 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 请求来源，WEB 前端；CLIENT 客户端
+    */
+    @SerializedName("RequestFromSource")
+    @Expose
+    private String RequestFromSource;
+
+    /**
     * 告警方式:email-邮件;sms-短信;wecom-企业微信
     */
     @SerializedName("AlarmWays")
@@ -130,6 +137,22 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
     }
 
     /**
+     * Get 请求来源，WEB 前端；CLIENT 客户端 
+     * @return RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public String getRequestFromSource() {
+        return this.RequestFromSource;
+    }
+
+    /**
+     * Set 请求来源，WEB 前端；CLIENT 客户端
+     * @param RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public void setRequestFromSource(String RequestFromSource) {
+        this.RequestFromSource = RequestFromSource;
+    }
+
+    /**
      * Get 告警方式:email-邮件;sms-短信;wecom-企业微信 
      * @return AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
      */
@@ -181,6 +204,9 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.RequestFromSource != null) {
+            this.RequestFromSource = new String(source.RequestFromSource);
+        }
         if (source.AlarmWays != null) {
             this.AlarmWays = new String(source.AlarmWays);
         }
@@ -198,6 +224,7 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedCheckParentSubmitted", this.NeedCheckParentSubmitted);
         this.setParamSimple(map, prefix + "AutoRun", this.AutoRun);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         this.setParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
         this.setParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
 

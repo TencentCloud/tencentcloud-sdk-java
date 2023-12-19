@@ -15,6 +15,9 @@ public enum WedataErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 查询数据开发资源锁状态-当前用户不持有锁
+     FAILEDOPERATION_NOLOCK("FailedOperation.NoLock"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

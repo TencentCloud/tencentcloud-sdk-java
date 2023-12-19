@@ -2361,6 +2361,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询表元数据详情
+     * @param req DescribeTableMetaRequest
+     * @return DescribeTableMetaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableMetaResponse DescribeTableMeta(DescribeTableMetaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTableMeta", DescribeTableMetaResponse.class);
+    }
+
+    /**
      *获取表元数据list
      * @param req DescribeTableMetasRequest
      * @return DescribeTableMetasResponse

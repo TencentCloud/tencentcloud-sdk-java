@@ -183,6 +183,22 @@ log：观察
     private BetaInfoByACL [] BetaList;
 
     /**
+    * 端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private String ParamTemplateId;
+
+    /**
+    * 端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParamTemplateName")
+    @Expose
+    private String ParamTemplateName;
+
+    /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例：
@@ -590,6 +606,46 @@ log：观察
         this.BetaList = BetaList;
     }
 
+    /**
+     * Get 端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParamTemplateId 端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParamTemplateId 端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParamTemplateId(String ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
+    /**
+     * Get 端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParamTemplateName 端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParamTemplateName() {
+        return this.ParamTemplateName;
+    }
+
+    /**
+     * Set 端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParamTemplateName 端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParamTemplateName(String ParamTemplateName) {
+        this.ParamTemplateName = ParamTemplateName;
+    }
+
     public VpcRuleItem() {
     }
 
@@ -658,6 +714,12 @@ log：观察
                 this.BetaList[i] = new BetaInfoByACL(source.BetaList[i]);
             }
         }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new String(source.ParamTemplateId);
+        }
+        if (source.ParamTemplateName != null) {
+            this.ParamTemplateName = new String(source.ParamTemplateName);
+        }
     }
 
 
@@ -684,6 +746,8 @@ log：观察
         this.setParamSimple(map, prefix + "FwGroupId", this.FwGroupId);
         this.setParamSimple(map, prefix + "FwGroupName", this.FwGroupName);
         this.setParamArrayObj(map, prefix + "BetaList.", this.BetaList);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
 
     }
 }

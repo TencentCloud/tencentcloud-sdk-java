@@ -51,7 +51,7 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     private String MetricName;
 
     /**
-    * 站点ID集合，不填默认选择全部站点。
+    * 站点ID集合，此参数必填。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -180,16 +180,16 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 站点ID集合，不填默认选择全部站点。 
-     * @return ZoneIds 站点ID集合，不填默认选择全部站点。
+     * Get 站点ID集合，此参数必填。 
+     * @return ZoneIds 站点ID集合，此参数必填。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点ID集合，不填默认选择全部站点。
-     * @param ZoneIds 站点ID集合，不填默认选择全部站点。
+     * Set 站点ID集合，此参数必填。
+     * @param ZoneIds 站点ID集合，此参数必填。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

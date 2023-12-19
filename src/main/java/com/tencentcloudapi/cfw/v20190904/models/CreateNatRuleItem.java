@@ -108,6 +108,13 @@ public class CreateNatRuleItem extends AbstractModel {
     private String Description;
 
     /**
+    * 端口协议组ID
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private String ParamTemplateId;
+
+    /**
      * Get 访问源示例： net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
      */
@@ -299,6 +306,22 @@ public class CreateNatRuleItem extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 端口协议组ID 
+     * @return ParamTemplateId 端口协议组ID
+     */
+    public String getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 端口协议组ID
+     * @param ParamTemplateId 端口协议组ID
+     */
+    public void setParamTemplateId(String ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
     public CreateNatRuleItem() {
     }
 
@@ -343,6 +366,9 @@ public class CreateNatRuleItem extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new String(source.ParamTemplateId);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class CreateNatRuleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
 
     }
 }

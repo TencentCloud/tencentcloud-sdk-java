@@ -129,6 +129,13 @@ public class CreateRuleItem extends AbstractModel {
     private String LogId;
 
     /**
+    * 端都协议组ID
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private String ParamTemplateId;
+
+    /**
      * Get 访问源示例： net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
      */
@@ -368,6 +375,22 @@ public class CreateRuleItem extends AbstractModel {
         this.LogId = LogId;
     }
 
+    /**
+     * Get 端都协议组ID 
+     * @return ParamTemplateId 端都协议组ID
+     */
+    public String getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 端都协议组ID
+     * @param ParamTemplateId 端都协议组ID
+     */
+    public void setParamTemplateId(String ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
     public CreateRuleItem() {
     }
 
@@ -421,6 +444,9 @@ public class CreateRuleItem extends AbstractModel {
         if (source.LogId != null) {
             this.LogId = new String(source.LogId);
         }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new String(source.ParamTemplateId);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class CreateRuleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "RuleSource", this.RuleSource);
         this.setParamSimple(map, prefix + "LogId", this.LogId);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
 
     }
 }

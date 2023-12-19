@@ -40,6 +40,14 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     private String [] Classification;
 
     /**
+    * 模板对应的策略id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
      * Get 通知模板ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NoticeId 通知模板ID
@@ -79,6 +87,26 @@ public class AlarmHierarchicalNotice extends AbstractModel {
         this.Classification = Classification;
     }
 
+    /**
+     * Get 模板对应的策略id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyId 模板对应的策略id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set 模板对应的策略id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyId 模板对应的策略id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
     public AlarmHierarchicalNotice() {
     }
 
@@ -96,6 +124,9 @@ public class AlarmHierarchicalNotice extends AbstractModel {
                 this.Classification[i] = new String(source.Classification[i]);
             }
         }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
     }
 
 
@@ -105,6 +136,7 @@ public class AlarmHierarchicalNotice extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NoticeId", this.NoticeId);
         this.setParamArraySimple(map, prefix + "Classification.", this.Classification);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

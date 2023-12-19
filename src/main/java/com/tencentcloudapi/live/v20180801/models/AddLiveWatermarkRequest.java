@@ -34,7 +34,7 @@ URL中禁止包含的字符：
 
     /**
     * 水印名称。
-最长16字节。
+最长30字节。
     */
     @SerializedName("WatermarkName")
     @Expose
@@ -108,9 +108,9 @@ URL中禁止包含的字符：
 
     /**
      * Get 水印名称。
-最长16字节。 
+最长30字节。 
      * @return WatermarkName 水印名称。
-最长16字节。
+最长30字节。
      */
     public String getWatermarkName() {
         return this.WatermarkName;
@@ -118,9 +118,9 @@ URL中禁止包含的字符：
 
     /**
      * Set 水印名称。
-最长16字节。
+最长30字节。
      * @param WatermarkName 水印名称。
-最长16字节。
+最长30字节。
      */
     public void setWatermarkName(String WatermarkName) {
         this.WatermarkName = WatermarkName;

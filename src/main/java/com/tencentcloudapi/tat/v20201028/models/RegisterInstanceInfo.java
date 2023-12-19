@@ -64,7 +64,7 @@ public class RegisterInstanceInfo extends AbstractModel {
     private String SystemName;
 
     /**
-    * 主机IP。
+    * 主机名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
@@ -212,9 +212,9 @@ public class RegisterInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机IP。
+     * Get 主机名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostName 主机IP。
+     * @return HostName 主机名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
@@ -222,9 +222,9 @@ public class RegisterInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 主机IP。
+     * Set 主机名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostName 主机IP。
+     * @param HostName 主机名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {

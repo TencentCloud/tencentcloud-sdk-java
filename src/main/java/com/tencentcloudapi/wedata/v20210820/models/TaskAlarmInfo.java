@@ -256,6 +256,14 @@ public class TaskAlarmInfo extends AbstractModel {
     private String Description;
 
     /**
+    * 飞书群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LarkWebHooks")
+    @Expose
+    private String LarkWebHooks;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -823,6 +831,26 @@ public class TaskAlarmInfo extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 飞书群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LarkWebHooks 飞书群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLarkWebHooks() {
+        return this.LarkWebHooks;
+    }
+
+    /**
+     * Set 飞书群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LarkWebHooks 飞书群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLarkWebHooks(String LarkWebHooks) {
+        this.LarkWebHooks = LarkWebHooks;
+    }
+
     public TaskAlarmInfo() {
     }
 
@@ -927,6 +955,9 @@ public class TaskAlarmInfo extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.LarkWebHooks != null) {
+            this.LarkWebHooks = new String(source.LarkWebHooks);
+        }
     }
 
 
@@ -964,6 +995,7 @@ public class TaskAlarmInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestAlarmInstanceId", this.LatestAlarmInstanceId);
         this.setParamSimple(map, prefix + "LatestAlarmTime", this.LatestAlarmTime);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "LarkWebHooks", this.LarkWebHooks);
 
     }
 }

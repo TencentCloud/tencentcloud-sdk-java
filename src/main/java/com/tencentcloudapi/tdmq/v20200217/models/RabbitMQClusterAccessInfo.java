@@ -114,6 +114,15 @@ OFF/ON/CREATING/DELETING
     private PrometheusEndpointInfo PrometheusEndpointInfo;
 
     /**
+    * http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
+公网域名接入点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebConsoleDomainEndpoint")
+    @Expose
+    private String WebConsoleDomainEndpoint;
+
+    /**
      * Get 集群公网接入地址
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublicAccessEndpoint 集群公网接入地址
@@ -329,6 +338,30 @@ OFF/ON/CREATING/DELETING
         this.PrometheusEndpointInfo = PrometheusEndpointInfo;
     }
 
+    /**
+     * Get http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
+公网域名接入点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebConsoleDomainEndpoint http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
+公网域名接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWebConsoleDomainEndpoint() {
+        return this.WebConsoleDomainEndpoint;
+    }
+
+    /**
+     * Set http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
+公网域名接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebConsoleDomainEndpoint http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
+公网域名接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebConsoleDomainEndpoint(String WebConsoleDomainEndpoint) {
+        this.WebConsoleDomainEndpoint = WebConsoleDomainEndpoint;
+    }
+
     public RabbitMQClusterAccessInfo() {
     }
 
@@ -373,6 +406,9 @@ OFF/ON/CREATING/DELETING
         if (source.PrometheusEndpointInfo != null) {
             this.PrometheusEndpointInfo = new PrometheusEndpointInfo(source.PrometheusEndpointInfo);
         }
+        if (source.WebConsoleDomainEndpoint != null) {
+            this.WebConsoleDomainEndpoint = new String(source.WebConsoleDomainEndpoint);
+        }
     }
 
 
@@ -392,6 +428,7 @@ OFF/ON/CREATING/DELETING
         this.setParamSimple(map, prefix + "VpcWebConsoleSwitchStatus", this.VpcWebConsoleSwitchStatus);
         this.setParamSimple(map, prefix + "PublicDataStreamStatus", this.PublicDataStreamStatus);
         this.setParamObj(map, prefix + "PrometheusEndpointInfo.", this.PrometheusEndpointInfo);
+        this.setParamSimple(map, prefix + "WebConsoleDomainEndpoint", this.WebConsoleDomainEndpoint);
 
     }
 }

@@ -193,7 +193,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *创建实例(预付费包年包月)
+     *创建实例(预付费包年包月),  仅支持创建专业版实例
      * @param req CreateInstancePreRequest
      * @return CreateInstancePreResponse
      * @throws TencentCloudSDKException

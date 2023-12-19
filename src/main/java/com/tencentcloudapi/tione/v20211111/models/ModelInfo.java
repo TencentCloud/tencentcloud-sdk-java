@@ -91,6 +91,14 @@ public class ModelInfo extends AbstractModel {
     private String ModelFormat;
 
     /**
+    * 是否为私有化大模型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsPrivateModel")
+    @Expose
+    private Boolean IsPrivateModel;
+
+    /**
      * Get 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
 自动学习类型的模型填写自动学习的任务id 
      * @return ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
@@ -250,6 +258,26 @@ public class ModelInfo extends AbstractModel {
         this.ModelFormat = ModelFormat;
     }
 
+    /**
+     * Get 是否为私有化大模型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsPrivateModel 是否为私有化大模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsPrivateModel() {
+        return this.IsPrivateModel;
+    }
+
+    /**
+     * Set 是否为私有化大模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsPrivateModel 是否为私有化大模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsPrivateModel(Boolean IsPrivateModel) {
+        this.IsPrivateModel = IsPrivateModel;
+    }
+
     public ModelInfo() {
     }
 
@@ -285,6 +313,9 @@ public class ModelInfo extends AbstractModel {
         if (source.ModelFormat != null) {
             this.ModelFormat = new String(source.ModelFormat);
         }
+        if (source.IsPrivateModel != null) {
+            this.IsPrivateModel = new Boolean(source.IsPrivateModel);
+        }
     }
 
 
@@ -301,6 +332,7 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AlgorithmFramework", this.AlgorithmFramework);
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
+        this.setParamSimple(map, prefix + "IsPrivateModel", this.IsPrivateModel);
 
     }
 }

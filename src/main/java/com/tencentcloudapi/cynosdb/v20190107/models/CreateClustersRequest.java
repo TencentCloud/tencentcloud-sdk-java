@@ -241,7 +241,7 @@ timeRollback，时间点回档
     private String DbMode;
 
     /**
-    * 当DbMode为SEVERLESS时必填
+    * 当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     */
     @SerializedName("MinCpu")
@@ -249,7 +249,7 @@ cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private Float MinCpu;
 
     /**
-    * 当DbMode为SEVERLESS时必填：
+    * 当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     */
     @SerializedName("MaxCpu")
@@ -257,7 +257,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private Float MaxCpu;
 
     /**
-    * 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+    * 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes
@@ -267,7 +267,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private String AutoPause;
 
     /**
-    * 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+    * 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
     */
     @SerializedName("AutoPauseDelay")
@@ -853,9 +853,9 @@ timeRollback，时间点回档
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时必填
+     * Get 当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MinCpu 当DbMode为SEVERLESS时必填
+     * @return MinCpu 当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public Float getMinCpu() {
@@ -863,9 +863,9 @@ cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时必填
+     * Set 当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MinCpu 当DbMode为SEVERLESS时必填
+     * @param MinCpu 当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public void setMinCpu(Float MinCpu) {
@@ -873,9 +873,9 @@ cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时必填：
+     * Get 当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回 
-     * @return MaxCpu 当DbMode为SEVERLESS时必填：
+     * @return MaxCpu 当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public Float getMaxCpu() {
@@ -883,9 +883,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时必填：
+     * Set 当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param MaxCpu 当DbMode为SEVERLESS时必填：
+     * @param MaxCpu 当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public void setMaxCpu(Float MaxCpu) {
@@ -893,11 +893,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+     * Get 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes 
-     * @return AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+     * @return AutoPause 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes
@@ -907,11 +907,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+     * Set 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes
-     * @param AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+     * @param AutoPause 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes
@@ -921,9 +921,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+     * Get 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600 
-     * @return AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+     * @return AutoPauseDelay 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
      */
     public Long getAutoPauseDelay() {
@@ -931,9 +931,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Set 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+     * Set 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
-     * @param AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+     * @param AutoPauseDelay 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {

@@ -31,7 +31,7 @@ public class UpdateUserDataEngineConfigRequest extends AbstractModel {
     private String DataEngineId;
 
     /**
-    * 引擎配置项
+    * 用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。
     */
     @SerializedName("DataEngineConfigPairs")
     @Expose
@@ -61,16 +61,16 @@ public class UpdateUserDataEngineConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 引擎配置项 
-     * @return DataEngineConfigPairs 引擎配置项
+     * Get 用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。 
+     * @return DataEngineConfigPairs 用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。
      */
     public DataEngineConfigPair [] getDataEngineConfigPairs() {
         return this.DataEngineConfigPairs;
     }
 
     /**
-     * Set 引擎配置项
-     * @param DataEngineConfigPairs 引擎配置项
+     * Set 用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。
+     * @param DataEngineConfigPairs 用户自定义引擎配置项集合。该参数需要传用户需要添加的全部配置项，例如，已有配置项k1:v1，添加k2:v2，需要传[k1:v1,k2:v2]。
      */
     public void setDataEngineConfigPairs(DataEngineConfigPair [] DataEngineConfigPairs) {
         this.DataEngineConfigPairs = DataEngineConfigPairs;

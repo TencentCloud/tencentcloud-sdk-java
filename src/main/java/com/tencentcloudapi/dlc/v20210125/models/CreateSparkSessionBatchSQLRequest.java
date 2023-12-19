@@ -103,6 +103,13 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
     private Long IsInherit;
 
     /**
+    * 用户自定义主键，需唯一
+    */
+    @SerializedName("CustomKey")
+    @Expose
+    private String CustomKey;
+
+    /**
      * Get DLC Spark作业引擎名称 
      * @return DataEngineName DLC Spark作业引擎名称
      */
@@ -286,6 +293,22 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
         this.IsInherit = IsInherit;
     }
 
+    /**
+     * Get 用户自定义主键，需唯一 
+     * @return CustomKey 用户自定义主键，需唯一
+     */
+    public String getCustomKey() {
+        return this.CustomKey;
+    }
+
+    /**
+     * Set 用户自定义主键，需唯一
+     * @param CustomKey 用户自定义主键，需唯一
+     */
+    public void setCustomKey(String CustomKey) {
+        this.CustomKey = CustomKey;
+    }
+
     public CreateSparkSessionBatchSQLRequest() {
     }
 
@@ -330,6 +353,9 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
         if (source.IsInherit != null) {
             this.IsInherit = new Long(source.IsInherit);
         }
+        if (source.CustomKey != null) {
+            this.CustomKey = new String(source.CustomKey);
+        }
     }
 
 
@@ -348,6 +374,7 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionName", this.SessionName);
         this.setParamArrayObj(map, prefix + "Arguments.", this.Arguments);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
+        this.setParamSimple(map, prefix + "CustomKey", this.CustomKey);
 
     }
 }
