@@ -114,7 +114,6 @@ public class DescribeInstances {
 
             // 实例化一个client选项，可选的，没有特殊需求可以跳过
             ClientProfile clientProfile = new ClientProfile();
-            clientProfile.setSignMethod("HmacSHA256"); // 指定签名算法(默认为HmacSHA256)
             // 自3.1.80版本开始，SDK 支持打印日志。
             clientProfile.setHttpProfile(httpProfile);
             clientProfile.setDebug(true);
@@ -196,7 +195,6 @@ httpProfile.setEndpoint("cvm.ap-shanghai.tencentcloudapi.com"); // 指定接入�
 
 ```java
 ClientProfile clientProfile = new ClientProfile();
-clientProfile.setSignMethod("HmacSHA256"); // 指定签名算法(默认为HmacSHA256)
 // 自3.1.80版本开始，SDK 支持打印日志。
 clientProfile.setHttpProfile(httpProfile);
 clientProfile.setDebug(true);
