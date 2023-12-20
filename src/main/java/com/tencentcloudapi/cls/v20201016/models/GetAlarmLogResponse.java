@@ -45,7 +45,8 @@ public class GetAlarmLogResponse extends AbstractModel {
     private Boolean Analysis;
 
     /**
-    * 如果Analysis为True，则返回分析结果的列名，否则为空
+    * 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColNames")
@@ -53,7 +54,10 @@ public class GetAlarmLogResponse extends AbstractModel {
     private String [] ColNames;
 
     /**
-    * 执行详情查询结果；当Analysis为True时，可能返回为null
+    * 执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
@@ -61,7 +65,8 @@ public class GetAlarmLogResponse extends AbstractModel {
     private LogInfo [] Results;
 
     /**
-    * 执行详情统计分析结果；当Analysis为False时，可能返回为null
+    * 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisResults")
@@ -140,9 +145,11 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 如果Analysis为True，则返回分析结果的列名，否则为空
+     * Get 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
+     * @return ColNames 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getColNames() {
@@ -150,9 +157,11 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 如果Analysis为True，则返回分析结果的列名，否则为空
+     * Set 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
+     * @param ColNames 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColNames(String [] ColNames) {
@@ -160,9 +169,15 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 执行详情查询结果；当Analysis为True时，可能返回为null
+     * Get 执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 执行详情查询结果；当Analysis为True时，可能返回为null
+     * @return Results 执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogInfo [] getResults() {
@@ -170,9 +185,15 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 执行详情查询结果；当Analysis为True时，可能返回为null
+     * Set 执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 执行详情查询结果；当Analysis为True时，可能返回为null
+     * @param Results 执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(LogInfo [] Results) {
@@ -180,9 +201,11 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 执行详情统计分析结果；当Analysis为False时，可能返回为null
+     * Get 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnalysisResults 执行详情统计分析结果；当Analysis为False时，可能返回为null
+     * @return AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogItems [] getAnalysisResults() {
@@ -190,9 +213,11 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 执行详情统计分析结果；当Analysis为False时，可能返回为null
+     * Set 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnalysisResults 执行详情统计分析结果；当Analysis为False时，可能返回为null
+     * @param AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisResults(LogItems [] AnalysisResults) {

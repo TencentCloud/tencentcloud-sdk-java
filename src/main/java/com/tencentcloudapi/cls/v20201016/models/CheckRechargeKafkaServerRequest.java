@@ -31,14 +31,16 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     private Long KafkaType;
 
     /**
-    * 腾讯云CKafka实例ID，KafkaType为0时必填
+    * 腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * 服务地址
+    * 服务地址。
+KafkaType为1时，ServerAddr必填
     */
     @SerializedName("ServerAddr")
     @Expose
@@ -52,7 +54,7 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     private Boolean IsEncryptionAddr;
 
     /**
-    * 加密访问协议，IsEncryptionAddr参数为true时必填
+    * 加密访问协议。IsEncryptionAddr参数为true时必填
     */
     @SerializedName("Protocol")
     @Expose
@@ -75,32 +77,40 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     }
 
     /**
-     * Get 腾讯云CKafka实例ID，KafkaType为0时必填 
-     * @return KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
+     * Get 腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填 
+     * @return KafkaInstance 腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set 腾讯云CKafka实例ID，KafkaType为0时必填
-     * @param KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
+     * Set 腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填
+     * @param KafkaInstance 腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get 服务地址 
-     * @return ServerAddr 服务地址
+     * Get 服务地址。
+KafkaType为1时，ServerAddr必填 
+     * @return ServerAddr 服务地址。
+KafkaType为1时，ServerAddr必填
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 服务地址
-     * @param ServerAddr 服务地址
+     * Set 服务地址。
+KafkaType为1时，ServerAddr必填
+     * @param ServerAddr 服务地址。
+KafkaType为1时，ServerAddr必填
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
@@ -123,16 +133,16 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     }
 
     /**
-     * Get 加密访问协议，IsEncryptionAddr参数为true时必填 
-     * @return Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
+     * Get 加密访问协议。IsEncryptionAddr参数为true时必填 
+     * @return Protocol 加密访问协议。IsEncryptionAddr参数为true时必填
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 加密访问协议，IsEncryptionAddr参数为true时必填
-     * @param Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
+     * Set 加密访问协议。IsEncryptionAddr参数为true时必填
+     * @param Protocol 加密访问协议。IsEncryptionAddr参数为true时必填
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;

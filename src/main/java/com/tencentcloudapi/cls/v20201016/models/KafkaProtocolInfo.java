@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class KafkaProtocolInfo extends AbstractModel {
 
     /**
-    * 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证
+    * 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
+入参必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
@@ -32,7 +33,8 @@ public class KafkaProtocolInfo extends AbstractModel {
     private String Protocol;
 
     /**
-    * 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512
+    * 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mechanism")
@@ -40,7 +42,8 @@ public class KafkaProtocolInfo extends AbstractModel {
     private String Mechanism;
 
     /**
-    * 用户名
+    * 用户名。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
@@ -48,7 +51,8 @@ public class KafkaProtocolInfo extends AbstractModel {
     private String UserName;
 
     /**
-    * 用户密码
+    * 用户密码。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
@@ -56,9 +60,11 @@ public class KafkaProtocolInfo extends AbstractModel {
     private String Password;
 
     /**
-     * Get 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证
+     * Get 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
+入参必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Protocol 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证
+     * @return Protocol 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
+入参必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
@@ -66,9 +72,11 @@ public class KafkaProtocolInfo extends AbstractModel {
     }
 
     /**
-     * Set 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证
+     * Set 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
+入参必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Protocol 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证
+     * @param Protocol 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
+入参必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
@@ -76,9 +84,11 @@ public class KafkaProtocolInfo extends AbstractModel {
     }
 
     /**
-     * Get 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512
+     * Get 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mechanism 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512
+     * @return Mechanism 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMechanism() {
@@ -86,9 +96,11 @@ public class KafkaProtocolInfo extends AbstractModel {
     }
 
     /**
-     * Set 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512
+     * Set 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mechanism 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512
+     * @param Mechanism 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMechanism(String Mechanism) {
@@ -96,9 +108,11 @@ public class KafkaProtocolInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户名
+     * Get 用户名。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserName 用户名
+     * @return UserName 用户名。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
@@ -106,9 +120,11 @@ public class KafkaProtocolInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户名
+     * Set 用户名。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserName 用户名
+     * @param UserName 用户名。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
@@ -116,9 +132,11 @@ public class KafkaProtocolInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户密码
+     * Get 用户密码。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Password 用户密码
+     * @return Password 用户密码。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
@@ -126,9 +144,11 @@ public class KafkaProtocolInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户密码
+     * Set 用户密码。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Password 用户密码
+     * @param Password 用户密码。
+当Protocol为sasl_plaintext或sasl_ssl时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {

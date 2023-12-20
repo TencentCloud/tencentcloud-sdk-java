@@ -159,7 +159,7 @@ polarismesh - STANDARD版本
     private InstanceTagInfo [] EngineTags;
 
     /**
-    * 引擎的初始帐号信息。可设置参数：
+    * 引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token
@@ -588,11 +588,11 @@ polarismesh - STANDARD版本
     }
 
     /**
-     * Get 引擎的初始帐号信息。可设置参数：
+     * Get 引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token 
-     * @return EngineAdmin 引擎的初始帐号信息。可设置参数：
+     * @return EngineAdmin 引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token
@@ -602,11 +602,11 @@ polarismesh - STANDARD版本
     }
 
     /**
-     * Set 引擎的初始帐号信息。可设置参数：
+     * Set 引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token
-     * @param EngineAdmin 引擎的初始帐号信息。可设置参数：
+     * @param EngineAdmin 引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token

@@ -80,7 +80,8 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     private Boolean IsEncryptionAddr;
 
     /**
-    * 加密访问协议，IsEncryptionAddr参数为true时必填
+    * 加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填
     */
     @SerializedName("Protocol")
     @Expose
@@ -94,7 +95,8 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     private String ConsumerGroupName;
 
     /**
-    * 日志导入规则
+    * 日志导入规则。
+必填字段。
     */
     @SerializedName("LogRechargeRule")
     @Expose
@@ -229,16 +231,20 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get 加密访问协议，IsEncryptionAddr参数为true时必填 
-     * @return Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
+     * Get 加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填 
+     * @return Protocol 加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 加密访问协议，IsEncryptionAddr参数为true时必填
-     * @param Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
+     * Set 加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+     * @param Protocol 加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;
@@ -261,16 +267,20 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志导入规则 
-     * @return LogRechargeRule 日志导入规则
+     * Get 日志导入规则。
+必填字段。 
+     * @return LogRechargeRule 日志导入规则。
+必填字段。
      */
     public LogRechargeRuleInfo getLogRechargeRule() {
         return this.LogRechargeRule;
     }
 
     /**
-     * Set 日志导入规则
-     * @param LogRechargeRule 日志导入规则
+     * Set 日志导入规则。
+必填字段。
+     * @param LogRechargeRule 日志导入规则。
+必填字段。
      */
     public void setLogRechargeRule(LogRechargeRuleInfo LogRechargeRule) {
         this.LogRechargeRule = LogRechargeRule;

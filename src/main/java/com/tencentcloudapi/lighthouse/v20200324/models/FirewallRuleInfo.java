@@ -45,7 +45,10 @@ public class FirewallRuleInfo extends AbstractModel {
     private String Port;
 
     /**
-    * 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
+    * IPv4网段或 IPv4地址(互斥)。
+示例值：0.0.0.0/0。
+
+和Ipv6CidrBlock互斥，两者都不指定时，如果Protocol不是ICMPv6，则取默认值0.0.0.0/0。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -114,16 +117,28 @@ public class FirewallRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。 
-     * @return CidrBlock 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
+     * Get IPv4网段或 IPv4地址(互斥)。
+示例值：0.0.0.0/0。
+
+和Ipv6CidrBlock互斥，两者都不指定时，如果Protocol不是ICMPv6，则取默认值0.0.0.0/0。 
+     * @return CidrBlock IPv4网段或 IPv4地址(互斥)。
+示例值：0.0.0.0/0。
+
+和Ipv6CidrBlock互斥，两者都不指定时，如果Protocol不是ICMPv6，则取默认值0.0.0.0/0。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
-     * @param CidrBlock 网段或 IP (互斥)。默认为 0.0.0.0/0，表示所有来源。
+     * Set IPv4网段或 IPv4地址(互斥)。
+示例值：0.0.0.0/0。
+
+和Ipv6CidrBlock互斥，两者都不指定时，如果Protocol不是ICMPv6，则取默认值0.0.0.0/0。
+     * @param CidrBlock IPv4网段或 IPv4地址(互斥)。
+示例值：0.0.0.0/0。
+
+和Ipv6CidrBlock互斥，两者都不指定时，如果Protocol不是ICMPv6，则取默认值0.0.0.0/0。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;

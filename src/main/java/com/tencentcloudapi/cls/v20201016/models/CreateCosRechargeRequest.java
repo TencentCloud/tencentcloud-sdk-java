@@ -45,14 +45,15 @@ public class CreateCosRechargeRequest extends AbstractModel {
     private String Name;
 
     /**
-    * COS存储桶
+    * COS存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * COS存储桶所在地域
+    * COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224
     */
     @SerializedName("BucketRegion")
     @Expose
@@ -136,32 +137,36 @@ public class CreateCosRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get COS存储桶 
-     * @return Bucket COS存储桶
+     * Get COS存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312 
+     * @return Bucket COS存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set COS存储桶
-     * @param Bucket COS存储桶
+     * Set COS存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
+     * @param Bucket COS存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get COS存储桶所在地域 
-     * @return BucketRegion COS存储桶所在地域
+     * Get COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224 
+     * @return BucketRegion COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set COS存储桶所在地域
-     * @param BucketRegion COS存储桶所在地域
+     * Set COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224
+     * @param BucketRegion COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;

@@ -120,6 +120,14 @@ public class InstanceLogInfo extends AbstractModel {
     private String InstanceStatus;
 
     /**
+    * 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CodeFileName")
+    @Expose
+    private String CodeFileName;
+
+    /**
      * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务id
@@ -359,6 +367,26 @@ public class InstanceLogInfo extends AbstractModel {
         this.InstanceStatus = InstanceStatus;
     }
 
+    /**
+     * Get 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CodeFileName 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCodeFileName() {
+        return this.CodeFileName;
+    }
+
+    /**
+     * Set 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CodeFileName 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCodeFileName(String CodeFileName) {
+        this.CodeFileName = CodeFileName;
+    }
+
     public InstanceLogInfo() {
     }
 
@@ -403,6 +431,9 @@ public class InstanceLogInfo extends AbstractModel {
         if (source.InstanceStatus != null) {
             this.InstanceStatus = new String(source.InstanceStatus);
         }
+        if (source.CodeFileName != null) {
+            this.CodeFileName = new String(source.CodeFileName);
+        }
     }
 
 
@@ -422,6 +453,7 @@ public class InstanceLogInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "CostTime", this.CostTime);
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "CodeFileName", this.CodeFileName);
 
     }
 }

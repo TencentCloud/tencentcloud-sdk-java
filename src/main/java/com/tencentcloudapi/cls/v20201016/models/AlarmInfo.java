@@ -45,7 +45,7 @@ public class AlarmInfo extends AbstractModel {
     private MonitorTime MonitorTime;
 
     /**
-    * 触发条件。
+    * 单触发条件。与MultiConditions参数互斥。
     */
     @SerializedName("Condition")
     @Expose
@@ -157,8 +157,8 @@ public class AlarmInfo extends AbstractModel {
     private Long AlarmLevel;
 
     /**
-    * 多触发条件。
-
+    * 多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiConditions")
@@ -214,16 +214,16 @@ public class AlarmInfo extends AbstractModel {
     }
 
     /**
-     * Get 触发条件。 
-     * @return Condition 触发条件。
+     * Get 单触发条件。与MultiConditions参数互斥。 
+     * @return Condition 单触发条件。与MultiConditions参数互斥。
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 触发条件。
-     * @param Condition 触发条件。
+     * Set 单触发条件。与MultiConditions参数互斥。
+     * @param Condition 单触发条件。与MultiConditions参数互斥。
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
@@ -482,11 +482,11 @@ public class AlarmInfo extends AbstractModel {
     }
 
     /**
-     * Get 多触发条件。
-
+     * Get 多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MultiConditions 多触发条件。
-
+     * @return MultiConditions 多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MultiCondition [] getMultiConditions() {
@@ -494,11 +494,11 @@ public class AlarmInfo extends AbstractModel {
     }
 
     /**
-     * Set 多触发条件。
-
+     * Set 多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiConditions 多触发条件。
-
+     * @param MultiConditions 多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiConditions(MultiCondition [] MultiConditions) {

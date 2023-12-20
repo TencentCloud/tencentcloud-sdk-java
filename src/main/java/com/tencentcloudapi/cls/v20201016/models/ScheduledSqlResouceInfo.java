@@ -45,7 +45,7 @@ public class ScheduledSqlResouceInfo extends AbstractModel {
     private Long BizType;
 
     /**
-    * 指标名称
+    * 指标名称。当BizType为1时，MetricName需要填写
     */
     @SerializedName("MetricName")
     @Expose
@@ -130,16 +130,16 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     }
 
     /**
-     * Get 指标名称 
-     * @return MetricName 指标名称
+     * Get 指标名称。当BizType为1时，MetricName需要填写 
+     * @return MetricName 指标名称。当BizType为1时，MetricName需要填写
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标名称
-     * @param MetricName 指标名称
+     * Set 指标名称。当BizType为1时，MetricName需要填写
+     * @param MetricName 指标名称。当BizType为1时，MetricName需要填写
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

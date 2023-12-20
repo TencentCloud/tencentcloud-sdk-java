@@ -297,7 +297,12 @@ public class EssbasicClient extends AbstractClient{
 
 **注**: 
 `1. 发起合同时候,  作为发起方的第三方子企业A员工的企业和员工必须经过实名, 而作为签署方的第三方子企业A员工/个人/自然人/SaaS平台企业员工/第三方子企业B员工企业中的企业和个人/员工可以未实名`
+
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
+
+`3. 合同发起后就会扣减合同的额度, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度）`
+
+`4. 静默（自动）签署不支持合同签署方存在填写功能`
      * @param req ChannelCreateFlowByFilesRequest
      * @return ChannelCreateFlowByFilesResponse
      * @throws TencentCloudSDKException
@@ -370,6 +375,10 @@ public class EssbasicClient extends AbstractClient{
 `1. 发起合同时候,  作为发起方的第三方子企业A员工的企业和员工必须经过实名, 而作为签署方的第三方子企业A员工/个人/自然人/SaaS平台企业员工/第三方子企业B员工企业中的企业和个人/员工可以未实名`
 
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
+
+`3. 合同发起后就会扣减合同的额度, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度），合同组中每个合同会扣减一个合同额度`
+
+`4. 静默（自动）签署不支持合同签署方存在填写功能`
      * @param req ChannelCreateFlowGroupByFilesRequest
      * @return ChannelCreateFlowGroupByFilesResponse
      * @throws TencentCloudSDKException
@@ -439,6 +448,10 @@ public class EssbasicClient extends AbstractClient{
 `1. 发起合同时候,  作为发起方的第三方子企业A员工的企业和员工必须经过实名, 而作为签署方的第三方子企业A员工/个人/自然人/SaaS平台企业员工/第三方子企业B员工企业中的企业和个人/员工可以未实名`
 
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
+
+`3. 合同发起后就会扣减合同的额度, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度），合同组中每个合同会扣减一个合同额度`
+
+`4. 静默（自动）签署不支持合同签署方存在填写功能`
      * @param req ChannelCreateFlowGroupByTemplatesRequest
      * @return ChannelCreateFlowGroupByTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1083,7 +1096,12 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 **注**: 
 `1. 发起合同时候,  作为发起方的第三方子企业A员工的企业和员工必须经过实名, 而作为签署方的第三方子企业A员工/个人/自然人/SaaS平台企业员工/第三方子企业B员工企业中的企业和个人/员工可以未实名`
+
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
+
+`3. 合同发起后就会扣减合同的额度, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度）`
+
+`4. 静默（自动）签署不支持合同签署方存在填写功能`
      * @param req CreateFlowsByTemplatesRequest
      * @return CreateFlowsByTemplatesResponse
      * @throws TencentCloudSDKException

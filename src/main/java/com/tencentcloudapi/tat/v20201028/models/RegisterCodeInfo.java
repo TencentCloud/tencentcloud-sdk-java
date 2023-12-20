@@ -48,7 +48,7 @@ public class RegisterCodeInfo extends AbstractModel {
     private String InstanceNamePrefix;
 
     /**
-    * 该注册码允许注册的实列数目。
+    * 该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisterLimit")
@@ -170,9 +170,9 @@ public class RegisterCodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 该注册码允许注册的实列数目。
+     * Get 该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegisterLimit 该注册码允许注册的实列数目。
+     * @return RegisterLimit 该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegisterLimit() {
@@ -180,9 +180,9 @@ public class RegisterCodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 该注册码允许注册的实列数目。
+     * Set 该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegisterLimit 该注册码允许注册的实列数目。
+     * @param RegisterLimit 该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisterLimit(Long RegisterLimit) {

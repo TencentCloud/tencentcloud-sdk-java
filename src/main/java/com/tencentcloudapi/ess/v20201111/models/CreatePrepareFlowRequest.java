@@ -163,6 +163,14 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     private String UserData;
 
     /**
+    * 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+    */
+    @SerializedName("CcInfos")
+    @Expose
+    private CcInfo CcInfos;
+
+    /**
     * 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
     */
@@ -563,6 +571,26 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
+     * Get 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+ 
+     * @return CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+     */
+    public CcInfo getCcInfos() {
+        return this.CcInfos;
+    }
+
+    /**
+     * Set 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+     * @param CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+     */
+    public void setCcInfos(CcInfo CcInfos) {
+        this.CcInfos = CcInfos;
+    }
+
+    /**
      * Get 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过` 
      * @return FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
@@ -678,6 +706,9 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.CcInfos != null) {
+            this.CcInfos = new CcInfo(source.CcInfos);
+        }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
@@ -712,6 +743,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "InitiatorComponents.", this.InitiatorComponents);

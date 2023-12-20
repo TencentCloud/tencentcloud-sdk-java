@@ -83,7 +83,7 @@ public class TemClient extends AbstractClient{
     }
 
     /**
-     *生成Cos临时秘钥
+     *生成Cos临时密钥
      * @param req CreateCosTokenRequest
      * @return CreateCosTokenResponse
      * @throws TencentCloudSDKException

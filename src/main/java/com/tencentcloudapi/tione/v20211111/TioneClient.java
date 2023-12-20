@@ -468,6 +468,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *模型加速之后的模型版本列表
+     * @param req DescribeModelAccelerateVersionsRequest
+     * @return DescribeModelAccelerateVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelAccelerateVersionsResponse DescribeModelAccelerateVersions(DescribeModelAccelerateVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelAccelerateVersions", DescribeModelAccelerateVersionsResponse.class);
+    }
+
+    /**
      *查询单个服务
      * @param req DescribeModelServiceRequest
      * @return DescribeModelServiceResponse

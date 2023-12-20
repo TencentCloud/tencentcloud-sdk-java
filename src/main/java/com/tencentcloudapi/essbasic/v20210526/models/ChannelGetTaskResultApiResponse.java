@@ -57,7 +57,7 @@ public class ChannelGetTaskResultApiResponse extends AbstractModel {
     private String TaskMessage;
 
     /**
-    * 资源Id，也是FileId，用于文件发起时使用
+    * 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
     */
     @SerializedName("ResourceId")
     @Expose
@@ -176,16 +176,16 @@ public class ChannelGetTaskResultApiResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源Id，也是FileId，用于文件发起时使用 
-     * @return ResourceId 资源Id，也是FileId，用于文件发起时使用
+     * Get 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles) 
+     * @return ResourceId 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id，也是FileId，用于文件发起时使用
-     * @param ResourceId 资源Id，也是FileId，用于文件发起时使用
+     * Set 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
+     * @param ResourceId 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

@@ -326,6 +326,14 @@ Modify 集群变更中；
     private Long IfExistCatalog;
 
     /**
+    * 页面特性，用于前端屏蔽一些页面入口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Characteristic")
+    @Expose
+    private String [] Characteristic;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1074,7 +1082,9 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IfExistCatalog 判断审计日志表是否有catalog字段
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getIfExistCatalog() {
         return this.IfExistCatalog;
     }
@@ -1084,9 +1094,31 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IfExistCatalog 判断审计日志表是否有catalog字段
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setIfExistCatalog(Long IfExistCatalog) {
         this.IfExistCatalog = IfExistCatalog;
+    }
+
+    /**
+     * Get 页面特性，用于前端屏蔽一些页面入口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Characteristic 页面特性，用于前端屏蔽一些页面入口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCharacteristic() {
+        return this.Characteristic;
+    }
+
+    /**
+     * Set 页面特性，用于前端屏蔽一些页面入口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Characteristic 页面特性，用于前端屏蔽一些页面入口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCharacteristic(String [] Characteristic) {
+        this.Characteristic = Characteristic;
     }
 
     public InstanceInfo() {
@@ -1211,6 +1243,12 @@ Modify 集群变更中；
         if (source.IfExistCatalog != null) {
             this.IfExistCatalog = new Long(source.IfExistCatalog);
         }
+        if (source.Characteristic != null) {
+            this.Characteristic = new String[source.Characteristic.length];
+            for (int i = 0; i < source.Characteristic.length; i++) {
+                this.Characteristic[i] = new String(source.Characteristic[i]);
+            }
+        }
     }
 
 
@@ -1255,6 +1293,7 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "BuildVersion", this.BuildVersion);
         this.setParamSimple(map, prefix + "Components", this.Components);
         this.setParamSimple(map, prefix + "IfExistCatalog", this.IfExistCatalog);
+        this.setParamArraySimple(map, prefix + "Characteristic.", this.Characteristic);
 
     }
 }

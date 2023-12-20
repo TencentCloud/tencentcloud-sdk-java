@@ -237,6 +237,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *获取指定作业的事件，包括作业启动停止、运行失败、快照失败、作业异常等各种事件类型
+     * @param req DescribeJobEventsRequest
+     * @return DescribeJobEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobEventsResponse DescribeJobEvents(DescribeJobEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobEvents", DescribeJobEventsResponse.class);
+    }
+
+    /**
      *查找Savepoint列表
      * @param req DescribeJobSavepointRequest
      * @return DescribeJobSavepointResponse
