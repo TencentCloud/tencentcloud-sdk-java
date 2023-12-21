@@ -170,7 +170,7 @@ public class RoomItem extends AbstractModel {
     private Long EndDelayTime;
 
     /**
-    * 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+    * 直播类型：0 常规（默认）1 伪直播
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveType")
@@ -570,9 +570,9 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Get 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+     * Get 直播类型：0 常规（默认）1 伪直播
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+     * @return LiveType 直播类型：0 常规（默认）1 伪直播
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLiveType() {
@@ -580,9 +580,9 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Set 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+     * Set 直播类型：0 常规（默认）1 伪直播
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+     * @param LiveType 直播类型：0 常规（默认）1 伪直播
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveType(Long LiveType) {

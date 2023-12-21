@@ -24,32 +24,47 @@ import java.util.HashMap;
 public class VatInvoiceVerifyNewResponse extends AbstractModel {
 
     /**
-    * 增值税发票信息，详情请点击左侧链接。
+    * 增值税发票、购车发票、全电发票的基础要素字段信息。
     */
     @SerializedName("Invoice")
     @Expose
     private VatInvoice Invoice;
 
     /**
-    * 机动车销售统一发票信息
+    * 机动车销售统一发票详细字段信息。
     */
     @SerializedName("VehicleInvoiceInfo")
     @Expose
     private VehicleInvoiceInfo VehicleInvoiceInfo;
 
     /**
-    * 二手车销售统一发票信息
+    * 二手车销售统一发票详细字段信息。
     */
     @SerializedName("UsedVehicleInvoiceInfo")
     @Expose
     private UsedVehicleInvoiceInfo UsedVehicleInvoiceInfo;
 
     /**
-    * 通行费发票信息
+    * 通行费发票详细字段信息。
     */
     @SerializedName("PassInvoiceInfoList")
     @Expose
     private PassInvoiceInfo [] PassInvoiceInfoList;
+
+    /**
+    * 全电发票（铁路电子客票）详细字段信息。
+
+    */
+    @SerializedName("ElectronicTrainTicket")
+    @Expose
+    private ElectronicTrainTicket ElectronicTrainTicket;
+
+    /**
+    * 全电发票（航空运输电子客票行程单）详细字段信息。
+    */
+    @SerializedName("ElectronicAirTransport")
+    @Expose
+    private ElectronicAirTransport ElectronicAirTransport;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +74,103 @@ public class VatInvoiceVerifyNewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 增值税发票信息，详情请点击左侧链接。 
-     * @return Invoice 增值税发票信息，详情请点击左侧链接。
+     * Get 增值税发票、购车发票、全电发票的基础要素字段信息。 
+     * @return Invoice 增值税发票、购车发票、全电发票的基础要素字段信息。
      */
     public VatInvoice getInvoice() {
         return this.Invoice;
     }
 
     /**
-     * Set 增值税发票信息，详情请点击左侧链接。
-     * @param Invoice 增值税发票信息，详情请点击左侧链接。
+     * Set 增值税发票、购车发票、全电发票的基础要素字段信息。
+     * @param Invoice 增值税发票、购车发票、全电发票的基础要素字段信息。
      */
     public void setInvoice(VatInvoice Invoice) {
         this.Invoice = Invoice;
     }
 
     /**
-     * Get 机动车销售统一发票信息 
-     * @return VehicleInvoiceInfo 机动车销售统一发票信息
+     * Get 机动车销售统一发票详细字段信息。 
+     * @return VehicleInvoiceInfo 机动车销售统一发票详细字段信息。
      */
     public VehicleInvoiceInfo getVehicleInvoiceInfo() {
         return this.VehicleInvoiceInfo;
     }
 
     /**
-     * Set 机动车销售统一发票信息
-     * @param VehicleInvoiceInfo 机动车销售统一发票信息
+     * Set 机动车销售统一发票详细字段信息。
+     * @param VehicleInvoiceInfo 机动车销售统一发票详细字段信息。
      */
     public void setVehicleInvoiceInfo(VehicleInvoiceInfo VehicleInvoiceInfo) {
         this.VehicleInvoiceInfo = VehicleInvoiceInfo;
     }
 
     /**
-     * Get 二手车销售统一发票信息 
-     * @return UsedVehicleInvoiceInfo 二手车销售统一发票信息
+     * Get 二手车销售统一发票详细字段信息。 
+     * @return UsedVehicleInvoiceInfo 二手车销售统一发票详细字段信息。
      */
     public UsedVehicleInvoiceInfo getUsedVehicleInvoiceInfo() {
         return this.UsedVehicleInvoiceInfo;
     }
 
     /**
-     * Set 二手车销售统一发票信息
-     * @param UsedVehicleInvoiceInfo 二手车销售统一发票信息
+     * Set 二手车销售统一发票详细字段信息。
+     * @param UsedVehicleInvoiceInfo 二手车销售统一发票详细字段信息。
      */
     public void setUsedVehicleInvoiceInfo(UsedVehicleInvoiceInfo UsedVehicleInvoiceInfo) {
         this.UsedVehicleInvoiceInfo = UsedVehicleInvoiceInfo;
     }
 
     /**
-     * Get 通行费发票信息 
-     * @return PassInvoiceInfoList 通行费发票信息
+     * Get 通行费发票详细字段信息。 
+     * @return PassInvoiceInfoList 通行费发票详细字段信息。
      */
     public PassInvoiceInfo [] getPassInvoiceInfoList() {
         return this.PassInvoiceInfoList;
     }
 
     /**
-     * Set 通行费发票信息
-     * @param PassInvoiceInfoList 通行费发票信息
+     * Set 通行费发票详细字段信息。
+     * @param PassInvoiceInfoList 通行费发票详细字段信息。
      */
     public void setPassInvoiceInfoList(PassInvoiceInfo [] PassInvoiceInfoList) {
         this.PassInvoiceInfoList = PassInvoiceInfoList;
+    }
+
+    /**
+     * Get 全电发票（铁路电子客票）详细字段信息。
+ 
+     * @return ElectronicTrainTicket 全电发票（铁路电子客票）详细字段信息。
+
+     */
+    public ElectronicTrainTicket getElectronicTrainTicket() {
+        return this.ElectronicTrainTicket;
+    }
+
+    /**
+     * Set 全电发票（铁路电子客票）详细字段信息。
+
+     * @param ElectronicTrainTicket 全电发票（铁路电子客票）详细字段信息。
+
+     */
+    public void setElectronicTrainTicket(ElectronicTrainTicket ElectronicTrainTicket) {
+        this.ElectronicTrainTicket = ElectronicTrainTicket;
+    }
+
+    /**
+     * Get 全电发票（航空运输电子客票行程单）详细字段信息。 
+     * @return ElectronicAirTransport 全电发票（航空运输电子客票行程单）详细字段信息。
+     */
+    public ElectronicAirTransport getElectronicAirTransport() {
+        return this.ElectronicAirTransport;
+    }
+
+    /**
+     * Set 全电发票（航空运输电子客票行程单）详细字段信息。
+     * @param ElectronicAirTransport 全电发票（航空运输电子客票行程单）详细字段信息。
+     */
+    public void setElectronicAirTransport(ElectronicAirTransport ElectronicAirTransport) {
+        this.ElectronicAirTransport = ElectronicAirTransport;
     }
 
     /**
@@ -161,6 +212,12 @@ public class VatInvoiceVerifyNewResponse extends AbstractModel {
                 this.PassInvoiceInfoList[i] = new PassInvoiceInfo(source.PassInvoiceInfoList[i]);
             }
         }
+        if (source.ElectronicTrainTicket != null) {
+            this.ElectronicTrainTicket = new ElectronicTrainTicket(source.ElectronicTrainTicket);
+        }
+        if (source.ElectronicAirTransport != null) {
+            this.ElectronicAirTransport = new ElectronicAirTransport(source.ElectronicAirTransport);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -175,6 +232,8 @@ public class VatInvoiceVerifyNewResponse extends AbstractModel {
         this.setParamObj(map, prefix + "VehicleInvoiceInfo.", this.VehicleInvoiceInfo);
         this.setParamObj(map, prefix + "UsedVehicleInvoiceInfo.", this.UsedVehicleInvoiceInfo);
         this.setParamArrayObj(map, prefix + "PassInvoiceInfoList.", this.PassInvoiceInfoList);
+        this.setParamObj(map, prefix + "ElectronicTrainTicket.", this.ElectronicTrainTicket);
+        this.setParamObj(map, prefix + "ElectronicAirTransport.", this.ElectronicAirTransport);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

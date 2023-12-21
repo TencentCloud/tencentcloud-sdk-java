@@ -178,7 +178,7 @@ public class RoomInfo extends AbstractModel {
     private Long EndDelayTime;
 
     /**
-    * 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+    * 直播类型：0 常规（默认）1 伪直播
     */
     @SerializedName("LiveType")
     @Expose
@@ -197,6 +197,13 @@ public class RoomInfo extends AbstractModel {
     @SerializedName("EnableAutoStart")
     @Expose
     private Long EnableAutoStart;
+
+    /**
+    * 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+    */
+    @SerializedName("RecordBackground")
+    @Expose
+    private String RecordBackground;
 
     /**
      * Get 房间名称。 
@@ -551,16 +558,16 @@ public class RoomInfo extends AbstractModel {
     }
 
     /**
-     * Get 直播方式：0 常规模式（默认）1 回放直播模式（伪直播） 
-     * @return LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * Get 直播类型：0 常规（默认）1 伪直播 
+     * @return LiveType 直播类型：0 常规（默认）1 伪直播
      */
     public Long getLiveType() {
         return this.LiveType;
     }
 
     /**
-     * Set 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
-     * @param LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * Set 直播类型：0 常规（默认）1 伪直播
+     * @param LiveType 直播类型：0 常规（默认）1 伪直播
      */
     public void setLiveType(Long LiveType) {
         this.LiveType = LiveType;
@@ -596,6 +603,22 @@ public class RoomInfo extends AbstractModel {
      */
     public void setEnableAutoStart(Long EnableAutoStart) {
         this.EnableAutoStart = EnableAutoStart;
+    }
+
+    /**
+     * Get 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道 
+     * @return RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     */
+    public String getRecordBackground() {
+        return this.RecordBackground;
+    }
+
+    /**
+     * Set 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     * @param RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     */
+    public void setRecordBackground(String RecordBackground) {
+        this.RecordBackground = RecordBackground;
     }
 
     public RoomInfo() {
@@ -684,6 +707,9 @@ public class RoomInfo extends AbstractModel {
         if (source.EnableAutoStart != null) {
             this.EnableAutoStart = new Long(source.EnableAutoStart);
         }
+        if (source.RecordBackground != null) {
+            this.RecordBackground = new String(source.RecordBackground);
+        }
     }
 
 
@@ -716,6 +742,7 @@ public class RoomInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LiveType", this.LiveType);
         this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
+        this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
 
     }
 }

@@ -1352,6 +1352,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *对点播中的音视频媒体发起音画质重生任务。
+     * @param req EnhanceMediaQualityRequest
+     * @return EnhanceMediaQualityResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnhanceMediaQualityResponse EnhanceMediaQuality(EnhanceMediaQualityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnhanceMediaQuality", EnhanceMediaQualityResponse.class);
+    }
+
+    /**
      *本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
      * @param req ExecuteFunctionRequest
      * @return ExecuteFunctionResponse

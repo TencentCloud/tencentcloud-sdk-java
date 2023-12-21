@@ -203,7 +203,7 @@ video 纯视频
     private Long EndDelayTime;
 
     /**
-    * 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+    * 直播类型：0 常规（默认）1 伪直播
     */
     @SerializedName("LiveType")
     @Expose
@@ -671,16 +671,16 @@ video 纯视频
     }
 
     /**
-     * Get 直播方式：0 常规模式（默认）1 回放直播模式（伪直播） 
-     * @return LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * Get 直播类型：0 常规（默认）1 伪直播 
+     * @return LiveType 直播类型：0 常规（默认）1 伪直播
      */
     public Long getLiveType() {
         return this.LiveType;
     }
 
     /**
-     * Set 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
-     * @param LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * Set 直播类型：0 常规（默认）1 伪直播
+     * @param LiveType 直播类型：0 常规（默认）1 伪直播
      */
     public void setLiveType(Long LiveType) {
         this.LiveType = LiveType;

@@ -267,7 +267,7 @@ public class CreateRecTaskRequest extends AbstractModel {
     private Long FilterModal;
 
     /**
-    * 单标点最多字数
+    * 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
@@ -1030,13 +1030,13 @@ public class CreateRecTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 单标点最多字数
+     * Get 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
 
 注意：需设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果 
-     * @return SentenceMaxLength 单标点最多字数
+     * @return SentenceMaxLength 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
@@ -1048,13 +1048,13 @@ public class CreateRecTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set 单标点最多字数
+     * Set 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
 
 注意：需设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果
-     * @param SentenceMaxLength 单标点最多字数
+     * @param SentenceMaxLength 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0

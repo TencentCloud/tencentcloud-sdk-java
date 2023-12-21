@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CrontabResumeSuspendStrategy extends AbstractModel {
 
     /**
-    * 定时拉起时间：如：周一8点
+    * 定时拉起时间：如：周一&周三8点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResumeTime")
@@ -32,7 +32,7 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
     private String ResumeTime;
 
     /**
-    * 定时挂起时间：如：周一20点
+    * 定时挂起时间：如：周一&周三20点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuspendTime")
@@ -48,9 +48,9 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
     private Long SuspendStrategy;
 
     /**
-     * Get 定时拉起时间：如：周一8点
+     * Get 定时拉起时间：如：周一&周三8点
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResumeTime 定时拉起时间：如：周一8点
+     * @return ResumeTime 定时拉起时间：如：周一&周三8点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResumeTime() {
@@ -58,9 +58,9 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
     }
 
     /**
-     * Set 定时拉起时间：如：周一8点
+     * Set 定时拉起时间：如：周一&周三8点
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResumeTime 定时拉起时间：如：周一8点
+     * @param ResumeTime 定时拉起时间：如：周一&周三8点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResumeTime(String ResumeTime) {
@@ -68,9 +68,9 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
     }
 
     /**
-     * Get 定时挂起时间：如：周一20点
+     * Get 定时挂起时间：如：周一&周三20点
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SuspendTime 定时挂起时间：如：周一20点
+     * @return SuspendTime 定时挂起时间：如：周一&周三20点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuspendTime() {
@@ -78,9 +78,9 @@ public class CrontabResumeSuspendStrategy extends AbstractModel {
     }
 
     /**
-     * Set 定时挂起时间：如：周一20点
+     * Set 定时挂起时间：如：周一&周三20点
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SuspendTime 定时挂起时间：如：周一20点
+     * @param SuspendTime 定时挂起时间：如：周一&周三20点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuspendTime(String SuspendTime) {

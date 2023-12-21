@@ -133,6 +133,24 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private Long Deadline;
 
     /**
+    * 合同流程的签署顺序类型：
+<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
+<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+    */
+    @SerializedName("Unordered")
+    @Expose
+    private Boolean Unordered;
+
+    /**
+    * 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
     * 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
 
 到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。
@@ -142,13 +160,22 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private Long RemindedOn;
 
     /**
-    * 合同流程的签署顺序类型：
-<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
-<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+    * 指定个人签署方查看合同的校验方式
+<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
     */
-    @SerializedName("Unordered")
+    @SerializedName("ApproverVerifyType")
     @Expose
-    private Boolean Unordered;
+    private String ApproverVerifyType;
+
+    /**
+    * 签署方签署控件（印章/签名等）的生成方式：
+<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
+<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+    */
+    @SerializedName("SignBeanTag")
+    @Expose
+    private Long SignBeanTag;
 
     /**
     * 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
@@ -172,46 +199,6 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private String CustomShowMap;
 
     /**
-    * 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
-    */
-    @SerializedName("NeedSignReview")
-    @Expose
-    private Boolean NeedSignReview;
-
-    /**
-    * 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
-
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
-    */
-    @SerializedName("UserData")
-    @Expose
-    private String UserData;
-
-    /**
-    * 指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
-    */
-    @SerializedName("ApproverVerifyType")
-    @Expose
-    private String ApproverVerifyType;
-
-    /**
-    * 签署方签署控件（印章/签名等）的生成方式：
-<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
-<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-    */
-    @SerializedName("SignBeanTag")
-    @Expose
-    private Long SignBeanTag;
-
-    /**
     * 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
     */
@@ -227,6 +214,19 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     @SerializedName("AutoSignScene")
     @Expose
     private String AutoSignScene;
+
+    /**
+    * 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+    */
+    @SerializedName("NeedSignReview")
+    @Expose
+    private Boolean NeedSignReview;
 
     /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
@@ -521,6 +521,54 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
+     * Get 合同流程的签署顺序类型：
+<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
+<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul> 
+     * @return Unordered 合同流程的签署顺序类型：
+<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
+<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+     */
+    public Boolean getUnordered() {
+        return this.Unordered;
+    }
+
+    /**
+     * Set 合同流程的签署顺序类型：
+<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
+<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+     * @param Unordered 合同流程的签署顺序类型：
+<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
+<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+     */
+    public void setUnordered(Boolean Unordered) {
+        this.Unordered = Unordered;
+    }
+
+    /**
+     * Get 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。 
+     * @return UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     * @param UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
      * Get 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。
 
 到达提醒时间后，腾讯电子签会短信通知发起方企业合同提醒，可用于处理合同到期事务，如合同续签等事宜。 
@@ -545,27 +593,51 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同流程的签署顺序类型：
-<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
-<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul> 
-     * @return Unordered 合同流程的签署顺序类型：
-<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
-<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+     * Get 指定个人签署方查看合同的校验方式
+<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul> 
+     * @return ApproverVerifyType 指定个人签署方查看合同的校验方式
+<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
      */
-    public Boolean getUnordered() {
-        return this.Unordered;
+    public String getApproverVerifyType() {
+        return this.ApproverVerifyType;
     }
 
     /**
-     * Set 合同流程的签署顺序类型：
-<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
-<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-     * @param Unordered 合同流程的签署顺序类型：
-<ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
-<li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
+     * Set 指定个人签署方查看合同的校验方式
+<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
+     * @param ApproverVerifyType 指定个人签署方查看合同的校验方式
+<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
      */
-    public void setUnordered(Boolean Unordered) {
-        this.Unordered = Unordered;
+    public void setApproverVerifyType(String ApproverVerifyType) {
+        this.ApproverVerifyType = ApproverVerifyType;
+    }
+
+    /**
+     * Get 签署方签署控件（印章/签名等）的生成方式：
+<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
+<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul> 
+     * @return SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
+<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
+<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+     */
+    public Long getSignBeanTag() {
+        return this.SignBeanTag;
+    }
+
+    /**
+     * Set 签署方签署控件（印章/签名等）的生成方式：
+<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
+<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+     * @param SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
+<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
+<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+     */
+    public void setSignBeanTag(Long SignBeanTag) {
+        this.SignBeanTag = SignBeanTag;
     }
 
     /**
@@ -641,118 +713,6 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同` 
-     * @return NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
-     */
-    public Boolean getNeedSignReview() {
-        return this.NeedSignReview;
-    }
-
-    /**
-     * Set 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
-     * @param NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
-     */
-    public void setNeedSignReview(Boolean NeedSignReview) {
-        this.NeedSignReview = NeedSignReview;
-    }
-
-    /**
-     * Get 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
-
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。 
-     * @return UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
-
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
-     */
-    public String getUserData() {
-        return this.UserData;
-    }
-
-    /**
-     * Set 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
-
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
-     * @param UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
-
-在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
-     */
-    public void setUserData(String UserData) {
-        this.UserData = UserData;
-    }
-
-    /**
-     * Get 指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul> 
-     * @return ApproverVerifyType 指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
-     */
-    public String getApproverVerifyType() {
-        return this.ApproverVerifyType;
-    }
-
-    /**
-     * Set 指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
-     * @param ApproverVerifyType 指定个人签署方查看合同的校验方式
-<ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
-     */
-    public void setApproverVerifyType(String ApproverVerifyType) {
-        this.ApproverVerifyType = ApproverVerifyType;
-    }
-
-    /**
-     * Get 签署方签署控件（印章/签名等）的生成方式：
-<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
-<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul> 
-     * @return SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
-<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
-<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-     */
-    public Long getSignBeanTag() {
-        return this.SignBeanTag;
-    }
-
-    /**
-     * Set 签署方签署控件（印章/签名等）的生成方式：
-<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
-<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-     * @param SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
-<ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
-<li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-     */
-    public void setSignBeanTag(Long SignBeanTag) {
-        this.SignBeanTag = SignBeanTag;
-    }
-
-    /**
      * Get 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
      * @return Agent 代理企业和员工的信息。
@@ -794,6 +754,46 @@ public class CreateFlowByFilesRequest extends AbstractModel {
      */
     public void setAutoSignScene(String AutoSignScene) {
         this.AutoSignScene = AutoSignScene;
+    }
+
+    /**
+     * Get 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同` 
+     * @return NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+     */
+    public Boolean getNeedSignReview() {
+        return this.NeedSignReview;
+    }
+
+    /**
+     * Set 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+     * @param NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li> **false**：（默认）不需要审批，直接签署。</li>
+<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+     */
+    public void setNeedSignReview(Boolean NeedSignReview) {
+        this.NeedSignReview = NeedSignReview;
     }
 
     public CreateFlowByFilesRequest() {
@@ -852,20 +852,14 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         if (source.Deadline != null) {
             this.Deadline = new Long(source.Deadline);
         }
-        if (source.RemindedOn != null) {
-            this.RemindedOn = new Long(source.RemindedOn);
-        }
         if (source.Unordered != null) {
             this.Unordered = new Boolean(source.Unordered);
         }
-        if (source.CustomShowMap != null) {
-            this.CustomShowMap = new String(source.CustomShowMap);
-        }
-        if (source.NeedSignReview != null) {
-            this.NeedSignReview = new Boolean(source.NeedSignReview);
-        }
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
+        }
+        if (source.RemindedOn != null) {
+            this.RemindedOn = new Long(source.RemindedOn);
         }
         if (source.ApproverVerifyType != null) {
             this.ApproverVerifyType = new String(source.ApproverVerifyType);
@@ -873,11 +867,17 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         if (source.SignBeanTag != null) {
             this.SignBeanTag = new Long(source.SignBeanTag);
         }
+        if (source.CustomShowMap != null) {
+            this.CustomShowMap = new String(source.CustomShowMap);
+        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
         if (source.AutoSignScene != null) {
             this.AutoSignScene = new String(source.AutoSignScene);
+        }
+        if (source.NeedSignReview != null) {
+            this.NeedSignReview = new Boolean(source.NeedSignReview);
         }
     }
 
@@ -898,15 +898,15 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         this.setParamSimple(map, prefix + "PreviewType", this.PreviewType);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
-        this.setParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
-        this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
-        this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
         this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
+        this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
+        this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
 
     }
 }

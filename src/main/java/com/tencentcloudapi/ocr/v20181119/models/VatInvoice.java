@@ -46,6 +46,7 @@ public class VatInvoice extends AbstractModel {
 
     /**
     * 购方抬头
+通用机打发票类型时不返回
     */
     @SerializedName("BuyerName")
     @Expose
@@ -53,6 +54,7 @@ public class VatInvoice extends AbstractModel {
 
     /**
     * 购方税号
+通用机打发票类型时不返回
     */
     @SerializedName("BuyerTaxCode")
     @Expose
@@ -60,6 +62,7 @@ public class VatInvoice extends AbstractModel {
 
     /**
     * 购方地址电话
+通用机打发票类型做不返回
     */
     @SerializedName("BuyerAddressPhone")
     @Expose
@@ -67,6 +70,7 @@ public class VatInvoice extends AbstractModel {
 
     /**
     * 购方银行账号
+通用机打发票类型时不返回
     */
     @SerializedName("BuyerBankAccount")
     @Expose
@@ -127,10 +131,19 @@ public class VatInvoice extends AbstractModel {
 15：二手车销售统一发票，
 32：深圳区块链发票，
 102：通用机打电子发票
+61：电子发票（航空运输电子客票行程单）
+83：电子发票（铁路电子发票）
     */
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
+    */
+    @SerializedName("ElectronicType")
+    @Expose
+    private String ElectronicType;
 
     /**
     * 检验码
@@ -291,8 +304,10 @@ Y: 有清单 N：无清单
     }
 
     /**
-     * Get 购方抬头 
+     * Get 购方抬头
+通用机打发票类型时不返回 
      * @return BuyerName 购方抬头
+通用机打发票类型时不返回
      */
     public String getBuyerName() {
         return this.BuyerName;
@@ -300,15 +315,19 @@ Y: 有清单 N：无清单
 
     /**
      * Set 购方抬头
+通用机打发票类型时不返回
      * @param BuyerName 购方抬头
+通用机打发票类型时不返回
      */
     public void setBuyerName(String BuyerName) {
         this.BuyerName = BuyerName;
     }
 
     /**
-     * Get 购方税号 
+     * Get 购方税号
+通用机打发票类型时不返回 
      * @return BuyerTaxCode 购方税号
+通用机打发票类型时不返回
      */
     public String getBuyerTaxCode() {
         return this.BuyerTaxCode;
@@ -316,15 +335,19 @@ Y: 有清单 N：无清单
 
     /**
      * Set 购方税号
+通用机打发票类型时不返回
      * @param BuyerTaxCode 购方税号
+通用机打发票类型时不返回
      */
     public void setBuyerTaxCode(String BuyerTaxCode) {
         this.BuyerTaxCode = BuyerTaxCode;
     }
 
     /**
-     * Get 购方地址电话 
+     * Get 购方地址电话
+通用机打发票类型做不返回 
      * @return BuyerAddressPhone 购方地址电话
+通用机打发票类型做不返回
      */
     public String getBuyerAddressPhone() {
         return this.BuyerAddressPhone;
@@ -332,15 +355,19 @@ Y: 有清单 N：无清单
 
     /**
      * Set 购方地址电话
+通用机打发票类型做不返回
      * @param BuyerAddressPhone 购方地址电话
+通用机打发票类型做不返回
      */
     public void setBuyerAddressPhone(String BuyerAddressPhone) {
         this.BuyerAddressPhone = BuyerAddressPhone;
     }
 
     /**
-     * Get 购方银行账号 
+     * Get 购方银行账号
+通用机打发票类型时不返回 
      * @return BuyerBankAccount 购方银行账号
+通用机打发票类型时不返回
      */
     public String getBuyerBankAccount() {
         return this.BuyerBankAccount;
@@ -348,7 +375,9 @@ Y: 有清单 N：无清单
 
     /**
      * Set 购方银行账号
+通用机打发票类型时不返回
      * @param BuyerBankAccount 购方银行账号
+通用机打发票类型时不返回
      */
     public void setBuyerBankAccount(String BuyerBankAccount) {
         this.BuyerBankAccount = BuyerBankAccount;
@@ -462,7 +491,9 @@ Y: 有清单 N：无清单
 14：增值税电子（通行费）发票，
 15：二手车销售统一发票，
 32：深圳区块链发票，
-102：通用机打电子发票 
+102：通用机打电子发票
+61：电子发票（航空运输电子客票行程单）
+83：电子发票（铁路电子发票） 
      * @return Type 票种类型
 01：增值税专用发票，
 02：货运运输业增值税专用发票，
@@ -475,6 +506,8 @@ Y: 有清单 N：无清单
 15：二手车销售统一发票，
 32：深圳区块链发票，
 102：通用机打电子发票
+61：电子发票（航空运输电子客票行程单）
+83：电子发票（铁路电子发票）
      */
     public String getType() {
         return this.Type;
@@ -493,6 +526,8 @@ Y: 有清单 N：无清单
 15：二手车销售统一发票，
 32：深圳区块链发票，
 102：通用机打电子发票
+61：电子发票（航空运输电子客票行程单）
+83：电子发票（铁路电子发票）
      * @param Type 票种类型
 01：增值税专用发票，
 02：货运运输业增值税专用发票，
@@ -505,9 +540,27 @@ Y: 有清单 N：无清单
 15：二手车销售统一发票，
 32：深圳区块链发票，
 102：通用机打电子发票
+61：电子发票（航空运输电子客票行程单）
+83：电子发票（铁路电子发票）
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单 
+     * @return ElectronicType 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
+     */
+    public String getElectronicType() {
+        return this.ElectronicType;
+    }
+
+    /**
+     * Set 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
+     * @param ElectronicType 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
+     */
+    public void setElectronicType(String ElectronicType) {
+        this.ElectronicType = ElectronicType;
     }
 
     /**
@@ -820,6 +873,9 @@ Y: 有清单 N：无清单
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.ElectronicType != null) {
+            this.ElectronicType = new String(source.ElectronicType);
+        }
         if (source.CheckCode != null) {
             this.CheckCode = new String(source.CheckCode);
         }
@@ -889,6 +945,7 @@ Y: 有清单 N：无清单
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MachineNo", this.MachineNo);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "ElectronicType", this.ElectronicType);
         this.setParamSimple(map, prefix + "CheckCode", this.CheckCode);
         this.setParamSimple(map, prefix + "IsAbandoned", this.IsAbandoned);
         this.setParamSimple(map, prefix + "HasSellerList", this.HasSellerList);

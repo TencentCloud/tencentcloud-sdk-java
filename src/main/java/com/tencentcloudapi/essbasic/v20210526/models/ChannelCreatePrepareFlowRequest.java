@@ -24,17 +24,6 @@ import java.util.HashMap;
 public class ChannelCreatePrepareFlowRequest extends AbstractModel {
 
     /**
-    * 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul>
-    */
-    @SerializedName("ResourceId")
-    @Expose
-    private String ResourceId;
-
-    /**
     * 资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>
@@ -64,6 +53,17 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
+
+    /**
+    * 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
 
     /**
     * 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
@@ -107,38 +107,6 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
-
-    /**
-     * Get 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul> 
-     * @return ResourceId 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul>
-     */
-    public String getResourceId() {
-        return this.ResourceId;
-    }
-
-    /**
-     * Set 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul>
-     * @param ResourceId 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul>
-     */
-    public void setResourceId(String ResourceId) {
-        this.ResourceId = ResourceId;
-    }
 
     /**
      * Get 资源类型，取值有：
@@ -226,6 +194,38 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
+    }
+
+    /**
+     * Get 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul> 
+     * @return ResourceId 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
+     * @param ResourceId 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     /**
@@ -348,9 +348,6 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ChannelCreatePrepareFlowRequest(ChannelCreatePrepareFlowRequest source) {
-        if (source.ResourceId != null) {
-            this.ResourceId = new String(source.ResourceId);
-        }
         if (source.ResourceType != null) {
             this.ResourceType = new Long(source.ResourceType);
         }
@@ -359,6 +356,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
         }
         if (source.FlowOption != null) {
             this.FlowOption = new CreateFlowOption(source.FlowOption);
@@ -388,10 +388,10 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamObj(map, prefix + "FlowInfo.", this.FlowInfo);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamObj(map, prefix + "FlowOption.", this.FlowOption);
         this.setParamArrayObj(map, prefix + "FlowApproverList.", this.FlowApproverList);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);

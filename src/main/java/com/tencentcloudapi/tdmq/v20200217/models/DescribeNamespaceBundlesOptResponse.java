@@ -31,13 +31,6 @@ public class DescribeNamespaceBundlesOptResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * bundle列表
-    */
-    @SerializedName("BundleSet")
-    @Expose
-    private BundleSetOpt [] BundleSet;
-
-    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -58,22 +51,6 @@ public class DescribeNamespaceBundlesOptResponse extends AbstractModel {
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get bundle列表 
-     * @return BundleSet bundle列表
-     */
-    public BundleSetOpt [] getBundleSet() {
-        return this.BundleSet;
-    }
-
-    /**
-     * Set bundle列表
-     * @param BundleSet bundle列表
-     */
-    public void setBundleSet(BundleSetOpt [] BundleSet) {
-        this.BundleSet = BundleSet;
     }
 
     /**
@@ -103,12 +80,6 @@ public class DescribeNamespaceBundlesOptResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.BundleSet != null) {
-            this.BundleSet = new BundleSetOpt[source.BundleSet.length];
-            for (int i = 0; i < source.BundleSet.length; i++) {
-                this.BundleSet[i] = new BundleSetOpt(source.BundleSet[i]);
-            }
-        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,7 +91,6 @@ public class DescribeNamespaceBundlesOptResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "BundleSet.", this.BundleSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
