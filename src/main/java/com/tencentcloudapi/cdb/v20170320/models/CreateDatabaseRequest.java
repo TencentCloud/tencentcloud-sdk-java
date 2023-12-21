@@ -31,7 +31,7 @@ public class CreateDatabaseRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 数据库名称。
+    * 数据库名称，长度不超过64。
     */
     @SerializedName("DBName")
     @Expose
@@ -61,16 +61,16 @@ public class CreateDatabaseRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库名称。 
-     * @return DBName 数据库名称。
+     * Get 数据库名称，长度不超过64。 
+     * @return DBName 数据库名称，长度不超过64。
      */
     public String getDBName() {
         return this.DBName;
     }
 
     /**
-     * Set 数据库名称。
-     * @param DBName 数据库名称。
+     * Set 数据库名称，长度不超过64。
+     * @param DBName 数据库名称，长度不超过64。
      */
     public void setDBName(String DBName) {
         this.DBName = DBName;

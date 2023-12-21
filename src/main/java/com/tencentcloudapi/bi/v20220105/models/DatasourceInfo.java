@@ -286,6 +286,14 @@ public class DatasourceInfo extends AbstractModel {
     private String DataOriginDatasourceId;
 
     /**
+    * 集群id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
      * Get 数据库ID 
      * @return Id 数据库ID
      */
@@ -925,6 +933,26 @@ public class DatasourceInfo extends AbstractModel {
         this.DataOriginDatasourceId = DataOriginDatasourceId;
     }
 
+    /**
+     * Get 集群id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId 集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId 集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public DatasourceInfo() {
     }
 
@@ -1041,6 +1069,9 @@ public class DatasourceInfo extends AbstractModel {
         if (source.DataOriginDatasourceId != null) {
             this.DataOriginDatasourceId = new String(source.DataOriginDatasourceId);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -1082,6 +1113,7 @@ public class DatasourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DataOrigin", this.DataOrigin);
         this.setParamSimple(map, prefix + "DataOriginProjectId", this.DataOriginProjectId);
         this.setParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

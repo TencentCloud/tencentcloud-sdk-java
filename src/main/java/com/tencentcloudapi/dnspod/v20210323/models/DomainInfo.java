@@ -259,6 +259,13 @@ public class DomainInfo extends AbstractModel {
     private String SearchEnginePush;
 
     /**
+    * 是否开启辅助 DNS
+    */
+    @SerializedName("SlaveDNS")
+    @Expose
+    private String SlaveDNS;
+
+    /**
      * Get 域名ID 
      * @return DomainId 域名ID
      */
@@ -814,6 +821,22 @@ public class DomainInfo extends AbstractModel {
         this.SearchEnginePush = SearchEnginePush;
     }
 
+    /**
+     * Get 是否开启辅助 DNS 
+     * @return SlaveDNS 是否开启辅助 DNS
+     */
+    public String getSlaveDNS() {
+        return this.SlaveDNS;
+    }
+
+    /**
+     * Set 是否开启辅助 DNS
+     * @param SlaveDNS 是否开启辅助 DNS
+     */
+    public void setSlaveDNS(String SlaveDNS) {
+        this.SlaveDNS = SlaveDNS;
+    }
+
     public DomainInfo() {
     }
 
@@ -927,6 +950,9 @@ public class DomainInfo extends AbstractModel {
         if (source.SearchEnginePush != null) {
             this.SearchEnginePush = new String(source.SearchEnginePush);
         }
+        if (source.SlaveDNS != null) {
+            this.SlaveDNS = new String(source.SlaveDNS);
+        }
     }
 
 
@@ -966,6 +992,7 @@ public class DomainInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSubDomain", this.IsSubDomain);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "SearchEnginePush", this.SearchEnginePush);
+        this.setParamSimple(map, prefix + "SlaveDNS", this.SlaveDNS);
 
     }
 }

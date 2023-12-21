@@ -165,6 +165,14 @@ public class BackupInfo extends AbstractModel {
     private String EncryptionFlag;
 
     /**
+    * 备份GTID点位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutedGTIDSet")
+    @Expose
+    private String ExecutedGTIDSet;
+
+    /**
      * Get 备份文件名 
      * @return Name 备份文件名
      */
@@ -488,6 +496,26 @@ public class BackupInfo extends AbstractModel {
         this.EncryptionFlag = EncryptionFlag;
     }
 
+    /**
+     * Get 备份GTID点位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutedGTIDSet 备份GTID点位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutedGTIDSet() {
+        return this.ExecutedGTIDSet;
+    }
+
+    /**
+     * Set 备份GTID点位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutedGTIDSet 备份GTID点位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutedGTIDSet(String ExecutedGTIDSet) {
+        this.ExecutedGTIDSet = ExecutedGTIDSet;
+    }
+
     public BackupInfo() {
     }
 
@@ -559,6 +587,9 @@ public class BackupInfo extends AbstractModel {
         if (source.EncryptionFlag != null) {
             this.EncryptionFlag = new String(source.EncryptionFlag);
         }
+        if (source.ExecutedGTIDSet != null) {
+            this.ExecutedGTIDSet = new String(source.ExecutedGTIDSet);
+        }
     }
 
 
@@ -586,6 +617,7 @@ public class BackupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
+        this.setParamSimple(map, prefix + "ExecutedGTIDSet", this.ExecutedGTIDSet);
 
     }
 }

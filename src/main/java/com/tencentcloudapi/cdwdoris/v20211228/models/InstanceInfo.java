@@ -334,6 +334,14 @@ Modify 集群变更中；
     private String [] Characteristic;
 
     /**
+    * 超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RestartTimeout")
+    @Expose
+    private String RestartTimeout;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1121,6 +1129,26 @@ Modify 集群变更中；
         this.Characteristic = Characteristic;
     }
 
+    /**
+     * Get 超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RestartTimeout 超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRestartTimeout() {
+        return this.RestartTimeout;
+    }
+
+    /**
+     * Set 超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RestartTimeout 超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRestartTimeout(String RestartTimeout) {
+        this.RestartTimeout = RestartTimeout;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1249,6 +1277,9 @@ Modify 集群变更中；
                 this.Characteristic[i] = new String(source.Characteristic[i]);
             }
         }
+        if (source.RestartTimeout != null) {
+            this.RestartTimeout = new String(source.RestartTimeout);
+        }
     }
 
 
@@ -1294,6 +1325,7 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "Components", this.Components);
         this.setParamSimple(map, prefix + "IfExistCatalog", this.IfExistCatalog);
         this.setParamArraySimple(map, prefix + "Characteristic.", this.Characteristic);
+        this.setParamSimple(map, prefix + "RestartTimeout", this.RestartTimeout);
 
     }
 }

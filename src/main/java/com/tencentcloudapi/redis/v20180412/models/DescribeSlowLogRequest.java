@@ -67,7 +67,9 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+    * 节点所属角色。
+- master：主节点。
+- slave：从节点。
     */
     @SerializedName("Role")
     @Expose
@@ -174,16 +176,24 @@ public class DescribeSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul> 
-     * @return Role 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+     * Get 节点所属角色。
+- master：主节点。
+- slave：从节点。 
+     * @return Role 节点所属角色。
+- master：主节点。
+- slave：从节点。
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
-     * @param Role 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+     * Set 节点所属角色。
+- master：主节点。
+- slave：从节点。
+     * @param Role 节点所属角色。
+- master：主节点。
+- slave：从节点。
      */
     public void setRole(String Role) {
         this.Role = Role;

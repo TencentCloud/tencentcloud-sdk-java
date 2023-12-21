@@ -958,6 +958,8 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DeleteAddressTemplate）用于删除IP地址模板。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
      * @param req DeleteAddressTemplateRequest
      * @return DeleteAddressTemplateResponse
      * @throws TencentCloudSDKException
@@ -969,6 +971,8 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
      * @param req DeleteAddressTemplateGroupRequest
      * @return DeleteAddressTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -1253,6 +1257,8 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DeleteServiceTemplate）用于删除协议端口模板。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
      * @param req DeleteServiceTemplateRequest
      * @return DeleteServiceTemplateResponse
      * @throws TencentCloudSDKException
@@ -1264,6 +1270,8 @@ public class VpcClient extends AbstractClient{
 
     /**
      *本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
      * @param req DeleteServiceTemplateGroupRequest
      * @return DeleteServiceTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -2869,6 +2877,8 @@ LimitTypes取值范围：
 
     /**
      *本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
      * @param req ModifyAddressTemplateAttributeRequest
      * @return ModifyAddressTemplateAttributeResponse
      * @throws TencentCloudSDKException
@@ -2880,6 +2890,8 @@ LimitTypes取值范围：
 
     /**
      *本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
      * @param req ModifyAddressTemplateGroupAttributeRequest
      * @return ModifyAddressTemplateGroupAttributeResponse
      * @throws TencentCloudSDKException
@@ -3239,6 +3251,8 @@ LimitTypes取值范围：
 
     /**
      *本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
      * @param req ModifyServiceTemplateAttributeRequest
      * @return ModifyServiceTemplateAttributeResponse
      * @throws TencentCloudSDKException
@@ -3250,6 +3264,8 @@ LimitTypes取值范围：
 
     /**
      *本接口（ModifyServiceTemplateGroupAttribute）用于修改协议端口模板集合。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
      * @param req ModifyServiceTemplateGroupAttributeRequest
      * @return ModifyServiceTemplateGroupAttributeResponse
      * @throws TencentCloudSDKException

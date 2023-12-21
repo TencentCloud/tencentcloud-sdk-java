@@ -59,6 +59,13 @@ public class CreateAudioModerationTaskRequest extends AbstractModel {
     private String CallbackUrl;
 
     /**
+    * 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
+    */
+    @SerializedName("User")
+    @Expose
+    private User User;
+
+    /**
      * Get 该字段表示输入的音频审核任务信息，具体输入内容请参见TaskInput数据结构的详细描述。<br> 备注：最多同时可创建**10个任务**。 
      * @return Tasks 该字段表示输入的音频审核任务信息，具体输入内容请参见TaskInput数据结构的详细描述。<br> 备注：最多同时可创建**10个任务**。
      */
@@ -138,6 +145,22 @@ public class CreateAudioModerationTaskRequest extends AbstractModel {
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户 
+     * @return User 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
+     */
+    public User getUser() {
+        return this.User;
+    }
+
+    /**
+     * Set 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
+     * @param User 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
+     */
+    public void setUser(User User) {
+        this.User = User;
+    }
+
     public CreateAudioModerationTaskRequest() {
     }
 
@@ -164,6 +187,9 @@ public class CreateAudioModerationTaskRequest extends AbstractModel {
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.User != null) {
+            this.User = new User(source.User);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class CreateAudioModerationTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamObj(map, prefix + "User.", this.User);
 
     }
 }

@@ -48,7 +48,7 @@ public class SyncDBEndpointInfos extends AbstractModel {
     private String DatabaseType;
 
     /**
-    * 数据库信息
+    * 数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
@@ -116,9 +116,9 @@ public class SyncDBEndpointInfos extends AbstractModel {
     }
 
     /**
-     * Get 数据库信息
+     * Get 数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Info 数据库信息
+     * @return Info 数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Endpoint [] getInfo() {
@@ -126,9 +126,9 @@ public class SyncDBEndpointInfos extends AbstractModel {
     }
 
     /**
-     * Set 数据库信息
+     * Set 数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Info 数据库信息
+     * @param Info 数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(Endpoint [] Info) {

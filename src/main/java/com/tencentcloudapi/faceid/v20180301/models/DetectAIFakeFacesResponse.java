@@ -43,6 +43,13 @@ High：高度疑似攻击
     private AttackRiskDetail [] AttackRiskDetailList;
 
     /**
+    * 额外信息
+    */
+    @SerializedName("ExtraInfo")
+    @Expose
+    private ExtraInfo ExtraInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -102,6 +109,22 @@ High：高度疑似攻击
     }
 
     /**
+     * Get 额外信息 
+     * @return ExtraInfo 额外信息
+     */
+    public ExtraInfo getExtraInfo() {
+        return this.ExtraInfo;
+    }
+
+    /**
+     * Set 额外信息
+     * @param ExtraInfo 额外信息
+     */
+    public void setExtraInfo(ExtraInfo ExtraInfo) {
+        this.ExtraInfo = ExtraInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -134,6 +157,9 @@ High：高度疑似攻击
                 this.AttackRiskDetailList[i] = new AttackRiskDetail(source.AttackRiskDetailList[i]);
             }
         }
+        if (source.ExtraInfo != null) {
+            this.ExtraInfo = new ExtraInfo(source.ExtraInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -146,6 +172,7 @@ High：高度疑似攻击
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AttackRiskLevel", this.AttackRiskLevel);
         this.setParamArrayObj(map, prefix + "AttackRiskDetailList.", this.AttackRiskDetailList);
+        this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
