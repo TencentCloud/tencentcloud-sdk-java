@@ -467,7 +467,9 @@ public class CodeBatch extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ext 未使用
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Ext getExt() {
         return this.Ext;
     }
@@ -477,7 +479,9 @@ public class CodeBatch extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ext 未使用
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setExt(Ext Ext) {
         this.Ext = Ext;
     }

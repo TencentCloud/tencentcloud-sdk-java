@@ -124,6 +124,37 @@
 
 
 
+## T-Sec-安心平台(RP)(trp) 版本：2021-05-15
+
+### 第 30 次发布
+
+发布时间：2023-12-21 10:26:13
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribePlanQRCodeScanRecords](https://cloud.tencent.com/document/api/1458/102574)
+
+新增数据结构：
+
+* [PlanQRCodeRecord](https://cloud.tencent.com/document/api/1458/75030#PlanQRCodeRecord)
+
+修改数据结构：
+
+* [CodeBatch](https://cloud.tencent.com/document/api/1458/75030#CodeBatch)
+
+	* <font color="#dd0000">**修改成员**：</font>TplName, Job, ProductionDate, ValidDate, Attrs
+
+* [Ext](https://cloud.tencent.com/document/api/1458/75030#Ext)
+
+	* 新增成员：Value
+
+
+
+
 ## 云点播(vod) 版本：2018-07-17
 
 ### 第 176 次发布
@@ -125411,6 +125442,33 @@
 
 ## T-Sec-安心平台(RP)(trp) 版本：2021-05-15
 
+### 第 30 次发布
+
+发布时间：2023-12-21 10:26:13
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribePlanQRCodeScanRecords](https://cloud.tencent.com/document/api/1458/102574)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[PlanQRCodeRecord](https://cloud.tencent.com/document/api/1458/75030#PlanQRCodeRecord)](https://cloud.tencent.com/document/api/1458/75030#[PlanQRCodeRecord](https://cloud.tencent.com/document/api/1458/75030#PlanQRCodeRecord))
+
+修改数据结构：
+
+* [CodeBatch](https://cloud.tencent.com/document/api/1458/75030#CodeBatch)
+
+	* <font color="#dd0000">**修改成员**：</font>TplName, Job, ProductionDate, ValidDate, Attrs
+
+* [Ext](https://cloud.tencent.com/document/api/1458/75030#Ext)
+
+	* 新增成员：Value
+
+
 ### 第 29 次发布
 
 发布时间：2023-10-26 14:46:10
@@ -125437,7 +125495,7 @@
 
 新增接口：
 
-* [DescribeCodeBatches](https://cloud.tencent.com/document/api/1458/75017)
+* [DescribeCodeBatches](https://cloud.tencent.com/document/api/1458/101819)
 
 ### 第 27 次发布
 

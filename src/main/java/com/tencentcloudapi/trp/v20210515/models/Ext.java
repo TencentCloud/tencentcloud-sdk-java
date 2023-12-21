@@ -23,6 +23,38 @@ import java.util.HashMap;
 
 public class Ext extends AbstractModel {
 
+    /**
+    * 字符串
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 字符串
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Value 字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value 字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
     public Ext() {
     }
 
@@ -31,6 +63,9 @@ public class Ext extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Ext(Ext source) {
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
     }
 
 
@@ -38,6 +73,7 @@ public class Ext extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }
