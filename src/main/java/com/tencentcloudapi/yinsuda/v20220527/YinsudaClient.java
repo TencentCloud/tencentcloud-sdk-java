@@ -94,6 +94,17 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *获取歌曲伴奏高潮的开始、结束时间，可用于抢唱
+     * @param req DescribeKTVMusicAccompanySegmentUrlVipRequest
+     * @return DescribeKTVMusicAccompanySegmentUrlVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVMusicAccompanySegmentUrlVipResponse DescribeKTVMusicAccompanySegmentUrlVip(DescribeKTVMusicAccompanySegmentUrlVipRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKTVMusicAccompanySegmentUrlVip", DescribeKTVMusicAccompanySegmentUrlVipResponse.class);
+    }
+
+    /**
      *通过标签过滤歌曲列表。
      * @param req DescribeKTVMusicsByTagRequest
      * @return DescribeKTVMusicsByTagResponse
@@ -182,6 +193,17 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *获取会员信息：获取用户是否开通会员
+     * @param req DescribeVipUserInfoRequest
+     * @return DescribeVipUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVipUserInfoResponse DescribeVipUserInfo(DescribeVipUserInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVipUserInfo", DescribeVipUserInfoResponse.class);
+    }
+
+    /**
      *销毁机器人，机器人退出 RTC 房间。
      * @param req DestroyKTVRobotRequest
      * @return DestroyKTVRobotResponse
@@ -201,6 +223,17 @@ public class YinsudaClient extends AbstractClient{
     public RechargeLiveVipResponse RechargeLiveVip(RechargeLiveVipRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RechargeLiveVip", RechargeLiveVipResponse.class);
+    }
+
+    /**
+     *充值会员
+     * @param req RechargeVipRequest
+     * @return RechargeVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public RechargeVipResponse RechargeVip(RechargeVipRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RechargeVip", RechargeVipResponse.class);
     }
 
     /**

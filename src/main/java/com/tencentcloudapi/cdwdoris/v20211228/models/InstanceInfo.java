@@ -342,6 +342,22 @@ Modify 集群变更中；
     private String RestartTimeout;
 
     /**
+    * 内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GraceShutdownWaitSeconds")
+    @Expose
+    private String GraceShutdownWaitSeconds;
+
+    /**
+    * 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CaseSensitive")
+    @Expose
+    private Long CaseSensitive;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1149,6 +1165,46 @@ Modify 集群变更中；
         this.RestartTimeout = RestartTimeout;
     }
 
+    /**
+     * Get 内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GraceShutdownWaitSeconds 内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGraceShutdownWaitSeconds() {
+        return this.GraceShutdownWaitSeconds;
+    }
+
+    /**
+     * Set 内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GraceShutdownWaitSeconds 内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGraceShutdownWaitSeconds(String GraceShutdownWaitSeconds) {
+        this.GraceShutdownWaitSeconds = GraceShutdownWaitSeconds;
+    }
+
+    /**
+     * Get 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCaseSensitive() {
+        return this.CaseSensitive;
+    }
+
+    /**
+     * Set 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCaseSensitive(Long CaseSensitive) {
+        this.CaseSensitive = CaseSensitive;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1280,6 +1336,12 @@ Modify 集群变更中；
         if (source.RestartTimeout != null) {
             this.RestartTimeout = new String(source.RestartTimeout);
         }
+        if (source.GraceShutdownWaitSeconds != null) {
+            this.GraceShutdownWaitSeconds = new String(source.GraceShutdownWaitSeconds);
+        }
+        if (source.CaseSensitive != null) {
+            this.CaseSensitive = new Long(source.CaseSensitive);
+        }
     }
 
 
@@ -1326,6 +1388,8 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "IfExistCatalog", this.IfExistCatalog);
         this.setParamArraySimple(map, prefix + "Characteristic.", this.Characteristic);
         this.setParamSimple(map, prefix + "RestartTimeout", this.RestartTimeout);
+        this.setParamSimple(map, prefix + "GraceShutdownWaitSeconds", this.GraceShutdownWaitSeconds);
+        this.setParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
 
     }
 }

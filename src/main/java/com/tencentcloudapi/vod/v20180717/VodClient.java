@@ -190,7 +190,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建音画质重生模板。
+     *该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+创建音画质重生模板。
      * @param req CreateEnhanceMediaTemplateRequest
      * @return CreateEnhanceMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -278,7 +279,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建视频重生模板。
+     *该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+创建视频重生模板。
      * @param req CreateRebuildMediaTemplateRequest
      * @return CreateRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -487,7 +489,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *删除音画质重生模板。
+     *该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+删除音画质重生模板。
      * @param req DeleteEnhanceMediaTemplateRequest
      * @return DeleteEnhanceMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -588,7 +591,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *删除视频重生模板。
+     *该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+删除视频重生模板。
      * @param req DeleteRebuildMediaTemplateRequest
      * @return DeleteRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -897,7 +901,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *获取音画质重生模板列表。
+     *该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+获取音画质重生模板列表。
      * @param req DescribeEnhanceMediaTemplatesRequest
      * @return DescribeEnhanceMediaTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1114,7 +1119,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *获取视频重生模板列表。
+     *该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+获取视频重生模板列表。
      * @param req DescribeRebuildMediaTemplatesRequest
      * @return DescribeRebuildMediaTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1341,7 +1347,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *使用模板发起音画质重生。
+     *该 API 已经<font color=red>不再维护</font>，请使用新版接口 [音画质重生](https://cloud.tencent.com/document/api/266/102571)。
+使用模板发起音画质重生。
      * @param req EnhanceMediaByTemplateRequest
      * @return EnhanceMediaByTemplateResponse
      * @throws TencentCloudSDKException
@@ -1544,7 +1551,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *修改音画质重生模板。
+     *该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+修改音画质重生模板。
      * @param req ModifyEnhanceMediaTemplateRequest
      * @return ModifyEnhanceMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -1660,7 +1668,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *修改视频重生模板。
+     *该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+修改视频重生模板。
      * @param req ModifyRebuildMediaTemplateRequest
      * @return ModifyRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -1929,7 +1938,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *发起音画质重生
+     *该 API 已经<font color=red>不再维护</font>，请使用新版接口 [音画质重生](https://cloud.tencent.com/document/api/266/102571)。
+发起音画质重生
      * @param req RebuildMediaRequest
      * @return RebuildMediaResponse
      * @throws TencentCloudSDKException
@@ -1940,7 +1950,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *使用模板发起视频重生。
+     *该 API 已经<font color=red>不再维护</font>，请使用新版接口 [音画质重生](https://cloud.tencent.com/document/api/266/102571)。
+使用模板发起视频重生。
      * @param req RebuildMediaByTemplateRequest
      * @return RebuildMediaByTemplateResponse
      * @throws TencentCloudSDKException

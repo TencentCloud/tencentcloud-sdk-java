@@ -48,6 +48,13 @@ public class DescribeClusterNodesRequest extends AbstractModel {
     private String NodeFlag;
 
     /**
+    * 导出全部节点信息csv时是否携带cdb信息
+    */
+    @SerializedName("ExportDb")
+    @Expose
+    private Boolean ExportDb;
+
+    /**
     * 页编号，默认值为0，表示第一页。
     */
     @SerializedName("Offset")
@@ -162,6 +169,22 @@ public class DescribeClusterNodesRequest extends AbstractModel {
     }
 
     /**
+     * Get 导出全部节点信息csv时是否携带cdb信息 
+     * @return ExportDb 导出全部节点信息csv时是否携带cdb信息
+     */
+    public Boolean getExportDb() {
+        return this.ExportDb;
+    }
+
+    /**
+     * Set 导出全部节点信息csv时是否携带cdb信息
+     * @param ExportDb 导出全部节点信息csv时是否携带cdb信息
+     */
+    public void setExportDb(Boolean ExportDb) {
+        this.ExportDb = ExportDb;
+    }
+
+    /**
      * Get 页编号，默认值为0，表示第一页。 
      * @return Offset 页编号，默认值为0，表示第一页。
      */
@@ -271,6 +294,9 @@ public class DescribeClusterNodesRequest extends AbstractModel {
         if (source.NodeFlag != null) {
             this.NodeFlag = new String(source.NodeFlag);
         }
+        if (source.ExportDb != null) {
+            this.ExportDb = new Boolean(source.ExportDb);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -301,6 +327,7 @@ public class DescribeClusterNodesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
+        this.setParamSimple(map, prefix + "ExportDb", this.ExportDb);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);

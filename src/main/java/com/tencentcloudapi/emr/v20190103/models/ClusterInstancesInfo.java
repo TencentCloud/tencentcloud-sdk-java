@@ -387,6 +387,22 @@ public class ClusterInstancesInfo extends AbstractModel {
     private Boolean IsCvmReplace;
 
     /**
+    * 标题
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterTitle")
+    @Expose
+    private String ClusterTitle;
+
+    /**
+    * 集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigDetail")
+    @Expose
+    private EmrProductConfigDetail ConfigDetail;
+
+    /**
      * Get ID号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id ID号
@@ -431,7 +447,9 @@ public class ClusterInstancesInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ftitle 标题
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getFtitle() {
         return this.Ftitle;
     }
@@ -441,7 +459,9 @@ public class ClusterInstancesInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ftitle 标题
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setFtitle(String Ftitle) {
         this.Ftitle = Ftitle;
     }
@@ -779,7 +799,9 @@ public class ClusterInstancesInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Config 集群产品配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public EmrProductConfigOutter getConfig() {
         return this.Config;
     }
@@ -789,7 +811,9 @@ public class ClusterInstancesInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Config 集群产品配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setConfig(EmrProductConfigOutter Config) {
         this.Config = Config;
     }
@@ -1334,6 +1358,46 @@ public class ClusterInstancesInfo extends AbstractModel {
         this.IsCvmReplace = IsCvmReplace;
     }
 
+    /**
+     * Get 标题
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterTitle 标题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterTitle() {
+        return this.ClusterTitle;
+    }
+
+    /**
+     * Set 标题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterTitle 标题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterTitle(String ClusterTitle) {
+        this.ClusterTitle = ClusterTitle;
+    }
+
+    /**
+     * Get 集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigDetail 集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EmrProductConfigDetail getConfigDetail() {
+        return this.ConfigDetail;
+    }
+
+    /**
+     * Set 集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigDetail 集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigDetail(EmrProductConfigDetail ConfigDetail) {
+        this.ConfigDetail = ConfigDetail;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1477,6 +1541,12 @@ public class ClusterInstancesInfo extends AbstractModel {
         if (source.IsCvmReplace != null) {
             this.IsCvmReplace = new Boolean(source.IsCvmReplace);
         }
+        if (source.ClusterTitle != null) {
+            this.ClusterTitle = new String(source.ClusterTitle);
+        }
+        if (source.ConfigDetail != null) {
+            this.ConfigDetail = new EmrProductConfigDetail(source.ConfigDetail);
+        }
     }
 
 
@@ -1526,6 +1596,8 @@ public class ClusterInstancesInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
         this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
         this.setParamSimple(map, prefix + "IsCvmReplace", this.IsCvmReplace);
+        this.setParamSimple(map, prefix + "ClusterTitle", this.ClusterTitle);
+        this.setParamObj(map, prefix + "ConfigDetail.", this.ConfigDetail);
 
     }
 }

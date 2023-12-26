@@ -207,6 +207,9 @@ public enum IotcloudErrorCode {
     // Topic数量超出限制。
      LIMITEXCEEDED_TOPICPOLICYEXCEEDLIMIT("LimitExceeded.TopicPolicyExceedLimit"),
      
+    // TDMQ缺少内网接入点，无法转发，请咨询TDMQ产品
+     OPERATIONDENIED_GETTDMQPROINTERNALENDPOINTFAIL("OperationDenied.GetTDMQProInternalEndpointFail"),
+     
     // CA证书不存在。
      RESOURCENOTFOUND_CACERTNOTEXIST("ResourceNotFound.CACertNotExist"),
      

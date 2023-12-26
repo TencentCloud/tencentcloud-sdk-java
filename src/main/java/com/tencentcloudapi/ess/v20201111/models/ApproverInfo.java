@@ -149,7 +149,8 @@ public class ApproverInfo extends AbstractModel {
     /**
     * 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
     */
     @SerializedName("UserId")
     @Expose
@@ -589,10 +590,12 @@ public class ApproverInfo extends AbstractModel {
     /**
      * Get 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息` 
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖） 
      * @return UserId 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
      */
     public String getUserId() {
         return this.UserId;
@@ -601,10 +604,12 @@ public class ApproverInfo extends AbstractModel {
     /**
      * Set 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
      * @param UserId 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

@@ -103,6 +103,22 @@ public class AutoScaleRecord extends AbstractModel {
     private Long CompensateCount;
 
     /**
+    * 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetryCount")
+    @Expose
+    private Long RetryCount;
+
+    /**
+    * 重试信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetryInfo")
+    @Expose
+    private String RetryInfo;
+
+    /**
      * Get 扩缩容规则名。 
      * @return StrategyName 扩缩容规则名。
      */
@@ -286,6 +302,46 @@ public class AutoScaleRecord extends AbstractModel {
         this.CompensateCount = CompensateCount;
     }
 
+    /**
+     * Get 重试次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetryCount 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetryCount() {
+        return this.RetryCount;
+    }
+
+    /**
+     * Set 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetryCount 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetryCount(Long RetryCount) {
+        this.RetryCount = RetryCount;
+    }
+
+    /**
+     * Get 重试信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetryInfo 重试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRetryInfo() {
+        return this.RetryInfo;
+    }
+
+    /**
+     * Set 重试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetryInfo 重试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetryInfo(String RetryInfo) {
+        this.RetryInfo = RetryInfo;
+    }
+
     public AutoScaleRecord() {
     }
 
@@ -327,6 +383,12 @@ public class AutoScaleRecord extends AbstractModel {
         if (source.CompensateCount != null) {
             this.CompensateCount = new Long(source.CompensateCount);
         }
+        if (source.RetryCount != null) {
+            this.RetryCount = new Long(source.RetryCount);
+        }
+        if (source.RetryInfo != null) {
+            this.RetryInfo = new String(source.RetryInfo);
+        }
     }
 
 
@@ -345,6 +407,8 @@ public class AutoScaleRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "SpecInfo", this.SpecInfo);
         this.setParamSimple(map, prefix + "CompensateFlag", this.CompensateFlag);
         this.setParamSimple(map, prefix + "CompensateCount", this.CompensateCount);
+        this.setParamSimple(map, prefix + "RetryCount", this.RetryCount);
+        this.setParamSimple(map, prefix + "RetryInfo", this.RetryInfo);
 
     }
 }

@@ -52,14 +52,14 @@ public class TemplateInfo extends AbstractModel {
     private Component [] Components;
 
     /**
-    * 模板中的签署参与方列表
+    * 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
     */
     @SerializedName("Recipients")
     @Expose
     private Recipient [] Recipients;
 
     /**
-    * 模板中的签署控件列表
+    * 此模版中的签署控件列表
     */
     @SerializedName("SignComponents")
     @Expose
@@ -96,7 +96,6 @@ public class TemplateInfo extends AbstractModel {
     /**
     * 模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
@@ -138,8 +137,8 @@ public class TemplateInfo extends AbstractModel {
     private Long ChannelAutoSave;
 
     /**
-    * 模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+    * 模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateVersion")
@@ -147,9 +146,10 @@ public class TemplateInfo extends AbstractModel {
     private String TemplateVersion;
 
     /**
-    * 模板可用状态：
-1启用（默认）
-2停用
+    * 模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Available")
@@ -221,32 +221,32 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 模板中的签署参与方列表 
-     * @return Recipients 模板中的签署参与方列表
+     * Get 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。 
+     * @return Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
      */
     public Recipient [] getRecipients() {
         return this.Recipients;
     }
 
     /**
-     * Set 模板中的签署参与方列表
-     * @param Recipients 模板中的签署参与方列表
+     * Set 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+     * @param Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
      */
     public void setRecipients(Recipient [] Recipients) {
         this.Recipients = Recipients;
     }
 
     /**
-     * Get 模板中的签署控件列表 
-     * @return SignComponents 模板中的签署控件列表
+     * Get 此模版中的签署控件列表 
+     * @return SignComponents 此模版中的签署控件列表
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
     }
 
     /**
-     * Set 模板中的签署控件列表
-     * @param SignComponents 模板中的签署控件列表
+     * Set 此模版中的签署控件列表
+     * @param SignComponents 此模版中的签署控件列表
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;
@@ -323,11 +323,9 @@ public class TemplateInfo extends AbstractModel {
     /**
      * Get 模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PreviewUrl 模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
@@ -337,11 +335,9 @@ public class TemplateInfo extends AbstractModel {
     /**
      * Set 模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewUrl 模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {
@@ -437,11 +433,11 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+     * Get 模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateVersion 模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+     * @return TemplateVersion 模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateVersion() {
@@ -449,11 +445,11 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set 模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+     * Set 模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateVersion 模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+     * @param TemplateVersion 模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateVersion(String TemplateVersion) {
@@ -461,13 +457,15 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 模板可用状态：
-1启用（默认）
-2停用
+     * Get 模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Available 模板可用状态：
-1启用（默认）
-2停用
+     * @return Available 模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAvailable() {
@@ -475,13 +473,15 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set 模板可用状态：
-1启用（默认）
-2停用
+     * Set 模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Available 模板可用状态：
-1启用（默认）
-2停用
+     * @param Available 模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailable(Long Available) {

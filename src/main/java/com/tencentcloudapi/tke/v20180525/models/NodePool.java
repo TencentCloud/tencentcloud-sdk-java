@@ -80,6 +80,13 @@ public class NodePool extends AbstractModel {
     private Taint [] Taints;
 
     /**
+    * 节点 Annotation 列表
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private AnnotationValue [] Annotations;
+
+    /**
     * NodeCountSummary 节点列表
     */
     @SerializedName("NodeCountSummary")
@@ -348,6 +355,22 @@ public class NodePool extends AbstractModel {
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
+    }
+
+    /**
+     * Get 节点 Annotation 列表 
+     * @return Annotations 节点 Annotation 列表
+     */
+    public AnnotationValue [] getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set 节点 Annotation 列表
+     * @param Annotations 节点 Annotation 列表
+     */
+    public void setAnnotations(AnnotationValue [] Annotations) {
+        this.Annotations = Annotations;
     }
 
     /**
@@ -744,6 +767,12 @@ public class NodePool extends AbstractModel {
                 this.Taints[i] = new Taint(source.Taints[i]);
             }
         }
+        if (source.Annotations != null) {
+            this.Annotations = new AnnotationValue[source.Annotations.length];
+            for (int i = 0; i < source.Annotations.length; i++) {
+                this.Annotations[i] = new AnnotationValue(source.Annotations[i]);
+            }
+        }
         if (source.NodeCountSummary != null) {
             this.NodeCountSummary = new NodeCountSummary(source.NodeCountSummary);
         }
@@ -819,6 +848,7 @@ public class NodePool extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
         this.setParamObj(map, prefix + "NodeCountSummary.", this.NodeCountSummary);
         this.setParamSimple(map, prefix + "AutoscalingGroupStatus", this.AutoscalingGroupStatus);
         this.setParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);

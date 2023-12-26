@@ -46,8 +46,8 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成修改模板的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
-<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面</li>
-<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面（支持移动端）</li>
+<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面（仅支持PC端）</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成扩展服务的嵌入页面</li>
@@ -157,8 +157,8 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成修改模板的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
-<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面</li>
-<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面（支持移动端）</li>
+<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面（仅支持PC端）</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成扩展服务的嵌入页面</li>
@@ -170,8 +170,8 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成修改模板的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
-<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面</li>
-<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面（支持移动端）</li>
+<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面（仅支持PC端）</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成扩展服务的嵌入页面</li>
@@ -189,8 +189,8 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成修改模板的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
-<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面</li>
-<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面（支持移动端）</li>
+<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面（仅支持PC端）</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成扩展服务的嵌入页面</li>
@@ -202,8 +202,8 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
 <li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
 <li>MODIFY_TEMPLATE：生成修改模板的嵌入页面</li>
 <li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
-<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面</li>
-<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同文档的嵌入页面（支持移动端）</li>
+<li>PREVIEW_FLOW_DETAIL：生成预览合同详情的嵌入页面（仅支持PC端）</li>
 <li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
 <li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
 <li>EXTEND_SERVICE：生成扩展服务的嵌入页面</li>

@@ -66,7 +66,7 @@ AnalyzeTaskType_MediaStream：音视频体验
     private Boolean Ascending;
 
     /**
-    * 选中字段
+    * 选中字段，如ProbeTime、TransferTime、TransferSize等。
     */
     @SerializedName("SelectedFields")
     @Expose
@@ -147,6 +147,13 @@ AnalyzeTaskType_MediaStream：音视频体验
     @SerializedName("ScrollID")
     @Expose
     private String ScrollID;
+
+    /**
+    * 详情数据下载
+    */
+    @SerializedName("QueryFlag")
+    @Expose
+    private String QueryFlag;
 
     /**
      * Get 开始时间戳（毫秒级） 
@@ -257,16 +264,16 @@ AnalyzeTaskType_MediaStream：音视频体验
     }
 
     /**
-     * Get 选中字段 
-     * @return SelectedFields 选中字段
+     * Get 选中字段，如ProbeTime、TransferTime、TransferSize等。 
+     * @return SelectedFields 选中字段，如ProbeTime、TransferTime、TransferSize等。
      */
     public String [] getSelectedFields() {
         return this.SelectedFields;
     }
 
     /**
-     * Set 选中字段
-     * @param SelectedFields 选中字段
+     * Set 选中字段，如ProbeTime、TransferTime、TransferSize等。
+     * @param SelectedFields 选中字段，如ProbeTime、TransferTime、TransferSize等。
      */
     public void setSelectedFields(String [] SelectedFields) {
         this.SelectedFields = SelectedFields;
@@ -480,6 +487,22 @@ AnalyzeTaskType_MediaStream：音视频体验
         this.ScrollID = ScrollID;
     }
 
+    /**
+     * Get 详情数据下载 
+     * @return QueryFlag 详情数据下载
+     */
+    public String getQueryFlag() {
+        return this.QueryFlag;
+    }
+
+    /**
+     * Set 详情数据下载
+     * @param QueryFlag 详情数据下载
+     */
+    public void setQueryFlag(String QueryFlag) {
+        this.QueryFlag = QueryFlag;
+    }
+
     public DescribeDetailedSingleProbeDataRequest() {
     }
 
@@ -548,6 +571,9 @@ AnalyzeTaskType_MediaStream：音视频体验
         if (source.ScrollID != null) {
             this.ScrollID = new String(source.ScrollID);
         }
+        if (source.QueryFlag != null) {
+            this.QueryFlag = new String(source.QueryFlag);
+        }
     }
 
 
@@ -569,6 +595,7 @@ AnalyzeTaskType_MediaStream：音视频体验
         this.setParamArraySimple(map, prefix + "ErrorTypes.", this.ErrorTypes);
         this.setParamArraySimple(map, prefix + "City.", this.City);
         this.setParamSimple(map, prefix + "ScrollID", this.ScrollID);
+        this.setParamSimple(map, prefix + "QueryFlag", this.QueryFlag);
 
     }
 }

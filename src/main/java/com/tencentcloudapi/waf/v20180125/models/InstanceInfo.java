@@ -310,6 +310,14 @@ public class InstanceInfo extends AbstractModel {
     private Long MiniMaxQPS;
 
     /**
+    * 最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastQpsExceedTime")
+    @Expose
+    private String LastQpsExceedTime;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1009,6 +1017,26 @@ public class InstanceInfo extends AbstractModel {
         this.MiniMaxQPS = MiniMaxQPS;
     }
 
+    /**
+     * Get 最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastQpsExceedTime 最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastQpsExceedTime() {
+        return this.LastQpsExceedTime;
+    }
+
+    /**
+     * Set 最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastQpsExceedTime 最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastQpsExceedTime(String LastQpsExceedTime) {
+        this.LastQpsExceedTime = LastQpsExceedTime;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1128,6 +1156,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.MiniMaxQPS != null) {
             this.MiniMaxQPS = new Long(source.MiniMaxQPS);
         }
+        if (source.LastQpsExceedTime != null) {
+            this.LastQpsExceedTime = new String(source.LastQpsExceedTime);
+        }
     }
 
 
@@ -1172,6 +1203,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamObj(map, prefix + "MiniPkg.", this.MiniPkg);
         this.setParamSimple(map, prefix + "MiniQpsStandard", this.MiniQpsStandard);
         this.setParamSimple(map, prefix + "MiniMaxQPS", this.MiniMaxQPS);
+        this.setParamSimple(map, prefix + "LastQpsExceedTime", this.LastQpsExceedTime);
 
     }
 }

@@ -45,7 +45,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
     private String LaunchConfigurePara;
 
     /**
-    * InstanceAdvancedSettings 示例参数
+    * InstanceAdvancedSettings
     */
     @SerializedName("InstanceAdvancedSettings")
     @Expose
@@ -78,6 +78,13 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
+
+    /**
+    * 节点Annotation 列表
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private AnnotationValue [] Annotations;
 
     /**
     * 节点池纬度运行时类型及版本
@@ -170,16 +177,16 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get InstanceAdvancedSettings 示例参数 
-     * @return InstanceAdvancedSettings InstanceAdvancedSettings 示例参数
+     * Get InstanceAdvancedSettings 
+     * @return InstanceAdvancedSettings InstanceAdvancedSettings
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
         return this.InstanceAdvancedSettings;
     }
 
     /**
-     * Set InstanceAdvancedSettings 示例参数
-     * @param InstanceAdvancedSettings InstanceAdvancedSettings 示例参数
+     * Set InstanceAdvancedSettings
+     * @param InstanceAdvancedSettings InstanceAdvancedSettings
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
         this.InstanceAdvancedSettings = InstanceAdvancedSettings;
@@ -247,6 +254,22 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
+    }
+
+    /**
+     * Get 节点Annotation 列表 
+     * @return Annotations 节点Annotation 列表
+     */
+    public AnnotationValue [] getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set 节点Annotation 列表
+     * @param Annotations 节点Annotation 列表
+     */
+    public void setAnnotations(AnnotationValue [] Annotations) {
+        this.Annotations = Annotations;
     }
 
     /**
@@ -383,6 +406,12 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
                 this.Taints[i] = new Taint(source.Taints[i]);
             }
         }
+        if (source.Annotations != null) {
+            this.Annotations = new AnnotationValue[source.Annotations.length];
+            for (int i = 0; i < source.Annotations.length; i++) {
+                this.Annotations[i] = new AnnotationValue(source.Annotations[i]);
+            }
+        }
         if (source.ContainerRuntime != null) {
             this.ContainerRuntime = new String(source.ContainerRuntime);
         }
@@ -419,6 +448,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);

@@ -73,7 +73,8 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li></ul>
     */
     @SerializedName("SignatureTypes")
     @Expose
@@ -216,7 +217,8 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul> 
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li></ul> 
      * @return SignatureTypes 指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
 <li>**1**：OCR楷体</li>
@@ -225,7 +227,8 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li></ul>
      */
     public Long [] getSignatureTypes() {
         return this.SignatureTypes;
@@ -240,7 +243,8 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li></ul>
      * @param SignatureTypes 指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
 <li>**1**：OCR楷体</li>
@@ -249,7 +253,8 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li></ul>
      */
     public void setSignatureTypes(Long [] SignatureTypes) {
         this.SignatureTypes = SignatureTypes;

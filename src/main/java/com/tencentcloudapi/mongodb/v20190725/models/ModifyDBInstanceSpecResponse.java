@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceSpecResponse extends AbstractModel {
 
     /**
-    * 订单ID
+    * 订单 ID。
     */
     @SerializedName("DealId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyDBInstanceSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单ID 
-     * @return DealId 订单ID
+     * Get 订单 ID。 
+     * @return DealId 订单 ID。
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set 订单ID
-     * @param DealId 订单ID
+     * Set 订单 ID。
+     * @param DealId 订单 ID。
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;

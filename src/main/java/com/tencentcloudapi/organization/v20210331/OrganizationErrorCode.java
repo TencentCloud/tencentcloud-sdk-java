@@ -144,6 +144,9 @@ public enum OrganizationErrorCode {
     // 集团策略不是禁用状态。
      FAILEDOPERATION_ORGANIZATIONPOLICYISNOTDISABLED("FailedOperation.OrganizationPolicyIsNotDisabled"),
      
+    // 调用经销系统报错。
+     FAILEDOPERATION_PARTNERMANAGEMENTERR("FailedOperation.PartnerManagementErr"),
+     
     // 代付者不合法。
      FAILEDOPERATION_PAYUINILLEGAL("FailedOperation.PayUinIllegal"),
      
@@ -261,6 +264,9 @@ public enum OrganizationErrorCode {
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
+    // 代付者财务状态异常，不支持代付费。
+     UNSUPPORTEDOPERATION_ABNORMALFINANCIALSTATUSOFADMIN("UnsupportedOperation.AbnormalFinancialStatusOfAdmin"),
+     
     // 不允许添加代付关系。
      UNSUPPORTEDOPERATION_ADDDELEGATEPAYERNOTALLOW("UnsupportedOperation.AddDelegatePayerNotAllow"),
      
@@ -334,7 +340,10 @@ public enum OrganizationErrorCode {
      UNSUPPORTEDOPERATION_PAYERARREARSANDNOCREDITACCOUNT("UnsupportedOperation.PayerArrearsAndNoCreditAccount"),
      
     // 代付者存在账户级优惠。
-     UNSUPPORTEDOPERATION_PAYEREXISTACCOUNTLEVELDISCOUNTINHERIT("UnsupportedOperation.PayerExistAccountLevelDiscountInherit");
+     UNSUPPORTEDOPERATION_PAYEREXISTACCOUNTLEVELDISCOUNTINHERIT("UnsupportedOperation.PayerExistAccountLevelDiscountInherit"),
+     
+    // 存在二级经销商子客，不支持代付费。
+     UNSUPPORTEDOPERATION_SECONDARYDISTRIBUTORSUBCLIENTEXISTED("UnsupportedOperation.SecondaryDistributorSubClientExisted");
      
     private String value;
     private OrganizationErrorCode (String value){

@@ -73,6 +73,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
     private Taint [] Taints;
 
     /**
+    * 节点 Annotation 列表
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private AnnotationValue [] Annotations;
+
+    /**
     * 是否开启伸缩
     */
     @SerializedName("EnableAutoscale")
@@ -266,6 +273,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
+    }
+
+    /**
+     * Get 节点 Annotation 列表 
+     * @return Annotations 节点 Annotation 列表
+     */
+    public AnnotationValue [] getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set 节点 Annotation 列表
+     * @param Annotations 节点 Annotation 列表
+     */
+    public void setAnnotations(AnnotationValue [] Annotations) {
+        this.Annotations = Annotations;
     }
 
     /**
@@ -495,6 +518,12 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
                 this.Taints[i] = new Taint(source.Taints[i]);
             }
         }
+        if (source.Annotations != null) {
+            this.Annotations = new AnnotationValue[source.Annotations.length];
+            for (int i = 0; i < source.Annotations.length; i++) {
+                this.Annotations[i] = new AnnotationValue(source.Annotations[i]);
+            }
+        }
         if (source.EnableAutoscale != null) {
             this.EnableAutoscale = new Boolean(source.EnableAutoscale);
         }
@@ -548,6 +577,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
         this.setParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);

@@ -52,13 +52,6 @@ public class Component extends AbstractModel {
     private String ComponentType;
 
     /**
-    * <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
-    */
-    @SerializedName("FileIndex")
-    @Expose
-    private Long FileIndex;
-
-    /**
     * **在绝对定位方式和关键字定位方式下**，指定控件的高度， 控件高度是指控件在PDF文件中的高度，单位为pt（点）。
 
     */
@@ -98,6 +91,23 @@ public class Component extends AbstractModel {
     @SerializedName("ComponentPosY")
     @Expose
     private Float ComponentPosY;
+
+    /**
+    * <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+    */
+    @SerializedName("FileIndex")
+    @Expose
+    private Long FileIndex;
+
+    /**
+    * 控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
+    */
+    @SerializedName("GenerateMode")
+    @Expose
+    private String GenerateMode;
 
     /**
     * 控件唯一ID。
@@ -222,30 +232,6 @@ public class Component extends AbstractModel {
     private String ComponentValue;
 
     /**
-    * 控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
-    */
-    @SerializedName("GenerateMode")
-    @Expose
-    private String GenerateMode;
-
-    /**
-    * <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
-    */
-    @SerializedName("ComponentDateFontSize")
-    @Expose
-    private Long ComponentDateFontSize;
-
-    /**
-    * <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
-    */
-    @SerializedName("ChannelComponentId")
-    @Expose
-    private String ChannelComponentId;
-
-    /**
     * **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -262,15 +248,6 @@ public class Component extends AbstractModel {
     @SerializedName("OffsetY")
     @Expose
     private Float OffsetY;
-
-    /**
-    * <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul>
-    */
-    @SerializedName("ChannelComponentSource")
-    @Expose
-    private Long ChannelComponentSource;
 
     /**
     * **如果控件是关键字定位方式**，指定关键字排序规则时，可以选择Positive或Reverse两种排序方式。
@@ -331,6 +308,29 @@ public class Component extends AbstractModel {
     @SerializedName("ForbidMoveAndDelete")
     @Expose
     private Boolean ForbidMoveAndDelete;
+
+    /**
+    * <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+    */
+    @SerializedName("ComponentDateFontSize")
+    @Expose
+    private Long ComponentDateFontSize;
+
+    /**
+    * <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+    */
+    @SerializedName("ChannelComponentId")
+    @Expose
+    private String ChannelComponentId;
+
+    /**
+    * <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul>
+    */
+    @SerializedName("ChannelComponentSource")
+    @Expose
+    private Long ChannelComponentSource;
 
     /**
      * Get **如果是Component填写控件类型，则可选的字段为**：
@@ -430,22 +430,6 @@ public class Component extends AbstractModel {
      */
     public void setComponentType(String ComponentType) {
         this.ComponentType = ComponentType;
-    }
-
-    /**
-     * Get <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0 
-     * @return FileIndex <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
-     */
-    public Long getFileIndex() {
-        return this.FileIndex;
-    }
-
-    /**
-     * Set <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
-     * @param FileIndex <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
-     */
-    public void setFileIndex(Long FileIndex) {
-        this.FileIndex = FileIndex;
     }
 
     /**
@@ -550,6 +534,50 @@ public class Component extends AbstractModel {
      */
     public void setComponentPosY(Float ComponentPosY) {
         this.ComponentPosY = ComponentPosY;
+    }
+
+    /**
+     * Get <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0 
+     * @return FileIndex <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+     */
+    public Long getFileIndex() {
+        return this.FileIndex;
+    }
+
+    /**
+     * Set <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+     * @param FileIndex <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+     */
+    public void setFileIndex(Long FileIndex) {
+        this.FileIndex = FileIndex;
+    }
+
+    /**
+     * Get 控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul> 
+     * @return GenerateMode 控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
+     */
+    public String getGenerateMode() {
+        return this.GenerateMode;
+    }
+
+    /**
+     * Set 控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
+     * @param GenerateMode 控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
+     */
+    public void setGenerateMode(String GenerateMode) {
+        this.GenerateMode = GenerateMode;
     }
 
     /**
@@ -957,66 +985,6 @@ public class Component extends AbstractModel {
     }
 
     /**
-     * Get 控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul> 
-     * @return GenerateMode 控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
-     */
-    public String getGenerateMode() {
-        return this.GenerateMode;
-    }
-
-    /**
-     * Set 控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
-     * @param GenerateMode 控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
-     */
-    public void setGenerateMode(String GenerateMode) {
-        this.GenerateMode = GenerateMode;
-    }
-
-    /**
-     * Get <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12 
-     * @return ComponentDateFontSize <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
-     */
-    public Long getComponentDateFontSize() {
-        return this.ComponentDateFontSize;
-    }
-
-    /**
-     * Set <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
-     * @param ComponentDateFontSize <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
-     */
-    public void setComponentDateFontSize(Long ComponentDateFontSize) {
-        this.ComponentDateFontSize = ComponentDateFontSize;
-    }
-
-    /**
-     * Get <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识 
-     * @return ChannelComponentId <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
-     */
-    public String getChannelComponentId() {
-        return this.ChannelComponentId;
-    }
-
-    /**
-     * Set <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
-     * @param ChannelComponentId <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
-     */
-    public void setChannelComponentId(String ChannelComponentId) {
-        this.ChannelComponentId = ChannelComponentId;
-    }
-
-    /**
      * Get **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -1062,30 +1030,6 @@ public class Component extends AbstractModel {
      */
     public void setOffsetY(Float OffsetY) {
         this.OffsetY = OffsetY;
-    }
-
-    /**
-     * Get <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul> 
-     * @return ChannelComponentSource <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul>
-     */
-    public Long getChannelComponentSource() {
-        return this.ChannelComponentSource;
-    }
-
-    /**
-     * Set <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul>
-     * @param ChannelComponentSource <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul>
-     */
-    public void setChannelComponentSource(Long ChannelComponentSource) {
-        this.ChannelComponentSource = ChannelComponentSource;
     }
 
     /**
@@ -1256,6 +1200,62 @@ public class Component extends AbstractModel {
         this.ForbidMoveAndDelete = ForbidMoveAndDelete;
     }
 
+    /**
+     * Get <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12 
+     * @return ComponentDateFontSize <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+     */
+    public Long getComponentDateFontSize() {
+        return this.ComponentDateFontSize;
+    }
+
+    /**
+     * Set <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+     * @param ComponentDateFontSize <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+     */
+    public void setComponentDateFontSize(Long ComponentDateFontSize) {
+        this.ComponentDateFontSize = ComponentDateFontSize;
+    }
+
+    /**
+     * Get <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识 
+     * @return ChannelComponentId <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+     */
+    public String getChannelComponentId() {
+        return this.ChannelComponentId;
+    }
+
+    /**
+     * Set <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+     * @param ChannelComponentId <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+     */
+    public void setChannelComponentId(String ChannelComponentId) {
+        this.ChannelComponentId = ChannelComponentId;
+    }
+
+    /**
+     * Get <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul> 
+     * @return ChannelComponentSource <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul>
+     */
+    public Long getChannelComponentSource() {
+        return this.ChannelComponentSource;
+    }
+
+    /**
+     * Set <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul>
+     * @param ChannelComponentSource <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul>
+     */
+    public void setChannelComponentSource(Long ChannelComponentSource) {
+        this.ChannelComponentSource = ChannelComponentSource;
+    }
+
     public Component() {
     }
 
@@ -1266,9 +1266,6 @@ public class Component extends AbstractModel {
     public Component(Component source) {
         if (source.ComponentType != null) {
             this.ComponentType = new String(source.ComponentType);
-        }
-        if (source.FileIndex != null) {
-            this.FileIndex = new Long(source.FileIndex);
         }
         if (source.ComponentHeight != null) {
             this.ComponentHeight = new Float(source.ComponentHeight);
@@ -1284,6 +1281,12 @@ public class Component extends AbstractModel {
         }
         if (source.ComponentPosY != null) {
             this.ComponentPosY = new Float(source.ComponentPosY);
+        }
+        if (source.FileIndex != null) {
+            this.FileIndex = new Long(source.FileIndex);
+        }
+        if (source.GenerateMode != null) {
+            this.GenerateMode = new String(source.GenerateMode);
         }
         if (source.ComponentId != null) {
             this.ComponentId = new String(source.ComponentId);
@@ -1306,23 +1309,11 @@ public class Component extends AbstractModel {
         if (source.ComponentValue != null) {
             this.ComponentValue = new String(source.ComponentValue);
         }
-        if (source.GenerateMode != null) {
-            this.GenerateMode = new String(source.GenerateMode);
-        }
-        if (source.ComponentDateFontSize != null) {
-            this.ComponentDateFontSize = new Long(source.ComponentDateFontSize);
-        }
-        if (source.ChannelComponentId != null) {
-            this.ChannelComponentId = new String(source.ChannelComponentId);
-        }
         if (source.OffsetX != null) {
             this.OffsetX = new Float(source.OffsetX);
         }
         if (source.OffsetY != null) {
             this.OffsetY = new Float(source.OffsetY);
-        }
-        if (source.ChannelComponentSource != null) {
-            this.ChannelComponentSource = new Long(source.ChannelComponentSource);
         }
         if (source.KeywordOrder != null) {
             this.KeywordOrder = new String(source.KeywordOrder);
@@ -1345,6 +1336,15 @@ public class Component extends AbstractModel {
         if (source.ForbidMoveAndDelete != null) {
             this.ForbidMoveAndDelete = new Boolean(source.ForbidMoveAndDelete);
         }
+        if (source.ComponentDateFontSize != null) {
+            this.ComponentDateFontSize = new Long(source.ComponentDateFontSize);
+        }
+        if (source.ChannelComponentId != null) {
+            this.ChannelComponentId = new String(source.ChannelComponentId);
+        }
+        if (source.ChannelComponentSource != null) {
+            this.ChannelComponentSource = new Long(source.ChannelComponentSource);
+        }
     }
 
 
@@ -1353,12 +1353,13 @@ public class Component extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ComponentType", this.ComponentType);
-        this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
         this.setParamSimple(map, prefix + "ComponentHeight", this.ComponentHeight);
         this.setParamSimple(map, prefix + "ComponentWidth", this.ComponentWidth);
         this.setParamSimple(map, prefix + "ComponentPage", this.ComponentPage);
         this.setParamSimple(map, prefix + "ComponentPosX", this.ComponentPosX);
         this.setParamSimple(map, prefix + "ComponentPosY", this.ComponentPosY);
+        this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
+        this.setParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
         this.setParamSimple(map, prefix + "ComponentId", this.ComponentId);
         this.setParamSimple(map, prefix + "ComponentName", this.ComponentName);
         this.setParamSimple(map, prefix + "ComponentRequired", this.ComponentRequired);
@@ -1366,18 +1367,17 @@ public class Component extends AbstractModel {
         this.setParamSimple(map, prefix + "ComponentExtra", this.ComponentExtra);
         this.setParamSimple(map, prefix + "IsFormType", this.IsFormType);
         this.setParamSimple(map, prefix + "ComponentValue", this.ComponentValue);
-        this.setParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
-        this.setParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
-        this.setParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
         this.setParamSimple(map, prefix + "OffsetX", this.OffsetX);
         this.setParamSimple(map, prefix + "OffsetY", this.OffsetY);
-        this.setParamSimple(map, prefix + "ChannelComponentSource", this.ChannelComponentSource);
         this.setParamSimple(map, prefix + "KeywordOrder", this.KeywordOrder);
         this.setParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
         this.setParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
         this.setParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
         this.setParamSimple(map, prefix + "LockComponentValue", this.LockComponentValue);
         this.setParamSimple(map, prefix + "ForbidMoveAndDelete", this.ForbidMoveAndDelete);
+        this.setParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
+        this.setParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
+        this.setParamSimple(map, prefix + "ChannelComponentSource", this.ChannelComponentSource);
 
     }
 }

@@ -55,6 +55,13 @@ public class ScriptBootstrapActionConfig extends AbstractModel {
     private String CosFileName;
 
     /**
+    * 备注
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 脚本的cos地址，参照格式：https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh查询cos存储桶列表：[存储桶列表](https://console.cloud.tencent.com/cos/bucket) 
      * @return CosFileURI 脚本的cos地址，参照格式：https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh查询cos存储桶列表：[存储桶列表](https://console.cloud.tencent.com/cos/bucket)
      */
@@ -130,6 +137,22 @@ public class ScriptBootstrapActionConfig extends AbstractModel {
         this.CosFileName = CosFileName;
     }
 
+    /**
+     * Get 备注 
+     * @return Remark 备注
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+     * @param Remark 备注
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public ScriptBootstrapActionConfig() {
     }
 
@@ -153,6 +176,9 @@ public class ScriptBootstrapActionConfig extends AbstractModel {
         if (source.CosFileName != null) {
             this.CosFileName = new String(source.CosFileName);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -164,6 +190,7 @@ public class ScriptBootstrapActionConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutionMoment", this.ExecutionMoment);
         this.setParamArraySimple(map, prefix + "Args.", this.Args);
         this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

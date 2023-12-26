@@ -87,6 +87,9 @@ public class FlowApproverInfo extends AbstractModel {
     * 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
     */
     @SerializedName("OpenId")
     @Expose
@@ -442,10 +445,16 @@ public class FlowApproverInfo extends AbstractModel {
     /**
      * Get 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
-当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程 
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖） 
      * @return OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
      */
     public String getOpenId() {
         return this.OpenId;
@@ -455,9 +464,15 @@ public class FlowApproverInfo extends AbstractModel {
      * Set 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
      * @param OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

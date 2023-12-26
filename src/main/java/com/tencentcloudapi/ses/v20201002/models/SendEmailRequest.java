@@ -24,9 +24,8 @@ import java.util.HashMap;
 public class SendEmailRequest extends AbstractModel {
 
     /**
-    * 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
+    * 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
     */
     @SerializedName("FromEmailAddress")
     @Expose
@@ -105,24 +104,20 @@ public class SendEmailRequest extends AbstractModel {
     private Long TriggerType;
 
     /**
-     * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com> 
-     * @return FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
+     * Get 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址> 
+     * @return FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
-     * @param FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
+     * Set 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
+     * @param FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;
