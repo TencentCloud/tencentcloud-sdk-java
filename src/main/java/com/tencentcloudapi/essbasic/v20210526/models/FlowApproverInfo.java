@@ -190,7 +190,14 @@ public class FlowApproverInfo extends AbstractModel {
     private ApproverOption ApproverOption;
 
     /**
-    * 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+    * 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
     */
     @SerializedName("ApproverNeedSignReview")
     @Expose
@@ -739,16 +746,44 @@ public class FlowApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前签署方进行签署操作是否需要企业内部审批，true 则为需要 
-     * @return ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     * Get 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同` 
+     * @return ApproverNeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
      */
     public Boolean getApproverNeedSignReview() {
         return this.ApproverNeedSignReview;
     }
 
     /**
-     * Set 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
-     * @param ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     * Set 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+     * @param ApproverNeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
      */
     public void setApproverNeedSignReview(Boolean ApproverNeedSignReview) {
         this.ApproverNeedSignReview = ApproverNeedSignReview;

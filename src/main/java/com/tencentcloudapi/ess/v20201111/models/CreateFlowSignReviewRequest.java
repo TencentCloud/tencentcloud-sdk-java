@@ -33,31 +33,22 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
 
     /**
     * 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul>
+    * 企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
     */
     @SerializedName("ReviewType")
     @Expose
     private String ReviewType;
-
-    /**
-    * 审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
-
-    */
-    @SerializedName("ReviewMessage")
-    @Expose
-    private String ReviewMessage;
 
     /**
     * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -67,9 +58,8 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * 审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。
+    * 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
     */
     @SerializedName("RecipientId")
     @Expose
@@ -86,6 +76,18 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
     @SerializedName("OperateType")
     @Expose
     private String OperateType;
+
+    /**
+    * 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+
+
+    */
+    @SerializedName("ReviewMessage")
+    @Expose
+    private String ReviewMessage;
 
     /**
      * Get 执行本接口操作的员工信息。
@@ -109,11 +111,11 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
 
     /**
      * Get 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。 
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul> 
      * @return FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
      */
     public String getFlowId() {
         return this.FlowId;
@@ -121,66 +123,42 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
 
     /**
      * Set 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
      * @param FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul> 
-     * @return ReviewType 企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul>
+     * Get 企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul> 
+     * @return ReviewType 企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
      */
     public String getReviewType() {
         return this.ReviewType;
     }
 
     /**
-     * Set 企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul>
-     * @param ReviewType 企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul>
+     * Set 企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
+     * @param ReviewType 企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
      */
     public void setReviewType(String ReviewType) {
         this.ReviewType = ReviewType;
-    }
-
-    /**
-     * Get 审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
- 
-     * @return ReviewMessage 审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
-
-     */
-    public String getReviewMessage() {
-        return this.ReviewMessage;
-    }
-
-    /**
-     * Set 审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
-
-     * @param ReviewMessage 审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
-
-     */
-    public void setReviewMessage(String ReviewMessage) {
-        this.ReviewMessage = ReviewMessage;
     }
 
     /**
@@ -200,24 +178,20 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
     }
 
     /**
-     * Get 审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。 
-     * @return RecipientId 审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。
+     * Get 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul> 
+     * @return RecipientId 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。
-     * @param RecipientId 审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。
+     * Set 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
+     * @param RecipientId 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
@@ -259,6 +233,42 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
         this.OperateType = OperateType;
     }
 
+    /**
+     * Get 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+
+ 
+     * @return ReviewMessage 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+
+
+     */
+    public String getReviewMessage() {
+        return this.ReviewMessage;
+    }
+
+    /**
+     * Set 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+
+
+     * @param ReviewMessage 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+
+
+     */
+    public void setReviewMessage(String ReviewMessage) {
+        this.ReviewMessage = ReviewMessage;
+    }
+
     public CreateFlowSignReviewRequest() {
     }
 
@@ -276,9 +286,6 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
         if (source.ReviewType != null) {
             this.ReviewType = new String(source.ReviewType);
         }
-        if (source.ReviewMessage != null) {
-            this.ReviewMessage = new String(source.ReviewMessage);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
@@ -287,6 +294,9 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
         }
         if (source.OperateType != null) {
             this.OperateType = new String(source.OperateType);
+        }
+        if (source.ReviewMessage != null) {
+            this.ReviewMessage = new String(source.ReviewMessage);
         }
     }
 
@@ -298,10 +308,10 @@ public class CreateFlowSignReviewRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "ReviewType", this.ReviewType);
-        this.setParamSimple(map, prefix + "ReviewMessage", this.ReviewMessage);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
         this.setParamSimple(map, prefix + "OperateType", this.OperateType);
+        this.setParamSimple(map, prefix + "ReviewMessage", this.ReviewMessage);
 
     }
 }

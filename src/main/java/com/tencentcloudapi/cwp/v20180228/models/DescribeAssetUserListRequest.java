@@ -45,8 +45,8 @@ public class DescribeAssetUserListRequest extends AbstractModel {
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>Status - uint64 - 是否必填：否 - 账号状态：0-禁用；1-启用</li>
 <li>UserType - uint64 - 是否必填：否 - 账号类型：0访客用户，1标准用户，2管理员用户 仅windows</li>
-<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows
-<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux
+<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows</li>
+<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux</li>
 <li>IsSudo - uint64 - 是否必填：否 - 是否Sudo权限：0 不是，1是 仅linux</li>
 <li>IsSshLogin - uint64 - 是否必填：否 - 是否ssh登录：0 不是，1是 仅linux</li>
 <li>ShellLoginStatus - uint64 - 是否必填：否 - 是否shell登录性，0不是；1是 仅linux</li>
@@ -117,8 +117,8 @@ PasswordLockDays
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>Status - uint64 - 是否必填：否 - 账号状态：0-禁用；1-启用</li>
 <li>UserType - uint64 - 是否必填：否 - 账号类型：0访客用户，1标准用户，2管理员用户 仅windows</li>
-<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows
-<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux
+<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows</li>
+<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux</li>
 <li>IsSudo - uint64 - 是否必填：否 - 是否Sudo权限：0 不是，1是 仅linux</li>
 <li>IsSshLogin - uint64 - 是否必填：否 - 是否ssh登录：0 不是，1是 仅linux</li>
 <li>ShellLoginStatus - uint64 - 是否必填：否 - 是否shell登录性，0不是；1是 仅linux</li>
@@ -138,8 +138,8 @@ PasswordLockDays
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>Status - uint64 - 是否必填：否 - 账号状态：0-禁用；1-启用</li>
 <li>UserType - uint64 - 是否必填：否 - 账号类型：0访客用户，1标准用户，2管理员用户 仅windows</li>
-<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows
-<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux
+<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows</li>
+<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux</li>
 <li>IsSudo - uint64 - 是否必填：否 - 是否Sudo权限：0 不是，1是 仅linux</li>
 <li>IsSshLogin - uint64 - 是否必填：否 - 是否ssh登录：0 不是，1是 仅linux</li>
 <li>ShellLoginStatus - uint64 - 是否必填：否 - 是否shell登录性，0不是；1是 仅linux</li>
@@ -165,8 +165,8 @@ PasswordLockDays
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>Status - uint64 - 是否必填：否 - 账号状态：0-禁用；1-启用</li>
 <li>UserType - uint64 - 是否必填：否 - 账号类型：0访客用户，1标准用户，2管理员用户 仅windows</li>
-<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows
-<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux
+<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows</li>
+<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux</li>
 <li>IsSudo - uint64 - 是否必填：否 - 是否Sudo权限：0 不是，1是 仅linux</li>
 <li>IsSshLogin - uint64 - 是否必填：否 - 是否ssh登录：0 不是，1是 仅linux</li>
 <li>ShellLoginStatus - uint64 - 是否必填：否 - 是否shell登录性，0不是；1是 仅linux</li>
@@ -186,8 +186,8 @@ PasswordLockDays
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>Status - uint64 - 是否必填：否 - 账号状态：0-禁用；1-启用</li>
 <li>UserType - uint64 - 是否必填：否 - 账号类型：0访客用户，1标准用户，2管理员用户 仅windows</li>
-<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows
-<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux
+<li>IsDomain - uint64 - 是否必填：否 - 是否域账号：0 不是，1是 仅windows</li>
+<li>IsRoot - uint64 - 是否必填：否 - 是否Root权限：0 不是，1是 仅linux</li>
 <li>IsSudo - uint64 - 是否必填：否 - 是否Sudo权限：0 不是，1是 仅linux</li>
 <li>IsSshLogin - uint64 - 是否必填：否 - 是否ssh登录：0 不是，1是 仅linux</li>
 <li>ShellLoginStatus - uint64 - 是否必填：否 - 是否shell登录性，0不是；1是 仅linux</li>

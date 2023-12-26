@@ -138,7 +138,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateBasicDBInstances）用于创建SQL server基础版实例。
+     *本接口（CreateBasicDBInstances）用于创建基础版实例 (云盘)。
      * @param req CreateBasicDBInstancesRequest
      * @return CreateBasicDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -149,7 +149,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateBusinessDBInstances）用于创建商业智能服务实例。
+     *本接口（CreateBusinessDBInstances）用于创建商业智能服务实例 (云盘)。
      * @param req CreateBusinessDBInstancesRequest
      * @return CreateBusinessDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -171,7 +171,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateCloudDBInstances）用于创建高可用实例(虚拟机版本)。
+     *本接口（CreateCloudDBInstances）用于创建高可用实例 (云盘)。
      * @param req CreateCloudDBInstancesRequest
      * @return CreateCloudDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -182,7 +182,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateCloudReadOnlyDBInstances）用于添加只读副本实例(虚拟机版本)。
+     *本接口（CreateCloudReadOnlyDBInstances）用于创建只读实例 (云盘)。
      * @param req CreateCloudReadOnlyDBInstancesRequest
      * @return CreateCloudReadOnlyDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -204,7 +204,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateDBInstances）用于创建实例。
+     *本接口（CreateDBInstances）用于创建高可用实例 (本地盘)
      * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -248,7 +248,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateReadOnlyDBInstances）用于添加只读副本实例。
+     *本接口（CreateReadOnlyDBInstances）用于创建只读实例 (本地盘)。
      * @param req CreateReadOnlyDBInstancesRequest
      * @return CreateReadOnlyDBInstancesResponse
      * @throws TencentCloudSDKException

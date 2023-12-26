@@ -478,7 +478,10 @@ public enum IssErrorCode {
      UNSUPPORTEDOPERATION_SCALEANDPOSBOTHEXIST("UnsupportedOperation.ScaleAndPosBothExist"),
      
     // StreamType和Resolution参数不支持同时下发
-     UNSUPPORTEDOPERATION_STREAMTYPEORRESOLUTION("UnsupportedOperation.StreamTypeOrResolution");
+     UNSUPPORTEDOPERATION_STREAMTYPEORRESOLUTION("UnsupportedOperation.StreamTypeOrResolution"),
+     
+    // 该地域未开通内网服务
+     UNSUPPORTEDOPERATION_UNOPENEDINTRANETSERVICESINREGION("UnsupportedOperation.UnopenedIntranetServicesInRegion");
      
     private String value;
     private IssErrorCode (String value){

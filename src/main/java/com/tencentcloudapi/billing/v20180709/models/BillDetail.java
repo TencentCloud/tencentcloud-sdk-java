@@ -245,6 +245,14 @@ public class BillDetail extends AbstractModel {
     private String BillMonth;
 
     /**
+    * 账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
      * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
@@ -768,6 +776,26 @@ public class BillDetail extends AbstractModel {
         this.BillMonth = BillMonth;
     }
 
+    /**
+     * Get 账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public BillDetail() {
     }
 
@@ -875,6 +903,9 @@ public class BillDetail extends AbstractModel {
         if (source.BillMonth != null) {
             this.BillMonth = new String(source.BillMonth);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -912,6 +943,7 @@ public class BillDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
         this.setParamSimple(map, prefix + "BillDay", this.BillDay);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

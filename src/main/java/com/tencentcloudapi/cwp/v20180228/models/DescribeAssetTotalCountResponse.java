@@ -39,7 +39,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块
+coremodule:内核模块
     */
     @SerializedName("Types")
     @Expose
@@ -68,7 +68,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块 
+coremodule:内核模块 
      * @return Types 各项资源数量
 system : 资源监控
 account: 账号
@@ -84,7 +84,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块
+coremodule:内核模块
      */
     public AssetKeyVal [] getTypes() {
         return this.Types;
@@ -106,7 +106,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块
+coremodule:内核模块
      * @param Types 各项资源数量
 system : 资源监控
 account: 账号
@@ -122,7 +122,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块
+coremodule:内核模块
      */
     public void setTypes(AssetKeyVal [] Types) {
         this.Types = Types;

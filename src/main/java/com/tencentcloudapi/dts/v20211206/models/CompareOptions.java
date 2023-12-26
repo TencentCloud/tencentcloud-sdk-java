@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CompareOptions extends AbstractModel {
 
     /**
-    * 对比类型：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+    * 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
@@ -48,9 +48,9 @@ public class CompareOptions extends AbstractModel {
     private Long ThreadCount;
 
     /**
-     * Get 对比类型：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * Get 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Method 对比类型：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * @return Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
@@ -58,9 +58,9 @@ public class CompareOptions extends AbstractModel {
     }
 
     /**
-     * Set 对比类型：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * Set 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Method 对比类型：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * @param Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {

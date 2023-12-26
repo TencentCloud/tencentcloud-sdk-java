@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateRecordBackupPlanModify extends AbstractModel {
 
     /**
-    * 录像计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段）
+    * 录像上云计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段）
     */
     @SerializedName("PlanName")
     @Expose
@@ -38,7 +38,7 @@ public class UpdateRecordBackupPlanModify extends AbstractModel {
     private String TemplateId;
 
     /**
-    * 录像计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
+    * 录像上云计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
     */
     @SerializedName("Describe")
     @Expose
@@ -73,16 +73,16 @@ public class UpdateRecordBackupPlanModify extends AbstractModel {
     private String [] OrganizationId;
 
     /**
-     * Get 录像计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段） 
-     * @return PlanName 录像计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段）
+     * Get 录像上云计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段） 
+     * @return PlanName 录像上云计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段）
      */
     public String getPlanName() {
         return this.PlanName;
     }
 
     /**
-     * Set 录像计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段）
-     * @param PlanName 录像计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段）
+     * Set 录像上云计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段）
+     * @param PlanName 录像上云计划名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段）
      */
     public void setPlanName(String PlanName) {
         this.PlanName = PlanName;
@@ -105,16 +105,16 @@ public class UpdateRecordBackupPlanModify extends AbstractModel {
     }
 
     /**
-     * Get 录像计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段） 
-     * @return Describe 录像计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
+     * Get 录像上云计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段） 
+     * @return Describe 录像上云计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
      */
     public String getDescribe() {
         return this.Describe;
     }
 
     /**
-     * Set 录像计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
-     * @param Describe 录像计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
+     * Set 录像上云计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
+     * @param Describe 录像上云计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;

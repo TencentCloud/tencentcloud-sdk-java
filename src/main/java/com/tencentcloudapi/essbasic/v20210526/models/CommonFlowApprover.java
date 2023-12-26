@@ -158,7 +158,7 @@ public class CommonFlowApprover extends AbstractModel {
     private String NotifyType;
 
     /**
-    * 签署人配置
+    * 签署人配置，用于控制签署人相关属性
     */
     @SerializedName("ApproverOption")
     @Expose
@@ -557,16 +557,16 @@ public class CommonFlowApprover extends AbstractModel {
     }
 
     /**
-     * Get 签署人配置 
-     * @return ApproverOption 签署人配置
+     * Get 签署人配置，用于控制签署人相关属性 
+     * @return ApproverOption 签署人配置，用于控制签署人相关属性
      */
     public CommonApproverOption getApproverOption() {
         return this.ApproverOption;
     }
 
     /**
-     * Set 签署人配置
-     * @param ApproverOption 签署人配置
+     * Set 签署人配置，用于控制签署人相关属性
+     * @param ApproverOption 签署人配置，用于控制签署人相关属性
      */
     public void setApproverOption(CommonApproverOption ApproverOption) {
         this.ApproverOption = ApproverOption;

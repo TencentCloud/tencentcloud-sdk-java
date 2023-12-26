@@ -25,15 +25,9 @@ public class DescribeAssetMachineListRequest extends AbstractModel {
 
     /**
     * 过滤条件。
-<li>MachineName  主机名称
-
-
-
-InstanceID  实例ID  
-
- 
-
-IP   内网IP或公网IP</li>
+<li>MachineName  主机名称</li>
+<li>InstanceID  实例ID  </li>
+<li>IP   内网IP或公网IP</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>CpuLoad - Int - 是否必填：否 - 
 0: 未知  1: 低负载
@@ -83,15 +77,9 @@ IP   内网IP或公网IP</li>
 
     /**
      * Get 过滤条件。
-<li>MachineName  主机名称
-
-
-
-InstanceID  实例ID  
-
- 
-
-IP   内网IP或公网IP</li>
+<li>MachineName  主机名称</li>
+<li>InstanceID  实例ID  </li>
+<li>IP   内网IP或公网IP</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>CpuLoad - Int - 是否必填：否 - 
 0: 未知  1: 低负载
@@ -107,15 +95,9 @@ IP   内网IP或公网IP</li>
 <li>Quuid：主机Quuid</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li> 
      * @return Filters 过滤条件。
-<li>MachineName  主机名称
-
-
-
-InstanceID  实例ID  
-
- 
-
-IP   内网IP或公网IP</li>
+<li>MachineName  主机名称</li>
+<li>InstanceID  实例ID  </li>
+<li>IP   内网IP或公网IP</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>CpuLoad - Int - 是否必填：否 - 
 0: 未知  1: 低负载
@@ -137,15 +119,9 @@ IP   内网IP或公网IP</li>
 
     /**
      * Set 过滤条件。
-<li>MachineName  主机名称
-
-
-
-InstanceID  实例ID  
-
- 
-
-IP   内网IP或公网IP</li>
+<li>MachineName  主机名称</li>
+<li>InstanceID  实例ID  </li>
+<li>IP   内网IP或公网IP</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>CpuLoad - Int - 是否必填：否 - 
 0: 未知  1: 低负载
@@ -161,15 +137,9 @@ IP   内网IP或公网IP</li>
 <li>Quuid：主机Quuid</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param Filters 过滤条件。
-<li>MachineName  主机名称
-
-
-
-InstanceID  实例ID  
-
- 
-
-IP   内网IP或公网IP</li>
+<li>MachineName  主机名称</li>
+<li>InstanceID  实例ID  </li>
+<li>IP   内网IP或公网IP</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
 <li>CpuLoad - Int - 是否必填：否 - 
 0: 未知  1: 低负载

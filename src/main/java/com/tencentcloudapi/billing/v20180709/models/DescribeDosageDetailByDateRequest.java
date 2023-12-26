@@ -56,6 +56,8 @@ cdn业务：
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
+
+仅支持以上产品
     */
     @SerializedName("ProductCode")
     @Expose
@@ -76,6 +78,13 @@ cdn业务：
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
+
+    /**
+    * 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
 
     /**
      * Get 查询账单开始日期，如 2019-01-01 
@@ -127,7 +136,9 @@ cdn业务：
 10226 视频直播流量(国内)
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
-100762 视频直播宽带(海外) 
+100762 视频直播宽带(海外)
+
+仅支持以上产品 
      * @return ProductCode 互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
@@ -146,6 +157,8 @@ cdn业务：
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
+
+仅支持以上产品
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -170,6 +183,8 @@ cdn业务：
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
+
+仅支持以上产品
      * @param ProductCode 互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
@@ -188,6 +203,8 @@ cdn业务：
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
+
+仅支持以上产品
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
@@ -233,6 +250,22 @@ cdn业务：
         this.InstanceID = InstanceID;
     }
 
+    /**
+     * Get 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN 
+     * @return PayerUin 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     * @param PayerUin 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
     public DescribeDosageDetailByDateRequest() {
     }
 
@@ -256,6 +289,9 @@ cdn业务：
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
         }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
     }
 
 
@@ -268,6 +304,7 @@ cdn业务：
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

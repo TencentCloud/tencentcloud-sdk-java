@@ -38,7 +38,14 @@ public class ListDevicesRequest extends AbstractModel {
     private Boolean IsContainSubLevel;
 
     /**
-    * 设备接入协议。1:RTMP，2:GB，3:GW
+    * 是否包含当前用户已关联的设备，默认false
+    */
+    @SerializedName("IsContainUser")
+    @Expose
+    private Boolean IsContainUser;
+
+    /**
+    * 设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
     */
     @SerializedName("AccessProtocol")
     @Expose
@@ -66,7 +73,7 @@ public class ListDevicesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 模糊搜索设备关键字
+    * 模糊搜索设备的关键字
     */
     @SerializedName("Keyword")
     @Expose
@@ -126,16 +133,32 @@ public class ListDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Get 设备接入协议。1:RTMP，2:GB，3:GW 
-     * @return AccessProtocol 设备接入协议。1:RTMP，2:GB，3:GW
+     * Get 是否包含当前用户已关联的设备，默认false 
+     * @return IsContainUser 是否包含当前用户已关联的设备，默认false
+     */
+    public Boolean getIsContainUser() {
+        return this.IsContainUser;
+    }
+
+    /**
+     * Set 是否包含当前用户已关联的设备，默认false
+     * @param IsContainUser 是否包含当前用户已关联的设备，默认false
+     */
+    public void setIsContainUser(Boolean IsContainUser) {
+        this.IsContainUser = IsContainUser;
+    }
+
+    /**
+     * Get 设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议) 
+     * @return AccessProtocol 设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
      */
     public Long getAccessProtocol() {
         return this.AccessProtocol;
     }
 
     /**
-     * Set 设备接入协议。1:RTMP，2:GB，3:GW
-     * @param AccessProtocol 设备接入协议。1:RTMP，2:GB，3:GW
+     * Set 设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
+     * @param AccessProtocol 设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
      */
     public void setAccessProtocol(Long AccessProtocol) {
         this.AccessProtocol = AccessProtocol;
@@ -190,16 +213,16 @@ public class ListDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Get 模糊搜索设备关键字 
-     * @return Keyword 模糊搜索设备关键字
+     * Get 模糊搜索设备的关键字 
+     * @return Keyword 模糊搜索设备的关键字
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 模糊搜索设备关键字
-     * @param Keyword 模糊搜索设备关键字
+     * Set 模糊搜索设备的关键字
+     * @param Keyword 模糊搜索设备的关键字
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
@@ -267,6 +290,9 @@ public class ListDevicesRequest extends AbstractModel {
         if (source.IsContainSubLevel != null) {
             this.IsContainSubLevel = new Boolean(source.IsContainSubLevel);
         }
+        if (source.IsContainUser != null) {
+            this.IsContainUser = new Boolean(source.IsContainUser);
+        }
         if (source.AccessProtocol != null) {
             this.AccessProtocol = new Long(source.AccessProtocol);
         }
@@ -300,6 +326,7 @@ public class ListDevicesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "IsContainSubLevel", this.IsContainSubLevel);
+        this.setParamSimple(map, prefix + "IsContainUser", this.IsContainUser);
         this.setParamSimple(map, prefix + "AccessProtocol", this.AccessProtocol);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Status", this.Status);

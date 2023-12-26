@@ -52,9 +52,9 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel {
     private String DbVersion;
 
     /**
-    * 0: 非大小写敏感
-1: 大小写敏感
-默认 0
+    * 0: 大小写敏感
+1: 非大小写敏感
+默认为0
     */
     @SerializedName("LowerCaseTableName")
     @Expose
@@ -125,24 +125,24 @@ public class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get 0: 非大小写敏感
-1: 大小写敏感
-默认 0 
-     * @return LowerCaseTableName 0: 非大小写敏感
-1: 大小写敏感
-默认 0
+     * Get 0: 大小写敏感
+1: 非大小写敏感
+默认为0 
+     * @return LowerCaseTableName 0: 大小写敏感
+1: 非大小写敏感
+默认为0
      */
     public String getLowerCaseTableName() {
         return this.LowerCaseTableName;
     }
 
     /**
-     * Set 0: 非大小写敏感
-1: 大小写敏感
-默认 0
-     * @param LowerCaseTableName 0: 非大小写敏感
-1: 大小写敏感
-默认 0
+     * Set 0: 大小写敏感
+1: 非大小写敏感
+默认为0
+     * @param LowerCaseTableName 0: 大小写敏感
+1: 非大小写敏感
+默认为0
      */
     public void setLowerCaseTableName(String LowerCaseTableName) {
         this.LowerCaseTableName = LowerCaseTableName;

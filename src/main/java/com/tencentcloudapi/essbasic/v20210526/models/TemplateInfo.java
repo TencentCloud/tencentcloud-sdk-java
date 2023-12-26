@@ -80,7 +80,7 @@ public class TemplateInfo extends AbstractModel {
     private Boolean IsPromoter;
 
     /**
-    * 模板的创建者信息，电子签系统用户ID
+    * 模板的创建者名字
     */
     @SerializedName("Creator")
     @Expose
@@ -289,16 +289,16 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 模板的创建者信息，电子签系统用户ID 
-     * @return Creator 模板的创建者信息，电子签系统用户ID
+     * Get 模板的创建者名字 
+     * @return Creator 模板的创建者名字
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 模板的创建者信息，电子签系统用户ID
-     * @param Creator 模板的创建者信息，电子签系统用户ID
+     * Set 模板的创建者名字
+     * @param Creator 模板的创建者名字
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;

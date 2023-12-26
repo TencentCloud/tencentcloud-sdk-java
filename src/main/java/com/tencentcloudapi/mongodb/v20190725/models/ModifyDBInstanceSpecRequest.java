@@ -82,6 +82,20 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private Long InMaintenance;
 
     /**
+    * 新增节点属性列表。
+    */
+    @SerializedName("AddNodeList")
+    @Expose
+    private AddNodeList [] AddNodeList;
+
+    /**
+    * 删除节点属性列表。
+    */
+    @SerializedName("RemoveNodeList")
+    @Expose
+    private RemoveNodeList [] RemoveNodeList;
+
+    /**
      * Get 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
  
      * @return InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
@@ -229,6 +243,38 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         this.InMaintenance = InMaintenance;
     }
 
+    /**
+     * Get 新增节点属性列表。 
+     * @return AddNodeList 新增节点属性列表。
+     */
+    public AddNodeList [] getAddNodeList() {
+        return this.AddNodeList;
+    }
+
+    /**
+     * Set 新增节点属性列表。
+     * @param AddNodeList 新增节点属性列表。
+     */
+    public void setAddNodeList(AddNodeList [] AddNodeList) {
+        this.AddNodeList = AddNodeList;
+    }
+
+    /**
+     * Get 删除节点属性列表。 
+     * @return RemoveNodeList 删除节点属性列表。
+     */
+    public RemoveNodeList [] getRemoveNodeList() {
+        return this.RemoveNodeList;
+    }
+
+    /**
+     * Set 删除节点属性列表。
+     * @param RemoveNodeList 删除节点属性列表。
+     */
+    public void setRemoveNodeList(RemoveNodeList [] RemoveNodeList) {
+        this.RemoveNodeList = RemoveNodeList;
+    }
+
     public ModifyDBInstanceSpecRequest() {
     }
 
@@ -258,6 +304,18 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         if (source.InMaintenance != null) {
             this.InMaintenance = new Long(source.InMaintenance);
         }
+        if (source.AddNodeList != null) {
+            this.AddNodeList = new AddNodeList[source.AddNodeList.length];
+            for (int i = 0; i < source.AddNodeList.length; i++) {
+                this.AddNodeList[i] = new AddNodeList(source.AddNodeList[i]);
+            }
+        }
+        if (source.RemoveNodeList != null) {
+            this.RemoveNodeList = new RemoveNodeList[source.RemoveNodeList.length];
+            for (int i = 0; i < source.RemoveNodeList.length; i++) {
+                this.RemoveNodeList[i] = new RemoveNodeList(source.RemoveNodeList[i]);
+            }
+        }
     }
 
 
@@ -272,6 +330,8 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
         this.setParamSimple(map, prefix + "InMaintenance", this.InMaintenance);
+        this.setParamArrayObj(map, prefix + "AddNodeList.", this.AddNodeList);
+        this.setParamArrayObj(map, prefix + "RemoveNodeList.", this.RemoveNodeList);
 
     }
 }

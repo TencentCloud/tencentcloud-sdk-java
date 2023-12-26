@@ -43,7 +43,7 @@ public class ExportAssetSystemPackageListRequest extends AbstractModel {
 <li>StartTime - String - 是否必填：否 - 安装开始时间</li>
 <li>EndTime - String - 是否必填：否 - 安装开始时间</li>
 <li>Type - int - 是否必填：否 - 安装包类型：
-1:rmp
+1:rpm
 2:dpkg
 3:java
 4:system</li>
@@ -104,7 +104,7 @@ public class ExportAssetSystemPackageListRequest extends AbstractModel {
 <li>StartTime - String - 是否必填：否 - 安装开始时间</li>
 <li>EndTime - String - 是否必填：否 - 安装开始时间</li>
 <li>Type - int - 是否必填：否 - 安装包类型：
-1:rmp
+1:rpm
 2:dpkg
 3:java
 4:system</li> 
@@ -113,7 +113,7 @@ public class ExportAssetSystemPackageListRequest extends AbstractModel {
 <li>StartTime - String - 是否必填：否 - 安装开始时间</li>
 <li>EndTime - String - 是否必填：否 - 安装开始时间</li>
 <li>Type - int - 是否必填：否 - 安装包类型：
-1:rmp
+1:rpm
 2:dpkg
 3:java
 4:system</li>
@@ -128,7 +128,7 @@ public class ExportAssetSystemPackageListRequest extends AbstractModel {
 <li>StartTime - String - 是否必填：否 - 安装开始时间</li>
 <li>EndTime - String - 是否必填：否 - 安装开始时间</li>
 <li>Type - int - 是否必填：否 - 安装包类型：
-1:rmp
+1:rpm
 2:dpkg
 3:java
 4:system</li>
@@ -137,7 +137,7 @@ public class ExportAssetSystemPackageListRequest extends AbstractModel {
 <li>StartTime - String - 是否必填：否 - 安装开始时间</li>
 <li>EndTime - String - 是否必填：否 - 安装开始时间</li>
 <li>Type - int - 是否必填：否 - 安装包类型：
-1:rmp
+1:rpm
 2:dpkg
 3:java
 4:system</li>
