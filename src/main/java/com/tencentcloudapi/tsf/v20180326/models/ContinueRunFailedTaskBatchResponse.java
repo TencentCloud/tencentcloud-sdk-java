@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ContinueRunFailedTaskBatchResponse extends AbstractModel {
 
     /**
-    * 成功或失败
+    * true：操作成功、false：操作失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ContinueRunFailedTaskBatchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功或失败 
-     * @return Result 成功或失败
+     * Get true：操作成功、false：操作失败 
+     * @return Result true：操作成功、false：操作失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 成功或失败
-     * @param Result 成功或失败
+     * Set true：操作成功、false：操作失败
+     * @param Result true：操作成功、false：操作失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

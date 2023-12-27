@@ -26,7 +26,9 @@ public class ChannelCreateBatchSignUrlResponse extends AbstractModel {
     /**
     * 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用`
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
     */
     @SerializedName("SignUrl")
     @Expose
@@ -42,7 +44,9 @@ public class ChannelCreateBatchSignUrlResponse extends AbstractModel {
     /**
     * 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用`
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
     */
     @SerializedName("MiniAppPath")
     @Expose
@@ -58,10 +62,14 @@ public class ChannelCreateBatchSignUrlResponse extends AbstractModel {
     /**
      * Get 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用` 
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误） 
      * @return SignUrl 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用`
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public String getSignUrl() {
         return this.SignUrl;
@@ -70,10 +78,14 @@ public class ChannelCreateBatchSignUrlResponse extends AbstractModel {
     /**
      * Set 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用`
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      * @param SignUrl 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用`
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public void setSignUrl(String SignUrl) {
         this.SignUrl = SignUrl;
@@ -98,10 +110,14 @@ public class ChannelCreateBatchSignUrlResponse extends AbstractModel {
     /**
      * Get 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用` 
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误） 
      * @return MiniAppPath 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用`
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public String getMiniAppPath() {
         return this.MiniAppPath;
@@ -110,10 +126,14 @@ public class ChannelCreateBatchSignUrlResponse extends AbstractModel {
     /**
      * Set 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用`
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      * @param MiniAppPath 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用`
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public void setMiniAppPath(String MiniAppPath) {
         this.MiniAppPath = MiniAppPath;

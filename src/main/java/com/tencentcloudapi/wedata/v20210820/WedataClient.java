@@ -1396,6 +1396,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *元数据模型-字段基础信息查询接口
+     * @param req DescribeFieldBasicInfoRequest
+     * @return DescribeFieldBasicInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFieldBasicInfoResponse DescribeFieldBasicInfo(DescribeFieldBasicInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFieldBasicInfo", DescribeFieldBasicInfoResponse.class);
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 拉取文件夹目录
      * @param req DescribeFolderListRequest
@@ -2339,6 +2350,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *元数据模型-表基础信息查询接口
+     * @param req DescribeTableBasicInfoRequest
+     * @return DescribeTableBasicInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableBasicInfoResponse DescribeTableBasicInfo(DescribeTableBasicInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTableBasicInfo", DescribeTableBasicInfoResponse.class);
+    }
+
+    /**
      *获取数据表信息
      * @param req DescribeTableInfoListRequest
      * @return DescribeTableInfoListResponse
@@ -2358,6 +2380,17 @@ public class WedataClient extends AbstractClient{
     public DescribeTableLineageResponse DescribeTableLineage(DescribeTableLineageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTableLineage", DescribeTableLineageResponse.class);
+    }
+
+    /**
+     *列出表血缘信息
+     * @param req DescribeTableLineageInfoRequest
+     * @return DescribeTableLineageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableLineageInfoResponse DescribeTableLineageInfo(DescribeTableLineageInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTableLineageInfo", DescribeTableLineageInfoResponse.class);
     }
 
     /**

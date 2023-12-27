@@ -25,6 +25,8 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignUrl")
@@ -139,8 +141,12 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Get 签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SignUrl 签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignUrl() {
@@ -149,8 +155,12 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SignUrl 签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignUrl(String SignUrl) {

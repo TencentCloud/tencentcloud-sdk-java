@@ -215,7 +215,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建参数模版，并返回模版详细信息
+     *创建参数模板，并返回模板详细信息
      * @param req CreateConfigTemplateWithDetailRespRequest
      * @return CreateConfigTemplateWithDetailRespResponse
      * @throws TencentCloudSDKException

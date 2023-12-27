@@ -31,7 +31,7 @@ public class AppearIndexPair extends AbstractModel {
     private Long AppearIndex;
 
     /**
-    * AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
+    * AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
     */
     @SerializedName("Index")
     @Expose
@@ -54,16 +54,16 @@ public class AppearIndexPair extends AbstractModel {
     }
 
     /**
-     * Get AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术 
-     * @return Index AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
+     * Get AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数 
+     * @return Index AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
-     * @param Index AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
+     * Set AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
+     * @param Index AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
      */
     public void setIndex(Long Index) {
         this.Index = Index;

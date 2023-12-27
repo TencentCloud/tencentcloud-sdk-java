@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class FlowApproverUrlInfo extends AbstractModel {
 
     /**
-    * 签署短链接。</br>
+    * 签署短链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。
+1. 该链接有效期为<b>30分钟</b>，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持<b>移动端浏览器</b>打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
     */
     @SerializedName("SignUrl")
     @Expose
@@ -37,7 +37,6 @@ public class FlowApproverUrlInfo extends AbstractModel {
     /**
     * 签署人类型。
 - **1**: 个人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverType")
     @Expose
@@ -45,7 +44,6 @@ public class FlowApproverUrlInfo extends AbstractModel {
 
     /**
     * 签署人姓名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverName")
     @Expose
@@ -53,50 +51,49 @@ public class FlowApproverUrlInfo extends AbstractModel {
 
     /**
     * 签署人手机号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverMobile")
     @Expose
     private String ApproverMobile;
 
     /**
-    * 签署长链接。</br>
+    * 签署长链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
     */
     @SerializedName("LongUrl")
     @Expose
     private String LongUrl;
 
     /**
-     * Get 签署短链接。</br>
+     * Get 签署短链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SignUrl 签署短链接。</br>
+1. 该链接有效期为<b>30分钟</b>，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持<b>移动端浏览器</b>打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误） 
+     * @return SignUrl 签署短链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。
+1. 该链接有效期为<b>30分钟</b>，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持<b>移动端浏览器</b>打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public String getSignUrl() {
         return this.SignUrl;
     }
 
     /**
-     * Set 签署短链接。</br>
+     * Set 签署短链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SignUrl 签署短链接。</br>
+1. 该链接有效期为<b>30分钟</b>，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持<b>移动端浏览器</b>打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+     * @param SignUrl 签署短链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。
+1. 该链接有效期为<b>30分钟</b>，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持<b>移动端浏览器</b>打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public void setSignUrl(String SignUrl) {
         this.SignUrl = SignUrl;
@@ -104,11 +101,9 @@ public class FlowApproverUrlInfo extends AbstractModel {
 
     /**
      * Get 签署人类型。
-- **1**: 个人
-注意：此字段可能返回 null，表示取不到有效值。 
+- **1**: 个人 
      * @return ApproverType 签署人类型。
 - **1**: 个人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApproverType() {
         return this.ApproverType;
@@ -117,20 +112,16 @@ public class FlowApproverUrlInfo extends AbstractModel {
     /**
      * Set 签署人类型。
 - **1**: 个人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverType 签署人类型。
 - **1**: 个人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;
     }
 
     /**
-     * Get 签署人姓名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署人姓名。 
      * @return ApproverName 签署人姓名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverName() {
         return this.ApproverName;
@@ -138,19 +129,15 @@ public class FlowApproverUrlInfo extends AbstractModel {
 
     /**
      * Set 签署人姓名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverName 签署人姓名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverName(String ApproverName) {
         this.ApproverName = ApproverName;
     }
 
     /**
-     * Get 签署人手机号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署人手机号。 
      * @return ApproverMobile 签署人手机号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverMobile() {
         return this.ApproverMobile;
@@ -158,41 +145,39 @@ public class FlowApproverUrlInfo extends AbstractModel {
 
     /**
      * Set 签署人手机号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverMobile 签署人手机号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverMobile(String ApproverMobile) {
         this.ApproverMobile = ApproverMobile;
     }
 
     /**
-     * Get 签署长链接。</br>
+     * Get 签署长链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LongUrl 签署长链接。</br>
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误） 
+     * @return LongUrl 签署长链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public String getLongUrl() {
         return this.LongUrl;
     }
 
     /**
-     * Set 签署长链接。</br>
+     * Set 签署长链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LongUrl 签署长链接。</br>
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+     * @param LongUrl 签署长链接。
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
-注意：此字段可能返回 null，表示取不到有效值。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public void setLongUrl(String LongUrl) {
         this.LongUrl = LongUrl;
