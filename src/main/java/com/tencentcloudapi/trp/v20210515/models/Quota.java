@@ -128,6 +128,14 @@ public class Quota extends AbstractModel {
     private String Version;
 
     /**
+    * 是否开启企业认证
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCertify")
+    @Expose
+    private Long ProductCertify;
+
+    /**
      * Get 服务开始时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 服务开始时间
@@ -387,6 +395,26 @@ public class Quota extends AbstractModel {
         this.Version = Version;
     }
 
+    /**
+     * Get 是否开启企业认证
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCertify 是否开启企业认证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProductCertify() {
+        return this.ProductCertify;
+    }
+
+    /**
+     * Set 是否开启企业认证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCertify 是否开启企业认证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCertify(Long ProductCertify) {
+        this.ProductCertify = ProductCertify;
+    }
+
     public Quota() {
     }
 
@@ -437,6 +465,9 @@ public class Quota extends AbstractModel {
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.ProductCertify != null) {
+            this.ProductCertify = new Long(source.ProductCertify);
+        }
     }
 
 
@@ -457,6 +488,7 @@ public class Quota extends AbstractModel {
         this.setParamSimple(map, prefix + "RiskQuota", this.RiskQuota);
         this.setParamSimple(map, prefix + "TrackType", this.TrackType);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "ProductCertify", this.ProductCertify);
 
     }
 }

@@ -164,7 +164,15 @@ public class ClusterInfoItem extends AbstractModel {
     private String TaskCreateTime;
 
     /**
-    * 接入状态
+    * 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessedStatus")
@@ -202,6 +210,14 @@ public class ClusterInfoItem extends AbstractModel {
     @SerializedName("UnInstallAgentNodeCount")
     @Expose
     private Long UnInstallAgentNodeCount;
+
+    /**
+    * 计费核数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChargeCoresCnt")
+    @Expose
+    private Long ChargeCoresCnt;
 
     /**
      * Get 集群id 
@@ -524,9 +540,25 @@ public class ClusterInfoItem extends AbstractModel {
     }
 
     /**
-     * Get 接入状态
+     * Get 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessedStatus 接入状态
+     * @return AccessedStatus 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessedStatus() {
@@ -534,9 +566,25 @@ public class ClusterInfoItem extends AbstractModel {
     }
 
     /**
-     * Set 接入状态
+     * Set 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessedStatus 接入状态
+     * @param AccessedStatus 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessedStatus(String AccessedStatus) {
@@ -623,6 +671,26 @@ public class ClusterInfoItem extends AbstractModel {
         this.UnInstallAgentNodeCount = UnInstallAgentNodeCount;
     }
 
+    /**
+     * Get 计费核数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChargeCoresCnt 计费核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getChargeCoresCnt() {
+        return this.ChargeCoresCnt;
+    }
+
+    /**
+     * Set 计费核数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChargeCoresCnt 计费核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChargeCoresCnt(Long ChargeCoresCnt) {
+        this.ChargeCoresCnt = ChargeCoresCnt;
+    }
+
     public ClusterInfoItem() {
     }
 
@@ -706,6 +774,9 @@ public class ClusterInfoItem extends AbstractModel {
         if (source.UnInstallAgentNodeCount != null) {
             this.UnInstallAgentNodeCount = new Long(source.UnInstallAgentNodeCount);
         }
+        if (source.ChargeCoresCnt != null) {
+            this.ChargeCoresCnt = new Long(source.ChargeCoresCnt);
+        }
     }
 
 
@@ -738,6 +809,7 @@ public class ClusterInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
         this.setParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);
+        this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
 
     }
 }

@@ -41,11 +41,12 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
     *   扩展服务类型
 <ul>
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
 <li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
 </ul>
     */
     @SerializedName("ServiceType")
@@ -53,9 +54,11 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
     private String ServiceType;
 
     /**
-    * 操作类型 
-OPEN:开通 
-CLOSE:关闭
+    * 操作类型
+<ul>
+<li>OPEN : 开通</li>
+<li>CLOSE : 关闭</li>
+</ul>
     */
     @SerializedName("Operate")
     @Expose
@@ -120,20 +123,22 @@ CLOSE:关闭
      * Get   扩展服务类型
 <ul>
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
 <li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
 </ul> 
      * @return ServiceType   扩展服务类型
 <ul>
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
 <li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
 </ul>
      */
     public String getServiceType() {
@@ -144,20 +149,22 @@ CLOSE:关闭
      * Set   扩展服务类型
 <ul>
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
 <li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
 </ul>
      * @param ServiceType   扩展服务类型
 <ul>
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
-<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
 <li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+<li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
 </ul>
      */
     public void setServiceType(String ServiceType) {
@@ -165,24 +172,32 @@ CLOSE:关闭
     }
 
     /**
-     * Get 操作类型 
-OPEN:开通 
-CLOSE:关闭 
-     * @return Operate 操作类型 
-OPEN:开通 
-CLOSE:关闭
+     * Get 操作类型
+<ul>
+<li>OPEN : 开通</li>
+<li>CLOSE : 关闭</li>
+</ul> 
+     * @return Operate 操作类型
+<ul>
+<li>OPEN : 开通</li>
+<li>CLOSE : 关闭</li>
+</ul>
      */
     public String getOperate() {
         return this.Operate;
     }
 
     /**
-     * Set 操作类型 
-OPEN:开通 
-CLOSE:关闭
-     * @param Operate 操作类型 
-OPEN:开通 
-CLOSE:关闭
+     * Set 操作类型
+<ul>
+<li>OPEN : 开通</li>
+<li>CLOSE : 关闭</li>
+</ul>
+     * @param Operate 操作类型
+<ul>
+<li>OPEN : 开通</li>
+<li>CLOSE : 关闭</li>
+</ul>
      */
     public void setOperate(String Operate) {
         this.Operate = Operate;

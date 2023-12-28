@@ -369,6 +369,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *查询元数据表
+     * @param req GetMetaTableRequest
+     * @return GetMetaTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMetaTableResponse GetMetaTable(GetMetaTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetMetaTable", GetMetaTableResponse.class);
+    }
+
+    /**
      *自定义树状结构页面拖拽文件夹
      * @param req ModifyFolderRequest
      * @return ModifyFolderResponse

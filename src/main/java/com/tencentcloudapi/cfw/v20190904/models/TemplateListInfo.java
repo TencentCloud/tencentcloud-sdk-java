@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TemplateListInfo extends AbstractModel {
 
     /**
-    * 模版ID
+    * 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
@@ -32,7 +32,7 @@ public class TemplateListInfo extends AbstractModel {
     private String Uuid;
 
     /**
-    * 模版名称
+    * 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -48,7 +48,7 @@ public class TemplateListInfo extends AbstractModel {
     private String Detail;
 
     /**
-    * IP模版
+    * IP模板
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpString")
@@ -72,7 +72,7 @@ public class TemplateListInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 模版类型
+    * 模板类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -104,9 +104,9 @@ public class TemplateListInfo extends AbstractModel {
     private String ProtocolType;
 
     /**
-     * Get 模版ID
+     * Get 模板ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uuid 模版ID
+     * @return Uuid 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
@@ -114,9 +114,9 @@ public class TemplateListInfo extends AbstractModel {
     }
 
     /**
-     * Set 模版ID
+     * Set 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uuid 模版ID
+     * @param Uuid 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
@@ -124,9 +124,9 @@ public class TemplateListInfo extends AbstractModel {
     }
 
     /**
-     * Get 模版名称
+     * Get 模板名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 模版名称
+     * @return Name 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -134,9 +134,9 @@ public class TemplateListInfo extends AbstractModel {
     }
 
     /**
-     * Set 模版名称
+     * Set 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 模版名称
+     * @param Name 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -164,9 +164,9 @@ public class TemplateListInfo extends AbstractModel {
     }
 
     /**
-     * Get IP模版
+     * Get IP模板
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpString IP模版
+     * @return IpString IP模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpString() {
@@ -174,9 +174,9 @@ public class TemplateListInfo extends AbstractModel {
     }
 
     /**
-     * Set IP模版
+     * Set IP模板
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpString IP模版
+     * @param IpString IP模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpString(String IpString) {
@@ -224,9 +224,9 @@ public class TemplateListInfo extends AbstractModel {
     }
 
     /**
-     * Get 模版类型
+     * Get 模板类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 模版类型
+     * @return Type 模板类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -234,9 +234,9 @@ public class TemplateListInfo extends AbstractModel {
     }
 
     /**
-     * Set 模版类型
+     * Set 模板类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 模版类型
+     * @param Type 模板类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {

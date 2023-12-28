@@ -59,7 +59,7 @@ public class RuleInfoData extends AbstractModel {
     private String Strategy;
 
     /**
-    * 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+    * 访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
     */
     @SerializedName("SourceType")
     @Expose
@@ -80,7 +80,7 @@ public class RuleInfoData extends AbstractModel {
     private String Detail;
 
     /**
-    * 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+    * 访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
     */
     @SerializedName("TargetType")
     @Expose
@@ -237,16 +237,16 @@ public class RuleInfoData extends AbstractModel {
     }
 
     /**
-     * Get 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版 
-     * @return SourceType 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * Get 访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板 
+     * @return SourceType 访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
      */
     public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
-     * @param SourceType 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * Set 访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
+     * @param SourceType 访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
@@ -285,16 +285,16 @@ public class RuleInfoData extends AbstractModel {
     }
 
     /**
-     * Get 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版 
-     * @return TargetType 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * Get 访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板 
+     * @return TargetType 访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
      */
     public Long getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
-     * @param TargetType 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * Set 访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
+     * @param TargetType 访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;

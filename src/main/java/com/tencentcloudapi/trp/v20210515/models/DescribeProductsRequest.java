@@ -59,6 +59,13 @@ public class DescribeProductsRequest extends AbstractModel {
     private Long CorpId;
 
     /**
+    * 认证状态
+    */
+    @SerializedName("CertState")
+    @Expose
+    private Long CertState;
+
+    /**
      * Get 商品名称 
      * @return Name 商品名称
      */
@@ -138,6 +145,22 @@ public class DescribeProductsRequest extends AbstractModel {
         this.CorpId = CorpId;
     }
 
+    /**
+     * Get 认证状态 
+     * @return CertState 认证状态
+     */
+    public Long getCertState() {
+        return this.CertState;
+    }
+
+    /**
+     * Set 认证状态
+     * @param CertState 认证状态
+     */
+    public void setCertState(Long CertState) {
+        this.CertState = CertState;
+    }
+
     public DescribeProductsRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeProductsRequest extends AbstractModel {
         if (source.CorpId != null) {
             this.CorpId = new Long(source.CorpId);
         }
+        if (source.CertState != null) {
+            this.CertState = new Long(source.CertState);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeProductsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "MerchantId", this.MerchantId);
         this.setParamSimple(map, prefix + "CorpId", this.CorpId);
+        this.setParamSimple(map, prefix + "CertState", this.CertState);
 
     }
 }

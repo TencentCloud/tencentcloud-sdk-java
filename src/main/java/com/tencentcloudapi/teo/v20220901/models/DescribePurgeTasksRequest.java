@@ -32,14 +32,14 @@ public class DescribePurgeTasksRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 查询起始时间。
+    * 查询起始时间，时间与job-id必填一个。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间。
+    * 查询结束时间，时间与job-id必填一个。
     */
     @SerializedName("EndTime")
     @Expose
@@ -87,32 +87,32 @@ public class DescribePurgeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询起始时间。 
-     * @return StartTime 查询起始时间。
+     * Get 查询起始时间，时间与job-id必填一个。 
+     * @return StartTime 查询起始时间，时间与job-id必填一个。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询起始时间。
-     * @param StartTime 查询起始时间。
+     * Set 查询起始时间，时间与job-id必填一个。
+     * @param StartTime 查询起始时间，时间与job-id必填一个。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间。 
-     * @return EndTime 查询结束时间。
+     * Get 查询结束时间，时间与job-id必填一个。 
+     * @return EndTime 查询结束时间，时间与job-id必填一个。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间。
-     * @param EndTime 查询结束时间。
+     * Set 查询结束时间，时间与job-id必填一个。
+     * @param EndTime 查询结束时间，时间与job-id必填一个。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

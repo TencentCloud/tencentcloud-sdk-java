@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class SyncBaselineDetectSummaryRequest extends AbstractModel {
 
+    /**
+    * 用于计算检测中和进度的任务ID集合，一般不用传入
+    */
+    @SerializedName("TaskIds")
+    @Expose
+    private Long [] TaskIds;
+
+    /**
+     * Get 用于计算检测中和进度的任务ID集合，一般不用传入 
+     * @return TaskIds 用于计算检测中和进度的任务ID集合，一般不用传入
+     */
+    public Long [] getTaskIds() {
+        return this.TaskIds;
+    }
+
+    /**
+     * Set 用于计算检测中和进度的任务ID集合，一般不用传入
+     * @param TaskIds 用于计算检测中和进度的任务ID集合，一般不用传入
+     */
+    public void setTaskIds(Long [] TaskIds) {
+        this.TaskIds = TaskIds;
+    }
+
     public SyncBaselineDetectSummaryRequest() {
     }
 
@@ -31,6 +54,12 @@ public class SyncBaselineDetectSummaryRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SyncBaselineDetectSummaryRequest(SyncBaselineDetectSummaryRequest source) {
+        if (source.TaskIds != null) {
+            this.TaskIds = new Long[source.TaskIds.length];
+            for (int i = 0; i < source.TaskIds.length; i++) {
+                this.TaskIds[i] = new Long(source.TaskIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +67,7 @@ public class SyncBaselineDetectSummaryRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
 
     }
 }

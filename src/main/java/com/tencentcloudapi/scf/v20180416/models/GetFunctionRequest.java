@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetFunctionRequest extends AbstractModel {
 
     /**
-    * 需要获取详情的函数名称
+    * 需要获取详情的函数名称，ResourceId和FunctionName只能传一个
     */
     @SerializedName("FunctionName")
     @Expose
@@ -54,16 +54,16 @@ public class GetFunctionRequest extends AbstractModel {
     private String ShowCode;
 
     /**
-     * Get 需要获取详情的函数名称 
-     * @return FunctionName 需要获取详情的函数名称
+     * Get 需要获取详情的函数名称，ResourceId和FunctionName只能传一个 
+     * @return FunctionName 需要获取详情的函数名称，ResourceId和FunctionName只能传一个
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set 需要获取详情的函数名称
-     * @param FunctionName 需要获取详情的函数名称
+     * Set 需要获取详情的函数名称，ResourceId和FunctionName只能传一个
+     * @param FunctionName 需要获取详情的函数名称，ResourceId和FunctionName只能传一个
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;

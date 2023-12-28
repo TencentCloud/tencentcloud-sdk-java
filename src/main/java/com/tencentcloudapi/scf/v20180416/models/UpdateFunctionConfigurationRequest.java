@@ -186,6 +186,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
     private IntranetConfigIn IntranetConfig;
 
     /**
+    * 忽略系统日志上报
+    */
+    @SerializedName("IgnoreSysLog")
+    @Expose
+    private Boolean IgnoreSysLog;
+
+    /**
      * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
@@ -557,6 +564,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
         this.IntranetConfig = IntranetConfig;
     }
 
+    /**
+     * Get 忽略系统日志上报 
+     * @return IgnoreSysLog 忽略系统日志上报
+     */
+    public Boolean getIgnoreSysLog() {
+        return this.IgnoreSysLog;
+    }
+
+    /**
+     * Set 忽略系统日志上报
+     * @param IgnoreSysLog 忽略系统日志上报
+     */
+    public void setIgnoreSysLog(Boolean IgnoreSysLog) {
+        this.IgnoreSysLog = IgnoreSysLog;
+    }
+
     public UpdateFunctionConfigurationRequest() {
     }
 
@@ -637,6 +660,9 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
         if (source.IntranetConfig != null) {
             this.IntranetConfig = new IntranetConfigIn(source.IntranetConfig);
         }
+        if (source.IgnoreSysLog != null) {
+            this.IgnoreSysLog = new Boolean(source.IgnoreSysLog);
+        }
     }
 
 
@@ -667,6 +693,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
         this.setParamSimple(map, prefix + "DnsCache", this.DnsCache);
         this.setParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
+        this.setParamSimple(map, prefix + "IgnoreSysLog", this.IgnoreSysLog);
 
     }
 }

@@ -59,7 +59,7 @@ public class TemplateInfo extends AbstractModel {
     private Recipient [] Recipients;
 
     /**
-    * 此模版中的签署控件列表
+    * 此模板中的签署控件列表
     */
     @SerializedName("SignComponents")
     @Expose
@@ -237,16 +237,16 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 此模版中的签署控件列表 
-     * @return SignComponents 此模版中的签署控件列表
+     * Get 此模板中的签署控件列表 
+     * @return SignComponents 此模板中的签署控件列表
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
     }
 
     /**
-     * Set 此模版中的签署控件列表
-     * @param SignComponents 此模版中的签署控件列表
+     * Set 此模板中的签署控件列表
+     * @param SignComponents 此模板中的签署控件列表
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;

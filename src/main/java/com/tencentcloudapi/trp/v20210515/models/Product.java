@@ -112,6 +112,14 @@ public class Product extends AbstractModel {
     private String MerchantName;
 
     /**
+    * 认证状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertState")
+    @Expose
+    private Long CertState;
+
+    /**
      * Get 商户标识码 
      * @return MerchantId 商户标识码
      */
@@ -319,6 +327,26 @@ public class Product extends AbstractModel {
         this.MerchantName = MerchantName;
     }
 
+    /**
+     * Get 认证状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertState 认证状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCertState() {
+        return this.CertState;
+    }
+
+    /**
+     * Set 认证状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertState 认证状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertState(Long CertState) {
+        this.CertState = CertState;
+    }
+
     public Product() {
     }
 
@@ -366,6 +394,9 @@ public class Product extends AbstractModel {
         if (source.MerchantName != null) {
             this.MerchantName = new String(source.MerchantName);
         }
+        if (source.CertState != null) {
+            this.CertState = new Long(source.CertState);
+        }
     }
 
 
@@ -385,6 +416,7 @@ public class Product extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "Ext.", this.Ext);
         this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
+        this.setParamSimple(map, prefix + "CertState", this.CertState);
 
     }
 }

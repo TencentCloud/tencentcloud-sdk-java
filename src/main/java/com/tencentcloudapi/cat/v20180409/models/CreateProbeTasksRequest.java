@@ -52,7 +52,7 @@ public class CreateProbeTasksRequest extends AbstractModel {
     private Long Interval;
 
     /**
-    * 拨测参数，如{}，详细可参考云拨测官方文档。
+    * 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
     */
     @SerializedName("Parameters")
     @Expose
@@ -174,16 +174,16 @@ public class CreateProbeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 拨测参数，如{}，详细可参考云拨测官方文档。 
-     * @return Parameters 拨测参数，如{}，详细可参考云拨测官方文档。
+     * Get 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。 
+     * @return Parameters 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 拨测参数，如{}，详细可参考云拨测官方文档。
-     * @param Parameters 拨测参数，如{}，详细可参考云拨测官方文档。
+     * Set 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
+     * @param Parameters 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;

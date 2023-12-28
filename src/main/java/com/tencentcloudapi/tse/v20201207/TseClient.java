@@ -83,6 +83,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建公网网络配置
+     * @param req CreateCloudNativeAPIGatewayPublicNetworkRequest
+     * @return CreateCloudNativeAPIGatewayPublicNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudNativeAPIGatewayPublicNetworkResponse CreateCloudNativeAPIGatewayPublicNetwork(CreateCloudNativeAPIGatewayPublicNetworkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudNativeAPIGatewayPublicNetwork", CreateCloudNativeAPIGatewayPublicNetworkResponse.class);
+    }
+
+    /**
      *创建云原生网关路由
      * @param req CreateCloudNativeAPIGatewayRouteRequest
      * @return CreateCloudNativeAPIGatewayRouteResponse
@@ -190,6 +201,17 @@ public class TseClient extends AbstractClient{
     public DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificate(DeleteCloudNativeAPIGatewayCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudNativeAPIGatewayCertificate", DeleteCloudNativeAPIGatewayCertificateResponse.class);
+    }
+
+    /**
+     *删除公网网络配置
+     * @param req DeleteCloudNativeAPIGatewayPublicNetworkRequest
+     * @return DeleteCloudNativeAPIGatewayPublicNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayPublicNetworkResponse DeleteCloudNativeAPIGatewayPublicNetwork(DeleteCloudNativeAPIGatewayPublicNetworkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayPublicNetwork", DeleteCloudNativeAPIGatewayPublicNetworkResponse.class);
     }
 
     /**
@@ -611,6 +633,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *修改网关实例Konga网络配置
+     * @param req ModifyConsoleNetworkRequest
+     * @return ModifyConsoleNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsoleNetworkResponse ModifyConsoleNetwork(ModifyConsoleNetworkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConsoleNetwork", ModifyConsoleNetworkResponse.class);
+    }
+
+    /**
      *修改云原生API网关实例分组基础信息
      * @param req ModifyNativeGatewayServerGroupRequest
      * @return ModifyNativeGatewayServerGroupResponse
@@ -619,6 +652,28 @@ public class TseClient extends AbstractClient{
     public ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(ModifyNativeGatewayServerGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNativeGatewayServerGroup", ModifyNativeGatewayServerGroupResponse.class);
+    }
+
+    /**
+     *修改云原生API网关实例Kong访问策略，支持白名单或者黑名单。
+     * @param req ModifyNetworkAccessStrategyRequest
+     * @return ModifyNetworkAccessStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkAccessStrategyResponse ModifyNetworkAccessStrategy(ModifyNetworkAccessStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNetworkAccessStrategy", ModifyNetworkAccessStrategyResponse.class);
+    }
+
+    /**
+     *修改云原生API网关实例网络基本信息，比如带宽以及描述，只支持修改客户端公网/内网的信息。
+     * @param req ModifyNetworkBasicInfoRequest
+     * @return ModifyNetworkBasicInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkBasicInfoResponse ModifyNetworkBasicInfo(ModifyNetworkBasicInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNetworkBasicInfo", ModifyNetworkBasicInfoResponse.class);
     }
 
     /**

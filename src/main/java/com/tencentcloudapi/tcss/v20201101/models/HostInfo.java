@@ -166,6 +166,22 @@ public class HostInfo extends AbstractModel {
     private String ClusterAccessedStatus;
 
     /**
+    * 计费核数
+    */
+    @SerializedName("ChargeCoresCnt")
+    @Expose
+    private Long ChargeCoresCnt;
+
+    /**
+    * 防护状态:
+已防护: Defended
+未防护: UnDefended
+    */
+    @SerializedName("DefendStatus")
+    @Expose
+    private String DefendStatus;
+
+    /**
      * Get 主机id 
      * @return HostID 主机id
      */
@@ -493,6 +509,46 @@ public class HostInfo extends AbstractModel {
         this.ClusterAccessedStatus = ClusterAccessedStatus;
     }
 
+    /**
+     * Get 计费核数 
+     * @return ChargeCoresCnt 计费核数
+     */
+    public Long getChargeCoresCnt() {
+        return this.ChargeCoresCnt;
+    }
+
+    /**
+     * Set 计费核数
+     * @param ChargeCoresCnt 计费核数
+     */
+    public void setChargeCoresCnt(Long ChargeCoresCnt) {
+        this.ChargeCoresCnt = ChargeCoresCnt;
+    }
+
+    /**
+     * Get 防护状态:
+已防护: Defended
+未防护: UnDefended 
+     * @return DefendStatus 防护状态:
+已防护: Defended
+未防护: UnDefended
+     */
+    public String getDefendStatus() {
+        return this.DefendStatus;
+    }
+
+    /**
+     * Set 防护状态:
+已防护: Defended
+未防护: UnDefended
+     * @param DefendStatus 防护状态:
+已防护: Defended
+未防护: UnDefended
+     */
+    public void setDefendStatus(String DefendStatus) {
+        this.DefendStatus = DefendStatus;
+    }
+
     public HostInfo() {
     }
 
@@ -564,6 +620,12 @@ public class HostInfo extends AbstractModel {
         if (source.ClusterAccessedStatus != null) {
             this.ClusterAccessedStatus = new String(source.ClusterAccessedStatus);
         }
+        if (source.ChargeCoresCnt != null) {
+            this.ChargeCoresCnt = new Long(source.ChargeCoresCnt);
+        }
+        if (source.DefendStatus != null) {
+            this.DefendStatus = new String(source.DefendStatus);
+        }
     }
 
 
@@ -591,6 +653,8 @@ public class HostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
+        this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
+        this.setParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
 
     }
 }
