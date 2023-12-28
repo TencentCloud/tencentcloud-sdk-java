@@ -21,6 +21,7 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -66,7 +67,7 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
             if (body == null) {
                 throw new TencentCloudSDKException("Response body should not be null");
             }
-            this.scanner = new Scanner(body.source());
+            this.scanner = new Scanner(body.source(), StandardCharsets.UTF_8.name());
         }
 
         @Override
