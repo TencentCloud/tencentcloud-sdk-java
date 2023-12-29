@@ -39,6 +39,17 @@ public class TmsClient extends AbstractClient{
     }
 
     /**
+     *天御文本内容安全审核接口，改接口会按照客户定制标签输出审核结果
+     * @param req ModerateTextRequest
+     * @return ModerateTextResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModerateTextResponse ModerateText(ModerateTextRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModerateText", ModerateTextResponse.class);
+    }
+
+    /**
      *本接口（Text Moderation）用于提交文本内容进行智能审核任务。使用前请您使用腾讯云主账号登录控制台 [开通文本内容安全服务](https://console.cloud.tencent.com/cms) 并调整好对应的业务配置。
 
 ### 接口使用说明

@@ -216,7 +216,7 @@
 | tiw | [互动白板](https://cloud.tencent.com/document/product/1137) | 2023-12-29 01:26:38 |
 | tke | [容器服务](https://cloud.tencent.com/document/product/457) | 2023-12-26 01:27:04 |
 | tkgdq | [腾讯知识图谱数据查询](https://cloud.tencent.com/document/product) | 2020-03-10 00:51:44 |
-| tms | [文本内容安全](https://cloud.tencent.com/document/product/1124) | 2023-11-28 01:28:13 |
+| tms | [文本内容安全](https://cloud.tencent.com/document/product/1124) | 2023-12-29 16:06:34 |
 | tmt | [机器翻译](https://cloud.tencent.com/document/product/551) | 2023-12-07 02:40:15 |
 | tourism | [文旅客情大数据](https://cloud.tencent.com/document/product/1684) | 2023-08-10 01:43:37 |
 | trdp | [流量风险决策平台](https://cloud.tencent.com/document/product/1604) | 2023-05-18 02:01:19 |
