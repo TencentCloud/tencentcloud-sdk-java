@@ -1,29 +1,32 @@
 # 本版本更新包含以下内容：
 
-## 文本内容安全(tms) 版本：2020-12-29
+## 流计算 Oceanus(oceanus) 版本：2019-04-22
 
-### 第 9 次发布
+### 第 52 次发布
 
-发布时间：2023-12-29 16:06:34
+发布时间：2024-01-01 00:15:04
 
 本次发布包含了以下内容：
 
 改善已有的文档。
 
-新增接口：
+修改接口：
 
-* [ModerateText](https://cloud.tencent.com/document/api/1124/102791)
+* [DescribeJobs](https://cloud.tencent.com/document/api/849/52008)
+
+	* 新增入参：ExtraResult
+
 
 新增数据结构：
 
-* [LabelGrade](https://cloud.tencent.com/document/api/1124/51861#LabelGrade)
-* [LibCheckResult](https://cloud.tencent.com/document/api/1124/51861#LibCheckResult)
-* [ModelResult](https://cloud.tencent.com/document/api/1124/51861#ModelResult)
-* [ModerationDetail](https://cloud.tencent.com/document/api/1124/51861#ModerationDetail)
+* [JobEventInfo](https://cloud.tencent.com/document/api/849/52010#JobEventInfo)
 
+修改数据结构：
 
+* [JobV1](https://cloud.tencent.com/document/api/849/52010#JobV1)
 
-## 文本内容安全(tms) 版本：2020-07-13
+	* 新增成员：EventInfo
+
 
 
 
@@ -88429,6 +88432,32 @@
 
 ## 流计算 Oceanus(oceanus) 版本：2019-04-22
 
+### 第 52 次发布
+
+发布时间：2024-01-01 00:15:04
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeJobs](https://cloud.tencent.com/document/api/849/52008)
+
+	* 新增入参：ExtraResult
+
+
+新增数据结构：
+
+* [[JobEventInfo](https://cloud.tencent.com/document/api/849/52010#JobEventInfo)](https://cloud.tencent.com/document/api/849/52010#[JobEventInfo](https://cloud.tencent.com/document/api/849/52010#JobEventInfo))
+
+修改数据结构：
+
+* [JobV1](https://cloud.tencent.com/document/api/849/52010#JobV1)
+
+	* 新增成员：EventInfo
+
+
 ### 第 51 次发布
 
 发布时间：2023-12-29 01:21:17
@@ -125430,14 +125459,14 @@
 
 新增接口：
 
-* [[ModerateText](https://cloud.tencent.com/document/api/1124/102791)](https://cloud.tencent.com/document/api/#/#)
+* [ModerateText](https://cloud.tencent.com/document/api/1124/102791)
 
 新增数据结构：
 
-* [[LabelGrade](https://cloud.tencent.com/document/api/1124/51861#LabelGrade)](https://cloud.tencent.com/document/api/1124/51861#[LabelGrade](https://cloud.tencent.com/document/api/1124/51861#LabelGrade))
-* [[LibCheckResult](https://cloud.tencent.com/document/api/1124/51861#LibCheckResult)](https://cloud.tencent.com/document/api/1124/51861#[LibCheckResult](https://cloud.tencent.com/document/api/1124/51861#LibCheckResult))
-* [[ModelResult](https://cloud.tencent.com/document/api/1124/51861#ModelResult)](https://cloud.tencent.com/document/api/1124/51861#[ModelResult](https://cloud.tencent.com/document/api/1124/51861#ModelResult))
-* [[ModerationDetail](https://cloud.tencent.com/document/api/1124/51861#ModerationDetail)](https://cloud.tencent.com/document/api/1124/51861#[ModerationDetail](https://cloud.tencent.com/document/api/1124/51861#ModerationDetail))
+* [LabelGrade](https://cloud.tencent.com/document/api/1124/51861#LabelGrade)
+* [LibCheckResult](https://cloud.tencent.com/document/api/1124/51861#LibCheckResult)
+* [ModelResult](https://cloud.tencent.com/document/api/1124/51861#ModelResult)
+* [ModerationDetail](https://cloud.tencent.com/document/api/1124/51861#ModerationDetail)
 
 ### 第 8 次发布
 

@@ -31,7 +31,7 @@ public class ModifySubAppIdStatusRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * 子应用状态，取值范围：
+    * 应用状态，取值范围：
 <li>On：启用。</li>
 <li>Off：停用。</li>
 <li>Destroyed：销毁。</li>
@@ -58,12 +58,12 @@ public class ModifySubAppIdStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 子应用状态，取值范围：
+     * Get 应用状态，取值范围：
 <li>On：启用。</li>
 <li>Off：停用。</li>
 <li>Destroyed：销毁。</li>
 当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。 
-     * @return Status 子应用状态，取值范围：
+     * @return Status 应用状态，取值范围：
 <li>On：启用。</li>
 <li>Off：停用。</li>
 <li>Destroyed：销毁。</li>
@@ -74,12 +74,12 @@ public class ModifySubAppIdStatusRequest extends AbstractModel {
     }
 
     /**
-     * Set 子应用状态，取值范围：
+     * Set 应用状态，取值范围：
 <li>On：启用。</li>
 <li>Off：停用。</li>
 <li>Destroyed：销毁。</li>
 当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
-     * @param Status 子应用状态，取值范围：
+     * @param Status 应用状态，取值范围：
 <li>On：启用。</li>
 <li>Off：停用。</li>
 <li>Destroyed：销毁。</li>

@@ -59,6 +59,13 @@ public class DescribeJobsRequest extends AbstractModel {
     private String WorkSpaceId;
 
     /**
+    * 查询额外的作业信息,例如 JobEventInfo	
+    */
+    @SerializedName("ExtraResult")
+    @Expose
+    private String [] ExtraResult;
+
+    /**
      * Get 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。 
      * @return JobIds 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。
      */
@@ -138,6 +145,22 @@ public class DescribeJobsRequest extends AbstractModel {
         this.WorkSpaceId = WorkSpaceId;
     }
 
+    /**
+     * Get 查询额外的作业信息,例如 JobEventInfo	 
+     * @return ExtraResult 查询额外的作业信息,例如 JobEventInfo	
+     */
+    public String [] getExtraResult() {
+        return this.ExtraResult;
+    }
+
+    /**
+     * Set 查询额外的作业信息,例如 JobEventInfo	
+     * @param ExtraResult 查询额外的作业信息,例如 JobEventInfo	
+     */
+    public void setExtraResult(String [] ExtraResult) {
+        this.ExtraResult = ExtraResult;
+    }
+
     public DescribeJobsRequest() {
     }
 
@@ -167,6 +190,12 @@ public class DescribeJobsRequest extends AbstractModel {
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.ExtraResult != null) {
+            this.ExtraResult = new String[source.ExtraResult.length];
+            for (int i = 0; i < source.ExtraResult.length; i++) {
+                this.ExtraResult[i] = new String(source.ExtraResult[i]);
+            }
+        }
     }
 
 
@@ -179,6 +208,7 @@ public class DescribeJobsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamArraySimple(map, prefix + "ExtraResult.", this.ExtraResult);
 
     }
 }
