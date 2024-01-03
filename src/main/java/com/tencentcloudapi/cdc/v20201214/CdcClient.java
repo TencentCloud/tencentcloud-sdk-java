@@ -116,7 +116,7 @@ public class CdcClient extends AbstractClient{
     }
 
     /**
-     *专用集群宿主机信息
+     *查询专用集群宿主机信息
      * @param req DescribeDedicatedClusterHostsRequest
      * @return DescribeDedicatedClusterHostsResponse
      * @throws TencentCloudSDKException
@@ -149,7 +149,7 @@ public class CdcClient extends AbstractClient{
     }
 
     /**
-     *专用集群概览信息
+     *查询专用集群概览信息
      * @param req DescribeDedicatedClusterOverviewRequest
      * @return DescribeDedicatedClusterOverviewResponse
      * @throws TencentCloudSDKException

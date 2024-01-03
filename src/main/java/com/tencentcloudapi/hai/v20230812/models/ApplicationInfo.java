@@ -66,6 +66,39 @@ public class ApplicationInfo extends AbstractModel {
     private Long MinSystemDiskSize;
 
     /**
+    * 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationType")
+    @Expose
+    private String ApplicationType;
+
+    /**
+    * 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationState")
+    @Expose
+    private String ApplicationState;
+
+    /**
+    * 应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 应用大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationSize")
+    @Expose
+    private Long ApplicationSize;
+
+    /**
      * Get 应用id
 
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -173,6 +206,90 @@ public class ApplicationInfo extends AbstractModel {
         this.MinSystemDiskSize = MinSystemDiskSize;
     }
 
+    /**
+     * Get 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationType 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationType() {
+        return this.ApplicationType;
+    }
+
+    /**
+     * Set 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationType 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationType(String ApplicationType) {
+        this.ApplicationType = ApplicationType;
+    }
+
+    /**
+     * Get 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationState 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationState() {
+        return this.ApplicationState;
+    }
+
+    /**
+     * Set 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationState 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationState(String ApplicationState) {
+        this.ApplicationState = ApplicationState;
+    }
+
+    /**
+     * Get 应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 应用大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationSize 应用大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getApplicationSize() {
+        return this.ApplicationSize;
+    }
+
+    /**
+     * Set 应用大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationSize 应用大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationSize(Long ApplicationSize) {
+        this.ApplicationSize = ApplicationSize;
+    }
+
     public ApplicationInfo() {
     }
 
@@ -196,6 +313,18 @@ public class ApplicationInfo extends AbstractModel {
         if (source.MinSystemDiskSize != null) {
             this.MinSystemDiskSize = new Long(source.MinSystemDiskSize);
         }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new String(source.ApplicationType);
+        }
+        if (source.ApplicationState != null) {
+            this.ApplicationState = new String(source.ApplicationState);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ApplicationSize != null) {
+            this.ApplicationSize = new Long(source.ApplicationSize);
+        }
     }
 
 
@@ -208,6 +337,10 @@ public class ApplicationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ConfigEnvironment", this.ConfigEnvironment);
         this.setParamSimple(map, prefix + "MinSystemDiskSize", this.MinSystemDiskSize);
+        this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+        this.setParamSimple(map, prefix + "ApplicationState", this.ApplicationState);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ApplicationSize", this.ApplicationSize);
 
     }
 }

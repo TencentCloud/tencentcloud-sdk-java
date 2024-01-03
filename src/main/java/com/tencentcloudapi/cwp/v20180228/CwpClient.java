@@ -2550,7 +2550,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *查询主机相关核心文件监控规则列 表   
+     *查询主机相关核心文件监控规则列表
      * @param req DescribeMachineFileTamperRulesRequest
      * @return DescribeMachineFileTamperRulesResponse
      * @throws TencentCloudSDKException

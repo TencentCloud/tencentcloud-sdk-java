@@ -70,6 +70,30 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
     private VpngwBandwidthData [] VpnConnectionBandwidthData;
 
     /**
+    * 宿主机资源概览信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostDetailInfo")
+    @Expose
+    private HostDetailInfo [] HostDetailInfo;
+
+    /**
+    * 热备宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostStandbyCount")
+    @Expose
+    private Long HostStandbyCount;
+
+    /**
+    * 普通宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostNormalCount")
+    @Expose
+    private Long HostNormalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -189,6 +213,66 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
     }
 
     /**
+     * Get 宿主机资源概览信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostDetailInfo 宿主机资源概览信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HostDetailInfo [] getHostDetailInfo() {
+        return this.HostDetailInfo;
+    }
+
+    /**
+     * Set 宿主机资源概览信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostDetailInfo 宿主机资源概览信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostDetailInfo(HostDetailInfo [] HostDetailInfo) {
+        this.HostDetailInfo = HostDetailInfo;
+    }
+
+    /**
+     * Get 热备宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostStandbyCount 热备宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHostStandbyCount() {
+        return this.HostStandbyCount;
+    }
+
+    /**
+     * Set 热备宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostStandbyCount 热备宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostStandbyCount(Long HostStandbyCount) {
+        this.HostStandbyCount = HostStandbyCount;
+    }
+
+    /**
+     * Get 普通宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostNormalCount 普通宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHostNormalCount() {
+        return this.HostNormalCount;
+    }
+
+    /**
+     * Set 普通宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostNormalCount 普通宿主机数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostNormalCount(Long HostNormalCount) {
+        this.HostNormalCount = HostNormalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -233,6 +317,18 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
                 this.VpnConnectionBandwidthData[i] = new VpngwBandwidthData(source.VpnConnectionBandwidthData[i]);
             }
         }
+        if (source.HostDetailInfo != null) {
+            this.HostDetailInfo = new HostDetailInfo[source.HostDetailInfo.length];
+            for (int i = 0; i < source.HostDetailInfo.length; i++) {
+                this.HostDetailInfo[i] = new HostDetailInfo(source.HostDetailInfo[i]);
+            }
+        }
+        if (source.HostStandbyCount != null) {
+            this.HostStandbyCount = new Long(source.HostStandbyCount);
+        }
+        if (source.HostNormalCount != null) {
+            this.HostNormalCount = new Long(source.HostNormalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -249,6 +345,9 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
         this.setParamObj(map, prefix + "VpngwBandwidthData.", this.VpngwBandwidthData);
         this.setParamObj(map, prefix + "LocalNetInfo.", this.LocalNetInfo);
         this.setParamArrayObj(map, prefix + "VpnConnectionBandwidthData.", this.VpnConnectionBandwidthData);
+        this.setParamArrayObj(map, prefix + "HostDetailInfo.", this.HostDetailInfo);
+        this.setParamSimple(map, prefix + "HostStandbyCount", this.HostStandbyCount);
+        this.setParamSimple(map, prefix + "HostNormalCount", this.HostNormalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

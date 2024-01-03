@@ -1516,6 +1516,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *查询超级节点列表
+     * @param req DescribeAssetSuperNodeListRequest
+     * @return DescribeAssetSuperNodeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetSuperNodeListResponse DescribeAssetSuperNodeList(DescribeAssetSuperNodeListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetSuperNodeList", DescribeAssetSuperNodeListResponse.class);
+    }
+
+    /**
      *查询资产同步最近时间
      * @param req DescribeAssetSyncLastTimeRequest
      * @return DescribeAssetSyncLastTimeResponse
@@ -1568,6 +1579,17 @@ public class TcssClient extends AbstractClient{
     public DescribeClusterDetailResponse DescribeClusterDetail(DescribeClusterDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterDetail", DescribeClusterDetailResponse.class);
+    }
+
+    /**
+     *查询集群节点信息
+     * @param req DescribeClusterNodesRequest
+     * @return DescribeClusterNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterNodesResponse DescribeClusterNodes(DescribeClusterNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterNodes", DescribeClusterNodesResponse.class);
     }
 
     /**
@@ -2605,6 +2627,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *查询超级节点pod列表
+     * @param req DescribeSuperNodePodListRequest
+     * @return DescribeSuperNodePodListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSuperNodePodListResponse DescribeSuperNodePodList(DescribeSuperNodePodListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSuperNodePodList", DescribeSuperNodePodListResponse.class);
+    }
+
+    /**
      *查询支持防御的漏洞列表
      * @param req DescribeSupportDefenceVulRequest
      * @return DescribeSupportDefenceVulResponse
@@ -2679,6 +2712,17 @@ public class TcssClient extends AbstractClient{
     public DescribeUserClusterResponse DescribeUserCluster(DescribeUserClusterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUserCluster", DescribeUserClusterResponse.class);
+    }
+
+    /**
+     *获取用户的pod列表
+     * @param req DescribeUserPodListRequest
+     * @return DescribeUserPodListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserPodListResponse DescribeUserPodList(DescribeUserPodListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserPodList", DescribeUserPodListResponse.class);
     }
 
     /**

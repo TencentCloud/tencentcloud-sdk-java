@@ -1047,6 +1047,9 @@ public enum CvmErrorCode {
     // 请求不支持国际版账号
      UNSUPPORTEDOPERATION_UNSUPPORTEDINTERNATIONALUSER("UnsupportedOperation.UnsupportedInternationalUser"),
      
+    // 指定的Pool非法。
+     UNSUPPORTEDOPERATION_UNSUPPORTEDPOOL("UnsupportedOperation.UnsupportedPool"),
+     
     // 用户限额操作的配额不足。
      UNSUPPORTEDOPERATION_USERLIMITOPERATIONEXCEEDQUOTA("UnsupportedOperation.UserLimitOperationExceedQuota"),
      

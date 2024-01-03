@@ -32,9 +32,10 @@ public class DescribeApplicationsRequest extends AbstractModel {
 
     /**
     * 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配;
     */
     @SerializedName("Filters")
     @Expose
@@ -58,6 +59,20 @@ MC：1000
     private Long Limit;
 
     /**
+    * 应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
      * Get 应用id列表 
      * @return ApplicationIds 应用id列表
      */
@@ -75,13 +90,15 @@ MC：1000
 
     /**
      * Get 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配 
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配; 
      * @return Filters 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配;
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -89,13 +106,15 @@ application-name，模糊匹配
 
     /**
      * Set 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配;
      * @param Filters 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配;
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -145,6 +164,38 @@ MC：1000
         this.Limit = Limit;
     }
 
+    /**
+     * Get 应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。 
+     * @return OrderField 应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。
+     * @param OrderField 应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。 
+     * @return Order 输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
+     * @param Order 输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
     public DescribeApplicationsRequest() {
     }
 
@@ -171,6 +222,12 @@ MC：1000
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
     }
 
 
@@ -182,6 +239,8 @@ MC：1000
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }

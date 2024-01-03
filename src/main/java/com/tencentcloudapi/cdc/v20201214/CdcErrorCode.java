@@ -12,7 +12,7 @@ public enum CdcErrorCode {
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // ccdb返回结果不为0。
+    // 无效的AppId
      INVALIDPARAMETERVALUE_INVALIDAPPIDFORMAT("InvalidParameterValue.InvalidAppIdFormat"),
      
     // 本地专用集群COS大小不正确。

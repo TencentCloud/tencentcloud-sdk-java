@@ -79,8 +79,8 @@ public class DescribeAssetUserListRequest extends AbstractModel {
     private String Order;
 
     /**
-    * 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays
+    * 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
+
     */
     @SerializedName("By")
     @Expose
@@ -247,20 +247,20 @@ PasswordLockDays
     }
 
     /**
-     * Get 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays 
-     * @return By 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays
+     * Get 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
+ 
+     * @return By 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
+
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays
-     * @param By 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays
+     * Set 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
+
+     * @param By 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
+
      */
     public void setBy(String By) {
         this.By = By;

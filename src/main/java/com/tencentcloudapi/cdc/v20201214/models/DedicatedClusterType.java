@@ -88,7 +88,7 @@ public class DedicatedClusterType extends AbstractModel {
     private Float PowerDrawKva;
 
     /**
-    * 显示计算资源规格详情，存储等资源不显示；对应规格
+    * 显示计算资源规格详情，存储等资源不显示
     */
     @SerializedName("ComputeFormatDesc")
     @Expose
@@ -243,16 +243,16 @@ public class DedicatedClusterType extends AbstractModel {
     }
 
     /**
-     * Get 显示计算资源规格详情，存储等资源不显示；对应规格 
-     * @return ComputeFormatDesc 显示计算资源规格详情，存储等资源不显示；对应规格
+     * Get 显示计算资源规格详情，存储等资源不显示 
+     * @return ComputeFormatDesc 显示计算资源规格详情，存储等资源不显示
      */
     public String getComputeFormatDesc() {
         return this.ComputeFormatDesc;
     }
 
     /**
-     * Set 显示计算资源规格详情，存储等资源不显示；对应规格
-     * @param ComputeFormatDesc 显示计算资源规格详情，存储等资源不显示；对应规格
+     * Set 显示计算资源规格详情，存储等资源不显示
+     * @param ComputeFormatDesc 显示计算资源规格详情，存储等资源不显示
      */
     public void setComputeFormatDesc(String ComputeFormatDesc) {
         this.ComputeFormatDesc = ComputeFormatDesc;
