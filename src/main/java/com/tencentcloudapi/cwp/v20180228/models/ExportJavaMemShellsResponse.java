@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportJavaMemShellsResponse extends AbstractModel {
 
     /**
-    * 任务ID,需要到接口“异步导出任务”https://cloud.tencent.com/document/product/296/52508 获取DownloadUrl下载地址
+    * 任务ID,需要到接口 <a href="https://cloud.tencent.com/document/product/296/52508" target="_blank" >异步导出任务</a>获取DownloadUrl下载地址
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ExportJavaMemShellsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID,需要到接口“异步导出任务”https://cloud.tencent.com/document/product/296/52508 获取DownloadUrl下载地址 
-     * @return TaskId 任务ID,需要到接口“异步导出任务”https://cloud.tencent.com/document/product/296/52508 获取DownloadUrl下载地址
+     * Get 任务ID,需要到接口 <a href="https://cloud.tencent.com/document/product/296/52508" target="_blank" >异步导出任务</a>获取DownloadUrl下载地址 
+     * @return TaskId 任务ID,需要到接口 <a href="https://cloud.tencent.com/document/product/296/52508" target="_blank" >异步导出任务</a>获取DownloadUrl下载地址
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID,需要到接口“异步导出任务”https://cloud.tencent.com/document/product/296/52508 获取DownloadUrl下载地址
-     * @param TaskId 任务ID,需要到接口“异步导出任务”https://cloud.tencent.com/document/product/296/52508 获取DownloadUrl下载地址
+     * Set 任务ID,需要到接口 <a href="https://cloud.tencent.com/document/product/296/52508" target="_blank" >异步导出任务</a>获取DownloadUrl下载地址
+     * @param TaskId 任务ID,需要到接口 <a href="https://cloud.tencent.com/document/product/296/52508" target="_blank" >异步导出任务</a>获取DownloadUrl下载地址
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

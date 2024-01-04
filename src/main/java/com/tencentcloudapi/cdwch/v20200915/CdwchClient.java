@@ -182,6 +182,17 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *获取实例节点信息列表
+     * @param req DescribeInstanceNodesRequest
+     * @return DescribeInstanceNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNodesResponse DescribeInstanceNodes(DescribeInstanceNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceNodes", DescribeInstanceNodesResponse.class);
+    }
+
+    /**
      *获取实例shard信息列表
      * @param req DescribeInstanceShardsRequest
      * @return DescribeInstanceShardsResponse

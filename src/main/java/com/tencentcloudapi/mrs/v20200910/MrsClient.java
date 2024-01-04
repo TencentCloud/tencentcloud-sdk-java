@@ -50,6 +50,28 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
+     *图片脱敏-异步接口
+     * @param req ImageMaskAsyncRequest
+     * @return ImageMaskAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageMaskAsyncResponse ImageMaskAsync(ImageMaskAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImageMaskAsync", ImageMaskAsyncResponse.class);
+    }
+
+    /**
+     *图片脱敏-异步获取结果接口
+     * @param req ImageMaskAsyncGetResultRequest
+     * @return ImageMaskAsyncGetResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageMaskAsyncGetResultResponse ImageMaskAsyncGetResult(ImageMaskAsyncGetResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImageMaskAsyncGetResult", ImageMaskAsyncGetResultResponse.class);
+    }
+
+    /**
      *图片分类
      * @param req ImageToClassRequest
      * @return ImageToClassResponse

@@ -31,21 +31,21 @@ public class GetMetaTableResponse extends AbstractModel {
     private String SerialId;
 
     /**
-    * Catalog名
+    * 目录名
     */
     @SerializedName("Catalog")
     @Expose
     private String Catalog;
 
     /**
-    * Database名
+    * 库名
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * Table名
+    * 表名
     */
     @SerializedName("Table")
     @Expose
@@ -61,7 +61,7 @@ Q1JFQVRFIFRBQkxFIGRhdGFnZW5fc291cmNlX3RhYmxlICggCiAgICBpZCBJTlQsIAogICAgbmFtZSBT
     private String DDL;
 
     /**
-    * 场景时间
+    * 创建时间
     */
     @SerializedName("CreateTime")
     @Expose
@@ -91,48 +91,48 @@ Q1JFQVRFIFRBQkxFIGRhdGFnZW5fc291cmNlX3RhYmxlICggCiAgICBpZCBJTlQsIAogICAgbmFtZSBT
     }
 
     /**
-     * Get Catalog名 
-     * @return Catalog Catalog名
+     * Get 目录名 
+     * @return Catalog 目录名
      */
     public String getCatalog() {
         return this.Catalog;
     }
 
     /**
-     * Set Catalog名
-     * @param Catalog Catalog名
+     * Set 目录名
+     * @param Catalog 目录名
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get Database名 
-     * @return Database Database名
+     * Get 库名 
+     * @return Database 库名
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set Database名
-     * @param Database Database名
+     * Set 库名
+     * @param Database 库名
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Table名 
-     * @return Table Table名
+     * Get 表名 
+     * @return Table 表名
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set Table名
-     * @param Table Table名
+     * Set 表名
+     * @param Table 表名
      */
     public void setTable(String Table) {
         this.Table = Table;
@@ -163,16 +163,16 @@ Q1JFQVRFIFRBQkxFIGRhdGFnZW5fc291cmNlX3RhYmxlICggCiAgICBpZCBJTlQsIAogICAgbmFtZSBT
     }
 
     /**
-     * Get 场景时间 
-     * @return CreateTime 场景时间
+     * Get 创建时间 
+     * @return CreateTime 创建时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 场景时间
-     * @param CreateTime 场景时间
+     * Set 创建时间
+     * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
