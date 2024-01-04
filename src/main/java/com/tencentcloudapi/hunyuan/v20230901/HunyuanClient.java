@@ -69,6 +69,17 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *腾讯混元-Embedding接口，可以将文本转化为高质量的向量数据。
+     * @param req GetEmbeddingRequest
+     * @return GetEmbeddingResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetEmbeddingResponse GetEmbedding(GetEmbeddingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetEmbedding", GetEmbeddingResponse.class);
+    }
+
+    /**
      *该接口用于计算文本对应Token数、字符数。
      * @param req GetTokenCountRequest
      * @return GetTokenCountResponse

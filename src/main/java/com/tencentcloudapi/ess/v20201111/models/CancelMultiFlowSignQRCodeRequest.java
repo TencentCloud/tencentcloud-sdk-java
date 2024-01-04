@@ -32,7 +32,7 @@ public class CancelMultiFlowSignQRCodeRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * 二维码ID，为32位字符串。
+    * 需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/companyApis/startFlows/CreateMultiFlowSignQRCode/)返回
     */
     @SerializedName("QrCodeId")
     @Expose
@@ -67,16 +67,16 @@ public class CancelMultiFlowSignQRCodeRequest extends AbstractModel {
     }
 
     /**
-     * Get 二维码ID，为32位字符串。 
-     * @return QrCodeId 二维码ID，为32位字符串。
+     * Get 需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/companyApis/startFlows/CreateMultiFlowSignQRCode/)返回 
+     * @return QrCodeId 需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/companyApis/startFlows/CreateMultiFlowSignQRCode/)返回
      */
     public String getQrCodeId() {
         return this.QrCodeId;
     }
 
     /**
-     * Set 二维码ID，为32位字符串。
-     * @param QrCodeId 二维码ID，为32位字符串。
+     * Set 需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/companyApis/startFlows/CreateMultiFlowSignQRCode/)返回
+     * @param QrCodeId 需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/companyApis/startFlows/CreateMultiFlowSignQRCode/)返回
      */
     public void setQrCodeId(String QrCodeId) {
         this.QrCodeId = QrCodeId;

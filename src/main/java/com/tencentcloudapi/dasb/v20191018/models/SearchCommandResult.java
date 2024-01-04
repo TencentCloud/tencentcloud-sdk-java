@@ -173,6 +173,14 @@ public class SearchCommandResult extends AbstractModel {
     private String DeviceDepartmentName;
 
     /**
+    * 会话大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Size")
+    @Expose
+    private Long Size;
+
+    /**
      * Get 命令输入的时间 
      * @return Time 命令输入的时间
      */
@@ -532,6 +540,26 @@ public class SearchCommandResult extends AbstractModel {
         this.DeviceDepartmentName = DeviceDepartmentName;
     }
 
+    /**
+     * Get 会话大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Size 会话大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set 会话大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Size 会话大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSize(Long Size) {
+        this.Size = Size;
+    }
+
     public SearchCommandResult() {
     }
 
@@ -600,6 +628,9 @@ public class SearchCommandResult extends AbstractModel {
         if (source.DeviceDepartmentName != null) {
             this.DeviceDepartmentName = new String(source.DeviceDepartmentName);
         }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
     }
 
 
@@ -627,6 +658,7 @@ public class SearchCommandResult extends AbstractModel {
         this.setParamSimple(map, prefix + "UserDepartmentName", this.UserDepartmentName);
         this.setParamSimple(map, prefix + "DeviceDepartmentId", this.DeviceDepartmentId);
         this.setParamSimple(map, prefix + "DeviceDepartmentName", this.DeviceDepartmentName);
+        this.setParamSimple(map, prefix + "Size", this.Size);
 
     }
 }

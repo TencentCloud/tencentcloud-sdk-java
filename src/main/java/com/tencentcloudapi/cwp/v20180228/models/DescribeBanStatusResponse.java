@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class DescribeBanStatusResponse extends AbstractModel {
 
     /**
-    * 阻断开关状态 0:关闭 1:开启
+    * 阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip)
     */
     @SerializedName("Status")
     @Expose
@@ -45,16 +48,28 @@ public class DescribeBanStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 阻断开关状态 0:关闭 1:开启 
-     * @return Status 阻断开关状态 0:关闭 1:开启
+     * Get 阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip) 
+     * @return Status 阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 阻断开关状态 0:关闭 1:开启
-     * @param Status 阻断开关状态 0:关闭 1:开启
+     * Set 阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip)
+     * @param Status 阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip)
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ChannelCreateMultiFlowSignQRCodeResponse extends AbstractModel {
 
     /**
-    * 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。	
+    * 一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。	
     */
     @SerializedName("QrCode")
     @Expose
     private SignQrCode QrCode;
 
     /**
-    * 流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	
+    * 一码多签签署码链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	
     */
     @SerializedName("SignUrls")
     @Expose
@@ -45,32 +45,32 @@ public class ChannelCreateMultiFlowSignQRCodeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。	 
-     * @return QrCode 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。	
+     * Get 一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。	 
+     * @return QrCode 一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。	
      */
     public SignQrCode getQrCode() {
         return this.QrCode;
     }
 
     /**
-     * Set 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。	
-     * @param QrCode 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。	
+     * Set 一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。	
+     * @param QrCode 一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。	
      */
     public void setQrCode(SignQrCode QrCode) {
         this.QrCode = QrCode;
     }
 
     /**
-     * Get 流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	 
-     * @return SignUrls 流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	
+     * Get 一码多签签署码链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	 
+     * @return SignUrls 一码多签签署码链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	
      */
     public SignUrl getSignUrls() {
         return this.SignUrls;
     }
 
     /**
-     * Set 流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	
-     * @param SignUrls 流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	
+     * Set 一码多签签署码链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	
+     * @param SignUrls 一码多签签署码链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。	
      */
     public void setSignUrls(SignUrl SignUrls) {
         this.SignUrls = SignUrls;

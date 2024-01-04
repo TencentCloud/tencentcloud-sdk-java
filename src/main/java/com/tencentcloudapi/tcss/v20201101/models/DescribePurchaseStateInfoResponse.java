@@ -112,6 +112,14 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     private String SubState;
 
     /**
+    * 计费key
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InquireKey")
+    @Expose
+    private String InquireKey;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -339,6 +347,26 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
+     * Get 计费key
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InquireKey 计费key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInquireKey() {
+        return this.InquireKey;
+    }
+
+    /**
+     * Set 计费key
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InquireKey 计费key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInquireKey(String InquireKey) {
+        this.InquireKey = InquireKey;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -395,6 +423,9 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         if (source.SubState != null) {
             this.SubState = new String(source.SubState);
         }
+        if (source.InquireKey != null) {
+            this.InquireKey = new String(source.InquireKey);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -416,6 +447,7 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         this.setParamSimple(map, prefix + "GivenAuthorizedCnt", this.GivenAuthorizedCnt);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "SubState", this.SubState);
+        this.setParamSimple(map, prefix + "InquireKey", this.InquireKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

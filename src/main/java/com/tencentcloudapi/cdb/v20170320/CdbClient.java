@@ -388,7 +388,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *删除审计规则模版
+     *删除审计规则模板
      * @param req DeleteAuditRuleTemplatesRequest
      * @return DeleteAuditRuleTemplatesResponse
      * @throws TencentCloudSDKException

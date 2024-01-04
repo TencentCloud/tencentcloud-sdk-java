@@ -38,7 +38,7 @@ public class IPGroup extends AbstractModel {
     private String Name;
 
     /**
-    * IP 组内容，可以填入 IP 及 IP 掩码。
+    * IP 组内容，仅支持 IP 及 IP 掩码。
     */
     @SerializedName("Content")
     @Expose
@@ -77,16 +77,16 @@ public class IPGroup extends AbstractModel {
     }
 
     /**
-     * Get IP 组内容，可以填入 IP 及 IP 掩码。 
-     * @return Content IP 组内容，可以填入 IP 及 IP 掩码。
+     * Get IP 组内容，仅支持 IP 及 IP 掩码。 
+     * @return Content IP 组内容，仅支持 IP 及 IP 掩码。
      */
     public String [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set IP 组内容，可以填入 IP 及 IP 掩码。
-     * @param Content IP 组内容，可以填入 IP 及 IP 掩码。
+     * Set IP 组内容，仅支持 IP 及 IP 掩码。
+     * @param Content IP 组内容，仅支持 IP 及 IP 掩码。
      */
     public void setContent(String [] Content) {
         this.Content = Content;

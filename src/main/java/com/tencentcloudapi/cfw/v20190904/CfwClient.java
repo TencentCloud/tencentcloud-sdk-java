@@ -1026,19 +1026,6 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
     }
 
     /**
-     *已上新接口，支持串行
-
-单个修改互联网边界防火墙开关
-     * @param req ModifyPublicIPSwitchStatusRequest
-     * @return ModifyPublicIPSwitchStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyPublicIPSwitchStatusResponse ModifyPublicIPSwitchStatus(ModifyPublicIPSwitchStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyPublicIPSwitchStatus", ModifyPublicIPSwitchStatusResponse.class);
-    }
-
-    /**
      *ModifyResourceGroup-资产中心资产组信息修改
 
 

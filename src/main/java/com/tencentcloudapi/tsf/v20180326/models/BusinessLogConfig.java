@@ -102,6 +102,14 @@ public class BusinessLogConfig extends AbstractModel {
     private BusinesLogConfigAssociatedGroup [] ConfigAssociatedGroups;
 
     /**
+    * 配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigAssociatedGroupList")
+    @Expose
+    private BusinessLogConfigAssociatedGroup [] ConfigAssociatedGroupList;
+
+    /**
      * Get 配置项ID 
      * @return ConfigId 配置项ID
      */
@@ -278,7 +286,9 @@ public class BusinessLogConfig extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigAssociatedGroups 配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public BusinesLogConfigAssociatedGroup [] getConfigAssociatedGroups() {
         return this.ConfigAssociatedGroups;
     }
@@ -288,9 +298,31 @@ public class BusinessLogConfig extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigAssociatedGroups 配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setConfigAssociatedGroups(BusinesLogConfigAssociatedGroup [] ConfigAssociatedGroups) {
         this.ConfigAssociatedGroups = ConfigAssociatedGroups;
+    }
+
+    /**
+     * Get 配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigAssociatedGroupList 配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BusinessLogConfigAssociatedGroup [] getConfigAssociatedGroupList() {
+        return this.ConfigAssociatedGroupList;
+    }
+
+    /**
+     * Set 配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigAssociatedGroupList 配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigAssociatedGroupList(BusinessLogConfigAssociatedGroup [] ConfigAssociatedGroupList) {
+        this.ConfigAssociatedGroupList = ConfigAssociatedGroupList;
     }
 
     public BusinessLogConfig() {
@@ -334,6 +366,12 @@ public class BusinessLogConfig extends AbstractModel {
                 this.ConfigAssociatedGroups[i] = new BusinesLogConfigAssociatedGroup(source.ConfigAssociatedGroups[i]);
             }
         }
+        if (source.ConfigAssociatedGroupList != null) {
+            this.ConfigAssociatedGroupList = new BusinessLogConfigAssociatedGroup[source.ConfigAssociatedGroupList.length];
+            for (int i = 0; i < source.ConfigAssociatedGroupList.length; i++) {
+                this.ConfigAssociatedGroupList[i] = new BusinessLogConfigAssociatedGroup(source.ConfigAssociatedGroupList[i]);
+            }
+        }
     }
 
 
@@ -351,6 +389,7 @@ public class BusinessLogConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ConfigUpdateTime", this.ConfigUpdateTime);
         this.setParamObj(map, prefix + "ConfigSchema.", this.ConfigSchema);
         this.setParamArrayObj(map, prefix + "ConfigAssociatedGroups.", this.ConfigAssociatedGroups);
+        this.setParamArrayObj(map, prefix + "ConfigAssociatedGroupList.", this.ConfigAssociatedGroupList);
 
     }
 }

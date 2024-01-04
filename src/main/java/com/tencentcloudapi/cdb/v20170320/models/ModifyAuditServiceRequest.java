@@ -59,7 +59,7 @@ public class ModifyAuditServiceRequest extends AbstractModel {
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
-    * 规则模版ID。
+    * 规则模板ID。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
@@ -146,16 +146,16 @@ public class ModifyAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则模版ID。 
-     * @return RuleTemplateIds 规则模版ID。
+     * Get 规则模板ID。 
+     * @return RuleTemplateIds 规则模板ID。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 规则模版ID。
-     * @param RuleTemplateIds 规则模版ID。
+     * Set 规则模板ID。
+     * @param RuleTemplateIds 规则模板ID。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;

@@ -85,10 +85,19 @@ RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
 InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
+
+    /**
+    * 是否打开印章识别
+    */
+    @SerializedName("EnableSealRecognize")
+    @Expose
+    private Boolean EnableSealRecognize;
 
     /**
      * Get 图片的 Url 地址。
@@ -238,7 +247,9 @@ RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
-InvoiceEng -- 海外发票模版 
+InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别 
      * @return ConfigId 配置id支持：
 General -- 通用场景
 OnlineTaxiItinerary -- 网约车行程单
@@ -247,6 +258,8 @@ RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
 InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -261,6 +274,8 @@ RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
 InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别
      * @param ConfigId 配置id支持：
 General -- 通用场景
 OnlineTaxiItinerary -- 网约车行程单
@@ -269,9 +284,27 @@ RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
 InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
+    }
+
+    /**
+     * Get 是否打开印章识别 
+     * @return EnableSealRecognize 是否打开印章识别
+     */
+    public Boolean getEnableSealRecognize() {
+        return this.EnableSealRecognize;
+    }
+
+    /**
+     * Set 是否打开印章识别
+     * @param EnableSealRecognize 是否打开印章识别
+     */
+    public void setEnableSealRecognize(Boolean EnableSealRecognize) {
+        this.EnableSealRecognize = EnableSealRecognize;
     }
 
     public SmartStructuralOCRV2Request() {
@@ -306,6 +339,9 @@ InvoiceEng -- 海外发票模版
         if (source.ConfigId != null) {
             this.ConfigId = new String(source.ConfigId);
         }
+        if (source.EnableSealRecognize != null) {
+            this.EnableSealRecognize = new Boolean(source.EnableSealRecognize);
+        }
     }
 
 
@@ -320,6 +356,7 @@ InvoiceEng -- 海外发票模版
         this.setParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
         this.setParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamSimple(map, prefix + "EnableSealRecognize", this.EnableSealRecognize);
 
     }
 }

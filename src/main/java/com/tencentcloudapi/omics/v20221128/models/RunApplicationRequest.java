@@ -31,13 +31,6 @@ public class RunApplicationRequest extends AbstractModel {
     private String ApplicationId;
 
     /**
-    * 项目ID。
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private String ProjectId;
-
-    /**
     * 任务批次名称。
     */
     @SerializedName("Name")
@@ -66,11 +59,11 @@ public class RunApplicationRequest extends AbstractModel {
     private Long CacheClearDelay;
 
     /**
-    * 运行选项。
+    * 项目ID。（不填使用指定地域下的默认项目）
     */
-    @SerializedName("Option")
+    @SerializedName("ProjectId")
     @Expose
-    private RunOption Option;
+    private String ProjectId;
 
     /**
     * 任务批次描述。
@@ -101,6 +94,20 @@ public class RunApplicationRequest extends AbstractModel {
     private String ApplicationVersionId;
 
     /**
+    * WDL运行选项。
+    */
+    @SerializedName("Option")
+    @Expose
+    private RunOption Option;
+
+    /**
+    * Nextflow运行选项。
+    */
+    @SerializedName("NFOption")
+    @Expose
+    private NFOption NFOption;
+
+    /**
      * Get 应用ID。 
      * @return ApplicationId 应用ID。
      */
@@ -114,22 +121,6 @@ public class RunApplicationRequest extends AbstractModel {
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
-    }
-
-    /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
-     */
-    public String getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
-     */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
     }
 
     /**
@@ -197,19 +188,19 @@ public class RunApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 运行选项。 
-     * @return Option 运行选项。
+     * Get 项目ID。（不填使用指定地域下的默认项目） 
+     * @return ProjectId 项目ID。（不填使用指定地域下的默认项目）
      */
-    public RunOption getOption() {
-        return this.Option;
+    public String getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set 运行选项。
-     * @param Option 运行选项。
+     * Set 项目ID。（不填使用指定地域下的默认项目）
+     * @param ProjectId 项目ID。（不填使用指定地域下的默认项目）
      */
-    public void setOption(RunOption Option) {
-        this.Option = Option;
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -276,6 +267,38 @@ public class RunApplicationRequest extends AbstractModel {
         this.ApplicationVersionId = ApplicationVersionId;
     }
 
+    /**
+     * Get WDL运行选项。 
+     * @return Option WDL运行选项。
+     */
+    public RunOption getOption() {
+        return this.Option;
+    }
+
+    /**
+     * Set WDL运行选项。
+     * @param Option WDL运行选项。
+     */
+    public void setOption(RunOption Option) {
+        this.Option = Option;
+    }
+
+    /**
+     * Get Nextflow运行选项。 
+     * @return NFOption Nextflow运行选项。
+     */
+    public NFOption getNFOption() {
+        return this.NFOption;
+    }
+
+    /**
+     * Set Nextflow运行选项。
+     * @param NFOption Nextflow运行选项。
+     */
+    public void setNFOption(NFOption NFOption) {
+        this.NFOption = NFOption;
+    }
+
     public RunApplicationRequest() {
     }
 
@@ -286,9 +309,6 @@ public class RunApplicationRequest extends AbstractModel {
     public RunApplicationRequest(RunApplicationRequest source) {
         if (source.ApplicationId != null) {
             this.ApplicationId = new String(source.ApplicationId);
-        }
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -302,8 +322,8 @@ public class RunApplicationRequest extends AbstractModel {
         if (source.CacheClearDelay != null) {
             this.CacheClearDelay = new Long(source.CacheClearDelay);
         }
-        if (source.Option != null) {
-            this.Option = new RunOption(source.Option);
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -320,6 +340,12 @@ public class RunApplicationRequest extends AbstractModel {
         if (source.ApplicationVersionId != null) {
             this.ApplicationVersionId = new String(source.ApplicationVersionId);
         }
+        if (source.Option != null) {
+            this.Option = new RunOption(source.Option);
+        }
+        if (source.NFOption != null) {
+            this.NFOption = new NFOption(source.NFOption);
+        }
     }
 
 
@@ -328,16 +354,17 @@ public class RunApplicationRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "InputBase64", this.InputBase64);
         this.setParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
-        this.setParamObj(map, prefix + "Option.", this.Option);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamArraySimple(map, prefix + "TableRowUuids.", this.TableRowUuids);
         this.setParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
+        this.setParamObj(map, prefix + "Option.", this.Option);
+        this.setParamObj(map, prefix + "NFOption.", this.NFOption);
 
     }
 }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GetMetaTableRequest extends AbstractModel {
 
     /**
-    * Catalog名
+    * 目录名
     */
     @SerializedName("Catalog")
     @Expose
     private String Catalog;
 
     /**
-    * Database名
+    * 库名
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * Table名
+    * 表名
     */
     @SerializedName("Table")
     @Expose
@@ -52,48 +52,48 @@ public class GetMetaTableRequest extends AbstractModel {
     private String WorkSpaceId;
 
     /**
-     * Get Catalog名 
-     * @return Catalog Catalog名
+     * Get 目录名 
+     * @return Catalog 目录名
      */
     public String getCatalog() {
         return this.Catalog;
     }
 
     /**
-     * Set Catalog名
-     * @param Catalog Catalog名
+     * Set 目录名
+     * @param Catalog 目录名
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get Database名 
-     * @return Database Database名
+     * Get 库名 
+     * @return Database 库名
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set Database名
-     * @param Database Database名
+     * Set 库名
+     * @param Database 库名
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Table名 
-     * @return Table Table名
+     * Get 表名 
+     * @return Table 表名
      */
     public String getTable() {
         return this.Table;
     }
 
     /**
-     * Set Table名
-     * @param Table Table名
+     * Set 表名
+     * @param Table 表名
      */
     public void setTable(String Table) {
         this.Table = Table;
