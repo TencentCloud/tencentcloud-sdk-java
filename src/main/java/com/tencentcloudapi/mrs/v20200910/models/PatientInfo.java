@@ -160,7 +160,7 @@ public class PatientInfo extends AbstractModel {
     private String AgeNorm;
 
     /**
-    * 民族
+    * 民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nation")
@@ -540,21 +540,25 @@ public class PatientInfo extends AbstractModel {
     }
 
     /**
-     * Get 民族
+     * Get 民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nation 民族
+     * @return Nation 民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getNation() {
         return this.Nation;
     }
 
     /**
-     * Set 民族
+     * Set 民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nation 民族
+     * @param Nation 民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setNation(String Nation) {
         this.Nation = Nation;
     }

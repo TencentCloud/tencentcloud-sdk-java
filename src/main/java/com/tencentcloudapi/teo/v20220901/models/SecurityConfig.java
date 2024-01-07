@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SecurityConfig extends AbstractModel {
 
     /**
-    * 托管规则。如果为null，默认使用历史配置。
+    * 托管规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafConfig")
@@ -32,7 +32,7 @@ public class SecurityConfig extends AbstractModel {
     private WafConfig WafConfig;
 
     /**
-    * 速率限制。如果为null，默认使用历史配置。
+    * 速率限制。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitConfig")
@@ -40,7 +40,7 @@ public class SecurityConfig extends AbstractModel {
     private RateLimitConfig RateLimitConfig;
 
     /**
-    * 自定义规则。如果为null，默认使用历史配置。
+    * 自定义规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AclConfig")
@@ -48,7 +48,7 @@ public class SecurityConfig extends AbstractModel {
     private AclConfig AclConfig;
 
     /**
-    * Bot配置。如果为null，默认使用历史配置。
+    * Bot配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotConfig")
@@ -56,7 +56,7 @@ public class SecurityConfig extends AbstractModel {
     private BotConfig BotConfig;
 
     /**
-    * 七层防护总开关。如果为null，默认使用历史配置。
+    * 七层防护总开关。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchConfig")
@@ -64,7 +64,7 @@ public class SecurityConfig extends AbstractModel {
     private SwitchConfig SwitchConfig;
 
     /**
-    * 基础访问管控。如果为null，默认使用历史配置。
+    * 基础访问管控。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpTableConfig")
@@ -72,7 +72,7 @@ public class SecurityConfig extends AbstractModel {
     private IpTableConfig IpTableConfig;
 
     /**
-    * 例外规则配置。如果为null，默认使用历史配置。
+    * 例外规则配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptConfig")
@@ -80,7 +80,7 @@ public class SecurityConfig extends AbstractModel {
     private ExceptConfig ExceptConfig;
 
     /**
-    * 自定义拦截页面配置。如果为null，默认使用历史配置。
+    * 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropPageConfig")
@@ -96,7 +96,7 @@ public class SecurityConfig extends AbstractModel {
     private TemplateConfig TemplateConfig;
 
     /**
-    * 慢速攻击配置。如果为null，默认使用历史配置。
+    * 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlowPostConfig")
@@ -104,9 +104,9 @@ public class SecurityConfig extends AbstractModel {
     private SlowPostConfig SlowPostConfig;
 
     /**
-     * Get 托管规则。如果为null，默认使用历史配置。
+     * Get 托管规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WafConfig 托管规则。如果为null，默认使用历史配置。
+     * @return WafConfig 托管规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WafConfig getWafConfig() {
@@ -114,9 +114,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set 托管规则。如果为null，默认使用历史配置。
+     * Set 托管规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WafConfig 托管规则。如果为null，默认使用历史配置。
+     * @param WafConfig 托管规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafConfig(WafConfig WafConfig) {
@@ -124,9 +124,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Get 速率限制。如果为null，默认使用历史配置。
+     * Get 速率限制。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RateLimitConfig 速率限制。如果为null，默认使用历史配置。
+     * @return RateLimitConfig 速率限制。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitConfig getRateLimitConfig() {
@@ -134,9 +134,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set 速率限制。如果为null，默认使用历史配置。
+     * Set 速率限制。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RateLimitConfig 速率限制。如果为null，默认使用历史配置。
+     * @param RateLimitConfig 速率限制。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitConfig(RateLimitConfig RateLimitConfig) {
@@ -144,9 +144,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Get 自定义规则。如果为null，默认使用历史配置。
+     * Get 自定义规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AclConfig 自定义规则。如果为null，默认使用历史配置。
+     * @return AclConfig 自定义规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AclConfig getAclConfig() {
@@ -154,9 +154,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set 自定义规则。如果为null，默认使用历史配置。
+     * Set 自定义规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AclConfig 自定义规则。如果为null，默认使用历史配置。
+     * @param AclConfig 自定义规则。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAclConfig(AclConfig AclConfig) {
@@ -164,9 +164,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Get Bot配置。如果为null，默认使用历史配置。
+     * Get Bot配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BotConfig Bot配置。如果为null，默认使用历史配置。
+     * @return BotConfig Bot配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BotConfig getBotConfig() {
@@ -174,9 +174,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set Bot配置。如果为null，默认使用历史配置。
+     * Set Bot配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BotConfig Bot配置。如果为null，默认使用历史配置。
+     * @param BotConfig Bot配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotConfig(BotConfig BotConfig) {
@@ -184,9 +184,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Get 七层防护总开关。如果为null，默认使用历史配置。
+     * Get 七层防护总开关。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SwitchConfig 七层防护总开关。如果为null，默认使用历史配置。
+     * @return SwitchConfig 七层防护总开关。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SwitchConfig getSwitchConfig() {
@@ -194,9 +194,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set 七层防护总开关。如果为null，默认使用历史配置。
+     * Set 七层防护总开关。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SwitchConfig 七层防护总开关。如果为null，默认使用历史配置。
+     * @param SwitchConfig 七层防护总开关。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchConfig(SwitchConfig SwitchConfig) {
@@ -204,9 +204,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Get 基础访问管控。如果为null，默认使用历史配置。
+     * Get 基础访问管控。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpTableConfig 基础访问管控。如果为null，默认使用历史配置。
+     * @return IpTableConfig 基础访问管控。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpTableConfig getIpTableConfig() {
@@ -214,9 +214,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set 基础访问管控。如果为null，默认使用历史配置。
+     * Set 基础访问管控。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpTableConfig 基础访问管控。如果为null，默认使用历史配置。
+     * @param IpTableConfig 基础访问管控。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpTableConfig(IpTableConfig IpTableConfig) {
@@ -224,9 +224,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Get 例外规则配置。如果为null，默认使用历史配置。
+     * Get 例外规则配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExceptConfig 例外规则配置。如果为null，默认使用历史配置。
+     * @return ExceptConfig 例外规则配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExceptConfig getExceptConfig() {
@@ -234,9 +234,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set 例外规则配置。如果为null，默认使用历史配置。
+     * Set 例外规则配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExceptConfig 例外规则配置。如果为null，默认使用历史配置。
+     * @param ExceptConfig 例外规则配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptConfig(ExceptConfig ExceptConfig) {
@@ -244,9 +244,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Get 自定义拦截页面配置。如果为null，默认使用历史配置。
+     * Get 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DropPageConfig 自定义拦截页面配置。如果为null，默认使用历史配置。
+     * @return DropPageConfig 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DropPageConfig getDropPageConfig() {
@@ -254,9 +254,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set 自定义拦截页面配置。如果为null，默认使用历史配置。
+     * Set 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DropPageConfig 自定义拦截页面配置。如果为null，默认使用历史配置。
+     * @param DropPageConfig 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropPageConfig(DropPageConfig DropPageConfig) {
@@ -284,9 +284,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Get 慢速攻击配置。如果为null，默认使用历史配置。
+     * Get 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlowPostConfig 慢速攻击配置。如果为null，默认使用历史配置。
+     * @return SlowPostConfig 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlowPostConfig getSlowPostConfig() {
@@ -294,9 +294,9 @@ public class SecurityConfig extends AbstractModel {
     }
 
     /**
-     * Set 慢速攻击配置。如果为null，默认使用历史配置。
+     * Set 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlowPostConfig 慢速攻击配置。如果为null，默认使用历史配置。
+     * @param SlowPostConfig 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlowPostConfig(SlowPostConfig SlowPostConfig) {

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartStreamIngestRequest extends AbstractModel {
 
     /**
-    * TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
+    * TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -62,7 +62,7 @@ public class StartStreamIngestRequest extends AbstractModel {
     private String UserSig;
 
     /**
-    * 源流URL。示例值：https://a.b/test.mp4
+    * 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
     */
     @SerializedName("SourceUrl")
     @Expose
@@ -90,16 +90,23 @@ public class StartStreamIngestRequest extends AbstractModel {
     private AudioEncodeParams AudioEncodeParams;
 
     /**
-     * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。 
-     * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
+    * 源流URL。历史原因本字段【必填】。
+    */
+    @SerializedName("StreamUrl")
+    @Expose
+    private String StreamUrl;
+
+    /**
+     * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。 
+     * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
-     * @param SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
+     * Set TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
+     * @param SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -182,16 +189,16 @@ public class StartStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 源流URL。示例值：https://a.b/test.mp4 
-     * @return SourceUrl 源流URL。示例值：https://a.b/test.mp4
+     * Get 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。 
+     * @return SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
      */
     public String [] getSourceUrl() {
         return this.SourceUrl;
     }
 
     /**
-     * Set 源流URL。示例值：https://a.b/test.mp4
-     * @param SourceUrl 源流URL。示例值：https://a.b/test.mp4
+     * Set 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
+     * @param SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
      */
     public void setSourceUrl(String [] SourceUrl) {
         this.SourceUrl = SourceUrl;
@@ -245,6 +252,22 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.AudioEncodeParams = AudioEncodeParams;
     }
 
+    /**
+     * Get 源流URL。历史原因本字段【必填】。 
+     * @return StreamUrl 源流URL。历史原因本字段【必填】。
+     */
+    public String getStreamUrl() {
+        return this.StreamUrl;
+    }
+
+    /**
+     * Set 源流URL。历史原因本字段【必填】。
+     * @param StreamUrl 源流URL。历史原因本字段【必填】。
+     */
+    public void setStreamUrl(String StreamUrl) {
+        this.StreamUrl = StreamUrl;
+    }
+
     public StartStreamIngestRequest() {
     }
 
@@ -283,6 +306,9 @@ public class StartStreamIngestRequest extends AbstractModel {
         if (source.AudioEncodeParams != null) {
             this.AudioEncodeParams = new AudioEncodeParams(source.AudioEncodeParams);
         }
+        if (source.StreamUrl != null) {
+            this.StreamUrl = new String(source.StreamUrl);
+        }
     }
 
 
@@ -299,6 +325,7 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
         this.setParamObj(map, prefix + "VideoEncodeParams.", this.VideoEncodeParams);
         this.setParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
+        this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
 
     }
 }

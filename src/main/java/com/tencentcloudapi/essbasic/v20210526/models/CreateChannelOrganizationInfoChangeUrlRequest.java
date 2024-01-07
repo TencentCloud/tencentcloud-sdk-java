@@ -48,6 +48,17 @@ public class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
     private Long ChangeType;
 
     /**
+    * 变更链接类型：
+<ul>
+<li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
+<li>**APP** : 创建变更小程序链接，可从第三方APP跳转到微信腾讯电子签小程序进行更换。</li>
+</ul>
+    */
+    @SerializedName("Endpoint")
+    @Expose
+    private String Endpoint;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -119,6 +130,38 @@ public class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
         this.ChangeType = ChangeType;
     }
 
+    /**
+     * Get 变更链接类型：
+<ul>
+<li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
+<li>**APP** : 创建变更小程序链接，可从第三方APP跳转到微信腾讯电子签小程序进行更换。</li>
+</ul> 
+     * @return Endpoint 变更链接类型：
+<ul>
+<li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
+<li>**APP** : 创建变更小程序链接，可从第三方APP跳转到微信腾讯电子签小程序进行更换。</li>
+</ul>
+     */
+    public String getEndpoint() {
+        return this.Endpoint;
+    }
+
+    /**
+     * Set 变更链接类型：
+<ul>
+<li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
+<li>**APP** : 创建变更小程序链接，可从第三方APP跳转到微信腾讯电子签小程序进行更换。</li>
+</ul>
+     * @param Endpoint 变更链接类型：
+<ul>
+<li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
+<li>**APP** : 创建变更小程序链接，可从第三方APP跳转到微信腾讯电子签小程序进行更换。</li>
+</ul>
+     */
+    public void setEndpoint(String Endpoint) {
+        this.Endpoint = Endpoint;
+    }
+
     public CreateChannelOrganizationInfoChangeUrlRequest() {
     }
 
@@ -133,6 +176,9 @@ public class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
         if (source.ChangeType != null) {
             this.ChangeType = new Long(source.ChangeType);
         }
+        if (source.Endpoint != null) {
+            this.Endpoint = new String(source.Endpoint);
+        }
     }
 
 
@@ -142,6 +188,7 @@ public class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ChangeType", this.ChangeType);
+        this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
 
     }
 }

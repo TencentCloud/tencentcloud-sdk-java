@@ -56,6 +56,8 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
+
+
     */
     @SerializedName("Filters")
     @Expose
@@ -116,7 +118,9 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 
 按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
-必选：否 
+必选：否
+
+ 
      * @return Filters 过滤器列表。
 
 - instance-name
@@ -142,6 +146,8 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
+
+
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -173,6 +179,8 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
+
+
      * @param Filters 过滤器列表。
 
 - instance-name
@@ -198,6 +206,8 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
+
+
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
