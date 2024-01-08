@@ -31,14 +31,14 @@ public class ModifyNotebookRequest extends AbstractModel {
     private String Id;
 
     /**
-    * 名称
+    * 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 计算资源付费模式 ，可选值为：
+    * （不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费
     */
@@ -89,14 +89,14 @@ POSTPAID_BY_HOUR：按小时后付费
     private String ResourceGroupId;
 
     /**
-    * Vpc-Id
+    * （不允许修改）Vpc-Id
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网Id
+    * （不允许修改）子网Id
     */
     @SerializedName("SubnetId")
     @Expose
@@ -110,7 +110,7 @@ POSTPAID_BY_HOUR：按小时后付费
     private Long VolumeSizeInGB;
 
     /**
-    * 存储的类型。取值包含： 
+    * （不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
@@ -121,7 +121,7 @@ POSTPAID_BY_HOUR：按小时后付费
     private String VolumeSourceType;
 
     /**
-    * CFS存储的配置
+    * （不允许修改）CFS存储的配置
     */
     @SerializedName("VolumeSourceCFS")
     @Expose
@@ -170,7 +170,7 @@ POSTPAID_BY_HOUR：按小时后付费
     private Tag [] Tags;
 
     /**
-    * 数据配置
+    * 数据配置，只支持WEDATA_HDFS
     */
     @SerializedName("DataConfigs")
     @Expose
@@ -184,7 +184,7 @@ POSTPAID_BY_HOUR：按小时后付费
     private ImageInfo ImageInfo;
 
     /**
-    * 镜像类型
+    * 镜像类型，包括SYSTEM、TCR、CCR
     */
     @SerializedName("ImageType")
     @Expose
@@ -214,26 +214,26 @@ POSTPAID_BY_HOUR：按小时后付费
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
+     * @return Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * @param Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 计算资源付费模式 ，可选值为：
+     * Get （不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费 
-     * @return ChargeType 计算资源付费模式 ，可选值为：
+     * @return ChargeType （不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费
      */
@@ -242,10 +242,10 @@ POSTPAID_BY_HOUR：按小时后付费
     }
 
     /**
-     * Set 计算资源付费模式 ，可选值为：
+     * Set （不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费
-     * @param ChargeType 计算资源付费模式 ，可选值为：
+     * @param ChargeType （不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费
      */
@@ -350,32 +350,32 @@ POSTPAID_BY_HOUR：按小时后付费
     }
 
     /**
-     * Get Vpc-Id 
-     * @return VpcId Vpc-Id
+     * Get （不允许修改）Vpc-Id 
+     * @return VpcId （不允许修改）Vpc-Id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Vpc-Id
-     * @param VpcId Vpc-Id
+     * Set （不允许修改）Vpc-Id
+     * @param VpcId （不允许修改）Vpc-Id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网Id 
-     * @return SubnetId 子网Id
+     * Get （不允许修改）子网Id 
+     * @return SubnetId （不允许修改）子网Id
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网Id
-     * @param SubnetId 子网Id
+     * Set （不允许修改）子网Id
+     * @param SubnetId （不允许修改）子网Id
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -398,12 +398,12 @@ POSTPAID_BY_HOUR：按小时后付费
     }
 
     /**
-     * Get 存储的类型。取值包含： 
+     * Get （不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
     CFS:     CFS存储，包含NFS和turbo 
-     * @return VolumeSourceType 存储的类型。取值包含： 
+     * @return VolumeSourceType （不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
@@ -414,12 +414,12 @@ POSTPAID_BY_HOUR：按小时后付费
     }
 
     /**
-     * Set 存储的类型。取值包含： 
+     * Set （不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
     CFS:     CFS存储，包含NFS和turbo
-     * @param VolumeSourceType 存储的类型。取值包含： 
+     * @param VolumeSourceType （不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
@@ -430,16 +430,16 @@ POSTPAID_BY_HOUR：按小时后付费
     }
 
     /**
-     * Get CFS存储的配置 
-     * @return VolumeSourceCFS CFS存储的配置
+     * Get （不允许修改）CFS存储的配置 
+     * @return VolumeSourceCFS （不允许修改）CFS存储的配置
      */
     public CFSConfig getVolumeSourceCFS() {
         return this.VolumeSourceCFS;
     }
 
     /**
-     * Set CFS存储的配置
-     * @param VolumeSourceCFS CFS存储的配置
+     * Set （不允许修改）CFS存储的配置
+     * @param VolumeSourceCFS （不允许修改）CFS存储的配置
      */
     public void setVolumeSourceCFS(CFSConfig VolumeSourceCFS) {
         this.VolumeSourceCFS = VolumeSourceCFS;
@@ -542,16 +542,16 @@ POSTPAID_BY_HOUR：按小时后付费
     }
 
     /**
-     * Get 数据配置 
-     * @return DataConfigs 数据配置
+     * Get 数据配置，只支持WEDATA_HDFS 
+     * @return DataConfigs 数据配置，只支持WEDATA_HDFS
      */
     public DataConfig [] getDataConfigs() {
         return this.DataConfigs;
     }
 
     /**
-     * Set 数据配置
-     * @param DataConfigs 数据配置
+     * Set 数据配置，只支持WEDATA_HDFS
+     * @param DataConfigs 数据配置，只支持WEDATA_HDFS
      */
     public void setDataConfigs(DataConfig [] DataConfigs) {
         this.DataConfigs = DataConfigs;
@@ -574,16 +574,16 @@ POSTPAID_BY_HOUR：按小时后付费
     }
 
     /**
-     * Get 镜像类型 
-     * @return ImageType 镜像类型
+     * Get 镜像类型，包括SYSTEM、TCR、CCR 
+     * @return ImageType 镜像类型，包括SYSTEM、TCR、CCR
      */
     public String getImageType() {
         return this.ImageType;
     }
 
     /**
-     * Set 镜像类型
-     * @param ImageType 镜像类型
+     * Set 镜像类型，包括SYSTEM、TCR、CCR
+     * @param ImageType 镜像类型，包括SYSTEM、TCR、CCR
      */
     public void setImageType(String ImageType) {
         this.ImageType = ImageType;

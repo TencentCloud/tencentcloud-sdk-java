@@ -40,7 +40,7 @@ public class PodInfo extends AbstractModel {
     private String IP;
 
     /**
-    * pod状态
+    * pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -112,9 +112,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Get pod状态
+     * Get pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status pod状态
+     * @return Status pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -122,9 +122,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Set pod状态
+     * Set pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status pod状态
+     * @param Status pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {

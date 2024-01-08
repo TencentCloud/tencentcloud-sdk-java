@@ -32,6 +32,22 @@ public class GooseFS extends AbstractModel {
     private String Id;
 
     /**
+    * GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
      * Get goosefs实例id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id goosefs实例id
@@ -51,6 +67,46 @@ public class GooseFS extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Path GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Path GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
     public GooseFS() {
     }
 
@@ -62,6 +118,12 @@ public class GooseFS extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
     }
 
 
@@ -70,6 +132,8 @@ public class GooseFS extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Path", this.Path);
 
     }
 }

@@ -40,6 +40,15 @@ public class ComposeVideoStream extends AbstractModel {
     private Long Fps;
 
     /**
+    * 参考码率，单位 kbps，范围：50~35000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将通过画面复杂度自动采用合适的码率。
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
      * Get 视频流的编码方式，可选值：
 <li>H.264：H.264 编码（默认）。</li> 
      * @return Codec 视频流的编码方式，可选值：
@@ -79,6 +88,30 @@ public class ComposeVideoStream extends AbstractModel {
         this.Fps = Fps;
     }
 
+    /**
+     * Get 参考码率，单位 kbps，范围：50~35000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将通过画面复杂度自动采用合适的码率。 
+     * @return Bitrate 参考码率，单位 kbps，范围：50~35000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将通过画面复杂度自动采用合适的码率。
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set 参考码率，单位 kbps，范围：50~35000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将通过画面复杂度自动采用合适的码率。
+     * @param Bitrate 参考码率，单位 kbps，范围：50~35000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将通过画面复杂度自动采用合适的码率。
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
+
     public ComposeVideoStream() {
     }
 
@@ -93,6 +126,9 @@ public class ComposeVideoStream extends AbstractModel {
         if (source.Fps != null) {
             this.Fps = new Long(source.Fps);
         }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
     }
 
 
@@ -102,6 +138,7 @@ public class ComposeVideoStream extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
 
     }
 }

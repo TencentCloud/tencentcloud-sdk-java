@@ -153,6 +153,28 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *由 VOD 创建新的日志集。
+     * @param req CreateCLSLogsetRequest
+     * @return CreateCLSLogsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSLogsetResponse CreateCLSLogset(CreateCLSLogsetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSLogset", CreateCLSLogsetResponse.class);
+    }
+
+    /**
+     *创建 VOD 下新的 CLS 日志主题
+     * @param req CreateCLSTopicRequest
+     * @return CreateCLSTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSTopicResponse CreateCLSTopic(CreateCLSTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSTopic", CreateCLSTopicResponse.class);
+    }
+
+    /**
      ** 用于对媒体进行分类管理；
 * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
 * 分类层次不可超过 4 层。
@@ -463,6 +485,17 @@ public class VodClient extends AbstractClient{
     public DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(DeleteAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAnimatedGraphicsTemplate", DeleteAnimatedGraphicsTemplateResponse.class);
+    }
+
+    /**
+     *删除点播开通的日志主题。
+     * @param req DeleteCLSTopicRequest
+     * @return DeleteCLSTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCLSTopicResponse DeleteCLSTopic(DeleteCLSTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCLSTopic", DeleteCLSTopicResponse.class);
     }
 
     /**
@@ -788,6 +821,39 @@ public class VodClient extends AbstractClient{
     public DescribeCDNUsageDataResponse DescribeCDNUsageData(DescribeCDNUsageDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCDNUsageData", DescribeCDNUsageDataResponse.class);
+    }
+
+    /**
+     *查询 VOD 创建的 CLS 日志集。
+     * @param req DescribeCLSLogsetsRequest
+     * @return DescribeCLSLogsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSLogsetsResponse DescribeCLSLogsets(DescribeCLSLogsetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSLogsets", DescribeCLSLogsetsResponse.class);
+    }
+
+    /**
+     *查询点播域名下日志投递的目标主题。
+     * @param req DescribeCLSPushTargetsRequest
+     * @return DescribeCLSPushTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSPushTargetsResponse DescribeCLSPushTargets(DescribeCLSPushTargetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSPushTargets", DescribeCLSPushTargetsResponse.class);
+    }
+
+    /**
+     *查询 VOD 创建的 CLS 日志主题列表。
+     * @param req DescribeCLSTopicsRequest
+     * @return DescribeCLSTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSTopicsResponse DescribeCLSTopics(DescribeCLSTopicsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSTopics", DescribeCLSTopicsResponse.class);
     }
 
     /**
@@ -2086,6 +2152,17 @@ public class VodClient extends AbstractClient{
     public SearchMediaResponse SearchMedia(SearchMediaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchMedia", SearchMediaResponse.class);
+    }
+
+    /**
+     *为点播域名设置投递 CLS 的目标。
+     * @param req SetCLSPushTargetRequest
+     * @return SetCLSPushTargetResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetCLSPushTargetResponse SetCLSPushTarget(SetCLSPushTargetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetCLSPushTarget", SetCLSPushTargetResponse.class);
     }
 
     /**

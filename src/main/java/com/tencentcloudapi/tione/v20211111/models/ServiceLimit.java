@@ -38,6 +38,20 @@ public class ServiceLimit extends AbstractModel {
     private Long InstanceRpsLimit;
 
     /**
+    * 是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+    */
+    @SerializedName("EnableInstanceReqLimit")
+    @Expose
+    private Boolean EnableInstanceReqLimit;
+
+    /**
+    * 每个服务实例的最大并发
+    */
+    @SerializedName("InstanceReqLimit")
+    @Expose
+    private Long InstanceReqLimit;
+
+    /**
      * Get 是否开启实例层面限流限速，true or false。true 则 InstanceRpsLimit 必填， false 则 InstanceRpsLimit 不生效 
      * @return EnableInstanceRpsLimit 是否开启实例层面限流限速，true or false。true 则 InstanceRpsLimit 必填， false 则 InstanceRpsLimit 不生效
      */
@@ -69,6 +83,38 @@ public class ServiceLimit extends AbstractModel {
         this.InstanceRpsLimit = InstanceRpsLimit;
     }
 
+    /**
+     * Get 是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效 
+     * @return EnableInstanceReqLimit 是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+     */
+    public Boolean getEnableInstanceReqLimit() {
+        return this.EnableInstanceReqLimit;
+    }
+
+    /**
+     * Set 是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+     * @param EnableInstanceReqLimit 是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+     */
+    public void setEnableInstanceReqLimit(Boolean EnableInstanceReqLimit) {
+        this.EnableInstanceReqLimit = EnableInstanceReqLimit;
+    }
+
+    /**
+     * Get 每个服务实例的最大并发 
+     * @return InstanceReqLimit 每个服务实例的最大并发
+     */
+    public Long getInstanceReqLimit() {
+        return this.InstanceReqLimit;
+    }
+
+    /**
+     * Set 每个服务实例的最大并发
+     * @param InstanceReqLimit 每个服务实例的最大并发
+     */
+    public void setInstanceReqLimit(Long InstanceReqLimit) {
+        this.InstanceReqLimit = InstanceReqLimit;
+    }
+
     public ServiceLimit() {
     }
 
@@ -83,6 +129,12 @@ public class ServiceLimit extends AbstractModel {
         if (source.InstanceRpsLimit != null) {
             this.InstanceRpsLimit = new Long(source.InstanceRpsLimit);
         }
+        if (source.EnableInstanceReqLimit != null) {
+            this.EnableInstanceReqLimit = new Boolean(source.EnableInstanceReqLimit);
+        }
+        if (source.InstanceReqLimit != null) {
+            this.InstanceReqLimit = new Long(source.InstanceReqLimit);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class ServiceLimit extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableInstanceRpsLimit", this.EnableInstanceRpsLimit);
         this.setParamSimple(map, prefix + "InstanceRpsLimit", this.InstanceRpsLimit);
+        this.setParamSimple(map, prefix + "EnableInstanceReqLimit", this.EnableInstanceReqLimit);
+        this.setParamSimple(map, prefix + "InstanceReqLimit", this.InstanceReqLimit);
 
     }
 }

@@ -53,6 +53,15 @@ public class ComposeAudioStream extends AbstractModel {
     private Long AudioChannel;
 
     /**
+    * 参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
      * Get 音频流的编码方式，可选值：
 <li>AAC：AAC 编码（默认），用于容器为 mp4。</li>
 <li>MP3：mp3 编码，用于容器为 mp3。</li> 
@@ -132,6 +141,30 @@ public class ComposeAudioStream extends AbstractModel {
         this.AudioChannel = AudioChannel;
     }
 
+    /**
+     * Get 参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。 
+     * @return Bitrate 参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set 参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。
+     * @param Bitrate 参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
+
     public ComposeAudioStream() {
     }
 
@@ -149,6 +182,9 @@ public class ComposeAudioStream extends AbstractModel {
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
     }
 
 
@@ -159,6 +195,7 @@ public class ComposeAudioStream extends AbstractModel {
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
 
     }
 }

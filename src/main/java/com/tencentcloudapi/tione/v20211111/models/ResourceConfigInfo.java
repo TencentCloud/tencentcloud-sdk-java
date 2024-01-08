@@ -31,28 +31,28 @@ public class ResourceConfigInfo extends AbstractModel {
     private String Role;
 
     /**
-    * cpu核数，1000=1核
+    * cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存，单位为MB
+    * 内存，使用资源组时需配置。单位为MB
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * gpu卡类型
+    * gpu卡类型，使用资源组时需配置
     */
     @SerializedName("GpuType")
     @Expose
     private String GpuType;
 
     /**
-    * gpu数
+    * gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
     */
     @SerializedName("Gpu")
     @Expose
@@ -138,64 +138,64 @@ TI.GN7.20XLARGE320.POST: 80C32
     }
 
     /**
-     * Get cpu核数，1000=1核 
-     * @return Cpu cpu核数，1000=1核
+     * Get cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核 
+     * @return Cpu cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set cpu核数，1000=1核
-     * @param Cpu cpu核数，1000=1核
+     * Set cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
+     * @param Cpu cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存，单位为MB 
-     * @return Memory 内存，单位为MB
+     * Get 内存，使用资源组时需配置。单位为MB 
+     * @return Memory 内存，使用资源组时需配置。单位为MB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存，单位为MB
-     * @param Memory 内存，单位为MB
+     * Set 内存，使用资源组时需配置。单位为MB
+     * @param Memory 内存，使用资源组时需配置。单位为MB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get gpu卡类型 
-     * @return GpuType gpu卡类型
+     * Get gpu卡类型，使用资源组时需配置 
+     * @return GpuType gpu卡类型，使用资源组时需配置
      */
     public String getGpuType() {
         return this.GpuType;
     }
 
     /**
-     * Set gpu卡类型
-     * @param GpuType gpu卡类型
+     * Set gpu卡类型，使用资源组时需配置
+     * @param GpuType gpu卡类型，使用资源组时需配置
      */
     public void setGpuType(String GpuType) {
         this.GpuType = GpuType;
     }
 
     /**
-     * Get gpu数 
-     * @return Gpu gpu数
+     * Get gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡 
+     * @return Gpu gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
      */
     public Long getGpu() {
         return this.Gpu;
     }
 
     /**
-     * Set gpu数
-     * @param Gpu gpu数
+     * Set gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
+     * @param Gpu gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
      */
     public void setGpu(Long Gpu) {
         this.Gpu = Gpu;

@@ -109,7 +109,7 @@ POSTPAID_BY_HOUR 按量计费
     private String TrainingMode;
 
     /**
-    * 数据配置，依赖DataSource字段
+    * 数据配置，依赖DataSource字段，数量不超过10个
     */
     @SerializedName("DataConfigs")
     @Expose
@@ -144,7 +144,7 @@ POSTPAID_BY_HOUR 按量计费
     private LogConfig LogConfig;
 
     /**
-    * 调优参数
+    * 调优参数，不超过2048个字符
     */
     @SerializedName("TuningParameters")
     @Expose
@@ -158,14 +158,14 @@ POSTPAID_BY_HOUR 按量计费
     private Boolean LogEnable;
 
     /**
-    * 备注，最多500个字
+    * 备注，不超过1024个字符
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 数据来源，eg：DATASET、COS、CFS、HDFS
+    * 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
     */
     @SerializedName("DataSource")
     @Expose
@@ -382,16 +382,16 @@ POSTPAID_BY_HOUR 按量计费
     }
 
     /**
-     * Get 数据配置，依赖DataSource字段 
-     * @return DataConfigs 数据配置，依赖DataSource字段
+     * Get 数据配置，依赖DataSource字段，数量不超过10个 
+     * @return DataConfigs 数据配置，依赖DataSource字段，数量不超过10个
      */
     public DataConfig [] getDataConfigs() {
         return this.DataConfigs;
     }
 
     /**
-     * Set 数据配置，依赖DataSource字段
-     * @param DataConfigs 数据配置，依赖DataSource字段
+     * Set 数据配置，依赖DataSource字段，数量不超过10个
+     * @param DataConfigs 数据配置，依赖DataSource字段，数量不超过10个
      */
     public void setDataConfigs(DataConfig [] DataConfigs) {
         this.DataConfigs = DataConfigs;
@@ -462,16 +462,16 @@ POSTPAID_BY_HOUR 按量计费
     }
 
     /**
-     * Get 调优参数 
-     * @return TuningParameters 调优参数
+     * Get 调优参数，不超过2048个字符 
+     * @return TuningParameters 调优参数，不超过2048个字符
      */
     public String getTuningParameters() {
         return this.TuningParameters;
     }
 
     /**
-     * Set 调优参数
-     * @param TuningParameters 调优参数
+     * Set 调优参数，不超过2048个字符
+     * @param TuningParameters 调优参数，不超过2048个字符
      */
     public void setTuningParameters(String TuningParameters) {
         this.TuningParameters = TuningParameters;
@@ -494,32 +494,32 @@ POSTPAID_BY_HOUR 按量计费
     }
 
     /**
-     * Get 备注，最多500个字 
-     * @return Remark 备注，最多500个字
+     * Get 备注，不超过1024个字符 
+     * @return Remark 备注，不超过1024个字符
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注，最多500个字
-     * @param Remark 备注，最多500个字
+     * Set 备注，不超过1024个字符
+     * @param Remark 备注，不超过1024个字符
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 数据来源，eg：DATASET、COS、CFS、HDFS 
-     * @return DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
+     * Get 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx 
+     * @return DataSource 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
      */
     public String getDataSource() {
         return this.DataSource;
     }
 
     /**
-     * Set 数据来源，eg：DATASET、COS、CFS、HDFS
-     * @param DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
+     * Set 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
+     * @param DataSource 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
      */
     public void setDataSource(String DataSource) {
         this.DataSource = DataSource;

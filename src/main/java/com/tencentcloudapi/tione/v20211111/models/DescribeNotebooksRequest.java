@@ -58,6 +58,7 @@ public class DescribeNotebooksRequest extends AbstractModel {
 Name（名称）：notebook1
 Id（notebook ID）：nb-123456789
 Status（状态）：Starting / Running / Stopped / Stopping / Failed / SubmitFailed
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 ChargeStatus（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ BILLING_STORAGE（存储计费中）/ARREARS_STOP（欠费停止）
 DefaultCodeRepoId（默认代码仓库ID）：cr-123456789
@@ -146,6 +147,7 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
 Name（名称）：notebook1
 Id（notebook ID）：nb-123456789
 Status（状态）：Starting / Running / Stopped / Stopping / Failed / SubmitFailed
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 ChargeStatus（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ BILLING_STORAGE（存储计费中）/ARREARS_STOP（欠费停止）
 DefaultCodeRepoId（默认代码仓库ID）：cr-123456789
@@ -157,6 +159,7 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
 Name（名称）：notebook1
 Id（notebook ID）：nb-123456789
 Status（状态）：Starting / Running / Stopped / Stopping / Failed / SubmitFailed
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 ChargeStatus（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ BILLING_STORAGE（存储计费中）/ARREARS_STOP（欠费停止）
 DefaultCodeRepoId（默认代码仓库ID）：cr-123456789
@@ -174,6 +177,7 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
 Name（名称）：notebook1
 Id（notebook ID）：nb-123456789
 Status（状态）：Starting / Running / Stopped / Stopping / Failed / SubmitFailed
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 ChargeStatus（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ BILLING_STORAGE（存储计费中）/ARREARS_STOP（欠费停止）
 DefaultCodeRepoId（默认代码仓库ID）：cr-123456789
@@ -185,6 +189,7 @@ LifecycleScriptId（生命周期ID）：ls-12312312311312
 Name（名称）：notebook1
 Id（notebook ID）：nb-123456789
 Status（状态）：Starting / Running / Stopped / Stopping / Failed / SubmitFailed
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 ChargeStatus（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ BILLING_STORAGE（存储计费中）/ARREARS_STOP（欠费停止）
 DefaultCodeRepoId（默认代码仓库ID）：cr-123456789

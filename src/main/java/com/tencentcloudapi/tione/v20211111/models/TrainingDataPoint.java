@@ -23,6 +23,62 @@ import java.util.HashMap;
 
 public class TrainingDataPoint extends AbstractModel {
 
+    /**
+    * 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Timestamp")
+    @Expose
+    private Long Timestamp;
+
+    /**
+    * 训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Value")
+    @Expose
+    private Float Value;
+
+    /**
+     * Get 时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Timestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTimestamp() {
+        return this.Timestamp;
+    }
+
+    /**
+     * Set 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Timestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimestamp(Long Timestamp) {
+        this.Timestamp = Timestamp;
+    }
+
+    /**
+     * Get 训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Value 训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value 训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValue(Float Value) {
+        this.Value = Value;
+    }
+
     public TrainingDataPoint() {
     }
 
@@ -31,6 +87,12 @@ public class TrainingDataPoint extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TrainingDataPoint(TrainingDataPoint source) {
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.Value != null) {
+            this.Value = new Float(source.Value);
+        }
     }
 
 
@@ -38,6 +100,8 @@ public class TrainingDataPoint extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

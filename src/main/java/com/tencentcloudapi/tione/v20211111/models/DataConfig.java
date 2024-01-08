@@ -31,7 +31,7 @@ public class DataConfig extends AbstractModel {
     private String MappingPath;
 
     /**
-    * DATASET、COS、CFS、HDFS、WEDATA_HDFS
+    * DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceType")
@@ -103,9 +103,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get DATASET、COS、CFS、HDFS、WEDATA_HDFS
+     * Get DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSourceType DATASET、COS、CFS、HDFS、WEDATA_HDFS
+     * @return DataSourceType DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceType() {
@@ -113,9 +113,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set DATASET、COS、CFS、HDFS、WEDATA_HDFS
+     * Set DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceType DATASET、COS、CFS、HDFS、WEDATA_HDFS
+     * @param DataSourceType DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceType(String DataSourceType) {

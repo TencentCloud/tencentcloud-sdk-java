@@ -312,6 +312,22 @@ public class NotebookDetail extends AbstractModel {
     private String ImageType;
 
     /**
+    * SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SSHConfig")
+    @Expose
+    private SSHConfig SSHConfig;
+
+    /**
+    * GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VolumeSourceGooseFS")
+    @Expose
+    private GooseFS VolumeSourceGooseFS;
+
+    /**
      * Get notebook  ID 
      * @return Id notebook  ID
      */
@@ -1019,6 +1035,46 @@ public class NotebookDetail extends AbstractModel {
         this.ImageType = ImageType;
     }
 
+    /**
+     * Get SSH配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SSHConfig SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SSHConfig getSSHConfig() {
+        return this.SSHConfig;
+    }
+
+    /**
+     * Set SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SSHConfig SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSSHConfig(SSHConfig SSHConfig) {
+        this.SSHConfig = SSHConfig;
+    }
+
+    /**
+     * Get GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VolumeSourceGooseFS GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GooseFS getVolumeSourceGooseFS() {
+        return this.VolumeSourceGooseFS;
+    }
+
+    /**
+     * Set GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeSourceGooseFS GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumeSourceGooseFS(GooseFS VolumeSourceGooseFS) {
+        this.VolumeSourceGooseFS = VolumeSourceGooseFS;
+    }
+
     public NotebookDetail() {
     }
 
@@ -1150,6 +1206,12 @@ public class NotebookDetail extends AbstractModel {
         if (source.ImageType != null) {
             this.ImageType = new String(source.ImageType);
         }
+        if (source.SSHConfig != null) {
+            this.SSHConfig = new SSHConfig(source.SSHConfig);
+        }
+        if (source.VolumeSourceGooseFS != null) {
+            this.VolumeSourceGooseFS = new GooseFS(source.VolumeSourceGooseFS);
+        }
     }
 
 
@@ -1194,6 +1256,8 @@ public class NotebookDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamSimple(map, prefix + "ImageType", this.ImageType);
+        this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
+        this.setParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
 
     }
 }

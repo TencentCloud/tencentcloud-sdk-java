@@ -318,6 +318,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *获取已接入标准用量明细模板产品的用量明细数据，目前已接入并支持查询的产品包括：云联络中心、实时音视频、实时音视频、智能媒资托管、CODING DevOps、全球IP应用加速
+     * @param req DescribeDosageDetailListRequest
+     * @return DescribeDosageDetailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDosageDetailListResponse DescribeDosageDetailList(DescribeDosageDetailListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDosageDetailList", DescribeDosageDetailListResponse.class);
+    }
+
+    /**
      *查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
      * @param req DescribeSavingPlanCoverageRequest
      * @return DescribeSavingPlanCoverageResponse

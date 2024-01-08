@@ -228,6 +228,14 @@ public class NotebookSetItem extends AbstractModel {
     private SSHConfig SSHConfig;
 
     /**
+    * GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VolumeSourceGooseFS")
+    @Expose
+    private GooseFS VolumeSourceGooseFS;
+
+    /**
      * Get notebook ID 
      * @return Id notebook ID
      */
@@ -731,6 +739,26 @@ public class NotebookSetItem extends AbstractModel {
         this.SSHConfig = SSHConfig;
     }
 
+    /**
+     * Get GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VolumeSourceGooseFS GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GooseFS getVolumeSourceGooseFS() {
+        return this.VolumeSourceGooseFS;
+    }
+
+    /**
+     * Set GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeSourceGooseFS GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumeSourceGooseFS(GooseFS VolumeSourceGooseFS) {
+        this.VolumeSourceGooseFS = VolumeSourceGooseFS;
+    }
+
     public NotebookSetItem() {
     }
 
@@ -826,6 +854,9 @@ public class NotebookSetItem extends AbstractModel {
         if (source.SSHConfig != null) {
             this.SSHConfig = new SSHConfig(source.SSHConfig);
         }
+        if (source.VolumeSourceGooseFS != null) {
+            this.VolumeSourceGooseFS = new GooseFS(source.VolumeSourceGooseFS);
+        }
     }
 
 
@@ -859,6 +890,7 @@ public class NotebookSetItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArraySimple(map, prefix + "UserTypes.", this.UserTypes);
         this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
+        this.setParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
 
     }
 }

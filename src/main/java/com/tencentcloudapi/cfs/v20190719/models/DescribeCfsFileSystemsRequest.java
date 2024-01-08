@@ -59,6 +59,13 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 用户自定义名称
+    */
+    @SerializedName("CreationToken")
+    @Expose
+    private String CreationToken;
+
+    /**
      * Get 文件系统 ID 
      * @return FileSystemId 文件系统 ID
      */
@@ -138,6 +145,22 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 用户自定义名称 
+     * @return CreationToken 用户自定义名称
+     */
+    public String getCreationToken() {
+        return this.CreationToken;
+    }
+
+    /**
+     * Set 用户自定义名称
+     * @param CreationToken 用户自定义名称
+     */
+    public void setCreationToken(String CreationToken) {
+        this.CreationToken = CreationToken;
+    }
+
     public DescribeCfsFileSystemsRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.CreationToken != null) {
+            this.CreationToken = new String(source.CreationToken);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "CreationToken", this.CreationToken);
 
     }
 }

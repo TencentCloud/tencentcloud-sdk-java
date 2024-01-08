@@ -31,6 +31,13 @@ public class DescribeIdsWhiteRuleResponse extends AbstractModel {
     private Long Total;
 
     /**
+    * 规则详情
+    */
+    @SerializedName("Data")
+    @Expose
+    private IdsWhiteInfo [] Data;
+
+    /**
     * 返回状态码 0 成功 非0不成功
     */
     @SerializedName("ReturnCode")
@@ -65,6 +72,22 @@ public class DescribeIdsWhiteRuleResponse extends AbstractModel {
      */
     public void setTotal(Long Total) {
         this.Total = Total;
+    }
+
+    /**
+     * Get 规则详情 
+     * @return Data 规则详情
+     */
+    public IdsWhiteInfo [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 规则详情
+     * @param Data 规则详情
+     */
+    public void setData(IdsWhiteInfo [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -126,6 +149,12 @@ public class DescribeIdsWhiteRuleResponse extends AbstractModel {
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.Data != null) {
+            this.Data = new IdsWhiteInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new IdsWhiteInfo(source.Data[i]);
+            }
+        }
         if (source.ReturnCode != null) {
             this.ReturnCode = new Long(source.ReturnCode);
         }
@@ -143,6 +172,7 @@ public class DescribeIdsWhiteRuleResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
         this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

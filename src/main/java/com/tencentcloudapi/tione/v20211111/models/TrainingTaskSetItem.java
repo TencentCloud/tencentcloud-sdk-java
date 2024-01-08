@@ -99,7 +99,8 @@ public class TrainingTaskSetItem extends AbstractModel {
     private String TrainingMode;
 
     /**
-    * 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+    * 任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
     */
     @SerializedName("Status")
     @Expose
@@ -385,16 +386,20 @@ public class TrainingTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Get 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成 
-     * @return Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * Get 任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成 
+     * @return Status 任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
-     * @param Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * Set 任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * @param Status 任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      */
     public void setStatus(String Status) {
         this.Status = Status;

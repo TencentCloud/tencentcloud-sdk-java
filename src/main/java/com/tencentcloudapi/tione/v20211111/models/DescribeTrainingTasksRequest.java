@@ -29,7 +29,9 @@ public class DescribeTrainingTasksRequest extends AbstractModel {
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
     */
@@ -66,7 +68,7 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     private String Order;
 
     /**
-    * 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+    * 排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime
     */
     @SerializedName("OrderField")
     @Expose
@@ -78,7 +80,9 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止） 
      * @return Filters 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
@@ -86,7 +90,9 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
      */
@@ -100,7 +106,9 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
      * @param Filters 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
@@ -108,7 +116,9 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
      */
@@ -181,16 +191,16 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     }
 
     /**
-     * Get 排序的依据字段， 取值范围 "CreateTime" "UpdateTime" 
-     * @return OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * Get 排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime 
+     * @return OrderField 排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
-     * @param OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * Set 排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime
+     * @param OrderField 排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;

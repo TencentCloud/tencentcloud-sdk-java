@@ -52,7 +52,8 @@ public class McuVideoParams extends AbstractModel {
     private String BackGroundColor;
 
     /**
-    * 整个画布的背景图url，优先级高于BackGroundColor。
+    * 整个画布的背景图url，优先级高于BackGroundColor。支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，背景图将不会生效。
     */
     @SerializedName("BackgroundImageUrl")
     @Expose
@@ -149,16 +150,20 @@ public class McuVideoParams extends AbstractModel {
     }
 
     /**
-     * Get 整个画布的背景图url，优先级高于BackGroundColor。 
-     * @return BackgroundImageUrl 整个画布的背景图url，优先级高于BackGroundColor。
+     * Get 整个画布的背景图url，优先级高于BackGroundColor。支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，背景图将不会生效。 
+     * @return BackgroundImageUrl 整个画布的背景图url，优先级高于BackGroundColor。支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，背景图将不会生效。
      */
     public String getBackgroundImageUrl() {
         return this.BackgroundImageUrl;
     }
 
     /**
-     * Set 整个画布的背景图url，优先级高于BackGroundColor。
-     * @param BackgroundImageUrl 整个画布的背景图url，优先级高于BackGroundColor。
+     * Set 整个画布的背景图url，优先级高于BackGroundColor。支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，背景图将不会生效。
+     * @param BackgroundImageUrl 整个画布的背景图url，优先级高于BackGroundColor。支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，背景图将不会生效。
      */
     public void setBackgroundImageUrl(String BackgroundImageUrl) {
         this.BackgroundImageUrl = BackgroundImageUrl;

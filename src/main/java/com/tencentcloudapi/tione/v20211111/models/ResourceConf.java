@@ -40,7 +40,7 @@ public class ResourceConf extends AbstractModel {
     private Long Memory;
 
     /**
-    * gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+    * gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gpu")
@@ -48,7 +48,7 @@ public class ResourceConf extends AbstractModel {
     private Long Gpu;
 
     /**
-    * GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+    * GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GpuType")
@@ -120,9 +120,9 @@ TI.GN7.20XLARGE320.POST: 80C320G T4*4
     }
 
     /**
-     * Get gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+     * Get gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Gpu gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+     * @return Gpu gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGpu() {
@@ -130,9 +130,9 @@ TI.GN7.20XLARGE320.POST: 80C320G T4*4
     }
 
     /**
-     * Set gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+     * Set gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Gpu gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+     * @param Gpu gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpu(Long Gpu) {
@@ -140,9 +140,9 @@ TI.GN7.20XLARGE320.POST: 80C320G T4*4
     }
 
     /**
-     * Get GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+     * Get GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GpuType GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+     * @return GpuType GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGpuType() {
@@ -150,9 +150,9 @@ TI.GN7.20XLARGE320.POST: 80C320G T4*4
     }
 
     /**
-     * Set GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+     * Set GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GpuType GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+     * @param GpuType GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGpuType(String GpuType) {

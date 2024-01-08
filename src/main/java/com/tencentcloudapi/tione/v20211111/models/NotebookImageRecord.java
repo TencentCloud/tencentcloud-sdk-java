@@ -40,7 +40,7 @@ public class NotebookImageRecord extends AbstractModel {
     private String ImageUrl;
 
     /**
-    * 状态
+    * 状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -120,9 +120,9 @@ public class NotebookImageRecord extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get 状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status 状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -130,9 +130,9 @@ public class NotebookImageRecord extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set 状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status 状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {

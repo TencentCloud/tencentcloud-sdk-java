@@ -40,7 +40,9 @@ public class HorizontalPodAutoscaler extends AbstractModel {
     private Long MaxReplicas;
 
     /**
-    * 扩缩容指标
+    * 支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HpaMetrics")
@@ -88,9 +90,13 @@ public class HorizontalPodAutoscaler extends AbstractModel {
     }
 
     /**
-     * Get 扩缩容指标
+     * Get 支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HpaMetrics 扩缩容指标
+     * @return HpaMetrics 支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Option [] getHpaMetrics() {
@@ -98,9 +104,13 @@ public class HorizontalPodAutoscaler extends AbstractModel {
     }
 
     /**
-     * Set 扩缩容指标
+     * Set 支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HpaMetrics 扩缩容指标
+     * @param HpaMetrics 支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHpaMetrics(Option [] HpaMetrics) {
