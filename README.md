@@ -357,14 +357,14 @@ SDK 会自动将您请求的地域设置为备选地域。
 
 目前仅支持使用POST方式，且签名方法必须使用签名方法 v3。
 
-详细使用请参阅示例：[使用 Common Client 进行调用](https://github.com/TencentCloud/tencentcloud-sdk-java/tree/master/examples/common/CommonClient)
+详细使用请参阅示例：[使用 Common Client 进行调用](https://github.com/TencentCloud/tencentcloud-sdk-java/tree/master/examples/common/commonclient)
 
 
 # 支持重试请求
 
 从 3.1.310 版本开始腾讯云 Java SDK 支持重试请求。对于每一个请求，您可以设置重试次数，如果接口请求未成功，就进行重试，直到请求成功或者达到重试次数为止。待设置的重试次数最大为10，最小为0，每次重试失败需要睡眠1秒钟。
 
-详细使用请参阅示例：[使用 retry 进行重试请求](https://github.com/TencentCloud/tencentcloud-sdk-java/tree/master/examples/common/retry/Retry.java)
+详细使用请参阅示例：[使用 retry 进行重试请求](https://github.com/TencentCloud/tencentcloud-sdk-java/tree/master/examples/common/Retry.java)
 
 # 凭证管理
 
