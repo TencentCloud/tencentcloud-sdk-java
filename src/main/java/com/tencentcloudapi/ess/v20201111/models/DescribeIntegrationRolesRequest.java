@@ -69,7 +69,7 @@ public class DescribeIntegrationRolesRequest extends AbstractModel {
 分页参数, 需要limit, offset 配合使用
 例如:
 您希望得到第三页的数据, 且每页限制最多10条
-你可以使用 LIMIT 10 OFFSET 20
+您可以使用 LIMIT 10 OFFSET 20
 
     */
     @SerializedName("Offset")
@@ -197,13 +197,13 @@ public class DescribeIntegrationRolesRequest extends AbstractModel {
 分页参数, 需要limit, offset 配合使用
 例如:
 您希望得到第三页的数据, 且每页限制最多10条
-你可以使用 LIMIT 10 OFFSET 20
+您可以使用 LIMIT 10 OFFSET 20
  
      * @return Offset OFFSET 用于指定查询结果的偏移量，如果不传默认偏移为0,最大2000。
 分页参数, 需要limit, offset 配合使用
 例如:
 您希望得到第三页的数据, 且每页限制最多10条
-你可以使用 LIMIT 10 OFFSET 20
+您可以使用 LIMIT 10 OFFSET 20
 
      */
     public Long getOffset() {
@@ -215,13 +215,13 @@ public class DescribeIntegrationRolesRequest extends AbstractModel {
 分页参数, 需要limit, offset 配合使用
 例如:
 您希望得到第三页的数据, 且每页限制最多10条
-你可以使用 LIMIT 10 OFFSET 20
+您可以使用 LIMIT 10 OFFSET 20
 
      * @param Offset OFFSET 用于指定查询结果的偏移量，如果不传默认偏移为0,最大2000。
 分页参数, 需要limit, offset 配合使用
 例如:
 您希望得到第三页的数据, 且每页限制最多10条
-你可以使用 LIMIT 10 OFFSET 20
+您可以使用 LIMIT 10 OFFSET 20
 
      */
     public void setOffset(Long Offset) {

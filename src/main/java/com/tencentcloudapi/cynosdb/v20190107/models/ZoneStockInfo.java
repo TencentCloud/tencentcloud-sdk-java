@@ -45,6 +45,14 @@ public class ZoneStockInfo extends AbstractModel {
     private Long StockCount;
 
     /**
+    * 备可用区库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaveZoneStockInfos")
+    @Expose
+    private SlaveZoneStockInfo [] SlaveZoneStockInfos;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -92,6 +100,26 @@ public class ZoneStockInfo extends AbstractModel {
         this.StockCount = StockCount;
     }
 
+    /**
+     * Get 备可用区库存信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaveZoneStockInfos 备可用区库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SlaveZoneStockInfo [] getSlaveZoneStockInfos() {
+        return this.SlaveZoneStockInfos;
+    }
+
+    /**
+     * Set 备可用区库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZoneStockInfos 备可用区库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaveZoneStockInfos(SlaveZoneStockInfo [] SlaveZoneStockInfos) {
+        this.SlaveZoneStockInfos = SlaveZoneStockInfos;
+    }
+
     public ZoneStockInfo() {
     }
 
@@ -109,6 +137,12 @@ public class ZoneStockInfo extends AbstractModel {
         if (source.StockCount != null) {
             this.StockCount = new Long(source.StockCount);
         }
+        if (source.SlaveZoneStockInfos != null) {
+            this.SlaveZoneStockInfos = new SlaveZoneStockInfo[source.SlaveZoneStockInfos.length];
+            for (int i = 0; i < source.SlaveZoneStockInfos.length; i++) {
+                this.SlaveZoneStockInfos[i] = new SlaveZoneStockInfo(source.SlaveZoneStockInfos[i]);
+            }
+        }
     }
 
 
@@ -119,6 +153,7 @@ public class ZoneStockInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "HasStock", this.HasStock);
         this.setParamSimple(map, prefix + "StockCount", this.StockCount);
+        this.setParamArrayObj(map, prefix + "SlaveZoneStockInfos.", this.SlaveZoneStockInfos);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOfflineLogRecordsRequest extends AbstractModel {
+public class SubsErr extends AbstractModel {
 
     /**
-    * 项目唯一上报 key
+    * 报错信息
     */
-    @SerializedName("ProjectKey")
+    @SerializedName("Message")
     @Expose
-    private String ProjectKey;
+    private String Message;
 
     /**
-     * Get 项目唯一上报 key 
-     * @return ProjectKey 项目唯一上报 key
+     * Get 报错信息 
+     * @return Message 报错信息
      */
-    public String getProjectKey() {
-        return this.ProjectKey;
+    public String getMessage() {
+        return this.Message;
     }
 
     /**
-     * Set 项目唯一上报 key
-     * @param ProjectKey 项目唯一上报 key
+     * Set 报错信息
+     * @param Message 报错信息
      */
-    public void setProjectKey(String ProjectKey) {
-        this.ProjectKey = ProjectKey;
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
-    public DescribeOfflineLogRecordsRequest() {
+    public SubsErr() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOfflineLogRecordsRequest(DescribeOfflineLogRecordsRequest source) {
-        if (source.ProjectKey != null) {
-            this.ProjectKey = new String(source.ProjectKey);
+    public SubsErr(SubsErr source) {
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeOfflineLogRecordsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

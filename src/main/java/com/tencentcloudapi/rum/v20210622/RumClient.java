@@ -54,17 +54,6 @@ public class RumClient extends AbstractClient{
     }
 
     /**
-     *创建离线日志监听，对应用户的离线日志将上报
-     * @param req CreateOfflineLogConfigRequest
-     * @return CreateOfflineLogConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateOfflineLogConfigResponse CreateOfflineLogConfig(CreateOfflineLogConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateOfflineLogConfig", CreateOfflineLogConfigResponse.class);
-    }
-
-    /**
      *创建 RUM 应用（归属于某个团队）
      * @param req CreateProjectRequest
      * @return CreateProjectResponse
@@ -500,28 +489,6 @@ public class RumClient extends AbstractClient{
     public DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(DescribeOfflineLogConfigsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOfflineLogConfigs", DescribeOfflineLogConfigsResponse.class);
-    }
-
-    /**
-     *获取所有离线日志记录(最多100条)
-     * @param req DescribeOfflineLogRecordsRequest
-     * @return DescribeOfflineLogRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineLogRecordsResponse DescribeOfflineLogRecords(DescribeOfflineLogRecordsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineLogRecords", DescribeOfflineLogRecordsResponse.class);
-    }
-
-    /**
-     *获取对应离线日志
-     * @param req DescribeOfflineLogsRequest
-     * @return DescribeOfflineLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineLogsResponse DescribeOfflineLogs(DescribeOfflineLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineLogs", DescribeOfflineLogsResponse.class);
     }
 
     /**

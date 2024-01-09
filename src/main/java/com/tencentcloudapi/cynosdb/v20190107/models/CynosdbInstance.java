@@ -407,6 +407,14 @@ pause
     private String InstanceIndexMode;
 
     /**
+    * 当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceAbility")
+    @Expose
+    private InstanceAbility InstanceAbility;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1302,6 +1310,26 @@ pause
         this.InstanceIndexMode = InstanceIndexMode;
     }
 
+    /**
+     * Get 当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceAbility 当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceAbility getInstanceAbility() {
+        return this.InstanceAbility;
+    }
+
+    /**
+     * Set 当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceAbility 当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceAbility(InstanceAbility InstanceAbility) {
+        this.InstanceAbility = InstanceAbility;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1484,6 +1512,9 @@ pause
         if (source.InstanceIndexMode != null) {
             this.InstanceIndexMode = new String(source.InstanceIndexMode);
         }
+        if (source.InstanceAbility != null) {
+            this.InstanceAbility = new InstanceAbility(source.InstanceAbility);
+        }
     }
 
 
@@ -1544,6 +1575,7 @@ pause
         this.setParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         this.setParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
+        this.setParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
 
     }
 }

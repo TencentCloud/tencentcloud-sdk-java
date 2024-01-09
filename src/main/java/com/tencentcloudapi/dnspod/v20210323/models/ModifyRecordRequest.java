@@ -108,6 +108,13 @@ public class ModifyRecordRequest extends AbstractModel {
     private String Status;
 
     /**
+    * 记录的备注信息。传空删除备注。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -299,6 +306,22 @@ public class ModifyRecordRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 记录的备注信息。传空删除备注。 
+     * @return Remark 记录的备注信息。传空删除备注。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 记录的备注信息。传空删除备注。
+     * @param Remark 记录的备注信息。传空删除备注。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public ModifyRecordRequest() {
     }
 
@@ -343,6 +366,9 @@ public class ModifyRecordRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class ModifyRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TTL", this.TTL);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

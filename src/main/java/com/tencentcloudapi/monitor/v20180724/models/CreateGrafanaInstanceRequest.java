@@ -66,6 +66,13 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
     private PrometheusTag [] TagSpecification;
 
     /**
+    * 是否自动选择代金券，默认为 false
+    */
+    @SerializedName("AutoVoucher")
+    @Expose
+    private Boolean AutoVoucher;
+
+    /**
      * Get 实例名 
      * @return InstanceName 实例名
      */
@@ -161,6 +168,22 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get 是否自动选择代金券，默认为 false 
+     * @return AutoVoucher 是否自动选择代金券，默认为 false
+     */
+    public Boolean getAutoVoucher() {
+        return this.AutoVoucher;
+    }
+
+    /**
+     * Set 是否自动选择代金券，默认为 false
+     * @param AutoVoucher 是否自动选择代金券，默认为 false
+     */
+    public void setAutoVoucher(Boolean AutoVoucher) {
+        this.AutoVoucher = AutoVoucher;
+    }
+
     public CreateGrafanaInstanceRequest() {
     }
 
@@ -193,6 +216,9 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
                 this.TagSpecification[i] = new PrometheusTag(source.TagSpecification[i]);
             }
         }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Boolean(source.AutoVoucher);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
         this.setParamSimple(map, prefix + "GrafanaInitPassword", this.GrafanaInitPassword);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
 
     }
 }

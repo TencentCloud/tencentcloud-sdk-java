@@ -38,6 +38,20 @@ public class IsolateClusterRequest extends AbstractModel {
     private String DbType;
 
     /**
+    * 实例退还原因类型
+    */
+    @SerializedName("IsolateReasonTypes")
+    @Expose
+    private Long [] IsolateReasonTypes;
+
+    /**
+    * 实例退还原因补充
+    */
+    @SerializedName("IsolateReason")
+    @Expose
+    private String IsolateReason;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -69,6 +83,38 @@ public class IsolateClusterRequest extends AbstractModel {
         this.DbType = DbType;
     }
 
+    /**
+     * Get 实例退还原因类型 
+     * @return IsolateReasonTypes 实例退还原因类型
+     */
+    public Long [] getIsolateReasonTypes() {
+        return this.IsolateReasonTypes;
+    }
+
+    /**
+     * Set 实例退还原因类型
+     * @param IsolateReasonTypes 实例退还原因类型
+     */
+    public void setIsolateReasonTypes(Long [] IsolateReasonTypes) {
+        this.IsolateReasonTypes = IsolateReasonTypes;
+    }
+
+    /**
+     * Get 实例退还原因补充 
+     * @return IsolateReason 实例退还原因补充
+     */
+    public String getIsolateReason() {
+        return this.IsolateReason;
+    }
+
+    /**
+     * Set 实例退还原因补充
+     * @param IsolateReason 实例退还原因补充
+     */
+    public void setIsolateReason(String IsolateReason) {
+        this.IsolateReason = IsolateReason;
+    }
+
     public IsolateClusterRequest() {
     }
 
@@ -83,6 +129,15 @@ public class IsolateClusterRequest extends AbstractModel {
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.IsolateReasonTypes != null) {
+            this.IsolateReasonTypes = new Long[source.IsolateReasonTypes.length];
+            for (int i = 0; i < source.IsolateReasonTypes.length; i++) {
+                this.IsolateReasonTypes[i] = new Long(source.IsolateReasonTypes[i]);
+            }
+        }
+        if (source.IsolateReason != null) {
+            this.IsolateReason = new String(source.IsolateReason);
+        }
     }
 
 
@@ -92,6 +147,8 @@ public class IsolateClusterRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamArraySimple(map, prefix + "IsolateReasonTypes.", this.IsolateReasonTypes);
+        this.setParamSimple(map, prefix + "IsolateReason", this.IsolateReason);
 
     }
 }

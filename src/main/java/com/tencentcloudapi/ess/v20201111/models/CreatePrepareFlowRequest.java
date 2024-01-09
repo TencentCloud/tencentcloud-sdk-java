@@ -37,8 +37,9 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     * 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
     */
     @SerializedName("ResourceId")
     @Expose
@@ -51,6 +52,15 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
+
+    /**
+    * 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private Long ResourceType;
 
     /**
     * 合同流程的签署顺序类型：
@@ -103,15 +113,6 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     @SerializedName("IntelligentStatus")
     @Expose
     private String IntelligentStatus;
-
-    /**
-    * 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
-    */
-    @SerializedName("ResourceType")
-    @Expose
-    private Long ResourceType;
 
     /**
     * 该字段已废弃，请使用InitiatorComponents
@@ -226,13 +227,15 @@ public class CreatePrepareFlowRequest extends AbstractModel {
      * Get 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul> 
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
+</ul>
+注意：需要同时设置 ResourceType 参数指定资源类型 
      * @return ResourceId 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -242,13 +245,15 @@ public class CreatePrepareFlowRequest extends AbstractModel {
      * Set 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
      * @param ResourceId 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -272,6 +277,30 @@ public class CreatePrepareFlowRequest extends AbstractModel {
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
+    }
+
+    /**
+     * Get 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul> 
+     * @return ResourceType 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
+     */
+    public Long getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
+     * @param ResourceType 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
+     */
+    public void setResourceType(Long ResourceType) {
+        this.ResourceType = ResourceType;
     }
 
     /**
@@ -408,30 +437,6 @@ public class CreatePrepareFlowRequest extends AbstractModel {
      */
     public void setIntelligentStatus(String IntelligentStatus) {
         this.IntelligentStatus = IntelligentStatus;
-    }
-
-    /**
-     * Get 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul> 
-     * @return ResourceType 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
-     */
-    public Long getResourceType() {
-        return this.ResourceType;
-    }
-
-    /**
-     * Set 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
-     * @param ResourceType 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
-     */
-    public void setResourceType(Long ResourceType) {
-        this.ResourceType = ResourceType;
     }
 
     /**
@@ -667,6 +672,9 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
         if (source.Unordered != null) {
             this.Unordered = new Boolean(source.Unordered);
         }
@@ -687,9 +695,6 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         }
         if (source.IntelligentStatus != null) {
             this.IntelligentStatus = new String(source.IntelligentStatus);
-        }
-        if (source.ResourceType != null) {
-            this.ResourceType = new Long(source.ResourceType);
         }
         if (source.Components != null) {
             this.Components = new Component(source.Components);
@@ -731,13 +736,13 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
-        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamObj(map, prefix + "Components.", this.Components);
         this.setParamObj(map, prefix + "FlowOption.", this.FlowOption);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);

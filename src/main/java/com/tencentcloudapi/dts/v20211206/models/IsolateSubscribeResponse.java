@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOfflineLogsResponse extends AbstractModel {
-
-    /**
-    * 接口调用返回信息
-    */
-    @SerializedName("Msg")
-    @Expose
-    private String Msg;
-
-    /**
-    * 日志列表
-    */
-    @SerializedName("LogSet")
-    @Expose
-    private String [] LogSet;
+public class IsolateSubscribeResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class DescribeOfflineLogsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 接口调用返回信息 
-     * @return Msg 接口调用返回信息
-     */
-    public String getMsg() {
-        return this.Msg;
-    }
-
-    /**
-     * Set 接口调用返回信息
-     * @param Msg 接口调用返回信息
-     */
-    public void setMsg(String Msg) {
-        this.Msg = Msg;
-    }
-
-    /**
-     * Get 日志列表 
-     * @return LogSet 日志列表
-     */
-    public String [] getLogSet() {
-        return this.LogSet;
-    }
-
-    /**
-     * Set 日志列表
-     * @param LogSet 日志列表
-     */
-    public void setLogSet(String [] LogSet) {
-        this.LogSet = LogSet;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -92,23 +46,14 @@ public class DescribeOfflineLogsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeOfflineLogsResponse() {
+    public IsolateSubscribeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOfflineLogsResponse(DescribeOfflineLogsResponse source) {
-        if (source.Msg != null) {
-            this.Msg = new String(source.Msg);
-        }
-        if (source.LogSet != null) {
-            this.LogSet = new String[source.LogSet.length];
-            for (int i = 0; i < source.LogSet.length; i++) {
-                this.LogSet[i] = new String(source.LogSet[i]);
-            }
-        }
+    public IsolateSubscribeResponse(IsolateSubscribeResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -119,8 +64,6 @@ public class DescribeOfflineLogsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Msg", this.Msg);
-        this.setParamArraySimple(map, prefix + "LogSet.", this.LogSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

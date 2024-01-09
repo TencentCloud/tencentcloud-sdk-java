@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOfflineLogConfigResponse extends AbstractModel {
-
-    /**
-    * 接口返回信息
-    */
-    @SerializedName("Msg")
-    @Expose
-    private String Msg;
+public class ModifyConsumerGroupPasswordResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class CreateOfflineLogConfigResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 接口返回信息 
-     * @return Msg 接口返回信息
-     */
-    public String getMsg() {
-        return this.Msg;
-    }
-
-    /**
-     * Set 接口返回信息
-     * @param Msg 接口返回信息
-     */
-    public void setMsg(String Msg) {
-        this.Msg = Msg;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class CreateOfflineLogConfigResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateOfflineLogConfigResponse() {
+    public ModifyConsumerGroupPasswordResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateOfflineLogConfigResponse(CreateOfflineLogConfigResponse source) {
-        if (source.Msg != null) {
-            this.Msg = new String(source.Msg);
-        }
+    public ModifyConsumerGroupPasswordResponse(ModifyConsumerGroupPasswordResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class CreateOfflineLogConfigResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

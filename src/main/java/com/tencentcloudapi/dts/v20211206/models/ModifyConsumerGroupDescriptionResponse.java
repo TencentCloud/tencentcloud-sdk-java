@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOfflineLogRecordsResponse extends AbstractModel {
-
-    /**
-    * 接口调用信息
-    */
-    @SerializedName("Msg")
-    @Expose
-    private String Msg;
-
-    /**
-    * 记录 ID 数组
-    */
-    @SerializedName("RecordSet")
-    @Expose
-    private String [] RecordSet;
+public class ModifyConsumerGroupDescriptionResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class DescribeOfflineLogRecordsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 接口调用信息 
-     * @return Msg 接口调用信息
-     */
-    public String getMsg() {
-        return this.Msg;
-    }
-
-    /**
-     * Set 接口调用信息
-     * @param Msg 接口调用信息
-     */
-    public void setMsg(String Msg) {
-        this.Msg = Msg;
-    }
-
-    /**
-     * Get 记录 ID 数组 
-     * @return RecordSet 记录 ID 数组
-     */
-    public String [] getRecordSet() {
-        return this.RecordSet;
-    }
-
-    /**
-     * Set 记录 ID 数组
-     * @param RecordSet 记录 ID 数组
-     */
-    public void setRecordSet(String [] RecordSet) {
-        this.RecordSet = RecordSet;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -92,23 +46,14 @@ public class DescribeOfflineLogRecordsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeOfflineLogRecordsResponse() {
+    public ModifyConsumerGroupDescriptionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOfflineLogRecordsResponse(DescribeOfflineLogRecordsResponse source) {
-        if (source.Msg != null) {
-            this.Msg = new String(source.Msg);
-        }
-        if (source.RecordSet != null) {
-            this.RecordSet = new String[source.RecordSet.length];
-            for (int i = 0; i < source.RecordSet.length; i++) {
-                this.RecordSet[i] = new String(source.RecordSet[i]);
-            }
-        }
+    public ModifyConsumerGroupDescriptionResponse(ModifyConsumerGroupDescriptionResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -119,8 +64,6 @@ public class DescribeOfflineLogRecordsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Msg", this.Msg);
-        this.setParamArraySimple(map, prefix + "RecordSet.", this.RecordSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
