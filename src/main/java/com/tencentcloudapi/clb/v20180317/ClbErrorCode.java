@@ -12,6 +12,9 @@ public enum ClbErrorCode {
     // LB状态异常。
      FAILEDOPERATION_INVALIDLBSTATUS("FailedOperation.InvalidLBStatus"),
      
+    // 正在操作指定的资源，请稍后重试。
+     FAILEDOPERATION_RESOURCEINOPERATING("FailedOperation.ResourceInOperating"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

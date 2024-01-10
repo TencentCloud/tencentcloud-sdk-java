@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class McuPublishCdnParam extends AbstractModel {
 
     /**
-    * CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。
+    * CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。
     */
     @SerializedName("PublishCdnUrl")
     @Expose
@@ -38,16 +39,20 @@ public class McuPublishCdnParam extends AbstractModel {
     private Long IsTencentCdn;
 
     /**
-     * Get CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。 
-     * @return PublishCdnUrl CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。
+     * Get CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。 
+     * @return PublishCdnUrl CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。
      */
     public String getPublishCdnUrl() {
         return this.PublishCdnUrl;
     }
 
     /**
-     * Set CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。
-     * @param PublishCdnUrl CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。
+     * Set CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。
+     * @param PublishCdnUrl CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。
      */
     public void setPublishCdnUrl(String PublishCdnUrl) {
         this.PublishCdnUrl = PublishCdnUrl;

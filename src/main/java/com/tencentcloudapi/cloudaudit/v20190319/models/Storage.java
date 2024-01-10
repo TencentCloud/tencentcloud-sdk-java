@@ -52,6 +52,22 @@ public class Storage extends AbstractModel {
     private String StoragePrefix;
 
     /**
+    * 被指定存储用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageAccountId")
+    @Expose
+    private String StorageAccountId;
+
+    /**
+    * 被指定存储用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageAppId")
+    @Expose
+    private String StorageAppId;
+
+    /**
      * Get 存储类型（目前支持 cos、cls） 
      * @return StorageType 存储类型（目前支持 cos、cls）
      */
@@ -115,6 +131,46 @@ public class Storage extends AbstractModel {
         this.StoragePrefix = StoragePrefix;
     }
 
+    /**
+     * Get 被指定存储用户ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageAccountId 被指定存储用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStorageAccountId() {
+        return this.StorageAccountId;
+    }
+
+    /**
+     * Set 被指定存储用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageAccountId 被指定存储用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageAccountId(String StorageAccountId) {
+        this.StorageAccountId = StorageAccountId;
+    }
+
+    /**
+     * Get 被指定存储用户appid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageAppId 被指定存储用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStorageAppId() {
+        return this.StorageAppId;
+    }
+
+    /**
+     * Set 被指定存储用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageAppId 被指定存储用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageAppId(String StorageAppId) {
+        this.StorageAppId = StorageAppId;
+    }
+
     public Storage() {
     }
 
@@ -135,6 +191,12 @@ public class Storage extends AbstractModel {
         if (source.StoragePrefix != null) {
             this.StoragePrefix = new String(source.StoragePrefix);
         }
+        if (source.StorageAccountId != null) {
+            this.StorageAccountId = new String(source.StorageAccountId);
+        }
+        if (source.StorageAppId != null) {
+            this.StorageAppId = new String(source.StorageAppId);
+        }
     }
 
 
@@ -146,6 +208,8 @@ public class Storage extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
         this.setParamSimple(map, prefix + "StorageName", this.StorageName);
         this.setParamSimple(map, prefix + "StoragePrefix", this.StoragePrefix);
+        this.setParamSimple(map, prefix + "StorageAccountId", this.StorageAccountId);
+        this.setParamSimple(map, prefix + "StorageAppId", this.StorageAppId);
 
     }
 }

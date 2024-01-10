@@ -54,7 +54,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *创建跟踪集
+     *创建操作审计跟踪集
      * @param req CreateAuditTrackRequest
      * @return CreateAuditTrackResponse
      * @throws TencentCloudSDKException
@@ -76,7 +76,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *删除云审计跟踪集
+     *删除操作审计跟踪集
      * @param req DeleteAuditTrackRequest
      * @return DeleteAuditTrackResponse
      * @throws TencentCloudSDKException
@@ -98,7 +98,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *查询云审计跟踪集详情
+     *查询操作审计跟踪集详情
      * @param req DescribeAuditTrackRequest
      * @return DescribeAuditTrackResponse
      * @throws TencentCloudSDKException
@@ -109,7 +109,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *查询云审计跟踪集列表
+     *查询操作审计跟踪集列表
      * @param req DescribeAuditTracksRequest
      * @return DescribeAuditTracksResponse
      * @throws TencentCloudSDKException
@@ -120,7 +120,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *查询云审计日志
+     *查询操作审计日志
      * @param req DescribeEventsRequest
      * @return DescribeEventsResponse
      * @throws TencentCloudSDKException
@@ -208,7 +208,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *修改云审计跟踪
+     *修改操作审计跟踪集
      * @param req ModifyAuditTrackRequest
      * @return ModifyAuditTrackResponse
      * @throws TencentCloudSDKException
