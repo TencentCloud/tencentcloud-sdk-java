@@ -39,173 +39,102 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *该接口不再使用
-
-检查区块链信息
-     * @param req CheckChainRequest
-     * @return CheckChainResponse
+     *检查用户套餐购买状态
+     * @param req CheckNewPurchaseRequest
+     * @return CheckNewPurchaseResponse
      * @throws TencentCloudSDKException
      */
-    public CheckChainResponse CheckChain(CheckChainRequest req) throws TencentCloudSDKException{
+    public CheckNewPurchaseResponse CheckNewPurchase(CheckNewPurchaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "CheckChain", CheckChainResponse.class);
+        return this.internalRequest(req, "CheckNewPurchase", CheckNewPurchaseResponse.class);
     }
 
     /**
-     *该接口不再使用
-
-创建凭证
-     * @param req CreateCredentialRequest
-     * @return CreateCredentialResponse
+     *自动生成公私钥对托管在DID平台，并注册DID标识
+     * @param req CreateTDidByHostRequest
+     * @return CreateTDidByHostResponse
      * @throws TencentCloudSDKException
      */
-    public CreateCredentialResponse CreateCredential(CreateCredentialRequest req) throws TencentCloudSDKException{
+    public CreateTDidByHostResponse CreateTDidByHost(CreateTDidByHostRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCredential", CreateCredentialResponse.class);
+        return this.internalRequest(req, "CreateTDidByHost", CreateTDidByHostResponse.class);
     }
 
     /**
-     *该接口不再使用
-
-创建选择性批露凭证
-     * @param req CreateSelectiveCredentialRequest
-     * @return CreateSelectiveCredentialResponse
+     *使用导入的公钥文件注册DID标识
+     * @param req CreateTDidByPubKeyRequest
+     * @return CreateTDidByPubKeyResponse
      * @throws TencentCloudSDKException
      */
-    public CreateSelectiveCredentialResponse CreateSelectiveCredential(CreateSelectiveCredentialRequest req) throws TencentCloudSDKException{
+    public CreateTDidByPubKeyResponse CreateTDidByPubKey(CreateTDidByPubKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "CreateSelectiveCredential", CreateSelectiveCredentialResponse.class);
+        return this.internalRequest(req, "CreateTDidByPubKey", CreateTDidByPubKeyResponse.class);
     }
 
     /**
-     *该接口不再使用
-
-创建机构DID
-     * @param req CreateTDidRequest
-     * @return CreateTDidResponse
+     *更新DID标识的禁用状态
+     * @param req DeactivateTDidRequest
+     * @return DeactivateTDidResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTDidResponse CreateTDid(CreateTDidRequest req) throws TencentCloudSDKException{
+    public DeactivateTDidResponse DeactivateTDid(DeactivateTDidRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTDid", CreateTDidResponse.class);
+        return this.internalRequest(req, "DeactivateTDid", DeactivateTDidResponse.class);
     }
 
     /**
-     *该接口不再使用
-
-新建DID根据私钥生成Tdid
-     * @param req CreateTDidByPrivateKeyRequest
-     * @return CreateTDidByPrivateKeyResponse
+     *获取凭证链上状态信息
+     * @param req GetCredentialStateRequest
+     * @return GetCredentialStateResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTDidByPrivateKeyResponse CreateTDidByPrivateKey(CreateTDidByPrivateKeyRequest req) throws TencentCloudSDKException{
+    public GetCredentialStateResponse GetCredentialState(GetCredentialStateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTDidByPrivateKey", CreateTDidByPrivateKeyResponse.class);
+        return this.internalRequest(req, "GetCredentialState", GetCredentialStateResponse.class);
     }
 
     /**
-     *该接口不再使用
-
- 新建DID根据公钥生成Tdid
-     * @param req CreateTDidByPublicKeyRequest
-     * @return CreateTDidByPublicKeyResponse
+     *获取DID标识的文档
+     * @param req GetTDidDocumentRequest
+     * @return GetTDidDocumentResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTDidByPublicKeyResponse CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req) throws TencentCloudSDKException{
+    public GetTDidDocumentResponse GetTDidDocument(GetTDidDocumentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTDidByPublicKey", CreateTDidByPublicKeyResponse.class);
+        return this.internalRequest(req, "GetTDidDocument", GetTDidDocumentResponse.class);
     }
 
     /**
-     *该接口不再使用
-
-获取权威机构信息
-     * @param req GetAuthorityIssuerRequest
-     * @return GetAuthorityIssuerResponse
+     *颁发可验证凭证
+     * @param req IssueCredentialRequest
+     * @return IssueCredentialResponse
      * @throws TencentCloudSDKException
      */
-    public GetAuthorityIssuerResponse GetAuthorityIssuer(GetAuthorityIssuerRequest req) throws TencentCloudSDKException{
+    public IssueCredentialResponse IssueCredential(IssueCredentialRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "GetAuthorityIssuer", GetAuthorityIssuerResponse.class);
+        return this.internalRequest(req, "IssueCredential", IssueCredentialResponse.class);
     }
 
     /**
-     *该接口不再使用
-
-凭证模版详情
-     * @param req GetCptInfoRequest
-     * @return GetCptInfoResponse
+     *更新凭证的链上状态
+     * @param req UpdateCredentialStateRequest
+     * @return UpdateCredentialStateResponse
      * @throws TencentCloudSDKException
      */
-    public GetCptInfoResponse GetCptInfo(GetCptInfoRequest req) throws TencentCloudSDKException{
+    public UpdateCredentialStateResponse UpdateCredentialState(UpdateCredentialStateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "GetCptInfo", GetCptInfoResponse.class);
+        return this.internalRequest(req, "UpdateCredentialState", UpdateCredentialStateResponse.class);
     }
 
     /**
-     *该接口不再使用
-
-获取凭证链上状态信息
-     * @param req GetCredentialStatusRequest
-     * @return GetCredentialStatusResponse
+     *验证已签名的可验证凭证
+     * @param req VerifyCredentialsRequest
+     * @return VerifyCredentialsResponse
      * @throws TencentCloudSDKException
      */
-    public GetCredentialStatusResponse GetCredentialStatus(GetCredentialStatusRequest req) throws TencentCloudSDKException{
+    public VerifyCredentialsResponse VerifyCredentials(VerifyCredentialsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "GetCredentialStatus", GetCredentialStatusResponse.class);
-    }
-
-    /**
-     *该接口不再使用
-
-查看DID文档
-
-     * @param req GetDidDocumentRequest
-     * @return GetDidDocumentResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDidDocumentResponse GetDidDocument(GetDidDocumentRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetDidDocument", GetDidDocumentResponse.class);
-    }
-
-    /**
-     *该接口不再使用
-
-凭证模版新建
-     * @param req RegisterCptRequest
-     * @return RegisterCptResponse
-     * @throws TencentCloudSDKException
-     */
-    public RegisterCptResponse RegisterCpt(RegisterCptRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RegisterCpt", RegisterCptResponse.class);
-    }
-
-    /**
-     *该接口不再使用
-
-设置凭证链上状态
-     * @param req SetCredentialStatusRequest
-     * @return SetCredentialStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public SetCredentialStatusResponse SetCredentialStatus(SetCredentialStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SetCredentialStatus", SetCredentialStatusResponse.class);
-    }
-
-    /**
-     *该接口不再使用
-
-验证凭证
-     * @param req VerifyCredentialRequest
-     * @return VerifyCredentialResponse
-     * @throws TencentCloudSDKException
-     */
-    public VerifyCredentialResponse VerifyCredential(VerifyCredentialRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "VerifyCredential", VerifyCredentialResponse.class);
+        return this.internalRequest(req, "VerifyCredentials", VerifyCredentialsResponse.class);
     }
 
 }
