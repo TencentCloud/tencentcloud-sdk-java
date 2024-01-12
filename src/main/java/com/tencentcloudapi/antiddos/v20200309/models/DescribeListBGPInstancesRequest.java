@@ -157,6 +157,14 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
     private Long FilterBasicPlusFlag;
 
     /**
+    * 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
+
+    */
+    @SerializedName("FilterPlanCntFlag")
+    @Expose
+    private Long FilterPlanCntFlag;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -460,6 +468,26 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         this.FilterBasicPlusFlag = FilterBasicPlusFlag;
     }
 
+    /**
+     * Get 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
+ 
+     * @return FilterPlanCntFlag 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
+
+     */
+    public Long getFilterPlanCntFlag() {
+        return this.FilterPlanCntFlag;
+    }
+
+    /**
+     * Set 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
+
+     * @param FilterPlanCntFlag 是否商业模式优化-普惠版 0: 包含商业模式优化-普惠版 1: 只查询商业模式优化-普惠版 
+
+     */
+    public void setFilterPlanCntFlag(Long FilterPlanCntFlag) {
+        this.FilterPlanCntFlag = FilterPlanCntFlag;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -531,6 +559,9 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         if (source.FilterBasicPlusFlag != null) {
             this.FilterBasicPlusFlag = new Long(source.FilterBasicPlusFlag);
         }
+        if (source.FilterPlanCntFlag != null) {
+            this.FilterPlanCntFlag = new Long(source.FilterPlanCntFlag);
+        }
     }
 
 
@@ -557,6 +588,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
         this.setParamArraySimple(map, prefix + "FilterAssetIpList.", this.FilterAssetIpList);
         this.setParamSimple(map, prefix + "FilterBasicPlusFlag", this.FilterBasicPlusFlag);
+        this.setParamSimple(map, prefix + "FilterPlanCntFlag", this.FilterPlanCntFlag);
 
     }
 }

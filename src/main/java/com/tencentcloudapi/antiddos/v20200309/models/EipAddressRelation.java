@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EipAddressRelation extends AbstractModel {
 
     /**
-    * 高防弹性公网IP绑定的实例地区，例如hk代表香港
+    * 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EipAddressRegion")
@@ -64,9 +64,9 @@ public class EipAddressRelation extends AbstractModel {
     private String ModifyTime;
 
     /**
-     * Get 高防弹性公网IP绑定的实例地区，例如hk代表香港
+     * Get 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表香港
+     * @return EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEipAddressRegion() {
@@ -74,9 +74,9 @@ public class EipAddressRelation extends AbstractModel {
     }
 
     /**
-     * Set 高防弹性公网IP绑定的实例地区，例如hk代表香港
+     * Set 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表香港
+     * @param EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEipAddressRegion(String EipAddressRegion) {

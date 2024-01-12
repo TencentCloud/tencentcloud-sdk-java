@@ -25,6 +25,7 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
     * 资源名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,6 +33,7 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
     * 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountPath")
     @Expose
@@ -39,6 +41,7 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
     * 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnly")
     @Expose
@@ -46,14 +49,17 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
     * Nfs挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NfsVolumes")
     @Expose
     private CloudBaseRunNfsVolumeSource [] NfsVolumes;
 
     /**
-     * Get 资源名 
+     * Get 资源名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 资源名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -61,15 +67,19 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
      * Set 资源名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 资源名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 挂载路径 
+     * Get 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MountPath 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountPath() {
         return this.MountPath;
@@ -77,15 +87,19 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
      * Set 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MountPath 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountPath(String MountPath) {
         this.MountPath = MountPath;
     }
 
     /**
-     * Get 是否只读 
+     * Get 是否只读
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReadOnly 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
@@ -93,15 +107,19 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
      * Set 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnly 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get Nfs挂载信息 
+     * Get Nfs挂载信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NfsVolumes Nfs挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public CloudBaseRunNfsVolumeSource [] getNfsVolumes() {
         return this.NfsVolumes;
@@ -109,7 +127,9 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
 
     /**
      * Set Nfs挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param NfsVolumes Nfs挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNfsVolumes(CloudBaseRunNfsVolumeSource [] NfsVolumes) {
         this.NfsVolumes = NfsVolumes;

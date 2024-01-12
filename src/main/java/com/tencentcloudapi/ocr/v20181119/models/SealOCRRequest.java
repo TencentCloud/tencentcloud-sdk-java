@@ -40,6 +40,20 @@ public class SealOCRRequest extends AbstractModel {
     private String ImageUrl;
 
     /**
+    * 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+    */
+    @SerializedName("EnablePdf")
+    @Expose
+    private Boolean EnablePdf;
+
+    /**
+    * 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。
+    */
+    @SerializedName("PdfPageNumber")
+    @Expose
+    private Long PdfPageNumber;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。建议卡片部分占据图片2/3以上。
@@ -79,6 +93,38 @@ public class SealOCRRequest extends AbstractModel {
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。 
+     * @return EnablePdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public Boolean getEnablePdf() {
+        return this.EnablePdf;
+    }
+
+    /**
+     * Set 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     * @param EnablePdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public void setEnablePdf(Boolean EnablePdf) {
+        this.EnablePdf = EnablePdf;
+    }
+
+    /**
+     * Get 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。 
+     * @return PdfPageNumber 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。
+     */
+    public Long getPdfPageNumber() {
+        return this.PdfPageNumber;
+    }
+
+    /**
+     * Set 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。
+     * @param PdfPageNumber 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。
+     */
+    public void setPdfPageNumber(Long PdfPageNumber) {
+        this.PdfPageNumber = PdfPageNumber;
+    }
+
     public SealOCRRequest() {
     }
 
@@ -93,6 +139,12 @@ public class SealOCRRequest extends AbstractModel {
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.EnablePdf != null) {
+            this.EnablePdf = new Boolean(source.EnablePdf);
+        }
+        if (source.PdfPageNumber != null) {
+            this.PdfPageNumber = new Long(source.PdfPageNumber);
+        }
     }
 
 
@@ -102,6 +154,8 @@ public class SealOCRRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "EnablePdf", this.EnablePdf);
+        this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
 
     }
 }

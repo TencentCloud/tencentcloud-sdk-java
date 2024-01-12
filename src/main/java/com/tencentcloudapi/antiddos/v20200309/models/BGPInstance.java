@@ -194,6 +194,14 @@ public class BGPInstance extends AbstractModel {
     private Long BasicPlusFlag;
 
     /**
+    * 是否是商业模式优化-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PlanCntFlag")
+    @Expose
+    private Long PlanCntFlag;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -609,6 +617,26 @@ public class BGPInstance extends AbstractModel {
         this.BasicPlusFlag = BasicPlusFlag;
     }
 
+    /**
+     * Get 是否是商业模式优化-普惠版
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PlanCntFlag 是否是商业模式优化-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPlanCntFlag() {
+        return this.PlanCntFlag;
+    }
+
+    /**
+     * Set 是否是商业模式优化-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PlanCntFlag 是否是商业模式优化-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlanCntFlag(Long PlanCntFlag) {
+        this.PlanCntFlag = PlanCntFlag;
+    }
+
     public BGPInstance() {
     }
 
@@ -689,6 +717,9 @@ public class BGPInstance extends AbstractModel {
         if (source.BasicPlusFlag != null) {
             this.BasicPlusFlag = new Long(source.BasicPlusFlag);
         }
+        if (source.PlanCntFlag != null) {
+            this.PlanCntFlag = new Long(source.PlanCntFlag);
+        }
     }
 
 
@@ -718,6 +749,7 @@ public class BGPInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "BasicPlusFlag", this.BasicPlusFlag);
+        this.setParamSimple(map, prefix + "PlanCntFlag", this.PlanCntFlag);
 
     }
 }

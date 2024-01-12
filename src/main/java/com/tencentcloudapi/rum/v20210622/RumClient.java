@@ -135,28 +135,6 @@ public class RumClient extends AbstractClient{
     }
 
     /**
-     *删除 rum 离线日志监听 - 对应用户的离线日志将不会上报
-     * @param req DeleteOfflineLogConfigRequest
-     * @return DeleteOfflineLogConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteOfflineLogConfigResponse DeleteOfflineLogConfig(DeleteOfflineLogConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteOfflineLogConfig", DeleteOfflineLogConfigResponse.class);
-    }
-
-    /**
-     *删除对应的离线日志记录
-     * @param req DeleteOfflineLogRecordRequest
-     * @return DeleteOfflineLogRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteOfflineLogRecordResponse DeleteOfflineLogRecord(DeleteOfflineLogRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteOfflineLogRecord", DeleteOfflineLogRecordResponse.class);
-    }
-
-    /**
      *删除给定的 rum 的项目
      * @param req DeleteProjectRequest
      * @return DeleteProjectResponse
@@ -478,17 +456,6 @@ public class RumClient extends AbstractClient{
     public DescribeLogListResponse DescribeLogList(DescribeLogListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLogList", DescribeLogListResponse.class);
-    }
-
-    /**
-     *获取设置的离线日志监听配置 - 返回设置的用户唯一标识
-     * @param req DescribeOfflineLogConfigsRequest
-     * @return DescribeOfflineLogConfigsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(DescribeOfflineLogConfigsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineLogConfigs", DescribeOfflineLogConfigsResponse.class);
     }
 
     /**

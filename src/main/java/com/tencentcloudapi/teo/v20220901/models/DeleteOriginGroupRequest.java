@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteOriginGroupRequest extends AbstractModel {
 
     /**
-    * 站点ID。
+    * 站点 ID
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 源站组ID，此参数必填。
+    * 源站组 ID，此参数必填。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
+     * Get 站点 ID 
+     * @return ZoneId 站点 ID
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
+     * Set 站点 ID
+     * @param ZoneId 站点 ID
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 源站组ID，此参数必填。 
-     * @return GroupId 源站组ID，此参数必填。
+     * Get 源站组 ID，此参数必填。 
+     * @return GroupId 源站组 ID，此参数必填。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 源站组ID，此参数必填。
-     * @param GroupId 源站组ID，此参数必填。
+     * Set 源站组 ID，此参数必填。
+     * @param GroupId 源站组 ID，此参数必填。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

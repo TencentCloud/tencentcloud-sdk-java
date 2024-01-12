@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServiceStatisticsResult extends AbstractModel {
 
     /**
-    * 请求模版路径:type为接口时返回，服务时不返回
+    * 请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -258,9 +258,9 @@ public class ServiceStatisticsResult extends AbstractModel {
     private String ApdexLevel;
 
     /**
-     * Get 请求模版路径:type为接口时返回，服务时不返回
+     * Get 请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path 请求模版路径:type为接口时返回，服务时不返回
+     * @return Path 请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -268,9 +268,9 @@ public class ServiceStatisticsResult extends AbstractModel {
     }
 
     /**
-     * Set 请求模版路径:type为接口时返回，服务时不返回
+     * Set 请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path 请求模版路径:type为接口时返回，服务时不返回
+     * @param Path 请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {

@@ -39,14 +39,25 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *检查用户套餐购买状态
-     * @param req CheckNewPurchaseRequest
-     * @return CheckNewPurchaseResponse
+     *根据披露策略创建选择性披露凭证
+     * @param req CreateDisclosedCredentialRequest
+     * @return CreateDisclosedCredentialResponse
      * @throws TencentCloudSDKException
      */
-    public CheckNewPurchaseResponse CheckNewPurchase(CheckNewPurchaseRequest req) throws TencentCloudSDKException{
+    public CreateDisclosedCredentialResponse CreateDisclosedCredential(CreateDisclosedCredentialRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "CheckNewPurchase", CheckNewPurchaseResponse.class);
+        return this.internalRequest(req, "CreateDisclosedCredential", CreateDisclosedCredentialResponse.class);
+    }
+
+    /**
+     *创建凭证持有人的可验证表达
+     * @param req CreatePresentationRequest
+     * @return CreatePresentationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePresentationResponse CreatePresentation(CreatePresentationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePresentation", CreatePresentationResponse.class);
     }
 
     /**
@@ -83,6 +94,17 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
+     *获取某个应用关键指标统计数据
+     * @param req GetAppSummaryRequest
+     * @return GetAppSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAppSummaryResponse GetAppSummary(GetAppSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAppSummary", GetAppSummaryResponse.class);
+    }
+
+    /**
      *获取凭证链上状态信息
      * @param req GetCredentialStateRequest
      * @return GetCredentialStateResponse
@@ -91,6 +113,28 @@ public class TdidClient extends AbstractClient{
     public GetCredentialStateResponse GetCredentialState(GetCredentialStateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetCredentialState", GetCredentialStateResponse.class);
+    }
+
+    /**
+     *获取某个应用关键指标统计数据
+     * @param req GetOverSummaryRequest
+     * @return GetOverSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetOverSummaryResponse GetOverSummary(GetOverSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetOverSummary", GetOverSummaryResponse.class);
+    }
+
+    /**
+     *通过业务层绑定的对象ID获取DID标识
+     * @param req GetTDidByObjectIdRequest
+     * @return GetTDidByObjectIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTDidByObjectIdResponse GetTDidByObjectId(GetTDidByObjectIdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTDidByObjectId", GetTDidByObjectIdResponse.class);
     }
 
     /**
@@ -105,6 +149,17 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
+     *查询DID标识的认证公钥
+     * @param req GetTDidPubKeyRequest
+     * @return GetTDidPubKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTDidPubKeyResponse GetTDidPubKey(GetTDidPubKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTDidPubKey", GetTDidPubKeyResponse.class);
+    }
+
+    /**
      *颁发可验证凭证
      * @param req IssueCredentialRequest
      * @return IssueCredentialResponse
@@ -113,6 +168,39 @@ public class TdidClient extends AbstractClient{
     public IssueCredentialResponse IssueCredential(IssueCredentialRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IssueCredential", IssueCredentialResponse.class);
+    }
+
+    /**
+     *查询权威机构信息
+     * @param req QueryAuthorityInfoRequest
+     * @return QueryAuthorityInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryAuthorityInfoResponse QueryAuthorityInfo(QueryAuthorityInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryAuthorityInfo", QueryAuthorityInfoResponse.class);
+    }
+
+    /**
+     *查询凭证模版内容
+     * @param req QueryCPTRequest
+     * @return QueryCPTResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCPTResponse QueryCPT(QueryCPTRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryCPT", QueryCPTResponse.class);
+    }
+
+    /**
+     *设置DID文档的自定义属性
+     * @param req SetTDidAttributeRequest
+     * @return SetTDidAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetTDidAttributeResponse SetTDidAttribute(SetTDidAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetTDidAttribute", SetTDidAttributeResponse.class);
     }
 
     /**
@@ -135,6 +223,17 @@ public class TdidClient extends AbstractClient{
     public VerifyCredentialsResponse VerifyCredentials(VerifyCredentialsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "VerifyCredentials", VerifyCredentialsResponse.class);
+    }
+
+    /**
+     *验证可验证表达的内容
+     * @param req VerifyPresentationRequest
+     * @return VerifyPresentationResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyPresentationResponse VerifyPresentation(VerifyPresentationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyPresentation", VerifyPresentationResponse.class);
     }
 
 }

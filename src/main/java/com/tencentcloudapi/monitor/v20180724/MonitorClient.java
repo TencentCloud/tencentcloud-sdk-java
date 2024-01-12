@@ -195,6 +195,20 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *创建Prometheus告警规则分组
+
+告警分组中可包含多条告警规则，分组内告警消息通过告警分组的通知模板发送。
+支持单个告警分组下分别创建启用/禁用的告警规则。
+     * @param req CreatePrometheusAlertGroupRequest
+     * @return CreatePrometheusAlertGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusAlertGroupResponse CreatePrometheusAlertGroup(CreatePrometheusAlertGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrometheusAlertGroup", CreatePrometheusAlertGroupResponse.class);
+    }
+
+    /**
      *创建 Prometheus 告警策略(将逐步废弃，建议使用 CreatePrometheusAlertGroup 创建告警策略)
      * @param req CreatePrometheusAlertPolicyRequest
      * @return CreatePrometheusAlertPolicyResponse
@@ -403,6 +417,17 @@ public class MonitorClient extends AbstractClient{
     public DeletePolicyGroupResponse DeletePolicyGroup(DeletePolicyGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePolicyGroup", DeletePolicyGroupResponse.class);
+    }
+
+    /**
+     *删除Prometheus告警规则分组
+     * @param req DeletePrometheusAlertGroupsRequest
+     * @return DeletePrometheusAlertGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusAlertGroupsResponse DeletePrometheusAlertGroups(DeletePrometheusAlertGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePrometheusAlertGroups", DeletePrometheusAlertGroupsResponse.class);
     }
 
     /**
@@ -902,6 +927,17 @@ public class MonitorClient extends AbstractClient{
     public DescribePrometheusAgentsResponse DescribePrometheusAgents(DescribePrometheusAgentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePrometheusAgents", DescribePrometheusAgentsResponse.class);
+    }
+
+    /**
+     *查询给定prometheus下的告警分组
+     * @param req DescribePrometheusAlertGroupsRequest
+     * @return DescribePrometheusAlertGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusAlertGroupsResponse DescribePrometheusAlertGroups(DescribePrometheusAlertGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrometheusAlertGroups", DescribePrometheusAlertGroupsResponse.class);
     }
 
     /**
@@ -1643,6 +1679,28 @@ public class MonitorClient extends AbstractClient{
     public UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatus(UpdatePrometheusAgentStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdatePrometheusAgentStatus", UpdatePrometheusAgentStatusResponse.class);
+    }
+
+    /**
+     *更新Prometheus告警规则分组
+     * @param req UpdatePrometheusAlertGroupRequest
+     * @return UpdatePrometheusAlertGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePrometheusAlertGroupResponse UpdatePrometheusAlertGroup(UpdatePrometheusAlertGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePrometheusAlertGroup", UpdatePrometheusAlertGroupResponse.class);
+    }
+
+    /**
+     *批量更新告警分组状态，将分组中全部告警规则更新为目标状态
+     * @param req UpdatePrometheusAlertGroupStateRequest
+     * @return UpdatePrometheusAlertGroupStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePrometheusAlertGroupStateResponse UpdatePrometheusAlertGroupState(UpdatePrometheusAlertGroupStateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePrometheusAlertGroupState", UpdatePrometheusAlertGroupStateResponse.class);
     }
 
     /**

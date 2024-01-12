@@ -25,6 +25,7 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
     * NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Server")
     @Expose
@@ -32,6 +33,7 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
     * Server路径
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -39,6 +41,7 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
     * 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnly")
     @Expose
@@ -46,6 +49,7 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
     * secret名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretName")
     @Expose
@@ -53,14 +57,17 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
     * 临时目录
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableEmptyDirVolume")
     @Expose
     private Boolean EnableEmptyDirVolume;
 
     /**
-     * Get NFS挂载Server 
+     * Get NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Server NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServer() {
         return this.Server;
@@ -68,15 +75,19 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
      * Set NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Server NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServer(String Server) {
         this.Server = Server;
     }
 
     /**
-     * Get Server路径 
+     * Get Server路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Path Server路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -84,15 +95,19 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
      * Set Server路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Path Server路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 是否只读 
+     * Get 是否只读
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReadOnly 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
@@ -100,15 +115,19 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
      * Set 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnly 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get secret名称 
+     * Get secret名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecretName secret名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretName() {
         return this.SecretName;
@@ -116,15 +135,19 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
      * Set secret名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretName secret名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 临时目录 
+     * Get 临时目录
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnableEmptyDirVolume 临时目录
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableEmptyDirVolume() {
         return this.EnableEmptyDirVolume;
@@ -132,7 +155,9 @@ public class CloudBaseRunNfsVolumeSource extends AbstractModel {
 
     /**
      * Set 临时目录
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableEmptyDirVolume 临时目录
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableEmptyDirVolume(Boolean EnableEmptyDirVolume) {
         this.EnableEmptyDirVolume = EnableEmptyDirVolume;

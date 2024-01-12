@@ -1075,6 +1075,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *导出RocketMQ消息详情
+     * @param req ExportRocketMQMessageDetailRequest
+     * @return ExportRocketMQMessageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetail(ExportRocketMQMessageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportRocketMQMessageDetail", ExportRocketMQMessageDetailResponse.class);
+    }
+
+    /**
      *输入迁移任务id和要导入的Group，导入后台
      * @param req ImportRocketMQConsumerGroupsRequest
      * @return ImportRocketMQConsumerGroupsResponse

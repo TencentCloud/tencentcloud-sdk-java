@@ -47,6 +47,20 @@ public class GetEidResultRequest extends AbstractModel {
     private Long BestFramesCount;
 
     /**
+    * 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+    */
+    @SerializedName("IsCutIdCardImage")
+    @Expose
+    private Boolean IsCutIdCardImage;
+
+    /**
+    * 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+    */
+    @SerializedName("IsNeedIdCardAvatar")
+    @Expose
+    private Boolean IsNeedIdCardAvatar;
+
+    /**
      * Get E证通流程的唯一标识，调用GetEidToken接口时生成。 
      * @return EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
      */
@@ -102,6 +116,38 @@ public class GetEidResultRequest extends AbstractModel {
         this.BestFramesCount = BestFramesCount;
     }
 
+    /**
+     * Get 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2） 
+     * @return IsCutIdCardImage 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+     */
+    public Boolean getIsCutIdCardImage() {
+        return this.IsCutIdCardImage;
+    }
+
+    /**
+     * Set 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+     * @param IsCutIdCardImage 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+     */
+    public void setIsCutIdCardImage(Boolean IsCutIdCardImage) {
+        this.IsCutIdCardImage = IsCutIdCardImage;
+    }
+
+    /**
+     * Get 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2） 
+     * @return IsNeedIdCardAvatar 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+     */
+    public Boolean getIsNeedIdCardAvatar() {
+        return this.IsNeedIdCardAvatar;
+    }
+
+    /**
+     * Set 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+     * @param IsNeedIdCardAvatar 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+     */
+    public void setIsNeedIdCardAvatar(Boolean IsNeedIdCardAvatar) {
+        this.IsNeedIdCardAvatar = IsNeedIdCardAvatar;
+    }
+
     public GetEidResultRequest() {
     }
 
@@ -119,6 +165,12 @@ public class GetEidResultRequest extends AbstractModel {
         if (source.BestFramesCount != null) {
             this.BestFramesCount = new Long(source.BestFramesCount);
         }
+        if (source.IsCutIdCardImage != null) {
+            this.IsCutIdCardImage = new Boolean(source.IsCutIdCardImage);
+        }
+        if (source.IsNeedIdCardAvatar != null) {
+            this.IsNeedIdCardAvatar = new Boolean(source.IsNeedIdCardAvatar);
+        }
     }
 
 
@@ -129,6 +181,8 @@ public class GetEidResultRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EidToken", this.EidToken);
         this.setParamSimple(map, prefix + "InfoType", this.InfoType);
         this.setParamSimple(map, prefix + "BestFramesCount", this.BestFramesCount);
+        this.setParamSimple(map, prefix + "IsCutIdCardImage", this.IsCutIdCardImage);
+        this.setParamSimple(map, prefix + "IsNeedIdCardAvatar", this.IsNeedIdCardAvatar);
 
     }
 }
