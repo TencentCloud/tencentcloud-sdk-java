@@ -1729,19 +1729,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *没用到
-
-获取kafka的topic信息
-     * @param req DescribeKafkaTopicInfoRequest
-     * @return DescribeKafkaTopicInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeKafkaTopicInfoResponse DescribeKafkaTopicInfo(DescribeKafkaTopicInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeKafkaTopicInfo", DescribeKafkaTopicInfoResponse.class);
-    }
-
-    /**
      *分页查询质量监控组
      * @param req DescribeMonitorsByPageRequest
      * @return DescribeMonitorsByPageResponse

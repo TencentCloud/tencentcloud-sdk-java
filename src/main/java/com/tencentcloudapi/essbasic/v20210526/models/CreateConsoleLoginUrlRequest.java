@@ -110,7 +110,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
-<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li></ul>
+<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
+<li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
+<li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
     */
     @SerializedName("Endpoint")
     @Expose
@@ -145,6 +147,22 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 子客经办人身份证
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+    */
+    @SerializedName("ProxyOperatorIdCardNumber")
+    @Expose
+    private String ProxyOperatorIdCardNumber;
+
+    /**
+    * 认证完成跳转链接
+注意：`只在H5生效，域名需要联系我们开白`。
+    */
+    @SerializedName("AutoJumpUrl")
+    @Expose
+    private String AutoJumpUrl;
 
     /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
@@ -395,12 +413,16 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
-<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li></ul> 
+<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
+<li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
+<li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul> 
      * @return Endpoint 生成链接的类型：
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
-<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li></ul>
+<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
+<li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
+<li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
      */
     public String getEndpoint() {
         return this.Endpoint;
@@ -411,12 +433,16 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
-<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li></ul>
+<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
+<li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
+<li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
      * @param Endpoint 生成链接的类型：
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
-<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li></ul>
+<li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
+<li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
+<li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
@@ -510,6 +536,46 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 子客经办人身份证
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。 
+     * @return ProxyOperatorIdCardNumber 子客经办人身份证
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+     */
+    public String getProxyOperatorIdCardNumber() {
+        return this.ProxyOperatorIdCardNumber;
+    }
+
+    /**
+     * Set 子客经办人身份证
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+     * @param ProxyOperatorIdCardNumber 子客经办人身份证
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+     */
+    public void setProxyOperatorIdCardNumber(String ProxyOperatorIdCardNumber) {
+        this.ProxyOperatorIdCardNumber = ProxyOperatorIdCardNumber;
+    }
+
+    /**
+     * Get 认证完成跳转链接
+注意：`只在H5生效，域名需要联系我们开白`。 
+     * @return AutoJumpUrl 认证完成跳转链接
+注意：`只在H5生效，域名需要联系我们开白`。
+     */
+    public String getAutoJumpUrl() {
+        return this.AutoJumpUrl;
+    }
+
+    /**
+     * Set 认证完成跳转链接
+注意：`只在H5生效，域名需要联系我们开白`。
+     * @param AutoJumpUrl 认证完成跳转链接
+注意：`只在H5生效，域名需要联系我们开白`。
+     */
+    public void setAutoJumpUrl(String AutoJumpUrl) {
+        this.AutoJumpUrl = AutoJumpUrl;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -554,6 +620,12 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.ProxyOperatorIdCardNumber != null) {
+            this.ProxyOperatorIdCardNumber = new String(source.ProxyOperatorIdCardNumber);
+        }
+        if (source.AutoJumpUrl != null) {
+            this.AutoJumpUrl = new String(source.AutoJumpUrl);
+        }
     }
 
 
@@ -572,6 +644,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
         this.setParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "ProxyOperatorIdCardNumber", this.ProxyOperatorIdCardNumber);
+        this.setParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
 
     }
 }

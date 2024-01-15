@@ -33,17 +33,6 @@ public class CreateFlowSignUrlRequest extends AbstractModel {
     private String FlowId;
 
     /**
-    * 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
-    */
-    @SerializedName("FlowApproverInfos")
-    @Expose
-    private FlowCreateApprover [] FlowApproverInfos;
-
-    /**
     * 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
     */
@@ -60,6 +49,17 @@ public class CreateFlowSignUrlRequest extends AbstractModel {
     private Agent Agent;
 
     /**
+    * 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+    */
+    @SerializedName("FlowApproverInfos")
+    @Expose
+    private FlowCreateApprover [] FlowApproverInfos;
+
+    /**
     * 机构信息，暂未开放
     */
     @SerializedName("Organization")
@@ -72,6 +72,18 @@ public class CreateFlowSignUrlRequest extends AbstractModel {
     @SerializedName("JumpUrl")
     @Expose
     private String JumpUrl;
+
+    /**
+    * 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+    */
+    @SerializedName("UrlType")
+    @Expose
+    private Long UrlType;
 
     /**
      * Get 合同流程ID，为32位字符串。
@@ -95,38 +107,6 @@ public class CreateFlowSignUrlRequest extends AbstractModel {
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
-    }
-
-    /**
-     * Get 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。` 
-     * @return FlowApproverInfos 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
-     */
-    public FlowCreateApprover [] getFlowApproverInfos() {
-        return this.FlowApproverInfos;
-    }
-
-    /**
-     * Set 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
-     * @param FlowApproverInfos 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
-     */
-    public void setFlowApproverInfos(FlowCreateApprover [] FlowApproverInfos) {
-        this.FlowApproverInfos = FlowApproverInfos;
     }
 
     /**
@@ -170,6 +150,38 @@ public class CreateFlowSignUrlRequest extends AbstractModel {
     }
 
     /**
+     * Get 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传` 
+     * @return FlowApproverInfos 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+     */
+    public FlowCreateApprover [] getFlowApproverInfos() {
+        return this.FlowApproverInfos;
+    }
+
+    /**
+     * Set 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+     * @param FlowApproverInfos 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+     */
+    public void setFlowApproverInfos(FlowCreateApprover [] FlowApproverInfos) {
+        this.FlowApproverInfos = FlowApproverInfos;
+    }
+
+    /**
      * Get 机构信息，暂未开放 
      * @return Organization 机构信息，暂未开放
      * @deprecated
@@ -205,6 +217,42 @@ public class CreateFlowSignUrlRequest extends AbstractModel {
         this.JumpUrl = JumpUrl;
     }
 
+    /**
+     * Get 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。` 
+     * @return UrlType 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+     */
+    public Long getUrlType() {
+        return this.UrlType;
+    }
+
+    /**
+     * Set 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+     * @param UrlType 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+     */
+    public void setUrlType(Long UrlType) {
+        this.UrlType = UrlType;
+    }
+
     public CreateFlowSignUrlRequest() {
     }
 
@@ -216,23 +264,26 @@ public class CreateFlowSignUrlRequest extends AbstractModel {
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
-        if (source.FlowApproverInfos != null) {
-            this.FlowApproverInfos = new FlowCreateApprover[source.FlowApproverInfos.length];
-            for (int i = 0; i < source.FlowApproverInfos.length; i++) {
-                this.FlowApproverInfos[i] = new FlowCreateApprover(source.FlowApproverInfos[i]);
-            }
-        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.FlowApproverInfos != null) {
+            this.FlowApproverInfos = new FlowCreateApprover[source.FlowApproverInfos.length];
+            for (int i = 0; i < source.FlowApproverInfos.length; i++) {
+                this.FlowApproverInfos[i] = new FlowCreateApprover(source.FlowApproverInfos[i]);
+            }
+        }
         if (source.Organization != null) {
             this.Organization = new OrganizationInfo(source.Organization);
         }
         if (source.JumpUrl != null) {
             this.JumpUrl = new String(source.JumpUrl);
+        }
+        if (source.UrlType != null) {
+            this.UrlType = new Long(source.UrlType);
         }
     }
 
@@ -242,11 +293,12 @@ public class CreateFlowSignUrlRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+        this.setParamSimple(map, prefix + "UrlType", this.UrlType);
 
     }
 }

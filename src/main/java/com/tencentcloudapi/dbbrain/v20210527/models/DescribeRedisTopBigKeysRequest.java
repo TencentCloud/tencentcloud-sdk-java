@@ -66,6 +66,20 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 异步任务ID。当为空时，选择最近任务的ID。
+    */
+    @SerializedName("AsyncRequestId")
+    @Expose
+    private Long AsyncRequestId;
+
+    /**
+    * 分片节点序号列表。当列表为空时，选择所有分片节点。
+    */
+    @SerializedName("ShardIds")
+    @Expose
+    private Long [] ShardIds;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -161,6 +175,38 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 异步任务ID。当为空时，选择最近任务的ID。 
+     * @return AsyncRequestId 异步任务ID。当为空时，选择最近任务的ID。
+     */
+    public Long getAsyncRequestId() {
+        return this.AsyncRequestId;
+    }
+
+    /**
+     * Set 异步任务ID。当为空时，选择最近任务的ID。
+     * @param AsyncRequestId 异步任务ID。当为空时，选择最近任务的ID。
+     */
+    public void setAsyncRequestId(Long AsyncRequestId) {
+        this.AsyncRequestId = AsyncRequestId;
+    }
+
+    /**
+     * Get 分片节点序号列表。当列表为空时，选择所有分片节点。 
+     * @return ShardIds 分片节点序号列表。当列表为空时，选择所有分片节点。
+     */
+    public Long [] getShardIds() {
+        return this.ShardIds;
+    }
+
+    /**
+     * Set 分片节点序号列表。当列表为空时，选择所有分片节点。
+     * @param ShardIds 分片节点序号列表。当列表为空时，选择所有分片节点。
+     */
+    public void setShardIds(Long [] ShardIds) {
+        this.ShardIds = ShardIds;
+    }
+
     public DescribeRedisTopBigKeysRequest() {
     }
 
@@ -187,6 +233,15 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.AsyncRequestId != null) {
+            this.AsyncRequestId = new Long(source.AsyncRequestId);
+        }
+        if (source.ShardIds != null) {
+            this.ShardIds = new Long[source.ShardIds.length];
+            for (int i = 0; i < source.ShardIds.length; i++) {
+                this.ShardIds[i] = new Long(source.ShardIds[i]);
+            }
+        }
     }
 
 
@@ -200,6 +255,8 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
         this.setParamSimple(map, prefix + "KeyType", this.KeyType);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
 
     }
 }

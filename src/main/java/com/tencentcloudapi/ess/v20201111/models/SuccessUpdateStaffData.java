@@ -46,6 +46,15 @@ public class SuccessUpdateStaffData extends AbstractModel {
     private String UserId;
 
     /**
+    * H5端员工实名链接
+
+只有入参 InvitationNotifyType = H5的时候才会进行返回。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
      * Get 传入的用户名称 
      * @return DisplayName 传入的用户名称
      */
@@ -97,6 +106,30 @@ public class SuccessUpdateStaffData extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get H5端员工实名链接
+
+只有入参 InvitationNotifyType = H5的时候才会进行返回。 
+     * @return Url H5端员工实名链接
+
+只有入参 InvitationNotifyType = H5的时候才会进行返回。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set H5端员工实名链接
+
+只有入参 InvitationNotifyType = H5的时候才会进行返回。
+     * @param Url H5端员工实名链接
+
+只有入参 InvitationNotifyType = H5的时候才会进行返回。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public SuccessUpdateStaffData() {
     }
 
@@ -114,6 +147,9 @@ public class SuccessUpdateStaffData extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -124,6 +160,7 @@ public class SuccessUpdateStaffData extends AbstractModel {
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

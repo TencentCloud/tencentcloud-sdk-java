@@ -46,6 +46,14 @@ public class InstanceConfs extends AbstractModel {
     private String [] KeyDelimiters;
 
     /**
+    * 分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShardNum")
+    @Expose
+    private String ShardNum;
+
+    /**
      * Get 数据库巡检开关, Yes/No。 
      * @return DailyInspection 数据库巡检开关, Yes/No。
      */
@@ -97,6 +105,26 @@ public class InstanceConfs extends AbstractModel {
         this.KeyDelimiters = KeyDelimiters;
     }
 
+    /**
+     * Get 分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShardNum 分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getShardNum() {
+        return this.ShardNum;
+    }
+
+    /**
+     * Set 分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShardNum 分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShardNum(String ShardNum) {
+        this.ShardNum = ShardNum;
+    }
+
     public InstanceConfs() {
     }
 
@@ -117,6 +145,9 @@ public class InstanceConfs extends AbstractModel {
                 this.KeyDelimiters[i] = new String(source.KeyDelimiters[i]);
             }
         }
+        if (source.ShardNum != null) {
+            this.ShardNum = new String(source.ShardNum);
+        }
     }
 
 
@@ -127,6 +158,7 @@ public class InstanceConfs extends AbstractModel {
         this.setParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
         this.setParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
         this.setParamArraySimple(map, prefix + "KeyDelimiters.", this.KeyDelimiters);
+        this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
 
     }
 }

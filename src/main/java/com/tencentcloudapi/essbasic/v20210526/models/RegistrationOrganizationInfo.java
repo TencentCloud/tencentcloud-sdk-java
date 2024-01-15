@@ -103,6 +103,24 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     private Long [] AuthorizationTypes;
 
     /**
+    * 经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+
+    */
+    @SerializedName("AdminIdCardType")
+    @Expose
+    private String AdminIdCardType;
+
+    /**
+    * 经办人的证件号
+    */
+    @SerializedName("AdminIdCardNumber")
+    @Expose
+    private String AdminIdCardNumber;
+
+    /**
      * Get 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。 
@@ -310,6 +328,54 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         this.AuthorizationTypes = AuthorizationTypes;
     }
 
+    /**
+     * Get 经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+ 
+     * @return AdminIdCardType 经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+
+     */
+    public String getAdminIdCardType() {
+        return this.AdminIdCardType;
+    }
+
+    /**
+     * Set 经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+
+     * @param AdminIdCardType 经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+
+     */
+    public void setAdminIdCardType(String AdminIdCardType) {
+        this.AdminIdCardType = AdminIdCardType;
+    }
+
+    /**
+     * Get 经办人的证件号 
+     * @return AdminIdCardNumber 经办人的证件号
+     */
+    public String getAdminIdCardNumber() {
+        return this.AdminIdCardNumber;
+    }
+
+    /**
+     * Set 经办人的证件号
+     * @param AdminIdCardNumber 经办人的证件号
+     */
+    public void setAdminIdCardNumber(String AdminIdCardNumber) {
+        this.AdminIdCardNumber = AdminIdCardNumber;
+    }
+
     public RegistrationOrganizationInfo() {
     }
 
@@ -348,6 +414,12 @@ public class RegistrationOrganizationInfo extends AbstractModel {
                 this.AuthorizationTypes[i] = new Long(source.AuthorizationTypes[i]);
             }
         }
+        if (source.AdminIdCardType != null) {
+            this.AdminIdCardType = new String(source.AdminIdCardType);
+        }
+        if (source.AdminIdCardNumber != null) {
+            this.AdminIdCardNumber = new String(source.AdminIdCardNumber);
+        }
     }
 
 
@@ -364,6 +436,8 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AdminName", this.AdminName);
         this.setParamSimple(map, prefix + "AdminMobile", this.AdminMobile);
         this.setParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
+        this.setParamSimple(map, prefix + "AdminIdCardType", this.AdminIdCardType);
+        this.setParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
 
     }
 }

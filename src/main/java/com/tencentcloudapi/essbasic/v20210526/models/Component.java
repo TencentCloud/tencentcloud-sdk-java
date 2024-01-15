@@ -58,8 +58,9 @@ public class Component extends AbstractModel {
 <li> <b>DATE</b> : 日期控件；默认是格式化为xxxx年xx月xx日字符串；</li>
 <li> <b>DISTRICT</b> : 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；</li></ul>
 
-**如果是SignComponent签署控件类型，则可选的字段为**
-
+**如果是SignComponent签署控件类型，
+需要根据签署人的类型可选的字段为**
+* 企业方
 <ul><li> <b>SIGN_SEAL</b> : 签署印章控件；</li>
 <li> <b>SIGN_DATE</b> : 签署日期控件；</li>
 <li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
@@ -67,6 +68,12 @@ public class Component extends AbstractModel {
 <li> <b>SIGN_PAGING_SEAL</b> : 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight</li>
 <li> <b>SIGN_OPINION</b> : 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认；</li>
 <li> <b>SIGN_LEGAL_PERSON_SEAL</b> : 企业法定代表人控件。</li></ul>
+
+* 个人方
+<ul><li> <b>SIGN_DATE</b> : 签署日期控件；</li>
+<li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
+<li> <b>SIGN_PERSONAL_SEAL</b> : 个人签署印章控件（使用文件发起暂不支持此类型）；</li></ul>
+ 
 注：` 表单域的控件不能作为印章和签名控件`
     */
     @SerializedName("ComponentType")
@@ -431,8 +438,9 @@ public class Component extends AbstractModel {
 <li> <b>DATE</b> : 日期控件；默认是格式化为xxxx年xx月xx日字符串；</li>
 <li> <b>DISTRICT</b> : 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；</li></ul>
 
-**如果是SignComponent签署控件类型，则可选的字段为**
-
+**如果是SignComponent签署控件类型，
+需要根据签署人的类型可选的字段为**
+* 企业方
 <ul><li> <b>SIGN_SEAL</b> : 签署印章控件；</li>
 <li> <b>SIGN_DATE</b> : 签署日期控件；</li>
 <li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
@@ -440,6 +448,12 @@ public class Component extends AbstractModel {
 <li> <b>SIGN_PAGING_SEAL</b> : 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight</li>
 <li> <b>SIGN_OPINION</b> : 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认；</li>
 <li> <b>SIGN_LEGAL_PERSON_SEAL</b> : 企业法定代表人控件。</li></ul>
+
+* 个人方
+<ul><li> <b>SIGN_DATE</b> : 签署日期控件；</li>
+<li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
+<li> <b>SIGN_PERSONAL_SEAL</b> : 个人签署印章控件（使用文件发起暂不支持此类型）；</li></ul>
+ 
 注：` 表单域的控件不能作为印章和签名控件` 
      * @return ComponentType **如果是Component填写控件类型，则可选的字段为**：
 
@@ -453,8 +467,9 @@ public class Component extends AbstractModel {
 <li> <b>DATE</b> : 日期控件；默认是格式化为xxxx年xx月xx日字符串；</li>
 <li> <b>DISTRICT</b> : 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；</li></ul>
 
-**如果是SignComponent签署控件类型，则可选的字段为**
-
+**如果是SignComponent签署控件类型，
+需要根据签署人的类型可选的字段为**
+* 企业方
 <ul><li> <b>SIGN_SEAL</b> : 签署印章控件；</li>
 <li> <b>SIGN_DATE</b> : 签署日期控件；</li>
 <li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
@@ -462,6 +477,12 @@ public class Component extends AbstractModel {
 <li> <b>SIGN_PAGING_SEAL</b> : 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight</li>
 <li> <b>SIGN_OPINION</b> : 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认；</li>
 <li> <b>SIGN_LEGAL_PERSON_SEAL</b> : 企业法定代表人控件。</li></ul>
+
+* 个人方
+<ul><li> <b>SIGN_DATE</b> : 签署日期控件；</li>
+<li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
+<li> <b>SIGN_PERSONAL_SEAL</b> : 个人签署印章控件（使用文件发起暂不支持此类型）；</li></ul>
+ 
 注：` 表单域的控件不能作为印章和签名控件`
      */
     public String getComponentType() {
@@ -481,8 +502,9 @@ public class Component extends AbstractModel {
 <li> <b>DATE</b> : 日期控件；默认是格式化为xxxx年xx月xx日字符串；</li>
 <li> <b>DISTRICT</b> : 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；</li></ul>
 
-**如果是SignComponent签署控件类型，则可选的字段为**
-
+**如果是SignComponent签署控件类型，
+需要根据签署人的类型可选的字段为**
+* 企业方
 <ul><li> <b>SIGN_SEAL</b> : 签署印章控件；</li>
 <li> <b>SIGN_DATE</b> : 签署日期控件；</li>
 <li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
@@ -490,6 +512,12 @@ public class Component extends AbstractModel {
 <li> <b>SIGN_PAGING_SEAL</b> : 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight</li>
 <li> <b>SIGN_OPINION</b> : 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认；</li>
 <li> <b>SIGN_LEGAL_PERSON_SEAL</b> : 企业法定代表人控件。</li></ul>
+
+* 个人方
+<ul><li> <b>SIGN_DATE</b> : 签署日期控件；</li>
+<li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
+<li> <b>SIGN_PERSONAL_SEAL</b> : 个人签署印章控件（使用文件发起暂不支持此类型）；</li></ul>
+ 
 注：` 表单域的控件不能作为印章和签名控件`
      * @param ComponentType **如果是Component填写控件类型，则可选的字段为**：
 
@@ -503,8 +531,9 @@ public class Component extends AbstractModel {
 <li> <b>DATE</b> : 日期控件；默认是格式化为xxxx年xx月xx日字符串；</li>
 <li> <b>DISTRICT</b> : 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；</li></ul>
 
-**如果是SignComponent签署控件类型，则可选的字段为**
-
+**如果是SignComponent签署控件类型，
+需要根据签署人的类型可选的字段为**
+* 企业方
 <ul><li> <b>SIGN_SEAL</b> : 签署印章控件；</li>
 <li> <b>SIGN_DATE</b> : 签署日期控件；</li>
 <li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
@@ -512,6 +541,12 @@ public class Component extends AbstractModel {
 <li> <b>SIGN_PAGING_SEAL</b> : 骑缝章；若文件发起，需要对应填充ComponentPosY、ComponentWidth、ComponentHeight</li>
 <li> <b>SIGN_OPINION</b> : 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认；</li>
 <li> <b>SIGN_LEGAL_PERSON_SEAL</b> : 企业法定代表人控件。</li></ul>
+
+* 个人方
+<ul><li> <b>SIGN_DATE</b> : 签署日期控件；</li>
+<li> <b>SIGN_SIGNATURE</b> : 用户签名控件；</li>
+<li> <b>SIGN_PERSONAL_SEAL</b> : 个人签署印章控件（使用文件发起暂不支持此类型）；</li></ul>
+ 
 注：` 表单域的控件不能作为印章和签名控件`
      */
     public void setComponentType(String ComponentType) {

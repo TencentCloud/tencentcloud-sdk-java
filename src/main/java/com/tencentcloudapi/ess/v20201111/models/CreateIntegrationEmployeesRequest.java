@@ -49,6 +49,25 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel {
     private Agent Agent;
 
     /**
+    * 员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递
+    */
+    @SerializedName("InvitationNotifyType")
+    @Expose
+    private String InvitationNotifyType;
+
+    /**
+    * 回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置
+
+    */
+    @SerializedName("JumpUrl")
+    @Expose
+    private String JumpUrl;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
@@ -112,6 +131,58 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递 
+     * @return InvitationNotifyType 员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递
+     */
+    public String getInvitationNotifyType() {
+        return this.InvitationNotifyType;
+    }
+
+    /**
+     * Set 员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递
+     * @param InvitationNotifyType 员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递
+     */
+    public void setInvitationNotifyType(String InvitationNotifyType) {
+        this.InvitationNotifyType = InvitationNotifyType;
+    }
+
+    /**
+     * Get 回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置
+ 
+     * @return JumpUrl 回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置
+
+     */
+    public String getJumpUrl() {
+        return this.JumpUrl;
+    }
+
+    /**
+     * Set 回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置
+
+     * @param JumpUrl 回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置
+
+     */
+    public void setJumpUrl(String JumpUrl) {
+        this.JumpUrl = JumpUrl;
+    }
+
     public CreateIntegrationEmployeesRequest() {
     }
 
@@ -132,6 +203,12 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.InvitationNotifyType != null) {
+            this.InvitationNotifyType = new String(source.InvitationNotifyType);
+        }
+        if (source.JumpUrl != null) {
+            this.JumpUrl = new String(source.JumpUrl);
+        }
     }
 
 
@@ -142,6 +219,8 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "Employees.", this.Employees);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "InvitationNotifyType", this.InvitationNotifyType);
+        this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
 
     }
 }
