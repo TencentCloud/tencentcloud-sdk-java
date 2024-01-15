@@ -52,7 +52,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
     private String PolicyName;
 
     /**
-    * 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
+    * 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
     */
     @SerializedName("MonitorTypes")
     @Expose
@@ -60,7 +60,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
 
     /**
     * 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
     */
     @SerializedName("Namespaces")
     @Expose
@@ -279,16 +279,16 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
     }
 
     /**
-     * Get 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 
-     * @return MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
+     * Get 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项 
+     * @return MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
      */
     public String [] getMonitorTypes() {
         return this.MonitorTypes;
     }
 
     /**
-     * Set 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
-     * @param MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
+     * Set 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
+     * @param MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控,当Dimension不为空时，该项为必填项
      */
     public void setMonitorTypes(String [] MonitorTypes) {
         this.MonitorTypes = MonitorTypes;
@@ -296,9 +296,9 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
 
     /**
      * Get 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397) 
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项 
      * @return Namespaces 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
      */
     public String [] getNamespaces() {
         return this.Namespaces;
@@ -306,9 +306,9 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel {
 
     /**
      * Set 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
      * @param Namespaces 根据命名空间过滤，不同策略类型的值详见
-[策略类型列表](https://cloud.tencent.com/document/product/248/50397)
+[策略类型列表](https://cloud.tencent.com/document/product/248/50397)当Dimension不为空时，该项为必填项
      */
     public void setNamespaces(String [] Namespaces) {
         this.Namespaces = Namespaces;

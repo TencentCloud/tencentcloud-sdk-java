@@ -45,6 +45,7 @@ public class ApplicationProxyRule extends AbstractModel {
     /**
     * 源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li>
     */
     @SerializedName("OriginType")
@@ -54,6 +55,7 @@ public class ApplicationProxyRule extends AbstractModel {
     /**
     * 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
     */
     @SerializedName("OriginValue")
@@ -179,9 +181,11 @@ public class ApplicationProxyRule extends AbstractModel {
     /**
      * Get 源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li> 
      * @return OriginType 源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li>
      */
     public String getOriginType() {
@@ -191,9 +195,11 @@ public class ApplicationProxyRule extends AbstractModel {
     /**
      * Set 源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li>
      * @param OriginType 源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li>
      */
     public void setOriginType(String OriginType) {
@@ -203,9 +209,11 @@ public class ApplicationProxyRule extends AbstractModel {
     /**
      * Get 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li> 
      * @return OriginValue 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      */
     public String [] getOriginValue() {
@@ -215,9 +223,11 @@ public class ApplicationProxyRule extends AbstractModel {
     /**
      * Set 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      * @param OriginValue 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      */
     public void setOriginValue(String [] OriginValue) {

@@ -66,9 +66,7 @@ public class CreateApplicationProxyRequest extends AbstractModel {
     private Long AccelerateType;
 
     /**
-    * 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。
+    * 四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。
     */
     @SerializedName("ProxyType")
     @Expose
@@ -214,24 +212,16 @@ public class CreateApplicationProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。 
-     * @return ProxyType 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。
+     * Get 四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。 
+     * @return ProxyType 四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。
      */
     public String getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。
-     * @param ProxyType 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。
+     * Set 四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。
+     * @param ProxyType 四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;

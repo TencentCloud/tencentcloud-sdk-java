@@ -88,6 +88,14 @@ public class LaneInfo extends AbstractModel {
     private String [] NamespaceIdList;
 
     /**
+    * 泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LaneGroupId")
+    @Expose
+    private String LaneGroupId;
+
+    /**
      * Get 泳道ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LaneId 泳道ID
@@ -247,6 +255,26 @@ public class LaneInfo extends AbstractModel {
         this.NamespaceIdList = NamespaceIdList;
     }
 
+    /**
+     * Get 泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LaneGroupId 泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLaneGroupId() {
+        return this.LaneGroupId;
+    }
+
+    /**
+     * Set 泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LaneGroupId 泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLaneGroupId(String LaneGroupId) {
+        this.LaneGroupId = LaneGroupId;
+    }
+
     public LaneInfo() {
     }
 
@@ -285,6 +313,9 @@ public class LaneInfo extends AbstractModel {
                 this.NamespaceIdList[i] = new String(source.NamespaceIdList[i]);
             }
         }
+        if (source.LaneGroupId != null) {
+            this.LaneGroupId = new String(source.LaneGroupId);
+        }
     }
 
 
@@ -300,6 +331,7 @@ public class LaneInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "LaneGroupList.", this.LaneGroupList);
         this.setParamSimple(map, prefix + "Entrance", this.Entrance);
         this.setParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
+        this.setParamSimple(map, prefix + "LaneGroupId", this.LaneGroupId);
 
     }
 }
