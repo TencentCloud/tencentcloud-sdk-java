@@ -171,6 +171,14 @@ public class ShipperInfo extends AbstractModel {
     private Long HistoryStatus;
 
     /**
+    * cos桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get 投递规则ID 
      * @return ShipperId 投递规则ID
      */
@@ -530,6 +538,26 @@ public class ShipperInfo extends AbstractModel {
         this.HistoryStatus = HistoryStatus;
     }
 
+    /**
+     * Get cos桶类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageType cos桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set cos桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageType cos桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public ShipperInfo() {
     }
 
@@ -598,6 +626,9 @@ public class ShipperInfo extends AbstractModel {
         if (source.HistoryStatus != null) {
             this.HistoryStatus = new Long(source.HistoryStatus);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -624,6 +655,7 @@ public class ShipperInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "RemainTime", this.RemainTime);
         this.setParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

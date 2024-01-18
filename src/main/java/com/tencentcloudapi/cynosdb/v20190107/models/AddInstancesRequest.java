@@ -52,7 +52,7 @@ public class AddInstancesRequest extends AbstractModel {
     private Long ReadOnlyCount;
 
     /**
-    * 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
+    * 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
     */
     @SerializedName("InstanceGrpId")
     @Expose
@@ -201,17 +201,21 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。 
-     * @return InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
+     * Get 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。 
+     * @return InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceGrpId() {
         return this.InstanceGrpId;
     }
 
     /**
-     * Set 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
-     * @param InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
+     * Set 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * @param InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceGrpId(String InstanceGrpId) {
         this.InstanceGrpId = InstanceGrpId;
     }

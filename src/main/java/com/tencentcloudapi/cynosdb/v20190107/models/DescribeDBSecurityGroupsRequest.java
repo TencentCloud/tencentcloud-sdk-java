@@ -24,26 +24,53 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
+    * 实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。 
-     * @return InstanceId 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
+    * 实例组ID
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private String InstanceGroupId;
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
-     * @param InstanceId 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 实例组ID 
+     * @return InstanceGroupId 实例组ID
+     */
+    public String getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set 实例组ID
+     * @param InstanceGroupId 实例组ID
+     */
+    public void setInstanceGroupId(String InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
     }
 
     public DescribeDBSecurityGroupsRequest() {
@@ -57,6 +84,9 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new String(source.InstanceGroupId);
+        }
     }
 
 
@@ -65,6 +95,7 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
 
     }
 }

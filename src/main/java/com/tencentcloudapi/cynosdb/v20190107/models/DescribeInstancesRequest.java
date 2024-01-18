@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * 返回数量，默认为 20，最大值为 100
+    * 返回数量，默认为 20，取值范围为(0,100]
     */
     @SerializedName("Limit")
     @Expose
@@ -63,7 +63,7 @@ public class DescribeInstancesRequest extends AbstractModel {
     private QueryFilter [] Filters;
 
     /**
-    * 引擎类型：目前支持“MYSQL”， “POSTGRESQL”
+    * 引擎类型：目前支持“MYSQL”
     */
     @SerializedName("DbType")
     @Expose
@@ -91,16 +91,16 @@ offlined 已下线
     private String [] InstanceIds;
 
     /**
-     * Get 返回数量，默认为 20，最大值为 100 
-     * @return Limit 返回数量，默认为 20，最大值为 100
+     * Get 返回数量，默认为 20，取值范围为(0,100] 
+     * @return Limit 返回数量，默认为 20，取值范围为(0,100]
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为 20，最大值为 100
-     * @param Limit 返回数量，默认为 20，最大值为 100
+     * Set 返回数量，默认为 20，取值范围为(0,100]
+     * @param Limit 返回数量，默认为 20，取值范围为(0,100]
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -187,16 +187,16 @@ offlined 已下线
     }
 
     /**
-     * Get 引擎类型：目前支持“MYSQL”， “POSTGRESQL” 
-     * @return DbType 引擎类型：目前支持“MYSQL”， “POSTGRESQL”
+     * Get 引擎类型：目前支持“MYSQL” 
+     * @return DbType 引擎类型：目前支持“MYSQL”
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 引擎类型：目前支持“MYSQL”， “POSTGRESQL”
-     * @param DbType 引擎类型：目前支持“MYSQL”， “POSTGRESQL”
+     * Set 引擎类型：目前支持“MYSQL”
+     * @param DbType 引擎类型：目前支持“MYSQL”
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

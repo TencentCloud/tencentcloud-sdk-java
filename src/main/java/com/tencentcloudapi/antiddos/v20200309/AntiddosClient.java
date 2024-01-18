@@ -446,6 +446,17 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *高防IP获取7层规则
+     * @param req DescribeBGPIPL7RulesRequest
+     * @return DescribeBGPIPL7RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBGPIPL7RulesResponse DescribeBGPIPL7Rules(DescribeBGPIPL7RulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBGPIPL7Rules", DescribeBGPIPL7RulesResponse.class);
+    }
+
+    /**
      *获取基础防护攻击状态
      * @param req DescribeBasicDeviceStatusRequest
      * @return DescribeBasicDeviceStatusResponse

@@ -54,6 +54,14 @@ public class Ability extends AbstractModel {
     private String NonsupportRoReason;
 
     /**
+    * 是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportManualSnapshot")
+    @Expose
+    private String IsSupportManualSnapshot;
+
+    /**
      * Get 是否支持从可用区 
      * @return IsSupportSlaveZone 是否支持从可用区
      */
@@ -125,6 +133,26 @@ public class Ability extends AbstractModel {
         this.NonsupportRoReason = NonsupportRoReason;
     }
 
+    /**
+     * Get 是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportManualSnapshot 是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsSupportManualSnapshot() {
+        return this.IsSupportManualSnapshot;
+    }
+
+    /**
+     * Set 是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportManualSnapshot 是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportManualSnapshot(String IsSupportManualSnapshot) {
+        this.IsSupportManualSnapshot = IsSupportManualSnapshot;
+    }
+
     public Ability() {
     }
 
@@ -145,6 +173,9 @@ public class Ability extends AbstractModel {
         if (source.NonsupportRoReason != null) {
             this.NonsupportRoReason = new String(source.NonsupportRoReason);
         }
+        if (source.IsSupportManualSnapshot != null) {
+            this.IsSupportManualSnapshot = new String(source.IsSupportManualSnapshot);
+        }
     }
 
 
@@ -156,6 +187,7 @@ public class Ability extends AbstractModel {
         this.setParamSimple(map, prefix + "NonsupportSlaveZoneReason", this.NonsupportSlaveZoneReason);
         this.setParamSimple(map, prefix + "IsSupportRo", this.IsSupportRo);
         this.setParamSimple(map, prefix + "NonsupportRoReason", this.NonsupportRoReason);
+        this.setParamSimple(map, prefix + "IsSupportManualSnapshot", this.IsSupportManualSnapshot);
 
     }
 }

@@ -81,7 +81,8 @@ public class PrivateZone extends AbstractModel {
     private VpcInfo [] VpcSet;
 
     /**
-    * 私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
+    * 私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED
     */
     @SerializedName("Status")
     @Expose
@@ -155,6 +156,14 @@ public class PrivateZone extends AbstractModel {
     @SerializedName("EndPointName")
     @Expose
     private String EndPointName;
+
+    /**
+    * 已删除的vpc
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeletedVpcSet")
+    @Expose
+    private VpcInfo [] DeletedVpcSet;
 
     /**
      * Get 私有域id: zone-xxxxxxxx 
@@ -289,16 +298,20 @@ public class PrivateZone extends AbstractModel {
     }
 
     /**
-     * Get 私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN 
-     * @return Status 私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
+     * Get 私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED 
+     * @return Status 私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
-     * @param Status 私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
+     * Set 私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED
+     * @param Status 私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -472,6 +485,26 @@ public class PrivateZone extends AbstractModel {
         this.EndPointName = EndPointName;
     }
 
+    /**
+     * Get 已删除的vpc
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeletedVpcSet 已删除的vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpcInfo [] getDeletedVpcSet() {
+        return this.DeletedVpcSet;
+    }
+
+    /**
+     * Set 已删除的vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeletedVpcSet 已删除的vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeletedVpcSet(VpcInfo [] DeletedVpcSet) {
+        this.DeletedVpcSet = DeletedVpcSet;
+    }
+
     public PrivateZone() {
     }
 
@@ -543,6 +576,12 @@ public class PrivateZone extends AbstractModel {
         if (source.EndPointName != null) {
             this.EndPointName = new String(source.EndPointName);
         }
+        if (source.DeletedVpcSet != null) {
+            this.DeletedVpcSet = new VpcInfo[source.DeletedVpcSet.length];
+            for (int i = 0; i < source.DeletedVpcSet.length; i++) {
+                this.DeletedVpcSet[i] = new VpcInfo(source.DeletedVpcSet[i]);
+            }
+        }
     }
 
 
@@ -568,6 +607,7 @@ public class PrivateZone extends AbstractModel {
         this.setParamSimple(map, prefix + "ForwardRuleType", this.ForwardRuleType);
         this.setParamSimple(map, prefix + "ForwardAddress", this.ForwardAddress);
         this.setParamSimple(map, prefix + "EndPointName", this.EndPointName);
+        this.setParamArrayObj(map, prefix + "DeletedVpcSet.", this.DeletedVpcSet);
 
     }
 }

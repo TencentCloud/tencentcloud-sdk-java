@@ -61,6 +61,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *购买新的MQTT实例
+     * @param req CreateMQTTInstanceRequest
+     * @return CreateMQTTInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMQTTInstanceResponse CreateMQTTInstance(CreateMQTTInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMQTTInstance", CreateMQTTInstanceResponse.class);
+    }
+
+    /**
      *添加角色
      * @param req CreateRoleRequest
      * @return CreateRoleResponse
@@ -177,6 +188,34 @@ public class TrocketClient extends AbstractClient{
     public DescribeInstanceListResponse DescribeInstanceList(DescribeInstanceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceList", DescribeInstanceListResponse.class);
+    }
+
+    /**
+     *获取实例列表，Filters参数使用说明如下：
+1. InstanceName, 名称模糊查询
+2. InstanceId，实例ID查询
+3. InstanceType, 实例类型查询，支持多选
+3. InstanceStatus，实例状态查询，支持多选
+
+当使用TagFilters查询时，Filters参数失效。
+     * @param req DescribeMQTTInstanceListRequest
+     * @return DescribeMQTTInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTInstanceListResponse DescribeMQTTInstanceList(DescribeMQTTInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTInstanceList", DescribeMQTTInstanceListResponse.class);
+    }
+
+    /**
+     *非对外接口，获取产品售卖规格
+     * @param req DescribeMQTTProductSKUListRequest
+     * @return DescribeMQTTProductSKUListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTProductSKUListResponse DescribeMQTTProductSKUList(DescribeMQTTProductSKUListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTProductSKUList", DescribeMQTTProductSKUListResponse.class);
     }
 
     /**

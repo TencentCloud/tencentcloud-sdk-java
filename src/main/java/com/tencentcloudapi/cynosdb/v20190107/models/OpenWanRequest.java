@@ -31,9 +31,25 @@ public class OpenWanRequest extends AbstractModel {
     private String InstanceGrpId;
 
     /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 实例组id
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private String InstanceGroupId;
+
+    /**
      * Get 实例组id 
      * @return InstanceGrpId 实例组id
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceGrpId() {
         return this.InstanceGrpId;
     }
@@ -41,9 +57,43 @@ public class OpenWanRequest extends AbstractModel {
     /**
      * Set 实例组id
      * @param InstanceGrpId 实例组id
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceGrpId(String InstanceGrpId) {
         this.InstanceGrpId = InstanceGrpId;
+    }
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 实例组id 
+     * @return InstanceGroupId 实例组id
+     */
+    public String getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set 实例组id
+     * @param InstanceGroupId 实例组id
+     */
+    public void setInstanceGroupId(String InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
     }
 
     public OpenWanRequest() {
@@ -57,6 +107,12 @@ public class OpenWanRequest extends AbstractModel {
         if (source.InstanceGrpId != null) {
             this.InstanceGrpId = new String(source.InstanceGrpId);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new String(source.InstanceGroupId);
+        }
     }
 
 
@@ -65,6 +121,8 @@ public class OpenWanRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
 
     }
 }

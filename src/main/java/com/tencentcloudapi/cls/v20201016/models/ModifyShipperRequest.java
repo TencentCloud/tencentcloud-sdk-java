@@ -108,6 +108,13 @@ public class ModifyShipperRequest extends AbstractModel {
     private Long FilenameMode;
 
     /**
+    * cos桶类型
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get 投递规则ID 
      * @return ShipperId 投递规则ID
      */
@@ -299,6 +306,22 @@ public class ModifyShipperRequest extends AbstractModel {
         this.FilenameMode = FilenameMode;
     }
 
+    /**
+     * Get cos桶类型 
+     * @return StorageType cos桶类型
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set cos桶类型
+     * @param StorageType cos桶类型
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public ModifyShipperRequest() {
     }
 
@@ -346,6 +369,9 @@ public class ModifyShipperRequest extends AbstractModel {
         if (source.FilenameMode != null) {
             this.FilenameMode = new Long(source.FilenameMode);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class ModifyShipperRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Compress.", this.Compress);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

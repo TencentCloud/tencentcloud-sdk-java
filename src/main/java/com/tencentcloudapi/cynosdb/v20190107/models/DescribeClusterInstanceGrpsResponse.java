@@ -38,6 +38,13 @@ public class DescribeClusterInstanceGrpsResponse extends AbstractModel {
     private CynosdbInstanceGrp [] InstanceGrpInfoList;
 
     /**
+    * 实例组列表
+    */
+    @SerializedName("InstanceGroupInfoList")
+    @Expose
+    private CynosdbInstanceGroup [] InstanceGroupInfoList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -63,7 +70,9 @@ public class DescribeClusterInstanceGrpsResponse extends AbstractModel {
     /**
      * Get 实例组列表 
      * @return InstanceGrpInfoList 实例组列表
+     * @deprecated
      */
+    @Deprecated
     public CynosdbInstanceGrp [] getInstanceGrpInfoList() {
         return this.InstanceGrpInfoList;
     }
@@ -71,9 +80,27 @@ public class DescribeClusterInstanceGrpsResponse extends AbstractModel {
     /**
      * Set 实例组列表
      * @param InstanceGrpInfoList 实例组列表
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceGrpInfoList(CynosdbInstanceGrp [] InstanceGrpInfoList) {
         this.InstanceGrpInfoList = InstanceGrpInfoList;
+    }
+
+    /**
+     * Get 实例组列表 
+     * @return InstanceGroupInfoList 实例组列表
+     */
+    public CynosdbInstanceGroup [] getInstanceGroupInfoList() {
+        return this.InstanceGroupInfoList;
+    }
+
+    /**
+     * Set 实例组列表
+     * @param InstanceGroupInfoList 实例组列表
+     */
+    public void setInstanceGroupInfoList(CynosdbInstanceGroup [] InstanceGroupInfoList) {
+        this.InstanceGroupInfoList = InstanceGroupInfoList;
     }
 
     /**
@@ -109,6 +136,12 @@ public class DescribeClusterInstanceGrpsResponse extends AbstractModel {
                 this.InstanceGrpInfoList[i] = new CynosdbInstanceGrp(source.InstanceGrpInfoList[i]);
             }
         }
+        if (source.InstanceGroupInfoList != null) {
+            this.InstanceGroupInfoList = new CynosdbInstanceGroup[source.InstanceGroupInfoList.length];
+            for (int i = 0; i < source.InstanceGroupInfoList.length; i++) {
+                this.InstanceGroupInfoList[i] = new CynosdbInstanceGroup(source.InstanceGroupInfoList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +154,7 @@ public class DescribeClusterInstanceGrpsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "InstanceGrpInfoList.", this.InstanceGrpInfoList);
+        this.setParamArrayObj(map, prefix + "InstanceGroupInfoList.", this.InstanceGroupInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

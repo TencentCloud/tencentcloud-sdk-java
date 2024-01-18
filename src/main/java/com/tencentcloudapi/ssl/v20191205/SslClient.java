@@ -490,19 +490,6 @@ public class SslClient extends AbstractClient{
     }
 
     /**
-     *证书托管接口已重构， 旧接口预下线， 近30天无请求
-
-云资源托管
-     * @param req HostCertificateRequest
-     * @return HostCertificateResponse
-     * @throws TencentCloudSDKException
-     */
-    public HostCertificateResponse HostCertificate(HostCertificateRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "HostCertificate", HostCertificateResponse.class);
-    }
-
-    /**
      *用户传入证书id和备注来修改证书备注。
      * @param req ModifyCertificateAliasRequest
      * @return ModifyCertificateAliasResponse

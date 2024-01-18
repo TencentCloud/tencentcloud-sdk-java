@@ -115,6 +115,13 @@ public class CreateShipperRequest extends AbstractModel {
     private Long EndTime;
 
     /**
+    * cos桶存储类型
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get 创建的投递规则所属的日志主题ID 
      * @return TopicId 创建的投递规则所属的日志主题ID
      */
@@ -322,6 +329,22 @@ public class CreateShipperRequest extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get cos桶存储类型 
+     * @return StorageType cos桶存储类型
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set cos桶存储类型
+     * @param StorageType cos桶存储类型
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public CreateShipperRequest() {
     }
 
@@ -372,6 +395,9 @@ public class CreateShipperRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class CreateShipperRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

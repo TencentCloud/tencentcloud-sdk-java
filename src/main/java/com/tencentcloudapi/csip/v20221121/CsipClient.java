@@ -391,6 +391,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改集团账号状态
+     * @param req ModifyOrganizationAccountStatusRequest
+     * @return ModifyOrganizationAccountStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatus(ModifyOrganizationAccountStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOrganizationAccountStatus", ModifyOrganizationAccountStatusResponse.class);
+    }
+
+    /**
      *修改风险中心风险状态
      * @param req ModifyRiskCenterRiskStatusRequest
      * @return ModifyRiskCenterRiskStatusResponse

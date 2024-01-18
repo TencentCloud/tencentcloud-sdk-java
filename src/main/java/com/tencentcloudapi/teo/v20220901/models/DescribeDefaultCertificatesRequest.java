@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeDefaultCertificatesRequest extends AbstractModel {
 
     /**
+    * 站点 ID。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
     * 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
 <li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li>
     */
@@ -44,6 +51,22 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel {
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+     * Get 站点 ID。 
+     * @return ZoneId 站点 ID。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 站点 ID。
+     * @param ZoneId 站点 ID。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
 
     /**
      * Get 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
@@ -105,6 +128,9 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDefaultCertificatesRequest(DescribeDefaultCertificatesRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -124,6 +150,7 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

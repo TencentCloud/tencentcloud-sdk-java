@@ -261,6 +261,22 @@ public class JobConfig extends AbstractModel {
     private String EsServerlessSpace;
 
     /**
+    * es索引中文
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexName")
+    @Expose
+    private String IndexName;
+
+    /**
+    * es空间中文
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkspaceName")
+    @Expose
+    private String WorkspaceName;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -848,6 +864,46 @@ public class JobConfig extends AbstractModel {
         this.EsServerlessSpace = EsServerlessSpace;
     }
 
+    /**
+     * Get es索引中文
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexName es索引中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexName() {
+        return this.IndexName;
+    }
+
+    /**
+     * Set es索引中文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexName es索引中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexName(String IndexName) {
+        this.IndexName = IndexName;
+    }
+
+    /**
+     * Get es空间中文
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkspaceName es空间中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkspaceName() {
+        return this.WorkspaceName;
+    }
+
+    /**
+     * Set es空间中文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkspaceName es空间中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkspaceName(String WorkspaceName) {
+        this.WorkspaceName = WorkspaceName;
+    }
+
     public JobConfig() {
     }
 
@@ -955,6 +1011,12 @@ public class JobConfig extends AbstractModel {
         if (source.EsServerlessSpace != null) {
             this.EsServerlessSpace = new String(source.EsServerlessSpace);
         }
+        if (source.IndexName != null) {
+            this.IndexName = new String(source.IndexName);
+        }
+        if (source.WorkspaceName != null) {
+            this.WorkspaceName = new String(source.WorkspaceName);
+        }
     }
 
 
@@ -992,6 +1054,8 @@ public class JobConfig extends AbstractModel {
         this.setParamObj(map, prefix + "JobGraph.", this.JobGraph);
         this.setParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
         this.setParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
+        this.setParamSimple(map, prefix + "IndexName", this.IndexName);
+        this.setParamSimple(map, prefix + "WorkspaceName", this.WorkspaceName);
 
     }
 }
