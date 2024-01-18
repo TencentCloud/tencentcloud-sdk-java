@@ -52,6 +52,13 @@ public class DescribeBaselineInstanceDagRequest extends AbstractModel {
     private Long Level;
 
     /**
+    * 保障任务id
+    */
+    @SerializedName("PromiseTaskId")
+    @Expose
+    private String PromiseTaskId;
+
+    /**
      * Get 基线实例id 
      * @return BaselineInstanceId 基线实例id
      */
@@ -115,6 +122,22 @@ public class DescribeBaselineInstanceDagRequest extends AbstractModel {
         this.Level = Level;
     }
 
+    /**
+     * Get 保障任务id 
+     * @return PromiseTaskId 保障任务id
+     */
+    public String getPromiseTaskId() {
+        return this.PromiseTaskId;
+    }
+
+    /**
+     * Set 保障任务id
+     * @param PromiseTaskId 保障任务id
+     */
+    public void setPromiseTaskId(String PromiseTaskId) {
+        this.PromiseTaskId = PromiseTaskId;
+    }
+
     public DescribeBaselineInstanceDagRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeBaselineInstanceDagRequest extends AbstractModel {
         if (source.Level != null) {
             this.Level = new Long(source.Level);
         }
+        if (source.PromiseTaskId != null) {
+            this.PromiseTaskId = new String(source.PromiseTaskId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeBaselineInstanceDagRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "UpstreamInstanceIds", this.UpstreamInstanceIds);
         this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "PromiseTaskId", this.PromiseTaskId);
 
     }
 }

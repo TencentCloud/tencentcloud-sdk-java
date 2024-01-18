@@ -38,6 +38,13 @@ public class DescribeBaselineAllTaskDagRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 1
+    */
+    @SerializedName("BaselineTaskId")
+    @Expose
+    private String BaselineTaskId;
+
+    /**
      * Get 基线id 
      * @return BaselineId 基线id
      */
@@ -69,6 +76,22 @@ public class DescribeBaselineAllTaskDagRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 1 
+     * @return BaselineTaskId 1
+     */
+    public String getBaselineTaskId() {
+        return this.BaselineTaskId;
+    }
+
+    /**
+     * Set 1
+     * @param BaselineTaskId 1
+     */
+    public void setBaselineTaskId(String BaselineTaskId) {
+        this.BaselineTaskId = BaselineTaskId;
+    }
+
     public DescribeBaselineAllTaskDagRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeBaselineAllTaskDagRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.BaselineTaskId != null) {
+            this.BaselineTaskId = new String(source.BaselineTaskId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeBaselineAllTaskDagRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BaselineId", this.BaselineId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "BaselineTaskId", this.BaselineTaskId);
 
     }
 }

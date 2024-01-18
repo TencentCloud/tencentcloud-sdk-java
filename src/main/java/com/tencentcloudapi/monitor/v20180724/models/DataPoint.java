@@ -45,6 +45,30 @@ public class DataPoint extends AbstractModel {
     private Float [] Values;
 
     /**
+    * 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxValues")
+    @Expose
+    private Float [] MaxValues;
+
+    /**
+    * 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinValues")
+    @Expose
+    private Float [] MinValues;
+
+    /**
+    * 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvgValues")
+    @Expose
+    private Float [] AvgValues;
+
+    /**
      * Get 实例对象维度组合 
      * @return Dimensions 实例对象维度组合
      */
@@ -92,6 +116,66 @@ public class DataPoint extends AbstractModel {
         this.Values = Values;
     }
 
+    /**
+     * Get 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getMaxValues() {
+        return this.MaxValues;
+    }
+
+    /**
+     * Set 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxValues(Float [] MaxValues) {
+        this.MaxValues = MaxValues;
+    }
+
+    /**
+     * Get 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getMinValues() {
+        return this.MinValues;
+    }
+
+    /**
+     * Set 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinValues(Float [] MinValues) {
+        this.MinValues = MinValues;
+    }
+
+    /**
+     * Get 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvgValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getAvgValues() {
+        return this.AvgValues;
+    }
+
+    /**
+     * Set 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvgValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvgValues(Float [] AvgValues) {
+        this.AvgValues = AvgValues;
+    }
+
     public DataPoint() {
     }
 
@@ -118,6 +202,24 @@ public class DataPoint extends AbstractModel {
                 this.Values[i] = new Float(source.Values[i]);
             }
         }
+        if (source.MaxValues != null) {
+            this.MaxValues = new Float[source.MaxValues.length];
+            for (int i = 0; i < source.MaxValues.length; i++) {
+                this.MaxValues[i] = new Float(source.MaxValues[i]);
+            }
+        }
+        if (source.MinValues != null) {
+            this.MinValues = new Float[source.MinValues.length];
+            for (int i = 0; i < source.MinValues.length; i++) {
+                this.MinValues[i] = new Float(source.MinValues[i]);
+            }
+        }
+        if (source.AvgValues != null) {
+            this.AvgValues = new Float[source.AvgValues.length];
+            for (int i = 0; i < source.AvgValues.length; i++) {
+                this.AvgValues[i] = new Float(source.AvgValues[i]);
+            }
+        }
     }
 
 
@@ -128,6 +230,9 @@ public class DataPoint extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
         this.setParamArraySimple(map, prefix + "Timestamps.", this.Timestamps);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamArraySimple(map, prefix + "MaxValues.", this.MaxValues);
+        this.setParamArraySimple(map, prefix + "MinValues.", this.MinValues);
+        this.setParamArraySimple(map, prefix + "AvgValues.", this.AvgValues);
 
     }
 }

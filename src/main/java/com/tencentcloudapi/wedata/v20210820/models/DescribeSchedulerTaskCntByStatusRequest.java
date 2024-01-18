@@ -52,6 +52,13 @@ public class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel {
     private String InCharge;
 
     /**
+    * 工作流ID
+    */
+    @SerializedName("WorkflowId")
+    @Expose
+    private String WorkflowId;
+
+    /**
      * Get 1 
      * @return TaskType 1
      */
@@ -115,6 +122,22 @@ public class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel {
         this.InCharge = InCharge;
     }
 
+    /**
+     * Get 工作流ID 
+     * @return WorkflowId 工作流ID
+     */
+    public String getWorkflowId() {
+        return this.WorkflowId;
+    }
+
+    /**
+     * Set 工作流ID
+     * @param WorkflowId 工作流ID
+     */
+    public void setWorkflowId(String WorkflowId) {
+        this.WorkflowId = WorkflowId;
+    }
+
     public DescribeSchedulerTaskCntByStatusRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel {
         if (source.InCharge != null) {
             this.InCharge = new String(source.InCharge);
         }
+        if (source.WorkflowId != null) {
+            this.WorkflowId = new String(source.WorkflowId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TypeName", this.TypeName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "InCharge", this.InCharge);
+        this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
 
     }
 }

@@ -150,6 +150,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取洞察结果信息
+     * @param req DescribeInsightListRequest
+     * @return DescribeInsightListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInsightListResponse DescribeInsightList(DescribeInsightListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInsightList", DescribeInsightListResponse.class);
+    }
+
+    /**
      *查询待续费节点信息
      * @param req DescribeInstanceRenewNodesRequest
      * @return DescribeInstanceRenewNodesResponse

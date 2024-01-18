@@ -32,9 +32,9 @@ public class AlarmNotice extends AbstractModel {
 
     /**
     * 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li>
     */
     @SerializedName("Type")
     @Expose
@@ -106,13 +106,13 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Get 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复 
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li> 
      * @return Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li>
      */
     public String getType() {
         return this.Type;
@@ -120,13 +120,13 @@ public class AlarmNotice extends AbstractModel {
 
     /**
      * Set 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li>
      * @param Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li>
      */
     public void setType(String Type) {
         this.Type = Type;

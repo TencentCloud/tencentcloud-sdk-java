@@ -47,6 +47,14 @@ public class BooleanResponse extends AbstractModel {
     private Long BaselineId;
 
     /**
+    * 错误码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Code")
+    @Expose
+    private String Code;
+
+    /**
      * Get 是否成功 
      * @return Success 是否成功
      */
@@ -102,6 +110,26 @@ public class BooleanResponse extends AbstractModel {
         this.BaselineId = BaselineId;
     }
 
+    /**
+     * Get 错误码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Code 错误码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCode() {
+        return this.Code;
+    }
+
+    /**
+     * Set 错误码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Code 错误码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCode(String Code) {
+        this.Code = Code;
+    }
+
     public BooleanResponse() {
     }
 
@@ -119,6 +147,9 @@ public class BooleanResponse extends AbstractModel {
         if (source.BaselineId != null) {
             this.BaselineId = new Long(source.BaselineId);
         }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
     }
 
 
@@ -129,6 +160,7 @@ public class BooleanResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Success", this.Success);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "BaselineId", this.BaselineId);
+        this.setParamSimple(map, prefix + "Code", this.Code);
 
     }
 }

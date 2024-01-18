@@ -241,6 +241,14 @@ WAITINT_TO_RUN:等待运行 / RUNNING: 正在运行 / COMPLETED: 执行成功 / 
     private String AppId;
 
     /**
+    * 关键路径依赖
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CriticalDependency")
+    @Expose
+    private String CriticalDependency;
+
+    /**
      * Get 任务实例变更记录id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 任务实例变更记录id
@@ -784,6 +792,26 @@ WAITINT_TO_RUN:等待运行 / RUNNING: 正在运行 / COMPLETED: 执行成功 / 
         this.AppId = AppId;
     }
 
+    /**
+     * Get 关键路径依赖
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CriticalDependency 关键路径依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCriticalDependency() {
+        return this.CriticalDependency;
+    }
+
+    /**
+     * Set 关键路径依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CriticalDependency 关键路径依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCriticalDependency(String CriticalDependency) {
+        this.CriticalDependency = CriticalDependency;
+    }
+
     public BaselineTaskInstanceDto() {
     }
 
@@ -873,6 +901,9 @@ WAITINT_TO_RUN:等待运行 / RUNNING: 正在运行 / COMPLETED: 执行成功 / 
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.CriticalDependency != null) {
+            this.CriticalDependency = new String(source.CriticalDependency);
+        }
     }
 
 
@@ -907,6 +938,7 @@ WAITINT_TO_RUN:等待运行 / RUNNING: 正在运行 / COMPLETED: 执行成功 / 
         this.setParamSimple(map, prefix + "UserUin", this.UserUin);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "CriticalDependency", this.CriticalDependency);
 
     }
 }

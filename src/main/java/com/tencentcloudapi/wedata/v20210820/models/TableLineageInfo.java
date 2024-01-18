@@ -32,14 +32,6 @@ public class TableLineageInfo extends AbstractModel {
     private String MetastoreType;
 
     /**
-    * 由中心节点到该节点的路径
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PrefixPath")
-    @Expose
-    private String PrefixPath;
-
-    /**
     * 空间id
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -152,6 +144,14 @@ public class TableLineageInfo extends AbstractModel {
     private String Description;
 
     /**
+    * 由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrefixPath")
+    @Expose
+    private String PrefixPath;
+
+    /**
     * 血缘创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -176,6 +176,14 @@ public class TableLineageInfo extends AbstractModel {
     private String [] Tasks;
 
     /**
+    * 模块/应用类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelType")
+    @Expose
+    private String ChannelType;
+
+    /**
      * Get 元数据类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetastoreType 元数据类型
@@ -193,26 +201,6 @@ public class TableLineageInfo extends AbstractModel {
      */
     public void setMetastoreType(String MetastoreType) {
         this.MetastoreType = MetastoreType;
-    }
-
-    /**
-     * Get 由中心节点到该节点的路径
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrefixPath 由中心节点到该节点的路径
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getPrefixPath() {
-        return this.PrefixPath;
-    }
-
-    /**
-     * Set 由中心节点到该节点的路径
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrefixPath 由中心节点到该节点的路径
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPrefixPath(String PrefixPath) {
-        this.PrefixPath = PrefixPath;
     }
 
     /**
@@ -496,6 +484,26 @@ public class TableLineageInfo extends AbstractModel {
     }
 
     /**
+     * Get 由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrefixPath 由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrefixPath() {
+        return this.PrefixPath;
+    }
+
+    /**
+     * Set 由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrefixPath 由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrefixPath(String PrefixPath) {
+        this.PrefixPath = PrefixPath;
+    }
+
+    /**
      * Get 血缘创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 血缘创建时间
@@ -555,6 +563,26 @@ public class TableLineageInfo extends AbstractModel {
         this.Tasks = Tasks;
     }
 
+    /**
+     * Get 模块/应用类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelType 模块/应用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelType() {
+        return this.ChannelType;
+    }
+
+    /**
+     * Set 模块/应用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelType 模块/应用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelType(String ChannelType) {
+        this.ChannelType = ChannelType;
+    }
+
     public TableLineageInfo() {
     }
 
@@ -565,9 +593,6 @@ public class TableLineageInfo extends AbstractModel {
     public TableLineageInfo(TableLineageInfo source) {
         if (source.MetastoreType != null) {
             this.MetastoreType = new String(source.MetastoreType);
-        }
-        if (source.PrefixPath != null) {
-            this.PrefixPath = new String(source.PrefixPath);
         }
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
@@ -617,6 +642,9 @@ public class TableLineageInfo extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.PrefixPath != null) {
+            this.PrefixPath = new String(source.PrefixPath);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -629,6 +657,9 @@ public class TableLineageInfo extends AbstractModel {
                 this.Tasks[i] = new String(source.Tasks[i]);
             }
         }
+        if (source.ChannelType != null) {
+            this.ChannelType = new String(source.ChannelType);
+        }
     }
 
 
@@ -637,7 +668,6 @@ public class TableLineageInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MetastoreType", this.MetastoreType);
-        this.setParamSimple(map, prefix + "PrefixPath", this.PrefixPath);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
@@ -652,9 +682,11 @@ public class TableLineageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DownStreamCount", this.DownStreamCount);
         this.setParamSimple(map, prefix + "UpStreamCount", this.UpStreamCount);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "PrefixPath", this.PrefixPath);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamArraySimple(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "ChannelType", this.ChannelType);
 
     }
 }

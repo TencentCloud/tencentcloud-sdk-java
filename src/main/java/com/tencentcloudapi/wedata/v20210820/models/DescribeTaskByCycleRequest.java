@@ -38,6 +38,13 @@ public class DescribeTaskByCycleRequest extends AbstractModel {
     private String InCharge;
 
     /**
+    * 工作流ID
+    */
+    @SerializedName("WorkflowId")
+    @Expose
+    private String WorkflowId;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -69,6 +76,22 @@ public class DescribeTaskByCycleRequest extends AbstractModel {
         this.InCharge = InCharge;
     }
 
+    /**
+     * Get 工作流ID 
+     * @return WorkflowId 工作流ID
+     */
+    public String getWorkflowId() {
+        return this.WorkflowId;
+    }
+
+    /**
+     * Set 工作流ID
+     * @param WorkflowId 工作流ID
+     */
+    public void setWorkflowId(String WorkflowId) {
+        this.WorkflowId = WorkflowId;
+    }
+
     public DescribeTaskByCycleRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeTaskByCycleRequest extends AbstractModel {
         if (source.InCharge != null) {
             this.InCharge = new String(source.InCharge);
         }
+        if (source.WorkflowId != null) {
+            this.WorkflowId = new String(source.WorkflowId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeTaskByCycleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "InCharge", this.InCharge);
+        this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
 
     }
 }

@@ -162,6 +162,22 @@ public class RuleTemplate extends AbstractModel {
     private Long SubQualityDim;
 
     /**
+    * sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResolvedSqlExpression")
+    @Expose
+    private SqlExpression ResolvedSqlExpression;
+
+    /**
+    * 支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceTypes")
+    @Expose
+    private Long [] DatasourceTypes;
+
+    /**
      * Get 规则模版ID 
      * @return RuleTemplateId 规则模版ID
      */
@@ -497,6 +513,46 @@ public class RuleTemplate extends AbstractModel {
         this.SubQualityDim = SubQualityDim;
     }
 
+    /**
+     * Get sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResolvedSqlExpression sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SqlExpression getResolvedSqlExpression() {
+        return this.ResolvedSqlExpression;
+    }
+
+    /**
+     * Set sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResolvedSqlExpression sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResolvedSqlExpression(SqlExpression ResolvedSqlExpression) {
+        this.ResolvedSqlExpression = ResolvedSqlExpression;
+    }
+
+    /**
+     * Get 支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceTypes 支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getDatasourceTypes() {
+        return this.DatasourceTypes;
+    }
+
+    /**
+     * Set 支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceTypes 支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceTypes(Long [] DatasourceTypes) {
+        this.DatasourceTypes = DatasourceTypes;
+    }
+
     public RuleTemplate() {
     }
 
@@ -562,6 +618,15 @@ public class RuleTemplate extends AbstractModel {
         if (source.SubQualityDim != null) {
             this.SubQualityDim = new Long(source.SubQualityDim);
         }
+        if (source.ResolvedSqlExpression != null) {
+            this.ResolvedSqlExpression = new SqlExpression(source.ResolvedSqlExpression);
+        }
+        if (source.DatasourceTypes != null) {
+            this.DatasourceTypes = new Long[source.DatasourceTypes.length];
+            for (int i = 0; i < source.DatasourceTypes.length; i++) {
+                this.DatasourceTypes[i] = new Long(source.DatasourceTypes[i]);
+            }
+        }
     }
 
 
@@ -587,6 +652,8 @@ public class RuleTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "MultiSourceFlag", this.MultiSourceFlag);
         this.setParamSimple(map, prefix + "SqlExpression", this.SqlExpression);
         this.setParamSimple(map, prefix + "SubQualityDim", this.SubQualityDim);
+        this.setParamObj(map, prefix + "ResolvedSqlExpression.", this.ResolvedSqlExpression);
+        this.setParamArraySimple(map, prefix + "DatasourceTypes.", this.DatasourceTypes);
 
     }
 }

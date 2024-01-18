@@ -73,6 +73,14 @@ public class InstanceReportWriteNode extends AbstractModel {
     private Long TotalErrorRecords;
 
     /**
+    * 等待上游数据发送过来的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WaitReaderTime")
+    @Expose
+    private Float WaitReaderTime;
+
+    /**
      * Get 节点名称 
      * @return NodeName 节点名称
      */
@@ -184,6 +192,26 @@ public class InstanceReportWriteNode extends AbstractModel {
         this.TotalErrorRecords = TotalErrorRecords;
     }
 
+    /**
+     * Get 等待上游数据发送过来的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WaitReaderTime 等待上游数据发送过来的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getWaitReaderTime() {
+        return this.WaitReaderTime;
+    }
+
+    /**
+     * Set 等待上游数据发送过来的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaitReaderTime 等待上游数据发送过来的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWaitReaderTime(Float WaitReaderTime) {
+        this.WaitReaderTime = WaitReaderTime;
+    }
+
     public InstanceReportWriteNode() {
     }
 
@@ -213,6 +241,9 @@ public class InstanceReportWriteNode extends AbstractModel {
         if (source.TotalErrorRecords != null) {
             this.TotalErrorRecords = new Long(source.TotalErrorRecords);
         }
+        if (source.WaitReaderTime != null) {
+            this.WaitReaderTime = new Float(source.WaitReaderTime);
+        }
     }
 
 
@@ -227,6 +258,7 @@ public class InstanceReportWriteNode extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordSpeed", this.RecordSpeed);
         this.setParamSimple(map, prefix + "ByteSpeed", this.ByteSpeed);
         this.setParamSimple(map, prefix + "TotalErrorRecords", this.TotalErrorRecords);
+        this.setParamSimple(map, prefix + "WaitReaderTime", this.WaitReaderTime);
 
     }
 }

@@ -397,6 +397,22 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long InstanceVersion;
 
     /**
+    * 离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArrangeSpaceTaskId")
+    @Expose
+    private String ArrangeSpaceTaskId;
+
+    /**
+    * 离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OfflineTaskStatus")
+    @Expose
+    private Long OfflineTaskStatus;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -1324,6 +1340,46 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.InstanceVersion = InstanceVersion;
     }
 
+    /**
+     * Get 离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArrangeSpaceTaskId 离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArrangeSpaceTaskId() {
+        return this.ArrangeSpaceTaskId;
+    }
+
+    /**
+     * Set 离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArrangeSpaceTaskId 离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArrangeSpaceTaskId(String ArrangeSpaceTaskId) {
+        this.ArrangeSpaceTaskId = ArrangeSpaceTaskId;
+    }
+
+    /**
+     * Get 离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OfflineTaskStatus 离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOfflineTaskStatus() {
+        return this.OfflineTaskStatus;
+    }
+
+    /**
+     * Set 离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OfflineTaskStatus 离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOfflineTaskStatus(Long OfflineTaskStatus) {
+        this.OfflineTaskStatus = OfflineTaskStatus;
+    }
+
     public IntegrationTaskInfo() {
     }
 
@@ -1494,6 +1550,12 @@ public class IntegrationTaskInfo extends AbstractModel {
         if (source.InstanceVersion != null) {
             this.InstanceVersion = new Long(source.InstanceVersion);
         }
+        if (source.ArrangeSpaceTaskId != null) {
+            this.ArrangeSpaceTaskId = new String(source.ArrangeSpaceTaskId);
+        }
+        if (source.OfflineTaskStatus != null) {
+            this.OfflineTaskStatus = new Long(source.OfflineTaskStatus);
+        }
     }
 
 
@@ -1548,6 +1610,8 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchResource", this.SwitchResource);
         this.setParamSimple(map, prefix + "ReadPhase", this.ReadPhase);
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+        this.setParamSimple(map, prefix + "ArrangeSpaceTaskId", this.ArrangeSpaceTaskId);
+        this.setParamSimple(map, prefix + "OfflineTaskStatus", this.OfflineTaskStatus);
 
     }
 }

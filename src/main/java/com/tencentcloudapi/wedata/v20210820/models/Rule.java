@@ -304,6 +304,70 @@ public class Rule extends AbstractModel {
     private Long [] SourceEngineTypes;
 
     /**
+    * 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableName")
+    @Expose
+    private String TableName;
+
+    /**
+    * 表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableOwnerName")
+    @Expose
+    private String TableOwnerName;
+
+    /**
+    * 执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecStrategy")
+    @Expose
+    private RuleGroupExecStrategy ExecStrategy;
+
+    /**
+    * 订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Subscription")
+    @Expose
+    private RuleGroupSubscribe Subscription;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 数据源 id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceId")
+    @Expose
+    private Long DatasourceId;
+
+    /**
+    * 数据库 id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseId")
+    @Expose
+    private String DatabaseId;
+
+    /**
+    * 监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorStatus")
+    @Expose
+    private Long MonitorStatus;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -1003,6 +1067,166 @@ public class Rule extends AbstractModel {
         this.SourceEngineTypes = SourceEngineTypes;
     }
 
+    /**
+     * Get 表名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableName() {
+        return this.TableName;
+    }
+
+    /**
+     * Set 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableName(String TableName) {
+        this.TableName = TableName;
+    }
+
+    /**
+     * Get 表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableOwnerName 表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableOwnerName() {
+        return this.TableOwnerName;
+    }
+
+    /**
+     * Set 表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableOwnerName 表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableOwnerName(String TableOwnerName) {
+        this.TableOwnerName = TableOwnerName;
+    }
+
+    /**
+     * Get 执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecStrategy 执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuleGroupExecStrategy getExecStrategy() {
+        return this.ExecStrategy;
+    }
+
+    /**
+     * Set 执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecStrategy 执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecStrategy(RuleGroupExecStrategy ExecStrategy) {
+        this.ExecStrategy = ExecStrategy;
+    }
+
+    /**
+     * Get 订阅信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Subscription 订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuleGroupSubscribe getSubscription() {
+        return this.Subscription;
+    }
+
+    /**
+     * Set 订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Subscription 订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscription(RuleGroupSubscribe Subscription) {
+        this.Subscription = Subscription;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 数据源 id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceId 数据源 id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDatasourceId() {
+        return this.DatasourceId;
+    }
+
+    /**
+     * Set 数据源 id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceId 数据源 id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceId(Long DatasourceId) {
+        this.DatasourceId = DatasourceId;
+    }
+
+    /**
+     * Get 数据库 id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseId 数据库 id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseId() {
+        return this.DatabaseId;
+    }
+
+    /**
+     * Set 数据库 id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseId 数据库 id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseId(String DatabaseId) {
+        this.DatabaseId = DatabaseId;
+    }
+
+    /**
+     * Get 监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorStatus 监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMonitorStatus() {
+        return this.MonitorStatus;
+    }
+
+    /**
+     * Set 监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorStatus 监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorStatus(Long MonitorStatus) {
+        this.MonitorStatus = MonitorStatus;
+    }
+
     public Rule() {
     }
 
@@ -1119,6 +1343,30 @@ public class Rule extends AbstractModel {
                 this.SourceEngineTypes[i] = new Long(source.SourceEngineTypes[i]);
             }
         }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.TableOwnerName != null) {
+            this.TableOwnerName = new String(source.TableOwnerName);
+        }
+        if (source.ExecStrategy != null) {
+            this.ExecStrategy = new RuleGroupExecStrategy(source.ExecStrategy);
+        }
+        if (source.Subscription != null) {
+            this.Subscription = new RuleGroupSubscribe(source.Subscription);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.DatasourceId != null) {
+            this.DatasourceId = new Long(source.DatasourceId);
+        }
+        if (source.DatabaseId != null) {
+            this.DatabaseId = new String(source.DatabaseId);
+        }
+        if (source.MonitorStatus != null) {
+            this.MonitorStatus = new Long(source.MonitorStatus);
+        }
     }
 
 
@@ -1161,6 +1409,14 @@ public class Rule extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetObjectDataTypeName", this.TargetObjectDataTypeName);
         this.setParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
         this.setParamArraySimple(map, prefix + "SourceEngineTypes.", this.SourceEngineTypes);
+        this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "TableOwnerName", this.TableOwnerName);
+        this.setParamObj(map, prefix + "ExecStrategy.", this.ExecStrategy);
+        this.setParamObj(map, prefix + "Subscription.", this.Subscription);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
+        this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
 
     }
 }

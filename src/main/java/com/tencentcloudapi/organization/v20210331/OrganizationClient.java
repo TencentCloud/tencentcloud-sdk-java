@@ -61,6 +61,39 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *创建共享单元，只有企业组织管理员可创建。
+     * @param req AddShareUnitRequest
+     * @return AddShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitResponse AddShareUnit(AddShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnit", AddShareUnitResponse.class);
+    }
+
+    /**
+     *添加共享单元成员
+     * @param req AddShareUnitMembersRequest
+     * @return AddShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitMembersResponse AddShareUnitMembers(AddShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnitMembers", AddShareUnitMembersResponse.class);
+    }
+
+    /**
+     *添加共享单元资源
+     * @param req AddShareUnitResourcesRequest
+     * @return AddShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitResourcesResponse AddShareUnitResources(AddShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnitResources", AddShareUnitResourcesResponse.class);
+    }
+
+    /**
      *绑定组织成员和组织管理员子账号的授权关系
      * @param req BindOrganizationMemberAuthAccountRequest
      * @return BindOrganizationMemberAuthAccountResponse
@@ -227,6 +260,39 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *删除共享单元。
+     * @param req DeleteShareUnitRequest
+     * @return DeleteShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitResponse DeleteShareUnit(DeleteShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnit", DeleteShareUnitResponse.class);
+    }
+
+    /**
+     *删除共享单元成员
+     * @param req DeleteShareUnitMembersRequest
+     * @return DeleteShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitMembersResponse DeleteShareUnitMembers(DeleteShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnitMembers", DeleteShareUnitMembersResponse.class);
+    }
+
+    /**
+     *删除共享单元资源
+     * @param req DeleteShareUnitResourcesRequest
+     * @return DeleteShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitResourcesResponse DeleteShareUnitResources(DeleteShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnitResources", DeleteShareUnitResourcesResponse.class);
+    }
+
+    /**
      *获取企业组织信息
      * @param req DescribeOrganizationRequest
      * @return DescribeOrganizationResponse
@@ -348,6 +414,50 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *获取可共享地域列表
+     * @param req DescribeShareAreasRequest
+     * @return DescribeShareAreasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareAreasResponse DescribeShareAreas(DescribeShareAreasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareAreas", DescribeShareAreasResponse.class);
+    }
+
+    /**
+     *获取共享单元成员列表。
+     * @param req DescribeShareUnitMembersRequest
+     * @return DescribeShareUnitMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitMembersResponse DescribeShareUnitMembers(DescribeShareUnitMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnitMembers", DescribeShareUnitMembersResponse.class);
+    }
+
+    /**
+     *获取共享单元资源列表。
+     * @param req DescribeShareUnitResourcesRequest
+     * @return DescribeShareUnitResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitResourcesResponse DescribeShareUnitResources(DescribeShareUnitResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnitResources", DescribeShareUnitResourcesResponse.class);
+    }
+
+    /**
+     *获取共享单元列表。
+     * @param req DescribeShareUnitsRequest
+     * @return DescribeShareUnitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitsResponse DescribeShareUnits(DescribeShareUnitsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnits", DescribeShareUnitsResponse.class);
+    }
+
+    /**
      *获取组织成员访问身份列表
      * @param req ListOrganizationIdentityRequest
      * @return ListOrganizationIdentityResponse
@@ -422,6 +532,17 @@ public class OrganizationClient extends AbstractClient{
     public UpdateOrganizationNodeResponse UpdateOrganizationNode(UpdateOrganizationNodeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOrganizationNode", UpdateOrganizationNodeResponse.class);
+    }
+
+    /**
+     *更新共享单元。
+     * @param req UpdateShareUnitRequest
+     * @return UpdateShareUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateShareUnitResponse UpdateShareUnit(UpdateShareUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateShareUnit", UpdateShareUnitResponse.class);
     }
 
 }

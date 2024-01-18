@@ -80,6 +80,14 @@ public class RuntimeInstanceCntTop extends AbstractModel {
     private String CurRunTime;
 
     /**
+    * 等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WaitScheduleTime")
+    @Expose
+    private Long WaitScheduleTime;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -219,6 +227,26 @@ public class RuntimeInstanceCntTop extends AbstractModel {
         this.CurRunTime = CurRunTime;
     }
 
+    /**
+     * Get 等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WaitScheduleTime 等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWaitScheduleTime() {
+        return this.WaitScheduleTime;
+    }
+
+    /**
+     * Set 等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaitScheduleTime 等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWaitScheduleTime(Long WaitScheduleTime) {
+        this.WaitScheduleTime = WaitScheduleTime;
+    }
+
     public RuntimeInstanceCntTop() {
     }
 
@@ -248,6 +276,9 @@ public class RuntimeInstanceCntTop extends AbstractModel {
         if (source.CurRunTime != null) {
             this.CurRunTime = new String(source.CurRunTime);
         }
+        if (source.WaitScheduleTime != null) {
+            this.WaitScheduleTime = new Long(source.WaitScheduleTime);
+        }
     }
 
 
@@ -262,6 +293,7 @@ public class RuntimeInstanceCntTop extends AbstractModel {
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "RunTime", this.RunTime);
         this.setParamSimple(map, prefix + "CurRunTime", this.CurRunTime);
+        this.setParamSimple(map, prefix + "WaitScheduleTime", this.WaitScheduleTime);
 
     }
 }

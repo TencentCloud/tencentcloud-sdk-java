@@ -45,6 +45,41 @@ public class DeleteCustomFunctionRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 函数名称
+    */
+    @SerializedName("FunctionName")
+    @Expose
+    private String FunctionName;
+
+    /**
+    * 函数类型，HIVE，SPARK，DLC，CDW_POSTGRESQL
+    */
+    @SerializedName("FunctionType")
+    @Expose
+    private String FunctionType;
+
+    /**
+    * 数据库名
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
+    * 模式名
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 函数命令格式
+    */
+    @SerializedName("CommandFormat")
+    @Expose
+    private String CommandFormat;
+
+    /**
      * Get 集群实例 ID 
      * @return ClusterIdentifier 集群实例 ID
      */
@@ -92,6 +127,86 @@ public class DeleteCustomFunctionRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 函数名称 
+     * @return FunctionName 函数名称
+     */
+    public String getFunctionName() {
+        return this.FunctionName;
+    }
+
+    /**
+     * Set 函数名称
+     * @param FunctionName 函数名称
+     */
+    public void setFunctionName(String FunctionName) {
+        this.FunctionName = FunctionName;
+    }
+
+    /**
+     * Get 函数类型，HIVE，SPARK，DLC，CDW_POSTGRESQL 
+     * @return FunctionType 函数类型，HIVE，SPARK，DLC，CDW_POSTGRESQL
+     */
+    public String getFunctionType() {
+        return this.FunctionType;
+    }
+
+    /**
+     * Set 函数类型，HIVE，SPARK，DLC，CDW_POSTGRESQL
+     * @param FunctionType 函数类型，HIVE，SPARK，DLC，CDW_POSTGRESQL
+     */
+    public void setFunctionType(String FunctionType) {
+        this.FunctionType = FunctionType;
+    }
+
+    /**
+     * Get 数据库名 
+     * @return DatabaseName 数据库名
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set 数据库名
+     * @param DatabaseName 数据库名
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
+    /**
+     * Get 模式名 
+     * @return SchemaName 模式名
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 模式名
+     * @param SchemaName 模式名
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 函数命令格式 
+     * @return CommandFormat 函数命令格式
+     */
+    public String getCommandFormat() {
+        return this.CommandFormat;
+    }
+
+    /**
+     * Set 函数命令格式
+     * @param CommandFormat 函数命令格式
+     */
+    public void setCommandFormat(String CommandFormat) {
+        this.CommandFormat = CommandFormat;
+    }
+
     public DeleteCustomFunctionRequest() {
     }
 
@@ -109,6 +224,21 @@ public class DeleteCustomFunctionRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.FunctionType != null) {
+            this.FunctionType = new String(source.FunctionType);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.CommandFormat != null) {
+            this.CommandFormat = new String(source.CommandFormat);
+        }
     }
 
 
@@ -119,6 +249,11 @@ public class DeleteCustomFunctionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterIdentifier", this.ClusterIdentifier);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamSimple(map, prefix + "FunctionType", this.FunctionType);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "CommandFormat", this.CommandFormat);
 
     }
 }

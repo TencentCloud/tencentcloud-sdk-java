@@ -115,6 +115,13 @@ public class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractMode
     private Long AverageWindowSize;
 
     /**
+    * 工作流ID
+    */
+    @SerializedName("WorkflowId")
+    @Expose
+    private String WorkflowId;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -322,6 +329,22 @@ public class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractMode
         this.AverageWindowSize = AverageWindowSize;
     }
 
+    /**
+     * Get 工作流ID 
+     * @return WorkflowId 工作流ID
+     */
+    public String getWorkflowId() {
+        return this.WorkflowId;
+    }
+
+    /**
+     * Set 工作流ID
+     * @param WorkflowId 工作流ID
+     */
+    public void setWorkflowId(String WorkflowId) {
+        this.WorkflowId = WorkflowId;
+    }
+
     public DescribeStatisticInstanceStatusTrendOpsRequest() {
     }
 
@@ -372,6 +395,9 @@ public class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractMode
         if (source.AverageWindowSize != null) {
             this.AverageWindowSize = new Long(source.AverageWindowSize);
         }
+        if (source.WorkflowId != null) {
+            this.WorkflowId = new String(source.WorkflowId);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractMode
         this.setParamArraySimple(map, prefix + "StateList.", this.StateList);
         this.setParamSimple(map, prefix + "AggregationUnit", this.AggregationUnit);
         this.setParamSimple(map, prefix + "AverageWindowSize", this.AverageWindowSize);
+        this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
 
     }
 }

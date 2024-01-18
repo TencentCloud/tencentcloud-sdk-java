@@ -114,6 +114,7 @@ public class FlowInfo extends AbstractModel {
 发起方：腾讯公司(张三) 
 签署方：李四
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
     */
     @SerializedName("CustomShowMap")
@@ -369,6 +370,7 @@ public class FlowInfo extends AbstractModel {
 发起方：腾讯公司(张三) 
 签署方：李四
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
  
      * @return CustomShowMap 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
@@ -384,6 +386,7 @@ public class FlowInfo extends AbstractModel {
 发起方：腾讯公司(张三) 
 签署方：李四
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
      */
     public String getCustomShowMap() {
@@ -405,6 +408,7 @@ public class FlowInfo extends AbstractModel {
 发起方：腾讯公司(张三) 
 签署方：李四
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
      * @param CustomShowMap 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
@@ -420,6 +424,7 @@ public class FlowInfo extends AbstractModel {
 发起方：腾讯公司(张三) 
 签署方：李四
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
      */
     public void setCustomShowMap(String CustomShowMap) {

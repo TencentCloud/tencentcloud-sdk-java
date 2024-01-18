@@ -73,6 +73,27 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
     private String InCharge;
 
     /**
+    * 工作流ID
+    */
+    @SerializedName("WorkflowId")
+    @Expose
+    private String WorkflowId;
+
+    /**
+    * 排序字段
+    */
+    @SerializedName("SortItem")
+    @Expose
+    private String SortItem;
+
+    /**
+    * 升序降序
+    */
+    @SerializedName("SortType")
+    @Expose
+    private String SortType;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -184,6 +205,54 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         this.InCharge = InCharge;
     }
 
+    /**
+     * Get 工作流ID 
+     * @return WorkflowId 工作流ID
+     */
+    public String getWorkflowId() {
+        return this.WorkflowId;
+    }
+
+    /**
+     * Set 工作流ID
+     * @param WorkflowId 工作流ID
+     */
+    public void setWorkflowId(String WorkflowId) {
+        this.WorkflowId = WorkflowId;
+    }
+
+    /**
+     * Get 排序字段 
+     * @return SortItem 排序字段
+     */
+    public String getSortItem() {
+        return this.SortItem;
+    }
+
+    /**
+     * Set 排序字段
+     * @param SortItem 排序字段
+     */
+    public void setSortItem(String SortItem) {
+        this.SortItem = SortItem;
+    }
+
+    /**
+     * Get 升序降序 
+     * @return SortType 升序降序
+     */
+    public String getSortType() {
+        return this.SortType;
+    }
+
+    /**
+     * Set 升序降序
+     * @param SortType 升序降序
+     */
+    public void setSortType(String SortType) {
+        this.SortType = SortType;
+    }
+
     public DescribeSchedulerRunTimeInstanceCntByStatusRequest() {
     }
 
@@ -213,6 +282,15 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         if (source.InCharge != null) {
             this.InCharge = new String(source.InCharge);
         }
+        if (source.WorkflowId != null) {
+            this.WorkflowId = new String(source.WorkflowId);
+        }
+        if (source.SortItem != null) {
+            this.SortItem = new String(source.SortItem);
+        }
+        if (source.SortType != null) {
+            this.SortType = new String(source.SortType);
+        }
     }
 
 
@@ -227,6 +305,9 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "InCharge", this.InCharge);
+        this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+        this.setParamSimple(map, prefix + "SortItem", this.SortItem);
+        this.setParamSimple(map, prefix + "SortType", this.SortType);
 
     }
 }

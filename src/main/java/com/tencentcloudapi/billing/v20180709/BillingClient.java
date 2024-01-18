@@ -351,6 +351,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *查询节省计划详情
+     * @param req DescribeSavingPlanResourceInfoRequest
+     * @return DescribeSavingPlanResourceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSavingPlanResourceInfoResponse DescribeSavingPlanResourceInfo(DescribeSavingPlanResourceInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSavingPlanResourceInfo", DescribeSavingPlanResourceInfoResponse.class);
+    }
+
+    /**
      *查用当前用户明细节省计划查询时段内的使用情况
      * @param req DescribeSavingPlanUsageRequest
      * @return DescribeSavingPlanUsageResponse

@@ -45,6 +45,13 @@ public class DescribeUsedIpAddressRequest extends AbstractModel {
     private String [] IpAddresses;
 
     /**
+    * 过滤条件，不支持同时指定IpAddresses和Filters参数。 支持的过滤条件如下： <li>ip-addresses：IP地址。</li> <li>resource-id：资源ID。</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * 偏移量，默认为0。
     */
     @SerializedName("Offset")
@@ -107,6 +114,22 @@ public class DescribeUsedIpAddressRequest extends AbstractModel {
     }
 
     /**
+     * Get 过滤条件，不支持同时指定IpAddresses和Filters参数。 支持的过滤条件如下： <li>ip-addresses：IP地址。</li> <li>resource-id：资源ID。</li> 
+     * @return Filters 过滤条件，不支持同时指定IpAddresses和Filters参数。 支持的过滤条件如下： <li>ip-addresses：IP地址。</li> <li>resource-id：资源ID。</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件，不支持同时指定IpAddresses和Filters参数。 支持的过滤条件如下： <li>ip-addresses：IP地址。</li> <li>resource-id：资源ID。</li>
+     * @param Filters 过滤条件，不支持同时指定IpAddresses和Filters参数。 支持的过滤条件如下： <li>ip-addresses：IP地址。</li> <li>resource-id：资源ID。</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
@@ -158,6 +181,12 @@ public class DescribeUsedIpAddressRequest extends AbstractModel {
                 this.IpAddresses[i] = new String(source.IpAddresses[i]);
             }
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -174,6 +203,7 @@ public class DescribeUsedIpAddressRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArraySimple(map, prefix + "IpAddresses.", this.IpAddresses);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

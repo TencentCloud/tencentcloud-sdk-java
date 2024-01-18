@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel {
 
     /**
-    * 日志总数
+    * 事件总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -32,7 +32,7 @@ public class SearchLogResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * 每页日志条数
+    * 每页事件条数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Limit")
@@ -48,7 +48,7 @@ public class SearchLogResponse extends AbstractModel {
     private Long Page;
 
     /**
-    * 日志检索结果
+    * 事件查询结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
@@ -63,9 +63,9 @@ public class SearchLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志总数
+     * Get 事件总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 日志总数
+     * @return Total 事件总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -73,9 +73,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志总数
+     * Set 事件总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 日志总数
+     * @param Total 事件总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -83,9 +83,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 每页日志条数
+     * Get 每页事件条数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Limit 每页日志条数
+     * @return Limit 每页事件条数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLimit() {
@@ -93,9 +93,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 每页日志条数
+     * Set 每页事件条数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Limit 每页日志条数
+     * @param Limit 每页事件条数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimit(Long Limit) {
@@ -123,9 +123,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志检索结果
+     * Get 事件查询结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 日志检索结果
+     * @return Results 事件查询结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SearchLogResult [] getResults() {
@@ -133,9 +133,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志检索结果
+     * Set 事件查询结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 日志检索结果
+     * @param Results 事件查询结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(SearchLogResult [] Results) {

@@ -171,7 +171,7 @@ public class EbClient extends AbstractClient{
     }
 
     /**
-     *查询日志索引维度值
+     *前置条件：需开启事件存储；事件查询维度值
      * @param req DescribeLogTagValueRequest
      * @return DescribeLogTagValueResponse
      * @throws TencentCloudSDKException
@@ -325,7 +325,7 @@ public class EbClient extends AbstractClient{
     }
 
     /**
-     *日志检索
+     *前置条件：开启事件存储；查询历史推送事件
      * @param req SearchLogRequest
      * @return SearchLogResponse
      * @throws TencentCloudSDKException

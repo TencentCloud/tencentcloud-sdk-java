@@ -31,11 +31,10 @@ public class GetFederationTokenRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 授予该临时访问凭证权限的CAM策略
-注意：
+    * 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
-3、该参数需要做urlencode。
+3、该参数需要做urlencode，服务端会对该字段做urldecode， 并按处理后Policy授予临时访问凭证权限，请按规范传入参数。
     */
     @SerializedName("Policy")
     @Expose
@@ -65,32 +64,28 @@ public class GetFederationTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get 授予该临时访问凭证权限的CAM策略
-注意：
+     * Get 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
-3、该参数需要做urlencode。 
-     * @return Policy 授予该临时访问凭证权限的CAM策略
-注意：
+3、该参数需要做urlencode，服务端会对该字段做urldecode， 并按处理后Policy授予临时访问凭证权限，请按规范传入参数。 
+     * @return Policy 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
-3、该参数需要做urlencode。
+3、该参数需要做urlencode，服务端会对该字段做urldecode， 并按处理后Policy授予临时访问凭证权限，请按规范传入参数。
      */
     public String getPolicy() {
         return this.Policy;
     }
 
     /**
-     * Set 授予该临时访问凭证权限的CAM策略
-注意：
+     * Set 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
-3、该参数需要做urlencode。
-     * @param Policy 授予该临时访问凭证权限的CAM策略
-注意：
+3、该参数需要做urlencode，服务端会对该字段做urldecode， 并按处理后Policy授予临时访问凭证权限，请按规范传入参数。
+     * @param Policy 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
-3、该参数需要做urlencode。
+3、该参数需要做urlencode，服务端会对该字段做urldecode， 并按处理后Policy授予临时访问凭证权限，请按规范传入参数。
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;

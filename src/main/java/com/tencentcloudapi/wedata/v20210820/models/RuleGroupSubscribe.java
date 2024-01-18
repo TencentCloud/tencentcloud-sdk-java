@@ -56,6 +56,22 @@ public class RuleGroupSubscribe extends AbstractModel {
     private SubscribeWebHook [] WebHooks;
 
     /**
+    * 规则Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
+    * 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -135,6 +151,46 @@ public class RuleGroupSubscribe extends AbstractModel {
         this.WebHooks = WebHooks;
     }
 
+    /**
+     * Get 规则Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleId 规则Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 规则Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleId 规则Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
+    /**
+     * Get 规则名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleName() {
+        return this.RuleName;
+    }
+
+    /**
+     * Set 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
+    }
+
     public RuleGroupSubscribe() {
     }
 
@@ -164,6 +220,12 @@ public class RuleGroupSubscribe extends AbstractModel {
                 this.WebHooks[i] = new SubscribeWebHook(source.WebHooks[i]);
             }
         }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
     }
 
 
@@ -175,6 +237,8 @@ public class RuleGroupSubscribe extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Receivers.", this.Receivers);
         this.setParamArraySimple(map, prefix + "SubscribeType.", this.SubscribeType);
         this.setParamArrayObj(map, prefix + "WebHooks.", this.WebHooks);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
 
     }
 }

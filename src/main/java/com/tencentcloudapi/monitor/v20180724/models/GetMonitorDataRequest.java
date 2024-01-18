@@ -66,6 +66,13 @@ public class GetMonitorDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
+    * 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+    */
+    @SerializedName("SpecifyStatistics")
+    @Expose
+    private Long SpecifyStatistics;
+
+    /**
      * Get 命名空间，如QCE/CVM。各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档 
      * @return Namespace 命名空间，如QCE/CVM。各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      */
@@ -161,6 +168,22 @@ public class GetMonitorDataRequest extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合 
+     * @return SpecifyStatistics 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+     */
+    public Long getSpecifyStatistics() {
+        return this.SpecifyStatistics;
+    }
+
+    /**
+     * Set 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+     * @param SpecifyStatistics 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+     */
+    public void setSpecifyStatistics(Long SpecifyStatistics) {
+        this.SpecifyStatistics = SpecifyStatistics;
+    }
+
     public GetMonitorDataRequest() {
     }
 
@@ -190,6 +213,9 @@ public class GetMonitorDataRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.SpecifyStatistics != null) {
+            this.SpecifyStatistics = new Long(source.SpecifyStatistics);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class GetMonitorDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SpecifyStatistics", this.SpecifyStatistics);
 
     }
 }

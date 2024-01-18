@@ -143,6 +143,13 @@ public class CreateDataSourceRequest extends AbstractModel {
     private String COSRegion;
 
     /**
+    * 连接测试结果
+    */
+    @SerializedName("ConnectResult")
+    @Expose
+    private String ConnectResult;
+
+    /**
      * Get 数据源名称，在相同SpaceName下，数据源名称不能为空 
      * @return Name 数据源名称，在相同SpaceName下，数据源名称不能为空
      */
@@ -414,6 +421,22 @@ public class CreateDataSourceRequest extends AbstractModel {
         this.COSRegion = COSRegion;
     }
 
+    /**
+     * Get 连接测试结果 
+     * @return ConnectResult 连接测试结果
+     */
+    public String getConnectResult() {
+        return this.ConnectResult;
+    }
+
+    /**
+     * Set 连接测试结果
+     * @param ConnectResult 连接测试结果
+     */
+    public void setConnectResult(String ConnectResult) {
+        this.ConnectResult = ConnectResult;
+    }
+
     public CreateDataSourceRequest() {
     }
 
@@ -473,6 +496,9 @@ public class CreateDataSourceRequest extends AbstractModel {
         if (source.COSRegion != null) {
             this.COSRegion = new String(source.COSRegion);
         }
+        if (source.ConnectResult != null) {
+            this.ConnectResult = new String(source.ConnectResult);
+        }
     }
 
 
@@ -497,6 +523,7 @@ public class CreateDataSourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Collect", this.Collect);
         this.setParamSimple(map, prefix + "COSBucket", this.COSBucket);
         this.setParamSimple(map, prefix + "COSRegion", this.COSRegion);
+        this.setParamSimple(map, prefix + "ConnectResult", this.ConnectResult);
 
     }
 }

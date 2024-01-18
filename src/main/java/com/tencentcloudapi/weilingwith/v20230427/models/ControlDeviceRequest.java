@@ -52,6 +52,13 @@ public class ControlDeviceRequest extends AbstractModel {
     private String ApplicationToken;
 
     /**
+    * 是否同步返回设备下控ack结果
+    */
+    @SerializedName("IsSynchronized")
+    @Expose
+    private Boolean IsSynchronized;
+
+    /**
      * Get 工作空间id 
      * @return WorkspaceId 工作空间id
      */
@@ -115,6 +122,22 @@ public class ControlDeviceRequest extends AbstractModel {
         this.ApplicationToken = ApplicationToken;
     }
 
+    /**
+     * Get 是否同步返回设备下控ack结果 
+     * @return IsSynchronized 是否同步返回设备下控ack结果
+     */
+    public Boolean getIsSynchronized() {
+        return this.IsSynchronized;
+    }
+
+    /**
+     * Set 是否同步返回设备下控ack结果
+     * @param IsSynchronized 是否同步返回设备下控ack结果
+     */
+    public void setIsSynchronized(Boolean IsSynchronized) {
+        this.IsSynchronized = IsSynchronized;
+    }
+
     public ControlDeviceRequest() {
     }
 
@@ -138,6 +161,9 @@ public class ControlDeviceRequest extends AbstractModel {
         if (source.ApplicationToken != null) {
             this.ApplicationToken = new String(source.ApplicationToken);
         }
+        if (source.IsSynchronized != null) {
+            this.IsSynchronized = new Boolean(source.IsSynchronized);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class ControlDeviceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "WIDSet.", this.WIDSet);
         this.setParamSimple(map, prefix + "ControlData", this.ControlData);
         this.setParamSimple(map, prefix + "ApplicationToken", this.ApplicationToken);
+        this.setParamSimple(map, prefix + "IsSynchronized", this.IsSynchronized);
 
     }
 }

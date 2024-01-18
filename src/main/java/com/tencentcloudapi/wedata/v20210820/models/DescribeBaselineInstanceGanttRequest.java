@@ -38,6 +38,13 @@ public class DescribeBaselineInstanceGanttRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 保障任务id
+    */
+    @SerializedName("PromiseTaskId")
+    @Expose
+    private String PromiseTaskId;
+
+    /**
      * Get 基线实例id 
      * @return BaselineInstanceId 基线实例id
      */
@@ -69,6 +76,22 @@ public class DescribeBaselineInstanceGanttRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 保障任务id 
+     * @return PromiseTaskId 保障任务id
+     */
+    public String getPromiseTaskId() {
+        return this.PromiseTaskId;
+    }
+
+    /**
+     * Set 保障任务id
+     * @param PromiseTaskId 保障任务id
+     */
+    public void setPromiseTaskId(String PromiseTaskId) {
+        this.PromiseTaskId = PromiseTaskId;
+    }
+
     public DescribeBaselineInstanceGanttRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeBaselineInstanceGanttRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.PromiseTaskId != null) {
+            this.PromiseTaskId = new String(source.PromiseTaskId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeBaselineInstanceGanttRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BaselineInstanceId", this.BaselineInstanceId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "PromiseTaskId", this.PromiseTaskId);
 
     }
 }

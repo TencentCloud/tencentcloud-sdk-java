@@ -32,9 +32,9 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
 
     /**
     * 通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li>
     */
     @SerializedName("Type")
     @Expose
@@ -85,13 +85,13 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
 
     /**
      * Get 通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复 
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li> 
      * @return Type 通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li>
      */
     public String getType() {
         return this.Type;
@@ -99,13 +99,13 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
 
     /**
      * Set 通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li>
      * @param Type 通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li>
      */
     public void setType(String Type) {
         this.Type = Type;

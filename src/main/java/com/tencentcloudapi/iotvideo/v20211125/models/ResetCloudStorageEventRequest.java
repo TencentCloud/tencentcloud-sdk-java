@@ -45,6 +45,13 @@ public class ResetCloudStorageEventRequest extends AbstractModel {
     private String UserId;
 
     /**
+    * 通道ID
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -92,6 +99,22 @@ public class ResetCloudStorageEventRequest extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 通道ID 
+     * @return ChannelId 通道ID
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID
+     * @param ChannelId 通道ID
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public ResetCloudStorageEventRequest() {
     }
 
@@ -109,6 +132,9 @@ public class ResetCloudStorageEventRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ResetCloudStorageEventRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

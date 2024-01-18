@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLogTagValueResponse extends AbstractModel {
 
     /**
-    * 索引检索维度值
+    * 事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
@@ -39,9 +39,9 @@ public class DescribeLogTagValueResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 索引检索维度值
+     * Get 事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 索引检索维度值
+     * @return Results 事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResults() {
@@ -49,9 +49,9 @@ public class DescribeLogTagValueResponse extends AbstractModel {
     }
 
     /**
-     * Set 索引检索维度值
+     * Set 事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 索引检索维度值
+     * @param Results 事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(String [] Results) {

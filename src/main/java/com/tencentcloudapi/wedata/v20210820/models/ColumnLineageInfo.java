@@ -32,14 +32,6 @@ public class ColumnLineageInfo extends AbstractModel {
     private String Id;
 
     /**
-    * 由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PrefixPath")
-    @Expose
-    private String PrefixPath;
-
-    /**
     * 数据源ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -160,6 +152,14 @@ public class ColumnLineageInfo extends AbstractModel {
     private String Description;
 
     /**
+    * 由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrefixPath")
+    @Expose
+    private String PrefixPath;
+
+    /**
     * 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -225,26 +225,6 @@ public class ColumnLineageInfo extends AbstractModel {
      */
     public void setId(String Id) {
         this.Id = Id;
-    }
-
-    /**
-     * Get 由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrefixPath 由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getPrefixPath() {
-        return this.PrefixPath;
-    }
-
-    /**
-     * Set 由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrefixPath 由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPrefixPath(String PrefixPath) {
-        this.PrefixPath = PrefixPath;
     }
 
     /**
@@ -548,6 +528,26 @@ public class ColumnLineageInfo extends AbstractModel {
     }
 
     /**
+     * Get 由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrefixPath 由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrefixPath() {
+        return this.PrefixPath;
+    }
+
+    /**
+     * Set 由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrefixPath 由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrefixPath(String PrefixPath) {
+        this.PrefixPath = PrefixPath;
+    }
+
+    /**
      * Get 创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
@@ -678,9 +678,6 @@ public class ColumnLineageInfo extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
-        if (source.PrefixPath != null) {
-            this.PrefixPath = new String(source.PrefixPath);
-        }
         if (source.DatasourceId != null) {
             this.DatasourceId = new String(source.DatasourceId);
         }
@@ -726,6 +723,9 @@ public class ColumnLineageInfo extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.PrefixPath != null) {
+            this.PrefixPath = new String(source.PrefixPath);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -758,7 +758,6 @@ public class ColumnLineageInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
-        this.setParamSimple(map, prefix + "PrefixPath", this.PrefixPath);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamSimple(map, prefix + "ColumnName", this.ColumnName);
@@ -774,6 +773,7 @@ public class ColumnLineageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DownStreamCount", this.DownStreamCount);
         this.setParamSimple(map, prefix + "UpStreamCount", this.UpStreamCount);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "PrefixPath", this.PrefixPath);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamArraySimple(map, prefix + "Tasks.", this.Tasks);
