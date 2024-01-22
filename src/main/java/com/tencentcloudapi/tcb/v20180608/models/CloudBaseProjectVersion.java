@@ -209,6 +209,62 @@ public class CloudBaseProjectVersion extends AbstractModel {
     private Long BuildPercent;
 
     /**
+    * Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BuildFinishTime")
+    @Expose
+    private String BuildFinishTime;
+
+    /**
+    * DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployFinishTime")
+    @Expose
+    private String DeployFinishTime;
+
+    /**
+    * BuildId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BuildId")
+    @Expose
+    private String BuildId;
+
+    /**
+    * SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceUrl")
+    @Expose
+    private String SourceUrl;
+
+    /**
+    * FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailReasonShort")
+    @Expose
+    private String FailReasonShort;
+
+    /**
+    * FirstInitRepo
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstInitRepo")
+    @Expose
+    private String FirstInitRepo;
+
+    /**
      * Get 项目名 
      * @return Name 项目名
      */
@@ -684,6 +740,146 @@ public class CloudBaseProjectVersion extends AbstractModel {
         this.BuildPercent = BuildPercent;
     }
 
+    /**
+     * Get Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uin Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uin Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BuildFinishTime BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBuildFinishTime() {
+        return this.BuildFinishTime;
+    }
+
+    /**
+     * Set BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BuildFinishTime BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBuildFinishTime(String BuildFinishTime) {
+        this.BuildFinishTime = BuildFinishTime;
+    }
+
+    /**
+     * Get DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployFinishTime DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeployFinishTime() {
+        return this.DeployFinishTime;
+    }
+
+    /**
+     * Set DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployFinishTime DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployFinishTime(String DeployFinishTime) {
+        this.DeployFinishTime = DeployFinishTime;
+    }
+
+    /**
+     * Get BuildId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BuildId BuildId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBuildId() {
+        return this.BuildId;
+    }
+
+    /**
+     * Set BuildId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BuildId BuildId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBuildId(String BuildId) {
+        this.BuildId = BuildId;
+    }
+
+    /**
+     * Get SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceUrl SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceUrl() {
+        return this.SourceUrl;
+    }
+
+    /**
+     * Set SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceUrl SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceUrl(String SourceUrl) {
+        this.SourceUrl = SourceUrl;
+    }
+
+    /**
+     * Get FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailReasonShort FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFailReasonShort() {
+        return this.FailReasonShort;
+    }
+
+    /**
+     * Set FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailReasonShort FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailReasonShort(String FailReasonShort) {
+        this.FailReasonShort = FailReasonShort;
+    }
+
+    /**
+     * Get FirstInitRepo
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirstInitRepo FirstInitRepo
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFirstInitRepo() {
+        return this.FirstInitRepo;
+    }
+
+    /**
+     * Set FirstInitRepo
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstInitRepo FirstInitRepo
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstInitRepo(String FirstInitRepo) {
+        this.FirstInitRepo = FirstInitRepo;
+    }
+
     public CloudBaseProjectVersion() {
     }
 
@@ -764,6 +960,27 @@ public class CloudBaseProjectVersion extends AbstractModel {
         if (source.BuildPercent != null) {
             this.BuildPercent = new Long(source.BuildPercent);
         }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.BuildFinishTime != null) {
+            this.BuildFinishTime = new String(source.BuildFinishTime);
+        }
+        if (source.DeployFinishTime != null) {
+            this.DeployFinishTime = new String(source.DeployFinishTime);
+        }
+        if (source.BuildId != null) {
+            this.BuildId = new String(source.BuildId);
+        }
+        if (source.SourceUrl != null) {
+            this.SourceUrl = new String(source.SourceUrl);
+        }
+        if (source.FailReasonShort != null) {
+            this.FailReasonShort = new String(source.FailReasonShort);
+        }
+        if (source.FirstInitRepo != null) {
+            this.FirstInitRepo = new String(source.FirstInitRepo);
+        }
     }
 
 
@@ -793,6 +1010,13 @@ public class CloudBaseProjectVersion extends AbstractModel {
         this.setParamSimple(map, prefix + "RepoUrl", this.RepoUrl);
         this.setParamSimple(map, prefix + "AutoDeployOnCodeChange", this.AutoDeployOnCodeChange);
         this.setParamSimple(map, prefix + "BuildPercent", this.BuildPercent);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "BuildFinishTime", this.BuildFinishTime);
+        this.setParamSimple(map, prefix + "DeployFinishTime", this.DeployFinishTime);
+        this.setParamSimple(map, prefix + "BuildId", this.BuildId);
+        this.setParamSimple(map, prefix + "SourceUrl", this.SourceUrl);
+        this.setParamSimple(map, prefix + "FailReasonShort", this.FailReasonShort);
+        this.setParamSimple(map, prefix + "FirstInitRepo", this.FirstInitRepo);
 
     }
 }

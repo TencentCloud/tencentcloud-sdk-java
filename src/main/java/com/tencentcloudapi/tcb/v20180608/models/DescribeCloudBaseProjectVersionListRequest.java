@@ -52,14 +52,14 @@ public class DescribeCloudBaseProjectVersionListRequest extends AbstractModel {
     private Long PageNum;
 
     /**
-    * 起始时间 2021-03-27 12:00:00
+    * 起始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 终止时间 2021-03-27 12:00:00
+    * 终止时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -130,32 +130,32 @@ public class DescribeCloudBaseProjectVersionListRequest extends AbstractModel {
     }
 
     /**
-     * Get 起始时间 2021-03-27 12:00:00 
-     * @return StartTime 起始时间 2021-03-27 12:00:00
+     * Get 起始时间 
+     * @return StartTime 起始时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间 2021-03-27 12:00:00
-     * @param StartTime 起始时间 2021-03-27 12:00:00
+     * Set 起始时间
+     * @param StartTime 起始时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 终止时间 2021-03-27 12:00:00 
-     * @return EndTime 终止时间 2021-03-27 12:00:00
+     * Get 终止时间 
+     * @return EndTime 终止时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 终止时间 2021-03-27 12:00:00
-     * @param EndTime 终止时间 2021-03-27 12:00:00
+     * Set 终止时间
+     * @param EndTime 终止时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

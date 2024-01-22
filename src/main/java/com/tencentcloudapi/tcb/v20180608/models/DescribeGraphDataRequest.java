@@ -37,14 +37,14 @@ StorageWrite: 存储写请求次数
 StorageCdnOriginFlux: CDN回源流量, 单位字节 
 CDNFlux: CDN回源流量, 单位字节 
 FunctionInvocation: 云函数调用次数 
-FunctionGBs: 云函数资源使用量, 单位Mb*Ms 
+FunctionGBs: 云函数资源使用量, 单位MB*ms 
 FunctionFlux: 云函数流量, 单位千字节(KB) 
 FunctionError: 云函数调用错误次数 
 FunctionDuration: 云函数运行时间, 单位毫秒 
 DbRead: 数据库读请求数 
 DbWrite: 数据库写请求数 
-DbCostTime10ms: 数据库耗时在10ms~50ms请求数 
-DbCostTime50ms: 数据库耗时在50ms~100ms请求数 
+DbCostTime10ms: 数据库耗时在10ms-50ms请求数 
+DbCostTime50ms: 数据库耗时在50ms-100ms请求数 
 DbCostTime100ms: 数据库耗时在100ms以上请求数 
 TkeCpuRatio: 容器CPU占用率 
 TkeMemRatio: 容器内存占用率 
@@ -105,14 +105,14 @@ StorageWrite: 存储写请求次数
 StorageCdnOriginFlux: CDN回源流量, 单位字节 
 CDNFlux: CDN回源流量, 单位字节 
 FunctionInvocation: 云函数调用次数 
-FunctionGBs: 云函数资源使用量, 单位Mb*Ms 
+FunctionGBs: 云函数资源使用量, 单位MB*ms 
 FunctionFlux: 云函数流量, 单位千字节(KB) 
 FunctionError: 云函数调用错误次数 
 FunctionDuration: 云函数运行时间, 单位毫秒 
 DbRead: 数据库读请求数 
 DbWrite: 数据库写请求数 
-DbCostTime10ms: 数据库耗时在10ms~50ms请求数 
-DbCostTime50ms: 数据库耗时在50ms~100ms请求数 
+DbCostTime10ms: 数据库耗时在10ms-50ms请求数 
+DbCostTime50ms: 数据库耗时在50ms-100ms请求数 
 DbCostTime100ms: 数据库耗时在100ms以上请求数 
 TkeCpuRatio: 容器CPU占用率 
 TkeMemRatio: 容器内存占用率 
@@ -130,14 +130,14 @@ StorageWrite: 存储写请求次数
 StorageCdnOriginFlux: CDN回源流量, 单位字节 
 CDNFlux: CDN回源流量, 单位字节 
 FunctionInvocation: 云函数调用次数 
-FunctionGBs: 云函数资源使用量, 单位Mb*Ms 
+FunctionGBs: 云函数资源使用量, 单位MB*ms 
 FunctionFlux: 云函数流量, 单位千字节(KB) 
 FunctionError: 云函数调用错误次数 
 FunctionDuration: 云函数运行时间, 单位毫秒 
 DbRead: 数据库读请求数 
 DbWrite: 数据库写请求数 
-DbCostTime10ms: 数据库耗时在10ms~50ms请求数 
-DbCostTime50ms: 数据库耗时在50ms~100ms请求数 
+DbCostTime10ms: 数据库耗时在10ms-50ms请求数 
+DbCostTime50ms: 数据库耗时在50ms-100ms请求数 
 DbCostTime100ms: 数据库耗时在100ms以上请求数 
 TkeCpuRatio: 容器CPU占用率 
 TkeMemRatio: 容器内存占用率 
@@ -161,14 +161,14 @@ StorageWrite: 存储写请求次数
 StorageCdnOriginFlux: CDN回源流量, 单位字节 
 CDNFlux: CDN回源流量, 单位字节 
 FunctionInvocation: 云函数调用次数 
-FunctionGBs: 云函数资源使用量, 单位Mb*Ms 
+FunctionGBs: 云函数资源使用量, 单位MB*ms 
 FunctionFlux: 云函数流量, 单位千字节(KB) 
 FunctionError: 云函数调用错误次数 
 FunctionDuration: 云函数运行时间, 单位毫秒 
 DbRead: 数据库读请求数 
 DbWrite: 数据库写请求数 
-DbCostTime10ms: 数据库耗时在10ms~50ms请求数 
-DbCostTime50ms: 数据库耗时在50ms~100ms请求数 
+DbCostTime10ms: 数据库耗时在10ms-50ms请求数 
+DbCostTime50ms: 数据库耗时在50ms-100ms请求数 
 DbCostTime100ms: 数据库耗时在100ms以上请求数 
 TkeCpuRatio: 容器CPU占用率 
 TkeMemRatio: 容器内存占用率 
@@ -186,14 +186,14 @@ StorageWrite: 存储写请求次数
 StorageCdnOriginFlux: CDN回源流量, 单位字节 
 CDNFlux: CDN回源流量, 单位字节 
 FunctionInvocation: 云函数调用次数 
-FunctionGBs: 云函数资源使用量, 单位Mb*Ms 
+FunctionGBs: 云函数资源使用量, 单位MB*ms 
 FunctionFlux: 云函数流量, 单位千字节(KB) 
 FunctionError: 云函数调用错误次数 
 FunctionDuration: 云函数运行时间, 单位毫秒 
 DbRead: 数据库读请求数 
 DbWrite: 数据库写请求数 
-DbCostTime10ms: 数据库耗时在10ms~50ms请求数 
-DbCostTime50ms: 数据库耗时在50ms~100ms请求数 
+DbCostTime10ms: 数据库耗时在10ms-50ms请求数 
+DbCostTime50ms: 数据库耗时在50ms-100ms请求数 
 DbCostTime100ms: 数据库耗时在100ms以上请求数 
 TkeCpuRatio: 容器CPU占用率 
 TkeMemRatio: 容器内存占用率 

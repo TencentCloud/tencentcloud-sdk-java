@@ -39,7 +39,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *上报相机移动、遮挡等告警信息
+     *优mall产品启动下线流程
+
+上报相机移动、遮挡等告警信息
 
 
      * @param req CreateCameraAlertsRequest
@@ -52,7 +54,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *上报当前场内所有相机的当前状态
+     *优mall产品启动下线流程
+
+上报当前场内所有相机的当前状态
      * @param req CreateCameraStateRequest
      * @return CreateCameraStateResponse
      * @throws TencentCloudSDKException
@@ -76,7 +80,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *集团广场的多经点位告警
+     *优mall产品启动下线流程
+
+集团广场的多经点位告警
      * @param req CreateMultiBizAlertRequest
      * @return CreateMultiBizAlertResponse
      * @throws TencentCloudSDKException
@@ -87,7 +93,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *上报所有进程监控信息
+     *优mall产品启动下线流程
+
+上报所有进程监控信息
      * @param req CreateProgramStateRequest
      * @return CreateProgramStateResponse
      * @throws TencentCloudSDKException
@@ -98,7 +106,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *上报所有服务器硬件监控信息
+     *优mall产品启动下线流程
+
+上报所有服务器硬件监控信息
      * @param req CreateServerStateRequest
      * @return CreateServerStateResponse
      * @throws TencentCloudSDKException
@@ -109,7 +119,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *集团广场的多经点位消警
+     *优mall产品启动下线流程
+
+集团广场的多经点位消警
      * @param req DeleteMultiBizAlertRequest
      * @return DeleteMultiBizAlertResponse
      * @throws TencentCloudSDKException
@@ -120,7 +132,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *删除集团广场对应的任务
+     *优mall产品启动下线流程
+
+删除集团广场对应的任务
      * @param req DeleteTaskRequest
      * @return DeleteTaskResponse
      * @throws TencentCloudSDKException
@@ -131,7 +145,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *获取集团广场对应的摄像头列表
+     *优mall产品启动下线流程
+
+获取集团广场对应的摄像头列表
      * @param req DescribeCamerasRequest
      * @return DescribeCamerasResponse
      * @throws TencentCloudSDKException
@@ -142,7 +158,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *获取摄像头配置信息
+     *优mall产品启动下线流程
+
+获取摄像头配置信息
 mac不为空返回指定相机配置
 mac为空返回对应GroupCode和MallId全量配置
      * @param req DescribeConfigRequest
@@ -155,7 +173,9 @@ mac为空返回对应GroupCode和MallId全量配置
     }
 
     /**
-     *实时获取底图接口
+     *优mall产品启动下线流程
+
+实时获取底图接口
      * @param req DescribeImageRequest
      * @return DescribeImageResponse
      * @throws TencentCloudSDKException
@@ -166,7 +186,9 @@ mac为空返回对应GroupCode和MallId全量配置
     }
 
     /**
-     *获取多经点位底图
+     *优mall产品启动下线流程
+
+获取多经点位底图
      * @param req DescribeMultiBizBaseImageRequest
      * @return DescribeMultiBizBaseImageResponse
      * @throws TencentCloudSDKException
@@ -177,7 +199,9 @@ mac为空返回对应GroupCode和MallId全量配置
     }
 
     /**
-     *查询集团广场对应的任务列表
+     *优mall产品启动下线流程
+
+查询集团广场对应的任务列表
      * @param req DescribeTasksRequest
      * @return DescribeTasksResponse
      * @throws TencentCloudSDKException
@@ -188,7 +212,9 @@ mac为空返回对应GroupCode和MallId全量配置
     }
 
     /**
-     *获取集团广场的点位列表
+     *优mall产品启动下线流程
+
+获取集团广场的点位列表
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException
@@ -199,7 +225,9 @@ mac为空返回对应GroupCode和MallId全量配置
     }
 
     /**
-     *集团广场的多经点位配置更新
+     *优mall产品启动下线流程
+
+集团广场的多经点位配置更新
      * @param req ModifyMultiBizConfigRequest
      * @return ModifyMultiBizConfigResponse
      * @throws TencentCloudSDKException
@@ -210,7 +238,9 @@ mac为空返回对应GroupCode和MallId全量配置
     }
 
     /**
-     *上报服务注册自身的服务地址作为回调地址, 用于信息回传。
+     *优mall产品启动下线流程
+
+上报服务注册自身的服务地址作为回调地址, 用于信息回传。
      * @param req ReportServiceRegisterRequest
      * @return ReportServiceRegisterResponse
      * @throws TencentCloudSDKException
@@ -221,7 +251,9 @@ mac为空返回对应GroupCode和MallId全量配置
     }
 
     /**
-     *以图搜图
+     *优mall产品启动下线流程
+
+以图搜图
      * @param req SearchImageRequest
      * @return SearchImageResponse
      * @throws TencentCloudSDKException

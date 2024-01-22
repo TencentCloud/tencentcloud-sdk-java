@@ -31,7 +31,7 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
     private String UploadUrl;
 
     /**
-    * 上传heder
+    * 上传header
     */
     @SerializedName("UploadHeaders")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeCloudBaseBuildServiceResponse extends AbstractModel {
     }
 
     /**
-     * Get 上传heder 
-     * @return UploadHeaders 上传heder
+     * Get 上传header 
+     * @return UploadHeaders 上传header
      */
     public KVPair [] getUploadHeaders() {
         return this.UploadHeaders;
     }
 
     /**
-     * Set 上传heder
-     * @param UploadHeaders 上传heder
+     * Set 上传header
+     * @param UploadHeaders 上传header
      */
     public void setUploadHeaders(KVPair [] UploadHeaders) {
         this.UploadHeaders = UploadHeaders;

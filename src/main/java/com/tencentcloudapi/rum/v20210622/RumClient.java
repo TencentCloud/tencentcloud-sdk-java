@@ -39,21 +39,6 @@ public class RumClient extends AbstractClient{
     }
 
     /**
-     *接口请求域名： rum.tencentcloudapi.com 。
-
-本接口用于创建日志下载任务
-
-默认接口请求频率限制：20次/秒。
-     * @param req CreateLogExportRequest
-     * @return CreateLogExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLogExportResponse CreateLogExport(CreateLogExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateLogExport", CreateLogExportResponse.class);
-    }
-
-    /**
      *创建 RUM 应用（归属于某个团队）
      * @param req CreateProjectRequest
      * @return CreateProjectResponse
@@ -117,21 +102,6 @@ public class RumClient extends AbstractClient{
     public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteInstance", DeleteInstanceResponse.class);
-    }
-
-    /**
-     *接口请求域名： rum.tencentcloudapi.com 。
-
-本接口用于删除日志下载任务
-
-默认接口请求频率限制：20次/秒。
-     * @param req DeleteLogExportRequest
-     * @return DeleteLogExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteLogExportResponse DeleteLogExport(DeleteLogExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteLogExport", DeleteLogExportResponse.class);
     }
 
     /**
@@ -430,32 +400,6 @@ public class RumClient extends AbstractClient{
     public DescribeErrorResponse DescribeError(DescribeErrorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeError", DescribeErrorResponse.class);
-    }
-
-    /**
-     *接口请求域名： rum.tencentcloudapi.com 。
-
-本接口用于获取日志下载任务列表
-
-默认接口请求频率限制：20次/秒
-     * @param req DescribeLogExportsRequest
-     * @return DescribeLogExportsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLogExportsResponse DescribeLogExports(DescribeLogExportsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLogExports", DescribeLogExportsResponse.class);
-    }
-
-    /**
-     *(已下线，请用DescribeRumLogList)
-     * @param req DescribeLogListRequest
-     * @return DescribeLogListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLogListResponse DescribeLogList(DescribeLogListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLogList", DescribeLogListResponse.class);
     }
 
     /**

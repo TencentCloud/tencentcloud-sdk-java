@@ -38,21 +38,28 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
     private String SnapshotId;
 
     /**
-    * 分页起始位置
+    * 分页起始位置，默认为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 页面长度
+    * 页面长度，默认为20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件
+    * 过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
     */
     @SerializedName("Filters")
     @Expose
@@ -105,48 +112,76 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页起始位置 
-     * @return Offset 分页起始位置
+     * Get 分页起始位置，默认为0 
+     * @return Offset 分页起始位置，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页起始位置
-     * @param Offset 分页起始位置
+     * Set 分页起始位置，默认为0
+     * @param Offset 分页起始位置，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 页面长度 
-     * @return Limit 页面长度
+     * Get 页面长度，默认为20 
+     * @return Limit 页面长度，默认为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页面长度
-     * @param Limit 页面长度
+     * Set 页面长度，默认为20
+     * @param Limit 页面长度，默认为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。 
+     * @return Filters 过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+     * @param Filters 过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

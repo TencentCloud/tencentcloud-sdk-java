@@ -102,6 +102,7 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel {
 
     /**
     * 策略类型
+cpu/mem
     */
     @SerializedName("PolicyType")
     @Expose
@@ -438,8 +439,10 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get 策略类型 
+     * Get 策略类型
+cpu/mem 
      * @return PolicyType 策略类型
+cpu/mem
      */
     public String getPolicyType() {
         return this.PolicyType;
@@ -447,7 +450,9 @@ public class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel {
 
     /**
      * Set 策略类型
+cpu/mem
      * @param PolicyType 策略类型
+cpu/mem
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;

@@ -260,6 +260,14 @@ public class AgentDealNewElem extends AbstractModel {
     private RefundMap [] RefundMap;
 
     /**
+    * 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubGoodsName")
+    @Expose
+    private String SubGoodsName;
+
+    /**
      * Get 订单自增 ID【请勿依赖该字段作为唯一标识】 
      * @return DealId 订单自增 ID【请勿依赖该字段作为唯一标识】
      */
@@ -843,6 +851,26 @@ public class AgentDealNewElem extends AbstractModel {
         this.RefundMap = RefundMap;
     }
 
+    /**
+     * Get 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubGoodsName 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubGoodsName() {
+        return this.SubGoodsName;
+    }
+
+    /**
+     * Set 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubGoodsName 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubGoodsName(String SubGoodsName) {
+        this.SubGoodsName = SubGoodsName;
+    }
+
     public AgentDealNewElem() {
     }
 
@@ -950,6 +978,9 @@ public class AgentDealNewElem extends AbstractModel {
                 this.RefundMap[i] = new RefundMap(source.RefundMap[i]);
             }
         }
+        if (source.SubGoodsName != null) {
+            this.SubGoodsName = new String(source.SubGoodsName);
+        }
     }
 
 
@@ -987,6 +1018,7 @@ public class AgentDealNewElem extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamArrayObj(map, prefix + "RefundMap.", this.RefundMap);
+        this.setParamSimple(map, prefix + "SubGoodsName", this.SubGoodsName);
 
     }
 }

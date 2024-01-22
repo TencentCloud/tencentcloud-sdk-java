@@ -52,7 +52,7 @@ public class DescribeCurveDataResponse extends AbstractModel {
     private Long Period;
 
     /**
-    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
     */
     @SerializedName("Values")
     @Expose
@@ -144,16 +144,16 @@ public class DescribeCurveDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到. 
-     * @return Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。 
+     * @return Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
      */
     public Long [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
-     * @param Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
+     * @param Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
      */
     public void setValues(Long [] Values) {
         this.Values = Values;

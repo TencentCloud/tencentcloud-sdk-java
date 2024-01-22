@@ -446,6 +446,17 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *拉取多个云存事件缩略图
+     * @param req DescribeCloudStorageMultiThumbnailRequest
+     * @return DescribeCloudStorageMultiThumbnailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageMultiThumbnailResponse DescribeCloudStorageMultiThumbnail(DescribeCloudStorageMultiThumbnailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageMultiThumbnail", DescribeCloudStorageMultiThumbnailResponse.class);
+    }
+
+    /**
      *查询云存服务详情
      * @param req DescribeCloudStorageOrderRequest
      * @return DescribeCloudStorageOrderResponse
