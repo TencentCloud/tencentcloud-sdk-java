@@ -50,7 +50,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *给GR集群增加可用的ClusterCIDR
+     *给GR集群增加可用的ClusterCIDR（开白才能使用此功能，如需要请联系我们）
      * @param req AddClusterCIDRRequest
      * @return AddClusterCIDRResponse
      * @throws TencentCloudSDKException

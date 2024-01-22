@@ -160,7 +160,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *创建实例子账号
+     *该接口（CreateInstanceAccount）用于自定义访问实例的账号。
      * @param req CreateInstanceAccountRequest
      * @return CreateInstanceAccountResponse
      * @throws TencentCloudSDKException

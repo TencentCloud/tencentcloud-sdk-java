@@ -413,6 +413,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *修改风险中心扫描任务
+     * @param req ModifyRiskCenterScanTaskRequest
+     * @return ModifyRiskCenterScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTask(ModifyRiskCenterScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRiskCenterScanTask", ModifyRiskCenterScanTaskResponse.class);
+    }
+
+    /**
      *停止扫风险中心扫描任务
      * @param req StopRiskCenterTaskRequest
      * @return StopRiskCenterTaskResponse

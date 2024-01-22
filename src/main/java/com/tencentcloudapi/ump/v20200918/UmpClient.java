@@ -63,7 +63,9 @@ public class UmpClient extends AbstractClient{
     }
 
     /**
-     *场内抓拍上报接口
+     *优mall产品下线
+
+场内抓拍上报接口
      * @param req CreateCaptureRequest
      * @return CreateCaptureResponse
      * @throws TencentCloudSDKException

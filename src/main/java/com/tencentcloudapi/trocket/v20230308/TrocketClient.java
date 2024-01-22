@@ -61,6 +61,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *为MQTT实例创建公网接入点
+     * @param req CreateMQTTInsPublicEndpointRequest
+     * @return CreateMQTTInsPublicEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMQTTInsPublicEndpointResponse CreateMQTTInsPublicEndpoint(CreateMQTTInsPublicEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMQTTInsPublicEndpoint", CreateMQTTInsPublicEndpointResponse.class);
+    }
+
+    /**
      *购买新的MQTT实例
      * @param req CreateMQTTInstanceRequest
      * @return CreateMQTTInstanceResponse
@@ -69,6 +80,28 @@ public class TrocketClient extends AbstractClient{
     public CreateMQTTInstanceResponse CreateMQTTInstance(CreateMQTTInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMQTTInstance", CreateMQTTInstanceResponse.class);
+    }
+
+    /**
+     *创建主题
+     * @param req CreateMQTTTopicRequest
+     * @return CreateMQTTTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMQTTTopicResponse CreateMQTTTopic(CreateMQTTTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMQTTTopic", CreateMQTTTopicResponse.class);
+    }
+
+    /**
+     *添加mqtt角色
+     * @param req CreateMQTTUserRequest
+     * @return CreateMQTTUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMQTTUserResponse CreateMQTTUser(CreateMQTTUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMQTTUser", CreateMQTTUserResponse.class);
     }
 
     /**
@@ -113,6 +146,50 @@ public class TrocketClient extends AbstractClient{
     public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteInstance", DeleteInstanceResponse.class);
+    }
+
+    /**
+     *删除MQTT实例的公网接入点
+     * @param req DeleteMQTTInsPublicEndpointRequest
+     * @return DeleteMQTTInsPublicEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMQTTInsPublicEndpointResponse DeleteMQTTInsPublicEndpoint(DeleteMQTTInsPublicEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMQTTInsPublicEndpoint", DeleteMQTTInsPublicEndpointResponse.class);
+    }
+
+    /**
+     *删除实例
+     * @param req DeleteMQTTInstanceRequest
+     * @return DeleteMQTTInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMQTTInstanceResponse DeleteMQTTInstance(DeleteMQTTInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMQTTInstance", DeleteMQTTInstanceResponse.class);
+    }
+
+    /**
+     *删除主题
+     * @param req DeleteMQTTTopicRequest
+     * @return DeleteMQTTTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMQTTTopicResponse DeleteMQTTTopic(DeleteMQTTTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMQTTTopic", DeleteMQTTTopicResponse.class);
+    }
+
+    /**
+     *删除MQTT访问用户
+     * @param req DeleteMQTTUserRequest
+     * @return DeleteMQTTUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMQTTUserResponse DeleteMQTTUser(DeleteMQTTUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMQTTUser", DeleteMQTTUserResponse.class);
     }
 
     /**
@@ -191,6 +268,61 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *查询 MQTT 客户端详情
+     * @param req DescribeMQTTClientRequest
+     * @return DescribeMQTTClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTClientResponse DescribeMQTTClient(DescribeMQTTClientRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTClient", DescribeMQTTClientResponse.class);
+    }
+
+    /**
+     *查询MQTT实例公网接入点
+     * @param req DescribeMQTTInsPublicEndpointsRequest
+     * @return DescribeMQTTInsPublicEndpointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTInsPublicEndpointsResponse DescribeMQTTInsPublicEndpoints(DescribeMQTTInsPublicEndpointsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTInsPublicEndpoints", DescribeMQTTInsPublicEndpointsResponse.class);
+    }
+
+    /**
+     *查询MQTT实例公网接入点
+     * @param req DescribeMQTTInsVPCEndpointsRequest
+     * @return DescribeMQTTInsVPCEndpointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTInsVPCEndpointsResponse DescribeMQTTInsVPCEndpoints(DescribeMQTTInsVPCEndpointsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTInsVPCEndpoints", DescribeMQTTInsVPCEndpointsResponse.class);
+    }
+
+    /**
+     *查询实例信息
+     * @param req DescribeMQTTInstanceRequest
+     * @return DescribeMQTTInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTInstanceResponse DescribeMQTTInstance(DescribeMQTTInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTInstance", DescribeMQTTInstanceResponse.class);
+    }
+
+    /**
+     *查询MQTT集群证书列表
+     * @param req DescribeMQTTInstanceCertRequest
+     * @return DescribeMQTTInstanceCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTInstanceCertResponse DescribeMQTTInstanceCert(DescribeMQTTInstanceCertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTInstanceCert", DescribeMQTTInstanceCertResponse.class);
+    }
+
+    /**
      *获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，实例ID查询
@@ -208,6 +340,28 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *查询MQTT消息详情
+     * @param req DescribeMQTTMessageRequest
+     * @return DescribeMQTTMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTMessageResponse DescribeMQTTMessage(DescribeMQTTMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTMessage", DescribeMQTTMessageResponse.class);
+    }
+
+    /**
+     *查询消息列表，如查询死信，请设置ConsumerGroup参数
+     * @param req DescribeMQTTMessageListRequest
+     * @return DescribeMQTTMessageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTMessageListResponse DescribeMQTTMessageList(DescribeMQTTMessageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTMessageList", DescribeMQTTMessageListResponse.class);
+    }
+
+    /**
      *非对外接口，获取产品售卖规格
      * @param req DescribeMQTTProductSKUListRequest
      * @return DescribeMQTTProductSKUListResponse
@@ -216,6 +370,44 @@ public class TrocketClient extends AbstractClient{
     public DescribeMQTTProductSKUListResponse DescribeMQTTProductSKUList(DescribeMQTTProductSKUListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMQTTProductSKUList", DescribeMQTTProductSKUListResponse.class);
+    }
+
+    /**
+     *查询mqtt主题详情
+     * @param req DescribeMQTTTopicRequest
+     * @return DescribeMQTTTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTTopicResponse DescribeMQTTTopic(DescribeMQTTTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTTopic", DescribeMQTTTopicResponse.class);
+    }
+
+    /**
+     *获取主题列表，Filter参数使用说明如下：
+
+1. TopicName，主题名称模糊搜索
+2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
+     * @param req DescribeMQTTTopicListRequest
+     * @return DescribeMQTTTopicListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTTopicListResponse DescribeMQTTTopicList(DescribeMQTTTopicListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTTopicList", DescribeMQTTTopicListResponse.class);
+    }
+
+    /**
+     *查询用户列表，Filter参数使用说明如下：
+
+1. Username，用户名称模糊搜索
+     * @param req DescribeMQTTUserListRequest
+     * @return DescribeMQTTUserListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMQTTUserListResponse DescribeMQTTUserList(DescribeMQTTUserListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMQTTUserList", DescribeMQTTUserListResponse.class);
     }
 
     /**
@@ -311,6 +503,62 @@ ConsumerGroup，消费组名称过滤
     public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstance", ModifyInstanceResponse.class);
+    }
+
+    /**
+     *为MQTT实例创建公网接入点
+     * @param req ModifyMQTTInsPublicEndpointRequest
+     * @return ModifyMQTTInsPublicEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMQTTInsPublicEndpointResponse ModifyMQTTInsPublicEndpoint(ModifyMQTTInsPublicEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMQTTInsPublicEndpoint", ModifyMQTTInsPublicEndpointResponse.class);
+    }
+
+    /**
+     *修改实例属性
+     * @param req ModifyMQTTInstanceRequest
+     * @return ModifyMQTTInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMQTTInstanceResponse ModifyMQTTInstance(ModifyMQTTInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMQTTInstance", ModifyMQTTInstanceResponse.class);
+    }
+
+    /**
+     *更新MQTT集群绑定证书
+参数传空，则为删除证书
+     * @param req ModifyMQTTInstanceCertBindingRequest
+     * @return ModifyMQTTInstanceCertBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMQTTInstanceCertBindingResponse ModifyMQTTInstanceCertBinding(ModifyMQTTInstanceCertBindingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMQTTInstanceCertBinding", ModifyMQTTInstanceCertBindingResponse.class);
+    }
+
+    /**
+     *修改主题属性
+     * @param req ModifyMQTTTopicRequest
+     * @return ModifyMQTTTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMQTTTopicResponse ModifyMQTTTopic(ModifyMQTTTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMQTTTopic", ModifyMQTTTopicResponse.class);
+    }
+
+    /**
+     *修改MQTT角色
+     * @param req ModifyMQTTUserRequest
+     * @return ModifyMQTTUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMQTTUserResponse ModifyMQTTUser(ModifyMQTTUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMQTTUser", ModifyMQTTUserResponse.class);
     }
 
     /**

@@ -24,168 +24,188 @@ import java.util.HashMap;
 public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 子账号名称
+    * 自定义访问数据库的名称。
+- 仅由字母、数字、下划线、中划线组成。
+- 长度不能大于32位。
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 1.长度8-30位,推荐使用12位以上的密码
-2.不能以"/"开头
-3.至少包含两项
-    a.小写字母a-z
-    b.大写字母A-Z
-    c.数字0-9
-    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+    * 设置自定义账号的密码。密码复杂度要求如下：
+- 字符个数为[8,32]。
+- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
+- 不能以"/"开头。
+
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * 路由策略：填写master或者replication，表示主节点或者从节点
+    * 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
+- master：主节点
+- replication：副本节点
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * 读写策略：填写r、rw，表示只读、读写
+    * 账户读写权限，支持选择只读与读写权限。
+- r：只读
+- rw: 读写权限
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * 子账号描述信息
+    * 子账号描述信息，长度[0,64] 字节，支持中文。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 子账号名称 
-     * @return AccountName 子账号名称
+     * Get 自定义访问数据库的名称。
+- 仅由字母、数字、下划线、中划线组成。
+- 长度不能大于32位。 
+     * @return AccountName 自定义访问数据库的名称。
+- 仅由字母、数字、下划线、中划线组成。
+- 长度不能大于32位。
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 子账号名称
-     * @param AccountName 子账号名称
+     * Set 自定义访问数据库的名称。
+- 仅由字母、数字、下划线、中划线组成。
+- 长度不能大于32位。
+     * @param AccountName 自定义访问数据库的名称。
+- 仅由字母、数字、下划线、中划线组成。
+- 长度不能大于32位。
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 1.长度8-30位,推荐使用12位以上的密码
-2.不能以"/"开头
-3.至少包含两项
-    a.小写字母a-z
-    b.大写字母A-Z
-    c.数字0-9
-    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 
-     * @return AccountPassword 1.长度8-30位,推荐使用12位以上的密码
-2.不能以"/"开头
-3.至少包含两项
-    a.小写字母a-z
-    b.大写字母A-Z
-    c.数字0-9
-    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * Get 设置自定义账号的密码。密码复杂度要求如下：
+- 字符个数为[8,32]。
+- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
+- 不能以"/"开头。
+ 
+     * @return AccountPassword 设置自定义账号的密码。密码复杂度要求如下：
+- 字符个数为[8,32]。
+- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
+- 不能以"/"开头。
+
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set 1.长度8-30位,推荐使用12位以上的密码
-2.不能以"/"开头
-3.至少包含两项
-    a.小写字母a-z
-    b.大写字母A-Z
-    c.数字0-9
-    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-     * @param AccountPassword 1.长度8-30位,推荐使用12位以上的密码
-2.不能以"/"开头
-3.至少包含两项
-    a.小写字母a-z
-    b.大写字母A-Z
-    c.数字0-9
-    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * Set 设置自定义账号的密码。密码复杂度要求如下：
+- 字符个数为[8,32]。
+- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
+- 不能以"/"开头。
+
+     * @param AccountPassword 设置自定义账号的密码。密码复杂度要求如下：
+- 字符个数为[8,32]。
+- 至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的两种。
+- 不能以"/"开头。
+
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get 路由策略：填写master或者replication，表示主节点或者从节点 
-     * @return ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
+     * Get 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
+- master：主节点
+- replication：副本节点 
+     * @return ReadonlyPolicy 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
+- master：主节点
+- replication：副本节点
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set 路由策略：填写master或者replication，表示主节点或者从节点
-     * @param ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
+     * Set 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
+- master：主节点
+- replication：副本节点
+     * @param ReadonlyPolicy 指定账号的读请求路由分发至主节点或副本节点。未开启副本只读，不支持选择副本节点。
+- master：主节点
+- replication：副本节点
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get 读写策略：填写r、rw，表示只读、读写 
-     * @return Privilege 读写策略：填写r、rw，表示只读、读写
+     * Get 账户读写权限，支持选择只读与读写权限。
+- r：只读
+- rw: 读写权限 
+     * @return Privilege 账户读写权限，支持选择只读与读写权限。
+- r：只读
+- rw: 读写权限
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 读写策略：填写r、rw，表示只读、读写
-     * @param Privilege 读写策略：填写r、rw，表示只读、读写
+     * Set 账户读写权限，支持选择只读与读写权限。
+- r：只读
+- rw: 读写权限
+     * @param Privilege 账户读写权限，支持选择只读与读写权限。
+- r：只读
+- rw: 读写权限
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get 子账号描述信息 
-     * @return Remark 子账号描述信息
+     * Get 子账号描述信息，长度[0,64] 字节，支持中文。 
+     * @return Remark 子账号描述信息，长度[0,64] 字节，支持中文。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 子账号描述信息
-     * @param Remark 子账号描述信息
+     * Set 子账号描述信息，长度[0,64] 字节，支持中文。
+     * @param Remark 子账号描述信息，长度[0,64] 字节，支持中文。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
