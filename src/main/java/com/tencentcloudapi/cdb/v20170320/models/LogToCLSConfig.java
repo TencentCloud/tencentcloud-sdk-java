@@ -48,6 +48,14 @@ public class LogToCLSConfig extends AbstractModel {
     private String LogTopicId;
 
     /**
+    * CLS服务所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClsRegion")
+    @Expose
+    private String ClsRegion;
+
+    /**
      * Get 投递状态打开或者关闭
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 投递状态打开或者关闭
@@ -107,6 +115,26 @@ public class LogToCLSConfig extends AbstractModel {
         this.LogTopicId = LogTopicId;
     }
 
+    /**
+     * Get CLS服务所在地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClsRegion CLS服务所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClsRegion() {
+        return this.ClsRegion;
+    }
+
+    /**
+     * Set CLS服务所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClsRegion CLS服务所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClsRegion(String ClsRegion) {
+        this.ClsRegion = ClsRegion;
+    }
+
     public LogToCLSConfig() {
     }
 
@@ -124,6 +152,9 @@ public class LogToCLSConfig extends AbstractModel {
         if (source.LogTopicId != null) {
             this.LogTopicId = new String(source.LogTopicId);
         }
+        if (source.ClsRegion != null) {
+            this.ClsRegion = new String(source.ClsRegion);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class LogToCLSConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+        this.setParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
 
     }
 }

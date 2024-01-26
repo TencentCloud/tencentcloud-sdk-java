@@ -38,7 +38,7 @@ public class DeleteSpartaProtectionRequest extends AbstractModel {
     private String Edition;
 
     /**
-    * 实例id
+    * 必填项。域名所属实例ID
     */
     @SerializedName("InstanceID")
     @Expose
@@ -77,16 +77,16 @@ public class DeleteSpartaProtectionRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceID 实例id
+     * Get 必填项。域名所属实例ID 
+     * @return InstanceID 必填项。域名所属实例ID
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceID 实例id
+     * Set 必填项。域名所属实例ID
+     * @param InstanceID 必填项。域名所属实例ID
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

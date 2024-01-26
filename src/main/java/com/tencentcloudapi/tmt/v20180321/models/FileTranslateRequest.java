@@ -98,7 +98,7 @@ lo（老挝语）：zh（简体中文）、zh-HK（繁体中文）、 zh-TW（�
     private String BasicDocumentType;
 
     /**
-    * 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
+    * 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中，具体请参见[文件翻译回调说明](https://cloud.tencent.com/document/product/551/91138)。
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -336,16 +336,16 @@ lo（老挝语）：zh（简体中文）、zh-HK（繁体中文）、 zh-TW（�
     }
 
     /**
-     * Get 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。 
-     * @return CallbackUrl 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
+     * Get 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中，具体请参见[文件翻译回调说明](https://cloud.tencent.com/document/product/551/91138)。 
+     * @return CallbackUrl 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中，具体请参见[文件翻译回调说明](https://cloud.tencent.com/document/product/551/91138)。
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
-     * @param CallbackUrl 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
+     * Set 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中，具体请参见[文件翻译回调说明](https://cloud.tencent.com/document/product/551/91138)。
+     * @param CallbackUrl 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中，具体请参见[文件翻译回调说明](https://cloud.tencent.com/document/product/551/91138)。
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;

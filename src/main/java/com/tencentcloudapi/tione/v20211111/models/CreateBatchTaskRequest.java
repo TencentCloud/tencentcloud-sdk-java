@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBatchTaskRequest extends AbstractModel {
 
     /**
-    * 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+    * 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
     */
     @SerializedName("BatchTaskName")
     @Expose
@@ -45,7 +45,7 @@ public class CreateBatchTaskRequest extends AbstractModel {
     private ResourceConfigInfo ResourceConfigInfo;
 
     /**
-    * 结果输出
+    * 结果输出存储信息
     */
     @SerializedName("Outputs")
     @Expose
@@ -157,16 +157,16 @@ public class CreateBatchTaskRequest extends AbstractModel {
     private String CallbackUrl;
 
     /**
-     * Get 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
-     * @return BatchTaskName 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * Get 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
+     * @return BatchTaskName 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
     public String getBatchTaskName() {
         return this.BatchTaskName;
     }
 
     /**
-     * Set 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
-     * @param BatchTaskName 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * Set 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * @param BatchTaskName 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
     public void setBatchTaskName(String BatchTaskName) {
         this.BatchTaskName = BatchTaskName;
@@ -205,16 +205,16 @@ public class CreateBatchTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 结果输出 
-     * @return Outputs 结果输出
+     * Get 结果输出存储信息 
+     * @return Outputs 结果输出存储信息
      */
     public DataConfig [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set 结果输出
-     * @param Outputs 结果输出
+     * Set 结果输出存储信息
+     * @param Outputs 结果输出存储信息
      */
     public void setOutputs(DataConfig [] Outputs) {
         this.Outputs = Outputs;
@@ -239,7 +239,9 @@ public class CreateBatchTaskRequest extends AbstractModel {
     /**
      * Get 工作类型 1:单次 2:周期 
      * @return JobType 工作类型 1:单次 2:周期
+     * @deprecated
      */
+    @Deprecated
     public Long getJobType() {
         return this.JobType;
     }
@@ -247,7 +249,9 @@ public class CreateBatchTaskRequest extends AbstractModel {
     /**
      * Set 工作类型 1:单次 2:周期
      * @param JobType 工作类型 1:单次 2:周期
+     * @deprecated
      */
+    @Deprecated
     public void setJobType(Long JobType) {
         this.JobType = JobType;
     }
@@ -255,7 +259,9 @@ public class CreateBatchTaskRequest extends AbstractModel {
     /**
      * Get 任务周期描述 
      * @return CronInfo 任务周期描述
+     * @deprecated
      */
+    @Deprecated
     public CronInfo getCronInfo() {
         return this.CronInfo;
     }
@@ -263,7 +269,9 @@ public class CreateBatchTaskRequest extends AbstractModel {
     /**
      * Set 任务周期描述
      * @param CronInfo 任务周期描述
+     * @deprecated
      */
+    @Deprecated
     public void setCronInfo(CronInfo CronInfo) {
         this.CronInfo = CronInfo;
     }

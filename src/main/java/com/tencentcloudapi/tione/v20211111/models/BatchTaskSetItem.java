@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class BatchTaskSetItem extends AbstractModel {
 
     /**
-    * 跑批任务ID
+    * 批量预测任务ID
     */
     @SerializedName("BatchTaskId")
     @Expose
     private String BatchTaskId;
 
     /**
-    * 跑批任务名称
+    * 批量预测任务名称
     */
     @SerializedName("BatchTaskName")
     @Expose
@@ -60,7 +60,12 @@ public class BatchTaskSetItem extends AbstractModel {
     private String ChargeType;
 
     /**
-    * 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+    * 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
     */
     @SerializedName("ChargeStatus")
     @Expose
@@ -90,7 +95,8 @@ public class BatchTaskSetItem extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 任务状态
+    * 任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
     */
     @SerializedName("Status")
     @Expose
@@ -105,14 +111,14 @@ public class BatchTaskSetItem extends AbstractModel {
     private Long RuntimeInSeconds;
 
     /**
-    * 创建时间
+    * 任务创建时间
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 开始时间
+    * 任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -120,7 +126,7 @@ public class BatchTaskSetItem extends AbstractModel {
     private String StartTime;
 
     /**
-    * 结束时间
+    * 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -128,7 +134,7 @@ public class BatchTaskSetItem extends AbstractModel {
     private String EndTime;
 
     /**
-    * 更新时间
+    * 任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -158,39 +164,39 @@ public class BatchTaskSetItem extends AbstractModel {
     private String FailureReason;
 
     /**
-    * 计费金额信息，eg：2.00元/小时 (for 按量计费)
+    * 按量计费信息
     */
     @SerializedName("BillingInfo")
     @Expose
     private String BillingInfo;
 
     /**
-     * Get 跑批任务ID 
-     * @return BatchTaskId 跑批任务ID
+     * Get 批量预测任务ID 
+     * @return BatchTaskId 批量预测任务ID
      */
     public String getBatchTaskId() {
         return this.BatchTaskId;
     }
 
     /**
-     * Set 跑批任务ID
-     * @param BatchTaskId 跑批任务ID
+     * Set 批量预测任务ID
+     * @param BatchTaskId 批量预测任务ID
      */
     public void setBatchTaskId(String BatchTaskId) {
         this.BatchTaskId = BatchTaskId;
     }
 
     /**
-     * Get 跑批任务名称 
-     * @return BatchTaskName 跑批任务名称
+     * Get 批量预测任务名称 
+     * @return BatchTaskName 批量预测任务名称
      */
     public String getBatchTaskName() {
         return this.BatchTaskName;
     }
 
     /**
-     * Set 跑批任务名称
-     * @param BatchTaskName 跑批任务名称
+     * Set 批量预测任务名称
+     * @param BatchTaskName 批量预测任务名称
      */
     public void setBatchTaskName(String BatchTaskName) {
         this.BatchTaskName = BatchTaskName;
@@ -249,16 +255,36 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Get 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中 
-     * @return ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Get 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止 
+     * @return ChargeStatus 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
      */
     public String getChargeStatus() {
         return this.ChargeStatus;
     }
 
     /**
-     * Set 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
-     * @param ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Set 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
+     * @param ChargeStatus 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
      */
     public void setChargeStatus(String ChargeStatus) {
         this.ChargeStatus = ChargeStatus;
@@ -321,16 +347,20 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get 任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED 
+     * @return Status 任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set 任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
+     * @param Status 任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -357,25 +387,25 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 任务创建时间 
+     * @return CreateTime 任务创建时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 任务创建时间
+     * @param CreateTime 任务创建时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 开始时间
+     * Get 任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 开始时间
+     * @return StartTime 任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -383,9 +413,9 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Set 开始时间
+     * Set 任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 开始时间
+     * @param StartTime 任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -393,9 +423,9 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Get 结束时间
+     * Get 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束时间
+     * @return EndTime 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -403,9 +433,9 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Set 结束时间
+     * Set 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束时间
+     * @param EndTime 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -413,9 +443,9 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get 任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime 任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -423,9 +453,9 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set 任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime 任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -485,16 +515,16 @@ public class BatchTaskSetItem extends AbstractModel {
     }
 
     /**
-     * Get 计费金额信息，eg：2.00元/小时 (for 按量计费) 
-     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
+     * Get 按量计费信息 
+     * @return BillingInfo 按量计费信息
      */
     public String getBillingInfo() {
         return this.BillingInfo;
     }
 
     /**
-     * Set 计费金额信息，eg：2.00元/小时 (for 按量计费)
-     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
+     * Set 按量计费信息
+     * @param BillingInfo 按量计费信息
      */
     public void setBillingInfo(String BillingInfo) {
         this.BillingInfo = BillingInfo;

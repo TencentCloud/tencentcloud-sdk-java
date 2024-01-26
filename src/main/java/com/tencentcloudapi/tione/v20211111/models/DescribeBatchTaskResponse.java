@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBatchTaskResponse extends AbstractModel {
 
     /**
-    * 跑批任务详情
+    * 批量预测任务详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchTaskDetail")
@@ -39,9 +39,9 @@ public class DescribeBatchTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 跑批任务详情
+     * Get 批量预测任务详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BatchTaskDetail 跑批任务详情
+     * @return BatchTaskDetail 批量预测任务详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchTaskDetail getBatchTaskDetail() {
@@ -49,9 +49,9 @@ public class DescribeBatchTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 跑批任务详情
+     * Set 批量预测任务详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BatchTaskDetail 跑批任务详情
+     * @param BatchTaskDetail 批量预测任务详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchTaskDetail(BatchTaskDetail BatchTaskDetail) {

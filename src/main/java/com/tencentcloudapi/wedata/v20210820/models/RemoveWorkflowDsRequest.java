@@ -38,6 +38,27 @@ public class RemoveWorkflowDsRequest extends AbstractModel {
     private String WorkflowId;
 
     /**
+    * 是否删除脚本
+    */
+    @SerializedName("DeleteScript")
+    @Expose
+    private String DeleteScript;
+
+    /**
+    * 删除是否通知下游
+    */
+    @SerializedName("OperateIsInform")
+    @Expose
+    private String OperateIsInform;
+
+    /**
+    * 是否终止进行中的任务
+    */
+    @SerializedName("DeleteMode")
+    @Expose
+    private String DeleteMode;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -69,6 +90,54 @@ public class RemoveWorkflowDsRequest extends AbstractModel {
         this.WorkflowId = WorkflowId;
     }
 
+    /**
+     * Get 是否删除脚本 
+     * @return DeleteScript 是否删除脚本
+     */
+    public String getDeleteScript() {
+        return this.DeleteScript;
+    }
+
+    /**
+     * Set 是否删除脚本
+     * @param DeleteScript 是否删除脚本
+     */
+    public void setDeleteScript(String DeleteScript) {
+        this.DeleteScript = DeleteScript;
+    }
+
+    /**
+     * Get 删除是否通知下游 
+     * @return OperateIsInform 删除是否通知下游
+     */
+    public String getOperateIsInform() {
+        return this.OperateIsInform;
+    }
+
+    /**
+     * Set 删除是否通知下游
+     * @param OperateIsInform 删除是否通知下游
+     */
+    public void setOperateIsInform(String OperateIsInform) {
+        this.OperateIsInform = OperateIsInform;
+    }
+
+    /**
+     * Get 是否终止进行中的任务 
+     * @return DeleteMode 是否终止进行中的任务
+     */
+    public String getDeleteMode() {
+        return this.DeleteMode;
+    }
+
+    /**
+     * Set 是否终止进行中的任务
+     * @param DeleteMode 是否终止进行中的任务
+     */
+    public void setDeleteMode(String DeleteMode) {
+        this.DeleteMode = DeleteMode;
+    }
+
     public RemoveWorkflowDsRequest() {
     }
 
@@ -83,6 +152,15 @@ public class RemoveWorkflowDsRequest extends AbstractModel {
         if (source.WorkflowId != null) {
             this.WorkflowId = new String(source.WorkflowId);
         }
+        if (source.DeleteScript != null) {
+            this.DeleteScript = new String(source.DeleteScript);
+        }
+        if (source.OperateIsInform != null) {
+            this.OperateIsInform = new String(source.OperateIsInform);
+        }
+        if (source.DeleteMode != null) {
+            this.DeleteMode = new String(source.DeleteMode);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class RemoveWorkflowDsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+        this.setParamSimple(map, prefix + "DeleteScript", this.DeleteScript);
+        this.setParamSimple(map, prefix + "OperateIsInform", this.OperateIsInform);
+        this.setParamSimple(map, prefix + "DeleteMode", this.DeleteMode);
 
     }
 }

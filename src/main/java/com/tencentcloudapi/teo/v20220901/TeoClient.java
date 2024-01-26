@@ -140,6 +140,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *用于创建四层代理实例。
+     * @param req CreateL4ProxyRequest
+     * @return CreateL4ProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateL4ProxyResponse CreateL4Proxy(CreateL4ProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateL4Proxy", CreateL4ProxyResponse.class);
+    }
+
+    /**
+     *用于创建四层代理实例规则，支持单条或者批量创建。
+     * @param req CreateL4ProxyRulesRequest
+     * @return CreateL4ProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateL4ProxyRulesResponse CreateL4ProxyRules(CreateL4ProxyRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateL4ProxyRules", CreateL4ProxyRulesResponse.class);
+    }
+
+    /**
      *创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
      * @param req CreateOriginGroupRequest
      * @return CreateOriginGroupResponse
@@ -273,6 +295,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteApplicationProxyRule", DeleteApplicationProxyRuleResponse.class);
+    }
+
+    /**
+     *用于删除四层代理实例。
+     * @param req DeleteL4ProxyRequest
+     * @return DeleteL4ProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteL4ProxyResponse DeleteL4Proxy(DeleteL4ProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteL4Proxy", DeleteL4ProxyResponse.class);
+    }
+
+    /**
+     *用于删除四层代理转发规则，支持单条或者批量操作。
+     * @param req DeleteL4ProxyRulesRequest
+     * @return DeleteL4ProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteL4ProxyRulesResponse DeleteL4ProxyRules(DeleteL4ProxyRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteL4ProxyRules", DeleteL4ProxyRulesResponse.class);
     }
 
     /**
@@ -515,6 +559,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeIdentificationsResponse DescribeIdentifications(DescribeIdentificationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIdentifications", DescribeIdentificationsResponse.class);
+    }
+
+    /**
+     *用于查询四层代理实例列表。
+     * @param req DescribeL4ProxyRequest
+     * @return DescribeL4ProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL4ProxyResponse DescribeL4Proxy(DescribeL4ProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeL4Proxy", DescribeL4ProxyResponse.class);
+    }
+
+    /**
+     *查询四层代理实例下的规则列表。
+     * @param req DescribeL4ProxyRulesRequest
+     * @return DescribeL4ProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeL4ProxyRulesResponse DescribeL4ProxyRules(DescribeL4ProxyRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeL4ProxyRules", DescribeL4ProxyRulesResponse.class);
     }
 
     /**
@@ -814,6 +880,50 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyHostsCertificateResponse ModifyHostsCertificate(ModifyHostsCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyHostsCertificate", ModifyHostsCertificateResponse.class);
+    }
+
+    /**
+     *用于修改四层代理实例的配置。
+     * @param req ModifyL4ProxyRequest
+     * @return ModifyL4ProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL4ProxyResponse ModifyL4Proxy(ModifyL4ProxyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL4Proxy", ModifyL4ProxyResponse.class);
+    }
+
+    /**
+     *用于修改四层代理转发规则，支持单条或者批量修改。
+     * @param req ModifyL4ProxyRulesRequest
+     * @return ModifyL4ProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL4ProxyRulesResponse ModifyL4ProxyRules(ModifyL4ProxyRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL4ProxyRules", ModifyL4ProxyRulesResponse.class);
+    }
+
+    /**
+     *用于启用/停用四层代理转发规则状态，支持单条或者批量操作。
+     * @param req ModifyL4ProxyRulesStatusRequest
+     * @return ModifyL4ProxyRulesStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL4ProxyRulesStatusResponse ModifyL4ProxyRulesStatus(ModifyL4ProxyRulesStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL4ProxyRulesStatus", ModifyL4ProxyRulesStatusResponse.class);
+    }
+
+    /**
+     *用于启用/停用四层代理实例。
+     * @param req ModifyL4ProxyStatusRequest
+     * @return ModifyL4ProxyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyL4ProxyStatusResponse ModifyL4ProxyStatus(ModifyL4ProxyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyL4ProxyStatus", ModifyL4ProxyStatusResponse.class);
     }
 
     /**

@@ -110,6 +110,30 @@ public class SlowQueryRecord extends AbstractModel {
     private Long IsQuery;
 
     /**
+    * ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResultBytesMB")
+    @Expose
+    private Float ResultBytesMB;
+
+    /**
+    * MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MemoryUsageMB")
+    @Expose
+    private Float MemoryUsageMB;
+
+    /**
+    * DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DurationSec")
+    @Expose
+    private Float DurationSec;
+
+    /**
      * Get 查询用户 
      * @return OsUser 查询用户
      */
@@ -309,6 +333,66 @@ public class SlowQueryRecord extends AbstractModel {
         this.IsQuery = IsQuery;
     }
 
+    /**
+     * Get ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResultBytesMB ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getResultBytesMB() {
+        return this.ResultBytesMB;
+    }
+
+    /**
+     * Set ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultBytesMB ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResultBytesMB(Float ResultBytesMB) {
+        this.ResultBytesMB = ResultBytesMB;
+    }
+
+    /**
+     * Get MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MemoryUsageMB MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getMemoryUsageMB() {
+        return this.MemoryUsageMB;
+    }
+
+    /**
+     * Set MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MemoryUsageMB MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMemoryUsageMB(Float MemoryUsageMB) {
+        this.MemoryUsageMB = MemoryUsageMB;
+    }
+
+    /**
+     * Get DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DurationSec DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDurationSec() {
+        return this.DurationSec;
+    }
+
+    /**
+     * Set DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DurationSec DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDurationSec(Float DurationSec) {
+        this.DurationSec = DurationSec;
+    }
+
     public SlowQueryRecord() {
     }
 
@@ -353,6 +437,15 @@ public class SlowQueryRecord extends AbstractModel {
         if (source.IsQuery != null) {
             this.IsQuery = new Long(source.IsQuery);
         }
+        if (source.ResultBytesMB != null) {
+            this.ResultBytesMB = new Float(source.ResultBytesMB);
+        }
+        if (source.MemoryUsageMB != null) {
+            this.MemoryUsageMB = new Float(source.MemoryUsageMB);
+        }
+        if (source.DurationSec != null) {
+            this.DurationSec = new Float(source.DurationSec);
+        }
     }
 
 
@@ -372,6 +465,9 @@ public class SlowQueryRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "InitialAddress", this.InitialAddress);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
+        this.setParamSimple(map, prefix + "ResultBytesMB", this.ResultBytesMB);
+        this.setParamSimple(map, prefix + "MemoryUsageMB", this.MemoryUsageMB);
+        this.setParamSimple(map, prefix + "DurationSec", this.DurationSec);
 
     }
 }

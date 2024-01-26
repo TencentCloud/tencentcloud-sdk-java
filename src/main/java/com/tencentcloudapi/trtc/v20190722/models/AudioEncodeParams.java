@@ -45,6 +45,13 @@ public class AudioEncodeParams extends AbstractModel {
     private Long BitRate;
 
     /**
+    * 音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Long Volume;
+
+    /**
      * Get 音频采样率，取值为[48000, 44100]，单位是Hz。 
      * @return SampleRate 音频采样率，取值为[48000, 44100]，单位是Hz。
      */
@@ -92,6 +99,22 @@ public class AudioEncodeParams extends AbstractModel {
         this.BitRate = BitRate;
     }
 
+    /**
+     * Get 音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。 
+     * @return Volume 音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
+     */
+    public Long getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set 音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
+     * @param Volume 音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
+     */
+    public void setVolume(Long Volume) {
+        this.Volume = Volume;
+    }
+
     public AudioEncodeParams() {
     }
 
@@ -109,6 +132,9 @@ public class AudioEncodeParams extends AbstractModel {
         if (source.BitRate != null) {
             this.BitRate = new Long(source.BitRate);
         }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class AudioEncodeParams extends AbstractModel {
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "BitRate", this.BitRate);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }
 }

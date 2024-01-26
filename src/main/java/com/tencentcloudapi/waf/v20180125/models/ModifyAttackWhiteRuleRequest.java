@@ -38,13 +38,6 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 规则Id
-    */
-    @SerializedName("SignatureId")
-    @Expose
-    private String SignatureId;
-
-    /**
     * 规则状态
     */
     @SerializedName("Status")
@@ -57,6 +50,20 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
     @SerializedName("Rules")
     @Expose
     private UserWhiteRuleItem [] Rules;
+
+    /**
+    * 规则Id
+    */
+    @SerializedName("SignatureId")
+    @Expose
+    private String SignatureId;
+
+    /**
+    * 编辑的加白的规则ID列表
+    */
+    @SerializedName("SignatureIds")
+    @Expose
+    private String [] SignatureIds;
 
     /**
      * Get 规则序号 
@@ -91,22 +98,6 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则Id 
-     * @return SignatureId 规则Id
-     */
-    public String getSignatureId() {
-        return this.SignatureId;
-    }
-
-    /**
-     * Set 规则Id
-     * @param SignatureId 规则Id
-     */
-    public void setSignatureId(String SignatureId) {
-        this.SignatureId = SignatureId;
-    }
-
-    /**
      * Get 规则状态 
      * @return Status 规则状态
      */
@@ -138,6 +129,38 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
         this.Rules = Rules;
     }
 
+    /**
+     * Get 规则Id 
+     * @return SignatureId 规则Id
+     */
+    public String getSignatureId() {
+        return this.SignatureId;
+    }
+
+    /**
+     * Set 规则Id
+     * @param SignatureId 规则Id
+     */
+    public void setSignatureId(String SignatureId) {
+        this.SignatureId = SignatureId;
+    }
+
+    /**
+     * Get 编辑的加白的规则ID列表 
+     * @return SignatureIds 编辑的加白的规则ID列表
+     */
+    public String [] getSignatureIds() {
+        return this.SignatureIds;
+    }
+
+    /**
+     * Set 编辑的加白的规则ID列表
+     * @param SignatureIds 编辑的加白的规则ID列表
+     */
+    public void setSignatureIds(String [] SignatureIds) {
+        this.SignatureIds = SignatureIds;
+    }
+
     public ModifyAttackWhiteRuleRequest() {
     }
 
@@ -152,9 +175,6 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
-        if (source.SignatureId != null) {
-            this.SignatureId = new String(source.SignatureId);
-        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
@@ -162,6 +182,15 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
             this.Rules = new UserWhiteRuleItem[source.Rules.length];
             for (int i = 0; i < source.Rules.length; i++) {
                 this.Rules[i] = new UserWhiteRuleItem(source.Rules[i]);
+            }
+        }
+        if (source.SignatureId != null) {
+            this.SignatureId = new String(source.SignatureId);
+        }
+        if (source.SignatureIds != null) {
+            this.SignatureIds = new String[source.SignatureIds.length];
+            for (int i = 0; i < source.SignatureIds.length; i++) {
+                this.SignatureIds[i] = new String(source.SignatureIds[i]);
             }
         }
     }
@@ -173,9 +202,10 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamSimple(map, prefix + "SignatureId", this.SignatureId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "SignatureId", this.SignatureId);
+        this.setParamArraySimple(map, prefix + "SignatureIds.", this.SignatureIds);
 
     }
 }

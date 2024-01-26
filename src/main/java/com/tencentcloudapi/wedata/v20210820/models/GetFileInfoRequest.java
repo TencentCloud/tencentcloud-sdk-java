@@ -32,6 +32,7 @@ public class GetFileInfoRequest extends AbstractModel {
 
     /**
     * 文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql
     */
     @SerializedName("FilePath")
     @Expose
@@ -54,8 +55,10 @@ public class GetFileInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 文件路径 
+     * Get 文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql 
      * @return FilePath 文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql
      */
     public String getFilePath() {
         return this.FilePath;
@@ -63,7 +66,9 @@ public class GetFileInfoRequest extends AbstractModel {
 
     /**
      * Set 文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql
      * @param FilePath 文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;

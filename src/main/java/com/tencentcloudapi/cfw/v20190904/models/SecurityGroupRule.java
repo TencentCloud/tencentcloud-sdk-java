@@ -128,6 +128,13 @@ drop：拒绝
     private String Enable;
 
     /**
+    * 规则对应的唯一内部id
+    */
+    @SerializedName("Uid")
+    @Expose
+    private String Uid;
+
+    /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板id(ipm-dyodhpby)
@@ -399,6 +406,22 @@ drop：拒绝
         this.Enable = Enable;
     }
 
+    /**
+     * Get 规则对应的唯一内部id 
+     * @return Uid 规则对应的唯一内部id
+     */
+    public String getUid() {
+        return this.Uid;
+    }
+
+    /**
+     * Set 规则对应的唯一内部id
+     * @param Uid 规则对应的唯一内部id
+     */
+    public void setUid(String Uid) {
+        this.Uid = Uid;
+    }
+
     public SecurityGroupRule() {
     }
 
@@ -443,6 +466,9 @@ drop：拒绝
         if (source.Enable != null) {
             this.Enable = new String(source.Enable);
         }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
     }
 
 
@@ -462,6 +488,7 @@ drop：拒绝
         this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
 
     }
 }

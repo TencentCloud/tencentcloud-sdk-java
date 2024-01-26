@@ -31,56 +31,56 @@ public class ClbDomainsInfo extends AbstractModel {
     private String Domain;
 
     /**
-    * 域名id
+    * 域名唯一ID
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 实例id
+    * 域名所属实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名
+    * 域名所属实例名
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * waf类型
+    * 域名所属实例类型
     */
     @SerializedName("Edition")
     @Expose
     private String Edition;
 
     /**
-    * 是否是cdn
+    * waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
     */
     @SerializedName("IsCdn")
     @Expose
     private Long IsCdn;
 
     /**
-    * 负载均衡算法
+    * 负载均衡类型为clb时，对应的负载均衡器信息
     */
     @SerializedName("LoadBalancerSet")
     @Expose
     private LoadBalancerPackageNew [] LoadBalancerSet;
 
     /**
-    * 镜像模式
+    * 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
     */
     @SerializedName("FlowMode")
     @Expose
     private Long FlowMode;
 
     /**
-    * 绑定clb状态
+    * 域名绑定负载均衡器状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
@@ -104,7 +104,7 @@ public class ClbDomainsInfo extends AbstractModel {
     private String [] IpHeaders;
 
     /**
-    * cdc类型会增加集群信息
+    * cdc-clb-waf类型WAF的CDC集群信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcClusters")
@@ -118,6 +118,14 @@ public class ClbDomainsInfo extends AbstractModel {
     @SerializedName("CloudType")
     @Expose
     private String CloudType;
+
+    /**
+    * 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Note")
+    @Expose
+    private String Note;
 
     /**
      * Get 域名 
@@ -136,121 +144,121 @@ public class ClbDomainsInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名id 
-     * @return DomainId 域名id
+     * Get 域名唯一ID 
+     * @return DomainId 域名唯一ID
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名id
-     * @param DomainId 域名id
+     * Set 域名唯一ID
+     * @param DomainId 域名唯一ID
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 域名所属实例ID 
+     * @return InstanceId 域名所属实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 域名所属实例ID
+     * @param InstanceId 域名所属实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceName 实例名
+     * Get 域名所属实例名 
+     * @return InstanceName 域名所属实例名
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceName 实例名
+     * Set 域名所属实例名
+     * @param InstanceName 域名所属实例名
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get waf类型 
-     * @return Edition waf类型
+     * Get 域名所属实例类型 
+     * @return Edition 域名所属实例类型
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set waf类型
-     * @param Edition waf类型
+     * Set 域名所属实例类型
+     * @param Edition 域名所属实例类型
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
     }
 
     /**
-     * Get 是否是cdn 
-     * @return IsCdn 是否是cdn
+     * Get waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP 
+     * @return IsCdn waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public Long getIsCdn() {
         return this.IsCdn;
     }
 
     /**
-     * Set 是否是cdn
-     * @param IsCdn 是否是cdn
+     * Set waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * @param IsCdn waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public void setIsCdn(Long IsCdn) {
         this.IsCdn = IsCdn;
     }
 
     /**
-     * Get 负载均衡算法 
-     * @return LoadBalancerSet 负载均衡算法
+     * Get 负载均衡类型为clb时，对应的负载均衡器信息 
+     * @return LoadBalancerSet 负载均衡类型为clb时，对应的负载均衡器信息
      */
     public LoadBalancerPackageNew [] getLoadBalancerSet() {
         return this.LoadBalancerSet;
     }
 
     /**
-     * Set 负载均衡算法
-     * @param LoadBalancerSet 负载均衡算法
+     * Set 负载均衡类型为clb时，对应的负载均衡器信息
+     * @param LoadBalancerSet 负载均衡类型为clb时，对应的负载均衡器信息
      */
     public void setLoadBalancerSet(LoadBalancerPackageNew [] LoadBalancerSet) {
         this.LoadBalancerSet = LoadBalancerSet;
     }
 
     /**
-     * Get 镜像模式 
-     * @return FlowMode 镜像模式
+     * Get 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式 
+     * @return FlowMode 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
      */
     public Long getFlowMode() {
         return this.FlowMode;
     }
 
     /**
-     * Set 镜像模式
-     * @param FlowMode 镜像模式
+     * Set 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
+     * @param FlowMode 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
      */
     public void setFlowMode(Long FlowMode) {
         this.FlowMode = FlowMode;
     }
 
     /**
-     * Get 绑定clb状态
+     * Get 域名绑定负载均衡器状态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return State 绑定clb状态
+     * @return State 域名绑定负载均衡器状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getState() {
@@ -258,9 +266,9 @@ public class ClbDomainsInfo extends AbstractModel {
     }
 
     /**
-     * Set 绑定clb状态
+     * Set 域名绑定负载均衡器状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param State 绑定clb状态
+     * @param State 域名绑定负载均衡器状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(Long State) {
@@ -308,9 +316,9 @@ public class ClbDomainsInfo extends AbstractModel {
     }
 
     /**
-     * Get cdc类型会增加集群信息
+     * Get cdc-clb-waf类型WAF的CDC集群信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CdcClusters cdc类型会增加集群信息
+     * @return CdcClusters cdc-clb-waf类型WAF的CDC集群信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcClusters() {
@@ -318,9 +326,9 @@ public class ClbDomainsInfo extends AbstractModel {
     }
 
     /**
-     * Set cdc类型会增加集群信息
+     * Set cdc-clb-waf类型WAF的CDC集群信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CdcClusters cdc类型会增加集群信息
+     * @param CdcClusters cdc-clb-waf类型WAF的CDC集群信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcClusters(String CdcClusters) {
@@ -345,6 +353,26 @@ public class ClbDomainsInfo extends AbstractModel {
      */
     public void setCloudType(String CloudType) {
         this.CloudType = CloudType;
+    }
+
+    /**
+     * Get 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Note 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNote() {
+        return this.Note;
+    }
+
+    /**
+     * Set 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Note 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNote(String Note) {
+        this.Note = Note;
     }
 
     public ClbDomainsInfo() {
@@ -400,6 +428,9 @@ public class ClbDomainsInfo extends AbstractModel {
         if (source.CloudType != null) {
             this.CloudType = new String(source.CloudType);
         }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
     }
 
 
@@ -420,6 +451,7 @@ public class ClbDomainsInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
         this.setParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
         this.setParamSimple(map, prefix + "CloudType", this.CloudType);
+        this.setParamSimple(map, prefix + "Note", this.Note);
 
     }
 }

@@ -250,8 +250,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *删除CLB-WAF防护域名
-支持批量操作
+     *删除负载均衡型域名，支持批量操作。
      * @param req DeleteHostRequest
      * @return DeleteHostResponse
      * @throws TencentCloudSDKException
@@ -284,7 +283,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *Saas型WAF删除防护域名
+     *SaaS型WAF删除防护域名
      * @param req DeleteSpartaProtectionRequest
      * @return DeleteSpartaProtectionResponse
      * @throws TencentCloudSDKException
@@ -794,7 +793,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *查询用户TLS版本
+     *查询SaaS型WAF支持的TLS版本
      * @param req DescribeTlsVersionRequest
      * @return DescribeTlsVersionResponse
      * @throws TencentCloudSDKException
@@ -1160,6 +1159,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *修改域名投递状态
+     * @param req ModifyDomainPostActionRequest
+     * @return ModifyDomainPostActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainPostActionResponse ModifyDomainPostAction(ModifyDomainPostActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDomainPostAction", ModifyDomainPostActionResponse.class);
+    }
+
+    /**
      *更改某一条规则
      * @param req ModifyDomainWhiteRuleRequest
      * @return ModifyDomainWhiteRuleResponse
@@ -1193,7 +1203,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *clb-waf编辑防护域名配置
+     *编辑负载均衡型WAF防护域名配置
      * @param req ModifyHostRequest
      * @return ModifyHostResponse
      * @throws TencentCloudSDKException
@@ -1204,7 +1214,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *clb-waf 设置防护域名的流量模式
+     *设置负载均衡型WAF防护域名的流量模式，切换镜像模式和清洗模式
      * @param req ModifyHostFlowModeRequest
      * @return ModifyHostFlowModeResponse
      * @throws TencentCloudSDKException
@@ -1315,7 +1325,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *修改域名配置
+     *编辑SaaS型WAF域名配置
      * @param req ModifySpartaProtectionRequest
      * @return ModifySpartaProtectionResponse
      * @throws TencentCloudSDKException

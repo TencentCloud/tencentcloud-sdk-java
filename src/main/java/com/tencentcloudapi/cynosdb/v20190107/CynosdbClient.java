@@ -358,6 +358,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *获取审计实例列表
+     * @param req DescribeAuditInstanceListRequest
+     * @return DescribeAuditInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditInstanceListResponse DescribeAuditInstanceList(DescribeAuditInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditInstanceList", DescribeAuditInstanceListResponse.class);
+    }
+
+    /**
      *本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
      * @param req DescribeAuditLogFilesRequest
      * @return DescribeAuditLogFilesResponse

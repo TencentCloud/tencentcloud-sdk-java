@@ -52,6 +52,15 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel {
     private Long DefenseStatus;
 
     /**
+    * 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
     * 重保护网域名状态
     */
     @SerializedName("HWState")
@@ -130,6 +139,30 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel {
     }
 
     /**
+     * Get 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Source 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Source 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
      * Get 重保护网域名状态 
      * @return HWState 重保护网域名状态
      */
@@ -181,6 +214,9 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel {
         if (source.DefenseStatus != null) {
             this.DefenseStatus = new Long(source.DefenseStatus);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
         if (source.HWState != null) {
             this.HWState = new Long(source.HWState);
         }
@@ -198,6 +234,7 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeThreshold", this.TimeThreshold);
         this.setParamSimple(map, prefix + "DenyTimeThreshold", this.DenyTimeThreshold);
         this.setParamSimple(map, prefix + "DefenseStatus", this.DefenseStatus);
+        this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "HWState", this.HWState);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

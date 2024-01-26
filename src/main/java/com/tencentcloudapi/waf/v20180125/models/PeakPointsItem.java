@@ -169,6 +169,30 @@ public class PeakPointsItem extends AbstractModel {
     private Long WxAccess;
 
     /**
+    * 小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WxCount")
+    @Expose
+    private Long WxCount;
+
+    /**
+    * 小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WxUp")
+    @Expose
+    private Long WxUp;
+
+    /**
+    * 小程序下行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WxDown")
+    @Expose
+    private Long WxDown;
+
+    /**
      * Get 秒级别时间戳 
      * @return Time 秒级别时间戳
      */
@@ -520,6 +544,66 @@ public class PeakPointsItem extends AbstractModel {
         this.WxAccess = WxAccess;
     }
 
+    /**
+     * Get 小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WxCount 小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWxCount() {
+        return this.WxCount;
+    }
+
+    /**
+     * Set 小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WxCount 小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWxCount(Long WxCount) {
+        this.WxCount = WxCount;
+    }
+
+    /**
+     * Get 小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WxUp 小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWxUp() {
+        return this.WxUp;
+    }
+
+    /**
+     * Set 小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WxUp 小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWxUp(Long WxUp) {
+        this.WxUp = WxUp;
+    }
+
+    /**
+     * Get 小程序下行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WxDown 小程序下行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWxDown() {
+        return this.WxDown;
+    }
+
+    /**
+     * Set 小程序下行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WxDown 小程序下行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWxDown(Long WxDown) {
+        this.WxDown = WxDown;
+    }
+
     public PeakPointsItem() {
     }
 
@@ -585,6 +669,15 @@ public class PeakPointsItem extends AbstractModel {
         if (source.WxAccess != null) {
             this.WxAccess = new Long(source.WxAccess);
         }
+        if (source.WxCount != null) {
+            this.WxCount = new Long(source.WxCount);
+        }
+        if (source.WxUp != null) {
+            this.WxUp = new Long(source.WxUp);
+        }
+        if (source.WxDown != null) {
+            this.WxDown = new Long(source.WxDown);
+        }
     }
 
 
@@ -611,6 +704,9 @@ public class PeakPointsItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Leak", this.Leak);
         this.setParamSimple(map, prefix + "ACL", this.ACL);
         this.setParamSimple(map, prefix + "WxAccess", this.WxAccess);
+        this.setParamSimple(map, prefix + "WxCount", this.WxCount);
+        this.setParamSimple(map, prefix + "WxUp", this.WxUp);
+        this.setParamSimple(map, prefix + "WxDown", this.WxDown);
 
     }
 }

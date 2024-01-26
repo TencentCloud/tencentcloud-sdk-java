@@ -24,21 +24,20 @@ import java.util.HashMap;
 public class DescribeBatchTasksRequest extends AbstractModel {
 
     /**
-    * 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+    * 过滤器
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
+
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
+    * 标签过滤器
     */
     @SerializedName("TagFilters")
     @Expose
@@ -52,7 +51,7 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     private Long Offset;
 
     /**
-    * 返回数量，默认为10，最大为50
+    * 限制数目，默认为20
     */
     @SerializedName("Limit")
     @Expose
@@ -66,67 +65,64 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     private String Order;
 
     /**
-    * 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+    * 排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-     * Get 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+     * Get 过滤器
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止） 
-     * @return Filters 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED 
+     * @return Filters 过滤器
+
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
+
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+     * Set 过滤器
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
-     * @param Filters 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
+     * @param Filters 过滤器
+
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
+
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }] 
-     * @return TagFilters 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
+     * Get 标签过滤器 
+     * @return TagFilters 标签过滤器
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
-     * @param TagFilters 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
+     * Set 标签过滤器
+     * @param TagFilters 标签过滤器
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
@@ -149,16 +145,16 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     }
 
     /**
-     * Get 返回数量，默认为10，最大为50 
-     * @return Limit 返回数量，默认为10，最大为50
+     * Get 限制数目，默认为20 
+     * @return Limit 限制数目，默认为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为10，最大为50
-     * @param Limit 返回数量，默认为10，最大为50
+     * Set 限制数目，默认为20
+     * @param Limit 限制数目，默认为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -181,16 +177,20 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     }
 
     /**
-     * Get 排序的依据字段， 取值范围 "CreateTime" "UpdateTime" 
-     * @return OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * Get 排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回 
+     * @return OrderField 排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
-     * @param OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * Set 排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回
+     * @param OrderField 排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;

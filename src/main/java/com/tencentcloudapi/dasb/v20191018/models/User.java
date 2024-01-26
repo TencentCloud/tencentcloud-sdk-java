@@ -136,6 +136,14 @@ public class User extends AbstractModel {
     private String Status;
 
     /**
+    * 权限版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AclVersion")
+    @Expose
+    private Long AclVersion;
+
+    /**
      * Get 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符 
      * @return UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      */
@@ -403,6 +411,26 @@ public class User extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 权限版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AclVersion 权限版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAclVersion() {
+        return this.AclVersion;
+    }
+
+    /**
+     * Set 权限版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AclVersion 权限版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAclVersion(Long AclVersion) {
+        this.AclVersion = AclVersion;
+    }
+
     public User() {
     }
 
@@ -459,6 +487,9 @@ public class User extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.AclVersion != null) {
+            this.AclVersion = new Long(source.AclVersion);
+        }
     }
 
 
@@ -481,6 +512,7 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
         this.setParamSimple(map, prefix + "LockStatus", this.LockStatus);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "AclVersion", this.AclVersion);
 
     }
 }

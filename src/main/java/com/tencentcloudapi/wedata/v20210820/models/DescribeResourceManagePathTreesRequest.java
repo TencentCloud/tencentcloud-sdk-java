@@ -53,6 +53,9 @@ public class DescribeResourceManagePathTreesRequest extends AbstractModel {
 
     /**
     * 文件夹类型
+personal 个人
+project 项目
+resource 资源
     */
     @SerializedName("DirType")
     @Expose
@@ -123,8 +126,14 @@ public class DescribeResourceManagePathTreesRequest extends AbstractModel {
     }
 
     /**
-     * Get 文件夹类型 
+     * Get 文件夹类型
+personal 个人
+project 项目
+resource 资源 
      * @return DirType 文件夹类型
+personal 个人
+project 项目
+resource 资源
      */
     public String getDirType() {
         return this.DirType;
@@ -132,7 +141,13 @@ public class DescribeResourceManagePathTreesRequest extends AbstractModel {
 
     /**
      * Set 文件夹类型
+personal 个人
+project 项目
+resource 资源
      * @param DirType 文件夹类型
+personal 个人
+project 项目
+resource 资源
      */
     public void setDirType(String DirType) {
         this.DirType = DirType;

@@ -31,14 +31,16 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
     private String ChannelId;
 
     /**
-    * 下载的开始时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
+    * 下载的开始时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 下载的结束时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
+    * 下载的结束时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
     */
     @SerializedName("EndTime")
     @Expose
@@ -75,32 +77,40 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 下载的开始时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天 
-     * @return BeginTime 下载的开始时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
+     * Get 下载的开始时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。 
+     * @return BeginTime 下载的开始时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 下载的开始时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
-     * @param BeginTime 下载的开始时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
+     * Set 下载的开始时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
+     * @param BeginTime 下载的开始时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 下载的结束时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天 
-     * @return EndTime 下载的结束时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
+     * Get 下载的结束时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。 
+     * @return EndTime 下载的结束时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 下载的结束时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
-     * @param EndTime 下载的结束时间，UTC 秒数，开始和结束时间段最长为30分钟，且不能跨天
+     * Set 下载的结束时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
+     * @param EndTime 下载的结束时间，UTC 秒数，开始和结束时间段最长为60分钟，且不能跨天。
+注意：实际下载的文件时长可能会大于该时段时长，通过指定IsRespActualTime参数可以获取实际下载的开始时间和结束时间。 原因是下载是TS切片对齐的，其目的也是为了保证用户下载数据的完整性，完全包含其指定的时间段。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

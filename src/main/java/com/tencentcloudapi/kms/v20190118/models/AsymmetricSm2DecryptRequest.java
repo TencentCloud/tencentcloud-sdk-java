@@ -31,7 +31,7 @@ public class AsymmetricSm2DecryptRequest extends AbstractModel {
     private String KeyId;
 
     /**
-    * 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+    * 使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
     */
     @SerializedName("Ciphertext")
     @Expose
@@ -54,16 +54,16 @@ public class AsymmetricSm2DecryptRequest extends AbstractModel {
     }
 
     /**
-     * Get 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。 
-     * @return Ciphertext 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+     * Get 使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。 
+     * @return Ciphertext 使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
      */
     public String getCiphertext() {
         return this.Ciphertext;
     }
 
     /**
-     * Set 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
-     * @param Ciphertext 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+     * Set 使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
+     * @param Ciphertext 使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
      */
     public void setCiphertext(String Ciphertext) {
         this.Ciphertext = Ciphertext;

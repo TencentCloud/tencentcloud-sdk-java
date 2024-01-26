@@ -88,6 +88,7 @@ public class ChannelBillUsageDetail extends AbstractModel {
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
     */
     @SerializedName("QuotaType")
@@ -278,6 +279,7 @@ public class ChannelBillUsageDetail extends AbstractModel {
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul> 
      * @return QuotaType 查询的套餐类型
 对应关系如下:
@@ -296,6 +298,7 @@ public class ChannelBillUsageDetail extends AbstractModel {
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
      */
     public String getQuotaType() {
@@ -320,6 +323,7 @@ public class ChannelBillUsageDetail extends AbstractModel {
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
      * @param QuotaType 查询的套餐类型
 对应关系如下:
@@ -338,6 +342,7 @@ public class ChannelBillUsageDetail extends AbstractModel {
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
      */
     public void setQuotaType(String QuotaType) {

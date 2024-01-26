@@ -95,6 +95,14 @@ abnormal = 异常
     private String Name;
 
     /**
+    * 是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableExternal")
+    @Expose
+    private Boolean EnableExternal;
+
+    /**
      * Get 集群类型 
      * @return ClusterType 集群类型
      */
@@ -270,6 +278,26 @@ abnormal = 异常
         this.Name = Name;
     }
 
+    /**
+     * Get 是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableExternal 是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableExternal() {
+        return this.EnableExternal;
+    }
+
+    /**
+     * Set 是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableExternal 是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableExternal(Boolean EnableExternal) {
+        this.EnableExternal = EnableExternal;
+    }
+
     public PrometheusAgentOverview() {
     }
 
@@ -308,6 +336,9 @@ abnormal = 异常
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.EnableExternal != null) {
+            this.EnableExternal = new Boolean(source.EnableExternal);
+        }
     }
 
 
@@ -324,6 +355,7 @@ abnormal = 异常
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "EnableExternal", this.EnableExternal);
 
     }
 }

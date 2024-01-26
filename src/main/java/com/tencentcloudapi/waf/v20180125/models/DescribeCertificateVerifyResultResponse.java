@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class DescribeCertificateVerifyResultResponse extends AbstractModel {
 
     /**
-    * 状态码
+    * 状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期
     */
     @SerializedName("Status")
     @Expose
@@ -45,7 +49,9 @@ public class DescribeCertificateVerifyResultResponse extends AbstractModel {
     private String NotAfter;
 
     /**
-    * 证书是否改变:1有改变，0没有改变
+    * 证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Changed")
@@ -60,16 +66,32 @@ public class DescribeCertificateVerifyResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 状态码 
-     * @return Status 状态码
+     * Get 状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期 
+     * @return Status 状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态码
-     * @param Status 状态码
+     * Set 状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期
+     * @param Status 状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -108,9 +130,13 @@ public class DescribeCertificateVerifyResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 证书是否改变:1有改变，0没有改变
+     * Get 证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Changed 证书是否改变:1有改变，0没有改变
+     * @return Changed 证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChanged() {
@@ -118,9 +144,13 @@ public class DescribeCertificateVerifyResultResponse extends AbstractModel {
     }
 
     /**
-     * Set 证书是否改变:1有改变，0没有改变
+     * Set 证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Changed 证书是否改变:1有改变，0没有改变
+     * @param Changed 证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChanged(Long Changed) {

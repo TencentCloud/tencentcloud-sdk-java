@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class DeleteProjectParamDsResponse extends AbstractModel {
 
     /**
-    * 结果
+    * 结果 true 删除成功
+false 删除失败
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +39,20 @@ public class DeleteProjectParamDsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果 
-     * @return Data 结果
+     * Get 结果 true 删除成功
+false 删除失败 
+     * @return Data 结果 true 删除成功
+false 删除失败
      */
     public Boolean getData() {
         return this.Data;
     }
 
     /**
-     * Set 结果
-     * @param Data 结果
+     * Set 结果 true 删除成功
+false 删除失败
+     * @param Data 结果 true 删除成功
+false 删除失败
      */
     public void setData(Boolean Data) {
         this.Data = Data;

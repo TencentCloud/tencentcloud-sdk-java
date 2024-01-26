@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteTaskDsResponse extends AbstractModel {
 
     /**
-    * 无
+    * 是否删除成功
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DeleteTaskDsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无
+     * Get 是否删除成功
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 无
+     * @return Data 是否删除成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getData() {
@@ -49,9 +49,9 @@ public class DeleteTaskDsResponse extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 是否删除成功
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 无
+     * @param Data 是否删除成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(Boolean Data) {

@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class SubmitTaskTestRunRequest extends AbstractModel {
 
     /**
-    * 无
+    * taskId列表
     */
     @SerializedName("TaskIds")
     @Expose
     private String TaskIds;
 
     /**
-    * 无
+    * 项目Id
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 无
+    * 工作流id
     */
     @SerializedName("WorkFlowId")
     @Expose
     private String WorkFlowId;
 
     /**
-    * 无
+    * 工作流名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 无
+    * 工作流任务列表
     */
     @SerializedName("Tasks")
     @Expose
     private StageCloudApiRequest [] Tasks;
 
     /**
-    * 无
+    * 备注
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 无
+    * 运行参数，map的Json形式
     */
     @SerializedName("RunParams")
     @Expose
     private String RunParams;
 
     /**
-    * 无
+    * 脚本内容
     */
     @SerializedName("ScriptContent")
     @Expose
     private String ScriptContent;
 
     /**
-    * 无
+    * 版本号
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-     * Get 无 
-     * @return TaskIds 无
+     * Get taskId列表 
+     * @return TaskIds taskId列表
      */
     public String getTaskIds() {
         return this.TaskIds;
     }
 
     /**
-     * Set 无
-     * @param TaskIds 无
+     * Set taskId列表
+     * @param TaskIds taskId列表
      */
     public void setTaskIds(String TaskIds) {
         this.TaskIds = TaskIds;
     }
 
     /**
-     * Get 无 
-     * @return ProjectId 无
+     * Get 项目Id 
+     * @return ProjectId 项目Id
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 无
-     * @param ProjectId 无
+     * Set 项目Id
+     * @param ProjectId 项目Id
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 无 
-     * @return WorkFlowId 无
+     * Get 工作流id 
+     * @return WorkFlowId 工作流id
      */
     public String getWorkFlowId() {
         return this.WorkFlowId;
     }
 
     /**
-     * Set 无
-     * @param WorkFlowId 无
+     * Set 工作流id
+     * @param WorkFlowId 工作流id
      */
     public void setWorkFlowId(String WorkFlowId) {
         this.WorkFlowId = WorkFlowId;
     }
 
     /**
-     * Get 无 
-     * @return Name 无
+     * Get 工作流名称 
+     * @return Name 工作流名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 无
-     * @param Name 无
+     * Set 工作流名称
+     * @param Name 工作流名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 无 
-     * @return Tasks 无
+     * Get 工作流任务列表 
+     * @return Tasks 工作流任务列表
      */
     public StageCloudApiRequest [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 无
-     * @param Tasks 无
+     * Set 工作流任务列表
+     * @param Tasks 工作流任务列表
      */
     public void setTasks(StageCloudApiRequest [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 无 
-     * @return Description 无
+     * Get 备注 
+     * @return Description 备注
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 无
-     * @param Description 无
+     * Set 备注
+     * @param Description 备注
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 无 
-     * @return RunParams 无
+     * Get 运行参数，map的Json形式 
+     * @return RunParams 运行参数，map的Json形式
      */
     public String getRunParams() {
         return this.RunParams;
     }
 
     /**
-     * Set 无
-     * @param RunParams 无
+     * Set 运行参数，map的Json形式
+     * @param RunParams 运行参数，map的Json形式
      */
     public void setRunParams(String RunParams) {
         this.RunParams = RunParams;
     }
 
     /**
-     * Get 无 
-     * @return ScriptContent 无
+     * Get 脚本内容 
+     * @return ScriptContent 脚本内容
      */
     public String getScriptContent() {
         return this.ScriptContent;
     }
 
     /**
-     * Set 无
-     * @param ScriptContent 无
+     * Set 脚本内容
+     * @param ScriptContent 脚本内容
      */
     public void setScriptContent(String ScriptContent) {
         this.ScriptContent = ScriptContent;
     }
 
     /**
-     * Get 无 
-     * @return VersionId 无
+     * Get 版本号 
+     * @return VersionId 版本号
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 无
-     * @param VersionId 无
+     * Set 版本号
+     * @param VersionId 版本号
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;

@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ModifyBotStatusRequest extends AbstractModel {
 
     /**
-    * 域名
-    */
-    @SerializedName("Domain")
-    @Expose
-    private String Domain;
-
-    /**
     * 类别
     */
     @SerializedName("Category")
@@ -43,6 +36,13 @@ public class ModifyBotStatusRequest extends AbstractModel {
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
 
     /**
     * 实例id
@@ -66,20 +66,11 @@ public class ModifyBotStatusRequest extends AbstractModel {
     private String BotVersion;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
-     */
-    public String getDomain() {
-        return this.Domain;
-    }
-
-    /**
-     * Set 域名
-     * @param Domain 域名
-     */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
-    }
+    * 批量开启BOT开关的域名列表
+    */
+    @SerializedName("DomainList")
+    @Expose
+    private String [] DomainList;
 
     /**
      * Get 类别 
@@ -111,6 +102,22 @@ public class ModifyBotStatusRequest extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 域名 
+     * @return Domain 域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+     * @param Domain 域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
     /**
@@ -161,6 +168,22 @@ public class ModifyBotStatusRequest extends AbstractModel {
         this.BotVersion = BotVersion;
     }
 
+    /**
+     * Get 批量开启BOT开关的域名列表 
+     * @return DomainList 批量开启BOT开关的域名列表
+     */
+    public String [] getDomainList() {
+        return this.DomainList;
+    }
+
+    /**
+     * Set 批量开启BOT开关的域名列表
+     * @param DomainList 批量开启BOT开关的域名列表
+     */
+    public void setDomainList(String [] DomainList) {
+        this.DomainList = DomainList;
+    }
+
     public ModifyBotStatusRequest() {
     }
 
@@ -169,14 +192,14 @@ public class ModifyBotStatusRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyBotStatusRequest(ModifyBotStatusRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
-        }
         if (source.Category != null) {
             this.Category = new String(source.Category);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
         }
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
@@ -187,6 +210,12 @@ public class ModifyBotStatusRequest extends AbstractModel {
         if (source.BotVersion != null) {
             this.BotVersion = new String(source.BotVersion);
         }
+        if (source.DomainList != null) {
+            this.DomainList = new String[source.DomainList.length];
+            for (int i = 0; i < source.DomainList.length; i++) {
+                this.DomainList[i] = new String(source.DomainList[i]);
+            }
+        }
     }
 
 
@@ -194,12 +223,13 @@ public class ModifyBotStatusRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "IsVersionFour", this.IsVersionFour);
         this.setParamSimple(map, prefix + "BotVersion", this.BotVersion);
+        this.setParamArraySimple(map, prefix + "DomainList.", this.DomainList);
 
     }
 }

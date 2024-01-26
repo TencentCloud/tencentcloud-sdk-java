@@ -45,6 +45,20 @@ public class DescribeProjectsRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * 按项目ID筛选，大于0
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
+    * 按项目名称筛选
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
      * Get 传1拉取所有项目（包括隐藏项目），传0拉取显示项目 
      * @return AllList 传1拉取所有项目（包括隐藏项目），传0拉取显示项目
      */
@@ -92,6 +106,38 @@ public class DescribeProjectsRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get 按项目ID筛选，大于0 
+     * @return ProjectId 按项目ID筛选，大于0
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 按项目ID筛选，大于0
+     * @param ProjectId 按项目ID筛选，大于0
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 按项目名称筛选 
+     * @return ProjectName 按项目名称筛选
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set 按项目名称筛选
+     * @param ProjectName 按项目名称筛选
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
     public DescribeProjectsRequest() {
     }
 
@@ -109,6 +155,12 @@ public class DescribeProjectsRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class DescribeProjectsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AllList", this.AllList);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
 
     }
 }

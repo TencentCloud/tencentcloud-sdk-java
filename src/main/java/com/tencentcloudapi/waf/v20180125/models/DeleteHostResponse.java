@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteHostResponse extends AbstractModel {
 
     /**
-    * 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+    * 域名删除结果。Code表示状态码，Message表示详细信息。
     */
     @SerializedName("Success")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteHostResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败 
-     * @return Success 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+     * Get 域名删除结果。Code表示状态码，Message表示详细信息。 
+     * @return Success 域名删除结果。Code表示状态码，Message表示详细信息。
      */
     public ResponseCode getSuccess() {
         return this.Success;
     }
 
     /**
-     * Set 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
-     * @param Success 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+     * Set 域名删除结果。Code表示状态码，Message表示详细信息。
+     * @param Success 域名删除结果。Code表示状态码，Message表示详细信息。
      */
     public void setSuccess(ResponseCode Success) {
         this.Success = Success;

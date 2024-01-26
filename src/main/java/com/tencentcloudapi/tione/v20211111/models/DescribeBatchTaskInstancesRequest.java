@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeBatchTaskInstancesRequest extends AbstractModel {
 
     /**
-    * 跑批任务id
+    * 批量预测任务id
     */
     @SerializedName("BatchTaskId")
     @Expose
     private String BatchTaskId;
 
     /**
-     * Get 跑批任务id 
-     * @return BatchTaskId 跑批任务id
+     * Get 批量预测任务id 
+     * @return BatchTaskId 批量预测任务id
      */
     public String getBatchTaskId() {
         return this.BatchTaskId;
     }
 
     /**
-     * Set 跑批任务id
-     * @param BatchTaskId 跑批任务id
+     * Set 批量预测任务id
+     * @param BatchTaskId 批量预测任务id
      */
     public void setBatchTaskId(String BatchTaskId) {
         this.BatchTaskId = BatchTaskId;

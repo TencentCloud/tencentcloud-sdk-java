@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBatchTasksResponse extends AbstractModel {
 
     /**
-    * 数量
+    * 批量预测任务总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 任务集
+    * 批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchTaskSet")
@@ -46,25 +46,25 @@ public class DescribeBatchTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数量 
-     * @return TotalCount 数量
+     * Get 批量预测任务总数 
+     * @return TotalCount 批量预测任务总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数量
-     * @param TotalCount 数量
+     * Set 批量预测任务总数
+     * @param TotalCount 批量预测任务总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 任务集
+     * Get 批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BatchTaskSet 任务集
+     * @return BatchTaskSet 批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchTaskSetItem [] getBatchTaskSet() {
@@ -72,9 +72,9 @@ public class DescribeBatchTasksResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务集
+     * Set 批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BatchTaskSet 任务集
+     * @param BatchTaskSet 批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchTaskSet(BatchTaskSetItem [] BatchTaskSet) {

@@ -46,8 +46,8 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
     * 是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
     */
     @SerializedName("AutoVoucher")
@@ -70,9 +70,9 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
     * 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内</li>切换
 默认值：0 
     */
     @SerializedName("SwitchTag")
@@ -143,12 +143,12 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
      * Get 是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0 
      * @return AutoVoucher 是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
      */
     public Long getAutoVoucher() {
@@ -157,12 +157,12 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
      * Set 是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
      * @param AutoVoucher 是否自动使用代金券：
-<li>0：否
-<li>1：是
+<li>0：否</li>
+<li>1：是</li>
 默认值：0
      */
     public void setAutoVoucher(Long AutoVoucher) {
@@ -203,14 +203,14 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
      * Get 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内</li>切换
 默认值：0  
      * @return SwitchTag 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内</li>切换
 默认值：0 
      */
     public Long getSwitchTag() {
@@ -219,14 +219,14 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
      * Set 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内</li>切换
 默认值：0 
      * @param SwitchTag 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内</li>切换
 默认值：0 
      */
     public void setSwitchTag(Long SwitchTag) {

@@ -115,6 +115,13 @@ public class CreateNatRuleItem extends AbstractModel {
     private String ParamTemplateId;
 
     /**
+    * 内部id
+    */
+    @SerializedName("InternalUuid")
+    @Expose
+    private Long InternalUuid;
+
+    /**
      * Get 访问源示例： net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
      */
@@ -322,6 +329,22 @@ public class CreateNatRuleItem extends AbstractModel {
         this.ParamTemplateId = ParamTemplateId;
     }
 
+    /**
+     * Get 内部id 
+     * @return InternalUuid 内部id
+     */
+    public Long getInternalUuid() {
+        return this.InternalUuid;
+    }
+
+    /**
+     * Set 内部id
+     * @param InternalUuid 内部id
+     */
+    public void setInternalUuid(Long InternalUuid) {
+        this.InternalUuid = InternalUuid;
+    }
+
     public CreateNatRuleItem() {
     }
 
@@ -369,6 +392,9 @@ public class CreateNatRuleItem extends AbstractModel {
         if (source.ParamTemplateId != null) {
             this.ParamTemplateId = new String(source.ParamTemplateId);
         }
+        if (source.InternalUuid != null) {
+            this.InternalUuid = new Long(source.InternalUuid);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class CreateNatRuleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
 
     }
 }

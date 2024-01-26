@@ -145,7 +145,7 @@ https：使用https协议回源
     private String [] GrayAreas;
 
     /**
-    * 是否开启HTTP强制跳转到HTTPS。
+    * 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
     */
@@ -168,7 +168,7 @@ https：使用https协议回源
     private String [] SrcList;
 
     /**
-    * 是否开启HTTP2，需要开启HTTPS协议支持。
+    * 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
     */
@@ -199,7 +199,7 @@ cdn-waf：CDN上的Web防护能力
     private String Edition;
 
     /**
-    * 是否开启长连接。
+    * 必填项，是否开启长连接。
 0： 短连接
 1： 长连接
     */
@@ -208,7 +208,7 @@ cdn-waf：CDN上的Web防护能力
     private String IsKeepAlive;
 
     /**
-    * 域名所属实例id
+    * 必填项，域名所属实例id
     */
     @SerializedName("InstanceID")
     @Expose
@@ -229,7 +229,7 @@ cdn-waf：CDN上的Web防护能力
     private Long [] Weights;
 
     /**
-    * 是否开启主动健康检测。
+    * 必填项，是否开启主动健康检测。
 0：不开启
 1：开启
     */
@@ -245,7 +245,7 @@ cdn-waf：CDN上的Web防护能力
     private Long TLSVersion;
 
     /**
-    * 加密套件模板。
+    * 必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
@@ -302,6 +302,20 @@ cdn-waf：CDN上的Web防护能力
     @SerializedName("XFFReset")
     @Expose
     private Long XFFReset;
+
+    /**
+    * 域名备注信息
+    */
+    @SerializedName("Note")
+    @Expose
+    private String Note;
+
+    /**
+    * 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+    */
+    @SerializedName("UpstreamHost")
+    @Expose
+    private String UpstreamHost;
 
     /**
      * Get 需要防护的域名 
@@ -608,10 +622,10 @@ https：使用https协议回源
     }
 
     /**
-     * Get 是否开启HTTP强制跳转到HTTPS。
+     * Get 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转 
-     * @return HttpsRewrite 是否开启HTTP强制跳转到HTTPS。
+     * @return HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
      */
@@ -620,10 +634,10 @@ https：使用https协议回源
     }
 
     /**
-     * Set 是否开启HTTP强制跳转到HTTPS。
+     * Set 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
-     * @param HttpsRewrite 是否开启HTTP强制跳转到HTTPS。
+     * @param HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
      */
@@ -664,10 +678,10 @@ https：使用https协议回源
     }
 
     /**
-     * Get 是否开启HTTP2，需要开启HTTPS协议支持。
+     * Get 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启 
-     * @return IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。
+     * @return IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
      */
@@ -676,10 +690,10 @@ https：使用https协议回源
     }
 
     /**
-     * Set 是否开启HTTP2，需要开启HTTPS协议支持。
+     * Set 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
-     * @param IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。
+     * @param IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
      */
@@ -752,10 +766,10 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 是否开启长连接。
+     * Get 必填项，是否开启长连接。
 0： 短连接
 1： 长连接 
-     * @return IsKeepAlive 是否开启长连接。
+     * @return IsKeepAlive 必填项，是否开启长连接。
 0： 短连接
 1： 长连接
      */
@@ -764,10 +778,10 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Set 是否开启长连接。
+     * Set 必填项，是否开启长连接。
 0： 短连接
 1： 长连接
-     * @param IsKeepAlive 是否开启长连接。
+     * @param IsKeepAlive 必填项，是否开启长连接。
 0： 短连接
 1： 长连接
      */
@@ -776,16 +790,16 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 域名所属实例id 
-     * @return InstanceID 域名所属实例id
+     * Get 必填项，域名所属实例id 
+     * @return InstanceID 必填项，域名所属实例id
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 域名所属实例id
-     * @param InstanceID 域名所属实例id
+     * Set 必填项，域名所属实例id
+     * @param InstanceID 必填项，域名所属实例id
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
@@ -824,10 +838,10 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 是否开启主动健康检测。
+     * Get 必填项，是否开启主动健康检测。
 0：不开启
 1：开启 
-     * @return ActiveCheck 是否开启主动健康检测。
+     * @return ActiveCheck 必填项，是否开启主动健康检测。
 0：不开启
 1：开启
      */
@@ -836,10 +850,10 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Set 是否开启主动健康检测。
+     * Set 必填项，是否开启主动健康检测。
 0：不开启
 1：开启
-     * @param ActiveCheck 是否开启主动健康检测。
+     * @param ActiveCheck 必填项，是否开启主动健康检测。
 0：不开启
 1：开启
      */
@@ -864,12 +878,12 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 加密套件模板。
+     * Get 必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
 3：自定义模板 
-     * @return CipherTemplate 加密套件模板。
+     * @return CipherTemplate 必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
@@ -880,12 +894,12 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Set 加密套件模板。
+     * Set 必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-     * @param CipherTemplate 加密套件模板。
+     * @param CipherTemplate 必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
@@ -1013,6 +1027,38 @@ cdn-waf：CDN上的Web防护能力
      */
     public void setXFFReset(Long XFFReset) {
         this.XFFReset = XFFReset;
+    }
+
+    /**
+     * Get 域名备注信息 
+     * @return Note 域名备注信息
+     */
+    public String getNote() {
+        return this.Note;
+    }
+
+    /**
+     * Set 域名备注信息
+     * @param Note 域名备注信息
+     */
+    public void setNote(String Note) {
+        this.Note = Note;
+    }
+
+    /**
+     * Get 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。 
+     * @return UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+     */
+    public String getUpstreamHost() {
+        return this.UpstreamHost;
+    }
+
+    /**
+     * Set 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+     * @param UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+     */
+    public void setUpstreamHost(String UpstreamHost) {
+        this.UpstreamHost = UpstreamHost;
     }
 
     public AddSpartaProtectionRequest() {
@@ -1143,6 +1189,12 @@ cdn-waf：CDN上的Web防护能力
         if (source.XFFReset != null) {
             this.XFFReset = new Long(source.XFFReset);
         }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.UpstreamHost != null) {
+            this.UpstreamHost = new String(source.UpstreamHost);
+        }
     }
 
 
@@ -1184,6 +1236,8 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "SniType", this.SniType);
         this.setParamSimple(map, prefix + "SniHost", this.SniHost);
         this.setParamSimple(map, prefix + "XFFReset", this.XFFReset);
+        this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
 
     }
 }

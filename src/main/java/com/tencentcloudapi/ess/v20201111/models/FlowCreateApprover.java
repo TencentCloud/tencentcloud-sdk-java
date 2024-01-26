@@ -298,6 +298,16 @@ public class FlowCreateApprover extends AbstractModel {
     private Long SignTypeSelector;
 
     /**
+    * Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
      * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
@@ -1085,6 +1095,34 @@ public class FlowCreateApprover extends AbstractModel {
         this.SignTypeSelector = SignTypeSelector;
     }
 
+    /**
+     * Get Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同` 
+     * @return Deadline Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     * @param Deadline Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -1189,6 +1227,9 @@ public class FlowCreateApprover extends AbstractModel {
         if (source.SignTypeSelector != null) {
             this.SignTypeSelector = new Long(source.SignTypeSelector);
         }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
     }
 
 
@@ -1222,6 +1263,7 @@ public class FlowCreateApprover extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }

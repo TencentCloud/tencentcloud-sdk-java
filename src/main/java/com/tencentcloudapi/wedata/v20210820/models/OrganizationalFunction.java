@@ -188,6 +188,38 @@ public class OrganizationalFunction extends AbstractModel {
     private String SubmitErrorMsg;
 
     /**
+    * 模式名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CommandFormat")
+    @Expose
+    private String CommandFormat;
+
+    /**
+    * 名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerName")
+    @Expose
+    private String OwnerName;
+
+    /**
+    * 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubmitTimestamp")
+    @Expose
+    private String SubmitTimestamp;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -591,6 +623,86 @@ public class OrganizationalFunction extends AbstractModel {
         this.SubmitErrorMsg = SubmitErrorMsg;
     }
 
+    /**
+     * Get 模式名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchemaName 模式名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 模式名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemaName 模式名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CommandFormat 函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCommandFormat() {
+        return this.CommandFormat;
+    }
+
+    /**
+     * Set 函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CommandFormat 函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCommandFormat(String CommandFormat) {
+        this.CommandFormat = CommandFormat;
+    }
+
+    /**
+     * Get 名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerName 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerName() {
+        return this.OwnerName;
+    }
+
+    /**
+     * Set 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerName 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerName(String OwnerName) {
+        this.OwnerName = OwnerName;
+    }
+
+    /**
+     * Get 时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubmitTimestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubmitTimestamp() {
+        return this.SubmitTimestamp;
+    }
+
+    /**
+     * Set 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubmitTimestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubmitTimestamp(String SubmitTimestamp) {
+        this.SubmitTimestamp = SubmitTimestamp;
+    }
+
     public OrganizationalFunction() {
     }
 
@@ -671,6 +783,18 @@ public class OrganizationalFunction extends AbstractModel {
         if (source.SubmitErrorMsg != null) {
             this.SubmitErrorMsg = new String(source.SubmitErrorMsg);
         }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.CommandFormat != null) {
+            this.CommandFormat = new String(source.CommandFormat);
+        }
+        if (source.OwnerName != null) {
+            this.OwnerName = new String(source.OwnerName);
+        }
+        if (source.SubmitTimestamp != null) {
+            this.SubmitTimestamp = new String(source.SubmitTimestamp);
+        }
     }
 
 
@@ -699,6 +823,10 @@ public class OrganizationalFunction extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OwnerUserIds.", this.OwnerUserIds);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "SubmitErrorMsg", this.SubmitErrorMsg);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "CommandFormat", this.CommandFormat);
+        this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
+        this.setParamSimple(map, prefix + "SubmitTimestamp", this.SubmitTimestamp);
 
     }
 }

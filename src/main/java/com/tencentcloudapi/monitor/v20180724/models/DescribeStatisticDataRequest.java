@@ -38,7 +38,8 @@ public class DescribeStatisticDataRequest extends AbstractModel {
     private String Namespace;
 
     /**
-    * 指标名列表
+    * 指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458
     */
     @SerializedName("MetricNames")
     @Expose
@@ -118,16 +119,20 @@ public class DescribeStatisticDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 指标名列表 
-     * @return MetricNames 指标名列表
+     * Get 指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458 
+     * @return MetricNames 指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 指标名列表
-     * @param MetricNames 指标名列表
+     * Set 指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458
+     * @param MetricNames 指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

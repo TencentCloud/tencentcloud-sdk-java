@@ -83,7 +83,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *创建技能组
+     *新建技能组
      * @param req CreateCCCSkillGroupRequest
      * @return CreateCCCSkillGroupResponse
      * @throws TencentCloudSDKException

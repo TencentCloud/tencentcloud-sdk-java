@@ -115,6 +115,14 @@ Disabled：已禁用。
     private String UpdateTime;
 
     /**
+    * 资源ID，对于没有关联资源ID的，用账号主资源ID填充。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get 编排唯一标识。 
      * @return ScheduleId 编排唯一标识。
      */
@@ -346,6 +354,26 @@ Disabled：已禁用。
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 资源ID，对于没有关联资源ID的，用账号主资源ID填充。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceId 资源ID，对于没有关联资源ID的，用账号主资源ID填充。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源ID，对于没有关联资源ID的，用账号主资源ID填充。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceId 资源ID，对于没有关联资源ID的，用账号主资源ID填充。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public SchedulesInfo() {
     }
 
@@ -390,6 +418,9 @@ Disabled：已禁用。
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -408,6 +439,7 @@ Disabled：已禁用。
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

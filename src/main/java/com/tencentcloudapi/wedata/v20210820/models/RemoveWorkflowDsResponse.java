@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoveWorkflowDsResponse extends AbstractModel {
 
     /**
-    * 工作流ID
+    * 是否删除成功
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class RemoveWorkflowDsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工作流ID 
-     * @return Data 工作流ID
+     * Get 是否删除成功 
+     * @return Data 是否删除成功
      */
     public Boolean getData() {
         return this.Data;
     }
 
     /**
-     * Set 工作流ID
-     * @param Data 工作流ID
+     * Set 是否删除成功
+     * @param Data 是否删除成功
      */
     public void setData(Boolean Data) {
         this.Data = Data;

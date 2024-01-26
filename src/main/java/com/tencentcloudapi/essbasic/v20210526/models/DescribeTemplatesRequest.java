@@ -42,6 +42,8 @@ public class DescribeTemplatesRequest extends AbstractModel {
     * 合同模板ID，为32位字符串。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
     */
     @SerializedName("TemplateId")
     @Expose
@@ -64,6 +66,9 @@ public class DescribeTemplatesRequest extends AbstractModel {
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
 2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
 4. `若传递此参数，分页参数(Limit,Offset)无效`
+
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
     */
     @SerializedName("TemplateIds")
@@ -198,10 +203,14 @@ public class DescribeTemplatesRequest extends AbstractModel {
     /**
      * Get 合同模板ID，为32位字符串。
 
-可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。 
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png) 
      * @return TemplateId 合同模板ID，为32位字符串。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -211,9 +220,13 @@ public class DescribeTemplatesRequest extends AbstractModel {
      * Set 合同模板ID，为32位字符串。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
      * @param TemplateId 合同模板ID，为32位字符串。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
@@ -254,6 +267,9 @@ public class DescribeTemplatesRequest extends AbstractModel {
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
 2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
 4. `若传递此参数，分页参数(Limit,Offset)无效`
+
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
  
      * @return TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
 
@@ -261,6 +277,9 @@ public class DescribeTemplatesRequest extends AbstractModel {
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
 2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
 4. `若传递此参数，分页参数(Limit,Offset)无效`
+
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
      */
     public String [] getTemplateIds() {
@@ -275,12 +294,18 @@ public class DescribeTemplatesRequest extends AbstractModel {
 2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
 4. `若传递此参数，分页参数(Limit,Offset)无效`
 
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
      * @param TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
 2. `请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。`
 4. `若传递此参数，分页参数(Limit,Offset)无效`
+
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
      */
     public void setTemplateIds(String [] TemplateIds) {

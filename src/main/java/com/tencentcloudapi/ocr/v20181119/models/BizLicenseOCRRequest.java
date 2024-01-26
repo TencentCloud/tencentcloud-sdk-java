@@ -45,7 +45,7 @@ public class BizLicenseOCRRequest extends AbstractModel {
     private String ImageUrl;
 
     /**
-    * 是否返回黑白复印件告警码，默认为false
+    * 是否返回告警码，默认为false
     */
     @SerializedName("EnableCopyWarn")
     @Expose
@@ -112,16 +112,16 @@ public class BizLicenseOCRRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否返回黑白复印件告警码，默认为false 
-     * @return EnableCopyWarn 是否返回黑白复印件告警码，默认为false
+     * Get 是否返回告警码，默认为false 
+     * @return EnableCopyWarn 是否返回告警码，默认为false
      */
     public Boolean getEnableCopyWarn() {
         return this.EnableCopyWarn;
     }
 
     /**
-     * Set 是否返回黑白复印件告警码，默认为false
-     * @param EnableCopyWarn 是否返回黑白复印件告警码，默认为false
+     * Set 是否返回告警码，默认为false
+     * @param EnableCopyWarn 是否返回告警码，默认为false
      */
     public void setEnableCopyWarn(Boolean EnableCopyWarn) {
         this.EnableCopyWarn = EnableCopyWarn;

@@ -48,14 +48,14 @@ public class StartStreamIngestRequest extends AbstractModel {
     private Long RoomIdType;
 
     /**
-    * 拉流转推机器人的UserId，用于进房发起拉流转推任务。
+    * 输入在线媒体流机器人的UserId，用于进房发起拉流转推任务。
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 拉流转推机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+    * 输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
     */
     @SerializedName("UserSig")
     @Expose
@@ -157,32 +157,32 @@ public class StartStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 拉流转推机器人的UserId，用于进房发起拉流转推任务。 
-     * @return UserId 拉流转推机器人的UserId，用于进房发起拉流转推任务。
+     * Get 输入在线媒体流机器人的UserId，用于进房发起拉流转推任务。 
+     * @return UserId 输入在线媒体流机器人的UserId，用于进房发起拉流转推任务。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 拉流转推机器人的UserId，用于进房发起拉流转推任务。
-     * @param UserId 拉流转推机器人的UserId，用于进房发起拉流转推任务。
+     * Set 输入在线媒体流机器人的UserId，用于进房发起拉流转推任务。
+     * @param UserId 输入在线媒体流机器人的UserId，用于进房发起拉流转推任务。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 拉流转推机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。 
-     * @return UserSig 拉流转推机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+     * Get 输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。 
+     * @return UserSig 输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
      */
     public String getUserSig() {
         return this.UserSig;
     }
 
     /**
-     * Set 拉流转推机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
-     * @param UserSig 拉流转推机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+     * Set 输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+     * @param UserSig 输入在线媒体流机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
      */
     public void setUserSig(String UserSig) {
         this.UserSig = UserSig;

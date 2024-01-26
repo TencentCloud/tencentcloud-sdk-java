@@ -280,6 +280,13 @@ CLOSE 关闭
     private String CerebroPrivateDomain;
 
     /**
+    * 变更为https集群，默认是http
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -895,6 +902,22 @@ CLOSE 关闭
         this.CerebroPrivateDomain = CerebroPrivateDomain;
     }
 
+    /**
+     * Get 变更为https集群，默认是http 
+     * @return Protocol 变更为https集群，默认是http
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 变更为https集群，默认是http
+     * @param Protocol 变更为https集群，默认是http
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -1011,6 +1034,9 @@ CLOSE 关闭
         if (source.CerebroPrivateDomain != null) {
             this.CerebroPrivateDomain = new String(source.CerebroPrivateDomain);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -1052,6 +1078,7 @@ CLOSE 关闭
         this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
         this.setParamSimple(map, prefix + "KibanaPrivateDomain", this.KibanaPrivateDomain);
         this.setParamSimple(map, prefix + "CerebroPrivateDomain", this.CerebroPrivateDomain);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

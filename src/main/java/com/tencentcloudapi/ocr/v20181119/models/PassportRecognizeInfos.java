@@ -101,6 +101,33 @@ public class PassportRecognizeInfos extends AbstractModel {
     private String DateOfExpiration;
 
     /**
+    * 持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+    */
+    @SerializedName("Signature")
+    @Expose
+    private String Signature;
+
+    /**
+    * 签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+    */
+    @SerializedName("IssuePlace")
+    @Expose
+    private String IssuePlace;
+
+    /**
+    * 签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+    */
+    @SerializedName("IssuingAuthority")
+    @Expose
+    private String IssuingAuthority;
+
+    /**
      * Get 证件类型（护照信息页识别结果） 
      * @return Type 证件类型（护照信息页识别结果）
      */
@@ -276,6 +303,78 @@ public class PassportRecognizeInfos extends AbstractModel {
         this.DateOfExpiration = DateOfExpiration;
     }
 
+    /**
+     * Get 持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持 
+     * @return Signature 持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public String getSignature() {
+        return this.Signature;
+    }
+
+    /**
+     * Set 持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * @param Signature 持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public void setSignature(String Signature) {
+        this.Signature = Signature;
+    }
+
+    /**
+     * Get 签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持 
+     * @return IssuePlace 签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public String getIssuePlace() {
+        return this.IssuePlace;
+    }
+
+    /**
+     * Set 签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * @param IssuePlace 签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public void setIssuePlace(String IssuePlace) {
+        this.IssuePlace = IssuePlace;
+    }
+
+    /**
+     * Get 签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持 
+     * @return IssuingAuthority 签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public String getIssuingAuthority() {
+        return this.IssuingAuthority;
+    }
+
+    /**
+     * Set 签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * @param IssuingAuthority 签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public void setIssuingAuthority(String IssuingAuthority) {
+        this.IssuingAuthority = IssuingAuthority;
+    }
+
     public PassportRecognizeInfos() {
     }
 
@@ -317,6 +416,15 @@ public class PassportRecognizeInfos extends AbstractModel {
         if (source.DateOfExpiration != null) {
             this.DateOfExpiration = new String(source.DateOfExpiration);
         }
+        if (source.Signature != null) {
+            this.Signature = new String(source.Signature);
+        }
+        if (source.IssuePlace != null) {
+            this.IssuePlace = new String(source.IssuePlace);
+        }
+        if (source.IssuingAuthority != null) {
+            this.IssuingAuthority = new String(source.IssuingAuthority);
+        }
     }
 
 
@@ -335,6 +443,9 @@ public class PassportRecognizeInfos extends AbstractModel {
         this.setParamSimple(map, prefix + "Sex", this.Sex);
         this.setParamSimple(map, prefix + "DateOfIssuance", this.DateOfIssuance);
         this.setParamSimple(map, prefix + "DateOfExpiration", this.DateOfExpiration);
+        this.setParamSimple(map, prefix + "Signature", this.Signature);
+        this.setParamSimple(map, prefix + "IssuePlace", this.IssuePlace);
+        this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
 
     }
 }

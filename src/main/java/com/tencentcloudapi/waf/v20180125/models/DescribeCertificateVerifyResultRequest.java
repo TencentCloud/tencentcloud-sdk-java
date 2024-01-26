@@ -31,28 +31,28 @@ public class DescribeCertificateVerifyResultRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 证书类型
+    * 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
     */
     @SerializedName("CertType")
     @Expose
     private Long CertType;
 
     /**
-    * 证书公钥
+    * CertType为1时，需要填充此参数，表示自有证书的证书链
     */
     @SerializedName("Certificate")
     @Expose
     private String Certificate;
 
     /**
-    * 证书ID
+    * CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
     */
     @SerializedName("CertID")
     @Expose
     private String CertID;
 
     /**
-    * 私钥信息
+    * CertType为1时，需要填充此参数，表示自有证书的私钥
     */
     @SerializedName("PrivateKey")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeCertificateVerifyResultRequest extends AbstractModel {
     }
 
     /**
-     * Get 证书类型 
-     * @return CertType 证书类型
+     * Get 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书 
+     * @return CertType 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证书类型
-     * @param CertType 证书类型
+     * Set 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
+     * @param CertType 证书类型。 0：仅配置HTTP监听端口，没有证书 1：证书来源为自有证书 2：证书来源为托管证书
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;
     }
 
     /**
-     * Get 证书公钥 
-     * @return Certificate 证书公钥
+     * Get CertType为1时，需要填充此参数，表示自有证书的证书链 
+     * @return Certificate CertType为1时，需要填充此参数，表示自有证书的证书链
      */
     public String getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 证书公钥
-     * @param Certificate 证书公钥
+     * Set CertType为1时，需要填充此参数，表示自有证书的证书链
+     * @param Certificate CertType为1时，需要填充此参数，表示自有证书的证书链
      */
     public void setCertificate(String Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get 证书ID 
-     * @return CertID 证书ID
+     * Get CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id 
+     * @return CertID CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      */
     public String getCertID() {
         return this.CertID;
     }
 
     /**
-     * Set 证书ID
-     * @param CertID 证书ID
+     * Set CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * @param CertID CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      */
     public void setCertID(String CertID) {
         this.CertID = CertID;
     }
 
     /**
-     * Get 私钥信息 
-     * @return PrivateKey 私钥信息
+     * Get CertType为1时，需要填充此参数，表示自有证书的私钥 
+     * @return PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
      */
     public String getPrivateKey() {
         return this.PrivateKey;
     }
 
     /**
-     * Set 私钥信息
-     * @param PrivateKey 私钥信息
+     * Set CertType为1时，需要填充此参数，表示自有证书的私钥
+     * @param PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;

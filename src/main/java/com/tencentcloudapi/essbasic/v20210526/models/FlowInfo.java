@@ -44,6 +44,9 @@ public class FlowInfo extends AbstractModel {
 如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
     */
     @SerializedName("TemplateId")
     @Expose
@@ -203,11 +206,17 @@ public class FlowInfo extends AbstractModel {
      * Get 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
 如果使用模板发起接口，此参数为必填。
 
-可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。 
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+ 
      * @return TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
 如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -218,10 +227,16 @@ public class FlowInfo extends AbstractModel {
 如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
      * @param TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
 如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

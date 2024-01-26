@@ -59,6 +59,13 @@ public class BatchCreateTaskVersionDsRequest extends AbstractModel {
     private String AlarmRecipientTypes;
 
     /**
+    * 是否需要校验父任务已经提交到调度	
+    */
+    @SerializedName("NeedCheckParentSubmitted")
+    @Expose
+    private Boolean NeedCheckParentSubmitted;
+
+    /**
      * Get 任务版本信息 
      * @return TaskVersionDTOs 任务版本信息
      */
@@ -138,6 +145,22 @@ public class BatchCreateTaskVersionDsRequest extends AbstractModel {
         this.AlarmRecipientTypes = AlarmRecipientTypes;
     }
 
+    /**
+     * Get 是否需要校验父任务已经提交到调度	 
+     * @return NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度	
+     */
+    public Boolean getNeedCheckParentSubmitted() {
+        return this.NeedCheckParentSubmitted;
+    }
+
+    /**
+     * Set 是否需要校验父任务已经提交到调度	
+     * @param NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度	
+     */
+    public void setNeedCheckParentSubmitted(Boolean NeedCheckParentSubmitted) {
+        this.NeedCheckParentSubmitted = NeedCheckParentSubmitted;
+    }
+
     public BatchCreateTaskVersionDsRequest() {
     }
 
@@ -164,6 +187,9 @@ public class BatchCreateTaskVersionDsRequest extends AbstractModel {
         if (source.AlarmRecipientTypes != null) {
             this.AlarmRecipientTypes = new String(source.AlarmRecipientTypes);
         }
+        if (source.NeedCheckParentSubmitted != null) {
+            this.NeedCheckParentSubmitted = new Boolean(source.NeedCheckParentSubmitted);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class BatchCreateTaskVersionDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRun", this.AutoRun);
         this.setParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
         this.setParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
+        this.setParamSimple(map, prefix + "NeedCheckParentSubmitted", this.NeedCheckParentSubmitted);
 
     }
 }

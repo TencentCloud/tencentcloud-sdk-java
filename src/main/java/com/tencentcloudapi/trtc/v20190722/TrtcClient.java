@@ -220,7 +220,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *您可以查询转推任务的状态。
+     *您可以查询输入在线媒体流任务的状态。
      * @param req DescribeStreamIngestRequest
      * @return DescribeStreamIngestResponse
      * @throws TencentCloudSDKException
@@ -736,7 +736,7 @@ ver：可以忽略。
     }
 
     /**
-     *停止一个拉流转推任务。
+     *停止一个输入在线媒体流任务。
      * @param req StopStreamIngestRequest
      * @return StopStreamIngestResponse
      * @throws TencentCloudSDKException

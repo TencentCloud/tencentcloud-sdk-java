@@ -45,13 +45,6 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
     private String Direction;
 
     /**
-    * 规则类型：1封禁，2放通
-    */
-    @SerializedName("RuleType")
-    @Expose
-    private Long RuleType;
-
-    /**
     * 排序类型：desc降序，asc正序
     */
     @SerializedName("Order")
@@ -71,6 +64,21 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
     @SerializedName("SearchValue")
     @Expose
     private String SearchValue;
+
+    /**
+    * 规则类型：1封禁，2放通
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private Long RuleType;
+
+    /**
+    * blocklist 封禁列表
+whitelist 白名单列表
+    */
+    @SerializedName("ShowType")
+    @Expose
+    private String ShowType;
 
     /**
      * Get 单页数量 
@@ -121,22 +129,6 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则类型：1封禁，2放通 
-     * @return RuleType 规则类型：1封禁，2放通
-     */
-    public Long getRuleType() {
-        return this.RuleType;
-    }
-
-    /**
-     * Set 规则类型：1封禁，2放通
-     * @param RuleType 规则类型：1封禁，2放通
-     */
-    public void setRuleType(Long RuleType) {
-        this.RuleType = RuleType;
-    }
-
-    /**
      * Get 排序类型：desc降序，asc正序 
      * @return Order 排序类型：desc降序，asc正序
      */
@@ -184,6 +176,42 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
         this.SearchValue = SearchValue;
     }
 
+    /**
+     * Get 规则类型：1封禁，2放通 
+     * @return RuleType 规则类型：1封禁，2放通
+     */
+    public Long getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set 规则类型：1封禁，2放通
+     * @param RuleType 规则类型：1封禁，2放通
+     */
+    public void setRuleType(Long RuleType) {
+        this.RuleType = RuleType;
+    }
+
+    /**
+     * Get blocklist 封禁列表
+whitelist 白名单列表 
+     * @return ShowType blocklist 封禁列表
+whitelist 白名单列表
+     */
+    public String getShowType() {
+        return this.ShowType;
+    }
+
+    /**
+     * Set blocklist 封禁列表
+whitelist 白名单列表
+     * @param ShowType blocklist 封禁列表
+whitelist 白名单列表
+     */
+    public void setShowType(String ShowType) {
+        this.ShowType = ShowType;
+    }
+
     public DescribeBlockIgnoreListRequest() {
     }
 
@@ -201,9 +229,6 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
         if (source.Direction != null) {
             this.Direction = new String(source.Direction);
         }
-        if (source.RuleType != null) {
-            this.RuleType = new Long(source.RuleType);
-        }
         if (source.Order != null) {
             this.Order = new String(source.Order);
         }
@@ -212,6 +237,12 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
         }
         if (source.SearchValue != null) {
             this.SearchValue = new String(source.SearchValue);
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new Long(source.RuleType);
+        }
+        if (source.ShowType != null) {
+            this.ShowType = new String(source.ShowType);
         }
     }
 
@@ -223,10 +254,11 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
-        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
         this.setParamSimple(map, prefix + "SearchValue", this.SearchValue);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "ShowType", this.ShowType);
 
     }
 }

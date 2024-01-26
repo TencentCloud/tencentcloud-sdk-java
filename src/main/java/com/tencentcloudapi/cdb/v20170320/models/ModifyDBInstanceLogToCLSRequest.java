@@ -31,7 +31,7 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 日志类型：error/slowLog
+    * 日志类型：error/slowlog
     */
     @SerializedName("LogType")
     @Expose
@@ -87,6 +87,13 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
     private Boolean CreateIndex;
 
     /**
+    * CLS所在地域
+    */
+    @SerializedName("ClsRegion")
+    @Expose
+    private String ClsRegion;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -103,16 +110,16 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志类型：error/slowLog 
-     * @return LogType 日志类型：error/slowLog
+     * Get 日志类型：error/slowlog 
+     * @return LogType 日志类型：error/slowlog
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 日志类型：error/slowLog
-     * @param LogType 日志类型：error/slowLog
+     * Set 日志类型：error/slowlog
+     * @param LogType 日志类型：error/slowlog
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
@@ -230,6 +237,22 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
         this.CreateIndex = CreateIndex;
     }
 
+    /**
+     * Get CLS所在地域 
+     * @return ClsRegion CLS所在地域
+     */
+    public String getClsRegion() {
+        return this.ClsRegion;
+    }
+
+    /**
+     * Set CLS所在地域
+     * @param ClsRegion CLS所在地域
+     */
+    public void setClsRegion(String ClsRegion) {
+        this.ClsRegion = ClsRegion;
+    }
+
     public ModifyDBInstanceLogToCLSRequest() {
     }
 
@@ -265,6 +288,9 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
         if (source.CreateIndex != null) {
             this.CreateIndex = new Boolean(source.CreateIndex);
         }
+        if (source.ClsRegion != null) {
+            this.ClsRegion = new String(source.ClsRegion);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class ModifyDBInstanceLogToCLSRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogTopic", this.LogTopic);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "CreateIndex", this.CreateIndex);
+        this.setParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
 
     }
 }

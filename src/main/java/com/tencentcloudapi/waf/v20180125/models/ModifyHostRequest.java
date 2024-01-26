@@ -31,7 +31,7 @@ public class ModifyHostRequest extends AbstractModel {
     private HostRecord Host;
 
     /**
-    * 实例id
+    * 实例唯一ID
     */
     @SerializedName("InstanceID")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyHostRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceID 实例id
+     * Get 实例唯一ID 
+     * @return InstanceID 实例唯一ID
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceID 实例id
+     * Set 实例唯一ID
+     * @param InstanceID 实例唯一ID
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

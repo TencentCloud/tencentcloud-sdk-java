@@ -200,6 +200,22 @@ public class ImpalaQuery extends AbstractModel {
     private Long NumRowsFetchedFromCache;
 
     /**
+    * 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * 单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PerNodePeakMemoryBytesSum")
+    @Expose
+    private Long PerNodePeakMemoryBytesSum;
+
+    /**
      * Get 执行语句
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Statement 执行语句
@@ -639,6 +655,46 @@ public class ImpalaQuery extends AbstractModel {
         this.NumRowsFetchedFromCache = NumRowsFetchedFromCache;
     }
 
+    /**
+     * Get 会话ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionId 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get 单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PerNodePeakMemoryBytesSum 单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPerNodePeakMemoryBytesSum() {
+        return this.PerNodePeakMemoryBytesSum;
+    }
+
+    /**
+     * Set 单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PerNodePeakMemoryBytesSum 单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPerNodePeakMemoryBytesSum(Long PerNodePeakMemoryBytesSum) {
+        this.PerNodePeakMemoryBytesSum = PerNodePeakMemoryBytesSum;
+    }
+
     public ImpalaQuery() {
     }
 
@@ -713,6 +769,12 @@ public class ImpalaQuery extends AbstractModel {
         if (source.NumRowsFetchedFromCache != null) {
             this.NumRowsFetchedFromCache = new Long(source.NumRowsFetchedFromCache);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.PerNodePeakMemoryBytesSum != null) {
+            this.PerNodePeakMemoryBytesSum = new Long(source.PerNodePeakMemoryBytesSum);
+        }
     }
 
 
@@ -742,6 +804,8 @@ public class ImpalaQuery extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalScanBytesSent", this.TotalScanBytesSent);
         this.setParamSimple(map, prefix + "EstimatedPerHostMemBytes", this.EstimatedPerHostMemBytes);
         this.setParamSimple(map, prefix + "NumRowsFetchedFromCache", this.NumRowsFetchedFromCache);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "PerNodePeakMemoryBytesSum", this.PerNodePeakMemoryBytesSum);
 
     }
 }

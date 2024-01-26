@@ -26,6 +26,8 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel {
     /**
     * 生成的合同流程ID数组，合同流程ID为32位字符串。
 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
     */
     @SerializedName("FlowIds")
     @Expose
@@ -79,9 +81,13 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel {
 
     /**
      * Get 生成的合同流程ID数组，合同流程ID为32位字符串。
-建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。 
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png) 
      * @return FlowIds 生成的合同流程ID数组，合同流程ID为32位字符串。
 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      */
     public String [] getFlowIds() {
         return this.FlowIds;
@@ -90,8 +96,12 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel {
     /**
      * Set 生成的合同流程ID数组，合同流程ID为32位字符串。
 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      * @param FlowIds 生成的合同流程ID数组，合同流程ID为32位字符串。
 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

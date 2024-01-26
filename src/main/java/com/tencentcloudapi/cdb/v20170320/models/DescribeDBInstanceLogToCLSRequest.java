@@ -31,6 +31,13 @@ public class DescribeDBInstanceLogToCLSRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * CLS服务所在地域
+    */
+    @SerializedName("ClsRegion")
+    @Expose
+    private String ClsRegion;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -46,6 +53,22 @@ public class DescribeDBInstanceLogToCLSRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get CLS服务所在地域 
+     * @return ClsRegion CLS服务所在地域
+     */
+    public String getClsRegion() {
+        return this.ClsRegion;
+    }
+
+    /**
+     * Set CLS服务所在地域
+     * @param ClsRegion CLS服务所在地域
+     */
+    public void setClsRegion(String ClsRegion) {
+        this.ClsRegion = ClsRegion;
+    }
+
     public DescribeDBInstanceLogToCLSRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeDBInstanceLogToCLSRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ClsRegion != null) {
+            this.ClsRegion = new String(source.ClsRegion);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeDBInstanceLogToCLSRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
 
     }
 }

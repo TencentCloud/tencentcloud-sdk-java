@@ -31,28 +31,28 @@ public class DomainsPartInfo extends AbstractModel {
     private String Domain;
 
     /**
-    * 域名id
+    * 域名唯一ID
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 实例id
+    * 域名所属实例唯一ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 类型
+    * 域名所属实例类型
     */
     @SerializedName("Edition")
     @Expose
     private String Edition;
 
     /**
-    * 实例名
+    * 域名所属实例名
     */
     @SerializedName("InstanceName")
     @Expose
@@ -73,147 +73,182 @@ public class DomainsPartInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * AI防御模式
+    * 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
     */
     @SerializedName("Engine")
     @Expose
     private Long Engine;
 
     /**
-    * 是否开启httpRewrite
+    * 是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
     */
     @SerializedName("HttpsRewrite")
     @Expose
     private Long HttpsRewrite;
 
     /**
-    * https回源端口
+    * HTTPS回源端口
     */
     @SerializedName("HttpsUpstreamPort")
     @Expose
     private String HttpsUpstreamPort;
 
     /**
-    * 是否是cdn
+    * waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
     */
     @SerializedName("IsCdn")
     @Expose
     private Long IsCdn;
 
     /**
-    * 是否开启gray
+    * 是否开启灰度，已废弃。
     */
     @SerializedName("IsGray")
     @Expose
     private Long IsGray;
 
     /**
-    * 是否是http2
+    * 是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
     */
     @SerializedName("IsHttp2")
     @Expose
     private Long IsHttp2;
 
     /**
-    * 是否开启websocket
+    * 是否开启WebSocket支持。
+0：关闭
+1：开启
     */
     @SerializedName("IsWebsocket")
     @Expose
     private Long IsWebsocket;
 
     /**
-    * 负载均衡
+    * 回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询
     */
     @SerializedName("LoadBalance")
     @Expose
     private Long LoadBalance;
 
     /**
-    * 防御模式
+    * 防护模式。
+0：观察模式
+1：拦截模式
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 私钥
+    * 自有证书的私钥
     */
     @SerializedName("PrivateKey")
     @Expose
     private String PrivateKey;
 
     /**
-    * ssl id
+    * CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
     */
     @SerializedName("SSLId")
     @Expose
     private String SSLId;
 
     /**
-    * 回源域名
+    * 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
     */
     @SerializedName("UpstreamDomain")
     @Expose
     private String UpstreamDomain;
 
     /**
-    * 回源类型
+    * 回源类型。
+0：通过IP回源
+1：通过域名回源
     */
     @SerializedName("UpstreamType")
     @Expose
     private Long UpstreamType;
 
     /**
-    * 回源ip
+    * IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
     */
     @SerializedName("SrcList")
     @Expose
     private String [] SrcList;
 
     /**
-    * 服务端口配置
+    * 域名端口配置
     */
     @SerializedName("Ports")
     @Expose
     private PortInfo [] Ports;
 
     /**
-    * 证书类型
+    * 证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书
     */
     @SerializedName("CertType")
     @Expose
     private Long CertType;
 
     /**
-    * 回源方式
+    * 服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源
     */
     @SerializedName("UpstreamScheme")
     @Expose
     private String UpstreamScheme;
 
     /**
-    * 日志包
+    * 日志包是否开启。
+0：关闭
+1：开启
     */
     @SerializedName("Cls")
     @Expose
     private Long Cls;
 
     /**
-    * 一级cname
+    * 接入Cname，SaaS型域名使用此Cname进行接入
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * 是否长连接
+    * 是否开启长连接。
+0： 短连接
+1： 长连接
     */
     @SerializedName("IsKeepAlive")
     @Expose
     private Long IsKeepAlive;
 
     /**
-    * 是否开启主动健康检测，1表示开启，0表示不开启
+    * 是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveCheck")
@@ -229,7 +264,7 @@ public class DomainsPartInfo extends AbstractModel {
     private Long TLSVersion;
 
     /**
-    * 加密套件信息
+    * 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ciphers")
@@ -237,7 +272,11 @@ public class DomainsPartInfo extends AbstractModel {
     private Long [] Ciphers;
 
     /**
-    * 模板
+    * 加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CipherTemplate")
@@ -245,7 +284,7 @@ public class DomainsPartInfo extends AbstractModel {
     private Long CipherTemplate;
 
     /**
-    * 300s
+    * WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyReadTimeout")
@@ -253,7 +292,7 @@ public class DomainsPartInfo extends AbstractModel {
     private Long ProxyReadTimeout;
 
     /**
-    * 300s
+    * WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxySendTimeout")
@@ -261,7 +300,11 @@ public class DomainsPartInfo extends AbstractModel {
     private Long ProxySendTimeout;
 
     /**
-    * 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+    * WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SniType")
@@ -269,7 +312,7 @@ public class DomainsPartInfo extends AbstractModel {
     private Long SniType;
 
     /**
-    * SniType=3时，需要填此参数，表示自定义的host；
+    * SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SniHost")
@@ -277,7 +320,7 @@ public class DomainsPartInfo extends AbstractModel {
     private String SniHost;
 
     /**
-    * 无
+    * 回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weights")
@@ -293,12 +336,38 @@ public class DomainsPartInfo extends AbstractModel {
     private String [] IpHeaders;
 
     /**
-    * 0:关闭xff重置；1:开启xff重置
+    * 是否开启XFF重置。
+0：关闭
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("XFFReset")
     @Expose
     private Long XFFReset;
+
+    /**
+    * 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Note")
+    @Expose
+    private String Note;
+
+    /**
+    * 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpstreamHost")
+    @Expose
+    private String UpstreamHost;
+
+    /**
+    * 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
 
     /**
      * Get 域名 
@@ -317,64 +386,64 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名id 
-     * @return DomainId 域名id
+     * Get 域名唯一ID 
+     * @return DomainId 域名唯一ID
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名id
-     * @param DomainId 域名id
+     * Set 域名唯一ID
+     * @param DomainId 域名唯一ID
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 域名所属实例唯一ID 
+     * @return InstanceId 域名所属实例唯一ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 域名所属实例唯一ID
+     * @param InstanceId 域名所属实例唯一ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 类型 
-     * @return Edition 类型
+     * Get 域名所属实例类型 
+     * @return Edition 域名所属实例类型
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 类型
-     * @param Edition 类型
+     * Set 域名所属实例类型
+     * @param Edition 域名所属实例类型
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceName 实例名
+     * Get 域名所属实例名 
+     * @return InstanceName 域名所属实例名
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceName 实例名
+     * Set 域名所属实例名
+     * @param InstanceName 域名所属实例名
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -413,329 +482,465 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get AI防御模式 
-     * @return Engine AI防御模式
+     * Get 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式 
+     * @return Engine 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
      */
     public Long getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set AI防御模式
-     * @param Engine AI防御模式
+     * Set 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
+     * @param Engine 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
      */
     public void setEngine(Long Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get 是否开启httpRewrite 
-     * @return HttpsRewrite 是否开启httpRewrite
+     * Get 是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转 
+     * @return HttpsRewrite 是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
      */
     public Long getHttpsRewrite() {
         return this.HttpsRewrite;
     }
 
     /**
-     * Set 是否开启httpRewrite
-     * @param HttpsRewrite 是否开启httpRewrite
+     * Set 是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
+     * @param HttpsRewrite 是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
      */
     public void setHttpsRewrite(Long HttpsRewrite) {
         this.HttpsRewrite = HttpsRewrite;
     }
 
     /**
-     * Get https回源端口 
-     * @return HttpsUpstreamPort https回源端口
+     * Get HTTPS回源端口 
+     * @return HttpsUpstreamPort HTTPS回源端口
      */
     public String getHttpsUpstreamPort() {
         return this.HttpsUpstreamPort;
     }
 
     /**
-     * Set https回源端口
-     * @param HttpsUpstreamPort https回源端口
+     * Set HTTPS回源端口
+     * @param HttpsUpstreamPort HTTPS回源端口
      */
     public void setHttpsUpstreamPort(String HttpsUpstreamPort) {
         this.HttpsUpstreamPort = HttpsUpstreamPort;
     }
 
     /**
-     * Get 是否是cdn 
-     * @return IsCdn 是否是cdn
+     * Get waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP 
+     * @return IsCdn waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public Long getIsCdn() {
         return this.IsCdn;
     }
 
     /**
-     * Set 是否是cdn
-     * @param IsCdn 是否是cdn
+     * Set waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * @param IsCdn waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public void setIsCdn(Long IsCdn) {
         this.IsCdn = IsCdn;
     }
 
     /**
-     * Get 是否开启gray 
-     * @return IsGray 是否开启gray
+     * Get 是否开启灰度，已废弃。 
+     * @return IsGray 是否开启灰度，已废弃。
      */
     public Long getIsGray() {
         return this.IsGray;
     }
 
     /**
-     * Set 是否开启gray
-     * @param IsGray 是否开启gray
+     * Set 是否开启灰度，已废弃。
+     * @param IsGray 是否开启灰度，已废弃。
      */
     public void setIsGray(Long IsGray) {
         this.IsGray = IsGray;
     }
 
     /**
-     * Get 是否是http2 
-     * @return IsHttp2 是否是http2
+     * Get 是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启 
+     * @return IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
      */
     public Long getIsHttp2() {
         return this.IsHttp2;
     }
 
     /**
-     * Set 是否是http2
-     * @param IsHttp2 是否是http2
+     * Set 是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
+     * @param IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
      */
     public void setIsHttp2(Long IsHttp2) {
         this.IsHttp2 = IsHttp2;
     }
 
     /**
-     * Get 是否开启websocket 
-     * @return IsWebsocket 是否开启websocket
+     * Get 是否开启WebSocket支持。
+0：关闭
+1：开启 
+     * @return IsWebsocket 是否开启WebSocket支持。
+0：关闭
+1：开启
      */
     public Long getIsWebsocket() {
         return this.IsWebsocket;
     }
 
     /**
-     * Set 是否开启websocket
-     * @param IsWebsocket 是否开启websocket
+     * Set 是否开启WebSocket支持。
+0：关闭
+1：开启
+     * @param IsWebsocket 是否开启WebSocket支持。
+0：关闭
+1：开启
      */
     public void setIsWebsocket(Long IsWebsocket) {
         this.IsWebsocket = IsWebsocket;
     }
 
     /**
-     * Get 负载均衡 
-     * @return LoadBalance 负载均衡
+     * Get 回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询 
+     * @return LoadBalance 回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询
      */
     public Long getLoadBalance() {
         return this.LoadBalance;
     }
 
     /**
-     * Set 负载均衡
-     * @param LoadBalance 负载均衡
+     * Set 回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询
+     * @param LoadBalance 回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询
      */
     public void setLoadBalance(Long LoadBalance) {
         this.LoadBalance = LoadBalance;
     }
 
     /**
-     * Get 防御模式 
-     * @return Mode 防御模式
+     * Get 防护模式。
+0：观察模式
+1：拦截模式 
+     * @return Mode 防护模式。
+0：观察模式
+1：拦截模式
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 防御模式
-     * @param Mode 防御模式
+     * Set 防护模式。
+0：观察模式
+1：拦截模式
+     * @param Mode 防护模式。
+0：观察模式
+1：拦截模式
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 私钥 
-     * @return PrivateKey 私钥
+     * Get 自有证书的私钥 
+     * @return PrivateKey 自有证书的私钥
      */
     public String getPrivateKey() {
         return this.PrivateKey;
     }
 
     /**
-     * Set 私钥
-     * @param PrivateKey 私钥
+     * Set 自有证书的私钥
+     * @param PrivateKey 自有证书的私钥
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;
     }
 
     /**
-     * Get ssl id 
-     * @return SSLId ssl id
+     * Get CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id 
+     * @return SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      */
     public String getSSLId() {
         return this.SSLId;
     }
 
     /**
-     * Set ssl id
-     * @param SSLId ssl id
+     * Set CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * @param SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      */
     public void setSSLId(String SSLId) {
         this.SSLId = SSLId;
     }
 
     /**
-     * Get 回源域名 
-     * @return UpstreamDomain 回源域名
+     * Get 域名回源时的回源域名。UpstreamType为1时，需要填充此字段 
+     * @return UpstreamDomain 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
      */
     public String getUpstreamDomain() {
         return this.UpstreamDomain;
     }
 
     /**
-     * Set 回源域名
-     * @param UpstreamDomain 回源域名
+     * Set 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
+     * @param UpstreamDomain 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
      */
     public void setUpstreamDomain(String UpstreamDomain) {
         this.UpstreamDomain = UpstreamDomain;
     }
 
     /**
-     * Get 回源类型 
-     * @return UpstreamType 回源类型
+     * Get 回源类型。
+0：通过IP回源
+1：通过域名回源 
+     * @return UpstreamType 回源类型。
+0：通过IP回源
+1：通过域名回源
      */
     public Long getUpstreamType() {
         return this.UpstreamType;
     }
 
     /**
-     * Set 回源类型
-     * @param UpstreamType 回源类型
+     * Set 回源类型。
+0：通过IP回源
+1：通过域名回源
+     * @param UpstreamType 回源类型。
+0：通过IP回源
+1：通过域名回源
      */
     public void setUpstreamType(Long UpstreamType) {
         this.UpstreamType = UpstreamType;
     }
 
     /**
-     * Get 回源ip 
-     * @return SrcList 回源ip
+     * Get IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段 
+     * @return SrcList IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
      */
     public String [] getSrcList() {
         return this.SrcList;
     }
 
     /**
-     * Set 回源ip
-     * @param SrcList 回源ip
+     * Set IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
+     * @param SrcList IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
      */
     public void setSrcList(String [] SrcList) {
         this.SrcList = SrcList;
     }
 
     /**
-     * Get 服务端口配置 
-     * @return Ports 服务端口配置
+     * Get 域名端口配置 
+     * @return Ports 域名端口配置
      */
     public PortInfo [] getPorts() {
         return this.Ports;
     }
 
     /**
-     * Set 服务端口配置
-     * @param Ports 服务端口配置
+     * Set 域名端口配置
+     * @param Ports 域名端口配置
      */
     public void setPorts(PortInfo [] Ports) {
         this.Ports = Ports;
     }
 
     /**
-     * Get 证书类型 
-     * @return CertType 证书类型
+     * Get 证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书 
+     * @return CertType 证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证书类型
-     * @param CertType 证书类型
+     * Set 证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书
+     * @param CertType 证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;
     }
 
     /**
-     * Get 回源方式 
-     * @return UpstreamScheme 回源方式
+     * Get 服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源 
+     * @return UpstreamScheme 服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源
      */
     public String getUpstreamScheme() {
         return this.UpstreamScheme;
     }
 
     /**
-     * Set 回源方式
-     * @param UpstreamScheme 回源方式
+     * Set 服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源
+     * @param UpstreamScheme 服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源
      */
     public void setUpstreamScheme(String UpstreamScheme) {
         this.UpstreamScheme = UpstreamScheme;
     }
 
     /**
-     * Get 日志包 
-     * @return Cls 日志包
+     * Get 日志包是否开启。
+0：关闭
+1：开启 
+     * @return Cls 日志包是否开启。
+0：关闭
+1：开启
      */
     public Long getCls() {
         return this.Cls;
     }
 
     /**
-     * Set 日志包
-     * @param Cls 日志包
+     * Set 日志包是否开启。
+0：关闭
+1：开启
+     * @param Cls 日志包是否开启。
+0：关闭
+1：开启
      */
     public void setCls(Long Cls) {
         this.Cls = Cls;
     }
 
     /**
-     * Get 一级cname 
-     * @return Cname 一级cname
+     * Get 接入Cname，SaaS型域名使用此Cname进行接入 
+     * @return Cname 接入Cname，SaaS型域名使用此Cname进行接入
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set 一级cname
-     * @param Cname 一级cname
+     * Set 接入Cname，SaaS型域名使用此Cname进行接入
+     * @param Cname 接入Cname，SaaS型域名使用此Cname进行接入
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get 是否长连接 
-     * @return IsKeepAlive 是否长连接
+     * Get 是否开启长连接。
+0： 短连接
+1： 长连接 
+     * @return IsKeepAlive 是否开启长连接。
+0： 短连接
+1： 长连接
      */
     public Long getIsKeepAlive() {
         return this.IsKeepAlive;
     }
 
     /**
-     * Set 是否长连接
-     * @param IsKeepAlive 是否长连接
+     * Set 是否开启长连接。
+0： 短连接
+1： 长连接
+     * @param IsKeepAlive 是否开启长连接。
+0： 短连接
+1： 长连接
      */
     public void setIsKeepAlive(Long IsKeepAlive) {
         this.IsKeepAlive = IsKeepAlive;
     }
 
     /**
-     * Get 是否开启主动健康检测，1表示开启，0表示不开启
+     * Get 是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActiveCheck 是否开启主动健康检测，1表示开启，0表示不开启
+     * @return ActiveCheck 是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActiveCheck() {
@@ -743,9 +948,13 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否开启主动健康检测，1表示开启，0表示不开启
+     * Set 是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActiveCheck 是否开启主动健康检测，1表示开启，0表示不开启
+     * @param ActiveCheck 是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveCheck(Long ActiveCheck) {
@@ -773,9 +982,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get 加密套件信息
+     * Get 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ciphers 加密套件信息
+     * @return Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getCiphers() {
@@ -783,9 +992,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set 加密套件信息
+     * Set 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ciphers 加密套件信息
+     * @param Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCiphers(Long [] Ciphers) {
@@ -793,9 +1002,17 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get 模板
+     * Get 加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CipherTemplate 模板
+     * @return CipherTemplate 加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCipherTemplate() {
@@ -803,9 +1020,17 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set 模板
+     * Set 加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CipherTemplate 模板
+     * @param CipherTemplate 加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCipherTemplate(Long CipherTemplate) {
@@ -813,9 +1038,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get 300s
+     * Get WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyReadTimeout 300s
+     * @return ProxyReadTimeout WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxyReadTimeout() {
@@ -823,9 +1048,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set 300s
+     * Set WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyReadTimeout 300s
+     * @param ProxyReadTimeout WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyReadTimeout(Long ProxyReadTimeout) {
@@ -833,9 +1058,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get 300s
+     * Get WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxySendTimeout 300s
+     * @return ProxySendTimeout WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxySendTimeout() {
@@ -843,9 +1068,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set 300s
+     * Set WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxySendTimeout 300s
+     * @param ProxySendTimeout WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxySendTimeout(Long ProxySendTimeout) {
@@ -853,9 +1078,17 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     * Get WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     * @return SniType WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSniType() {
@@ -863,9 +1096,17 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     * Set WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     * @param SniType WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSniType(Long SniType) {
@@ -873,9 +1114,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get SniType=3时，需要填此参数，表示自定义的host；
+     * Get SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SniHost SniType=3时，需要填此参数，表示自定义的host；
+     * @return SniHost SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSniHost() {
@@ -883,9 +1124,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set SniType=3时，需要填此参数，表示自定义的host；
+     * Set SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SniHost SniType=3时，需要填此参数，表示自定义的host；
+     * @param SniHost SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSniHost(String SniHost) {
@@ -893,9 +1134,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Weights 无
+     * @return Weights 回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getWeights() {
@@ -903,9 +1144,9 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Weights 无
+     * @param Weights 回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeights(String [] Weights) {
@@ -933,9 +1174,13 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Get 0:关闭xff重置；1:开启xff重置
+     * Get 是否开启XFF重置。
+0：关闭
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return XFFReset 0:关闭xff重置；1:开启xff重置
+     * @return XFFReset 是否开启XFF重置。
+0：关闭
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getXFFReset() {
@@ -943,13 +1188,77 @@ public class DomainsPartInfo extends AbstractModel {
     }
 
     /**
-     * Set 0:关闭xff重置；1:开启xff重置
+     * Set 是否开启XFF重置。
+0：关闭
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param XFFReset 0:关闭xff重置；1:开启xff重置
+     * @param XFFReset 是否开启XFF重置。
+0：关闭
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setXFFReset(Long XFFReset) {
         this.XFFReset = XFFReset;
+    }
+
+    /**
+     * Get 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Note 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNote() {
+        return this.Note;
+    }
+
+    /**
+     * Set 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Note 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNote(String Note) {
+        this.Note = Note;
+    }
+
+    /**
+     * Get 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpstreamHost() {
+        return this.UpstreamHost;
+    }
+
+    /**
+     * Set 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpstreamHost(String UpstreamHost) {
+        this.UpstreamHost = UpstreamHost;
+    }
+
+    /**
+     * Get 防护规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Level 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Level 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
     }
 
     public DomainsPartInfo() {
@@ -1089,6 +1398,15 @@ public class DomainsPartInfo extends AbstractModel {
         if (source.XFFReset != null) {
             this.XFFReset = new Long(source.XFFReset);
         }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.UpstreamHost != null) {
+            this.UpstreamHost = new String(source.UpstreamHost);
+        }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
     }
 
 
@@ -1134,6 +1452,9 @@ public class DomainsPartInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Weights.", this.Weights);
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
         this.setParamSimple(map, prefix + "XFFReset", this.XFFReset);
+        this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
+        this.setParamSimple(map, prefix + "Level", this.Level);
 
     }
 }

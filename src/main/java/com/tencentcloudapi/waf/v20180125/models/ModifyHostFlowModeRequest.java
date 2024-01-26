@@ -38,7 +38,9 @@ public class ModifyHostFlowModeRequest extends AbstractModel {
     private String DomainId;
 
     /**
-    * WAF流量模式，1：清洗模式，0：镜像模式（默认）
+    * WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式
     */
     @SerializedName("FlowMode")
     @Expose
@@ -84,16 +86,24 @@ public class ModifyHostFlowModeRequest extends AbstractModel {
     }
 
     /**
-     * Get WAF流量模式，1：清洗模式，0：镜像模式（默认） 
-     * @return FlowMode WAF流量模式，1：清洗模式，0：镜像模式（默认）
+     * Get WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式 
+     * @return FlowMode WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式
      */
     public Long getFlowMode() {
         return this.FlowMode;
     }
 
     /**
-     * Set WAF流量模式，1：清洗模式，0：镜像模式（默认）
-     * @param FlowMode WAF流量模式，1：清洗模式，0：镜像模式（默认）
+     * Set WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式
+     * @param FlowMode WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式
      */
     public void setFlowMode(Long FlowMode) {
         this.FlowMode = FlowMode;

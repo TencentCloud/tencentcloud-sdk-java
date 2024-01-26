@@ -32,6 +32,29 @@ public class ModifyBotStatusResponse extends AbstractModel {
     private String Data;
 
     /**
+    * 未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnSupportedList")
+    @Expose
+    private String [] UnSupportedList;
+
+    /**
+    * 已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailDomainList")
+    @Expose
+    private String [] FailDomainList;
+
+    /**
+    * 成功数目
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +79,62 @@ public class ModifyBotStatusResponse extends AbstractModel {
      */
     public void setData(String Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnSupportedList 未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getUnSupportedList() {
+        return this.UnSupportedList;
+    }
+
+    /**
+     * Set 未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnSupportedList 未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnSupportedList(String [] UnSupportedList) {
+        this.UnSupportedList = UnSupportedList;
+    }
+
+    /**
+     * Get 已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailDomainList 已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFailDomainList() {
+        return this.FailDomainList;
+    }
+
+    /**
+     * Set 已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailDomainList 已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailDomainList(String [] FailDomainList) {
+        this.FailDomainList = FailDomainList;
+    }
+
+    /**
+     * Get 成功数目 
+     * @return Count 成功数目
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 成功数目
+     * @param Count 成功数目
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
     }
 
     /**
@@ -85,6 +164,21 @@ public class ModifyBotStatusResponse extends AbstractModel {
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
+        if (source.UnSupportedList != null) {
+            this.UnSupportedList = new String[source.UnSupportedList.length];
+            for (int i = 0; i < source.UnSupportedList.length; i++) {
+                this.UnSupportedList[i] = new String(source.UnSupportedList[i]);
+            }
+        }
+        if (source.FailDomainList != null) {
+            this.FailDomainList = new String[source.FailDomainList.length];
+            for (int i = 0; i < source.FailDomainList.length; i++) {
+                this.FailDomainList[i] = new String(source.FailDomainList[i]);
+            }
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -96,6 +190,9 @@ public class ModifyBotStatusResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamArraySimple(map, prefix + "UnSupportedList.", this.UnSupportedList);
+        this.setParamArraySimple(map, prefix + "FailDomainList.", this.FailDomainList);
+        this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

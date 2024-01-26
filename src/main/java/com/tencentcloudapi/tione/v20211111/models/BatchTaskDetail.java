@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class BatchTaskDetail extends AbstractModel {
 
     /**
-    * 跑批任务ID
+    * 批量预测任务ID
     */
     @SerializedName("BatchTaskId")
     @Expose
     private String BatchTaskId;
 
     /**
-    * 跑批任务名称
+    * 批量预测任务名称
     */
     @SerializedName("BatchTaskName")
     @Expose
@@ -220,7 +220,12 @@ public class BatchTaskDetail extends AbstractModel {
     private String EndTime;
 
     /**
-    * 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+    * 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
     */
     @SerializedName("ChargeStatus")
     @Expose
@@ -275,32 +280,32 @@ public class BatchTaskDetail extends AbstractModel {
     private CosPathInfo ModelInferenceCodeInfo;
 
     /**
-     * Get 跑批任务ID 
-     * @return BatchTaskId 跑批任务ID
+     * Get 批量预测任务ID 
+     * @return BatchTaskId 批量预测任务ID
      */
     public String getBatchTaskId() {
         return this.BatchTaskId;
     }
 
     /**
-     * Set 跑批任务ID
-     * @param BatchTaskId 跑批任务ID
+     * Set 批量预测任务ID
+     * @param BatchTaskId 批量预测任务ID
      */
     public void setBatchTaskId(String BatchTaskId) {
         this.BatchTaskId = BatchTaskId;
     }
 
     /**
-     * Get 跑批任务名称 
-     * @return BatchTaskName 跑批任务名称
+     * Get 批量预测任务名称 
+     * @return BatchTaskName 批量预测任务名称
      */
     public String getBatchTaskName() {
         return this.BatchTaskName;
     }
 
     /**
-     * Set 跑批任务名称
-     * @param BatchTaskName 跑批任务名称
+     * Set 批量预测任务名称
+     * @param BatchTaskName 批量预测任务名称
      */
     public void setBatchTaskName(String BatchTaskName) {
         this.BatchTaskName = BatchTaskName;
@@ -747,16 +752,36 @@ public class BatchTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中 
-     * @return ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Get 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止 
+     * @return ChargeStatus 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
      */
     public String getChargeStatus() {
         return this.ChargeStatus;
     }
 
     /**
-     * Set 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
-     * @param ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Set 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
+     * @param ChargeStatus 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
      */
     public void setChargeStatus(String ChargeStatus) {
         this.ChargeStatus = ChargeStatus;

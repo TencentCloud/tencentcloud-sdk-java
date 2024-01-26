@@ -240,6 +240,15 @@ public class ApproverInfo extends AbstractModel {
     private String SignInstructionContent;
 
     /**
+    * 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
      * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -851,6 +860,30 @@ public class ApproverInfo extends AbstractModel {
         this.SignInstructionContent = SignInstructionContent;
     }
 
+    /**
+     * Get 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同` 
+     * @return Deadline 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     * @param Deadline 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
     public ApproverInfo() {
     }
 
@@ -937,6 +970,9 @@ public class ApproverInfo extends AbstractModel {
         if (source.SignInstructionContent != null) {
             this.SignInstructionContent = new String(source.SignInstructionContent);
         }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
     }
 
 
@@ -965,6 +1001,7 @@ public class ApproverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
         this.setParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
         this.setParamSimple(map, prefix + "SignInstructionContent", this.SignInstructionContent);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }

@@ -105,7 +105,7 @@ public class BizLicenseOCRResponse extends AbstractModel {
     /**
     * 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+WARN_RESHOOT_CARD翻拍件告警
     */
     @SerializedName("RecognizeWarnMsg")
     @Expose
@@ -328,10 +328,10 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
     /**
      * Get 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警 
+WARN_RESHOOT_CARD翻拍件告警 
      * @return RecognizeWarnMsg 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+WARN_RESHOOT_CARD翻拍件告警
      */
     public String [] getRecognizeWarnMsg() {
         return this.RecognizeWarnMsg;
@@ -340,10 +340,10 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
     /**
      * Set 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+WARN_RESHOOT_CARD翻拍件告警
      * @param RecognizeWarnMsg 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+WARN_RESHOOT_CARD翻拍件告警
      */
     public void setRecognizeWarnMsg(String [] RecognizeWarnMsg) {
         this.RecognizeWarnMsg = RecognizeWarnMsg;

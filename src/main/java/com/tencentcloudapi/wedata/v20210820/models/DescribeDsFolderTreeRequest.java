@@ -31,7 +31,8 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 是否一级拉取
+    * 是否一级拉取 true 是 
+false 否
     */
     @SerializedName("FirstLevelPull")
     @Expose
@@ -59,14 +60,16 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
     private String Keyword;
 
     /**
-    * 是否包含工作流
+    * 是否包含工作流 true 是 
+false 否
     */
     @SerializedName("IncludeWorkflow")
     @Expose
     private Boolean IncludeWorkflow;
 
     /**
-    * 是否包含任务
+    * 是否包含任务 true 是 
+false 否
     */
     @SerializedName("IncludeTask")
     @Expose
@@ -94,7 +97,8 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
     private String DisplayType;
 
     /**
-    * 是否包含任务目录
+    * 是否包含任务目录 true 是 
+false 否
     */
     @SerializedName("IncludeTaskFolder")
     @Expose
@@ -117,16 +121,20 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否一级拉取 
-     * @return FirstLevelPull 是否一级拉取
+     * Get 是否一级拉取 true 是 
+false 否 
+     * @return FirstLevelPull 是否一级拉取 true 是 
+false 否
      */
     public Boolean getFirstLevelPull() {
         return this.FirstLevelPull;
     }
 
     /**
-     * Set 是否一级拉取
-     * @param FirstLevelPull 是否一级拉取
+     * Set 是否一级拉取 true 是 
+false 否
+     * @param FirstLevelPull 是否一级拉取 true 是 
+false 否
      */
     public void setFirstLevelPull(Boolean FirstLevelPull) {
         this.FirstLevelPull = FirstLevelPull;
@@ -181,32 +189,40 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否包含工作流 
-     * @return IncludeWorkflow 是否包含工作流
+     * Get 是否包含工作流 true 是 
+false 否 
+     * @return IncludeWorkflow 是否包含工作流 true 是 
+false 否
      */
     public Boolean getIncludeWorkflow() {
         return this.IncludeWorkflow;
     }
 
     /**
-     * Set 是否包含工作流
-     * @param IncludeWorkflow 是否包含工作流
+     * Set 是否包含工作流 true 是 
+false 否
+     * @param IncludeWorkflow 是否包含工作流 true 是 
+false 否
      */
     public void setIncludeWorkflow(Boolean IncludeWorkflow) {
         this.IncludeWorkflow = IncludeWorkflow;
     }
 
     /**
-     * Get 是否包含任务 
-     * @return IncludeTask 是否包含任务
+     * Get 是否包含任务 true 是 
+false 否 
+     * @return IncludeTask 是否包含任务 true 是 
+false 否
      */
     public Boolean getIncludeTask() {
         return this.IncludeTask;
     }
 
     /**
-     * Set 是否包含任务
-     * @param IncludeTask 是否包含任务
+     * Set 是否包含任务 true 是 
+false 否
+     * @param IncludeTask 是否包含任务 true 是 
+false 否
      */
     public void setIncludeTask(Boolean IncludeTask) {
         this.IncludeTask = IncludeTask;
@@ -261,16 +277,20 @@ public class DescribeDsFolderTreeRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否包含任务目录 
-     * @return IncludeTaskFolder 是否包含任务目录
+     * Get 是否包含任务目录 true 是 
+false 否 
+     * @return IncludeTaskFolder 是否包含任务目录 true 是 
+false 否
      */
     public Boolean getIncludeTaskFolder() {
         return this.IncludeTaskFolder;
     }
 
     /**
-     * Set 是否包含任务目录
-     * @param IncludeTaskFolder 是否包含任务目录
+     * Set 是否包含任务目录 true 是 
+false 否
+     * @param IncludeTaskFolder 是否包含任务目录 true 是 
+false 否
      */
     public void setIncludeTaskFolder(Boolean IncludeTaskFolder) {
         this.IncludeTaskFolder = IncludeTaskFolder;

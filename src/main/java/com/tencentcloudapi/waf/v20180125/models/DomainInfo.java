@@ -52,14 +52,45 @@ public class DomainInfo extends AbstractModel {
     private String Cname;
 
     /**
-    * 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
+    * 域名所属实例类型。
+sparta-waf：SaaS型WAF实例
+clb-waf：负载均衡型WAF实例
+cdc-clb-waf：CDC环境下负载均衡型WAF实例
     */
     @SerializedName("Edition")
     @Expose
     private String Edition;
 
     /**
-    * 地域
+    * 地域。
+"多伦多": "ca"
+"广州": "gz"
+"成都": "cd"
+"福州": "fzec"
+"深圳": "szx"
+"印度": "in"
+"济南": "jnec"
+"重庆": "cq"
+"天津": "tsn"
+"欧洲东北": "ru"
+"南京": "nj"
+"美国硅谷": "usw"
+"泰国": "th"
+"广州Open": "gzopen"
+"深圳金融": "szjr"
+"法兰克福": "de"
+"日本": "jp"
+"弗吉尼亚": "use"
+"北京": "bj"
+"香港": "hk"
+"杭州": "hzec"
+"北京金融": "bjjr"
+"上海金融": "shjr"
+"台北": "tpe"
+"首尔": "kr"
+"上海": "sh"
+"新加坡": "sg"
+"清远": "qy"
     */
     @SerializedName("Region")
     @Expose
@@ -73,49 +104,64 @@ public class DomainInfo extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 日志包
+    * 访问日志开关状态。
+0：关闭
+1：开启
     */
     @SerializedName("ClsStatus")
     @Expose
     private Long ClsStatus;
 
     /**
-    * clbwaf使用模式,0镜像模式 1清洗模式
+    * 负载均衡型WAF使用模式。
+0：镜像模式 
+1：清洗模式
     */
     @SerializedName("FlowMode")
     @Expose
     private Long FlowMode;
 
     /**
-    * waf开关,0关闭 1开启
+    * waf开关状态。
+0：关闭 
+1：开启
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 规则引擎防护模式,0观察模式 1拦截模式
+    * 规则引擎防护模式。
+0：观察模式 
+1：拦截模式
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+    * 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
     */
     @SerializedName("Engine")
     @Expose
     private Long Engine;
 
     /**
-    * CC列表
+    * 沙箱集群回源出口IP列表
     */
     @SerializedName("CCList")
     @Expose
     private String [] CCList;
 
     /**
-    * 回源ip
+    * 生产集群回源出口IP列表
     */
     @SerializedName("RsList")
     @Expose
@@ -129,7 +175,7 @@ public class DomainInfo extends AbstractModel {
     private PortInfo [] Ports;
 
     /**
-    * 负载均衡器
+    * 负载均衡器相关配置
     */
     @SerializedName("LoadBalancerSet")
     @Expose
@@ -143,7 +189,13 @@ public class DomainInfo extends AbstractModel {
     private Long AppId;
 
     /**
-    * clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
+    * 负载均衡型WAF域名LB监听器状态。
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
     */
     @SerializedName("State")
     @Expose
@@ -157,42 +209,58 @@ public class DomainInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * Ipv6开关状态,0关闭 1开启
+    * Ipv6开关状态。
+0：关闭 
+1：开启
     */
     @SerializedName("Ipv6Status")
     @Expose
     private Long Ipv6Status;
 
     /**
-    * BOT开关状态,0关闭 1开启
+    * BOT开关状态。
+0：关闭 
+1：关闭
+2：开启
+3：开启
     */
     @SerializedName("BotStatus")
     @Expose
     private Long BotStatus;
 
     /**
-    * 版本信息
+    * 实例版本信息。
+101：小微敏捷版 
+102：小微超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * 是否开启投递CLS功能,0关闭 1开启
+    * 投递CLS状态。
+0：关闭 
+1：开启
     */
     @SerializedName("PostCLSStatus")
     @Expose
     private Long PostCLSStatus;
 
     /**
-    * 是否开启投递CKafka功能,0关闭 1开启
+    * 投递CKafka状态。
+0：关闭 
+1：开启
     */
     @SerializedName("PostCKafkaStatus")
     @Expose
     private Long PostCKafkaStatus;
 
     /**
-    * cdc实例域名接入的集群信息,非cdc实例忽略
+    * cdc实例域名接入的集群信息,非cdc实例忽略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcClusters")
@@ -200,7 +268,9 @@ public class DomainInfo extends AbstractModel {
     private String CdcClusters;
 
     /**
-    * api安全开关状态,0关闭 1开启
+    * api安全开关状态。
+0：关闭 
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiStatus")
@@ -208,7 +278,9 @@ public class DomainInfo extends AbstractModel {
     private Long ApiStatus;
 
     /**
-    * 应用型负载均衡类型,clb或者apisix，默认clb
+    * 应用型负载均衡类型，默认clb。
+clb：七层负载均衡器类型
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlbType")
@@ -216,7 +288,11 @@ public class DomainInfo extends AbstractModel {
     private String AlbType;
 
     /**
-    * 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+    * 安全组状态。
+0：不展示
+1：非腾讯云源站
+2：安全组绑定失败
+3：安全组发生变更
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgState")
@@ -232,12 +308,45 @@ public class DomainInfo extends AbstractModel {
     private String SgDetail;
 
     /**
-    * 域名类型:hybrid表示混合云域名，public表示公有云域名
+    * 域名云环境。hybrid：混合云域名
+public：公有云域名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudType")
     @Expose
     private String CloudType;
+
+    /**
+    * 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Note")
+    @Expose
+    private String Note;
+
+    /**
+    * SAASWAF源站IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SrcList")
+    @Expose
+    private String [] SrcList;
+
+    /**
+    * SAASWAF源站域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpstreamDomainList")
+    @Expose
+    private String [] UpstreamDomainList;
+
+    /**
+    * 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SgID")
+    @Expose
+    private String SgID;
 
     /**
      * Get 域名 
@@ -304,32 +413,156 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名 
-     * @return Edition 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
+     * Get 域名所属实例类型。
+sparta-waf：SaaS型WAF实例
+clb-waf：负载均衡型WAF实例
+cdc-clb-waf：CDC环境下负载均衡型WAF实例 
+     * @return Edition 域名所属实例类型。
+sparta-waf：SaaS型WAF实例
+clb-waf：负载均衡型WAF实例
+cdc-clb-waf：CDC环境下负载均衡型WAF实例
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
-     * @param Edition 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
+     * Set 域名所属实例类型。
+sparta-waf：SaaS型WAF实例
+clb-waf：负载均衡型WAF实例
+cdc-clb-waf：CDC环境下负载均衡型WAF实例
+     * @param Edition 域名所属实例类型。
+sparta-waf：SaaS型WAF实例
+clb-waf：负载均衡型WAF实例
+cdc-clb-waf：CDC环境下负载均衡型WAF实例
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get 地域。
+"多伦多": "ca"
+"广州": "gz"
+"成都": "cd"
+"福州": "fzec"
+"深圳": "szx"
+"印度": "in"
+"济南": "jnec"
+"重庆": "cq"
+"天津": "tsn"
+"欧洲东北": "ru"
+"南京": "nj"
+"美国硅谷": "usw"
+"泰国": "th"
+"广州Open": "gzopen"
+"深圳金融": "szjr"
+"法兰克福": "de"
+"日本": "jp"
+"弗吉尼亚": "use"
+"北京": "bj"
+"香港": "hk"
+"杭州": "hzec"
+"北京金融": "bjjr"
+"上海金融": "shjr"
+"台北": "tpe"
+"首尔": "kr"
+"上海": "sh"
+"新加坡": "sg"
+"清远": "qy" 
+     * @return Region 地域。
+"多伦多": "ca"
+"广州": "gz"
+"成都": "cd"
+"福州": "fzec"
+"深圳": "szx"
+"印度": "in"
+"济南": "jnec"
+"重庆": "cq"
+"天津": "tsn"
+"欧洲东北": "ru"
+"南京": "nj"
+"美国硅谷": "usw"
+"泰国": "th"
+"广州Open": "gzopen"
+"深圳金融": "szjr"
+"法兰克福": "de"
+"日本": "jp"
+"弗吉尼亚": "use"
+"北京": "bj"
+"香港": "hk"
+"杭州": "hzec"
+"北京金融": "bjjr"
+"上海金融": "shjr"
+"台北": "tpe"
+"首尔": "kr"
+"上海": "sh"
+"新加坡": "sg"
+"清远": "qy"
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set 地域。
+"多伦多": "ca"
+"广州": "gz"
+"成都": "cd"
+"福州": "fzec"
+"深圳": "szx"
+"印度": "in"
+"济南": "jnec"
+"重庆": "cq"
+"天津": "tsn"
+"欧洲东北": "ru"
+"南京": "nj"
+"美国硅谷": "usw"
+"泰国": "th"
+"广州Open": "gzopen"
+"深圳金融": "szjr"
+"法兰克福": "de"
+"日本": "jp"
+"弗吉尼亚": "use"
+"北京": "bj"
+"香港": "hk"
+"杭州": "hzec"
+"北京金融": "bjjr"
+"上海金融": "shjr"
+"台北": "tpe"
+"首尔": "kr"
+"上海": "sh"
+"新加坡": "sg"
+"清远": "qy"
+     * @param Region 地域。
+"多伦多": "ca"
+"广州": "gz"
+"成都": "cd"
+"福州": "fzec"
+"深圳": "szx"
+"印度": "in"
+"济南": "jnec"
+"重庆": "cq"
+"天津": "tsn"
+"欧洲东北": "ru"
+"南京": "nj"
+"美国硅谷": "usw"
+"泰国": "th"
+"广州Open": "gzopen"
+"深圳金融": "szjr"
+"法兰克福": "de"
+"日本": "jp"
+"弗吉尼亚": "use"
+"北京": "bj"
+"香港": "hk"
+"杭州": "hzec"
+"北京金融": "bjjr"
+"上海金融": "shjr"
+"台北": "tpe"
+"首尔": "kr"
+"上海": "sh"
+"新加坡": "sg"
+"清远": "qy"
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -352,112 +585,172 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志包 
-     * @return ClsStatus 日志包
+     * Get 访问日志开关状态。
+0：关闭
+1：开启 
+     * @return ClsStatus 访问日志开关状态。
+0：关闭
+1：开启
      */
     public Long getClsStatus() {
         return this.ClsStatus;
     }
 
     /**
-     * Set 日志包
-     * @param ClsStatus 日志包
+     * Set 访问日志开关状态。
+0：关闭
+1：开启
+     * @param ClsStatus 访问日志开关状态。
+0：关闭
+1：开启
      */
     public void setClsStatus(Long ClsStatus) {
         this.ClsStatus = ClsStatus;
     }
 
     /**
-     * Get clbwaf使用模式,0镜像模式 1清洗模式 
-     * @return FlowMode clbwaf使用模式,0镜像模式 1清洗模式
+     * Get 负载均衡型WAF使用模式。
+0：镜像模式 
+1：清洗模式 
+     * @return FlowMode 负载均衡型WAF使用模式。
+0：镜像模式 
+1：清洗模式
      */
     public Long getFlowMode() {
         return this.FlowMode;
     }
 
     /**
-     * Set clbwaf使用模式,0镜像模式 1清洗模式
-     * @param FlowMode clbwaf使用模式,0镜像模式 1清洗模式
+     * Set 负载均衡型WAF使用模式。
+0：镜像模式 
+1：清洗模式
+     * @param FlowMode 负载均衡型WAF使用模式。
+0：镜像模式 
+1：清洗模式
      */
     public void setFlowMode(Long FlowMode) {
         this.FlowMode = FlowMode;
     }
 
     /**
-     * Get waf开关,0关闭 1开启 
-     * @return Status waf开关,0关闭 1开启
+     * Get waf开关状态。
+0：关闭 
+1：开启 
+     * @return Status waf开关状态。
+0：关闭 
+1：开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set waf开关,0关闭 1开启
-     * @param Status waf开关,0关闭 1开启
+     * Set waf开关状态。
+0：关闭 
+1：开启
+     * @param Status waf开关状态。
+0：关闭 
+1：开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 规则引擎防护模式,0观察模式 1拦截模式 
-     * @return Mode 规则引擎防护模式,0观察模式 1拦截模式
+     * Get 规则引擎防护模式。
+0：观察模式 
+1：拦截模式 
+     * @return Mode 规则引擎防护模式。
+0：观察模式 
+1：拦截模式
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 规则引擎防护模式,0观察模式 1拦截模式
-     * @param Mode 规则引擎防护模式,0观察模式 1拦截模式
+     * Set 规则引擎防护模式。
+0：观察模式 
+1：拦截模式
+     * @param Mode 规则引擎防护模式。
+0：观察模式 
+1：拦截模式
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式 
-     * @return Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * Get 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式 
+     * @return Engine 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
      */
     public Long getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
-     * @param Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * Set 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
+     * @param Engine 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
      */
     public void setEngine(Long Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get CC列表 
-     * @return CCList CC列表
+     * Get 沙箱集群回源出口IP列表 
+     * @return CCList 沙箱集群回源出口IP列表
      */
     public String [] getCCList() {
         return this.CCList;
     }
 
     /**
-     * Set CC列表
-     * @param CCList CC列表
+     * Set 沙箱集群回源出口IP列表
+     * @param CCList 沙箱集群回源出口IP列表
      */
     public void setCCList(String [] CCList) {
         this.CCList = CCList;
     }
 
     /**
-     * Get 回源ip 
-     * @return RsList 回源ip
+     * Get 生产集群回源出口IP列表 
+     * @return RsList 生产集群回源出口IP列表
      */
     public String [] getRsList() {
         return this.RsList;
     }
 
     /**
-     * Set 回源ip
-     * @param RsList 回源ip
+     * Set 生产集群回源出口IP列表
+     * @param RsList 生产集群回源出口IP列表
      */
     public void setRsList(String [] RsList) {
         this.RsList = RsList;
@@ -480,16 +773,16 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡器 
-     * @return LoadBalancerSet 负载均衡器
+     * Get 负载均衡器相关配置 
+     * @return LoadBalancerSet 负载均衡器相关配置
      */
     public LoadBalancerPackageNew [] getLoadBalancerSet() {
         return this.LoadBalancerSet;
     }
 
     /**
-     * Set 负载均衡器
-     * @param LoadBalancerSet 负载均衡器
+     * Set 负载均衡器相关配置
+     * @param LoadBalancerSet 负载均衡器相关配置
      */
     public void setLoadBalancerSet(LoadBalancerPackageNew [] LoadBalancerSet) {
         this.LoadBalancerSet = LoadBalancerSet;
@@ -512,16 +805,40 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误 
-     * @return State clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
+     * Get 负载均衡型WAF域名LB监听器状态。
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误 
+     * @return State 负载均衡型WAF域名LB监听器状态。
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
-     * @param State clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
+     * Set 负载均衡型WAF域名LB监听器状态。
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+     * @param State 负载均衡型WAF域名LB监听器状态。
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
      */
     public void setState(Long State) {
         this.State = State;
@@ -544,89 +861,153 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get Ipv6开关状态,0关闭 1开启 
-     * @return Ipv6Status Ipv6开关状态,0关闭 1开启
+     * Get Ipv6开关状态。
+0：关闭 
+1：开启 
+     * @return Ipv6Status Ipv6开关状态。
+0：关闭 
+1：开启
      */
     public Long getIpv6Status() {
         return this.Ipv6Status;
     }
 
     /**
-     * Set Ipv6开关状态,0关闭 1开启
-     * @param Ipv6Status Ipv6开关状态,0关闭 1开启
+     * Set Ipv6开关状态。
+0：关闭 
+1：开启
+     * @param Ipv6Status Ipv6开关状态。
+0：关闭 
+1：开启
      */
     public void setIpv6Status(Long Ipv6Status) {
         this.Ipv6Status = Ipv6Status;
     }
 
     /**
-     * Get BOT开关状态,0关闭 1开启 
-     * @return BotStatus BOT开关状态,0关闭 1开启
+     * Get BOT开关状态。
+0：关闭 
+1：关闭
+2：开启
+3：开启 
+     * @return BotStatus BOT开关状态。
+0：关闭 
+1：关闭
+2：开启
+3：开启
      */
     public Long getBotStatus() {
         return this.BotStatus;
     }
 
     /**
-     * Set BOT开关状态,0关闭 1开启
-     * @param BotStatus BOT开关状态,0关闭 1开启
+     * Set BOT开关状态。
+0：关闭 
+1：关闭
+2：开启
+3：开启
+     * @param BotStatus BOT开关状态。
+0：关闭 
+1：关闭
+2：开启
+3：开启
      */
     public void setBotStatus(Long BotStatus) {
         this.BotStatus = BotStatus;
     }
 
     /**
-     * Get 版本信息 
-     * @return Level 版本信息
+     * Get 实例版本信息。
+101：小微敏捷版 
+102：小微超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版 
+     * @return Level 实例版本信息。
+101：小微敏捷版 
+102：小微超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 版本信息
-     * @param Level 版本信息
+     * Set 实例版本信息。
+101：小微敏捷版 
+102：小微超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
+     * @param Level 实例版本信息。
+101：小微敏捷版 
+102：小微超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 是否开启投递CLS功能,0关闭 1开启 
-     * @return PostCLSStatus 是否开启投递CLS功能,0关闭 1开启
+     * Get 投递CLS状态。
+0：关闭 
+1：开启 
+     * @return PostCLSStatus 投递CLS状态。
+0：关闭 
+1：开启
      */
     public Long getPostCLSStatus() {
         return this.PostCLSStatus;
     }
 
     /**
-     * Set 是否开启投递CLS功能,0关闭 1开启
-     * @param PostCLSStatus 是否开启投递CLS功能,0关闭 1开启
+     * Set 投递CLS状态。
+0：关闭 
+1：开启
+     * @param PostCLSStatus 投递CLS状态。
+0：关闭 
+1：开启
      */
     public void setPostCLSStatus(Long PostCLSStatus) {
         this.PostCLSStatus = PostCLSStatus;
     }
 
     /**
-     * Get 是否开启投递CKafka功能,0关闭 1开启 
-     * @return PostCKafkaStatus 是否开启投递CKafka功能,0关闭 1开启
+     * Get 投递CKafka状态。
+0：关闭 
+1：开启 
+     * @return PostCKafkaStatus 投递CKafka状态。
+0：关闭 
+1：开启
      */
     public Long getPostCKafkaStatus() {
         return this.PostCKafkaStatus;
     }
 
     /**
-     * Set 是否开启投递CKafka功能,0关闭 1开启
-     * @param PostCKafkaStatus 是否开启投递CKafka功能,0关闭 1开启
+     * Set 投递CKafka状态。
+0：关闭 
+1：开启
+     * @param PostCKafkaStatus 投递CKafka状态。
+0：关闭 
+1：开启
      */
     public void setPostCKafkaStatus(Long PostCKafkaStatus) {
         this.PostCKafkaStatus = PostCKafkaStatus;
     }
 
     /**
-     * Get cdc实例域名接入的集群信息,非cdc实例忽略
+     * Get cdc实例域名接入的集群信息,非cdc实例忽略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略
+     * @return CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcClusters() {
@@ -634,9 +1015,9 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set cdc实例域名接入的集群信息,非cdc实例忽略
+     * Set cdc实例域名接入的集群信息,非cdc实例忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略
+     * @param CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcClusters(String CdcClusters) {
@@ -644,9 +1025,13 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get api安全开关状态,0关闭 1开启
+     * Get api安全开关状态。
+0：关闭 
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiStatus api安全开关状态,0关闭 1开启
+     * @return ApiStatus api安全开关状态。
+0：关闭 
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiStatus() {
@@ -654,9 +1039,13 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set api安全开关状态,0关闭 1开启
+     * Set api安全开关状态。
+0：关闭 
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiStatus api安全开关状态,0关闭 1开启
+     * @param ApiStatus api安全开关状态。
+0：关闭 
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiStatus(Long ApiStatus) {
@@ -664,9 +1053,13 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用型负载均衡类型,clb或者apisix，默认clb
+     * Get 应用型负载均衡类型，默认clb。
+clb：七层负载均衡器类型
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlbType 应用型负载均衡类型,clb或者apisix，默认clb
+     * @return AlbType 应用型负载均衡类型，默认clb。
+clb：七层负载均衡器类型
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlbType() {
@@ -674,9 +1067,13 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set 应用型负载均衡类型,clb或者apisix，默认clb
+     * Set 应用型负载均衡类型，默认clb。
+clb：七层负载均衡器类型
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlbType 应用型负载均衡类型,clb或者apisix，默认clb
+     * @param AlbType 应用型负载均衡类型，默认clb。
+clb：七层负载均衡器类型
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlbType(String AlbType) {
@@ -684,9 +1081,17 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+     * Get 安全组状态。
+0：不展示
+1：非腾讯云源站
+2：安全组绑定失败
+3：安全组发生变更
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SgState 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+     * @return SgState 安全组状态。
+0：不展示
+1：非腾讯云源站
+2：安全组绑定失败
+3：安全组发生变更
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSgState() {
@@ -694,9 +1099,17 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+     * Set 安全组状态。
+0：不展示
+1：非腾讯云源站
+2：安全组绑定失败
+3：安全组发生变更
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SgState 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+     * @param SgState 安全组状态。
+0：不展示
+1：非腾讯云源站
+2：安全组绑定失败
+3：安全组发生变更
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgState(Long SgState) {
@@ -724,9 +1137,11 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名类型:hybrid表示混合云域名，public表示公有云域名
+     * Get 域名云环境。hybrid：混合云域名
+public：公有云域名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CloudType 域名类型:hybrid表示混合云域名，public表示公有云域名
+     * @return CloudType 域名云环境。hybrid：混合云域名
+public：公有云域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudType() {
@@ -734,13 +1149,95 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Set 域名类型:hybrid表示混合云域名，public表示公有云域名
+     * Set 域名云环境。hybrid：混合云域名
+public：公有云域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CloudType 域名类型:hybrid表示混合云域名，public表示公有云域名
+     * @param CloudType 域名云环境。hybrid：混合云域名
+public：公有云域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudType(String CloudType) {
         this.CloudType = CloudType;
+    }
+
+    /**
+     * Get 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Note 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNote() {
+        return this.Note;
+    }
+
+    /**
+     * Set 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Note 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNote(String Note) {
+        this.Note = Note;
+    }
+
+    /**
+     * Get SAASWAF源站IP列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SrcList SAASWAF源站IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSrcList() {
+        return this.SrcList;
+    }
+
+    /**
+     * Set SAASWAF源站IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SrcList SAASWAF源站IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSrcList(String [] SrcList) {
+        this.SrcList = SrcList;
+    }
+
+    /**
+     * Get SAASWAF源站域名列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpstreamDomainList SAASWAF源站域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getUpstreamDomainList() {
+        return this.UpstreamDomainList;
+    }
+
+    /**
+     * Set SAASWAF源站域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpstreamDomainList SAASWAF源站域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpstreamDomainList(String [] UpstreamDomainList) {
+        this.UpstreamDomainList = UpstreamDomainList;
+    }
+
+    /**
+     * Get 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SgID 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSgID() {
+        return this.SgID;
+    }
+
+    /**
+     * Set 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SgID 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSgID(String SgID) {
+        this.SgID = SgID;
     }
 
     public DomainInfo() {
@@ -853,6 +1350,24 @@ public class DomainInfo extends AbstractModel {
         if (source.CloudType != null) {
             this.CloudType = new String(source.CloudType);
         }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
+        if (source.SrcList != null) {
+            this.SrcList = new String[source.SrcList.length];
+            for (int i = 0; i < source.SrcList.length; i++) {
+                this.SrcList[i] = new String(source.SrcList[i]);
+            }
+        }
+        if (source.UpstreamDomainList != null) {
+            this.UpstreamDomainList = new String[source.UpstreamDomainList.length];
+            for (int i = 0; i < source.UpstreamDomainList.length; i++) {
+                this.UpstreamDomainList[i] = new String(source.UpstreamDomainList[i]);
+            }
+        }
+        if (source.SgID != null) {
+            this.SgID = new String(source.SgID);
+        }
     }
 
 
@@ -890,6 +1405,10 @@ public class DomainInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SgState", this.SgState);
         this.setParamSimple(map, prefix + "SgDetail", this.SgDetail);
         this.setParamSimple(map, prefix + "CloudType", this.CloudType);
+        this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamArraySimple(map, prefix + "SrcList.", this.SrcList);
+        this.setParamArraySimple(map, prefix + "UpstreamDomainList.", this.UpstreamDomainList);
+        this.setParamSimple(map, prefix + "SgID", this.SgID);
 
     }
 }

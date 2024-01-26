@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SubmitTaskTestRunResponse extends AbstractModel {
 
     /**
-    * 无
+    * 提交运行jobid
     */
     @SerializedName("JobId")
     @Expose
     private Long JobId;
 
     /**
-    * 无
+    * 运行记录id
     */
     @SerializedName("RecordId")
     @Expose
@@ -45,32 +45,32 @@ public class SubmitTaskTestRunResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无 
-     * @return JobId 无
+     * Get 提交运行jobid 
+     * @return JobId 提交运行jobid
      */
     public Long getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 无
-     * @param JobId 无
+     * Set 提交运行jobid
+     * @param JobId 提交运行jobid
      */
     public void setJobId(Long JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 无 
-     * @return RecordId 无
+     * Get 运行记录id 
+     * @return RecordId 运行记录id
      */
     public Long [] getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 无
-     * @param RecordId 无
+     * Set 运行记录id
+     * @param RecordId 运行记录id
      */
     public void setRecordId(Long [] RecordId) {
         this.RecordId = RecordId;

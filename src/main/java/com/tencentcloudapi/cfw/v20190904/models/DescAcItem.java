@@ -254,6 +254,22 @@ public class DescAcItem extends AbstractModel {
     private String ParamTemplateId;
 
     /**
+    * 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceName")
+    @Expose
+    private String SourceName;
+
+    /**
+    * 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetName")
+    @Expose
+    private String TargetName;
+
+    /**
      * Get 访问源
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceContent 访问源
@@ -825,6 +841,46 @@ public class DescAcItem extends AbstractModel {
         this.ParamTemplateId = ParamTemplateId;
     }
 
+    /**
+     * Get 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceName 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceName() {
+        return this.SourceName;
+    }
+
+    /**
+     * Set 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceName 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceName(String SourceName) {
+        this.SourceName = SourceName;
+    }
+
+    /**
+     * Get 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetName 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetName() {
+        return this.TargetName;
+    }
+
+    /**
+     * Set 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetName 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetName(String TargetName) {
+        this.TargetName = TargetName;
+    }
+
     public DescAcItem() {
     }
 
@@ -923,6 +979,12 @@ public class DescAcItem extends AbstractModel {
         if (source.ParamTemplateId != null) {
             this.ParamTemplateId = new String(source.ParamTemplateId);
         }
+        if (source.SourceName != null) {
+            this.SourceName = new String(source.SourceName);
+        }
+        if (source.TargetName != null) {
+            this.TargetName = new String(source.TargetName);
+        }
     }
 
 
@@ -959,6 +1021,8 @@ public class DescAcItem extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetBorderUuid", this.InternetBorderUuid);
         this.setParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamSimple(map, prefix + "SourceName", this.SourceName);
+        this.setParamSimple(map, prefix + "TargetName", this.TargetName);
 
     }
 }

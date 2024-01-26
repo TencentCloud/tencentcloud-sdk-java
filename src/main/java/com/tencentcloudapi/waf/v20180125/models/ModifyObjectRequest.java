@@ -31,7 +31,7 @@ public class ModifyObjectRequest extends AbstractModel {
     private String ObjectId;
 
     /**
-    * 改动作类型:Status修改开关，InstanceId绑定实例
+    * 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
     */
     @SerializedName("OpType")
     @Expose
@@ -52,6 +52,20 @@ public class ModifyObjectRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+    */
+    @SerializedName("Proxy")
+    @Expose
+    private Long Proxy;
+
+    /**
+    * IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+    */
+    @SerializedName("IpHeaders")
+    @Expose
+    private String [] IpHeaders;
+
+    /**
      * Get 修改对象标识 
      * @return ObjectId 修改对象标识
      */
@@ -68,16 +82,16 @@ public class ModifyObjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 改动作类型:Status修改开关，InstanceId绑定实例 
-     * @return OpType 改动作类型:Status修改开关，InstanceId绑定实例
+     * Get 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态 
+     * @return OpType 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
      */
     public String getOpType() {
         return this.OpType;
     }
 
     /**
-     * Set 改动作类型:Status修改开关，InstanceId绑定实例
-     * @param OpType 改动作类型:Status修改开关，InstanceId绑定实例
+     * Set 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
+     * @param OpType 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
      */
     public void setOpType(String OpType) {
         this.OpType = OpType;
@@ -115,6 +129,38 @@ public class ModifyObjectRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效) 
+     * @return Proxy 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+     */
+    public Long getProxy() {
+        return this.Proxy;
+    }
+
+    /**
+     * Set 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+     * @param Proxy 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+     */
+    public void setProxy(Long Proxy) {
+        this.Proxy = Proxy;
+    }
+
+    /**
+     * Get IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效) 
+     * @return IpHeaders IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+     */
+    public String [] getIpHeaders() {
+        return this.IpHeaders;
+    }
+
+    /**
+     * Set IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+     * @param IpHeaders IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+     */
+    public void setIpHeaders(String [] IpHeaders) {
+        this.IpHeaders = IpHeaders;
+    }
+
     public ModifyObjectRequest() {
     }
 
@@ -135,6 +181,15 @@ public class ModifyObjectRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Proxy != null) {
+            this.Proxy = new Long(source.Proxy);
+        }
+        if (source.IpHeaders != null) {
+            this.IpHeaders = new String[source.IpHeaders.length];
+            for (int i = 0; i < source.IpHeaders.length; i++) {
+                this.IpHeaders[i] = new String(source.IpHeaders[i]);
+            }
+        }
     }
 
 
@@ -146,6 +201,8 @@ public class ModifyObjectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OpType", this.OpType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Proxy", this.Proxy);
+        this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
 
     }
 }

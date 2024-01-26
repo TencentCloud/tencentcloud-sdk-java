@@ -232,6 +232,14 @@ public class Acl extends AbstractModel {
     private ACTemplate [] ACTemplateSet;
 
     /**
+    * 关联的白命令命令
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WhiteCmds")
+    @Expose
+    private String [] WhiteCmds;
+
+    /**
      * Get 访问权限ID 
      * @return Id 访问权限ID
      */
@@ -715,6 +723,26 @@ public class Acl extends AbstractModel {
         this.ACTemplateSet = ACTemplateSet;
     }
 
+    /**
+     * Get 关联的白命令命令
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WhiteCmds 关联的白命令命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getWhiteCmds() {
+        return this.WhiteCmds;
+    }
+
+    /**
+     * Set 关联的白命令命令
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WhiteCmds 关联的白命令命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWhiteCmds(String [] WhiteCmds) {
+        this.WhiteCmds = WhiteCmds;
+    }
+
     public Acl() {
     }
 
@@ -831,6 +859,12 @@ public class Acl extends AbstractModel {
                 this.ACTemplateSet[i] = new ACTemplate(source.ACTemplateSet[i]);
             }
         }
+        if (source.WhiteCmds != null) {
+            this.WhiteCmds = new String[source.WhiteCmds.length];
+            for (int i = 0; i < source.WhiteCmds.length; i++) {
+                this.WhiteCmds[i] = new String(source.WhiteCmds[i]);
+            }
+        }
     }
 
 
@@ -867,6 +901,7 @@ public class Acl extends AbstractModel {
         this.setParamObj(map, prefix + "Department.", this.Department);
         this.setParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
         this.setParamArrayObj(map, prefix + "ACTemplateSet.", this.ACTemplateSet);
+        this.setParamArraySimple(map, prefix + "WhiteCmds.", this.WhiteCmds);
 
     }
 }

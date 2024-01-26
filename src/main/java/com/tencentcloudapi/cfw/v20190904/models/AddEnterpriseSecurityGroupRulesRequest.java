@@ -45,11 +45,25 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * 是否延迟下发，1则延迟下发，否则立即下发
+    * （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
     */
     @SerializedName("IsDelay")
     @Expose
     private Long IsDelay;
+
+    /**
+    * 来源 默认空 覆盖导入是 batch_import_cover
+    */
+    @SerializedName("From")
+    @Expose
+    private String From;
+
+    /**
+    * 是否使用id 默认不需要
+    */
+    @SerializedName("IsUseId")
+    @Expose
+    private Long IsUseId;
 
     /**
      * Get 创建规则数据 
@@ -100,19 +114,51 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否延迟下发，1则延迟下发，否则立即下发 
-     * @return IsDelay 是否延迟下发，1则延迟下发，否则立即下发
+     * Get （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发 
+     * @return IsDelay （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
      */
     public Long getIsDelay() {
         return this.IsDelay;
     }
 
     /**
-     * Set 是否延迟下发，1则延迟下发，否则立即下发
-     * @param IsDelay 是否延迟下发，1则延迟下发，否则立即下发
+     * Set （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+     * @param IsDelay （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
      */
     public void setIsDelay(Long IsDelay) {
         this.IsDelay = IsDelay;
+    }
+
+    /**
+     * Get 来源 默认空 覆盖导入是 batch_import_cover 
+     * @return From 来源 默认空 覆盖导入是 batch_import_cover
+     */
+    public String getFrom() {
+        return this.From;
+    }
+
+    /**
+     * Set 来源 默认空 覆盖导入是 batch_import_cover
+     * @param From 来源 默认空 覆盖导入是 batch_import_cover
+     */
+    public void setFrom(String From) {
+        this.From = From;
+    }
+
+    /**
+     * Get 是否使用id 默认不需要 
+     * @return IsUseId 是否使用id 默认不需要
+     */
+    public Long getIsUseId() {
+        return this.IsUseId;
+    }
+
+    /**
+     * Set 是否使用id 默认不需要
+     * @param IsUseId 是否使用id 默认不需要
+     */
+    public void setIsUseId(Long IsUseId) {
+        this.IsUseId = IsUseId;
     }
 
     public AddEnterpriseSecurityGroupRulesRequest() {
@@ -138,6 +184,12 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
         if (source.IsDelay != null) {
             this.IsDelay = new Long(source.IsDelay);
         }
+        if (source.From != null) {
+            this.From = new String(source.From);
+        }
+        if (source.IsUseId != null) {
+            this.IsUseId = new Long(source.IsUseId);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "IsDelay", this.IsDelay);
+        this.setParamSimple(map, prefix + "From", this.From);
+        this.setParamSimple(map, prefix + "IsUseId", this.IsUseId);
 
     }
 }

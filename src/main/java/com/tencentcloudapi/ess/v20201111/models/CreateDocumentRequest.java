@@ -31,20 +31,21 @@ public class CreateDocumentRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
+    * 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
     * 合同流程ID，为32位字符串。
 此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
-
-    /**
-    * 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
-    */
-    @SerializedName("TemplateId")
-    @Expose
-    private String TemplateId;
 
     /**
     * 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
@@ -119,6 +120,30 @@ public class CreateDocumentRequest extends AbstractModel {
     }
 
     /**
+     * Get 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png) 
+     * @return TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
+     * @param TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
      * Get 合同流程ID，为32位字符串。
 此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。 
      * @return FlowId 合同流程ID，为32位字符串。
@@ -136,26 +161,6 @@ public class CreateDocumentRequest extends AbstractModel {
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
-    }
-
-    /**
-     * Get 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。 
-     * @return TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
-     */
-    public String getTemplateId() {
-        return this.TemplateId;
-    }
-
-    /**
-     * Set 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
-     * @param TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
-     */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
     }
 
     /**
@@ -321,11 +326,11 @@ public class CreateDocumentRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
-        if (source.FlowId != null) {
-            this.FlowId = new String(source.FlowId);
-        }
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
+        }
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
         }
         if (source.FileNames != null) {
             this.FileNames = new String[source.FileNames.length];
@@ -359,8 +364,8 @@ public class CreateDocumentRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArraySimple(map, prefix + "FileNames.", this.FileNames);
         this.setParamArrayObj(map, prefix + "FormFields.", this.FormFields);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);

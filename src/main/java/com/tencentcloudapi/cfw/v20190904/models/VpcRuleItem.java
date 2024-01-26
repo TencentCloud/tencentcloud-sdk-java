@@ -199,6 +199,22 @@ log：观察
     private String ParamTemplateName;
 
     /**
+    * 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetName")
+    @Expose
+    private String TargetName;
+
+    /**
+    * 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceName")
+    @Expose
+    private String SourceName;
+
+    /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例：
@@ -646,6 +662,46 @@ log：观察
         this.ParamTemplateName = ParamTemplateName;
     }
 
+    /**
+     * Get 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetName 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetName() {
+        return this.TargetName;
+    }
+
+    /**
+     * Set 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetName 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetName(String TargetName) {
+        this.TargetName = TargetName;
+    }
+
+    /**
+     * Get 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceName 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceName() {
+        return this.SourceName;
+    }
+
+    /**
+     * Set 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceName 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceName(String SourceName) {
+        this.SourceName = SourceName;
+    }
+
     public VpcRuleItem() {
     }
 
@@ -720,6 +776,12 @@ log：观察
         if (source.ParamTemplateName != null) {
             this.ParamTemplateName = new String(source.ParamTemplateName);
         }
+        if (source.TargetName != null) {
+            this.TargetName = new String(source.TargetName);
+        }
+        if (source.SourceName != null) {
+            this.SourceName = new String(source.SourceName);
+        }
     }
 
 
@@ -748,6 +810,8 @@ log：观察
         this.setParamArrayObj(map, prefix + "BetaList.", this.BetaList);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
+        this.setParamSimple(map, prefix + "TargetName", this.TargetName);
+        this.setParamSimple(map, prefix + "SourceName", this.SourceName);
 
     }
 }

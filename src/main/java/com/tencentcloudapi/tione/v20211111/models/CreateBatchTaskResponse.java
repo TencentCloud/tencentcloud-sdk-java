@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBatchTaskResponse extends AbstractModel {
 
     /**
-    * 跑批任务ID
+    * 批量预测任务ID
     */
     @SerializedName("BatchTaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateBatchTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 跑批任务ID 
-     * @return BatchTaskId 跑批任务ID
+     * Get 批量预测任务ID 
+     * @return BatchTaskId 批量预测任务ID
      */
     public String getBatchTaskId() {
         return this.BatchTaskId;
     }
 
     /**
-     * Set 跑批任务ID
-     * @param BatchTaskId 跑批任务ID
+     * Set 批量预测任务ID
+     * @param BatchTaskId 批量预测任务ID
      */
     public void setBatchTaskId(String BatchTaskId) {
         this.BatchTaskId = BatchTaskId;

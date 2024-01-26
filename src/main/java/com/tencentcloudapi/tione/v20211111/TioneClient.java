@@ -61,7 +61,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *创建跑批任务
+     *创建批量预测任务
      * @param req CreateBatchTaskRequest
      * @return CreateBatchTaskResponse
      * @throws TencentCloudSDKException
@@ -149,7 +149,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *删除跑批任务
+     *删除批量预测任务
      * @param req DeleteBatchTaskRequest
      * @return DeleteBatchTaskResponse
      * @throws TencentCloudSDKException
@@ -270,7 +270,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *查询跑批任务
+     *查询批量预测任务
      * @param req DescribeBatchTaskRequest
      * @return DescribeBatchTaskResponse
      * @throws TencentCloudSDKException
@@ -281,7 +281,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *查询跑批实例列表
+     *查询批量预测任务实例列表
      * @param req DescribeBatchTaskInstancesRequest
      * @return DescribeBatchTaskInstancesResponse
      * @throws TencentCloudSDKException
@@ -292,7 +292,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *批量预测任务列表信息
+     *查询批量预测任务列表信息
      * @param req DescribeBatchTasksRequest
      * @return DescribeBatchTasksResponse
      * @throws TencentCloudSDKException
@@ -798,7 +798,7 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *停止跑批任务
+     *停止批量预测任务
      * @param req StopBatchTaskRequest
      * @return StopBatchTaskResponse
      * @throws TencentCloudSDKException

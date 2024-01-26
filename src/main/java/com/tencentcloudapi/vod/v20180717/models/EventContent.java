@@ -253,6 +253,14 @@ public class EventContent extends AbstractModel {
     private QualityEnhanceTask QualityEnhanceCompleteEvent;
 
     /**
+    * 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MediaCastStatusChangedEvent")
+    @Expose
+    private MediaCastEvent MediaCastStatusChangedEvent;
+
+    /**
      * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
@@ -856,6 +864,26 @@ public class EventContent extends AbstractModel {
         this.QualityEnhanceCompleteEvent = QualityEnhanceCompleteEvent;
     }
 
+    /**
+     * Get 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MediaCastStatusChangedEvent 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaCastEvent getMediaCastStatusChangedEvent() {
+        return this.MediaCastStatusChangedEvent;
+    }
+
+    /**
+     * Set 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaCastStatusChangedEvent 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMediaCastStatusChangedEvent(MediaCastEvent MediaCastStatusChangedEvent) {
+        this.MediaCastStatusChangedEvent = MediaCastStatusChangedEvent;
+    }
+
     public EventContent() {
     }
 
@@ -942,6 +970,9 @@ public class EventContent extends AbstractModel {
         if (source.QualityEnhanceCompleteEvent != null) {
             this.QualityEnhanceCompleteEvent = new QualityEnhanceTask(source.QualityEnhanceCompleteEvent);
         }
+        if (source.MediaCastStatusChangedEvent != null) {
+            this.MediaCastStatusChangedEvent = new MediaCastEvent(source.MediaCastStatusChangedEvent);
+        }
     }
 
 
@@ -975,6 +1006,7 @@ public class EventContent extends AbstractModel {
         this.setParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);
         this.setParamObj(map, prefix + "QualityInspectCompleteEvent.", this.QualityInspectCompleteEvent);
         this.setParamObj(map, prefix + "QualityEnhanceCompleteEvent.", this.QualityEnhanceCompleteEvent);
+        this.setParamObj(map, prefix + "MediaCastStatusChangedEvent.", this.MediaCastStatusChangedEvent);
 
     }
 }

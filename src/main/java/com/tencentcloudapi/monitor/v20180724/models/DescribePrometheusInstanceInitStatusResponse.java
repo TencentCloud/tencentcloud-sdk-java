@@ -51,6 +51,14 @@ running 初始化完成，运行中
     private String EksClusterId;
 
     /**
+    * eks集群内pod的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupId")
+    @Expose
+    private String SecurityGroupId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -130,6 +138,26 @@ running 初始化完成，运行中
     }
 
     /**
+     * Get eks集群内pod的安全组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupId eks集群内pod的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSecurityGroupId() {
+        return this.SecurityGroupId;
+    }
+
+    /**
+     * Set eks集群内pod的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupId eks集群内pod的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupId(String SecurityGroupId) {
+        this.SecurityGroupId = SecurityGroupId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -165,6 +193,9 @@ running 初始化完成，运行中
         if (source.EksClusterId != null) {
             this.EksClusterId = new String(source.EksClusterId);
         }
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -178,6 +209,7 @@ running 初始化完成，运行中
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Steps.", this.Steps);
         this.setParamSimple(map, prefix + "EksClusterId", this.EksClusterId);
+        this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

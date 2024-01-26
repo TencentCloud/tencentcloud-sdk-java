@@ -59,6 +59,13 @@ public class DeleteIpAccessControlRequest extends AbstractModel {
     private String SourceType;
 
     /**
+    * IP黑白名单类型，40为IP白名单，42为IP黑名单
+    */
+    @SerializedName("ActionType")
+    @Expose
+    private Long ActionType;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -138,6 +145,22 @@ public class DeleteIpAccessControlRequest extends AbstractModel {
         this.SourceType = SourceType;
     }
 
+    /**
+     * Get IP黑白名单类型，40为IP白名单，42为IP黑名单 
+     * @return ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单
+     */
+    public Long getActionType() {
+        return this.ActionType;
+    }
+
+    /**
+     * Set IP黑白名单类型，40为IP白名单，42为IP黑名单
+     * @param ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单
+     */
+    public void setActionType(Long ActionType) {
+        this.ActionType = ActionType;
+    }
+
     public DeleteIpAccessControlRequest() {
     }
 
@@ -164,6 +187,9 @@ public class DeleteIpAccessControlRequest extends AbstractModel {
         if (source.SourceType != null) {
             this.SourceType = new String(source.SourceType);
         }
+        if (source.ActionType != null) {
+            this.ActionType = new Long(source.ActionType);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DeleteIpAccessControlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsId", this.IsId);
         this.setParamSimple(map, prefix + "DeleteAll", this.DeleteAll);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
 
     }
 }

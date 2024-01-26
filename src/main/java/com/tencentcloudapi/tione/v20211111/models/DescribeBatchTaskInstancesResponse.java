@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBatchTaskInstancesResponse extends AbstractModel {
 
     /**
-    * 实例集
+    * 批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchInstances")
@@ -39,9 +39,9 @@ public class DescribeBatchTaskInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例集
+     * Get 批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BatchInstances 实例集
+     * @return BatchInstances 批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchTaskInstance [] getBatchInstances() {
@@ -49,9 +49,9 @@ public class DescribeBatchTaskInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 实例集
+     * Set 批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BatchInstances 实例集
+     * @param BatchInstances 批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchInstances(BatchTaskInstance [] BatchInstances) {

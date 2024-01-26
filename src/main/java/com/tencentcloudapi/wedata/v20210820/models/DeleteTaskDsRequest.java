@@ -32,13 +32,18 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
     * 是否删除脚本
+true：删除
+false：不删除
+不传默认false
     */
     @SerializedName("DeleteScript")
     @Expose
     private Boolean DeleteScript;
 
     /**
-    * 任务操作是否消息通知下游任务责任人
+    * 任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false
     */
     @SerializedName("OperateInform")
     @Expose
@@ -46,6 +51,7 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
     * 任务ID
+和VirtualTaskId选填一个
     */
     @SerializedName("TaskId")
     @Expose
@@ -53,6 +59,8 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
     * 虚拟任务id
+和TaskId选填一个
+
     */
     @SerializedName("VirtualTaskId")
     @Expose
@@ -60,6 +68,9 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
     * 虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false
     */
     @SerializedName("VirtualFlag")
     @Expose
@@ -67,6 +78,10 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
     * 任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
+
     */
     @SerializedName("DeleteMode")
     @Expose
@@ -89,8 +104,14 @@ public class DeleteTaskDsRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否删除脚本 
+     * Get 是否删除脚本
+true：删除
+false：不删除
+不传默认false 
      * @return DeleteScript 是否删除脚本
+true：删除
+false：不删除
+不传默认false
      */
     public Boolean getDeleteScript() {
         return this.DeleteScript;
@@ -98,31 +119,47 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
      * Set 是否删除脚本
+true：删除
+false：不删除
+不传默认false
      * @param DeleteScript 是否删除脚本
+true：删除
+false：不删除
+不传默认false
      */
     public void setDeleteScript(Boolean DeleteScript) {
         this.DeleteScript = DeleteScript;
     }
 
     /**
-     * Get 任务操作是否消息通知下游任务责任人 
-     * @return OperateInform 任务操作是否消息通知下游任务责任人
+     * Get 任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false 
+     * @return OperateInform 任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false
      */
     public Boolean getOperateInform() {
         return this.OperateInform;
     }
 
     /**
-     * Set 任务操作是否消息通知下游任务责任人
-     * @param OperateInform 任务操作是否消息通知下游任务责任人
+     * Set 任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false
+     * @param OperateInform 任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false
      */
     public void setOperateInform(Boolean OperateInform) {
         this.OperateInform = OperateInform;
     }
 
     /**
-     * Get 任务ID 
+     * Get 任务ID
+和VirtualTaskId选填一个 
      * @return TaskId 任务ID
+和VirtualTaskId选填一个
      */
     public String getTaskId() {
         return this.TaskId;
@@ -130,15 +167,21 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
      * Set 任务ID
+和VirtualTaskId选填一个
      * @param TaskId 任务ID
+和VirtualTaskId选填一个
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 虚拟任务id 
+     * Get 虚拟任务id
+和TaskId选填一个
+ 
      * @return VirtualTaskId 虚拟任务id
+和TaskId选填一个
+
      */
     public String getVirtualTaskId() {
         return this.VirtualTaskId;
@@ -146,15 +189,25 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
      * Set 虚拟任务id
+和TaskId选填一个
+
      * @param VirtualTaskId 虚拟任务id
+和TaskId选填一个
+
      */
     public void setVirtualTaskId(String VirtualTaskId) {
         this.VirtualTaskId = VirtualTaskId;
     }
 
     /**
-     * Get 虚拟任务标记 
+     * Get 虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false 
      * @return VirtualFlag 虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false
      */
     public Boolean getVirtualFlag() {
         return this.VirtualFlag;
@@ -162,15 +215,29 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
      * Set 虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false
      * @param VirtualFlag 虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false
      */
     public void setVirtualFlag(Boolean VirtualFlag) {
         this.VirtualFlag = VirtualFlag;
     }
 
     /**
-     * Get 任务删除方式 
+     * Get 任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
+ 
      * @return DeleteMode 任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
+
      */
     public Boolean getDeleteMode() {
         return this.DeleteMode;
@@ -178,7 +245,15 @@ public class DeleteTaskDsRequest extends AbstractModel {
 
     /**
      * Set 任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
+
      * @param DeleteMode 任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
+
      */
     public void setDeleteMode(Boolean DeleteMode) {
         this.DeleteMode = DeleteMode;

@@ -233,6 +233,13 @@ public class SecurityGroupListData extends AbstractModel {
     private String ParameterName;
 
     /**
+    * 端口协议类型参数模板名称
+    */
+    @SerializedName("ProtocolPortName")
+    @Expose
+    private String ProtocolPortName;
+
+    /**
      * Get 执行顺序 
      * @return OrderIndex 执行顺序
      */
@@ -732,6 +739,22 @@ public class SecurityGroupListData extends AbstractModel {
         this.ParameterName = ParameterName;
     }
 
+    /**
+     * Get 端口协议类型参数模板名称 
+     * @return ProtocolPortName 端口协议类型参数模板名称
+     */
+    public String getProtocolPortName() {
+        return this.ProtocolPortName;
+    }
+
+    /**
+     * Set 端口协议类型参数模板名称
+     * @param ProtocolPortName 端口协议类型参数模板名称
+     */
+    public void setProtocolPortName(String ProtocolPortName) {
+        this.ProtocolPortName = ProtocolPortName;
+    }
+
     public SecurityGroupListData() {
     }
 
@@ -827,6 +850,9 @@ public class SecurityGroupListData extends AbstractModel {
         if (source.ParameterName != null) {
             this.ParameterName = new String(source.ParameterName);
         }
+        if (source.ProtocolPortName != null) {
+            this.ProtocolPortName = new String(source.ProtocolPortName);
+        }
     }
 
 
@@ -862,6 +888,7 @@ public class SecurityGroupListData extends AbstractModel {
         this.setParamSimple(map, prefix + "AssetGroupNameIn", this.AssetGroupNameIn);
         this.setParamSimple(map, prefix + "AssetGroupNameOut", this.AssetGroupNameOut);
         this.setParamSimple(map, prefix + "ParameterName", this.ParameterName);
+        this.setParamSimple(map, prefix + "ProtocolPortName", this.ProtocolPortName);
 
     }
 }
