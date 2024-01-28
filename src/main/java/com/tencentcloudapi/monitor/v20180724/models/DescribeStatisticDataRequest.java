@@ -38,16 +38,14 @@ public class DescribeStatisticDataRequest extends AbstractModel {
     private String Namespace;
 
     /**
-    * 指标名列表，相关指标信息可参考对应 云产品指标文档
-https://cloud.tencent.com/document/product/248/62458
+    * 指标名列表，相关指标信息可参考对应 [云产品指标文档](https://cloud.tencent.com/document/product/248/62458)
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 维度条件，操作符支持=、in
-配置文档参考：https://cloud.tencent.com/document/product/248/53821
+    * 维度条件，操作符支持=、in，详情请参考对应 [指标维度信息](https://cloud.tencent.com/document/product/248/53821)
     */
     @SerializedName("Conditions")
     @Expose
@@ -119,40 +117,32 @@ https://cloud.tencent.com/document/product/248/62458
     }
 
     /**
-     * Get 指标名列表，相关指标信息可参考对应 云产品指标文档
-https://cloud.tencent.com/document/product/248/62458 
-     * @return MetricNames 指标名列表，相关指标信息可参考对应 云产品指标文档
-https://cloud.tencent.com/document/product/248/62458
+     * Get 指标名列表，相关指标信息可参考对应 [云产品指标文档](https://cloud.tencent.com/document/product/248/62458) 
+     * @return MetricNames 指标名列表，相关指标信息可参考对应 [云产品指标文档](https://cloud.tencent.com/document/product/248/62458)
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 指标名列表，相关指标信息可参考对应 云产品指标文档
-https://cloud.tencent.com/document/product/248/62458
-     * @param MetricNames 指标名列表，相关指标信息可参考对应 云产品指标文档
-https://cloud.tencent.com/document/product/248/62458
+     * Set 指标名列表，相关指标信息可参考对应 [云产品指标文档](https://cloud.tencent.com/document/product/248/62458)
+     * @param MetricNames 指标名列表，相关指标信息可参考对应 [云产品指标文档](https://cloud.tencent.com/document/product/248/62458)
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 维度条件，操作符支持=、in
-配置文档参考：https://cloud.tencent.com/document/product/248/53821 
-     * @return Conditions 维度条件，操作符支持=、in
-配置文档参考：https://cloud.tencent.com/document/product/248/53821
+     * Get 维度条件，操作符支持=、in，详情请参考对应 [指标维度信息](https://cloud.tencent.com/document/product/248/53821) 
+     * @return Conditions 维度条件，操作符支持=、in，详情请参考对应 [指标维度信息](https://cloud.tencent.com/document/product/248/53821)
      */
     public MidQueryCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 维度条件，操作符支持=、in
-配置文档参考：https://cloud.tencent.com/document/product/248/53821
-     * @param Conditions 维度条件，操作符支持=、in
-配置文档参考：https://cloud.tencent.com/document/product/248/53821
+     * Set 维度条件，操作符支持=、in，详情请参考对应 [指标维度信息](https://cloud.tencent.com/document/product/248/53821)
+     * @param Conditions 维度条件，操作符支持=、in，详情请参考对应 [指标维度信息](https://cloud.tencent.com/document/product/248/53821)
      */
     public void setConditions(MidQueryCondition [] Conditions) {
         this.Conditions = Conditions;

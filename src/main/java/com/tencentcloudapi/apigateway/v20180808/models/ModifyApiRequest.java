@@ -94,7 +94,7 @@ public class ModifyApiRequest extends AbstractModel {
     private Long ServiceTimeout;
 
     /**
-    * API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+    * API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
     */
     @SerializedName("Protocol")
     @Expose
@@ -569,16 +569,16 @@ public class ModifyApiRequest extends AbstractModel {
     }
 
     /**
-     * Get API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。 
-     * @return Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+     * Get API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填 
+     * @return Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
-     * @param Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+     * Set API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
+     * @param Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

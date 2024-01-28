@@ -109,12 +109,20 @@ public class Instances extends AbstractModel {
     private String Vip;
 
     /**
-    * 内部参数，用户可忽略。
+    * 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
+
+    /**
+    * 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPv6")
+    @Expose
+    private String IPv6;
 
     /**
     * VPC 网络ID，如：75101。
@@ -372,9 +380,9 @@ public class Instances extends AbstractModel {
     }
 
     /**
-     * Get 内部参数，用户可忽略。
+     * Get 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip6 内部参数，用户可忽略。
+     * @return Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
@@ -382,13 +390,33 @@ public class Instances extends AbstractModel {
     }
 
     /**
-     * Set 内部参数，用户可忽略。
+     * Set 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip6 内部参数，用户可忽略。
+     * @param Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
+    }
+
+    /**
+     * Get 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPv6 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIPv6() {
+        return this.IPv6;
+    }
+
+    /**
+     * Set 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPv6 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPv6(String IPv6) {
+        this.IPv6 = IPv6;
     }
 
     /**
@@ -590,6 +618,9 @@ public class Instances extends AbstractModel {
         if (source.Vip6 != null) {
             this.Vip6 = new String(source.Vip6);
         }
+        if (source.IPv6 != null) {
+            this.IPv6 = new String(source.IPv6);
+        }
         if (source.VpcID != null) {
             this.VpcID = new Long(source.VpcID);
         }
@@ -631,6 +662,7 @@ public class Instances extends AbstractModel {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vip6", this.Vip6);
+        this.setParamSimple(map, prefix + "IPv6", this.IPv6);
         this.setParamSimple(map, prefix + "VpcID", this.VpcID);
         this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "Status", this.Status);

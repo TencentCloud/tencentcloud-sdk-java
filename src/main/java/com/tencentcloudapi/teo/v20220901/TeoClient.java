@@ -430,6 +430,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *通过本接口查询计费数据。
+     * @param req DescribeBillingDataRequest
+     * @return DescribeBillingDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingDataResponse DescribeBillingData(DescribeBillingDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillingData", DescribeBillingDataResponse.class);
+    }
+
+    /**
      *在版本管理模式下，用于获取版本的详细信息，包括版本 ID、描述、状态、创建时间、所属配置组信息以及版本配置文件的内容。版本管理功能内测中，当前仅白名单开放。
      * @param req DescribeConfigGroupVersionDetailRequest
      * @return DescribeConfigGroupVersionDetailResponse

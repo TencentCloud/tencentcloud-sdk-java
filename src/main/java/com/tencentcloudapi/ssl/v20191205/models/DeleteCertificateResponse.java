@@ -31,6 +31,14 @@ public class DeleteCertificateResponse extends AbstractModel {
     private Boolean DeleteResult;
 
     /**
+    * 异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class DeleteCertificateResponse extends AbstractModel {
      */
     public void setDeleteResult(Boolean DeleteResult) {
         this.DeleteResult = DeleteResult;
+    }
+
+    /**
+     * Get 异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskId 异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -80,6 +108,9 @@ public class DeleteCertificateResponse extends AbstractModel {
         if (source.DeleteResult != null) {
             this.DeleteResult = new Boolean(source.DeleteResult);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +122,7 @@ public class DeleteCertificateResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeleteResult", this.DeleteResult);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

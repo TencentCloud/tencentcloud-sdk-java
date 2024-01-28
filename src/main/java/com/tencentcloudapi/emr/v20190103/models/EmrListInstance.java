@@ -254,6 +254,14 @@ public class EmrListInstance extends AbstractModel {
     private Boolean IsSupportOutsideCluster;
 
     /**
+    * 是否专有集群场景集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDedicatedCluster")
+    @Expose
+    private Boolean IsDedicatedCluster;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -813,6 +821,26 @@ public class EmrListInstance extends AbstractModel {
         this.IsSupportOutsideCluster = IsSupportOutsideCluster;
     }
 
+    /**
+     * Get 是否专有集群场景集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDedicatedCluster 是否专有集群场景集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDedicatedCluster() {
+        return this.IsDedicatedCluster;
+    }
+
+    /**
+     * Set 是否专有集群场景集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDedicatedCluster 是否专有集群场景集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDedicatedCluster(Boolean IsDedicatedCluster) {
+        this.IsDedicatedCluster = IsDedicatedCluster;
+    }
+
     public EmrListInstance() {
     }
 
@@ -917,6 +945,9 @@ public class EmrListInstance extends AbstractModel {
         if (source.IsSupportOutsideCluster != null) {
             this.IsSupportOutsideCluster = new Boolean(source.IsSupportOutsideCluster);
         }
+        if (source.IsDedicatedCluster != null) {
+            this.IsDedicatedCluster = new Boolean(source.IsDedicatedCluster);
+        }
     }
 
 
@@ -954,6 +985,7 @@ public class EmrListInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
         this.setParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
         this.setParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
+        this.setParamSimple(map, prefix + "IsDedicatedCluster", this.IsDedicatedCluster);
 
     }
 }

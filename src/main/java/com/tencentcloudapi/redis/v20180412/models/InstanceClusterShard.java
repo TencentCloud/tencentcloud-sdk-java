@@ -75,11 +75,18 @@ public class InstanceClusterShard extends AbstractModel {
     private Float StorageSlope;
 
     /**
-    * 实例运行时节点 ID。
+    * 该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
     */
     @SerializedName("Runid")
     @Expose
     private String Runid;
+
+    /**
+    * 实例运行时节点 ID。
+    */
+    @SerializedName("RunId")
+    @Expose
+    private String RunId;
 
     /**
     * 服务状态。
@@ -211,19 +218,35 @@ public class InstanceClusterShard extends AbstractModel {
     }
 
     /**
-     * Get 实例运行时节点 ID。 
-     * @return Runid 实例运行时节点 ID。
+     * Get 该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。 
+     * @return Runid 该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
      */
     public String getRunid() {
         return this.Runid;
     }
 
     /**
-     * Set 实例运行时节点 ID。
-     * @param Runid 实例运行时节点 ID。
+     * Set 该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
+     * @param Runid 该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
      */
     public void setRunid(String Runid) {
         this.Runid = Runid;
+    }
+
+    /**
+     * Get 实例运行时节点 ID。 
+     * @return RunId 实例运行时节点 ID。
+     */
+    public String getRunId() {
+        return this.RunId;
+    }
+
+    /**
+     * Set 实例运行时节点 ID。
+     * @param RunId 实例运行时节点 ID。
+     */
+    public void setRunId(String RunId) {
+        this.RunId = RunId;
     }
 
     /**
@@ -282,6 +305,9 @@ public class InstanceClusterShard extends AbstractModel {
         if (source.Runid != null) {
             this.Runid = new String(source.Runid);
         }
+        if (source.RunId != null) {
+            this.RunId = new String(source.RunId);
+        }
         if (source.Connected != null) {
             this.Connected = new Long(source.Connected);
         }
@@ -300,6 +326,7 @@ public class InstanceClusterShard extends AbstractModel {
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "StorageSlope", this.StorageSlope);
         this.setParamSimple(map, prefix + "Runid", this.Runid);
+        this.setParamSimple(map, prefix + "RunId", this.RunId);
         this.setParamSimple(map, prefix + "Connected", this.Connected);
 
     }

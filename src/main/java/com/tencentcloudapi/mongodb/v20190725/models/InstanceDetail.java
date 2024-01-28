@@ -290,6 +290,14 @@ public class InstanceDetail extends AbstractModel {
     private String RealInstanceId;
 
     /**
+    * 实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneList")
+    @Expose
+    private String [] ZoneList;
+
+    /**
     * mongos节点个数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -962,6 +970,26 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
+     * Get 实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneList 实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getZoneList() {
+        return this.ZoneList;
+    }
+
+    /**
+     * Set 实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneList 实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneList(String [] ZoneList) {
+        this.ZoneList = ZoneList;
+    }
+
+    /**
      * Get mongos节点个数。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MongosNodeNum mongos节点个数。
@@ -1258,6 +1286,12 @@ public class InstanceDetail extends AbstractModel {
         if (source.RealInstanceId != null) {
             this.RealInstanceId = new String(source.RealInstanceId);
         }
+        if (source.ZoneList != null) {
+            this.ZoneList = new String[source.ZoneList.length];
+            for (int i = 0; i < source.ZoneList.length; i++) {
+                this.ZoneList[i] = new String(source.ZoneList[i]);
+            }
+        }
         if (source.MongosNodeNum != null) {
             this.MongosNodeNum = new Long(source.MongosNodeNum);
         }
@@ -1327,6 +1361,7 @@ public class InstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
         this.setParamSimple(map, prefix + "RealInstanceId", this.RealInstanceId);
+        this.setParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
         this.setParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
         this.setParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
         this.setParamSimple(map, prefix + "MongosCpuNum", this.MongosCpuNum);

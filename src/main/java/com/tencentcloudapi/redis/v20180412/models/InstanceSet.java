@@ -322,12 +322,20 @@ public class InstanceSet extends AbstractModel {
     private Long PasswordFree;
 
     /**
-    * 内部参数，用户可忽略。
+    * 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
+
+    /**
+    * 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPv6")
+    @Expose
+    private String IPv6;
 
     /**
     * 实例只读标识（内部参数，用户可忽略）。
@@ -1154,9 +1162,9 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get 内部参数，用户可忽略。
+     * Get 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip6 内部参数，用户可忽略。
+     * @return Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
@@ -1164,13 +1172,33 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Set 内部参数，用户可忽略。
+     * Set 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip6 内部参数，用户可忽略。
+     * @param Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
+    }
+
+    /**
+     * Get 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPv6 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIPv6() {
+        return this.IPv6;
+    }
+
+    /**
+     * Set 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPv6 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPv6(String IPv6) {
+        this.IPv6 = IPv6;
     }
 
     /**
@@ -1593,6 +1621,9 @@ public class InstanceSet extends AbstractModel {
         if (source.Vip6 != null) {
             this.Vip6 = new String(source.Vip6);
         }
+        if (source.IPv6 != null) {
+            this.IPv6 = new String(source.IPv6);
+        }
         if (source.ReadOnly != null) {
             this.ReadOnly = new Long(source.ReadOnly);
         }
@@ -1686,6 +1717,7 @@ public class InstanceSet extends AbstractModel {
         this.setParamSimple(map, prefix + "NetLimit", this.NetLimit);
         this.setParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
         this.setParamSimple(map, prefix + "Vip6", this.Vip6);
+        this.setParamSimple(map, prefix + "IPv6", this.IPv6);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
