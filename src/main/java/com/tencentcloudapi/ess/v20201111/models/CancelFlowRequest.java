@@ -34,14 +34,16 @@ public class CancelFlowRequest extends AbstractModel {
     /**
     * 合同流程ID, 为32位字符串。
 
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+可登录腾讯电子签控制台，[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+    * 撤销此合同流程的**撤销理由**，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
     */
     @SerializedName("CancelMessage")
     @Expose
@@ -78,10 +80,10 @@ public class CancelFlowRequest extends AbstractModel {
     /**
      * Get 合同流程ID, 为32位字符串。
 
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。 
+可登录腾讯电子签控制台，[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png) 
      * @return FlowId 合同流程ID, 为32位字符串。
 
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+可登录腾讯电子签控制台，[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      */
     public String getFlowId() {
         return this.FlowId;
@@ -90,26 +92,34 @@ public class CancelFlowRequest extends AbstractModel {
     /**
      * Set 合同流程ID, 为32位字符串。
 
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+可登录腾讯电子签控制台，[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      * @param FlowId 合同流程ID, 为32位字符串。
 
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+可登录腾讯电子签控制台，[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。 
-     * @return CancelMessage 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+     * Get 撤销此合同流程的**撤销理由**，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png) 
+     * @return CancelMessage 撤销此合同流程的**撤销理由**，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
      */
     public String getCancelMessage() {
         return this.CancelMessage;
     }
 
     /**
-     * Set 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
-     * @param CancelMessage 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+     * Set 撤销此合同流程的**撤销理由**，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+     * @param CancelMessage 撤销此合同流程的**撤销理由**，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
      */
     public void setCancelMessage(String CancelMessage) {
         this.CancelMessage = CancelMessage;

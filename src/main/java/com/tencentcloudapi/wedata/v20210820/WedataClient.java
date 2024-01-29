@@ -39,28 +39,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取协同编辑资源锁
-     * @param req AcquireLockRequest
-     * @return AcquireLockResponse
-     * @throws TencentCloudSDKException
-     */
-    public AcquireLockResponse AcquireLock(AcquireLockRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "AcquireLock", AcquireLockResponse.class);
-    }
-
-    /**
-     *上游依赖自动解析
-     * @param req AnalyzeDependentTasksRequest
-     * @return AnalyzeDependentTasksResponse
-     * @throws TencentCloudSDKException
-     */
-    public AnalyzeDependentTasksResponse AnalyzeDependentTasks(AnalyzeDependentTasksRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "AnalyzeDependentTasks", AnalyzeDependentTasksResponse.class);
-    }
-
-    /**
      *批量创建任务告警规则
      * @param req BatchCreateIntegrationTaskAlarmsRequest
      * @return BatchCreateIntegrationTaskAlarmsResponse
@@ -72,17 +50,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *异步批量创建任务版本
-     * @param req BatchCreateTaskVersionAsyncRequest
-     * @return BatchCreateTaskVersionAsyncResponse
-     * @throws TencentCloudSDKException
-     */
-    public BatchCreateTaskVersionAsyncResponse BatchCreateTaskVersionAsync(BatchCreateTaskVersionAsyncRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BatchCreateTaskVersionAsync", BatchCreateTaskVersionAsyncResponse.class);
-    }
-
-    /**
      *批量创建任务版本Ds
      * @param req BatchCreateTaskVersionDsRequest
      * @return BatchCreateTaskVersionDsResponse
@@ -91,17 +58,6 @@ public class WedataClient extends AbstractClient{
     public BatchCreateTaskVersionDsResponse BatchCreateTaskVersionDs(BatchCreateTaskVersionDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BatchCreateTaskVersionDs", BatchCreateTaskVersionDsResponse.class);
-    }
-
-    /**
-     *批量创建虚拟任务, 用于新建跨工作流任务场景中新增跨工作流任务操作
-     * @param req BatchCreateVirtualTaskDsRequest
-     * @return BatchCreateVirtualTaskDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public BatchCreateVirtualTaskDsResponse BatchCreateVirtualTaskDs(BatchCreateVirtualTaskDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BatchCreateVirtualTaskDs", BatchCreateVirtualTaskDsResponse.class);
     }
 
     /**
@@ -135,17 +91,6 @@ public class WedataClient extends AbstractClient{
     public BatchDeleteTasksDsResponse BatchDeleteTasksDs(BatchDeleteTasksDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BatchDeleteTasksDs", BatchDeleteTasksDsResponse.class);
-    }
-
-    /**
-     *Ds批量删除任务，仅对任务状态为”已停止“有效；
-     * @param req BatchDeleteTasksDsAsyncRequest
-     * @return BatchDeleteTasksDsAsyncResponse
-     * @throws TencentCloudSDKException
-     */
-    public BatchDeleteTasksDsAsyncResponse BatchDeleteTasksDsAsync(BatchDeleteTasksDsAsyncRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BatchDeleteTasksDsAsync", BatchDeleteTasksDsAsyncResponse.class);
     }
 
     /**
@@ -251,20 +196,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量运行任务, 用于工作流-任务配置-运行、工作流-任务右键-运行、任务运维-任务管理-更多操作-运行、任务运维-任务管理-选择任务-批量运行等场景。
-1. 任务运行预判断
-2. 更新db中任务状态
-3. 通知scheduler进行运行操作
-     * @param req BatchRunTasksDsRequest
-     * @return BatchRunTasksDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public BatchRunTasksDsResponse BatchRunTasksDs(BatchRunTasksDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BatchRunTasksDs", BatchRunTasksDsResponse.class);
-    }
-
-    /**
      *批量运行集成任务
      * @param req BatchStartIntegrationTasksRequest
      * @return BatchStartIntegrationTasksResponse
@@ -343,17 +274,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量更新任务Ds
-     * @param req BatchUpdateTasksDsRequest
-     * @return BatchUpdateTasksDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public BatchUpdateTasksDsResponse BatchUpdateTasksDs(BatchUpdateTasksDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BatchUpdateTasksDs", BatchUpdateTasksDsResponse.class);
-    }
-
-    /**
      *判断告警规则重名
      * @param req CheckAlarmRegularNameExistRequest
      * @return CheckAlarmRegularNameExistResponse
@@ -362,17 +282,6 @@ public class WedataClient extends AbstractClient{
     public CheckAlarmRegularNameExistResponse CheckAlarmRegularNameExist(CheckAlarmRegularNameExistRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CheckAlarmRegularNameExist", CheckAlarmRegularNameExistResponse.class);
-    }
-
-    /**
-     *新建用户自定义函数组件检查
-     * @param req CheckCustomFunctionPremiseRequest
-     * @return CheckCustomFunctionPremiseResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckCustomFunctionPremiseResponse CheckCustomFunctionPremise(CheckCustomFunctionPremiseRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CheckCustomFunctionPremise", CheckCustomFunctionPremiseResponse.class);
     }
 
     /**
@@ -431,39 +340,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *检查任务名称是否重复
-     * @param req CheckTaskNameExistDsRequest
-     * @return CheckTaskNameExistDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckTaskNameExistDsResponse CheckTaskNameExistDs(CheckTaskNameExistDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CheckTaskNameExistDs", CheckTaskNameExistDsResponse.class);
-    }
-
-    /**
-     *检查操作用户对所选任务是否有操作权限, 用于新建跨工作流任务场景中展示审批提示操作
-     * @param req CheckTaskPriorityDsRequest
-     * @return CheckTaskPriorityDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckTaskPriorityDsResponse CheckTaskPriorityDs(CheckTaskPriorityDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CheckTaskPriorityDs", CheckTaskPriorityDsResponse.class);
-    }
-
-    /**
-     *清空回收站任务
-     * @param req ClearRecycleTaskRequest
-     * @return ClearRecycleTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public ClearRecycleTaskResponse ClearRecycleTask(ClearRecycleTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ClearRecycleTask", ClearRecycleTaskResponse.class);
-    }
-
-    /**
      *提交数据导出任务
      * @param req CommitExportTaskRequest
      * @return CommitExportTaskResponse
@@ -508,50 +384,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *工作流版本提交
-     * @param req CommitWorkflowRequest
-     * @return CommitWorkflowResponse
-     * @throws TencentCloudSDKException
-     */
-    public CommitWorkflowResponse CommitWorkflow(CommitWorkflowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CommitWorkflow", CommitWorkflowResponse.class);
-    }
-
-    /**
-     *对比任务版本
-     * @param req CompareDsTaskVersionInfoRequest
-     * @return CompareDsTaskVersionInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public CompareDsTaskVersionInfoResponse CompareDsTaskVersionInfo(CompareDsTaskVersionInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CompareDsTaskVersionInfo", CompareDsTaskVersionInfoResponse.class);
-    }
-
-    /**
-     *复制任务Ds
-     * @param req CopyTaskDsRequest
-     * @return CopyTaskDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CopyTaskDsResponse CopyTaskDs(CopyTaskDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CopyTaskDs", CopyTaskDsResponse.class);
-    }
-
-    /**
-     *复制工作流
-     * @param req CopyWorkflowDsRequest
-     * @return CopyWorkflowDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CopyWorkflowDsResponse CopyWorkflowDs(CopyWorkflowDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CopyWorkflowDs", CopyWorkflowDsResponse.class);
-    }
-
-    /**
      *统计任务实例状态
      * @param req CountOpsInstanceStateRequest
      * @return CountOpsInstanceStateResponse
@@ -571,17 +403,6 @@ public class WedataClient extends AbstractClient{
     public CreateBaselineResponse CreateBaseline(CreateBaselineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateBaseline", CreateBaselineResponse.class);
-    }
-
-    /**
-     *创建用户数据开发浏览历史
-     * @param req CreateBrowsingHistoryRequest
-     * @return CreateBrowsingHistoryResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateBrowsingHistoryResponse CreateBrowsingHistory(CreateBrowsingHistoryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateBrowsingHistory", CreateBrowsingHistoryResponse.class);
     }
 
     /**
@@ -616,17 +437,6 @@ public class WedataClient extends AbstractClient{
     public CreateDsFolderResponse CreateDsFolder(CreateDsFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDsFolder", CreateDsFolderResponse.class);
-    }
-
-    /**
-     *创建开发空间版本
-     * @param req CreateFileVersionRequest
-     * @return CreateFileVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateFileVersionResponse CreateFileVersion(CreateFileVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateFileVersion", CreateFileVersionResponse.class);
     }
 
     /**
@@ -697,17 +507,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建任务连接
-     * @param req CreateLinkRequest
-     * @return CreateLinkResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLinkResponse CreateLink(CreateLinkRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateLink", CreateLinkResponse.class);
-    }
-
-    /**
      *创建离线任务
      * @param req CreateOfflineTaskRequest
      * @return CreateOfflineTaskResponse
@@ -738,39 +537,6 @@ public class WedataClient extends AbstractClient{
     public CreateOrUpdateResourceResponse CreateOrUpdateResource(CreateOrUpdateResourceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateOrUpdateResource", CreateOrUpdateResourceResponse.class);
-    }
-
-    /**
-     *新建文件夹
-     * @param req CreatePathRequest
-     * @return CreatePathResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreatePathResponse CreatePath(CreatePathRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreatePath", CreatePathResponse.class);
-    }
-
-    /**
-     *创建项目参数
-     * @param req CreateProjectParamDsRequest
-     * @return CreateProjectParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateProjectParamDsResponse CreateProjectParamDs(CreateProjectParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateProjectParamDs", CreateProjectParamDsResponse.class);
-    }
-
-    /**
-     *资源管理-创建资源目录
-     * @param req CreateResourceDirectoryRequest
-     * @return CreateResourceDirectoryResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateResourceDirectoryResponse CreateResourceDirectory(CreateResourceDirectoryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateResourceDirectory", CreateResourceDirectoryResponse.class);
     }
 
     /**
@@ -807,17 +573,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *编排空间导入开发空间脚本。
-     * @param req CreateScriptsImportTasksDsRequest
-     * @return CreateScriptsImportTasksDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateScriptsImportTasksDsResponse CreateScriptsImportTasksDs(CreateScriptsImportTasksDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateScriptsImportTasksDs", CreateScriptsImportTasksDsResponse.class);
-    }
-
-    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建任务
      * @param req CreateTaskRequest
@@ -838,83 +593,6 @@ public class WedataClient extends AbstractClient{
     public CreateTaskAlarmRegularResponse CreateTaskAlarmRegular(CreateTaskAlarmRegularRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTaskAlarmRegular", CreateTaskAlarmRegularResponse.class);
-    }
-
-    /**
-     *创建任务Ds
-     * @param req CreateTaskDsRequest
-     * @return CreateTaskDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskDsResponse CreateTaskDs(CreateTaskDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTaskDs", CreateTaskDsResponse.class);
-    }
-
-    /**
-     *编排空间-工作流-创建任务文件夹
-     * @param req CreateTaskFolderRequest
-     * @return CreateTaskFolderResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskFolderResponse CreateTaskFolder(CreateTaskFolderRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTaskFolder", CreateTaskFolderResponse.class);
-    }
-
-    /**
-     *设置任务输入参数
-     * @param req CreateTaskInParamDsRequest
-     * @return CreateTaskInParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskInParamDsResponse CreateTaskInParamDs(CreateTaskInParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTaskInParamDs", CreateTaskInParamDsResponse.class);
-    }
-
-    /**
-     *设置任务输出参数
-     * @param req CreateTaskOutParamDsRequest
-     * @return CreateTaskOutParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskOutParamDsResponse CreateTaskOutParamDs(CreateTaskOutParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTaskOutParamDs", CreateTaskOutParamDsResponse.class);
-    }
-
-    /**
-     *批量创建登记项
-     * @param req CreateTaskOutputRegistriesRequest
-     * @return CreateTaskOutputRegistriesResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskOutputRegistriesResponse CreateTaskOutputRegistries(CreateTaskOutputRegistriesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTaskOutputRegistries", CreateTaskOutputRegistriesResponse.class);
-    }
-
-    /**
-     *新增或编辑产出登记项
-     * @param req CreateTaskOutputRegistryRequest
-     * @return CreateTaskOutputRegistryResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskOutputRegistryResponse CreateTaskOutputRegistry(CreateTaskOutputRegistryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTaskOutputRegistry", CreateTaskOutputRegistryResponse.class);
-    }
-
-    /**
-     *任务引用参数
-     * @param req CreateTaskParamDsRequest
-     * @return CreateTaskParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTaskParamDsResponse CreateTaskParamDs(CreateTaskParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTaskParamDs", CreateTaskParamDsResponse.class);
     }
 
     /**
@@ -941,17 +619,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建工作流
-     * @param req CreateWorkflowDsRequest
-     * @return CreateWorkflowDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateWorkflowDsResponse CreateWorkflowDs(CreateWorkflowDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateWorkflowDs", CreateWorkflowDsResponse.class);
-    }
-
-    /**
      *拉取dag实例
      * @param req DagInstancesRequest
      * @return DagInstancesResponse
@@ -971,17 +638,6 @@ public class WedataClient extends AbstractClient{
     public DeleteBaselineResponse DeleteBaseline(DeleteBaselineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBaseline", DeleteBaselineResponse.class);
-    }
-
-    /**
-     *批量删除工作流
-     * @param req DeleteBatchWorkflowDsRequest
-     * @return DeleteBatchWorkflowDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteBatchWorkflowDsResponse DeleteBatchWorkflowDs(DeleteBatchWorkflowDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteBatchWorkflowDs", DeleteBatchWorkflowDsResponse.class);
     }
 
     /**
@@ -1008,39 +664,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *删除事件
-     * @param req DeleteDsEventRequest
-     * @return DeleteDsEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteDsEventResponse DeleteDsEvent(DeleteDsEventRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteDsEvent", DeleteDsEventResponse.class);
-    }
-
-    /**
-     *删除事件监听者
-     * @param req DeleteDsEventListenerRequest
-     * @return DeleteDsEventListenerResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteDsEventListenerResponse DeleteDsEventListener(DeleteDsEventListenerRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteDsEventListener", DeleteDsEventListenerResponse.class);
-    }
-
-    /**
-     *删除事件发布者
-     * @param req DeleteDsEventPublisherRequest
-     * @return DeleteDsEventPublisherResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteDsEventPublisherResponse DeleteDsEventPublisher(DeleteDsEventPublisherRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteDsEventPublisher", DeleteDsEventPublisherResponse.class);
-    }
-
-    /**
      *编排空间-删除文件夹
      * @param req DeleteDsFolderRequest
      * @return DeleteDsFolderResponse
@@ -1049,17 +672,6 @@ public class WedataClient extends AbstractClient{
     public DeleteDsFolderResponse DeleteDsFolder(DeleteDsFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDsFolder", DeleteDsFolderResponse.class);
-    }
-
-    /**
-     *通过任务ID删除所有事件
-     * @param req DeleteEventListenerByTaskIdRequest
-     * @return DeleteEventListenerByTaskIdResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteEventListenerByTaskIdResponse DeleteEventListenerByTaskId(DeleteEventListenerByTaskIdRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteEventListenerByTaskId", DeleteEventListenerByTaskIdResponse.class);
     }
 
     /**
@@ -1130,17 +742,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *删除任务连接
-     * @param req DeleteLinkRequest
-     * @return DeleteLinkResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteLinkResponse DeleteLink(DeleteLinkRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteLink", DeleteLinkResponse.class);
-    }
-
-    /**
      *删除任务
      * @param req DeleteOfflineTaskRequest
      * @return DeleteOfflineTaskResponse
@@ -1163,17 +764,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *删除项目参数版本
-     * @param req DeleteProjectParamVersionDsRequest
-     * @return DeleteProjectParamVersionDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteProjectParamVersionDsResponse DeleteProjectParamVersionDs(DeleteProjectParamVersionDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteProjectParamVersionDs", DeleteProjectParamVersionDsResponse.class);
-    }
-
-    /**
      *删除项目用户
      * @param req DeleteProjectUsersRequest
      * @return DeleteProjectUsersResponse
@@ -1182,28 +772,6 @@ public class WedataClient extends AbstractClient{
     public DeleteProjectUsersResponse DeleteProjectUsers(DeleteProjectUsersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteProjectUsers", DeleteProjectUsersResponse.class);
-    }
-
-    /**
-     *批量删除任务提交记录列表
-     * @param req DeleteRecordListRequest
-     * @return DeleteRecordListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteRecordListResponse DeleteRecordList(DeleteRecordListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteRecordList", DeleteRecordListResponse.class);
-    }
-
-    /**
-     *删除回收站任务
-     * @param req DeleteRecycleTaskRequest
-     * @return DeleteRecycleTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteRecycleTaskResponse DeleteRecycleTask(DeleteRecycleTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteRecycleTask", DeleteRecycleTaskResponse.class);
     }
 
     /**
@@ -1237,17 +805,6 @@ public class WedataClient extends AbstractClient{
     public DeleteResourceFilesResponse DeleteResourceFiles(DeleteResourceFilesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteResourceFiles", DeleteResourceFilesResponse.class);
-    }
-
-    /**
-     *资源管理-删除资源目录
-     * @param req DeleteResourcePathRequest
-     * @return DeleteResourcePathResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteResourcePathResponse DeleteResourcePath(DeleteResourcePathRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteResourcePath", DeleteResourcePathResponse.class);
     }
 
     /**
@@ -1292,50 +849,6 @@ public class WedataClient extends AbstractClient{
     public DeleteTaskDsResponse DeleteTaskDs(DeleteTaskDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTaskDs", DeleteTaskDsResponse.class);
-    }
-
-    /**
-     *编排空间-工作流-删除任务文件夹
-     * @param req DeleteTaskFolderRequest
-     * @return DeleteTaskFolderResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTaskFolderResponse DeleteTaskFolder(DeleteTaskFolderRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTaskFolder", DeleteTaskFolderResponse.class);
-    }
-
-    /**
-     *删除任务输入参数
-     * @param req DeleteTaskInParamDsRequest
-     * @return DeleteTaskInParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTaskInParamDsResponse DeleteTaskInParamDs(DeleteTaskInParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTaskInParamDs", DeleteTaskInParamDsResponse.class);
-    }
-
-    /**
-     *删除任务输出参数
-     * @param req DeleteTaskOutParamDsRequest
-     * @return DeleteTaskOutParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTaskOutParamDsResponse DeleteTaskOutParamDs(DeleteTaskOutParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTaskOutParamDs", DeleteTaskOutParamDsResponse.class);
-    }
-
-    /**
-     *删除产出登记项
-     * @param req DeleteTaskOutputRegistryRequest
-     * @return DeleteTaskOutputRegistryResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTaskOutputRegistryResponse DeleteTaskOutputRegistry(DeleteTaskOutputRegistryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTaskOutputRegistry", DeleteTaskOutputRegistryResponse.class);
     }
 
     /**
@@ -1392,17 +905,6 @@ public class WedataClient extends AbstractClient{
     public DescribeAllByFolderNewResponse DescribeAllByFolderNew(DescribeAllByFolderNewRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAllByFolderNew", DescribeAllByFolderNewResponse.class);
-    }
-
-    /**
-     *查询所有参数
-     * @param req DescribeAllParamDsRequest
-     * @return DescribeAllParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAllParamDsResponse DescribeAllParamDs(DescribeAllParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAllParamDs", DescribeAllParamDsResponse.class);
     }
 
     /**
@@ -1527,17 +1029,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量获取etl测试运行任务执行状态和日志
-     * @param req DescribeBatchTestRunRequest
-     * @return DescribeBatchTestRunResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBatchTestRunResponse DescribeBatchTestRun(DescribeBatchTestRunRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBatchTestRun", DescribeBatchTestRunResponse.class);
-    }
-
-    /**
      *智能运维-事件列表-所属任务/基线过滤列表
      * @param req DescribeBelongToRequest
      * @return DescribeBelongToResponse
@@ -1549,39 +1040,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询用户数据开发浏览历史
-     * @param req DescribeBrowsingHistoriesRequest
-     * @return DescribeBrowsingHistoriesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBrowsingHistoriesResponse DescribeBrowsingHistories(DescribeBrowsingHistoriesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBrowsingHistories", DescribeBrowsingHistoriesResponse.class);
-    }
-
-    /**
-     *查询子任务信息Ds
-     * @param req DescribeChildrenDsRequest
-     * @return DescribeChildrenDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeChildrenDsResponse DescribeChildrenDs(DescribeChildrenDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeChildrenDs", DescribeChildrenDsResponse.class);
-    }
-
-    /**
-     *开发空间-拉取指定路径目录树
-     * @param req DescribeChildrenPathTreesRequest
-     * @return DescribeChildrenPathTreesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeChildrenPathTreesResponse DescribeChildrenPathTrees(DescribeChildrenPathTreesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeChildrenPathTrees", DescribeChildrenPathTreesResponse.class);
-    }
-
-    /**
      *获取集群命名空间列表
      * @param req DescribeClusterNamespaceListRequest
      * @return DescribeClusterNamespaceListResponse
@@ -1590,83 +1048,6 @@ public class WedataClient extends AbstractClient{
     public DescribeClusterNamespaceListResponse DescribeClusterNamespaceList(DescribeClusterNamespaceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterNamespaceList", DescribeClusterNamespaceListResponse.class);
-    }
-
-    /**
-     *查询文件或任务详情
-     * @param req DescribeCodeDetailRequest
-     * @return DescribeCodeDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCodeDetailResponse DescribeCodeDetail(DescribeCodeDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCodeDetail", DescribeCodeDetailResponse.class);
-    }
-
-    /**
-     *全局搜索查询文件或任务详情
-     * @param req DescribeCodeDetailV2Request
-     * @return DescribeCodeDetailV2Response
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCodeDetailV2Response DescribeCodeDetailV2(DescribeCodeDetailV2Request req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCodeDetailV2", DescribeCodeDetailV2Response.class);
-    }
-
-    /**
-     *查询最近5条代码搜索审计日志
-     * @param req DescribeCodeSearchAuditInfoRequest
-     * @return DescribeCodeSearchAuditInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCodeSearchAuditInfoResponse DescribeCodeSearchAuditInfo(DescribeCodeSearchAuditInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCodeSearchAuditInfo", DescribeCodeSearchAuditInfoResponse.class);
-    }
-
-    /**
-     *获取代码搜索最近n条关键字搜索信息
-     * @param req DescribeCodeSearchAuditInfoV2Request
-     * @return DescribeCodeSearchAuditInfoV2Response
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCodeSearchAuditInfoV2Response DescribeCodeSearchAuditInfoV2(DescribeCodeSearchAuditInfoV2Request req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCodeSearchAuditInfoV2", DescribeCodeSearchAuditInfoV2Response.class);
-    }
-
-    /**
-     *代码搜索结果的统计信息
-     * @param req DescribeCodeSearchCountRequest
-     * @return DescribeCodeSearchCountResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCodeSearchCountResponse DescribeCodeSearchCount(DescribeCodeSearchCountRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCodeSearchCount", DescribeCodeSearchCountResponse.class);
-    }
-
-    /**
-     *根据条件搜索代码
-     * @param req DescribeCodeSearchInfoRequest
-     * @return DescribeCodeSearchInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCodeSearchInfoResponse DescribeCodeSearchInfo(DescribeCodeSearchInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCodeSearchInfo", DescribeCodeSearchInfoResponse.class);
-    }
-
-    /**
-     *全局搜索根据条件搜索代码
-     * @param req DescribeCodeSearchInfoV2Request
-     * @return DescribeCodeSearchInfoV2Response
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCodeSearchInfoV2Response DescribeCodeSearchInfoV2(DescribeCodeSearchInfoV2Request req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCodeSearchInfoV2", DescribeCodeSearchInfoV2Response.class);
     }
 
     /**
@@ -1692,28 +1073,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取 crontab topN 个数据时间周期
-     * @param req DescribeCrontabTopNDsRequest
-     * @return DescribeCrontabTopNDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCrontabTopNDsResponse DescribeCrontabTopNDs(DescribeCrontabTopNDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCrontabTopNDs", DescribeCrontabTopNDsResponse.class);
-    }
-
-    /**
-     *查询函数版本列表
-     * @param req DescribeCustomFunctionVersionListRequest
-     * @return DescribeCustomFunctionVersionListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCustomFunctionVersionListResponse DescribeCustomFunctionVersionList(DescribeCustomFunctionVersionListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCustomFunctionVersionList", DescribeCustomFunctionVersionListResponse.class);
-    }
-
-    /**
      *查询数据来源列表
      * @param req DescribeDataBasesRequest
      * @return DescribeDataBasesResponse
@@ -1733,17 +1092,6 @@ public class WedataClient extends AbstractClient{
     public DescribeDataCheckStatResponse DescribeDataCheckStat(DescribeDataCheckStatRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataCheckStat", DescribeDataCheckStatResponse.class);
-    }
-
-    /**
-     *获取数据开发任务类型
-     * @param req DescribeDataDevelopTaskTypeRequest
-     * @return DescribeDataDevelopTaskTypeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDataDevelopTaskTypeResponse DescribeDataDevelopTaskType(DescribeDataDevelopTaskTypeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDataDevelopTaskType", DescribeDataDevelopTaskTypeResponse.class);
     }
 
     /**
@@ -1790,17 +1138,6 @@ public class WedataClient extends AbstractClient{
     public DescribeDataSourceWithoutInfoResponse DescribeDataSourceWithoutInfo(DescribeDataSourceWithoutInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataSourceWithoutInfo", DescribeDataSourceWithoutInfoResponse.class);
-    }
-
-    /**
-     *获取数据表导入状态
-     * @param req DescribeDataTableImportProgressRequest
-     * @return DescribeDataTableImportProgressResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDataTableImportProgressResponse DescribeDataTableImportProgress(DescribeDataTableImportProgressRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDataTableImportProgress", DescribeDataTableImportProgressResponse.class);
     }
 
     /**
@@ -1882,17 +1219,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *根据层级查找开发态上下游任务节点
-     * @param req DescribeDependTasksDevDsRequest
-     * @return DescribeDependTasksDevDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDependTasksDevDsResponse DescribeDependTasksDevDs(DescribeDependTasksDevDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDependTasksDevDs", DescribeDependTasksDevDsResponse.class);
-    }
-
-    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 根据层级查找上/下游任务节点
      * @param req DescribeDependTasksNewRequest
@@ -1902,39 +1228,6 @@ public class WedataClient extends AbstractClient{
     public DescribeDependTasksNewResponse DescribeDependTasksNew(DescribeDependTasksNewRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDependTasksNew", DescribeDependTasksNewResponse.class);
-    }
-
-    /**
-     *【项目克隆任务模式】依赖任务信息查询
-     * @param req DescribeDependencyTasksForProjectCloneRequest
-     * @return DescribeDependencyTasksForProjectCloneResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDependencyTasksForProjectCloneResponse DescribeDependencyTasksForProjectClone(DescribeDependencyTasksForProjectCloneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDependencyTasksForProjectClone", DescribeDependencyTasksForProjectCloneResponse.class);
-    }
-
-    /**
-     *查询依赖工作流信息查询-项目克隆使用
-     * @param req DescribeDependencyWorkflowForProjectCloneRequest
-     * @return DescribeDependencyWorkflowForProjectCloneResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDependencyWorkflowForProjectCloneResponse DescribeDependencyWorkflowForProjectClone(DescribeDependencyWorkflowForProjectCloneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDependencyWorkflowForProjectClone", DescribeDependencyWorkflowForProjectCloneResponse.class);
-    }
-
-    /**
-     *获取开发空间支持的脚本类型
-     * @param req DescribeDevelopmentSpaceSupportTypeRequest
-     * @return DescribeDevelopmentSpaceSupportTypeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDevelopmentSpaceSupportTypeResponse DescribeDevelopmentSpaceSupportType(DescribeDevelopmentSpaceSupportTypeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDevelopmentSpaceSupportType", DescribeDevelopmentSpaceSupportTypeResponse.class);
     }
 
     /**
@@ -1993,72 +1286,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *分页查询事件
-     * @param req DescribeDsEventRequest
-     * @return DescribeDsEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsEventResponse DescribeDsEvent(DescribeDsEventRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsEvent", DescribeDsEventResponse.class);
-    }
-
-    /**
-     *事件管理-查询事件详情
-     * @param req DescribeDsEventDetailRequest
-     * @return DescribeDsEventDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsEventDetailResponse DescribeDsEventDetail(DescribeDsEventDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsEventDetail", DescribeDsEventDetailResponse.class);
-    }
-
-    /**
-     *查询事件监听者信息
-     * @param req DescribeDsEventListenerRequest
-     * @return DescribeDsEventListenerResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsEventListenerResponse DescribeDsEventListener(DescribeDsEventListenerRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsEventListener", DescribeDsEventListenerResponse.class);
-    }
-
-    /**
-     *查询事件监听者列表
-     * @param req DescribeDsEventListenerListRequest
-     * @return DescribeDsEventListenerListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsEventListenerListResponse DescribeDsEventListenerList(DescribeDsEventListenerListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsEventListenerList", DescribeDsEventListenerListResponse.class);
-    }
-
-    /**
-     *查询事件发布者信息
-     * @param req DescribeDsEventPublisherRequest
-     * @return DescribeDsEventPublisherResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsEventPublisherResponse DescribeDsEventPublisher(DescribeDsEventPublisherRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsEventPublisher", DescribeDsEventPublisherResponse.class);
-    }
-
-    /**
-     *查询事件发布者列表
-     * @param req DescribeDsEventPublisherListRequest
-     * @return DescribeDsEventPublisherListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsEventPublisherListResponse DescribeDsEventPublisherList(DescribeDsEventPublisherListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsEventPublisherList", DescribeDsEventPublisherListResponse.class);
-    }
-
-    /**
      *查询目录树
      * @param req DescribeDsFolderTreeRequest
      * @return DescribeDsFolderTreeResponse
@@ -2070,39 +1297,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询 kettle 资源服务器目录树
-     * @param req DescribeDsKettleServerFolderTreeRequest
-     * @return DescribeDsKettleServerFolderTreeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsKettleServerFolderTreeResponse DescribeDsKettleServerFolderTree(DescribeDsKettleServerFolderTreeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsKettleServerFolderTree", DescribeDsKettleServerFolderTreeResponse.class);
-    }
-
-    /**
-     *获取任务最新版本
-     * @param req DescribeDsLatestTaskVersionInfoRequest
-     * @return DescribeDsLatestTaskVersionInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsLatestTaskVersionInfoResponse DescribeDsLatestTaskVersionInfo(DescribeDsLatestTaskVersionInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsLatestTaskVersionInfo", DescribeDsLatestTaskVersionInfoResponse.class);
-    }
-
-    /**
-     *根据工作流id查询保存未提交任务
-     * @param req DescribeDsNotSubmitTasksAndCanRunByWorkflowRequest
-     * @return DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse DescribeDsNotSubmitTasksAndCanRunByWorkflow(DescribeDsNotSubmitTasksAndCanRunByWorkflowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsNotSubmitTasksAndCanRunByWorkflow", DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse.class);
-    }
-
-    /**
      *查询父目录树，用于工作流、任务定位
      * @param req DescribeDsParentFolderTreeRequest
      * @return DescribeDsParentFolderTreeResponse
@@ -2111,39 +1305,6 @@ public class WedataClient extends AbstractClient{
     public DescribeDsParentFolderTreeResponse DescribeDsParentFolderTree(DescribeDsParentFolderTreeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDsParentFolderTree", DescribeDsParentFolderTreeResponse.class);
-    }
-
-    /**
-     *查看任务版本详细信息
-     * @param req DescribeDsTaskVersionInfoRequest
-     * @return DescribeDsTaskVersionInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsTaskVersionInfoResponse DescribeDsTaskVersionInfo(DescribeDsTaskVersionInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsTaskVersionInfo", DescribeDsTaskVersionInfoResponse.class);
-    }
-
-    /**
-     *拉取任务版本列表
-     * @param req DescribeDsTaskVersionListRequest
-     * @return DescribeDsTaskVersionListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDsTaskVersionListResponse DescribeDsTaskVersionList(DescribeDsTaskVersionListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDsTaskVersionList", DescribeDsTaskVersionListResponse.class);
-    }
-
-    /**
-     *获取数据同步任务类型
-     * @param req DescribeEtlTaskTypeRequest
-     * @return DescribeEtlTaskTypeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEtlTaskTypeResponse DescribeEtlTaskType(DescribeEtlTaskTypeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEtlTaskType", DescribeEtlTaskTypeResponse.class);
     }
 
     /**
@@ -2202,28 +1363,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *根据任务ID获取任务监听事件
-     * @param req DescribeEventListenerByTaskIdRequest
-     * @return DescribeEventListenerByTaskIdResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEventListenerByTaskIdResponse DescribeEventListenerByTaskId(DescribeEventListenerByTaskIdRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEventListenerByTaskId", DescribeEventListenerByTaskIdResponse.class);
-    }
-
-    /**
-     *事件管理-查询事件关联任务
-     * @param req DescribeEventListenerTaskRequest
-     * @return DescribeEventListenerTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEventListenerTaskResponse DescribeEventListenerTask(DescribeEventListenerTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEventListenerTask", DescribeEventListenerTaskResponse.class);
-    }
-
-    /**
      *查询事件类型列表
      * @param req DescribeEventTypesRequest
      * @return DescribeEventTypesResponse
@@ -2257,28 +1396,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取执行日志
-     * @param req DescribeExecutionLogRequest
-     * @return DescribeExecutionLogResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExecutionLogResponse DescribeExecutionLog(DescribeExecutionLogRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExecutionLog", DescribeExecutionLogResponse.class);
-    }
-
-    /**
-     *查询父任务数据源信息Ds
-     * @param req DescribeFatherDatasourceInfoDsRequest
-     * @return DescribeFatherDatasourceInfoDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFatherDatasourceInfoDsResponse DescribeFatherDatasourceInfoDs(DescribeFatherDatasourceInfoDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeFatherDatasourceInfoDs", DescribeFatherDatasourceInfoDsResponse.class);
-    }
-
-    /**
      *获取关联父实例
      * @param req DescribeFathersRequest
      * @return DescribeFathersResponse
@@ -2298,17 +1415,6 @@ public class WedataClient extends AbstractClient{
     public DescribeFieldBasicInfoResponse DescribeFieldBasicInfo(DescribeFieldBasicInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFieldBasicInfo", DescribeFieldBasicInfoResponse.class);
-    }
-
-    /**
-     *查询开发空间版本列表
-     * @param req DescribeFileVersionsRequest
-     * @return DescribeFileVersionsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFileVersionsResponse DescribeFileVersions(DescribeFileVersionsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeFileVersions", DescribeFileVersionsResponse.class);
     }
 
     /**
@@ -2358,28 +1464,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取全局工作流信息，用于跨工作流节点拉取租户所有工作流列表
-     * @param req DescribeGlobalWorkflowDsRequest
-     * @return DescribeGlobalWorkflowDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGlobalWorkflowDsResponse DescribeGlobalWorkflowDs(DescribeGlobalWorkflowDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGlobalWorkflowDs", DescribeGlobalWorkflowDsResponse.class);
-    }
-
-    /**
-     *查询可导入的集成任务
-     * @param req DescribeImportableOfflineTaskRequest
-     * @return DescribeImportableOfflineTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeImportableOfflineTaskResponse DescribeImportableOfflineTask(DescribeImportableOfflineTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeImportableOfflineTask", DescribeImportableOfflineTaskResponse.class);
-    }
-
-    /**
      *获取采集器列表
      * @param req DescribeInLongAgentListRequest
      * @return DescribeInLongAgentListResponse
@@ -2421,17 +1505,6 @@ public class WedataClient extends AbstractClient{
     public DescribeInLongTkeClusterListResponse DescribeInLongTkeClusterList(DescribeInLongTkeClusterListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInLongTkeClusterList", DescribeInLongTkeClusterListResponse.class);
-    }
-
-    /**
-     *基于任务类型获取任务信息Ds
-     * @param req DescribeInfoTransByTypeIdDsRequest
-     * @return DescribeInfoTransByTypeIdDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInfoTransByTypeIdDsResponse DescribeInfoTransByTypeIdDs(DescribeInfoTransByTypeIdDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeInfoTransByTypeIdDs", DescribeInfoTransByTypeIdDsResponse.class);
     }
 
     /**
@@ -2667,17 +1740,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取协同编辑资源锁
-     * @param req DescribeLockRequest
-     * @return DescribeLockResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLockResponse DescribeLock(DescribeLockRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLock", DescribeLockResponse.class);
-    }
-
-    /**
      *分页查询质量监控组
      * @param req DescribeMonitorsByPageRequest
      * @return DescribeMonitorsByPageResponse
@@ -2686,17 +1748,6 @@ public class WedataClient extends AbstractClient{
     public DescribeMonitorsByPageResponse DescribeMonitorsByPage(DescribeMonitorsByPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMonitorsByPage", DescribeMonitorsByPageResponse.class);
-    }
-
-    /**
-     *新获取SQL执行结果
-     * @param req DescribeNewSqlTaskResultRequest
-     * @return DescribeNewSqlTaskResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeNewSqlTaskResultResponse DescribeNewSqlTaskResult(DescribeNewSqlTaskResultRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeNewSqlTaskResult", DescribeNewSqlTaskResultResponse.class);
     }
 
     /**
@@ -2821,28 +1872,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询任务父依赖
-     * @param req DescribeParentTaskRequest
-     * @return DescribeParentTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeParentTaskResponse DescribeParentTask(DescribeParentTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeParentTask", DescribeParentTaskResponse.class);
-    }
-
-    /**
-     *开发空间-拉取完整目录树
-     * @param req DescribePathTreesRequest
-     * @return DescribePathTreesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribePathTreesResponse DescribePathTrees(DescribePathTreesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribePathTrees", DescribePathTreesResponse.class);
-    }
-
-    /**
      *数据质量获取生产调度任务列表
      * @param req DescribeProdTasksRequest
      * @return DescribeProdTasksResponse
@@ -2854,17 +1883,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取工作流画布信息
-     * @param req DescribeProdWorkflowCanvasInfoDsRequest
-     * @return DescribeProdWorkflowCanvasInfoDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProdWorkflowCanvasInfoDsResponse DescribeProdWorkflowCanvasInfoDs(DescribeProdWorkflowCanvasInfoDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeProdWorkflowCanvasInfoDs", DescribeProdWorkflowCanvasInfoDsResponse.class);
-    }
-
-    /**
      *获取项目信息
      * @param req DescribeProjectRequest
      * @return DescribeProjectResponse
@@ -2873,50 +1891,6 @@ public class WedataClient extends AbstractClient{
     public DescribeProjectResponse DescribeProject(DescribeProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProject", DescribeProjectResponse.class);
-    }
-
-    /**
-     *查询项目全局参数
-     * @param req DescribeProjectParamDsRequest
-     * @return DescribeProjectParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProjectParamDsResponse DescribeProjectParamDs(DescribeProjectParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeProjectParamDs", DescribeProjectParamDsResponse.class);
-    }
-
-    /**
-     *查询项目全局参数
-     * @param req DescribeProjectParamDsPageRequest
-     * @return DescribeProjectParamDsPageResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProjectParamDsPageResponse DescribeProjectParamDsPage(DescribeProjectParamDsPageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeProjectParamDsPage", DescribeProjectParamDsPageResponse.class);
-    }
-
-    /**
-     *查询项目参数历史版本
-     * @param req DescribeProjectParamVersionDsRequest
-     * @return DescribeProjectParamVersionDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProjectParamVersionDsResponse DescribeProjectParamVersionDs(DescribeProjectParamVersionDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeProjectParamVersionDs", DescribeProjectParamVersionDsResponse.class);
-    }
-
-    /**
-     *拉取项目参数版本详情
-     * @param req DescribeProjectParamVersionInfoDsRequest
-     * @return DescribeProjectParamVersionInfoDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProjectParamVersionInfoDsResponse DescribeProjectParamVersionInfoDs(DescribeProjectParamVersionInfoDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeProjectParamVersionInfoDs", DescribeProjectParamVersionInfoDsResponse.class);
     }
 
     /**
@@ -2972,39 +1946,6 @@ public class WedataClient extends AbstractClient{
     public DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeed(DescribeRealTimeTaskSpeedRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRealTimeTaskSpeed", DescribeRealTimeTaskSpeedResponse.class);
-    }
-
-    /**
-     *即席分析-获取任务列表
-     * @param req DescribeRecordListRequest
-     * @return DescribeRecordListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRecordListResponse DescribeRecordList(DescribeRecordListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRecordList", DescribeRecordListResponse.class);
-    }
-
-    /**
-     *获取回收站任务详情
-     * @param req DescribeRecycleTaskDetailRequest
-     * @return DescribeRecycleTaskDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRecycleTaskDetailResponse DescribeRecycleTaskDetail(DescribeRecycleTaskDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRecycleTaskDetail", DescribeRecycleTaskDetailResponse.class);
-    }
-
-    /**
-     *查询回收站任务列表
-     * @param req DescribeRecycleTaskListRequest
-     * @return DescribeRecycleTaskListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRecycleTaskListResponse DescribeRecycleTaskList(DescribeRecycleTaskListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRecycleTaskList", DescribeRecycleTaskListResponse.class);
     }
 
     /**
@@ -3352,17 +2293,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取脚本导出任务类型
-     * @param req DescribeScriptsImportTaskTypeRequest
-     * @return DescribeScriptsImportTaskTypeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScriptsImportTaskTypeResponse DescribeScriptsImportTaskType(DescribeScriptsImportTaskTypeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeScriptsImportTaskType", DescribeScriptsImportTaskTypeResponse.class);
-    }
-
-    /**
      *获取关联子实例
      * @param req DescribeSonInstancesRequest
      * @return DescribeSonInstancesResponse
@@ -3371,17 +2301,6 @@ public class WedataClient extends AbstractClient{
     public DescribeSonInstancesResponse DescribeSonInstances(DescribeSonInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSonInstances", DescribeSonInstancesResponse.class);
-    }
-
-    /**
-     *获取SQL执行结果
-     * @param req DescribeSqlTaskResultRequest
-     * @return DescribeSqlTaskResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSqlTaskResultResponse DescribeSqlTaskResult(DescribeSqlTaskResultRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSqlTaskResult", DescribeSqlTaskResultResponse.class);
     }
 
     /**
@@ -3539,17 +2458,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取任务绑定的虚拟任务
-     * @param req DescribeTaskBindVirtualTaskRequest
-     * @return DescribeTaskBindVirtualTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskBindVirtualTaskResponse DescribeTaskBindVirtualTask(DescribeTaskBindVirtualTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskBindVirtualTask", DescribeTaskBindVirtualTaskResponse.class);
-    }
-
-    /**
      *根据周期类型 查询所有任务
      * @param req DescribeTaskByCycleRequest
      * @return DescribeTaskByCycleResponse
@@ -3595,28 +2503,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询任务具体详情Ds
-     * @param req DescribeTaskDetailDsRequest
-     * @return DescribeTaskDetailDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskDetailDsResponse DescribeTaskDetailDs(DescribeTaskDetailDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskDetailDs", DescribeTaskDetailDsResponse.class);
-    }
-
-    /**
-     *查询任务输入参数
-     * @param req DescribeTaskInParamDsRequest
-     * @return DescribeTaskInParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskInParamDsResponse DescribeTaskInParamDs(DescribeTaskInParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskInParamDs", DescribeTaskInParamDsResponse.class);
-    }
-
-    /**
      *离线任务实例详情
      * @param req DescribeTaskInstanceRequest
      * @return DescribeTaskInstanceResponse
@@ -3650,28 +2536,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *通过指定基准时间，计算出最近一次任务基于该基准时间的运行时间
-     * @param req DescribeTaskLatestRunTimeRequest
-     * @return DescribeTaskLatestRunTimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskLatestRunTimeResponse DescribeTaskLatestRunTime(DescribeTaskLatestRunTimeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskLatestRunTime", DescribeTaskLatestRunTimeResponse.class);
-    }
-
-    /**
-     *基于条件翻页获取任务列表, 用于新建跨工作流任务场景中展示工作流列表操作
-     * @param req DescribeTaskListByConditionDsRequest
-     * @return DescribeTaskListByConditionDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskListByConditionDsResponse DescribeTaskListByConditionDs(DescribeTaskListByConditionDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskListByConditionDs", DescribeTaskListByConditionDsResponse.class);
-    }
-
-    /**
      *查看任务锁状态信息
      * @param req DescribeTaskLockStatusRequest
      * @return DescribeTaskLockStatusResponse
@@ -3680,50 +2544,6 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskLockStatusResponse DescribeTaskLockStatus(DescribeTaskLockStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTaskLockStatus", DescribeTaskLockStatusResponse.class);
-    }
-
-    /**
-     *查询任务输出参数
-     * @param req DescribeTaskOutParamDsRequest
-     * @return DescribeTaskOutParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskOutParamDsResponse DescribeTaskOutParamDs(DescribeTaskOutParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskOutParamDs", DescribeTaskOutParamDsResponse.class);
-    }
-
-    /**
-     *获取指定任务产出登记列表
-     * @param req DescribeTaskOutputRegistriesRequest
-     * @return DescribeTaskOutputRegistriesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskOutputRegistriesResponse DescribeTaskOutputRegistries(DescribeTaskOutputRegistriesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskOutputRegistries", DescribeTaskOutputRegistriesResponse.class);
-    }
-
-    /**
-     *查询任务引用参数
-     * @param req DescribeTaskParamDsRequest
-     * @return DescribeTaskParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskParamDsResponse DescribeTaskParamDs(DescribeTaskParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskParamDs", DescribeTaskParamDsResponse.class);
-    }
-
-    /**
-     *基于当前任务的数据时间计算依赖的上游任务数据时间
-     * @param req DescribeTaskParentRunTimeRequest
-     * @return DescribeTaskParentRunTimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskParentRunTimeResponse DescribeTaskParentRunTime(DescribeTaskParentRunTimeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskParentRunTime", DescribeTaskParentRunTimeResponse.class);
     }
 
     /**
@@ -3772,17 +2592,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *根据脚本类型获取任务类型
-     * @param req DescribeTaskTypeByScriptTypeRequest
-     * @return DescribeTaskTypeByScriptTypeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskTypeByScriptTypeResponse DescribeTaskTypeByScriptType(DescribeTaskTypeByScriptTypeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTaskTypeByScriptType", DescribeTaskTypeByScriptTypeResponse.class);
-    }
-
-    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 根据工作流分页查询任务
      * @param req DescribeTasksByPageRequest
@@ -3792,17 +2601,6 @@ public class WedataClient extends AbstractClient{
     public DescribeTasksByPageResponse DescribeTasksByPage(DescribeTasksByPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTasksByPage", DescribeTasksByPageResponse.class);
-    }
-
-    /**
-     *任务信息查询-项目克隆使用
-     * @param req DescribeTasksForProjectCloneRequest
-     * @return DescribeTasksForProjectCloneResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTasksForProjectCloneResponse DescribeTasksForProjectClone(DescribeTasksForProjectCloneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTasksForProjectClone", DescribeTasksForProjectCloneResponse.class);
     }
 
     /**
@@ -3828,17 +2626,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取etl测试运行任务执行状态和日志
-     * @param req DescribeTestRunRequest
-     * @return DescribeTestRunResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTestRunResponse DescribeTestRun(DescribeTestRunRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTestRun", DescribeTestRunResponse.class);
-    }
-
-    /**
      *获取第三方运行日志
      * @param req DescribeThirdTaskRunLogRequest
      * @return DescribeThirdTaskRunLogResponse
@@ -3847,17 +2634,6 @@ public class WedataClient extends AbstractClient{
     public DescribeThirdTaskRunLogResponse DescribeThirdTaskRunLog(DescribeThirdTaskRunLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeThirdTaskRunLog", DescribeThirdTaskRunLogResponse.class);
-    }
-
-    /**
-     *获取长连接Token
-     * @param req DescribeTokenRequest
-     * @return DescribeTokenResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTokenResponse DescribeToken(DescribeTokenRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeToken", DescribeTokenResponse.class);
     }
 
     /**
@@ -3883,17 +2659,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *根据文件夹查询工作流
-     * @param req DescribeWorkflowByFordIdsRequest
-     * @return DescribeWorkflowByFordIdsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWorkflowByFordIdsResponse DescribeWorkflowByFordIds(DescribeWorkflowByFordIdsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWorkflowByFordIds", DescribeWorkflowByFordIdsResponse.class);
-    }
-
-    /**
      *查询工作流画布
      * @param req DescribeWorkflowCanvasInfoRequest
      * @return DescribeWorkflowCanvasInfoResponse
@@ -3905,39 +2670,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *数据开发-获取工作流画布信息
-     * @param req DescribeWorkflowCanvasInfoDsRequest
-     * @return DescribeWorkflowCanvasInfoDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWorkflowCanvasInfoDsResponse DescribeWorkflowCanvasInfoDs(DescribeWorkflowCanvasInfoDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWorkflowCanvasInfoDs", DescribeWorkflowCanvasInfoDsResponse.class);
-    }
-
-    /**
-     *获取工作流操作日志
-     * @param req DescribeWorkflowCanvasOpLogsRequest
-     * @return DescribeWorkflowCanvasOpLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWorkflowCanvasOpLogsResponse DescribeWorkflowCanvasOpLogs(DescribeWorkflowCanvasOpLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWorkflowCanvasOpLogs", DescribeWorkflowCanvasOpLogsResponse.class);
-    }
-
-    /**
-     *获取工作流画布操作人列表
-     * @param req DescribeWorkflowCanvasOperatorsRequest
-     * @return DescribeWorkflowCanvasOperatorsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWorkflowCanvasOperatorsResponse DescribeWorkflowCanvasOperators(DescribeWorkflowCanvasOperatorsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWorkflowCanvasOperators", DescribeWorkflowCanvasOperatorsResponse.class);
-    }
-
-    /**
      *查询工作流画布运行起止时间
      * @param req DescribeWorkflowExecuteByIdRequest
      * @return DescribeWorkflowExecuteByIdResponse
@@ -3946,17 +2678,6 @@ public class WedataClient extends AbstractClient{
     public DescribeWorkflowExecuteByIdResponse DescribeWorkflowExecuteById(DescribeWorkflowExecuteByIdRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWorkflowExecuteById", DescribeWorkflowExecuteByIdResponse.class);
-    }
-
-    /**
-     *工作流信息查询-项目克隆使用
-     * @param req DescribeWorkflowForProjectCloneRequest
-     * @return DescribeWorkflowForProjectCloneResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWorkflowForProjectCloneResponse DescribeWorkflowForProjectClone(DescribeWorkflowForProjectCloneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWorkflowForProjectClone", DescribeWorkflowForProjectCloneResponse.class);
     }
 
     /**
@@ -3993,28 +2714,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *查询工作流全局参数
-     * @param req DescribeWorkflowParamDsRequest
-     * @return DescribeWorkflowParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWorkflowParamDsResponse DescribeWorkflowParamDs(DescribeWorkflowParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWorkflowParamDs", DescribeWorkflowParamDsResponse.class);
-    }
-
-    /**
-     *获取工作流调度信息
-     * @param req DescribeWorkflowSchedulerInfoDsRequest
-     * @return DescribeWorkflowSchedulerInfoDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWorkflowSchedulerInfoDsResponse DescribeWorkflowSchedulerInfoDs(DescribeWorkflowSchedulerInfoDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWorkflowSchedulerInfoDs", DescribeWorkflowSchedulerInfoDsResponse.class);
-    }
-
-    /**
      *查询工作流任务数
      * @param req DescribeWorkflowTaskCountRequest
      * @return DescribeWorkflowTaskCountResponse
@@ -4026,17 +2725,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *工作流任务信息查询-项目克隆使用
-     * @param req DescribeWorkflowTasksForProjectCloneRequest
-     * @return DescribeWorkflowTasksForProjectCloneResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWorkflowTasksForProjectCloneResponse DescribeWorkflowTasksForProjectClone(DescribeWorkflowTasksForProjectCloneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWorkflowTasksForProjectClone", DescribeWorkflowTasksForProjectCloneResponse.class);
-    }
-
-    /**
      *实例诊断信息
      * @param req DiagnosePlusRequest
      * @return DiagnosePlusResponse
@@ -4045,28 +2733,6 @@ public class WedataClient extends AbstractClient{
     public DiagnosePlusResponse DiagnosePlus(DiagnosePlusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DiagnosePlus", DiagnosePlusResponse.class);
-    }
-
-    /**
-     *下载SQL执行结果
-     * @param req DownloadNewSqlResultRequest
-     * @return DownloadNewSqlResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public DownloadNewSqlResultResponse DownloadNewSqlResult(DownloadNewSqlResultRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DownloadNewSqlResult", DownloadNewSqlResultResponse.class);
-    }
-
-    /**
-     *下载SQL执行结果
-     * @param req DownloadSqlResultRequest
-     * @return DownloadSqlResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public DownloadSqlResultResponse DownloadSqlResult(DownloadSqlResultRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DownloadSqlResult", DownloadSqlResultResponse.class);
     }
 
     /**
@@ -4092,61 +2758,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *事件管理-导出事件
-     * @param req ExportDsEventRequest
-     * @return ExportDsEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public ExportDsEventResponse ExportDsEvent(ExportDsEventRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ExportDsEvent", ExportDsEventResponse.class);
-    }
-
-    /**
-     *批量导出文件
-     * @param req ExportFilesRequest
-     * @return ExportFilesResponse
-     * @throws TencentCloudSDKException
-     */
-    public ExportFilesResponse ExportFiles(ExportFilesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ExportFiles", ExportFilesResponse.class);
-    }
-
-    /**
-     *导出项目参数
-     * @param req ExportProjectParamDsRequest
-     * @return ExportProjectParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ExportProjectParamDsResponse ExportProjectParamDs(ExportProjectParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ExportProjectParamDs", ExportProjectParamDsResponse.class);
-    }
-
-    /**
-     *导出工作流(XML格式)，导出的文件存储在 cos 中(私有化 csp)，请自行下载，相关的下载信息在返回值中可以获取到
-     * @param req ExportWorkflowXmlRequest
-     * @return ExportWorkflowXmlResponse
-     * @throws TencentCloudSDKException
-     */
-    public ExportWorkflowXmlResponse ExportWorkflowXml(ExportWorkflowXmlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ExportWorkflowXml", ExportWorkflowXmlResponse.class);
-    }
-
-    /**
-     *导出工作流到 Zip 文件，导出的文件存储在 cos 中(私有化 csp)，请自行下载，相关的下载信息在返回值中可以获取到
-     * @param req ExportWorkflowZipRequest
-     * @return ExportWorkflowZipResponse
-     * @throws TencentCloudSDKException
-     */
-    public ExportWorkflowZipResponse ExportWorkflowZip(ExportWorkflowZipRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ExportWorkflowZip", ExportWorkflowZipResponse.class);
-    }
-
-    /**
      *查找全部的文件夹
      * @param req FindAllFolderRequest
      * @return FindAllFolderResponse
@@ -4155,50 +2766,6 @@ public class WedataClient extends AbstractClient{
     public FindAllFolderResponse FindAllFolder(FindAllFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "FindAllFolder", FindAllFolderResponse.class);
-    }
-
-    /**
-     *拉取下游依赖的任务列表Ds
-     * @param req FindDependTaskListDsRequest
-     * @return FindDependTaskListDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public FindDependTaskListDsResponse FindDependTaskListDs(FindDependTaskListDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "FindDependTaskListDs", FindDependTaskListDsResponse.class);
-    }
-
-    /**
-     *批量拉取下游依赖的任务列表Ds
-     * @param req FindDependTaskListsDsRequest
-     * @return FindDependTaskListsDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public FindDependTaskListsDsResponse FindDependTaskListsDs(FindDependTaskListsDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "FindDependTaskListsDs", FindDependTaskListsDsResponse.class);
-    }
-
-    /**
-     *编排空间-根据项目名称和任务名称模糊查询所有任务
-     * @param req FindFuzzyTasksDsRequest
-     * @return FindFuzzyTasksDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public FindFuzzyTasksDsResponse FindFuzzyTasksDs(FindFuzzyTasksDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "FindFuzzyTasksDs", FindFuzzyTasksDsResponse.class);
-    }
-
-    /**
-     *远端路径寻找任务
-     * @param req FindTaskByRemotePathRequest
-     * @return FindTaskByRemotePathResponse
-     * @throws TencentCloudSDKException
-     */
-    public FindTaskByRemotePathResponse FindTaskByRemotePath(FindTaskByRemotePathRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "FindTaskByRemotePath", FindTaskByRemotePathResponse.class);
     }
 
     /**
@@ -4282,39 +2849,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取高级运行参数
-     * @param req GetAdvanceRunParamsRequest
-     * @return GetAdvanceRunParamsResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetAdvanceRunParamsResponse GetAdvanceRunParams(GetAdvanceRunParamsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetAdvanceRunParams", GetAdvanceRunParamsResponse.class);
-    }
-
-    /**
-     *获取批量操作错误日志
-     * @param req GetBatchDetailErrorLogRequest
-     * @return GetBatchDetailErrorLogResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetBatchDetailErrorLogResponse GetBatchDetailErrorLog(GetBatchDetailErrorLogRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetBatchDetailErrorLog", GetBatchDetailErrorLogResponse.class);
-    }
-
-    /**
-     *获取cos token
-     * @param req GetCosTokenRequest
-     * @return GetCosTokenResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetCosTokenResponse GetCosToken(GetCosTokenRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetCosToken", GetCosTokenResponse.class);
-    }
-
-    /**
      *开发空间-获取数据开发脚本信息
      * @param req GetFileInfoRequest
      * @return GetFileInfoResponse
@@ -4337,28 +2871,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *开发空间获取最近一次测试运行记录信息
-     * @param req GetLatestAnalyseInfoRequest
-     * @return GetLatestAnalyseInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetLatestAnalyseInfoResponse GetLatestAnalyseInfo(GetLatestAnalyseInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetLatestAnalyseInfo", GetLatestAnalyseInfoResponse.class);
-    }
-
-    /**
-     *编排空间获取最近一次测试运行记录信息
-     * @param req GetLatestTestRunInfoRequest
-     * @return GetLatestTestRunInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetLatestTestRunInfoResponse GetLatestTestRunInfo(GetLatestTestRunInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetLatestTestRunInfo", GetLatestTestRunInfoResponse.class);
-    }
-
-    /**
      *获取离线任务实例列表(新)
      * @param req GetOfflineDIInstanceListRequest
      * @return GetOfflineDIInstanceListResponse
@@ -4378,171 +2890,6 @@ public class WedataClient extends AbstractClient{
     public GetOfflineInstanceListResponse GetOfflineInstanceList(GetOfflineInstanceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetOfflineInstanceList", GetOfflineInstanceListResponse.class);
-    }
-
-    /**
-     *回收站脚本文件目录树
-     * @param req GetPathTreesRequest
-     * @return GetPathTreesResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetPathTreesResponse GetPathTrees(GetPathTreesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetPathTrees", GetPathTreesResponse.class);
-    }
-
-    /**
-     *资源管理-获取资源上传的可用 cos 路径
-     * @param req GetResourceCosPathRequest
-     * @return GetResourceCosPathResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetResourceCosPathResponse GetResourceCosPath(GetResourceCosPathRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetResourceCosPath", GetResourceCosPathResponse.class);
-    }
-
-    /**
-     *资源管理-拉取资源目录树
-     * @param req GetResourcePathTreeRequest
-     * @return GetResourcePathTreeResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetResourcePathTreeResponse GetResourcePathTree(GetResourcePathTreeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetResourcePathTree", GetResourcePathTreeResponse.class);
-    }
-
-    /**
-     *获取工作流运行任务下游Ds
-     * @param req GetRunSonListDsRequest
-     * @return GetRunSonListDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetRunSonListDsResponse GetRunSonListDs(GetRunSonListDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetRunSonListDs", GetRunSonListDsResponse.class);
-    }
-
-    /**
-     *获取调试任务实例状态信息
-     * @param req GetTestRunTaskInstancesStatusInfoRequest
-     * @return GetTestRunTaskInstancesStatusInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetTestRunTaskInstancesStatusInfoResponse GetTestRunTaskInstancesStatusInfo(GetTestRunTaskInstancesStatusInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetTestRunTaskInstancesStatusInfo", GetTestRunTaskInstancesStatusInfoResponse.class);
-    }
-
-    /**
-     *协同编辑资源锁心跳
-     * @param req HeartBeatRequest
-     * @return HeartBeatResponse
-     * @throws TencentCloudSDKException
-     */
-    public HeartBeatResponse HeartBeat(HeartBeatRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "HeartBeat", HeartBeatResponse.class);
-    }
-
-    /**
-     *事件管理-导入事件
-     * @param req ImportDsEventRequest
-     * @return ImportDsEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImportDsEventResponse ImportDsEvent(ImportDsEventRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImportDsEvent", ImportDsEventResponse.class);
-    }
-
-    /**
-     *批量导入文件
-     * @param req ImportFilesRequest
-     * @return ImportFilesResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImportFilesResponse ImportFiles(ImportFilesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImportFiles", ImportFilesResponse.class);
-    }
-
-    /**
-     *异步导入集成任务
-     * @param req ImportOfflineTaskRequest
-     * @return ImportOfflineTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImportOfflineTaskResponse ImportOfflineTask(ImportOfflineTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImportOfflineTask", ImportOfflineTaskResponse.class);
-    }
-
-    /**
-     *导入项目参数
-     * @param req ImportProjectParamDsRequest
-     * @return ImportProjectParamDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImportProjectParamDsResponse ImportProjectParamDs(ImportProjectParamDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImportProjectParamDs", ImportProjectParamDsResponse.class);
-    }
-
-    /**
-     *创建数据表：HIVE
-     * @param req ImportTableDataRequest
-     * @return ImportTableDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImportTableDataResponse ImportTableData(ImportTableDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImportTableData", ImportTableDataResponse.class);
-    }
-
-    /**
-     *工作流导入（XML）
-     * @param req ImportWorkflowXmlRequest
-     * @return ImportWorkflowXmlResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImportWorkflowXmlResponse ImportWorkflowXml(ImportWorkflowXmlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImportWorkflowXml", ImportWorkflowXmlResponse.class);
-    }
-
-    /**
-     *工作流导入（ZIP）
-     * @param req ImportWorkflowZipRequest
-     * @return ImportWorkflowZipResponse
-     * @throws TencentCloudSDKException
-     */
-    public ImportWorkflowZipResponse ImportWorkflowZip(ImportWorkflowZipRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ImportWorkflowZip", ImportWorkflowZipResponse.class);
-    }
-
-    /**
-     *资源管理-判断资源文件是否存在
-     * @param req JudgeResourceFileRequest
-     * @return JudgeResourceFileResponse
-     * @throws TencentCloudSDKException
-     */
-    public JudgeResourceFileResponse JudgeResourceFile(JudgeResourceFileRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "JudgeResourceFile", JudgeResourceFileResponse.class);
-    }
-
-    /**
-     *任务是否存在监听事件
-     * @param req JudgeTaskListenEventRequest
-     * @return JudgeTaskListenEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public JudgeTaskListenEventResponse JudgeTaskListenEvent(JudgeTaskListenEventRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "JudgeTaskListenEvent", JudgeTaskListenEventResponse.class);
     }
 
     /**
@@ -4577,39 +2924,6 @@ public class WedataClient extends AbstractClient{
     public KillScheduleInstancesResponse KillScheduleInstances(KillScheduleInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "KillScheduleInstances", KillScheduleInstancesResponse.class);
-    }
-
-    /**
-     *停止试运行任务（多个）
-     * @param req KillTasksTestRunRequest
-     * @return KillTasksTestRunResponse
-     * @throws TencentCloudSDKException
-     */
-    public KillTasksTestRunResponse KillTasksTestRun(KillTasksTestRunRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "KillTasksTestRun", KillTasksTestRunResponse.class);
-    }
-
-    /**
-     *获取操作详情列表
-     * @param req ListBatchDetailRequest
-     * @return ListBatchDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListBatchDetailResponse ListBatchDetail(ListBatchDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListBatchDetail", ListBatchDetailResponse.class);
-    }
-
-    /**
-     *获取操作历史列表
-     * @param req ListBatchJobRequest
-     * @return ListBatchJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListBatchJobResponse ListBatchJob(ListBatchJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListBatchJob", ListBatchJobResponse.class);
     }
 
     /**
@@ -4840,17 +3154,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *编排空间-工作流-创建任务文件夹
-     * @param req ModifyTaskFolderRequest
-     * @return ModifyTaskFolderResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTaskFolderResponse ModifyTaskFolder(ModifyTaskFolderRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTaskFolder", ModifyTaskFolderResponse.class);
-    }
-
-    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 更新任务
      * @param req ModifyTaskInfoRequest
@@ -4863,17 +3166,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *更新任务Ds
-     * @param req ModifyTaskInfoDsRequest
-     * @return ModifyTaskInfoDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTaskInfoDsResponse ModifyTaskInfoDs(ModifyTaskInfoDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTaskInfoDs", ModifyTaskInfoDsResponse.class);
-    }
-
-    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 添加父任务依赖
      * @param req ModifyTaskLinksRequest
@@ -4883,17 +3175,6 @@ public class WedataClient extends AbstractClient{
     public ModifyTaskLinksResponse ModifyTaskLinks(ModifyTaskLinksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTaskLinks", ModifyTaskLinksResponse.class);
-    }
-
-    /**
-     *添加父任务依赖
-     * @param req ModifyTaskLinksDsRequest
-     * @return ModifyTaskLinksDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTaskLinksDsResponse ModifyTaskLinksDs(ModifyTaskLinksDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTaskLinksDs", ModifyTaskLinksDsResponse.class);
     }
 
     /**
@@ -4917,17 +3198,6 @@ public class WedataClient extends AbstractClient{
     public ModifyTaskScriptResponse ModifyTaskScript(ModifyTaskScriptRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTaskScript", ModifyTaskScriptResponse.class);
-    }
-
-    /**
-     *修改任务脚本Ds
-     * @param req ModifyTaskScriptDsRequest
-     * @return ModifyTaskScriptDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyTaskScriptDsResponse ModifyTaskScriptDs(ModifyTaskScriptDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyTaskScriptDs", ModifyTaskScriptDsResponse.class);
     }
 
     /**
@@ -4955,83 +3225,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *移动文件
-     * @param req MoveFileRequest
-     * @return MoveFileResponse
-     * @throws TencentCloudSDKException
-     */
-    public MoveFileResponse MoveFile(MoveFileRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "MoveFile", MoveFileResponse.class);
-    }
-
-    /**
-     *编排空间-工作流-移动任务到工作流文件夹
-     * @param req MoveTasksToFolderRequest
-     * @return MoveTasksToFolderResponse
-     * @throws TencentCloudSDKException
-     */
-    public MoveTasksToFolderResponse MoveTasksToFolder(MoveTasksToFolderRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "MoveTasksToFolder", MoveTasksToFolderResponse.class);
-    }
-
-    /**
-     *库表管理-新建数据表-csv预览，最多支持500行预览
-     * @param req PreviewDataTableCsvRequest
-     * @return PreviewDataTableCsvResponse
-     * @throws TencentCloudSDKException
-     */
-    public PreviewDataTableCsvResponse PreviewDataTableCsv(PreviewDataTableCsvRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "PreviewDataTableCsv", PreviewDataTableCsvResponse.class);
-    }
-
-    /**
-     *查询工作流版本信息
-     * @param req QueryWorkflowVersionRequest
-     * @return QueryWorkflowVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryWorkflowVersionResponse QueryWorkflowVersion(QueryWorkflowVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "QueryWorkflowVersion", QueryWorkflowVersionResponse.class);
-    }
-
-    /**
-     *注册事件
-     * @param req RegisterDsEventRequest
-     * @return RegisterDsEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public RegisterDsEventResponse RegisterDsEvent(RegisterDsEventRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RegisterDsEvent", RegisterDsEventResponse.class);
-    }
-
-    /**
-     *注册事件监听者
-     * @param req RegisterDsEventListenerRequest
-     * @return RegisterDsEventListenerResponse
-     * @throws TencentCloudSDKException
-     */
-    public RegisterDsEventListenerResponse RegisterDsEventListener(RegisterDsEventListenerRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RegisterDsEventListener", RegisterDsEventListenerResponse.class);
-    }
-
-    /**
-     *注册事件发布者
-     * @param req RegisterDsEventPublisherRequest
-     * @return RegisterDsEventPublisherResponse
-     * @throws TencentCloudSDKException
-     */
-    public RegisterDsEventPublisherResponse RegisterDsEventPublisher(RegisterDsEventPublisherRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RegisterDsEventPublisher", RegisterDsEventPublisherResponse.class);
-    }
-
-    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 注册事件
      * @param req RegisterEventRequest
@@ -5056,17 +3249,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *释放协同编辑资源锁
-     * @param req ReleaseLockRequest
-     * @return ReleaseLockResponse
-     * @throws TencentCloudSDKException
-     */
-    public ReleaseLockResponse ReleaseLock(ReleaseLockRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ReleaseLock", ReleaseLockResponse.class);
-    }
-
-    /**
      *删除编排空间工作流
      * @param req RemoveWorkflowDsRequest
      * @return RemoveWorkflowDsResponse
@@ -5075,116 +3257,6 @@ public class WedataClient extends AbstractClient{
     public RemoveWorkflowDsResponse RemoveWorkflowDs(RemoveWorkflowDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveWorkflowDs", RemoveWorkflowDsResponse.class);
-    }
-
-    /**
-     *重命名文件
-     * @param req RenameFileRequest
-     * @return RenameFileResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenameFileResponse RenameFile(RenameFileRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenameFile", RenameFileResponse.class);
-    }
-
-    /**
-     *资源管理-重命名资源
-     * @param req RenameResourceRequest
-     * @return RenameResourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenameResourceResponse RenameResource(RenameResourceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenameResource", RenameResourceResponse.class);
-    }
-
-    /**
-     *资源管理-重命名资源文件
-     * @param req RenameResourceFileRequest
-     * @return RenameResourceFileResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenameResourceFileResponse RenameResourceFile(RenameResourceFileRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenameResourceFile", RenameResourceFileResponse.class);
-    }
-
-    /**
-     *资源管理-重命名资源目录
-     * @param req RenameResourcePathRequest
-     * @return RenameResourcePathResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenameResourcePathResponse RenameResourcePath(RenameResourcePathRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenameResourcePath", RenameResourcePathResponse.class);
-    }
-
-    /**
-     *RenameTaskDs
-     * @param req RenameTaskDsRequest
-     * @return RenameTaskDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenameTaskDsResponse RenameTaskDs(RenameTaskDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenameTaskDs", RenameTaskDsResponse.class);
-    }
-
-    /**
-     *更新工作流
-     * @param req RenewWorkflowDsRequest
-     * @return RenewWorkflowDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenewWorkflowDsResponse RenewWorkflowDs(RenewWorkflowDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenewWorkflowDs", RenewWorkflowDsResponse.class);
-    }
-
-    /**
-     *移动文件夹
-     * @param req RenewWorkflowFolderDsRequest
-     * @return RenewWorkflowFolderDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenewWorkflowFolderDsResponse RenewWorkflowFolderDs(RenewWorkflowFolderDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenewWorkflowFolderDs", RenewWorkflowFolderDsResponse.class);
-    }
-
-    /**
-     *批量更新工作流下任务责任人
-     * @param req RenewWorkflowOwnerDsRequest
-     * @return RenewWorkflowOwnerDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(RenewWorkflowOwnerDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenewWorkflowOwnerDs", RenewWorkflowOwnerDsResponse.class);
-    }
-
-    /**
-     *更新工作流下任务调度信息
-     * @param req RenewWorkflowSchedulerInfoDsRequest
-     * @return RenewWorkflowSchedulerInfoDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(RenewWorkflowSchedulerInfoDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RenewWorkflowSchedulerInfoDs", RenewWorkflowSchedulerInfoDsResponse.class);
-    }
-
-    /**
-     *替换项目参数历史版本
-     * @param req ReplaceProjectParamVersionDsRequest
-     * @return ReplaceProjectParamVersionDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ReplaceProjectParamVersionDsResponse ReplaceProjectParamVersionDs(ReplaceProjectParamVersionDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ReplaceProjectParamVersionDs", ReplaceProjectParamVersionDsResponse.class);
     }
 
     /**
@@ -5233,17 +3305,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *还原任务
-     * @param req RestoreRecycleTaskRequest
-     * @return RestoreRecycleTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public RestoreRecycleTaskResponse RestoreRecycleTask(RestoreRecycleTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RestoreRecycleTask", RestoreRecycleTaskResponse.class);
-    }
-
-    /**
      *继续集成任务
      * @param req ResumeIntegrationTaskRequest
      * @return ResumeIntegrationTaskResponse
@@ -5263,17 +3324,6 @@ public class WedataClient extends AbstractClient{
     public RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(RobAndLockIntegrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RobAndLockIntegrationTask", RobAndLockIntegrationTaskResponse.class);
-    }
-
-    /**
-     *回滚自定义函数版本
-     * @param req RollbackCustomFunctionVersionRequest
-     * @return RollbackCustomFunctionVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public RollbackCustomFunctionVersionResponse RollbackCustomFunctionVersion(RollbackCustomFunctionVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RollbackCustomFunctionVersion", RollbackCustomFunctionVersionResponse.class);
     }
 
     /**
@@ -5333,28 +3383,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量保存任务位置
-     * @param req SavePositionsDsRequest
-     * @return SavePositionsDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public SavePositionsDsResponse SavePositionsDs(SavePositionsDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SavePositionsDs", SavePositionsDsResponse.class);
-    }
-
-    /**
-     *判断脚本文件是否被任务列表所引用
-     * @param req ScriptUsedByOtherTaskDsRequest
-     * @return ScriptUsedByOtherTaskDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ScriptUsedByOtherTaskDsResponse ScriptUsedByOtherTaskDs(ScriptUsedByOtherTaskDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ScriptUsedByOtherTaskDs", ScriptUsedByOtherTaskDsResponse.class);
-    }
-
-    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 设置任务告警，新建/更新告警信息（最新）
      * @param req SetTaskAlarmNewRequest
@@ -5375,17 +3403,6 @@ public class WedataClient extends AbstractClient{
     public StartIntegrationTaskResponse StartIntegrationTask(StartIntegrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartIntegrationTask", StartIntegrationTaskResponse.class);
-    }
-
-    /**
-     *即席分析终止任务接口
-     * @param req StopAdhocTaskRequest
-     * @return StopAdhocTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopAdhocTaskResponse StopAdhocTask(StopAdhocTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopAdhocTask", StopAdhocTaskResponse.class);
     }
 
     /**
@@ -5411,17 +3428,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *终止etl测试运行任务
-     * @param req StopTestRunRequest
-     * @return StopTestRunResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopTestRunResponse StopTestRun(StopTestRunRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopTestRun", StopTestRunResponse.class);
-    }
-
-    /**
      *提交基线
      * @param req SubmitBaselineRequest
      * @return SubmitBaselineResponse
@@ -5433,17 +3439,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量提交etl测试运行任务
-     * @param req SubmitBatchTestRunRequest
-     * @return SubmitBatchTestRunResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitBatchTestRunResponse SubmitBatchTestRun(SubmitBatchTestRunRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitBatchTestRun", SubmitBatchTestRunResponse.class);
-    }
-
-    /**
      *提交自定义函数
      * @param req SubmitCustomFunctionRequest
      * @return SubmitCustomFunctionResponse
@@ -5452,50 +3447,6 @@ public class WedataClient extends AbstractClient{
     public SubmitCustomFunctionResponse SubmitCustomFunction(SubmitCustomFunctionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitCustomFunction", SubmitCustomFunctionResponse.class);
-    }
-
-    /**
-     *即席分析提交数据集成任务
-     * @param req SubmitIntegrationTaskRequest
-     * @return SubmitIntegrationTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitIntegrationTaskResponse SubmitIntegrationTask(SubmitIntegrationTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitIntegrationTask", SubmitIntegrationTaskResponse.class);
-    }
-
-    /**
-     *即席分析提交PySpark任务
-     * @param req SubmitPySparkTaskRequest
-     * @return SubmitPySparkTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitPySparkTaskResponse SubmitPySparkTask(SubmitPySparkTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitPySparkTask", SubmitPySparkTaskResponse.class);
-    }
-
-    /**
-     *即席分析提交PYTHON任务
-     * @param req SubmitPythonTaskRequest
-     * @return SubmitPythonTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitPythonTaskResponse SubmitPythonTask(SubmitPythonTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitPythonTask", SubmitPythonTaskResponse.class);
-    }
-
-    /**
-     *即席分析提交SHELL任务
-     * @param req SubmitShellTaskRequest
-     * @return SubmitShellTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitShellTaskResponse SubmitShellTask(SubmitShellTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitShellTask", SubmitShellTaskResponse.class);
     }
 
     /**
@@ -5530,17 +3481,6 @@ public class WedataClient extends AbstractClient{
     public SubmitTaskTestRunResponse SubmitTaskTestRun(SubmitTaskTestRunRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitTaskTestRun", SubmitTaskTestRunResponse.class);
-    }
-
-    /**
-     *提交etl测试运行任务
-     * @param req SubmitTestRunRequest
-     * @return SubmitTestRunResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitTestRunResponse SubmitTestRun(SubmitTestRunRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitTestRun", SubmitTestRunResponse.class);
     }
 
     /**
@@ -5612,105 +3552,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *批量更新高级设置
-     * @param req UpdateBatchTaskAdvancedSettingsRequest
-     * @return UpdateBatchTaskAdvancedSettingsResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateBatchTaskAdvancedSettingsResponse UpdateBatchTaskAdvancedSettings(UpdateBatchTaskAdvancedSettingsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateBatchTaskAdvancedSettings", UpdateBatchTaskAdvancedSettingsResponse.class);
-    }
-
-    /**
-     *批量更新数据源
-     * @param req UpdateBatchTaskDatasourceRequest
-     * @return UpdateBatchTaskDatasourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateBatchTaskDatasourceResponse UpdateBatchTaskDatasource(UpdateBatchTaskDatasourceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateBatchTaskDatasource", UpdateBatchTaskDatasourceResponse.class);
-    }
-
-    /**
-     *批量修改责任人
-     * @param req UpdateBatchTaskInChargeRequest
-     * @return UpdateBatchTaskInChargeResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateBatchTaskInChargeResponse UpdateBatchTaskInCharge(UpdateBatchTaskInChargeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateBatchTaskInCharge", UpdateBatchTaskInChargeResponse.class);
-    }
-
-    /**
-     *批量修改参数
-     * @param req UpdateBatchTaskParameterRequest
-     * @return UpdateBatchTaskParameterResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateBatchTaskParameterResponse UpdateBatchTaskParameter(UpdateBatchTaskParameterRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateBatchTaskParameter", UpdateBatchTaskParameterResponse.class);
-    }
-
-    /**
-     *批量更新调度参数
-     * @param req UpdateBatchTaskParamsRequest
-     * @return UpdateBatchTaskParamsResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateBatchTaskParamsResponse UpdateBatchTaskParams(UpdateBatchTaskParamsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateBatchTaskParams", UpdateBatchTaskParamsResponse.class);
-    }
-
-    /**
-     *批量修改资源组
-     * @param req UpdateBatchTaskResourceGroupRequest
-     * @return UpdateBatchTaskResourceGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateBatchTaskResourceGroupResponse UpdateBatchTaskResourceGroup(UpdateBatchTaskResourceGroupRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateBatchTaskResourceGroup", UpdateBatchTaskResourceGroupResponse.class);
-    }
-
-    /**
-     *批量更新调度周期设置
-     * @param req UpdateBatchTaskScheduleRequest
-     * @return UpdateBatchTaskScheduleResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateBatchTaskScheduleResponse UpdateBatchTaskSchedule(UpdateBatchTaskScheduleRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateBatchTaskSchedule", UpdateBatchTaskScheduleResponse.class);
-    }
-
-    /**
-     *更新事件
-     * @param req UpdateDsEventRequest
-     * @return UpdateDsEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateDsEventResponse UpdateDsEvent(UpdateDsEventRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateDsEvent", UpdateDsEventResponse.class);
-    }
-
-    /**
-     *更新事件监听
-     * @param req UpdateEventListenerRequest
-     * @return UpdateEventListenerResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateEventListenerResponse UpdateEventListener(UpdateEventListenerRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateEventListener", UpdateEventListenerResponse.class);
-    }
-
-    /**
      *更新采集器
      * @param req UpdateInLongAgentRequest
      * @return UpdateInLongAgentResponse
@@ -5719,29 +3560,6 @@ public class WedataClient extends AbstractClient{
     public UpdateInLongAgentResponse UpdateInLongAgent(UpdateInLongAgentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateInLongAgent", UpdateInLongAgentResponse.class);
-    }
-
-    /**
-     *更新任务Ds
-     * @param req UpdateTaskDsRequest
-     * @return UpdateTaskDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateTaskDsResponse UpdateTaskDs(UpdateTaskDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateTaskDs", UpdateTaskDsResponse.class);
-    }
-
-    /**
-     *<p style="color:red;">[该接口为 ds 中开发]</p>
-更新工作流（包括工作流基本信息与工作流参数）
-     * @param req UpdateWorkflowInfoRequest
-     * @return UpdateWorkflowInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateWorkflowInfoResponse UpdateWorkflowInfo(UpdateWorkflowInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateWorkflowInfo", UpdateWorkflowInfoResponse.class);
     }
 
     /**
@@ -5756,17 +3574,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *保存高级运行用户自定义参数
-     * @param req UploadAdvanceRunParamsRequest
-     * @return UploadAdvanceRunParamsResponse
-     * @throws TencentCloudSDKException
-     */
-    public UploadAdvanceRunParamsResponse UploadAdvanceRunParams(UploadAdvanceRunParamsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UploadAdvanceRunParams", UploadAdvanceRunParamsResponse.class);
-    }
-
-    /**
      *保存任务信息
      * @param req UploadContentRequest
      * @return UploadContentResponse
@@ -5775,28 +3582,6 @@ public class WedataClient extends AbstractClient{
     public UploadContentResponse UploadContent(UploadContentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UploadContent", UploadContentResponse.class);
-    }
-
-    /**
-     *文件上传需要先获取文件上传所需要的秘钥，文件位置等信息，因为文件名字可能会出现冲突，所以需要传入将要写入的文件，如果检测到文件名冲突，WeData 后端会在文件名上加入随机字符串。
-     * @param req UploadFilesDsRequest
-     * @return UploadFilesDsResponse
-     * @throws TencentCloudSDKException
-     */
-    public UploadFilesDsResponse UploadFilesDs(UploadFilesDsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UploadFilesDs", UploadFilesDsResponse.class);
-    }
-
-    /**
-     *资源管理-上传资源
-     * @param req UploadResourceRequest
-     * @return UploadResourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public UploadResourceResponse UploadResource(UploadResourceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UploadResource", UploadResourceResponse.class);
     }
 
 }

@@ -919,6 +919,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *查询实例发生的事件信息
+     * @param req DescribeInstanceAlarmEventsRequest
+     * @return DescribeInstanceAlarmEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceAlarmEventsResponse DescribeInstanceAlarmEvents(DescribeInstanceAlarmEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceAlarmEvents", DescribeInstanceAlarmEventsResponse.class);
+    }
+
+    /**
      *该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
      * @param req DescribeInstanceParamRecordsRequest
      * @return DescribeInstanceParamRecordsResponse

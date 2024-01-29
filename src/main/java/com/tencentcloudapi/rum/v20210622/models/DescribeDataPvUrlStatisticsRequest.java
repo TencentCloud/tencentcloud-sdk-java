@@ -179,7 +179,8 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
     private Long GroupByType;
 
     /**
-    * 无需关注，是否查询zhiyan
+    * 1: 查询智研
+0: 走旧逻辑，已下线，勿使用
     */
     @SerializedName("IsNewData")
     @Expose
@@ -542,16 +543,20 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 无需关注，是否查询zhiyan 
-     * @return IsNewData 无需关注，是否查询zhiyan
+     * Get 1: 查询智研
+0: 走旧逻辑，已下线，勿使用 
+     * @return IsNewData 1: 查询智研
+0: 走旧逻辑，已下线，勿使用
      */
     public Long getIsNewData() {
         return this.IsNewData;
     }
 
     /**
-     * Set 无需关注，是否查询zhiyan
-     * @param IsNewData 无需关注，是否查询zhiyan
+     * Set 1: 查询智研
+0: 走旧逻辑，已下线，勿使用
+     * @param IsNewData 1: 查询智研
+0: 走旧逻辑，已下线，勿使用
      */
     public void setIsNewData(Long IsNewData) {
         this.IsNewData = IsNewData;

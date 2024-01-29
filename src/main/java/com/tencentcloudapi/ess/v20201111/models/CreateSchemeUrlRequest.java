@@ -115,7 +115,10 @@ public class CreateSchemeUrlRequest extends AbstractModel {
     /**
     * 签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
-注:  ` 该参数只针对"APP" 类型的签署链接有效`
+
+注: 
+1. 该参数<font color="red">只针对APP</font> 类型的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
     */
     @SerializedName("AutoJumpBack")
     @Expose
@@ -391,10 +394,16 @@ public class CreateSchemeUrlRequest extends AbstractModel {
     /**
      * Get 签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
-注:  ` 该参数只针对"APP" 类型的签署链接有效` 
+
+注: 
+1. 该参数<font color="red">只针对APP</font> 类型的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object) 
      * @return AutoJumpBack 签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
-注:  ` 该参数只针对"APP" 类型的签署链接有效`
+
+注: 
+1. 该参数<font color="red">只针对APP</font> 类型的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
      */
     public Boolean getAutoJumpBack() {
         return this.AutoJumpBack;
@@ -403,10 +412,16 @@ public class CreateSchemeUrlRequest extends AbstractModel {
     /**
      * Set 签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
-注:  ` 该参数只针对"APP" 类型的签署链接有效`
+
+注: 
+1. 该参数<font color="red">只针对APP</font> 类型的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
      * @param AutoJumpBack 签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
-注:  ` 该参数只针对"APP" 类型的签署链接有效`
+
+注: 
+1. 该参数<font color="red">只针对APP</font> 类型的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
      */
     public void setAutoJumpBack(Boolean AutoJumpBack) {
         this.AutoJumpBack = AutoJumpBack;

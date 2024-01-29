@@ -52,6 +52,13 @@ public class DescribeDevicePackagesRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * 通道id
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -115,6 +122,22 @@ public class DescribeDevicePackagesRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get 通道id 
+     * @return ChannelId 通道id
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道id
+     * @param ChannelId 通道id
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public DescribeDevicePackagesRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeDevicePackagesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeDevicePackagesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

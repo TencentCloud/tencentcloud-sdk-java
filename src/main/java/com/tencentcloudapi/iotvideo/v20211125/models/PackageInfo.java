@@ -85,6 +85,13 @@ public class PackageInfo extends AbstractModel {
     private String OrderId;
 
     /**
+    * 通道id
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
      * Get 云存开启状态，0为未开启，2为正在生效，1为已过期
 注：这里只返回状态为0的数据 
      * @return Status 云存开启状态，0为未开启，2为正在生效，1为已过期
@@ -232,6 +239,22 @@ public class PackageInfo extends AbstractModel {
         this.OrderId = OrderId;
     }
 
+    /**
+     * Get 通道id 
+     * @return ChannelId 通道id
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道id
+     * @param ChannelId 通道id
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public PackageInfo() {
     }
 
@@ -264,6 +287,9 @@ public class PackageInfo extends AbstractModel {
         if (source.OrderId != null) {
             this.OrderId = new String(source.OrderId);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
     }
 
 
@@ -279,6 +305,7 @@ public class PackageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }
