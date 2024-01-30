@@ -156,6 +156,38 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Boolean CorpAdmin;
 
     /**
+    * 企微用户id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppUserId")
+    @Expose
+    private String AppUserId;
+
+    /**
+    * 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppUserAliasName")
+    @Expose
+    private String AppUserAliasName;
+
+    /**
+    * 应用用户名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppUserName")
+    @Expose
+    private String AppUserName;
+
+    /**
+    * 是否在可见范围内
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InValidateAppRange")
+    @Expose
+    private Boolean InValidateAppRange;
+
+    /**
      * Get 业务ID 
      * @return Id 业务ID
      */
@@ -479,6 +511,86 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.CorpAdmin = CorpAdmin;
     }
 
+    /**
+     * Get 企微用户id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppUserId 企微用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppUserId() {
+        return this.AppUserId;
+    }
+
+    /**
+     * Set 企微用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppUserId 企微用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppUserId(String AppUserId) {
+        this.AppUserId = AppUserId;
+    }
+
+    /**
+     * Get 昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppUserAliasName 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppUserAliasName() {
+        return this.AppUserAliasName;
+    }
+
+    /**
+     * Set 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppUserAliasName 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppUserAliasName(String AppUserAliasName) {
+        this.AppUserAliasName = AppUserAliasName;
+    }
+
+    /**
+     * Get 应用用户名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppUserName 应用用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppUserName() {
+        return this.AppUserName;
+    }
+
+    /**
+     * Set 应用用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppUserName 应用用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppUserName(String AppUserName) {
+        this.AppUserName = AppUserName;
+    }
+
+    /**
+     * Get 是否在可见范围内
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InValidateAppRange 是否在可见范围内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getInValidateAppRange() {
+        return this.InValidateAppRange;
+    }
+
+    /**
+     * Set 是否在可见范围内
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InValidateAppRange 是否在可见范围内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInValidateAppRange(Boolean InValidateAppRange) {
+        this.InValidateAppRange = InValidateAppRange;
+    }
+
     public UserRoleListDataUserRoleInfo() {
     }
 
@@ -544,6 +656,18 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         if (source.CorpAdmin != null) {
             this.CorpAdmin = new Boolean(source.CorpAdmin);
         }
+        if (source.AppUserId != null) {
+            this.AppUserId = new String(source.AppUserId);
+        }
+        if (source.AppUserAliasName != null) {
+            this.AppUserAliasName = new String(source.AppUserAliasName);
+        }
+        if (source.AppUserName != null) {
+            this.AppUserName = new String(source.AppUserName);
+        }
+        if (source.InValidateAppRange != null) {
+            this.InValidateAppRange = new Boolean(source.InValidateAppRange);
+        }
     }
 
 
@@ -568,6 +692,10 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AreaCode", this.AreaCode);
         this.setParamSimple(map, prefix + "RootAccount", this.RootAccount);
         this.setParamSimple(map, prefix + "CorpAdmin", this.CorpAdmin);
+        this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
+        this.setParamSimple(map, prefix + "AppUserAliasName", this.AppUserAliasName);
+        this.setParamSimple(map, prefix + "AppUserName", this.AppUserName);
+        this.setParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
 
     }
 }

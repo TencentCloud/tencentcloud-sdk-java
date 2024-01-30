@@ -87,6 +87,13 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
     private Long TimeoutInterval;
 
     /**
+    * 固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -230,6 +237,22 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
         this.TimeoutInterval = TimeoutInterval;
     }
 
+    /**
+     * Get 固件升级任务类型，默认静态升级值为空或1，动态升级值为7。 
+     * @return Type 固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
+     * @param Type 固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
     public BatchUpdateFirmwareRequest() {
     }
 
@@ -268,6 +291,9 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
         if (source.TimeoutInterval != null) {
             this.TimeoutInterval = new Long(source.TimeoutInterval);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamArraySimple(map, prefix + "DeviceNames.", this.DeviceNames);
         this.setParamSimple(map, prefix + "TimeoutInterval", this.TimeoutInterval);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

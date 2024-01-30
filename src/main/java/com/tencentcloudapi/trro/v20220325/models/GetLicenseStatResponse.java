@@ -52,6 +52,13 @@ public class GetLicenseStatResponse extends AbstractModel {
     private Long Expire;
 
     /**
+    * 当月用量超时授权个数
+    */
+    @SerializedName("MonthlyExpire")
+    @Expose
+    private Long MonthlyExpire;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class GetLicenseStatResponse extends AbstractModel {
     }
 
     /**
+     * Get 当月用量超时授权个数 
+     * @return MonthlyExpire 当月用量超时授权个数
+     */
+    public Long getMonthlyExpire() {
+        return this.MonthlyExpire;
+    }
+
+    /**
+     * Set 当月用量超时授权个数
+     * @param MonthlyExpire 当月用量超时授权个数
+     */
+    public void setMonthlyExpire(Long MonthlyExpire) {
+        this.MonthlyExpire = MonthlyExpire;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class GetLicenseStatResponse extends AbstractModel {
         if (source.Expire != null) {
             this.Expire = new Long(source.Expire);
         }
+        if (source.MonthlyExpire != null) {
+            this.MonthlyExpire = new Long(source.MonthlyExpire);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class GetLicenseStatResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Bound", this.Bound);
         this.setParamSimple(map, prefix + "UnBound", this.UnBound);
         this.setParamSimple(map, prefix + "Expire", this.Expire);
+        this.setParamSimple(map, prefix + "MonthlyExpire", this.MonthlyExpire);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

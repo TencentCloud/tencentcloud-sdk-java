@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AutoScalerPolicy extends AbstractModel {
 
     /**
-    * 类型，Pods或Percent
+    * 类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -48,9 +48,9 @@ public class AutoScalerPolicy extends AbstractModel {
     private Long PeriodSeconds;
 
     /**
-     * Get 类型，Pods或Percent
+     * Get 类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 类型，Pods或Percent
+     * @return Type 类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -58,9 +58,9 @@ public class AutoScalerPolicy extends AbstractModel {
     }
 
     /**
-     * Set 类型，Pods或Percent
+     * Set 类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 类型，Pods或Percent
+     * @param Type 类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

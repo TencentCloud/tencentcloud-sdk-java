@@ -59,6 +59,13 @@ public class ModifyUserRoleProjectRequest extends AbstractModel {
     private String UserName;
 
     /**
+    * 企业微信应用用户id
+    */
+    @SerializedName("AppUserId")
+    @Expose
+    private String AppUserId;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -138,6 +145,22 @@ public class ModifyUserRoleProjectRequest extends AbstractModel {
         this.UserName = UserName;
     }
 
+    /**
+     * Get 企业微信应用用户id 
+     * @return AppUserId 企业微信应用用户id
+     */
+    public String getAppUserId() {
+        return this.AppUserId;
+    }
+
+    /**
+     * Set 企业微信应用用户id
+     * @param AppUserId 企业微信应用用户id
+     */
+    public void setAppUserId(String AppUserId) {
+        this.AppUserId = AppUserId;
+    }
+
     public ModifyUserRoleProjectRequest() {
     }
 
@@ -164,6 +187,9 @@ public class ModifyUserRoleProjectRequest extends AbstractModel {
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
+        if (source.AppUserId != null) {
+            this.AppUserId = new String(source.AppUserId);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyUserRoleProjectRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RoleIdList.", this.RoleIdList);
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
 
     }
 }

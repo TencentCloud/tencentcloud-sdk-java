@@ -39,7 +39,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（BatchUpdateFirmware）用于批量更新设备固件 
+     *本接口（BatchUpdateFirmware）用于批量更新设备固件
      * @param req BatchUpdateFirmwareRequest
      * @return BatchUpdateFirmwareResponse
      * @throws TencentCloudSDKException
@@ -578,7 +578,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（ListFirmwares）用于获取固件列表 
+     *本接口（ListFirmwares）用于获取固件列表
      * @param req ListFirmwaresRequest
      * @return ListFirmwaresResponse
      * @throws TencentCloudSDKException
@@ -776,6 +776,17 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *本接口（UpdateOtaTask）当固件升级大任务处于没有在全部成功的状态时，可修改为取消状态，取消部分或全部设备的升级;或其它允许的可修改的状态
+     * @param req UpdateOtaTaskStatusRequest
+     * @return UpdateOtaTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOtaTaskStatusResponse UpdateOtaTaskStatus(UpdateOtaTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOtaTaskStatus", UpdateOtaTaskStatusResponse.class);
+    }
+
+    /**
      *更新私有CA证书
      * @param req UpdatePrivateCARequest
      * @return UpdatePrivateCAResponse
@@ -820,7 +831,7 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
-     *本接口（UploadFirmware）用于上传设备固件信息 
+     *本接口（UploadFirmware）用于上传设备固件信息
      * @param req UploadFirmwareRequest
      * @return UploadFirmwareResponse
      * @throws TencentCloudSDKException

@@ -72,7 +72,7 @@ public class DeviceDataInfo extends AbstractModel {
     private String ProductName;
 
     /**
-    * 产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+    * 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductAbility")
@@ -182,6 +182,22 @@ public class DeviceDataInfo extends AbstractModel {
     @SerializedName("GroupInfo")
     @Expose
     private String GroupInfo;
+
+    /**
+    * 通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceStatus")
+    @Expose
+    private String DeviceStatus;
+
+    /**
+    * 设备业务状态（normal、fault、offline）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
      * Get 设备ID， wid
@@ -304,9 +320,9 @@ public class DeviceDataInfo extends AbstractModel {
     }
 
     /**
-     * Get 产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * Get 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductAbility 产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * @return ProductAbility 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductAbility() {
@@ -314,9 +330,9 @@ public class DeviceDataInfo extends AbstractModel {
     }
 
     /**
-     * Set 产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * Set 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductAbility 产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * @param ProductAbility 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductAbility(Long ProductAbility) {
@@ -583,6 +599,46 @@ public class DeviceDataInfo extends AbstractModel {
         this.GroupInfo = GroupInfo;
     }
 
+    /**
+     * Get 通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceStatus 通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceStatus() {
+        return this.DeviceStatus;
+    }
+
+    /**
+     * Set 通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceStatus 通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceStatus(String DeviceStatus) {
+        this.DeviceStatus = DeviceStatus;
+    }
+
+    /**
+     * Get 设备业务状态（normal、fault、offline）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 设备业务状态（normal、fault、offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 设备业务状态（normal、fault、offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 设备业务状态（normal、fault、offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public DeviceDataInfo() {
     }
 
@@ -660,6 +716,12 @@ public class DeviceDataInfo extends AbstractModel {
         if (source.GroupInfo != null) {
             this.GroupInfo = new String(source.GroupInfo);
         }
+        if (source.DeviceStatus != null) {
+            this.DeviceStatus = new String(source.DeviceStatus);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -687,6 +749,8 @@ public class DeviceDataInfo extends AbstractModel {
         this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamArrayObj(map, prefix + "FieldList.", this.FieldList);
         this.setParamSimple(map, prefix + "GroupInfo", this.GroupInfo);
+        this.setParamSimple(map, prefix + "DeviceStatus", this.DeviceStatus);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

@@ -66,6 +66,13 @@ public class DescribeUserRoleListRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 是否只获取绑定企微应用的
+    */
+    @SerializedName("IsOnlyBindAppUser")
+    @Expose
+    private Boolean IsOnlyBindAppUser;
+
+    /**
      * Get 页码 
      * @return PageNo 页码
      */
@@ -161,6 +168,22 @@ public class DescribeUserRoleListRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 是否只获取绑定企微应用的 
+     * @return IsOnlyBindAppUser 是否只获取绑定企微应用的
+     */
+    public Boolean getIsOnlyBindAppUser() {
+        return this.IsOnlyBindAppUser;
+    }
+
+    /**
+     * Set 是否只获取绑定企微应用的
+     * @param IsOnlyBindAppUser 是否只获取绑定企微应用的
+     */
+    public void setIsOnlyBindAppUser(Boolean IsOnlyBindAppUser) {
+        this.IsOnlyBindAppUser = IsOnlyBindAppUser;
+    }
+
     public DescribeUserRoleListRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeUserRoleListRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.IsOnlyBindAppUser != null) {
+            this.IsOnlyBindAppUser = new Boolean(source.IsOnlyBindAppUser);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeUserRoleListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "IsOnlyBindAppUser", this.IsOnlyBindAppUser);
 
     }
 }

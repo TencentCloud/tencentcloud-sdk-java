@@ -142,6 +142,46 @@ public class UserIdAndUserName extends AbstractModel {
     private String Mobile;
 
     /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppUserId")
+    @Expose
+    private String AppUserId;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppUserAliasName")
+    @Expose
+    private String AppUserAliasName;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppUserName")
+    @Expose
+    private String AppUserName;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InValidateAppRange")
+    @Expose
+    private Boolean InValidateAppRange;
+
+    /**
      * Get 用户ID 
      * @return UserId 用户ID
      */
@@ -433,6 +473,106 @@ public class UserIdAndUserName extends AbstractModel {
         this.Mobile = Mobile;
     }
 
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppUserId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppUserId() {
+        return this.AppUserId;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppUserId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppUserId(String AppUserId) {
+        this.AppUserId = AppUserId;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppUserAliasName 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppUserAliasName() {
+        return this.AppUserAliasName;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppUserAliasName 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppUserAliasName(String AppUserAliasName) {
+        this.AppUserAliasName = AppUserAliasName;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppUserName 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppUserName() {
+        return this.AppUserName;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppUserName 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppUserName(String AppUserName) {
+        this.AppUserName = AppUserName;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InValidateAppRange 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getInValidateAppRange() {
+        return this.InValidateAppRange;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InValidateAppRange 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInValidateAppRange(Boolean InValidateAppRange) {
+        this.InValidateAppRange = InValidateAppRange;
+    }
+
     public UserIdAndUserName() {
     }
 
@@ -486,6 +626,21 @@ public class UserIdAndUserName extends AbstractModel {
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.AppUserId != null) {
+            this.AppUserId = new String(source.AppUserId);
+        }
+        if (source.AppUserAliasName != null) {
+            this.AppUserAliasName = new String(source.AppUserAliasName);
+        }
+        if (source.AppUserName != null) {
+            this.AppUserName = new String(source.AppUserName);
+        }
+        if (source.InValidateAppRange != null) {
+            this.InValidateAppRange = new Boolean(source.InValidateAppRange);
+        }
     }
 
 
@@ -508,6 +663,11 @@ public class UserIdAndUserName extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "GlobalUserName", this.GlobalUserName);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
+        this.setParamSimple(map, prefix + "AppUserAliasName", this.AppUserAliasName);
+        this.setParamSimple(map, prefix + "AppUserName", this.AppUserName);
+        this.setParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
 
     }
 }

@@ -231,6 +231,13 @@ video 纯视频
     private String RecordBackground;
 
     /**
+    * RTMP推流链接
+    */
+    @SerializedName("RTMPStreamingURL")
+    @Expose
+    private String RTMPStreamingURL;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -742,6 +749,22 @@ video 纯视频
     }
 
     /**
+     * Get RTMP推流链接 
+     * @return RTMPStreamingURL RTMP推流链接
+     */
+    public String getRTMPStreamingURL() {
+        return this.RTMPStreamingURL;
+    }
+
+    /**
+     * Set RTMP推流链接
+     * @param RTMPStreamingURL RTMP推流链接
+     */
+    public void setRTMPStreamingURL(String RTMPStreamingURL) {
+        this.RTMPStreamingURL = RTMPStreamingURL;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -849,6 +872,9 @@ video 纯视频
         if (source.RecordBackground != null) {
             this.RecordBackground = new String(source.RecordBackground);
         }
+        if (source.RTMPStreamingURL != null) {
+            this.RTMPStreamingURL = new String(source.RTMPStreamingURL);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -886,6 +912,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
         this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+        this.setParamSimple(map, prefix + "RTMPStreamingURL", this.RTMPStreamingURL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

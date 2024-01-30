@@ -40,7 +40,7 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
     private String StartAt;
 
     /**
-    * 定时伸缩目标节点数
+    * 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetReplicas")
@@ -48,7 +48,7 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
     private Long TargetReplicas;
 
     /**
-    * 定时伸缩cron表达式
+    * 定时伸缩cron表达式，无需输入
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Crontab")
@@ -96,9 +96,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
     }
 
     /**
-     * Get 定时伸缩目标节点数
+     * Get 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetReplicas 定时伸缩目标节点数
+     * @return TargetReplicas 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetReplicas() {
@@ -106,9 +106,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
     }
 
     /**
-     * Set 定时伸缩目标节点数
+     * Set 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetReplicas 定时伸缩目标节点数
+     * @param TargetReplicas 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetReplicas(Long TargetReplicas) {
@@ -116,9 +116,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
     }
 
     /**
-     * Get 定时伸缩cron表达式
+     * Get 定时伸缩cron表达式，无需输入
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Crontab 定时伸缩cron表达式
+     * @return Crontab 定时伸缩cron表达式，无需输入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontab() {
@@ -126,9 +126,9 @@ public class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends Abstract
     }
 
     /**
-     * Set 定时伸缩cron表达式
+     * Set 定时伸缩cron表达式，无需输入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Crontab 定时伸缩cron表达式
+     * @param Crontab 定时伸缩cron表达式，无需输入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontab(String Crontab) {

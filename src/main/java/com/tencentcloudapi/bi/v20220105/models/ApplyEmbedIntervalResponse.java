@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class ApplyEmbedIntervalResponse extends AbstractModel {
 
     /**
+    * 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorInfo")
+    @Expose
+    private ErrorInfo ErrorInfo;
+
+    /**
     * 额外参数
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -53,6 +61,26 @@ public class ApplyEmbedIntervalResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ErrorInfo getErrorInfo() {
+        return this.ErrorInfo;
+    }
+
+    /**
+     * Set 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorInfo(ErrorInfo ErrorInfo) {
+        this.ErrorInfo = ErrorInfo;
+    }
 
     /**
      * Get 额外参数
@@ -138,6 +166,9 @@ public class ApplyEmbedIntervalResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ApplyEmbedIntervalResponse(ApplyEmbedIntervalResponse source) {
+        if (source.ErrorInfo != null) {
+            this.ErrorInfo = new ErrorInfo(source.ErrorInfo);
+        }
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
@@ -157,6 +188,7 @@ public class ApplyEmbedIntervalResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "Msg", this.Msg);

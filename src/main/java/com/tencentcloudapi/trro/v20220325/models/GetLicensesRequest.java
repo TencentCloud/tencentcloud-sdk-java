@@ -52,6 +52,13 @@ public class GetLicensesRequest extends AbstractModel {
     private String DeviceId;
 
     /**
+    * license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 页码 
      * @return PageNum 页码
      */
@@ -115,6 +122,22 @@ public class GetLicensesRequest extends AbstractModel {
         this.DeviceId = DeviceId;
     }
 
+    /**
+     * Get license状态：0:未绑定；1:已绑定；2:已停服；3:已退费 
+     * @return Status license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
+     * @param Status license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public GetLicensesRequest() {
     }
 
@@ -135,6 +158,9 @@ public class GetLicensesRequest extends AbstractModel {
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class GetLicensesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

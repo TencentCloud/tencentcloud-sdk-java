@@ -80,7 +80,7 @@ public class ProductInfo extends AbstractModel {
     private String ProductType;
 
     /**
-    * 产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+    * 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductAbility")
@@ -268,9 +268,9 @@ public class ProductInfo extends AbstractModel {
     }
 
     /**
-     * Get 产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * Get 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductAbility 产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * @return ProductAbility 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductAbility() {
@@ -278,9 +278,9 @@ public class ProductInfo extends AbstractModel {
     }
 
     /**
-     * Set 产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * Set 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductAbility 产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * @param ProductAbility 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductAbility(Long ProductAbility) {

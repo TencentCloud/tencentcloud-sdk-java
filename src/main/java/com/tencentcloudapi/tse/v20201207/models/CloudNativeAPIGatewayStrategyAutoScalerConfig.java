@@ -132,7 +132,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Enabled 是否开启指标伸缩
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEnabled() {
         return this.Enabled;
     }
@@ -142,7 +144,9 @@ public class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否开启指标伸缩
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }

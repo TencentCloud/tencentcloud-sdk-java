@@ -80,6 +80,14 @@ public class Device extends AbstractModel {
     private String [] LicenseIds;
 
     /**
+    * 每月license的限定时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonthlyRemainTime")
+    @Expose
+    private Long MonthlyRemainTime;
+
+    /**
      * Get 设备ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备ID
@@ -219,6 +227,26 @@ public class Device extends AbstractModel {
         this.LicenseIds = LicenseIds;
     }
 
+    /**
+     * Get 每月license的限定时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonthlyRemainTime 每月license的限定时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMonthlyRemainTime() {
+        return this.MonthlyRemainTime;
+    }
+
+    /**
+     * Set 每月license的限定时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonthlyRemainTime 每月license的限定时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonthlyRemainTime(Long MonthlyRemainTime) {
+        this.MonthlyRemainTime = MonthlyRemainTime;
+    }
+
     public Device() {
     }
 
@@ -251,6 +279,9 @@ public class Device extends AbstractModel {
                 this.LicenseIds[i] = new String(source.LicenseIds[i]);
             }
         }
+        if (source.MonthlyRemainTime != null) {
+            this.MonthlyRemainTime = new Long(source.MonthlyRemainTime);
+        }
     }
 
 
@@ -265,6 +296,7 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamArraySimple(map, prefix + "LicenseIds.", this.LicenseIds);
+        this.setParamSimple(map, prefix + "MonthlyRemainTime", this.MonthlyRemainTime);
 
     }
 }

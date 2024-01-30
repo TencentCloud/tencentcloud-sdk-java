@@ -116,6 +116,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建告警屏蔽规则。
+     * @param req CreateAlarmShieldRequest
+     * @return CreateAlarmShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlarmShieldResponse CreateAlarmShield(CreateAlarmShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAlarmShield", CreateAlarmShieldResponse.class);
+    }
+
+    /**
      *创建采集规则配置
      * @param req CreateConfigRequest
      * @return CreateConfigResponse
@@ -292,6 +303,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于删除告警屏蔽规则。
+     * @param req DeleteAlarmShieldRequest
+     * @return DeleteAlarmShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmShieldResponse DeleteAlarmShield(DeleteAlarmShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAlarmShield", DeleteAlarmShieldResponse.class);
+    }
+
+    /**
      *删除采集规则配置
      * @param req DeleteConfigRequest
      * @return DeleteConfigResponse
@@ -454,6 +476,17 @@ public class ClsClient extends AbstractClient{
     public DescribeAlarmNoticesResponse DescribeAlarmNotices(DescribeAlarmNoticesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlarmNotices", DescribeAlarmNoticesResponse.class);
+    }
+
+    /**
+     *获取告警屏蔽配置规则
+     * @param req DescribeAlarmShieldsRequest
+     * @return DescribeAlarmShieldsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmShieldsResponse DescribeAlarmShields(DescribeAlarmShieldsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlarmShields", DescribeAlarmShieldsResponse.class);
     }
 
     /**
@@ -773,6 +806,17 @@ public class ClsClient extends AbstractClient{
     public ModifyAlarmNoticeResponse ModifyAlarmNotice(ModifyAlarmNoticeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAlarmNotice", ModifyAlarmNoticeResponse.class);
+    }
+
+    /**
+     *该接口用于修改告警屏蔽规则。
+     * @param req ModifyAlarmShieldRequest
+     * @return ModifyAlarmShieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmShieldResponse ModifyAlarmShield(ModifyAlarmShieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAlarmShield", ModifyAlarmShieldResponse.class);
     }
 
     /**

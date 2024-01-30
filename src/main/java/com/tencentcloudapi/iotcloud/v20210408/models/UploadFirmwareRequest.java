@@ -66,6 +66,13 @@ public class UploadFirmwareRequest extends AbstractModel {
     private String FirmwareDescription;
 
     /**
+    * 固件用户自定义配置信息
+    */
+    @SerializedName("FirmwareUserDefined")
+    @Expose
+    private String FirmwareUserDefined;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -161,6 +168,22 @@ public class UploadFirmwareRequest extends AbstractModel {
         this.FirmwareDescription = FirmwareDescription;
     }
 
+    /**
+     * Get 固件用户自定义配置信息 
+     * @return FirmwareUserDefined 固件用户自定义配置信息
+     */
+    public String getFirmwareUserDefined() {
+        return this.FirmwareUserDefined;
+    }
+
+    /**
+     * Set 固件用户自定义配置信息
+     * @param FirmwareUserDefined 固件用户自定义配置信息
+     */
+    public void setFirmwareUserDefined(String FirmwareUserDefined) {
+        this.FirmwareUserDefined = FirmwareUserDefined;
+    }
+
     public UploadFirmwareRequest() {
     }
 
@@ -187,6 +210,9 @@ public class UploadFirmwareRequest extends AbstractModel {
         if (source.FirmwareDescription != null) {
             this.FirmwareDescription = new String(source.FirmwareDescription);
         }
+        if (source.FirmwareUserDefined != null) {
+            this.FirmwareUserDefined = new String(source.FirmwareUserDefined);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class UploadFirmwareRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamSimple(map, prefix + "FirmwareName", this.FirmwareName);
         this.setParamSimple(map, prefix + "FirmwareDescription", this.FirmwareDescription);
+        this.setParamSimple(map, prefix + "FirmwareUserDefined", this.FirmwareUserDefined);
 
     }
 }

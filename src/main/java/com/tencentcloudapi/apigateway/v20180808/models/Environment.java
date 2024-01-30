@@ -52,6 +52,14 @@ public class Environment extends AbstractModel {
     private String VersionName;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 环境名称。 
      * @return EnvironmentName 环境名称。
      */
@@ -115,6 +123,26 @@ public class Environment extends AbstractModel {
         this.VersionName = VersionName;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public Environment() {
     }
 
@@ -135,6 +163,9 @@ public class Environment extends AbstractModel {
         if (source.VersionName != null) {
             this.VersionName = new String(source.VersionName);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -146,6 +177,7 @@ public class Environment extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VersionName", this.VersionName);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

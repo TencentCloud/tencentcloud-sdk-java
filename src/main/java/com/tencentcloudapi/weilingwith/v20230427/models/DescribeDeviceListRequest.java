@@ -108,6 +108,20 @@ public class DescribeDeviceListRequest extends AbstractModel {
     private Long [] GroupIdSet;
 
     /**
+    * 是否激活，默认全部，"1"激活，"0"未激活
+    */
+    @SerializedName("IsActive")
+    @Expose
+    private String IsActive;
+
+    /**
+    * 是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
+    */
+    @SerializedName("IsCamera")
+    @Expose
+    private String IsCamera;
+
+    /**
      * Get 工作空间id 
      * @return WorkspaceId 工作空间id
      */
@@ -299,6 +313,38 @@ public class DescribeDeviceListRequest extends AbstractModel {
         this.GroupIdSet = GroupIdSet;
     }
 
+    /**
+     * Get 是否激活，默认全部，"1"激活，"0"未激活 
+     * @return IsActive 是否激活，默认全部，"1"激活，"0"未激活
+     */
+    public String getIsActive() {
+        return this.IsActive;
+    }
+
+    /**
+     * Set 是否激活，默认全部，"1"激活，"0"未激活
+     * @param IsActive 是否激活，默认全部，"1"激活，"0"未激活
+     */
+    public void setIsActive(String IsActive) {
+        this.IsActive = IsActive;
+    }
+
+    /**
+     * Get 是否为摄像头，默认全部，"true"摄像头，"false"非摄像头 
+     * @return IsCamera 是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
+     */
+    public String getIsCamera() {
+        return this.IsCamera;
+    }
+
+    /**
+     * Set 是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
+     * @param IsCamera 是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
+     */
+    public void setIsCamera(String IsCamera) {
+        this.IsCamera = IsCamera;
+    }
+
     public DescribeDeviceListRequest() {
     }
 
@@ -364,6 +410,12 @@ public class DescribeDeviceListRequest extends AbstractModel {
                 this.GroupIdSet[i] = new Long(source.GroupIdSet[i]);
             }
         }
+        if (source.IsActive != null) {
+            this.IsActive = new String(source.IsActive);
+        }
+        if (source.IsCamera != null) {
+            this.IsCamera = new String(source.IsCamera);
+        }
     }
 
 
@@ -383,6 +435,8 @@ public class DescribeDeviceListRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "WIDSet.", this.WIDSet);
         this.setParamObj(map, prefix + "Field.", this.Field);
         this.setParamArraySimple(map, prefix + "GroupIdSet.", this.GroupIdSet);
+        this.setParamSimple(map, prefix + "IsActive", this.IsActive);
+        this.setParamSimple(map, prefix + "IsCamera", this.IsCamera);
 
     }
 }

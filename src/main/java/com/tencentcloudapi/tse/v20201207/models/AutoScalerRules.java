@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AutoScalerRules extends AbstractModel {
 
     /**
-    * 稳定窗口时间
+    * 稳定窗口时间，扩容时默认0，缩容时默认300
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StabilizationWindowSeconds")
@@ -40,7 +40,7 @@ public class AutoScalerRules extends AbstractModel {
     private String SelectPolicy;
 
     /**
-    * 扩容策略
+    * 扩缩容策略
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policies")
@@ -48,9 +48,9 @@ public class AutoScalerRules extends AbstractModel {
     private AutoScalerPolicy [] Policies;
 
     /**
-     * Get 稳定窗口时间
+     * Get 稳定窗口时间，扩容时默认0，缩容时默认300
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StabilizationWindowSeconds 稳定窗口时间
+     * @return StabilizationWindowSeconds 稳定窗口时间，扩容时默认0，缩容时默认300
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStabilizationWindowSeconds() {
@@ -58,9 +58,9 @@ public class AutoScalerRules extends AbstractModel {
     }
 
     /**
-     * Set 稳定窗口时间
+     * Set 稳定窗口时间，扩容时默认0，缩容时默认300
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StabilizationWindowSeconds 稳定窗口时间
+     * @param StabilizationWindowSeconds 稳定窗口时间，扩容时默认0，缩容时默认300
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStabilizationWindowSeconds(Long StabilizationWindowSeconds) {
@@ -88,9 +88,9 @@ public class AutoScalerRules extends AbstractModel {
     }
 
     /**
-     * Get 扩容策略
+     * Get 扩缩容策略
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Policies 扩容策略
+     * @return Policies 扩缩容策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoScalerPolicy [] getPolicies() {
@@ -98,9 +98,9 @@ public class AutoScalerRules extends AbstractModel {
     }
 
     /**
-     * Set 扩容策略
+     * Set 扩缩容策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Policies 扩容策略
+     * @param Policies 扩缩容策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicies(AutoScalerPolicy [] Policies) {

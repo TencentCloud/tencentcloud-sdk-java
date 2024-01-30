@@ -66,6 +66,13 @@ public class ModifyUserRoleRequest extends AbstractModel {
     private String AreaCode;
 
     /**
+    * 企业微信应用用户id
+    */
+    @SerializedName("AppUserId")
+    @Expose
+    private String AppUserId;
+
+    /**
      * Get 用户ID 
      * @return UserId 用户ID
      */
@@ -161,6 +168,22 @@ public class ModifyUserRoleRequest extends AbstractModel {
         this.AreaCode = AreaCode;
     }
 
+    /**
+     * Get 企业微信应用用户id 
+     * @return AppUserId 企业微信应用用户id
+     */
+    public String getAppUserId() {
+        return this.AppUserId;
+    }
+
+    /**
+     * Set 企业微信应用用户id
+     * @param AppUserId 企业微信应用用户id
+     */
+    public void setAppUserId(String AppUserId) {
+        this.AppUserId = AppUserId;
+    }
+
     public ModifyUserRoleRequest() {
     }
 
@@ -190,6 +213,9 @@ public class ModifyUserRoleRequest extends AbstractModel {
         if (source.AreaCode != null) {
             this.AreaCode = new String(source.AreaCode);
         }
+        if (source.AppUserId != null) {
+            this.AppUserId = new String(source.AppUserId);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class ModifyUserRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "AreaCode", this.AreaCode);
+        this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
 
     }
 }
