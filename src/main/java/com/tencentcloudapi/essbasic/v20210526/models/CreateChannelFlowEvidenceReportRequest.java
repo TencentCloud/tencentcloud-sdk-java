@@ -54,6 +54,15 @@ public class CreateChannelFlowEvidenceReportRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
+    * 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul>
+    */
+    @SerializedName("ReportType")
+    @Expose
+    private Long ReportType;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -141,6 +150,30 @@ public class CreateChannelFlowEvidenceReportRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul> 
+     * @return ReportType 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul>
+     */
+    public Long getReportType() {
+        return this.ReportType;
+    }
+
+    /**
+     * Set 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul>
+     * @param ReportType 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul>
+     */
+    public void setReportType(Long ReportType) {
+        this.ReportType = ReportType;
+    }
+
     public CreateChannelFlowEvidenceReportRequest() {
     }
 
@@ -158,6 +191,9 @@ public class CreateChannelFlowEvidenceReportRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.ReportType != null) {
+            this.ReportType = new Long(source.ReportType);
+        }
     }
 
 
@@ -168,6 +204,7 @@ public class CreateChannelFlowEvidenceReportRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "ReportType", this.ReportType);
 
     }
 }

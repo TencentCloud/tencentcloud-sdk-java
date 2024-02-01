@@ -61,6 +61,8 @@ public class CreateSignUrlsRequest extends AbstractModel {
 <li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
 
+**注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
+
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
     */
     @SerializedName("Endpoint")
@@ -284,12 +286,16 @@ public class CreateSignUrlsRequest extends AbstractModel {
 <li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
 
+**注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
+
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下** 
      * @return Endpoint 签署链接类型,可以设置的参数如下
 <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
 <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
 <li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
+
+**注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
 
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
      */
@@ -304,12 +310,16 @@ public class CreateSignUrlsRequest extends AbstractModel {
 <li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
 
+**注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
+
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
      * @param Endpoint 签署链接类型,可以设置的参数如下
 <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
 <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
 <li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
+
+**注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
 
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
      */

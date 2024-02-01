@@ -47,6 +47,15 @@ public class DescribeFlowEvidenceReportRequest extends AbstractModel {
     private Agent Agent;
 
     /**
+    * 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul>
+    */
+    @SerializedName("ReportType")
+    @Expose
+    private Long ReportType;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -102,6 +111,30 @@ public class DescribeFlowEvidenceReportRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul> 
+     * @return ReportType 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul>
+     */
+    public Long getReportType() {
+        return this.ReportType;
+    }
+
+    /**
+     * Set 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul>
+     * @param ReportType 指定申请的报告类型，可选类型如下：
+<ul><li> **0** :合同签署报告（默认）</li>
+<li> **1** :公证处核验报告</li></ul>
+     */
+    public void setReportType(Long ReportType) {
+        this.ReportType = ReportType;
+    }
+
     public DescribeFlowEvidenceReportRequest() {
     }
 
@@ -119,6 +152,9 @@ public class DescribeFlowEvidenceReportRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.ReportType != null) {
+            this.ReportType = new Long(source.ReportType);
+        }
     }
 
 
@@ -129,6 +165,7 @@ public class DescribeFlowEvidenceReportRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ReportId", this.ReportId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "ReportType", this.ReportType);
 
     }
 }
