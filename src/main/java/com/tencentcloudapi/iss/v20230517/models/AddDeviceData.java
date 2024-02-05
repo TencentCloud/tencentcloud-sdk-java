@@ -32,7 +32,7 @@ public class AddDeviceData extends AbstractModel {
     private String DeviceId;
 
     /**
-    * 设备编码（即我们为设备生成的20位国标编码）
+    * 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -189,9 +189,9 @@ public class AddDeviceData extends AbstractModel {
     }
 
     /**
-     * Get 设备编码（即我们为设备生成的20位国标编码）
+     * Get 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code 设备编码（即我们为设备生成的20位国标编码）
+     * @return Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
@@ -199,9 +199,9 @@ public class AddDeviceData extends AbstractModel {
     }
 
     /**
-     * Set 设备编码（即我们为设备生成的20位国标编码）
+     * Set 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code 设备编码（即我们为设备生成的20位国标编码）
+     * @param Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {

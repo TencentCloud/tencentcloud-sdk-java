@@ -181,7 +181,7 @@ public class Service extends AbstractModel {
     private String BusinessStatus;
 
     /**
-    * 已废弃
+    * 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceLimit")
@@ -189,7 +189,7 @@ public class Service extends AbstractModel {
     private ServiceLimit ServiceLimit;
 
     /**
-    * 已废弃
+    * 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduledAction")
@@ -261,6 +261,14 @@ DEFAULT: 其他来源
     @SerializedName("LatestVersion")
     @Expose
     private String LatestVersion;
+
+    /**
+    * 资源组类别 托管 NORMAL，纳管 SW
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupSWType")
+    @Expose
+    private String ResourceGroupSWType;
 
     /**
      * Get 服务组id 
@@ -651,41 +659,49 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 已废弃
+     * Get 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceLimit 已废弃
+     * @return ServiceLimit 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public ServiceLimit getServiceLimit() {
         return this.ServiceLimit;
     }
 
     /**
-     * Set 已废弃
+     * Set 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceLimit 已废弃
+     * @param ServiceLimit 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setServiceLimit(ServiceLimit ServiceLimit) {
         this.ServiceLimit = ServiceLimit;
     }
 
     /**
-     * Get 已废弃
+     * Get 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduledAction 已废弃
+     * @return ScheduledAction 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public ScheduledAction getScheduledAction() {
         return this.ScheduledAction;
     }
 
     /**
-     * Set 已废弃
+     * Set 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduledAction 已废弃
+     * @param ScheduledAction 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setScheduledAction(ScheduledAction ScheduledAction) {
         this.ScheduledAction = ScheduledAction;
     }
@@ -870,6 +886,26 @@ DEFAULT: 其他来源
         this.LatestVersion = LatestVersion;
     }
 
+    /**
+     * Get 资源组类别 托管 NORMAL，纳管 SW
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupSWType 资源组类别 托管 NORMAL，纳管 SW
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupSWType() {
+        return this.ResourceGroupSWType;
+    }
+
+    /**
+     * Set 资源组类别 托管 NORMAL，纳管 SW
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupSWType 资源组类别 托管 NORMAL，纳管 SW
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupSWType(String ResourceGroupSWType) {
+        this.ResourceGroupSWType = ResourceGroupSWType;
+    }
+
     public Service() {
     }
 
@@ -968,6 +1004,9 @@ DEFAULT: 其他来源
         if (source.LatestVersion != null) {
             this.LatestVersion = new String(source.LatestVersion);
         }
+        if (source.ResourceGroupSWType != null) {
+            this.ResourceGroupSWType = new String(source.ResourceGroupSWType);
+        }
     }
 
 
@@ -1004,6 +1043,7 @@ DEFAULT: 其他来源
         this.setParamSimple(map, prefix + "CreateSource", this.CreateSource);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
+        this.setParamSimple(map, prefix + "ResourceGroupSWType", this.ResourceGroupSWType);
 
     }
 }

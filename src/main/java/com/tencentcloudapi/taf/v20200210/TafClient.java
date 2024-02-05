@@ -39,6 +39,17 @@ public class TafClient extends AbstractClient{
     }
 
     /**
+     *虚假流量识别
+     * @param req ManagePortraitRiskRequest
+     * @return ManagePortraitRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManagePortraitRiskResponse ManagePortraitRisk(ManagePortraitRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ManagePortraitRisk", ManagePortraitRiskResponse.class);
+    }
+
+    /**
      *流量反欺诈-流量验准定制版
      * @param req RecognizeCustomizedAudienceRequest
      * @return RecognizeCustomizedAudienceResponse

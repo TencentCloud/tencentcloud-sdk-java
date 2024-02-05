@@ -38,7 +38,8 @@ public class DescribeInstancesListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 每页返回数量，默认值为10，最大值为100。
+    * 每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录；
     */
     @SerializedName("Limit")
     @Expose
@@ -98,16 +99,20 @@ public class DescribeInstancesListRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页返回数量，默认值为10，最大值为100。 
-     * @return Limit 每页返回数量，默认值为10，最大值为100。
+     * Get 每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录； 
+     * @return Limit 每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录；
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页返回数量，默认值为10，最大值为100。
-     * @param Limit 每页返回数量，默认值为10，最大值为100。
+     * Set 每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录；
+     * @param Limit 每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录；
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -39,6 +39,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *弹性伸缩策略批量绑定网关分组
+     * @param req BindAutoScalerResourceStrategyToGroupsRequest
+     * @return BindAutoScalerResourceStrategyToGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindAutoScalerResourceStrategyToGroupsResponse BindAutoScalerResourceStrategyToGroups(BindAutoScalerResourceStrategyToGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindAutoScalerResourceStrategyToGroups", BindAutoScalerResourceStrategyToGroupsResponse.class);
+    }
+
+    /**
      *关闭 WAF 防护
      * @param req CloseWafProtectionRequest
      * @return CloseWafProtectionResponse
@@ -47,6 +58,17 @@ public class TseClient extends AbstractClient{
     public CloseWafProtectionResponse CloseWafProtection(CloseWafProtectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CloseWafProtection", CloseWafProtectionResponse.class);
+    }
+
+    /**
+     *创建弹性伸缩策略
+     * @param req CreateAutoScalerResourceStrategyRequest
+     * @return CreateAutoScalerResourceStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoScalerResourceStrategyResponse CreateAutoScalerResourceStrategy(CreateAutoScalerResourceStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAutoScalerResourceStrategy", CreateAutoScalerResourceStrategyResponse.class);
     }
 
     /**
@@ -171,6 +193,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *删除弹性伸缩策略
+     * @param req DeleteAutoScalerResourceStrategyRequest
+     * @return DeleteAutoScalerResourceStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoScalerResourceStrategyResponse DeleteAutoScalerResourceStrategy(DeleteAutoScalerResourceStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAutoScalerResourceStrategy", DeleteAutoScalerResourceStrategyResponse.class);
+    }
+
+    /**
      *删除云原生API网关实例
      * @param req DeleteCloudNativeAPIGatewayRequest
      * @return DeleteCloudNativeAPIGatewayResponse
@@ -289,6 +322,28 @@ public class TseClient extends AbstractClient{
     public DeleteWafDomainsResponse DeleteWafDomains(DeleteWafDomainsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWafDomains", DeleteWafDomainsResponse.class);
+    }
+
+    /**
+     *查看弹性伸缩策略列表
+     * @param req DescribeAutoScalerResourceStrategiesRequest
+     * @return DescribeAutoScalerResourceStrategiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScalerResourceStrategiesResponse DescribeAutoScalerResourceStrategies(DescribeAutoScalerResourceStrategiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoScalerResourceStrategies", DescribeAutoScalerResourceStrategiesResponse.class);
+    }
+
+    /**
+     *查看弹性伸缩策略绑定的网关分组
+     * @param req DescribeAutoScalerResourceStrategyBindingGroupsRequest
+     * @return DescribeAutoScalerResourceStrategyBindingGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScalerResourceStrategyBindingGroupsResponse DescribeAutoScalerResourceStrategyBindingGroups(DescribeAutoScalerResourceStrategyBindingGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoScalerResourceStrategyBindingGroups", DescribeAutoScalerResourceStrategyBindingGroupsResponse.class);
     }
 
     /**
@@ -479,6 +534,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询云原生API网关实例公网详情
+     * @param req DescribePublicNetworkRequest
+     * @return DescribePublicNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicNetworkResponse DescribePublicNetwork(DescribePublicNetworkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePublicNetwork", DescribePublicNetworkResponse.class);
+    }
+
+    /**
      *查询引擎实例访问地址
      * @param req DescribeSREInstanceAccessAddressRequest
      * @return DescribeSREInstanceAccessAddressResponse
@@ -553,6 +619,17 @@ public class TseClient extends AbstractClient{
     public DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(DescribeZookeeperServerInterfacesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeZookeeperServerInterfaces", DescribeZookeeperServerInterfacesResponse.class);
+    }
+
+    /**
+     *更新弹性伸缩策略
+     * @param req ModifyAutoScalerResourceStrategyRequest
+     * @return ModifyAutoScalerResourceStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoScalerResourceStrategyResponse ModifyAutoScalerResourceStrategy(ModifyAutoScalerResourceStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoScalerResourceStrategy", ModifyAutoScalerResourceStrategyResponse.class);
     }
 
     /**
@@ -696,6 +773,17 @@ public class TseClient extends AbstractClient{
     public OpenWafProtectionResponse OpenWafProtection(OpenWafProtectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenWafProtection", OpenWafProtectionResponse.class);
+    }
+
+    /**
+     *弹性伸缩策略批量解绑网关分组
+     * @param req UnbindAutoScalerResourceStrategyFromGroupsRequest
+     * @return UnbindAutoScalerResourceStrategyFromGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindAutoScalerResourceStrategyFromGroupsResponse UnbindAutoScalerResourceStrategyFromGroups(UnbindAutoScalerResourceStrategyFromGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnbindAutoScalerResourceStrategyFromGroups", UnbindAutoScalerResourceStrategyFromGroupsResponse.class);
     }
 
     /**

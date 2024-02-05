@@ -38,11 +38,32 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel {
     private Long Scope;
 
     /**
-    * 作用弄范围内旗舰版主机列表
+    * 作用范围内旗舰版主机列表
     */
     @SerializedName("Quuids")
     @Expose
     private String [] Quuids;
+
+    /**
+    * 排除作用范围内旗舰版主机列表
+    */
+    @SerializedName("ExcludeInstanceIds")
+    @Expose
+    private String [] ExcludeInstanceIds;
+
+    /**
+    * 新增资产自动包含 0 不包含 1包含
+    */
+    @SerializedName("AutoInclude")
+    @Expose
+    private Long AutoInclude;
+
+    /**
+    * 作用范围内旗舰版主机列表
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
 
     /**
      * Get 防御开关，0 关闭 1 开启 
@@ -77,19 +98,67 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel {
     }
 
     /**
-     * Get 作用弄范围内旗舰版主机列表 
-     * @return Quuids 作用弄范围内旗舰版主机列表
+     * Get 作用范围内旗舰版主机列表 
+     * @return Quuids 作用范围内旗舰版主机列表
      */
     public String [] getQuuids() {
         return this.Quuids;
     }
 
     /**
-     * Set 作用弄范围内旗舰版主机列表
-     * @param Quuids 作用弄范围内旗舰版主机列表
+     * Set 作用范围内旗舰版主机列表
+     * @param Quuids 作用范围内旗舰版主机列表
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
+    }
+
+    /**
+     * Get 排除作用范围内旗舰版主机列表 
+     * @return ExcludeInstanceIds 排除作用范围内旗舰版主机列表
+     */
+    public String [] getExcludeInstanceIds() {
+        return this.ExcludeInstanceIds;
+    }
+
+    /**
+     * Set 排除作用范围内旗舰版主机列表
+     * @param ExcludeInstanceIds 排除作用范围内旗舰版主机列表
+     */
+    public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
+        this.ExcludeInstanceIds = ExcludeInstanceIds;
+    }
+
+    /**
+     * Get 新增资产自动包含 0 不包含 1包含 
+     * @return AutoInclude 新增资产自动包含 0 不包含 1包含
+     */
+    public Long getAutoInclude() {
+        return this.AutoInclude;
+    }
+
+    /**
+     * Set 新增资产自动包含 0 不包含 1包含
+     * @param AutoInclude 新增资产自动包含 0 不包含 1包含
+     */
+    public void setAutoInclude(Long AutoInclude) {
+        this.AutoInclude = AutoInclude;
+    }
+
+    /**
+     * Get 作用范围内旗舰版主机列表 
+     * @return InstanceIds 作用范围内旗舰版主机列表
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 作用范围内旗舰版主机列表
+     * @param InstanceIds 作用范围内旗舰版主机列表
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
     }
 
     public ModifyVulDefenceSettingRequest() {
@@ -112,6 +181,21 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel {
                 this.Quuids[i] = new String(source.Quuids[i]);
             }
         }
+        if (source.ExcludeInstanceIds != null) {
+            this.ExcludeInstanceIds = new String[source.ExcludeInstanceIds.length];
+            for (int i = 0; i < source.ExcludeInstanceIds.length; i++) {
+                this.ExcludeInstanceIds[i] = new String(source.ExcludeInstanceIds[i]);
+            }
+        }
+        if (source.AutoInclude != null) {
+            this.AutoInclude = new Long(source.AutoInclude);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
     }
 
 
@@ -122,6 +206,9 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+        this.setParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
+        this.setParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

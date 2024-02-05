@@ -80,6 +80,14 @@ public class ServiceCallInfo extends AbstractModel {
     private String AppSecret;
 
     /**
+    * 鉴权是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AuthorizationEnable")
+    @Expose
+    private Boolean AuthorizationEnable;
+
+    /**
      * Get 服务组id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceGroupId 服务组id
@@ -219,6 +227,26 @@ public class ServiceCallInfo extends AbstractModel {
         this.AppSecret = AppSecret;
     }
 
+    /**
+     * Get 鉴权是否开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AuthorizationEnable 鉴权是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAuthorizationEnable() {
+        return this.AuthorizationEnable;
+    }
+
+    /**
+     * Set 鉴权是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AuthorizationEnable 鉴权是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAuthorizationEnable(Boolean AuthorizationEnable) {
+        this.AuthorizationEnable = AuthorizationEnable;
+    }
+
     public ServiceCallInfo() {
     }
 
@@ -248,6 +276,9 @@ public class ServiceCallInfo extends AbstractModel {
         if (source.AppSecret != null) {
             this.AppSecret = new String(source.AppSecret);
         }
+        if (source.AuthorizationEnable != null) {
+            this.AuthorizationEnable = new Boolean(source.AuthorizationEnable);
+        }
     }
 
 
@@ -262,6 +293,7 @@ public class ServiceCallInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OuterHttpsAddr", this.OuterHttpsAddr);
         this.setParamSimple(map, prefix + "AppKey", this.AppKey);
         this.setParamSimple(map, prefix + "AppSecret", this.AppSecret);
+        this.setParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
 
     }
 }

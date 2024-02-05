@@ -122,6 +122,13 @@ public class ApplyCertificateRequest extends AbstractModel {
     private Boolean DeleteDnsAutoRecord;
 
     /**
+    * 域名数组（多域名证书可以上传）。	
+    */
+    @SerializedName("DnsNames")
+    @Expose
+    private String [] DnsNames;
+
+    /**
      * Get 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。 
      * @return DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      */
@@ -345,6 +352,22 @@ public class ApplyCertificateRequest extends AbstractModel {
         this.DeleteDnsAutoRecord = DeleteDnsAutoRecord;
     }
 
+    /**
+     * Get 域名数组（多域名证书可以上传）。	 
+     * @return DnsNames 域名数组（多域名证书可以上传）。	
+     */
+    public String [] getDnsNames() {
+        return this.DnsNames;
+    }
+
+    /**
+     * Set 域名数组（多域名证书可以上传）。	
+     * @param DnsNames 域名数组（多域名证书可以上传）。	
+     */
+    public void setDnsNames(String [] DnsNames) {
+        this.DnsNames = DnsNames;
+    }
+
     public ApplyCertificateRequest() {
     }
 
@@ -395,6 +418,12 @@ public class ApplyCertificateRequest extends AbstractModel {
         if (source.DeleteDnsAutoRecord != null) {
             this.DeleteDnsAutoRecord = new Boolean(source.DeleteDnsAutoRecord);
         }
+        if (source.DnsNames != null) {
+            this.DnsNames = new String[source.DnsNames.length];
+            for (int i = 0; i < source.DnsNames.length; i++) {
+                this.DnsNames[i] = new String(source.DnsNames[i]);
+            }
+        }
     }
 
 
@@ -416,6 +445,7 @@ public class ApplyCertificateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "DeleteDnsAutoRecord", this.DeleteDnsAutoRecord);
+        this.setParamArraySimple(map, prefix + "DnsNames.", this.DnsNames);
 
     }
 }

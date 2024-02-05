@@ -53,6 +53,29 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
     private Long FlagshipCount;
 
     /**
+    * 影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
+    * 新增旗舰版主机自动加入;1是，0否 
+    */
+    @SerializedName("AutoInclude")
+    @Expose
+    private Long AutoInclude;
+
+    /**
+    * 排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExcludeInstanceIds")
+    @Expose
+    private String [] ExcludeInstanceIds;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -128,6 +151,62 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
     }
 
     /**
+     * Get 影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceIds 影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceIds 影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 新增旗舰版主机自动加入;1是，0否  
+     * @return AutoInclude 新增旗舰版主机自动加入;1是，0否 
+     */
+    public Long getAutoInclude() {
+        return this.AutoInclude;
+    }
+
+    /**
+     * Set 新增旗舰版主机自动加入;1是，0否 
+     * @param AutoInclude 新增旗舰版主机自动加入;1是，0否 
+     */
+    public void setAutoInclude(Long AutoInclude) {
+        this.AutoInclude = AutoInclude;
+    }
+
+    /**
+     * Get 排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExcludeInstanceIds 排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getExcludeInstanceIds() {
+        return this.ExcludeInstanceIds;
+    }
+
+    /**
+     * Set 排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExcludeInstanceIds 排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
+        this.ExcludeInstanceIds = ExcludeInstanceIds;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -166,6 +245,21 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
         if (source.FlagshipCount != null) {
             this.FlagshipCount = new Long(source.FlagshipCount);
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.AutoInclude != null) {
+            this.AutoInclude = new Long(source.AutoInclude);
+        }
+        if (source.ExcludeInstanceIds != null) {
+            this.ExcludeInstanceIds = new String[source.ExcludeInstanceIds.length];
+            for (int i = 0; i < source.ExcludeInstanceIds.length; i++) {
+                this.ExcludeInstanceIds[i] = new String(source.ExcludeInstanceIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -180,6 +274,9 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
         this.setParamSimple(map, prefix + "FlagshipCount", this.FlagshipCount);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
+        this.setParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

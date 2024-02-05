@@ -112,6 +112,14 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     private FilterDataObject [] OsList;
 
     /**
+    * 资产类型和实例类型的对应关系
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetMapInstanceTypeList")
+    @Expose
+    private AssetInstanceTypeMap [] AssetMapInstanceTypeList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -339,6 +347,26 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     }
 
     /**
+     * Get 资产类型和实例类型的对应关系
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetMapInstanceTypeList 资产类型和实例类型的对应关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AssetInstanceTypeMap [] getAssetMapInstanceTypeList() {
+        return this.AssetMapInstanceTypeList;
+    }
+
+    /**
+     * Set 资产类型和实例类型的对应关系
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetMapInstanceTypeList 资产类型和实例类型的对应关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetMapInstanceTypeList(AssetInstanceTypeMap [] AssetMapInstanceTypeList) {
+        this.AssetMapInstanceTypeList = AssetMapInstanceTypeList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -425,6 +453,12 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
                 this.OsList[i] = new FilterDataObject(source.OsList[i]);
             }
         }
+        if (source.AssetMapInstanceTypeList != null) {
+            this.AssetMapInstanceTypeList = new AssetInstanceTypeMap[source.AssetMapInstanceTypeList.length];
+            for (int i = 0; i < source.AssetMapInstanceTypeList.length; i++) {
+                this.AssetMapInstanceTypeList[i] = new AssetInstanceTypeMap(source.AssetMapInstanceTypeList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -446,6 +480,7 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AppIdList.", this.AppIdList);
         this.setParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
         this.setParamArrayObj(map, prefix + "OsList.", this.OsList);
+        this.setParamArrayObj(map, prefix + "AssetMapInstanceTypeList.", this.AssetMapInstanceTypeList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

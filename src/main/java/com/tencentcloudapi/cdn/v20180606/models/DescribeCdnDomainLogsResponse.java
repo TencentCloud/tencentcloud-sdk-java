@@ -25,7 +25,7 @@ public class DescribeCdnDomainLogsResponse extends AbstractModel {
 
     /**
     * 日志包下载链接。
-下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。链接有效期1天。
     */
     @SerializedName("DomainLogs")
     @Expose
@@ -47,9 +47,9 @@ public class DescribeCdnDomainLogsResponse extends AbstractModel {
 
     /**
      * Get 日志包下载链接。
-下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。 
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。链接有效期1天。 
      * @return DomainLogs 日志包下载链接。
-下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。链接有效期1天。
      */
     public DomainLog [] getDomainLogs() {
         return this.DomainLogs;
@@ -57,9 +57,9 @@ public class DescribeCdnDomainLogsResponse extends AbstractModel {
 
     /**
      * Set 日志包下载链接。
-下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。链接有效期1天。
      * @param DomainLogs 日志包下载链接。
-下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。
+下载内容是gz后缀的压缩包，解压后是无扩展名的文本文件。链接有效期1天。
      */
     public void setDomainLogs(DomainLog [] DomainLogs) {
         this.DomainLogs = DomainLogs;

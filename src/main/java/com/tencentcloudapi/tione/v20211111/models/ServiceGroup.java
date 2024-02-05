@@ -163,6 +163,22 @@ UPDATING 更新中
     private String WeightUpdateStatus;
 
     /**
+    * 服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplicasCount")
+    @Expose
+    private Long ReplicasCount;
+
+    /**
+    * 服务组下期望的pod数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvailableReplicasCount")
+    @Expose
+    private Long AvailableReplicasCount;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -526,6 +542,46 @@ UPDATING 更新中
         this.WeightUpdateStatus = WeightUpdateStatus;
     }
 
+    /**
+     * Get 服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplicasCount 服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReplicasCount() {
+        return this.ReplicasCount;
+    }
+
+    /**
+     * Set 服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplicasCount 服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplicasCount(Long ReplicasCount) {
+        this.ReplicasCount = ReplicasCount;
+    }
+
+    /**
+     * Get 服务组下期望的pod数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvailableReplicasCount 服务组下期望的pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAvailableReplicasCount() {
+        return this.AvailableReplicasCount;
+    }
+
+    /**
+     * Set 服务组下期望的pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvailableReplicasCount 服务组下期望的pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvailableReplicasCount(Long AvailableReplicasCount) {
+        this.AvailableReplicasCount = AvailableReplicasCount;
+    }
+
     public ServiceGroup() {
     }
 
@@ -588,6 +644,12 @@ UPDATING 更新中
         if (source.WeightUpdateStatus != null) {
             this.WeightUpdateStatus = new String(source.WeightUpdateStatus);
         }
+        if (source.ReplicasCount != null) {
+            this.ReplicasCount = new Long(source.ReplicasCount);
+        }
+        if (source.AvailableReplicasCount != null) {
+            this.AvailableReplicasCount = new Long(source.AvailableReplicasCount);
+        }
     }
 
 
@@ -611,6 +673,8 @@ UPDATING 更新中
         this.setParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
         this.setParamSimple(map, prefix + "CreateSource", this.CreateSource);
         this.setParamSimple(map, prefix + "WeightUpdateStatus", this.WeightUpdateStatus);
+        this.setParamSimple(map, prefix + "ReplicasCount", this.ReplicasCount);
+        this.setParamSimple(map, prefix + "AvailableReplicasCount", this.AvailableReplicasCount);
 
     }
 }

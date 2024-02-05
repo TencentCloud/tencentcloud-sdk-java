@@ -127,14 +127,6 @@ HYBRID_PAID:
     private Long Weight;
 
     /**
-    * 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PodList")
-    @Expose
-    private String [] PodList;
-
-    /**
     * 资源总量
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -206,6 +198,14 @@ HYBRID_PAID:
     @SerializedName("ScheduledAction")
     @Expose
     private String ScheduledAction;
+
+    /**
+    * 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodList")
+    @Expose
+    private String [] PodList;
 
     /**
     * Pod列表信息
@@ -540,26 +540,6 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String [] getPodList() {
-        return this.PodList;
-    }
-
-    /**
-     * Set 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPodList(String [] PodList) {
-        this.PodList = PodList;
-    }
-
-    /**
      * Get 资源总量
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceTotal 资源总量
@@ -744,11 +724,37 @@ HYBRID_PAID:
     }
 
     /**
+     * Get 实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodList 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public String [] getPodList() {
+        return this.PodList;
+    }
+
+    /**
+     * Set 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodList 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setPodList(String [] PodList) {
+        this.PodList = PodList;
+    }
+
+    /**
      * Get Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Pods Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Pod getPods() {
         return this.Pods;
     }
@@ -758,7 +764,9 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Pods Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setPods(Pod Pods) {
         this.Pods = Pods;
     }
@@ -950,12 +958,6 @@ HYBRID_PAID:
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
-        if (source.PodList != null) {
-            this.PodList = new String[source.PodList.length];
-            for (int i = 0; i < source.PodList.length; i++) {
-                this.PodList[i] = new String(source.PodList[i]);
-            }
-        }
         if (source.ResourceTotal != null) {
             this.ResourceTotal = new ResourceInfo(source.ResourceTotal);
         }
@@ -985,6 +987,12 @@ HYBRID_PAID:
         }
         if (source.ScheduledAction != null) {
             this.ScheduledAction = new String(source.ScheduledAction);
+        }
+        if (source.PodList != null) {
+            this.PodList = new String[source.PodList.length];
+            for (int i = 0; i < source.PodList.length; i++) {
+                this.PodList[i] = new String(source.PodList[i]);
+            }
         }
         if (source.Pods != null) {
             this.Pods = new Pod(source.Pods);
@@ -1032,7 +1040,6 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "HorizontalPodAutoscaler.", this.HorizontalPodAutoscaler);
         this.setParamObj(map, prefix + "Status.", this.Status);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
-        this.setParamArraySimple(map, prefix + "PodList.", this.PodList);
         this.setParamObj(map, prefix + "ResourceTotal.", this.ResourceTotal);
         this.setParamSimple(map, prefix + "OldReplicas", this.OldReplicas);
         this.setParamSimple(map, prefix + "HybridBillingPrepaidReplicas", this.HybridBillingPrepaidReplicas);
@@ -1042,6 +1049,7 @@ HYBRID_PAID:
         this.setParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
         this.setParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);
         this.setParamSimple(map, prefix + "ScheduledAction", this.ScheduledAction);
+        this.setParamArraySimple(map, prefix + "PodList.", this.PodList);
         this.setParamObj(map, prefix + "Pods.", this.Pods);
         this.setParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);

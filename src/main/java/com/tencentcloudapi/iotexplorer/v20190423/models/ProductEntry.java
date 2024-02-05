@@ -155,6 +155,14 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
     private Long BindStrategy;
 
     /**
+    * 设备数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceCount")
+    @Expose
+    private Long DeviceCount;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -462,6 +470,26 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         this.BindStrategy = BindStrategy;
     }
 
+    /**
+     * Get 设备数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceCount 设备数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeviceCount() {
+        return this.DeviceCount;
+    }
+
+    /**
+     * Set 设备数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceCount 设备数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceCount(Long DeviceCount) {
+        this.DeviceCount = DeviceCount;
+    }
+
     public ProductEntry() {
     }
 
@@ -524,6 +552,9 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         if (source.BindStrategy != null) {
             this.BindStrategy = new Long(source.BindStrategy);
         }
+        if (source.DeviceCount != null) {
+            this.DeviceCount = new Long(source.DeviceCount);
+        }
     }
 
 
@@ -549,6 +580,7 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
         this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
         this.setParamSimple(map, prefix + "BindStrategy", this.BindStrategy);
+        this.setParamSimple(map, prefix + "DeviceCount", this.DeviceCount);
 
     }
 }

@@ -31,14 +31,14 @@ public class AddUserDeviceRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 设备接入协议（1:RTMP,2:GB,3:GW）
+    * 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
     */
     @SerializedName("AccessProtocol")
     @Expose
     private Long AccessProtocol;
 
     /**
-    * 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
+    * 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
     */
     @SerializedName("Type")
     @Expose
@@ -115,6 +115,13 @@ public class AddUserDeviceRequest extends AbstractModel {
     private String Username;
 
     /**
+    * 设备 SN，仅IVCP 协议设备需要
+    */
+    @SerializedName("SNCode")
+    @Expose
+    private String SNCode;
+
+    /**
      * Get 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复） 
      * @return Name 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
      */
@@ -131,32 +138,32 @@ public class AddUserDeviceRequest extends AbstractModel {
     }
 
     /**
-     * Get 设备接入协议（1:RTMP,2:GB,3:GW） 
-     * @return AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW）
+     * Get 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP） 
+     * @return AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
      */
     public Long getAccessProtocol() {
         return this.AccessProtocol;
     }
 
     /**
-     * Set 设备接入协议（1:RTMP,2:GB,3:GW）
-     * @param AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW）
+     * Set 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+     * @param AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
      */
     public void setAccessProtocol(Long AccessProtocol) {
         this.AccessProtocol = AccessProtocol;
     }
 
     /**
-     * Get 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC） 
-     * @return Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
+     * Get 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC） 
+     * @return Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
-     * @param Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
+     * Set 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
+     * @param Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -322,6 +329,22 @@ public class AddUserDeviceRequest extends AbstractModel {
         this.Username = Username;
     }
 
+    /**
+     * Get 设备 SN，仅IVCP 协议设备需要 
+     * @return SNCode 设备 SN，仅IVCP 协议设备需要
+     */
+    public String getSNCode() {
+        return this.SNCode;
+    }
+
+    /**
+     * Set 设备 SN，仅IVCP 协议设备需要
+     * @param SNCode 设备 SN，仅IVCP 协议设备需要
+     */
+    public void setSNCode(String SNCode) {
+        this.SNCode = SNCode;
+    }
+
     public AddUserDeviceRequest() {
     }
 
@@ -369,6 +392,9 @@ public class AddUserDeviceRequest extends AbstractModel {
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
+        if (source.SNCode != null) {
+            this.SNCode = new String(source.SNCode);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class AddUserDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "SNCode", this.SNCode);
 
     }
 }

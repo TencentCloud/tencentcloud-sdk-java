@@ -40,6 +40,22 @@ public class IntranetCallInfo extends AbstractModel {
     private ServiceEIPInfo [] ServiceEIPInfo;
 
     /**
+    * 私有连接信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrivateLinkInfos")
+    @Expose
+    private PrivateLinkInfo [] PrivateLinkInfos;
+
+    /**
+    * 默认内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultInnerCallInfos")
+    @Expose
+    private DefaultInnerCallInfo [] DefaultInnerCallInfos;
+
+    /**
      * Get 私有连接通道信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IngressPrivateLinkInfo 私有连接通道信息
@@ -79,6 +95,46 @@ public class IntranetCallInfo extends AbstractModel {
         this.ServiceEIPInfo = ServiceEIPInfo;
     }
 
+    /**
+     * Get 私有连接信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrivateLinkInfos 私有连接信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PrivateLinkInfo [] getPrivateLinkInfos() {
+        return this.PrivateLinkInfos;
+    }
+
+    /**
+     * Set 私有连接信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrivateLinkInfos 私有连接信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivateLinkInfos(PrivateLinkInfo [] PrivateLinkInfos) {
+        this.PrivateLinkInfos = PrivateLinkInfos;
+    }
+
+    /**
+     * Get 默认内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultInnerCallInfos 默认内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DefaultInnerCallInfo [] getDefaultInnerCallInfos() {
+        return this.DefaultInnerCallInfos;
+    }
+
+    /**
+     * Set 默认内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultInnerCallInfos 默认内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultInnerCallInfos(DefaultInnerCallInfo [] DefaultInnerCallInfos) {
+        this.DefaultInnerCallInfos = DefaultInnerCallInfos;
+    }
+
     public IntranetCallInfo() {
     }
 
@@ -96,6 +152,18 @@ public class IntranetCallInfo extends AbstractModel {
                 this.ServiceEIPInfo[i] = new ServiceEIPInfo(source.ServiceEIPInfo[i]);
             }
         }
+        if (source.PrivateLinkInfos != null) {
+            this.PrivateLinkInfos = new PrivateLinkInfo[source.PrivateLinkInfos.length];
+            for (int i = 0; i < source.PrivateLinkInfos.length; i++) {
+                this.PrivateLinkInfos[i] = new PrivateLinkInfo(source.PrivateLinkInfos[i]);
+            }
+        }
+        if (source.DefaultInnerCallInfos != null) {
+            this.DefaultInnerCallInfos = new DefaultInnerCallInfo[source.DefaultInnerCallInfos.length];
+            for (int i = 0; i < source.DefaultInnerCallInfos.length; i++) {
+                this.DefaultInnerCallInfos[i] = new DefaultInnerCallInfo(source.DefaultInnerCallInfos[i]);
+            }
+        }
     }
 
 
@@ -105,6 +173,8 @@ public class IntranetCallInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "IngressPrivateLinkInfo.", this.IngressPrivateLinkInfo);
         this.setParamArrayObj(map, prefix + "ServiceEIPInfo.", this.ServiceEIPInfo);
+        this.setParamArrayObj(map, prefix + "PrivateLinkInfos.", this.PrivateLinkInfos);
+        this.setParamArrayObj(map, prefix + "DefaultInnerCallInfos.", this.DefaultInnerCallInfos);
 
     }
 }

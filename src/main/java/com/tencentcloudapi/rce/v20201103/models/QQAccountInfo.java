@@ -45,14 +45,16 @@ public class QQAccountInfo extends AbstractModel {
     private String AssociateAccount;
 
     /**
-    * 账号绑定的手机号。
+    * 账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
     */
     @SerializedName("MobilePhone")
     @Expose
     private String MobilePhone;
 
     /**
-    * 用户设备号。
+    * 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -107,32 +109,40 @@ public class QQAccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号绑定的手机号。 
-     * @return MobilePhone 账号绑定的手机号。
+     * Get 账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。 
+     * @return MobilePhone 账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
      */
     public String getMobilePhone() {
         return this.MobilePhone;
     }
 
     /**
-     * Set 账号绑定的手机号。
-     * @param MobilePhone 账号绑定的手机号。
+     * Set 账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
+     * @param MobilePhone 账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
      */
     public void setMobilePhone(String MobilePhone) {
         this.MobilePhone = MobilePhone;
     }
 
     /**
-     * Get 用户设备号。 
-     * @return DeviceId 用户设备号。
+     * Get 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。 
+     * @return DeviceId 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 用户设备号。
-     * @param DeviceId 用户设备号。
+     * Set 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+     * @param DeviceId 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DescribeBillingResourceGroupsRequest extends AbstractModel {
 
     /**
-    * 资源组类型; 枚举值 TRAIN:训练 INFERENCE:推理
+    * 资源组类型;
+枚举值:
+空: 通用, TRAIN: 训练, INFERENCE: 推理
     */
     @SerializedName("Type")
     @Expose
@@ -55,8 +57,7 @@ Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1�
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为30;
-注意：小于0则默认为20；大于30则默认为30
+    * 分页查询每页大小，默认20
     */
     @SerializedName("Limit")
     @Expose
@@ -79,16 +80,24 @@ true: 不展示，false 展示；
     private Boolean DontShowInstanceSet;
 
     /**
-     * Get 资源组类型; 枚举值 TRAIN:训练 INFERENCE:推理 
-     * @return Type 资源组类型; 枚举值 TRAIN:训练 INFERENCE:推理
+     * Get 资源组类型;
+枚举值:
+空: 通用, TRAIN: 训练, INFERENCE: 推理 
+     * @return Type 资源组类型;
+枚举值:
+空: 通用, TRAIN: 训练, INFERENCE: 推理
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 资源组类型; 枚举值 TRAIN:训练 INFERENCE:推理
-     * @param Type 资源组类型; 枚举值 TRAIN:训练 INFERENCE:推理
+     * Set 资源组类型;
+枚举值:
+空: 通用, TRAIN: 训练, INFERENCE: 推理
+     * @param Type 资源组类型;
+枚举值:
+空: 通用, TRAIN: 训练, INFERENCE: 推理
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -155,20 +164,16 @@ Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1�
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为30;
-注意：小于0则默认为20；大于30则默认为30 
-     * @return Limit 返回数量，默认为20，最大值为30;
-注意：小于0则默认为20；大于30则默认为30
+     * Get 分页查询每页大小，默认20 
+     * @return Limit 分页查询每页大小，默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为30;
-注意：小于0则默认为20；大于30则默认为30
-     * @param Limit 返回数量，默认为20，最大值为30;
-注意：小于0则默认为20；大于30则默认为30
+     * Set 分页查询每页大小，默认20
+     * @param Limit 分页查询每页大小，默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

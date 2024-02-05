@@ -129,6 +129,54 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     private String ImpactComponent;
 
     /**
+    * 漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Payload")
+    @Expose
+    private String Payload;
+
+    /**
+    * 技术参考
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("References")
+    @Expose
+    private String References;
+
+    /**
+    * cvss评分
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CVSS")
+    @Expose
+    private String CVSS;
+
+    /**
+    * 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttackHeat")
+    @Expose
+    private String AttackHeat;
+
+    /**
+    * 安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceSupport")
+    @Expose
+    private ServiceSupport [] ServiceSupport;
+
+    /**
+    * 最新检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecentScanTime")
+    @Expose
+    private String RecentScanTime;
+
+    /**
      * Get 风险ID 
      * @return RiskId 风险ID
      */
@@ -380,6 +428,126 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
         this.ImpactComponent = ImpactComponent;
     }
 
+    /**
+     * Get 漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Payload 漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayload() {
+        return this.Payload;
+    }
+
+    /**
+     * Set 漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Payload 漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayload(String Payload) {
+        this.Payload = Payload;
+    }
+
+    /**
+     * Get 技术参考
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return References 技术参考
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReferences() {
+        return this.References;
+    }
+
+    /**
+     * Set 技术参考
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param References 技术参考
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReferences(String References) {
+        this.References = References;
+    }
+
+    /**
+     * Get cvss评分
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CVSS cvss评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCVSS() {
+        return this.CVSS;
+    }
+
+    /**
+     * Set cvss评分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CVSS cvss评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCVSS(String CVSS) {
+        this.CVSS = CVSS;
+    }
+
+    /**
+     * Get 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttackHeat 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAttackHeat() {
+        return this.AttackHeat;
+    }
+
+    /**
+     * Set 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttackHeat 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttackHeat(String AttackHeat) {
+        this.AttackHeat = AttackHeat;
+    }
+
+    /**
+     * Get 安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceSupport 安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceSupport [] getServiceSupport() {
+        return this.ServiceSupport;
+    }
+
+    /**
+     * Set 安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceSupport 安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceSupport(ServiceSupport [] ServiceSupport) {
+        this.ServiceSupport = ServiceSupport;
+    }
+
+    /**
+     * Get 最新检测时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecentScanTime 最新检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecentScanTime() {
+        return this.RecentScanTime;
+    }
+
+    /**
+     * Set 最新检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecentScanTime 最新检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecentScanTime(String RecentScanTime) {
+        this.RecentScanTime = RecentScanTime;
+    }
+
     public VULRiskAdvanceCFGList() {
     }
 
@@ -436,6 +604,27 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
         if (source.ImpactComponent != null) {
             this.ImpactComponent = new String(source.ImpactComponent);
         }
+        if (source.Payload != null) {
+            this.Payload = new String(source.Payload);
+        }
+        if (source.References != null) {
+            this.References = new String(source.References);
+        }
+        if (source.CVSS != null) {
+            this.CVSS = new String(source.CVSS);
+        }
+        if (source.AttackHeat != null) {
+            this.AttackHeat = new String(source.AttackHeat);
+        }
+        if (source.ServiceSupport != null) {
+            this.ServiceSupport = new ServiceSupport[source.ServiceSupport.length];
+            for (int i = 0; i < source.ServiceSupport.length; i++) {
+                this.ServiceSupport[i] = new ServiceSupport(source.ServiceSupport[i]);
+            }
+        }
+        if (source.RecentScanTime != null) {
+            this.RecentScanTime = new String(source.RecentScanTime);
+        }
     }
 
 
@@ -457,6 +646,12 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
         this.setParamSimple(map, prefix + "EMGCVulType", this.EMGCVulType);
         this.setParamSimple(map, prefix + "VULDescribe", this.VULDescribe);
         this.setParamSimple(map, prefix + "ImpactComponent", this.ImpactComponent);
+        this.setParamSimple(map, prefix + "Payload", this.Payload);
+        this.setParamSimple(map, prefix + "References", this.References);
+        this.setParamSimple(map, prefix + "CVSS", this.CVSS);
+        this.setParamSimple(map, prefix + "AttackHeat", this.AttackHeat);
+        this.setParamArrayObj(map, prefix + "ServiceSupport.", this.ServiceSupport);
+        this.setParamSimple(map, prefix + "RecentScanTime", this.RecentScanTime);
 
     }
 }

@@ -63,6 +63,14 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
     private FilterDataObject [] CheckFromLists;
 
     /**
+    * 漏洞标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulTagList")
+    @Expose
+    private FilterDataObject [] VulTagList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -166,6 +174,26 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
     }
 
     /**
+     * Get 漏洞标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulTagList 漏洞标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FilterDataObject [] getVulTagList() {
+        return this.VulTagList;
+    }
+
+    /**
+     * Set 漏洞标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulTagList 漏洞标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulTagList(FilterDataObject [] VulTagList) {
+        this.VulTagList = VulTagList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -216,6 +244,12 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
                 this.CheckFromLists[i] = new FilterDataObject(source.CheckFromLists[i]);
             }
         }
+        if (source.VulTagList != null) {
+            this.VulTagList = new FilterDataObject[source.VulTagList.length];
+            for (int i = 0; i < source.VulTagList.length; i++) {
+                this.VulTagList[i] = new FilterDataObject(source.VulTagList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -231,6 +265,7 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RiskLevelLists.", this.RiskLevelLists);
         this.setParamArrayObj(map, prefix + "VULTypeLists.", this.VULTypeLists);
         this.setParamArrayObj(map, prefix + "CheckFromLists.", this.CheckFromLists);
+        this.setParamArrayObj(map, prefix + "VulTagList.", this.VulTagList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

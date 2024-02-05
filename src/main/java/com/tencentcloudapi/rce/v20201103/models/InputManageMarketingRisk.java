@@ -24,60 +24,58 @@ import java.util.HashMap;
 public class InputManageMarketingRisk extends AbstractModel {
 
     /**
-    * 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
-
+    * 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。
     */
     @SerializedName("Account")
     @Expose
     private AccountInfo Account;
 
     /**
-    * 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
+    * 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection
     */
     @SerializedName("SceneCode")
     @Expose
     private String SceneCode;
 
     /**
-    * 登录来源的外网IP
+    * 用户外网ip（传入用户非外网ip会影响判断结果）。
     */
     @SerializedName("UserIp")
     @Expose
     private String UserIp;
 
     /**
-    * 时间戳
+    * 用户操作时间戳，精确到秒。
     */
     @SerializedName("PostTime")
     @Expose
     private Long PostTime;
 
     /**
-    * 用户唯一标识。
+    * 业务平台用户唯一标识。
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 设备指纹token。
+    * 设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。
     */
     @SerializedName("DeviceToken")
     @Expose
     private String DeviceToken;
 
     /**
-    * 设备指纹BusinessId
+    * 设备指纹 BusinessId。
     */
     @SerializedName("DeviceBusinessId")
     @Expose
@@ -156,43 +154,42 @@ public class InputManageMarketingRisk extends AbstractModel {
     private String VendorId;
 
     /**
-    * 设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5;
+    * 设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
     */
     @SerializedName("DeviceType")
     @Expose
     private Long DeviceType;
 
     /**
-    * 详细信息
+    * 扩展字段。
     */
     @SerializedName("Details")
     @Expose
     private InputDetails [] Details;
 
     /**
-    * 可选填写。详情请跳转至SponsorInfo查看。
+    * 邀请助力场景相关信息。
     */
     @SerializedName("Sponsor")
     @Expose
     private SponsorInfo Sponsor;
 
     /**
-    * 可选填写。详情请跳转至OnlineScamInfo查看。
+    * 详情请跳转至OnlineScamInfo查看。
     */
     @SerializedName("OnlineScam")
     @Expose
     private OnlineScamInfo OnlineScam;
 
     /**
-    * 1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+    * 1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
 
     */
     @SerializedName("Platform")
@@ -200,156 +197,148 @@ public class InputManageMarketingRisk extends AbstractModel {
     private String Platform;
 
     /**
-     * Get 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
- 
-     * @return Account 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
-
+     * Get 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。 
+     * @return Account 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。
      */
     public AccountInfo getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
-
-     * @param Account 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
-
+     * Set 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。
+     * @param Account 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。
      */
     public void setAccount(AccountInfo Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot； 
-     * @return SceneCode 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
+     * Get 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection 
+     * @return SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection
      */
     public String getSceneCode() {
         return this.SceneCode;
     }
 
     /**
-     * Set 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
-     * @param SceneCode 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
+     * Set 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection
+     * @param SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection
      */
     public void setSceneCode(String SceneCode) {
         this.SceneCode = SceneCode;
     }
 
     /**
-     * Get 登录来源的外网IP 
-     * @return UserIp 登录来源的外网IP
+     * Get 用户外网ip（传入用户非外网ip会影响判断结果）。 
+     * @return UserIp 用户外网ip（传入用户非外网ip会影响判断结果）。
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 登录来源的外网IP
-     * @param UserIp 登录来源的外网IP
+     * Set 用户外网ip（传入用户非外网ip会影响判断结果）。
+     * @param UserIp 用户外网ip（传入用户非外网ip会影响判断结果）。
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
     }
 
     /**
-     * Get 时间戳 
-     * @return PostTime 时间戳
+     * Get 用户操作时间戳，精确到秒。 
+     * @return PostTime 用户操作时间戳，精确到秒。
      */
     public Long getPostTime() {
         return this.PostTime;
     }
 
     /**
-     * Set 时间戳
-     * @param PostTime 时间戳
+     * Set 用户操作时间戳，精确到秒。
+     * @param PostTime 用户操作时间戳，精确到秒。
      */
     public void setPostTime(Long PostTime) {
         this.PostTime = PostTime;
     }
 
     /**
-     * Get 用户唯一标识。 
-     * @return UserId 用户唯一标识。
+     * Get 业务平台用户唯一标识。 
+     * @return UserId 业务平台用户唯一标识。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户唯一标识。
-     * @param UserId 用户唯一标识。
+     * Set 业务平台用户唯一标识。
+     * @param UserId 业务平台用户唯一标识。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 设备指纹token。 
-     * @return DeviceToken 设备指纹token。
+     * Get 设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。 
+     * @return DeviceToken 设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。
      */
     public String getDeviceToken() {
         return this.DeviceToken;
     }
 
     /**
-     * Set 设备指纹token。
-     * @param DeviceToken 设备指纹token。
+     * Set 设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。
+     * @param DeviceToken 设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。
      */
     public void setDeviceToken(String DeviceToken) {
         this.DeviceToken = DeviceToken;
     }
 
     /**
-     * Get 设备指纹BusinessId 
-     * @return DeviceBusinessId 设备指纹BusinessId
+     * Get 设备指纹 BusinessId。 
+     * @return DeviceBusinessId 设备指纹 BusinessId。
      */
     public Long getDeviceBusinessId() {
         return this.DeviceBusinessId;
     }
 
     /**
-     * Set 设备指纹BusinessId
-     * @param DeviceBusinessId 设备指纹BusinessId
+     * Set 设备指纹 BusinessId。
+     * @param DeviceBusinessId 设备指纹 BusinessId。
      */
     public void setDeviceBusinessId(Long DeviceBusinessId) {
         this.DeviceBusinessId = DeviceBusinessId;
@@ -524,99 +513,95 @@ public class InputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Get 设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5; 
-     * @return DeviceType 设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5;
+     * Get 设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。 
+     * @return DeviceType 设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
      */
     public Long getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5;
-     * @param DeviceType 设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5;
+     * Set 设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+     * @param DeviceType 设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
      */
     public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 详细信息 
-     * @return Details 详细信息
+     * Get 扩展字段。 
+     * @return Details 扩展字段。
      */
     public InputDetails [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 详细信息
-     * @param Details 详细信息
+     * Set 扩展字段。
+     * @param Details 扩展字段。
      */
     public void setDetails(InputDetails [] Details) {
         this.Details = Details;
     }
 
     /**
-     * Get 可选填写。详情请跳转至SponsorInfo查看。 
-     * @return Sponsor 可选填写。详情请跳转至SponsorInfo查看。
+     * Get 邀请助力场景相关信息。 
+     * @return Sponsor 邀请助力场景相关信息。
      */
     public SponsorInfo getSponsor() {
         return this.Sponsor;
     }
 
     /**
-     * Set 可选填写。详情请跳转至SponsorInfo查看。
-     * @param Sponsor 可选填写。详情请跳转至SponsorInfo查看。
+     * Set 邀请助力场景相关信息。
+     * @param Sponsor 邀请助力场景相关信息。
      */
     public void setSponsor(SponsorInfo Sponsor) {
         this.Sponsor = Sponsor;
     }
 
     /**
-     * Get 可选填写。详情请跳转至OnlineScamInfo查看。 
-     * @return OnlineScam 可选填写。详情请跳转至OnlineScamInfo查看。
+     * Get 详情请跳转至OnlineScamInfo查看。 
+     * @return OnlineScam 详情请跳转至OnlineScamInfo查看。
      */
     public OnlineScamInfo getOnlineScam() {
         return this.OnlineScam;
     }
 
     /**
-     * Set 可选填写。详情请跳转至OnlineScamInfo查看。
-     * @param OnlineScam 可选填写。详情请跳转至OnlineScamInfo查看。
+     * Set 详情请跳转至OnlineScamInfo查看。
+     * @param OnlineScam 详情请跳转至OnlineScamInfo查看。
      */
     public void setOnlineScam(OnlineScamInfo OnlineScam) {
         this.OnlineScam = OnlineScam;
     }
 
     /**
-     * Get 1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+     * Get 1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
  
-     * @return Platform 1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+     * @return Platform 1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
 
      */
     public String getPlatform() {
@@ -624,15 +609,15 @@ public class InputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Set 1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+     * Set 1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
 
-     * @param Platform 1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+     * @param Platform 1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
 
      */
     public void setPlatform(String Platform) {

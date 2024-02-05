@@ -1177,8 +1177,10 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 ### 三. 填充模版中定义的填写控件
 模版中配置的<font color="red">发起人填充控件</font>可以通过本接口的**FormFields数组**字段填充
+
 ![image](https://qcloudimg.tencent-cloud.cn/raw/37457e0e450fc221effddfcb8b1bad55.png)
 填充的传参示例如下
+
 ```
     request.FormFields = [{
             "ComponentName": "项目的名字",
@@ -1202,6 +1204,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     ]
 ```
 合成后合同样子示例
+
 ![image](https://qcloudimg.tencent-cloud.cn/raw/140a2fb771ac66a185d0a000d37485f6.png)
 
 

@@ -479,7 +479,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *获取database列表
+     *获取集群数据库列表
      * @param req DescribeClusterDatabasesRequest
      * @return DescribeClusterDatabasesResponse
      * @throws TencentCloudSDKException
@@ -1359,7 +1359,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(SearchClusterDatabases)搜索集群database列表
+     *本接口(SearchClusterDatabases)搜索集群数据库列表
      * @param req SearchClusterDatabasesRequest
      * @return SearchClusterDatabasesResponse
      * @throws TencentCloudSDKException

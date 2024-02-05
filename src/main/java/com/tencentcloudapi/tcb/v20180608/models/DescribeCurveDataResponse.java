@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class DescribeCurveDataResponse extends AbstractModel {
 
     /**
-    * 开始时间, 会根据数据的统计周期进行取整.
+    * 开始时间, 会根据数据的统计周期进行取整
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间, 会根据数据的统计周期进行取整.
+    * 结束时间, 会根据数据的统计周期进行取整
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 指标名.
+    * 指标名
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天.
+    * 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
+    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
     */
     @SerializedName("Values")
     @Expose
     private Long [] Values;
 
     /**
-    * 时间数据, 标识监控数据Values中的点是哪个时间段上报的.
+    * 时间数据, 标识监控数据Values中的点是哪个时间段上报的
     */
     @SerializedName("Time")
     @Expose
     private Long [] Time;
 
     /**
-    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
     */
     @SerializedName("NewValues")
     @Expose
@@ -80,112 +80,112 @@ public class DescribeCurveDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 开始时间, 会根据数据的统计周期进行取整. 
-     * @return StartTime 开始时间, 会根据数据的统计周期进行取整.
+     * Get 开始时间, 会根据数据的统计周期进行取整 
+     * @return StartTime 开始时间, 会根据数据的统计周期进行取整
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间, 会根据数据的统计周期进行取整.
-     * @param StartTime 开始时间, 会根据数据的统计周期进行取整.
+     * Set 开始时间, 会根据数据的统计周期进行取整
+     * @param StartTime 开始时间, 会根据数据的统计周期进行取整
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间, 会根据数据的统计周期进行取整. 
-     * @return EndTime 结束时间, 会根据数据的统计周期进行取整.
+     * Get 结束时间, 会根据数据的统计周期进行取整 
+     * @return EndTime 结束时间, 会根据数据的统计周期进行取整
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间, 会根据数据的统计周期进行取整.
-     * @param EndTime 结束时间, 会根据数据的统计周期进行取整.
+     * Set 结束时间, 会根据数据的统计周期进行取整
+     * @param EndTime 结束时间, 会根据数据的统计周期进行取整
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 指标名. 
-     * @return MetricName 指标名.
+     * Get 指标名 
+     * @return MetricName 指标名
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标名.
-     * @param MetricName 指标名.
+     * Set 指标名
+     * @param MetricName 指标名
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天. 
-     * @return Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天.
+     * Get 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天 
+     * @return Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天.
-     * @param Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天.
+     * Set 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
+     * @param Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。 
-     * @return Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
+     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到 
+     * @return Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
      */
     public Long [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
-     * @param Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到。
+     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     * @param Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
      */
     public void setValues(Long [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 时间数据, 标识监控数据Values中的点是哪个时间段上报的. 
-     * @return Time 时间数据, 标识监控数据Values中的点是哪个时间段上报的.
+     * Get 时间数据, 标识监控数据Values中的点是哪个时间段上报的 
+     * @return Time 时间数据, 标识监控数据Values中的点是哪个时间段上报的
      */
     public Long [] getTime() {
         return this.Time;
     }
 
     /**
-     * Set 时间数据, 标识监控数据Values中的点是哪个时间段上报的.
-     * @param Time 时间数据, 标识监控数据Values中的点是哪个时间段上报的.
+     * Set 时间数据, 标识监控数据Values中的点是哪个时间段上报的
+     * @param Time 时间数据, 标识监控数据Values中的点是哪个时间段上报的
      */
     public void setTime(Long [] Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到. 
-     * @return NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到 
+     * @return NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
      */
     public Float [] getNewValues() {
         return this.NewValues;
     }
 
     /**
-     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
-     * @param NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     * @param NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
      */
     public void setNewValues(Float [] NewValues) {
         this.NewValues = NewValues;

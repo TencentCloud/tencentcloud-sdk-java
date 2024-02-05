@@ -432,6 +432,102 @@ public class CVMAssetVO extends AbstractModel {
     private Long IsNewAsset;
 
     /**
+    * 0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CVMAgentStatus")
+    @Expose
+    private Long CVMAgentStatus;
+
+    /**
+    * 1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CVMStatus")
+    @Expose
+    private Long CVMStatus;
+
+    /**
+    * 1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefenseModel")
+    @Expose
+    private Long DefenseModel;
+
+    /**
+    * 1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TatStatus")
+    @Expose
+    private Long TatStatus;
+
+    /**
+    * cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CpuTrend")
+    @Expose
+    private Element [] CpuTrend;
+
+    /**
+    * 内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MemoryTrend")
+    @Expose
+    private Element [] MemoryTrend;
+
+    /**
+    * 1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentStatus")
+    @Expose
+    private Long AgentStatus;
+
+    /**
+    * 本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloseDefenseCount")
+    @Expose
+    private Long CloseDefenseCount;
+
+    /**
+    * 运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
+
+    /**
+    * 安全组数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * 物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentMemRss")
+    @Expose
+    private Long AgentMemRss;
+
+    /**
+    * CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentCpuPer")
+    @Expose
+    private Float AgentCpuPer;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -1451,6 +1547,246 @@ public class CVMAssetVO extends AbstractModel {
         this.IsNewAsset = IsNewAsset;
     }
 
+    /**
+     * Get 0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CVMAgentStatus 0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCVMAgentStatus() {
+        return this.CVMAgentStatus;
+    }
+
+    /**
+     * Set 0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CVMAgentStatus 0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCVMAgentStatus(Long CVMAgentStatus) {
+        this.CVMAgentStatus = CVMAgentStatus;
+    }
+
+    /**
+     * Get 1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CVMStatus 1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCVMStatus() {
+        return this.CVMStatus;
+    }
+
+    /**
+     * Set 1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CVMStatus 1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCVMStatus(Long CVMStatus) {
+        this.CVMStatus = CVMStatus;
+    }
+
+    /**
+     * Get 1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefenseModel 1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefenseModel() {
+        return this.DefenseModel;
+    }
+
+    /**
+     * Set 1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefenseModel 1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefenseModel(Long DefenseModel) {
+        this.DefenseModel = DefenseModel;
+    }
+
+    /**
+     * Get 1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TatStatus 1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTatStatus() {
+        return this.TatStatus;
+    }
+
+    /**
+     * Set 1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TatStatus 1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTatStatus(Long TatStatus) {
+        this.TatStatus = TatStatus;
+    }
+
+    /**
+     * Get cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CpuTrend cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Element [] getCpuTrend() {
+        return this.CpuTrend;
+    }
+
+    /**
+     * Set cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CpuTrend cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCpuTrend(Element [] CpuTrend) {
+        this.CpuTrend = CpuTrend;
+    }
+
+    /**
+     * Get 内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MemoryTrend 内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Element [] getMemoryTrend() {
+        return this.MemoryTrend;
+    }
+
+    /**
+     * Set 内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MemoryTrend 内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMemoryTrend(Element [] MemoryTrend) {
+        this.MemoryTrend = MemoryTrend;
+    }
+
+    /**
+     * Get 1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentStatus 1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAgentStatus() {
+        return this.AgentStatus;
+    }
+
+    /**
+     * Set 1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentStatus 1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentStatus(Long AgentStatus) {
+        this.AgentStatus = AgentStatus;
+    }
+
+    /**
+     * Get 本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloseDefenseCount 本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCloseDefenseCount() {
+        return this.CloseDefenseCount;
+    }
+
+    /**
+     * Set 本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloseDefenseCount 本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloseDefenseCount(Long CloseDefenseCount) {
+        this.CloseDefenseCount = CloseDefenseCount;
+    }
+
+    /**
+     * Get 运行状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceState 运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * Set 运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceState 运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
+    }
+
+    /**
+     * Get 安全组数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupIds 安全组数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupIds 安全组数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get 物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentMemRss 物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAgentMemRss() {
+        return this.AgentMemRss;
+    }
+
+    /**
+     * Set 物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentMemRss 物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentMemRss(Long AgentMemRss) {
+        this.AgentMemRss = AgentMemRss;
+    }
+
+    /**
+     * Get CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentCpuPer CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getAgentCpuPer() {
+        return this.AgentCpuPer;
+    }
+
+    /**
+     * Set CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentCpuPer CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentCpuPer(Float AgentCpuPer) {
+        this.AgentCpuPer = AgentCpuPer;
+    }
+
     public CVMAssetVO() {
     }
 
@@ -1615,6 +1951,51 @@ public class CVMAssetVO extends AbstractModel {
         if (source.IsNewAsset != null) {
             this.IsNewAsset = new Long(source.IsNewAsset);
         }
+        if (source.CVMAgentStatus != null) {
+            this.CVMAgentStatus = new Long(source.CVMAgentStatus);
+        }
+        if (source.CVMStatus != null) {
+            this.CVMStatus = new Long(source.CVMStatus);
+        }
+        if (source.DefenseModel != null) {
+            this.DefenseModel = new Long(source.DefenseModel);
+        }
+        if (source.TatStatus != null) {
+            this.TatStatus = new Long(source.TatStatus);
+        }
+        if (source.CpuTrend != null) {
+            this.CpuTrend = new Element[source.CpuTrend.length];
+            for (int i = 0; i < source.CpuTrend.length; i++) {
+                this.CpuTrend[i] = new Element(source.CpuTrend[i]);
+            }
+        }
+        if (source.MemoryTrend != null) {
+            this.MemoryTrend = new Element[source.MemoryTrend.length];
+            for (int i = 0; i < source.MemoryTrend.length; i++) {
+                this.MemoryTrend[i] = new Element(source.MemoryTrend[i]);
+            }
+        }
+        if (source.AgentStatus != null) {
+            this.AgentStatus = new Long(source.AgentStatus);
+        }
+        if (source.CloseDefenseCount != null) {
+            this.CloseDefenseCount = new Long(source.CloseDefenseCount);
+        }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.AgentMemRss != null) {
+            this.AgentMemRss = new Long(source.AgentMemRss);
+        }
+        if (source.AgentCpuPer != null) {
+            this.AgentCpuPer = new Float(source.AgentCpuPer);
+        }
     }
 
 
@@ -1673,6 +2054,18 @@ public class CVMAssetVO extends AbstractModel {
         this.setParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
         this.setParamSimple(map, prefix + "BASAgentStatus", this.BASAgentStatus);
         this.setParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
+        this.setParamSimple(map, prefix + "CVMAgentStatus", this.CVMAgentStatus);
+        this.setParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
+        this.setParamSimple(map, prefix + "DefenseModel", this.DefenseModel);
+        this.setParamSimple(map, prefix + "TatStatus", this.TatStatus);
+        this.setParamArrayObj(map, prefix + "CpuTrend.", this.CpuTrend);
+        this.setParamArrayObj(map, prefix + "MemoryTrend.", this.MemoryTrend);
+        this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+        this.setParamSimple(map, prefix + "CloseDefenseCount", this.CloseDefenseCount);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "AgentMemRss", this.AgentMemRss);
+        this.setParamSimple(map, prefix + "AgentCpuPer", this.AgentCpuPer);
 
     }
 }

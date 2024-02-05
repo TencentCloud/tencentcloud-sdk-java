@@ -27,9 +27,7 @@ public class OutputManageMarketingRiskValue extends AbstractModel {
     * 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -46,7 +44,7 @@ AccountType是10004时，对应手机号的MD5。
     private Long PostTime;
 
     /**
-    * 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+    * 业务参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociateAccount")
@@ -62,10 +60,10 @@ AccountType是10004时，对应手机号的MD5。
     private String UserIp;
 
     /**
-    * 风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+    * 风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
@@ -106,7 +104,7 @@ reject：拒绝，高风险恶意
     private Long [] RiskType;
 
     /**
-    * 唯一ID
+    * 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConstId")
@@ -114,7 +112,7 @@ reject：拒绝，高风险恶意
     private String ConstId;
 
     /**
-    * 扩展信息
+    * 风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskInformation")
@@ -125,17 +123,13 @@ reject：拒绝，高风险恶意
      * Get 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserId 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -147,17 +141,13 @@ AccountType是10004时，对应手机号的MD5。
      * Set 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -186,9 +176,9 @@ AccountType是10004时，对应手机号的MD5。
     }
 
     /**
-     * Get 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+     * Get 业务参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AssociateAccount 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+     * @return AssociateAccount 业务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssociateAccount() {
@@ -196,9 +186,9 @@ AccountType是10004时，对应手机号的MD5。
     }
 
     /**
-     * Set 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+     * Set 业务参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AssociateAccount 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+     * @param AssociateAccount 业务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociateAccount(String AssociateAccount) {
@@ -226,15 +216,15 @@ AccountType是10004时，对应手机号的MD5。
     }
 
     /**
-     * Get 风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+     * Get 风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskLevel 风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+     * @return RiskLevel 风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
@@ -242,15 +232,15 @@ reject：拒绝，高风险恶意
     }
 
     /**
-     * Set 风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+     * Set 风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskLevel 风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+     * @param RiskLevel 风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
@@ -378,9 +368,9 @@ reject：拒绝，高风险恶意
     }
 
     /**
-     * Get 唯一ID
+     * Get 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConstId 唯一ID
+     * @return ConstId 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConstId() {
@@ -388,9 +378,9 @@ reject：拒绝，高风险恶意
     }
 
     /**
-     * Set 唯一ID
+     * Set 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConstId 唯一ID
+     * @param ConstId 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConstId(String ConstId) {
@@ -398,9 +388,9 @@ reject：拒绝，高风险恶意
     }
 
     /**
-     * Get 扩展信息
+     * Get 风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskInformation 扩展信息
+     * @return RiskInformation 风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskInformation() {
@@ -408,9 +398,9 @@ reject：拒绝，高风险恶意
     }
 
     /**
-     * Set 扩展信息
+     * Set 风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskInformation 扩展信息
+     * @param RiskInformation 风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskInformation(String RiskInformation) {

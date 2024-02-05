@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class AccountInfo extends AbstractModel {
 
     /**
-    * 账号类型
+    * 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
     */
     @SerializedName("AccountType")
     @Expose
@@ -45,23 +49,39 @@ public class AccountInfo extends AbstractModel {
     private WeChatAccountInfo WeChatAccount;
 
     /**
-    * 其它账号信息，AccountType是0、4、8或10004时，该字段必填。
+    * 其它账号信息，AccountType是8或10004时，该字段必填。
     */
     @SerializedName("OtherAccount")
     @Expose
     private OtherAccountInfo OtherAccount;
 
     /**
-     * Get 账号类型 
-     * @return AccountType 账号类型
+     * Get 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值 
+     * @return AccountType 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 账号类型
-     * @param AccountType 账号类型
+     * Set 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+     * @param AccountType 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
@@ -100,16 +120,16 @@ public class AccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 其它账号信息，AccountType是0、4、8或10004时，该字段必填。 
-     * @return OtherAccount 其它账号信息，AccountType是0、4、8或10004时，该字段必填。
+     * Get 其它账号信息，AccountType是8或10004时，该字段必填。 
+     * @return OtherAccount 其它账号信息，AccountType是8或10004时，该字段必填。
      */
     public OtherAccountInfo getOtherAccount() {
         return this.OtherAccount;
     }
 
     /**
-     * Set 其它账号信息，AccountType是0、4、8或10004时，该字段必填。
-     * @param OtherAccount 其它账号信息，AccountType是0、4、8或10004时，该字段必填。
+     * Set 其它账号信息，AccountType是8或10004时，该字段必填。
+     * @param OtherAccount 其它账号信息，AccountType是8或10004时，该字段必填。
      */
     public void setOtherAccount(OtherAccountInfo OtherAccount) {
         this.OtherAccount = OtherAccount;

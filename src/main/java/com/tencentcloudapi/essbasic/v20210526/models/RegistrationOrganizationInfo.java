@@ -91,12 +91,15 @@ public class RegistrationOrganizationInfo extends AbstractModel {
 
     /**
     * 可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
+
 
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证`
     */
     @SerializedName("AuthorizationTypes")
     @Expose
@@ -119,6 +122,13 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     @SerializedName("AdminIdCardNumber")
     @Expose
     private String AdminIdCardNumber;
+
+    /**
+    * 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+    */
+    @SerializedName("BusinessLicense")
+    @Expose
+    private String BusinessLicense;
 
     /**
      * Get 组织机构名称。
@@ -290,19 +300,25 @@ public class RegistrationOrganizationInfo extends AbstractModel {
 
     /**
      * Get 可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
 
-注:
-`1. 当前仅支持一种认证方式`
-`2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款` 
-     * @return AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
 
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证` 
+     * @return AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
+
+
+注:
+`1. 当前仅支持一种认证方式`
+`2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证`
      */
     public Long [] getAuthorizationTypes() {
         return this.AuthorizationTypes;
@@ -310,19 +326,25 @@ public class RegistrationOrganizationInfo extends AbstractModel {
 
     /**
      * Set 可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
+
 
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证`
      * @param AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
+
 
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证`
      */
     public void setAuthorizationTypes(Long [] AuthorizationTypes) {
         this.AuthorizationTypes = AuthorizationTypes;
@@ -376,6 +398,22 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         this.AdminIdCardNumber = AdminIdCardNumber;
     }
 
+    /**
+     * Get 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M 
+     * @return BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     */
+    public String getBusinessLicense() {
+        return this.BusinessLicense;
+    }
+
+    /**
+     * Set 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     * @param BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     */
+    public void setBusinessLicense(String BusinessLicense) {
+        this.BusinessLicense = BusinessLicense;
+    }
+
     public RegistrationOrganizationInfo() {
     }
 
@@ -420,6 +458,9 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         if (source.AdminIdCardNumber != null) {
             this.AdminIdCardNumber = new String(source.AdminIdCardNumber);
         }
+        if (source.BusinessLicense != null) {
+            this.BusinessLicense = new String(source.BusinessLicense);
+        }
     }
 
 
@@ -438,6 +479,7 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
         this.setParamSimple(map, prefix + "AdminIdCardType", this.AdminIdCardType);
         this.setParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
+        this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
 
     }
 }

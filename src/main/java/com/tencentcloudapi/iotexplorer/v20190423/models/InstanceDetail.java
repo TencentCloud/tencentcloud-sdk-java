@@ -31,7 +31,7 @@ public class InstanceDetail extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
+    * 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
     */
     @SerializedName("InstanceType")
     @Expose
@@ -59,7 +59,7 @@ public class InstanceDetail extends AbstractModel {
     private Long TotalDeviceNum;
 
     /**
-    * 以注册设备数
+    * 已注册设备数
     */
     @SerializedName("UsedDeviceNum")
     @Expose
@@ -117,6 +117,22 @@ public class InstanceDetail extends AbstractModel {
     private Long ActivateDevice;
 
     /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -133,16 +149,16 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例类型（0 公共实例 1 标准企业实例 2专享企业实例） 
-     * @return InstanceType 实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
+     * Get 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例） 
+     * @return InstanceType 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
-     * @param InstanceType 实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
+     * Set 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
+     * @param InstanceType 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
@@ -197,16 +213,16 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 以注册设备数 
-     * @return UsedDeviceNum 以注册设备数
+     * Get 已注册设备数 
+     * @return UsedDeviceNum 已注册设备数
      */
     public Long getUsedDeviceNum() {
         return this.UsedDeviceNum;
     }
 
     /**
-     * Set 以注册设备数
-     * @param UsedDeviceNum 以注册设备数
+     * Set 已注册设备数
+     * @param UsedDeviceNum 已注册设备数
      */
     public void setUsedDeviceNum(Long UsedDeviceNum) {
         this.UsedDeviceNum = UsedDeviceNum;
@@ -332,6 +348,46 @@ public class InstanceDetail extends AbstractModel {
         this.ActivateDevice = ActivateDevice;
     }
 
+    /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 实例状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public InstanceDetail() {
     }
 
@@ -379,6 +435,12 @@ public class InstanceDetail extends AbstractModel {
         if (source.ActivateDevice != null) {
             this.ActivateDevice = new Long(source.ActivateDevice);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -399,6 +461,8 @@ public class InstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "TotalDevice", this.TotalDevice);
         this.setParamSimple(map, prefix + "ActivateDevice", this.ActivateDevice);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

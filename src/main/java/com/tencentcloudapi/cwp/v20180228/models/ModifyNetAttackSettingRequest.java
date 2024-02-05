@@ -38,6 +38,34 @@ public class ModifyNetAttackSettingRequest extends AbstractModel {
     private Long NetAttackAlarmStatus;
 
     /**
+    * 1 全部旗舰版主机，0 Quuids列表主机
+    */
+    @SerializedName("Scope")
+    @Expose
+    private Long Scope;
+
+    /**
+    * 自选主机
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
+    * 自选排除的主机
+    */
+    @SerializedName("ExcludeInstanceIds")
+    @Expose
+    private String [] ExcludeInstanceIds;
+
+    /**
+    * 新增资产自动包含 0 不包含 1包含
+    */
+    @SerializedName("AutoInclude")
+    @Expose
+    private Long AutoInclude;
+
+    /**
      * Get 0 关闭网络攻击检测，1开启网络攻击检测 
      * @return NetAttackEnable 0 关闭网络攻击检测，1开启网络攻击检测
      */
@@ -69,6 +97,70 @@ public class ModifyNetAttackSettingRequest extends AbstractModel {
         this.NetAttackAlarmStatus = NetAttackAlarmStatus;
     }
 
+    /**
+     * Get 1 全部旗舰版主机，0 Quuids列表主机 
+     * @return Scope 1 全部旗舰版主机，0 Quuids列表主机
+     */
+    public Long getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set 1 全部旗舰版主机，0 Quuids列表主机
+     * @param Scope 1 全部旗舰版主机，0 Quuids列表主机
+     */
+    public void setScope(Long Scope) {
+        this.Scope = Scope;
+    }
+
+    /**
+     * Get 自选主机 
+     * @return InstanceIds 自选主机
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 自选主机
+     * @param InstanceIds 自选主机
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 自选排除的主机 
+     * @return ExcludeInstanceIds 自选排除的主机
+     */
+    public String [] getExcludeInstanceIds() {
+        return this.ExcludeInstanceIds;
+    }
+
+    /**
+     * Set 自选排除的主机
+     * @param ExcludeInstanceIds 自选排除的主机
+     */
+    public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
+        this.ExcludeInstanceIds = ExcludeInstanceIds;
+    }
+
+    /**
+     * Get 新增资产自动包含 0 不包含 1包含 
+     * @return AutoInclude 新增资产自动包含 0 不包含 1包含
+     */
+    public Long getAutoInclude() {
+        return this.AutoInclude;
+    }
+
+    /**
+     * Set 新增资产自动包含 0 不包含 1包含
+     * @param AutoInclude 新增资产自动包含 0 不包含 1包含
+     */
+    public void setAutoInclude(Long AutoInclude) {
+        this.AutoInclude = AutoInclude;
+    }
+
     public ModifyNetAttackSettingRequest() {
     }
 
@@ -83,6 +175,24 @@ public class ModifyNetAttackSettingRequest extends AbstractModel {
         if (source.NetAttackAlarmStatus != null) {
             this.NetAttackAlarmStatus = new Long(source.NetAttackAlarmStatus);
         }
+        if (source.Scope != null) {
+            this.Scope = new Long(source.Scope);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.ExcludeInstanceIds != null) {
+            this.ExcludeInstanceIds = new String[source.ExcludeInstanceIds.length];
+            for (int i = 0; i < source.ExcludeInstanceIds.length; i++) {
+                this.ExcludeInstanceIds[i] = new String(source.ExcludeInstanceIds[i]);
+            }
+        }
+        if (source.AutoInclude != null) {
+            this.AutoInclude = new Long(source.AutoInclude);
+        }
     }
 
 
@@ -92,6 +202,10 @@ public class ModifyNetAttackSettingRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetAttackEnable", this.NetAttackEnable);
         this.setParamSimple(map, prefix + "NetAttackAlarmStatus", this.NetAttackAlarmStatus);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
+        this.setParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
 
     }
 }

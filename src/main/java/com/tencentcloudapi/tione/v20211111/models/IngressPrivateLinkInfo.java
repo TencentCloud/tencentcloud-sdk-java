@@ -56,6 +56,14 @@ public class IngressPrivateLinkInfo extends AbstractModel {
     private String [] InnerHttpsAddr;
 
     /**
+    * 私有连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
      * Get 用户VpcId
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId 用户VpcId
@@ -135,6 +143,26 @@ public class IngressPrivateLinkInfo extends AbstractModel {
         this.InnerHttpsAddr = InnerHttpsAddr;
     }
 
+    /**
+     * Get 私有连接状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return State 私有连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set 私有连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param State 私有连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
     public IngressPrivateLinkInfo() {
     }
 
@@ -161,6 +189,9 @@ public class IngressPrivateLinkInfo extends AbstractModel {
                 this.InnerHttpsAddr[i] = new String(source.InnerHttpsAddr[i]);
             }
         }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class IngressPrivateLinkInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArraySimple(map, prefix + "InnerHttpAddr.", this.InnerHttpAddr);
         this.setParamArraySimple(map, prefix + "InnerHttpsAddr.", this.InnerHttpsAddr);
+        this.setParamSimple(map, prefix + "State", this.State);
 
     }
 }

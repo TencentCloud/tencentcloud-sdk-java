@@ -63,6 +63,7 @@ public class DescribeClusterNodesRequest extends AbstractModel {
 
     /**
     * 每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据
     */
     @SerializedName("Limit")
     @Expose
@@ -201,8 +202,10 @@ public class DescribeClusterNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页返回数量，默认值为100，最大值为100。 
+     * Get 每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据 
      * @return Limit 每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据
      */
     public Long getLimit() {
         return this.Limit;
@@ -210,7 +213,9 @@ public class DescribeClusterNodesRequest extends AbstractModel {
 
     /**
      * Set 每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据
      * @param Limit 每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

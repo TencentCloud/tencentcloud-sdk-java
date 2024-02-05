@@ -52,7 +52,7 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel {
     private String InvoiceKind;
 
     /**
-    * 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)时必填;
+    * 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)、全电纸质发票（增值税普通发票）时必填;
 区块链为 5 位
     */
     @SerializedName("CheckCode")
@@ -153,9 +153,9 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel {
     }
 
     /**
-     * Get 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)时必填;
+     * Get 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)、全电纸质发票（增值税普通发票）时必填;
 区块链为 5 位 
-     * @return CheckCode 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)时必填;
+     * @return CheckCode 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)、全电纸质发票（增值税普通发票）时必填;
 区块链为 5 位
      */
     public String getCheckCode() {
@@ -163,9 +163,9 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel {
     }
 
     /**
-     * Set 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)时必填;
+     * Set 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)、全电纸质发票（增值税普通发票）时必填;
 区块链为 5 位
-     * @param CheckCode 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)时必填;
+     * @param CheckCode 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)、全电纸质发票（增值税普通发票）时必填;
 区块链为 5 位
      */
     public void setCheckCode(String CheckCode) {
