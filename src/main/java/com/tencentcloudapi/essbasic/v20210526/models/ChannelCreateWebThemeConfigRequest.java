@@ -32,7 +32,11 @@ public class ChannelCreateWebThemeConfigRequest extends AbstractModel {
 
     /**
     * 主题类型<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+<ul>
+<li>EMBED_WEB_THEME，web页面嵌入的主题风格配置</li>
+<li>COMPANY_AUTHENTICATE，子客认证主题配置， 对当前第三方应用号生效，
+目前支持的有，背景图替换，隐藏企业认证页面导航栏和隐藏企业认证顶部logo</li>
+</ul>
     */
     @SerializedName("ThemeType")
     @Expose
@@ -63,9 +67,17 @@ public class ChannelCreateWebThemeConfigRequest extends AbstractModel {
 
     /**
      * Get 主题类型<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置 
+<ul>
+<li>EMBED_WEB_THEME，web页面嵌入的主题风格配置</li>
+<li>COMPANY_AUTHENTICATE，子客认证主题配置， 对当前第三方应用号生效，
+目前支持的有，背景图替换，隐藏企业认证页面导航栏和隐藏企业认证顶部logo</li>
+</ul> 
      * @return ThemeType 主题类型<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+<ul>
+<li>EMBED_WEB_THEME，web页面嵌入的主题风格配置</li>
+<li>COMPANY_AUTHENTICATE，子客认证主题配置， 对当前第三方应用号生效，
+目前支持的有，背景图替换，隐藏企业认证页面导航栏和隐藏企业认证顶部logo</li>
+</ul>
      */
     public String getThemeType() {
         return this.ThemeType;
@@ -73,9 +85,17 @@ public class ChannelCreateWebThemeConfigRequest extends AbstractModel {
 
     /**
      * Set 主题类型<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+<ul>
+<li>EMBED_WEB_THEME，web页面嵌入的主题风格配置</li>
+<li>COMPANY_AUTHENTICATE，子客认证主题配置， 对当前第三方应用号生效，
+目前支持的有，背景图替换，隐藏企业认证页面导航栏和隐藏企业认证顶部logo</li>
+</ul>
      * @param ThemeType 主题类型<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+<ul>
+<li>EMBED_WEB_THEME，web页面嵌入的主题风格配置</li>
+<li>COMPANY_AUTHENTICATE，子客认证主题配置， 对当前第三方应用号生效，
+目前支持的有，背景图替换，隐藏企业认证页面导航栏和隐藏企业认证顶部logo</li>
+</ul>
      */
     public void setThemeType(String ThemeType) {
         this.ThemeType = ThemeType;

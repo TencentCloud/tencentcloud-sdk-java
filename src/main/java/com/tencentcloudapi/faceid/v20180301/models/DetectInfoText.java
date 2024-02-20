@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DetectInfoText extends AbstractModel {
 
     /**
-    * 本次流程最终验证结果。0为成功
+    * 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
@@ -269,9 +269,9 @@ public class DetectInfoText extends AbstractModel {
     private String VisaNum;
 
     /**
-     * Get 本次流程最终验证结果。0为成功
+     * Get 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrCode 本次流程最终验证结果。0为成功
+     * @return ErrCode 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
@@ -279,9 +279,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终验证结果。0为成功
+     * Set 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrCode 本次流程最终验证结果。0为成功
+     * @param ErrCode 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {

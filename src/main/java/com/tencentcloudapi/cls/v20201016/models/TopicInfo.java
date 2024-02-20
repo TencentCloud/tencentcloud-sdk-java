@@ -31,14 +31,14 @@ public class TopicInfo extends AbstractModel {
     private String LogsetId;
 
     /**
-    * 日志主题ID
+    * 主题ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志主题名称
+    * 主题名称
     */
     @SerializedName("TopicName")
     @Expose
@@ -52,14 +52,14 @@ public class TopicInfo extends AbstractModel {
     private Long PartitionCount;
 
     /**
-    * 是否开启索引
+    * 主题是否开启索引（主题类型需为日志主题）
     */
     @SerializedName("Index")
     @Expose
     private Boolean Index;
 
     /**
-    * 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+    * 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssumerName")
@@ -74,14 +74,14 @@ public class TopicInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 日主主题是否开启采集
+    * 主题是否开启采集
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 日志主题绑定的标签信息
+    * 主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -105,7 +105,7 @@ public class TopicInfo extends AbstractModel {
     private Long MaxSplitPartitions;
 
     /**
-    * 日主题的存储类型
+    * 主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
@@ -129,7 +129,7 @@ public class TopicInfo extends AbstractModel {
     private String SubAssumerName;
 
     /**
-    * 日志主题描述
+    * 主题描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Describes")
@@ -137,8 +137,8 @@ public class TopicInfo extends AbstractModel {
     private String Describes;
 
     /**
-    * 开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+    * 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HotPeriod")
@@ -182,32 +182,32 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get 主题ID 
+     * @return TopicId 主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set 主题ID
+     * @param TopicId 主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题名称 
-     * @return TopicName 日志主题名称
+     * Get 主题名称 
+     * @return TopicName 主题名称
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 日志主题名称
-     * @param TopicName 日志主题名称
+     * Set 主题名称
+     * @param TopicName 主题名称
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -230,25 +230,25 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否开启索引 
-     * @return Index 是否开启索引
+     * Get 主题是否开启索引（主题类型需为日志主题） 
+     * @return Index 主题是否开启索引（主题类型需为日志主题）
      */
     public Boolean getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 是否开启索引
-     * @param Index 是否开启索引
+     * Set 主题是否开启索引（主题类型需为日志主题）
+     * @param Index 主题是否开启索引（主题类型需为日志主题）
      */
     public void setIndex(Boolean Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * Get 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AssumerName 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * @return AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssumerName() {
@@ -256,9 +256,9 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Set 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * Set 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AssumerName 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * @param AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssumerName(String AssumerName) {
@@ -282,25 +282,25 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Get 日主主题是否开启采集 
-     * @return Status 日主主题是否开启采集
+     * Get 主题是否开启采集 
+     * @return Status 主题是否开启采集
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 日主主题是否开启采集
-     * @param Status 日主主题是否开启采集
+     * Set 主题是否开启采集
+     * @param Status 主题是否开启采集
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 日志主题绑定的标签信息
+     * Get 主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 日志主题绑定的标签信息
+     * @return Tags 主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -308,9 +308,9 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Set 日志主题绑定的标签信息
+     * Set 主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 日志主题绑定的标签信息
+     * @param Tags 主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -358,9 +358,9 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Get 日主题的存储类型
+     * Get 主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StorageType 日主题的存储类型
+     * @return StorageType 主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageType() {
@@ -368,9 +368,9 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Set 日主题的存储类型
+     * Set 主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StorageType 日主题的存储类型
+     * @param StorageType 主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(String StorageType) {
@@ -418,9 +418,9 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志主题描述
+     * Get 主题描述
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Describes 日志主题描述
+     * @return Describes 主题描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescribes() {
@@ -428,9 +428,9 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Set 日志主题描述
+     * Set 主题描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Describes 日志主题描述
+     * @param Describes 主题描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribes(String Describes) {
@@ -438,11 +438,11 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Get 开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+     * Get 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HotPeriod 开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+     * @return HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHotPeriod() {
@@ -450,11 +450,11 @@ public class TopicInfo extends AbstractModel {
     }
 
     /**
-     * Set 开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+     * Set 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HotPeriod 开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+     * @param HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHotPeriod(Long HotPeriod) {

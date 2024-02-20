@@ -90,6 +90,14 @@ public class LogContextInfo extends AbstractModel {
     private String IndexStatus;
 
     /**
+    * 日志内容的高亮描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HighLights")
+    @Expose
+    private HighLightItem [] HighLights;
+
+    /**
      * Get 日志来源设备 
      * @return Source 日志来源设备
      */
@@ -245,6 +253,26 @@ public class LogContextInfo extends AbstractModel {
         this.IndexStatus = IndexStatus;
     }
 
+    /**
+     * Get 日志内容的高亮描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HighLights 日志内容的高亮描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HighLightItem [] getHighLights() {
+        return this.HighLights;
+    }
+
+    /**
+     * Set 日志内容的高亮描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HighLights 日志内容的高亮描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHighLights(HighLightItem [] HighLights) {
+        this.HighLights = HighLights;
+    }
+
     public LogContextInfo() {
     }
 
@@ -280,6 +308,12 @@ public class LogContextInfo extends AbstractModel {
         if (source.IndexStatus != null) {
             this.IndexStatus = new String(source.IndexStatus);
         }
+        if (source.HighLights != null) {
+            this.HighLights = new HighLightItem[source.HighLights.length];
+            for (int i = 0; i < source.HighLights.length; i++) {
+                this.HighLights[i] = new HighLightItem(source.HighLights[i]);
+            }
+        }
     }
 
 
@@ -296,6 +330,7 @@ public class LogContextInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "RawLog", this.RawLog);
         this.setParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
+        this.setParamArrayObj(map, prefix + "HighLights.", this.HighLights);
 
     }
 }

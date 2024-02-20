@@ -38,7 +38,7 @@ public class InputManageMarketingRisk extends AbstractModel {
     * 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection
     */
     @SerializedName("SceneCode")
@@ -232,12 +232,12 @@ public class InputManageMarketingRisk extends AbstractModel {
      * Get 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection 
      * @return SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection
      */
     public String getSceneCode() {
@@ -248,12 +248,12 @@ public class InputManageMarketingRisk extends AbstractModel {
      * Set 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection
      * @param SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection
      */
     public void setSceneCode(String SceneCode) {

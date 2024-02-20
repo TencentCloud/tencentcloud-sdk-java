@@ -1174,6 +1174,17 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *更新服务级账号密码
+     * @param req ModifyServiceAccountPasswordRequest
+     * @return ModifyServiceAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceAccountPasswordResponse ModifyServiceAccountPassword(ModifyServiceAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyServiceAccountPassword", ModifyServiceAccountPasswordResponse.class);
+    }
+
+    /**
      *更新版本保留规则
      * @param req ModifyTagRetentionRuleRequest
      * @return ModifyTagRetentionRuleResponse
