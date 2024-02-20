@@ -1,5 +1,7 @@
 package hunyuan.v20230901;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.SSEResponseModel;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
@@ -7,6 +9,7 @@ import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.hunyuan.v20230901.HunyuanClient;
 import com.tencentcloudapi.hunyuan.v20230901.models.ChatStdRequest;
 import com.tencentcloudapi.hunyuan.v20230901.models.ChatStdResponse;
+import com.tencentcloudapi.hunyuan.v20230901.models.Choice;
 import com.tencentcloudapi.hunyuan.v20230901.models.Message;
 
 public class ChatStd {
@@ -30,11 +33,16 @@ public class ChatStd {
 
             ChatStdResponse resp = client.ChatStd(req);
 
+            Gson gson = new GsonBuilder().create();
             for (SSEResponseModel.SSE e : resp) {
-                System.out.println(e.Data);
+                ChatStdResponse eventModel = gson.fromJson(e.Data, ChatStdResponse.class);
+                Choice[] choices = eventModel.getChoices();
+                if (choices.length > 0) {
+                    System.out.println(choices[0].getDelta().getContent());
+                }
             }
         } catch (TencentCloudSDKException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 }

@@ -27,17 +27,12 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public abstract class SSEResponseModel extends AbstractModel implements Iterable<SSEResponseModel.SSE> {
-    protected String RequestId;
     private Response response;
     private CircuitBreaker.Token token;
 
-    public String getRequestId() {
-        return RequestId;
-    }
+    public abstract String getRequestId();
 
-    public void setRequestId(String requestId) {
-        RequestId = requestId;
-    }
+    public abstract void setRequestId(String requestId);
 
     public void setResponse(Response response) {
         this.response = response;
