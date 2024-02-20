@@ -42,7 +42,7 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
     * 待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
     */
     @SerializedName("NeedRelievedFlowId")
     @Expose
@@ -161,11 +161,11 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
      * Get 待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png) 
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png) 
      * @return NeedRelievedFlowId 待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      */
     public String getNeedRelievedFlowId() {
         return this.NeedRelievedFlowId;
@@ -175,11 +175,11 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel {
      * Set 待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      * @param NeedRelievedFlowId 待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      */
     public void setNeedRelievedFlowId(String NeedRelievedFlowId) {
         this.NeedRelievedFlowId = NeedRelievedFlowId;

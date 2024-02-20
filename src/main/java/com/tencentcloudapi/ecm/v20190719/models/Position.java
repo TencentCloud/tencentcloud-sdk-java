@@ -66,6 +66,14 @@ public class Position extends AbstractModel {
     private RegionInfo RegionInfo;
 
     /**
+    * 实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6Supported")
+    @Expose
+    private Boolean Ipv6Supported;
+
+    /**
      * Get 实例所在的Zone的信息。 
      * @return ZoneInfo 实例所在的Zone的信息。
      */
@@ -161,6 +169,26 @@ public class Position extends AbstractModel {
         this.RegionInfo = RegionInfo;
     }
 
+    /**
+     * Get 实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6Supported 实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIpv6Supported() {
+        return this.Ipv6Supported;
+    }
+
+    /**
+     * Set 实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6Supported 实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6Supported(Boolean Ipv6Supported) {
+        this.Ipv6Supported = Ipv6Supported;
+    }
+
     public Position() {
     }
 
@@ -187,6 +215,9 @@ public class Position extends AbstractModel {
         if (source.RegionInfo != null) {
             this.RegionInfo = new RegionInfo(source.RegionInfo);
         }
+        if (source.Ipv6Supported != null) {
+            this.Ipv6Supported = new Boolean(source.Ipv6Supported);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class Position extends AbstractModel {
         this.setParamObj(map, prefix + "Province.", this.Province);
         this.setParamObj(map, prefix + "City.", this.City);
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
+        this.setParamSimple(map, prefix + "Ipv6Supported", this.Ipv6Supported);
 
     }
 }

@@ -809,6 +809,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询任务列表
+     * @param req DescribeTasksRequest
+     * @return DescribeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
+    }
+
+    /**
      *本接口(DescribeZones)用于查询可售卖地域可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse

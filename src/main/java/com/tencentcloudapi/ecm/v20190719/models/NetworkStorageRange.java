@@ -129,6 +129,20 @@ public class NetworkStorageRange extends AbstractModel {
     private Long MaxModuleNum;
 
     /**
+    * 是否支持cbs
+    */
+    @SerializedName("CBSSupported")
+    @Expose
+    private Boolean CBSSupported;
+
+    /**
+    * 磁盘数量限制
+    */
+    @SerializedName("DiskNumLimit")
+    @Expose
+    private Long DiskNumLimit;
+
+    /**
      * Get 网络带宽上限 
      * @return MaxBandwidth 网络带宽上限
      */
@@ -368,6 +382,38 @@ public class NetworkStorageRange extends AbstractModel {
         this.MaxModuleNum = MaxModuleNum;
     }
 
+    /**
+     * Get 是否支持cbs 
+     * @return CBSSupported 是否支持cbs
+     */
+    public Boolean getCBSSupported() {
+        return this.CBSSupported;
+    }
+
+    /**
+     * Set 是否支持cbs
+     * @param CBSSupported 是否支持cbs
+     */
+    public void setCBSSupported(Boolean CBSSupported) {
+        this.CBSSupported = CBSSupported;
+    }
+
+    /**
+     * Get 磁盘数量限制 
+     * @return DiskNumLimit 磁盘数量限制
+     */
+    public Long getDiskNumLimit() {
+        return this.DiskNumLimit;
+    }
+
+    /**
+     * Set 磁盘数量限制
+     * @param DiskNumLimit 磁盘数量限制
+     */
+    public void setDiskNumLimit(Long DiskNumLimit) {
+        this.DiskNumLimit = DiskNumLimit;
+    }
+
     public NetworkStorageRange() {
     }
 
@@ -421,6 +467,12 @@ public class NetworkStorageRange extends AbstractModel {
         if (source.MaxModuleNum != null) {
             this.MaxModuleNum = new Long(source.MaxModuleNum);
         }
+        if (source.CBSSupported != null) {
+            this.CBSSupported = new Boolean(source.CBSSupported);
+        }
+        if (source.DiskNumLimit != null) {
+            this.DiskNumLimit = new Long(source.DiskNumLimit);
+        }
     }
 
 
@@ -443,6 +495,8 @@ public class NetworkStorageRange extends AbstractModel {
         this.setParamSimple(map, prefix + "PerBandwidth", this.PerBandwidth);
         this.setParamSimple(map, prefix + "PerDataDisk", this.PerDataDisk);
         this.setParamSimple(map, prefix + "MaxModuleNum", this.MaxModuleNum);
+        this.setParamSimple(map, prefix + "CBSSupported", this.CBSSupported);
+        this.setParamSimple(map, prefix + "DiskNumLimit", this.DiskNumLimit);
 
     }
 }

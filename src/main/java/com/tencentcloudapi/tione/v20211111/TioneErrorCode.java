@@ -228,6 +228,9 @@ public enum TioneErrorCode {
     // 获取HDFS存储信息失败。
      INTERNALERROR_QUERYHDFSINFOFAILED("InternalError.QueryHDFSInfoFailed"),
      
+    // 询价失败
+     INTERNALERROR_QUERYPRICEFAILED("InternalError.QueryPriceFailed"),
+     
     // 查询预付费资源组详情失败。
      INTERNALERROR_QUERYRESOURCEGROUPFAILED("InternalError.QueryResourceGroupFailed"),
      
@@ -320,6 +323,9 @@ public enum TioneErrorCode {
      
     // 不支持的过滤参数。
      INVALIDPARAMETERVALUE_DCFILTERVALUES("InvalidParameterValue.DCFilterValues"),
+     
+    // 数据集不存在
+     INVALIDPARAMETERVALUE_DATASETNOTEXIST("InvalidParameterValue.DatasetNotExist"),
      
     // 数据集数量超过限制。
      INVALIDPARAMETERVALUE_DATASETNUMLIMITEXCEEDED("InvalidParameterValue.DatasetNumLimitExceeded"),

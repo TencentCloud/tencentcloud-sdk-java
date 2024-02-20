@@ -161,6 +161,14 @@ public class TaskResultInfo extends AbstractModel {
     private Long TotalTime;
 
     /**
+    * 获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QueryResultTime")
+    @Expose
+    private Float QueryResultTime;
+
+    /**
      * Get 任务唯一ID 
      * @return TaskId 任务唯一ID
      */
@@ -480,6 +488,26 @@ public class TaskResultInfo extends AbstractModel {
         this.TotalTime = TotalTime;
     }
 
+    /**
+     * Get 获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QueryResultTime 获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getQueryResultTime() {
+        return this.QueryResultTime;
+    }
+
+    /**
+     * Set 获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QueryResultTime 获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQueryResultTime(Float QueryResultTime) {
+        this.QueryResultTime = QueryResultTime;
+    }
+
     public TaskResultInfo() {
     }
 
@@ -548,6 +576,9 @@ public class TaskResultInfo extends AbstractModel {
         if (source.TotalTime != null) {
             this.TotalTime = new Long(source.TotalTime);
         }
+        if (source.QueryResultTime != null) {
+            this.QueryResultTime = new Float(source.QueryResultTime);
+        }
     }
 
 
@@ -574,6 +605,7 @@ public class TaskResultInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
         this.setParamSimple(map, prefix + "DisplayFormat", this.DisplayFormat);
         this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
+        this.setParamSimple(map, prefix + "QueryResultTime", this.QueryResultTime);
 
     }
 }

@@ -570,7 +570,7 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
-     *获取帐户信息
+     *获取账户信息
      * @param req DescribeUserDetailRequest
      * @return DescribeUserDetailResponse
      * @throws TencentCloudSDKException

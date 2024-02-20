@@ -63,6 +63,14 @@ FALSE：表示不用作公网网关
     private Long Ipv6AddressCount;
 
     /**
+    * runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6SubnetIds")
+    @Expose
+    private String [] Ipv6SubnetIds;
+
+    /**
      * Get 私有网络ID，形如vpc-xxx。 
      * @return VpcId 私有网络ID，形如vpc-xxx。
      */
@@ -158,6 +166,26 @@ FALSE：表示不用作公网网关
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 
+    /**
+     * Get runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6SubnetIds runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIpv6SubnetIds() {
+        return this.Ipv6SubnetIds;
+    }
+
+    /**
+     * Set runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6SubnetIds runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6SubnetIds(String [] Ipv6SubnetIds) {
+        this.Ipv6SubnetIds = Ipv6SubnetIds;
+    }
+
     public VirtualPrivateCloud() {
     }
 
@@ -184,6 +212,12 @@ FALSE：表示不用作公网网关
         if (source.Ipv6AddressCount != null) {
             this.Ipv6AddressCount = new Long(source.Ipv6AddressCount);
         }
+        if (source.Ipv6SubnetIds != null) {
+            this.Ipv6SubnetIds = new String[source.Ipv6SubnetIds.length];
+            for (int i = 0; i < source.Ipv6SubnetIds.length; i++) {
+                this.Ipv6SubnetIds[i] = new String(source.Ipv6SubnetIds[i]);
+            }
+        }
     }
 
 
@@ -196,6 +230,7 @@ FALSE：表示不用作公网网关
         this.setParamSimple(map, prefix + "AsVpcGateway", this.AsVpcGateway);
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+        this.setParamArraySimple(map, prefix + "Ipv6SubnetIds.", this.Ipv6SubnetIds);
 
     }
 }

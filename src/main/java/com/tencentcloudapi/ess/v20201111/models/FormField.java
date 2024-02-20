@@ -39,7 +39,7 @@ DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击�
     /**
     * 控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
     */
     @SerializedName("ComponentId")
     @Expose
@@ -48,7 +48,7 @@ DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击�
     /**
     * 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
     */
     @SerializedName("ComponentName")
     @Expose
@@ -97,10 +97,10 @@ DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击�
     /**
      * Get 控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a> 
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a> 
      * @return ComponentId 控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
      */
     public String getComponentId() {
         return this.ComponentId;
@@ -109,10 +109,10 @@ DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击�
     /**
      * Set 控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
      * @param ComponentId 控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
      */
     public void setComponentId(String ComponentId) {
         this.ComponentId = ComponentId;
@@ -121,10 +121,10 @@ DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击�
     /**
      * Get 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a> 
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a> 
      * @return ComponentName 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
      */
     public String getComponentName() {
         return this.ComponentName;
@@ -133,10 +133,10 @@ DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击�
     /**
      * Set 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
      * @param ComponentName 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;

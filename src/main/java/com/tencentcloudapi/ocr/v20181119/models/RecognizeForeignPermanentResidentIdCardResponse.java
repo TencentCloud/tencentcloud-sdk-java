@@ -73,6 +73,20 @@ public class RecognizeForeignPermanentResidentIdCardResponse extends AbstractMod
     private String No;
 
     /**
+    * 曾持证件号码。
+    */
+    @SerializedName("PreviousNumber")
+    @Expose
+    private String PreviousNumber;
+
+    /**
+    * 签发机关。
+    */
+    @SerializedName("IssuedAuthority")
+    @Expose
+    private String IssuedAuthority;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +206,38 @@ public class RecognizeForeignPermanentResidentIdCardResponse extends AbstractMod
     }
 
     /**
+     * Get 曾持证件号码。 
+     * @return PreviousNumber 曾持证件号码。
+     */
+    public String getPreviousNumber() {
+        return this.PreviousNumber;
+    }
+
+    /**
+     * Set 曾持证件号码。
+     * @param PreviousNumber 曾持证件号码。
+     */
+    public void setPreviousNumber(String PreviousNumber) {
+        this.PreviousNumber = PreviousNumber;
+    }
+
+    /**
+     * Get 签发机关。 
+     * @return IssuedAuthority 签发机关。
+     */
+    public String getIssuedAuthority() {
+        return this.IssuedAuthority;
+    }
+
+    /**
+     * Set 签发机关。
+     * @param IssuedAuthority 签发机关。
+     */
+    public void setIssuedAuthority(String IssuedAuthority) {
+        this.IssuedAuthority = IssuedAuthority;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +282,12 @@ public class RecognizeForeignPermanentResidentIdCardResponse extends AbstractMod
         if (source.No != null) {
             this.No = new String(source.No);
         }
+        if (source.PreviousNumber != null) {
+            this.PreviousNumber = new String(source.PreviousNumber);
+        }
+        if (source.IssuedAuthority != null) {
+            this.IssuedAuthority = new String(source.IssuedAuthority);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -253,6 +305,8 @@ public class RecognizeForeignPermanentResidentIdCardResponse extends AbstractMod
         this.setParamSimple(map, prefix + "Nationality", this.Nationality);
         this.setParamSimple(map, prefix + "PeriodOfValidity", this.PeriodOfValidity);
         this.setParamSimple(map, prefix + "No", this.No);
+        this.setParamSimple(map, prefix + "PreviousNumber", this.PreviousNumber);
+        this.setParamSimple(map, prefix + "IssuedAuthority", this.IssuedAuthority);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

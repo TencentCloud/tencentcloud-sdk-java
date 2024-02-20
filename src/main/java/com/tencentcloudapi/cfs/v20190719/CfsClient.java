@@ -506,7 +506,7 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
-     *更新文件系统带宽
+     *更新文件系统吞吐
 仅吞吐型支持此接口
      * @param req UpdateFileSystemBandwidthLimitRequest
      * @return UpdateFileSystemBandwidthLimitResponse

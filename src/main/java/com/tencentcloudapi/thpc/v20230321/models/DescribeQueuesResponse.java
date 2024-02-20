@@ -31,7 +31,7 @@ public class DescribeQueuesResponse extends AbstractModel {
     private QueueOverview [] QueueSet;
 
     /**
-    * 符合条件的节点数量。
+    * 符合条件的队列数量。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeQueuesResponse extends AbstractModel {
     }
 
     /**
-     * Get 符合条件的节点数量。 
-     * @return TotalCount 符合条件的节点数量。
+     * Get 符合条件的队列数量。 
+     * @return TotalCount 符合条件的队列数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的节点数量。
-     * @param TotalCount 符合条件的节点数量。
+     * Set 符合条件的队列数量。
+     * @param TotalCount 符合条件的队列数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

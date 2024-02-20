@@ -163,6 +163,13 @@ public class ScaleOutClusterRequest extends AbstractModel {
     private String SubnetId;
 
     /**
+    * 扩容指定配置组
+    */
+    @SerializedName("ScaleOutServiceConfGroupsInfo")
+    @Expose
+    private ScaleOutServiceConfGroupsInfo [] ScaleOutServiceConfGroupsInfo;
+
+    /**
      * Get 节点计费模式。取值范围：
 <li>PREPAID：预付费，即包年包月。</li>
 <li>POSTPAID_BY_HOUR：按小时后付费。</li>
@@ -490,6 +497,22 @@ public class ScaleOutClusterRequest extends AbstractModel {
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 扩容指定配置组 
+     * @return ScaleOutServiceConfGroupsInfo 扩容指定配置组
+     */
+    public ScaleOutServiceConfGroupsInfo [] getScaleOutServiceConfGroupsInfo() {
+        return this.ScaleOutServiceConfGroupsInfo;
+    }
+
+    /**
+     * Set 扩容指定配置组
+     * @param ScaleOutServiceConfGroupsInfo 扩容指定配置组
+     */
+    public void setScaleOutServiceConfGroupsInfo(ScaleOutServiceConfGroupsInfo [] ScaleOutServiceConfGroupsInfo) {
+        this.ScaleOutServiceConfGroupsInfo = ScaleOutServiceConfGroupsInfo;
+    }
+
     public ScaleOutClusterRequest() {
     }
 
@@ -570,6 +593,12 @@ public class ScaleOutClusterRequest extends AbstractModel {
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.ScaleOutServiceConfGroupsInfo != null) {
+            this.ScaleOutServiceConfGroupsInfo = new ScaleOutServiceConfGroupsInfo[source.ScaleOutServiceConfGroupsInfo.length];
+            for (int i = 0; i < source.ScaleOutServiceConfGroupsInfo.length; i++) {
+                this.ScaleOutServiceConfGroupsInfo[i] = new ScaleOutServiceConfGroupsInfo(source.ScaleOutServiceConfGroupsInfo[i]);
+            }
+        }
     }
 
 
@@ -596,6 +625,7 @@ public class ScaleOutClusterRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
 
     }
 }
