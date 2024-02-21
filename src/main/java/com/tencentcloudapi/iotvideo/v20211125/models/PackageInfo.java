@@ -92,6 +92,14 @@ public class PackageInfo extends AbstractModel {
     private Long ChannelId;
 
     /**
+    * 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CSUserId")
+    @Expose
+    private String CSUserId;
+
+    /**
      * Get 云存开启状态，0为未开启，2为正在生效，1为已过期
 注：这里只返回状态为0的数据 
      * @return Status 云存开启状态，0为未开启，2为正在生效，1为已过期
@@ -255,6 +263,26 @@ public class PackageInfo extends AbstractModel {
         this.ChannelId = ChannelId;
     }
 
+    /**
+     * Get 用户id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CSUserId 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCSUserId() {
+        return this.CSUserId;
+    }
+
+    /**
+     * Set 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CSUserId 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCSUserId(String CSUserId) {
+        this.CSUserId = CSUserId;
+    }
+
     public PackageInfo() {
     }
 
@@ -290,6 +318,9 @@ public class PackageInfo extends AbstractModel {
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
         }
+        if (source.CSUserId != null) {
+            this.CSUserId = new String(source.CSUserId);
+        }
     }
 
 
@@ -306,6 +337,7 @@ public class PackageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "CSUserId", this.CSUserId);
 
     }
 }

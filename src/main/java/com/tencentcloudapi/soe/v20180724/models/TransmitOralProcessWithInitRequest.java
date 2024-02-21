@@ -190,7 +190,8 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel {
     private String Keyword;
 
     /**
-    * 音频存储路径，支持通过子路径指定文件夹名称
+    * 音频存储模式，此参数已废弃，无需设置；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
     */
     @SerializedName("COSBucketURL")
     @Expose
@@ -649,16 +650,20 @@ public class TransmitOralProcessWithInitRequest extends AbstractModel {
     }
 
     /**
-     * Get 音频存储路径，支持通过子路径指定文件夹名称 
-     * @return COSBucketURL 音频存储路径，支持通过子路径指定文件夹名称
+     * Get 音频存储模式，此参数已废弃，无需设置；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。 
+     * @return COSBucketURL 音频存储模式，此参数已废弃，无需设置；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
      */
     public String getCOSBucketURL() {
         return this.COSBucketURL;
     }
 
     /**
-     * Set 音频存储路径，支持通过子路径指定文件夹名称
-     * @param COSBucketURL 音频存储路径，支持通过子路径指定文件夹名称
+     * Set 音频存储模式，此参数已废弃，无需设置；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
+     * @param COSBucketURL 音频存储模式，此参数已废弃，无需设置；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
      */
     public void setCOSBucketURL(String COSBucketURL) {
         this.COSBucketURL = COSBucketURL;

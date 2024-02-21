@@ -31,11 +31,18 @@ public class DescribeSlowLogResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 慢查询详情。
+    * 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
     */
     @SerializedName("InstanceSlowlogDetail")
     @Expose
     private InstanceSlowlogDetail [] InstanceSlowlogDetail;
+
+    /**
+    * 慢查询详情。
+    */
+    @SerializedName("InstanceSlowLogDetail")
+    @Expose
+    private InstanceSlowlogDetail [] InstanceSlowLogDetail;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,19 +68,35 @@ public class DescribeSlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 慢查询详情。 
-     * @return InstanceSlowlogDetail 慢查询详情。
+     * Get 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。 
+     * @return InstanceSlowlogDetail 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
      */
     public InstanceSlowlogDetail [] getInstanceSlowlogDetail() {
         return this.InstanceSlowlogDetail;
     }
 
     /**
-     * Set 慢查询详情。
-     * @param InstanceSlowlogDetail 慢查询详情。
+     * Set 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
+     * @param InstanceSlowlogDetail 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
      */
     public void setInstanceSlowlogDetail(InstanceSlowlogDetail [] InstanceSlowlogDetail) {
         this.InstanceSlowlogDetail = InstanceSlowlogDetail;
+    }
+
+    /**
+     * Get 慢查询详情。 
+     * @return InstanceSlowLogDetail 慢查询详情。
+     */
+    public InstanceSlowlogDetail [] getInstanceSlowLogDetail() {
+        return this.InstanceSlowLogDetail;
+    }
+
+    /**
+     * Set 慢查询详情。
+     * @param InstanceSlowLogDetail 慢查询详情。
+     */
+    public void setInstanceSlowLogDetail(InstanceSlowlogDetail [] InstanceSlowLogDetail) {
+        this.InstanceSlowLogDetail = InstanceSlowLogDetail;
     }
 
     /**
@@ -109,6 +132,12 @@ public class DescribeSlowLogResponse extends AbstractModel {
                 this.InstanceSlowlogDetail[i] = new InstanceSlowlogDetail(source.InstanceSlowlogDetail[i]);
             }
         }
+        if (source.InstanceSlowLogDetail != null) {
+            this.InstanceSlowLogDetail = new InstanceSlowlogDetail[source.InstanceSlowLogDetail.length];
+            for (int i = 0; i < source.InstanceSlowLogDetail.length; i++) {
+                this.InstanceSlowLogDetail[i] = new InstanceSlowlogDetail(source.InstanceSlowLogDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +150,7 @@ public class DescribeSlowLogResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "InstanceSlowlogDetail.", this.InstanceSlowlogDetail);
+        this.setParamArrayObj(map, prefix + "InstanceSlowLogDetail.", this.InstanceSlowLogDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

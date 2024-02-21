@@ -91,7 +91,7 @@ lo（老挝语）：zh（简体中文）、zh-HK（繁体中文）、 zh-TW（�
     private String Url;
 
     /**
-    * 原始文档类型
+    * 原始文档类型。该参数为高级参数，请留空，如需使用，请与工作人员确认后再使用。
     */
     @SerializedName("BasicDocumentType")
     @Expose
@@ -320,16 +320,16 @@ lo（老挝语）：zh（简体中文）、zh-HK（繁体中文）、 zh-TW（�
     }
 
     /**
-     * Get 原始文档类型 
-     * @return BasicDocumentType 原始文档类型
+     * Get 原始文档类型。该参数为高级参数，请留空，如需使用，请与工作人员确认后再使用。 
+     * @return BasicDocumentType 原始文档类型。该参数为高级参数，请留空，如需使用，请与工作人员确认后再使用。
      */
     public String getBasicDocumentType() {
         return this.BasicDocumentType;
     }
 
     /**
-     * Set 原始文档类型
-     * @param BasicDocumentType 原始文档类型
+     * Set 原始文档类型。该参数为高级参数，请留空，如需使用，请与工作人员确认后再使用。
+     * @param BasicDocumentType 原始文档类型。该参数为高级参数，请留空，如需使用，请与工作人员确认后再使用。
      */
     public void setBasicDocumentType(String BasicDocumentType) {
         this.BasicDocumentType = BasicDocumentType;

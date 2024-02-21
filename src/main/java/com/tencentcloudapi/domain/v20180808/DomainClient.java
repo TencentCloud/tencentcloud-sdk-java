@@ -149,6 +149,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *用于清除多余的预定域名信息
+     * @param req DeleteReservedPreDomainInfoRequest
+     * @return DeleteReservedPreDomainInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReservedPreDomainInfoResponse DeleteReservedPreDomainInfo(DeleteReservedPreDomainInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteReservedPreDomainInfo", DeleteReservedPreDomainInfoResponse.class);
+    }
+
+    /**
      *本接口 ( DeleteTemplate ) 用于删除信息模板。
      * @param req DeleteTemplateRequest
      * @return DeleteTemplateResponse
@@ -248,6 +259,28 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *用户服务商提前获取预释放域名数据，查询数据根据结束时间进行倒序。
+     * @param req DescribePreDomainListRequest
+     * @return DescribePreDomainListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePreDomainListResponse DescribePreDomainList(DescribePreDomainListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePreDomainList", DescribePreDomainListResponse.class);
+    }
+
+    /**
+     *合作商用于查询预约预释放状态信息内容
+     * @param req DescribeReservedPreDomainInfoRequest
+     * @return DescribeReservedPreDomainInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedPreDomainInfoResponse DescribeReservedPreDomainInfo(DescribeReservedPreDomainInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReservedPreDomainInfo", DescribeReservedPreDomainInfoResponse.class);
+    }
+
+    /**
      *本接口 (DescribeTemplate) 用于获取模板信息。
      * @param req DescribeTemplateRequest
      * @return DescribeTemplateResponse
@@ -323,6 +356,17 @@ public class DomainClient extends AbstractClient{
     public RenewDomainBatchResponse RenewDomainBatch(RenewDomainBatchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RenewDomainBatch", RenewDomainBatchResponse.class);
+    }
+
+    /**
+     *用于合作商对预释放域名进行预留。
+     * @param req ReservedPreDomainsRequest
+     * @return ReservedPreDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReservedPreDomainsResponse ReservedPreDomains(ReservedPreDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReservedPreDomains", ReservedPreDomainsResponse.class);
     }
 
     /**
