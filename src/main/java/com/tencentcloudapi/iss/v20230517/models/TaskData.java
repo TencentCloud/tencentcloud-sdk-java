@@ -137,6 +137,38 @@ public class TaskData extends AbstractModel {
     private Long Runtime;
 
     /**
+    * 设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private String DeviceId;
+
+    /**
+    * 设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceName")
+    @Expose
+    private String DeviceName;
+
+    /**
+    * 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private String ChannelId;
+
+    /**
+    *  通道名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelName")
+    @Expose
+    private String ChannelName;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -396,6 +428,86 @@ public class TaskData extends AbstractModel {
         this.Runtime = Runtime;
     }
 
+    /**
+     * Get 设备ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceId 设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceId 设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    /**
+     * Get 设备名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceName 设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceName() {
+        return this.DeviceName;
+    }
+
+    /**
+     * Set 设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceName 设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceName(String DeviceName) {
+        this.DeviceName = DeviceName;
+    }
+
+    /**
+     * Get 通道ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelId 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelId 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelId(String ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get  通道名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelName  通道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelName() {
+        return this.ChannelName;
+    }
+
+    /**
+     * Set  通道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelName  通道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelName(String ChannelName) {
+        this.ChannelName = ChannelName;
+    }
+
     public TaskData() {
     }
 
@@ -452,6 +564,18 @@ public class TaskData extends AbstractModel {
         if (source.Runtime != null) {
             this.Runtime = new Long(source.Runtime);
         }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
     }
 
 
@@ -475,6 +599,10 @@ public class TaskData extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamSimple(map, prefix + "Runtime", this.Runtime);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
 
     }
 }

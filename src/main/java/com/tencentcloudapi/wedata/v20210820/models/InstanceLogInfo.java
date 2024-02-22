@@ -128,6 +128,14 @@ public class InstanceLogInfo extends AbstractModel {
     private String CodeFileName;
 
     /**
+    * 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtensionInfo")
+    @Expose
+    private AttributeItemDTO [] ExtensionInfo;
+
+    /**
      * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务id
@@ -387,6 +395,26 @@ public class InstanceLogInfo extends AbstractModel {
         this.CodeFileName = CodeFileName;
     }
 
+    /**
+     * Get 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtensionInfo 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AttributeItemDTO [] getExtensionInfo() {
+        return this.ExtensionInfo;
+    }
+
+    /**
+     * Set 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtensionInfo 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtensionInfo(AttributeItemDTO [] ExtensionInfo) {
+        this.ExtensionInfo = ExtensionInfo;
+    }
+
     public InstanceLogInfo() {
     }
 
@@ -434,6 +462,12 @@ public class InstanceLogInfo extends AbstractModel {
         if (source.CodeFileName != null) {
             this.CodeFileName = new String(source.CodeFileName);
         }
+        if (source.ExtensionInfo != null) {
+            this.ExtensionInfo = new AttributeItemDTO[source.ExtensionInfo.length];
+            for (int i = 0; i < source.ExtensionInfo.length; i++) {
+                this.ExtensionInfo[i] = new AttributeItemDTO(source.ExtensionInfo[i]);
+            }
+        }
     }
 
 
@@ -454,6 +488,7 @@ public class InstanceLogInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CostTime", this.CostTime);
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "CodeFileName", this.CodeFileName);
+        this.setParamArrayObj(map, prefix + "ExtensionInfo.", this.ExtensionInfo);
 
     }
 }

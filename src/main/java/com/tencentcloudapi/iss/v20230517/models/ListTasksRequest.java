@@ -31,25 +31,42 @@ public class ListTasksRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * 每页数量，默认为10
+    * 每页数量，默认为20
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice
+    * 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+    * 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
+
+    /**
+    * 开始时间
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private Long BeginTime;
+
+    /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
 
     /**
      * Get 页码，默认为1 
@@ -68,51 +85,95 @@ public class ListTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页数量，默认为10 
-     * @return PageSize 每页数量，默认为10
+     * Get 每页数量，默认为20 
+     * @return PageSize 每页数量，默认为20
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量，默认为10
-     * @param PageSize 每页数量，默认为10
+     * Set 每页数量，默认为20
+     * @param PageSize 每页数量，默认为20
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice 
-     * @return Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice
+     * Get 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice 
+     * @return Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice
-     * @param Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice
+     * Set 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice
+     * @param Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED 
-     * @return Status 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+     * Get 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消 
+     * @return Status 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
-     * @param Status 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+     * Set 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
+     * @param Status 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 开始时间 
+     * @return BeginTime 开始时间
+     */
+    public Long getBeginTime() {
+        return this.BeginTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param BeginTime 开始时间
+     */
+    public void setBeginTime(Long BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * Get 结束时间 
+     * @return EndTime 结束时间
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
     }
 
     public ListTasksRequest() {
@@ -135,6 +196,12 @@ public class ListTasksRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.BeginTime != null) {
+            this.BeginTime = new Long(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
     }
 
 
@@ -146,6 +213,8 @@ public class ListTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

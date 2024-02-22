@@ -47,7 +47,9 @@ public class GetCustomizationListRequest extends AbstractModel {
     /**
      * Get 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格” 
      * @return TagInfos 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
+     * @deprecated
      */
+    @Deprecated
     public String [] getTagInfos() {
         return this.TagInfos;
     }
@@ -55,7 +57,9 @@ public class GetCustomizationListRequest extends AbstractModel {
     /**
      * Set 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
      * @param TagInfos 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
+     * @deprecated
      */
+    @Deprecated
     public void setTagInfos(String [] TagInfos) {
         this.TagInfos = TagInfos;
     }

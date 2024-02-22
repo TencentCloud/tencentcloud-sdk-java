@@ -31,7 +31,7 @@ public class BatchOperateDeviceRequest extends AbstractModel {
     private String [] DeviceIds;
 
     /**
-    * 操作命令（enable：启用；disable：禁用；delete：删除）
+    * 操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
     */
     @SerializedName("Cmd")
     @Expose
@@ -54,16 +54,16 @@ public class BatchOperateDeviceRequest extends AbstractModel {
     }
 
     /**
-     * Get 操作命令（enable：启用；disable：禁用；delete：删除） 
-     * @return Cmd 操作命令（enable：启用；disable：禁用；delete：删除）
+     * Get 操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启） 
+     * @return Cmd 操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
      */
     public String getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set 操作命令（enable：启用；disable：禁用；delete：删除）
-     * @param Cmd 操作命令（enable：启用；disable：禁用；delete：删除）
+     * Set 操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+     * @param Cmd 操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;

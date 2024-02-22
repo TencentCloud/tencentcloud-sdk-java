@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class EnableRestProxyRequest extends AbstractModel {
 
     /**
-    * 对应于appid
+    * 集群 ID。
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 对应于appid 
-     * @return ClusterId 对应于appid
+     * Get 集群 ID。 
+     * @return ClusterId 集群 ID。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 对应于appid
-     * @param ClusterId 对应于appid
+     * Set 集群 ID。
+     * @param ClusterId 集群 ID。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

@@ -102,7 +102,9 @@ public class CreateCustomizationRequest extends AbstractModel {
     /**
      * Get 标签信息 
      * @return TagInfos 标签信息
+     * @deprecated
      */
+    @Deprecated
     public String [] getTagInfos() {
         return this.TagInfos;
     }
@@ -110,7 +112,9 @@ public class CreateCustomizationRequest extends AbstractModel {
     /**
      * Set 标签信息
      * @param TagInfos 标签信息
+     * @deprecated
      */
+    @Deprecated
     public void setTagInfos(String [] TagInfos) {
         this.TagInfos = TagInfos;
     }

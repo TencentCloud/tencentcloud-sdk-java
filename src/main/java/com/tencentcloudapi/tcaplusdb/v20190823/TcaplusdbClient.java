@@ -384,7 +384,7 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *当restful api为关闭状态时，可以通过此接口开启restful apu
+     *当restful api为关闭状态时，可以通过此接口开启restful api。
      * @param req EnableRestProxyRequest
      * @return EnableRestProxyResponse
      * @throws TencentCloudSDKException

@@ -456,6 +456,54 @@ public class InstanceOpsDto extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
+    * 关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RelatedInstanceList")
+    @Expose
+    private InstanceOpsDto [] RelatedInstanceList;
+
+    /**
+    * 关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RelatedInstanceSize")
+    @Expose
+    private Long RelatedInstanceSize;
+
+    /**
+    * ownerId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerId")
+    @Expose
+    private String OwnerId;
+
+    /**
+    * 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
+    * 实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceLifeCycleOpsDto")
+    @Expose
+    private InstanceLifeCycleOpsDto InstanceLifeCycleOpsDto;
+
+    /**
+    * 自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetryAttempts")
+    @Expose
+    private Long RetryAttempts;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1535,6 +1583,126 @@ public class InstanceOpsDto extends AbstractModel {
         this.ExecutorGroupName = ExecutorGroupName;
     }
 
+    /**
+     * Get 关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RelatedInstanceList 关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceOpsDto [] getRelatedInstanceList() {
+        return this.RelatedInstanceList;
+    }
+
+    /**
+     * Set 关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RelatedInstanceList 关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRelatedInstanceList(InstanceOpsDto [] RelatedInstanceList) {
+        this.RelatedInstanceList = RelatedInstanceList;
+    }
+
+    /**
+     * Get 关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RelatedInstanceSize 关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRelatedInstanceSize() {
+        return this.RelatedInstanceSize;
+    }
+
+    /**
+     * Set 关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RelatedInstanceSize 关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRelatedInstanceSize(Long RelatedInstanceSize) {
+        this.RelatedInstanceSize = RelatedInstanceSize;
+    }
+
+    /**
+     * Get ownerId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerId ownerId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerId() {
+        return this.OwnerId;
+    }
+
+    /**
+     * Set ownerId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerId ownerId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerId(String OwnerId) {
+        this.OwnerId = OwnerId;
+    }
+
+    /**
+     * Get 用户id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
+     * Get 实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceLifeCycleOpsDto 实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceLifeCycleOpsDto getInstanceLifeCycleOpsDto() {
+        return this.InstanceLifeCycleOpsDto;
+    }
+
+    /**
+     * Set 实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceLifeCycleOpsDto 实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceLifeCycleOpsDto(InstanceLifeCycleOpsDto InstanceLifeCycleOpsDto) {
+        this.InstanceLifeCycleOpsDto = InstanceLifeCycleOpsDto;
+    }
+
+    /**
+     * Get 自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetryAttempts 自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetryAttempts() {
+        return this.RetryAttempts;
+    }
+
+    /**
+     * Set 自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetryAttempts 自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetryAttempts(Long RetryAttempts) {
+        this.RetryAttempts = RetryAttempts;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -1705,6 +1873,27 @@ public class InstanceOpsDto extends AbstractModel {
         if (source.ExecutorGroupName != null) {
             this.ExecutorGroupName = new String(source.ExecutorGroupName);
         }
+        if (source.RelatedInstanceList != null) {
+            this.RelatedInstanceList = new InstanceOpsDto[source.RelatedInstanceList.length];
+            for (int i = 0; i < source.RelatedInstanceList.length; i++) {
+                this.RelatedInstanceList[i] = new InstanceOpsDto(source.RelatedInstanceList[i]);
+            }
+        }
+        if (source.RelatedInstanceSize != null) {
+            this.RelatedInstanceSize = new Long(source.RelatedInstanceSize);
+        }
+        if (source.OwnerId != null) {
+            this.OwnerId = new String(source.OwnerId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.InstanceLifeCycleOpsDto != null) {
+            this.InstanceLifeCycleOpsDto = new InstanceLifeCycleOpsDto(source.InstanceLifeCycleOpsDto);
+        }
+        if (source.RetryAttempts != null) {
+            this.RetryAttempts = new Long(source.RetryAttempts);
+        }
     }
 
 
@@ -1766,6 +1955,12 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceKey", this.InstanceKey);
         this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
         this.setParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
+        this.setParamArrayObj(map, prefix + "RelatedInstanceList.", this.RelatedInstanceList);
+        this.setParamSimple(map, prefix + "RelatedInstanceSize", this.RelatedInstanceSize);
+        this.setParamSimple(map, prefix + "OwnerId", this.OwnerId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamObj(map, prefix + "InstanceLifeCycleOpsDto.", this.InstanceLifeCycleOpsDto);
+        this.setParamSimple(map, prefix + "RetryAttempts", this.RetryAttempts);
 
     }
 }

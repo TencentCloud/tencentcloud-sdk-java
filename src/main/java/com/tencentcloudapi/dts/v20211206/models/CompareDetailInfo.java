@@ -40,6 +40,30 @@ public class CompareDetailInfo extends AbstractModel {
     private SkippedDetail Skipped;
 
     /**
+    * 数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DifferenceAdvancedObjects")
+    @Expose
+    private DifferenceAdvancedObjectsDetail DifferenceAdvancedObjects;
+
+    /**
+    * 数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DifferenceData")
+    @Expose
+    private DifferenceDataDetail DifferenceData;
+
+    /**
+    * 数据行不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DifferenceRow")
+    @Expose
+    private DifferenceRowDetail DifferenceRow;
+
+    /**
      * Get 数据不一致的表详情
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Difference 数据不一致的表详情
@@ -79,6 +103,66 @@ public class CompareDetailInfo extends AbstractModel {
         this.Skipped = Skipped;
     }
 
+    /**
+     * Get 数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DifferenceAdvancedObjectsDetail getDifferenceAdvancedObjects() {
+        return this.DifferenceAdvancedObjects;
+    }
+
+    /**
+     * Set 数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDifferenceAdvancedObjects(DifferenceAdvancedObjectsDetail DifferenceAdvancedObjects) {
+        this.DifferenceAdvancedObjects = DifferenceAdvancedObjects;
+    }
+
+    /**
+     * Get 数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DifferenceData 数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DifferenceDataDetail getDifferenceData() {
+        return this.DifferenceData;
+    }
+
+    /**
+     * Set 数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DifferenceData 数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDifferenceData(DifferenceDataDetail DifferenceData) {
+        this.DifferenceData = DifferenceData;
+    }
+
+    /**
+     * Get 数据行不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DifferenceRow 数据行不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DifferenceRowDetail getDifferenceRow() {
+        return this.DifferenceRow;
+    }
+
+    /**
+     * Set 数据行不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DifferenceRow 数据行不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDifferenceRow(DifferenceRowDetail DifferenceRow) {
+        this.DifferenceRow = DifferenceRow;
+    }
+
     public CompareDetailInfo() {
     }
 
@@ -93,6 +177,15 @@ public class CompareDetailInfo extends AbstractModel {
         if (source.Skipped != null) {
             this.Skipped = new SkippedDetail(source.Skipped);
         }
+        if (source.DifferenceAdvancedObjects != null) {
+            this.DifferenceAdvancedObjects = new DifferenceAdvancedObjectsDetail(source.DifferenceAdvancedObjects);
+        }
+        if (source.DifferenceData != null) {
+            this.DifferenceData = new DifferenceDataDetail(source.DifferenceData);
+        }
+        if (source.DifferenceRow != null) {
+            this.DifferenceRow = new DifferenceRowDetail(source.DifferenceRow);
+        }
     }
 
 
@@ -102,6 +195,9 @@ public class CompareDetailInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Difference.", this.Difference);
         this.setParamObj(map, prefix + "Skipped.", this.Skipped);
+        this.setParamObj(map, prefix + "DifferenceAdvancedObjects.", this.DifferenceAdvancedObjects);
+        this.setParamObj(map, prefix + "DifferenceData.", this.DifferenceData);
+        this.setParamObj(map, prefix + "DifferenceRow.", this.DifferenceRow);
 
     }
 }
