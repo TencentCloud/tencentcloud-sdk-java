@@ -38,7 +38,7 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private String Description;
 
     /**
-    * Trace数据保存时长
+    * Trace数据保存时长，单位为天默认存储为3天
     */
     @SerializedName("TraceDuration")
     @Expose
@@ -52,7 +52,7 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
-    * 实例上报额度值
+    * 实例上报额度值，默认赋值为0表示不限制上报额度
     */
     @SerializedName("SpanDailyCounters")
     @Expose
@@ -98,16 +98,16 @@ public class CreateApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Trace数据保存时长 
-     * @return TraceDuration Trace数据保存时长
+     * Get Trace数据保存时长，单位为天默认存储为3天 
+     * @return TraceDuration Trace数据保存时长，单位为天默认存储为3天
      */
     public Long getTraceDuration() {
         return this.TraceDuration;
     }
 
     /**
-     * Set Trace数据保存时长
-     * @param TraceDuration Trace数据保存时长
+     * Set Trace数据保存时长，单位为天默认存储为3天
+     * @param TraceDuration Trace数据保存时长，单位为天默认存储为3天
      */
     public void setTraceDuration(Long TraceDuration) {
         this.TraceDuration = TraceDuration;
@@ -130,16 +130,16 @@ public class CreateApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例上报额度值 
-     * @return SpanDailyCounters 实例上报额度值
+     * Get 实例上报额度值，默认赋值为0表示不限制上报额度 
+     * @return SpanDailyCounters 实例上报额度值，默认赋值为0表示不限制上报额度
      */
     public Long getSpanDailyCounters() {
         return this.SpanDailyCounters;
     }
 
     /**
-     * Set 实例上报额度值
-     * @param SpanDailyCounters 实例上报额度值
+     * Set 实例上报额度值，默认赋值为0表示不限制上报额度
+     * @param SpanDailyCounters 实例上报额度值，默认赋值为0表示不限制上报额度
      */
     public void setSpanDailyCounters(Long SpanDailyCounters) {
         this.SpanDailyCounters = SpanDailyCounters;

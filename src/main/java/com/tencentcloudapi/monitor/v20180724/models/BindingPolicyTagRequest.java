@@ -87,6 +87,13 @@ public class BindingPolicyTagRequest extends AbstractModel {
     private String EbSubject;
 
     /**
+    * 标识标签取交/并集关系
+    */
+    @SerializedName("TagOperation")
+    @Expose
+    private String TagOperation;
+
+    /**
      * Get 固定取值 monitor 
      * @return Module 固定取值 monitor
      */
@@ -230,6 +237,22 @@ public class BindingPolicyTagRequest extends AbstractModel {
         this.EbSubject = EbSubject;
     }
 
+    /**
+     * Get 标识标签取交/并集关系 
+     * @return TagOperation 标识标签取交/并集关系
+     */
+    public String getTagOperation() {
+        return this.TagOperation;
+    }
+
+    /**
+     * Set 标识标签取交/并集关系
+     * @param TagOperation 标识标签取交/并集关系
+     */
+    public void setTagOperation(String TagOperation) {
+        this.TagOperation = TagOperation;
+    }
+
     public BindingPolicyTagRequest() {
     }
 
@@ -268,6 +291,9 @@ public class BindingPolicyTagRequest extends AbstractModel {
         if (source.EbSubject != null) {
             this.EbSubject = new String(source.EbSubject);
         }
+        if (source.TagOperation != null) {
+            this.TagOperation = new String(source.TagOperation);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class BindingPolicyTagRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "BatchTag.", this.BatchTag);
         this.setParamSimple(map, prefix + "EbEventFlag", this.EbEventFlag);
         this.setParamSimple(map, prefix + "EbSubject", this.EbSubject);
+        this.setParamSimple(map, prefix + "TagOperation", this.TagOperation);
 
     }
 }

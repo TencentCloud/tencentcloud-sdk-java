@@ -102,9 +102,8 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     private String NotifyType;
 
     /**
-    * 本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
-
+    * 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
     */
     @SerializedName("FlowIds")
     @Expose
@@ -365,24 +364,20 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
- 
-     * @return FlowIds 本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
-
+     * Get 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。` 
+     * @return FlowIds 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
-
-     * @param FlowIds 本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
-
+     * Set 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+     * @param FlowIds 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

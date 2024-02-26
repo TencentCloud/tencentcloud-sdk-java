@@ -45,6 +45,20 @@ public class CreateHpcClusterRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 高性能计算集群类型。
+    */
+    @SerializedName("HpcClusterType")
+    @Expose
+    private String HpcClusterType;
+
+    /**
+    * 高性能计算集群对应的业务场景标识，当前只支持CDC。
+    */
+    @SerializedName("HpcClusterBusinessId")
+    @Expose
+    private String HpcClusterBusinessId;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -92,6 +106,38 @@ public class CreateHpcClusterRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 高性能计算集群类型。 
+     * @return HpcClusterType 高性能计算集群类型。
+     */
+    public String getHpcClusterType() {
+        return this.HpcClusterType;
+    }
+
+    /**
+     * Set 高性能计算集群类型。
+     * @param HpcClusterType 高性能计算集群类型。
+     */
+    public void setHpcClusterType(String HpcClusterType) {
+        this.HpcClusterType = HpcClusterType;
+    }
+
+    /**
+     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC。 
+     * @return HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。
+     */
+    public String getHpcClusterBusinessId() {
+        return this.HpcClusterBusinessId;
+    }
+
+    /**
+     * Set 高性能计算集群对应的业务场景标识，当前只支持CDC。
+     * @param HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。
+     */
+    public void setHpcClusterBusinessId(String HpcClusterBusinessId) {
+        this.HpcClusterBusinessId = HpcClusterBusinessId;
+    }
+
     public CreateHpcClusterRequest() {
     }
 
@@ -109,6 +155,12 @@ public class CreateHpcClusterRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.HpcClusterType != null) {
+            this.HpcClusterType = new String(source.HpcClusterType);
+        }
+        if (source.HpcClusterBusinessId != null) {
+            this.HpcClusterBusinessId = new String(source.HpcClusterBusinessId);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class CreateHpcClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
+        this.setParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
 
     }
 }

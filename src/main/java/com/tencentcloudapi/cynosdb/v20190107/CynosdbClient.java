@@ -512,6 +512,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeClusterInstanceGrps）用于查询实例组信息。
+     * @param req DescribeClusterInstanceGroupsRequest
+     * @return DescribeClusterInstanceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterInstanceGroupsResponse DescribeClusterInstanceGroups(DescribeClusterInstanceGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterInstanceGroups", DescribeClusterInstanceGroupsResponse.class);
+    }
+
+    /**
      *本接口（DescribeClusterInstanceGrps）用于查询实例组信息。 该接口已废弃，推荐使用DescribeClusterInstanceGroups
      * @param req DescribeClusterInstanceGrpsRequest
      * @return DescribeClusterInstanceGrpsResponse

@@ -331,6 +331,14 @@ public class AlarmPolicy extends AbstractModel {
     private Long IsSupportAlarmTag;
 
     /**
+    * 多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagOperation")
+    @Expose
+    private String TagOperation;
+
+    /**
      * Get 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 告警策略 ID
@@ -1102,6 +1110,26 @@ public class AlarmPolicy extends AbstractModel {
         this.IsSupportAlarmTag = IsSupportAlarmTag;
     }
 
+    /**
+     * Get 多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagOperation 多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTagOperation() {
+        return this.TagOperation;
+    }
+
+    /**
+     * Set 多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagOperation 多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagOperation(String TagOperation) {
+        this.TagOperation = TagOperation;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -1245,6 +1273,9 @@ public class AlarmPolicy extends AbstractModel {
         if (source.IsSupportAlarmTag != null) {
             this.IsSupportAlarmTag = new Long(source.IsSupportAlarmTag);
         }
+        if (source.TagOperation != null) {
+            this.TagOperation = new String(source.TagOperation);
+        }
     }
 
 
@@ -1290,6 +1321,7 @@ public class AlarmPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "IsBindAll", this.IsBindAll);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsSupportAlarmTag", this.IsSupportAlarmTag);
+        this.setParamSimple(map, prefix + "TagOperation", this.TagOperation);
 
     }
 }

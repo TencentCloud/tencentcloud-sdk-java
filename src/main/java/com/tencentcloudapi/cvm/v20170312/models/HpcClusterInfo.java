@@ -84,6 +84,22 @@ public class HpcClusterInfo extends AbstractModel {
     private String [] InstanceIds;
 
     /**
+    * 高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HpcClusterType")
+    @Expose
+    private String HpcClusterType;
+
+    /**
+    * 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HpcClusterBusinessId")
+    @Expose
+    private String HpcClusterBusinessId;
+
+    /**
      * Get 高性能计算集群ID 
      * @return HpcClusterId 高性能计算集群ID
      */
@@ -227,6 +243,46 @@ public class HpcClusterInfo extends AbstractModel {
         this.InstanceIds = InstanceIds;
     }
 
+    /**
+     * Get 高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HpcClusterType 高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHpcClusterType() {
+        return this.HpcClusterType;
+    }
+
+    /**
+     * Set 高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HpcClusterType 高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHpcClusterType(String HpcClusterType) {
+        this.HpcClusterType = HpcClusterType;
+    }
+
+    /**
+     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHpcClusterBusinessId() {
+        return this.HpcClusterBusinessId;
+    }
+
+    /**
+     * Set 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHpcClusterBusinessId(String HpcClusterBusinessId) {
+        this.HpcClusterBusinessId = HpcClusterBusinessId;
+    }
+
     public HpcClusterInfo() {
     }
 
@@ -262,6 +318,12 @@ public class HpcClusterInfo extends AbstractModel {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.HpcClusterType != null) {
+            this.HpcClusterType = new String(source.HpcClusterType);
+        }
+        if (source.HpcClusterBusinessId != null) {
+            this.HpcClusterBusinessId = new String(source.HpcClusterBusinessId);
+        }
     }
 
 
@@ -277,6 +339,8 @@ public class HpcClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
+        this.setParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
 
     }
 }

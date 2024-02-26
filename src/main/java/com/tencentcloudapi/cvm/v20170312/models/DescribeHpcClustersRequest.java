@@ -59,6 +59,20 @@ public class DescribeHpcClustersRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 高性能计算集群类型。
+    */
+    @SerializedName("HpcClusterType")
+    @Expose
+    private String HpcClusterType;
+
+    /**
+    * 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+    */
+    @SerializedName("HpcClusterBusinessId")
+    @Expose
+    private String HpcClusterBusinessId;
+
+    /**
      * Get 高性能计算集群ID数组。 
      * @return HpcClusterIds 高性能计算集群ID数组。
      */
@@ -138,6 +152,38 @@ public class DescribeHpcClustersRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 高性能计算集群类型。 
+     * @return HpcClusterType 高性能计算集群类型。
+     */
+    public String getHpcClusterType() {
+        return this.HpcClusterType;
+    }
+
+    /**
+     * Set 高性能计算集群类型。
+     * @param HpcClusterType 高性能计算集群类型。
+     */
+    public void setHpcClusterType(String HpcClusterType) {
+        this.HpcClusterType = HpcClusterType;
+    }
+
+    /**
+     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC。	 
+     * @return HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+     */
+    public String getHpcClusterBusinessId() {
+        return this.HpcClusterBusinessId;
+    }
+
+    /**
+     * Set 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+     * @param HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+     */
+    public void setHpcClusterBusinessId(String HpcClusterBusinessId) {
+        this.HpcClusterBusinessId = HpcClusterBusinessId;
+    }
+
     public DescribeHpcClustersRequest() {
     }
 
@@ -164,6 +210,12 @@ public class DescribeHpcClustersRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.HpcClusterType != null) {
+            this.HpcClusterType = new String(source.HpcClusterType);
+        }
+        if (source.HpcClusterBusinessId != null) {
+            this.HpcClusterBusinessId = new String(source.HpcClusterBusinessId);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class DescribeHpcClustersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "HpcClusterType", this.HpcClusterType);
+        this.setParamSimple(map, prefix + "HpcClusterBusinessId", this.HpcClusterBusinessId);
 
     }
 }

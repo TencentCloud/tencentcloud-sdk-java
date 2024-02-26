@@ -64,6 +64,22 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     private Long PackageRegion;
 
     /**
+    * 是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+    */
+    @SerializedName("AutoVoucher")
+    @Expose
+    private Boolean AutoVoucher;
+
+    /**
+    * 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
+    */
+    @SerializedName("VoucherIds")
+    @Expose
+    private String [] VoucherIds;
+
+    /**
      * Get 流量包规格类型。可取值如下：
 DEVICE_1_FLOW_20G、DEVICE_2_FLOW_50G、
 DEVICE_3_FLOW_100G、
@@ -175,6 +191,46 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         this.PackageRegion = PackageRegion;
     }
 
+    /**
+     * Get 是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。 
+     * @return AutoVoucher 是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+     */
+    public Boolean getAutoVoucher() {
+        return this.AutoVoucher;
+    }
+
+    /**
+     * Set 是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+     * @param AutoVoucher 是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+     */
+    public void setAutoVoucher(Boolean AutoVoucher) {
+        this.AutoVoucher = AutoVoucher;
+    }
+
+    /**
+     * Get 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券 
+     * @return VoucherIds 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
+     */
+    public String [] getVoucherIds() {
+        return this.VoucherIds;
+    }
+
+    /**
+     * Set 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
+     * @param VoucherIds 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
+     */
+    public void setVoucherIds(String [] VoucherIds) {
+        this.VoucherIds = VoucherIds;
+    }
+
     public OrderFlowPackageRequest() {
     }
 
@@ -198,6 +254,15 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         if (source.PackageRegion != null) {
             this.PackageRegion = new Long(source.PackageRegion);
         }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Boolean(source.AutoVoucher);
+        }
+        if (source.VoucherIds != null) {
+            this.VoucherIds = new String[source.VoucherIds.length];
+            for (int i = 0; i < source.VoucherIds.length; i++) {
+                this.VoucherIds[i] = new String(source.VoucherIds[i]);
+            }
+        }
     }
 
 
@@ -209,6 +274,8 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         this.setParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "PackageRegion", this.PackageRegion);
+        this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+        this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
 
     }
 }
