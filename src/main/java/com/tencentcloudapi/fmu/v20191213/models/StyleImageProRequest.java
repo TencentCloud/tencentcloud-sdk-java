@@ -58,7 +58,7 @@ public class StyleImageProRequest extends AbstractModel {
     private Long FilterDegree;
 
     /**
-    * 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+    * 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。
     */
     @SerializedName("RspImgType")
     @Expose
@@ -153,16 +153,16 @@ public class StyleImageProRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。 
-     * @return RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     * Get 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。 
+     * @return RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。
      */
     public String getRspImgType() {
         return this.RspImgType;
     }
 
     /**
-     * Set 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
-     * @param RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     * Set 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。
+     * @param RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。
      */
     public void setRspImgType(String RspImgType) {
         this.RspImgType = RspImgType;

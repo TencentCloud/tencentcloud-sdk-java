@@ -99,7 +99,7 @@ public enum DomainErrorCode {
     // 修改DNSHost失败。
      INTERNALERROR_MODIFYDNSHOSTERR("InternalError.ModifyDNSHostErr"),
      
-    // 需要登陆。
+    // 需要登录。
      INTERNALERROR_NEEDLOGIN("InternalError.NeedLogin"),
      
     // 读取body失败。

@@ -241,6 +241,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *查看成本分析明细
+     * @param req DescribeCostExplorerSummaryRequest
+     * @return DescribeCostExplorerSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCostExplorerSummaryResponse DescribeCostExplorerSummary(DescribeCostExplorerSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCostExplorerSummary", DescribeCostExplorerSummaryResponse.class);
+    }
+
+    /**
      *获取按产品汇总消耗详情
      * @param req DescribeCostSummaryByProductRequest
      * @return DescribeCostSummaryByProductResponse

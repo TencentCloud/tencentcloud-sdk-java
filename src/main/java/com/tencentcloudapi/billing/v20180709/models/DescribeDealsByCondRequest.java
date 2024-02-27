@@ -71,7 +71,7 @@ public class DescribeDealsByCondRequest extends AbstractModel {
     private Long Status;
 
     /**
-    * 订单号
+    * 子订单号
     */
     @SerializedName("OrderId")
     @Expose
@@ -220,16 +220,16 @@ public class DescribeDealsByCondRequest extends AbstractModel {
     }
 
     /**
-     * Get 订单号 
-     * @return OrderId 订单号
+     * Get 子订单号 
+     * @return OrderId 子订单号
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单号
-     * @param OrderId 订单号
+     * Set 子订单号
+     * @param OrderId 子订单号
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;

@@ -39,6 +39,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *添加扩缩容规则，按负载和时间
+     * @param req AddMetricScaleStrategyRequest
+     * @return AddMetricScaleStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddMetricScaleStrategyResponse AddMetricScaleStrategy(AddMetricScaleStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddMetricScaleStrategy", AddMetricScaleStrategyResponse.class);
+    }
+
+    /**
      *该接口支持安装了OpenLdap组件的集群。
 新增用户列表（用户管理）。
      * @param req AddUsersForUserManagerRequest
@@ -73,6 +84,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
+     * @param req DeleteAutoScaleStrategyRequest
+     * @return DeleteAutoScaleStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategy(DeleteAutoScaleStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAutoScaleStrategy", DeleteAutoScaleStrategyResponse.class);
+    }
+
+    /**
      *删除用户列表（用户管理）
      * @param req DeleteUserManagerUserListRequest
      * @return DeleteUserManagerUserListResponse
@@ -84,6 +106,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取自动扩缩容全局配置
+     * @param req DescribeAutoScaleGroupGlobalConfRequest
+     * @return DescribeAutoScaleGroupGlobalConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScaleGroupGlobalConfResponse DescribeAutoScaleGroupGlobalConf(DescribeAutoScaleGroupGlobalConfRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoScaleGroupGlobalConf", DescribeAutoScaleGroupGlobalConfResponse.class);
+    }
+
+    /**
      *获取集群的自动扩缩容的详细记录
      * @param req DescribeAutoScaleRecordsRequest
      * @return DescribeAutoScaleRecordsResponse
@@ -92,6 +125,17 @@ public class EmrClient extends AbstractClient{
     public DescribeAutoScaleRecordsResponse DescribeAutoScaleRecords(DescribeAutoScaleRecordsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAutoScaleRecords", DescribeAutoScaleRecordsResponse.class);
+    }
+
+    /**
+     *获取自动扩缩容规则
+     * @param req DescribeAutoScaleStrategiesRequest
+     * @return DescribeAutoScaleStrategiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScaleStrategiesResponse DescribeAutoScaleStrategies(DescribeAutoScaleStrategiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoScaleStrategies", DescribeAutoScaleStrategiesResponse.class);
     }
 
     /**
@@ -291,6 +335,17 @@ public class EmrClient extends AbstractClient{
     public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstance(InquiryPriceUpdateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquiryPriceUpdateInstance", InquiryPriceUpdateInstanceResponse.class);
+    }
+
+    /**
+     *修改自动扩缩容规则
+     * @param req ModifyAutoScaleStrategyRequest
+     * @return ModifyAutoScaleStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(ModifyAutoScaleStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoScaleStrategy", ModifyAutoScaleStrategyResponse.class);
     }
 
     /**

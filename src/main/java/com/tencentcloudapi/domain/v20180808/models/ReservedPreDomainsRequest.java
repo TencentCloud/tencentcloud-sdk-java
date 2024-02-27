@@ -31,7 +31,7 @@ public class ReservedPreDomainsRequest extends AbstractModel {
     private String [] DomainList;
 
     /**
-    * 模版ID
+    * 模板ID
     */
     @SerializedName("TemplateId")
     @Expose
@@ -54,16 +54,16 @@ public class ReservedPreDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get 模版ID 
-     * @return TemplateId 模版ID
+     * Get 模板ID 
+     * @return TemplateId 模板ID
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版ID
-     * @param TemplateId 模版ID
+     * Set 模板ID
+     * @param TemplateId 模板ID
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

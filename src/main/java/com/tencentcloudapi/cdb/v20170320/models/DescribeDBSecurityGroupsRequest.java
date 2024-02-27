@@ -38,6 +38,13 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     private Boolean ForReadonlyInstance;
 
     /**
+    * 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+    */
+    @SerializedName("OpResourceId")
+    @Expose
+    private String OpResourceId;
+
+    /**
      * Get 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。 
      * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv或者cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
      */
@@ -69,6 +76,22 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
         this.ForReadonlyInstance = ForReadonlyInstance;
     }
 
+    /**
+     * Get 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。 
+     * @return OpResourceId 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     */
+    public String getOpResourceId() {
+        return this.OpResourceId;
+    }
+
+    /**
+     * Set 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     * @param OpResourceId 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     */
+    public void setOpResourceId(String OpResourceId) {
+        this.OpResourceId = OpResourceId;
+    }
+
     public DescribeDBSecurityGroupsRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
         if (source.ForReadonlyInstance != null) {
             this.ForReadonlyInstance = new Boolean(source.ForReadonlyInstance);
         }
+        if (source.OpResourceId != null) {
+            this.OpResourceId = new String(source.OpResourceId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ForReadonlyInstance", this.ForReadonlyInstance);
+        this.setParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
 
     }
 }

@@ -40,8 +40,8 @@ groups.security-group-id - String - （过滤条件）绑定的安全组实例ID
 network-interface-name - String - （过滤条件）网卡实例名称。
 network-interface-description - String - （过滤条件）网卡实例描述。
 address-ip - String - （过滤条件）内网IPv4地址。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。
+tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网卡进行过滤。值为true时，仅过滤主网卡；值为false时，仅过滤辅助网卡；次过滤参数为提供时，同时过滤主网卡和辅助网卡。
     */
     @SerializedName("Filters")
@@ -95,8 +95,8 @@ groups.security-group-id - String - （过滤条件）绑定的安全组实例ID
 network-interface-name - String - （过滤条件）网卡实例名称。
 network-interface-description - String - （过滤条件）网卡实例描述。
 address-ip - String - （过滤条件）内网IPv4地址。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。
+tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网卡进行过滤。值为true时，仅过滤主网卡；值为false时，仅过滤辅助网卡；次过滤参数为提供时，同时过滤主网卡和辅助网卡。 
      * @return Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
@@ -107,8 +107,8 @@ groups.security-group-id - String - （过滤条件）绑定的安全组实例ID
 network-interface-name - String - （过滤条件）网卡实例名称。
 network-interface-description - String - （过滤条件）网卡实例描述。
 address-ip - String - （过滤条件）内网IPv4地址。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。
+tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网卡进行过滤。值为true时，仅过滤主网卡；值为false时，仅过滤辅助网卡；次过滤参数为提供时，同时过滤主网卡和辅助网卡。
      */
     public Filter [] getFilters() {
@@ -125,8 +125,8 @@ groups.security-group-id - String - （过滤条件）绑定的安全组实例ID
 network-interface-name - String - （过滤条件）网卡实例名称。
 network-interface-description - String - （过滤条件）网卡实例描述。
 address-ip - String - （过滤条件）内网IPv4地址。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。
+tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网卡进行过滤。值为true时，仅过滤主网卡；值为false时，仅过滤辅助网卡；次过滤参数为提供时，同时过滤主网卡和辅助网卡。
      * @param Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
@@ -137,8 +137,8 @@ groups.security-group-id - String - （过滤条件）绑定的安全组实例ID
 network-interface-name - String - （过滤条件）网卡实例名称。
 network-interface-description - String - （过滤条件）网卡实例描述。
 address-ip - String - （过滤条件）内网IPv4地址。
-tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2
-tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。
+tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
+tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 is-primary - Boolean - 是否必填：否 - （过滤条件）按照是否主网卡进行过滤。值为true时，仅过滤主网卡；值为false时，仅过滤辅助网卡；次过滤参数为提供时，同时过滤主网卡和辅助网卡。
      */
     public void setFilters(Filter [] Filters) {
