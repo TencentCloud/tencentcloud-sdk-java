@@ -29,6 +29,8 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
     public long ExpirationReservationTime = 600;
     private long expiredTime;
 
+    private boolean isTke;
+
     public OIDCRoleArnProvider(String region, String providerId, String webIdentityToken,
                                String roleArn, String roleSessionName, long durationSeconds) {
         Region = region;
@@ -39,7 +41,12 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
         DurationSeconds = durationSeconds;
     }
 
-    public OIDCRoleArnProvider() throws IOException, TencentCloudSDKException {
+    public OIDCRoleArnProvider() throws TencentCloudSDKException {
+        isTke = true;
+        initFromTke();
+    }
+
+    private void initFromTke() throws TencentCloudSDKException {
         Region = System.getenv("TKE_REGION");
         if (Region == null || Region.isEmpty())
             throw new TencentCloudSDKException("env TKE_REGION not exist");
@@ -52,7 +59,11 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
         if (tokenFile == null || tokenFile.isEmpty())
             throw new TencentCloudSDKException("env TKE_WEB_IDENTITY_TOKEN_FILE not exist");
 
-        WebIdentityToken = new String(Files.readAllBytes(Paths.get(tokenFile)));
+        try {
+            WebIdentityToken = new String(Files.readAllBytes(Paths.get(tokenFile)));
+        } catch (IOException e) {
+            throw new TencentCloudSDKException("failed to read token file: " + tokenFile, e);
+        }
 
         RoleArn = System.getenv("TKE_ROLE_ARN");
         if (RoleArn == null || RoleArn.isEmpty())
@@ -80,6 +91,9 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
         if (this.expiredTime - now > this.ExpirationReservationTime) {
             return;
         }
+
+        if (isTke)
+            initFromTke();
 
         // can not use sts package here, because it will cause circular dependency
         CommonClient client = new CommonClient(Service, Version, new Credential("", ""), Region);
