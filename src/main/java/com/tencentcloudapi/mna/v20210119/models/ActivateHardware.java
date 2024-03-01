@@ -62,6 +62,13 @@ public class ActivateHardware extends AbstractModel {
     private String DataKey;
 
     /**
+    * 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+    */
+    @SerializedName("AccessScope")
+    @Expose
+    private Long AccessScope;
+
+    /**
      * Get 厂商名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vendor 厂商名称
@@ -153,6 +160,22 @@ public class ActivateHardware extends AbstractModel {
         this.DataKey = DataKey;
     }
 
+    /**
+     * Get 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入） 
+     * @return AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     */
+    public Long getAccessScope() {
+        return this.AccessScope;
+    }
+
+    /**
+     * Set 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     * @param AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     */
+    public void setAccessScope(Long AccessScope) {
+        this.AccessScope = AccessScope;
+    }
+
     public ActivateHardware() {
     }
 
@@ -176,6 +199,9 @@ public class ActivateHardware extends AbstractModel {
         if (source.DataKey != null) {
             this.DataKey = new String(source.DataKey);
         }
+        if (source.AccessScope != null) {
+            this.AccessScope = new Long(source.AccessScope);
+        }
     }
 
 
@@ -188,6 +214,7 @@ public class ActivateHardware extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "DataKey", this.DataKey);
+        this.setParamSimple(map, prefix + "AccessScope", this.AccessScope);
 
     }
 }

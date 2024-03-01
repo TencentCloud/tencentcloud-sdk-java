@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateEdgeCVMInstancesRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * 集群id，边缘集群需要先开启公网访问才能添加cvm节点
     */
     @SerializedName("ClusterID")
     @Expose
@@ -73,16 +73,16 @@ public class CreateEdgeCVMInstancesRequest extends AbstractModel {
     private Boolean EnableEni;
 
     /**
-     * Get 集群id 
-     * @return ClusterID 集群id
+     * Get 集群id，边缘集群需要先开启公网访问才能添加cvm节点 
+     * @return ClusterID 集群id，边缘集群需要先开启公网访问才能添加cvm节点
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterID 集群id
+     * Set 集群id，边缘集群需要先开启公网访问才能添加cvm节点
+     * @param ClusterID 集群id，边缘集群需要先开启公网访问才能添加cvm节点
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;

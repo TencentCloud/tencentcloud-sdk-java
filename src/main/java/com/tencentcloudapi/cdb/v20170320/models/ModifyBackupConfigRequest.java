@@ -108,7 +108,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private String StartBackupPeriodSaveDate;
 
     /**
-    * 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+    * 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
     */
     @SerializedName("EnableBackupArchive")
     @Expose
@@ -129,14 +129,14 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private Long BinlogArchiveDays;
 
     /**
-    * 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+    * 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
     */
     @SerializedName("EnableBinlogArchive")
     @Expose
     private String EnableBinlogArchive;
 
     /**
-    * 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+    * 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
     */
     @SerializedName("EnableBackupStandby")
     @Expose
@@ -150,7 +150,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private Long BackupStandbyDays;
 
     /**
-    * 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+    * 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
     */
     @SerializedName("EnableBinlogStandby")
     @Expose
@@ -356,16 +356,16 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启数据备份归档策略，off-关闭，on-打开，默认为off 
-     * @return EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+     * Get 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。 
+     * @return EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
      */
     public String getEnableBackupArchive() {
         return this.EnableBackupArchive;
     }
 
     /**
-     * Set 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
-     * @param EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+     * Set 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+     * @param EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
      */
     public void setEnableBackupArchive(String EnableBackupArchive) {
         this.EnableBackupArchive = EnableBackupArchive;
@@ -404,32 +404,32 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启日志备份归档策略，off-关闭，on-打开，默认为off 
-     * @return EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     * Get 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。 
+     * @return EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
      */
     public String getEnableBinlogArchive() {
         return this.EnableBinlogArchive;
     }
 
     /**
-     * Set 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
-     * @param EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     * Set 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+     * @param EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
      */
     public void setEnableBinlogArchive(String EnableBinlogArchive) {
         this.EnableBinlogArchive = EnableBinlogArchive;
     }
 
     /**
-     * Get 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off 
-     * @return EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     * Get 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。 
+     * @return EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
      */
     public String getEnableBackupStandby() {
         return this.EnableBackupStandby;
     }
 
     /**
-     * Set 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
-     * @param EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     * Set 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+     * @param EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
      */
     public void setEnableBackupStandby(String EnableBackupStandby) {
         this.EnableBackupStandby = EnableBackupStandby;
@@ -452,16 +452,16 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off 
-     * @return EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     * Get 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。 
+     * @return EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
      */
     public String getEnableBinlogStandby() {
         return this.EnableBinlogStandby;
     }
 
     /**
-     * Set 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
-     * @param EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     * Set 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+     * @param EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
      */
     public void setEnableBinlogStandby(String EnableBinlogStandby) {
         this.EnableBinlogStandby = EnableBinlogStandby;

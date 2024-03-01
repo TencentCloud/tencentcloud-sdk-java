@@ -160,6 +160,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *批量添加入侵防御封禁列表、放通列表规则
+     * @param req CreateBlockIgnoreRuleNewRequest
+     * @return CreateBlockIgnoreRuleNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBlockIgnoreRuleNewResponse CreateBlockIgnoreRuleNew(CreateBlockIgnoreRuleNewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBlockIgnoreRuleNew", CreateBlockIgnoreRuleNewResponse.class);
+    }
+
+    /**
      *创建、选择vpc
      * @param req CreateChooseVpcsRequest
      * @return CreateChooseVpcsResponse
@@ -278,6 +289,17 @@ public class CfwClient extends AbstractClient{
     public DeleteBlockIgnoreRuleListResponse DeleteBlockIgnoreRuleList(DeleteBlockIgnoreRuleListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBlockIgnoreRuleList", DeleteBlockIgnoreRuleListResponse.class);
+    }
+
+    /**
+     *批量删除入侵防御封禁列表、放通列表规则（新）
+     * @param req DeleteBlockIgnoreRuleNewRequest
+     * @return DeleteBlockIgnoreRuleNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNew(DeleteBlockIgnoreRuleNewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBlockIgnoreRuleNew", DeleteBlockIgnoreRuleNewResponse.class);
     }
 
     /**
@@ -890,6 +912,17 @@ public class CfwClient extends AbstractClient{
     public ModifyBlockIgnoreRuleResponse ModifyBlockIgnoreRule(ModifyBlockIgnoreRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBlockIgnoreRule", ModifyBlockIgnoreRuleResponse.class);
+    }
+
+    /**
+     *编辑单条入侵防御封禁列表、放通列表规则（新）
+     * @param req ModifyBlockIgnoreRuleNewRequest
+     * @return ModifyBlockIgnoreRuleNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlockIgnoreRuleNewResponse ModifyBlockIgnoreRuleNew(ModifyBlockIgnoreRuleNewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBlockIgnoreRuleNew", ModifyBlockIgnoreRuleNewResponse.class);
     }
 
     /**

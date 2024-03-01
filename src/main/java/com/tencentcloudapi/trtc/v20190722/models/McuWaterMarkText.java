@@ -87,6 +87,13 @@ public class McuWaterMarkText extends AbstractModel {
     private Long DynamicPosType;
 
     /**
+    * 水印在输出时的层级，不填默认为0。
+    */
+    @SerializedName("ZOrder")
+    @Expose
+    private Long ZOrder;
+
+    /**
      * Get 文字水印内容。 
      * @return Text 文字水印内容。
      */
@@ -230,6 +237,22 @@ public class McuWaterMarkText extends AbstractModel {
         this.DynamicPosType = DynamicPosType;
     }
 
+    /**
+     * Get 水印在输出时的层级，不填默认为0。 
+     * @return ZOrder 水印在输出时的层级，不填默认为0。
+     */
+    public Long getZOrder() {
+        return this.ZOrder;
+    }
+
+    /**
+     * Set 水印在输出时的层级，不填默认为0。
+     * @param ZOrder 水印在输出时的层级，不填默认为0。
+     */
+    public void setZOrder(Long ZOrder) {
+        this.ZOrder = ZOrder;
+    }
+
     public McuWaterMarkText() {
     }
 
@@ -265,6 +288,9 @@ public class McuWaterMarkText extends AbstractModel {
         if (source.DynamicPosType != null) {
             this.DynamicPosType = new Long(source.DynamicPosType);
         }
+        if (source.ZOrder != null) {
+            this.ZOrder = new Long(source.ZOrder);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class McuWaterMarkText extends AbstractModel {
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
         this.setParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
+        this.setParamSimple(map, prefix + "ZOrder", this.ZOrder);
 
     }
 }

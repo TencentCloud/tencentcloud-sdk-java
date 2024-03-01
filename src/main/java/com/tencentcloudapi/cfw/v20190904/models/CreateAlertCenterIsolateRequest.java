@@ -58,7 +58,7 @@ public class CreateAlertCenterIsolateRequest extends AbstractModel {
     private Long [] IsolateType;
 
     /**
-    * 运维模式 1 IP白名单 2 身份认证
+    * 运维模式 1 IP白名单 2 身份认证  0 非运维模式
     */
     @SerializedName("OmMode")
     @Expose
@@ -153,16 +153,16 @@ public class CreateAlertCenterIsolateRequest extends AbstractModel {
     }
 
     /**
-     * Get 运维模式 1 IP白名单 2 身份认证 
-     * @return OmMode 运维模式 1 IP白名单 2 身份认证
+     * Get 运维模式 1 IP白名单 2 身份认证  0 非运维模式 
+     * @return OmMode 运维模式 1 IP白名单 2 身份认证  0 非运维模式
      */
     public Long getOmMode() {
         return this.OmMode;
     }
 
     /**
-     * Set 运维模式 1 IP白名单 2 身份认证
-     * @param OmMode 运维模式 1 IP白名单 2 身份认证
+     * Set 运维模式 1 IP白名单 2 身份认证  0 非运维模式
+     * @param OmMode 运维模式 1 IP白名单 2 身份认证  0 非运维模式
      */
     public void setOmMode(Long OmMode) {
         this.OmMode = OmMode;

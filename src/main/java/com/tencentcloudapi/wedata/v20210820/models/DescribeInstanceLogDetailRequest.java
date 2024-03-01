@@ -59,6 +59,20 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
     private String OriginFileName;
 
     /**
+    * 起始行
+    */
+    @SerializedName("StartCount")
+    @Expose
+    private Long StartCount;
+
+    /**
+    * 每次查询行数
+    */
+    @SerializedName("LineCount")
+    @Expose
+    private Long LineCount;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -138,6 +152,38 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         this.OriginFileName = OriginFileName;
     }
 
+    /**
+     * Get 起始行 
+     * @return StartCount 起始行
+     */
+    public Long getStartCount() {
+        return this.StartCount;
+    }
+
+    /**
+     * Set 起始行
+     * @param StartCount 起始行
+     */
+    public void setStartCount(Long StartCount) {
+        this.StartCount = StartCount;
+    }
+
+    /**
+     * Get 每次查询行数 
+     * @return LineCount 每次查询行数
+     */
+    public Long getLineCount() {
+        return this.LineCount;
+    }
+
+    /**
+     * Set 每次查询行数
+     * @param LineCount 每次查询行数
+     */
+    public void setLineCount(Long LineCount) {
+        this.LineCount = LineCount;
+    }
+
     public DescribeInstanceLogDetailRequest() {
     }
 
@@ -161,6 +207,12 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         if (source.OriginFileName != null) {
             this.OriginFileName = new String(source.OriginFileName);
         }
+        if (source.StartCount != null) {
+            this.StartCount = new Long(source.StartCount);
+        }
+        if (source.LineCount != null) {
+            this.LineCount = new Long(source.LineCount);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CurRunDate", this.CurRunDate);
         this.setParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
         this.setParamSimple(map, prefix + "OriginFileName", this.OriginFileName);
+        this.setParamSimple(map, prefix + "StartCount", this.StartCount);
+        this.setParamSimple(map, prefix + "LineCount", this.LineCount);
 
     }
 }

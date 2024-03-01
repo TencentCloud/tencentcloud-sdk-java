@@ -39,6 +39,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *停止预测式外呼任务
+     * @param req AbortPredictiveDialingCampaignRequest
+     * @return AbortPredictiveDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public AbortPredictiveDialingCampaignResponse AbortPredictiveDialingCampaign(AbortPredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AbortPredictiveDialingCampaign", AbortPredictiveDialingCampaignResponse.class);
+    }
+
+    /**
      *绑定号码外呼技能组
      * @param req BindNumberCallOutSkillGroupRequest
      * @return BindNumberCallOutSkillGroupResponse
@@ -127,6 +138,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建预测式外呼任务
+     * @param req CreatePredictiveDialingCampaignRequest
+     * @return CreatePredictiveDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePredictiveDialingCampaignResponse CreatePredictiveDialingCampaign(CreatePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePredictiveDialingCampaign", CreatePredictiveDialingCampaignResponse.class);
+    }
+
+    /**
      *创建 SDK 登录 Token。
      * @param req CreateSDKLoginTokenRequest
      * @return CreateSDKLoginTokenResponse
@@ -168,6 +190,17 @@ public class CccClient extends AbstractClient{
     public DeleteExtensionResponse DeleteExtension(DeleteExtensionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteExtension", DeleteExtensionResponse.class);
+    }
+
+    /**
+     *删除预测式外呼任务
+     * @param req DeletePredictiveDialingCampaignRequest
+     * @return DeletePredictiveDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaign(DeletePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePredictiveDialingCampaign", DeletePredictiveDialingCampaignResponse.class);
     }
 
     /**
@@ -327,6 +360,39 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *查询预测式外呼任务
+     * @param req DescribePredictiveDialingCampaignRequest
+     * @return DescribePredictiveDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePredictiveDialingCampaignResponse DescribePredictiveDialingCampaign(DescribePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePredictiveDialingCampaign", DescribePredictiveDialingCampaignResponse.class);
+    }
+
+    /**
+     *查询预测式外呼任务列表
+     * @param req DescribePredictiveDialingCampaignsRequest
+     * @return DescribePredictiveDialingCampaignsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePredictiveDialingCampaignsResponse DescribePredictiveDialingCampaigns(DescribePredictiveDialingCampaignsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePredictiveDialingCampaigns", DescribePredictiveDialingCampaignsResponse.class);
+    }
+
+    /**
+     *查询预测式外呼呼叫列表
+     * @param req DescribePredictiveDialingSessionsRequest
+     * @return DescribePredictiveDialingSessionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePredictiveDialingSessionsResponse DescribePredictiveDialingSessions(DescribePredictiveDialingSessionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePredictiveDialingSessions", DescribePredictiveDialingSessionsResponse.class);
+    }
+
+    /**
      *获取主被叫受保护的电话服务记录与录音
      * @param req DescribeProtectedTelCdrRequest
      * @return DescribeProtectedTelCdrResponse
@@ -448,6 +514,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *暂停预测式外呼任务
+     * @param req PausePredictiveDialingCampaignRequest
+     * @return PausePredictiveDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaign(PausePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PausePredictiveDialingCampaign", PausePredictiveDialingCampaignResponse.class);
+    }
+
+    /**
      *重置话机注册密码
      * @param req ResetExtensionPasswordRequest
      * @return ResetExtensionPasswordResponse
@@ -456,6 +533,17 @@ public class CccClient extends AbstractClient{
     public ResetExtensionPasswordResponse ResetExtensionPassword(ResetExtensionPasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetExtensionPassword", ResetExtensionPasswordResponse.class);
+    }
+
+    /**
+     *恢复预测式外呼任务
+     * @param req ResumePredictiveDialingCampaignRequest
+     * @return ResumePredictiveDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaign(ResumePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumePredictiveDialingCampaign", ResumePredictiveDialingCampaignResponse.class);
     }
 
     /**
@@ -489,6 +577,17 @@ public class CccClient extends AbstractClient{
     public UnbindStaffSkillGroupListResponse UnbindStaffSkillGroupList(UnbindStaffSkillGroupListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindStaffSkillGroupList", UnbindStaffSkillGroupListResponse.class);
+    }
+
+    /**
+     *任务未启动前，更新预测式外呼任务。
+     * @param req UpdatePredictiveDialingCampaignRequest
+     * @return UpdatePredictiveDialingCampaignResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePredictiveDialingCampaignResponse UpdatePredictiveDialingCampaign(UpdatePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePredictiveDialingCampaign", UpdatePredictiveDialingCampaignResponse.class);
     }
 
 }

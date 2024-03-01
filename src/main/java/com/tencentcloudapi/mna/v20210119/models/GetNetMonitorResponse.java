@@ -32,6 +32,17 @@ public class GetNetMonitorResponse extends AbstractModel {
     private MonitorData [] MonitorData;
 
     /**
+    * 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲
+    */
+    @SerializedName("AccessRegion")
+    @Expose
+    private String AccessRegion;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +67,38 @@ public class GetNetMonitorResponse extends AbstractModel {
      */
     public void setMonitorData(MonitorData [] MonitorData) {
         this.MonitorData = MonitorData;
+    }
+
+    /**
+     * Get 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲 
+     * @return AccessRegion 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲
+     */
+    public String getAccessRegion() {
+        return this.AccessRegion;
+    }
+
+    /**
+     * Set 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲
+     * @param AccessRegion 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲
+     */
+    public void setAccessRegion(String AccessRegion) {
+        this.AccessRegion = AccessRegion;
     }
 
     /**
@@ -88,6 +131,9 @@ public class GetNetMonitorResponse extends AbstractModel {
                 this.MonitorData[i] = new MonitorData(source.MonitorData[i]);
             }
         }
+        if (source.AccessRegion != null) {
+            this.AccessRegion = new String(source.AccessRegion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +145,7 @@ public class GetNetMonitorResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MonitorData.", this.MonitorData);
+        this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

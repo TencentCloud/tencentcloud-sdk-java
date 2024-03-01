@@ -92,6 +92,14 @@ public class MachineGroupInfo extends AbstractModel {
     private Boolean ServiceLogging;
 
     /**
+    * 机器组中机器离线定期清理时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DelayCleanupTime")
+    @Expose
+    private Long DelayCleanupTime;
+
+    /**
     * 机器组元数据信息列表
     */
     @SerializedName("MetaTags")
@@ -270,6 +278,26 @@ public class MachineGroupInfo extends AbstractModel {
     }
 
     /**
+     * Get 机器组中机器离线定期清理时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DelayCleanupTime 机器组中机器离线定期清理时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDelayCleanupTime() {
+        return this.DelayCleanupTime;
+    }
+
+    /**
+     * Set 机器组中机器离线定期清理时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DelayCleanupTime 机器组中机器离线定期清理时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDelayCleanupTime(Long DelayCleanupTime) {
+        this.DelayCleanupTime = DelayCleanupTime;
+    }
+
+    /**
      * Get 机器组元数据信息列表 
      * @return MetaTags 机器组元数据信息列表
      */
@@ -339,6 +367,9 @@ public class MachineGroupInfo extends AbstractModel {
         if (source.ServiceLogging != null) {
             this.ServiceLogging = new Boolean(source.ServiceLogging);
         }
+        if (source.DelayCleanupTime != null) {
+            this.DelayCleanupTime = new Long(source.DelayCleanupTime);
+        }
         if (source.MetaTags != null) {
             this.MetaTags = new MetaTagInfo[source.MetaTags.length];
             for (int i = 0; i < source.MetaTags.length; i++) {
@@ -364,6 +395,7 @@ public class MachineGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
         this.setParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
         this.setParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+        this.setParamSimple(map, prefix + "DelayCleanupTime", this.DelayCleanupTime);
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
         this.setParamSimple(map, prefix + "OSType", this.OSType);
 

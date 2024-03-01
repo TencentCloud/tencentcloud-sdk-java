@@ -176,6 +176,14 @@ public class ColumnBasicInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 精度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Scale")
+    @Expose
+    private Long Scale;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -555,6 +563,26 @@ public class ColumnBasicInfo extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 精度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Scale 精度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScale() {
+        return this.Scale;
+    }
+
+    /**
+     * Set 精度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Scale 精度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScale(Long Scale) {
+        this.Scale = Scale;
+    }
+
     public ColumnBasicInfo() {
     }
 
@@ -620,6 +648,9 @@ public class ColumnBasicInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Scale != null) {
+            this.Scale = new Long(source.Scale);
+        }
     }
 
 
@@ -646,6 +677,7 @@ public class ColumnBasicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectDisplayName", this.ProjectDisplayName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Scale", this.Scale);
 
     }
 }

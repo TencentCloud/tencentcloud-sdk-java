@@ -52,6 +52,13 @@ public class BatchSuspendIntegrationTasksRequest extends AbstractModel {
     private String Event;
 
     /**
+    * 本次批量操作涉及任务，用于审计
+    */
+    @SerializedName("TaskNames")
+    @Expose
+    private String [] TaskNames;
+
+    /**
      * Get 任务id 
      * @return TaskIds 任务id
      */
@@ -115,6 +122,22 @@ public class BatchSuspendIntegrationTasksRequest extends AbstractModel {
         this.Event = Event;
     }
 
+    /**
+     * Get 本次批量操作涉及任务，用于审计 
+     * @return TaskNames 本次批量操作涉及任务，用于审计
+     */
+    public String [] getTaskNames() {
+        return this.TaskNames;
+    }
+
+    /**
+     * Set 本次批量操作涉及任务，用于审计
+     * @param TaskNames 本次批量操作涉及任务，用于审计
+     */
+    public void setTaskNames(String [] TaskNames) {
+        this.TaskNames = TaskNames;
+    }
+
     public BatchSuspendIntegrationTasksRequest() {
     }
 
@@ -138,6 +161,12 @@ public class BatchSuspendIntegrationTasksRequest extends AbstractModel {
         if (source.Event != null) {
             this.Event = new String(source.Event);
         }
+        if (source.TaskNames != null) {
+            this.TaskNames = new String[source.TaskNames.length];
+            for (int i = 0; i < source.TaskNames.length; i++) {
+                this.TaskNames[i] = new String(source.TaskNames[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class BatchSuspendIntegrationTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Event", this.Event);
+        this.setParamArraySimple(map, prefix + "TaskNames.", this.TaskNames);
 
     }
 }

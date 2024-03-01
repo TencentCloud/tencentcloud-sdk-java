@@ -59,6 +59,13 @@ public class ModifyBackupPlanRequest extends AbstractModel {
     private String [] BackupPeriod;
 
     /**
+    * 实例日志备份保留时长，取值范围为7-1830，单位是天
+    */
+    @SerializedName("LogBackupRetentionPeriod")
+    @Expose
+    private Long LogBackupRetentionPeriod;
+
+    /**
      * Get 实例ID 
      * @return DBInstanceId 实例ID
      */
@@ -138,6 +145,22 @@ public class ModifyBackupPlanRequest extends AbstractModel {
         this.BackupPeriod = BackupPeriod;
     }
 
+    /**
+     * Get 实例日志备份保留时长，取值范围为7-1830，单位是天 
+     * @return LogBackupRetentionPeriod 实例日志备份保留时长，取值范围为7-1830，单位是天
+     */
+    public Long getLogBackupRetentionPeriod() {
+        return this.LogBackupRetentionPeriod;
+    }
+
+    /**
+     * Set 实例日志备份保留时长，取值范围为7-1830，单位是天
+     * @param LogBackupRetentionPeriod 实例日志备份保留时长，取值范围为7-1830，单位是天
+     */
+    public void setLogBackupRetentionPeriod(Long LogBackupRetentionPeriod) {
+        this.LogBackupRetentionPeriod = LogBackupRetentionPeriod;
+    }
+
     public ModifyBackupPlanRequest() {
     }
 
@@ -164,6 +187,9 @@ public class ModifyBackupPlanRequest extends AbstractModel {
                 this.BackupPeriod[i] = new String(source.BackupPeriod[i]);
             }
         }
+        if (source.LogBackupRetentionPeriod != null) {
+            this.LogBackupRetentionPeriod = new Long(source.LogBackupRetentionPeriod);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyBackupPlanRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxBackupStartTime", this.MaxBackupStartTime);
         this.setParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
         this.setParamArraySimple(map, prefix + "BackupPeriod.", this.BackupPeriod);
+        this.setParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
 
     }
 }

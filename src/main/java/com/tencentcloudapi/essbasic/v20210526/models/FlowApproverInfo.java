@@ -283,6 +283,24 @@ public class FlowApproverInfo extends AbstractModel {
     private Long SignTypeSelector;
 
     /**
+    * 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
+
+
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+    */
+    @SerializedName("Components")
+    @Expose
+    private Component [] Components;
+
+    /**
      * Get 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。 
      * @return Name 签署方经办人的姓名。
@@ -1022,6 +1040,66 @@ public class FlowApproverInfo extends AbstractModel {
         this.SignTypeSelector = SignTypeSelector;
     }
 
+    /**
+     * Get 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
+
+
+注：`此参数仅在通过文件发起合同或者合同组时生效` 
+     * @return Components 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
+
+
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+     */
+    public Component [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
+
+
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+     * @param Components 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
+
+
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+     */
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -1120,6 +1198,12 @@ public class FlowApproverInfo extends AbstractModel {
         if (source.SignTypeSelector != null) {
             this.SignTypeSelector = new Long(source.SignTypeSelector);
         }
+        if (source.Components != null) {
+            this.Components = new Component[source.Components.length];
+            for (int i = 0; i < source.Components.length; i++) {
+                this.Components[i] = new Component(source.Components[i]);
+            }
+        }
     }
 
 
@@ -1152,6 +1236,7 @@ public class FlowApproverInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
         this.setParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
         this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
+        this.setParamArrayObj(map, prefix + "Components.", this.Components);
 
     }
 }

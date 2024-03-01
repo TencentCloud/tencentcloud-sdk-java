@@ -127,6 +127,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *计费资源购买、续费下单接口
+     * @param req CreateDealsRequest
+     * @return CreateDealsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDealsResponse CreateDeals(CreateDealsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeals", CreateDealsResponse.class);
+    }
+
+    /**
      *clb-waf中添加防护域名
      * @param req CreateHostRequest
      * @return CreateHostResponse

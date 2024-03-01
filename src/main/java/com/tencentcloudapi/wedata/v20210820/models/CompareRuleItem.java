@@ -32,7 +32,16 @@ public class CompareRuleItem extends AbstractModel {
     private Long CompareType;
 
     /**
-    * 比较操作类型 <  <=  ==  =>  >
+    * 比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
@@ -76,9 +85,27 @@ public class CompareRuleItem extends AbstractModel {
     }
 
     /**
-     * Get 比较操作类型 <  <=  ==  =>  >
+     * Get 比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Operator 比较操作类型 <  <=  ==  =>  >
+     * @return Operator 比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
@@ -86,9 +113,27 @@ public class CompareRuleItem extends AbstractModel {
     }
 
     /**
-     * Set 比较操作类型 <  <=  ==  =>  >
+     * Set 比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Operator 比较操作类型 <  <=  ==  =>  >
+     * @param Operator 比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {

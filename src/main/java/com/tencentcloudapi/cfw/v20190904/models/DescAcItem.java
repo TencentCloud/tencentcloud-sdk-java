@@ -94,7 +94,7 @@ public class DescAcItem extends AbstractModel {
     private String SourceType;
 
     /**
-    * 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+    * 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
@@ -442,9 +442,9 @@ public class DescAcItem extends AbstractModel {
     }
 
     /**
-     * Get 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+     * Get 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+     * @return TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetType() {
@@ -452,9 +452,9 @@ public class DescAcItem extends AbstractModel {
     }
 
     /**
-     * Set 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+     * Set 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+     * @param TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(String TargetType) {

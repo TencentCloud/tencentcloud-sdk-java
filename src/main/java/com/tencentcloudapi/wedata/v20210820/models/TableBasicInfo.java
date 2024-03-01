@@ -248,6 +248,14 @@ public class TableBasicInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -807,6 +815,26 @@ public class TableBasicInfo extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 存储位置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Location 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Location 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
     public TableBasicInfo() {
     }
 
@@ -902,6 +930,9 @@ public class TableBasicInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
     }
 
 
@@ -937,6 +968,7 @@ public class TableBasicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Location", this.Location);
 
     }
 }

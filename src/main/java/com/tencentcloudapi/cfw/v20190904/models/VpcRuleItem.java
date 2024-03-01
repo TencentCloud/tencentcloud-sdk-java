@@ -48,7 +48,7 @@ domain：域名规则，例如*.qq.com
     private String DestContent;
 
     /**
-    * 访问目的类型，类型可以为：net，domain
+    * 访问目的类型，类型可以为：net，domain，dnsparse
     */
     @SerializedName("DestType")
     @Expose
@@ -275,16 +275,16 @@ domain：域名规则，例如*.qq.com
     }
 
     /**
-     * Get 访问目的类型，类型可以为：net，domain 
-     * @return DestType 访问目的类型，类型可以为：net，domain
+     * Get 访问目的类型，类型可以为：net，domain，dnsparse 
+     * @return DestType 访问目的类型，类型可以为：net，domain，dnsparse
      */
     public String getDestType() {
         return this.DestType;
     }
 
     /**
-     * Set 访问目的类型，类型可以为：net，domain
-     * @param DestType 访问目的类型，类型可以为：net，domain
+     * Set 访问目的类型，类型可以为：net，domain，dnsparse
+     * @param DestType 访问目的类型，类型可以为：net，domain，dnsparse
      */
     public void setDestType(String DestType) {
         this.DestType = DestType;

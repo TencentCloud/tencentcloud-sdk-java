@@ -66,6 +66,13 @@ public class DescribeColumnsMetaRequest extends AbstractModel {
     private Boolean IsPartitionQuery;
 
     /**
+    * 合规组ID
+    */
+    @SerializedName("ComplianceId")
+    @Expose
+    private Long ComplianceId;
+
+    /**
      * Get 表ID 
      * @return TableId 表ID
      */
@@ -161,6 +168,22 @@ public class DescribeColumnsMetaRequest extends AbstractModel {
         this.IsPartitionQuery = IsPartitionQuery;
     }
 
+    /**
+     * Get 合规组ID 
+     * @return ComplianceId 合规组ID
+     */
+    public Long getComplianceId() {
+        return this.ComplianceId;
+    }
+
+    /**
+     * Set 合规组ID
+     * @param ComplianceId 合规组ID
+     */
+    public void setComplianceId(Long ComplianceId) {
+        this.ComplianceId = ComplianceId;
+    }
+
     public DescribeColumnsMetaRequest() {
     }
 
@@ -193,6 +216,9 @@ public class DescribeColumnsMetaRequest extends AbstractModel {
         if (source.IsPartitionQuery != null) {
             this.IsPartitionQuery = new Boolean(source.IsPartitionQuery);
         }
+        if (source.ComplianceId != null) {
+            this.ComplianceId = new Long(source.ComplianceId);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class DescribeColumnsMetaRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FilterSet.", this.FilterSet);
         this.setParamArrayObj(map, prefix + "OrderFieldSet.", this.OrderFieldSet);
         this.setParamSimple(map, prefix + "IsPartitionQuery", this.IsPartitionQuery);
+        this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
 
     }
 }

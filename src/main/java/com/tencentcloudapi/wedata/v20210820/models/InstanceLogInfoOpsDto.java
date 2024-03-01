@@ -64,6 +64,14 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String ThirdTaskLogUrlDesc;
 
     /**
+    * 日志行数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LineCount")
+    @Expose
+    private Long LineCount;
+
+    /**
      * Get 实例运行日志
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogInfo 实例运行日志
@@ -163,6 +171,26 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.ThirdTaskLogUrlDesc = ThirdTaskLogUrlDesc;
     }
 
+    /**
+     * Get 日志行数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LineCount 日志行数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLineCount() {
+        return this.LineCount;
+    }
+
+    /**
+     * Set 日志行数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LineCount 日志行数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLineCount(Long LineCount) {
+        this.LineCount = LineCount;
+    }
+
     public InstanceLogInfoOpsDto() {
     }
 
@@ -189,6 +217,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         if (source.ThirdTaskLogUrlDesc != null) {
             this.ThirdTaskLogUrlDesc = new String(source.ThirdTaskLogUrlDesc);
         }
+        if (source.LineCount != null) {
+            this.LineCount = new Long(source.LineCount);
+        }
     }
 
 
@@ -201,6 +232,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "DataLogInfo", this.DataLogInfo);
         this.setParamSimple(map, prefix + "ThirdTaskRunLogInfo", this.ThirdTaskRunLogInfo);
         this.setParamSimple(map, prefix + "ThirdTaskLogUrlDesc", this.ThirdTaskLogUrlDesc);
+        this.setParamSimple(map, prefix + "LineCount", this.LineCount);
 
     }
 }

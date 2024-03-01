@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class BatchStartIntegrationTasksRequest extends AbstractModel {
 
     /**
-    * 任务id
-    */
-    @SerializedName("TaskIds")
-    @Expose
-    private String [] TaskIds;
-
-    /**
     * 任务类型
     */
     @SerializedName("TaskType")
@@ -45,20 +38,18 @@ public class BatchStartIntegrationTasksRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-     * Get 任务id 
-     * @return TaskIds 任务id
-     */
-    public String [] getTaskIds() {
-        return this.TaskIds;
-    }
+    * 任务id
+    */
+    @SerializedName("TaskIds")
+    @Expose
+    private String [] TaskIds;
 
     /**
-     * Set 任务id
-     * @param TaskIds 任务id
-     */
-    public void setTaskIds(String [] TaskIds) {
-        this.TaskIds = TaskIds;
-    }
+    * 批量运行集成任务，目前仅实时集成用到了这个参数
+    */
+    @SerializedName("StartTaskInfoSet")
+    @Expose
+    private StartTaskInfo [] StartTaskInfoSet;
 
     /**
      * Get 任务类型 
@@ -92,6 +83,38 @@ public class BatchStartIntegrationTasksRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 任务id 
+     * @return TaskIds 任务id
+     */
+    public String [] getTaskIds() {
+        return this.TaskIds;
+    }
+
+    /**
+     * Set 任务id
+     * @param TaskIds 任务id
+     */
+    public void setTaskIds(String [] TaskIds) {
+        this.TaskIds = TaskIds;
+    }
+
+    /**
+     * Get 批量运行集成任务，目前仅实时集成用到了这个参数 
+     * @return StartTaskInfoSet 批量运行集成任务，目前仅实时集成用到了这个参数
+     */
+    public StartTaskInfo [] getStartTaskInfoSet() {
+        return this.StartTaskInfoSet;
+    }
+
+    /**
+     * Set 批量运行集成任务，目前仅实时集成用到了这个参数
+     * @param StartTaskInfoSet 批量运行集成任务，目前仅实时集成用到了这个参数
+     */
+    public void setStartTaskInfoSet(StartTaskInfo [] StartTaskInfoSet) {
+        this.StartTaskInfoSet = StartTaskInfoSet;
+    }
+
     public BatchStartIntegrationTasksRequest() {
     }
 
@@ -100,17 +123,23 @@ public class BatchStartIntegrationTasksRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BatchStartIntegrationTasksRequest(BatchStartIntegrationTasksRequest source) {
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
         if (source.TaskIds != null) {
             this.TaskIds = new String[source.TaskIds.length];
             for (int i = 0; i < source.TaskIds.length; i++) {
                 this.TaskIds[i] = new String(source.TaskIds[i]);
             }
         }
-        if (source.TaskType != null) {
-            this.TaskType = new Long(source.TaskType);
-        }
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
+        if (source.StartTaskInfoSet != null) {
+            this.StartTaskInfoSet = new StartTaskInfo[source.StartTaskInfoSet.length];
+            for (int i = 0; i < source.StartTaskInfoSet.length; i++) {
+                this.StartTaskInfoSet[i] = new StartTaskInfo(source.StartTaskInfoSet[i]);
+            }
         }
     }
 
@@ -119,9 +148,10 @@ public class BatchStartIntegrationTasksRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+        this.setParamArrayObj(map, prefix + "StartTaskInfoSet.", this.StartTaskInfoSet);
 
     }
 }

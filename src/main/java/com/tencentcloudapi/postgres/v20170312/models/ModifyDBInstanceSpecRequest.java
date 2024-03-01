@@ -94,6 +94,13 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private String SwitchEndTime;
 
     /**
+    * 修改后的实例CPU大小，单位Core。
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get 实例ID，形如：postgres-6bwgamo3。 
      * @return DBInstanceId 实例ID，形如：postgres-6bwgamo3。
      */
@@ -265,6 +272,22 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         this.SwitchEndTime = SwitchEndTime;
     }
 
+    /**
+     * Get 修改后的实例CPU大小，单位Core。 
+     * @return Cpu 修改后的实例CPU大小，单位Core。
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 修改后的实例CPU大小，单位Core。
+     * @param Cpu 修改后的实例CPU大小，单位Core。
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
     public ModifyDBInstanceSpecRequest() {
     }
 
@@ -303,6 +326,9 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         if (source.SwitchEndTime != null) {
             this.SwitchEndTime = new String(source.SwitchEndTime);
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
     }
 
 
@@ -319,6 +345,7 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
         this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
         this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

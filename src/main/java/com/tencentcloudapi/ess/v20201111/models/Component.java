@@ -234,8 +234,8 @@ public class Component extends AbstractModel {
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
 <li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
-<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取</li>
-<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取</li></ul>
+<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
+<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 
 
 <b>控件值约束说明</b>：
@@ -996,8 +996,8 @@ public class Component extends AbstractModel {
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
 <li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
-<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取</li>
-<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取</li></ul>
+<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
+<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 
 
 <b>控件值约束说明</b>：
@@ -1011,8 +1011,8 @@ public class Component extends AbstractModel {
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
 <li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
-<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取</li>
-<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取</li></ul>
+<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
+<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 
 
 <b>控件值约束说明</b>：
@@ -1032,8 +1032,8 @@ public class Component extends AbstractModel {
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
 <li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
-<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取</li>
-<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取</li></ul>
+<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
+<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 
 
 <b>控件值约束说明</b>：
@@ -1047,8 +1047,8 @@ public class Component extends AbstractModel {
 <li> <b>SELECTOR</b> : 选项值</li>
 <li> <b>DYNAMIC_TABLE</b>  - 传入json格式的表格内容，详见说明：[数据表格](https://qian.tencent.com/developers/company/dynamic_table)</li>
 <li> <b>DATE</b> : 默认是格式化为xxxx年xx月xx日</li>
-<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取</li>
-<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取</li></ul>
+<li> <b>SIGN_SEAL</b> : 印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li>
+<li> <b>SIGN_PAGING_SEAL</b> : 可以指定印章ID，于控制台查询获取， [点击查看在控制台上位置](https://qcloudimg.tencent-cloud.cn/raw/f7b0f2ea4a534aada4b893dbf9671eae.png)</li></ul>
 
 
 <b>控件值约束说明</b>：

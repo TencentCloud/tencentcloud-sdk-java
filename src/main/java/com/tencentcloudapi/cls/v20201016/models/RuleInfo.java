@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuleInfo extends AbstractModel {
 
     /**
-    * 全文索引配置, 如果为空时代表未开启全文索引
+    * 全文索引配置, 为空时代表未开启全文索引
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FullText")
@@ -32,7 +32,7 @@ public class RuleInfo extends AbstractModel {
     private FullTextInfo FullText;
 
     /**
-    * 键值索引配置，如果为空时代表未开启键值索引
+    * 键值索引配置，为空时代表未开启键值索引
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyValue")
@@ -40,7 +40,7 @@ public class RuleInfo extends AbstractModel {
     private RuleKeyValueInfo KeyValue;
 
     /**
-    * 元字段索引配置，如果为空时代表未开启元字段索引
+    * 元字段索引配置，为空时代表未开启元字段索引
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
@@ -48,8 +48,8 @@ public class RuleInfo extends AbstractModel {
     private RuleTagInfo Tag;
 
     /**
-    * 动态索引配置，为空时代表未开启动态索引。
-启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
+    * 键值索引自动配置，为空时代表未开启该功能。
+启用后自动将日志内的字段添加到键值索引中，包括日志中后续新增的字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DynamicIndex")
@@ -57,9 +57,9 @@ public class RuleInfo extends AbstractModel {
     private DynamicIndex DynamicIndex;
 
     /**
-     * Get 全文索引配置, 如果为空时代表未开启全文索引
+     * Get 全文索引配置, 为空时代表未开启全文索引
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FullText 全文索引配置, 如果为空时代表未开启全文索引
+     * @return FullText 全文索引配置, 为空时代表未开启全文索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FullTextInfo getFullText() {
@@ -67,9 +67,9 @@ public class RuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 全文索引配置, 如果为空时代表未开启全文索引
+     * Set 全文索引配置, 为空时代表未开启全文索引
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FullText 全文索引配置, 如果为空时代表未开启全文索引
+     * @param FullText 全文索引配置, 为空时代表未开启全文索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFullText(FullTextInfo FullText) {
@@ -77,9 +77,9 @@ public class RuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 键值索引配置，如果为空时代表未开启键值索引
+     * Get 键值索引配置，为空时代表未开启键值索引
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyValue 键值索引配置，如果为空时代表未开启键值索引
+     * @return KeyValue 键值索引配置，为空时代表未开启键值索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleKeyValueInfo getKeyValue() {
@@ -87,9 +87,9 @@ public class RuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 键值索引配置，如果为空时代表未开启键值索引
+     * Set 键值索引配置，为空时代表未开启键值索引
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyValue 键值索引配置，如果为空时代表未开启键值索引
+     * @param KeyValue 键值索引配置，为空时代表未开启键值索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyValue(RuleKeyValueInfo KeyValue) {
@@ -97,9 +97,9 @@ public class RuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 元字段索引配置，如果为空时代表未开启元字段索引
+     * Get 元字段索引配置，为空时代表未开启元字段索引
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tag 元字段索引配置，如果为空时代表未开启元字段索引
+     * @return Tag 元字段索引配置，为空时代表未开启元字段索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleTagInfo getTag() {
@@ -107,9 +107,9 @@ public class RuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 元字段索引配置，如果为空时代表未开启元字段索引
+     * Set 元字段索引配置，为空时代表未开启元字段索引
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tag 元字段索引配置，如果为空时代表未开启元字段索引
+     * @param Tag 元字段索引配置，为空时代表未开启元字段索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(RuleTagInfo Tag) {
@@ -117,11 +117,11 @@ public class RuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 动态索引配置，为空时代表未开启动态索引。
-启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
+     * Get 键值索引自动配置，为空时代表未开启该功能。
+启用后自动将日志内的字段添加到键值索引中，包括日志中后续新增的字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DynamicIndex 动态索引配置，为空时代表未开启动态索引。
-启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
+     * @return DynamicIndex 键值索引自动配置，为空时代表未开启该功能。
+启用后自动将日志内的字段添加到键值索引中，包括日志中后续新增的字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DynamicIndex getDynamicIndex() {
@@ -129,11 +129,11 @@ public class RuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 动态索引配置，为空时代表未开启动态索引。
-启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
+     * Set 键值索引自动配置，为空时代表未开启该功能。
+启用后自动将日志内的字段添加到键值索引中，包括日志中后续新增的字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DynamicIndex 动态索引配置，为空时代表未开启动态索引。
-启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
+     * @param DynamicIndex 键值索引自动配置，为空时代表未开启该功能。
+启用后自动将日志内的字段添加到键值索引中，包括日志中后续新增的字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDynamicIndex(DynamicIndex DynamicIndex) {

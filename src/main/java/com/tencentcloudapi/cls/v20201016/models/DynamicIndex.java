@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DynamicIndex extends AbstractModel {
 
     /**
-    * 动态索引配置开关
+    * 键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -32,9 +32,9 @@ public class DynamicIndex extends AbstractModel {
     private Boolean Status;
 
     /**
-     * Get 动态索引配置开关
+     * Get 键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 动态索引配置开关
+     * @return Status 键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStatus() {
@@ -42,9 +42,9 @@ public class DynamicIndex extends AbstractModel {
     }
 
     /**
-     * Set 动态索引配置开关
+     * Set 键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 动态索引配置开关
+     * @param Status 键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Boolean Status) {

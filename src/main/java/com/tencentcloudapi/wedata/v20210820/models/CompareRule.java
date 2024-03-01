@@ -40,6 +40,14 @@ public class CompareRule extends AbstractModel {
     private Long CycleStep;
 
     /**
+    * o 表示 或，a 表示 且，数字表示items下标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComputeExpression")
+    @Expose
+    private String ComputeExpression;
+
+    /**
      * Get 比较条件列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Items 比较条件列表
@@ -79,6 +87,26 @@ public class CompareRule extends AbstractModel {
         this.CycleStep = CycleStep;
     }
 
+    /**
+     * Get o 表示 或，a 表示 且，数字表示items下标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ComputeExpression o 表示 或，a 表示 且，数字表示items下标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComputeExpression() {
+        return this.ComputeExpression;
+    }
+
+    /**
+     * Set o 表示 或，a 表示 且，数字表示items下标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComputeExpression o 表示 或，a 表示 且，数字表示items下标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComputeExpression(String ComputeExpression) {
+        this.ComputeExpression = ComputeExpression;
+    }
+
     public CompareRule() {
     }
 
@@ -96,6 +124,9 @@ public class CompareRule extends AbstractModel {
         if (source.CycleStep != null) {
             this.CycleStep = new Long(source.CycleStep);
         }
+        if (source.ComputeExpression != null) {
+            this.ComputeExpression = new String(source.ComputeExpression);
+        }
     }
 
 
@@ -105,6 +136,7 @@ public class CompareRule extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "CycleStep", this.CycleStep);
+        this.setParamSimple(map, prefix + "ComputeExpression", this.ComputeExpression);
 
     }
 }

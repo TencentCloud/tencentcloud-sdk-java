@@ -60,6 +60,14 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     private Long Status;
 
     /**
+    * 购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
     * 生效时间，Unix时间戳格式，单位：秒
     */
     @SerializedName("ActiveTime")
@@ -100,6 +108,13 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     @SerializedName("RenewFlag")
     @Expose
     private Boolean RenewFlag;
+
+    /**
+    * 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+    */
+    @SerializedName("ModifyStatus")
+    @Expose
+    private Long ModifyStatus;
 
     /**
      * Get 流量包的唯一资源ID 
@@ -198,6 +213,26 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     }
 
     /**
+     * Get 购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Get 生效时间，Unix时间戳格式，单位：秒 
      * @return ActiveTime 生效时间，Unix时间戳格式，单位：秒
      */
@@ -293,6 +328,22 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费 
+     * @return ModifyStatus 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+     */
+    public Long getModifyStatus() {
+        return this.ModifyStatus;
+    }
+
+    /**
+     * Set 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+     * @param ModifyStatus 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+     */
+    public void setModifyStatus(Long ModifyStatus) {
+        this.ModifyStatus = ModifyStatus;
+    }
+
     public FlowPackageInfo() {
     }
 
@@ -312,6 +363,9 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
         }
         if (source.ActiveTime != null) {
             this.ActiveTime = new Long(source.ActiveTime);
@@ -334,6 +388,9 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         if (source.RenewFlag != null) {
             this.RenewFlag = new Boolean(source.RenewFlag);
         }
+        if (source.ModifyStatus != null) {
+            this.ModifyStatus = new Long(source.ModifyStatus);
+        }
     }
 
 
@@ -345,12 +402,14 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ActiveTime", this.ActiveTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
         this.setParamSimple(map, prefix + "CapacitySize", this.CapacitySize);
         this.setParamSimple(map, prefix + "CapacityRemain", this.CapacityRemain);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "ModifyStatus", this.ModifyStatus);
 
     }
 }

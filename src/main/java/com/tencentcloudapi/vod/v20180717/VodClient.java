@@ -944,6 +944,19 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查询默认分发配置。
+* 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
+* 播放密钥，用于计算播放器签名。
+     * @param req DescribeDefaultDistributionConfigRequest
+     * @return DescribeDefaultDistributionConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDefaultDistributionConfigResponse DescribeDefaultDistributionConfig(DescribeDefaultDistributionConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDefaultDistributionConfig", DescribeDefaultDistributionConfigResponse.class);
+    }
+
+    /**
      *本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中 [DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643) 的升级版本。
 
 如果您是新接入点播加密的用户，不要使用该 API，请参考 [视频加密综述](https://cloud.tencent.com/document/product/266/45552) 使用推荐的加密方式。
@@ -1604,6 +1617,19 @@ public class VodClient extends AbstractClient{
     public ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyContentReviewTemplate", ModifyContentReviewTemplateResponse.class);
+    }
+
+    /**
+     *该接口用于修改默认分发配置。
+* 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
+* 播放密钥，用于计算播放器签名。
+     * @param req ModifyDefaultDistributionConfigRequest
+     * @return ModifyDefaultDistributionConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDefaultDistributionConfigResponse ModifyDefaultDistributionConfig(ModifyDefaultDistributionConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDefaultDistributionConfig", ModifyDefaultDistributionConfigResponse.class);
     }
 
     /**

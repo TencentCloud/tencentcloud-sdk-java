@@ -38,6 +38,13 @@ public class DescribePreDomainListRequest extends AbstractModel {
     private Long Size;
 
     /**
+    * 用于结束时间筛选
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get 页码 
      * @return Page 页码
      */
@@ -69,6 +76,22 @@ public class DescribePreDomainListRequest extends AbstractModel {
         this.Size = Size;
     }
 
+    /**
+     * Get 用于结束时间筛选 
+     * @return EndTime 用于结束时间筛选
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 用于结束时间筛选
+     * @param EndTime 用于结束时间筛选
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public DescribePreDomainListRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribePreDomainListRequest extends AbstractModel {
         if (source.Size != null) {
             this.Size = new Long(source.Size);
         }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribePreDomainListRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

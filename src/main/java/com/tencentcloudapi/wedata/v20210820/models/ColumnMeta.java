@@ -104,6 +104,22 @@ public class ColumnMeta extends AbstractModel {
     private String DictionaryName;
 
     /**
+    * 安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LevelName")
+    @Expose
+    private String LevelName;
+
+    /**
+    * 安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LevelRank")
+    @Expose
+    private Long LevelRank;
+
+    /**
      * Get 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NameEn 字段英文名称
@@ -303,6 +319,46 @@ public class ColumnMeta extends AbstractModel {
         this.DictionaryName = DictionaryName;
     }
 
+    /**
+     * Get 安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LevelName 安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLevelName() {
+        return this.LevelName;
+    }
+
+    /**
+     * Set 安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LevelName 安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLevelName(String LevelName) {
+        this.LevelName = LevelName;
+    }
+
+    /**
+     * Get 安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LevelRank 安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLevelRank() {
+        return this.LevelRank;
+    }
+
+    /**
+     * Set 安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LevelRank 安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLevelRank(Long LevelRank) {
+        this.LevelRank = LevelRank;
+    }
+
     public ColumnMeta() {
     }
 
@@ -344,6 +400,12 @@ public class ColumnMeta extends AbstractModel {
         if (source.DictionaryName != null) {
             this.DictionaryName = new String(source.DictionaryName);
         }
+        if (source.LevelName != null) {
+            this.LevelName = new String(source.LevelName);
+        }
+        if (source.LevelRank != null) {
+            this.LevelRank = new Long(source.LevelRank);
+        }
     }
 
 
@@ -361,6 +423,8 @@ public class ColumnMeta extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ColumnFamiliesFieldSet.", this.ColumnFamiliesFieldSet);
         this.setParamSimple(map, prefix + "DictionaryId", this.DictionaryId);
         this.setParamSimple(map, prefix + "DictionaryName", this.DictionaryName);
+        this.setParamSimple(map, prefix + "LevelName", this.LevelName);
+        this.setParamSimple(map, prefix + "LevelRank", this.LevelRank);
 
     }
 }

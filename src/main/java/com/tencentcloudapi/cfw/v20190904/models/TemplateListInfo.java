@@ -104,6 +104,14 @@ public class TemplateListInfo extends AbstractModel {
     private String ProtocolType;
 
     /**
+    * 模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPNum")
+    @Expose
+    private Long IPNum;
+
+    /**
      * Get 模板ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uuid 模板ID
@@ -303,6 +311,26 @@ public class TemplateListInfo extends AbstractModel {
         this.ProtocolType = ProtocolType;
     }
 
+    /**
+     * Get 模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPNum 模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIPNum() {
+        return this.IPNum;
+    }
+
+    /**
+     * Set 模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPNum 模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPNum(Long IPNum) {
+        this.IPNum = IPNum;
+    }
+
     public TemplateListInfo() {
     }
 
@@ -341,6 +369,9 @@ public class TemplateListInfo extends AbstractModel {
         if (source.ProtocolType != null) {
             this.ProtocolType = new String(source.ProtocolType);
         }
+        if (source.IPNum != null) {
+            this.IPNum = new Long(source.IPNum);
+        }
     }
 
 
@@ -358,6 +389,7 @@ public class TemplateListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RulesNum", this.RulesNum);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+        this.setParamSimple(map, prefix + "IPNum", this.IPNum);
 
     }
 }

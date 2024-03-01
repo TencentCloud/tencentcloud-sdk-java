@@ -137,6 +137,13 @@ public class L4ProxyRule extends AbstractModel {
     private String Status;
 
     /**
+    * BuID。
+    */
+    @SerializedName("BuId")
+    @Expose
+    private String BuId;
+
+    /**
      * Get 转发规则 ID。
 注意：L4ProxyRule 在 CreateL4ProxyRules 作为入参使用时，该参数请勿填写；在 ModifyL4ProxyRules 作为入参使用时，该参数必填。 
      * @return RuleId 转发规则 ID。
@@ -456,6 +463,22 @@ public class L4ProxyRule extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get BuID。 
+     * @return BuId BuID。
+     */
+    public String getBuId() {
+        return this.BuId;
+    }
+
+    /**
+     * Set BuID。
+     * @param BuId BuID。
+     */
+    public void setBuId(String BuId) {
+        this.BuId = BuId;
+    }
+
     public L4ProxyRule() {
     }
 
@@ -503,6 +526,9 @@ public class L4ProxyRule extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.BuId != null) {
+            this.BuId = new String(source.BuId);
+        }
     }
 
 
@@ -521,6 +547,7 @@ public class L4ProxyRule extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BuId", this.BuId);
 
     }
 }

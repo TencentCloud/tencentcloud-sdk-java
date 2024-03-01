@@ -176,6 +176,22 @@ public class RuleGroup extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StrategyConfig")
+    @Expose
+    private Boolean StrategyConfig;
+
+    /**
+    * 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubscribeConfig")
+    @Expose
+    private Boolean SubscribeConfig;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -555,6 +571,46 @@ public class RuleGroup extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StrategyConfig 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getStrategyConfig() {
+        return this.StrategyConfig;
+    }
+
+    /**
+     * Set 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StrategyConfig 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStrategyConfig(Boolean StrategyConfig) {
+        this.StrategyConfig = StrategyConfig;
+    }
+
+    /**
+     * Get 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscribeConfig 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSubscribeConfig() {
+        return this.SubscribeConfig;
+    }
+
+    /**
+     * Set 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscribeConfig 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscribeConfig(Boolean SubscribeConfig) {
+        this.SubscribeConfig = SubscribeConfig;
+    }
+
     public RuleGroup() {
     }
 
@@ -620,6 +676,12 @@ public class RuleGroup extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.StrategyConfig != null) {
+            this.StrategyConfig = new Boolean(source.StrategyConfig);
+        }
+        if (source.SubscribeConfig != null) {
+            this.SubscribeConfig = new Boolean(source.SubscribeConfig);
+        }
     }
 
 
@@ -646,6 +708,8 @@ public class RuleGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "TableOwnerUserId", this.TableOwnerUserId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "StrategyConfig", this.StrategyConfig);
+        this.setParamSimple(map, prefix + "SubscribeConfig", this.SubscribeConfig);
 
     }
 }

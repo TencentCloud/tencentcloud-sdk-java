@@ -94,7 +94,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
     private McuSeiParams SeiParams;
 
     /**
-    * 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+    * 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
     */
     @SerializedName("FeedBackRoomParams")
     @Expose
@@ -261,16 +261,16 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
     }
 
     /**
-     * Get 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。 
-     * @return FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+     * Get 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。 
+     * @return FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     public McuFeedBackRoomParams [] getFeedBackRoomParams() {
         return this.FeedBackRoomParams;
     }
 
     /**
-     * Set 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
-     * @param FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+     * Set 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+     * @param FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     public void setFeedBackRoomParams(McuFeedBackRoomParams [] FeedBackRoomParams) {
         this.FeedBackRoomParams = FeedBackRoomParams;

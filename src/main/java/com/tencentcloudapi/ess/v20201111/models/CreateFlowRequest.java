@@ -45,7 +45,10 @@ public class CreateFlowRequest extends AbstractModel {
     /**
     * 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
 
-注:  `approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效`
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 approver 中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+![image](https://qcloudimg.tencent-cloud.cn/raw/addbc9f12785e4d9d7c5cdeda660631a.png)
     */
     @SerializedName("Approvers")
     @Expose
@@ -237,10 +240,16 @@ public class CreateFlowRequest extends AbstractModel {
     /**
      * Get 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
 
-注:  `approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效` 
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 approver 中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+![image](https://qcloudimg.tencent-cloud.cn/raw/addbc9f12785e4d9d7c5cdeda660631a.png) 
      * @return Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
 
-注:  `approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效`
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 approver 中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+![image](https://qcloudimg.tencent-cloud.cn/raw/addbc9f12785e4d9d7c5cdeda660631a.png)
      */
     public FlowCreateApprover [] getApprovers() {
         return this.Approvers;
@@ -249,10 +258,16 @@ public class CreateFlowRequest extends AbstractModel {
     /**
      * Set 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
 
-注:  `approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效`
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 approver 中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+![image](https://qcloudimg.tencent-cloud.cn/raw/addbc9f12785e4d9d7c5cdeda660631a.png)
      * @param Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
 
-注:  `approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效`
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 approver 中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+![image](https://qcloudimg.tencent-cloud.cn/raw/addbc9f12785e4d9d7c5cdeda660631a.png)
      */
     public void setApprovers(FlowCreateApprover [] Approvers) {
         this.Approvers = Approvers;

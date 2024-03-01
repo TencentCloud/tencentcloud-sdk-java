@@ -1046,6 +1046,19 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *启停负载均衡实例或者监听器。
+本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+该功能正在内测中，如需使用，请通过[工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20LB&step=1)。
+     * @param req SetLoadBalancerStartStatusRequest
+     * @return SetLoadBalancerStartStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetLoadBalancerStartStatusResponse SetLoadBalancerStartStatus(SetLoadBalancerStartStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetLoadBalancerStartStatus", SetLoadBalancerStartStatusResponse.class);
+    }
+
+    /**
      *绑定或解绑一个安全组到多个公网负载均衡实例。注意：内网负载均衡不支持绑定安全组。
      * @param req SetSecurityGroupForLoadbalancersRequest
      * @return SetSecurityGroupForLoadbalancersResponse

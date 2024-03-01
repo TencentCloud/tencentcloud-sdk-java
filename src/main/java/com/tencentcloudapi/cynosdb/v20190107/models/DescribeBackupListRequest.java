@@ -31,14 +31,14 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 备份文件列表大小，取值范围(0,100]
+    * 返回数量，取值范围(0,100]
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 备份文件列表偏移，取值范围[0,INF)
+    * 记录偏移量，取值范围[0,INF)
     */
     @SerializedName("Offset")
     @Expose
@@ -67,7 +67,7 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String BackupType;
 
     /**
-    * 备份方式，可选值：auto，自动备份；manual，手动备
+    * 备份方式，可选值：auto，自动备份；manual，手动备份
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -146,32 +146,32 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get 备份文件列表大小，取值范围(0,100] 
-     * @return Limit 备份文件列表大小，取值范围(0,100]
+     * Get 返回数量，取值范围(0,100] 
+     * @return Limit 返回数量，取值范围(0,100]
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 备份文件列表大小，取值范围(0,100]
-     * @param Limit 备份文件列表大小，取值范围(0,100]
+     * Set 返回数量，取值范围(0,100]
+     * @param Limit 返回数量，取值范围(0,100]
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 备份文件列表偏移，取值范围[0,INF) 
-     * @return Offset 备份文件列表偏移，取值范围[0,INF)
+     * Get 记录偏移量，取值范围[0,INF) 
+     * @return Offset 记录偏移量，取值范围[0,INF)
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 备份文件列表偏移，取值范围[0,INF)
-     * @param Offset 备份文件列表偏移，取值范围[0,INF)
+     * Set 记录偏移量，取值范围[0,INF)
+     * @param Offset 记录偏移量，取值范围[0,INF)
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -230,16 +230,16 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get 备份方式，可选值：auto，自动备份；manual，手动备 
-     * @return BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备
+     * Get 备份方式，可选值：auto，自动备份；manual，手动备份 
+     * @return BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备份
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 备份方式，可选值：auto，自动备份；manual，手动备
-     * @param BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备
+     * Set 备份方式，可选值：auto，自动备份；manual，手动备份
+     * @param BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备份
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;

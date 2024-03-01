@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeEdgeClusterUpgradeInfoResponse extends AbstractModel {
 
     /**
-    * 可升级的集群组件和
+    * 可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentVersion")
@@ -71,9 +71,9 @@ public class DescribeEdgeClusterUpgradeInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可升级的集群组件和
+     * Get 可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComponentVersion 可升级的集群组件和
+     * @return ComponentVersion 可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentVersion() {
@@ -81,9 +81,9 @@ public class DescribeEdgeClusterUpgradeInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 可升级的集群组件和
+     * Set 可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComponentVersion 可升级的集群组件和
+     * @param ComponentVersion 可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentVersion(String ComponentVersion) {

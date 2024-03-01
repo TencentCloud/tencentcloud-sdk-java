@@ -45,6 +45,16 @@ public class DescribeGetAuthInfoResponse extends AbstractModel {
     private String Type;
 
     /**
+    * 大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +110,34 @@ public class DescribeGetAuthInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户 
+     * @return Level 大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set 大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户
+     * @param Level 大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +170,9 @@ public class DescribeGetAuthInfoResponse extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +186,7 @@ public class DescribeGetAuthInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsTenPayMasked", this.IsTenPayMasked);
         this.setParamSimple(map, prefix + "IsAuthenticated", this.IsAuthenticated);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

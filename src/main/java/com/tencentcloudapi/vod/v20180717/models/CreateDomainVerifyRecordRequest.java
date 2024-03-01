@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class CreateDomainVerifyRecordRequest extends AbstractModel {
 
+    /**
+    * 需要接入点播的加速域名。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+     * Get 需要接入点播的加速域名。 
+     * @return Domain 需要接入点播的加速域名。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 需要接入点播的加速域名。
+     * @param Domain 需要接入点播的加速域名。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public CreateDomainVerifyRecordRequest() {
     }
 
@@ -31,6 +54,9 @@ public class CreateDomainVerifyRecordRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateDomainVerifyRecordRequest(CreateDomainVerifyRecordRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class CreateDomainVerifyRecordRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

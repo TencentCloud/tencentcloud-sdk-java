@@ -93,6 +93,13 @@ lye1y30d：低功耗事件30天年套餐。
     private Long ChannelId;
 
     /**
+    * 云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
+    */
+    @SerializedName("StorageRegion")
+    @Expose
+    private String StorageRegion;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -284,6 +291,22 @@ lye1y30d：低功耗事件30天年套餐。
         this.ChannelId = ChannelId;
     }
 
+    /**
+     * Get 云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。 
+     * @return StorageRegion 云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
+     */
+    public String getStorageRegion() {
+        return this.StorageRegion;
+    }
+
+    /**
+     * Set 云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
+     * @param StorageRegion 云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
+     */
+    public void setStorageRegion(String StorageRegion) {
+        this.StorageRegion = StorageRegion;
+    }
+
     public CreateCloudStorageRequest() {
     }
 
@@ -313,6 +336,9 @@ lye1y30d：低功耗事件30天年套餐。
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
         }
+        if (source.StorageRegion != null) {
+            this.StorageRegion = new String(source.StorageRegion);
+        }
     }
 
 
@@ -327,6 +353,7 @@ lye1y30d：低功耗事件30天年套餐。
         this.setParamSimple(map, prefix + "PackageQueue", this.PackageQueue);
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
 
     }
 }

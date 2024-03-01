@@ -444,6 +444,12 @@ public enum VodErrorCode {
     // 参数值错误：SampleType。
      INVALIDPARAMETERVALUE_SAMPLETYPE("InvalidParameterValue.SampleType"),
      
+    // 参数错误：Scheme 无效。
+     INVALIDPARAMETERVALUE_SCHEME("InvalidParameterValue.Scheme"),
+     
+    // 域名没有开启 https。
+     INVALIDPARAMETERVALUE_SCHEMECONFLICT("InvalidParameterValue.SchemeConflict"),
+     
     // 参数值错误：ScreenshotInterval 参数取值非法。
      INVALIDPARAMETERVALUE_SCREENSHOTINTERVAL("InvalidParameterValue.ScreenshotInterval"),
      
@@ -557,6 +563,9 @@ public enum VodErrorCode {
      
     // 去重识别码一天内重复，请求被去重。
      INVALIDPARAMETERVALUE_UNIQUEIDENTIFIER("InvalidParameterValue.UniqueIdentifier"),
+     
+    // 域名不能被设置。
+     INVALIDPARAMETERVALUE_UNSUPPORTDOMAIN("InvalidParameterValue.UnsupportDomain"),
      
     // 参数值错误：文件不支持该解冻方式。
      INVALIDPARAMETERVALUE_UNSUPPORTEDRESTORETIER("InvalidParameterValue.UnsupportedRestoreTier"),

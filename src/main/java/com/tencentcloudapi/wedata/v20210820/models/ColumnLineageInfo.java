@@ -40,14 +40,6 @@ public class ColumnLineageInfo extends AbstractModel {
     private String DatasourceId;
 
     /**
-    * 表ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TableId")
-    @Expose
-    private String TableId;
-
-    /**
     * 字段名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -208,6 +200,14 @@ public class ColumnLineageInfo extends AbstractModel {
     private LineageParamRecord [] ExtParams;
 
     /**
+    * 表ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableId")
+    @Expose
+    private String TableId;
+
+    /**
      * Get 血缘id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 血缘id
@@ -245,26 +245,6 @@ public class ColumnLineageInfo extends AbstractModel {
      */
     public void setDatasourceId(String DatasourceId) {
         this.DatasourceId = DatasourceId;
-    }
-
-    /**
-     * Get 表ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableId 表ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getTableId() {
-        return this.TableId;
-    }
-
-    /**
-     * Set 表ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableId 表ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTableId(String TableId) {
-        this.TableId = TableId;
     }
 
     /**
@@ -667,6 +647,26 @@ public class ColumnLineageInfo extends AbstractModel {
         this.ExtParams = ExtParams;
     }
 
+    /**
+     * Get 表ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableId 表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableId() {
+        return this.TableId;
+    }
+
+    /**
+     * Set 表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableId 表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableId(String TableId) {
+        this.TableId = TableId;
+    }
+
     public ColumnLineageInfo() {
     }
 
@@ -680,9 +680,6 @@ public class ColumnLineageInfo extends AbstractModel {
         }
         if (source.DatasourceId != null) {
             this.DatasourceId = new String(source.DatasourceId);
-        }
-        if (source.TableId != null) {
-            this.TableId = new String(source.TableId);
         }
         if (source.ColumnName != null) {
             this.ColumnName = new String(source.ColumnName);
@@ -750,6 +747,9 @@ public class ColumnLineageInfo extends AbstractModel {
                 this.ExtParams[i] = new LineageParamRecord(source.ExtParams[i]);
             }
         }
+        if (source.TableId != null) {
+            this.TableId = new String(source.TableId);
+        }
     }
 
 
@@ -759,7 +759,6 @@ public class ColumnLineageInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
-        this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamSimple(map, prefix + "ColumnName", this.ColumnName);
         this.setParamSimple(map, prefix + "ColumnNameCn", this.ColumnNameCn);
         this.setParamSimple(map, prefix + "ColumnType", this.ColumnType);
@@ -780,6 +779,7 @@ public class ColumnLineageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ParentSet", this.ParentSet);
         this.setParamSimple(map, prefix + "ChildSet", this.ChildSet);
         this.setParamArrayObj(map, prefix + "ExtParams.", this.ExtParams);
+        this.setParamSimple(map, prefix + "TableId", this.TableId);
 
     }
 }

@@ -81,6 +81,20 @@ public class Environment extends AbstractModel {
     private Boolean Available;
 
     /**
+    * 环境是否为默认环境。
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
+    * 环境是否为托管环境。
+    */
+    @SerializedName("IsManaged")
+    @Expose
+    private Boolean IsManaged;
+
+    /**
     * 环境信息。
     */
     @SerializedName("Message")
@@ -255,6 +269,38 @@ public class Environment extends AbstractModel {
     }
 
     /**
+     * Get 环境是否为默认环境。 
+     * @return IsDefault 环境是否为默认环境。
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 环境是否为默认环境。
+     * @param IsDefault 环境是否为默认环境。
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get 环境是否为托管环境。 
+     * @return IsManaged 环境是否为托管环境。
+     */
+    public Boolean getIsManaged() {
+        return this.IsManaged;
+    }
+
+    /**
+     * Set 环境是否为托管环境。
+     * @param IsManaged 环境是否为托管环境。
+     */
+    public void setIsManaged(Boolean IsManaged) {
+        this.IsManaged = IsManaged;
+    }
+
+    /**
      * Get 环境信息。 
      * @return Message 环境信息。
      */
@@ -355,6 +401,12 @@ public class Environment extends AbstractModel {
         if (source.Available != null) {
             this.Available = new Boolean(source.Available);
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.IsManaged != null) {
+            this.IsManaged = new Boolean(source.IsManaged);
+        }
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
@@ -381,6 +433,8 @@ public class Environment extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Available", this.Available);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "IsManaged", this.IsManaged);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "LastWorkflowUuid", this.LastWorkflowUuid);

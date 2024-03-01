@@ -117,6 +117,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *成员账号删除检查
+     * @param req CheckAccountDeleteRequest
+     * @return CheckAccountDeleteResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckAccountDeleteResponse CheckAccountDelete(CheckAccountDeleteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckAccountDelete", CheckAccountDeleteResponse.class);
+    }
+
+    /**
      *创建企业组织
      * @param req CreateOrganizationRequest
      * @return CreateOrganizationResponse

@@ -31,7 +31,7 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 网卡名
+    * 网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
     */
     @SerializedName("Interface")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel {
     }
 
     /**
-     * Get 网卡名 
-     * @return Interface 网卡名
+     * Get 网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡 
+     * @return Interface 网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
      */
     public String getInterface() {
         return this.Interface;
     }
 
     /**
-     * Set 网卡名
-     * @param Interface 网卡名
+     * Set 网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
+     * @param Interface 网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
      */
     public void setInterface(String Interface) {
         this.Interface = Interface;

@@ -400,6 +400,31 @@ public class TableMeta extends AbstractModel {
     private SearchColumnDocVO [] Columns;
 
     /**
+    * 表采集类型
+TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUAL_VIEW(虚拟视图), MATERIALIZED_VIEW(物化视图), LATERAL_VIEW, INDEX_TABLE(索引表), END_SELECT(查询结构), INSTANCE(中间临时表类型(数据血缘)), CDW(CDW表类型)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaCrawlType")
+    @Expose
+    private String MetaCrawlType;
+
+    /**
+    * 是否视图
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsView")
+    @Expose
+    private Boolean IsView;
+
+    /**
+    * 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -1339,6 +1364,70 @@ public class TableMeta extends AbstractModel {
         this.Columns = Columns;
     }
 
+    /**
+     * Get 表采集类型
+TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUAL_VIEW(虚拟视图), MATERIALIZED_VIEW(物化视图), LATERAL_VIEW, INDEX_TABLE(索引表), END_SELECT(查询结构), INSTANCE(中间临时表类型(数据血缘)), CDW(CDW表类型)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetaCrawlType 表采集类型
+TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUAL_VIEW(虚拟视图), MATERIALIZED_VIEW(物化视图), LATERAL_VIEW, INDEX_TABLE(索引表), END_SELECT(查询结构), INSTANCE(中间临时表类型(数据血缘)), CDW(CDW表类型)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetaCrawlType() {
+        return this.MetaCrawlType;
+    }
+
+    /**
+     * Set 表采集类型
+TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUAL_VIEW(虚拟视图), MATERIALIZED_VIEW(物化视图), LATERAL_VIEW, INDEX_TABLE(索引表), END_SELECT(查询结构), INSTANCE(中间临时表类型(数据血缘)), CDW(CDW表类型)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaCrawlType 表采集类型
+TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUAL_VIEW(虚拟视图), MATERIALIZED_VIEW(物化视图), LATERAL_VIEW, INDEX_TABLE(索引表), END_SELECT(查询结构), INSTANCE(中间临时表类型(数据血缘)), CDW(CDW表类型)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaCrawlType(String MetaCrawlType) {
+        this.MetaCrawlType = MetaCrawlType;
+    }
+
+    /**
+     * Get 是否视图
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsView 是否视图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsView() {
+        return this.IsView;
+    }
+
+    /**
+     * Set 是否视图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsView 是否视图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsView(Boolean IsView) {
+        this.IsView = IsView;
+    }
+
+    /**
+     * Get 存储位置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Location 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Location 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
     public TableMeta() {
     }
 
@@ -1497,6 +1586,15 @@ public class TableMeta extends AbstractModel {
                 this.Columns[i] = new SearchColumnDocVO(source.Columns[i]);
             }
         }
+        if (source.MetaCrawlType != null) {
+            this.MetaCrawlType = new String(source.MetaCrawlType);
+        }
+        if (source.IsView != null) {
+            this.IsView = new Boolean(source.IsView);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
     }
 
 
@@ -1551,6 +1649,9 @@ public class TableMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "TableOwnerId", this.TableOwnerId);
         this.setParamSimple(map, prefix + "DataSourceCategory", this.DataSourceCategory);
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
+        this.setParamSimple(map, prefix + "MetaCrawlType", this.MetaCrawlType);
+        this.setParamSimple(map, prefix + "IsView", this.IsView);
+        this.setParamSimple(map, prefix + "Location", this.Location);
 
     }
 }

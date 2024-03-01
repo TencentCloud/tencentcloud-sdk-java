@@ -59,6 +59,13 @@ public class DeviceBaseInfo extends AbstractModel {
     private String Remark;
 
     /**
+    * 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+    */
+    @SerializedName("AccessScope")
+    @Expose
+    private Long AccessScope;
+
+    /**
      * Get 设备唯一ID 
      * @return DeviceId 设备唯一ID
      */
@@ -138,6 +145,22 @@ public class DeviceBaseInfo extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入） 
+     * @return AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     */
+    public Long getAccessScope() {
+        return this.AccessScope;
+    }
+
+    /**
+     * Set 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     * @param AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     */
+    public void setAccessScope(Long AccessScope) {
+        this.AccessScope = AccessScope;
+    }
+
     public DeviceBaseInfo() {
     }
 
@@ -161,6 +184,9 @@ public class DeviceBaseInfo extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.AccessScope != null) {
+            this.AccessScope = new Long(source.AccessScope);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DeviceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "LastTime", this.LastTime);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "AccessScope", this.AccessScope);
 
     }
 }

@@ -157,8 +157,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private String ProxyOperatorIdCardNumber;
 
     /**
-    * 认证完成跳转链接
-注意：`只在H5生效，域名需要联系我们开白`。
+    * 认证完成跳转链接。
+注意：`目前仅支持 H5 和 PC`。
     */
     @SerializedName("AutoJumpUrl")
     @Expose
@@ -557,20 +557,20 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 认证完成跳转链接
-注意：`只在H5生效，域名需要联系我们开白`。 
-     * @return AutoJumpUrl 认证完成跳转链接
-注意：`只在H5生效，域名需要联系我们开白`。
+     * Get 认证完成跳转链接。
+注意：`目前仅支持 H5 和 PC`。 
+     * @return AutoJumpUrl 认证完成跳转链接。
+注意：`目前仅支持 H5 和 PC`。
      */
     public String getAutoJumpUrl() {
         return this.AutoJumpUrl;
     }
 
     /**
-     * Set 认证完成跳转链接
-注意：`只在H5生效，域名需要联系我们开白`。
-     * @param AutoJumpUrl 认证完成跳转链接
-注意：`只在H5生效，域名需要联系我们开白`。
+     * Set 认证完成跳转链接。
+注意：`目前仅支持 H5 和 PC`。
+     * @param AutoJumpUrl 认证完成跳转链接。
+注意：`目前仅支持 H5 和 PC`。
      */
     public void setAutoJumpUrl(String AutoJumpUrl) {
         this.AutoJumpUrl = AutoJumpUrl;

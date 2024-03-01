@@ -184,6 +184,30 @@ public class TableLineageInfo extends AbstractModel {
     private String ChannelType;
 
     /**
+    * 展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisplayType")
+    @Expose
+    private String DisplayType;
+
+    /**
+    * 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
+    * 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableType")
+    @Expose
+    private String TableType;
+
+    /**
      * Get 元数据类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetastoreType 元数据类型
@@ -583,6 +607,66 @@ public class TableLineageInfo extends AbstractModel {
         this.ChannelType = ChannelType;
     }
 
+    /**
+     * Get 展示类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisplayType 展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDisplayType() {
+        return this.DisplayType;
+    }
+
+    /**
+     * Set 展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisplayType 展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisplayType(String DisplayType) {
+        this.DisplayType = DisplayType;
+    }
+
+    /**
+     * Get 表类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineType 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineType 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
+    /**
+     * Get 表类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableType 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableType() {
+        return this.TableType;
+    }
+
+    /**
+     * Set 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableType 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableType(String TableType) {
+        this.TableType = TableType;
+    }
+
     public TableLineageInfo() {
     }
 
@@ -660,6 +744,15 @@ public class TableLineageInfo extends AbstractModel {
         if (source.ChannelType != null) {
             this.ChannelType = new String(source.ChannelType);
         }
+        if (source.DisplayType != null) {
+            this.DisplayType = new String(source.DisplayType);
+        }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
+        if (source.TableType != null) {
+            this.TableType = new String(source.TableType);
+        }
     }
 
 
@@ -687,6 +780,9 @@ public class TableLineageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamArraySimple(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "ChannelType", this.ChannelType);
+        this.setParamSimple(map, prefix + "DisplayType", this.DisplayType);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamSimple(map, prefix + "TableType", this.TableType);
 
     }
 }

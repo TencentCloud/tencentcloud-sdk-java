@@ -93,11 +93,18 @@ public class RunWorkflowRequest extends AbstractModel {
     private String InputCosUri;
 
     /**
-    * 任务缓存清理时间（小时）。不填表示不清理。
+    * 任务缓存清理时间（小时）。不填或0表示不清理。
     */
     @SerializedName("CacheClearDelay")
     @Expose
     private Long CacheClearDelay;
+
+    /**
+    * 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+    */
+    @SerializedName("WorkDir")
+    @Expose
+    private String WorkDir;
 
     /**
      * Get 任务批次名称。 
@@ -268,19 +275,35 @@ public class RunWorkflowRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务缓存清理时间（小时）。不填表示不清理。 
-     * @return CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
+     * Get 任务缓存清理时间（小时）。不填或0表示不清理。 
+     * @return CacheClearDelay 任务缓存清理时间（小时）。不填或0表示不清理。
      */
     public Long getCacheClearDelay() {
         return this.CacheClearDelay;
     }
 
     /**
-     * Set 任务缓存清理时间（小时）。不填表示不清理。
-     * @param CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
+     * Set 任务缓存清理时间（小时）。不填或0表示不清理。
+     * @param CacheClearDelay 任务缓存清理时间（小时）。不填或0表示不清理。
      */
     public void setCacheClearDelay(Long CacheClearDelay) {
         this.CacheClearDelay = CacheClearDelay;
+    }
+
+    /**
+     * Get 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow) 
+     * @return WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     */
+    public String getWorkDir() {
+        return this.WorkDir;
+    }
+
+    /**
+     * Set 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     * @param WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     */
+    public void setWorkDir(String WorkDir) {
+        this.WorkDir = WorkDir;
     }
 
     public RunWorkflowRequest() {
@@ -321,6 +344,9 @@ public class RunWorkflowRequest extends AbstractModel {
         if (source.CacheClearDelay != null) {
             this.CacheClearDelay = new Long(source.CacheClearDelay);
         }
+        if (source.WorkDir != null) {
+            this.WorkDir = new String(source.WorkDir);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class RunWorkflowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InputBase64", this.InputBase64);
         this.setParamSimple(map, prefix + "InputCosUri", this.InputCosUri);
         this.setParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
+        this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
 
     }
 }

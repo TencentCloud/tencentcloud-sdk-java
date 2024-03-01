@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class FiltersItemNew extends AbstractModel {
 
     /**
-    * 字段名
+    * 字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号
     */
     @SerializedName("Name")
     @Expose
@@ -45,16 +46,20 @@ public class FiltersItemNew extends AbstractModel {
     private Boolean ExactMatch;
 
     /**
-     * Get 字段名 
-     * @return Name 字段名
+     * Get 字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号 
+     * @return Name 字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 字段名
-     * @param Name 字段名
+     * Set 字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号
+     * @param Name 字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号
      */
     public void setName(String Name) {
         this.Name = Name;

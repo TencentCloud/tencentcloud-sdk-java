@@ -956,6 +956,17 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
+     * @param req ModifyDisksBackupQuotaRequest
+     * @return ModifyDisksBackupQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDisksBackupQuotaResponse ModifyDisksBackupQuota(ModifyDisksBackupQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDisksBackupQuota", ModifyDisksBackupQuotaResponse.class);
+    }
+
+    /**
      *本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
      * @param req ModifyDisksRenewFlagRequest
      * @return ModifyDisksRenewFlagResponse
@@ -1238,6 +1249,17 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     public ResetInstancesPasswordResponse ResetInstancesPassword(ResetInstancesPasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetInstancesPassword", ResetInstancesPasswordResponse.class);
+    }
+
+    /**
+     *本接口(ResizeDisks)用于扩容云硬盘。该操作目前仅支持云硬盘类型为数据盘的云硬盘。
+     * @param req ResizeDisksRequest
+     * @return ResizeDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResizeDisksResponse ResizeDisks(ResizeDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResizeDisks", ResizeDisksResponse.class);
     }
 
     /**

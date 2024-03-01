@@ -38,7 +38,7 @@ public class DescribeVsmsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 查询关键字
+    * 资源ID或者资源名字模糊查询的关键字
     */
     @SerializedName("SearchWord")
     @Expose
@@ -98,16 +98,16 @@ public class DescribeVsmsRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询关键字 
-     * @return SearchWord 查询关键字
+     * Get 资源ID或者资源名字模糊查询的关键字 
+     * @return SearchWord 资源ID或者资源名字模糊查询的关键字
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 查询关键字
-     * @param SearchWord 查询关键字
+     * Set 资源ID或者资源名字模糊查询的关键字
+     * @param SearchWord 资源ID或者资源名字模糊查询的关键字
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;

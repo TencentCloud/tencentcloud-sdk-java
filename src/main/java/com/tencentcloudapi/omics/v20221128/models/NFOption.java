@@ -56,6 +56,17 @@ public class NFOption extends AbstractModel {
     private Boolean Resume;
 
     /**
+    * Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NFVersion")
+    @Expose
+    private String NFVersion;
+
+    /**
      * Get Config。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Config Config。
@@ -135,6 +146,38 @@ public class NFOption extends AbstractModel {
         this.Resume = Resume;
     }
 
+    /**
+     * Get Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NFVersion Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNFVersion() {
+        return this.NFVersion;
+    }
+
+    /**
+     * Set Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NFVersion Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNFVersion(String NFVersion) {
+        this.NFVersion = NFVersion;
+    }
+
     public NFOption() {
     }
 
@@ -155,6 +198,9 @@ public class NFOption extends AbstractModel {
         if (source.Resume != null) {
             this.Resume = new Boolean(source.Resume);
         }
+        if (source.NFVersion != null) {
+            this.NFVersion = new String(source.NFVersion);
+        }
     }
 
 
@@ -166,6 +212,7 @@ public class NFOption extends AbstractModel {
         this.setParamSimple(map, prefix + "Profile", this.Profile);
         this.setParamSimple(map, prefix + "Report", this.Report);
         this.setParamSimple(map, prefix + "Resume", this.Resume);
+        this.setParamSimple(map, prefix + "NFVersion", this.NFVersion);
 
     }
 }

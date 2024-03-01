@@ -249,6 +249,23 @@ public class ApproverInfo extends AbstractModel {
     private Long Deadline;
 
     /**
+    * 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
+
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+    */
+    @SerializedName("Components")
+    @Expose
+    private Component [] Components;
+
+    /**
      * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -884,6 +901,62 @@ public class ApproverInfo extends AbstractModel {
         this.Deadline = Deadline;
     }
 
+    /**
+     * Get 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
+
+注：`此参数仅在通过文件发起合同或者合同组时生效` 
+     * @return Components 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
+
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+     */
+    public Component [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
+
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+     * @param Components 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
+
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+     */
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
+    }
+
     public ApproverInfo() {
     }
 
@@ -973,6 +1046,12 @@ public class ApproverInfo extends AbstractModel {
         if (source.Deadline != null) {
             this.Deadline = new Long(source.Deadline);
         }
+        if (source.Components != null) {
+            this.Components = new Component[source.Components.length];
+            for (int i = 0; i < source.Components.length; i++) {
+                this.Components[i] = new Component(source.Components[i]);
+            }
+        }
     }
 
 
@@ -1002,6 +1081,7 @@ public class ApproverInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AddSignComponentsLimits.", this.AddSignComponentsLimits);
         this.setParamSimple(map, prefix + "SignInstructionContent", this.SignInstructionContent);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamArrayObj(map, prefix + "Components.", this.Components);
 
     }
 }

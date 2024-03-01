@@ -52,13 +52,6 @@ public class RunApplicationRequest extends AbstractModel {
     private String InputBase64;
 
     /**
-    * 任务缓存清理时间（小时）。不填表示不清理。
-    */
-    @SerializedName("CacheClearDelay")
-    @Expose
-    private Long CacheClearDelay;
-
-    /**
     * 项目ID。（不填使用指定地域下的默认项目）
     */
     @SerializedName("ProjectId")
@@ -87,6 +80,13 @@ public class RunApplicationRequest extends AbstractModel {
     private String [] TableRowUuids;
 
     /**
+    * 任务缓存清理时间（小时）。不填或0表示不清理。
+    */
+    @SerializedName("CacheClearDelay")
+    @Expose
+    private Long CacheClearDelay;
+
+    /**
     * 应用版本ID。不填表示使用当前最新版本。
     */
     @SerializedName("ApplicationVersionId")
@@ -106,6 +106,13 @@ public class RunApplicationRequest extends AbstractModel {
     @SerializedName("NFOption")
     @Expose
     private NFOption NFOption;
+
+    /**
+    * 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+    */
+    @SerializedName("WorkDir")
+    @Expose
+    private String WorkDir;
 
     /**
      * Get 应用ID。 
@@ -169,22 +176,6 @@ public class RunApplicationRequest extends AbstractModel {
      */
     public void setInputBase64(String InputBase64) {
         this.InputBase64 = InputBase64;
-    }
-
-    /**
-     * Get 任务缓存清理时间（小时）。不填表示不清理。 
-     * @return CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
-     */
-    public Long getCacheClearDelay() {
-        return this.CacheClearDelay;
-    }
-
-    /**
-     * Set 任务缓存清理时间（小时）。不填表示不清理。
-     * @param CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
-     */
-    public void setCacheClearDelay(Long CacheClearDelay) {
-        this.CacheClearDelay = CacheClearDelay;
     }
 
     /**
@@ -252,6 +243,22 @@ public class RunApplicationRequest extends AbstractModel {
     }
 
     /**
+     * Get 任务缓存清理时间（小时）。不填或0表示不清理。 
+     * @return CacheClearDelay 任务缓存清理时间（小时）。不填或0表示不清理。
+     */
+    public Long getCacheClearDelay() {
+        return this.CacheClearDelay;
+    }
+
+    /**
+     * Set 任务缓存清理时间（小时）。不填或0表示不清理。
+     * @param CacheClearDelay 任务缓存清理时间（小时）。不填或0表示不清理。
+     */
+    public void setCacheClearDelay(Long CacheClearDelay) {
+        this.CacheClearDelay = CacheClearDelay;
+    }
+
+    /**
      * Get 应用版本ID。不填表示使用当前最新版本。 
      * @return ApplicationVersionId 应用版本ID。不填表示使用当前最新版本。
      */
@@ -299,6 +306,22 @@ public class RunApplicationRequest extends AbstractModel {
         this.NFOption = NFOption;
     }
 
+    /**
+     * Get 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow) 
+     * @return WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     */
+    public String getWorkDir() {
+        return this.WorkDir;
+    }
+
+    /**
+     * Set 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     * @param WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     */
+    public void setWorkDir(String WorkDir) {
+        this.WorkDir = WorkDir;
+    }
+
     public RunApplicationRequest() {
     }
 
@@ -319,9 +342,6 @@ public class RunApplicationRequest extends AbstractModel {
         if (source.InputBase64 != null) {
             this.InputBase64 = new String(source.InputBase64);
         }
-        if (source.CacheClearDelay != null) {
-            this.CacheClearDelay = new Long(source.CacheClearDelay);
-        }
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
@@ -337,6 +357,9 @@ public class RunApplicationRequest extends AbstractModel {
                 this.TableRowUuids[i] = new String(source.TableRowUuids[i]);
             }
         }
+        if (source.CacheClearDelay != null) {
+            this.CacheClearDelay = new Long(source.CacheClearDelay);
+        }
         if (source.ApplicationVersionId != null) {
             this.ApplicationVersionId = new String(source.ApplicationVersionId);
         }
@@ -345,6 +368,9 @@ public class RunApplicationRequest extends AbstractModel {
         }
         if (source.NFOption != null) {
             this.NFOption = new NFOption(source.NFOption);
+        }
+        if (source.WorkDir != null) {
+            this.WorkDir = new String(source.WorkDir);
         }
     }
 
@@ -357,14 +383,15 @@ public class RunApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "InputBase64", this.InputBase64);
-        this.setParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamArraySimple(map, prefix + "TableRowUuids.", this.TableRowUuids);
+        this.setParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
         this.setParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
         this.setParamObj(map, prefix + "Option.", this.Option);
         this.setParamObj(map, prefix + "NFOption.", this.NFOption);
+        this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
 
     }
 }

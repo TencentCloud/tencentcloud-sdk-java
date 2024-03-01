@@ -45,6 +45,13 @@ public class BatchStopIntegrationTasksResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 本次批量操作涉及成功任务，用于审计
+    */
+    @SerializedName("TaskNames")
+    @Expose
+    private String [] TaskNames;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class BatchStopIntegrationTasksResponse extends AbstractModel {
     }
 
     /**
+     * Get 本次批量操作涉及成功任务，用于审计 
+     * @return TaskNames 本次批量操作涉及成功任务，用于审计
+     */
+    public String [] getTaskNames() {
+        return this.TaskNames;
+    }
+
+    /**
+     * Set 本次批量操作涉及成功任务，用于审计
+     * @param TaskNames 本次批量操作涉及成功任务，用于审计
+     */
+    public void setTaskNames(String [] TaskNames) {
+        this.TaskNames = TaskNames;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +155,12 @@ public class BatchStopIntegrationTasksResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.TaskNames != null) {
+            this.TaskNames = new String[source.TaskNames.length];
+            for (int i = 0; i < source.TaskNames.length; i++) {
+                this.TaskNames[i] = new String(source.TaskNames[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +174,7 @@ public class BatchStopIntegrationTasksResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
         this.setParamSimple(map, prefix + "FailedCount", this.FailedCount);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "TaskNames.", this.TaskNames);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

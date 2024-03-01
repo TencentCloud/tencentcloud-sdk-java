@@ -52,6 +52,13 @@ public class GetNetMonitorRequest extends AbstractModel {
     private String Metrics;
 
     /**
+    * 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+    */
+    @SerializedName("GatewayType")
+    @Expose
+    private Long GatewayType;
+
+    /**
      * Get 设备id 
      * @return DeviceId 设备id
      */
@@ -115,6 +122,22 @@ public class GetNetMonitorRequest extends AbstractModel {
         this.Metrics = Metrics;
     }
 
+    /**
+     * Get 网关类型。0：公有云网关；1：自有网关。不传默认为0。 
+     * @return GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     */
+    public Long getGatewayType() {
+        return this.GatewayType;
+    }
+
+    /**
+     * Set 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     * @param GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     */
+    public void setGatewayType(Long GatewayType) {
+        this.GatewayType = GatewayType;
+    }
+
     public GetNetMonitorRequest() {
     }
 
@@ -135,6 +158,9 @@ public class GetNetMonitorRequest extends AbstractModel {
         if (source.Metrics != null) {
             this.Metrics = new String(source.Metrics);
         }
+        if (source.GatewayType != null) {
+            this.GatewayType = new Long(source.GatewayType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class GetNetMonitorRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Metrics", this.Metrics);
+        this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
 
     }
 }
