@@ -26,12 +26,7 @@ public class DefaultCredentialsProvider implements CredentialsProvider {
             return cred;
         }
 
-        try {
-            cred = new OIDCRoleArnProvider().getCredentials();
-            return cred;
-        } catch (IOException e) {
-        }
-
-        throw new TencentCloudSDKException("No valid credential");
+        cred = new OIDCRoleArnProvider().getCredentials();
+        return cred;
     }
 }
