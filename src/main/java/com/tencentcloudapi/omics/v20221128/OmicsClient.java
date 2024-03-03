@@ -50,6 +50,17 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *创建缓存卷。
+     * @param req CreateVolumeRequest
+     * @return CreateVolumeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVolumeResponse CreateVolume(CreateVolumeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVolume", CreateVolumeResponse.class);
+    }
+
+    /**
      *删除环境。
      * @param req DeleteEnvironmentRequest
      * @return DeleteEnvironmentResponse
@@ -58,6 +69,28 @@ public class OmicsClient extends AbstractClient{
     public DeleteEnvironmentResponse DeleteEnvironment(DeleteEnvironmentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteEnvironment", DeleteEnvironmentResponse.class);
+    }
+
+    /**
+     *删除缓存卷。
+     * @param req DeleteVolumeRequest
+     * @return DeleteVolumeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVolumeResponse DeleteVolume(DeleteVolumeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVolume", DeleteVolumeResponse.class);
+    }
+
+    /**
+     *删除缓存卷数据。
+     * @param req DeleteVolumeDataRequest
+     * @return DeleteVolumeDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVolumeDataResponse DeleteVolumeData(DeleteVolumeDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVolumeData", DeleteVolumeDataResponse.class);
     }
 
     /**
@@ -116,6 +149,17 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *查询缓存卷列表。
+     * @param req DescribeVolumesRequest
+     * @return DescribeVolumesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVolumesResponse DescribeVolumes(DescribeVolumesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVolumes", DescribeVolumesResponse.class);
+    }
+
+    /**
      *查询作业详情。
      * @param req GetRunCallsRequest
      * @return GetRunCallsResponse
@@ -157,6 +201,17 @@ public class OmicsClient extends AbstractClient{
     public ImportTableFileResponse ImportTableFile(ImportTableFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ImportTableFile", ImportTableFileResponse.class);
+    }
+
+    /**
+     *修改缓存卷。
+     * @param req ModifyVolumeRequest
+     * @return ModifyVolumeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVolumeResponse ModifyVolume(ModifyVolumeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVolume", ModifyVolumeResponse.class);
     }
 
     /**

@@ -103,6 +103,22 @@ abnormal = 异常
     private Boolean EnableExternal;
 
     /**
+    * 采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DesiredAgentNum")
+    @Expose
+    private Long DesiredAgentNum;
+
+    /**
+    * 采集agent已正常启动pod数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadyAgentNum")
+    @Expose
+    private Long ReadyAgentNum;
+
+    /**
      * Get 集群类型 
      * @return ClusterType 集群类型
      */
@@ -298,6 +314,46 @@ abnormal = 异常
         this.EnableExternal = EnableExternal;
     }
 
+    /**
+     * Get 采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DesiredAgentNum 采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDesiredAgentNum() {
+        return this.DesiredAgentNum;
+    }
+
+    /**
+     * Set 采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DesiredAgentNum 采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDesiredAgentNum(Long DesiredAgentNum) {
+        this.DesiredAgentNum = DesiredAgentNum;
+    }
+
+    /**
+     * Get 采集agent已正常启动pod数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReadyAgentNum 采集agent已正常启动pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReadyAgentNum() {
+        return this.ReadyAgentNum;
+    }
+
+    /**
+     * Set 采集agent已正常启动pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadyAgentNum 采集agent已正常启动pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadyAgentNum(Long ReadyAgentNum) {
+        this.ReadyAgentNum = ReadyAgentNum;
+    }
+
     public PrometheusAgentOverview() {
     }
 
@@ -339,6 +395,12 @@ abnormal = 异常
         if (source.EnableExternal != null) {
             this.EnableExternal = new Boolean(source.EnableExternal);
         }
+        if (source.DesiredAgentNum != null) {
+            this.DesiredAgentNum = new Long(source.DesiredAgentNum);
+        }
+        if (source.ReadyAgentNum != null) {
+            this.ReadyAgentNum = new Long(source.ReadyAgentNum);
+        }
     }
 
 
@@ -356,6 +418,8 @@ abnormal = 异常
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "EnableExternal", this.EnableExternal);
+        this.setParamSimple(map, prefix + "DesiredAgentNum", this.DesiredAgentNum);
+        this.setParamSimple(map, prefix + "ReadyAgentNum", this.ReadyAgentNum);
 
     }
 }

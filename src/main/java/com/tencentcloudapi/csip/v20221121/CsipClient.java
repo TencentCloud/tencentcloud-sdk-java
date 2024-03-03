@@ -369,6 +369,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询TOP攻击信息
+     * @param req DescribeTopAttackInfoRequest
+     * @return DescribeTopAttackInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopAttackInfoResponse DescribeTopAttackInfo(DescribeTopAttackInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopAttackInfo", DescribeTopAttackInfoResponse.class);
+    }
+
+    /**
      *查询漏洞风险高级配置
      * @param req DescribeVULRiskAdvanceCFGListRequest
      * @return DescribeVULRiskAdvanceCFGListResponse

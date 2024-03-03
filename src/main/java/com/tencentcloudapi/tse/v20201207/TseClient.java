@@ -171,6 +171,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建治理中心服务实例
+     * @param req CreateGovernanceInstancesRequest
+     * @return CreateGovernanceInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGovernanceInstancesResponse CreateGovernanceInstances(CreateGovernanceInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGovernanceInstances", CreateGovernanceInstancesResponse.class);
+    }
+
+    /**
      *创建云原生网关引擎分组
      * @param req CreateNativeGatewayServerGroupRequest
      * @return CreateNativeGatewayServerGroupResponse
@@ -300,6 +311,17 @@ public class TseClient extends AbstractClient{
     public DeleteEngineResponse DeleteEngine(DeleteEngineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteEngine", DeleteEngineResponse.class);
+    }
+
+    /**
+     *删除治理中心服务实例
+     * @param req DeleteGovernanceInstancesRequest
+     * @return DeleteGovernanceInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGovernanceInstancesResponse DeleteGovernanceInstances(DeleteGovernanceInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGovernanceInstances", DeleteGovernanceInstancesResponse.class);
     }
 
     /**
@@ -487,6 +509,17 @@ public class TseClient extends AbstractClient{
     public DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGateways(DescribeCloudNativeAPIGatewaysRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudNativeAPIGateways", DescribeCloudNativeAPIGatewaysResponse.class);
+    }
+
+    /**
+     *查询治理中心服务实例
+     * @param req DescribeGovernanceInstancesRequest
+     * @return DescribeGovernanceInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGovernanceInstancesResponse DescribeGovernanceInstances(DescribeGovernanceInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGovernanceInstances", DescribeGovernanceInstancesResponse.class);
     }
 
     /**
@@ -718,6 +751,17 @@ public class TseClient extends AbstractClient{
     public ModifyConsoleNetworkResponse ModifyConsoleNetwork(ModifyConsoleNetworkRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyConsoleNetwork", ModifyConsoleNetworkResponse.class);
+    }
+
+    /**
+     *修改治理中心服务实例
+     * @param req ModifyGovernanceInstancesRequest
+     * @return ModifyGovernanceInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGovernanceInstancesResponse ModifyGovernanceInstances(ModifyGovernanceInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGovernanceInstances", ModifyGovernanceInstancesResponse.class);
     }
 
     /**

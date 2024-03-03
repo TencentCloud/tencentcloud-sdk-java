@@ -73,6 +73,13 @@ public class DescribeCodeBatchesRequest extends AbstractModel {
     private Long CorpId;
 
     /**
+    * 批次状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 查询商户ID 
      * @return MerchantId 查询商户ID
      */
@@ -184,6 +191,22 @@ public class DescribeCodeBatchesRequest extends AbstractModel {
         this.CorpId = CorpId;
     }
 
+    /**
+     * Get 批次状态 
+     * @return Status 批次状态
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 批次状态
+     * @param Status 批次状态
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public DescribeCodeBatchesRequest() {
     }
 
@@ -213,6 +236,9 @@ public class DescribeCodeBatchesRequest extends AbstractModel {
         if (source.CorpId != null) {
             this.CorpId = new Long(source.CorpId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DescribeCodeBatchesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "BatchType", this.BatchType);
         this.setParamSimple(map, prefix + "CorpId", this.CorpId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

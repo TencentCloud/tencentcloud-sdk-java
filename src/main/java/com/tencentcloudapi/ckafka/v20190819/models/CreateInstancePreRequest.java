@@ -94,7 +94,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private String KafkaVersion;
 
     /**
-    * 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+    * 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
     */
     @SerializedName("SpecificationsType")
     @Expose
@@ -129,7 +129,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+    * 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
     */
     @SerializedName("DiskType")
     @Expose
@@ -331,16 +331,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession" 
-     * @return SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+     * Get 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium" 
+     * @return SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
      */
     public String getSpecificationsType() {
         return this.SpecificationsType;
     }
 
     /**
-     * Set 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
-     * @param SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+     * Set 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
+     * @param SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
      */
     public void setSpecificationsType(String SpecificationsType) {
         this.SpecificationsType = SpecificationsType;
@@ -411,16 +411,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC" 
-     * @return DiskType 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+     * Get 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC" 
+     * @return DiskType 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
-     * @param DiskType 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+     * Set 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+     * @param DiskType 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
