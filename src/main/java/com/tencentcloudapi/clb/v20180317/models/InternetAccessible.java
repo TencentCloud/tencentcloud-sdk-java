@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class InternetAccessible extends AbstractModel {
 
     /**
-    * TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费;
+    * TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费; BANDWIDTH_PACKAGE 按带宽包计费;BANDWIDTH_PREPAID按带宽预付费。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetChargeType")
@@ -36,6 +35,7 @@ BANDWIDTH_PACKAGE 按带宽包计费;
     * 最大出带宽，单位Mbps，仅对公网属性的共享型、性能容量型和独占型 CLB 实例、以及内网属性的性能容量型 CLB 实例生效。
 - 对于公网属性的共享型和独占型 CLB 实例，最大出带宽的范围为1Mbps-2048Mbps。
 - 对于公网属性和内网属性的性能容量型 CLB实例，最大出带宽的范围为1Mbps-61440Mbps。
+（调用CreateLoadBalancer创建LB时不指定此参数则设置为默认值10Mbps。此上限可调整）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetMaxBandwidthOut")
@@ -43,7 +43,7 @@ BANDWIDTH_PACKAGE 按带宽包计费;
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 带宽包的类型，如SINGLEISP
+    * 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthpkgSubType")
@@ -51,11 +51,9 @@ BANDWIDTH_PACKAGE 按带宽包计费;
     private String BandwidthpkgSubType;
 
     /**
-     * Get TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费;
+     * Get TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费; BANDWIDTH_PACKAGE 按带宽包计费;BANDWIDTH_PREPAID按带宽预付费。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InternetChargeType TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费;
+     * @return InternetChargeType TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费; BANDWIDTH_PACKAGE 按带宽包计费;BANDWIDTH_PREPAID按带宽预付费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInternetChargeType() {
@@ -63,11 +61,9 @@ BANDWIDTH_PACKAGE 按带宽包计费;
     }
 
     /**
-     * Set TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费;
+     * Set TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费; BANDWIDTH_PACKAGE 按带宽包计费;BANDWIDTH_PREPAID按带宽预付费。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InternetChargeType TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费;
+     * @param InternetChargeType TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费; BANDWIDTH_PACKAGE 按带宽包计费;BANDWIDTH_PREPAID按带宽预付费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetChargeType(String InternetChargeType) {
@@ -78,10 +74,12 @@ BANDWIDTH_PACKAGE 按带宽包计费;
      * Get 最大出带宽，单位Mbps，仅对公网属性的共享型、性能容量型和独占型 CLB 实例、以及内网属性的性能容量型 CLB 实例生效。
 - 对于公网属性的共享型和独占型 CLB 实例，最大出带宽的范围为1Mbps-2048Mbps。
 - 对于公网属性和内网属性的性能容量型 CLB实例，最大出带宽的范围为1Mbps-61440Mbps。
+（调用CreateLoadBalancer创建LB时不指定此参数则设置为默认值10Mbps。此上限可调整）
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InternetMaxBandwidthOut 最大出带宽，单位Mbps，仅对公网属性的共享型、性能容量型和独占型 CLB 实例、以及内网属性的性能容量型 CLB 实例生效。
 - 对于公网属性的共享型和独占型 CLB 实例，最大出带宽的范围为1Mbps-2048Mbps。
 - 对于公网属性和内网属性的性能容量型 CLB实例，最大出带宽的范围为1Mbps-61440Mbps。
+（调用CreateLoadBalancer创建LB时不指定此参数则设置为默认值10Mbps。此上限可调整）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternetMaxBandwidthOut() {
@@ -92,10 +90,12 @@ BANDWIDTH_PACKAGE 按带宽包计费;
      * Set 最大出带宽，单位Mbps，仅对公网属性的共享型、性能容量型和独占型 CLB 实例、以及内网属性的性能容量型 CLB 实例生效。
 - 对于公网属性的共享型和独占型 CLB 实例，最大出带宽的范围为1Mbps-2048Mbps。
 - 对于公网属性和内网属性的性能容量型 CLB实例，最大出带宽的范围为1Mbps-61440Mbps。
+（调用CreateLoadBalancer创建LB时不指定此参数则设置为默认值10Mbps。此上限可调整）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetMaxBandwidthOut 最大出带宽，单位Mbps，仅对公网属性的共享型、性能容量型和独占型 CLB 实例、以及内网属性的性能容量型 CLB 实例生效。
 - 对于公网属性的共享型和独占型 CLB 实例，最大出带宽的范围为1Mbps-2048Mbps。
 - 对于公网属性和内网属性的性能容量型 CLB实例，最大出带宽的范围为1Mbps-61440Mbps。
+（调用CreateLoadBalancer创建LB时不指定此参数则设置为默认值10Mbps。此上限可调整）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
@@ -103,9 +103,9 @@ BANDWIDTH_PACKAGE 按带宽包计费;
     }
 
     /**
-     * Get 带宽包的类型，如SINGLEISP
+     * Get 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BandwidthpkgSubType 带宽包的类型，如SINGLEISP
+     * @return BandwidthpkgSubType 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBandwidthpkgSubType() {
@@ -113,9 +113,9 @@ BANDWIDTH_PACKAGE 按带宽包计费;
     }
 
     /**
-     * Set 带宽包的类型，如SINGLEISP
+     * Set 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BandwidthpkgSubType 带宽包的类型，如SINGLEISP
+     * @param BandwidthpkgSubType 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthpkgSubType(String BandwidthpkgSubType) {

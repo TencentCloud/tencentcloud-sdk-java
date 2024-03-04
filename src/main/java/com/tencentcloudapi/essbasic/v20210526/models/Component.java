@@ -179,6 +179,11 @@ public class Component extends AbstractModel {
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
+<font color="red">ComponentType为DATE时</font>，支持以下参数：
+<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<li> <b>FontSize</b>： 范围12 :72</li></ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+
 <font color="red">ComponentType为FILL_IMAGE时</font>，支持以下参数：
 <ul><li> <b>NotMakeImageCenter</b>：bool。是否设置图片居中。false：居中（默认）。 true : 不居中</li>
 <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
@@ -805,6 +810,11 @@ public class Component extends AbstractModel {
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
+<font color="red">ComponentType为DATE时</font>，支持以下参数：
+<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<li> <b>FontSize</b>： 范围12 :72</li></ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+
 <font color="red">ComponentType为FILL_IMAGE时</font>，支持以下参数：
 <ul><li> <b>NotMakeImageCenter</b>：bool。是否设置图片居中。false：居中（默认）。 true : 不居中</li>
 <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
@@ -849,6 +859,11 @@ public class Component extends AbstractModel {
 <li> <b>FontSize</b>： 范围12 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+
+<font color="red">ComponentType为DATE时</font>，支持以下参数：
+<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<li> <b>FontSize</b>： 范围12 :72</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
 <font color="red">ComponentType为FILL_IMAGE时</font>，支持以下参数：
@@ -903,6 +918,11 @@ public class Component extends AbstractModel {
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
+<font color="red">ComponentType为DATE时</font>，支持以下参数：
+<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<li> <b>FontSize</b>： 范围12 :72</li></ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+
 <font color="red">ComponentType为FILL_IMAGE时</font>，支持以下参数：
 <ul><li> <b>NotMakeImageCenter</b>：bool。是否设置图片居中。false：居中（默认）。 true : 不居中</li>
 <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
@@ -947,6 +967,11 @@ public class Component extends AbstractModel {
 <li> <b>FontSize</b>： 范围12 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
 <li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+
+<font color="red">ComponentType为DATE时</font>，支持以下参数：
+<ul><li> <b>Font</b>：目前只支持黑体、宋体</li>
+<li> <b>FontSize</b>： 范围12 :72</li></ul>
 <b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
 
 <font color="red">ComponentType为FILL_IMAGE时</font>，支持以下参数：

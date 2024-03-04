@@ -87,7 +87,7 @@ public class CreateRecordRequest extends AbstractModel {
     private Long TTL;
 
     /**
-    * 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
+    * 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
     */
     @SerializedName("Weight")
     @Expose
@@ -252,16 +252,16 @@ public class CreateRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。 
-     * @return Weight 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
+     * Get 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。 
+     * @return Weight 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
-     * @param Weight 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
+     * Set 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
+     * @param Weight 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

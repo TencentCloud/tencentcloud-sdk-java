@@ -39,7 +39,7 @@ public class DescribeResourcesRequest extends AbstractModel {
 
     /**
     * 查询可用区资源列表条件，详细的过滤条件如下：
-<li> zone - String - 是否必填：否 - （过滤条件）按照 可用区 过滤，如："ap-guangzhou-1"（广州一区）。</li>
+<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
 <li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li>
     */
     @SerializedName("Filters")
@@ -80,10 +80,10 @@ public class DescribeResourcesRequest extends AbstractModel {
 
     /**
      * Get 查询可用区资源列表条件，详细的过滤条件如下：
-<li> zone - String - 是否必填：否 - （过滤条件）按照 可用区 过滤，如："ap-guangzhou-1"（广州一区）。</li>
+<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
 <li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li> 
      * @return Filters 查询可用区资源列表条件，详细的过滤条件如下：
-<li> zone - String - 是否必填：否 - （过滤条件）按照 可用区 过滤，如："ap-guangzhou-1"（广州一区）。</li>
+<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
 <li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li>
      */
     public Filter [] getFilters() {
@@ -92,10 +92,10 @@ public class DescribeResourcesRequest extends AbstractModel {
 
     /**
      * Set 查询可用区资源列表条件，详细的过滤条件如下：
-<li> zone - String - 是否必填：否 - （过滤条件）按照 可用区 过滤，如："ap-guangzhou-1"（广州一区）。</li>
+<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
 <li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li>
      * @param Filters 查询可用区资源列表条件，详细的过滤条件如下：
-<li> zone - String - 是否必填：否 - （过滤条件）按照 可用区 过滤，如："ap-guangzhou-1"（广州一区）。</li>
+<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
 <li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li>
      */
     public void setFilters(Filter [] Filters) {

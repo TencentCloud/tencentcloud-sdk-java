@@ -32,7 +32,7 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel {
 
     /**
     * 日志服务(CLS)的日志集 ID。
-<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/58624) 接口获取日志集 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li>
     */
     @SerializedName("LogSetId")
@@ -41,7 +41,7 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel {
 
     /**
     * 日志服务(CLS)的日志主题 ID。
-<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/56454) 接口获取日志主题 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li>
     */
     @SerializedName("LogTopicId")
@@ -76,10 +76,10 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel {
 
     /**
      * Get 日志服务(CLS)的日志集 ID。
-<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/58624) 接口获取日志集 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li> 
      * @return LogSetId 日志服务(CLS)的日志集 ID。
-<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/58624) 接口获取日志集 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li>
      */
     public String getLogSetId() {
@@ -88,10 +88,10 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel {
 
     /**
      * Set 日志服务(CLS)的日志集 ID。
-<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/58624) 接口获取日志集 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li>
      * @param LogSetId 日志服务(CLS)的日志集 ID。
-<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/58624) 接口获取日志集 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li>
      */
     public void setLogSetId(String LogSetId) {
@@ -100,10 +100,10 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel {
 
     /**
      * Get 日志服务(CLS)的日志主题 ID。
-<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/56454) 接口获取日志主题 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li> 
      * @return LogTopicId 日志服务(CLS)的日志主题 ID。
-<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/56454) 接口获取日志主题 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li>
      */
     public String getLogTopicId() {
@@ -112,10 +112,10 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel {
 
     /**
      * Set 日志服务(CLS)的日志主题 ID。
-<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/56454) 接口获取日志主题 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li>
      * @param LogTopicId 日志服务(CLS)的日志主题 ID。
-<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+<li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/56454) 接口获取日志主题 ID。</li>
 <li>删除日志主题时，此参数填写为null即可。</li>
      */
     public void setLogTopicId(String LogTopicId) {

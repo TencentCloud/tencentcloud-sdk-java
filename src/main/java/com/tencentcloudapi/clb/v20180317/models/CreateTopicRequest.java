@@ -45,7 +45,7 @@ public class CreateTopicRequest extends AbstractModel {
     private String TopicType;
 
     /**
-    * 日志集的保存周期，单位：天，默认30天。
+    * 日志集的保存周期，单位：天，默认30天，范围[1, 3600]。
     */
     @SerializedName("Period")
     @Expose
@@ -107,16 +107,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志集的保存周期，单位：天，默认30天。 
-     * @return Period 日志集的保存周期，单位：天，默认30天。
+     * Get 日志集的保存周期，单位：天，默认30天，范围[1, 3600]。 
+     * @return Period 日志集的保存周期，单位：天，默认30天，范围[1, 3600]。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 日志集的保存周期，单位：天，默认30天。
-     * @param Period 日志集的保存周期，单位：天，默认30天。
+     * Set 日志集的保存周期，单位：天，默认30天，范围[1, 3600]。
+     * @param Period 日志集的保存周期，单位：天，默认30天，范围[1, 3600]。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

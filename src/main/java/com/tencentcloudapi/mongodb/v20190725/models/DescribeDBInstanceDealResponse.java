@@ -52,6 +52,13 @@ public class DescribeDBInstanceDealResponse extends AbstractModel {
     private String Action;
 
     /**
+    * 当前订单的资源Id。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class DescribeDBInstanceDealResponse extends AbstractModel {
     }
 
     /**
+     * Get 当前订单的资源Id。 
+     * @return InstanceId 当前订单的资源Id。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 当前订单的资源Id。
+     * @param InstanceId 当前订单的资源Id。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class DescribeDBInstanceDealResponse extends AbstractModel {
         if (source.Action != null) {
             this.Action = new String(source.Action);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class DescribeDBInstanceDealResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         this.setParamSimple(map, prefix + "Action", this.Action);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

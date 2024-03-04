@@ -45,6 +45,20 @@ public class ModifyAppRequest extends AbstractModel {
     private String CallbackKey;
 
     /**
+    * 转存id
+    */
+    @SerializedName("TransferId")
+    @Expose
+    private String TransferId;
+
+    /**
+    * 转存地址
+    */
+    @SerializedName("TransferUrl")
+    @Expose
+    private String TransferUrl;
+
+    /**
      * Get 低代码互动课堂的SdkAppId。 
      * @return SdkAppId 低代码互动课堂的SdkAppId。
      */
@@ -92,6 +106,38 @@ public class ModifyAppRequest extends AbstractModel {
         this.CallbackKey = CallbackKey;
     }
 
+    /**
+     * Get 转存id 
+     * @return TransferId 转存id
+     */
+    public String getTransferId() {
+        return this.TransferId;
+    }
+
+    /**
+     * Set 转存id
+     * @param TransferId 转存id
+     */
+    public void setTransferId(String TransferId) {
+        this.TransferId = TransferId;
+    }
+
+    /**
+     * Get 转存地址 
+     * @return TransferUrl 转存地址
+     */
+    public String getTransferUrl() {
+        return this.TransferUrl;
+    }
+
+    /**
+     * Set 转存地址
+     * @param TransferUrl 转存地址
+     */
+    public void setTransferUrl(String TransferUrl) {
+        this.TransferUrl = TransferUrl;
+    }
+
     public ModifyAppRequest() {
     }
 
@@ -109,6 +155,12 @@ public class ModifyAppRequest extends AbstractModel {
         if (source.CallbackKey != null) {
             this.CallbackKey = new String(source.CallbackKey);
         }
+        if (source.TransferId != null) {
+            this.TransferId = new String(source.TransferId);
+        }
+        if (source.TransferUrl != null) {
+            this.TransferUrl = new String(source.TransferUrl);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ModifyAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Callback", this.Callback);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "TransferId", this.TransferId);
+        this.setParamSimple(map, prefix + "TransferUrl", this.TransferUrl);
 
     }
 }

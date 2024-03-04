@@ -580,6 +580,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *更新技能组
+     * @param req UpdateCCCSkillGroupRequest
+     * @return UpdateCCCSkillGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCCCSkillGroupResponse UpdateCCCSkillGroup(UpdateCCCSkillGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCCCSkillGroup", UpdateCCCSkillGroupResponse.class);
+    }
+
+    /**
      *任务未启动前，更新预测式外呼任务。
      * @param req UpdatePredictiveDialingCampaignRequest
      * @return UpdatePredictiveDialingCampaignResponse
