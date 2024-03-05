@@ -24,386 +24,440 @@ import java.util.HashMap;
 public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel {
 
     /**
-    * 专用通道ID
+    * 专用通道ID。
     */
     @SerializedName("DirectConnectTunnelId")
     @Expose
     private String DirectConnectTunnelId;
 
     /**
-    * 专用通道的Vlan
+    * 专用通道的Vlan。
     */
     @SerializedName("Vlan")
     @Expose
     private Long Vlan;
 
     /**
-    * 用户侧BGP，Asn，AuthKey
+    * Bgp参数，包括Asn，AuthKey
     */
     @SerializedName("BgpPeer")
     @Expose
     private BgpPeer BgpPeer;
 
     /**
-    * 用户侧过滤网段地址
+    * 用户侧过滤网段地址。
     */
     @SerializedName("RouteFilterPrefixes")
     @Expose
     private RouteFilterPrefix RouteFilterPrefixes;
 
     /**
-    * 腾讯侧互联IP
+    * 腾讯侧互联IP。
     */
     @SerializedName("TencentAddress")
     @Expose
     private String TencentAddress;
 
     /**
-    * 腾讯侧备用互联IP
+    * 腾讯侧备用互联IP。
     */
     @SerializedName("TencentBackupAddress")
     @Expose
     private String TencentBackupAddress;
 
     /**
-    * 用户侧互联IP
+    * 用户侧互联IP。
     */
     @SerializedName("CustomerAddress")
     @Expose
     private String CustomerAddress;
 
     /**
-    * 专用通道带宽值
+    * 专用通道带宽值。
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * BGP community开关
+    * BGP community开关。
     */
     @SerializedName("EnableBGPCommunity")
     @Expose
     private Boolean EnableBGPCommunity;
 
     /**
-    * 是否开启BFD
+    * 是否开启BFD。
     */
     @SerializedName("BfdEnable")
     @Expose
     private Long BfdEnable;
 
     /**
-    * 是否开启NQA
+    * 是否开启NQA。
     */
     @SerializedName("NqaEnable")
     @Expose
     private Long NqaEnable;
 
     /**
-    * BFD配置信息
+    * BFD配置信息。
     */
     @SerializedName("BfdInfo")
     @Expose
     private BFDInfo BfdInfo;
 
     /**
-    * NQA配置信息
+    * NQA配置信息。
     */
     @SerializedName("NqaInfo")
     @Expose
     private NQAInfo NqaInfo;
 
     /**
-    * 0：停用IPv6
-1: 启用IPv6
+    * IPV6使能。0：停用IPv6；1: 启用IPv6。
     */
     @SerializedName("IPv6Enable")
     @Expose
     private Long IPv6Enable;
 
     /**
-    * 去往用户侧的路由信息
+    * 去往用户侧的路由信息。
     */
     @SerializedName("CustomerIDCRoutes")
     @Expose
     private RouteFilterPrefix [] CustomerIDCRoutes;
 
     /**
-    * 是否开启巨帧
-1：开启
-0：不开启
+    * 是否开启巨帧。1：开启；0：不开启。
     */
     @SerializedName("JumboEnable")
     @Expose
     private Long JumboEnable;
 
     /**
-     * Get 专用通道ID 
-     * @return DirectConnectTunnelId 专用通道ID
+    * 腾讯侧互联IPv6。
+    */
+    @SerializedName("TencentIPv6Address")
+    @Expose
+    private String TencentIPv6Address;
+
+    /**
+    * 腾讯侧备用互联IPv6。
+    */
+    @SerializedName("TencentBackupIPv6Address")
+    @Expose
+    private String TencentBackupIPv6Address;
+
+    /**
+    * 用户侧互联IPv6。
+    */
+    @SerializedName("CustomerIPv6Address")
+    @Expose
+    private String CustomerIPv6Address;
+
+    /**
+     * Get 专用通道ID。 
+     * @return DirectConnectTunnelId 专用通道ID。
      */
     public String getDirectConnectTunnelId() {
         return this.DirectConnectTunnelId;
     }
 
     /**
-     * Set 专用通道ID
-     * @param DirectConnectTunnelId 专用通道ID
+     * Set 专用通道ID。
+     * @param DirectConnectTunnelId 专用通道ID。
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
         this.DirectConnectTunnelId = DirectConnectTunnelId;
     }
 
     /**
-     * Get 专用通道的Vlan 
-     * @return Vlan 专用通道的Vlan
+     * Get 专用通道的Vlan。 
+     * @return Vlan 专用通道的Vlan。
      */
     public Long getVlan() {
         return this.Vlan;
     }
 
     /**
-     * Set 专用通道的Vlan
-     * @param Vlan 专用通道的Vlan
+     * Set 专用通道的Vlan。
+     * @param Vlan 专用通道的Vlan。
      */
     public void setVlan(Long Vlan) {
         this.Vlan = Vlan;
     }
 
     /**
-     * Get 用户侧BGP，Asn，AuthKey 
-     * @return BgpPeer 用户侧BGP，Asn，AuthKey
+     * Get Bgp参数，包括Asn，AuthKey 
+     * @return BgpPeer Bgp参数，包括Asn，AuthKey
      */
     public BgpPeer getBgpPeer() {
         return this.BgpPeer;
     }
 
     /**
-     * Set 用户侧BGP，Asn，AuthKey
-     * @param BgpPeer 用户侧BGP，Asn，AuthKey
+     * Set Bgp参数，包括Asn，AuthKey
+     * @param BgpPeer Bgp参数，包括Asn，AuthKey
      */
     public void setBgpPeer(BgpPeer BgpPeer) {
         this.BgpPeer = BgpPeer;
     }
 
     /**
-     * Get 用户侧过滤网段地址 
-     * @return RouteFilterPrefixes 用户侧过滤网段地址
+     * Get 用户侧过滤网段地址。 
+     * @return RouteFilterPrefixes 用户侧过滤网段地址。
      */
     public RouteFilterPrefix getRouteFilterPrefixes() {
         return this.RouteFilterPrefixes;
     }
 
     /**
-     * Set 用户侧过滤网段地址
-     * @param RouteFilterPrefixes 用户侧过滤网段地址
+     * Set 用户侧过滤网段地址。
+     * @param RouteFilterPrefixes 用户侧过滤网段地址。
      */
     public void setRouteFilterPrefixes(RouteFilterPrefix RouteFilterPrefixes) {
         this.RouteFilterPrefixes = RouteFilterPrefixes;
     }
 
     /**
-     * Get 腾讯侧互联IP 
-     * @return TencentAddress 腾讯侧互联IP
+     * Get 腾讯侧互联IP。 
+     * @return TencentAddress 腾讯侧互联IP。
      */
     public String getTencentAddress() {
         return this.TencentAddress;
     }
 
     /**
-     * Set 腾讯侧互联IP
-     * @param TencentAddress 腾讯侧互联IP
+     * Set 腾讯侧互联IP。
+     * @param TencentAddress 腾讯侧互联IP。
      */
     public void setTencentAddress(String TencentAddress) {
         this.TencentAddress = TencentAddress;
     }
 
     /**
-     * Get 腾讯侧备用互联IP 
-     * @return TencentBackupAddress 腾讯侧备用互联IP
+     * Get 腾讯侧备用互联IP。 
+     * @return TencentBackupAddress 腾讯侧备用互联IP。
      */
     public String getTencentBackupAddress() {
         return this.TencentBackupAddress;
     }
 
     /**
-     * Set 腾讯侧备用互联IP
-     * @param TencentBackupAddress 腾讯侧备用互联IP
+     * Set 腾讯侧备用互联IP。
+     * @param TencentBackupAddress 腾讯侧备用互联IP。
      */
     public void setTencentBackupAddress(String TencentBackupAddress) {
         this.TencentBackupAddress = TencentBackupAddress;
     }
 
     /**
-     * Get 用户侧互联IP 
-     * @return CustomerAddress 用户侧互联IP
+     * Get 用户侧互联IP。 
+     * @return CustomerAddress 用户侧互联IP。
      */
     public String getCustomerAddress() {
         return this.CustomerAddress;
     }
 
     /**
-     * Set 用户侧互联IP
-     * @param CustomerAddress 用户侧互联IP
+     * Set 用户侧互联IP。
+     * @param CustomerAddress 用户侧互联IP。
      */
     public void setCustomerAddress(String CustomerAddress) {
         this.CustomerAddress = CustomerAddress;
     }
 
     /**
-     * Get 专用通道带宽值 
-     * @return Bandwidth 专用通道带宽值
+     * Get 专用通道带宽值。 
+     * @return Bandwidth 专用通道带宽值。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 专用通道带宽值
-     * @param Bandwidth 专用通道带宽值
+     * Set 专用通道带宽值。
+     * @param Bandwidth 专用通道带宽值。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get BGP community开关 
-     * @return EnableBGPCommunity BGP community开关
+     * Get BGP community开关。 
+     * @return EnableBGPCommunity BGP community开关。
      */
     public Boolean getEnableBGPCommunity() {
         return this.EnableBGPCommunity;
     }
 
     /**
-     * Set BGP community开关
-     * @param EnableBGPCommunity BGP community开关
+     * Set BGP community开关。
+     * @param EnableBGPCommunity BGP community开关。
      */
     public void setEnableBGPCommunity(Boolean EnableBGPCommunity) {
         this.EnableBGPCommunity = EnableBGPCommunity;
     }
 
     /**
-     * Get 是否开启BFD 
-     * @return BfdEnable 是否开启BFD
+     * Get 是否开启BFD。 
+     * @return BfdEnable 是否开启BFD。
      */
     public Long getBfdEnable() {
         return this.BfdEnable;
     }
 
     /**
-     * Set 是否开启BFD
-     * @param BfdEnable 是否开启BFD
+     * Set 是否开启BFD。
+     * @param BfdEnable 是否开启BFD。
      */
     public void setBfdEnable(Long BfdEnable) {
         this.BfdEnable = BfdEnable;
     }
 
     /**
-     * Get 是否开启NQA 
-     * @return NqaEnable 是否开启NQA
+     * Get 是否开启NQA。 
+     * @return NqaEnable 是否开启NQA。
      */
     public Long getNqaEnable() {
         return this.NqaEnable;
     }
 
     /**
-     * Set 是否开启NQA
-     * @param NqaEnable 是否开启NQA
+     * Set 是否开启NQA。
+     * @param NqaEnable 是否开启NQA。
      */
     public void setNqaEnable(Long NqaEnable) {
         this.NqaEnable = NqaEnable;
     }
 
     /**
-     * Get BFD配置信息 
-     * @return BfdInfo BFD配置信息
+     * Get BFD配置信息。 
+     * @return BfdInfo BFD配置信息。
      */
     public BFDInfo getBfdInfo() {
         return this.BfdInfo;
     }
 
     /**
-     * Set BFD配置信息
-     * @param BfdInfo BFD配置信息
+     * Set BFD配置信息。
+     * @param BfdInfo BFD配置信息。
      */
     public void setBfdInfo(BFDInfo BfdInfo) {
         this.BfdInfo = BfdInfo;
     }
 
     /**
-     * Get NQA配置信息 
-     * @return NqaInfo NQA配置信息
+     * Get NQA配置信息。 
+     * @return NqaInfo NQA配置信息。
      */
     public NQAInfo getNqaInfo() {
         return this.NqaInfo;
     }
 
     /**
-     * Set NQA配置信息
-     * @param NqaInfo NQA配置信息
+     * Set NQA配置信息。
+     * @param NqaInfo NQA配置信息。
      */
     public void setNqaInfo(NQAInfo NqaInfo) {
         this.NqaInfo = NqaInfo;
     }
 
     /**
-     * Get 0：停用IPv6
-1: 启用IPv6 
-     * @return IPv6Enable 0：停用IPv6
-1: 启用IPv6
+     * Get IPV6使能。0：停用IPv6；1: 启用IPv6。 
+     * @return IPv6Enable IPV6使能。0：停用IPv6；1: 启用IPv6。
      */
     public Long getIPv6Enable() {
         return this.IPv6Enable;
     }
 
     /**
-     * Set 0：停用IPv6
-1: 启用IPv6
-     * @param IPv6Enable 0：停用IPv6
-1: 启用IPv6
+     * Set IPV6使能。0：停用IPv6；1: 启用IPv6。
+     * @param IPv6Enable IPV6使能。0：停用IPv6；1: 启用IPv6。
      */
     public void setIPv6Enable(Long IPv6Enable) {
         this.IPv6Enable = IPv6Enable;
     }
 
     /**
-     * Get 去往用户侧的路由信息 
-     * @return CustomerIDCRoutes 去往用户侧的路由信息
+     * Get 去往用户侧的路由信息。 
+     * @return CustomerIDCRoutes 去往用户侧的路由信息。
      */
     public RouteFilterPrefix [] getCustomerIDCRoutes() {
         return this.CustomerIDCRoutes;
     }
 
     /**
-     * Set 去往用户侧的路由信息
-     * @param CustomerIDCRoutes 去往用户侧的路由信息
+     * Set 去往用户侧的路由信息。
+     * @param CustomerIDCRoutes 去往用户侧的路由信息。
      */
     public void setCustomerIDCRoutes(RouteFilterPrefix [] CustomerIDCRoutes) {
         this.CustomerIDCRoutes = CustomerIDCRoutes;
     }
 
     /**
-     * Get 是否开启巨帧
-1：开启
-0：不开启 
-     * @return JumboEnable 是否开启巨帧
-1：开启
-0：不开启
+     * Get 是否开启巨帧。1：开启；0：不开启。 
+     * @return JumboEnable 是否开启巨帧。1：开启；0：不开启。
      */
     public Long getJumboEnable() {
         return this.JumboEnable;
     }
 
     /**
-     * Set 是否开启巨帧
-1：开启
-0：不开启
-     * @param JumboEnable 是否开启巨帧
-1：开启
-0：不开启
+     * Set 是否开启巨帧。1：开启；0：不开启。
+     * @param JumboEnable 是否开启巨帧。1：开启；0：不开启。
      */
     public void setJumboEnable(Long JumboEnable) {
         this.JumboEnable = JumboEnable;
+    }
+
+    /**
+     * Get 腾讯侧互联IPv6。 
+     * @return TencentIPv6Address 腾讯侧互联IPv6。
+     */
+    public String getTencentIPv6Address() {
+        return this.TencentIPv6Address;
+    }
+
+    /**
+     * Set 腾讯侧互联IPv6。
+     * @param TencentIPv6Address 腾讯侧互联IPv6。
+     */
+    public void setTencentIPv6Address(String TencentIPv6Address) {
+        this.TencentIPv6Address = TencentIPv6Address;
+    }
+
+    /**
+     * Get 腾讯侧备用互联IPv6。 
+     * @return TencentBackupIPv6Address 腾讯侧备用互联IPv6。
+     */
+    public String getTencentBackupIPv6Address() {
+        return this.TencentBackupIPv6Address;
+    }
+
+    /**
+     * Set 腾讯侧备用互联IPv6。
+     * @param TencentBackupIPv6Address 腾讯侧备用互联IPv6。
+     */
+    public void setTencentBackupIPv6Address(String TencentBackupIPv6Address) {
+        this.TencentBackupIPv6Address = TencentBackupIPv6Address;
+    }
+
+    /**
+     * Get 用户侧互联IPv6。 
+     * @return CustomerIPv6Address 用户侧互联IPv6。
+     */
+    public String getCustomerIPv6Address() {
+        return this.CustomerIPv6Address;
+    }
+
+    /**
+     * Set 用户侧互联IPv6。
+     * @param CustomerIPv6Address 用户侧互联IPv6。
+     */
+    public void setCustomerIPv6Address(String CustomerIPv6Address) {
+        this.CustomerIPv6Address = CustomerIPv6Address;
     }
 
     public ModifyDirectConnectTunnelExtraRequest() {
@@ -465,6 +519,15 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel {
         if (source.JumboEnable != null) {
             this.JumboEnable = new Long(source.JumboEnable);
         }
+        if (source.TencentIPv6Address != null) {
+            this.TencentIPv6Address = new String(source.TencentIPv6Address);
+        }
+        if (source.TencentBackupIPv6Address != null) {
+            this.TencentBackupIPv6Address = new String(source.TencentBackupIPv6Address);
+        }
+        if (source.CustomerIPv6Address != null) {
+            this.CustomerIPv6Address = new String(source.CustomerIPv6Address);
+        }
     }
 
 
@@ -488,6 +551,9 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
         this.setParamArrayObj(map, prefix + "CustomerIDCRoutes.", this.CustomerIDCRoutes);
         this.setParamSimple(map, prefix + "JumboEnable", this.JumboEnable);
+        this.setParamSimple(map, prefix + "TencentIPv6Address", this.TencentIPv6Address);
+        this.setParamSimple(map, prefix + "TencentBackupIPv6Address", this.TencentBackupIPv6Address);
+        this.setParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
 
     }
 }

@@ -55,6 +55,7 @@ public class DescribeTargetsRequest extends AbstractModel {
     * 查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
 <li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -127,10 +128,12 @@ public class DescribeTargetsRequest extends AbstractModel {
     /**
      * Get 查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
-<li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li> 
+<li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li> 
      * @return Filters 查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
 <li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -140,9 +143,11 @@ public class DescribeTargetsRequest extends AbstractModel {
      * Set 查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
 <li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li>
      * @param Filters 查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
 <li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

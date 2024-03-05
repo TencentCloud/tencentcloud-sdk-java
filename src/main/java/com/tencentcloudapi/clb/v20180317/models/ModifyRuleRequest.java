@@ -67,14 +67,14 @@ public class ModifyRuleRequest extends AbstractModel {
     private String Scheduler;
 
     /**
-    * 会话保持时间。
+    * 会话保持时间。取值范围0或30-86400（单位：秒）。
     */
     @SerializedName("SessionExpireTime")
     @Expose
     private Long SessionExpireTime;
 
     /**
-    * 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
+    * 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
     */
     @SerializedName("ForwardType")
     @Expose
@@ -195,32 +195,32 @@ public class ModifyRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 会话保持时间。 
-     * @return SessionExpireTime 会话保持时间。
+     * Get 会话保持时间。取值范围0或30-86400（单位：秒）。 
+     * @return SessionExpireTime 会话保持时间。取值范围0或30-86400（单位：秒）。
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set 会话保持时间。
-     * @param SessionExpireTime 会话保持时间。
+     * Set 会话保持时间。取值范围0或30-86400（单位：秒）。
+     * @param SessionExpireTime 会话保持时间。取值范围0或30-86400（单位：秒）。
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
     /**
-     * Get 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。 
-     * @return ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
+     * Get 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。 
+     * @return ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
-     * @param ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
+     * Set 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
+     * @param ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;

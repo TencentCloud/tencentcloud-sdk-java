@@ -60,7 +60,7 @@ public class BatchTarget extends AbstractModel {
     private Long Weight;
 
     /**
-    * 七层规则 ID。
+    * 七层规则 ID。7层负载均衡该参数必填
     */
     @SerializedName("LocationId")
     @Expose
@@ -158,16 +158,16 @@ public class BatchTarget extends AbstractModel {
     }
 
     /**
-     * Get 七层规则 ID。 
-     * @return LocationId 七层规则 ID。
+     * Get 七层规则 ID。7层负载均衡该参数必填 
+     * @return LocationId 七层规则 ID。7层负载均衡该参数必填
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 七层规则 ID。
-     * @param LocationId 七层规则 ID。
+     * Set 七层规则 ID。7层负载均衡该参数必填
+     * @param LocationId 七层规则 ID。7层负载均衡该参数必填
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

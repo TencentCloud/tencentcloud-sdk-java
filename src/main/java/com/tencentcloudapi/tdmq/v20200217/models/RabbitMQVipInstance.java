@@ -140,6 +140,22 @@ public class RabbitMQVipInstance extends AbstractModel {
     private Long ClusterStatus;
 
     /**
+    * 公网接入点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicAccessEndpoint")
+    @Expose
+    private String PublicAccessEndpoint;
+
+    /**
+    * VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Vpcs")
+    @Expose
+    private VpcEndpointInfo [] Vpcs;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -411,6 +427,46 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.ClusterStatus = ClusterStatus;
     }
 
+    /**
+     * Get 公网接入点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicAccessEndpoint 公网接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicAccessEndpoint() {
+        return this.PublicAccessEndpoint;
+    }
+
+    /**
+     * Set 公网接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicAccessEndpoint 公网接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
+        this.PublicAccessEndpoint = PublicAccessEndpoint;
+    }
+
+    /**
+     * Get VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Vpcs VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpcEndpointInfo [] getVpcs() {
+        return this.Vpcs;
+    }
+
+    /**
+     * Set VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Vpcs VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcs(VpcEndpointInfo [] Vpcs) {
+        this.Vpcs = Vpcs;
+    }
+
     public RabbitMQVipInstance() {
     }
 
@@ -467,6 +523,15 @@ public class RabbitMQVipInstance extends AbstractModel {
         if (source.ClusterStatus != null) {
             this.ClusterStatus = new Long(source.ClusterStatus);
         }
+        if (source.PublicAccessEndpoint != null) {
+            this.PublicAccessEndpoint = new String(source.PublicAccessEndpoint);
+        }
+        if (source.Vpcs != null) {
+            this.Vpcs = new VpcEndpointInfo[source.Vpcs.length];
+            for (int i = 0; i < source.Vpcs.length; i++) {
+                this.Vpcs[i] = new VpcEndpointInfo(source.Vpcs[i]);
+            }
+        }
     }
 
 
@@ -490,6 +555,8 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
         this.setParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
+        this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
 
     }
 }

@@ -63,7 +63,9 @@ public class CreateClsLogSetRequest extends AbstractModel {
     /**
      * Get 日志集的保存周期，单位：天。 
      * @return Period 日志集的保存周期，单位：天。
+     * @deprecated
      */
+    @Deprecated
     public Long getPeriod() {
         return this.Period;
     }
@@ -71,7 +73,9 @@ public class CreateClsLogSetRequest extends AbstractModel {
     /**
      * Set 日志集的保存周期，单位：天。
      * @param Period 日志集的保存周期，单位：天。
+     * @deprecated
      */
+    @Deprecated
     public void setPeriod(Long Period) {
         this.Period = Period;
     }

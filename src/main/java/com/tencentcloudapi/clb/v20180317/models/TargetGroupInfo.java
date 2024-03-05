@@ -67,7 +67,7 @@ public class TargetGroupInfo extends AbstractModel {
     private String UpdatedTime;
 
     /**
-    * 关联到的规则数组
+    * 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociatedRule")
@@ -175,9 +175,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 关联到的规则数组
+     * Get 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AssociatedRule 关联到的规则数组
+     * @return AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssociationItem [] getAssociatedRule() {
@@ -185,9 +185,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 关联到的规则数组
+     * Set 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AssociatedRule 关联到的规则数组
+     * @param AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociatedRule(AssociationItem [] AssociatedRule) {

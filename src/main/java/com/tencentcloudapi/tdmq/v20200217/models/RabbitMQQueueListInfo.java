@@ -79,6 +79,22 @@ public class RabbitMQQueueListInfo extends AbstractModel {
     private Float MessageRateOut;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
      * Get 队列名 
      * @return QueueName 队列名
      */
@@ -214,6 +230,46 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         this.MessageRateOut = MessageRateOut;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
     public RabbitMQQueueListInfo() {
     }
 
@@ -243,6 +299,12 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         if (source.MessageRateOut != null) {
             this.MessageRateOut = new Float(source.MessageRateOut);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
     }
 
 
@@ -257,6 +319,8 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
         this.setParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
         this.setParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

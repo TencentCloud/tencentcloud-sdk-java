@@ -50,7 +50,7 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
-     *获取Apm Agent信息
+     *获取APM Agent信息
      * @param req DescribeApmAgentRequest
      * @return DescribeApmAgentResponse
      * @throws TencentCloudSDKException

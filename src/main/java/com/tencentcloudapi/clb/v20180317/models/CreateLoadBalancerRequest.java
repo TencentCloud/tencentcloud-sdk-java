@@ -97,7 +97,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String ZoneId;
 
     /**
-    * 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+    * 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
     */
     @SerializedName("InternetAccessible")
     @Expose
@@ -391,16 +391,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 仅对内网属性的性能容量型实例和公网属性的所有实例生效。 
-     * @return InternetAccessible 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+     * Get 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。 
+     * @return InternetAccessible 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
-     * @param InternetAccessible 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+     * Set 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+     * @param InternetAccessible 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;

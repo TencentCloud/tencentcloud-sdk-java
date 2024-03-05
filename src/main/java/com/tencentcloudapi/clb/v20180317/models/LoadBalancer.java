@@ -53,7 +53,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Long Forward;
 
     /**
-    * 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+    * 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
@@ -197,7 +197,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Long NumericalVpcId;
 
     /**
-    * 负载均衡IP地址所属的ISP
+    * 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VipIsp")
@@ -529,9 +529,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+     * Get 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+     * @return Domain 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
@@ -539,9 +539,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+     * Set 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+     * @param Domain 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
@@ -733,7 +733,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Log 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getLog() {
         return this.Log;
     }
@@ -743,7 +745,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Log 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setLog(String Log) {
         this.Log = Log;
     }
@@ -889,9 +893,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡IP地址所属的ISP
+     * Get 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VipIsp 负载均衡IP地址所属的ISP
+     * @return VipIsp 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVipIsp() {
@@ -899,9 +903,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 负载均衡IP地址所属的ISP
+     * Set 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VipIsp 负载均衡IP地址所属的ISP
+     * @param VipIsp 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVipIsp(String VipIsp) {

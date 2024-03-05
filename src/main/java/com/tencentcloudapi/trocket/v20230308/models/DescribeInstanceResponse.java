@@ -29,7 +29,6 @@ EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -192,6 +191,58 @@ PLATINUM 铂金版
     private String PayMode;
 
     /**
+    * 是否开启弹性TPS
+    */
+    @SerializedName("ScaledTpsEnabled")
+    @Expose
+    private Boolean ScaledTpsEnabled;
+
+    /**
+    * 是否自动续费
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
+    * 到期时间
+    */
+    @SerializedName("ExpiryTime")
+    @Expose
+    private Long ExpiryTime;
+
+    /**
+    * 角色数量限制
+    */
+    @SerializedName("RoleNumLimit")
+    @Expose
+    private Long RoleNumLimit;
+
+    /**
+    * 是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AclEnabled")
+    @Expose
+    private Boolean AclEnabled;
+
+    /**
+    * topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicNumLowerLimit")
+    @Expose
+    private Long TopicNumLowerLimit;
+
+    /**
+    * 最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicNumUpperLimit")
+    @Expose
+    private Long TopicNumUpperLimit;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -203,14 +254,12 @@ PLATINUM 铂金版
 EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。 
+PLATINUM 铂金版 
      * @return InstanceType 实例类型，
 EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -222,13 +271,11 @@ EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型，
 EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -595,6 +642,130 @@ PLATINUM 铂金版
     }
 
     /**
+     * Get 是否开启弹性TPS 
+     * @return ScaledTpsEnabled 是否开启弹性TPS
+     */
+    public Boolean getScaledTpsEnabled() {
+        return this.ScaledTpsEnabled;
+    }
+
+    /**
+     * Set 是否开启弹性TPS
+     * @param ScaledTpsEnabled 是否开启弹性TPS
+     */
+    public void setScaledTpsEnabled(Boolean ScaledTpsEnabled) {
+        this.ScaledTpsEnabled = ScaledTpsEnabled;
+    }
+
+    /**
+     * Get 是否自动续费 
+     * @return RenewFlag 是否自动续费
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 是否自动续费
+     * @param RenewFlag 是否自动续费
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get 到期时间 
+     * @return ExpiryTime 到期时间
+     */
+    public Long getExpiryTime() {
+        return this.ExpiryTime;
+    }
+
+    /**
+     * Set 到期时间
+     * @param ExpiryTime 到期时间
+     */
+    public void setExpiryTime(Long ExpiryTime) {
+        this.ExpiryTime = ExpiryTime;
+    }
+
+    /**
+     * Get 角色数量限制 
+     * @return RoleNumLimit 角色数量限制
+     */
+    public Long getRoleNumLimit() {
+        return this.RoleNumLimit;
+    }
+
+    /**
+     * Set 角色数量限制
+     * @param RoleNumLimit 角色数量限制
+     */
+    public void setRoleNumLimit(Long RoleNumLimit) {
+        this.RoleNumLimit = RoleNumLimit;
+    }
+
+    /**
+     * Get 是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AclEnabled 是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAclEnabled() {
+        return this.AclEnabled;
+    }
+
+    /**
+     * Set 是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AclEnabled 是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAclEnabled(Boolean AclEnabled) {
+        this.AclEnabled = AclEnabled;
+    }
+
+    /**
+     * Get topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicNumLowerLimit topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTopicNumLowerLimit() {
+        return this.TopicNumLowerLimit;
+    }
+
+    /**
+     * Set topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicNumLowerLimit topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicNumLowerLimit(Long TopicNumLowerLimit) {
+        this.TopicNumLowerLimit = TopicNumLowerLimit;
+    }
+
+    /**
+     * Get 最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicNumUpperLimit 最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTopicNumUpperLimit() {
+        return this.TopicNumUpperLimit;
+    }
+
+    /**
+     * Set 最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicNumUpperLimit 最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicNumUpperLimit(Long TopicNumUpperLimit) {
+        this.TopicNumUpperLimit = TopicNumUpperLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -693,6 +864,27 @@ PLATINUM 铂金版
         if (source.PayMode != null) {
             this.PayMode = new String(source.PayMode);
         }
+        if (source.ScaledTpsEnabled != null) {
+            this.ScaledTpsEnabled = new Boolean(source.ScaledTpsEnabled);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+        if (source.ExpiryTime != null) {
+            this.ExpiryTime = new Long(source.ExpiryTime);
+        }
+        if (source.RoleNumLimit != null) {
+            this.RoleNumLimit = new Long(source.RoleNumLimit);
+        }
+        if (source.AclEnabled != null) {
+            this.AclEnabled = new Boolean(source.AclEnabled);
+        }
+        if (source.TopicNumLowerLimit != null) {
+            this.TopicNumLowerLimit = new Long(source.TopicNumLowerLimit);
+        }
+        if (source.TopicNumUpperLimit != null) {
+            this.TopicNumUpperLimit = new Long(source.TopicNumUpperLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -726,6 +918,13 @@ PLATINUM 铂金版
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "SkuCode", this.SkuCode);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ScaledTpsEnabled", this.ScaledTpsEnabled);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "ExpiryTime", this.ExpiryTime);
+        this.setParamSimple(map, prefix + "RoleNumLimit", this.RoleNumLimit);
+        this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+        this.setParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
+        this.setParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

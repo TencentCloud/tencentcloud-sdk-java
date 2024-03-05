@@ -61,7 +61,7 @@ public class Listener extends AbstractModel {
     private HealthCheck HealthCheck;
 
     /**
-    * 请求的调度方式
+    * 请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scheduler")
@@ -205,6 +205,14 @@ public class Listener extends AbstractModel {
     private Long IdleConnectTimeout;
 
     /**
+    * 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RescheduleInterval")
+    @Expose
+    private Long RescheduleInterval;
+
+    /**
      * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
@@ -293,9 +301,9 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Get 请求的调度方式
+     * Get 请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scheduler 请求的调度方式
+     * @return Scheduler 请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduler() {
@@ -303,9 +311,9 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Set 请求的调度方式
+     * Set 请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scheduler 请求的调度方式
+     * @param Scheduler 请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduler(String Scheduler) {
@@ -652,6 +660,26 @@ public class Listener extends AbstractModel {
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
+    /**
+     * Get 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RescheduleInterval 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRescheduleInterval() {
+        return this.RescheduleInterval;
+    }
+
+    /**
+     * Set 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RescheduleInterval 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRescheduleInterval(Long RescheduleInterval) {
+        this.RescheduleInterval = RescheduleInterval;
+    }
+
     public Listener() {
     }
 
@@ -738,6 +766,9 @@ public class Listener extends AbstractModel {
         if (source.IdleConnectTimeout != null) {
             this.IdleConnectTimeout = new Long(source.IdleConnectTimeout);
         }
+        if (source.RescheduleInterval != null) {
+            this.RescheduleInterval = new Long(source.RescheduleInterval);
+        }
     }
 
 
@@ -768,6 +799,7 @@ public class Listener extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+        this.setParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
 
     }
 }

@@ -130,6 +130,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *针对指定实时日志投递任务（task-id），在对应的腾讯云 CLS 日志主题中创建投递日志字段对应的键值索引。如果您在腾讯云 CLS 已经创建索引，本接口将采用合并的方式追加索引。
+     * @param req CreateCLSIndexRequest
+     * @return CreateCLSIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSIndexResponse CreateCLSIndex(CreateCLSIndexRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSIndex", CreateCLSIndexResponse.class);
+    }
+
+    /**
      *在版本管理模式下，用于创建指定配置组的新版本。版本管理功能内测中，当前仅白名单开放。
      * @param req CreateConfigGroupVersionRequest
      * @return CreateConfigGroupVersionResponse
@@ -206,6 +217,18 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public CreatePurgeTaskResponse CreatePurgeTask(CreatePurgeTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePurgeTask", CreatePurgeTaskResponse.class);
+    }
+
+    /**
+     *通过本接口创建实时日志投递任务。本接口有如下限制：
+同一个实体（七层域名或者四层代理实例）在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到一个实时日志投递任务中。建议先通过 [DescribeRealtimeLogDeliveryTasks](https://tcloud4api.woa.com/document/product/1657/343539?!preview&!document=1)  接口根据实体查询实时日志投递任务列表，检查实体是否已经被添加到另一实时日志投递任务中。
+     * @param req CreateRealtimeLogDeliveryTaskRequest
+     * @return CreateRealtimeLogDeliveryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRealtimeLogDeliveryTaskResponse CreateRealtimeLogDeliveryTask(CreateRealtimeLogDeliveryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRealtimeLogDeliveryTask", CreateRealtimeLogDeliveryTaskResponse.class);
     }
 
     /**
@@ -330,6 +353,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteOriginGroupResponse DeleteOriginGroup(DeleteOriginGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOriginGroup", DeleteOriginGroupResponse.class);
+    }
+
+    /**
+     *通过本接口删除实时日志投递任务。
+     * @param req DeleteRealtimeLogDeliveryTaskRequest
+     * @return DeleteRealtimeLogDeliveryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRealtimeLogDeliveryTaskResponse DeleteRealtimeLogDeliveryTask(DeleteRealtimeLogDeliveryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRealtimeLogDeliveryTask", DeleteRealtimeLogDeliveryTaskResponse.class);
     }
 
     /**
@@ -652,6 +686,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *通过本接口查询实时日志投递任务列表。
+     * @param req DescribeRealtimeLogDeliveryTasksRequest
+     * @return DescribeRealtimeLogDeliveryTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealtimeLogDeliveryTasksResponse DescribeRealtimeLogDeliveryTasks(DescribeRealtimeLogDeliveryTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRealtimeLogDeliveryTasks", DescribeRealtimeLogDeliveryTasksResponse.class);
+    }
+
+    /**
      *查询规则引擎规则。
      * @param req DescribeRulesRequest
      * @return DescribeRulesResponse
@@ -951,6 +996,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyOriginGroupResponse ModifyOriginGroup(ModifyOriginGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyOriginGroup", ModifyOriginGroupResponse.class);
+    }
+
+    /**
+     *通过本接口修改实时日志投递任务配置。本接口有如下限制：<li>不支持修改实时日志投递任务目的地类型（TaskType）；</li><li>不支持修改数据投递类型（LogType）</li><li>不支持修改数据投递区域（Area）</li><li>当原实时日志投递任务的目的地为腾讯云 CLS 时，不支持修改目的地详细配置，如日志集、日志主题。</li>
+     * @param req ModifyRealtimeLogDeliveryTaskRequest
+     * @return ModifyRealtimeLogDeliveryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRealtimeLogDeliveryTaskResponse ModifyRealtimeLogDeliveryTask(ModifyRealtimeLogDeliveryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRealtimeLogDeliveryTask", ModifyRealtimeLogDeliveryTaskResponse.class);
     }
 
     /**

@@ -156,6 +156,14 @@ public class PulsarProInstance extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingLabelVersion")
+    @Expose
+    private String BillingLabelVersion;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -467,6 +475,26 @@ public class PulsarProInstance extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillingLabelVersion() {
+        return this.BillingLabelVersion;
+    }
+
+    /**
+     * Set 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingLabelVersion(String BillingLabelVersion) {
+        this.BillingLabelVersion = BillingLabelVersion;
+    }
+
     public PulsarProInstance() {
     }
 
@@ -532,6 +560,9 @@ public class PulsarProInstance extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.BillingLabelVersion != null) {
+            this.BillingLabelVersion = new String(source.BillingLabelVersion);
+        }
     }
 
 
@@ -557,6 +588,7 @@ public class PulsarProInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxBandWidth", this.MaxBandWidth);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
 
     }
 }

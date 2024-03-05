@@ -32,6 +32,13 @@ public class BatchRegisterTargetsResponse extends AbstractModel {
     private String [] FailListenerIdSet;
 
     /**
+    * 绑定失败错误原因信息。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +63,22 @@ public class BatchRegisterTargetsResponse extends AbstractModel {
      */
     public void setFailListenerIdSet(String [] FailListenerIdSet) {
         this.FailListenerIdSet = FailListenerIdSet;
+    }
+
+    /**
+     * Get 绑定失败错误原因信息。 
+     * @return Message 绑定失败错误原因信息。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 绑定失败错误原因信息。
+     * @param Message 绑定失败错误原因信息。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
@@ -88,6 +111,9 @@ public class BatchRegisterTargetsResponse extends AbstractModel {
                 this.FailListenerIdSet[i] = new String(source.FailListenerIdSet[i]);
             }
         }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +125,7 @@ public class BatchRegisterTargetsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FailListenerIdSet.", this.FailListenerIdSet);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

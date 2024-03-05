@@ -68,13 +68,14 @@ public class ModifyListenerRequest extends AbstractModel {
     /**
     * 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+    * 是否开启SNI特性，此参数仅适用于HTTPS监听器。默认0，表示不开启，1表示开启。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
     */
     @SerializedName("SniSwitch")
     @Expose
@@ -89,6 +90,7 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
     * 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
+默认值0表示不开启，1表示开启。
     */
     @SerializedName("KeepaliveEnable")
     @Expose
@@ -103,6 +105,7 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
     * 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
     */
     @SerializedName("SessionType")
     @Expose
@@ -234,9 +237,11 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Get 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。 
+分别表示按权重轮询、最小连接数， 默认为 WRR。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。 
      * @return Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
      */
     public String getScheduler() {
         return this.Scheduler;
@@ -245,24 +250,26 @@ public class ModifyListenerRequest extends AbstractModel {
     /**
      * Set 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
      * @param Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。 
-     * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+     * Get 是否开启SNI特性，此参数仅适用于HTTPS监听器。默认0，表示不开启，1表示开启。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。 
+     * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。默认0，表示不开启，1表示开启。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
      */
     public Long getSniSwitch() {
         return this.SniSwitch;
     }
 
     /**
-     * Set 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
-     * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+     * Set 是否开启SNI特性，此参数仅适用于HTTPS监听器。默认0，表示不开启，1表示开启。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+     * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。默认0，表示不开启，1表示开启。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
      */
     public void setSniSwitch(Long SniSwitch) {
         this.SniSwitch = SniSwitch;
@@ -285,8 +292,10 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。 
+     * Get 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
+默认值0表示不开启，1表示开启。 
      * @return KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
+默认值0表示不开启，1表示开启。
      */
     public Long getKeepaliveEnable() {
         return this.KeepaliveEnable;
@@ -294,7 +303,9 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Set 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
+默认值0表示不开启，1表示开启。
      * @param KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
+默认值0表示不开启，1表示开启。
      */
     public void setKeepaliveEnable(Long KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
@@ -317,8 +328,10 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。 
+     * Get 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。 
      * @return SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public String getSessionType() {
         return this.SessionType;
@@ -326,7 +339,9 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Set 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
      * @param SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public void setSessionType(String SessionType) {
         this.SessionType = SessionType;

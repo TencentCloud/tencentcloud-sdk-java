@@ -89,6 +89,14 @@ public class PulsarProClusterInfo extends AbstractModel {
     private Boolean CanEditRoute;
 
     /**
+    * 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingLabelVersion")
+    @Expose
+    private String BillingLabelVersion;
+
+    /**
      * Get 集群Id。 
      * @return ClusterId 集群Id。
      */
@@ -240,6 +248,26 @@ public class PulsarProClusterInfo extends AbstractModel {
         this.CanEditRoute = CanEditRoute;
     }
 
+    /**
+     * Get 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillingLabelVersion() {
+        return this.BillingLabelVersion;
+    }
+
+    /**
+     * Set 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingLabelVersion(String BillingLabelVersion) {
+        this.BillingLabelVersion = BillingLabelVersion;
+    }
+
     public PulsarProClusterInfo() {
     }
 
@@ -278,6 +306,9 @@ public class PulsarProClusterInfo extends AbstractModel {
         if (source.CanEditRoute != null) {
             this.CanEditRoute = new Boolean(source.CanEditRoute);
         }
+        if (source.BillingLabelVersion != null) {
+            this.BillingLabelVersion = new String(source.BillingLabelVersion);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class PulsarProClusterInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
         this.setParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
+        this.setParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
 
     }
 }

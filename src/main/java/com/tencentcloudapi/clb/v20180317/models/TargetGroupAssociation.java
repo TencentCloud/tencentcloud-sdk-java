@@ -38,7 +38,7 @@ public class TargetGroupAssociation extends AbstractModel {
     private String TargetGroupId;
 
     /**
-    * 监听器ID
+    * 监听器ID。访问AssociateTargetGroups和DisassociateTargetGroups接口时必传此参数。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -84,16 +84,16 @@ public class TargetGroupAssociation extends AbstractModel {
     }
 
     /**
-     * Get 监听器ID 
-     * @return ListenerId 监听器ID
+     * Get 监听器ID。访问AssociateTargetGroups和DisassociateTargetGroups接口时必传此参数。 
+     * @return ListenerId 监听器ID。访问AssociateTargetGroups和DisassociateTargetGroups接口时必传此参数。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID
-     * @param ListenerId 监听器ID
+     * Set 监听器ID。访问AssociateTargetGroups和DisassociateTargetGroups接口时必传此参数。
+     * @param ListenerId 监听器ID。访问AssociateTargetGroups和DisassociateTargetGroups接口时必传此参数。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;

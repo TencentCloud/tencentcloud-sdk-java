@@ -347,19 +347,6 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *接口支持删除多个集群，目前已废弃
-
-删除专业集群——预付费，仅通过API 调用，支持同时删除多个集群
-     * @param req DeleteProClustersRequest
-     * @return DeleteProClustersResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteProClustersResponse DeleteProClusters(DeleteProClustersRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteProClusters", DeleteProClustersResponse.class);
-    }
-
-    /**
      *删除RabbitMQ的用户
      * @param req DeleteRabbitMQUserRequest
      * @return DeleteRabbitMQUserResponse
@@ -643,6 +630,28 @@ public class TdmqClient extends AbstractClient{
     public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEnvironments", DescribeEnvironmentsResponse.class);
+    }
+
+    /**
+     *查询消息轨迹
+     * @param req DescribeMqMsgTraceRequest
+     * @return DescribeMqMsgTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMqMsgTraceResponse DescribeMqMsgTrace(DescribeMqMsgTraceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMqMsgTrace", DescribeMqMsgTraceResponse.class);
+    }
+
+    /**
+     *消息详情
+     * @param req DescribeMsgRequest
+     * @return DescribeMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMsgResponse DescribeMsg(DescribeMsgRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMsg", DescribeMsgResponse.class);
     }
 
     /**

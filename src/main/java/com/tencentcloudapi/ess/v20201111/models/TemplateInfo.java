@@ -31,11 +31,40 @@ public class TemplateInfo extends AbstractModel {
     private String TemplateId;
 
     /**
-    * 模板名
+    * 模板的名字
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
+
+    /**
+    * 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
+    */
+    @SerializedName("Recipients")
+    @Expose
+    private Recipient [] Recipients;
+
+    /**
+    * 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
+    */
+    @SerializedName("Components")
+    @Expose
+    private Component [] Components;
+
+    /**
+    * 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+    */
+    @SerializedName("SignComponents")
+    @Expose
+    private Component [] SignComponents;
 
     /**
     * 模板描述信息
@@ -45,7 +74,7 @@ public class TemplateInfo extends AbstractModel {
     private String Description;
 
     /**
-    * 模板关联的资源ID列表
+    * 此模板的资源ID
     */
     @SerializedName("DocumentResourceIds")
     @Expose
@@ -59,54 +88,37 @@ public class TemplateInfo extends AbstractModel {
     private FileInfo [] FileInfos;
 
     /**
-    * 附件关联的资源ID
+    * 此模板里边附件的资源ID
     */
     @SerializedName("AttachmentResourceIds")
     @Expose
     private String [] AttachmentResourceIds;
 
     /**
-    * 签署顺序
-无序 -1
-有序为序列数字 0,1,2
+    * 签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝
     */
     @SerializedName("SignOrder")
     @Expose
     private Long [] SignOrder;
 
     /**
-    * 模板中的签署参与方列表
-    */
-    @SerializedName("Recipients")
-    @Expose
-    private Recipient [] Recipients;
+    * 此模板的状态可以分为以下几种：
 
-    /**
-    * 模板的填充控件列表
-    */
-    @SerializedName("Components")
-    @Expose
-    private Component [] Components;
-
-    /**
-    * 模板中的签署控件列表
-    */
-    @SerializedName("SignComponents")
-    @Expose
-    private Component [] SignComponents;
-
-    /**
-    * 模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 模板的创建者信息，电子签系统用户ID
+    * 模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID`
     */
     @SerializedName("Creator")
     @Expose
@@ -120,25 +132,32 @@ public class TemplateInfo extends AbstractModel {
     private Long CreatedOn;
 
     /**
-    * 发起方参与信息Promoter
+    * 此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
     */
     @SerializedName("Promoter")
     @Expose
     private Recipient Promoter;
 
     /**
-    * 模板类型：
-1  静默签,
-3  普通模板
+    * 模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
     */
     @SerializedName("TemplateType")
     @Expose
     private Long TemplateType;
 
     /**
-    * 模板可用状态：
-1 启用（默认）
-2 停用
+    * 模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板
     */
     @SerializedName("Available")
     @Expose
@@ -152,7 +171,15 @@ public class TemplateInfo extends AbstractModel {
     private String OrganizationId;
 
     /**
-    * 模板预览链接，有效时间5分钟
+    * 模板创建人用户ID
+    */
+    @SerializedName("CreatorId")
+    @Expose
+    private String CreatorId;
+
+    /**
+    * 模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
@@ -160,7 +187,7 @@ public class TemplateInfo extends AbstractModel {
     private String PreviewUrl;
 
     /**
-    * 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+    * 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateVersion")
@@ -168,9 +195,10 @@ public class TemplateInfo extends AbstractModel {
     private String TemplateVersion;
 
     /**
-    * 模板是否已发布：
-true-已发布
-false-未发布
+    * 模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Published")
@@ -178,7 +206,7 @@ false-未发布
     private Boolean Published;
 
     /**
-    * 分享来源的模板ID。用在集团账号子企业模板里
+    * <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareTemplateId")
@@ -186,7 +214,7 @@ false-未发布
     private String ShareTemplateId;
 
     /**
-    * 模板内部指定的印章列表
+    * 此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateSeals")
@@ -218,19 +246,99 @@ false-未发布
     }
 
     /**
-     * Get 模板名 
-     * @return TemplateName 模板名
+     * Get 模板的名字 
+     * @return TemplateName 模板的名字
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名
-     * @param TemplateName 模板名
+     * Set 模板的名字
+     * @param TemplateName 模板的名字
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
+    }
+
+    /**
+     * Get 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+ 
+     * @return Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
+     */
+    public Recipient [] getRecipients() {
+        return this.Recipients;
+    }
+
+    /**
+     * Set 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
+     * @param Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
+     */
+    public void setRecipients(Recipient [] Recipients) {
+        this.Recipients = Recipients;
+    }
+
+    /**
+     * Get 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png) 
+     * @return Components 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
+     */
+    public Component [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
+     * @param Components 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
+     */
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
+    }
+
+    /**
+     * Get 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png) 
+     * @return SignComponents 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+     */
+    public Component [] getSignComponents() {
+        return this.SignComponents;
+    }
+
+    /**
+     * Set 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+     * @param SignComponents 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+     */
+    public void setSignComponents(Component [] SignComponents) {
+        this.SignComponents = SignComponents;
     }
 
     /**
@@ -250,16 +358,16 @@ false-未发布
     }
 
     /**
-     * Get 模板关联的资源ID列表 
-     * @return DocumentResourceIds 模板关联的资源ID列表
+     * Get 此模板的资源ID 
+     * @return DocumentResourceIds 此模板的资源ID
      */
     public String [] getDocumentResourceIds() {
         return this.DocumentResourceIds;
     }
 
     /**
-     * Set 模板关联的资源ID列表
-     * @param DocumentResourceIds 模板关联的资源ID列表
+     * Set 此模板的资源ID
+     * @param DocumentResourceIds 此模板的资源ID
      */
     public void setDocumentResourceIds(String [] DocumentResourceIds) {
         this.DocumentResourceIds = DocumentResourceIds;
@@ -282,132 +390,100 @@ false-未发布
     }
 
     /**
-     * Get 附件关联的资源ID 
-     * @return AttachmentResourceIds 附件关联的资源ID
+     * Get 此模板里边附件的资源ID 
+     * @return AttachmentResourceIds 此模板里边附件的资源ID
      */
     public String [] getAttachmentResourceIds() {
         return this.AttachmentResourceIds;
     }
 
     /**
-     * Set 附件关联的资源ID
-     * @param AttachmentResourceIds 附件关联的资源ID
+     * Set 此模板里边附件的资源ID
+     * @param AttachmentResourceIds 此模板里边附件的资源ID
      */
     public void setAttachmentResourceIds(String [] AttachmentResourceIds) {
         this.AttachmentResourceIds = AttachmentResourceIds;
     }
 
     /**
-     * Get 签署顺序
-无序 -1
-有序为序列数字 0,1,2 
-     * @return SignOrder 签署顺序
-无序 -1
-有序为序列数字 0,1,2
+     * Get 签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝ 
+     * @return SignOrder 签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝
      */
     public Long [] getSignOrder() {
         return this.SignOrder;
     }
 
     /**
-     * Set 签署顺序
-无序 -1
-有序为序列数字 0,1,2
-     * @param SignOrder 签署顺序
-无序 -1
-有序为序列数字 0,1,2
+     * Set 签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝
+     * @param SignOrder 签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝
      */
     public void setSignOrder(Long [] SignOrder) {
         this.SignOrder = SignOrder;
     }
 
     /**
-     * Get 模板中的签署参与方列表 
-     * @return Recipients 模板中的签署参与方列表
-     */
-    public Recipient [] getRecipients() {
-        return this.Recipients;
-    }
+     * Get 此模板的状态可以分为以下几种：
 
-    /**
-     * Set 模板中的签署参与方列表
-     * @param Recipients 模板中的签署参与方列表
-     */
-    public void setRecipients(Recipient [] Recipients) {
-        this.Recipients = Recipients;
-    }
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。 
+     * @return Status 此模板的状态可以分为以下几种：
 
-    /**
-     * Get 模板的填充控件列表 
-     * @return Components 模板的填充控件列表
-     */
-    public Component [] getComponents() {
-        return this.Components;
-    }
-
-    /**
-     * Set 模板的填充控件列表
-     * @param Components 模板的填充控件列表
-     */
-    public void setComponents(Component [] Components) {
-        this.Components = Components;
-    }
-
-    /**
-     * Get 模板中的签署控件列表 
-     * @return SignComponents 模板中的签署控件列表
-     */
-    public Component [] getSignComponents() {
-        return this.SignComponents;
-    }
-
-    /**
-     * Set 模板中的签署控件列表
-     * @param SignComponents 模板中的签署控件列表
-     */
-    public void setSignComponents(Component [] SignComponents) {
-        this.SignComponents = SignComponents;
-    }
-
-    /**
-     * Get 模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用 
-     * @return Status 模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用
-     * @param Status 模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用
+     * Set 此模板的状态可以分为以下几种：
+
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。
+     * @param Status 此模板的状态可以分为以下几种：
+
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 模板的创建者信息，电子签系统用户ID 
-     * @return Creator 模板的创建者信息，电子签系统用户ID
+     * Get 模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID` 
+     * @return Creator 模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID`
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 模板的创建者信息，电子签系统用户ID
-     * @param Creator 模板的创建者信息，电子签系统用户ID
+     * Set 模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID`
+     * @param Creator 模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID`
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
@@ -430,64 +506,92 @@ false-未发布
     }
 
     /**
-     * Get 发起方参与信息Promoter 
-     * @return Promoter 发起方参与信息Promoter
+     * Get 此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+ 
+     * @return Promoter 此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
      */
     public Recipient getPromoter() {
         return this.Promoter;
     }
 
     /**
-     * Set 发起方参与信息Promoter
-     * @param Promoter 发起方参与信息Promoter
+     * Set 此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+     * @param Promoter 此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
      */
     public void setPromoter(Recipient Promoter) {
         this.Promoter = Promoter;
     }
 
     /**
-     * Get 模板类型：
-1  静默签,
-3  普通模板 
-     * @return TemplateType 模板类型：
-1  静默签,
-3  普通模板
+     * Get 模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。 
+     * @return TemplateType 模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
      */
     public Long getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 模板类型：
-1  静默签,
-3  普通模板
-     * @param TemplateType 模板类型：
-1  静默签,
-3  普通模板
+     * Set 模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
+     * @param TemplateType 模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
      */
     public void setTemplateType(Long TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get 模板可用状态：
-1 启用（默认）
-2 停用 
-     * @return Available 模板可用状态：
-1 启用（默认）
-2 停用
+     * Get 模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板 
+     * @return Available 模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板
      */
     public Long getAvailable() {
         return this.Available;
     }
 
     /**
-     * Set 模板可用状态：
-1 启用（默认）
-2 停用
-     * @param Available 模板可用状态：
-1 启用（默认）
-2 停用
+     * Set 模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板
+     * @param Available 模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板
      */
     public void setAvailable(Long Available) {
         this.Available = Available;
@@ -510,9 +614,27 @@ false-未发布
     }
 
     /**
-     * Get 模板预览链接，有效时间5分钟
+     * Get 模板创建人用户ID 
+     * @return CreatorId 模板创建人用户ID
+     */
+    public String getCreatorId() {
+        return this.CreatorId;
+    }
+
+    /**
+     * Set 模板创建人用户ID
+     * @param CreatorId 模板创建人用户ID
+     */
+    public void setCreatorId(String CreatorId) {
+        this.CreatorId = CreatorId;
+    }
+
+    /**
+     * Get 模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreviewUrl 模板预览链接，有效时间5分钟
+     * @return PreviewUrl 模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
@@ -520,9 +642,11 @@ false-未发布
     }
 
     /**
-     * Set 模板预览链接，有效时间5分钟
+     * Set 模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreviewUrl 模板预览链接，有效时间5分钟
+     * @param PreviewUrl 模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {
@@ -530,9 +654,9 @@ false-未发布
     }
 
     /**
-     * Get 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+     * Get 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateVersion 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+     * @return TemplateVersion 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateVersion() {
@@ -540,9 +664,9 @@ false-未发布
     }
 
     /**
-     * Set 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+     * Set 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateVersion 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+     * @param TemplateVersion 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateVersion(String TemplateVersion) {
@@ -550,13 +674,15 @@ false-未发布
     }
 
     /**
-     * Get 模板是否已发布：
-true-已发布
-false-未发布
+     * Get 模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Published 模板是否已发布：
-true-已发布
-false-未发布
+     * @return Published 模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublished() {
@@ -564,13 +690,15 @@ false-未发布
     }
 
     /**
-     * Set 模板是否已发布：
-true-已发布
-false-未发布
+     * Set 模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Published 模板是否已发布：
-true-已发布
-false-未发布
+     * @param Published 模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublished(Boolean Published) {
@@ -578,9 +706,9 @@ false-未发布
     }
 
     /**
-     * Get 分享来源的模板ID。用在集团账号子企业模板里
+     * Get <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShareTemplateId 分享来源的模板ID。用在集团账号子企业模板里
+     * @return ShareTemplateId <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShareTemplateId() {
@@ -588,9 +716,9 @@ false-未发布
     }
 
     /**
-     * Set 分享来源的模板ID。用在集团账号子企业模板里
+     * Set <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShareTemplateId 分享来源的模板ID。用在集团账号子企业模板里
+     * @param ShareTemplateId <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareTemplateId(String ShareTemplateId) {
@@ -598,9 +726,9 @@ false-未发布
     }
 
     /**
-     * Get 模板内部指定的印章列表
+     * Get 此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateSeals 模板内部指定的印章列表
+     * @return TemplateSeals 此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SealInfo [] getTemplateSeals() {
@@ -608,9 +736,9 @@ false-未发布
     }
 
     /**
-     * Set 模板内部指定的印章列表
+     * Set 此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateSeals 模板内部指定的印章列表
+     * @param TemplateSeals 此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateSeals(SealInfo [] TemplateSeals) {
@@ -655,6 +783,24 @@ false-未发布
         if (source.TemplateName != null) {
             this.TemplateName = new String(source.TemplateName);
         }
+        if (source.Recipients != null) {
+            this.Recipients = new Recipient[source.Recipients.length];
+            for (int i = 0; i < source.Recipients.length; i++) {
+                this.Recipients[i] = new Recipient(source.Recipients[i]);
+            }
+        }
+        if (source.Components != null) {
+            this.Components = new Component[source.Components.length];
+            for (int i = 0; i < source.Components.length; i++) {
+                this.Components[i] = new Component(source.Components[i]);
+            }
+        }
+        if (source.SignComponents != null) {
+            this.SignComponents = new Component[source.SignComponents.length];
+            for (int i = 0; i < source.SignComponents.length; i++) {
+                this.SignComponents[i] = new Component(source.SignComponents[i]);
+            }
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -682,24 +828,6 @@ false-未发布
                 this.SignOrder[i] = new Long(source.SignOrder[i]);
             }
         }
-        if (source.Recipients != null) {
-            this.Recipients = new Recipient[source.Recipients.length];
-            for (int i = 0; i < source.Recipients.length; i++) {
-                this.Recipients[i] = new Recipient(source.Recipients[i]);
-            }
-        }
-        if (source.Components != null) {
-            this.Components = new Component[source.Components.length];
-            for (int i = 0; i < source.Components.length; i++) {
-                this.Components[i] = new Component(source.Components[i]);
-            }
-        }
-        if (source.SignComponents != null) {
-            this.SignComponents = new Component[source.SignComponents.length];
-            for (int i = 0; i < source.SignComponents.length; i++) {
-                this.SignComponents[i] = new Component(source.SignComponents[i]);
-            }
-        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
@@ -720,6 +848,9 @@ false-未发布
         }
         if (source.OrganizationId != null) {
             this.OrganizationId = new String(source.OrganizationId);
+        }
+        if (source.CreatorId != null) {
+            this.CreatorId = new String(source.CreatorId);
         }
         if (source.PreviewUrl != null) {
             this.PreviewUrl = new String(source.PreviewUrl);
@@ -754,14 +885,14 @@ false-未发布
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
+        this.setParamArrayObj(map, prefix + "Recipients.", this.Recipients);
+        this.setParamArrayObj(map, prefix + "Components.", this.Components);
+        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArraySimple(map, prefix + "DocumentResourceIds.", this.DocumentResourceIds);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamArraySimple(map, prefix + "AttachmentResourceIds.", this.AttachmentResourceIds);
         this.setParamArraySimple(map, prefix + "SignOrder.", this.SignOrder);
-        this.setParamArrayObj(map, prefix + "Recipients.", this.Recipients);
-        this.setParamArrayObj(map, prefix + "Components.", this.Components);
-        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
@@ -769,6 +900,7 @@ false-未发布
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
         this.setParamSimple(map, prefix + "Available", this.Available);
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
+        this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
         this.setParamSimple(map, prefix + "Published", this.Published);

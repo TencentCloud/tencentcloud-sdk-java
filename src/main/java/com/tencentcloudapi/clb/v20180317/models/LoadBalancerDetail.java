@@ -96,7 +96,7 @@ Public：公网属性， Private：内网属性。
     private String Zone;
 
     /**
-    * 负载均衡实例IP地址所属的ISP。
+    * 负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressIsp")
@@ -128,7 +128,7 @@ Public：公网属性， Private：内网属性。
     private String CreateTime;
 
     /**
-    * 负载均衡实例的计费类型。
+    * 负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeType")
@@ -272,7 +272,7 @@ Public：公网属性， Private：内网属性。
     private String [] SecurityGroup;
 
     /**
-    * 负载均衡安全组上移特性是否开启标识。
+    * 负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerPassToTarget")
@@ -516,9 +516,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Get 负载均衡实例IP地址所属的ISP。
+     * Get 负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AddressIsp 负载均衡实例IP地址所属的ISP。
+     * @return AddressIsp 负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressIsp() {
@@ -526,9 +526,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Set 负载均衡实例IP地址所属的ISP。
+     * Set 负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AddressIsp 负载均衡实例IP地址所属的ISP。
+     * @param AddressIsp 负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressIsp(String AddressIsp) {
@@ -596,9 +596,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Get 负载均衡实例的计费类型。
+     * Get 负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeType 负载均衡实例的计费类型。
+     * @return ChargeType 负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeType() {
@@ -606,9 +606,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Set 负载均衡实例的计费类型。
+     * Set 负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeType 负载均衡实例的计费类型。
+     * @param ChargeType 负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeType(String ChargeType) {
@@ -956,9 +956,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Get 负载均衡安全组上移特性是否开启标识。
+     * Get 负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。
+     * @return LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLoadBalancerPassToTarget() {
@@ -966,9 +966,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Set 负载均衡安全组上移特性是否开启标识。
+     * Set 负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。
+     * @param LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerPassToTarget(Long LoadBalancerPassToTarget) {

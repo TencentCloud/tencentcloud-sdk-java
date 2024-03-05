@@ -70,7 +70,8 @@ public class RuleOutput extends AbstractModel {
     private CertificateOutput Certificate;
 
     /**
-    * 规则的请求转发方式
+    * 规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
     */
     @SerializedName("Scheduler")
     @Expose
@@ -134,7 +135,7 @@ public class RuleOutput extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 后端服务器类型
+    * 后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
     */
     @SerializedName("TargetType")
     @Expose
@@ -173,7 +174,7 @@ public class RuleOutput extends AbstractModel {
     private String TrpcFunc;
 
     /**
-    * QUIC状态
+    * QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuicStatus")
@@ -309,16 +310,20 @@ public class RuleOutput extends AbstractModel {
     }
 
     /**
-     * Get 规则的请求转发方式 
-     * @return Scheduler 规则的请求转发方式
+     * Get 规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。 
+     * @return Scheduler 规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 规则的请求转发方式
-     * @param Scheduler 规则的请求转发方式
+     * Set 规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
+     * @param Scheduler 规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -457,16 +462,16 @@ public class RuleOutput extends AbstractModel {
     }
 
     /**
-     * Get 后端服务器类型 
-     * @return TargetType 后端服务器类型
+     * Get 后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。 
+     * @return TargetType 后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 后端服务器类型
-     * @param TargetType 后端服务器类型
+     * Set 后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     * @param TargetType 后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
@@ -553,9 +558,9 @@ public class RuleOutput extends AbstractModel {
     }
 
     /**
-     * Get QUIC状态
+     * Get QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuicStatus QUIC状态
+     * @return QuicStatus QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuicStatus() {
@@ -563,9 +568,9 @@ public class RuleOutput extends AbstractModel {
     }
 
     /**
-     * Set QUIC状态
+     * Set QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuicStatus QUIC状态
+     * @param QuicStatus QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuicStatus(String QuicStatus) {

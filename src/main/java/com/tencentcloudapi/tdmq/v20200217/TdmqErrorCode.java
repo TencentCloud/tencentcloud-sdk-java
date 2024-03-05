@@ -276,6 +276,9 @@ public enum TdmqErrorCode {
     // 迁移任务不存在。
      RESOURCENOTFOUND_MIGRATIONTASK("ResourceNotFound.MigrationTask"),
      
+    // 找不到指定消息。
+     RESOURCENOTFOUND_MSG("ResourceNotFound.Msg"),
+     
     // 消息生产日志不存在。
      RESOURCENOTFOUND_MSGPRODUCELOG("ResourceNotFound.MsgProduceLog"),
      

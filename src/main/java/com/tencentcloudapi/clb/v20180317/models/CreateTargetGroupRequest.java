@@ -38,7 +38,8 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 目标组的默认端口， 后续添加服务器时可使用该默认端口
+    * 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+
     */
     @SerializedName("Port")
     @Expose
@@ -84,16 +85,20 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口 
-     * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口
+     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+ 
+     * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口
-     * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口
+     * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+
+     * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+
      */
     public void setPort(Long Port) {
         this.Port = Port;

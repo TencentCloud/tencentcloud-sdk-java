@@ -765,6 +765,17 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *拉取设备p2p信息
+     * @param req DescribeP2PInfoRequest
+     * @return DescribeP2PInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeP2PInfoResponse DescribeP2PInfo(DescribeP2PInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeP2PInfo", DescribeP2PInfoResponse.class);
+    }
+
+    /**
      *查询套餐消耗记录详情
      * @param req DescribePackageConsumeTaskRequest
      * @return DescribePackageConsumeTaskResponse
