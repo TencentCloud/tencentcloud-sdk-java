@@ -38,6 +38,13 @@ public class DescribeDSPADataSourceDbInfoRequest extends AbstractModel {
     private String DataSourceId;
 
     /**
+    * 数据源类型
+    */
+    @SerializedName("DataSourceType")
+    @Expose
+    private String DataSourceType;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -69,6 +76,22 @@ public class DescribeDSPADataSourceDbInfoRequest extends AbstractModel {
         this.DataSourceId = DataSourceId;
     }
 
+    /**
+     * Get 数据源类型 
+     * @return DataSourceType 数据源类型
+     */
+    public String getDataSourceType() {
+        return this.DataSourceType;
+    }
+
+    /**
+     * Set 数据源类型
+     * @param DataSourceType 数据源类型
+     */
+    public void setDataSourceType(String DataSourceType) {
+        this.DataSourceType = DataSourceType;
+    }
+
     public DescribeDSPADataSourceDbInfoRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeDSPADataSourceDbInfoRequest extends AbstractModel {
         if (source.DataSourceId != null) {
             this.DataSourceId = new String(source.DataSourceId);
         }
+        if (source.DataSourceType != null) {
+            this.DataSourceType = new String(source.DataSourceType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeDSPADataSourceDbInfoRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
+        this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
 
     }
 }

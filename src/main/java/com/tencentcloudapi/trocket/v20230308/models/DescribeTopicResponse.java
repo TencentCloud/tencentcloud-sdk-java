@@ -85,6 +85,13 @@ TRANSACTION:事务消息
     private SubscriptionData [] SubscriptionData;
 
     /**
+    * 消息保留时长
+    */
+    @SerializedName("MsgTTL")
+    @Expose
+    private Long MsgTTL;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -240,6 +247,22 @@ TRANSACTION:事务消息
     }
 
     /**
+     * Get 消息保留时长 
+     * @return MsgTTL 消息保留时长
+     */
+    public Long getMsgTTL() {
+        return this.MsgTTL;
+    }
+
+    /**
+     * Set 消息保留时长
+     * @param MsgTTL 消息保留时长
+     */
+    public void setMsgTTL(Long MsgTTL) {
+        this.MsgTTL = MsgTTL;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -290,6 +313,9 @@ TRANSACTION:事务消息
                 this.SubscriptionData[i] = new SubscriptionData(source.SubscriptionData[i]);
             }
         }
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -308,6 +334,7 @@ TRANSACTION:事务消息
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
         this.setParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
+        this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

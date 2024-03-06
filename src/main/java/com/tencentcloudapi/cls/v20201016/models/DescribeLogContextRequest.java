@@ -38,28 +38,29 @@ public class DescribeLogContextRequest extends AbstractModel {
     private String BTime;
 
     /**
-    * 日志包序号
+    * 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
     */
     @SerializedName("PkgId")
     @Expose
     private String PkgId;
 
     /**
-    * 日志包内一条日志的序号
+    * 日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。
     */
     @SerializedName("PkgLogId")
     @Expose
     private Long PkgLogId;
 
     /**
-    * 上文日志条数,  默认值10
+    * 前${PrevLogs}条日志，默认值10。
     */
     @SerializedName("PrevLogs")
     @Expose
     private Long PrevLogs;
 
     /**
-    * 下文日志条数,  默认值10
+    * 后${NextLogs}条日志，默认值10。
     */
     @SerializedName("NextLogs")
     @Expose
@@ -98,64 +99,68 @@ public class DescribeLogContextRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志包序号 
-     * @return PkgId 日志包序号
+     * Get 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。 
+     * @return PkgId 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
      */
     public String getPkgId() {
         return this.PkgId;
     }
 
     /**
-     * Set 日志包序号
-     * @param PkgId 日志包序号
+     * Set 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
+     * @param PkgId 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
     }
 
     /**
-     * Get 日志包内一条日志的序号 
-     * @return PkgLogId 日志包内一条日志的序号
+     * Get 日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。 
+     * @return PkgLogId 日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。
      */
     public Long getPkgLogId() {
         return this.PkgLogId;
     }
 
     /**
-     * Set 日志包内一条日志的序号
-     * @param PkgLogId 日志包内一条日志的序号
+     * Set 日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。
+     * @param PkgLogId 日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。
      */
     public void setPkgLogId(Long PkgLogId) {
         this.PkgLogId = PkgLogId;
     }
 
     /**
-     * Get 上文日志条数,  默认值10 
-     * @return PrevLogs 上文日志条数,  默认值10
+     * Get 前${PrevLogs}条日志，默认值10。 
+     * @return PrevLogs 前${PrevLogs}条日志，默认值10。
      */
     public Long getPrevLogs() {
         return this.PrevLogs;
     }
 
     /**
-     * Set 上文日志条数,  默认值10
-     * @param PrevLogs 上文日志条数,  默认值10
+     * Set 前${PrevLogs}条日志，默认值10。
+     * @param PrevLogs 前${PrevLogs}条日志，默认值10。
      */
     public void setPrevLogs(Long PrevLogs) {
         this.PrevLogs = PrevLogs;
     }
 
     /**
-     * Get 下文日志条数,  默认值10 
-     * @return NextLogs 下文日志条数,  默认值10
+     * Get 后${NextLogs}条日志，默认值10。 
+     * @return NextLogs 后${NextLogs}条日志，默认值10。
      */
     public Long getNextLogs() {
         return this.NextLogs;
     }
 
     /**
-     * Set 下文日志条数,  默认值10
-     * @param NextLogs 下文日志条数,  默认值10
+     * Set 后${NextLogs}条日志，默认值10。
+     * @param NextLogs 后${NextLogs}条日志，默认值10。
      */
     public void setNextLogs(Long NextLogs) {
         this.NextLogs = NextLogs;

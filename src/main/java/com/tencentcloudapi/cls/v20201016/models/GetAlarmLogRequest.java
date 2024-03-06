@@ -70,7 +70,10 @@ public class GetAlarmLogRequest extends AbstractModel {
     private String Sort;
 
     /**
-    * 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
+    * 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false
     */
     @SerializedName("UseNewAnalysis")
     @Expose
@@ -189,16 +192,28 @@ public class GetAlarmLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效 
-     * @return UseNewAnalysis 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
+     * Get 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false 
+     * @return UseNewAnalysis 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false
      */
     public Boolean getUseNewAnalysis() {
         return this.UseNewAnalysis;
     }
 
     /**
-     * Set 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
-     * @param UseNewAnalysis 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
+     * Set 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false
+     * @param UseNewAnalysis 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false
      */
     public void setUseNewAnalysis(Boolean UseNewAnalysis) {
         this.UseNewAnalysis = UseNewAnalysis;

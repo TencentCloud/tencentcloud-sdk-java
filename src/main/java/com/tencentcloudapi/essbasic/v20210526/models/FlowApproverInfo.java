@@ -301,6 +301,17 @@ public class FlowApproverInfo extends AbstractModel {
     private Component [] Components;
 
     /**
+    * 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+    */
+    @SerializedName("Intention")
+    @Expose
+    private Intention Intention;
+
+    /**
      * Get 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。 
      * @return Name 签署方经办人的姓名。
@@ -1100,6 +1111,38 @@ public class FlowApproverInfo extends AbstractModel {
         this.Components = Components;
     }
 
+    /**
+     * Get 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。` 
+     * @return Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+     */
+    public Intention getIntention() {
+        return this.Intention;
+    }
+
+    /**
+     * Set 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+     * @param Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+     */
+    public void setIntention(Intention Intention) {
+        this.Intention = Intention;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -1204,6 +1247,9 @@ public class FlowApproverInfo extends AbstractModel {
                 this.Components[i] = new Component(source.Components[i]);
             }
         }
+        if (source.Intention != null) {
+            this.Intention = new Intention(source.Intention);
+        }
     }
 
 
@@ -1237,6 +1283,7 @@ public class FlowApproverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
         this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
+        this.setParamObj(map, prefix + "Intention.", this.Intention);
 
     }
 }

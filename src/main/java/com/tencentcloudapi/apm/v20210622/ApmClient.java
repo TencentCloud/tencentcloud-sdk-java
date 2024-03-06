@@ -117,7 +117,7 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
-     *修改Apm实例接口
+     *修改APM实例接口
      * @param req ModifyApmInstanceRequest
      * @return ModifyApmInstanceResponse
      * @throws TencentCloudSDKException

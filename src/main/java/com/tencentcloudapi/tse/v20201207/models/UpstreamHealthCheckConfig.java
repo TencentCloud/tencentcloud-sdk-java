@@ -96,6 +96,14 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
     private Long [] UnhealthyHttpStatuses;
 
     /**
+    * 健康检查屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IgnoreZeroWeightNodes")
+    @Expose
+    private Boolean IgnoreZeroWeightNodes;
+
+    /**
      * Get 开启主动健康检查
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnableActiveHealthCheck 开启主动健康检查
@@ -275,6 +283,26 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
         this.UnhealthyHttpStatuses = UnhealthyHttpStatuses;
     }
 
+    /**
+     * Get 健康检查屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IgnoreZeroWeightNodes 健康检查屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIgnoreZeroWeightNodes() {
+        return this.IgnoreZeroWeightNodes;
+    }
+
+    /**
+     * Set 健康检查屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IgnoreZeroWeightNodes 健康检查屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIgnoreZeroWeightNodes(Boolean IgnoreZeroWeightNodes) {
+        this.IgnoreZeroWeightNodes = IgnoreZeroWeightNodes;
+    }
+
     public UpstreamHealthCheckConfig() {
     }
 
@@ -316,6 +344,9 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
                 this.UnhealthyHttpStatuses[i] = new Long(source.UnhealthyHttpStatuses[i]);
             }
         }
+        if (source.IgnoreZeroWeightNodes != null) {
+            this.IgnoreZeroWeightNodes = new Boolean(source.IgnoreZeroWeightNodes);
+        }
     }
 
 
@@ -332,6 +363,7 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Timeouts", this.Timeouts);
         this.setParamArraySimple(map, prefix + "HealthyHttpStatuses.", this.HealthyHttpStatuses);
         this.setParamArraySimple(map, prefix + "UnhealthyHttpStatuses.", this.UnhealthyHttpStatuses);
+        this.setParamSimple(map, prefix + "IgnoreZeroWeightNodes", this.IgnoreZeroWeightNodes);
 
     }
 }

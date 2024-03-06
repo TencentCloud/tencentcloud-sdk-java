@@ -31,8 +31,30 @@ public class TopicIdAndRegion extends AbstractModel {
     private String TopicId;
 
     /**
-    * 日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域）
+    * 日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo
     */
     @SerializedName("RegionId")
     @Expose
@@ -55,20 +77,108 @@ public class TopicIdAndRegion extends AbstractModel {
     }
 
     /**
-     * Get 日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域） 
-     * @return RegionId 日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域）
+     * Get 日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo 
+     * @return RegionId 日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域）
-     * @param RegionId 日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域）
+     * Set 日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo
+     * @param RegionId 日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;

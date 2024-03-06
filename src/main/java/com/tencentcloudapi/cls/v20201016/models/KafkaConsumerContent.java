@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KafkaConsumerContent extends AbstractModel {
 
     /**
-    * 消费格式 0:全文；1:json
+    * 消费数据格式。 0：原始内容；1：JSON。
     */
     @SerializedName("Format")
     @Expose
@@ -48,9 +48,15 @@ Format为0时，此字段不需要赋值
     private String [] MetaFields;
 
     /**
-    * tag数据处理方式：
-1:不平铺（默认值）
-2:平铺
+    * tag数据处理方式：1:不平铺（默认值）；2:平铺。
+
+不平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagTransaction")
@@ -61,22 +67,31 @@ Format为0时，此字段不需要赋值
     * 消费数据Json格式：
 1：不转义（默认格式）
 2：转义
+
+投递Json格式。
+JsonType为1：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为2：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
     */
     @SerializedName("JsonType")
     @Expose
     private Long JsonType;
 
     /**
-     * Get 消费格式 0:全文；1:json 
-     * @return Format 消费格式 0:全文；1:json
+     * Get 消费数据格式。 0：原始内容；1：JSON。 
+     * @return Format 消费数据格式。 0：原始内容；1：JSON。
      */
     public Long getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 消费格式 0:全文；1:json
-     * @param Format 消费格式 0:全文；1:json
+     * Set 消费数据格式。 0：原始内容；1：JSON。
+     * @param Format 消费数据格式。 0：原始内容；1：JSON。
      */
     public void setFormat(Long Format) {
         this.Format = Format;
@@ -127,13 +142,25 @@ Format为0时，此字段不需要赋值
     }
 
     /**
-     * Get tag数据处理方式：
-1:不平铺（默认值）
-2:平铺
+     * Get tag数据处理方式：1:不平铺（默认值）；2:平铺。
+
+不平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagTransaction tag数据处理方式：
-1:不平铺（默认值）
-2:平铺
+     * @return TagTransaction tag数据处理方式：1:不平铺（默认值）；2:平铺。
+
+不平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTagTransaction() {
@@ -141,13 +168,25 @@ Format为0时，此字段不需要赋值
     }
 
     /**
-     * Set tag数据处理方式：
-1:不平铺（默认值）
-2:平铺
+     * Set tag数据处理方式：1:不平铺（默认值）；2:平铺。
+
+不平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagTransaction tag数据处理方式：
-1:不平铺（默认值）
-2:平铺
+     * @param TagTransaction tag数据处理方式：1:不平铺（默认值）；2:平铺。
+
+不平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+平铺示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagTransaction(Long TagTransaction) {
@@ -157,10 +196,28 @@ Format为0时，此字段不需要赋值
     /**
      * Get 消费数据Json格式：
 1：不转义（默认格式）
-2：转义 
+2：转义
+
+投递Json格式。
+JsonType为1：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为2：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}` 
      * @return JsonType 消费数据Json格式：
 1：不转义（默认格式）
 2：转义
+
+投递Json格式。
+JsonType为1：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为2：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
      */
     public Long getJsonType() {
         return this.JsonType;
@@ -170,9 +227,27 @@ Format为0时，此字段不需要赋值
      * Set 消费数据Json格式：
 1：不转义（默认格式）
 2：转义
+
+投递Json格式。
+JsonType为1：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为2：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
      * @param JsonType 消费数据Json格式：
 1：不转义（默认格式）
 2：转义
+
+投递Json格式。
+JsonType为1：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为2：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
      */
     public void setJsonType(Long JsonType) {
         this.JsonType = JsonType;

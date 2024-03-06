@@ -67,7 +67,7 @@ public class MachineInfo extends AbstractModel {
     private String Version;
 
     /**
-    * 机器升级功能状态。
+    * 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
     */
     @SerializedName("UpdateStatus")
     @Expose
@@ -75,6 +75,7 @@ public class MachineInfo extends AbstractModel {
 
     /**
     * 机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -82,6 +83,7 @@ public class MachineInfo extends AbstractModel {
 
     /**
     * 机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -188,24 +190,26 @@ public class MachineInfo extends AbstractModel {
     }
 
     /**
-     * Get 机器升级功能状态。 
-     * @return UpdateStatus 机器升级功能状态。
+     * Get 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。 
+     * @return UpdateStatus 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
      */
     public Long getUpdateStatus() {
         return this.UpdateStatus;
     }
 
     /**
-     * Set 机器升级功能状态。
-     * @param UpdateStatus 机器升级功能状态。
+     * Set 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
+     * @param UpdateStatus 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
      */
     public void setUpdateStatus(Long UpdateStatus) {
         this.UpdateStatus = UpdateStatus;
     }
 
     /**
-     * Get 机器升级结果标识。 
+     * Get 机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。 
      * @return ErrCode 机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -213,15 +217,19 @@ public class MachineInfo extends AbstractModel {
 
     /**
      * Set 机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。
      * @param ErrCode 机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 机器升级结果信息。 
+     * Get 机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。 
      * @return ErrMsg 机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。
      */
     public String getErrMsg() {
         return this.ErrMsg;
@@ -229,7 +237,9 @@ public class MachineInfo extends AbstractModel {
 
     /**
      * Set 机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。
      * @param ErrMsg 机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;

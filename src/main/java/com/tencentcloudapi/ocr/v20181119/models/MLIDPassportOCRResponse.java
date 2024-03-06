@@ -83,7 +83,7 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private Long [] Warn;
 
     /**
-    * 证件图片
+    * 证件中的人像图片base64
     */
     @SerializedName("Image")
     @Expose
@@ -296,16 +296,16 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 证件图片 
-     * @return Image 证件图片
+     * Get 证件中的人像图片base64 
+     * @return Image 证件中的人像图片base64
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 证件图片
-     * @param Image 证件图片
+     * Set 证件中的人像图片base64
+     * @param Image 证件中的人像图片base64
      */
     public void setImage(String Image) {
         this.Image = Image;

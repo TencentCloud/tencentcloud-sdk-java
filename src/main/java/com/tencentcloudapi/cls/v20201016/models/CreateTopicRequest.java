@@ -73,7 +73,8 @@ public class CreateTopicRequest extends AbstractModel {
     private String StorageType;
 
     /**
-    * 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
+    * 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
     */
     @SerializedName("Period")
     @Expose
@@ -88,14 +89,16 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
     * 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。
     */
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
 
     /**
-    * 免鉴权开关； false: 关闭 true： 开启
+    * 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
     */
     @SerializedName("IsWebTracking")
     @Expose
@@ -214,16 +217,20 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存 
-     * @return Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
+     * Get 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。 
+     * @return Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
-     * @param Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
+     * Set 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
+     * @param Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -247,9 +254,11 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
      * Get 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效 
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。 
      * @return HotPeriod 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
@@ -257,25 +266,31 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
      * Set 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。
      * @param HotPeriod 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
     }
 
     /**
-     * Get 免鉴权开关； false: 关闭 true： 开启 
-     * @return IsWebTracking 免鉴权开关； false: 关闭 true： 开启
+     * Get 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。 
+     * @return IsWebTracking 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set 免鉴权开关； false: 关闭 true： 开启
-     * @param IsWebTracking 免鉴权开关； false: 关闭 true： 开启
+     * Set 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * @param IsWebTracking 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;

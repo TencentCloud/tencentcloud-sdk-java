@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLogKafkaAccessRequest extends AbstractModel {
 
     /**
-    * 实例名称 如 云镜测试环境
+    * 实例名称 如 主机安全测试环境
     */
     @SerializedName("KafkaEnvName")
     @Expose
@@ -136,16 +136,16 @@ public class ModifyLogKafkaAccessRequest extends AbstractModel {
     private String Pwd;
 
     /**
-     * Get 实例名称 如 云镜测试环境 
-     * @return KafkaEnvName 实例名称 如 云镜测试环境
+     * Get 实例名称 如 主机安全测试环境 
+     * @return KafkaEnvName 实例名称 如 主机安全测试环境
      */
     public String getKafkaEnvName() {
         return this.KafkaEnvName;
     }
 
     /**
-     * Set 实例名称 如 云镜测试环境
-     * @param KafkaEnvName 实例名称 如 云镜测试环境
+     * Set 实例名称 如 主机安全测试环境
+     * @param KafkaEnvName 实例名称 如 主机安全测试环境
      */
     public void setKafkaEnvName(String KafkaEnvName) {
         this.KafkaEnvName = KafkaEnvName;

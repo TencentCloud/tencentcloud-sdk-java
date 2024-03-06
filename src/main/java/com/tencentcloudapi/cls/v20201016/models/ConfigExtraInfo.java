@@ -169,6 +169,14 @@ public class ConfigExtraInfo extends AbstractModel {
     private String TopicName;
 
     /**
+    * 采集相关配置信息。详情见 CollectInfo复杂类型配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CollectInfos")
+    @Expose
+    private CollectInfo [] CollectInfos;
+
+    /**
     * 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -533,6 +541,26 @@ public class ConfigExtraInfo extends AbstractModel {
     }
 
     /**
+     * Get 采集相关配置信息。详情见 CollectInfo复杂类型配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CollectInfos 采集相关配置信息。详情见 CollectInfo复杂类型配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CollectInfo [] getCollectInfos() {
+        return this.CollectInfos;
+    }
+
+    /**
+     * Set 采集相关配置信息。详情见 CollectInfo复杂类型配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CollectInfos 采集相关配置信息。详情见 CollectInfo复杂类型配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCollectInfos(CollectInfo [] CollectInfos) {
+        this.CollectInfos = CollectInfos;
+    }
+
+    /**
      * Get 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -636,6 +664,12 @@ public class ConfigExtraInfo extends AbstractModel {
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
+        if (source.CollectInfos != null) {
+            this.CollectInfos = new CollectInfo[source.CollectInfos.length];
+            for (int i = 0; i < source.CollectInfos.length; i++) {
+                this.CollectInfos[i] = new CollectInfo(source.CollectInfos[i]);
+            }
+        }
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new String(source.AdvancedConfig);
         }
@@ -665,6 +699,7 @@ public class ConfigExtraInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamArrayObj(map, prefix + "CollectInfos.", this.CollectInfos);
         this.setParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
 
     }

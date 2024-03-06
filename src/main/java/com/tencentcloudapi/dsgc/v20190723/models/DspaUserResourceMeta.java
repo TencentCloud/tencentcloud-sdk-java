@@ -157,6 +157,22 @@ public class DspaUserResourceMeta extends AbstractModel {
     private String ResourceAuthAccount;
 
     /**
+    * x
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * x
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceValue")
+    @Expose
+    private String InstanceValue;
+
+    /**
      * Get 用户资源ID。 
      * @return ResourceId 用户资源ID。
      */
@@ -460,6 +476,46 @@ public class DspaUserResourceMeta extends AbstractModel {
         this.ResourceAuthAccount = ResourceAuthAccount;
     }
 
+    /**
+     * Get x
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType x
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set x
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType x
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get x
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceValue x
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceValue() {
+        return this.InstanceValue;
+    }
+
+    /**
+     * Set x
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceValue x
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceValue(String InstanceValue) {
+        this.InstanceValue = InstanceValue;
+    }
+
     public DspaUserResourceMeta() {
     }
 
@@ -525,6 +581,12 @@ public class DspaUserResourceMeta extends AbstractModel {
         if (source.ResourceAuthAccount != null) {
             this.ResourceAuthAccount = new String(source.ResourceAuthAccount);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceValue != null) {
+            this.InstanceValue = new String(source.InstanceValue);
+        }
     }
 
 
@@ -551,6 +613,8 @@ public class DspaUserResourceMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceVersion", this.ResourceVersion);
         this.setParamSimple(map, prefix + "ResourceAuthType", this.ResourceAuthType);
         this.setParamSimple(map, prefix + "ResourceAuthAccount", this.ResourceAuthAccount);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "InstanceValue", this.InstanceValue);
 
     }
 }

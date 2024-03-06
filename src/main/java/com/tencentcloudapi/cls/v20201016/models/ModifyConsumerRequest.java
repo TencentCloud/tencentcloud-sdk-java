@@ -38,7 +38,9 @@ public class ModifyConsumerRequest extends AbstractModel {
     private Boolean Effective;
 
     /**
-    * 是否投递日志的元数据信息，默认为 false
+    * 是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。
     */
     @SerializedName("NeedContent")
     @Expose
@@ -59,7 +61,7 @@ public class ModifyConsumerRequest extends AbstractModel {
     private Ckafka Ckafka;
 
     /**
-    * 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+    * 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
     */
     @SerializedName("Compression")
     @Expose
@@ -98,16 +100,24 @@ public class ModifyConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否投递日志的元数据信息，默认为 false 
-     * @return NeedContent 是否投递日志的元数据信息，默认为 false
+     * Get 是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。 
+     * @return NeedContent 是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。
      */
     public Boolean getNeedContent() {
         return this.NeedContent;
     }
 
     /**
-     * Set 是否投递日志的元数据信息，默认为 false
-     * @param NeedContent 是否投递日志的元数据信息，默认为 false
+     * Set 是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。
+     * @param NeedContent 是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。
      */
     public void setNeedContent(Boolean NeedContent) {
         this.NeedContent = NeedContent;
@@ -146,16 +156,16 @@ public class ModifyConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4] 
-     * @return Compression 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+     * Get 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4] 
+     * @return Compression 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
-     * @param Compression 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+     * Set 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
+     * @param Compression 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;

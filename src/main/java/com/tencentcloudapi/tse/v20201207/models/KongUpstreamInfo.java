@@ -184,6 +184,14 @@ public class KongUpstreamInfo extends AbstractModel {
     private String HealthStatus;
 
     /**
+    * 云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScfCamAuthEnable")
+    @Expose
+    private Boolean ScfCamAuthEnable;
+
+    /**
      * Get IP或域名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Host IP或域名
@@ -583,6 +591,26 @@ public class KongUpstreamInfo extends AbstractModel {
         this.HealthStatus = HealthStatus;
     }
 
+    /**
+     * Get 云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScfCamAuthEnable 云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getScfCamAuthEnable() {
+        return this.ScfCamAuthEnable;
+    }
+
+    /**
+     * Set 云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScfCamAuthEnable 云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScfCamAuthEnable(Boolean ScfCamAuthEnable) {
+        this.ScfCamAuthEnable = ScfCamAuthEnable;
+    }
+
     public KongUpstreamInfo() {
     }
 
@@ -654,6 +682,9 @@ public class KongUpstreamInfo extends AbstractModel {
         if (source.HealthStatus != null) {
             this.HealthStatus = new String(source.HealthStatus);
         }
+        if (source.ScfCamAuthEnable != null) {
+            this.ScfCamAuthEnable = new Boolean(source.ScfCamAuthEnable);
+        }
     }
 
 
@@ -681,6 +712,7 @@ public class KongUpstreamInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamSimple(map, prefix + "RealSourceType", this.RealSourceType);
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+        this.setParamSimple(map, prefix + "ScfCamAuthEnable", this.ScfCamAuthEnable);
 
     }
 }

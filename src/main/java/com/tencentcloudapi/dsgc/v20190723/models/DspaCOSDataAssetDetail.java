@@ -156,6 +156,24 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
     private String CategoryFullPath;
 
     /**
+    * 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdentifyType")
+    @Expose
+    private Long IdentifyType;
+
+    /**
+    * 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckStatus")
+    @Expose
+    private Long CheckStatus;
+
+    /**
      * Get 对象桶 
      * @return BucketName 对象桶
      */
@@ -467,6 +485,54 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
         this.CategoryFullPath = CategoryFullPath;
     }
 
+    /**
+     * Get 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdentifyType 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIdentifyType() {
+        return this.IdentifyType;
+    }
+
+    /**
+     * Set 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdentifyType 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdentifyType(Long IdentifyType) {
+        this.IdentifyType = IdentifyType;
+    }
+
+    /**
+     * Get 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckStatus 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCheckStatus() {
+        return this.CheckStatus;
+    }
+
+    /**
+     * Set 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckStatus 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckStatus(Long CheckStatus) {
+        this.CheckStatus = CheckStatus;
+    }
+
     public DspaCOSDataAssetDetail() {
     }
 
@@ -529,6 +595,12 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
         if (source.CategoryFullPath != null) {
             this.CategoryFullPath = new String(source.CategoryFullPath);
         }
+        if (source.IdentifyType != null) {
+            this.IdentifyType = new Long(source.IdentifyType);
+        }
+        if (source.CheckStatus != null) {
+            this.CheckStatus = new Long(source.CheckStatus);
+        }
     }
 
 
@@ -554,6 +626,8 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "FileResultId", this.FileResultId);
         this.setParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
         this.setParamSimple(map, prefix + "CategoryFullPath", this.CategoryFullPath);
+        this.setParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
+        this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
 
     }
 }

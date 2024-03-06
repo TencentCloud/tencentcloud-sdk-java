@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExtractRuleInfo extends AbstractModel {
 
     /**
-    * 时间字段的key名字，time_key和time_format必须成对出现
+    * 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeKey")
@@ -40,7 +40,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private String TimeFormat;
 
     /**
-    * 分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+    * 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Delimiter")
@@ -48,7 +48,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private String Delimiter;
 
     /**
-    * 整条日志匹配规则，只有log_type为fullregex_log时有效
+    * 整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogRegex")
@@ -56,7 +56,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private String LogRegex;
 
     /**
-    * 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+    * 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginRegex")
@@ -64,7 +64,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private String BeginRegex;
 
     /**
-    * 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+    * 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
@@ -96,7 +96,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private String UnMatchLogKey;
 
     /**
-    * 增量采集模式下的回溯数据量，默认-1（全量采集）
+    * 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Backtracking")
@@ -178,9 +178,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     private EventLog [] EventLogRules;
 
     /**
-     * Get 时间字段的key名字，time_key和time_format必须成对出现
+     * Get 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeKey 时间字段的key名字，time_key和time_format必须成对出现
+     * @return TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeKey() {
@@ -188,9 +188,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 时间字段的key名字，time_key和time_format必须成对出现
+     * Set 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeKey 时间字段的key名字，time_key和time_format必须成对出现
+     * @param TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeKey(String TimeKey) {
@@ -218,9 +218,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+     * Get 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Delimiter 分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+     * @return Delimiter 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDelimiter() {
@@ -228,9 +228,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+     * Set 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Delimiter 分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+     * @param Delimiter 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelimiter(String Delimiter) {
@@ -238,9 +238,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 整条日志匹配规则，只有log_type为fullregex_log时有效
+     * Get 整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogRegex 整条日志匹配规则，只有log_type为fullregex_log时有效
+     * @return LogRegex 整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogRegex() {
@@ -248,9 +248,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 整条日志匹配规则，只有log_type为fullregex_log时有效
+     * Set 整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogRegex 整条日志匹配规则，只有log_type为fullregex_log时有效
+     * @param LogRegex 整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogRegex(String LogRegex) {
@@ -258,9 +258,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+     * Get 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BeginRegex 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+     * @return BeginRegex 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginRegex() {
@@ -268,9 +268,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+     * Set 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BeginRegex 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+     * @param BeginRegex 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginRegex(String BeginRegex) {
@@ -278,9 +278,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * Get 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * @return Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeys() {
@@ -288,9 +288,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * Set 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * @param Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(String [] Keys) {
@@ -358,9 +358,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 增量采集模式下的回溯数据量，默认-1（全量采集）
+     * Get 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）
+     * @return Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBacktracking() {
@@ -368,9 +368,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 增量采集模式下的回溯数据量，默认-1（全量采集）
+     * Set 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）
+     * @param Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBacktracking(Long Backtracking) {

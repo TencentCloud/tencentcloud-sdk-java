@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDataTransformRequest extends AbstractModel {
 
     /**
-    * 任务类型. 1: 指定主题；2:动态创建
+    * 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
     */
     @SerializedName("FuncType")
     @Expose
@@ -52,11 +52,19 @@ public class CreateDataTransformRequest extends AbstractModel {
     private String EtlContent;
 
     /**
-    * 加工类型  1 使用源日志主题中的随机数据，进行加工预览 :2 使用用户自定义测试数据，进行加工预览 3 创建真实加工任务
+    * 加工类型。
+1：使用源日志主题中的随机数据，进行加工预览；2：使用用户自定义测试数据，进行加工预览；3：创建真实加工任务。
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
+
+    /**
+    * 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+    */
+    @SerializedName("DstResources")
+    @Expose
+    private DataTransformResouceInfo [] DstResources;
 
     /**
     * 任务启动状态.   默认为1:开启,  2:关闭
@@ -66,13 +74,6 @@ public class CreateDataTransformRequest extends AbstractModel {
     private Long EnableFlag;
 
     /**
-    * 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
-    */
-    @SerializedName("DstResources")
-    @Expose
-    private DataTransformResouceInfo [] DstResources;
-
-    /**
     * 用于预览加工结果的测试数据
     */
     @SerializedName("PreviewLogStatistics")
@@ -80,16 +81,16 @@ public class CreateDataTransformRequest extends AbstractModel {
     private PreviewLogStatistic [] PreviewLogStatistics;
 
     /**
-     * Get 任务类型. 1: 指定主题；2:动态创建 
-     * @return FuncType 任务类型. 1: 指定主题；2:动态创建
+     * Get 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。 
+     * @return FuncType 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
      */
     public Long getFuncType() {
         return this.FuncType;
     }
 
     /**
-     * Set 任务类型. 1: 指定主题；2:动态创建
-     * @param FuncType 任务类型. 1: 指定主题；2:动态创建
+     * Set 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
+     * @param FuncType 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
      */
     public void setFuncType(Long FuncType) {
         this.FuncType = FuncType;
@@ -144,19 +145,39 @@ public class CreateDataTransformRequest extends AbstractModel {
     }
 
     /**
-     * Get 加工类型  1 使用源日志主题中的随机数据，进行加工预览 :2 使用用户自定义测试数据，进行加工预览 3 创建真实加工任务 
-     * @return TaskType 加工类型  1 使用源日志主题中的随机数据，进行加工预览 :2 使用用户自定义测试数据，进行加工预览 3 创建真实加工任务
+     * Get 加工类型。
+1：使用源日志主题中的随机数据，进行加工预览；2：使用用户自定义测试数据，进行加工预览；3：创建真实加工任务。 
+     * @return TaskType 加工类型。
+1：使用源日志主题中的随机数据，进行加工预览；2：使用用户自定义测试数据，进行加工预览；3：创建真实加工任务。
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 加工类型  1 使用源日志主题中的随机数据，进行加工预览 :2 使用用户自定义测试数据，进行加工预览 3 创建真实加工任务
-     * @param TaskType 加工类型  1 使用源日志主题中的随机数据，进行加工预览 :2 使用用户自定义测试数据，进行加工预览 3 创建真实加工任务
+     * Set 加工类型。
+1：使用源日志主题中的随机数据，进行加工预览；2：使用用户自定义测试数据，进行加工预览；3：创建真实加工任务。
+     * @param TaskType 加工类型。
+1：使用源日志主题中的随机数据，进行加工预览；2：使用用户自定义测试数据，进行加工预览；3：创建真实加工任务。
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。 
+     * @return DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+     */
+    public DataTransformResouceInfo [] getDstResources() {
+        return this.DstResources;
+    }
+
+    /**
+     * Set 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+     * @param DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+     */
+    public void setDstResources(DataTransformResouceInfo [] DstResources) {
+        this.DstResources = DstResources;
     }
 
     /**
@@ -173,22 +194,6 @@ public class CreateDataTransformRequest extends AbstractModel {
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;
-    }
-
-    /**
-     * Get 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写 
-     * @return DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
-     */
-    public DataTransformResouceInfo [] getDstResources() {
-        return this.DstResources;
-    }
-
-    /**
-     * Set 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
-     * @param DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
-     */
-    public void setDstResources(DataTransformResouceInfo [] DstResources) {
-        this.DstResources = DstResources;
     }
 
     /**
@@ -230,14 +235,14 @@ public class CreateDataTransformRequest extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
-        if (source.EnableFlag != null) {
-            this.EnableFlag = new Long(source.EnableFlag);
-        }
         if (source.DstResources != null) {
             this.DstResources = new DataTransformResouceInfo[source.DstResources.length];
             for (int i = 0; i < source.DstResources.length; i++) {
                 this.DstResources[i] = new DataTransformResouceInfo(source.DstResources[i]);
             }
+        }
+        if (source.EnableFlag != null) {
+            this.EnableFlag = new Long(source.EnableFlag);
         }
         if (source.PreviewLogStatistics != null) {
             this.PreviewLogStatistics = new PreviewLogStatistic[source.PreviewLogStatistics.length];
@@ -257,8 +262,8 @@ public class CreateDataTransformRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
-        this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+        this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
 
     }

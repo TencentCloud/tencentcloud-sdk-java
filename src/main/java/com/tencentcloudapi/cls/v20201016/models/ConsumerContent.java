@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ConsumerContent extends AbstractModel {
 
     /**
-    * 是否投递 TAG 信息
+    * 是否投递 TAG 信息。
+当EnableTag为true时，表示投递TAG元信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableTag")
@@ -40,7 +41,16 @@ public class ConsumerContent extends AbstractModel {
     private String [] MetaFields;
 
     /**
-    * 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+    * 当EnableTag为true时，必须填写TagJsonNotTiled字段。
+TagJsonNotTiled用于标识tag信息是否json平铺。
+
+TagJsonNotTiled为true时不平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+TagJsonNotTiled为false时平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagJsonNotTiled")
@@ -48,7 +58,7 @@ public class ConsumerContent extends AbstractModel {
     private Boolean TagJsonNotTiled;
 
     /**
-    * 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+    * 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimestampAccuracy")
@@ -56,9 +66,26 @@ public class ConsumerContent extends AbstractModel {
     private Long TimestampAccuracy;
 
     /**
-     * Get 是否投递 TAG 信息
+    * 投递Json格式。
+JsonType为0：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为1：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JsonType")
+    @Expose
+    private Long JsonType;
+
+    /**
+     * Get 是否投递 TAG 信息。
+当EnableTag为true时，表示投递TAG元信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableTag 是否投递 TAG 信息
+     * @return EnableTag 是否投递 TAG 信息。
+当EnableTag为true时，表示投递TAG元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableTag() {
@@ -66,9 +93,11 @@ public class ConsumerContent extends AbstractModel {
     }
 
     /**
-     * Set 是否投递 TAG 信息
+     * Set 是否投递 TAG 信息。
+当EnableTag为true时，表示投递TAG元信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableTag 是否投递 TAG 信息
+     * @param EnableTag 是否投递 TAG 信息。
+当EnableTag为true时，表示投递TAG元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableTag(Boolean EnableTag) {
@@ -96,9 +125,27 @@ public class ConsumerContent extends AbstractModel {
     }
 
     /**
-     * Get 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+     * Get 当EnableTag为true时，必须填写TagJsonNotTiled字段。
+TagJsonNotTiled用于标识tag信息是否json平铺。
+
+TagJsonNotTiled为true时不平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+TagJsonNotTiled为false时平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+     * @return TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段。
+TagJsonNotTiled用于标识tag信息是否json平铺。
+
+TagJsonNotTiled为true时不平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+TagJsonNotTiled为false时平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTagJsonNotTiled() {
@@ -106,9 +153,27 @@ public class ConsumerContent extends AbstractModel {
     }
 
     /**
-     * Set 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+     * Set 当EnableTag为true时，必须填写TagJsonNotTiled字段。
+TagJsonNotTiled用于标识tag信息是否json平铺。
+
+TagJsonNotTiled为true时不平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+TagJsonNotTiled为false时平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+     * @param TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段。
+TagJsonNotTiled用于标识tag信息是否json平铺。
+
+TagJsonNotTiled为true时不平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+不平铺：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+
+TagJsonNotTiled为false时平铺，示例：
+TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagJsonNotTiled(Boolean TagJsonNotTiled) {
@@ -116,9 +181,9 @@ public class ConsumerContent extends AbstractModel {
     }
 
     /**
-     * Get 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+     * Get 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimestampAccuracy 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+     * @return TimestampAccuracy 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestampAccuracy() {
@@ -126,13 +191,61 @@ public class ConsumerContent extends AbstractModel {
     }
 
     /**
-     * Set 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+     * Set 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimestampAccuracy 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+     * @param TimestampAccuracy 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestampAccuracy(Long TimestampAccuracy) {
         this.TimestampAccuracy = TimestampAccuracy;
+    }
+
+    /**
+     * Get 投递Json格式。
+JsonType为0：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为1：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JsonType 投递Json格式。
+JsonType为0：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为1：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getJsonType() {
+        return this.JsonType;
+    }
+
+    /**
+     * Set 投递Json格式。
+JsonType为0：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为1：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JsonType 投递Json格式。
+JsonType为0：和原始日志一致，不转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+
+JsonType为1：转义。示例：
+日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
+投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJsonType(Long JsonType) {
+        this.JsonType = JsonType;
     }
 
     public ConsumerContent() {
@@ -158,6 +271,9 @@ public class ConsumerContent extends AbstractModel {
         if (source.TimestampAccuracy != null) {
             this.TimestampAccuracy = new Long(source.TimestampAccuracy);
         }
+        if (source.JsonType != null) {
+            this.JsonType = new Long(source.JsonType);
+        }
     }
 
 
@@ -169,6 +285,7 @@ public class ConsumerContent extends AbstractModel {
         this.setParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
         this.setParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
         this.setParamSimple(map, prefix + "TimestampAccuracy", this.TimestampAccuracy);
+        this.setParamSimple(map, prefix + "JsonType", this.JsonType);
 
     }
 }

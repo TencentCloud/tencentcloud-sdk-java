@@ -38,7 +38,7 @@ public class CreateRocketMQTopicRequest extends AbstractModel {
     private String [] Namespaces;
 
     /**
-    * 主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
+    * 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
     */
     @SerializedName("Type")
     @Expose
@@ -98,16 +98,16 @@ public class CreateRocketMQTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。 
-     * @return Type 主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
+     * Get 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。 
+     * @return Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
-     * @param Type 主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
+     * Set 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
+     * @param Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder, Transaction, DelayScheduled。Transaction仅在专享版支持。
      */
     public void setType(String Type) {
         this.Type = Type;

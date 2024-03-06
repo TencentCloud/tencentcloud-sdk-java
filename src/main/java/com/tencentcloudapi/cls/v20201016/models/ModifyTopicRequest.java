@@ -45,7 +45,8 @@ public class ModifyTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 该日志主题是否开始采集
+    * 主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。
     */
     @SerializedName("Status")
     @Expose
@@ -88,7 +89,8 @@ public class ModifyTopicRequest extends AbstractModel {
     private Long HotPeriod;
 
     /**
-    * 免鉴权开关； false: 关闭 true: 开启
+    * 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
     */
     @SerializedName("IsWebTracking")
     @Expose
@@ -143,16 +145,20 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 该日志主题是否开始采集 
-     * @return Status 该日志主题是否开始采集
+     * Get 主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。 
+     * @return Status 主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 该日志主题是否开始采集
-     * @param Status 该日志主题是否开始采集
+     * Set 主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。
+     * @param Status 主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
@@ -243,16 +249,20 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 免鉴权开关； false: 关闭 true: 开启 
-     * @return IsWebTracking 免鉴权开关； false: 关闭 true: 开启
+     * Get 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。 
+     * @return IsWebTracking 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
     }
 
     /**
-     * Set 免鉴权开关； false: 关闭 true: 开启
-     * @param IsWebTracking 免鉴权开关； false: 关闭 true: 开启
+     * Set 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+     * @param IsWebTracking 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;

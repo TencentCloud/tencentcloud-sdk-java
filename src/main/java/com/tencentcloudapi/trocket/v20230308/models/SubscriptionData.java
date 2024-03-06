@@ -136,6 +136,16 @@ public class SubscriptionData extends AbstractModel {
     private Boolean ConsumeMessageOrderly;
 
     /**
+    * 消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MessageModel")
+    @Expose
+    private String MessageModel;
+
+    /**
      * Get 实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID
@@ -415,6 +425,34 @@ public class SubscriptionData extends AbstractModel {
         this.ConsumeMessageOrderly = ConsumeMessageOrderly;
     }
 
+    /**
+     * Get 消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MessageModel 消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMessageModel() {
+        return this.MessageModel;
+    }
+
+    /**
+     * Set 消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MessageModel 消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessageModel(String MessageModel) {
+        this.MessageModel = MessageModel;
+    }
+
     public SubscriptionData() {
     }
 
@@ -465,6 +503,9 @@ public class SubscriptionData extends AbstractModel {
         if (source.ConsumeMessageOrderly != null) {
             this.ConsumeMessageOrderly = new Boolean(source.ConsumeMessageOrderly);
         }
+        if (source.MessageModel != null) {
+            this.MessageModel = new String(source.MessageModel);
+        }
     }
 
 
@@ -486,6 +527,7 @@ public class SubscriptionData extends AbstractModel {
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
+        this.setParamSimple(map, prefix + "MessageModel", this.MessageModel);
 
     }
 }

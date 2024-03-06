@@ -101,7 +101,7 @@ public class ExportInfo extends AbstractModel {
     private Long To;
 
     /**
-    * 日志导出路径
+    * 日志导出路径,有效期一个小时，请尽快使用该路径下载。
     */
     @SerializedName("CosPath")
     @Expose
@@ -299,16 +299,16 @@ public class ExportInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志导出路径 
-     * @return CosPath 日志导出路径
+     * Get 日志导出路径,有效期一个小时，请尽快使用该路径下载。 
+     * @return CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
      */
     public String getCosPath() {
         return this.CosPath;
     }
 
     /**
-     * Set 日志导出路径
-     * @param CosPath 日志导出路径
+     * Set 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     * @param CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
      */
     public void setCosPath(String CosPath) {
         this.CosPath = CosPath;

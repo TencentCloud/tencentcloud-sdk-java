@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractModel {
 
     /**
-    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * VPC实例ID。形如：vpc-xxx。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * NAT网关ID。
+    * NAT网关ID。形如：nat-xxx
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * 专线网关ID。
+    * 专线网关ID。形如：dcg-xxx
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get VPC实例ID。形如：vpc-xxx。 
+     * @return VpcId VPC实例ID。形如：vpc-xxx。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set VPC实例ID。形如：vpc-xxx。
+     * @param VpcId VPC实例ID。形如：vpc-xxx。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get NAT网关ID。 
-     * @return NatGatewayId NAT网关ID。
+     * Get NAT网关ID。形如：nat-xxx 
+     * @return NatGatewayId NAT网关ID。形如：nat-xxx
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT网关ID。
-     * @param NatGatewayId NAT网关ID。
+     * Set NAT网关ID。形如：nat-xxx
+     * @param NatGatewayId NAT网关ID。形如：nat-xxx
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get 专线网关ID。 
-     * @return DirectConnectGatewayId 专线网关ID。
+     * Get 专线网关ID。形如：dcg-xxx 
+     * @return DirectConnectGatewayId 专线网关ID。形如：dcg-xxx
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set 专线网关ID。
-     * @param DirectConnectGatewayId 专线网关ID。
+     * Set 专线网关ID。形如：dcg-xxx
+     * @param DirectConnectGatewayId 专线网关ID。形如：dcg-xxx
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;

@@ -1144,6 +1144,23 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
+
+1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸图片。
+2. 该接口**不支持小程序端**的签署人脸图片获取。
+3. 请在**签署完成后的三天内**获取人脸图片，**过期后将无法获取**。
+
+**注意：该接口需要开通白名单，请联系客户经理开通后使用。**
+     * @param req DescribeSignFaceVideoRequest
+     * @return DescribeSignFaceVideoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSignFaceVideoResponse DescribeSignFaceVideo(DescribeSignFaceVideoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSignFaceVideo", DescribeSignFaceVideoResponse.class);
+    }
+
+    /**
      *通过AuthCode查询个人用户是否实名
 
 

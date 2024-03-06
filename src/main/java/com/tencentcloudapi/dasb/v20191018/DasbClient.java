@@ -501,6 +501,17 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *设置OAuth认证参数
+     * @param req ModifyOAuthSettingRequest
+     * @return ModifyOAuthSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOAuthSettingResponse ModifyOAuthSetting(ModifyOAuthSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOAuthSetting", ModifyOAuthSettingResponse.class);
+    }
+
+    /**
      *资源变配
      * @param req ModifyResourceRequest
      * @return ModifyResourceResponse

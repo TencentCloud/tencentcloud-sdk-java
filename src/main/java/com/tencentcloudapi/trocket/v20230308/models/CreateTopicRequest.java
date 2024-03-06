@@ -64,6 +64,13 @@ TRANSACTION:事务消息
     private String Remark;
 
     /**
+    * 消息保留时长
+    */
+    @SerializedName("MsgTTL")
+    @Expose
+    private Long MsgTTL;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -163,6 +170,22 @@ TRANSACTION:事务消息
         this.Remark = Remark;
     }
 
+    /**
+     * Get 消息保留时长 
+     * @return MsgTTL 消息保留时长
+     */
+    public Long getMsgTTL() {
+        return this.MsgTTL;
+    }
+
+    /**
+     * Set 消息保留时长
+     * @param MsgTTL 消息保留时长
+     */
+    public void setMsgTTL(Long MsgTTL) {
+        this.MsgTTL = MsgTTL;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -186,6 +209,9 @@ TRANSACTION:事务消息
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
     }
 
 
@@ -198,6 +224,7 @@ TRANSACTION:事务消息
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "QueueNum", this.QueueNum);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
 
     }
 }

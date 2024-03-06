@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeKafkaUserRequest extends AbstractModel {
 
     /**
-    * kafka消费用户名
+    * kafka用户名。
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get kafka消费用户名 
-     * @return UserName kafka消费用户名
+     * Get kafka用户名。 
+     * @return UserName kafka用户名。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set kafka消费用户名
-     * @param UserName kafka消费用户名
+     * Set kafka用户名。
+     * @param UserName kafka用户名。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

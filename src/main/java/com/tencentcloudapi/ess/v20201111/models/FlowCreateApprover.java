@@ -308,6 +308,17 @@ public class FlowCreateApprover extends AbstractModel {
     private Long Deadline;
 
     /**
+    * 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+    */
+    @SerializedName("Intention")
+    @Expose
+    private Intention Intention;
+
+    /**
      * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
@@ -1123,6 +1134,38 @@ public class FlowCreateApprover extends AbstractModel {
         this.Deadline = Deadline;
     }
 
+    /**
+     * Get 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。` 
+     * @return Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+     */
+    public Intention getIntention() {
+        return this.Intention;
+    }
+
+    /**
+     * Set 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+     * @param Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+     */
+    public void setIntention(Intention Intention) {
+        this.Intention = Intention;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -1230,6 +1273,9 @@ public class FlowCreateApprover extends AbstractModel {
         if (source.Deadline != null) {
             this.Deadline = new Long(source.Deadline);
         }
+        if (source.Intention != null) {
+            this.Intention = new Intention(source.Intention);
+        }
     }
 
 
@@ -1264,6 +1310,7 @@ public class FlowCreateApprover extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamObj(map, prefix + "Intention.", this.Intention);
 
     }
 }

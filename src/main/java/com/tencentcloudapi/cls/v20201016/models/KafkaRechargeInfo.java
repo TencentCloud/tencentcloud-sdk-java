@@ -103,7 +103,7 @@ public class KafkaRechargeInfo extends AbstractModel {
     private String ConsumerGroupName;
 
     /**
-    * 状态   status 1: 运行中, 2: 暂停 ...
+    * 状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -339,9 +339,9 @@ public class KafkaRechargeInfo extends AbstractModel {
     }
 
     /**
-     * Get 状态   status 1: 运行中, 2: 暂停 ...
+     * Get 状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态   status 1: 运行中, 2: 暂停 ...
+     * @return Status 状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -349,9 +349,9 @@ public class KafkaRechargeInfo extends AbstractModel {
     }
 
     /**
-     * Set 状态   status 1: 运行中, 2: 暂停 ...
+     * Set 状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态   status 1: 运行中, 2: 暂停 ...
+     * @param Status 状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

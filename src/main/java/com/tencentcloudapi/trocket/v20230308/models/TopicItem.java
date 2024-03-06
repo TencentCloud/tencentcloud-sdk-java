@@ -60,6 +60,46 @@ public class TopicItem extends AbstractModel {
     private String Remark;
 
     /**
+    * 4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterIdV4")
+    @Expose
+    private String ClusterIdV4;
+
+    /**
+    * 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceV4")
+    @Expose
+    private String NamespaceV4;
+
+    /**
+    * 4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicV4")
+    @Expose
+    private String TopicV4;
+
+    /**
+    * 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FullNamespaceV4")
+    @Expose
+    private String FullNamespaceV4;
+
+    /**
+    * 消息保留时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MsgTTL")
+    @Expose
+    private Long MsgTTL;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -143,6 +183,106 @@ public class TopicItem extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterIdV4 4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterIdV4() {
+        return this.ClusterIdV4;
+    }
+
+    /**
+     * Set 4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterIdV4 4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterIdV4(String ClusterIdV4) {
+        this.ClusterIdV4 = ClusterIdV4;
+    }
+
+    /**
+     * Get 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceV4 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceV4() {
+        return this.NamespaceV4;
+    }
+
+    /**
+     * Set 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceV4 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceV4(String NamespaceV4) {
+        this.NamespaceV4 = NamespaceV4;
+    }
+
+    /**
+     * Get 4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicV4 4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicV4() {
+        return this.TopicV4;
+    }
+
+    /**
+     * Set 4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicV4 4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicV4(String TopicV4) {
+        this.TopicV4 = TopicV4;
+    }
+
+    /**
+     * Get 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FullNamespaceV4 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFullNamespaceV4() {
+        return this.FullNamespaceV4;
+    }
+
+    /**
+     * Set 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FullNamespaceV4 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFullNamespaceV4(String FullNamespaceV4) {
+        this.FullNamespaceV4 = FullNamespaceV4;
+    }
+
+    /**
+     * Get 消息保留时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MsgTTL 消息保留时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMsgTTL() {
+        return this.MsgTTL;
+    }
+
+    /**
+     * Set 消息保留时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MsgTTL 消息保留时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMsgTTL(Long MsgTTL) {
+        this.MsgTTL = MsgTTL;
+    }
+
     public TopicItem() {
     }
 
@@ -166,6 +306,21 @@ public class TopicItem extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.ClusterIdV4 != null) {
+            this.ClusterIdV4 = new String(source.ClusterIdV4);
+        }
+        if (source.NamespaceV4 != null) {
+            this.NamespaceV4 = new String(source.NamespaceV4);
+        }
+        if (source.TopicV4 != null) {
+            this.TopicV4 = new String(source.TopicV4);
+        }
+        if (source.FullNamespaceV4 != null) {
+            this.FullNamespaceV4 = new String(source.FullNamespaceV4);
+        }
+        if (source.MsgTTL != null) {
+            this.MsgTTL = new Long(source.MsgTTL);
+        }
     }
 
 
@@ -178,6 +333,11 @@ public class TopicItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "QueueNum", this.QueueNum);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "ClusterIdV4", this.ClusterIdV4);
+        this.setParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
+        this.setParamSimple(map, prefix + "TopicV4", this.TopicV4);
+        this.setParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
+        this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
 
     }
 }

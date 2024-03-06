@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyVpcAttributeRequest extends AbstractModel {
 
     /**
-    * VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+    * VPC实例ID。形如：vpc-f49l6u0z。
     */
     @SerializedName("VpcId")
     @Expose
@@ -66,16 +66,16 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     private Boolean EnableCdcPublish;
 
     /**
-     * Get VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。 
-     * @return VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Get VPC实例ID。形如：vpc-f49l6u0z。 
+     * @return VpcId VPC实例ID。形如：vpc-f49l6u0z。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
-     * @param VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Set VPC实例ID。形如：vpc-f49l6u0z。
+     * @param VpcId VPC实例ID。形如：vpc-f49l6u0z。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

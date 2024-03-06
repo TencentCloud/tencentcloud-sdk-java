@@ -73,6 +73,13 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Boolean ScaledTpsEnabled;
 
     /**
+    * 最大可创建主题数
+    */
+    @SerializedName("MaxTopicNum")
+    @Expose
+    private Long MaxTopicNum;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -184,6 +191,22 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.ScaledTpsEnabled = ScaledTpsEnabled;
     }
 
+    /**
+     * Get 最大可创建主题数 
+     * @return MaxTopicNum 最大可创建主题数
+     */
+    public Long getMaxTopicNum() {
+        return this.MaxTopicNum;
+    }
+
+    /**
+     * Set 最大可创建主题数
+     * @param MaxTopicNum 最大可创建主题数
+     */
+    public void setMaxTopicNum(Long MaxTopicNum) {
+        this.MaxTopicNum = MaxTopicNum;
+    }
+
     public ModifyInstanceRequest() {
     }
 
@@ -213,6 +236,9 @@ public class ModifyInstanceRequest extends AbstractModel {
         if (source.ScaledTpsEnabled != null) {
             this.ScaledTpsEnabled = new Boolean(source.ScaledTpsEnabled);
         }
+        if (source.MaxTopicNum != null) {
+            this.MaxTopicNum = new Long(source.MaxTopicNum);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SkuCode", this.SkuCode);
         this.setParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
         this.setParamSimple(map, prefix + "ScaledTpsEnabled", this.ScaledTpsEnabled);
+        this.setParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
 
     }
 }

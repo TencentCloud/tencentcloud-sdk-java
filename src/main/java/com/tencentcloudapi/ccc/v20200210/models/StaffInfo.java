@@ -63,6 +63,13 @@ public class StaffInfo extends AbstractModel {
     private String StaffNumber;
 
     /**
+    * 用户角色id
+    */
+    @SerializedName("RoleId")
+    @Expose
+    private Long RoleId;
+
+    /**
     * 所属技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -175,6 +182,22 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
+     * Get 用户角色id 
+     * @return RoleId 用户角色id
+     */
+    public Long getRoleId() {
+        return this.RoleId;
+    }
+
+    /**
+     * Set 用户角色id
+     * @param RoleId 用户角色id
+     */
+    public void setRoleId(Long RoleId) {
+        this.RoleId = RoleId;
+    }
+
+    /**
      * Get 所属技能组列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SkillGroupList 所属技能组列表
@@ -237,6 +260,9 @@ public class StaffInfo extends AbstractModel {
         if (source.StaffNumber != null) {
             this.StaffNumber = new String(source.StaffNumber);
         }
+        if (source.RoleId != null) {
+            this.RoleId = new Long(source.RoleId);
+        }
         if (source.SkillGroupList != null) {
             this.SkillGroupList = new SkillGroupItem[source.SkillGroupList.length];
             for (int i = 0; i < source.SkillGroupList.length; i++) {
@@ -258,6 +284,7 @@ public class StaffInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
+        this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
 

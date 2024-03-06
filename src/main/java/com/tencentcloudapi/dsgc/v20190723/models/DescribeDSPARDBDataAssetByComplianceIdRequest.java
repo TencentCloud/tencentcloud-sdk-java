@@ -45,6 +45,13 @@ public class DescribeDSPARDBDataAssetByComplianceIdRequest extends AbstractModel
     private String DataSourceType;
 
     /**
+    * 自建还是云上
+    */
+    @SerializedName("BuildType")
+    @Expose
+    private String BuildType;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -92,6 +99,22 @@ public class DescribeDSPARDBDataAssetByComplianceIdRequest extends AbstractModel
         this.DataSourceType = DataSourceType;
     }
 
+    /**
+     * Get 自建还是云上 
+     * @return BuildType 自建还是云上
+     */
+    public String getBuildType() {
+        return this.BuildType;
+    }
+
+    /**
+     * Set 自建还是云上
+     * @param BuildType 自建还是云上
+     */
+    public void setBuildType(String BuildType) {
+        this.BuildType = BuildType;
+    }
+
     public DescribeDSPARDBDataAssetByComplianceIdRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeDSPARDBDataAssetByComplianceIdRequest extends AbstractModel
         if (source.DataSourceType != null) {
             this.DataSourceType = new String(source.DataSourceType);
         }
+        if (source.BuildType != null) {
+            this.BuildType = new String(source.BuildType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeDSPARDBDataAssetByComplianceIdRequest extends AbstractModel
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
         this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
+        this.setParamSimple(map, prefix + "BuildType", this.BuildType);
 
     }
 }

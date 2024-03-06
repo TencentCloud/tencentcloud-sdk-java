@@ -47,7 +47,24 @@ experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w
     */
     @SerializedName("SkuCode")
     @Expose
@@ -82,7 +99,7 @@ basic_6k
     private Boolean EnablePublic;
 
     /**
-    * 公网带宽
+    * 公网带宽（单位：兆）
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -96,11 +113,39 @@ basic_6k
     private IpRule [] IpRules;
 
     /**
-    * 消息保留时长，小时为单位
+    * 消息保留时长（单位：小时）
     */
     @SerializedName("MessageRetention")
     @Expose
     private Long MessageRetention;
+
+    /**
+    * 付费模式（0: 后付费；1: 预付费）
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * 是否自动续费（0: 不自动续费；1: 自动续费）
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
+    * 购买时长（单位：月）
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Long TimeSpan;
+
+    /**
+    * 最大可创建主题数
+    */
+    @SerializedName("MaxTopicNum")
+    @Expose
+    private Long MaxTopicNum;
 
     /**
      * Get 实例类型，
@@ -156,13 +201,47 @@ experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k 
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w 
      * @return SkuCode 商品规格，可用规格如下：
 experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w
      */
     public String getSkuCode() {
         return this.SkuCode;
@@ -174,13 +253,47 @@ experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w
      * @param SkuCode 商品规格，可用规格如下：
 experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;
@@ -251,16 +364,16 @@ basic_6k
     }
 
     /**
-     * Get 公网带宽 
-     * @return Bandwidth 公网带宽
+     * Get 公网带宽（单位：兆） 
+     * @return Bandwidth 公网带宽（单位：兆）
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 公网带宽
-     * @param Bandwidth 公网带宽
+     * Set 公网带宽（单位：兆）
+     * @param Bandwidth 公网带宽（单位：兆）
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
@@ -283,19 +396,83 @@ basic_6k
     }
 
     /**
-     * Get 消息保留时长，小时为单位 
-     * @return MessageRetention 消息保留时长，小时为单位
+     * Get 消息保留时长（单位：小时） 
+     * @return MessageRetention 消息保留时长（单位：小时）
      */
     public Long getMessageRetention() {
         return this.MessageRetention;
     }
 
     /**
-     * Set 消息保留时长，小时为单位
-     * @param MessageRetention 消息保留时长，小时为单位
+     * Set 消息保留时长（单位：小时）
+     * @param MessageRetention 消息保留时长（单位：小时）
      */
     public void setMessageRetention(Long MessageRetention) {
         this.MessageRetention = MessageRetention;
+    }
+
+    /**
+     * Get 付费模式（0: 后付费；1: 预付费） 
+     * @return PayMode 付费模式（0: 后付费；1: 预付费）
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 付费模式（0: 后付费；1: 预付费）
+     * @param PayMode 付费模式（0: 后付费；1: 预付费）
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 是否自动续费（0: 不自动续费；1: 自动续费） 
+     * @return RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费）
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 是否自动续费（0: 不自动续费；1: 自动续费）
+     * @param RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费）
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get 购买时长（单位：月） 
+     * @return TimeSpan 购买时长（单位：月）
+     */
+    public Long getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * Set 购买时长（单位：月）
+     * @param TimeSpan 购买时长（单位：月）
+     */
+    public void setTimeSpan(Long TimeSpan) {
+        this.TimeSpan = TimeSpan;
+    }
+
+    /**
+     * Get 最大可创建主题数 
+     * @return MaxTopicNum 最大可创建主题数
+     */
+    public Long getMaxTopicNum() {
+        return this.MaxTopicNum;
+    }
+
+    /**
+     * Set 最大可创建主题数
+     * @param MaxTopicNum 最大可创建主题数
+     */
+    public void setMaxTopicNum(Long MaxTopicNum) {
+        this.MaxTopicNum = MaxTopicNum;
     }
 
     public CreateInstanceRequest() {
@@ -345,6 +522,18 @@ basic_6k
         if (source.MessageRetention != null) {
             this.MessageRetention = new Long(source.MessageRetention);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.MaxTopicNum != null) {
+            this.MaxTopicNum = new Long(source.MaxTopicNum);
+        }
     }
 
 
@@ -362,6 +551,10 @@ basic_6k
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamArrayObj(map, prefix + "IpRules.", this.IpRules);
         this.setParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
 
     }
 }

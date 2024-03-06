@@ -65,7 +65,7 @@ public class GetAlarmLogResponse extends AbstractModel {
     private LogInfo [] Results;
 
     /**
-    * 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+    * 执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -74,7 +74,7 @@ public class GetAlarmLogResponse extends AbstractModel {
     private LogItems [] AnalysisResults;
 
     /**
-    * 执行详情统计分析结果; UseNewAnalysis为true有效
+    * 执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisRecords")
@@ -201,10 +201,10 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+     * Get 执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+     * @return AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -213,10 +213,10 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+     * Set 执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+     * @param AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -225,9 +225,9 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 执行详情统计分析结果; UseNewAnalysis为true有效
+     * Get 执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnalysisRecords 执行详情统计分析结果; UseNewAnalysis为true有效
+     * @return AnalysisRecords 执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAnalysisRecords() {
@@ -235,9 +235,9 @@ public class GetAlarmLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 执行详情统计分析结果; UseNewAnalysis为true有效
+     * Set 执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnalysisRecords 执行详情统计分析结果; UseNewAnalysis为true有效
+     * @param AnalysisRecords 执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisRecords(String [] AnalysisRecords) {

@@ -68,7 +68,7 @@ KafkaType为1时ServerAddr必填
     private String ServerAddr;
 
     /**
-    * ServerAddr是否为加密连接。。
+    * ServerAddr是否为加密连接。
 KafkaType为1时有效。
     */
     @SerializedName("IsEncryptionAddr")
@@ -202,9 +202,9 @@ KafkaType为1时ServerAddr必填
     }
 
     /**
-     * Get ServerAddr是否为加密连接。。
+     * Get ServerAddr是否为加密连接。
 KafkaType为1时有效。 
-     * @return IsEncryptionAddr ServerAddr是否为加密连接。。
+     * @return IsEncryptionAddr ServerAddr是否为加密连接。
 KafkaType为1时有效。
      */
     public Boolean getIsEncryptionAddr() {
@@ -212,9 +212,9 @@ KafkaType为1时有效。
     }
 
     /**
-     * Set ServerAddr是否为加密连接。。
+     * Set ServerAddr是否为加密连接。
 KafkaType为1时有效。
-     * @param IsEncryptionAddr ServerAddr是否为加密连接。。
+     * @param IsEncryptionAddr ServerAddr是否为加密连接。
 KafkaType为1时有效。
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {

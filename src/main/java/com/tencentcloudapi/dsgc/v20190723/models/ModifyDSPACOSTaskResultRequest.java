@@ -52,6 +52,27 @@ public class ModifyDSPACOSTaskResultRequest extends AbstractModel {
     private Boolean IsSetNonSensitiveFile;
 
     /**
+    * 文件名
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
+    * 桶名
+    */
+    @SerializedName("BucketName")
+    @Expose
+    private String BucketName;
+
+    /**
+    * 数据源id
+    */
+    @SerializedName("DataSourceId")
+    @Expose
+    private String DataSourceId;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -115,6 +136,54 @@ public class ModifyDSPACOSTaskResultRequest extends AbstractModel {
         this.IsSetNonSensitiveFile = IsSetNonSensitiveFile;
     }
 
+    /**
+     * Get 文件名 
+     * @return FileName 文件名
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set 文件名
+     * @param FileName 文件名
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
+
+    /**
+     * Get 桶名 
+     * @return BucketName 桶名
+     */
+    public String getBucketName() {
+        return this.BucketName;
+    }
+
+    /**
+     * Set 桶名
+     * @param BucketName 桶名
+     */
+    public void setBucketName(String BucketName) {
+        this.BucketName = BucketName;
+    }
+
+    /**
+     * Get 数据源id 
+     * @return DataSourceId 数据源id
+     */
+    public String getDataSourceId() {
+        return this.DataSourceId;
+    }
+
+    /**
+     * Set 数据源id
+     * @param DataSourceId 数据源id
+     */
+    public void setDataSourceId(String DataSourceId) {
+        this.DataSourceId = DataSourceId;
+    }
+
     public ModifyDSPACOSTaskResultRequest() {
     }
 
@@ -135,6 +204,15 @@ public class ModifyDSPACOSTaskResultRequest extends AbstractModel {
         if (source.IsSetNonSensitiveFile != null) {
             this.IsSetNonSensitiveFile = new Boolean(source.IsSetNonSensitiveFile);
         }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.BucketName != null) {
+            this.BucketName = new String(source.BucketName);
+        }
+        if (source.DataSourceId != null) {
+            this.DataSourceId = new String(source.DataSourceId);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class ModifyDSPACOSTaskResultRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
         this.setParamSimple(map, prefix + "FileResultId", this.FileResultId);
         this.setParamSimple(map, prefix + "IsSetNonSensitiveFile", this.IsSetNonSensitiveFile);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "BucketName", this.BucketName);
+        this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
 
     }
 }

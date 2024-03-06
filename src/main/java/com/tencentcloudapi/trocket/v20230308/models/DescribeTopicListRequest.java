@@ -31,6 +31,13 @@ public class DescribeTopicListRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 查询条件列表
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * 查询起始位置
     */
     @SerializedName("Offset")
@@ -43,13 +50,6 @@ public class DescribeTopicListRequest extends AbstractModel {
     @SerializedName("Limit")
     @Expose
     private Long Limit;
-
-    /**
-    * 查询条件列表
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
 
     /**
      * Get 实例ID 
@@ -65,6 +65,22 @@ public class DescribeTopicListRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 查询条件列表 
+     * @return Filters 查询条件列表
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 查询条件列表
+     * @param Filters 查询条件列表
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -99,22 +115,6 @@ public class DescribeTopicListRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
-    /**
-     * Get 查询条件列表 
-     * @return Filters 查询条件列表
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 查询条件列表
-     * @param Filters 查询条件列表
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
     public DescribeTopicListRequest() {
     }
 
@@ -126,17 +126,17 @@ public class DescribeTopicListRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
         }
     }
 
@@ -146,9 +146,9 @@ public class DescribeTopicListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

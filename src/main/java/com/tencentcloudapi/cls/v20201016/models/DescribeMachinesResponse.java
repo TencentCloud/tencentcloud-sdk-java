@@ -31,7 +31,7 @@ public class DescribeMachinesResponse extends AbstractModel {
     private MachineInfo [] Machines;
 
     /**
-    * 机器组是否开启自动升级功能
+    * 机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
     */
     @SerializedName("AutoUpdate")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeMachinesResponse extends AbstractModel {
     }
 
     /**
-     * Get 机器组是否开启自动升级功能 
-     * @return AutoUpdate 机器组是否开启自动升级功能
+     * Get 机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。 
+     * @return AutoUpdate 机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
      */
     public Long getAutoUpdate() {
         return this.AutoUpdate;
     }
 
     /**
-     * Set 机器组是否开启自动升级功能
-     * @param AutoUpdate 机器组是否开启自动升级功能
+     * Set 机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
+     * @param AutoUpdate 机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
      */
     public void setAutoUpdate(Long AutoUpdate) {
         this.AutoUpdate = AutoUpdate;

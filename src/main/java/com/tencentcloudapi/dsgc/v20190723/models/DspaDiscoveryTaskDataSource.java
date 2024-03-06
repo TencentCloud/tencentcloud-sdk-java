@@ -62,6 +62,14 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
     private String ResourceRegion;
 
     /**
+    * 无
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataSourceType")
+    @Expose
+    private String DataSourceType;
+
+    /**
      * Get 数据源ID 
      * @return DataSourceId 数据源ID
      */
@@ -153,6 +161,26 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
         this.ResourceRegion = ResourceRegion;
     }
 
+    /**
+     * Get 无
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataSourceType 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataSourceType() {
+        return this.DataSourceType;
+    }
+
+    /**
+     * Set 无
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSourceType 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataSourceType(String DataSourceType) {
+        this.DataSourceType = DataSourceType;
+    }
+
     public DspaDiscoveryTaskDataSource() {
     }
 
@@ -179,6 +207,9 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
         if (source.ResourceRegion != null) {
             this.ResourceRegion = new String(source.ResourceRegion);
         }
+        if (source.DataSourceType != null) {
+            this.DataSourceType = new String(source.DataSourceType);
+        }
     }
 
 
@@ -191,6 +222,7 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ProxyAddress.", this.ProxyAddress);
         this.setParamSimple(map, prefix + "DataSourceName", this.DataSourceName);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
+        this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
 
     }
 }

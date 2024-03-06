@@ -38,6 +38,21 @@ public class DescribeDSPAESDataAssetByComplianceIdRequest extends AbstractModel 
     private Long ComplianceId;
 
     /**
+    * 云上还是自建
+
+    */
+    @SerializedName("BuildType")
+    @Expose
+    private String BuildType;
+
+    /**
+    * 数据源类型
+    */
+    @SerializedName("DataSourceType")
+    @Expose
+    private String DataSourceType;
+
+    /**
      * Get dspa实例id 
      * @return DspaId dspa实例id
      */
@@ -69,6 +84,42 @@ public class DescribeDSPAESDataAssetByComplianceIdRequest extends AbstractModel 
         this.ComplianceId = ComplianceId;
     }
 
+    /**
+     * Get 云上还是自建
+ 
+     * @return BuildType 云上还是自建
+
+     */
+    public String getBuildType() {
+        return this.BuildType;
+    }
+
+    /**
+     * Set 云上还是自建
+
+     * @param BuildType 云上还是自建
+
+     */
+    public void setBuildType(String BuildType) {
+        this.BuildType = BuildType;
+    }
+
+    /**
+     * Get 数据源类型 
+     * @return DataSourceType 数据源类型
+     */
+    public String getDataSourceType() {
+        return this.DataSourceType;
+    }
+
+    /**
+     * Set 数据源类型
+     * @param DataSourceType 数据源类型
+     */
+    public void setDataSourceType(String DataSourceType) {
+        this.DataSourceType = DataSourceType;
+    }
+
     public DescribeDSPAESDataAssetByComplianceIdRequest() {
     }
 
@@ -83,6 +134,12 @@ public class DescribeDSPAESDataAssetByComplianceIdRequest extends AbstractModel 
         if (source.ComplianceId != null) {
             this.ComplianceId = new Long(source.ComplianceId);
         }
+        if (source.BuildType != null) {
+            this.BuildType = new String(source.BuildType);
+        }
+        if (source.DataSourceType != null) {
+            this.DataSourceType = new String(source.DataSourceType);
+        }
     }
 
 
@@ -92,6 +149,8 @@ public class DescribeDSPAESDataAssetByComplianceIdRequest extends AbstractModel 
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+        this.setParamSimple(map, prefix + "BuildType", this.BuildType);
+        this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
 
     }
 }

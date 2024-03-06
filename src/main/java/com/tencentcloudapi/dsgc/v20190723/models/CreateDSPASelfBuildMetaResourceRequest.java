@@ -113,6 +113,23 @@ clb - 通过LB的方式进行访问。
     private String ResourceName;
 
     /**
+    * 实例类型
+databse
+sid
+serviceName
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 实例值
+    */
+    @SerializedName("InstanceValue")
+    @Expose
+    private String InstanceValue;
+
+    /**
      * Get Dspa实例ID。 
      * @return DspaId Dspa实例ID。
      */
@@ -324,6 +341,50 @@ clb - 通过LB的方式进行访问。
         this.ResourceName = ResourceName;
     }
 
+    /**
+     * Get 实例类型
+databse
+sid
+serviceName 
+     * @return InstanceType 实例类型
+databse
+sid
+serviceName
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型
+databse
+sid
+serviceName
+     * @param InstanceType 实例类型
+databse
+sid
+serviceName
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 实例值 
+     * @return InstanceValue 实例值
+     */
+    public String getInstanceValue() {
+        return this.InstanceValue;
+    }
+
+    /**
+     * Set 实例值
+     * @param InstanceValue 实例值
+     */
+    public void setInstanceValue(String InstanceValue) {
+        this.InstanceValue = InstanceValue;
+    }
+
     public CreateDSPASelfBuildMetaResourceRequest() {
     }
 
@@ -368,6 +429,12 @@ clb - 通过LB的方式进行访问。
         if (source.ResourceName != null) {
             this.ResourceName = new String(source.ResourceName);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceValue != null) {
+            this.InstanceValue = new String(source.InstanceValue);
+        }
     }
 
 
@@ -387,6 +454,8 @@ clb - 通过LB的方式进行访问。
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "InstanceValue", this.InstanceValue);
 
     }
 }

@@ -31,14 +31,14 @@ public class DescribeLogContextResponse extends AbstractModel {
     private LogContextInfo [] LogContextInfos;
 
     /**
-    * 上文日志是否已经返回
+    * 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
     */
     @SerializedName("PrevOver")
     @Expose
     private Boolean PrevOver;
 
     /**
-    * 下文日志是否已经返回
+    * 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
     */
     @SerializedName("NextOver")
     @Expose
@@ -68,32 +68,32 @@ public class DescribeLogContextResponse extends AbstractModel {
     }
 
     /**
-     * Get 上文日志是否已经返回 
-     * @return PrevOver 上文日志是否已经返回
+     * Get 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。 
+     * @return PrevOver 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
      */
     public Boolean getPrevOver() {
         return this.PrevOver;
     }
 
     /**
-     * Set 上文日志是否已经返回
-     * @param PrevOver 上文日志是否已经返回
+     * Set 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
+     * @param PrevOver 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
      */
     public void setPrevOver(Boolean PrevOver) {
         this.PrevOver = PrevOver;
     }
 
     /**
-     * Get 下文日志是否已经返回 
-     * @return NextOver 下文日志是否已经返回
+     * Get 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。 
+     * @return NextOver 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
      */
     public Boolean getNextOver() {
         return this.NextOver;
     }
 
     /**
-     * Set 下文日志是否已经返回
-     * @param NextOver 下文日志是否已经返回
+     * Set 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
+     * @param NextOver 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
      */
     public void setNextOver(Boolean NextOver) {
         this.NextOver = NextOver;

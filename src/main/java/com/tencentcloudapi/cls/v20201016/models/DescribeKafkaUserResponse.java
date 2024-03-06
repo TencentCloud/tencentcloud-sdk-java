@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeKafkaUserResponse extends AbstractModel {
 
     /**
-    * kafka消费用户名
+    * 如果返回不为空，代表用户名UserName已经创建成功。
     */
     @SerializedName("UserName")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeKafkaUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get kafka消费用户名 
-     * @return UserName kafka消费用户名
+     * Get 如果返回不为空，代表用户名UserName已经创建成功。 
+     * @return UserName 如果返回不为空，代表用户名UserName已经创建成功。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set kafka消费用户名
-     * @param UserName kafka消费用户名
+     * Set 如果返回不为空，代表用户名UserName已经创建成功。
+     * @param UserName 如果返回不为空，代表用户名UserName已经创建成功。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
