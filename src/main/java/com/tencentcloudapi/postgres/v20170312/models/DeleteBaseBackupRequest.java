@@ -31,7 +31,7 @@ public class DeleteBaseBackupRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * 基础备份ID。
+    * 数据备份ID。
     */
     @SerializedName("BaseBackupId")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteBaseBackupRequest extends AbstractModel {
     }
 
     /**
-     * Get 基础备份ID。 
-     * @return BaseBackupId 基础备份ID。
+     * Get 数据备份ID。 
+     * @return BaseBackupId 数据备份ID。
      */
     public String getBaseBackupId() {
         return this.BaseBackupId;
     }
 
     /**
-     * Set 基础备份ID。
-     * @param BaseBackupId 基础备份ID。
+     * Set 数据备份ID。
+     * @param BaseBackupId 数据备份ID。
      */
     public void setBaseBackupId(String BaseBackupId) {
         this.BaseBackupId = BaseBackupId;

@@ -1260,6 +1260,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDReadable）用于开通或者关闭备机只读
+     * @param req ModifyDReadableRequest
+     * @return ModifyDReadableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDReadableResponse ModifyDReadable(ModifyDReadableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDReadable", ModifyDReadableResponse.class);
+    }
+
+    /**
      *本接口(ModifyDatabaseCDC)用于开启、关闭数据库数据变更捕获(CDC)
      * @param req ModifyDatabaseCDCRequest
      * @return ModifyDatabaseCDCResponse
@@ -1483,7 +1494,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（ResetAccountPassword）用于重置实例的账户密码。
+     *本接口（ResetAccountPassword）用于重置实例的账号密码。
      * @param req ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      * @throws TencentCloudSDKException

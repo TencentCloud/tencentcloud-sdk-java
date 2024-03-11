@@ -45,28 +45,28 @@ public class BackupSummary extends AbstractModel {
     private Long LogBackupSize;
 
     /**
-    * 手动创建的实例基础备份数量。
+    * 手动创建的实例数据备份数量。
     */
     @SerializedName("ManualBaseBackupCount")
     @Expose
     private Long ManualBaseBackupCount;
 
     /**
-    * 手动创建的实例基础备份大小。
+    * 手动创建的实例数据备份大小。
     */
     @SerializedName("ManualBaseBackupSize")
     @Expose
     private Long ManualBaseBackupSize;
 
     /**
-    * 自动创建的实例基础备份数量。
+    * 自动创建的实例数据备份数量。
     */
     @SerializedName("AutoBaseBackupCount")
     @Expose
     private Long AutoBaseBackupCount;
 
     /**
-    * 自动创建的实例基础备份大小。
+    * 自动创建的实例数据备份大小。
     */
     @SerializedName("AutoBaseBackupSize")
     @Expose
@@ -135,64 +135,64 @@ public class BackupSummary extends AbstractModel {
     }
 
     /**
-     * Get 手动创建的实例基础备份数量。 
-     * @return ManualBaseBackupCount 手动创建的实例基础备份数量。
+     * Get 手动创建的实例数据备份数量。 
+     * @return ManualBaseBackupCount 手动创建的实例数据备份数量。
      */
     public Long getManualBaseBackupCount() {
         return this.ManualBaseBackupCount;
     }
 
     /**
-     * Set 手动创建的实例基础备份数量。
-     * @param ManualBaseBackupCount 手动创建的实例基础备份数量。
+     * Set 手动创建的实例数据备份数量。
+     * @param ManualBaseBackupCount 手动创建的实例数据备份数量。
      */
     public void setManualBaseBackupCount(Long ManualBaseBackupCount) {
         this.ManualBaseBackupCount = ManualBaseBackupCount;
     }
 
     /**
-     * Get 手动创建的实例基础备份大小。 
-     * @return ManualBaseBackupSize 手动创建的实例基础备份大小。
+     * Get 手动创建的实例数据备份大小。 
+     * @return ManualBaseBackupSize 手动创建的实例数据备份大小。
      */
     public Long getManualBaseBackupSize() {
         return this.ManualBaseBackupSize;
     }
 
     /**
-     * Set 手动创建的实例基础备份大小。
-     * @param ManualBaseBackupSize 手动创建的实例基础备份大小。
+     * Set 手动创建的实例数据备份大小。
+     * @param ManualBaseBackupSize 手动创建的实例数据备份大小。
      */
     public void setManualBaseBackupSize(Long ManualBaseBackupSize) {
         this.ManualBaseBackupSize = ManualBaseBackupSize;
     }
 
     /**
-     * Get 自动创建的实例基础备份数量。 
-     * @return AutoBaseBackupCount 自动创建的实例基础备份数量。
+     * Get 自动创建的实例数据备份数量。 
+     * @return AutoBaseBackupCount 自动创建的实例数据备份数量。
      */
     public Long getAutoBaseBackupCount() {
         return this.AutoBaseBackupCount;
     }
 
     /**
-     * Set 自动创建的实例基础备份数量。
-     * @param AutoBaseBackupCount 自动创建的实例基础备份数量。
+     * Set 自动创建的实例数据备份数量。
+     * @param AutoBaseBackupCount 自动创建的实例数据备份数量。
      */
     public void setAutoBaseBackupCount(Long AutoBaseBackupCount) {
         this.AutoBaseBackupCount = AutoBaseBackupCount;
     }
 
     /**
-     * Get 自动创建的实例基础备份大小。 
-     * @return AutoBaseBackupSize 自动创建的实例基础备份大小。
+     * Get 自动创建的实例数据备份大小。 
+     * @return AutoBaseBackupSize 自动创建的实例数据备份大小。
      */
     public Long getAutoBaseBackupSize() {
         return this.AutoBaseBackupSize;
     }
 
     /**
-     * Set 自动创建的实例基础备份大小。
-     * @param AutoBaseBackupSize 自动创建的实例基础备份大小。
+     * Set 自动创建的实例数据备份大小。
+     * @param AutoBaseBackupSize 自动创建的实例数据备份大小。
      */
     public void setAutoBaseBackupSize(Long AutoBaseBackupSize) {
         this.AutoBaseBackupSize = AutoBaseBackupSize;

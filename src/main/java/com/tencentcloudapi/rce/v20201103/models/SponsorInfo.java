@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SponsorInfo extends AbstractModel {
 
     /**
-    * 助力场景建议填写：活动发起人微信 OpenID
+    * 助力场景建议填写：活动发起人微信OpenId。
     */
     @SerializedName("SponsorOpenId")
     @Expose
@@ -59,16 +59,16 @@ public class SponsorInfo extends AbstractModel {
     private String CampaignUrl;
 
     /**
-     * Get 助力场景建议填写：活动发起人微信 OpenID 
-     * @return SponsorOpenId 助力场景建议填写：活动发起人微信 OpenID
+     * Get 助力场景建议填写：活动发起人微信OpenId。 
+     * @return SponsorOpenId 助力场景建议填写：活动发起人微信OpenId。
      */
     public String getSponsorOpenId() {
         return this.SponsorOpenId;
     }
 
     /**
-     * Set 助力场景建议填写：活动发起人微信 OpenID
-     * @param SponsorOpenId 助力场景建议填写：活动发起人微信 OpenID
+     * Set 助力场景建议填写：活动发起人微信OpenId。
+     * @param SponsorOpenId 助力场景建议填写：活动发起人微信OpenId。
      */
     public void setSponsorOpenId(String SponsorOpenId) {
         this.SponsorOpenId = SponsorOpenId;

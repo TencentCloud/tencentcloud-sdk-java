@@ -66,14 +66,14 @@ public class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractMo
     private String EndTime;
 
     /**
-    * 分页参数
+    * 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页参数
+    * 返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
     */
     @SerializedName("Limit")
     @Expose
@@ -176,32 +176,32 @@ public class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractMo
     }
 
     /**
-     * Get 分页参数 
-     * @return Offset 分页参数
+     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节 
+     * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数
-     * @param Offset 分页参数
+     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
+     * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页参数 
-     * @return Limit 分页参数
+     * Get 返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。 
+     * @return Limit 返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数
-     * @param Limit 分页参数
+     * Set 返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
+     * @param Limit 返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

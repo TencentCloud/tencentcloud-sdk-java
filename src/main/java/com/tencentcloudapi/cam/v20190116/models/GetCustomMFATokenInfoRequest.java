@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetCustomMFATokenInfoRequest extends AbstractModel {
 
     /**
-    * 自定义多因子验证Token
+    * 自定义多因子验证Token，针对用户自定义的安全校验方式而生成的，以供查询用户安全校验时使用。
     */
     @SerializedName("MFAToken")
     @Expose
     private String MFAToken;
 
     /**
-     * Get 自定义多因子验证Token 
-     * @return MFAToken 自定义多因子验证Token
+     * Get 自定义多因子验证Token，针对用户自定义的安全校验方式而生成的，以供查询用户安全校验时使用。 
+     * @return MFAToken 自定义多因子验证Token，针对用户自定义的安全校验方式而生成的，以供查询用户安全校验时使用。
      */
     public String getMFAToken() {
         return this.MFAToken;
     }
 
     /**
-     * Set 自定义多因子验证Token
-     * @param MFAToken 自定义多因子验证Token
+     * Set 自定义多因子验证Token，针对用户自定义的安全校验方式而生成的，以供查询用户安全校验时使用。
+     * @param MFAToken 自定义多因子验证Token，针对用户自定义的安全校验方式而生成的，以供查询用户安全校验时使用。
      */
     public void setMFAToken(String MFAToken) {
         this.MFAToken = MFAToken;

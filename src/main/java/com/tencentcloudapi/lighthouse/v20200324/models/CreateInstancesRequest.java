@@ -124,6 +124,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Tag [] Tags;
 
     /**
+    * 创建实例后自动执行的命令。
+    */
+    @SerializedName("InitCommand")
+    @Expose
+    private Command InitCommand;
+
+    /**
      * Get 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。 
      * @return BundleId 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
      */
@@ -367,6 +374,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.Tags = Tags;
     }
 
+    /**
+     * Get 创建实例后自动执行的命令。 
+     * @return InitCommand 创建实例后自动执行的命令。
+     */
+    public Command getInitCommand() {
+        return this.InitCommand;
+    }
+
+    /**
+     * Set 创建实例后自动执行的命令。
+     * @param InitCommand 创建实例后自动执行的命令。
+     */
+    public void setInitCommand(Command InitCommand) {
+        this.InitCommand = InitCommand;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -423,6 +446,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.InitCommand != null) {
+            this.InitCommand = new Command(source.InitCommand);
+        }
     }
 
 
@@ -443,6 +469,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "InitCommand.", this.InitCommand);
 
     }
 }

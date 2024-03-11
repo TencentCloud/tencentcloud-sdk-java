@@ -122,6 +122,20 @@ public class ReadOnlyGroup extends AbstractModel {
     private ReadOnlyInstance [] ReadOnlyInstanceSet;
 
     /**
+    * RO组外网地址域名
+    */
+    @SerializedName("DnsPodDomain")
+    @Expose
+    private String DnsPodDomain;
+
+    /**
+    * RO组外网地址端口
+    */
+    @SerializedName("TgwWanVPort")
+    @Expose
+    private Long TgwWanVPort;
+
+    /**
      * Get 只读组ID 
      * @return ReadOnlyGroupId 只读组ID
      */
@@ -345,6 +359,38 @@ public class ReadOnlyGroup extends AbstractModel {
         this.ReadOnlyInstanceSet = ReadOnlyInstanceSet;
     }
 
+    /**
+     * Get RO组外网地址域名 
+     * @return DnsPodDomain RO组外网地址域名
+     */
+    public String getDnsPodDomain() {
+        return this.DnsPodDomain;
+    }
+
+    /**
+     * Set RO组外网地址域名
+     * @param DnsPodDomain RO组外网地址域名
+     */
+    public void setDnsPodDomain(String DnsPodDomain) {
+        this.DnsPodDomain = DnsPodDomain;
+    }
+
+    /**
+     * Get RO组外网地址端口 
+     * @return TgwWanVPort RO组外网地址端口
+     */
+    public Long getTgwWanVPort() {
+        return this.TgwWanVPort;
+    }
+
+    /**
+     * Set RO组外网地址端口
+     * @param TgwWanVPort RO组外网地址端口
+     */
+    public void setTgwWanVPort(Long TgwWanVPort) {
+        this.TgwWanVPort = TgwWanVPort;
+    }
+
     public ReadOnlyGroup() {
     }
 
@@ -398,6 +444,12 @@ public class ReadOnlyGroup extends AbstractModel {
                 this.ReadOnlyInstanceSet[i] = new ReadOnlyInstance(source.ReadOnlyInstanceSet[i]);
             }
         }
+        if (source.DnsPodDomain != null) {
+            this.DnsPodDomain = new String(source.DnsPodDomain);
+        }
+        if (source.TgwWanVPort != null) {
+            this.TgwWanVPort = new Long(source.TgwWanVPort);
+        }
     }
 
 
@@ -419,6 +471,8 @@ public class ReadOnlyGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "MasterInstanceId", this.MasterInstanceId);
         this.setParamArrayObj(map, prefix + "ReadOnlyInstanceSet.", this.ReadOnlyInstanceSet);
+        this.setParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
+        this.setParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
 
     }
 }

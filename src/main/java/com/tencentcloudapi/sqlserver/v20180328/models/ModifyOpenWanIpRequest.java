@@ -31,6 +31,13 @@ public class ModifyOpenWanIpRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * RO只读组Id
+    */
+    @SerializedName("RoGroupId")
+    @Expose
+    private String RoGroupId;
+
+    /**
      * Get 实例资源ID 
      * @return InstanceId 实例资源ID
      */
@@ -46,6 +53,22 @@ public class ModifyOpenWanIpRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get RO只读组Id 
+     * @return RoGroupId RO只读组Id
+     */
+    public String getRoGroupId() {
+        return this.RoGroupId;
+    }
+
+    /**
+     * Set RO只读组Id
+     * @param RoGroupId RO只读组Id
+     */
+    public void setRoGroupId(String RoGroupId) {
+        this.RoGroupId = RoGroupId;
+    }
+
     public ModifyOpenWanIpRequest() {
     }
 
@@ -57,6 +80,9 @@ public class ModifyOpenWanIpRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.RoGroupId != null) {
+            this.RoGroupId = new String(source.RoGroupId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ModifyOpenWanIpRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "RoGroupId", this.RoGroupId);
 
     }
 }

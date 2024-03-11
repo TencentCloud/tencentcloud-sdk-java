@@ -163,7 +163,7 @@ public class ParamInfo extends AbstractModel {
     private String LastModifyTime;
 
     /**
-    * 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+    * 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StandbyRelated")
@@ -171,7 +171,7 @@ public class ParamInfo extends AbstractModel {
     private Long StandbyRelated;
 
     /**
-    * 参数版本关联信息，存储具体内核版本下的具体参数信息
+    * 参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionRelationSet")
@@ -179,7 +179,7 @@ public class ParamInfo extends AbstractModel {
     private ParamVersionRelation [] VersionRelationSet;
 
     /**
-    * 参数规格关联信息，存储具体规格下具体的参数信息
+    * 参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecRelationSet")
@@ -539,9 +539,9 @@ public class ParamInfo extends AbstractModel {
     }
 
     /**
-     * Get 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+     * Get 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StandbyRelated 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+     * @return StandbyRelated 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStandbyRelated() {
@@ -549,9 +549,9 @@ public class ParamInfo extends AbstractModel {
     }
 
     /**
-     * Set 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+     * Set 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StandbyRelated 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+     * @param StandbyRelated 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStandbyRelated(Long StandbyRelated) {
@@ -559,9 +559,9 @@ public class ParamInfo extends AbstractModel {
     }
 
     /**
-     * Get 参数版本关联信息，存储具体内核版本下的具体参数信息
+     * Get 参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VersionRelationSet 参数版本关联信息，存储具体内核版本下的具体参数信息
+     * @return VersionRelationSet 参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamVersionRelation [] getVersionRelationSet() {
@@ -569,9 +569,9 @@ public class ParamInfo extends AbstractModel {
     }
 
     /**
-     * Set 参数版本关联信息，存储具体内核版本下的具体参数信息
+     * Set 参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VersionRelationSet 参数版本关联信息，存储具体内核版本下的具体参数信息
+     * @param VersionRelationSet 参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionRelationSet(ParamVersionRelation [] VersionRelationSet) {
@@ -579,9 +579,9 @@ public class ParamInfo extends AbstractModel {
     }
 
     /**
-     * Get 参数规格关联信息，存储具体规格下具体的参数信息
+     * Get 参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecRelationSet 参数规格关联信息，存储具体规格下具体的参数信息
+     * @return SpecRelationSet 参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamSpecRelation [] getSpecRelationSet() {
@@ -589,9 +589,9 @@ public class ParamInfo extends AbstractModel {
     }
 
     /**
-     * Set 参数规格关联信息，存储具体规格下具体的参数信息
+     * Set 参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecRelationSet 参数规格关联信息，存储具体规格下具体的参数信息
+     * @param SpecRelationSet 参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecRelationSet(ParamSpecRelation [] SpecRelationSet) {

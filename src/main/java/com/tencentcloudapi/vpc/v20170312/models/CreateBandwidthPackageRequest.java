@@ -36,7 +36,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private String NetworkType;
 
     /**
-    * 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+    * 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
@@ -63,7 +63,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private Long BandwidthPackageCount;
 
     /**
-    * 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
+    * 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
     */
     @SerializedName("InternetMaxBandwidth")
     @Expose
@@ -134,14 +134,14 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     }
 
     /**
-     * Get 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+     * Get 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
 <li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
 <li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
  
-     * @return ChargeType 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+     * @return ChargeType 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
@@ -154,14 +154,14 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     }
 
     /**
-     * Set 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+     * Set 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
 <li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
 <li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
 
-     * @param ChargeType 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+     * @param ChargeType 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
@@ -206,16 +206,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     }
 
     /**
-     * Get 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。 
-     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
+     * Get 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。 
+     * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
      */
     public Long getInternetMaxBandwidth() {
         return this.InternetMaxBandwidth;
     }
 
     /**
-     * Set 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
-     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
+     * Set 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
+     * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
      */
     public void setInternetMaxBandwidth(Long InternetMaxBandwidth) {
         this.InternetMaxBandwidth = InternetMaxBandwidth;

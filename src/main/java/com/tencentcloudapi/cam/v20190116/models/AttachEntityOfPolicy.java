@@ -47,7 +47,7 @@ public class AttachEntityOfPolicy extends AbstractModel {
     private Long Uin;
 
     /**
-    * 关联类型。1 用户关联 ； 2 用户组关联
+    * 关联类型。1 用户关联 ； 2 用户组关联 3 角色关联
     */
     @SerializedName("RelatedType")
     @Expose
@@ -118,16 +118,16 @@ public class AttachEntityOfPolicy extends AbstractModel {
     }
 
     /**
-     * Get 关联类型。1 用户关联 ； 2 用户组关联 
-     * @return RelatedType 关联类型。1 用户关联 ； 2 用户组关联
+     * Get 关联类型。1 用户关联 ； 2 用户组关联 3 角色关联 
+     * @return RelatedType 关联类型。1 用户关联 ； 2 用户组关联 3 角色关联
      */
     public Long getRelatedType() {
         return this.RelatedType;
     }
 
     /**
-     * Set 关联类型。1 用户关联 ； 2 用户组关联
-     * @param RelatedType 关联类型。1 用户关联 ； 2 用户组关联
+     * Set 关联类型。1 用户关联 ； 2 用户组关联 3 角色关联
+     * @param RelatedType 关联类型。1 用户关联 ； 2 用户组关联 3 角色关联
      */
     public void setRelatedType(Long RelatedType) {
         this.RelatedType = RelatedType;

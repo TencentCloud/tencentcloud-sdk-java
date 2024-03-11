@@ -94,6 +94,13 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     private SSLConfig SSLConfig;
 
     /**
+    * 备机只读信息
+    */
+    @SerializedName("DrReadableInfo")
+    @Expose
+    private DrReadableInfo DrReadableInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -261,6 +268,22 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     }
 
     /**
+     * Get 备机只读信息 
+     * @return DrReadableInfo 备机只读信息
+     */
+    public DrReadableInfo getDrReadableInfo() {
+        return this.DrReadableInfo;
+    }
+
+    /**
+     * Set 备机只读信息
+     * @param DrReadableInfo 备机只读信息
+     */
+    public void setDrReadableInfo(DrReadableInfo DrReadableInfo) {
+        this.DrReadableInfo = DrReadableInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -314,6 +337,9 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         if (source.SSLConfig != null) {
             this.SSLConfig = new SSLConfig(source.SSLConfig);
         }
+        if (source.DrReadableInfo != null) {
+            this.DrReadableInfo = new DrReadableInfo(source.DrReadableInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -334,6 +360,7 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "EventSaveDays", this.EventSaveDays);
         this.setParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
         this.setParamObj(map, prefix + "SSLConfig.", this.SSLConfig);
+        this.setParamObj(map, prefix + "DrReadableInfo.", this.DrReadableInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

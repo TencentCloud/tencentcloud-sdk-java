@@ -31,7 +31,7 @@ public class BackupPlan extends AbstractModel {
     private String BackupPeriod;
 
     /**
-    * 基础备份保留时长
+    * 数据备份保留时长
     */
     @SerializedName("BaseBackupRetentionPeriod")
     @Expose
@@ -68,16 +68,16 @@ public class BackupPlan extends AbstractModel {
     }
 
     /**
-     * Get 基础备份保留时长 
-     * @return BaseBackupRetentionPeriod 基础备份保留时长
+     * Get 数据备份保留时长 
+     * @return BaseBackupRetentionPeriod 数据备份保留时长
      */
     public Long getBaseBackupRetentionPeriod() {
         return this.BaseBackupRetentionPeriod;
     }
 
     /**
-     * Set 基础备份保留时长
-     * @param BaseBackupRetentionPeriod 基础备份保留时长
+     * Set 数据备份保留时长
+     * @param BaseBackupRetentionPeriod 数据备份保留时长
      */
     public void setBaseBackupRetentionPeriod(Long BaseBackupRetentionPeriod) {
         this.BaseBackupRetentionPeriod = BaseBackupRetentionPeriod;

@@ -288,6 +288,14 @@ public class JobV1 extends AbstractModel {
     private JobEventInfo EventInfo;
 
     /**
+    * 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -947,6 +955,26 @@ public class JobV1 extends AbstractModel {
         this.EventInfo = EventInfo;
     }
 
+    /**
+     * Get 描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public JobV1() {
     }
 
@@ -1057,6 +1085,9 @@ public class JobV1 extends AbstractModel {
         if (source.EventInfo != null) {
             this.EventInfo = new JobEventInfo(source.EventInfo);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -1097,6 +1128,7 @@ public class JobV1 extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkSpaceName", this.WorkSpaceName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "EventInfo.", this.EventInfo);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

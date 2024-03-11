@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class InputManageMarketingRisk extends AbstractModel {
 
     /**
-    * 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。
+    * 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
     */
     @SerializedName("Account")
     @Expose
@@ -60,15 +60,14 @@ public class InputManageMarketingRisk extends AbstractModel {
     private Long PostTime;
 
     /**
-    * 业务平台用户唯一标识。
+    * 业务平台用户唯一标识，支持自定义。
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。
+    * 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
     */
     @SerializedName("DeviceToken")
     @Expose
@@ -96,7 +95,7 @@ public class InputManageMarketingRisk extends AbstractModel {
     private String Nickname;
 
     /**
-    * 用户邮箱地址（非系统自动生成）。
+    * 用户邮箱地址。
     */
     @SerializedName("EmailAddress")
     @Expose
@@ -155,10 +154,10 @@ public class InputManageMarketingRisk extends AbstractModel {
 
     /**
     * 设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -186,10 +185,10 @@ public class InputManageMarketingRisk extends AbstractModel {
     private OnlineScamInfo OnlineScam;
 
     /**
-    * 1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+    * 1：Android
+2：iOS
+3：H5
+4：小程序
 
     */
     @SerializedName("Platform")
@@ -197,32 +196,32 @@ public class InputManageMarketingRisk extends AbstractModel {
     private String Platform;
 
     /**
-     * Get 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。 
-     * @return Account 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。
+     * Get 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。 
+     * @return Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      */
     public AccountInfo getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。
-     * @param Account 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。
+     * Set 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+     * @param Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      */
     public void setAccount(AccountInfo Account) {
         this.Account = Account;
@@ -293,36 +292,32 @@ public class InputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Get 业务平台用户唯一标识。 
-     * @return UserId 业务平台用户唯一标识。
+     * Get 业务平台用户唯一标识，支持自定义。 
+     * @return UserId 业务平台用户唯一标识，支持自定义。
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 业务平台用户唯一标识。
-     * @param UserId 业务平台用户唯一标识。
+     * Set 业务平台用户唯一标识，支持自定义。
+     * @param UserId 业务平台用户唯一标识，支持自定义。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。 
-     * @return DeviceToken 设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。
+     * Get 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。 
+     * @return DeviceToken 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
      */
     public String getDeviceToken() {
         return this.DeviceToken;
     }
 
     /**
-     * Set 设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。
-     * @param DeviceToken 设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。
+     * Set 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
+     * @param DeviceToken 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
      */
     public void setDeviceToken(String DeviceToken) {
         this.DeviceToken = DeviceToken;
@@ -377,16 +372,16 @@ public class InputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Get 用户邮箱地址（非系统自动生成）。 
-     * @return EmailAddress 用户邮箱地址（非系统自动生成）。
+     * Get 用户邮箱地址。 
+     * @return EmailAddress 用户邮箱地址。
      */
     public String getEmailAddress() {
         return this.EmailAddress;
     }
 
     /**
-     * Set 用户邮箱地址（非系统自动生成）。
-     * @param EmailAddress 用户邮箱地址（非系统自动生成）。
+     * Set 用户邮箱地址。
+     * @param EmailAddress 用户邮箱地址。
      */
     public void setEmailAddress(String EmailAddress) {
         this.EmailAddress = EmailAddress;
@@ -514,15 +509,15 @@ public class InputManageMarketingRisk extends AbstractModel {
 
     /**
      * Get 设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。 
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。 
      * @return DeviceType 设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
      */
     public Long getDeviceType() {
         return this.DeviceType;
@@ -530,15 +525,15 @@ public class InputManageMarketingRisk extends AbstractModel {
 
     /**
      * Set 设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
      * @param DeviceType 设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
      */
     public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;
@@ -593,15 +588,15 @@ public class InputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Get 1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+     * Get 1：Android
+2：iOS
+3：H5
+4：小程序
  
-     * @return Platform 1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+     * @return Platform 1：Android
+2：iOS
+3：H5
+4：小程序
 
      */
     public String getPlatform() {
@@ -609,15 +604,15 @@ public class InputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Set 1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+     * Set 1：Android
+2：iOS
+3：H5
+4：小程序
 
-     * @param Platform 1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+     * @param Platform 1：Android
+2：iOS
+3：H5
+4：小程序
 
      */
     public void setPlatform(String Platform) {

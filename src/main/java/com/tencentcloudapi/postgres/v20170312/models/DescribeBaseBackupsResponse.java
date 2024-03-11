@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBaseBackupsResponse extends AbstractModel {
 
     /**
-    * 查询到的基础备份数量。
+    * 查询到的数据备份数量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 基础备份详细信息列表。
+    * 数据备份详细信息列表。
     */
     @SerializedName("BaseBackupSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBaseBackupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询到的基础备份数量。 
-     * @return TotalCount 查询到的基础备份数量。
+     * Get 查询到的数据备份数量。 
+     * @return TotalCount 查询到的数据备份数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询到的基础备份数量。
-     * @param TotalCount 查询到的基础备份数量。
+     * Set 查询到的数据备份数量。
+     * @param TotalCount 查询到的数据备份数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 基础备份详细信息列表。 
-     * @return BaseBackupSet 基础备份详细信息列表。
+     * Get 数据备份详细信息列表。 
+     * @return BaseBackupSet 数据备份详细信息列表。
      */
     public BaseBackup [] getBaseBackupSet() {
         return this.BaseBackupSet;
     }
 
     /**
-     * Set 基础备份详细信息列表。
-     * @param BaseBackupSet 基础备份详细信息列表。
+     * Set 数据备份详细信息列表。
+     * @param BaseBackupSet 数据备份详细信息列表。
      */
     public void setBaseBackupSet(BaseBackup [] BaseBackupSet) {
         this.BaseBackupSet = BaseBackupSet;

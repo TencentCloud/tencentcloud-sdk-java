@@ -31,8 +31,8 @@ public class DescribeIp6AddressesRequest extends AbstractModel {
     private String [] Ip6AddressIds;
 
     /**
-    * 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
-<li> address-ip - String - 是否必填：否 - （过滤条件）按照 EIP 的 IP 地址过滤。</li>
+    * 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
+<li> address-ip - String - 是否必填：否 - （过滤条件）按照 IPV6 的 IP 地址过滤。</li>
 <li> network-interface-id - String - 是否必填：否 - （过滤条件）按照弹性网卡的唯一ID过滤。</li>
     */
     @SerializedName("Filters")
@@ -70,11 +70,11 @@ public class DescribeIp6AddressesRequest extends AbstractModel {
     }
 
     /**
-     * Get 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
-<li> address-ip - String - 是否必填：否 - （过滤条件）按照 EIP 的 IP 地址过滤。</li>
+     * Get 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
+<li> address-ip - String - 是否必填：否 - （过滤条件）按照 IPV6 的 IP 地址过滤。</li>
 <li> network-interface-id - String - 是否必填：否 - （过滤条件）按照弹性网卡的唯一ID过滤。</li> 
-     * @return Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
-<li> address-ip - String - 是否必填：否 - （过滤条件）按照 EIP 的 IP 地址过滤。</li>
+     * @return Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
+<li> address-ip - String - 是否必填：否 - （过滤条件）按照 IPV6 的 IP 地址过滤。</li>
 <li> network-interface-id - String - 是否必填：否 - （过滤条件）按照弹性网卡的唯一ID过滤。</li>
      */
     public Filter [] getFilters() {
@@ -82,11 +82,11 @@ public class DescribeIp6AddressesRequest extends AbstractModel {
     }
 
     /**
-     * Set 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
-<li> address-ip - String - 是否必填：否 - （过滤条件）按照 EIP 的 IP 地址过滤。</li>
+     * Set 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
+<li> address-ip - String - 是否必填：否 - （过滤条件）按照 IPV6 的 IP 地址过滤。</li>
 <li> network-interface-id - String - 是否必填：否 - （过滤条件）按照弹性网卡的唯一ID过滤。</li>
-     * @param Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
-<li> address-ip - String - 是否必填：否 - （过滤条件）按照 EIP 的 IP 地址过滤。</li>
+     * @param Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。参数不支持同时指定`AddressIds`和`Filters`。详细的过滤条件如下：
+<li> address-ip - String - 是否必填：否 - （过滤条件）按照 IPV6 的 IP 地址过滤。</li>
 <li> network-interface-id - String - 是否必填：否 - （过滤条件）按照弹性网卡的唯一ID过滤。</li>
      */
     public void setFilters(Filter [] Filters) {

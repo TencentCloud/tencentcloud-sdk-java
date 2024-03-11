@@ -83,6 +83,105 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *查询资源目录筛选条件
+     * @param req DescribeAllocateConditionsRequest
+     * @return DescribeAllocateConditionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocateConditionsResponse DescribeAllocateConditions(DescribeAllocateConditionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocateConditions", DescribeAllocateConditionsResponse.class);
+    }
+
+    /**
+     *查询分账账单筛选条件
+     * @param req DescribeAllocationBillConditionsRequest
+     * @return DescribeAllocationBillConditionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationBillConditionsResponse DescribeAllocationBillConditions(DescribeAllocationBillConditionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationBillConditions", DescribeAllocationBillConditionsResponse.class);
+    }
+
+    /**
+     *查询分账账单明细
+     * @param req DescribeAllocationBillDetailRequest
+     * @return DescribeAllocationBillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationBillDetailResponse DescribeAllocationBillDetail(DescribeAllocationBillDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationBillDetail", DescribeAllocationBillDetailResponse.class);
+    }
+
+    /**
+     *查询分账账单月概览
+     * @param req DescribeAllocationMonthOverviewRequest
+     * @return DescribeAllocationMonthOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationMonthOverviewResponse DescribeAllocationMonthOverview(DescribeAllocationMonthOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationMonthOverview", DescribeAllocationMonthOverviewResponse.class);
+    }
+
+    /**
+     *查询分账账单日概览
+     * @param req DescribeAllocationOverviewRequest
+     * @return DescribeAllocationOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationOverviewResponse DescribeAllocationOverview(DescribeAllocationOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationOverview", DescribeAllocationOverviewResponse.class);
+    }
+
+    /**
+     *查询分账账单按产品汇总
+     * @param req DescribeAllocationSummaryByBusinessRequest
+     * @return DescribeAllocationSummaryByBusinessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationSummaryByBusinessResponse DescribeAllocationSummaryByBusiness(DescribeAllocationSummaryByBusinessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationSummaryByBusiness", DescribeAllocationSummaryByBusinessResponse.class);
+    }
+
+    /**
+     *查询分账账单按组件汇总
+     * @param req DescribeAllocationSummaryByItemRequest
+     * @return DescribeAllocationSummaryByItemResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationSummaryByItemResponse DescribeAllocationSummaryByItem(DescribeAllocationSummaryByItemRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationSummaryByItem", DescribeAllocationSummaryByItemResponse.class);
+    }
+
+    /**
+     *查询分账账单按资源汇总
+     * @param req DescribeAllocationSummaryByResourceRequest
+     * @return DescribeAllocationSummaryByResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationSummaryByResourceResponse DescribeAllocationSummaryByResource(DescribeAllocationSummaryByResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationSummaryByResource", DescribeAllocationSummaryByResourceResponse.class);
+    }
+
+    /**
+     *查询分账账单费用趋势
+     * @param req DescribeAllocationTrendByMonthRequest
+     * @return DescribeAllocationTrendByMonthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonth(DescribeAllocationTrendByMonthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationTrendByMonth", DescribeAllocationTrendByMonthResponse.class);
+    }
+
+    /**
      *获取账单明细数据。
 注意事项：
 1.在请求接口时，由于网络不稳定或其它异常，可能会导致请求失败。如果您遇到这种情况，我们建议您在接口请求失败时，手动发起重试操作，这样可以更好地确保您的接口请求能够成功执行。
@@ -337,6 +436,17 @@ public class BillingClient extends AbstractClient{
     public DescribeDosageDetailListResponse DescribeDosageDetailList(DescribeDosageDetailListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDosageDetailList", DescribeDosageDetailListResponse.class);
+    }
+
+    /**
+     *查询分账账单资源归集汇总
+     * @param req DescribeGatherResourceRequest
+     * @return DescribeGatherResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatherResourceResponse DescribeGatherResource(DescribeGatherResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGatherResource", DescribeGatherResourceResponse.class);
     }
 
     /**

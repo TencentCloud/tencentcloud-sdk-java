@@ -31,7 +31,7 @@ public class DescribeAccountsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 帐号列表详细信息。
+    * 账号列表详细信息。
     */
     @SerializedName("Details")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAccountsResponse extends AbstractModel {
     }
 
     /**
-     * Get 帐号列表详细信息。 
-     * @return Details 帐号列表详细信息。
+     * Get 账号列表详细信息。 
+     * @return Details 账号列表详细信息。
      */
     public AccountInfo [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 帐号列表详细信息。
-     * @param Details 帐号列表详细信息。
+     * Set 账号列表详细信息。
+     * @param Details 账号列表详细信息。
      */
     public void setDetails(AccountInfo [] Details) {
         this.Details = Details;

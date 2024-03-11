@@ -83,7 +83,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateBaseBackup）用于创建实例的全量备份。
+     *本接口（CreateBaseBackup）用于创建实例的数据备份。
      * @param req CreateBaseBackupRequest
      * @return CreateBaseBackupResponse
      * @throws TencentCloudSDKException
@@ -184,7 +184,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteBaseBackup）用于删除实例指定全量备份。
+     *本接口（DeleteBaseBackup）用于删除实例指定数据备份。
      * @param req DeleteBaseBackupRequest
      * @return DeleteBaseBackupResponse
      * @throws TencentCloudSDKException
@@ -338,7 +338,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeBaseBackups）用于查询基础备份列表。
+     *本接口（DescribeBaseBackups）用于查询数据备份列表。
      * @param req DescribeBaseBackupsRequest
      * @return DescribeBaseBackupsResponse
      * @throws TencentCloudSDKException
@@ -725,7 +725,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModifyAccountRemark）用于修改帐号备注。
+     *本接口（ModifyAccountRemark）用于修改账号备注。
      * @param req ModifyAccountRemarkRequest
      * @return ModifyAccountRemarkResponse
      * @throws TencentCloudSDKException
@@ -758,7 +758,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModifyBaseBackupExpireTime）用于修改实例指定全量备份的过期时间。
+     *本接口（ModifyBaseBackupExpireTime）用于修改实例指定数据备份的过期时间。
      * @param req ModifyBaseBackupExpireTimeRequest
      * @return ModifyBaseBackupExpireTimeResponse
      * @throws TencentCloudSDKException

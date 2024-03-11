@@ -80,6 +80,13 @@ public class CreateFileSystemRequest extends AbstractModel {
     private GooseFSxBuildElement GooseFSxBuildElements;
 
     /**
+    * 客户端集群所属的安全组
+    */
+    @SerializedName("SecurityGroupId")
+    @Expose
+    private String SecurityGroupId;
+
+    /**
      * Get 文件系统类型, 可填goosefs和goosefsx 
      * @return Type 文件系统类型, 可填goosefs和goosefsx
      */
@@ -207,6 +214,22 @@ public class CreateFileSystemRequest extends AbstractModel {
         this.GooseFSxBuildElements = GooseFSxBuildElements;
     }
 
+    /**
+     * Get 客户端集群所属的安全组 
+     * @return SecurityGroupId 客户端集群所属的安全组
+     */
+    public String getSecurityGroupId() {
+        return this.SecurityGroupId;
+    }
+
+    /**
+     * Set 客户端集群所属的安全组
+     * @param SecurityGroupId 客户端集群所属的安全组
+     */
+    public void setSecurityGroupId(String SecurityGroupId) {
+        this.SecurityGroupId = SecurityGroupId;
+    }
+
     public CreateFileSystemRequest() {
     }
 
@@ -242,6 +265,9 @@ public class CreateFileSystemRequest extends AbstractModel {
         if (source.GooseFSxBuildElements != null) {
             this.GooseFSxBuildElements = new GooseFSxBuildElement(source.GooseFSxBuildElements);
         }
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class CreateFileSystemRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "GooseFSxBuildElements.", this.GooseFSxBuildElements);
+        this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
 
     }
 }

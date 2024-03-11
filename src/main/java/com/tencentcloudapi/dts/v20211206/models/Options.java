@@ -104,6 +104,22 @@ public class Options extends AbstractModel {
     private Long AutoRetryTimeRangeMinutes;
 
     /**
+    * 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FilterBeginCommit")
+    @Expose
+    private Boolean FilterBeginCommit;
+
+    /**
+    * 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FilterCheckpoint")
+    @Expose
+    private Boolean FilterCheckpoint;
+
+    /**
      * Get 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
@@ -303,6 +319,46 @@ public class Options extends AbstractModel {
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
     }
 
+    /**
+     * Get 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getFilterBeginCommit() {
+        return this.FilterBeginCommit;
+    }
+
+    /**
+     * Set 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilterBeginCommit(Boolean FilterBeginCommit) {
+        this.FilterBeginCommit = FilterBeginCommit;
+    }
+
+    /**
+     * Get 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getFilterCheckpoint() {
+        return this.FilterCheckpoint;
+    }
+
+    /**
+     * Set 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilterCheckpoint(Boolean FilterCheckpoint) {
+        this.FilterCheckpoint = FilterCheckpoint;
+    }
+
     public Options() {
     }
 
@@ -347,6 +403,12 @@ public class Options extends AbstractModel {
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
+        if (source.FilterBeginCommit != null) {
+            this.FilterBeginCommit = new Boolean(source.FilterBeginCommit);
+        }
+        if (source.FilterCheckpoint != null) {
+            this.FilterCheckpoint = new Boolean(source.FilterCheckpoint);
+        }
     }
 
 
@@ -364,6 +426,8 @@ public class Options extends AbstractModel {
         this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
         this.setParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+        this.setParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
+        this.setParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
 
     }
 }

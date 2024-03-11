@@ -24,141 +24,169 @@ import java.util.HashMap;
 public class TopicRule extends AbstractModel {
 
     /**
-    * topic名
+    * topic名。单topic时，所有的TopicName必须相同
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * topic分区策略，如 自定义topic：Random（随机投递），集中投递到单Topic：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)
+    * topic分区策略，自定义topic时支持：Random（随机投递），集中投递到单Topic时支持：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)、PartitionByCols(按列分区)
     */
     @SerializedName("PartitionType")
     @Expose
     private String PartitionType;
 
     /**
-    * 库名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中必须有一项为‘Default’
+    * 库名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中最后一项必须为‘Default’
     */
     @SerializedName("DbMatchMode")
     @Expose
     private String DbMatchMode;
 
     /**
-    * 库名，仅“自定义topic”时，DbMatchMode=Regular生效
+    * 库名，DbMatchMode=Regular时生效
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * 表名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中必须有一项为‘Default’
+    * 表名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中最后一项必须为‘Default’
     */
     @SerializedName("TableMatchMode")
     @Expose
     private String TableMatchMode;
 
     /**
-    * 表名，仅“自定义topic”时，TableMatchMode=Regular生效
+    * 表名，仅TableMatchMode=Regular时生效
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-     * Get topic名 
-     * @return TopicName topic名
+    * 按列分区时需要选择配置列名，可以选择多列
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Columns")
+    @Expose
+    private String [] Columns;
+
+    /**
+     * Get topic名。单topic时，所有的TopicName必须相同 
+     * @return TopicName topic名。单topic时，所有的TopicName必须相同
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set topic名
-     * @param TopicName topic名
+     * Set topic名。单topic时，所有的TopicName必须相同
+     * @param TopicName topic名。单topic时，所有的TopicName必须相同
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get topic分区策略，如 自定义topic：Random（随机投递），集中投递到单Topic：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区) 
-     * @return PartitionType topic分区策略，如 自定义topic：Random（随机投递），集中投递到单Topic：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)
+     * Get topic分区策略，自定义topic时支持：Random（随机投递），集中投递到单Topic时支持：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)、PartitionByCols(按列分区) 
+     * @return PartitionType topic分区策略，自定义topic时支持：Random（随机投递），集中投递到单Topic时支持：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)、PartitionByCols(按列分区)
      */
     public String getPartitionType() {
         return this.PartitionType;
     }
 
     /**
-     * Set topic分区策略，如 自定义topic：Random（随机投递），集中投递到单Topic：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)
-     * @param PartitionType topic分区策略，如 自定义topic：Random（随机投递），集中投递到单Topic：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)
+     * Set topic分区策略，自定义topic时支持：Random（随机投递），集中投递到单Topic时支持：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)、PartitionByCols(按列分区)
+     * @param PartitionType topic分区策略，自定义topic时支持：Random（随机投递），集中投递到单Topic时支持：AllInPartitionZero（全部投递至partition0）、PartitionByTable(按表名分区)、PartitionByTableAndKey(按表名加主键分区)、PartitionByCols(按列分区)
      */
     public void setPartitionType(String PartitionType) {
         this.PartitionType = PartitionType;
     }
 
     /**
-     * Get 库名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中必须有一项为‘Default’ 
-     * @return DbMatchMode 库名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中必须有一项为‘Default’
+     * Get 库名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中最后一项必须为‘Default’ 
+     * @return DbMatchMode 库名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中最后一项必须为‘Default’
      */
     public String getDbMatchMode() {
         return this.DbMatchMode;
     }
 
     /**
-     * Set 库名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中必须有一项为‘Default’
-     * @param DbMatchMode 库名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中必须有一项为‘Default’
+     * Set 库名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中最后一项必须为‘Default’
+     * @param DbMatchMode 库名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余库)，数组中最后一项必须为‘Default’
      */
     public void setDbMatchMode(String DbMatchMode) {
         this.DbMatchMode = DbMatchMode;
     }
 
     /**
-     * Get 库名，仅“自定义topic”时，DbMatchMode=Regular生效 
-     * @return DbName 库名，仅“自定义topic”时，DbMatchMode=Regular生效
+     * Get 库名，DbMatchMode=Regular时生效 
+     * @return DbName 库名，DbMatchMode=Regular时生效
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 库名，仅“自定义topic”时，DbMatchMode=Regular生效
-     * @param DbName 库名，仅“自定义topic”时，DbMatchMode=Regular生效
+     * Set 库名，DbMatchMode=Regular时生效
+     * @param DbName 库名，DbMatchMode=Regular时生效
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 表名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中必须有一项为‘Default’ 
-     * @return TableMatchMode 表名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中必须有一项为‘Default’
+     * Get 表名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中最后一项必须为‘Default’ 
+     * @return TableMatchMode 表名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中最后一项必须为‘Default’
      */
     public String getTableMatchMode() {
         return this.TableMatchMode;
     }
 
     /**
-     * Set 表名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中必须有一项为‘Default’
-     * @param TableMatchMode 表名匹配规则，仅“自定义topic”生效，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中必须有一项为‘Default’
+     * Set 表名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中最后一项必须为‘Default’
+     * @param TableMatchMode 表名匹配规则，如Regular（正则匹配）, Default(不符合匹配规则的剩余表)，数组中最后一项必须为‘Default’
      */
     public void setTableMatchMode(String TableMatchMode) {
         this.TableMatchMode = TableMatchMode;
     }
 
     /**
-     * Get 表名，仅“自定义topic”时，TableMatchMode=Regular生效 
-     * @return TableName 表名，仅“自定义topic”时，TableMatchMode=Regular生效
+     * Get 表名，仅TableMatchMode=Regular时生效 
+     * @return TableName 表名，仅TableMatchMode=Regular时生效
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set 表名，仅“自定义topic”时，TableMatchMode=Regular生效
-     * @param TableName 表名，仅“自定义topic”时，TableMatchMode=Regular生效
+     * Set 表名，仅TableMatchMode=Regular时生效
+     * @param TableName 表名，仅TableMatchMode=Regular时生效
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
+    }
+
+    /**
+     * Get 按列分区时需要选择配置列名，可以选择多列
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Columns 按列分区时需要选择配置列名，可以选择多列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getColumns() {
+        return this.Columns;
+    }
+
+    /**
+     * Set 按列分区时需要选择配置列名，可以选择多列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Columns 按列分区时需要选择配置列名，可以选择多列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColumns(String [] Columns) {
+        this.Columns = Columns;
     }
 
     public TopicRule() {
@@ -187,6 +215,12 @@ public class TopicRule extends AbstractModel {
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.Columns != null) {
+            this.Columns = new String[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new String(source.Columns[i]);
+            }
+        }
     }
 
 
@@ -200,6 +234,7 @@ public class TopicRule extends AbstractModel {
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "TableMatchMode", this.TableMatchMode);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamArraySimple(map, prefix + "Columns.", this.Columns);
 
     }
 }

@@ -31,7 +31,7 @@ public class ModifyAddressAttributeRequest extends AbstractModel {
     private String AddressId;
 
     /**
-    * 修改后的 EIP 名称。长度上限为20个字符。
+    * 修改后的 EIP 名称。长度上限为128个字符。
     */
     @SerializedName("AddressName")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyAddressAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改后的 EIP 名称。长度上限为20个字符。 
-     * @return AddressName 修改后的 EIP 名称。长度上限为20个字符。
+     * Get 修改后的 EIP 名称。长度上限为128个字符。 
+     * @return AddressName 修改后的 EIP 名称。长度上限为128个字符。
      */
     public String getAddressName() {
         return this.AddressName;
     }
 
     /**
-     * Set 修改后的 EIP 名称。长度上限为20个字符。
-     * @param AddressName 修改后的 EIP 名称。长度上限为20个字符。
+     * Set 修改后的 EIP 名称。长度上限为128个字符。
+     * @param AddressName 修改后的 EIP 名称。长度上限为128个字符。
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;

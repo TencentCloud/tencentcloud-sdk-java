@@ -66,6 +66,34 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
     private Boolean QueryDlqMsg;
 
     /**
+    * 查询死信时该值为true，只对Rocketmq有效
+    */
+    @SerializedName("QueryDeadLetterMessage")
+    @Expose
+    private Boolean QueryDeadLetterMessage;
+
+    /**
+    * 分页Offset
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 分页Limit
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 根据消费组名称过滤消费详情
+    */
+    @SerializedName("FilterTrackGroup")
+    @Expose
+    private String FilterTrackGroup;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -148,7 +176,9 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
     /**
      * Get 查询死信时该值为true，只对Rocketmq有效 
      * @return QueryDlqMsg 查询死信时该值为true，只对Rocketmq有效
+     * @deprecated
      */
+    @Deprecated
     public Boolean getQueryDlqMsg() {
         return this.QueryDlqMsg;
     }
@@ -156,9 +186,75 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
     /**
      * Set 查询死信时该值为true，只对Rocketmq有效
      * @param QueryDlqMsg 查询死信时该值为true，只对Rocketmq有效
+     * @deprecated
      */
+    @Deprecated
     public void setQueryDlqMsg(Boolean QueryDlqMsg) {
         this.QueryDlqMsg = QueryDlqMsg;
+    }
+
+    /**
+     * Get 查询死信时该值为true，只对Rocketmq有效 
+     * @return QueryDeadLetterMessage 查询死信时该值为true，只对Rocketmq有效
+     */
+    public Boolean getQueryDeadLetterMessage() {
+        return this.QueryDeadLetterMessage;
+    }
+
+    /**
+     * Set 查询死信时该值为true，只对Rocketmq有效
+     * @param QueryDeadLetterMessage 查询死信时该值为true，只对Rocketmq有效
+     */
+    public void setQueryDeadLetterMessage(Boolean QueryDeadLetterMessage) {
+        this.QueryDeadLetterMessage = QueryDeadLetterMessage;
+    }
+
+    /**
+     * Get 分页Offset 
+     * @return Offset 分页Offset
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页Offset
+     * @param Offset 分页Offset
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 分页Limit 
+     * @return Limit 分页Limit
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页Limit
+     * @param Limit 分页Limit
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 根据消费组名称过滤消费详情 
+     * @return FilterTrackGroup 根据消费组名称过滤消费详情
+     */
+    public String getFilterTrackGroup() {
+        return this.FilterTrackGroup;
+    }
+
+    /**
+     * Set 根据消费组名称过滤消费详情
+     * @param FilterTrackGroup 根据消费组名称过滤消费详情
+     */
+    public void setFilterTrackGroup(String FilterTrackGroup) {
+        this.FilterTrackGroup = FilterTrackGroup;
     }
 
     public DescribeRocketMQMsgRequest() {
@@ -187,6 +283,18 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
         if (source.QueryDlqMsg != null) {
             this.QueryDlqMsg = new Boolean(source.QueryDlqMsg);
         }
+        if (source.QueryDeadLetterMessage != null) {
+            this.QueryDeadLetterMessage = new Boolean(source.QueryDeadLetterMessage);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.FilterTrackGroup != null) {
+            this.FilterTrackGroup = new String(source.FilterTrackGroup);
+        }
     }
 
 
@@ -200,6 +308,10 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MsgId", this.MsgId);
         this.setParamSimple(map, prefix + "PulsarMsgId", this.PulsarMsgId);
         this.setParamSimple(map, prefix + "QueryDlqMsg", this.QueryDlqMsg);
+        this.setParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "FilterTrackGroup", this.FilterTrackGroup);
 
     }
 }

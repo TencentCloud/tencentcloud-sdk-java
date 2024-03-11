@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ReturnNormalAddressesRequest extends AbstractModel {
 
     /**
-    * EIP 的 IP 地址,示例：101.35.139.183
+    * 普通公网IP 的 IP 地址,示例：101.35.139.183
     */
     @SerializedName("AddressIps")
     @Expose
     private String [] AddressIps;
 
     /**
-     * Get EIP 的 IP 地址,示例：101.35.139.183 
-     * @return AddressIps EIP 的 IP 地址,示例：101.35.139.183
+     * Get 普通公网IP 的 IP 地址,示例：101.35.139.183 
+     * @return AddressIps 普通公网IP 的 IP 地址,示例：101.35.139.183
      */
     public String [] getAddressIps() {
         return this.AddressIps;
     }
 
     /**
-     * Set EIP 的 IP 地址,示例：101.35.139.183
-     * @param AddressIps EIP 的 IP 地址,示例：101.35.139.183
+     * Set 普通公网IP 的 IP 地址,示例：101.35.139.183
+     * @param AddressIps 普通公网IP 的 IP 地址,示例：101.35.139.183
      */
     public void setAddressIps(String [] AddressIps) {
         this.AddressIps = AddressIps;

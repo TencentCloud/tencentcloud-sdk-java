@@ -930,6 +930,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *从腾讯云可观测平台拉取公网指标监控数据，目前仅支持客户端到 LB 的入带宽和出宽带指标。
+     * @param req DescribeRocketMQPublicAccessMonitorDataRequest
+     * @return DescribeRocketMQPublicAccessMonitorDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQPublicAccessMonitorDataResponse DescribeRocketMQPublicAccessMonitorData(DescribeRocketMQPublicAccessMonitorDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQPublicAccessMonitorData", DescribeRocketMQPublicAccessMonitorDataResponse.class);
+    }
+
+    /**
      *接口用于查询RocketMQ实例的公网接入信息
      * @param req DescribeRocketMQPublicAccessPointRequest
      * @return DescribeRocketMQPublicAccessPointResponse

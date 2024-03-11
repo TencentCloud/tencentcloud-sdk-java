@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WeChatAccountInfo extends AbstractModel {
 
     /**
-    * 微信的OpenID/UnionID 。
+    * 微信的OpenId/UnionId。
     */
     @SerializedName("WeChatOpenId")
     @Expose
@@ -70,24 +70,24 @@ public class WeChatAccountInfo extends AbstractModel {
     private String MobilePhone;
 
     /**
-    * 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+    * 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-     * Get 微信的OpenID/UnionID 。 
-     * @return WeChatOpenId 微信的OpenID/UnionID 。
+     * Get 微信的OpenId/UnionId。 
+     * @return WeChatOpenId 微信的OpenId/UnionId。
      */
     public String getWeChatOpenId() {
         return this.WeChatOpenId;
     }
 
     /**
-     * Set 微信的OpenID/UnionID 。
-     * @param WeChatOpenId 微信的OpenID/UnionID 。
+     * Set 微信的OpenId/UnionId。
+     * @param WeChatOpenId 微信的OpenId/UnionId。
      */
     public void setWeChatOpenId(String WeChatOpenId) {
         this.WeChatOpenId = WeChatOpenId;
@@ -190,20 +190,20 @@ public class WeChatAccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。 
-     * @return DeviceId 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+     * Get 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。 
+     * @return DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
-     * @param DeviceId 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+     * Set 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+     * @param DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;

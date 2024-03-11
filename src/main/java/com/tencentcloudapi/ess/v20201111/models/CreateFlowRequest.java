@@ -64,6 +64,7 @@ public class CreateFlowRequest extends AbstractModel {
 
     /**
     * 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
+此合同类型需要跟模板配置的合同类型保持一致。
     */
     @SerializedName("FlowType")
     @Expose
@@ -295,8 +296,10 @@ public class CreateFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。 
+     * Get 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
+此合同类型需要跟模板配置的合同类型保持一致。 
      * @return FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
+此合同类型需要跟模板配置的合同类型保持一致。
      */
     public String getFlowType() {
         return this.FlowType;
@@ -304,7 +307,9 @@ public class CreateFlowRequest extends AbstractModel {
 
     /**
      * Set 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
+此合同类型需要跟模板配置的合同类型保持一致。
      * @param FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
+此合同类型需要跟模板配置的合同类型保持一致。
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;

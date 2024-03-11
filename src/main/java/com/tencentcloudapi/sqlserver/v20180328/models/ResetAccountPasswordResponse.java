@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResetAccountPasswordResponse extends AbstractModel {
 
     /**
-    * 修改帐号密码的异步任务流程ID
+    * 修改账号密码的异步任务流程ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class ResetAccountPasswordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改帐号密码的异步任务流程ID 
-     * @return FlowId 修改帐号密码的异步任务流程ID
+     * Get 修改账号密码的异步任务流程ID 
+     * @return FlowId 修改账号密码的异步任务流程ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 修改帐号密码的异步任务流程ID
-     * @param FlowId 修改帐号密码的异步任务流程ID
+     * Set 修改账号密码的异步任务流程ID
+     * @param FlowId 修改账号密码的异步任务流程ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

@@ -359,6 +359,22 @@ Modify 集群变更中；
     private Long CaseSensitive;
 
     /**
+    * 用户是否可以绑定安全组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsWhiteSGs")
+    @Expose
+    private Boolean IsWhiteSGs;
+
+    /**
+    * 已绑定的安全组信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BindSGs")
+    @Expose
+    private String [] BindSGs;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1210,6 +1226,46 @@ Modify 集群变更中；
         this.CaseSensitive = CaseSensitive;
     }
 
+    /**
+     * Get 用户是否可以绑定安全组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsWhiteSGs 用户是否可以绑定安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsWhiteSGs() {
+        return this.IsWhiteSGs;
+    }
+
+    /**
+     * Set 用户是否可以绑定安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsWhiteSGs 用户是否可以绑定安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsWhiteSGs(Boolean IsWhiteSGs) {
+        this.IsWhiteSGs = IsWhiteSGs;
+    }
+
+    /**
+     * Get 已绑定的安全组信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BindSGs 已绑定的安全组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getBindSGs() {
+        return this.BindSGs;
+    }
+
+    /**
+     * Set 已绑定的安全组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BindSGs 已绑定的安全组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBindSGs(String [] BindSGs) {
+        this.BindSGs = BindSGs;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1347,6 +1403,15 @@ Modify 集群变更中；
         if (source.CaseSensitive != null) {
             this.CaseSensitive = new Long(source.CaseSensitive);
         }
+        if (source.IsWhiteSGs != null) {
+            this.IsWhiteSGs = new Boolean(source.IsWhiteSGs);
+        }
+        if (source.BindSGs != null) {
+            this.BindSGs = new String[source.BindSGs.length];
+            for (int i = 0; i < source.BindSGs.length; i++) {
+                this.BindSGs[i] = new String(source.BindSGs[i]);
+            }
+        }
     }
 
 
@@ -1395,6 +1460,8 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "RestartTimeout", this.RestartTimeout);
         this.setParamSimple(map, prefix + "GraceShutdownWaitSeconds", this.GraceShutdownWaitSeconds);
         this.setParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
+        this.setParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
+        this.setParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
 
     }
 }

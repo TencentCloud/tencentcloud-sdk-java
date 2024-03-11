@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyImageAttributeRequest extends AbstractModel {
 
     /**
-    * 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
+    * 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。</li>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
+    * 设置新的镜像名称；必须满足下列限制 <li> 不得超过60个字符。</li><li> 镜像名称不能与已有镜像重复。</li>
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * 设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
+    * 设置新的镜像描述；必须满足下列限制： <li> 不得超过 256 个字符。</li>
     */
     @SerializedName("ImageDescription")
     @Expose
     private String ImageDescription;
 
     /**
-     * Get 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。 
-     * @return ImageId 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
+     * Get 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。</li> 
+     * @return ImageId 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。</li>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
-     * @param ImageId 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
+     * Set 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。</li>
+     * @param ImageId 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。</li>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。 
-     * @return ImageName 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
+     * Get 设置新的镜像名称；必须满足下列限制 <li> 不得超过60个字符。</li><li> 镜像名称不能与已有镜像重复。</li> 
+     * @return ImageName 设置新的镜像名称；必须满足下列限制 <li> 不得超过60个字符。</li><li> 镜像名称不能与已有镜像重复。</li>
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
-     * @param ImageName 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
+     * Set 设置新的镜像名称；必须满足下列限制 <li> 不得超过60个字符。</li><li> 镜像名称不能与已有镜像重复。</li>
+     * @param ImageName 设置新的镜像名称；必须满足下列限制 <li> 不得超过60个字符。</li><li> 镜像名称不能与已有镜像重复。</li>
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get 设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。 
-     * @return ImageDescription 设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
+     * Get 设置新的镜像描述；必须满足下列限制： <li> 不得超过 256 个字符。</li> 
+     * @return ImageDescription 设置新的镜像描述；必须满足下列限制： <li> 不得超过 256 个字符。</li>
      */
     public String getImageDescription() {
         return this.ImageDescription;
     }
 
     /**
-     * Set 设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
-     * @param ImageDescription 设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
+     * Set 设置新的镜像描述；必须满足下列限制： <li> 不得超过 256 个字符。</li>
+     * @param ImageDescription 设置新的镜像描述；必须满足下列限制： <li> 不得超过 256 个字符。</li>
      */
     public void setImageDescription(String ImageDescription) {
         this.ImageDescription = ImageDescription;

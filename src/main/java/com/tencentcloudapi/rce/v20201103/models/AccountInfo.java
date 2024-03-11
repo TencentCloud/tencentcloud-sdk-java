@@ -24,25 +24,25 @@ import java.util.HashMap;
 public class AccountInfo extends AbstractModel {
 
     /**
-    * 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+    * 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号（imei/imeiMD5/idfa/idfaMd5）
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
     */
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
 
     /**
-    * QQ账号信息，AccountType是1时，该字段必填。
+    * QQ账号信息，AccountType是"1"时，该字段必填。
     */
     @SerializedName("QQAccount")
     @Expose
     private QQAccountInfo QQAccount;
 
     /**
-    * 微信账号信息，AccountType是2时，该字段必填。
+    * 微信账号信息，AccountType是"2"时，该字段必填。
     */
     @SerializedName("WeChatAccount")
     @Expose
@@ -56,64 +56,64 @@ public class AccountInfo extends AbstractModel {
     private OtherAccountInfo OtherAccount;
 
     /**
-     * Get 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+     * Get 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号（imei/imeiMD5/idfa/idfaMd5）
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值 
-     * @return AccountType 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。 
+     * @return AccountType 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号（imei/imeiMD5/idfa/idfaMd5）
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+     * Set 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号（imei/imeiMD5/idfa/idfaMd5）
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
-     * @param AccountType 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+     * @param AccountType 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号（imei/imeiMD5/idfa/idfaMd5）
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get QQ账号信息，AccountType是1时，该字段必填。 
-     * @return QQAccount QQ账号信息，AccountType是1时，该字段必填。
+     * Get QQ账号信息，AccountType是"1"时，该字段必填。 
+     * @return QQAccount QQ账号信息，AccountType是"1"时，该字段必填。
      */
     public QQAccountInfo getQQAccount() {
         return this.QQAccount;
     }
 
     /**
-     * Set QQ账号信息，AccountType是1时，该字段必填。
-     * @param QQAccount QQ账号信息，AccountType是1时，该字段必填。
+     * Set QQ账号信息，AccountType是"1"时，该字段必填。
+     * @param QQAccount QQ账号信息，AccountType是"1"时，该字段必填。
      */
     public void setQQAccount(QQAccountInfo QQAccount) {
         this.QQAccount = QQAccount;
     }
 
     /**
-     * Get 微信账号信息，AccountType是2时，该字段必填。 
-     * @return WeChatAccount 微信账号信息，AccountType是2时，该字段必填。
+     * Get 微信账号信息，AccountType是"2"时，该字段必填。 
+     * @return WeChatAccount 微信账号信息，AccountType是"2"时，该字段必填。
      */
     public WeChatAccountInfo getWeChatAccount() {
         return this.WeChatAccount;
     }
 
     /**
-     * Set 微信账号信息，AccountType是2时，该字段必填。
-     * @param WeChatAccount 微信账号信息，AccountType是2时，该字段必填。
+     * Set 微信账号信息，AccountType是"2"时，该字段必填。
+     * @param WeChatAccount 微信账号信息，AccountType是"2"时，该字段必填。
      */
     public void setWeChatAccount(WeChatAccountInfo WeChatAccount) {
         this.WeChatAccount = WeChatAccount;

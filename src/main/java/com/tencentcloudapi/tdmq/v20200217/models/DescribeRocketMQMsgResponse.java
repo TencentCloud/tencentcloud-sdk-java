@@ -59,7 +59,7 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     private String ProducerAddr;
 
     /**
-    * 消费组消费情况
+    * 消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageTracks")
@@ -73,6 +73,13 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     @SerializedName("ShowTopicName")
     @Expose
     private String ShowTopicName;
+
+    /**
+    * 消费组消费情况列表总数
+    */
+    @SerializedName("MessageTracksCount")
+    @Expose
+    private Long MessageTracksCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -162,9 +169,9 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     }
 
     /**
-     * Get 消费组消费情况
+     * Get 消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MessageTracks 消费组消费情况
+     * @return MessageTracks 消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RocketMQMessageTrack [] getMessageTracks() {
@@ -172,9 +179,9 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
     }
 
     /**
-     * Set 消费组消费情况
+     * Set 消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MessageTracks 消费组消费情况
+     * @param MessageTracks 消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageTracks(RocketMQMessageTrack [] MessageTracks) {
@@ -199,6 +206,22 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
      */
     public void setShowTopicName(String ShowTopicName) {
         this.ShowTopicName = ShowTopicName;
+    }
+
+    /**
+     * Get 消费组消费情况列表总数 
+     * @return MessageTracksCount 消费组消费情况列表总数
+     */
+    public Long getMessageTracksCount() {
+        return this.MessageTracksCount;
+    }
+
+    /**
+     * Set 消费组消费情况列表总数
+     * @param MessageTracksCount 消费组消费情况列表总数
+     */
+    public void setMessageTracksCount(Long MessageTracksCount) {
+        this.MessageTracksCount = MessageTracksCount;
     }
 
     /**
@@ -249,6 +272,9 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
         if (source.ShowTopicName != null) {
             this.ShowTopicName = new String(source.ShowTopicName);
         }
+        if (source.MessageTracksCount != null) {
+            this.MessageTracksCount = new Long(source.MessageTracksCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -266,6 +292,7 @@ public class DescribeRocketMQMsgResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ProducerAddr", this.ProducerAddr);
         this.setParamArrayObj(map, prefix + "MessageTracks.", this.MessageTracks);
         this.setParamSimple(map, prefix + "ShowTopicName", this.ShowTopicName);
+        this.setParamSimple(map, prefix + "MessageTracksCount", this.MessageTracksCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

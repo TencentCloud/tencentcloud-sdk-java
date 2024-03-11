@@ -47,7 +47,7 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel {
     /**
     * 源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。
+<li>origins：源站组。</li>
     */
     @SerializedName("OriginType")
     @Expose
@@ -176,10 +176,10 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel {
     /**
      * Get 源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。 
+<li>origins：源站组。</li> 
      * @return OriginType 源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。
+<li>origins：源站组。</li>
      */
     public String getOriginType() {
         return this.OriginType;
@@ -188,10 +188,10 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel {
     /**
      * Set 源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。
+<li>origins：源站组。</li>
      * @param OriginType 源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。
+<li>origins：源站组。</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;

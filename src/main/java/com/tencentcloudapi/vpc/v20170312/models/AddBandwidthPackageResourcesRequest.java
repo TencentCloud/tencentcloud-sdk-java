@@ -38,7 +38,7 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
-    * 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+    * 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
     */
     @SerializedName("NetworkType")
     @Expose
@@ -91,16 +91,16 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel {
     }
 
     /**
-     * Get 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。 
-     * @return NetworkType 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+     * Get 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。 
+     * @return NetworkType 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
-     * @param NetworkType 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+     * Set 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
+     * @param NetworkType 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;

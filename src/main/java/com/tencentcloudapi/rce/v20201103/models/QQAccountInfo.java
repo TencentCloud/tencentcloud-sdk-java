@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QQAccountInfo extends AbstractModel {
 
     /**
-    * QQ的OpenID。
+    * QQ的OpenId。
     */
     @SerializedName("QQOpenId")
     @Expose
@@ -53,24 +53,25 @@ public class QQAccountInfo extends AbstractModel {
     private String MobilePhone;
 
     /**
-    * 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+    * 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-     * Get QQ的OpenID。 
-     * @return QQOpenId QQ的OpenID。
+     * Get QQ的OpenId。 
+     * @return QQOpenId QQ的OpenId。
      */
     public String getQQOpenId() {
         return this.QQOpenId;
     }
 
     /**
-     * Set QQ的OpenID。
-     * @param QQOpenId QQ的OpenID。
+     * Set QQ的OpenId。
+     * @param QQOpenId QQ的OpenId。
      */
     public void setQQOpenId(String QQOpenId) {
         this.QQOpenId = QQOpenId;
@@ -129,20 +130,24 @@ public class QQAccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。 
-     * @return DeviceId 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+     * Get 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+ 
+     * @return DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
-     * @param DeviceId 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+     * Set 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+
+     * @param DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;

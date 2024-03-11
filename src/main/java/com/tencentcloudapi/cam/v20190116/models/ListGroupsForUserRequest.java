@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListGroupsForUserRequest extends AbstractModel {
 
     /**
-    * 子用户 UID
+    * 子用户 UID，入参Uid和SubUin二选一
     */
     @SerializedName("Uid")
     @Expose
@@ -45,23 +45,23 @@ public class ListGroupsForUserRequest extends AbstractModel {
     private Long Page;
 
     /**
-    * 子账号UIN
+    * 子账号UIN，入参Uid和SubUin二选一
     */
     @SerializedName("SubUin")
     @Expose
     private Long SubUin;
 
     /**
-     * Get 子用户 UID 
-     * @return Uid 子用户 UID
+     * Get 子用户 UID，入参Uid和SubUin二选一 
+     * @return Uid 子用户 UID，入参Uid和SubUin二选一
      */
     public Long getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 子用户 UID
-     * @param Uid 子用户 UID
+     * Set 子用户 UID，入参Uid和SubUin二选一
+     * @param Uid 子用户 UID，入参Uid和SubUin二选一
      */
     public void setUid(Long Uid) {
         this.Uid = Uid;
@@ -100,16 +100,16 @@ public class ListGroupsForUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 子账号UIN 
-     * @return SubUin 子账号UIN
+     * Get 子账号UIN，入参Uid和SubUin二选一 
+     * @return SubUin 子账号UIN，入参Uid和SubUin二选一
      */
     public Long getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set 子账号UIN
-     * @param SubUin 子账号UIN
+     * Set 子账号UIN，入参Uid和SubUin二选一
+     * @param SubUin 子账号UIN，入参Uid和SubUin二选一
      */
     public void setSubUin(Long SubUin) {
         this.SubUin = SubUin;

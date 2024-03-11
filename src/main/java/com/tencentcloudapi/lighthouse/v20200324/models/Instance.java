@@ -231,6 +231,13 @@ FAILED：表示操作失败
     private String InstanceRestrictState;
 
     /**
+    * 创建实例后自动执行TAT命令的调用ID。
+    */
+    @SerializedName("InitInvocationId")
+    @Expose
+    private String InitInvocationId;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -734,6 +741,22 @@ FAILED：表示操作失败
         this.InstanceRestrictState = InstanceRestrictState;
     }
 
+    /**
+     * Get 创建实例后自动执行TAT命令的调用ID。 
+     * @return InitInvocationId 创建实例后自动执行TAT命令的调用ID。
+     */
+    public String getInitInvocationId() {
+        return this.InitInvocationId;
+    }
+
+    /**
+     * Set 创建实例后自动执行TAT命令的调用ID。
+     * @param InitInvocationId 创建实例后自动执行TAT命令的调用ID。
+     */
+    public void setInitInvocationId(String InitInvocationId) {
+        this.InitInvocationId = InitInvocationId;
+    }
+
     public Instance() {
     }
 
@@ -832,6 +855,9 @@ FAILED：表示操作失败
         if (source.InstanceRestrictState != null) {
             this.InstanceRestrictState = new String(source.InstanceRestrictState);
         }
+        if (source.InitInvocationId != null) {
+            this.InitInvocationId = new String(source.InitInvocationId);
+        }
     }
 
 
@@ -866,6 +892,7 @@ FAILED：表示操作失败
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
+        this.setParamSimple(map, prefix + "InitInvocationId", this.InitInvocationId);
 
     }
 }

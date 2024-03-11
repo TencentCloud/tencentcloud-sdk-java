@@ -136,7 +136,7 @@ public class SlowLogData extends AbstractModel {
     private String TsMin;
 
     /**
-    * 帐号
+    * 账号
     */
     @SerializedName("User")
     @Expose
@@ -415,16 +415,16 @@ public class SlowLogData extends AbstractModel {
     }
 
     /**
-     * Get 帐号 
-     * @return User 帐号
+     * Get 账号 
+     * @return User 账号
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 帐号
-     * @param User 帐号
+     * Set 账号
+     * @param User 账号
      */
     public void setUser(String User) {
         this.User = User;

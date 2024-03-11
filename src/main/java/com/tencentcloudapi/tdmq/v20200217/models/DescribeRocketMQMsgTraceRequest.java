@@ -66,6 +66,13 @@ public class DescribeRocketMQMsgTraceRequest extends AbstractModel {
     private Boolean QueryDLQMsg;
 
     /**
+    * 查询死信时该值为true
+    */
+    @SerializedName("QueryDeadLetterMessage")
+    @Expose
+    private String QueryDeadLetterMessage;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -148,7 +155,9 @@ public class DescribeRocketMQMsgTraceRequest extends AbstractModel {
     /**
      * Get 查询死信时该值为true 
      * @return QueryDLQMsg 查询死信时该值为true
+     * @deprecated
      */
+    @Deprecated
     public Boolean getQueryDLQMsg() {
         return this.QueryDLQMsg;
     }
@@ -156,9 +165,27 @@ public class DescribeRocketMQMsgTraceRequest extends AbstractModel {
     /**
      * Set 查询死信时该值为true
      * @param QueryDLQMsg 查询死信时该值为true
+     * @deprecated
      */
+    @Deprecated
     public void setQueryDLQMsg(Boolean QueryDLQMsg) {
         this.QueryDLQMsg = QueryDLQMsg;
+    }
+
+    /**
+     * Get 查询死信时该值为true 
+     * @return QueryDeadLetterMessage 查询死信时该值为true
+     */
+    public String getQueryDeadLetterMessage() {
+        return this.QueryDeadLetterMessage;
+    }
+
+    /**
+     * Set 查询死信时该值为true
+     * @param QueryDeadLetterMessage 查询死信时该值为true
+     */
+    public void setQueryDeadLetterMessage(String QueryDeadLetterMessage) {
+        this.QueryDeadLetterMessage = QueryDeadLetterMessage;
     }
 
     public DescribeRocketMQMsgTraceRequest() {
@@ -187,6 +214,9 @@ public class DescribeRocketMQMsgTraceRequest extends AbstractModel {
         if (source.QueryDLQMsg != null) {
             this.QueryDLQMsg = new Boolean(source.QueryDLQMsg);
         }
+        if (source.QueryDeadLetterMessage != null) {
+            this.QueryDeadLetterMessage = new String(source.QueryDeadLetterMessage);
+        }
     }
 
 
@@ -200,6 +230,7 @@ public class DescribeRocketMQMsgTraceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MsgId", this.MsgId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "QueryDLQMsg", this.QueryDLQMsg);
+        this.setParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
 
     }
 }

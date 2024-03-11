@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBaseBackupResponse extends AbstractModel {
 
     /**
-    * 基础备份集ID
+    * 数据备份集ID
     */
     @SerializedName("BaseBackupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateBaseBackupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基础备份集ID 
-     * @return BaseBackupId 基础备份集ID
+     * Get 数据备份集ID 
+     * @return BaseBackupId 数据备份集ID
      */
     public String getBaseBackupId() {
         return this.BaseBackupId;
     }
 
     /**
-     * Set 基础备份集ID
-     * @param BaseBackupId 基础备份集ID
+     * Set 数据备份集ID
+     * @param BaseBackupId 数据备份集ID
      */
     public void setBaseBackupId(String BaseBackupId) {
         this.BaseBackupId = BaseBackupId;

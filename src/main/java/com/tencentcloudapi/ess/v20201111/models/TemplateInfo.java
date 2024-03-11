@@ -187,6 +187,19 @@ public class TemplateInfo extends AbstractModel {
     private String PreviewUrl;
 
     /**
+    * 用户自定义合同类型。
+
+返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserFlowType")
+    @Expose
+    private UserFlowType UserFlowType;
+
+    /**
     * 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -654,6 +667,46 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
+     * Get 用户自定义合同类型。
+
+返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserFlowType 用户自定义合同类型。
+
+返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UserFlowType getUserFlowType() {
+        return this.UserFlowType;
+    }
+
+    /**
+     * Set 用户自定义合同类型。
+
+返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserFlowType 用户自定义合同类型。
+
+返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserFlowType(UserFlowType UserFlowType) {
+        this.UserFlowType = UserFlowType;
+    }
+
+    /**
      * Get 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TemplateVersion 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
@@ -855,6 +908,9 @@ public class TemplateInfo extends AbstractModel {
         if (source.PreviewUrl != null) {
             this.PreviewUrl = new String(source.PreviewUrl);
         }
+        if (source.UserFlowType != null) {
+            this.UserFlowType = new UserFlowType(source.UserFlowType);
+        }
         if (source.TemplateVersion != null) {
             this.TemplateVersion = new String(source.TemplateVersion);
         }
@@ -902,6 +958,7 @@ public class TemplateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
+        this.setParamObj(map, prefix + "UserFlowType.", this.UserFlowType);
         this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
         this.setParamSimple(map, prefix + "Published", this.Published);
         this.setParamSimple(map, prefix + "ShareTemplateId", this.ShareTemplateId);

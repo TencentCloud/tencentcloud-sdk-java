@@ -33,8 +33,8 @@ public class CreateKeyPairRequest extends AbstractModel {
     /**
     * 密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
     */
     @SerializedName("ProjectId")
     @Expose
@@ -66,12 +66,12 @@ public class CreateKeyPairRequest extends AbstractModel {
     /**
      * Get 密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。 
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li> 
      * @return ProjectId 密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -80,12 +80,12 @@ public class CreateKeyPairRequest extends AbstractModel {
     /**
      * Set 密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
      * @param ProjectId 密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

@@ -59,6 +59,13 @@ public class ModifyJobRequest extends AbstractModel {
     private String WorkSpaceId;
 
     /**
+    * 作业描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -138,6 +145,22 @@ public class ModifyJobRequest extends AbstractModel {
         this.WorkSpaceId = WorkSpaceId;
     }
 
+    /**
+     * Get 作业描述 
+     * @return Description 作业描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 作业描述
+     * @param Description 作业描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public ModifyJobRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyJobRequest extends AbstractModel {
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "TargetFolderId", this.TargetFolderId);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

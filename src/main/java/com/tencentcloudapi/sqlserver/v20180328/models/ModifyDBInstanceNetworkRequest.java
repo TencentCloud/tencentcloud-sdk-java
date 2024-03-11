@@ -59,6 +59,14 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
     private String Vip;
 
     /**
+    * 目标节点，0-修改主节点网络，1-修改备节点网络，默认取值0
+
+    */
+    @SerializedName("DRNetwork")
+    @Expose
+    private Long DRNetwork;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -138,6 +146,26 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         this.Vip = Vip;
     }
 
+    /**
+     * Get 目标节点，0-修改主节点网络，1-修改备节点网络，默认取值0
+ 
+     * @return DRNetwork 目标节点，0-修改主节点网络，1-修改备节点网络，默认取值0
+
+     */
+    public Long getDRNetwork() {
+        return this.DRNetwork;
+    }
+
+    /**
+     * Set 目标节点，0-修改主节点网络，1-修改备节点网络，默认取值0
+
+     * @param DRNetwork 目标节点，0-修改主节点网络，1-修改备节点网络，默认取值0
+
+     */
+    public void setDRNetwork(Long DRNetwork) {
+        this.DRNetwork = DRNetwork;
+    }
+
     public ModifyDBInstanceNetworkRequest() {
     }
 
@@ -161,6 +189,9 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.DRNetwork != null) {
+            this.DRNetwork = new Long(source.DRNetwork);
+        }
     }
 
 
@@ -173,6 +204,7 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NewSubnetId", this.NewSubnetId);
         this.setParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "DRNetwork", this.DRNetwork);
 
     }
 }
