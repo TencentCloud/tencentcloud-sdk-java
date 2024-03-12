@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AssignProjectResponse extends AbstractModel {
 
     /**
-    * 返回的异步任务ID列表
+    * 返回的异步任务ID列表。
     */
     @SerializedName("FlowIds")
     @Expose
     private Long [] FlowIds;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * Get 返回的异步任务ID列表 
-     * @return FlowIds 返回的异步任务ID列表
+     * Get 返回的异步任务ID列表。 
+     * @return FlowIds 返回的异步任务ID列表。
      */
     public Long [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 返回的异步任务ID列表
-     * @param FlowIds 返回的异步任务ID列表
+     * Set 返回的异步任务ID列表。
+     * @param FlowIds 返回的异步任务ID列表。
      */
     public void setFlowIds(Long [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;

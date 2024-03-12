@@ -31,7 +31,7 @@ public class SetPasswordRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例账户名称
+    * 实例账户名。初始化实例密码，本参数传mongouser。
     */
     @SerializedName("UserName")
     @Expose
@@ -61,16 +61,16 @@ public class SetPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例账户名称 
-     * @return UserName 实例账户名称
+     * Get 实例账户名。初始化实例密码，本参数传mongouser。 
+     * @return UserName 实例账户名。初始化实例密码，本参数传mongouser。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 实例账户名称
-     * @param UserName 实例账户名称
+     * Set 实例账户名。初始化实例密码，本参数传mongouser。
+     * @param UserName 实例账户名。初始化实例密码，本参数传mongouser。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

@@ -94,6 +94,17 @@ public class CdcClient extends AbstractClient{
     }
 
     /**
+     *查询本地专用集群云硬盘仓库信息
+     * @param req DescribeDedicatedClusterCbsStatisticsRequest
+     * @return DescribeDedicatedClusterCbsStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDedicatedClusterCbsStatisticsResponse DescribeDedicatedClusterCbsStatistics(DescribeDedicatedClusterCbsStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDedicatedClusterCbsStatistics", DescribeDedicatedClusterCbsStatisticsResponse.class);
+    }
+
+    /**
      *查询专用集群内cos的容量信息
      * @param req DescribeDedicatedClusterCosCapacityRequest
      * @return DescribeDedicatedClusterCosCapacityResponse

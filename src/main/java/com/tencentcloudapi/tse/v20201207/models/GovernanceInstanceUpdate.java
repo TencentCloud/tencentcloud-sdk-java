@@ -38,13 +38,6 @@ public class GovernanceInstanceUpdate extends AbstractModel {
     private String Namespace;
 
     /**
-    * 治理中心服务实例id。
-    */
-    @SerializedName("Id")
-    @Expose
-    private String Id;
-
-    /**
     * 实例负载均衡权重信息。不填默认为100。
     */
     @SerializedName("Weight")
@@ -108,6 +101,13 @@ public class GovernanceInstanceUpdate extends AbstractModel {
     private Long Ttl;
 
     /**
+    * 治理中心服务实例id。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 元数据信息。
     */
     @SerializedName("Metadatas")
@@ -144,22 +144,6 @@ public class GovernanceInstanceUpdate extends AbstractModel {
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
-    }
-
-    /**
-     * Get 治理中心服务实例id。 
-     * @return Id 治理中心服务实例id。
-     */
-    public String getId() {
-        return this.Id;
-    }
-
-    /**
-     * Set 治理中心服务实例id。
-     * @param Id 治理中心服务实例id。
-     */
-    public void setId(String Id) {
-        this.Id = Id;
     }
 
     /**
@@ -307,6 +291,22 @@ public class GovernanceInstanceUpdate extends AbstractModel {
     }
 
     /**
+     * Get 治理中心服务实例id。 
+     * @return Id 治理中心服务实例id。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 治理中心服务实例id。
+     * @param Id 治理中心服务实例id。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
      * Get 元数据信息。 
      * @return Metadatas 元数据信息。
      */
@@ -336,9 +336,6 @@ public class GovernanceInstanceUpdate extends AbstractModel {
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
-        if (source.Id != null) {
-            this.Id = new String(source.Id);
-        }
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
@@ -366,6 +363,9 @@ public class GovernanceInstanceUpdate extends AbstractModel {
         if (source.Ttl != null) {
             this.Ttl = new Long(source.Ttl);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Metadatas != null) {
             this.Metadatas = new Metadata[source.Metadatas.length];
             for (int i = 0; i < source.Metadatas.length; i++) {
@@ -381,7 +381,6 @@ public class GovernanceInstanceUpdate extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
-        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "Healthy", this.Healthy);
         this.setParamSimple(map, prefix + "Isolate", this.Isolate);
@@ -391,6 +390,7 @@ public class GovernanceInstanceUpdate extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
         this.setParamSimple(map, prefix + "Ttl", this.Ttl);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
 
     }
