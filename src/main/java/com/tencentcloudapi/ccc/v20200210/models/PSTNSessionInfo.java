@@ -66,21 +66,21 @@ public class PSTNSessionInfo extends AbstractModel {
     private String AcceptTimestamp;
 
     /**
-    * 坐席邮箱
+    * 座席邮箱
     */
     @SerializedName("StaffEmail")
     @Expose
     private String StaffEmail;
 
     /**
-    * 坐席工号
+    * 座席工号
     */
     @SerializedName("StaffNumber")
     @Expose
     private String StaffNumber;
 
     /**
-    * 坐席状态 inProgress 进行中
+    * 座席状态 inProgress 进行中
     */
     @SerializedName("SessionStatus")
     @Expose
@@ -211,48 +211,48 @@ public class PSTNSessionInfo extends AbstractModel {
     }
 
     /**
-     * Get 坐席邮箱 
-     * @return StaffEmail 坐席邮箱
+     * Get 座席邮箱 
+     * @return StaffEmail 座席邮箱
      */
     public String getStaffEmail() {
         return this.StaffEmail;
     }
 
     /**
-     * Set 坐席邮箱
-     * @param StaffEmail 坐席邮箱
+     * Set 座席邮箱
+     * @param StaffEmail 座席邮箱
      */
     public void setStaffEmail(String StaffEmail) {
         this.StaffEmail = StaffEmail;
     }
 
     /**
-     * Get 坐席工号 
-     * @return StaffNumber 坐席工号
+     * Get 座席工号 
+     * @return StaffNumber 座席工号
      */
     public String getStaffNumber() {
         return this.StaffNumber;
     }
 
     /**
-     * Set 坐席工号
-     * @param StaffNumber 坐席工号
+     * Set 座席工号
+     * @param StaffNumber 座席工号
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
     }
 
     /**
-     * Get 坐席状态 inProgress 进行中 
-     * @return SessionStatus 坐席状态 inProgress 进行中
+     * Get 座席状态 inProgress 进行中 
+     * @return SessionStatus 座席状态 inProgress 进行中
      */
     public String getSessionStatus() {
         return this.SessionStatus;
     }
 
     /**
-     * Set 坐席状态 inProgress 进行中
-     * @param SessionStatus 坐席状态 inProgress 进行中
+     * Set 座席状态 inProgress 进行中
+     * @param SessionStatus 座席状态 inProgress 进行中
      */
     public void setSessionStatus(String SessionStatus) {
         this.SessionStatus = SessionStatus;

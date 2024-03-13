@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ErrStaffItem extends AbstractModel {
 
     /**
-    * 坐席邮箱地址
+    * 座席邮箱地址
     */
     @SerializedName("StaffEmail")
     @Expose
@@ -45,16 +45,16 @@ public class ErrStaffItem extends AbstractModel {
     private String Message;
 
     /**
-     * Get 坐席邮箱地址 
-     * @return StaffEmail 坐席邮箱地址
+     * Get 座席邮箱地址 
+     * @return StaffEmail 座席邮箱地址
      */
     public String getStaffEmail() {
         return this.StaffEmail;
     }
 
     /**
-     * Set 坐席邮箱地址
-     * @param StaffEmail 坐席邮箱地址
+     * Set 座席邮箱地址
+     * @param StaffEmail 座席邮箱地址
      */
     public void setStaffEmail(String StaffEmail) {
         this.StaffEmail = StaffEmail;

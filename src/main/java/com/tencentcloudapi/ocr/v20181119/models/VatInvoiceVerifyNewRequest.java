@@ -89,6 +89,15 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel {
     private Boolean EnableCommonElectronic;
 
     /**
+    * 是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
+    */
+    @SerializedName("EnableTodayInvoice")
+    @Expose
+    private Boolean EnableTodayInvoice;
+
+    /**
      * Get 发票号码，8位、20位（全电票） 
      * @return InvoiceNo 发票号码，8位、20位（全电票）
      */
@@ -240,6 +249,30 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel {
         this.EnableCommonElectronic = EnableCommonElectronic;
     }
 
+    /**
+     * Get 是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。 
+     * @return EnableTodayInvoice 是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
+     */
+    public Boolean getEnableTodayInvoice() {
+        return this.EnableTodayInvoice;
+    }
+
+    /**
+     * Set 是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
+     * @param EnableTodayInvoice 是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
+     */
+    public void setEnableTodayInvoice(Boolean EnableTodayInvoice) {
+        this.EnableTodayInvoice = EnableTodayInvoice;
+    }
+
     public VatInvoiceVerifyNewRequest() {
     }
 
@@ -275,6 +308,9 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel {
         if (source.EnableCommonElectronic != null) {
             this.EnableCommonElectronic = new Boolean(source.EnableCommonElectronic);
         }
+        if (source.EnableTodayInvoice != null) {
+            this.EnableTodayInvoice = new Boolean(source.EnableTodayInvoice);
+        }
     }
 
 
@@ -291,6 +327,7 @@ public class VatInvoiceVerifyNewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RegionCode", this.RegionCode);
         this.setParamSimple(map, prefix + "SellerTaxCode", this.SellerTaxCode);
         this.setParamSimple(map, prefix + "EnableCommonElectronic", this.EnableCommonElectronic);
+        this.setParamSimple(map, prefix + "EnableTodayInvoice", this.EnableTodayInvoice);
 
     }
 }

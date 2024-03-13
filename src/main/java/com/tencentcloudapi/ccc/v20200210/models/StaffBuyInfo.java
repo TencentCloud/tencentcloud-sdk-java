@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StaffBuyInfo extends AbstractModel {
 
     /**
-    * 购买坐席数量
+    * 购买座席数量
     */
     @SerializedName("Num")
     @Expose
@@ -53,16 +53,16 @@ public class StaffBuyInfo extends AbstractModel {
     private Long SipNum;
 
     /**
-     * Get 购买坐席数量 
-     * @return Num 购买坐席数量
+     * Get 购买座席数量 
+     * @return Num 购买座席数量
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set 购买坐席数量
-     * @param Num 购买坐席数量
+     * Set 购买座席数量
+     * @param Num 购买座席数量
      */
     public void setNum(Long Num) {
         this.Num = Num;

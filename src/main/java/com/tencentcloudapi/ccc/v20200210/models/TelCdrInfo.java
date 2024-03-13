@@ -74,7 +74,7 @@ public class TelCdrInfo extends AbstractModel {
     private String RecordId;
 
     /**
-    * 坐席信息
+    * 座席信息
     */
     @SerializedName("SeatUser")
     @Expose
@@ -95,7 +95,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -187,7 +187,7 @@ public class TelCdrInfo extends AbstractModel {
     private String [] IVRKeyPressed;
 
     /**
-    * 挂机方 seat 坐席 user 用户 system 系统
+    * 挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HungUpSide")
@@ -225,7 +225,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -508,16 +508,16 @@ public class TelCdrInfo extends AbstractModel {
     }
 
     /**
-     * Get 坐席信息 
-     * @return SeatUser 坐席信息
+     * Get 座席信息 
+     * @return SeatUser 座席信息
      */
     public SeatUserInfo getSeatUser() {
         return this.SeatUser;
     }
 
     /**
-     * Set 坐席信息
-     * @param SeatUser 坐席信息
+     * Set 座席信息
+     * @param SeatUser 座席信息
      */
     public void setSeatUser(SeatUserInfo SeatUser) {
         this.SeatUser = SeatUser;
@@ -538,7 +538,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -584,7 +584,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -636,7 +636,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -682,7 +682,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -852,9 +852,9 @@ public class TelCdrInfo extends AbstractModel {
     }
 
     /**
-     * Get 挂机方 seat 坐席 user 用户 system 系统
+     * Get 挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HungUpSide 挂机方 seat 坐席 user 用户 system 系统
+     * @return HungUpSide 挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHungUpSide() {
@@ -862,9 +862,9 @@ public class TelCdrInfo extends AbstractModel {
     }
 
     /**
-     * Set 挂机方 seat 坐席 user 用户 system 系统
+     * Set 挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HungUpSide 挂机方 seat 坐席 user 用户 system 系统
+     * @param HungUpSide 挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHungUpSide(String HungUpSide) {
@@ -926,7 +926,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -973,7 +973,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -1026,7 +1026,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -1073,7 +1073,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 

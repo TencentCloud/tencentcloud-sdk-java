@@ -40,8 +40,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
@@ -93,8 +93,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Operator 比较操作类型
 <  <=  ==  =>  > !=
@@ -104,8 +104,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
@@ -121,8 +121,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 比较操作类型
 <  <=  ==  =>  > !=
@@ -132,8 +132,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {

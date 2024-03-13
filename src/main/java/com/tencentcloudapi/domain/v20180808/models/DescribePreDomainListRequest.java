@@ -45,6 +45,13 @@ public class DescribePreDomainListRequest extends AbstractModel {
     private String EndTime;
 
     /**
+    * 用户指定上架时间筛选
+    */
+    @SerializedName("UpTime")
+    @Expose
+    private String UpTime;
+
+    /**
      * Get 页码 
      * @return Page 页码
      */
@@ -92,6 +99,22 @@ public class DescribePreDomainListRequest extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 用户指定上架时间筛选 
+     * @return UpTime 用户指定上架时间筛选
+     */
+    public String getUpTime() {
+        return this.UpTime;
+    }
+
+    /**
+     * Set 用户指定上架时间筛选
+     * @param UpTime 用户指定上架时间筛选
+     */
+    public void setUpTime(String UpTime) {
+        this.UpTime = UpTime;
+    }
+
     public DescribePreDomainListRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribePreDomainListRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.UpTime != null) {
+            this.UpTime = new String(source.UpTime);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribePreDomainListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "UpTime", this.UpTime);
 
     }
 }

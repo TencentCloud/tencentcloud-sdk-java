@@ -87,14 +87,14 @@ public class ExtensionInfo extends AbstractModel {
     private Boolean Register;
 
     /**
-    * 绑定坐席邮箱
+    * 绑定座席邮箱
     */
     @SerializedName("Relation")
     @Expose
     private String Relation;
 
     /**
-    * 绑定坐席名称
+    * 绑定座席名称
     */
     @SerializedName("RelationName")
     @Expose
@@ -245,32 +245,32 @@ public class ExtensionInfo extends AbstractModel {
     }
 
     /**
-     * Get 绑定坐席邮箱 
-     * @return Relation 绑定坐席邮箱
+     * Get 绑定座席邮箱 
+     * @return Relation 绑定座席邮箱
      */
     public String getRelation() {
         return this.Relation;
     }
 
     /**
-     * Set 绑定坐席邮箱
-     * @param Relation 绑定坐席邮箱
+     * Set 绑定座席邮箱
+     * @param Relation 绑定座席邮箱
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;
     }
 
     /**
-     * Get 绑定坐席名称 
-     * @return RelationName 绑定坐席名称
+     * Get 绑定座席名称 
+     * @return RelationName 绑定座席名称
      */
     public String getRelationName() {
         return this.RelationName;
     }
 
     /**
-     * Set 绑定坐席名称
-     * @param RelationName 绑定坐席名称
+     * Set 绑定座席名称
+     * @param RelationName 绑定座席名称
      */
     public void setRelationName(String RelationName) {
         this.RelationName = RelationName;

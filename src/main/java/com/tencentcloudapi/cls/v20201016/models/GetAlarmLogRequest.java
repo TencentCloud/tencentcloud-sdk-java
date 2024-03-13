@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetAlarmLogRequest extends AbstractModel {
 
     /**
-    * 要查询的执行详情的起始时间，Unix时间戳，单位ms
+    * 要查询的执行详情的起始时间，Unix时间戳，单位ms。
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 要查询的执行详情的结束时间，Unix时间戳，单位ms
+    * 要查询的执行详情的结束时间，Unix时间戳，单位ms。
     */
     @SerializedName("To")
     @Expose
@@ -56,56 +56,61 @@ public class GetAlarmLogRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+    * 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+    * 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+    * true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
 两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false
     */
     @SerializedName("UseNewAnalysis")
     @Expose
     private Boolean UseNewAnalysis;
 
     /**
-     * Get 要查询的执行详情的起始时间，Unix时间戳，单位ms 
-     * @return From 要查询的执行详情的起始时间，Unix时间戳，单位ms
+     * Get 要查询的执行详情的起始时间，Unix时间戳，单位ms。 
+     * @return From 要查询的执行详情的起始时间，Unix时间戳，单位ms。
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 要查询的执行详情的起始时间，Unix时间戳，单位ms
-     * @param From 要查询的执行详情的起始时间，Unix时间戳，单位ms
+     * Set 要查询的执行详情的起始时间，Unix时间戳，单位ms。
+     * @param From 要查询的执行详情的起始时间，Unix时间戳，单位ms。
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 要查询的执行详情的结束时间，Unix时间戳，单位ms 
-     * @return To 要查询的执行详情的结束时间，Unix时间戳，单位ms
+     * Get 要查询的执行详情的结束时间，Unix时间戳，单位ms。 
+     * @return To 要查询的执行详情的结束时间，Unix时间戳，单位ms。
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 要查询的执行详情的结束时间，Unix时间戳，单位ms
-     * @param To 要查询的执行详情的结束时间，Unix时间戳，单位ms
+     * Set 要查询的执行详情的结束时间，Unix时间戳，单位ms。
+     * @param To 要查询的执行详情的结束时间，Unix时间戳，单位ms。
      */
     public void setTo(Long To) {
         this.To = To;
@@ -160,60 +165,80 @@ public class GetAlarmLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情 
-     * @return Context 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+     * Get 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a> 
+     * @return Context 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
-     * @param Context 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+     * Set 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+     * @param Context 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc 
-     * @return Sort 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * Get 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a> 
+     * @return Sort 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
-     * @param Sort 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * Set 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
+     * @param Sort 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+     * Get true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。 
+     * @return UseNewAnalysis true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
 两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false 
-     * @return UseNewAnalysis 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
-两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false
      */
     public Boolean getUseNewAnalysis() {
         return this.UseNewAnalysis;
     }
 
     /**
-     * Set 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+     * Set true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
 两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false
-     * @param UseNewAnalysis 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+     * @param UseNewAnalysis true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
 两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false
      */
     public void setUseNewAnalysis(Boolean UseNewAnalysis) {
         this.UseNewAnalysis = UseNewAnalysis;

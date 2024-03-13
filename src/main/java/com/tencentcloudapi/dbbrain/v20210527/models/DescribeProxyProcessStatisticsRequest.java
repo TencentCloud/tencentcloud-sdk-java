@@ -59,7 +59,7 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+    * 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
     */
     @SerializedName("SortBy")
     @Expose
@@ -153,16 +153,16 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。 
-     * @return SortBy 按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+     * Get 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。 
+     * @return SortBy 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
-     * @param SortBy 按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+     * Set 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+     * @param SortBy 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;

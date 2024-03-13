@@ -66,6 +66,14 @@ public class LoginActionFlag extends AbstractModel {
     private Long Mail;
 
     /**
+    * u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("U2FToken")
+    @Expose
+    private Long U2FToken;
+
+    /**
      * Get 手机 
      * @return Phone 手机
      */
@@ -161,6 +169,26 @@ public class LoginActionFlag extends AbstractModel {
         this.Mail = Mail;
     }
 
+    /**
+     * Get u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return U2FToken u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getU2FToken() {
+        return this.U2FToken;
+    }
+
+    /**
+     * Set u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param U2FToken u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setU2FToken(Long U2FToken) {
+        this.U2FToken = U2FToken;
+    }
+
     public LoginActionFlag() {
     }
 
@@ -187,6 +215,9 @@ public class LoginActionFlag extends AbstractModel {
         if (source.Mail != null) {
             this.Mail = new Long(source.Mail);
         }
+        if (source.U2FToken != null) {
+            this.U2FToken = new Long(source.U2FToken);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class LoginActionFlag extends AbstractModel {
         this.setParamSimple(map, prefix + "Wechat", this.Wechat);
         this.setParamSimple(map, prefix + "Custom", this.Custom);
         this.setParamSimple(map, prefix + "Mail", this.Mail);
+        this.setParamSimple(map, prefix + "U2FToken", this.U2FToken);
 
     }
 }

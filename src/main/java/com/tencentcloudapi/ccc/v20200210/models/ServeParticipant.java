@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServeParticipant extends AbstractModel {
 
     /**
-    * 坐席邮箱
+    * 座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mail")
@@ -32,7 +32,7 @@ public class ServeParticipant extends AbstractModel {
     private String Mail;
 
     /**
-    * 坐席电话
+    * 座席电话
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phone")
@@ -64,7 +64,7 @@ public class ServeParticipant extends AbstractModel {
     private Long EndedTimestamp;
 
     /**
-    * 录音 ID，能够索引到坐席侧的录音
+    * 录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordId")
@@ -80,7 +80,7 @@ public class ServeParticipant extends AbstractModel {
     private String Type;
 
     /**
-    * 转接来源坐席信息
+    * 转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferFrom")
@@ -96,7 +96,7 @@ public class ServeParticipant extends AbstractModel {
     private String TransferFromType;
 
     /**
-    * 转接去向坐席信息
+    * 转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferTo")
@@ -168,9 +168,9 @@ public class ServeParticipant extends AbstractModel {
     private String CustomRecordURL;
 
     /**
-     * Get 坐席邮箱
+     * Get 座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mail 坐席邮箱
+     * @return Mail 座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMail() {
@@ -178,9 +178,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Set 坐席邮箱
+     * Set 座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mail 坐席邮箱
+     * @param Mail 座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMail(String Mail) {
@@ -188,9 +188,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Get 坐席电话
+     * Get 座席电话
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Phone 坐席电话
+     * @return Phone 座席电话
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhone() {
@@ -198,9 +198,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Set 坐席电话
+     * Set 座席电话
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Phone 坐席电话
+     * @param Phone 座席电话
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhone(String Phone) {
@@ -268,9 +268,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Get 录音 ID，能够索引到坐席侧的录音
+     * Get 录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordId 录音 ID，能够索引到坐席侧的录音
+     * @return RecordId 录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordId() {
@@ -278,9 +278,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Set 录音 ID，能够索引到坐席侧的录音
+     * Set 录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordId 录音 ID，能够索引到坐席侧的录音
+     * @param RecordId 录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordId(String RecordId) {
@@ -308,9 +308,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Get 转接来源坐席信息
+     * Get 转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransferFrom 转接来源坐席信息
+     * @return TransferFrom 转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferFrom() {
@@ -318,9 +318,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Set 转接来源坐席信息
+     * Set 转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransferFrom 转接来源坐席信息
+     * @param TransferFrom 转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferFrom(String TransferFrom) {
@@ -348,9 +348,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Get 转接去向坐席信息
+     * Get 转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransferTo 转接去向坐席信息
+     * @return TransferTo 转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransferTo() {
@@ -358,9 +358,9 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Set 转接去向坐席信息
+     * Set 转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransferTo 转接去向坐席信息
+     * @param TransferTo 转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferTo(String TransferTo) {

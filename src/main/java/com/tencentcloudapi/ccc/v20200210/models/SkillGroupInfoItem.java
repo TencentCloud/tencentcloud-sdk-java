@@ -53,7 +53,7 @@ public class SkillGroupInfoItem extends AbstractModel {
     private String RoutePolicy;
 
     /**
-    * 会话分配是否优先上次服务坐席
+    * 会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsingLastSeat")
@@ -153,9 +153,9 @@ public class SkillGroupInfoItem extends AbstractModel {
     }
 
     /**
-     * Get 会话分配是否优先上次服务坐席
+     * Get 会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UsingLastSeat 会话分配是否优先上次服务坐席
+     * @return UsingLastSeat 会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsingLastSeat() {
@@ -163,9 +163,9 @@ public class SkillGroupInfoItem extends AbstractModel {
     }
 
     /**
-     * Set 会话分配是否优先上次服务坐席
+     * Set 会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UsingLastSeat 会话分配是否优先上次服务坐席
+     * @param UsingLastSeat 会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsingLastSeat(Long UsingLastSeat) {

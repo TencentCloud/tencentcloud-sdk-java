@@ -73,14 +73,14 @@ public class PSTNSession extends AbstractModel {
     private Long AcceptTimestamp;
 
     /**
-    * 坐席邮箱
+    * 座席邮箱
     */
     @SerializedName("StaffEmail")
     @Expose
     private String StaffEmail;
 
     /**
-    * 坐席工号
+    * 座席工号
     */
     @SerializedName("StaffNumber")
     @Expose
@@ -89,7 +89,7 @@ public class PSTNSession extends AbstractModel {
     /**
     * 会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成
     */
@@ -245,32 +245,32 @@ finished 已完成
     }
 
     /**
-     * Get 坐席邮箱 
-     * @return StaffEmail 坐席邮箱
+     * Get 座席邮箱 
+     * @return StaffEmail 座席邮箱
      */
     public String getStaffEmail() {
         return this.StaffEmail;
     }
 
     /**
-     * Set 坐席邮箱
-     * @param StaffEmail 坐席邮箱
+     * Set 座席邮箱
+     * @param StaffEmail 座席邮箱
      */
     public void setStaffEmail(String StaffEmail) {
         this.StaffEmail = StaffEmail;
     }
 
     /**
-     * Get 坐席工号 
-     * @return StaffNumber 坐席工号
+     * Get 座席工号 
+     * @return StaffNumber 座席工号
      */
     public String getStaffNumber() {
         return this.StaffNumber;
     }
 
     /**
-     * Set 坐席工号
-     * @param StaffNumber 坐席工号
+     * Set 座席工号
+     * @param StaffNumber 座席工号
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
@@ -279,12 +279,12 @@ finished 已完成
     /**
      * Get 会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成 
      * @return SessionStatus 会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成
      */
@@ -295,12 +295,12 @@ finished 已完成
     /**
      * Set 会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成
      * @param SessionStatus 会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成
      */

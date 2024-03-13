@@ -40,6 +40,22 @@ public class InstanceLifeDetailDto extends AbstractModel {
     private String StartTime;
 
     /**
+    * 实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetailState")
+    @Expose
+    private String DetailState;
+
+    /**
+    * 该状态结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get 实例状态
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return State 实例状态
@@ -79,6 +95,46 @@ public class InstanceLifeDetailDto extends AbstractModel {
         this.StartTime = StartTime;
     }
 
+    /**
+     * Get 实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetailState 实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDetailState() {
+        return this.DetailState;
+    }
+
+    /**
+     * Set 实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailState 实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetailState(String DetailState) {
+        this.DetailState = DetailState;
+    }
+
+    /**
+     * Get 该状态结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndTime 该状态结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 该状态结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndTime 该状态结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public InstanceLifeDetailDto() {
     }
 
@@ -93,6 +149,12 @@ public class InstanceLifeDetailDto extends AbstractModel {
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
+        if (source.DetailState != null) {
+            this.DetailState = new String(source.DetailState);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -102,6 +164,8 @@ public class InstanceLifeDetailDto extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "DetailState", this.DetailState);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

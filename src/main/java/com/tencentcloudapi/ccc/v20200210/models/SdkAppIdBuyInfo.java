@@ -38,14 +38,14 @@ public class SdkAppIdBuyInfo extends AbstractModel {
     private String Name;
 
     /**
-    * 坐席购买数（还在有效期内）
+    * 座席购买数（还在有效期内）
     */
     @SerializedName("StaffBuyNum")
     @Expose
     private Long StaffBuyNum;
 
     /**
-    * 坐席购买列表 （还在有效期内）
+    * 座席购买列表 （还在有效期内）
     */
     @SerializedName("StaffBuyList")
     @Expose
@@ -99,32 +99,32 @@ public class SdkAppIdBuyInfo extends AbstractModel {
     }
 
     /**
-     * Get 坐席购买数（还在有效期内） 
-     * @return StaffBuyNum 坐席购买数（还在有效期内）
+     * Get 座席购买数（还在有效期内） 
+     * @return StaffBuyNum 座席购买数（还在有效期内）
      */
     public Long getStaffBuyNum() {
         return this.StaffBuyNum;
     }
 
     /**
-     * Set 坐席购买数（还在有效期内）
-     * @param StaffBuyNum 坐席购买数（还在有效期内）
+     * Set 座席购买数（还在有效期内）
+     * @param StaffBuyNum 座席购买数（还在有效期内）
      */
     public void setStaffBuyNum(Long StaffBuyNum) {
         this.StaffBuyNum = StaffBuyNum;
     }
 
     /**
-     * Get 坐席购买列表 （还在有效期内） 
-     * @return StaffBuyList 坐席购买列表 （还在有效期内）
+     * Get 座席购买列表 （还在有效期内） 
+     * @return StaffBuyList 座席购买列表 （还在有效期内）
      */
     public StaffBuyInfo [] getStaffBuyList() {
         return this.StaffBuyList;
     }
 
     /**
-     * Set 坐席购买列表 （还在有效期内）
-     * @param StaffBuyList 坐席购买列表 （还在有效期内）
+     * Set 座席购买列表 （还在有效期内）
+     * @param StaffBuyList 座席购买列表 （还在有效期内）
      */
     public void setStaffBuyList(StaffBuyInfo [] StaffBuyList) {
         this.StaffBuyList = StaffBuyList;

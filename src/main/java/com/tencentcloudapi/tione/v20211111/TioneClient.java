@@ -127,6 +127,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *生成Notebook访问链接
+     * @param req CreatePresignedNotebookUrlRequest
+     * @return CreatePresignedNotebookUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePresignedNotebookUrlResponse CreatePresignedNotebookUrl(CreatePresignedNotebookUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePresignedNotebookUrl", CreatePresignedNotebookUrlResponse.class);
+    }
+
+    /**
      *导入模型
      * @param req CreateTrainingModelRequest
      * @return CreateTrainingModelResponse

@@ -55,6 +55,17 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     private String AuthorizedOrganizationName;
 
     /**
+    * 是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+
+    */
+    @SerializedName("PlatformAppAuthorization")
+    @Expose
+    private Boolean PlatformAppAuthorization;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -142,6 +153,38 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.AuthorizedOrganizationName = AuthorizedOrganizationName;
     }
 
+    /**
+     * Get 是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+ 
+     * @return PlatformAppAuthorization 是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+
+     */
+    public Boolean getPlatformAppAuthorization() {
+        return this.PlatformAppAuthorization;
+    }
+
+    /**
+     * Set 是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+
+     * @param PlatformAppAuthorization 是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+
+     */
+    public void setPlatformAppAuthorization(Boolean PlatformAppAuthorization) {
+        this.PlatformAppAuthorization = PlatformAppAuthorization;
+    }
+
     public CreatePartnerAutoSignAuthUrlRequest() {
     }
 
@@ -159,6 +202,9 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         if (source.AuthorizedOrganizationName != null) {
             this.AuthorizedOrganizationName = new String(source.AuthorizedOrganizationName);
         }
+        if (source.PlatformAppAuthorization != null) {
+            this.PlatformAppAuthorization = new Boolean(source.PlatformAppAuthorization);
+        }
     }
 
 
@@ -169,6 +215,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
         this.setParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
+        this.setParamSimple(map, prefix + "PlatformAppAuthorization", this.PlatformAppAuthorization);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRuleTemplatesResponse extends AbstractModel {
 
     /**
-    * 规则模版列表
+    * 规则模板列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DescribeRuleTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规则模版列表
+     * Get 规则模板列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 规则模版列表
+     * @return Data 规则模板列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleTemplate [] getData() {
@@ -49,9 +49,9 @@ public class DescribeRuleTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Set 规则模版列表
+     * Set 规则模板列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 规则模版列表
+     * @param Data 规则模板列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(RuleTemplate [] Data) {

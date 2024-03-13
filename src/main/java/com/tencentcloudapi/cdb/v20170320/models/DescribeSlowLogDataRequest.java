@@ -80,7 +80,7 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-    * 偏移量，默认为0。
+    * 偏移量，默认为0，最大为9999。
     */
     @SerializedName("Offset")
     @Expose
@@ -229,16 +229,16 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get 偏移量，默认为0，最大为9999。 
+     * @return Offset 偏移量，默认为0，最大为9999。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set 偏移量，默认为0，最大为9999。
+     * @param Offset 偏移量，默认为0，最大为9999。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

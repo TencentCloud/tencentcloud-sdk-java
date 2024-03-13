@@ -55,7 +55,6 @@ public class GetAlarmLogResponse extends AbstractModel {
 
     /**
     * 执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,12 +169,10 @@ public class GetAlarmLogResponse extends AbstractModel {
 
     /**
      * Get 执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Results 执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,12 +183,10 @@ public class GetAlarmLogResponse extends AbstractModel {
 
     /**
      * Set 执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。

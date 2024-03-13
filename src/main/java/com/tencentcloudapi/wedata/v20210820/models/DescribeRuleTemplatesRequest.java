@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRuleTemplatesRequest extends AbstractModel {
 
     /**
-    * 模版类型 1.系统模版 2.自定义模版
+    * 模板类型 1.系统模板 2.自定义模板
     */
     @SerializedName("Type")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeRuleTemplatesRequest extends AbstractModel {
     private Long [] SourceEngineTypes;
 
     /**
-     * Get 模版类型 1.系统模版 2.自定义模版 
-     * @return Type 模版类型 1.系统模版 2.自定义模版
+     * Get 模板类型 1.系统模板 2.自定义模板 
+     * @return Type 模板类型 1.系统模板 2.自定义模板
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 模版类型 1.系统模版 2.自定义模版
-     * @param Type 模版类型 1.系统模版 2.自定义模版
+     * Set 模板类型 1.系统模板 2.自定义模板
+     * @param Type 模板类型 1.系统模板 2.自定义模板
      */
     public void setType(Long Type) {
         this.Type = Type;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StaffInfo extends AbstractModel {
 
     /**
-    * 坐席名称
+    * 座席名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,14 +32,14 @@ public class StaffInfo extends AbstractModel {
     private String Name;
 
     /**
-    * 坐席邮箱
+    * 座席邮箱
     */
     @SerializedName("Mail")
     @Expose
     private String Mail;
 
     /**
-    * 坐席电话号码
+    * 座席电话号码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phone")
@@ -47,7 +47,7 @@ public class StaffInfo extends AbstractModel {
     private String Phone;
 
     /**
-    * 坐席昵称
+    * 座席昵称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nick")
@@ -55,7 +55,7 @@ public class StaffInfo extends AbstractModel {
     private String Nick;
 
     /**
-    * 坐席工号
+    * 座席工号
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StaffNumber")
@@ -86,9 +86,9 @@ public class StaffInfo extends AbstractModel {
     private Long LastModifyTimestamp;
 
     /**
-     * Get 坐席名称
+     * Get 座席名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 坐席名称
+     * @return Name 座席名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -96,9 +96,9 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Set 坐席名称
+     * Set 座席名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 坐席名称
+     * @param Name 座席名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -106,25 +106,25 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Get 坐席邮箱 
-     * @return Mail 坐席邮箱
+     * Get 座席邮箱 
+     * @return Mail 座席邮箱
      */
     public String getMail() {
         return this.Mail;
     }
 
     /**
-     * Set 坐席邮箱
-     * @param Mail 坐席邮箱
+     * Set 座席邮箱
+     * @param Mail 座席邮箱
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
     }
 
     /**
-     * Get 坐席电话号码
+     * Get 座席电话号码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Phone 坐席电话号码
+     * @return Phone 座席电话号码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhone() {
@@ -132,9 +132,9 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Set 坐席电话号码
+     * Set 座席电话号码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Phone 坐席电话号码
+     * @param Phone 座席电话号码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhone(String Phone) {
@@ -142,9 +142,9 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Get 坐席昵称
+     * Get 座席昵称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nick 坐席昵称
+     * @return Nick 座席昵称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNick() {
@@ -152,9 +152,9 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Set 坐席昵称
+     * Set 座席昵称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nick 坐席昵称
+     * @param Nick 座席昵称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNick(String Nick) {
@@ -162,9 +162,9 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Get 坐席工号
+     * Get 座席工号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StaffNumber 坐席工号
+     * @return StaffNumber 座席工号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStaffNumber() {
@@ -172,9 +172,9 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Set 坐席工号
+     * Set 座席工号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StaffNumber 坐席工号
+     * @param StaffNumber 座席工号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStaffNumber(String StaffNumber) {

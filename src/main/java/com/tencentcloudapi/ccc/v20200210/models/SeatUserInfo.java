@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SeatUserInfo extends AbstractModel {
 
     /**
-    * 坐席名称
+    * 座席名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 坐席邮箱
+    * 座席邮箱
     */
     @SerializedName("Mail")
     @Expose
@@ -46,14 +46,14 @@ public class SeatUserInfo extends AbstractModel {
     private String StaffNumber;
 
     /**
-    * 坐席电话号码（带0086前缀）
+    * 座席电话号码（带0086前缀）
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * 坐席昵称
+    * 座席昵称
     */
     @SerializedName("Nick")
     @Expose
@@ -67,7 +67,7 @@ public class SeatUserInfo extends AbstractModel {
     private String UserId;
 
     /**
-    * 坐席关联的技能组列表
+    * 座席关联的技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupNameList")
@@ -86,32 +86,32 @@ else:自定义角色ID
     private Long Role;
 
     /**
-     * Get 坐席名称 
-     * @return Name 坐席名称
+     * Get 座席名称 
+     * @return Name 座席名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 坐席名称
-     * @param Name 坐席名称
+     * Set 座席名称
+     * @param Name 座席名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 坐席邮箱 
-     * @return Mail 坐席邮箱
+     * Get 座席邮箱 
+     * @return Mail 座席邮箱
      */
     public String getMail() {
         return this.Mail;
     }
 
     /**
-     * Set 坐席邮箱
-     * @param Mail 坐席邮箱
+     * Set 座席邮箱
+     * @param Mail 座席邮箱
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
@@ -138,32 +138,32 @@ else:自定义角色ID
     }
 
     /**
-     * Get 坐席电话号码（带0086前缀） 
-     * @return Phone 坐席电话号码（带0086前缀）
+     * Get 座席电话号码（带0086前缀） 
+     * @return Phone 座席电话号码（带0086前缀）
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 坐席电话号码（带0086前缀）
-     * @param Phone 坐席电话号码（带0086前缀）
+     * Set 座席电话号码（带0086前缀）
+     * @param Phone 座席电话号码（带0086前缀）
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 坐席昵称 
-     * @return Nick 坐席昵称
+     * Get 座席昵称 
+     * @return Nick 座席昵称
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set 坐席昵称
-     * @param Nick 坐席昵称
+     * Set 座席昵称
+     * @param Nick 座席昵称
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
@@ -186,9 +186,9 @@ else:自定义角色ID
     }
 
     /**
-     * Get 坐席关联的技能组列表
+     * Get 座席关联的技能组列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SkillGroupNameList 坐席关联的技能组列表
+     * @return SkillGroupNameList 座席关联的技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSkillGroupNameList() {
@@ -196,9 +196,9 @@ else:自定义角色ID
     }
 
     /**
-     * Set 坐席关联的技能组列表
+     * Set 座席关联的技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SkillGroupNameList 坐席关联的技能组列表
+     * @param SkillGroupNameList 座席关联的技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupNameList(String [] SkillGroupNameList) {

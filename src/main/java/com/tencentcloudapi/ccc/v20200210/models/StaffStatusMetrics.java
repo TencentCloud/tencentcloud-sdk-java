@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class StaffStatusMetrics extends AbstractModel {
 
     /**
-    * 坐席邮箱
+    * 座席邮箱
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-    * 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
+    * 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 坐席状态补充信息
+    * 座席状态补充信息
     */
     @SerializedName("StatusExtra")
     @Expose
@@ -138,48 +138,48 @@ public class StaffStatusMetrics extends AbstractModel {
     private Long LastStatusTimestamp;
 
     /**
-     * Get 坐席邮箱 
-     * @return Email 坐席邮箱
+     * Get 座席邮箱 
+     * @return Email 座席邮箱
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set 坐席邮箱
-     * @param Email 坐席邮箱
+     * Set 座席邮箱
+     * @param Email 座席邮箱
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线 
-     * @return Status 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
+     * Get 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线 
+     * @return Status 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
-     * @param Status 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
+     * Set 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
+     * @param Status 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 坐席状态补充信息 
-     * @return StatusExtra 坐席状态补充信息
+     * Get 座席状态补充信息 
+     * @return StatusExtra 座席状态补充信息
      */
     public StaffStatusExtra getStatusExtra() {
         return this.StatusExtra;
     }
 
     /**
-     * Set 坐席状态补充信息
-     * @param StatusExtra 坐席状态补充信息
+     * Set 座席状态补充信息
+     * @param StatusExtra 座席状态补充信息
      */
     public void setStatusExtra(StaffStatusExtra StatusExtra) {
         this.StatusExtra = StatusExtra;

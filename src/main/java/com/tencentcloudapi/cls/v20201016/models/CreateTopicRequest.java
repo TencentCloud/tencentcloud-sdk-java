@@ -97,7 +97,7 @@ public class CreateTopicRequest extends AbstractModel {
     private Long HotPeriod;
 
     /**
-    * 免鉴权开关。 false：关闭； true：开启。
+    * 免鉴权开关。 false：关闭； true：开启。默认为false。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
     */
     @SerializedName("IsWebTracking")
@@ -277,9 +277,9 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 免鉴权开关。 false：关闭； true：开启。
+     * Get 免鉴权开关。 false：关闭； true：开启。默认为false。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。 
-     * @return IsWebTracking 免鉴权开关。 false：关闭； true：开启。
+     * @return IsWebTracking 免鉴权开关。 false：关闭； true：开启。默认为false。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     public Boolean getIsWebTracking() {
@@ -287,9 +287,9 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Set 免鉴权开关。 false：关闭； true：开启。
+     * Set 免鉴权开关。 false：关闭； true：开启。默认为false。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-     * @param IsWebTracking 免鉴权开关。 false：关闭； true：开启。
+     * @param IsWebTracking 免鉴权开关。 false：关闭； true：开启。默认为false。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     public void setIsWebTracking(Boolean IsWebTracking) {

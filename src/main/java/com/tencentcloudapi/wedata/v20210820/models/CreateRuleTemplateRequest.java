@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateRuleTemplateRequest extends AbstractModel {
 
     /**
-    * 模版类型  1.系统模版   2.自定义模版
+    * 模板类型  1.系统模板   2.自定义模板
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 模版名称
+    * 模板名称
     */
     @SerializedName("Name")
     @Expose
@@ -94,32 +94,32 @@ public class CreateRuleTemplateRequest extends AbstractModel {
     private Boolean WhereFlag;
 
     /**
-     * Get 模版类型  1.系统模版   2.自定义模版 
-     * @return Type 模版类型  1.系统模版   2.自定义模版
+     * Get 模板类型  1.系统模板   2.自定义模板 
+     * @return Type 模板类型  1.系统模板   2.自定义模板
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 模版类型  1.系统模版   2.自定义模版
-     * @param Type 模版类型  1.系统模版   2.自定义模版
+     * Set 模板类型  1.系统模板   2.自定义模板
+     * @param Type 模板类型  1.系统模板   2.自定义模板
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 模版名称 
-     * @return Name 模版名称
+     * Get 模板名称 
+     * @return Name 模板名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模版名称
-     * @param Name 模版名称
+     * Set 模板名称
+     * @param Name 模板名称
      */
     public void setName(String Name) {
         this.Name = Name;

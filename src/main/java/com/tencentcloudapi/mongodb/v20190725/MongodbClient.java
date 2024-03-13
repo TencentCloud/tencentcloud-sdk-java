@@ -425,6 +425,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（SetInstanceMaintenance ） 用于设置实例维护时间窗。
+     * @param req SetInstanceMaintenanceRequest
+     * @return SetInstanceMaintenanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetInstanceMaintenanceResponse SetInstanceMaintenance(SetInstanceMaintenanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetInstanceMaintenance", SetInstanceMaintenanceResponse.class);
+    }
+
+    /**
      *本接口（TerminateDBInstances）可将包年包月实例退还隔离。
      * @param req TerminateDBInstancesRequest
      * @return TerminateDBInstancesResponse

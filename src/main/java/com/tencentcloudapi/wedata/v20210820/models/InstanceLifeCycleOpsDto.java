@@ -104,6 +104,14 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
     private InstanceLogInfo InstanceLogListOpsDto;
 
     /**
+    * 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
+
+    /**
      * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务id
@@ -303,6 +311,26 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         this.InstanceLogListOpsDto = InstanceLogListOpsDto;
     }
 
+    /**
+     * Get 实例状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceState 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * Set 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceState 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
+    }
+
     public InstanceLifeCycleOpsDto() {
     }
 
@@ -344,6 +372,9 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         if (source.InstanceLogListOpsDto != null) {
             this.InstanceLogListOpsDto = new InstanceLogInfo(source.InstanceLogListOpsDto);
         }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
     }
 
 
@@ -361,6 +392,7 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorDesc", this.ErrorDesc);
         this.setParamSimple(map, prefix + "ErrorCodeLevel", this.ErrorCodeLevel);
         this.setParamObj(map, prefix + "InstanceLogListOpsDto.", this.InstanceLogListOpsDto);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
 
     }
 }
