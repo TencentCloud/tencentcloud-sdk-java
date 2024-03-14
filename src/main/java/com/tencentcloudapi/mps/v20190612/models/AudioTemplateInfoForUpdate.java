@@ -72,8 +72,8 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     * 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioChannel")
@@ -236,14 +236,14 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
      * Get 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioChannel 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAudioChannel() {
@@ -254,14 +254,14 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
      * Set 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioChannel 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioChannel(Long AudioChannel) {

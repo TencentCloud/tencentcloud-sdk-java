@@ -61,7 +61,7 @@ public class CustomEndpoint extends AbstractModel {
     private String Protocol;
 
     /**
-    * 投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。
+    * 投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。
     */
     @SerializedName("Headers")
     @Expose
@@ -156,16 +156,16 @@ public class CustomEndpoint extends AbstractModel {
     }
 
     /**
-     * Get 投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。 
-     * @return Headers 投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。
+     * Get 投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。 
+     * @return Headers 投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。
      */
     public Header [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set 投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。
-     * @param Headers 投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。
+     * Set 投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。
+     * @param Headers 投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。
      */
     public void setHeaders(Header [] Headers) {
         this.Headers = Headers;

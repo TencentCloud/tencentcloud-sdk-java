@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKafkaUserRequest extends AbstractModel {
+public class DescribeBuildInImagesRequest extends AbstractModel {
 
-    /**
-    * kafka用户名。
-    */
-    @SerializedName("UserName")
-    @Expose
-    private String UserName;
-
-    /**
-     * Get kafka用户名。 
-     * @return UserName kafka用户名。
-     */
-    public String getUserName() {
-        return this.UserName;
-    }
-
-    /**
-     * Set kafka用户名。
-     * @param UserName kafka用户名。
-     */
-    public void setUserName(String UserName) {
-        this.UserName = UserName;
-    }
-
-    public DescribeKafkaUserRequest() {
+    public DescribeBuildInImagesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeKafkaUserRequest(DescribeKafkaUserRequest source) {
-        if (source.UserName != null) {
-            this.UserName = new String(source.UserName);
-        }
+    public DescribeBuildInImagesRequest(DescribeBuildInImagesRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class DescribeKafkaUserRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UserName", this.UserName);
 
     }
 }

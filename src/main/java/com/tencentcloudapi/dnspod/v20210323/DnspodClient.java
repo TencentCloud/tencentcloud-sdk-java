@@ -470,6 +470,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *按分类返回线路列表
+     * @param req DescribeRecordLineCategoryListRequest
+     * @return DescribeRecordLineCategoryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordLineCategoryListResponse DescribeRecordLineCategoryList(DescribeRecordLineCategoryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecordLineCategoryList", DescribeRecordLineCategoryListResponse.class);
+    }
+
+    /**
      *获取等级允许的线路
      * @param req DescribeRecordLineListRequest
      * @return DescribeRecordLineListResponse

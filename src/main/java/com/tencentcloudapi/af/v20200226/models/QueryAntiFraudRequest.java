@@ -31,7 +31,7 @@ public class QueryAntiFraudRequest extends AbstractModel {
     private String PhoneNumber;
 
     /**
-    * Id(五选二)
+    * Id(五选二) 
     */
     @SerializedName("IdNumber")
     @Expose
@@ -52,14 +52,14 @@ public class QueryAntiFraudRequest extends AbstractModel {
     private String UserIp;
 
     /**
-    * 国际移动设备识别码(五选二)
+    * 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
     */
     @SerializedName("Imei")
     @Expose
     private String Imei;
 
     /**
-    * ios 系统广告标示符(五选二)
+    * ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
     */
     @SerializedName("Idfa")
     @Expose
@@ -184,8 +184,6 @@ ID 区分统计数据
     * 姓名加密类型
 0：不加密（默认值）
 1：md5
-2：sha256
-3：SM3
     */
     @SerializedName("NameCryptoType")
     @Expose
@@ -208,16 +206,16 @@ ID 区分统计数据
     }
 
     /**
-     * Get Id(五选二) 
-     * @return IdNumber Id(五选二)
+     * Get Id(五选二)  
+     * @return IdNumber Id(五选二) 
      */
     public String getIdNumber() {
         return this.IdNumber;
     }
 
     /**
-     * Set Id(五选二)
-     * @param IdNumber Id(五选二)
+     * Set Id(五选二) 
+     * @param IdNumber Id(五选二) 
      */
     public void setIdNumber(String IdNumber) {
         this.IdNumber = IdNumber;
@@ -256,32 +254,32 @@ ID 区分统计数据
     }
 
     /**
-     * Get 国际移动设备识别码(五选二) 
-     * @return Imei 国际移动设备识别码(五选二)
+     * Get 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二) 
+     * @return Imei 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
      */
     public String getImei() {
         return this.Imei;
     }
 
     /**
-     * Set 国际移动设备识别码(五选二)
-     * @param Imei 国际移动设备识别码(五选二)
+     * Set 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
+     * @param Imei 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
      */
     public void setImei(String Imei) {
         this.Imei = Imei;
     }
 
     /**
-     * Get ios 系统广告标示符(五选二) 
-     * @return Idfa ios 系统广告标示符(五选二)
+     * Get ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二) 
+     * @return Idfa ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
      */
     public String getIdfa() {
         return this.Idfa;
     }
 
     /**
-     * Set ios 系统广告标示符(五选二)
-     * @param Idfa ios 系统广告标示符(五选二)
+     * Set ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
+     * @param Idfa ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
      */
     public void setIdfa(String Idfa) {
         this.Idfa = Idfa;
@@ -570,14 +568,10 @@ ID 区分统计数据
     /**
      * Get 姓名加密类型
 0：不加密（默认值）
-1：md5
-2：sha256
-3：SM3 
+1：md5 
      * @return NameCryptoType 姓名加密类型
 0：不加密（默认值）
 1：md5
-2：sha256
-3：SM3
      */
     public String getNameCryptoType() {
         return this.NameCryptoType;
@@ -587,13 +581,9 @@ ID 区分统计数据
      * Set 姓名加密类型
 0：不加密（默认值）
 1：md5
-2：sha256
-3：SM3
      * @param NameCryptoType 姓名加密类型
 0：不加密（默认值）
 1：md5
-2：sha256
-3：SM3
      */
     public void setNameCryptoType(String NameCryptoType) {
         this.NameCryptoType = NameCryptoType;

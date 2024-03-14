@@ -258,6 +258,9 @@ public enum ScfErrorCode {
     // Args 参数值有误。
      INVALIDPARAMETERVALUE_ARGS("InvalidParameterValue.Args"),
      
+    // 容器启动参数取值与规范不符。
+     INVALIDPARAMETERVALUE_ARGSLIST("InvalidParameterValue.ArgsList"),
+     
     // AsyncRunEnable 取值不正确。
      INVALIDPARAMETERVALUE_ASYNCRUNENABLE("InvalidParameterValue.AsyncRunEnable"),
      
@@ -303,6 +306,9 @@ public enum ScfErrorCode {
     // Command[Entrypoint] 参数值有误。
      INVALIDPARAMETERVALUE_COMMAND("InvalidParameterValue.Command"),
      
+    // 容器启动命令参数值与规范不符。
+     INVALIDPARAMETERVALUE_COMMANDLIST("InvalidParameterValue.CommandList"),
+     
     // CompatibleRuntimes参数传入错误。
      INVALIDPARAMETERVALUE_COMPATIBLERUNTIMES("InvalidParameterValue.CompatibleRuntimes"),
      
@@ -344,6 +350,9 @@ public enum ScfErrorCode {
      
     // Description传入错误。
      INVALIDPARAMETERVALUE_DESCRIPTION("InvalidParameterValue.Description"),
+     
+    // DiskSize 参数取值不规范。
+     INVALIDPARAMETERVALUE_DISKSIZE("InvalidParameterValue.DiskSize"),
      
     // 环境变量DNS[OS_NAMESERVER]配置有误。
      INVALIDPARAMETERVALUE_DNSINFO("InvalidParameterValue.DnsInfo"),
@@ -875,6 +884,9 @@ public enum ScfErrorCode {
      
     // Cos操作不支持。
      UNSUPPORTEDOPERATION_COS("UnsupportedOperation.Cos"),
+     
+    // DiskSize 配置内测中，需要申请开启。如需使用可联系我们。
+     UNSUPPORTEDOPERATION_DISKSIZE("UnsupportedOperation.DiskSize"),
      
     // 指定的配置EipFixed暂不支持。
      UNSUPPORTEDOPERATION_EIPFIXED("UnsupportedOperation.EipFixed"),

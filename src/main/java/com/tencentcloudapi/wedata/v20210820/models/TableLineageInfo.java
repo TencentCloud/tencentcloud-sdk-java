@@ -208,6 +208,30 @@ public class TableLineageInfo extends AbstractModel {
     private String TableType;
 
     /**
+    * datasourceName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceName")
+    @Expose
+    private String DatasourceName;
+
+    /**
+    * DatabaseName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
+    * DatabaseId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseId")
+    @Expose
+    private String DatabaseId;
+
+    /**
      * Get 元数据类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetastoreType 元数据类型
@@ -667,6 +691,66 @@ public class TableLineageInfo extends AbstractModel {
         this.TableType = TableType;
     }
 
+    /**
+     * Get datasourceName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceName datasourceName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceName() {
+        return this.DatasourceName;
+    }
+
+    /**
+     * Set datasourceName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceName datasourceName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceName(String DatasourceName) {
+        this.DatasourceName = DatasourceName;
+    }
+
+    /**
+     * Get DatabaseName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseName DatabaseName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set DatabaseName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseName DatabaseName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
+    /**
+     * Get DatabaseId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseId DatabaseId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseId() {
+        return this.DatabaseId;
+    }
+
+    /**
+     * Set DatabaseId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseId DatabaseId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseId(String DatabaseId) {
+        this.DatabaseId = DatabaseId;
+    }
+
     public TableLineageInfo() {
     }
 
@@ -753,6 +837,15 @@ public class TableLineageInfo extends AbstractModel {
         if (source.TableType != null) {
             this.TableType = new String(source.TableType);
         }
+        if (source.DatasourceName != null) {
+            this.DatasourceName = new String(source.DatasourceName);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.DatabaseId != null) {
+            this.DatabaseId = new String(source.DatabaseId);
+        }
     }
 
 
@@ -783,6 +876,9 @@ public class TableLineageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DisplayType", this.DisplayType);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamSimple(map, prefix + "TableType", this.TableType);
+        this.setParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
 
     }
 }

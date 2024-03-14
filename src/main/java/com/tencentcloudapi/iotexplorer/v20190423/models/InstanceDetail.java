@@ -133,6 +133,70 @@ public class InstanceDetail extends AbstractModel {
     private Long Status;
 
     /**
+    * 消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpDownTPS")
+    @Expose
+    private Long UpDownTPS;
+
+    /**
+    * 当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpDownCurrentTPS")
+    @Expose
+    private Long UpDownCurrentTPS;
+
+    /**
+    * 消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ForwardTPS")
+    @Expose
+    private Long ForwardTPS;
+
+    /**
+    * 消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ForwardCurrentTPS")
+    @Expose
+    private Long ForwardCurrentTPS;
+
+    /**
+    * 实例单元数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CellNum")
+    @Expose
+    private Long CellNum;
+
+    /**
+    * 实例Tag
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingTag")
+    @Expose
+    private String BillingTag;
+
+    /**
+    * 每日消息数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EverydayFreeMessageCount")
+    @Expose
+    private Long EverydayFreeMessageCount;
+
+    /**
+    * 最大在线设备数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxDeviceOnlineCount")
+    @Expose
+    private Long MaxDeviceOnlineCount;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -388,6 +452,166 @@ public class InstanceDetail extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpDownTPS 消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpDownTPS() {
+        return this.UpDownTPS;
+    }
+
+    /**
+     * Set 消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpDownTPS 消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpDownTPS(Long UpDownTPS) {
+        this.UpDownTPS = UpDownTPS;
+    }
+
+    /**
+     * Get 当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpDownCurrentTPS 当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpDownCurrentTPS() {
+        return this.UpDownCurrentTPS;
+    }
+
+    /**
+     * Set 当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpDownCurrentTPS 当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpDownCurrentTPS(Long UpDownCurrentTPS) {
+        this.UpDownCurrentTPS = UpDownCurrentTPS;
+    }
+
+    /**
+     * Get 消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ForwardTPS 消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getForwardTPS() {
+        return this.ForwardTPS;
+    }
+
+    /**
+     * Set 消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ForwardTPS 消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setForwardTPS(Long ForwardTPS) {
+        this.ForwardTPS = ForwardTPS;
+    }
+
+    /**
+     * Get 消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ForwardCurrentTPS 消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getForwardCurrentTPS() {
+        return this.ForwardCurrentTPS;
+    }
+
+    /**
+     * Set 消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ForwardCurrentTPS 消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setForwardCurrentTPS(Long ForwardCurrentTPS) {
+        this.ForwardCurrentTPS = ForwardCurrentTPS;
+    }
+
+    /**
+     * Get 实例单元数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CellNum 实例单元数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCellNum() {
+        return this.CellNum;
+    }
+
+    /**
+     * Set 实例单元数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CellNum 实例单元数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCellNum(Long CellNum) {
+        this.CellNum = CellNum;
+    }
+
+    /**
+     * Get 实例Tag
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingTag 实例Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillingTag() {
+        return this.BillingTag;
+    }
+
+    /**
+     * Set 实例Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingTag 实例Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingTag(String BillingTag) {
+        this.BillingTag = BillingTag;
+    }
+
+    /**
+     * Get 每日消息数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EverydayFreeMessageCount 每日消息数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEverydayFreeMessageCount() {
+        return this.EverydayFreeMessageCount;
+    }
+
+    /**
+     * Set 每日消息数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EverydayFreeMessageCount 每日消息数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEverydayFreeMessageCount(Long EverydayFreeMessageCount) {
+        this.EverydayFreeMessageCount = EverydayFreeMessageCount;
+    }
+
+    /**
+     * Get 最大在线设备数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxDeviceOnlineCount 最大在线设备数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxDeviceOnlineCount() {
+        return this.MaxDeviceOnlineCount;
+    }
+
+    /**
+     * Set 最大在线设备数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxDeviceOnlineCount 最大在线设备数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxDeviceOnlineCount(Long MaxDeviceOnlineCount) {
+        this.MaxDeviceOnlineCount = MaxDeviceOnlineCount;
+    }
+
     public InstanceDetail() {
     }
 
@@ -441,6 +665,30 @@ public class InstanceDetail extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.UpDownTPS != null) {
+            this.UpDownTPS = new Long(source.UpDownTPS);
+        }
+        if (source.UpDownCurrentTPS != null) {
+            this.UpDownCurrentTPS = new Long(source.UpDownCurrentTPS);
+        }
+        if (source.ForwardTPS != null) {
+            this.ForwardTPS = new Long(source.ForwardTPS);
+        }
+        if (source.ForwardCurrentTPS != null) {
+            this.ForwardCurrentTPS = new Long(source.ForwardCurrentTPS);
+        }
+        if (source.CellNum != null) {
+            this.CellNum = new Long(source.CellNum);
+        }
+        if (source.BillingTag != null) {
+            this.BillingTag = new String(source.BillingTag);
+        }
+        if (source.EverydayFreeMessageCount != null) {
+            this.EverydayFreeMessageCount = new Long(source.EverydayFreeMessageCount);
+        }
+        if (source.MaxDeviceOnlineCount != null) {
+            this.MaxDeviceOnlineCount = new Long(source.MaxDeviceOnlineCount);
+        }
     }
 
 
@@ -463,6 +711,14 @@ public class InstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ActivateDevice", this.ActivateDevice);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "UpDownTPS", this.UpDownTPS);
+        this.setParamSimple(map, prefix + "UpDownCurrentTPS", this.UpDownCurrentTPS);
+        this.setParamSimple(map, prefix + "ForwardTPS", this.ForwardTPS);
+        this.setParamSimple(map, prefix + "ForwardCurrentTPS", this.ForwardCurrentTPS);
+        this.setParamSimple(map, prefix + "CellNum", this.CellNum);
+        this.setParamSimple(map, prefix + "BillingTag", this.BillingTag);
+        this.setParamSimple(map, prefix + "EverydayFreeMessageCount", this.EverydayFreeMessageCount);
+        this.setParamSimple(map, prefix + "MaxDeviceOnlineCount", this.MaxDeviceOnlineCount);
 
     }
 }

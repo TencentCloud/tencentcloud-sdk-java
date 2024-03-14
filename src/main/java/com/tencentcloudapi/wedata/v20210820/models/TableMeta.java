@@ -425,6 +425,30 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private String Location;
 
     /**
+    * 判断是否是分区表1 是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsPartitionTable")
+    @Expose
+    private Long IsPartitionTable;
+
+    /**
+    * 分区字段 key
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PartitionColumns")
+    @Expose
+    private String [] PartitionColumns;
+
+    /**
+    * 生命周期-分区保留天数【分区保留策略时有效】
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PartitionExpireDays")
+    @Expose
+    private Long PartitionExpireDays;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -1428,6 +1452,66 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.Location = Location;
     }
 
+    /**
+     * Get 判断是否是分区表1 是 0否
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsPartitionTable 判断是否是分区表1 是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsPartitionTable() {
+        return this.IsPartitionTable;
+    }
+
+    /**
+     * Set 判断是否是分区表1 是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsPartitionTable 判断是否是分区表1 是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsPartitionTable(Long IsPartitionTable) {
+        this.IsPartitionTable = IsPartitionTable;
+    }
+
+    /**
+     * Get 分区字段 key
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PartitionColumns 分区字段 key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getPartitionColumns() {
+        return this.PartitionColumns;
+    }
+
+    /**
+     * Set 分区字段 key
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PartitionColumns 分区字段 key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPartitionColumns(String [] PartitionColumns) {
+        this.PartitionColumns = PartitionColumns;
+    }
+
+    /**
+     * Get 生命周期-分区保留天数【分区保留策略时有效】
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PartitionExpireDays 生命周期-分区保留天数【分区保留策略时有效】
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPartitionExpireDays() {
+        return this.PartitionExpireDays;
+    }
+
+    /**
+     * Set 生命周期-分区保留天数【分区保留策略时有效】
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PartitionExpireDays 生命周期-分区保留天数【分区保留策略时有效】
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPartitionExpireDays(Long PartitionExpireDays) {
+        this.PartitionExpireDays = PartitionExpireDays;
+    }
+
     public TableMeta() {
     }
 
@@ -1595,6 +1679,18 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.Location != null) {
             this.Location = new String(source.Location);
         }
+        if (source.IsPartitionTable != null) {
+            this.IsPartitionTable = new Long(source.IsPartitionTable);
+        }
+        if (source.PartitionColumns != null) {
+            this.PartitionColumns = new String[source.PartitionColumns.length];
+            for (int i = 0; i < source.PartitionColumns.length; i++) {
+                this.PartitionColumns[i] = new String(source.PartitionColumns[i]);
+            }
+        }
+        if (source.PartitionExpireDays != null) {
+            this.PartitionExpireDays = new Long(source.PartitionExpireDays);
+        }
     }
 
 
@@ -1652,6 +1748,9 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamSimple(map, prefix + "MetaCrawlType", this.MetaCrawlType);
         this.setParamSimple(map, prefix + "IsView", this.IsView);
         this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "IsPartitionTable", this.IsPartitionTable);
+        this.setParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
+        this.setParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
 
     }
 }

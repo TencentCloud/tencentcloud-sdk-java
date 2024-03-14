@@ -32,9 +32,11 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * 待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
+    * 待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
     */
     @SerializedName("Employees")
     @Expose
@@ -69,24 +71,32 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel {
     }
 
     /**
-     * Get 待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul> 
-     * @return Employees 待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
+     * Get 待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。 
+     * @return Employees 待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
      */
     public Staff [] getEmployees() {
         return this.Employees;
     }
 
     /**
-     * Set 待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
-     * @param Employees 待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
+     * Set 待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
+     * @param Employees 待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
      */
     public void setEmployees(Staff [] Employees) {
         this.Employees = Employees;

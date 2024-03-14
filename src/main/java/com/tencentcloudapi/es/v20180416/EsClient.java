@@ -39,6 +39,28 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *检查cos迁移索引元数据
+     * @param req CheckMigrateIndexMetaDataRequest
+     * @return CheckMigrateIndexMetaDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaData(CheckMigrateIndexMetaDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckMigrateIndexMetaData", CheckMigrateIndexMetaDataResponse.class);
+    }
+
+    /**
+     *cos迁移流程
+     * @param req CreateCosMigrateToServerlessInstanceRequest
+     * @return CreateCosMigrateToServerlessInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosMigrateToServerlessInstanceResponse CreateCosMigrateToServerlessInstance(CreateCosMigrateToServerlessInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosMigrateToServerlessInstance", CreateCosMigrateToServerlessInstanceResponse.class);
+    }
+
+    /**
      *创建索引
      * @param req CreateIndexRequest
      * @return CreateIndexResponse
@@ -69,6 +91,28 @@ public class EsClient extends AbstractClient{
     public CreateLogstashInstanceResponse CreateLogstashInstance(CreateLogstashInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateLogstashInstance", CreateLogstashInstanceResponse.class);
+    }
+
+    /**
+     *创建Serverless索引
+     * @param req CreateServerlessInstanceRequest
+     * @return CreateServerlessInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServerlessInstanceResponse CreateServerlessInstance(CreateServerlessInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateServerlessInstance", CreateServerlessInstanceResponse.class);
+    }
+
+    /**
+     *创建Serverless索引空间
+     * @param req CreateServerlessSpaceV2Request
+     * @return CreateServerlessSpaceV2Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateServerlessSpaceV2Response CreateServerlessSpaceV2(CreateServerlessSpaceV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateServerlessSpaceV2", CreateServerlessSpaceV2Response.class);
     }
 
     /**
@@ -113,6 +157,28 @@ public class EsClient extends AbstractClient{
     public DeleteLogstashPipelinesResponse DeleteLogstashPipelines(DeleteLogstashPipelinesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteLogstashPipelines", DeleteLogstashPipelinesResponse.class);
+    }
+
+    /**
+     *删除Serverless索引
+     * @param req DeleteServerlessInstanceRequest
+     * @return DeleteServerlessInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServerlessInstanceResponse DeleteServerlessInstance(DeleteServerlessInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteServerlessInstance", DeleteServerlessInstanceResponse.class);
+    }
+
+    /**
+     *删除Serverless空间子用户
+     * @param req DeleteServerlessSpaceUserRequest
+     * @return DeleteServerlessSpaceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUser(DeleteServerlessSpaceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteServerlessSpaceUser", DeleteServerlessSpaceUserResponse.class);
     }
 
     /**
@@ -234,6 +300,39 @@ public class EsClient extends AbstractClient{
     public DescribeLogstashPipelinesResponse DescribeLogstashPipelines(DescribeLogstashPipelinesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLogstashPipelines", DescribeLogstashPipelinesResponse.class);
+    }
+
+    /**
+     *查看Serverless空间子用户
+     * @param req DescribeServerlessSpaceUserRequest
+     * @return DescribeServerlessSpaceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessSpaceUserResponse DescribeServerlessSpaceUser(DescribeServerlessSpaceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServerlessSpaceUser", DescribeServerlessSpaceUserResponse.class);
+    }
+
+    /**
+     *获取Serverless索引空间列表
+     * @param req DescribeServerlessSpacesRequest
+     * @return DescribeServerlessSpacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessSpacesResponse DescribeServerlessSpaces(DescribeServerlessSpacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServerlessSpaces", DescribeServerlessSpacesResponse.class);
+    }
+
+    /**
+     *查询快照信息接口
+     * @param req DescribeUserCosSnapshotListRequest
+     * @return DescribeUserCosSnapshotListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserCosSnapshotListResponse DescribeUserCosSnapshotList(DescribeUserCosSnapshotListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserCosSnapshotList", DescribeUserCosSnapshotListResponse.class);
     }
 
     /**
@@ -488,6 +587,28 @@ public class EsClient extends AbstractClient{
     public UpdateRequestTargetNodeTypesResponse UpdateRequestTargetNodeTypes(UpdateRequestTargetNodeTypesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateRequestTargetNodeTypes", UpdateRequestTargetNodeTypesResponse.class);
+    }
+
+    /**
+     *更新Serverless索引
+     * @param req UpdateServerlessInstanceRequest
+     * @return UpdateServerlessInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateServerlessInstanceResponse UpdateServerlessInstance(UpdateServerlessInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateServerlessInstance", UpdateServerlessInstanceResponse.class);
+    }
+
+    /**
+     *更新Serverless索引空间
+     * @param req UpdateServerlessSpaceRequest
+     * @return UpdateServerlessSpaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateServerlessSpaceResponse UpdateServerlessSpace(UpdateServerlessSpaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateServerlessSpace", UpdateServerlessSpaceResponse.class);
     }
 
     /**

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DBInfo extends AbstractModel {
 
     /**
-    * 表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+    * 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
@@ -184,9 +184,17 @@ public class DBInfo extends AbstractModel {
     private String TmpToken;
 
     /**
-     * Get 表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+    * tdsql分片id。tdsql set节点必填
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SetId")
+    @Expose
+    private String SetId;
+
+    /**
+     * Get 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+     * @return Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
@@ -194,9 +202,9 @@ public class DBInfo extends AbstractModel {
     }
 
     /**
-     * Set 表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+     * Set 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+     * @param Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {
@@ -583,6 +591,26 @@ public class DBInfo extends AbstractModel {
         this.TmpToken = TmpToken;
     }
 
+    /**
+     * Get tdsql分片id。tdsql set节点必填
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SetId tdsql分片id。tdsql set节点必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSetId() {
+        return this.SetId;
+    }
+
+    /**
+     * Set tdsql分片id。tdsql set节点必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SetId tdsql分片id。tdsql set节点必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSetId(String SetId) {
+        this.SetId = SetId;
+    }
+
     public DBInfo() {
     }
 
@@ -651,6 +679,9 @@ public class DBInfo extends AbstractModel {
         if (source.TmpToken != null) {
             this.TmpToken = new String(source.TmpToken);
         }
+        if (source.SetId != null) {
+            this.SetId = new String(source.SetId);
+        }
     }
 
 
@@ -678,6 +709,7 @@ public class DBInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
+        this.setParamSimple(map, prefix + "SetId", this.SetId);
 
     }
 }

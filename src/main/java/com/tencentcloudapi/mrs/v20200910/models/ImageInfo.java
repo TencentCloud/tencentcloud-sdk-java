@@ -31,7 +31,7 @@ public class ImageInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * 图片url
+    * 图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
     */
     @SerializedName("Url")
     @Expose
@@ -61,16 +61,16 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Get 图片url 
-     * @return Url 图片url
+     * Get 图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码) 
+     * @return Url 图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 图片url
-     * @param Url 图片url
+     * Set 图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
+     * @param Url 图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
      */
     public void setUrl(String Url) {
         this.Url = Url;

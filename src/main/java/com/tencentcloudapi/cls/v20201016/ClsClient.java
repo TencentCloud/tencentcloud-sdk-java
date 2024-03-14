@@ -633,17 +633,6 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于获取kafka用户信息
-     * @param req DescribeKafkaUserRequest
-     * @return DescribeKafkaUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeKafkaUserResponse DescribeKafkaUser(DescribeKafkaUserRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeKafkaUser", DescribeKafkaUserResponse.class);
-    }
-
-    /**
      *本接口用于搜索日志上下文附近的内容，详情参考[上下文检索](https://cloud.tencent.com/document/product/614/53248)。
 API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
      * @param req DescribeLogContextRequest

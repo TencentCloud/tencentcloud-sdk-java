@@ -32,7 +32,7 @@ public class Endpoint extends AbstractModel {
     private String Region;
 
     /**
-    * tdsql mysql版的节点类型，枚举值为proxy、set
+    * tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
@@ -260,9 +260,9 @@ public class Endpoint extends AbstractModel {
     }
 
     /**
-     * Get tdsql mysql版的节点类型，枚举值为proxy、set
+     * Get tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Role tdsql mysql版的节点类型，枚举值为proxy、set
+     * @return Role tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
@@ -270,9 +270,9 @@ public class Endpoint extends AbstractModel {
     }
 
     /**
-     * Set tdsql mysql版的节点类型，枚举值为proxy、set
+     * Set tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Role tdsql mysql版的节点类型，枚举值为proxy、set
+     * @param Role tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {

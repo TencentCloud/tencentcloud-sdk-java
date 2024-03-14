@@ -369,6 +369,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *获取内置镜像列表
+     * @param req DescribeBuildInImagesRequest
+     * @return DescribeBuildInImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBuildInImagesResponse DescribeBuildInImages(DescribeBuildInImagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBuildInImages", DescribeBuildInImagesResponse.class);
+    }
+
+    /**
      *查询结构化数据集详情
      * @param req DescribeDatasetDetailStructuredRequest
      * @return DescribeDatasetDetailStructuredResponse

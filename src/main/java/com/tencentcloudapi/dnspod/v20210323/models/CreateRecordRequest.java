@@ -108,6 +108,13 @@ public class CreateRecordRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 开启DNSSEC时，强制添加CNAME/URL记录
+    */
+    @SerializedName("DnssecConflictMode")
+    @Expose
+    private String DnssecConflictMode;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -299,6 +306,22 @@ public class CreateRecordRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 开启DNSSEC时，强制添加CNAME/URL记录 
+     * @return DnssecConflictMode 开启DNSSEC时，强制添加CNAME/URL记录
+     */
+    public String getDnssecConflictMode() {
+        return this.DnssecConflictMode;
+    }
+
+    /**
+     * Set 开启DNSSEC时，强制添加CNAME/URL记录
+     * @param DnssecConflictMode 开启DNSSEC时，强制添加CNAME/URL记录
+     */
+    public void setDnssecConflictMode(String DnssecConflictMode) {
+        this.DnssecConflictMode = DnssecConflictMode;
+    }
+
     public CreateRecordRequest() {
     }
 
@@ -343,6 +366,9 @@ public class CreateRecordRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.DnssecConflictMode != null) {
+            this.DnssecConflictMode = new String(source.DnssecConflictMode);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class CreateRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "DnssecConflictMode", this.DnssecConflictMode);
 
     }
 }
