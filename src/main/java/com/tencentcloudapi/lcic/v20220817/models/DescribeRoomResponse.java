@@ -238,6 +238,20 @@ video 纯视频
     private String RTMPStreamingURL;
 
     /**
+    * 录制自定义场景，仅recordlayout=9的时候此参数有效
+    */
+    @SerializedName("RecordScene")
+    @Expose
+    private String RecordScene;
+
+    /**
+    * 录制自定义语言，仅recordlayout=9的时候此参数有效
+    */
+    @SerializedName("RecordLang")
+    @Expose
+    private String RecordLang;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -765,6 +779,38 @@ video 纯视频
     }
 
     /**
+     * Get 录制自定义场景，仅recordlayout=9的时候此参数有效 
+     * @return RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     */
+    public String getRecordScene() {
+        return this.RecordScene;
+    }
+
+    /**
+     * Set 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * @param RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     */
+    public void setRecordScene(String RecordScene) {
+        this.RecordScene = RecordScene;
+    }
+
+    /**
+     * Get 录制自定义语言，仅recordlayout=9的时候此参数有效 
+     * @return RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     */
+    public String getRecordLang() {
+        return this.RecordLang;
+    }
+
+    /**
+     * Set 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * @param RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     */
+    public void setRecordLang(String RecordLang) {
+        this.RecordLang = RecordLang;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -875,6 +921,12 @@ video 纯视频
         if (source.RTMPStreamingURL != null) {
             this.RTMPStreamingURL = new String(source.RTMPStreamingURL);
         }
+        if (source.RecordScene != null) {
+            this.RecordScene = new String(source.RecordScene);
+        }
+        if (source.RecordLang != null) {
+            this.RecordLang = new String(source.RecordLang);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -913,6 +965,8 @@ video 纯视频
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
         this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
         this.setParamSimple(map, prefix + "RTMPStreamingURL", this.RTMPStreamingURL);
+        this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
+        this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

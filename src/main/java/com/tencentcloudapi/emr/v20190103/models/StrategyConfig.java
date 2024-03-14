@@ -57,6 +57,14 @@ public class StrategyConfig extends AbstractModel {
     private Long DealOnFail;
 
     /**
+    * 指令需要指定的参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Args")
+    @Expose
+    private Arg [] Args;
+
+    /**
      * Get 0:关闭滚动重启
 1:开启滚动启动
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -140,6 +148,26 @@ public class StrategyConfig extends AbstractModel {
         this.DealOnFail = DealOnFail;
     }
 
+    /**
+     * Get 指令需要指定的参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Args 指令需要指定的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Arg [] getArgs() {
+        return this.Args;
+    }
+
+    /**
+     * Set 指令需要指定的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Args 指令需要指定的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArgs(Arg [] Args) {
+        this.Args = Args;
+    }
+
     public StrategyConfig() {
     }
 
@@ -160,6 +188,12 @@ public class StrategyConfig extends AbstractModel {
         if (source.DealOnFail != null) {
             this.DealOnFail = new Long(source.DealOnFail);
         }
+        if (source.Args != null) {
+            this.Args = new Arg[source.Args.length];
+            for (int i = 0; i < source.Args.length; i++) {
+                this.Args[i] = new Arg(source.Args[i]);
+            }
+        }
     }
 
 
@@ -171,6 +205,7 @@ public class StrategyConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "BatchSize", this.BatchSize);
         this.setParamSimple(map, prefix + "TimeWait", this.TimeWait);
         this.setParamSimple(map, prefix + "DealOnFail", this.DealOnFail);
+        this.setParamArrayObj(map, prefix + "Args.", this.Args);
 
     }
 }

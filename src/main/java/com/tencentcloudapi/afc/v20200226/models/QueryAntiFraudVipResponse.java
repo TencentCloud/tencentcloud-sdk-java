@@ -38,7 +38,7 @@ public class QueryAntiFraudVipResponse extends AbstractModel {
     private Long IdFound;
 
     /**
-    * 0~100;值越高 欺诈可能性越大
+    * 0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
     */
     @SerializedName("RiskScore")
     @Expose
@@ -100,16 +100,16 @@ public class QueryAntiFraudVipResponse extends AbstractModel {
     }
 
     /**
-     * Get 0~100;值越高 欺诈可能性越大 
-     * @return RiskScore 0~100;值越高 欺诈可能性越大
+     * Get 0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型） 
+     * @return RiskScore 0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
      */
     public Long getRiskScore() {
         return this.RiskScore;
     }
 
     /**
-     * Set 0~100;值越高 欺诈可能性越大
-     * @param RiskScore 0~100;值越高 欺诈可能性越大
+     * Set 0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
+     * @param RiskScore 0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
      */
     public void setRiskScore(Long RiskScore) {
         this.RiskScore = RiskScore;

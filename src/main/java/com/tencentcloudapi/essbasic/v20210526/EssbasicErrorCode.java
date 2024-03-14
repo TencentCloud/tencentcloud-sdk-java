@@ -24,6 +24,9 @@ public enum EssbasicErrorCode {
     // 已授权。
      FAILEDOPERATION_HASAUTHORIZED("FailedOperation.HasAuthorized"),
      
+    // 自动签许可额度不足
+     FAILEDOPERATION_LICENSENOQUOTA("FailedOperation.LicenseNoQuota"),
+     
     // 无角色授权，请确认数据是否存在
      FAILEDOPERATION_NOROLEAUTH("FailedOperation.NoRoleAuth"),
      

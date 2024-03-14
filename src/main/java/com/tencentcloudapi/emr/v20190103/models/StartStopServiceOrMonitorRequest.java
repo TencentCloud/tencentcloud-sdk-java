@@ -57,6 +57,13 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
     private StrategyConfig StrategyConfig;
 
     /**
+    * 暂停服务时用的参数
+    */
+    @SerializedName("StopParams")
+    @Expose
+    private StopParams StopParams;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -140,6 +147,22 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         this.StrategyConfig = StrategyConfig;
     }
 
+    /**
+     * Get 暂停服务时用的参数 
+     * @return StopParams 暂停服务时用的参数
+     */
+    public StopParams getStopParams() {
+        return this.StopParams;
+    }
+
+    /**
+     * Set 暂停服务时用的参数
+     * @param StopParams 暂停服务时用的参数
+     */
+    public void setStopParams(StopParams StopParams) {
+        this.StopParams = StopParams;
+    }
+
     public StartStopServiceOrMonitorRequest() {
     }
 
@@ -160,6 +183,9 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         if (source.StrategyConfig != null) {
             this.StrategyConfig = new StrategyConfig(source.StrategyConfig);
         }
+        if (source.StopParams != null) {
+            this.StopParams = new StopParams(source.StopParams);
+        }
     }
 
 
@@ -171,6 +197,7 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OpType", this.OpType);
         this.setParamObj(map, prefix + "OpScope.", this.OpScope);
         this.setParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
+        this.setParamObj(map, prefix + "StopParams.", this.StopParams);
 
     }
 }

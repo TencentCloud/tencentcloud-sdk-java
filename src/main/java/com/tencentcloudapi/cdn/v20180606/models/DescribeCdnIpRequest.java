@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCdnIpRequest extends AbstractModel {
 
     /**
-    * 需要查询的 IP 列表
+    * 需要查询的 IP 列表，单次可支持1-20个IP查询。
     */
     @SerializedName("Ips")
     @Expose
     private String [] Ips;
 
     /**
-     * Get 需要查询的 IP 列表 
-     * @return Ips 需要查询的 IP 列表
+     * Get 需要查询的 IP 列表，单次可支持1-20个IP查询。 
+     * @return Ips 需要查询的 IP 列表，单次可支持1-20个IP查询。
      */
     public String [] getIps() {
         return this.Ips;
     }
 
     /**
-     * Set 需要查询的 IP 列表
-     * @param Ips 需要查询的 IP 列表
+     * Set 需要查询的 IP 列表，单次可支持1-20个IP查询。
+     * @param Ips 需要查询的 IP 列表，单次可支持1-20个IP查询。
      */
     public void setIps(String [] Ips) {
         this.Ips = Ips;

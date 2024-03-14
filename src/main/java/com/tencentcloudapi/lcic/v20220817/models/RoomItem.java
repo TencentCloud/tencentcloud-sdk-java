@@ -202,6 +202,22 @@ public class RoomItem extends AbstractModel {
     private String RecordBackground;
 
     /**
+    * 录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordScene")
+    @Expose
+    private String RecordScene;
+
+    /**
+    * 录制自定义语言，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordLang")
+    @Expose
+    private String RecordLang;
+
+    /**
      * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 名称
@@ -649,6 +665,46 @@ public class RoomItem extends AbstractModel {
         this.RecordBackground = RecordBackground;
     }
 
+    /**
+     * Get 录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordScene() {
+        return this.RecordScene;
+    }
+
+    /**
+     * Set 录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordScene(String RecordScene) {
+        this.RecordScene = RecordScene;
+    }
+
+    /**
+     * Get 录制自定义语言，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordLang() {
+        return this.RecordLang;
+    }
+
+    /**
+     * Set 录制自定义语言，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordLang(String RecordLang) {
+        this.RecordLang = RecordLang;
+    }
+
     public RoomItem() {
     }
 
@@ -723,6 +779,12 @@ public class RoomItem extends AbstractModel {
         if (source.RecordBackground != null) {
             this.RecordBackground = new String(source.RecordBackground);
         }
+        if (source.RecordScene != null) {
+            this.RecordScene = new String(source.RecordScene);
+        }
+        if (source.RecordLang != null) {
+            this.RecordLang = new String(source.RecordLang);
+        }
     }
 
 
@@ -752,6 +814,8 @@ public class RoomItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
         this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+        this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
+        this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
 
     }
 }

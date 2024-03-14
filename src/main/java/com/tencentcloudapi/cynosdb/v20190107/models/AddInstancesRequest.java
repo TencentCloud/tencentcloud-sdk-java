@@ -137,6 +137,13 @@ public class AddInstancesRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * proxy同步升级
+    */
+    @SerializedName("UpgradeProxy")
+    @Expose
+    private UpgradeProxy UpgradeProxy;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -400,6 +407,22 @@ public class AddInstancesRequest extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get proxy同步升级 
+     * @return UpgradeProxy proxy同步升级
+     */
+    public UpgradeProxy getUpgradeProxy() {
+        return this.UpgradeProxy;
+    }
+
+    /**
+     * Set proxy同步升级
+     * @param UpgradeProxy proxy同步升级
+     */
+    public void setUpgradeProxy(UpgradeProxy UpgradeProxy) {
+        this.UpgradeProxy = UpgradeProxy;
+    }
+
     public AddInstancesRequest() {
     }
 
@@ -462,6 +485,9 @@ public class AddInstancesRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.UpgradeProxy != null) {
+            this.UpgradeProxy = new UpgradeProxy(source.UpgradeProxy);
+        }
     }
 
 
@@ -485,6 +511,7 @@ public class AddInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamObj(map, prefix + "UpgradeProxy.", this.UpgradeProxy);
 
     }
 }

@@ -32,6 +32,13 @@ CLOUD_SSD-云服务器SSD云盘,CLOUD_HSSD-云服务器加强型SSD云盘，CLOU
     private String MachineType;
 
     /**
+    * 购买实例版本号
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
+
+    /**
      * Get 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-云服务器高性能云盘，
 CLOUD_SSD-云服务器SSD云盘,CLOUD_HSSD-云服务器加强型SSD云盘，CLOUD_TSSD-云服务器极速型SSD云盘，CLOUD_BSSD-云服务器通用型SSD云盘,CLOUD_BASIC-云服务器云硬盘，默认取值PM 
      * @return MachineType 购买实例的宿主机类型，PM-物理机, CLOUD_PREMIUM-云服务器高性能云盘，
@@ -51,6 +58,22 @@ CLOUD_SSD-云服务器SSD云盘,CLOUD_HSSD-云服务器加强型SSD云盘，CLOU
         this.MachineType = MachineType;
     }
 
+    /**
+     * Get 购买实例版本号 
+     * @return DBVersion 购买实例版本号
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set 购买实例版本号
+     * @param DBVersion 购买实例版本号
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+    }
+
     public DescribeCollationTimeZoneRequest() {
     }
 
@@ -62,6 +85,9 @@ CLOUD_SSD-云服务器SSD云盘,CLOUD_HSSD-云服务器加强型SSD云盘，CLOU
         if (source.MachineType != null) {
             this.MachineType = new String(source.MachineType);
         }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
+        }
     }
 
 
@@ -70,6 +96,7 @@ CLOUD_SSD-云服务器SSD云盘,CLOUD_HSSD-云服务器加强型SSD云盘，CLOU
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
 
     }
 }

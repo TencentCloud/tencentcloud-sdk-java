@@ -87,6 +87,13 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private String UpgradeMode;
 
     /**
+    * proxy同步升级
+    */
+    @SerializedName("UpgradeProxy")
+    @Expose
+    private UpgradeProxy UpgradeProxy;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -230,6 +237,22 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.UpgradeMode = UpgradeMode;
     }
 
+    /**
+     * Get proxy同步升级 
+     * @return UpgradeProxy proxy同步升级
+     */
+    public UpgradeProxy getUpgradeProxy() {
+        return this.UpgradeProxy;
+    }
+
+    /**
+     * Set proxy同步升级
+     * @param UpgradeProxy proxy同步升级
+     */
+    public void setUpgradeProxy(UpgradeProxy UpgradeProxy) {
+        this.UpgradeProxy = UpgradeProxy;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -265,6 +288,9 @@ public class UpgradeInstanceRequest extends AbstractModel {
         if (source.UpgradeMode != null) {
             this.UpgradeMode = new String(source.UpgradeMode);
         }
+        if (source.UpgradeProxy != null) {
+            this.UpgradeProxy = new UpgradeProxy(source.UpgradeProxy);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
+        this.setParamObj(map, prefix + "UpgradeProxy.", this.UpgradeProxy);
 
     }
 }

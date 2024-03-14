@@ -1346,6 +1346,19 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
+
+注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
+     * @param req RenewAutoSignLicenseRequest
+     * @return RenewAutoSignLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewAutoSignLicenseResponse RenewAutoSignLicense(RenewAutoSignLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewAutoSignLicense", RenewAutoSignLicenseResponse.class);
+    }
+
+    /**
      *此接口用于启动流程。它是模板发起合同的最后一步。
 在[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)和[创建电子文档](https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument)之后，用于开始整个合同流程,  推进流程进入到签署环节。
 

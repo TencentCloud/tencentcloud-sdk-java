@@ -231,6 +231,20 @@ video 纯视频
     private String RecordBackground;
 
     /**
+    * 录制自定义场景，仅recordlayout=9的时候此参数有效
+    */
+    @SerializedName("RecordScene")
+    @Expose
+    private String RecordScene;
+
+    /**
+    * 录制自定义语言，仅recordlayout=9的时候此参数有效
+    */
+    @SerializedName("RecordLang")
+    @Expose
+    private String RecordLang;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -734,6 +748,38 @@ video 纯视频
         this.RecordBackground = RecordBackground;
     }
 
+    /**
+     * Get 录制自定义场景，仅recordlayout=9的时候此参数有效 
+     * @return RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     */
+    public String getRecordScene() {
+        return this.RecordScene;
+    }
+
+    /**
+     * Set 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * @param RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     */
+    public void setRecordScene(String RecordScene) {
+        this.RecordScene = RecordScene;
+    }
+
+    /**
+     * Get 录制自定义语言，仅recordlayout=9的时候此参数有效 
+     * @return RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     */
+    public String getRecordLang() {
+        return this.RecordLang;
+    }
+
+    /**
+     * Set 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * @param RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     */
+    public void setRecordLang(String RecordLang) {
+        this.RecordLang = RecordLang;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -826,6 +872,12 @@ video 纯视频
         if (source.RecordBackground != null) {
             this.RecordBackground = new String(source.RecordBackground);
         }
+        if (source.RecordScene != null) {
+            this.RecordScene = new String(source.RecordScene);
+        }
+        if (source.RecordLang != null) {
+            this.RecordLang = new String(source.RecordLang);
+        }
     }
 
 
@@ -860,6 +912,8 @@ video 纯视频
         this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);
         this.setParamSimple(map, prefix + "EnableAutoStart", this.EnableAutoStart);
         this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
+        this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
+        this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
 
     }
 }

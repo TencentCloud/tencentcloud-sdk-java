@@ -52,14 +52,14 @@ public class QueryAntiFraudVipRequest extends AbstractModel {
     private String UserIp;
 
     /**
-    * 国际移动设备识别码(五选二)
+    * 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
     */
     @SerializedName("Imei")
     @Expose
     private String Imei;
 
     /**
-    * ios 系统广告标示符(五选二)
+    * ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
     */
     @SerializedName("Idfa")
     @Expose
@@ -181,11 +181,7 @@ ID 区分统计数据
     private String Imsi;
 
     /**
-    * 姓名加密类型
-0：不加密（默认值）
-1：md5
-2：sha256
-3：SM3
+    * 姓名加密类型0：不加密（默认值）1：md5
     */
     @SerializedName("NameCryptoType")
     @Expose
@@ -256,32 +252,32 @@ ID 区分统计数据
     }
 
     /**
-     * Get 国际移动设备识别码(五选二) 
-     * @return Imei 国际移动设备识别码(五选二)
+     * Get 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二) 
+     * @return Imei 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
      */
     public String getImei() {
         return this.Imei;
     }
 
     /**
-     * Set 国际移动设备识别码(五选二)
-     * @param Imei 国际移动设备识别码(五选二)
+     * Set 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
+     * @param Imei 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
      */
     public void setImei(String Imei) {
         this.Imei = Imei;
     }
 
     /**
-     * Get ios 系统广告标示符(五选二) 
-     * @return Idfa ios 系统广告标示符(五选二)
+     * Get ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二) 
+     * @return Idfa ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
      */
     public String getIdfa() {
         return this.Idfa;
     }
 
     /**
-     * Set ios 系统广告标示符(五选二)
-     * @param Idfa ios 系统广告标示符(五选二)
+     * Set ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
+     * @param Idfa ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
      */
     public void setIdfa(String Idfa) {
         this.Idfa = Idfa;
@@ -568,32 +564,16 @@ ID 区分统计数据
     }
 
     /**
-     * Get 姓名加密类型
-0：不加密（默认值）
-1：md5
-2：sha256
-3：SM3 
-     * @return NameCryptoType 姓名加密类型
-0：不加密（默认值）
-1：md5
-2：sha256
-3：SM3
+     * Get 姓名加密类型0：不加密（默认值）1：md5 
+     * @return NameCryptoType 姓名加密类型0：不加密（默认值）1：md5
      */
     public String getNameCryptoType() {
         return this.NameCryptoType;
     }
 
     /**
-     * Set 姓名加密类型
-0：不加密（默认值）
-1：md5
-2：sha256
-3：SM3
-     * @param NameCryptoType 姓名加密类型
-0：不加密（默认值）
-1：md5
-2：sha256
-3：SM3
+     * Set 姓名加密类型0：不加密（默认值）1：md5
+     * @param NameCryptoType 姓名加密类型0：不加密（默认值）1：md5
      */
     public void setNameCryptoType(String NameCryptoType) {
         this.NameCryptoType = NameCryptoType;

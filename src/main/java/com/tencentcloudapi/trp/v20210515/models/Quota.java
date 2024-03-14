@@ -112,6 +112,22 @@ public class Quota extends AbstractModel {
     private Long RiskQuota;
 
     /**
+    * AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AigcTextQuota")
+    @Expose
+    private Long AigcTextQuota;
+
+    /**
+    * AI图片数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AigcImageQuota")
+    @Expose
+    private Long AigcImageQuota;
+
+    /**
     * 溯源类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -356,6 +372,46 @@ public class Quota extends AbstractModel {
     }
 
     /**
+     * Get AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AigcTextQuota AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAigcTextQuota() {
+        return this.AigcTextQuota;
+    }
+
+    /**
+     * Set AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AigcTextQuota AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAigcTextQuota(Long AigcTextQuota) {
+        this.AigcTextQuota = AigcTextQuota;
+    }
+
+    /**
+     * Get AI图片数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AigcImageQuota AI图片数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAigcImageQuota() {
+        return this.AigcImageQuota;
+    }
+
+    /**
+     * Set AI图片数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AigcImageQuota AI图片数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAigcImageQuota(Long AigcImageQuota) {
+        this.AigcImageQuota = AigcImageQuota;
+    }
+
+    /**
      * Get 溯源类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TrackType 溯源类型
@@ -459,6 +515,12 @@ public class Quota extends AbstractModel {
         if (source.RiskQuota != null) {
             this.RiskQuota = new Long(source.RiskQuota);
         }
+        if (source.AigcTextQuota != null) {
+            this.AigcTextQuota = new Long(source.AigcTextQuota);
+        }
+        if (source.AigcImageQuota != null) {
+            this.AigcImageQuota = new Long(source.AigcImageQuota);
+        }
         if (source.TrackType != null) {
             this.TrackType = new Long(source.TrackType);
         }
@@ -486,6 +548,8 @@ public class Quota extends AbstractModel {
         this.setParamSimple(map, prefix + "SaleQuota", this.SaleQuota);
         this.setParamSimple(map, prefix + "ChainQuota", this.ChainQuota);
         this.setParamSimple(map, prefix + "RiskQuota", this.RiskQuota);
+        this.setParamSimple(map, prefix + "AigcTextQuota", this.AigcTextQuota);
+        this.setParamSimple(map, prefix + "AigcImageQuota", this.AigcImageQuota);
         this.setParamSimple(map, prefix + "TrackType", this.TrackType);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "ProductCertify", this.ProductCertify);
