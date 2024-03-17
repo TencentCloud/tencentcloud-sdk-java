@@ -24,115 +24,135 @@ import java.util.HashMap;
 public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
+    * 原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+
     */
     @SerializedName("OldIpExpiredTime")
     @Expose
     private Long OldIpExpiredTime;
 
     /**
-    * 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+    * 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
     */
     @SerializedName("NewUniqVpcId")
     @Expose
     private String NewUniqVpcId;
 
     /**
-    * 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
+    * 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
     */
     @SerializedName("NewUniqSubnetId")
     @Expose
     private String NewUniqSubnetId;
 
     /**
-    * 待修改IP信息
+    * IP 地址信息，包含新 IP 地址与 原 IP 地址。
     */
     @SerializedName("NetworkAddresses")
     @Expose
     private ModifyNetworkAddress [] NetworkAddresses;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ 
+     * @return InstanceId 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
+     * @param InstanceId 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP 
-     * @return OldIpExpiredTime 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
+     * Get 原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+ 
+     * @return OldIpExpiredTime 原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+
      */
     public Long getOldIpExpiredTime() {
         return this.OldIpExpiredTime;
     }
 
     /**
-     * Set 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
-     * @param OldIpExpiredTime 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
+     * Set 原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+
+     * @param OldIpExpiredTime 原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+
      */
     public void setOldIpExpiredTime(Long OldIpExpiredTime) {
         this.OldIpExpiredTime = OldIpExpiredTime;
     }
 
     /**
-     * Get 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空 
-     * @return NewUniqVpcId 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+     * Get 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。 
+     * @return NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
      */
     public String getNewUniqVpcId() {
         return this.NewUniqVpcId;
     }
 
     /**
-     * Set 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
-     * @param NewUniqVpcId 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+     * Set 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
+     * @param NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
      */
     public void setNewUniqVpcId(String NewUniqVpcId) {
         this.NewUniqVpcId = NewUniqVpcId;
     }
 
     /**
-     * Get 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空 
-     * @return NewUniqSubnetId 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
+     * Get 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。 
+     * @return NewUniqSubnetId 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
      */
     public String getNewUniqSubnetId() {
         return this.NewUniqSubnetId;
     }
 
     /**
-     * Set 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
-     * @param NewUniqSubnetId 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
+     * Set 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+     * @param NewUniqSubnetId 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
      */
     public void setNewUniqSubnetId(String NewUniqSubnetId) {
         this.NewUniqSubnetId = NewUniqSubnetId;
     }
 
     /**
-     * Get 待修改IP信息 
-     * @return NetworkAddresses 待修改IP信息
+     * Get IP 地址信息，包含新 IP 地址与 原 IP 地址。 
+     * @return NetworkAddresses IP 地址信息，包含新 IP 地址与 原 IP 地址。
      */
     public ModifyNetworkAddress [] getNetworkAddresses() {
         return this.NetworkAddresses;
     }
 
     /**
-     * Set 待修改IP信息
-     * @param NetworkAddresses 待修改IP信息
+     * Set IP 地址信息，包含新 IP 地址与 原 IP 地址。
+     * @param NetworkAddresses IP 地址信息，包含新 IP 地址与 原 IP 地址。
      */
     public void setNetworkAddresses(ModifyNetworkAddress [] NetworkAddresses) {
         this.NetworkAddresses = NetworkAddresses;

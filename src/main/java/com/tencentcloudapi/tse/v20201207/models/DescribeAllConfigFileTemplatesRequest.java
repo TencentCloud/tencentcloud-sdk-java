@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,44 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWafInfoRequest extends AbstractModel {
+public class DescribeAllConfigFileTemplatesRequest extends AbstractModel {
 
     /**
-    * CLB回调WAF接口（获取、删除）的参数
+    * TSE实例id
     */
-    @SerializedName("Params")
+    @SerializedName("InstanceId")
     @Expose
-    private ClbHostsParams [] Params;
+    private String InstanceId;
 
     /**
-     * Get CLB回调WAF接口（获取、删除）的参数 
-     * @return Params CLB回调WAF接口（获取、删除）的参数
+     * Get TSE实例id 
+     * @return InstanceId TSE实例id
      */
-    public ClbHostsParams [] getParams() {
-        return this.Params;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set CLB回调WAF接口（获取、删除）的参数
-     * @param Params CLB回调WAF接口（获取、删除）的参数
+     * Set TSE实例id
+     * @param InstanceId TSE实例id
      */
-    public void setParams(ClbHostsParams [] Params) {
-        this.Params = Params;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public DescribeWafInfoRequest() {
+    public DescribeAllConfigFileTemplatesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeWafInfoRequest(DescribeWafInfoRequest source) {
-        if (source.Params != null) {
-            this.Params = new ClbHostsParams[source.Params.length];
-            for (int i = 0; i < source.Params.length; i++) {
-                this.Params[i] = new ClbHostsParams(source.Params[i]);
-            }
+    public DescribeAllConfigFileTemplatesRequest(DescribeAllConfigFileTemplatesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -67,7 +64,7 @@ public class DescribeWafInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Params.", this.Params);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

@@ -141,6 +141,30 @@ public class GovernanceInstance extends AbstractModel {
     private Long Ttl;
 
     /**
+    * 版本信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceVersion")
+    @Expose
+    private String InstanceVersion;
+
+    /**
+    * 状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthStatus")
+    @Expose
+    private String HealthStatus;
+
+    /**
+    * 描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
      * Get 实例id。 
      * @return Id 实例id。
      */
@@ -428,6 +452,66 @@ public class GovernanceInstance extends AbstractModel {
         this.Ttl = Ttl;
     }
 
+    /**
+     * Get 版本信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceVersion 版本信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceVersion() {
+        return this.InstanceVersion;
+    }
+
+    /**
+     * Set 版本信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceVersion 版本信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceVersion(String InstanceVersion) {
+        this.InstanceVersion = InstanceVersion;
+    }
+
+    /**
+     * Get 状态信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthStatus 状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHealthStatus() {
+        return this.HealthStatus;
+    }
+
+    /**
+     * Set 状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthStatus 状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthStatus(String HealthStatus) {
+        this.HealthStatus = HealthStatus;
+    }
+
+    /**
+     * Get 描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Comment 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Comment 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
     public GovernanceInstance() {
     }
 
@@ -484,6 +568,15 @@ public class GovernanceInstance extends AbstractModel {
         if (source.Ttl != null) {
             this.Ttl = new Long(source.Ttl);
         }
+        if (source.InstanceVersion != null) {
+            this.InstanceVersion = new String(source.InstanceVersion);
+        }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new String(source.HealthStatus);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
     }
 
 
@@ -506,6 +599,9 @@ public class GovernanceInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
         this.setParamSimple(map, prefix + "Ttl", this.Ttl);
+        this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+        this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }

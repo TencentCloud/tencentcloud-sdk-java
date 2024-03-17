@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWafInfoResponse extends AbstractModel {
+public class DescribeGovernanceServiceContractVersionsResponse extends AbstractModel {
 
     /**
-    * 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
+    * 服务契约版本列表
     */
-    @SerializedName("Total")
+    @SerializedName("GovernanceServiceContractVersions")
     @Expose
-    private Long Total;
-
-    /**
-    * 对应的WAF信息的数组。
-    */
-    @SerializedName("HostList")
-    @Expose
-    private ClbHostResult [] HostList;
+    private GovernanceServiceContractVersion [] GovernanceServiceContractVersions;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class DescribeWafInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息 
-     * @return Total 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
+     * Get 服务契约版本列表 
+     * @return GovernanceServiceContractVersions 服务契约版本列表
      */
-    public Long getTotal() {
-        return this.Total;
+    public GovernanceServiceContractVersion [] getGovernanceServiceContractVersions() {
+        return this.GovernanceServiceContractVersions;
     }
 
     /**
-     * Set 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
-     * @param Total 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
+     * Set 服务契约版本列表
+     * @param GovernanceServiceContractVersions 服务契约版本列表
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get 对应的WAF信息的数组。 
-     * @return HostList 对应的WAF信息的数组。
-     */
-    public ClbHostResult [] getHostList() {
-        return this.HostList;
-    }
-
-    /**
-     * Set 对应的WAF信息的数组。
-     * @param HostList 对应的WAF信息的数组。
-     */
-    public void setHostList(ClbHostResult [] HostList) {
-        this.HostList = HostList;
+    public void setGovernanceServiceContractVersions(GovernanceServiceContractVersion [] GovernanceServiceContractVersions) {
+        this.GovernanceServiceContractVersions = GovernanceServiceContractVersions;
     }
 
     /**
@@ -92,21 +69,18 @@ public class DescribeWafInfoResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeWafInfoResponse() {
+    public DescribeGovernanceServiceContractVersionsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeWafInfoResponse(DescribeWafInfoResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.HostList != null) {
-            this.HostList = new ClbHostResult[source.HostList.length];
-            for (int i = 0; i < source.HostList.length; i++) {
-                this.HostList[i] = new ClbHostResult(source.HostList[i]);
+    public DescribeGovernanceServiceContractVersionsResponse(DescribeGovernanceServiceContractVersionsResponse source) {
+        if (source.GovernanceServiceContractVersions != null) {
+            this.GovernanceServiceContractVersions = new GovernanceServiceContractVersion[source.GovernanceServiceContractVersions.length];
+            for (int i = 0; i < source.GovernanceServiceContractVersions.length; i++) {
+                this.GovernanceServiceContractVersions[i] = new GovernanceServiceContractVersion(source.GovernanceServiceContractVersions[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,8 +93,7 @@ public class DescribeWafInfoResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "HostList.", this.HostList);
+        this.setParamArrayObj(map, prefix + "GovernanceServiceContractVersions.", this.GovernanceServiceContractVersions);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -31,7 +31,7 @@ public class DescribeBillDetailRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 数量，最大值为100
+    * 数量，最大值为300
     */
     @SerializedName("Limit")
     @Expose
@@ -175,16 +175,16 @@ public class DescribeBillDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 数量，最大值为100 
-     * @return Limit 数量，最大值为100
+     * Get 数量，最大值为300 
+     * @return Limit 数量，最大值为300
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 数量，最大值为100
-     * @param Limit 数量，最大值为100
+     * Set 数量，最大值为300
+     * @param Limit 数量，最大值为300
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

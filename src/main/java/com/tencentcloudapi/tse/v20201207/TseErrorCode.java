@@ -153,6 +153,12 @@ public enum TseErrorCode {
     // 不允许的操作。
      OPERATIONDENIED_OPERATIONDENIED("OperationDenied.OperationDenied"),
      
+    // 服务下存在实例，无法删除。
+     RESOURCEINUSE_INSTANCESEXISTEDINSERVICE("ResourceInUse.InstancesExistedInService"),
+     
+    // 此命名空间下存在服务，无法删除。
+     RESOURCEINUSE_SERVICESEXISTEDINNAMESPACE("ResourceInUse.ServicesExistedInNamespace"),
+     
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
      

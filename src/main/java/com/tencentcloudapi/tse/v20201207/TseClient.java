@@ -160,6 +160,28 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建配置文件
+     * @param req CreateConfigFileRequest
+     * @return CreateConfigFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConfigFileResponse CreateConfigFile(CreateConfigFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConfigFile", CreateConfigFileResponse.class);
+    }
+
+    /**
+     *创建服务治理中心配置文件组
+     * @param req CreateConfigFileGroupRequest
+     * @return CreateConfigFileGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConfigFileGroupResponse CreateConfigFileGroup(CreateConfigFileGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConfigFileGroup", CreateConfigFileGroupResponse.class);
+    }
+
+    /**
      *创建引擎实例
      * @param req CreateEngineRequest
      * @return CreateEngineResponse
@@ -171,7 +193,18 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *创建治理中心服务实例
+     *创建治理中心服务别名
+     * @param req CreateGovernanceAliasRequest
+     * @return CreateGovernanceAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGovernanceAliasResponse CreateGovernanceAlias(CreateGovernanceAliasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGovernanceAlias", CreateGovernanceAliasResponse.class);
+    }
+
+    /**
+     *创建服务实例
      * @param req CreateGovernanceInstancesRequest
      * @return CreateGovernanceInstancesResponse
      * @throws TencentCloudSDKException
@@ -179,6 +212,28 @@ public class TseClient extends AbstractClient{
     public CreateGovernanceInstancesResponse CreateGovernanceInstances(CreateGovernanceInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateGovernanceInstances", CreateGovernanceInstancesResponse.class);
+    }
+
+    /**
+     *创建治理中心命名空间
+     * @param req CreateGovernanceNamespacesRequest
+     * @return CreateGovernanceNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGovernanceNamespacesResponse CreateGovernanceNamespaces(CreateGovernanceNamespacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGovernanceNamespaces", CreateGovernanceNamespacesResponse.class);
+    }
+
+    /**
+     *创建治理中心服务
+     * @param req CreateGovernanceServicesRequest
+     * @return CreateGovernanceServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGovernanceServicesResponse CreateGovernanceServices(CreateGovernanceServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGovernanceServices", CreateGovernanceServicesResponse.class);
     }
 
     /**
@@ -190,6 +245,17 @@ public class TseClient extends AbstractClient{
     public CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroup(CreateNativeGatewayServerGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateNativeGatewayServerGroup", CreateNativeGatewayServerGroupResponse.class);
+    }
+
+    /**
+     *创建或更新配置文件并发布配置
+     * @param req CreateOrUpdateConfigFileAndReleaseRequest
+     * @return CreateOrUpdateConfigFileAndReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrUpdateConfigFileAndReleaseResponse CreateOrUpdateConfigFileAndRelease(CreateOrUpdateConfigFileAndReleaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrUpdateConfigFileAndRelease", CreateOrUpdateConfigFileAndReleaseResponse.class);
     }
 
     /**
@@ -303,6 +369,39 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *删除配置文件分组
+     * @param req DeleteConfigFileGroupRequest
+     * @return DeleteConfigFileGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConfigFileGroupResponse DeleteConfigFileGroup(DeleteConfigFileGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConfigFileGroup", DeleteConfigFileGroupResponse.class);
+    }
+
+    /**
+     *删除配置发布
+     * @param req DeleteConfigFileReleasesRequest
+     * @return DeleteConfigFileReleasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConfigFileReleasesResponse DeleteConfigFileReleases(DeleteConfigFileReleasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConfigFileReleases", DeleteConfigFileReleasesResponse.class);
+    }
+
+    /**
+     *删除配置文件
+     * @param req DeleteConfigFilesRequest
+     * @return DeleteConfigFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConfigFilesResponse DeleteConfigFiles(DeleteConfigFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConfigFiles", DeleteConfigFilesResponse.class);
+    }
+
+    /**
      *删除引擎实例
      * @param req DeleteEngineRequest
      * @return DeleteEngineResponse
@@ -314,7 +413,18 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *删除治理中心服务实例
+     *删除治理中心服务别名
+     * @param req DeleteGovernanceAliasesRequest
+     * @return DeleteGovernanceAliasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGovernanceAliasesResponse DeleteGovernanceAliases(DeleteGovernanceAliasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGovernanceAliases", DeleteGovernanceAliasesResponse.class);
+    }
+
+    /**
+     *删除服务实例
      * @param req DeleteGovernanceInstancesRequest
      * @return DeleteGovernanceInstancesResponse
      * @throws TencentCloudSDKException
@@ -322,6 +432,39 @@ public class TseClient extends AbstractClient{
     public DeleteGovernanceInstancesResponse DeleteGovernanceInstances(DeleteGovernanceInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGovernanceInstances", DeleteGovernanceInstancesResponse.class);
+    }
+
+    /**
+     *删除治理中心服务实例
+     * @param req DeleteGovernanceInstancesByHostRequest
+     * @return DeleteGovernanceInstancesByHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGovernanceInstancesByHostResponse DeleteGovernanceInstancesByHost(DeleteGovernanceInstancesByHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGovernanceInstancesByHost", DeleteGovernanceInstancesByHostResponse.class);
+    }
+
+    /**
+     *删除治理中心命名空间
+     * @param req DeleteGovernanceNamespacesRequest
+     * @return DeleteGovernanceNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGovernanceNamespacesResponse DeleteGovernanceNamespaces(DeleteGovernanceNamespacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGovernanceNamespaces", DeleteGovernanceNamespacesResponse.class);
+    }
+
+    /**
+     *删除治理中心服务
+     * @param req DeleteGovernanceServicesRequest
+     * @return DeleteGovernanceServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGovernanceServicesResponse DeleteGovernanceServices(DeleteGovernanceServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGovernanceServices", DeleteGovernanceServicesResponse.class);
     }
 
     /**
@@ -344,6 +487,17 @@ public class TseClient extends AbstractClient{
     public DeleteWafDomainsResponse DeleteWafDomains(DeleteWafDomainsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWafDomains", DeleteWafDomainsResponse.class);
+    }
+
+    /**
+     *获取全量配置文件模板列表
+     * @param req DescribeAllConfigFileTemplatesRequest
+     * @return DescribeAllConfigFileTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllConfigFileTemplatesResponse DescribeAllConfigFileTemplates(DescribeAllConfigFileTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllConfigFileTemplates", DescribeAllConfigFileTemplatesResponse.class);
     }
 
     /**
@@ -512,7 +666,106 @@ public class TseClient extends AbstractClient{
     }
 
     /**
-     *查询治理中心服务实例
+     *根据命名空间、组、名字查找配置文件
+     * @param req DescribeConfigFileRequest
+     * @return DescribeConfigFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigFileResponse DescribeConfigFile(DescribeConfigFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigFile", DescribeConfigFileResponse.class);
+    }
+
+    /**
+     *根据条件分页查询配置文件组
+     * @param req DescribeConfigFileGroupsRequest
+     * @return DescribeConfigFileGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigFileGroupsResponse DescribeConfigFileGroups(DescribeConfigFileGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigFileGroups", DescribeConfigFileGroupsResponse.class);
+    }
+
+    /**
+     *获取配置文件发布
+     * @param req DescribeConfigFileReleaseRequest
+     * @return DescribeConfigFileReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigFileReleaseResponse DescribeConfigFileRelease(DescribeConfigFileReleaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigFileRelease", DescribeConfigFileReleaseResponse.class);
+    }
+
+    /**
+     *获取配置文件发布历史列表
+     * @param req DescribeConfigFileReleaseHistoriesRequest
+     * @return DescribeConfigFileReleaseHistoriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigFileReleaseHistoriesResponse DescribeConfigFileReleaseHistories(DescribeConfigFileReleaseHistoriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigFileReleaseHistories", DescribeConfigFileReleaseHistoriesResponse.class);
+    }
+
+    /**
+     *查询某个配置所有版本信息
+     * @param req DescribeConfigFileReleaseVersionsRequest
+     * @return DescribeConfigFileReleaseVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigFileReleaseVersionsResponse DescribeConfigFileReleaseVersions(DescribeConfigFileReleaseVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigFileReleaseVersions", DescribeConfigFileReleaseVersionsResponse.class);
+    }
+
+    /**
+     *查询配置版本列表
+     * @param req DescribeConfigFileReleasesRequest
+     * @return DescribeConfigFileReleasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigFileReleasesResponse DescribeConfigFileReleases(DescribeConfigFileReleasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigFileReleases", DescribeConfigFileReleasesResponse.class);
+    }
+
+    /**
+     *根据命名空间、组名、名称、标签查询配置文件列表
+     * @param req DescribeConfigFilesRequest
+     * @return DescribeConfigFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigFilesResponse DescribeConfigFiles(DescribeConfigFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigFiles", DescribeConfigFilesResponse.class);
+    }
+
+    /**
+     *根据group查询配置文件列表
+     * @param req DescribeConfigFilesByGroupRequest
+     * @return DescribeConfigFilesByGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigFilesByGroupResponse DescribeConfigFilesByGroup(DescribeConfigFilesByGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigFilesByGroup", DescribeConfigFilesByGroupResponse.class);
+    }
+
+    /**
+     *查询治理中心服务别名列表
+     * @param req DescribeGovernanceAliasesRequest
+     * @return DescribeGovernanceAliasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGovernanceAliasesResponse DescribeGovernanceAliases(DescribeGovernanceAliasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGovernanceAliases", DescribeGovernanceAliasesResponse.class);
+    }
+
+    /**
+     *查询服务实例
      * @param req DescribeGovernanceInstancesRequest
      * @return DescribeGovernanceInstancesResponse
      * @throws TencentCloudSDKException
@@ -520,6 +773,50 @@ public class TseClient extends AbstractClient{
     public DescribeGovernanceInstancesResponse DescribeGovernanceInstances(DescribeGovernanceInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGovernanceInstances", DescribeGovernanceInstancesResponse.class);
+    }
+
+    /**
+     *查询服务治理中心命名空间列表
+     * @param req DescribeGovernanceNamespacesRequest
+     * @return DescribeGovernanceNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGovernanceNamespacesResponse DescribeGovernanceNamespaces(DescribeGovernanceNamespacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGovernanceNamespaces", DescribeGovernanceNamespacesResponse.class);
+    }
+
+    /**
+     *查询服务下契约版本列表
+     * @param req DescribeGovernanceServiceContractVersionsRequest
+     * @return DescribeGovernanceServiceContractVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGovernanceServiceContractVersionsResponse DescribeGovernanceServiceContractVersions(DescribeGovernanceServiceContractVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGovernanceServiceContractVersions", DescribeGovernanceServiceContractVersionsResponse.class);
+    }
+
+    /**
+     *查询服务契约定义列表
+     * @param req DescribeGovernanceServiceContractsRequest
+     * @return DescribeGovernanceServiceContractsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGovernanceServiceContractsResponse DescribeGovernanceServiceContracts(DescribeGovernanceServiceContractsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGovernanceServiceContracts", DescribeGovernanceServiceContractsResponse.class);
+    }
+
+    /**
+     *查询治理中心服务列表
+     * @param req DescribeGovernanceServicesRequest
+     * @return DescribeGovernanceServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGovernanceServicesResponse DescribeGovernanceServices(DescribeGovernanceServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGovernanceServices", DescribeGovernanceServicesResponse.class);
     }
 
     /**
@@ -743,6 +1040,28 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *批量修改配置文件组
+     * @param req ModifyConfigFileGroupRequest
+     * @return ModifyConfigFileGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConfigFileGroupResponse ModifyConfigFileGroup(ModifyConfigFileGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConfigFileGroup", ModifyConfigFileGroupResponse.class);
+    }
+
+    /**
+     *修改配置文件
+     * @param req ModifyConfigFilesRequest
+     * @return ModifyConfigFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConfigFilesResponse ModifyConfigFiles(ModifyConfigFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConfigFiles", ModifyConfigFilesResponse.class);
+    }
+
+    /**
      *修改网关实例Konga网络配置
      * @param req ModifyConsoleNetworkRequest
      * @return ModifyConsoleNetworkResponse
@@ -754,6 +1073,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *修改治理中心服务别名
+     * @param req ModifyGovernanceAliasRequest
+     * @return ModifyGovernanceAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGovernanceAliasResponse ModifyGovernanceAlias(ModifyGovernanceAliasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGovernanceAlias", ModifyGovernanceAliasResponse.class);
+    }
+
+    /**
      *修改治理中心服务实例
      * @param req ModifyGovernanceInstancesRequest
      * @return ModifyGovernanceInstancesResponse
@@ -762,6 +1092,28 @@ public class TseClient extends AbstractClient{
     public ModifyGovernanceInstancesResponse ModifyGovernanceInstances(ModifyGovernanceInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGovernanceInstances", ModifyGovernanceInstancesResponse.class);
+    }
+
+    /**
+     *修改治理中心命名空间
+     * @param req ModifyGovernanceNamespacesRequest
+     * @return ModifyGovernanceNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGovernanceNamespacesResponse ModifyGovernanceNamespaces(ModifyGovernanceNamespacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGovernanceNamespaces", ModifyGovernanceNamespacesResponse.class);
+    }
+
+    /**
+     *修改治理中心服务
+     * @param req ModifyGovernanceServicesRequest
+     * @return ModifyGovernanceServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGovernanceServicesResponse ModifyGovernanceServices(ModifyGovernanceServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGovernanceServices", ModifyGovernanceServicesResponse.class);
     }
 
     /**
@@ -817,6 +1169,28 @@ public class TseClient extends AbstractClient{
     public OpenWafProtectionResponse OpenWafProtection(OpenWafProtectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenWafProtection", OpenWafProtectionResponse.class);
+    }
+
+    /**
+     *发布配置文件
+     * @param req PublishConfigFilesRequest
+     * @return PublishConfigFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishConfigFilesResponse PublishConfigFiles(PublishConfigFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PublishConfigFiles", PublishConfigFilesResponse.class);
+    }
+
+    /**
+     *回滚配置发布
+     * @param req RollbackConfigFileReleasesRequest
+     * @return RollbackConfigFileReleasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollbackConfigFileReleasesResponse RollbackConfigFileReleases(RollbackConfigFileReleasesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RollbackConfigFileReleases", RollbackConfigFileReleasesResponse.class);
     }
 
     /**
