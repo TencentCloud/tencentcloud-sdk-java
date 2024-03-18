@@ -38,6 +38,13 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel {
     private String AppName;
 
     /**
+    * 流名称。已废弃该字段，请传入空字符串。
+    */
+    @SerializedName("StreamName")
+    @Expose
+    private String StreamName;
+
+    /**
     * 指定已有的模板Id。
     */
     @SerializedName("TemplateId")
@@ -77,6 +84,22 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel {
     }
 
     /**
+     * Get 流名称。已废弃该字段，请传入空字符串。 
+     * @return StreamName 流名称。已废弃该字段，请传入空字符串。
+     */
+    public String getStreamName() {
+        return this.StreamName;
+    }
+
+    /**
+     * Set 流名称。已废弃该字段，请传入空字符串。
+     * @param StreamName 流名称。已废弃该字段，请传入空字符串。
+     */
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
+    }
+
+    /**
      * Get 指定已有的模板Id。 
      * @return TemplateId 指定已有的模板Id。
      */
@@ -106,6 +129,9 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel {
         if (source.AppName != null) {
             this.AppName = new String(source.AppName);
         }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
         if (source.TemplateId != null) {
             this.TemplateId = new Long(source.TemplateId);
         }
@@ -118,6 +144,7 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
