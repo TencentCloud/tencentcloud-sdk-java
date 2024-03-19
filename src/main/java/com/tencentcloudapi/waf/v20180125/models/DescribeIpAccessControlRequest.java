@@ -101,7 +101,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     private String Sort;
 
     /**
-    * ip
+    * IP
     */
     @SerializedName("Ip")
     @Expose
@@ -127,6 +127,13 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     @SerializedName("ValidTimeStampMax")
     @Expose
     private String ValidTimeStampMax;
+
+    /**
+    * 规则ID
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
 
     /**
      * Get 域名 
@@ -313,16 +320,16 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get ip 
-     * @return Ip ip
+     * Get IP 
+     * @return Ip IP
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set ip
-     * @param Ip ip
+     * Set IP
+     * @param Ip IP
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
@@ -374,6 +381,22 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
      */
     public void setValidTimeStampMax(String ValidTimeStampMax) {
         this.ValidTimeStampMax = ValidTimeStampMax;
+    }
+
+    /**
+     * Get 规则ID 
+     * @return RuleId 规则ID
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 规则ID
+     * @param RuleId 规则ID
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
     }
 
     public DescribeIpAccessControlRequest() {
@@ -429,6 +452,9 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
         if (source.ValidTimeStampMax != null) {
             this.ValidTimeStampMax = new String(source.ValidTimeStampMax);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
     }
 
 
@@ -451,6 +477,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         this.setParamSimple(map, prefix + "ValidTimeStampMin", this.ValidTimeStampMin);
         this.setParamSimple(map, prefix + "ValidTimeStampMax", this.ValidTimeStampMax);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

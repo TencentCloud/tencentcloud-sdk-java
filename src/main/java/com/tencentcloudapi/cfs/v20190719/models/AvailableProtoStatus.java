@@ -31,7 +31,7 @@ public class AvailableProtoStatus extends AbstractModel {
     private String SaleStatus;
 
     /**
-    * 协议类型。可选值有 NFS、CIFS
+    * 协议类型。可选值有 NFS、CIFS、TURBO
     */
     @SerializedName("Protocol")
     @Expose
@@ -54,16 +54,16 @@ public class AvailableProtoStatus extends AbstractModel {
     }
 
     /**
-     * Get 协议类型。可选值有 NFS、CIFS 
-     * @return Protocol 协议类型。可选值有 NFS、CIFS
+     * Get 协议类型。可选值有 NFS、CIFS、TURBO 
+     * @return Protocol 协议类型。可选值有 NFS、CIFS、TURBO
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议类型。可选值有 NFS、CIFS
-     * @param Protocol 协议类型。可选值有 NFS、CIFS
+     * Set 协议类型。可选值有 NFS、CIFS、TURBO
+     * @param Protocol 协议类型。可选值有 NFS、CIFS、TURBO
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

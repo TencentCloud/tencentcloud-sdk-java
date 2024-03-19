@@ -56,7 +56,9 @@ public class ModifyAccessPeriodRequest extends AbstractModel {
     /**
      * Get 日志主题，新版本不需要再传 
      * @return TopicId 日志主题，新版本不需要再传
+     * @deprecated
      */
+    @Deprecated
     public String getTopicId() {
         return this.TopicId;
     }
@@ -64,7 +66,9 @@ public class ModifyAccessPeriodRequest extends AbstractModel {
     /**
      * Set 日志主题，新版本不需要再传
      * @param TopicId 日志主题，新版本不需要再传
+     * @deprecated
      */
+    @Deprecated
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }

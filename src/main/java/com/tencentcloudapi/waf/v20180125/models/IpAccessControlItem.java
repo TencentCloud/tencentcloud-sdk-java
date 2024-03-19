@@ -83,6 +83,22 @@ public class IpAccessControlItem extends AbstractModel {
     private Long ValidStatus;
 
     /**
+    * 55000001
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
+    * IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpList")
+    @Expose
+    private String [] IpList;
+
+    /**
      * Get mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id mongo表自增Id
@@ -222,6 +238,46 @@ public class IpAccessControlItem extends AbstractModel {
         this.ValidStatus = ValidStatus;
     }
 
+    /**
+     * Get 55000001
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleId 55000001
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 55000001
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleId 55000001
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
+    /**
+     * Get IP列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIpList() {
+        return this.IpList;
+    }
+
+    /**
+     * Set IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpList(String [] IpList) {
+        this.IpList = IpList;
+    }
+
     public IpAccessControlItem() {
     }
 
@@ -254,6 +310,15 @@ public class IpAccessControlItem extends AbstractModel {
         if (source.ValidStatus != null) {
             this.ValidStatus = new Long(source.ValidStatus);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.IpList != null) {
+            this.IpList = new String[source.IpList.length];
+            for (int i = 0; i < source.IpList.length; i++) {
+                this.IpList[i] = new String(source.IpList[i]);
+            }
+        }
     }
 
 
@@ -269,6 +334,8 @@ public class IpAccessControlItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TsVersion", this.TsVersion);
         this.setParamSimple(map, prefix + "ValidTs", this.ValidTs);
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
 
     }
 }

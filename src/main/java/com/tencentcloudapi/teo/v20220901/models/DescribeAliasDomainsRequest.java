@@ -46,7 +46,8 @@ public class DescribeAliasDomainsRequest extends AbstractModel {
 
     /**
     * 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。
     */
     @SerializedName("Filters")
     @Expose
@@ -102,9 +103,11 @@ public class DescribeAliasDomainsRequest extends AbstractModel {
 
     /**
      * Get 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。 
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。 
      * @return Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
@@ -112,9 +115,11 @@ public class DescribeAliasDomainsRequest extends AbstractModel {
 
     /**
      * Set 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。
      * @param Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>target-name<br>   按照【<strong>目标域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>alias-name<br>   按照【<strong>别称域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为alias-name。
+<li>target-name：目标域名名称进行过滤；</li>
+<li>alias-name：按照别称域名名称进行过滤。</li>模糊查询时仅支持过滤字段名为 alias-name。
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

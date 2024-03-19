@@ -82,7 +82,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -349,6 +349,14 @@ public：公有云域名
     private String SgID;
 
     /**
+    * clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessStatus")
+    @Expose
+    private Long AccessStatus;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -461,7 +469,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -490,7 +498,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -525,7 +533,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -554,7 +562,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 "日本": "jp"
 "弗吉尼亚": "use"
 "北京": "bj"
-"香港": "hk"
+"中国香港": "hk"
 "杭州": "hzec"
 "北京金融": "bjjr"
 "上海金融": "shjr"
@@ -1240,6 +1248,26 @@ public：公有云域名
         this.SgID = SgID;
     }
 
+    /**
+     * Get clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessStatus clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAccessStatus() {
+        return this.AccessStatus;
+    }
+
+    /**
+     * Set clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessStatus clbwaf接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessStatus(Long AccessStatus) {
+        this.AccessStatus = AccessStatus;
+    }
+
     public DomainInfo() {
     }
 
@@ -1368,6 +1396,9 @@ public：公有云域名
         if (source.SgID != null) {
             this.SgID = new String(source.SgID);
         }
+        if (source.AccessStatus != null) {
+            this.AccessStatus = new Long(source.AccessStatus);
+        }
     }
 
 
@@ -1409,6 +1440,7 @@ public：公有云域名
         this.setParamArraySimple(map, prefix + "SrcList.", this.SrcList);
         this.setParamArraySimple(map, prefix + "UpstreamDomainList.", this.UpstreamDomainList);
         this.setParamSimple(map, prefix + "SgID", this.SgID);
+        this.setParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
 
     }
 }

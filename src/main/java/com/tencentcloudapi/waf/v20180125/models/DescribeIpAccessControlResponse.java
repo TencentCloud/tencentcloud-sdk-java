@@ -32,6 +32,14 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
     private IpAccessControlData Data;
 
     /**
+    * 已经使用的IP黑白名单的IP总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UsedTotal")
+    @Expose
+    private Long UsedTotal;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +64,26 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
      */
     public void setData(IpAccessControlData Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 已经使用的IP黑白名单的IP总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UsedTotal 已经使用的IP黑白名单的IP总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUsedTotal() {
+        return this.UsedTotal;
+    }
+
+    /**
+     * Set 已经使用的IP黑白名单的IP总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsedTotal 已经使用的IP黑白名单的IP总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsedTotal(Long UsedTotal) {
+        this.UsedTotal = UsedTotal;
     }
 
     /**
@@ -85,6 +113,9 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
         if (source.Data != null) {
             this.Data = new IpAccessControlData(source.Data);
         }
+        if (source.UsedTotal != null) {
+            this.UsedTotal = new Long(source.UsedTotal);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -96,6 +127,7 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "UsedTotal", this.UsedTotal);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

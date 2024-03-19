@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCCAutoStatusResponse extends AbstractModel {
 
     /**
-    * 配置状态
+    * 配置状态，0表示关闭，1表示开启
     */
     @SerializedName("AutoCCSwitch")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCCAutoStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配置状态 
-     * @return AutoCCSwitch 配置状态
+     * Get 配置状态，0表示关闭，1表示开启 
+     * @return AutoCCSwitch 配置状态，0表示关闭，1表示开启
      */
     public Long getAutoCCSwitch() {
         return this.AutoCCSwitch;
     }
 
     /**
-     * Set 配置状态
-     * @param AutoCCSwitch 配置状态
+     * Set 配置状态，0表示关闭，1表示开启
+     * @param AutoCCSwitch 配置状态，0表示关闭，1表示开启
      */
     public void setAutoCCSwitch(Long AutoCCSwitch) {
         this.AutoCCSwitch = AutoCCSwitch;

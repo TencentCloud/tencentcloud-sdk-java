@@ -81,6 +81,22 @@ public class BatchIpAccessControlItem extends AbstractModel {
     private String [] Hosts;
 
     /**
+    * 55101145
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
+    * IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpList")
+    @Expose
+    private String [] IpList;
+
+    /**
      * Get mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id mongo表自增Id
@@ -212,6 +228,46 @@ public class BatchIpAccessControlItem extends AbstractModel {
         this.Hosts = Hosts;
     }
 
+    /**
+     * Get 55101145
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleId 55101145
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 55101145
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleId 55101145
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
+    /**
+     * Get IP列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIpList() {
+        return this.IpList;
+    }
+
+    /**
+     * Set IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpList(String [] IpList) {
+        this.IpList = IpList;
+    }
+
     public BatchIpAccessControlItem() {
     }
 
@@ -247,6 +303,15 @@ public class BatchIpAccessControlItem extends AbstractModel {
                 this.Hosts[i] = new String(source.Hosts[i]);
             }
         }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.IpList != null) {
+            this.IpList = new String[source.IpList.length];
+            for (int i = 0; i < source.IpList.length; i++) {
+                this.IpList[i] = new String(source.IpList[i]);
+            }
+        }
     }
 
 
@@ -262,6 +327,8 @@ public class BatchIpAccessControlItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TsVersion", this.TsVersion);
         this.setParamSimple(map, prefix + "ValidTs", this.ValidTs);
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
 
     }
 }

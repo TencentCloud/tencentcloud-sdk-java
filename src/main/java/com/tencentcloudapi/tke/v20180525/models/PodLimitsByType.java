@@ -48,6 +48,14 @@ public class PodLimitsByType extends AbstractModel {
     private Long TKEDirectENI;
 
     /**
+    * TKE中继网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TKESubENI")
+    @Expose
+    private Long TKESubENI;
+
+    /**
      * Get TKE共享网卡非固定IP模式可支持的Pod数量
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TKERouteENINonStaticIP TKE共享网卡非固定IP模式可支持的Pod数量
@@ -107,6 +115,26 @@ public class PodLimitsByType extends AbstractModel {
         this.TKEDirectENI = TKEDirectENI;
     }
 
+    /**
+     * Get TKE中继网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TKESubENI TKE中继网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTKESubENI() {
+        return this.TKESubENI;
+    }
+
+    /**
+     * Set TKE中继网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TKESubENI TKE中继网卡模式可支持的Pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTKESubENI(Long TKESubENI) {
+        this.TKESubENI = TKESubENI;
+    }
+
     public PodLimitsByType() {
     }
 
@@ -124,6 +152,9 @@ public class PodLimitsByType extends AbstractModel {
         if (source.TKEDirectENI != null) {
             this.TKEDirectENI = new Long(source.TKEDirectENI);
         }
+        if (source.TKESubENI != null) {
+            this.TKESubENI = new Long(source.TKESubENI);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class PodLimitsByType extends AbstractModel {
         this.setParamSimple(map, prefix + "TKERouteENINonStaticIP", this.TKERouteENINonStaticIP);
         this.setParamSimple(map, prefix + "TKERouteENIStaticIP", this.TKERouteENIStaticIP);
         this.setParamSimple(map, prefix + "TKEDirectENI", this.TKEDirectENI);
+        this.setParamSimple(map, prefix + "TKESubENI", this.TKESubENI);
 
     }
 }

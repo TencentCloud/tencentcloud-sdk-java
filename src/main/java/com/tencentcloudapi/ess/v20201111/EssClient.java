@@ -960,6 +960,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *通过[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)发起批量撤销任务后，可通过此接口查询批量撤销任务的结果。
+     * @param req DescribeCancelFlowsTaskRequest
+     * @return DescribeCancelFlowsTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCancelFlowsTaskResponse DescribeCancelFlowsTask(DescribeCancelFlowsTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCancelFlowsTask", DescribeCancelFlowsTaskResponse.class);
+    }
+
+    /**
      *查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
 1. 企业自动签（本企业授权、集团企业授权、合作企业授权）
 2. 批量签署能力

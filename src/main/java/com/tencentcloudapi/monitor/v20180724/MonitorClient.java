@@ -644,6 +644,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取告警短信配额
+     * @param req DescribeAlarmSmsQuotaRequest
+     * @return DescribeAlarmSmsQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmSmsQuotaResponse DescribeAlarmSmsQuota(DescribeAlarmSmsQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlarmSmsQuota", DescribeAlarmSmsQuotaResponse.class);
+    }
+
+    /**
      *Prometheus 报警规则查询接口
      * @param req DescribeAlertRulesRequest
      * @return DescribeAlertRulesResponse
@@ -831,6 +842,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取资源消耗页概览
+     * @param req DescribeMonitorResourceInfoRequest
+     * @return DescribeMonitorResourceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMonitorResourceInfoResponse DescribeMonitorResourceInfo(DescribeMonitorResourceInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMonitorResourceInfo", DescribeMonitorResourceInfoResponse.class);
+    }
+
+    /**
      *腾讯云可观测平台支持多种类型的监控，此接口列出支持的所有类型
      * @param req DescribeMonitorTypesRequest
      * @return DescribeMonitorTypesResponse
@@ -839,6 +861,17 @@ public class MonitorClient extends AbstractClient{
     public DescribeMonitorTypesResponse DescribeMonitorTypes(DescribeMonitorTypesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMonitorTypes", DescribeMonitorTypesResponse.class);
+    }
+
+    /**
+     *查询周期内电话流水总数
+     * @param req DescribePhoneAlarmFlowTotalCountRequest
+     * @return DescribePhoneAlarmFlowTotalCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePhoneAlarmFlowTotalCountResponse DescribePhoneAlarmFlowTotalCount(DescribePhoneAlarmFlowTotalCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePhoneAlarmFlowTotalCount", DescribePhoneAlarmFlowTotalCountResponse.class);
     }
 
     /**

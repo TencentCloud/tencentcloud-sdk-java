@@ -370,6 +370,14 @@ https：使用https协议回源
     private String Level;
 
     /**
+    * 是否开启缓存 0-关闭 1-开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyBuffer")
+    @Expose
+    private Long ProxyBuffer;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1261,6 +1269,26 @@ https：使用https协议回源
         this.Level = Level;
     }
 
+    /**
+     * Get 是否开启缓存 0-关闭 1-开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyBuffer 是否开启缓存 0-关闭 1-开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProxyBuffer() {
+        return this.ProxyBuffer;
+    }
+
+    /**
+     * Set 是否开启缓存 0-关闭 1-开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyBuffer 是否开启缓存 0-关闭 1-开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyBuffer(Long ProxyBuffer) {
+        this.ProxyBuffer = ProxyBuffer;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1407,6 +1435,9 @@ https：使用https协议回源
         if (source.Level != null) {
             this.Level = new String(source.Level);
         }
+        if (source.ProxyBuffer != null) {
+            this.ProxyBuffer = new Long(source.ProxyBuffer);
+        }
     }
 
 
@@ -1455,6 +1486,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
 
     }
 }

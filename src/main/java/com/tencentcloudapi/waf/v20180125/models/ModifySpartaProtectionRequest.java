@@ -38,6 +38,13 @@ public class ModifySpartaProtectionRequest extends AbstractModel {
     private String DomainId;
 
     /**
+    * 必填项。域名所属实例id
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
     * 必填项。证书类型。
 0：仅配置HTTP监听端口，没有证书
 1：证书来源为自有证书
@@ -186,13 +193,6 @@ https：使用https协议回源
     private String IsKeepAlive;
 
     /**
-    * 必填项。域名所属实例id
-    */
-    @SerializedName("InstanceID")
-    @Expose
-    private String InstanceID;
-
-    /**
     * 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
     */
     @SerializedName("Anycast")
@@ -303,6 +303,13 @@ https：使用https协议回源
     private String UpstreamHost;
 
     /**
+    * 是否开启缓存 0-关闭 1-开启
+    */
+    @SerializedName("ProxyBuffer")
+    @Expose
+    private Long ProxyBuffer;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -332,6 +339,22 @@ https：使用https协议回源
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
+    }
+
+    /**
+     * Get 必填项。域名所属实例id 
+     * @return InstanceID 必填项。域名所属实例id
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set 必填项。域名所属实例id
+     * @param InstanceID 必填项。域名所属实例id
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
     }
 
     /**
@@ -711,22 +734,6 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项。域名所属实例id 
-     * @return InstanceID 必填项。域名所属实例id
-     */
-    public String getInstanceID() {
-        return this.InstanceID;
-    }
-
-    /**
-     * Set 必填项。域名所属实例id
-     * @param InstanceID 必填项。域名所属实例id
-     */
-    public void setInstanceID(String InstanceID) {
-        this.InstanceID = InstanceID;
-    }
-
-    /**
      * Get 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP 
      * @return Anycast 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      */
@@ -998,6 +1005,22 @@ https：使用https协议回源
         this.UpstreamHost = UpstreamHost;
     }
 
+    /**
+     * Get 是否开启缓存 0-关闭 1-开启 
+     * @return ProxyBuffer 是否开启缓存 0-关闭 1-开启
+     */
+    public Long getProxyBuffer() {
+        return this.ProxyBuffer;
+    }
+
+    /**
+     * Set 是否开启缓存 0-关闭 1-开启
+     * @param ProxyBuffer 是否开启缓存 0-关闭 1-开启
+     */
+    public void setProxyBuffer(Long ProxyBuffer) {
+        this.ProxyBuffer = ProxyBuffer;
+    }
+
     public ModifySpartaProtectionRequest() {
     }
 
@@ -1011,6 +1034,9 @@ https：使用https协议回源
         }
         if (source.DomainId != null) {
             this.DomainId = new String(source.DomainId);
+        }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
         }
         if (source.CertType != null) {
             this.CertType = new Long(source.CertType);
@@ -1072,9 +1098,6 @@ https：使用https协议回源
         if (source.IsKeepAlive != null) {
             this.IsKeepAlive = new String(source.IsKeepAlive);
         }
-        if (source.InstanceID != null) {
-            this.InstanceID = new String(source.InstanceID);
-        }
         if (source.Anycast != null) {
             this.Anycast = new Long(source.Anycast);
         }
@@ -1126,6 +1149,9 @@ https：使用https协议回源
         if (source.UpstreamHost != null) {
             this.UpstreamHost = new String(source.UpstreamHost);
         }
+        if (source.ProxyBuffer != null) {
+            this.ProxyBuffer = new Long(source.ProxyBuffer);
+        }
     }
 
 
@@ -1135,6 +1161,7 @@ https：使用https协议回源
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "CertType", this.CertType);
         this.setParamSimple(map, prefix + "Cert", this.Cert);
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
@@ -1153,7 +1180,6 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamArrayObj(map, prefix + "Ports.", this.Ports);
         this.setParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
-        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Anycast", this.Anycast);
         this.setParamArraySimple(map, prefix + "Weights.", this.Weights);
         this.setParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
@@ -1168,6 +1194,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "XFFReset", this.XFFReset);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
+        this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
 
     }
 }

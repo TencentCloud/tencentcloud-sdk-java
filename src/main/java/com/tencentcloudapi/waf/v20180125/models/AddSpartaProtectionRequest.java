@@ -80,6 +80,34 @@ public class AddSpartaProtectionRequest extends AbstractModel {
     private String LoadBalance;
 
     /**
+    * 服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同
+    */
+    @SerializedName("Ports")
+    @Expose
+    private PortItem [] Ports;
+
+    /**
+    * 必填项，是否开启长连接。
+0： 短连接
+1： 长连接
+    */
+    @SerializedName("IsKeepAlive")
+    @Expose
+    private String IsKeepAlive;
+
+    /**
+    * 必填项，域名所属实例id
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
     * CertType为1时，需要填充此参数，表示自有证书的证书链
     */
     @SerializedName("Cert")
@@ -177,18 +205,6 @@ https：使用https协议回源
     private Long IsHttp2;
 
     /**
-    * 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
-    */
-    @SerializedName("Ports")
-    @Expose
-    private PortItem [] Ports;
-
-    /**
     * 待废弃，可不填。WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
@@ -197,22 +213,6 @@ cdn-waf：CDN上的Web防护能力
     @SerializedName("Edition")
     @Expose
     private String Edition;
-
-    /**
-    * 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
-    */
-    @SerializedName("IsKeepAlive")
-    @Expose
-    private String IsKeepAlive;
-
-    /**
-    * 必填项，域名所属实例id
-    */
-    @SerializedName("InstanceID")
-    @Expose
-    private String InstanceID;
 
     /**
     * 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
@@ -316,6 +316,13 @@ cdn-waf：CDN上的Web防护能力
     @SerializedName("UpstreamHost")
     @Expose
     private String UpstreamHost;
+
+    /**
+    * 是否开启缓存 0-关闭 1-开启
+    */
+    @SerializedName("ProxyBuffer")
+    @Expose
+    private Long ProxyBuffer;
 
     /**
      * Get 需要防护的域名 
@@ -467,6 +474,82 @@ cdn-waf：CDN上的Web防护能力
      */
     public void setLoadBalance(String LoadBalance) {
         this.LoadBalance = LoadBalance;
+    }
+
+    /**
+     * Get 服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同 
+     * @return Ports 服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同
+     */
+    public PortItem [] getPorts() {
+        return this.Ports;
+    }
+
+    /**
+     * Set 服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同
+     * @param Ports 服务端口列表配置。
+NginxServerId：新增域名时填'0'
+Port：监听端口号
+Protocol：端口协议
+UpstreamPort：与Port相同
+UpstreamProtocol：与Protocol相同
+     */
+    public void setPorts(PortItem [] Ports) {
+        this.Ports = Ports;
+    }
+
+    /**
+     * Get 必填项，是否开启长连接。
+0： 短连接
+1： 长连接 
+     * @return IsKeepAlive 必填项，是否开启长连接。
+0： 短连接
+1： 长连接
+     */
+    public String getIsKeepAlive() {
+        return this.IsKeepAlive;
+    }
+
+    /**
+     * Set 必填项，是否开启长连接。
+0： 短连接
+1： 长连接
+     * @param IsKeepAlive 必填项，是否开启长连接。
+0： 短连接
+1： 长连接
+     */
+    public void setIsKeepAlive(String IsKeepAlive) {
+        this.IsKeepAlive = IsKeepAlive;
+    }
+
+    /**
+     * Get 必填项，域名所属实例id 
+     * @return InstanceID 必填项，域名所属实例id
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set 必填项，域名所属实例id
+     * @param InstanceID 必填项，域名所属实例id
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
     }
 
     /**
@@ -702,42 +785,6 @@ https：使用https协议回源
     }
 
     /**
-     * Get 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同 
-     * @return Ports 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
-     */
-    public PortItem [] getPorts() {
-        return this.Ports;
-    }
-
-    /**
-     * Set 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
-     * @param Ports 服务端口列表配置。
-NginxServerId：新增域名时填'0'
-Port：监听端口号
-Protocol：端口协议
-UpstreamPort：与Port相同
-UpstreamProtocol：与Protocol相同
-     */
-    public void setPorts(PortItem [] Ports) {
-        this.Ports = Ports;
-    }
-
-    /**
      * Get 待废弃，可不填。WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
@@ -763,46 +810,6 @@ cdn-waf：CDN上的Web防护能力
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
-    }
-
-    /**
-     * Get 必填项，是否开启长连接。
-0： 短连接
-1： 长连接 
-     * @return IsKeepAlive 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
-     */
-    public String getIsKeepAlive() {
-        return this.IsKeepAlive;
-    }
-
-    /**
-     * Set 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
-     * @param IsKeepAlive 必填项，是否开启长连接。
-0： 短连接
-1： 长连接
-     */
-    public void setIsKeepAlive(String IsKeepAlive) {
-        this.IsKeepAlive = IsKeepAlive;
-    }
-
-    /**
-     * Get 必填项，域名所属实例id 
-     * @return InstanceID 必填项，域名所属实例id
-     */
-    public String getInstanceID() {
-        return this.InstanceID;
-    }
-
-    /**
-     * Set 必填项，域名所属实例id
-     * @param InstanceID 必填项，域名所属实例id
-     */
-    public void setInstanceID(String InstanceID) {
-        this.InstanceID = InstanceID;
     }
 
     /**
@@ -1061,6 +1068,22 @@ cdn-waf：CDN上的Web防护能力
         this.UpstreamHost = UpstreamHost;
     }
 
+    /**
+     * Get 是否开启缓存 0-关闭 1-开启 
+     * @return ProxyBuffer 是否开启缓存 0-关闭 1-开启
+     */
+    public Long getProxyBuffer() {
+        return this.ProxyBuffer;
+    }
+
+    /**
+     * Set 是否开启缓存 0-关闭 1-开启
+     * @param ProxyBuffer 是否开启缓存 0-关闭 1-开启
+     */
+    public void setProxyBuffer(Long ProxyBuffer) {
+        this.ProxyBuffer = ProxyBuffer;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -1086,6 +1109,18 @@ cdn-waf：CDN上的Web防护能力
         }
         if (source.LoadBalance != null) {
             this.LoadBalance = new String(source.LoadBalance);
+        }
+        if (source.Ports != null) {
+            this.Ports = new PortItem[source.Ports.length];
+            for (int i = 0; i < source.Ports.length; i++) {
+                this.Ports[i] = new PortItem(source.Ports[i]);
+            }
+        }
+        if (source.IsKeepAlive != null) {
+            this.IsKeepAlive = new String(source.IsKeepAlive);
+        }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
         }
         if (source.Cert != null) {
             this.Cert = new String(source.Cert);
@@ -1135,20 +1170,8 @@ cdn-waf：CDN上的Web防护能力
         if (source.IsHttp2 != null) {
             this.IsHttp2 = new Long(source.IsHttp2);
         }
-        if (source.Ports != null) {
-            this.Ports = new PortItem[source.Ports.length];
-            for (int i = 0; i < source.Ports.length; i++) {
-                this.Ports[i] = new PortItem(source.Ports[i]);
-            }
-        }
         if (source.Edition != null) {
             this.Edition = new String(source.Edition);
-        }
-        if (source.IsKeepAlive != null) {
-            this.IsKeepAlive = new String(source.IsKeepAlive);
-        }
-        if (source.InstanceID != null) {
-            this.InstanceID = new String(source.InstanceID);
         }
         if (source.Anycast != null) {
             this.Anycast = new Long(source.Anycast);
@@ -1195,6 +1218,9 @@ cdn-waf：CDN上的Web防护能力
         if (source.UpstreamHost != null) {
             this.UpstreamHost = new String(source.UpstreamHost);
         }
+        if (source.ProxyBuffer != null) {
+            this.ProxyBuffer = new Long(source.ProxyBuffer);
+        }
     }
 
 
@@ -1208,6 +1234,9 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
         this.setParamSimple(map, prefix + "IsWebsocket", this.IsWebsocket);
         this.setParamSimple(map, prefix + "LoadBalance", this.LoadBalance);
+        this.setParamArrayObj(map, prefix + "Ports.", this.Ports);
+        this.setParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Cert", this.Cert);
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
         this.setParamSimple(map, prefix + "SSLId", this.SSLId);
@@ -1221,10 +1250,7 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "UpstreamDomain", this.UpstreamDomain);
         this.setParamArraySimple(map, prefix + "SrcList.", this.SrcList);
         this.setParamSimple(map, prefix + "IsHttp2", this.IsHttp2);
-        this.setParamArrayObj(map, prefix + "Ports.", this.Ports);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
-        this.setParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
-        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "Anycast", this.Anycast);
         this.setParamArraySimple(map, prefix + "Weights.", this.Weights);
         this.setParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
@@ -1238,6 +1264,7 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "XFFReset", this.XFFReset);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
+        this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
 
     }
 }

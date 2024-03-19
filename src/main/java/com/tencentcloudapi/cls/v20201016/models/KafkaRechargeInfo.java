@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KafkaRechargeInfo extends AbstractModel {
 
     /**
-    * 主键ID
+    * Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -143,9 +143,9 @@ public class KafkaRechargeInfo extends AbstractModel {
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-     * Get 主键ID
+     * Get Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 主键ID
+     * @return Id Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -153,9 +153,9 @@ public class KafkaRechargeInfo extends AbstractModel {
     }
 
     /**
-     * Set 主键ID
+     * Set Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 主键ID
+     * @param Id Kafka数据订阅配置的ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
