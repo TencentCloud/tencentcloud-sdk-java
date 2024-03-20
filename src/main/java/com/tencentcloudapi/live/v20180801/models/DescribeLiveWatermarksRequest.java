@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class DescribeLiveWatermarksRequest extends AbstractModel {
 
+    /**
+    * 水印名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 分页的索引参数，从1开始
+    */
+    @SerializedName("PageNo")
+    @Expose
+    private Long PageNo;
+
+    /**
+    * 分页的大小参数，默认值500
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+     * Get 水印名称 
+     * @return Name 水印名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 水印名称
+     * @param Name 水印名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 分页的索引参数，从1开始 
+     * @return PageNo 分页的索引参数，从1开始
+     */
+    public Long getPageNo() {
+        return this.PageNo;
+    }
+
+    /**
+     * Set 分页的索引参数，从1开始
+     * @param PageNo 分页的索引参数，从1开始
+     */
+    public void setPageNo(Long PageNo) {
+        this.PageNo = PageNo;
+    }
+
+    /**
+     * Get 分页的大小参数，默认值500 
+     * @return PageSize 分页的大小参数，默认值500
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 分页的大小参数，默认值500
+     * @param PageSize 分页的大小参数，默认值500
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
     public DescribeLiveWatermarksRequest() {
     }
 
@@ -31,6 +100,15 @@ public class DescribeLiveWatermarksRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLiveWatermarksRequest(DescribeLiveWatermarksRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.PageNo != null) {
+            this.PageNo = new Long(source.PageNo);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class DescribeLiveWatermarksRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "PageNo", this.PageNo);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

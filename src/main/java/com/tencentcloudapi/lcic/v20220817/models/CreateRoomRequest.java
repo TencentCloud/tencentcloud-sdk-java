@@ -231,7 +231,7 @@ video 纯视频
     private String RecordBackground;
 
     /**
-    * 录制自定义场景，仅recordlayout=9的时候此参数有效
+    * 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
     */
     @SerializedName("RecordScene")
     @Expose
@@ -749,16 +749,16 @@ video 纯视频
     }
 
     /**
-     * Get 录制自定义场景，仅recordlayout=9的时候此参数有效 
-     * @return RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * Get 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。 
+     * @return RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      */
     public String getRecordScene() {
         return this.RecordScene;
     }
 
     /**
-     * Set 录制自定义场景，仅recordlayout=9的时候此参数有效
-     * @param RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * Set 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * @param RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      */
     public void setRecordScene(String RecordScene) {
         this.RecordScene = RecordScene;
@@ -767,7 +767,9 @@ video 纯视频
     /**
      * Get 录制自定义语言，仅recordlayout=9的时候此参数有效 
      * @return RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * @deprecated
      */
+    @Deprecated
     public String getRecordLang() {
         return this.RecordLang;
     }
@@ -775,7 +777,9 @@ video 纯视频
     /**
      * Set 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * @deprecated
      */
+    @Deprecated
     public void setRecordLang(String RecordLang) {
         this.RecordLang = RecordLang;
     }

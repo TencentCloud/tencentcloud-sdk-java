@@ -31,11 +31,18 @@ public class ModifyDisksRenewFlagRequest extends AbstractModel {
     private String [] DiskIds;
 
     /**
-    * 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+    * 	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
+
+    /**
+    * 该参数支持设置云硬盘的自动续费周期，单位为月。
+    */
+    @SerializedName("AutoRenewPeriod")
+    @Expose
+    private Long AutoRenewPeriod;
 
     /**
      * Get 一个或多个待操作的云硬盘ID。 
@@ -54,19 +61,35 @@ public class ModifyDisksRenewFlagRequest extends AbstractModel {
     }
 
     /**
-     * Get 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。 
-     * @return RenewFlag 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+     * Get 	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul> 
+     * @return RenewFlag 	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
-     * @param RenewFlag 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+     * Set 	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
+     * @param RenewFlag 	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get 该参数支持设置云硬盘的自动续费周期，单位为月。 
+     * @return AutoRenewPeriod 该参数支持设置云硬盘的自动续费周期，单位为月。
+     */
+    public Long getAutoRenewPeriod() {
+        return this.AutoRenewPeriod;
+    }
+
+    /**
+     * Set 该参数支持设置云硬盘的自动续费周期，单位为月。
+     * @param AutoRenewPeriod 该参数支持设置云硬盘的自动续费周期，单位为月。
+     */
+    public void setAutoRenewPeriod(Long AutoRenewPeriod) {
+        this.AutoRenewPeriod = AutoRenewPeriod;
     }
 
     public ModifyDisksRenewFlagRequest() {
@@ -86,6 +109,9 @@ public class ModifyDisksRenewFlagRequest extends AbstractModel {
         if (source.RenewFlag != null) {
             this.RenewFlag = new String(source.RenewFlag);
         }
+        if (source.AutoRenewPeriod != null) {
+            this.AutoRenewPeriod = new Long(source.AutoRenewPeriod);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class ModifyDisksRenewFlagRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "AutoRenewPeriod", this.AutoRenewPeriod);
 
     }
 }

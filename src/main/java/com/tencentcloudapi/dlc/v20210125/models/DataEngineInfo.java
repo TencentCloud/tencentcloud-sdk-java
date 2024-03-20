@@ -395,6 +395,14 @@ public class DataEngineInfo extends AbstractModel {
     private String EngineTypeDetail;
 
     /**
+    * 引擎网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineNetworkId")
+    @Expose
+    private String EngineNetworkId;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1302,6 +1310,26 @@ public class DataEngineInfo extends AbstractModel {
         this.EngineTypeDetail = EngineTypeDetail;
     }
 
+    /**
+     * Get 引擎网络ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineNetworkId 引擎网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineNetworkId() {
+        return this.EngineNetworkId;
+    }
+
+    /**
+     * Set 引擎网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineNetworkId 引擎网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineNetworkId(String EngineNetworkId) {
+        this.EngineNetworkId = EngineNetworkId;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1463,6 +1491,9 @@ public class DataEngineInfo extends AbstractModel {
         if (source.EngineTypeDetail != null) {
             this.EngineTypeDetail = new String(source.EngineTypeDetail);
         }
+        if (source.EngineNetworkId != null) {
+            this.EngineNetworkId = new String(source.EngineNetworkId);
+        }
     }
 
 
@@ -1518,6 +1549,7 @@ public class DataEngineInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoAuthorization", this.AutoAuthorization);
         this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+        this.setParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
 
     }
 }
