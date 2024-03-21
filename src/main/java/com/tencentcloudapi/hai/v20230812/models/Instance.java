@@ -207,6 +207,14 @@ FAILED：表示操作失败
     private LoginService [] LoginServices;
 
     /**
+    * 应用服务的操作系统类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OSType")
+    @Expose
+    private String OSType;
+
+    /**
      * Get 实例id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例id
@@ -686,6 +694,26 @@ FAILED：表示操作失败
         this.LoginServices = LoginServices;
     }
 
+    /**
+     * Get 应用服务的操作系统类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OSType 应用服务的操作系统类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOSType() {
+        return this.OSType;
+    }
+
+    /**
+     * Set 应用服务的操作系统类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OSType 应用服务的操作系统类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOSType(String OSType) {
+        this.OSType = OSType;
+    }
+
     public Instance() {
     }
 
@@ -769,6 +797,9 @@ FAILED：表示操作失败
                 this.LoginServices[i] = new LoginService(source.LoginServices[i]);
             }
         }
+        if (source.OSType != null) {
+            this.OSType = new String(source.OSType);
+        }
     }
 
 
@@ -797,6 +828,7 @@ FAILED：表示操作失败
         this.setParamSimple(map, prefix + "MaxFreeTraffic", this.MaxFreeTraffic);
         this.setParamSimple(map, prefix + "ConfigurationEnvironment", this.ConfigurationEnvironment);
         this.setParamArrayObj(map, prefix + "LoginServices.", this.LoginServices);
+        this.setParamSimple(map, prefix + "OSType", this.OSType);
 
     }
 }

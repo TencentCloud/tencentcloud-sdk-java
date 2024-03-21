@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetTagKeysResponse extends AbstractModel {
 
     /**
-    * 获取的下一页的Token值
+    * 获取的下一页的Token值，如果当前是最后一页，返回为空
     */
     @SerializedName("PaginationToken")
     @Expose
@@ -45,16 +45,16 @@ public class GetTagKeysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取的下一页的Token值 
-     * @return PaginationToken 获取的下一页的Token值
+     * Get 获取的下一页的Token值，如果当前是最后一页，返回为空 
+     * @return PaginationToken 获取的下一页的Token值，如果当前是最后一页，返回为空
      */
     public String getPaginationToken() {
         return this.PaginationToken;
     }
 
     /**
-     * Set 获取的下一页的Token值
-     * @param PaginationToken 获取的下一页的Token值
+     * Set 获取的下一页的Token值，如果当前是最后一页，返回为空
+     * @param PaginationToken 获取的下一页的Token值，如果当前是最后一页，返回为空
      */
     public void setPaginationToken(String PaginationToken) {
         this.PaginationToken = PaginationToken;

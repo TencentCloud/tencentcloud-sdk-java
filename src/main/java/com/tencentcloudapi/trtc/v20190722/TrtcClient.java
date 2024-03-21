@@ -455,6 +455,17 @@ xa0
     }
 
     /**
+     *查询页面录制任务
+     * @param req DescribeWebRecordRequest
+     * @return DescribeWebRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebRecordResponse DescribeWebRecord(DescribeWebRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebRecord", DescribeWebRecordResponse.class);
+    }
+
+    /**
      *接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
      * @param req DismissRoomRequest
      * @return DismissRoomResponse
@@ -702,6 +713,18 @@ ver：可以忽略。
     }
 
     /**
+     *通过此接口可以发起 WEB 页面录制任务，在接口参数中指定录制 URL，录制分辨率，录制结果存储等参数。
+因为参数或API逻辑问题会立即返回结果。而因为页面问题，如页面无法访问，会在回调中返回结果，请关注。
+     * @param req StartWebRecordRequest
+     * @return StartWebRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartWebRecordResponse StartWebRecord(StartWebRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartWebRecord", StartWebRecordResponse.class);
+    }
+
+    /**
      *接口说明：结束云端混流
      * @param req StopMCUMixTranscodeRequest
      * @return StopMCUMixTranscodeResponse
@@ -743,6 +766,17 @@ ver：可以忽略。
     public StopStreamIngestResponse StopStreamIngest(StopStreamIngestRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopStreamIngest", StopStreamIngestResponse.class);
+    }
+
+    /**
+     *停止页面录制任务
+     * @param req StopWebRecordRequest
+     * @return StopWebRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopWebRecordResponse StopWebRecord(StopWebRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopWebRecord", StopWebRecordResponse.class);
     }
 
     /**

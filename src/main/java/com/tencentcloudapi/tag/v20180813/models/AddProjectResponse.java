@@ -31,7 +31,7 @@ public class AddProjectResponse extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 是否为新项目
+    * 是否为新项目，1是新项目，0不是新项目
     */
     @SerializedName("IsNew")
     @Expose
@@ -61,16 +61,16 @@ public class AddProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否为新项目 
-     * @return IsNew 是否为新项目
+     * Get 是否为新项目，1是新项目，0不是新项目 
+     * @return IsNew 是否为新项目，1是新项目，0不是新项目
      */
     public Long getIsNew() {
         return this.IsNew;
     }
 
     /**
-     * Set 是否为新项目
-     * @param IsNew 是否为新项目
+     * Set 是否为新项目，1是新项目，0不是新项目
+     * @param IsNew 是否为新项目，1是新项目，0不是新项目
      */
     public void setIsNew(Long IsNew) {
         this.IsNew = IsNew;

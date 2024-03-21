@@ -41,6 +41,13 @@ public class DescribeBanStatusResponse extends AbstractModel {
     private Boolean ShowTips;
 
     /**
+    * 是否开启智能过白模式
+    */
+    @SerializedName("OpenSmartMode")
+    @Expose
+    private Boolean OpenSmartMode;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -92,6 +99,22 @@ public class DescribeBanStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否开启智能过白模式 
+     * @return OpenSmartMode 是否开启智能过白模式
+     */
+    public Boolean getOpenSmartMode() {
+        return this.OpenSmartMode;
+    }
+
+    /**
+     * Set 是否开启智能过白模式
+     * @param OpenSmartMode 是否开启智能过白模式
+     */
+    public void setOpenSmartMode(Boolean OpenSmartMode) {
+        this.OpenSmartMode = OpenSmartMode;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -121,6 +144,9 @@ public class DescribeBanStatusResponse extends AbstractModel {
         if (source.ShowTips != null) {
             this.ShowTips = new Boolean(source.ShowTips);
         }
+        if (source.OpenSmartMode != null) {
+            this.OpenSmartMode = new Boolean(source.OpenSmartMode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -133,6 +159,7 @@ public class DescribeBanStatusResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ShowTips", this.ShowTips);
+        this.setParamSimple(map, prefix + "OpenSmartMode", this.OpenSmartMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

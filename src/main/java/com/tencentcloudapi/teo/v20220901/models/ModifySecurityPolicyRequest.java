@@ -38,14 +38,20 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     private SecurityConfig SecurityConfig;
 
     /**
-    * 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+    * 子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
 
     /**
-    * 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+    * 指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -84,32 +90,56 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。 
-     * @return Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * Get 子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。 
+     * @return Entity 子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
-     * @param Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * Set 子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
+     * @param Entity 子域名/应用名。
+
+注意：当同时指定本参数和 TemplateId 参数时，本参数不生效。请勿同时指定本参数和 TemplateId 参数。
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
     }
 
     /**
-     * Get 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。 
-     * @return TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     * Get 指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。 
+     * @return TemplateId 指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
-     * @param TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     * Set 指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
+     * @param TemplateId 指定模板策略 ID，或指定站点全局策略。
+- 如需配置策略模板，请指定策略模板 ID。
+- 如需配置站点全局策略，请使用 @ZoneLevel@Domain 参数值
+
+注意：当使用本参数时，Entity 参数不生效。请勿同时使用本参数和 Entity 参数。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

@@ -111,7 +111,17 @@ public class BruteAttackInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 阻断状态：1-阻断成功；非1-阻断失败
+    * 0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BanStatus")
@@ -221,6 +231,22 @@ public class BruteAttackInfo extends AbstractModel {
     @SerializedName("DataFrom")
     @Expose
     private Long DataFrom;
+
+    /**
+    * 破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttackStatusDesc")
+    @Expose
+    private String AttackStatusDesc;
+
+    /**
+    * 阻断过期时间（仅阻断中事件有效）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BanExpiredTime")
+    @Expose
+    private String BanExpiredTime;
 
     /**
      * Get 唯一Id 
@@ -439,9 +465,29 @@ public class BruteAttackInfo extends AbstractModel {
     }
 
     /**
-     * Get 阻断状态：1-阻断成功；非1-阻断失败
+     * Get 0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BanStatus 阻断状态：1-阻断成功；非1-阻断失败
+     * @return BanStatus 0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBanStatus() {
@@ -449,9 +495,29 @@ public class BruteAttackInfo extends AbstractModel {
     }
 
     /**
-     * Set 阻断状态：1-阻断成功；非1-阻断失败
+     * Set 0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BanStatus 阻断状态：1-阻断成功；非1-阻断失败
+     * @param BanStatus 0 -不阻断(客户端版本不支持)
+1 -已阻断
+2 -阻断失败(程序异常)
+3 -不阻断(内网不阻断)
+4 -可用区不支持阻断
+10-阻断中
+81-不阻断(未开启阻断)
+82-不阻断(非专业版)
+83-不阻断(已加白名单)
+86-不阻断(系统白名单)
+87-不阻断(客户端离线)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBanStatus(Long BanStatus) {
@@ -718,6 +784,46 @@ public class BruteAttackInfo extends AbstractModel {
         this.DataFrom = DataFrom;
     }
 
+    /**
+     * Get 破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttackStatusDesc 破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAttackStatusDesc() {
+        return this.AttackStatusDesc;
+    }
+
+    /**
+     * Set 破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttackStatusDesc 破解状态说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttackStatusDesc(String AttackStatusDesc) {
+        this.AttackStatusDesc = AttackStatusDesc;
+    }
+
+    /**
+     * Get 阻断过期时间（仅阻断中事件有效）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BanExpiredTime 阻断过期时间（仅阻断中事件有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBanExpiredTime() {
+        return this.BanExpiredTime;
+    }
+
+    /**
+     * Set 阻断过期时间（仅阻断中事件有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BanExpiredTime 阻断过期时间（仅阻断中事件有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBanExpiredTime(String BanExpiredTime) {
+        this.BanExpiredTime = BanExpiredTime;
+    }
+
     public BruteAttackInfo() {
     }
 
@@ -801,6 +907,12 @@ public class BruteAttackInfo extends AbstractModel {
         if (source.DataFrom != null) {
             this.DataFrom = new Long(source.DataFrom);
         }
+        if (source.AttackStatusDesc != null) {
+            this.AttackStatusDesc = new String(source.AttackStatusDesc);
+        }
+        if (source.BanExpiredTime != null) {
+            this.BanExpiredTime = new String(source.BanExpiredTime);
+        }
     }
 
 
@@ -833,6 +945,8 @@ public class BruteAttackInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamSimple(map, prefix + "DataFrom", this.DataFrom);
+        this.setParamSimple(map, prefix + "AttackStatusDesc", this.AttackStatusDesc);
+        this.setParamSimple(map, prefix + "BanExpiredTime", this.BanExpiredTime);
 
     }
 }

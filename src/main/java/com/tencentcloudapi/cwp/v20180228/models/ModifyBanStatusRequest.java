@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class ModifyBanStatusRequest extends AbstractModel {
 
     /**
-    * 阻断状态 0:关闭 1:开启
+    * 阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 阻断状态 0:关闭 1:开启 
-     * @return Status 阻断状态 0:关闭 1:开启
+    * 是否开启智能过白模式
+    */
+    @SerializedName("OpenSmartMode")
+    @Expose
+    private Boolean OpenSmartMode;
+
+    /**
+     * Get 阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip) 
+     * @return Status 阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 阻断状态 0:关闭 1:开启
-     * @param Status 阻断状态 0:关闭 1:开启
+     * Set 阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
+     * @param Status 阻断开关状态: 0 -- 关闭 1 -- 高级阻断 2 -- 基础阻断(只阻断情报库黑ip)
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 是否开启智能过白模式 
+     * @return OpenSmartMode 是否开启智能过白模式
+     */
+    public Boolean getOpenSmartMode() {
+        return this.OpenSmartMode;
+    }
+
+    /**
+     * Set 是否开启智能过白模式
+     * @param OpenSmartMode 是否开启智能过白模式
+     */
+    public void setOpenSmartMode(Boolean OpenSmartMode) {
+        this.OpenSmartMode = OpenSmartMode;
     }
 
     public ModifyBanStatusRequest() {
@@ -57,6 +80,9 @@ public class ModifyBanStatusRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.OpenSmartMode != null) {
+            this.OpenSmartMode = new Boolean(source.OpenSmartMode);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ModifyBanStatusRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "OpenSmartMode", this.OpenSmartMode);
 
     }
 }

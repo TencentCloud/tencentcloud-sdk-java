@@ -100,6 +100,10 @@ public class ApproverInfo extends AbstractModel {
     * 通知签署方经办人的方式,  有以下途径:
 <ul><li>  **sms**  :  (默认)短信</li>
 <li>   **none**   : 不通知</li></ul>
+```
+注意：
+如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信
+```
     */
     @SerializedName("NotifyType")
     @Expose
@@ -476,10 +480,18 @@ public class ApproverInfo extends AbstractModel {
     /**
      * Get 通知签署方经办人的方式,  有以下途径:
 <ul><li>  **sms**  :  (默认)短信</li>
-<li>   **none**   : 不通知</li></ul> 
+<li>   **none**   : 不通知</li></ul>
+```
+注意：
+如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信
+``` 
      * @return NotifyType 通知签署方经办人的方式,  有以下途径:
 <ul><li>  **sms**  :  (默认)短信</li>
 <li>   **none**   : 不通知</li></ul>
+```
+注意：
+如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信
+```
      */
     public String getNotifyType() {
         return this.NotifyType;
@@ -489,9 +501,17 @@ public class ApproverInfo extends AbstractModel {
      * Set 通知签署方经办人的方式,  有以下途径:
 <ul><li>  **sms**  :  (默认)短信</li>
 <li>   **none**   : 不通知</li></ul>
+```
+注意：
+如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信
+```
      * @param NotifyType 通知签署方经办人的方式,  有以下途径:
 <ul><li>  **sms**  :  (默认)短信</li>
 <li>   **none**   : 不通知</li></ul>
+```
+注意：
+如果使用的是通过文件发起合同（CreateFlowByFiles），NotifyType必须 是 sms 才会发送短信
+```
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
