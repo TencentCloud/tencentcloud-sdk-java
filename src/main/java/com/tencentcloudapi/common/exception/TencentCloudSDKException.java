@@ -62,12 +62,16 @@ public class TencentCloudSDKException extends Exception {
     }
 
     public String toString() {
-        return "[TencentCloudSDKException]"
+        String msg = "[TencentCloudSDKException]"
                 + "code: "
                 + this.getErrorCode()
                 + " message:"
                 + this.getMessage()
                 + " requestId:"
                 + this.getRequestId();
+        if (getCause() != null) {
+            msg += " cause:" + getCause().toString();
+        }
+        return msg;
     }
 }
