@@ -39,13 +39,6 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-    */
-    @SerializedName("FlowId")
-    @Expose
-    private String FlowId;
-
-    /**
     * 补充企业签署人信息。
 
 - 如果发起方指定的补充签署人是企业签署人，则需要提供企业名称或者企业OpenId；
@@ -55,6 +48,13 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
     @SerializedName("Approvers")
     @Expose
     private FillApproverInfo [] Approvers;
+
+    /**
+    * 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
 
     /**
     * 签署人信息补充方式
@@ -71,6 +71,13 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
 
     /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
@@ -121,22 +128,6 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。 
-     * @return FlowId 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-     */
-    public String getFlowId() {
-        return this.FlowId;
-    }
-
-    /**
-     * Set 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-     * @param FlowId 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-     */
-    public void setFlowId(String FlowId) {
-        this.FlowId = FlowId;
-    }
-
-    /**
      * Get 补充企业签署人信息。
 
 - 如果发起方指定的补充签署人是企业签署人，则需要提供企业名称或者企业OpenId；
@@ -166,6 +157,22 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
      */
     public void setApprovers(FillApproverInfo [] Approvers) {
         this.Approvers = Approvers;
+    }
+
+    /**
+     * Get 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。 
+     * @return FlowId 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     * @param FlowId 合同流程ID，为32位字符串。 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -208,6 +215,22 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值 
+     * @return FlowGroupId 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
+     * @param FlowGroupId 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
     public ChannelCreateFlowApproversRequest() {
     }
 
@@ -219,20 +242,23 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.FlowId != null) {
-            this.FlowId = new String(source.FlowId);
-        }
         if (source.Approvers != null) {
             this.Approvers = new FillApproverInfo[source.Approvers.length];
             for (int i = 0; i < source.Approvers.length; i++) {
                 this.Approvers[i] = new FillApproverInfo(source.Approvers[i]);
             }
         }
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
         if (source.FillApproverType != null) {
             this.FillApproverType = new Long(source.FillApproverType);
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
+        }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
         }
     }
 
@@ -242,10 +268,11 @@ public class ChannelCreateFlowApproversRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "FillApproverType", this.FillApproverType);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
 
     }
 }

@@ -156,6 +156,13 @@ public class CreateSchemeUrlRequest extends AbstractModel {
     private String RecipientId;
 
     /**
+    * 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+    */
+    @SerializedName("FlowGroupUrlInfo")
+    @Expose
+    private FlowGroupUrlInfo FlowGroupUrlInfo;
+
+    /**
      * Get 执行本接口操作的员工信息, userId 必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息, userId 必填。
@@ -515,6 +522,22 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         this.RecipientId = RecipientId;
     }
 
+    /**
+     * Get 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。 
+     * @return FlowGroupUrlInfo 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+     */
+    public FlowGroupUrlInfo getFlowGroupUrlInfo() {
+        return this.FlowGroupUrlInfo;
+    }
+
+    /**
+     * Set 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+     * @param FlowGroupUrlInfo 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+     */
+    public void setFlowGroupUrlInfo(FlowGroupUrlInfo FlowGroupUrlInfo) {
+        this.FlowGroupUrlInfo = FlowGroupUrlInfo;
+    }
+
     public CreateSchemeUrlRequest() {
     }
 
@@ -568,6 +591,9 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         if (source.RecipientId != null) {
             this.RecipientId = new String(source.RecipientId);
         }
+        if (source.FlowGroupUrlInfo != null) {
+            this.FlowGroupUrlInfo = new FlowGroupUrlInfo(source.FlowGroupUrlInfo);
+        }
     }
 
 
@@ -589,6 +615,7 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArraySimple(map, prefix + "Hides.", this.Hides);
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
+        this.setParamObj(map, prefix + "FlowGroupUrlInfo.", this.FlowGroupUrlInfo);
 
     }
 }

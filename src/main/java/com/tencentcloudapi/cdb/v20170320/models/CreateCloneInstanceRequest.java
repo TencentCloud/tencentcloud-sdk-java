@@ -171,6 +171,20 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
+    * 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+    */
+    @SerializedName("PayType")
+    @Expose
+    private String PayType;
+
+    /**
+    * 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
      * Get 克隆源实例Id。 
      * @return InstanceId 克隆源实例Id。
      */
@@ -506,6 +520,38 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费 
+     * @return PayType 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+     */
+    public String getPayType() {
+        return this.PayType;
+    }
+
+    /**
+     * Set 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+     * @param PayType 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
+     */
+    public void setPayType(String PayType) {
+        this.PayType = PayType;
+    }
+
+    /**
+     * Get 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。 
+     * @return Period 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @param Period 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -583,6 +629,12 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.PayType != null) {
+            this.PayType = new String(source.PayType);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -611,6 +663,8 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "PayType", this.PayType);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

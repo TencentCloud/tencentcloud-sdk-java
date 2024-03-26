@@ -86,6 +86,13 @@ public class GetEidTokenConfig extends AbstractModel {
     private Boolean IsSupportHMTResidentPermitOCR;
 
     /**
+    * 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+    */
+    @SerializedName("MouthOpenRecognition")
+    @Expose
+    private Boolean MouthOpenRecognition;
+
+    /**
      * Get 姓名身份证输入方式。
 1：传身份证正反面OCR   
 2：传身份证正面OCR  
@@ -237,6 +244,22 @@ public class GetEidTokenConfig extends AbstractModel {
         this.IsSupportHMTResidentPermitOCR = IsSupportHMTResidentPermitOCR;
     }
 
+    /**
+     * Get 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。 
+     * @return MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     */
+    public Boolean getMouthOpenRecognition() {
+        return this.MouthOpenRecognition;
+    }
+
+    /**
+     * Set 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     * @param MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     */
+    public void setMouthOpenRecognition(Boolean MouthOpenRecognition) {
+        this.MouthOpenRecognition = MouthOpenRecognition;
+    }
+
     public GetEidTokenConfig() {
     }
 
@@ -275,6 +298,9 @@ public class GetEidTokenConfig extends AbstractModel {
         if (source.IsSupportHMTResidentPermitOCR != null) {
             this.IsSupportHMTResidentPermitOCR = new Boolean(source.IsSupportHMTResidentPermitOCR);
         }
+        if (source.MouthOpenRecognition != null) {
+            this.MouthOpenRecognition = new Boolean(source.MouthOpenRecognition);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class GetEidTokenConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "IntentionActions.", this.IntentionActions);
         this.setParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
         this.setParamSimple(map, prefix + "IsSupportHMTResidentPermitOCR", this.IsSupportHMTResidentPermitOCR);
+        this.setParamSimple(map, prefix + "MouthOpenRecognition", this.MouthOpenRecognition);
 
     }
 }

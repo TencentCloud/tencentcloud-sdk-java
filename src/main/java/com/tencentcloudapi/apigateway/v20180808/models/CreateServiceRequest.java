@@ -52,7 +52,7 @@ public class CreateServiceRequest extends AbstractModel {
     private String [] NetTypes;
 
     /**
-    * IP版本号，支持IPv4和IPv6，默认为IPv4。
+    * IP版本号，仅支持IPv4。
     */
     @SerializedName("IpVersion")
     @Expose
@@ -158,16 +158,16 @@ public class CreateServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get IP版本号，支持IPv4和IPv6，默认为IPv4。 
-     * @return IpVersion IP版本号，支持IPv4和IPv6，默认为IPv4。
+     * Get IP版本号，仅支持IPv4。 
+     * @return IpVersion IP版本号，仅支持IPv4。
      */
     public String getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set IP版本号，支持IPv4和IPv6，默认为IPv4。
-     * @param IpVersion IP版本号，支持IPv4和IPv6，默认为IPv4。
+     * Set IP版本号，仅支持IPv4。
+     * @param IpVersion IP版本号，仅支持IPv4。
      */
     public void setIpVersion(String IpVersion) {
         this.IpVersion = IpVersion;

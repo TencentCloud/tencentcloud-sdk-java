@@ -227,6 +227,17 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *完成验证后，用FaceIdToken调用本接口获取设备风险相关信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+     * @param req GetFaceIdRiskInfoRequest
+     * @return GetFaceIdRiskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFaceIdRiskInfoResponse GetFaceIdRiskInfo(GetFaceIdRiskInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFaceIdRiskInfo", GetFaceIdRiskInfoResponse.class);
+    }
+
+    /**
      *每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取验证结果信息，该token仅能核身一次。
      * @param req GetFaceIdTokenRequest
      * @return GetFaceIdTokenResponse
@@ -235,6 +246,17 @@ public class FaceidClient extends AbstractClient{
     public GetFaceIdTokenResponse GetFaceIdToken(GetFaceIdTokenRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetFaceIdToken", GetFaceIdTokenResponse.class);
+    }
+
+    /**
+     *每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取风险结果信息，该Token仅能核身一次。
+     * @param req GetFaceidRiskInfoTokenRequest
+     * @return GetFaceidRiskInfoTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFaceidRiskInfoTokenResponse GetFaceidRiskInfoToken(GetFaceidRiskInfoTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFaceidRiskInfoToken", GetFaceidRiskInfoTokenResponse.class);
     }
 
     /**

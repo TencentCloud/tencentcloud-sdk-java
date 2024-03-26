@@ -167,6 +167,14 @@ public class AssetMachineBaseInfo extends AbstractModel {
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * cpu负载读数（仅linux系统有效）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CpuLoadNum")
+    @Expose
+    private String CpuLoadNum;
+
+    /**
      * Get 服务器Quuid 
      * @return Quuid 服务器Quuid
      */
@@ -498,6 +506,26 @@ public class AssetMachineBaseInfo extends AbstractModel {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get cpu负载读数（仅linux系统有效）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CpuLoadNum cpu负载读数（仅linux系统有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCpuLoadNum() {
+        return this.CpuLoadNum;
+    }
+
+    /**
+     * Set cpu负载读数（仅linux系统有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CpuLoadNum cpu负载读数（仅linux系统有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCpuLoadNum(String CpuLoadNum) {
+        this.CpuLoadNum = CpuLoadNum;
+    }
+
     public AssetMachineBaseInfo() {
     }
 
@@ -569,6 +597,9 @@ public class AssetMachineBaseInfo extends AbstractModel {
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.CpuLoadNum != null) {
+            this.CpuLoadNum = new String(source.CpuLoadNum);
+        }
     }
 
 
@@ -596,6 +627,7 @@ public class AssetMachineBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "CpuLoadNum", this.CpuLoadNum);
 
     }
 }

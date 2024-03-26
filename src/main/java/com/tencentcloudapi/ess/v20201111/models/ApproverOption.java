@@ -44,6 +44,13 @@ public class ApproverOption extends AbstractModel {
     private Boolean NoTransfer;
 
     /**
+    * 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
+    */
+    @SerializedName("CanEditApprover")
+    @Expose
+    private Boolean CanEditApprover;
+
+    /**
     * 签署人信息补充类型，默认无需补充。
 
 <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
@@ -121,6 +128,22 @@ public class ApproverOption extends AbstractModel {
      */
     public void setNoTransfer(Boolean NoTransfer) {
         this.NoTransfer = NoTransfer;
+    }
+
+    /**
+     * Get 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑 
+     * @return CanEditApprover 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
+     */
+    public Boolean getCanEditApprover() {
+        return this.CanEditApprover;
+    }
+
+    /**
+     * Set 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
+     * @param CanEditApprover 允许编辑签署人信息（嵌入式使用） 默认true-可以编辑 false-不可以编辑
+     */
+    public void setCanEditApprover(Boolean CanEditApprover) {
+        this.CanEditApprover = CanEditApprover;
     }
 
     /**
@@ -209,6 +232,9 @@ public class ApproverOption extends AbstractModel {
         if (source.NoTransfer != null) {
             this.NoTransfer = new Boolean(source.NoTransfer);
         }
+        if (source.CanEditApprover != null) {
+            this.CanEditApprover = new Boolean(source.CanEditApprover);
+        }
         if (source.FillType != null) {
             this.FillType = new Long(source.FillType);
         }
@@ -224,6 +250,7 @@ public class ApproverOption extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NoRefuse", this.NoRefuse);
         this.setParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
+        this.setParamSimple(map, prefix + "CanEditApprover", this.CanEditApprover);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
 

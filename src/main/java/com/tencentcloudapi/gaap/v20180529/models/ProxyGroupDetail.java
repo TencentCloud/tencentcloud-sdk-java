@@ -191,6 +191,16 @@ public class ProxyGroupDetail extends AbstractModel {
     private Long FeatureBitmap;
 
     /**
+    * 是否支持设置TSL设置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportTLSChoice")
+    @Expose
+    private Long IsSupportTLSChoice;
+
+    /**
      * Get 创建时间 
      * @return CreateTime 创建时间
      */
@@ -618,6 +628,34 @@ public class ProxyGroupDetail extends AbstractModel {
         this.FeatureBitmap = FeatureBitmap;
     }
 
+    /**
+     * Get 是否支持设置TSL设置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportTLSChoice 是否支持设置TSL设置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSupportTLSChoice() {
+        return this.IsSupportTLSChoice;
+    }
+
+    /**
+     * Set 是否支持设置TSL设置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportTLSChoice 是否支持设置TSL设置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportTLSChoice(Long IsSupportTLSChoice) {
+        this.IsSupportTLSChoice = IsSupportTLSChoice;
+    }
+
     public ProxyGroupDetail() {
     }
 
@@ -692,6 +730,9 @@ public class ProxyGroupDetail extends AbstractModel {
         if (source.FeatureBitmap != null) {
             this.FeatureBitmap = new Long(source.FeatureBitmap);
         }
+        if (source.IsSupportTLSChoice != null) {
+            this.IsSupportTLSChoice = new Long(source.IsSupportTLSChoice);
+        }
     }
 
 
@@ -719,6 +760,7 @@ public class ProxyGroupDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
+        this.setParamSimple(map, prefix + "IsSupportTLSChoice", this.IsSupportTLSChoice);
 
     }
 }

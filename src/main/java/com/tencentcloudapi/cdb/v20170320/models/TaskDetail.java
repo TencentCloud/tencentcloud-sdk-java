@@ -116,6 +116,14 @@ public class TaskDetail extends AbstractModel {
     private String AsyncRequestId;
 
     /**
+    * 任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskAttachInfo")
+    @Expose
+    private TaskAttachInfo [] TaskAttachInfo;
+
+    /**
      * Get 错误码。 
      * @return Code 错误码。
      */
@@ -363,6 +371,26 @@ public class TaskDetail extends AbstractModel {
         this.AsyncRequestId = AsyncRequestId;
     }
 
+    /**
+     * Get 任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskAttachInfo 任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskAttachInfo [] getTaskAttachInfo() {
+        return this.TaskAttachInfo;
+    }
+
+    /**
+     * Set 任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskAttachInfo 任务的附加信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskAttachInfo(TaskAttachInfo [] TaskAttachInfo) {
+        this.TaskAttachInfo = TaskAttachInfo;
+    }
+
     public TaskDetail() {
     }
 
@@ -404,6 +432,12 @@ public class TaskDetail extends AbstractModel {
         if (source.AsyncRequestId != null) {
             this.AsyncRequestId = new String(source.AsyncRequestId);
         }
+        if (source.TaskAttachInfo != null) {
+            this.TaskAttachInfo = new TaskAttachInfo[source.TaskAttachInfo.length];
+            for (int i = 0; i < source.TaskAttachInfo.length; i++) {
+                this.TaskAttachInfo[i] = new TaskAttachInfo(source.TaskAttachInfo[i]);
+            }
+        }
     }
 
 
@@ -421,6 +455,7 @@ public class TaskDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamArrayObj(map, prefix + "TaskAttachInfo.", this.TaskAttachInfo);
 
     }
 }

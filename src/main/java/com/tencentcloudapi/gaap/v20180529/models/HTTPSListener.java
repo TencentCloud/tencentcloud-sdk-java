@@ -154,6 +154,22 @@ public class HTTPSListener extends AbstractModel {
     private String GroupId;
 
     /**
+    * 支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TLSSupportVersion")
+    @Expose
+    private String [] TLSSupportVersion;
+
+    /**
+    * 支持的TLS密码套件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TLSCiphers")
+    @Expose
+    private String TLSCiphers;
+
+    /**
      * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
@@ -481,6 +497,46 @@ public class HTTPSListener extends AbstractModel {
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get 支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TLSSupportVersion 支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTLSSupportVersion() {
+        return this.TLSSupportVersion;
+    }
+
+    /**
+     * Set 支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TLSSupportVersion 支持的TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTLSSupportVersion(String [] TLSSupportVersion) {
+        this.TLSSupportVersion = TLSSupportVersion;
+    }
+
+    /**
+     * Get 支持的TLS密码套件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TLSCiphers 支持的TLS密码套件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTLSCiphers() {
+        return this.TLSCiphers;
+    }
+
+    /**
+     * Set 支持的TLS密码套件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TLSCiphers 支持的TLS密码套件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTLSCiphers(String TLSCiphers) {
+        this.TLSCiphers = TLSCiphers;
+    }
+
     public HTTPSListener() {
     }
 
@@ -540,6 +596,15 @@ public class HTTPSListener extends AbstractModel {
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.TLSSupportVersion != null) {
+            this.TLSSupportVersion = new String[source.TLSSupportVersion.length];
+            for (int i = 0; i < source.TLSSupportVersion.length; i++) {
+                this.TLSSupportVersion[i] = new String(source.TLSSupportVersion[i]);
+            }
+        }
+        if (source.TLSCiphers != null) {
+            this.TLSCiphers = new String(source.TLSCiphers);
+        }
     }
 
 
@@ -563,6 +628,8 @@ public class HTTPSListener extends AbstractModel {
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamArraySimple(map, prefix + "TLSSupportVersion.", this.TLSSupportVersion);
+        this.setParamSimple(map, prefix + "TLSCiphers", this.TLSCiphers);
 
     }
 }

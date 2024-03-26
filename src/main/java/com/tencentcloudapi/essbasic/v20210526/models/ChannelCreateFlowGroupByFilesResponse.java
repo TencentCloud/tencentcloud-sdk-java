@@ -44,6 +44,13 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     private String [] FlowIds;
 
     /**
+    * 合同组签署方信息。
+    */
+    @SerializedName("Approvers")
+    @Expose
+    private FlowGroupApprovers [] Approvers;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -107,6 +114,22 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     }
 
     /**
+     * Get 合同组签署方信息。 
+     * @return Approvers 合同组签署方信息。
+     */
+    public FlowGroupApprovers [] getApprovers() {
+        return this.Approvers;
+    }
+
+    /**
+     * Set 合同组签署方信息。
+     * @param Approvers 合同组签署方信息。
+     */
+    public void setApprovers(FlowGroupApprovers [] Approvers) {
+        this.Approvers = Approvers;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -139,6 +162,12 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
                 this.FlowIds[i] = new String(source.FlowIds[i]);
             }
         }
+        if (source.Approvers != null) {
+            this.Approvers = new FlowGroupApprovers[source.Approvers.length];
+            for (int i = 0; i < source.Approvers.length; i++) {
+                this.Approvers[i] = new FlowGroupApprovers(source.Approvers[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -151,6 +180,7 @@ public class ChannelCreateFlowGroupByFilesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+        this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

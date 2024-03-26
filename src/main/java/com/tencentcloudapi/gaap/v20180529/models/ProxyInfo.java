@@ -324,6 +324,16 @@ CrossBorder表示跨境通道。
     private Long IsAutoScaleProxy;
 
     /**
+    * 是否允许设置TLS配置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportTLSChoice")
+    @Expose
+    private Long IsSupportTLSChoice;
+
+    /**
      * Get （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -1091,6 +1101,34 @@ CrossBorder表示跨境通道。
         this.IsAutoScaleProxy = IsAutoScaleProxy;
     }
 
+    /**
+     * Get 是否允许设置TLS配置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportTLSChoice 是否允许设置TLS配置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSupportTLSChoice() {
+        return this.IsSupportTLSChoice;
+    }
+
+    /**
+     * Set 是否允许设置TLS配置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportTLSChoice 是否允许设置TLS配置
+0表示不支持；
+1表示支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportTLSChoice(Long IsSupportTLSChoice) {
+        this.IsSupportTLSChoice = IsSupportTLSChoice;
+    }
+
     public ProxyInfo() {
     }
 
@@ -1222,6 +1260,9 @@ CrossBorder表示跨境通道。
         if (source.IsAutoScaleProxy != null) {
             this.IsAutoScaleProxy = new Long(source.IsAutoScaleProxy);
         }
+        if (source.IsSupportTLSChoice != null) {
+            this.IsSupportTLSChoice = new Long(source.IsSupportTLSChoice);
+        }
     }
 
 
@@ -1265,6 +1306,7 @@ CrossBorder表示跨境通道。
         this.setParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
         this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
         this.setParamSimple(map, prefix + "IsAutoScaleProxy", this.IsAutoScaleProxy);
+        this.setParamSimple(map, prefix + "IsSupportTLSChoice", this.IsSupportTLSChoice);
 
     }
 }

@@ -100,6 +100,13 @@ public class FillApproverInfo extends AbstractModel {
     private String ApproverIdCardNumber;
 
     /**
+    * 合同流程ID，补充合同组子合同动态签署人时必传。
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
      * Get 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
  
      * @return RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
@@ -295,6 +302,22 @@ public class FillApproverInfo extends AbstractModel {
         this.ApproverIdCardNumber = ApproverIdCardNumber;
     }
 
+    /**
+     * Get 合同流程ID，补充合同组子合同动态签署人时必传。 
+     * @return FlowId 合同流程ID，补充合同组子合同动态签署人时必传。
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 合同流程ID，补充合同组子合同动态签署人时必传。
+     * @param FlowId 合同流程ID，补充合同组子合同动态签署人时必传。
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
+
     public FillApproverInfo() {
     }
 
@@ -330,6 +353,9 @@ public class FillApproverInfo extends AbstractModel {
         if (source.ApproverIdCardNumber != null) {
             this.ApproverIdCardNumber = new String(source.ApproverIdCardNumber);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
     }
 
 
@@ -346,6 +372,7 @@ public class FillApproverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NotChannelOrganization", this.NotChannelOrganization);
         this.setParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
         this.setParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
 
     }
 }

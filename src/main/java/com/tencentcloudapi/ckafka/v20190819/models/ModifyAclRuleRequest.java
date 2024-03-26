@@ -38,7 +38,7 @@ public class ModifyAclRuleRequest extends AbstractModel {
     private String RuleName;
 
     /**
-    * 是否应用到新增的Topic
+    * 修改预设规则时传入,是否应用到新增的Topic
     */
     @SerializedName("IsApplied")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否应用到新增的Topic 
-     * @return IsApplied 是否应用到新增的Topic
+     * Get 修改预设规则时传入,是否应用到新增的Topic 
+     * @return IsApplied 修改预设规则时传入,是否应用到新增的Topic
      */
     public Long getIsApplied() {
         return this.IsApplied;
     }
 
     /**
-     * Set 是否应用到新增的Topic
-     * @param IsApplied 是否应用到新增的Topic
+     * Set 修改预设规则时传入,是否应用到新增的Topic
+     * @param IsApplied 修改预设规则时传入,是否应用到新增的Topic
      */
     public void setIsApplied(Long IsApplied) {
         this.IsApplied = IsApplied;

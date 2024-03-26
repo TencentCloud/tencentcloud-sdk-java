@@ -193,6 +193,13 @@ public class CreateSignUrlsRequest extends AbstractModel {
     private String [] RecipientIds;
 
     /**
+    * 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+    */
+    @SerializedName("FlowGroupUrlInfo")
+    @Expose
+    private FlowGroupUrlInfo FlowGroupUrlInfo;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -668,6 +675,22 @@ public class CreateSignUrlsRequest extends AbstractModel {
         this.RecipientIds = RecipientIds;
     }
 
+    /**
+     * Get 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。 
+     * @return FlowGroupUrlInfo 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+     */
+    public FlowGroupUrlInfo getFlowGroupUrlInfo() {
+        return this.FlowGroupUrlInfo;
+    }
+
+    /**
+     * Set 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+     * @param FlowGroupUrlInfo 合同组相关信息，指定合同组子合同和签署方的信息，用于补充动态签署人。
+     */
+    public void setFlowGroupUrlInfo(FlowGroupUrlInfo FlowGroupUrlInfo) {
+        this.FlowGroupUrlInfo = FlowGroupUrlInfo;
+    }
+
     public CreateSignUrlsRequest() {
     }
 
@@ -736,6 +759,9 @@ public class CreateSignUrlsRequest extends AbstractModel {
                 this.RecipientIds[i] = new String(source.RecipientIds[i]);
             }
         }
+        if (source.FlowGroupUrlInfo != null) {
+            this.FlowGroupUrlInfo = new FlowGroupUrlInfo(source.FlowGroupUrlInfo);
+        }
     }
 
 
@@ -760,6 +786,7 @@ public class CreateSignUrlsRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "Hides.", this.Hides);
         this.setParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
+        this.setParamObj(map, prefix + "FlowGroupUrlInfo.", this.FlowGroupUrlInfo);
 
     }
 }

@@ -98,6 +98,13 @@ WEWORKAPP: 企业微信
     private String ApproverIdCardNumber;
 
     /**
+    * 合同流程ID，补充合同组子合同动态签署人时必传。
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
      * Get 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
 模板发起合同时，该参数为必填项。
 文件发起合同是，该参数无需传值。
@@ -297,6 +304,22 @@ WEWORKAPP: 企业微信
         this.ApproverIdCardNumber = ApproverIdCardNumber;
     }
 
+    /**
+     * Get 合同流程ID，补充合同组子合同动态签署人时必传。 
+     * @return FlowId 合同流程ID，补充合同组子合同动态签署人时必传。
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 合同流程ID，补充合同组子合同动态签署人时必传。
+     * @param FlowId 合同流程ID，补充合同组子合同动态签署人时必传。
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
+
     public FillApproverInfo() {
     }
 
@@ -329,6 +352,9 @@ WEWORKAPP: 企业微信
         if (source.ApproverIdCardNumber != null) {
             this.ApproverIdCardNumber = new String(source.ApproverIdCardNumber);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
     }
 
 
@@ -344,6 +370,7 @@ WEWORKAPP: 企业微信
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
         this.setParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
 
     }
 }
