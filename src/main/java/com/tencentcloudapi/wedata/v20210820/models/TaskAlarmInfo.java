@@ -184,6 +184,14 @@ public class TaskAlarmInfo extends AbstractModel {
     private Long AlarmRecipientType;
 
     /**
+    * 免打扰时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuietPeriods")
+    @Expose
+    private QuietPeriod [] QuietPeriods;
+
+    /**
     * 企业微信群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -652,6 +660,26 @@ public class TaskAlarmInfo extends AbstractModel {
     }
 
     /**
+     * Get 免打扰时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuietPeriods 免打扰时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public QuietPeriod [] getQuietPeriods() {
+        return this.QuietPeriods;
+    }
+
+    /**
+     * Set 免打扰时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuietPeriods 免打扰时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuietPeriods(QuietPeriod [] QuietPeriods) {
+        this.QuietPeriods = QuietPeriods;
+    }
+
+    /**
      * Get 企业微信群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WeComHook 企业微信群Hook地址，多个hook地址使用,隔开
@@ -925,6 +953,12 @@ public class TaskAlarmInfo extends AbstractModel {
         if (source.AlarmRecipientType != null) {
             this.AlarmRecipientType = new Long(source.AlarmRecipientType);
         }
+        if (source.QuietPeriods != null) {
+            this.QuietPeriods = new QuietPeriod[source.QuietPeriods.length];
+            for (int i = 0; i < source.QuietPeriods.length; i++) {
+                this.QuietPeriods[i] = new QuietPeriod(source.QuietPeriods[i]);
+            }
+        }
         if (source.WeComHook != null) {
             this.WeComHook = new String(source.WeComHook);
         }
@@ -986,6 +1020,7 @@ public class TaskAlarmInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
         this.setParamArrayObj(map, prefix + "AlarmIndicatorInfos.", this.AlarmIndicatorInfos);
         this.setParamSimple(map, prefix + "AlarmRecipientType", this.AlarmRecipientType);
+        this.setParamArrayObj(map, prefix + "QuietPeriods.", this.QuietPeriods);
         this.setParamSimple(map, prefix + "WeComHook", this.WeComHook);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "OperatorUin", this.OperatorUin);

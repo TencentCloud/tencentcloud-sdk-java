@@ -157,6 +157,13 @@ public class ModifyDataSourceRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 数据源开发环境配置
+    */
+    @SerializedName("DevelopmentParams")
+    @Expose
+    private String DevelopmentParams;
+
+    /**
      * Get 数据源名称，在相同SpaceName下，数据源名称不能为空 
      * @return Name 数据源名称，在相同SpaceName下，数据源名称不能为空
      */
@@ -460,6 +467,22 @@ public class ModifyDataSourceRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 数据源开发环境配置 
+     * @return DevelopmentParams 数据源开发环境配置
+     */
+    public String getDevelopmentParams() {
+        return this.DevelopmentParams;
+    }
+
+    /**
+     * Set 数据源开发环境配置
+     * @param DevelopmentParams 数据源开发环境配置
+     */
+    public void setDevelopmentParams(String DevelopmentParams) {
+        this.DevelopmentParams = DevelopmentParams;
+    }
+
     public ModifyDataSourceRequest() {
     }
 
@@ -525,6 +548,9 @@ public class ModifyDataSourceRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.DevelopmentParams != null) {
+            this.DevelopmentParams = new String(source.DevelopmentParams);
+        }
     }
 
 
@@ -551,6 +577,7 @@ public class ModifyDataSourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "COSBucket", this.COSBucket);
         this.setParamSimple(map, prefix + "COSRegion", this.COSRegion);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
 
     }
 }

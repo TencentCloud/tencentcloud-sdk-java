@@ -45,6 +45,13 @@ public class BatchRerunIntegrationTaskInstancesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 实际传的为taskId
+    */
+    @SerializedName("TaskNames")
+    @Expose
+    private String [] TaskNames;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class BatchRerunIntegrationTaskInstancesResponse extends AbstractModel {
     }
 
     /**
+     * Get 实际传的为taskId 
+     * @return TaskNames 实际传的为taskId
+     */
+    public String [] getTaskNames() {
+        return this.TaskNames;
+    }
+
+    /**
+     * Set 实际传的为taskId
+     * @param TaskNames 实际传的为taskId
+     */
+    public void setTaskNames(String [] TaskNames) {
+        this.TaskNames = TaskNames;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +155,12 @@ public class BatchRerunIntegrationTaskInstancesResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.TaskNames != null) {
+            this.TaskNames = new String[source.TaskNames.length];
+            for (int i = 0; i < source.TaskNames.length; i++) {
+                this.TaskNames[i] = new String(source.TaskNames[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +174,7 @@ public class BatchRerunIntegrationTaskInstancesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
         this.setParamSimple(map, prefix + "FailedCount", this.FailedCount);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "TaskNames.", this.TaskNames);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

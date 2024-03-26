@@ -184,6 +184,14 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
     private SubscribeKafkaConfig KafkaConfig;
 
     /**
+    * 订阅内置kafka的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaVersion")
+    @Expose
+    private String KafkaVersion;
+
+    /**
     * 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -629,6 +637,26 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     }
 
     /**
+     * Get 订阅内置kafka的版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaVersion 订阅内置kafka的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKafkaVersion() {
+        return this.KafkaVersion;
+    }
+
+    /**
+     * Set 订阅内置kafka的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaVersion 订阅内置kafka的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaVersion(String KafkaVersion) {
+        this.KafkaVersion = KafkaVersion;
+    }
+
+    /**
      * Get 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
@@ -846,6 +874,9 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
         if (source.KafkaConfig != null) {
             this.KafkaConfig = new SubscribeKafkaConfig(source.KafkaConfig);
         }
+        if (source.KafkaVersion != null) {
+            this.KafkaVersion = new String(source.KafkaVersion);
+        }
         if (source.AccessType != null) {
             this.AccessType = new String(source.AccessType);
         }
@@ -910,6 +941,7 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArrayObj(map, prefix + "SubscribeObjects.", this.SubscribeObjects);
         this.setParamObj(map, prefix + "KafkaConfig.", this.KafkaConfig);
+        this.setParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
         this.setParamSimple(map, prefix + "AccessType", this.AccessType);
         this.setParamArrayObj(map, prefix + "Endpoints.", this.Endpoints);
         this.setParamArrayObj(map, prefix + "PipelineInfo.", this.PipelineInfo);

@@ -105,6 +105,17 @@ public class PtsClient extends AbstractClient{
     }
 
     /**
+     *创建环境
+     * @param req CreateEnvironmentRequest
+     * @return CreateEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEnvironmentResponse CreateEnvironment(CreateEnvironmentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEnvironment", CreateEnvironmentResponse.class);
+    }
+
+    /**
      *创建文件
      * @param req CreateFileRequest
      * @return CreateFileResponse
@@ -157,6 +168,17 @@ public class PtsClient extends AbstractClient{
     public DeleteCronJobsResponse DeleteCronJobs(DeleteCronJobsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCronJobs", DeleteCronJobsResponse.class);
+    }
+
+    /**
+     *删除环境
+     * @param req DeleteEnvironmentsRequest
+     * @return DeleteEnvironmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEnvironmentsResponse DeleteEnvironments(DeleteEnvironmentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEnvironments", DeleteEnvironmentsResponse.class);
     }
 
     /**
@@ -256,6 +278,17 @@ public class PtsClient extends AbstractClient{
     public DescribeCronJobsResponse DescribeCronJobs(DescribeCronJobsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCronJobs", DescribeCronJobsResponse.class);
+    }
+
+    /**
+     *查看环境列表
+     * @param req DescribeEnvironmentsRequest
+     * @return DescribeEnvironmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEnvironments", DescribeEnvironmentsResponse.class);
     }
 
     /**
@@ -476,6 +509,17 @@ public class PtsClient extends AbstractClient{
     public UpdateCronJobResponse UpdateCronJob(UpdateCronJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateCronJob", UpdateCronJobResponse.class);
+    }
+
+    /**
+     *更新环境
+     * @param req UpdateEnvironmentRequest
+     * @return UpdateEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEnvironmentResponse UpdateEnvironment(UpdateEnvironmentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateEnvironment", UpdateEnvironmentResponse.class);
     }
 
     /**

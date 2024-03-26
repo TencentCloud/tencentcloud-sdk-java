@@ -135,6 +135,22 @@ public class AlarmEventInfo extends AbstractModel {
     private Long IsSendSuccess;
 
     /**
+    * 是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InQuitePeriods")
+    @Expose
+    private Long InQuitePeriods;
+
+    /**
+    * 告警记录id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private Long RecordId;
+
+    /**
     * 消息ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -471,6 +487,46 @@ public class AlarmEventInfo extends AbstractModel {
     }
 
     /**
+     * Get 是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InQuitePeriods 是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInQuitePeriods() {
+        return this.InQuitePeriods;
+    }
+
+    /**
+     * Set 是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InQuitePeriods 是否在免打扰时间内，0:否, 1:是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInQuitePeriods(Long InQuitePeriods) {
+        this.InQuitePeriods = InQuitePeriods;
+    }
+
+    /**
+     * Get 告警记录id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordId 告警记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set 告警记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordId 告警记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordId(Long RecordId) {
+        this.RecordId = RecordId;
+    }
+
+    /**
      * Get 消息ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MessageId 消息ID
@@ -703,6 +759,12 @@ public class AlarmEventInfo extends AbstractModel {
         if (source.IsSendSuccess != null) {
             this.IsSendSuccess = new Long(source.IsSendSuccess);
         }
+        if (source.InQuitePeriods != null) {
+            this.InQuitePeriods = new Long(source.InQuitePeriods);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new Long(source.RecordId);
+        }
         if (source.MessageId != null) {
             this.MessageId = new String(source.MessageId);
         }
@@ -752,6 +814,8 @@ public class AlarmEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "IsSendSuccess", this.IsSendSuccess);
+        this.setParamSimple(map, prefix + "InQuitePeriods", this.InQuitePeriods);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "MessageId", this.MessageId);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "RegularId", this.RegularId);

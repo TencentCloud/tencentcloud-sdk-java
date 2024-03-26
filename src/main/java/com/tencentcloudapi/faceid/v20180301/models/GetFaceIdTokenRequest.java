@@ -82,6 +82,14 @@ public class GetFaceIdTokenRequest extends AbstractModel {
     private Encryption Encryption;
 
     /**
+    * 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
      * Get 本地上传照片(LOCAL)、商业库(BUSINESS) 
      * @return CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
      */
@@ -217,6 +225,26 @@ public class GetFaceIdTokenRequest extends AbstractModel {
         this.Encryption = Encryption;
     }
 
+    /**
+     * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1 
+     * @return RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1
+     * @param RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+示例值：1
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public GetFaceIdTokenRequest() {
     }
 
@@ -249,6 +277,9 @@ public class GetFaceIdTokenRequest extends AbstractModel {
         if (source.Encryption != null) {
             this.Encryption = new Encryption(source.Encryption);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
     }
 
 
@@ -264,6 +295,7 @@ public class GetFaceIdTokenRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "UseCos", this.UseCos);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

@@ -272,6 +272,30 @@ public class DataSourceInfo extends AbstractModel {
     private String ShowType;
 
     /**
+    * 当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private Long ProductId;
+
+    /**
+    * 当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DevelopmentId")
+    @Expose
+    private Long DevelopmentId;
+
+    /**
+    * 同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DevelopmentParams")
+    @Expose
+    private String DevelopmentParams;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 若数据源列表为绑定数据库，则为db名称
@@ -891,6 +915,66 @@ public class DataSourceInfo extends AbstractModel {
         this.ShowType = ShowType;
     }
 
+    /**
+     * Get 当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductId 当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductId 当前数据源生产源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductId(Long ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * Get 当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DevelopmentId 当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDevelopmentId() {
+        return this.DevelopmentId;
+    }
+
+    /**
+     * Set 当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DevelopmentId 当前数据源开发源Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDevelopmentId(Long DevelopmentId) {
+        this.DevelopmentId = DevelopmentId;
+    }
+
+    /**
+     * Get 同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DevelopmentParams 同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDevelopmentParams() {
+        return this.DevelopmentParams;
+    }
+
+    /**
+     * Set 同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DevelopmentParams 同params 内容为开发数据源的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDevelopmentParams(String DevelopmentParams) {
+        this.DevelopmentParams = DevelopmentParams;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -992,6 +1076,15 @@ public class DataSourceInfo extends AbstractModel {
         if (source.ShowType != null) {
             this.ShowType = new String(source.ShowType);
         }
+        if (source.ProductId != null) {
+            this.ProductId = new Long(source.ProductId);
+        }
+        if (source.DevelopmentId != null) {
+            this.DevelopmentId = new Long(source.DevelopmentId);
+        }
+        if (source.DevelopmentParams != null) {
+            this.DevelopmentParams = new String(source.DevelopmentParams);
+        }
     }
 
 
@@ -1030,6 +1123,9 @@ public class DataSourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BizParamsString", this.BizParamsString);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         this.setParamSimple(map, prefix + "ShowType", this.ShowType);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "DevelopmentId", this.DevelopmentId);
+        this.setParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
 
     }
 }

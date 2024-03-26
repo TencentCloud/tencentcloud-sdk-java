@@ -31,13 +31,6 @@ public class CreateInstancePostRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
-    */
-    @SerializedName("BandWidth")
-    @Expose
-    private Long BandWidth;
-
-    /**
     * 创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
     */
     @SerializedName("VpcId")
@@ -50,6 +43,13 @@ public class CreateInstancePostRequest extends AbstractModel {
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
+
+    /**
+    * 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
+    */
+    @SerializedName("BandWidth")
+    @Expose
+    private Long BandWidth;
 
     /**
     * 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
@@ -166,22 +166,6 @@ public class CreateInstancePostRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。 
-     * @return BandWidth 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
-     */
-    public Long getBandWidth() {
-        return this.BandWidth;
-    }
-
-    /**
-     * Set 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
-     * @param BandWidth 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
-     */
-    public void setBandWidth(Long BandWidth) {
-        this.BandWidth = BandWidth;
-    }
-
-    /**
      * Get 创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填 
      * @return VpcId 创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
      */
@@ -211,6 +195,22 @@ public class CreateInstancePostRequest extends AbstractModel {
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。 
+     * @return BandWidth 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
+     */
+    public Long getBandWidth() {
+        return this.BandWidth;
+    }
+
+    /**
+     * Set 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
+     * @param BandWidth 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
+     */
+    public void setBandWidth(Long BandWidth) {
+        this.BandWidth = BandWidth;
     }
 
     /**
@@ -448,14 +448,14 @@ public class CreateInstancePostRequest extends AbstractModel {
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
-        if (source.BandWidth != null) {
-            this.BandWidth = new Long(source.BandWidth);
-        }
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.BandWidth != null) {
+            this.BandWidth = new Long(source.BandWidth);
         }
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
@@ -510,9 +510,9 @@ public class CreateInstancePostRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
-        this.setParamSimple(map, prefix + "BandWidth", this.BandWidth);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "BandWidth", this.BandWidth);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

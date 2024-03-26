@@ -1238,6 +1238,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *该接口（QueryTaskCostDetail）用于查询任务消耗明细
+     * @param req QueryTaskCostDetailRequest
+     * @return QueryTaskCostDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryTaskCostDetailResponse QueryTaskCostDetail(QueryTaskCostDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryTaskCostDetail", QueryTaskCostDetailResponse.class);
+    }
+
+    /**
      *续费数据引擎
      * @param req RenewDataEngineRequest
      * @return RenewDataEngineResponse
