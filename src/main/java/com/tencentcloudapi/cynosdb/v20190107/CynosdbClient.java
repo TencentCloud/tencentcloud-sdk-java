@@ -1381,6 +1381,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *回档到新集群
+     * @param req RollbackToNewClusterRequest
+     * @return RollbackToNewClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollbackToNewClusterResponse RollbackToNewCluster(RollbackToNewClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RollbackToNewCluster", RollbackToNewClusterResponse.class);
+    }
+
+    /**
      *本接口(SearchClusterDatabases)搜索集群数据库列表
      * @param req SearchClusterDatabasesRequest
      * @return SearchClusterDatabasesResponse

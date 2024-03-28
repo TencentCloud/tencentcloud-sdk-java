@@ -31,7 +31,7 @@ public class DescribeGatherResourceRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+    * 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
     */
     @SerializedName("Offset")
     @Expose
@@ -138,7 +138,7 @@ desc - 降序
     private String [] OwnerUins;
 
     /**
-    * 模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
+    * 模糊搜索：支持标签、资源id、资源别名
     */
     @SerializedName("SearchKey")
     @Expose
@@ -182,16 +182,16 @@ desc - 降序
     }
 
     /**
-     * Get 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推 
-     * @return Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * Get 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推 
+     * @return Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
-     * @param Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * Set 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+     * @param Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -442,16 +442,16 @@ desc - 降序
     }
 
     /**
-     * Get 模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称 
-     * @return SearchKey 模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
+     * Get 模糊搜索：支持标签、资源id、资源别名 
+     * @return SearchKey 模糊搜索：支持标签、资源id、资源别名
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
-     * @param SearchKey 模糊搜索：支持标签、资源id、资源别名、分拆项id和分拆项名称
+     * Set 模糊搜索：支持标签、资源id、资源别名
+     * @param SearchKey 模糊搜索：支持标签、资源id、资源别名
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

@@ -28,20 +28,20 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
 当不需要对音频进行转码时，可选值为：
 <li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
+<li>mp3。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
 <li>flac。</li>
 当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
+<li>aac；</li>
+<li>mp3；</li>
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
+<li>aac：更适合 mp4；</li>
+<li>mp3：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>aac；</li>
+<li>mp3。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codec")
@@ -93,39 +93,39 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
 当不需要对音频进行转码时，可选值为：
 <li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
+<li>mp3。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
 <li>flac。</li>
 当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
+<li>aac；</li>
+<li>mp3；</li>
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
+<li>aac：更适合 mp4；</li>
+<li>mp3：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>aac；</li>
+<li>mp3。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 音频流的编码格式。
 当不需要对音频进行转码时，可选值为：
 <li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
+<li>mp3。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
 <li>flac。</li>
 当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
+<li>aac；</li>
+<li>mp3；</li>
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
+<li>aac：更适合 mp4；</li>
+<li>mp3：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>aac；</li>
+<li>mp3。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodec() {
@@ -137,39 +137,39 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
 当不需要对音频进行转码时，可选值为：
 <li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
+<li>mp3。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
 <li>flac。</li>
 当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
+<li>aac；</li>
+<li>mp3；</li>
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
+<li>aac：更适合 mp4；</li>
+<li>mp3：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>aac；</li>
+<li>mp3。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 音频流的编码格式。
 当不需要对音频进行转码时，可选值为：
 <li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
-<li>libmp3lame。</li>
+<li>mp3。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
 <li>flac。</li>
 当外层参数 Container 为 m4a 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame；</li>
+<li>aac；</li>
+<li>mp3；</li>
 <li>ac3。</li>
 当外层参数 Container 为 mp4 或 flv 时，可选值为：
-<li>libfdk_aac：更适合 mp4；</li>
-<li>libmp3lame：更适合 flv；</li>
+<li>aac：更适合 mp4；</li>
+<li>mp3：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>aac；</li>
+<li>mp3。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodec(String Codec) {

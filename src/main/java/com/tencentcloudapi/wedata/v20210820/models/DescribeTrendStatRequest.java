@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTrendStatRequest extends AbstractModel {
 
     /**
-    * Project id
+    * 项目id
     */
     @SerializedName("ProjectId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeTrendStatRequest extends AbstractModel {
     private String EndDate;
 
     /**
-     * Get Project id 
-     * @return ProjectId Project id
+     * Get 项目id 
+     * @return ProjectId 项目id
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project id
-     * @param ProjectId Project id
+     * Set 项目id
+     * @param ProjectId 项目id
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

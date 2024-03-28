@@ -48,6 +48,14 @@ public class MessageItem extends AbstractModel {
     private String ImageMessage;
 
     /**
+    * 自定义消息内容。message type为2时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomMessage")
+    @Expose
+    private CustomMsgContent CustomMessage;
+
+    /**
      * Get 消息类型。0表示文本消息，1表示图片消息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MessageType 消息类型。0表示文本消息，1表示图片消息
@@ -107,6 +115,26 @@ public class MessageItem extends AbstractModel {
         this.ImageMessage = ImageMessage;
     }
 
+    /**
+     * Get 自定义消息内容。message type为2时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomMessage 自定义消息内容。message type为2时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CustomMsgContent getCustomMessage() {
+        return this.CustomMessage;
+    }
+
+    /**
+     * Set 自定义消息内容。message type为2时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomMessage 自定义消息内容。message type为2时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomMessage(CustomMsgContent CustomMessage) {
+        this.CustomMessage = CustomMessage;
+    }
+
     public MessageItem() {
     }
 
@@ -124,6 +152,9 @@ public class MessageItem extends AbstractModel {
         if (source.ImageMessage != null) {
             this.ImageMessage = new String(source.ImageMessage);
         }
+        if (source.CustomMessage != null) {
+            this.CustomMessage = new CustomMsgContent(source.CustomMessage);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class MessageItem extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageType", this.MessageType);
         this.setParamSimple(map, prefix + "TextMessage", this.TextMessage);
         this.setParamSimple(map, prefix + "ImageMessage", this.ImageMessage);
+        this.setParamObj(map, prefix + "CustomMessage.", this.CustomMessage);
 
     }
 }

@@ -28,6 +28,7 @@ public class MsgBody extends AbstractModel {
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
 TIMImageElem（图像消息）
+TIMCustomElem（自定义消息）
     */
     @SerializedName("MsgType")
     @Expose
@@ -55,14 +56,23 @@ TIMImageElem（图像消息）
     private ImageMsgContent ImageMsgContent;
 
     /**
+    * 自定义消息，TIMCustomElem（自定义消息）必选。
+    */
+    @SerializedName("CustomMsgContent")
+    @Expose
+    private CustomMsgContent CustomMsgContent;
+
+    /**
      * Get TIM 消息对象类型，目前支持的消息对象包括：
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
-TIMImageElem（图像消息） 
+TIMImageElem（图像消息）
+TIMCustomElem（自定义消息） 
      * @return MsgType TIM 消息对象类型，目前支持的消息对象包括：
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
 TIMImageElem（图像消息）
+TIMCustomElem（自定义消息）
      */
     public String getMsgType() {
         return this.MsgType;
@@ -73,10 +83,12 @@ TIMImageElem（图像消息）
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
 TIMImageElem（图像消息）
+TIMCustomElem（自定义消息）
      * @param MsgType TIM 消息对象类型，目前支持的消息对象包括：
 TIMTextElem（文本消息）
 TIMFaceElem（表情消息）
 TIMImageElem（图像消息）
+TIMCustomElem（自定义消息）
      */
     public void setMsgType(String MsgType) {
         this.MsgType = MsgType;
@@ -130,6 +142,22 @@ TIMImageElem（图像消息）
         this.ImageMsgContent = ImageMsgContent;
     }
 
+    /**
+     * Get 自定义消息，TIMCustomElem（自定义消息）必选。 
+     * @return CustomMsgContent 自定义消息，TIMCustomElem（自定义消息）必选。
+     */
+    public CustomMsgContent getCustomMsgContent() {
+        return this.CustomMsgContent;
+    }
+
+    /**
+     * Set 自定义消息，TIMCustomElem（自定义消息）必选。
+     * @param CustomMsgContent 自定义消息，TIMCustomElem（自定义消息）必选。
+     */
+    public void setCustomMsgContent(CustomMsgContent CustomMsgContent) {
+        this.CustomMsgContent = CustomMsgContent;
+    }
+
     public MsgBody() {
     }
 
@@ -150,6 +178,9 @@ TIMImageElem（图像消息）
         if (source.ImageMsgContent != null) {
             this.ImageMsgContent = new ImageMsgContent(source.ImageMsgContent);
         }
+        if (source.CustomMsgContent != null) {
+            this.CustomMsgContent = new CustomMsgContent(source.CustomMsgContent);
+        }
     }
 
 
@@ -161,6 +192,7 @@ TIMImageElem（图像消息）
         this.setParamObj(map, prefix + "TextMsgContent.", this.TextMsgContent);
         this.setParamObj(map, prefix + "FaceMsgContent.", this.FaceMsgContent);
         this.setParamObj(map, prefix + "ImageMsgContent.", this.ImageMsgContent);
+        this.setParamObj(map, prefix + "CustomMsgContent.", this.CustomMsgContent);
 
     }
 }

@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeBuildInImagesRequest extends AbstractModel {
 
+    /**
+    * 镜像过滤器
+    */
+    @SerializedName("ImageFilters")
+    @Expose
+    private ImageFIlter [] ImageFilters;
+
+    /**
+     * Get 镜像过滤器 
+     * @return ImageFilters 镜像过滤器
+     */
+    public ImageFIlter [] getImageFilters() {
+        return this.ImageFilters;
+    }
+
+    /**
+     * Set 镜像过滤器
+     * @param ImageFilters 镜像过滤器
+     */
+    public void setImageFilters(ImageFIlter [] ImageFilters) {
+        this.ImageFilters = ImageFilters;
+    }
+
     public DescribeBuildInImagesRequest() {
     }
 
@@ -31,6 +54,12 @@ public class DescribeBuildInImagesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBuildInImagesRequest(DescribeBuildInImagesRequest source) {
+        if (source.ImageFilters != null) {
+            this.ImageFilters = new ImageFIlter[source.ImageFilters.length];
+            for (int i = 0; i < source.ImageFilters.length; i++) {
+                this.ImageFilters[i] = new ImageFIlter(source.ImageFilters[i]);
+            }
+        }
     }
 
 
@@ -38,6 +67,7 @@ public class DescribeBuildInImagesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "ImageFilters.", this.ImageFilters);
 
     }
 }

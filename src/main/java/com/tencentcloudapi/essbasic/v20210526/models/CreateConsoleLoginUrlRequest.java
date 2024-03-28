@@ -68,6 +68,13 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private String ProxyOperatorName;
 
     /**
+    * 子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
+    */
+    @SerializedName("ProxyOperatorMobile")
+    @Expose
+    private String ProxyOperatorMobile;
+
+    /**
     * Web控制台登录后进入的功能模块,  支持的模块包括：
 <ul>
 <li> **空值** :(默认)企业中心模块</li>
@@ -290,6 +297,22 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
      */
     public void setProxyOperatorName(String ProxyOperatorName) {
         this.ProxyOperatorName = ProxyOperatorName;
+    }
+
+    /**
+     * Get 子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效` 
+     * @return ProxyOperatorMobile 子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
+     */
+    public String getProxyOperatorMobile() {
+        return this.ProxyOperatorMobile;
+    }
+
+    /**
+     * Set 子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
+     * @param ProxyOperatorMobile 子客企业员工的手机码,  支持国内手机号11位数字(无需加+86前缀或其他字符)。注：`该手机号需要和Agent.ProxyOperator.OpenId相匹配,  当员工完成认证后该手机号会和Agent.ProxyOperator.OpenId一一绑定, 若员工已认证加入企业，这里修改经办人手机号传入将不会生效`
+     */
+    public void setProxyOperatorMobile(String ProxyOperatorMobile) {
+        this.ProxyOperatorMobile = ProxyOperatorMobile;
     }
 
     /**
@@ -596,6 +619,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         if (source.ProxyOperatorName != null) {
             this.ProxyOperatorName = new String(source.ProxyOperatorName);
         }
+        if (source.ProxyOperatorMobile != null) {
+            this.ProxyOperatorMobile = new String(source.ProxyOperatorMobile);
+        }
         if (source.Module != null) {
             this.Module = new String(source.Module);
         }
@@ -637,6 +663,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamSimple(map, prefix + "ProxyOperatorName", this.ProxyOperatorName);
+        this.setParamSimple(map, prefix + "ProxyOperatorMobile", this.ProxyOperatorMobile);
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
         this.setParamSimple(map, prefix + "MenuStatus", this.MenuStatus);

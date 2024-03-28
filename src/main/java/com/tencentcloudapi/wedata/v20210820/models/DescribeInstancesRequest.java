@@ -31,14 +31,14 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 页数
+    * 页数:默认1
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页大小
+    * 分页大小,默认最小10
     */
     @SerializedName("PageSize")
     @Expose
@@ -68,32 +68,32 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 页数 
-     * @return PageNumber 页数
+     * Get 页数:默认1 
+     * @return PageNumber 页数:默认1
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页数
-     * @param PageNumber 页数
+     * Set 页数:默认1
+     * @param PageNumber 页数:默认1
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get 分页大小,默认最小10 
+     * @return PageSize 分页大小,默认最小10
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set 分页大小,默认最小10
+     * @param PageSize 分页大小,默认最小10
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

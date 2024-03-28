@@ -66,6 +66,13 @@ public class CreateProjectRequest extends AbstractModel {
     private Long DefaultPanelType;
 
     /**
+    * 管理平台
+    */
+    @SerializedName("ManagePlatform")
+    @Expose
+    private String ManagePlatform;
+
+    /**
      * Get 项目名称 
      * @return Name 项目名称
      */
@@ -161,6 +168,22 @@ public class CreateProjectRequest extends AbstractModel {
         this.DefaultPanelType = DefaultPanelType;
     }
 
+    /**
+     * Get 管理平台 
+     * @return ManagePlatform 管理平台
+     */
+    public String getManagePlatform() {
+        return this.ManagePlatform;
+    }
+
+    /**
+     * Set 管理平台
+     * @param ManagePlatform 管理平台
+     */
+    public void setManagePlatform(String ManagePlatform) {
+        this.ManagePlatform = ManagePlatform;
+    }
+
     public CreateProjectRequest() {
     }
 
@@ -187,6 +210,9 @@ public class CreateProjectRequest extends AbstractModel {
         if (source.DefaultPanelType != null) {
             this.DefaultPanelType = new Long(source.DefaultPanelType);
         }
+        if (source.ManagePlatform != null) {
+            this.ManagePlatform = new String(source.ManagePlatform);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateProjectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Mark", this.Mark);
         this.setParamSimple(map, prefix + "IsApply", this.IsApply);
         this.setParamSimple(map, prefix + "DefaultPanelType", this.DefaultPanelType);
+        this.setParamSimple(map, prefix + "ManagePlatform", this.ManagePlatform);
 
     }
 }

@@ -64,7 +64,7 @@ public class GatherResourceSummary extends AbstractModel {
     private String InstanceTypeName;
 
     /**
-    * 资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+    * 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
@@ -72,7 +72,7 @@ public class GatherResourceSummary extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+    * 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
@@ -431,9 +431,9 @@ public class GatherResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get 资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * Get 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceId 资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * @return ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
@@ -441,9 +441,9 @@ public class GatherResourceSummary extends AbstractModel {
     }
 
     /**
-     * Set 资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * Set 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceId 资源ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * @param ResourceId 资源ID：不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID； 若该产品被分拆，则展示产品分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
@@ -451,9 +451,9 @@ public class GatherResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get 实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+     * Get 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+     * @return ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
@@ -461,9 +461,9 @@ public class GatherResourceSummary extends AbstractModel {
     }
 
     /**
-     * Set 实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+     * Set 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空
+     * @param ResourceName 实例名称：用户在控制台为资源设置的名称，如未设置默认为空；若该产品被分拆，则展示分拆产品分拆后的分拆项资源别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
@@ -1067,7 +1067,9 @@ public class GatherResourceSummary extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SplitItemId 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getSplitItemId() {
         return this.SplitItemId;
     }
@@ -1077,7 +1079,9 @@ public class GatherResourceSummary extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SplitItemId 分拆项 ID：涉及分拆产品的分拆后的分拆项 ID，如 COS 桶 ID，CDN 域名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setSplitItemId(String SplitItemId) {
         this.SplitItemId = SplitItemId;
     }
@@ -1087,7 +1091,9 @@ public class GatherResourceSummary extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SplitItemName 分拆项名称：涉及分拆产品的分拆后的分拆项
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getSplitItemName() {
         return this.SplitItemName;
     }
@@ -1097,7 +1103,9 @@ public class GatherResourceSummary extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SplitItemName 分拆项名称：涉及分拆产品的分拆后的分拆项
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setSplitItemName(String SplitItemName) {
         this.SplitItemName = SplitItemName;
     }

@@ -157,6 +157,13 @@ public class CreateDatasourceRequest extends AbstractModel {
     private String VpcId;
 
     /**
+    * 操作权限限制
+    */
+    @SerializedName("OperationAuthLimit")
+    @Expose
+    private String [] OperationAuthLimit;
+
+    /**
      * Get HOST 
      * @return DbHost HOST
      */
@@ -460,6 +467,22 @@ public class CreateDatasourceRequest extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get 操作权限限制 
+     * @return OperationAuthLimit 操作权限限制
+     */
+    public String [] getOperationAuthLimit() {
+        return this.OperationAuthLimit;
+    }
+
+    /**
+     * Set 操作权限限制
+     * @param OperationAuthLimit 操作权限限制
+     */
+    public void setOperationAuthLimit(String [] OperationAuthLimit) {
+        this.OperationAuthLimit = OperationAuthLimit;
+    }
+
     public CreateDatasourceRequest() {
     }
 
@@ -525,6 +548,12 @@ public class CreateDatasourceRequest extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.OperationAuthLimit != null) {
+            this.OperationAuthLimit = new String[source.OperationAuthLimit.length];
+            for (int i = 0; i < source.OperationAuthLimit.length; i++) {
+                this.OperationAuthLimit[i] = new String(source.OperationAuthLimit[i]);
+            }
+        }
     }
 
 
@@ -551,6 +580,7 @@ public class CreateDatasourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamArraySimple(map, prefix + "OperationAuthLimit.", this.OperationAuthLimit);
 
     }
 }

@@ -130,6 +130,22 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
     private String CvmInstanceId;
 
     /**
+    * 部署失败错误码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrCode")
+    @Expose
+    private String ErrCode;
+
+    /**
+    * 部署失败错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
      * Get 资源组节点id 
      * @return InstanceId 资源组节点id
      */
@@ -409,6 +425,46 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
         this.CvmInstanceId = CvmInstanceId;
     }
 
+    /**
+     * Get 部署失败错误码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrCode 部署失败错误码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrCode() {
+        return this.ErrCode;
+    }
+
+    /**
+     * Set 部署失败错误码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrCode 部署失败错误码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrCode(String ErrCode) {
+        this.ErrCode = ErrCode;
+    }
+
+    /**
+     * Get 部署失败错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrMsg 部署失败错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 部署失败错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrMsg 部署失败错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
     public Instance() {
     }
 
@@ -456,6 +512,12 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
         if (source.CvmInstanceId != null) {
             this.CvmInstanceId = new String(source.CvmInstanceId);
         }
+        if (source.ErrCode != null) {
+            this.ErrCode = new String(source.ErrCode);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
     }
 
 
@@ -475,6 +537,8 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
         this.setParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
         this.setParamArraySimple(map, prefix + "SpecFeatures.", this.SpecFeatures);
         this.setParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
 
     }
 }

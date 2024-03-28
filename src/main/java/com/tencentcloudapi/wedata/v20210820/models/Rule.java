@@ -368,6 +368,14 @@ public class Rule extends AbstractModel {
     private Long MonitorStatus;
 
     /**
+    * 触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerCondition")
+    @Expose
+    private String TriggerCondition;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -1227,6 +1235,26 @@ public class Rule extends AbstractModel {
         this.MonitorStatus = MonitorStatus;
     }
 
+    /**
+     * Get 触发条件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerCondition 触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTriggerCondition() {
+        return this.TriggerCondition;
+    }
+
+    /**
+     * Set 触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerCondition 触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerCondition(String TriggerCondition) {
+        this.TriggerCondition = TriggerCondition;
+    }
+
     public Rule() {
     }
 
@@ -1367,6 +1395,9 @@ public class Rule extends AbstractModel {
         if (source.MonitorStatus != null) {
             this.MonitorStatus = new Long(source.MonitorStatus);
         }
+        if (source.TriggerCondition != null) {
+            this.TriggerCondition = new String(source.TriggerCondition);
+        }
     }
 
 
@@ -1417,6 +1448,7 @@ public class Rule extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
+        this.setParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
 
     }
 }

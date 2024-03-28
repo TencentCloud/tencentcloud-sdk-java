@@ -240,6 +240,22 @@ public class Endpoint extends AbstractModel {
     private String CcnOwnerUin;
 
     /**
+    * 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChildInstanceId")
+    @Expose
+    private String ChildInstanceId;
+
+    /**
+    * 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChildInstanceType")
+    @Expose
+    private String ChildInstanceType;
+
+    /**
      * Get 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 地域英文名，如：ap-guangzhou
@@ -779,6 +795,46 @@ public class Endpoint extends AbstractModel {
         this.CcnOwnerUin = CcnOwnerUin;
     }
 
+    /**
+     * Get 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChildInstanceId 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChildInstanceId() {
+        return this.ChildInstanceId;
+    }
+
+    /**
+     * Set 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChildInstanceId 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChildInstanceId(String ChildInstanceId) {
+        this.ChildInstanceId = ChildInstanceId;
+    }
+
+    /**
+     * Get 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChildInstanceType 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChildInstanceType() {
+        return this.ChildInstanceType;
+    }
+
+    /**
+     * Set 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChildInstanceType 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChildInstanceType(String ChildInstanceType) {
+        this.ChildInstanceType = ChildInstanceType;
+    }
+
     public Endpoint() {
     }
 
@@ -868,6 +924,12 @@ public class Endpoint extends AbstractModel {
         if (source.CcnOwnerUin != null) {
             this.CcnOwnerUin = new String(source.CcnOwnerUin);
         }
+        if (source.ChildInstanceId != null) {
+            this.ChildInstanceId = new String(source.ChildInstanceId);
+        }
+        if (source.ChildInstanceType != null) {
+            this.ChildInstanceType = new String(source.ChildInstanceType);
+        }
     }
 
 
@@ -902,6 +964,8 @@ public class Endpoint extends AbstractModel {
         this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
         this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
         this.setParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
+        this.setParamSimple(map, prefix + "ChildInstanceId", this.ChildInstanceId);
+        this.setParamSimple(map, prefix + "ChildInstanceType", this.ChildInstanceType);
 
     }
 }

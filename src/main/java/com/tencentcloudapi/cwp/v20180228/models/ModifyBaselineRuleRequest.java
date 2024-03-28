@@ -45,6 +45,27 @@ public class ModifyBaselineRuleRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
+    * 0:检测项，1:检测项分类
+    */
+    @SerializedName("IdType")
+    @Expose
+    private Long IdType;
+
+    /**
+    * 需要排除的检测项id
+    */
+    @SerializedName("ExcludeIds")
+    @Expose
+    private Long [] ExcludeIds;
+
+    /**
+    * 勾选的检测项分类
+    */
+    @SerializedName("CategoryIds")
+    @Expose
+    private Long [] CategoryIds;
+
+    /**
      * Get 无 
      * @return Data 无
      */
@@ -92,6 +113,54 @@ public class ModifyBaselineRuleRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get 0:检测项，1:检测项分类 
+     * @return IdType 0:检测项，1:检测项分类
+     */
+    public Long getIdType() {
+        return this.IdType;
+    }
+
+    /**
+     * Set 0:检测项，1:检测项分类
+     * @param IdType 0:检测项，1:检测项分类
+     */
+    public void setIdType(Long IdType) {
+        this.IdType = IdType;
+    }
+
+    /**
+     * Get 需要排除的检测项id 
+     * @return ExcludeIds 需要排除的检测项id
+     */
+    public Long [] getExcludeIds() {
+        return this.ExcludeIds;
+    }
+
+    /**
+     * Set 需要排除的检测项id
+     * @param ExcludeIds 需要排除的检测项id
+     */
+    public void setExcludeIds(Long [] ExcludeIds) {
+        this.ExcludeIds = ExcludeIds;
+    }
+
+    /**
+     * Get 勾选的检测项分类 
+     * @return CategoryIds 勾选的检测项分类
+     */
+    public Long [] getCategoryIds() {
+        return this.CategoryIds;
+    }
+
+    /**
+     * Set 勾选的检测项分类
+     * @param CategoryIds 勾选的检测项分类
+     */
+    public void setCategoryIds(Long [] CategoryIds) {
+        this.CategoryIds = CategoryIds;
+    }
+
     public ModifyBaselineRuleRequest() {
     }
 
@@ -112,6 +181,21 @@ public class ModifyBaselineRuleRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.IdType != null) {
+            this.IdType = new Long(source.IdType);
+        }
+        if (source.ExcludeIds != null) {
+            this.ExcludeIds = new Long[source.ExcludeIds.length];
+            for (int i = 0; i < source.ExcludeIds.length; i++) {
+                this.ExcludeIds[i] = new Long(source.ExcludeIds[i]);
+            }
+        }
+        if (source.CategoryIds != null) {
+            this.CategoryIds = new Long[source.CategoryIds.length];
+            for (int i = 0; i < source.CategoryIds.length; i++) {
+                this.CategoryIds[i] = new Long(source.CategoryIds[i]);
+            }
+        }
     }
 
 
@@ -122,6 +206,9 @@ public class ModifyBaselineRuleRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "SelectAll", this.SelectAll);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "IdType", this.IdType);
+        this.setParamArraySimple(map, prefix + "ExcludeIds.", this.ExcludeIds);
+        this.setParamArraySimple(map, prefix + "CategoryIds.", this.CategoryIds);
 
     }
 }

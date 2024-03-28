@@ -25,8 +25,8 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
     * 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
+<li>h264：H.264 编码</li>
+<li>h265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 注意：av1 编码容器目前只支持 mp4 。
@@ -127,15 +127,15 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
      * Get 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
+<li>h264：H.264 编码</li>
+<li>h265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 注意：av1 编码容器目前只支持 mp4 。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
+<li>h264：H.264 编码</li>
+<li>h265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 注意：av1 编码容器目前只支持 mp4 。
@@ -147,15 +147,15 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
      * Set 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
+<li>h264：H.264 编码</li>
+<li>h265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 注意：av1 编码容器目前只支持 mp4 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
+<li>h264：H.264 编码</li>
+<li>h265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 注意：av1 编码容器目前只支持 mp4 。

@@ -144,6 +144,14 @@ public class RuleGroupExecResult extends AbstractModel {
     private String EngineType;
 
     /**
+    * 规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleExecResultVOList")
+    @Expose
+    private RuleExecResult [] RuleExecResultVOList;
+
+    /**
      * Get 规则组执行ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupExecId 规则组执行ID
@@ -443,6 +451,26 @@ public class RuleGroupExecResult extends AbstractModel {
         this.EngineType = EngineType;
     }
 
+    /**
+     * Get 规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleExecResultVOList 规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuleExecResult [] getRuleExecResultVOList() {
+        return this.RuleExecResultVOList;
+    }
+
+    /**
+     * Set 规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleExecResultVOList 规则执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleExecResultVOList(RuleExecResult [] RuleExecResultVOList) {
+        this.RuleExecResultVOList = RuleExecResultVOList;
+    }
+
     public RuleGroupExecResult() {
     }
 
@@ -496,6 +524,12 @@ public class RuleGroupExecResult extends AbstractModel {
         if (source.EngineType != null) {
             this.EngineType = new String(source.EngineType);
         }
+        if (source.RuleExecResultVOList != null) {
+            this.RuleExecResultVOList = new RuleExecResult[source.RuleExecResultVOList.length];
+            for (int i = 0; i < source.RuleExecResultVOList.length; i++) {
+                this.RuleExecResultVOList[i] = new RuleExecResult(source.RuleExecResultVOList[i]);
+            }
+        }
     }
 
 
@@ -518,6 +552,7 @@ public class RuleGroupExecResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Permission", this.Permission);
         this.setParamSimple(map, prefix + "ExecDetail", this.ExecDetail);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamArrayObj(map, prefix + "RuleExecResultVOList.", this.RuleExecResultVOList);
 
     }
 }

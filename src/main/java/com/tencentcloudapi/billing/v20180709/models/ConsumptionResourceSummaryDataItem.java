@@ -187,6 +187,142 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
     private String TransferPayAmount;
 
     /**
+    * 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
+    * 使用者UIN：实际使用资源的账号 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerUin")
+    @Expose
+    private String OwnerUin;
+
+    /**
+    * 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String OperateUin;
+
+    /**
+    * 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCodeName")
+    @Expose
+    private String ProductCodeName;
+
+    /**
+    * 地域类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionType")
+    @Expose
+    private String RegionType;
+
+    /**
+    * 地域类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionTypeName")
+    @Expose
+    private String RegionTypeName;
+
+    /**
+    * 扩展字段1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Extend1")
+    @Expose
+    private String Extend1;
+
+    /**
+    * 扩展字段2
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Extend2")
+    @Expose
+    private String Extend2;
+
+    /**
+    * 扩展字段3
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Extend3")
+    @Expose
+    private String Extend3;
+
+    /**
+    * 扩展字段4
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Extend4")
+    @Expose
+    private String Extend4;
+
+    /**
+    * 扩展字段5
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Extend5")
+    @Expose
+    private String Extend5;
+
+    /**
+    * 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 实例类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceTypeName")
+    @Expose
+    private String InstanceTypeName;
+
+    /**
+    * 扣费时间：结算扣费时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayTime")
+    @Expose
+    private String PayTime;
+
+    /**
+    * 可用区：资源所属可用区，如广州三区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
+    * 配置描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComponentConfig")
+    @Expose
+    private String ComponentConfig;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -574,6 +710,346 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
         this.TransferPayAmount = TransferPayAmount;
     }
 
+    /**
+     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
+    /**
+     * Get 使用者UIN：实际使用资源的账号 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerUin 使用者UIN：实际使用资源的账号 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerUin() {
+        return this.OwnerUin;
+    }
+
+    /**
+     * Set 使用者UIN：实际使用资源的账号 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerUin 使用者UIN：实际使用资源的账号 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerUin(String OwnerUin) {
+        this.OwnerUin = OwnerUin;
+    }
+
+    /**
+     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * Set 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateUin(String OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
+    /**
+     * Get 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCode 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * Set 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCode 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * Get 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductCodeName() {
+        return this.ProductCodeName;
+    }
+
+    /**
+     * Set 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCodeName(String ProductCodeName) {
+        this.ProductCodeName = ProductCodeName;
+    }
+
+    /**
+     * Get 地域类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionType 地域类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionType() {
+        return this.RegionType;
+    }
+
+    /**
+     * Set 地域类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionType 地域类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionType(String RegionType) {
+        this.RegionType = RegionType;
+    }
+
+    /**
+     * Get 地域类型名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionTypeName 地域类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionTypeName() {
+        return this.RegionTypeName;
+    }
+
+    /**
+     * Set 地域类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionTypeName 地域类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionTypeName(String RegionTypeName) {
+        this.RegionTypeName = RegionTypeName;
+    }
+
+    /**
+     * Get 扩展字段1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Extend1 扩展字段1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtend1() {
+        return this.Extend1;
+    }
+
+    /**
+     * Set 扩展字段1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Extend1 扩展字段1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtend1(String Extend1) {
+        this.Extend1 = Extend1;
+    }
+
+    /**
+     * Get 扩展字段2
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Extend2 扩展字段2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtend2() {
+        return this.Extend2;
+    }
+
+    /**
+     * Set 扩展字段2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Extend2 扩展字段2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtend2(String Extend2) {
+        this.Extend2 = Extend2;
+    }
+
+    /**
+     * Get 扩展字段3
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Extend3 扩展字段3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtend3() {
+        return this.Extend3;
+    }
+
+    /**
+     * Set 扩展字段3
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Extend3 扩展字段3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtend3(String Extend3) {
+        this.Extend3 = Extend3;
+    }
+
+    /**
+     * Get 扩展字段4
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Extend4 扩展字段4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtend4() {
+        return this.Extend4;
+    }
+
+    /**
+     * Set 扩展字段4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Extend4 扩展字段4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtend4(String Extend4) {
+        this.Extend4 = Extend4;
+    }
+
+    /**
+     * Get 扩展字段5
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Extend5 扩展字段5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtend5() {
+        return this.Extend5;
+    }
+
+    /**
+     * Set 扩展字段5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Extend5 扩展字段5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtend5(String Extend5) {
+        this.Extend5 = Extend5;
+    }
+
+    /**
+     * Get 实例类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 实例类型名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceTypeName 实例类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceTypeName() {
+        return this.InstanceTypeName;
+    }
+
+    /**
+     * Set 实例类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceTypeName 实例类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceTypeName(String InstanceTypeName) {
+        this.InstanceTypeName = InstanceTypeName;
+    }
+
+    /**
+     * Get 扣费时间：结算扣费时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayTime 扣费时间：结算扣费时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayTime() {
+        return this.PayTime;
+    }
+
+    /**
+     * Set 扣费时间：结算扣费时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayTime 扣费时间：结算扣费时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayTime(String PayTime) {
+        this.PayTime = PayTime;
+    }
+
+    /**
+     * Get 可用区：资源所属可用区，如广州三区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneName 可用区：资源所属可用区，如广州三区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set 可用区：资源所属可用区，如广州三区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneName 可用区：资源所属可用区，如广州三区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get 配置描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ComponentConfig 配置描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComponentConfig() {
+        return this.ComponentConfig;
+    }
+
+    /**
+     * Set 配置描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComponentConfig 配置描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComponentConfig(String ComponentConfig) {
+        this.ComponentConfig = ComponentConfig;
+    }
+
     public ConsumptionResourceSummaryDataItem() {
     }
 
@@ -648,6 +1124,57 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
         }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String(source.OperateUin);
+        }
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+        if (source.ProductCodeName != null) {
+            this.ProductCodeName = new String(source.ProductCodeName);
+        }
+        if (source.RegionType != null) {
+            this.RegionType = new String(source.RegionType);
+        }
+        if (source.RegionTypeName != null) {
+            this.RegionTypeName = new String(source.RegionTypeName);
+        }
+        if (source.Extend1 != null) {
+            this.Extend1 = new String(source.Extend1);
+        }
+        if (source.Extend2 != null) {
+            this.Extend2 = new String(source.Extend2);
+        }
+        if (source.Extend3 != null) {
+            this.Extend3 = new String(source.Extend3);
+        }
+        if (source.Extend4 != null) {
+            this.Extend4 = new String(source.Extend4);
+        }
+        if (source.Extend5 != null) {
+            this.Extend5 = new String(source.Extend5);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceTypeName != null) {
+            this.InstanceTypeName = new String(source.InstanceTypeName);
+        }
+        if (source.PayTime != null) {
+            this.PayTime = new String(source.PayTime);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.ComponentConfig != null) {
+            this.ComponentConfig = new String(source.ComponentConfig);
+        }
     }
 
 
@@ -677,6 +1204,23 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "ProductCodeName", this.ProductCodeName);
+        this.setParamSimple(map, prefix + "RegionType", this.RegionType);
+        this.setParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
+        this.setParamSimple(map, prefix + "Extend1", this.Extend1);
+        this.setParamSimple(map, prefix + "Extend2", this.Extend2);
+        this.setParamSimple(map, prefix + "Extend3", this.Extend3);
+        this.setParamSimple(map, prefix + "Extend4", this.Extend4);
+        this.setParamSimple(map, prefix + "Extend5", this.Extend5);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "InstanceTypeName", this.InstanceTypeName);
+        this.setParamSimple(map, prefix + "PayTime", this.PayTime);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
 
     }
 }

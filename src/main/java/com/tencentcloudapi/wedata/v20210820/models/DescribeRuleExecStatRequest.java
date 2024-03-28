@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRuleExecStatRequest extends AbstractModel {
 
     /**
-    * ProjectId 值
+    * 项目id
     */
     @SerializedName("ProjectId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeRuleExecStatRequest extends AbstractModel {
     private String EndDate;
 
     /**
-     * Get ProjectId 值 
-     * @return ProjectId ProjectId 值
+     * Get 项目id 
+     * @return ProjectId 项目id
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set ProjectId 值
-     * @param ProjectId ProjectId 值
+     * Set 项目id
+     * @param ProjectId 项目id
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

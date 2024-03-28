@@ -87,6 +87,13 @@ public class ModifyProjectRequest extends AbstractModel {
     private String PanelScope;
 
     /**
+    * 项目管理平台
+    */
+    @SerializedName("ManagePlatform")
+    @Expose
+    private String ManagePlatform;
+
+    /**
      * Get 项目Id 
      * @return Id 项目Id
      */
@@ -230,6 +237,22 @@ public class ModifyProjectRequest extends AbstractModel {
         this.PanelScope = PanelScope;
     }
 
+    /**
+     * Get 项目管理平台 
+     * @return ManagePlatform 项目管理平台
+     */
+    public String getManagePlatform() {
+        return this.ManagePlatform;
+    }
+
+    /**
+     * Set 项目管理平台
+     * @param ManagePlatform 项目管理平台
+     */
+    public void setManagePlatform(String ManagePlatform) {
+        this.ManagePlatform = ManagePlatform;
+    }
+
     public ModifyProjectRequest() {
     }
 
@@ -265,6 +288,9 @@ public class ModifyProjectRequest extends AbstractModel {
         if (source.PanelScope != null) {
             this.PanelScope = new String(source.PanelScope);
         }
+        if (source.ManagePlatform != null) {
+            this.ManagePlatform = new String(source.ManagePlatform);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class ModifyProjectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "DefaultPanelType", this.DefaultPanelType);
         this.setParamSimple(map, prefix + "PanelScope", this.PanelScope);
+        this.setParamSimple(map, prefix + "ManagePlatform", this.ManagePlatform);
 
     }
 }

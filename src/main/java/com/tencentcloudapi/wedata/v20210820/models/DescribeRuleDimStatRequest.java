@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRuleDimStatRequest extends AbstractModel {
 
     /**
-    * Project Id
+    * 项目id
     */
     @SerializedName("ProjectId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeRuleDimStatRequest extends AbstractModel {
     private String EndDate;
 
     /**
-     * Get Project Id 
-     * @return ProjectId Project Id
+     * Get 项目id 
+     * @return ProjectId 项目id
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project Id
-     * @param ProjectId Project Id
+     * Set 项目id
+     * @param ProjectId 项目id
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

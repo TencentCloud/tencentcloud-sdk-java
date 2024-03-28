@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateWorkspaceRequest extends AbstractModel {
 
     /**
-    * 工作空间名称
+    * 工作空间名称, 长度限制 2~64
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 工作空间描述
+    * 工作空间描述, 长度限制 0~255
     */
     @SerializedName("Description")
     @Expose
@@ -45,7 +45,7 @@ public class CreateWorkspaceRequest extends AbstractModel {
     private String Specs;
 
     /**
-    * 工作空间基础镜像名称, 默认会使用 All In One 镜像
+    * 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
     */
     @SerializedName("Image")
     @Expose
@@ -66,7 +66,7 @@ public class CreateWorkspaceRequest extends AbstractModel {
     private Env [] Envs;
 
     /**
-    * 预装插件. 工作空间启动时, 会自动安装这些插件 
+    * 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
     */
     @SerializedName("Extensions")
     @Expose
@@ -80,32 +80,60 @@ public class CreateWorkspaceRequest extends AbstractModel {
     private LifeCycle Lifecycle;
 
     /**
-     * Get 工作空间名称 
-     * @return Name 工作空间名称
+    * 应用名称
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * 用户UIN
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * VPCID
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * 子网ID
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+     * Get 工作空间名称, 长度限制 2~64 
+     * @return Name 工作空间名称, 长度限制 2~64
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 工作空间名称
-     * @param Name 工作空间名称
+     * Set 工作空间名称, 长度限制 2~64
+     * @param Name 工作空间名称, 长度限制 2~64
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 工作空间描述 
-     * @return Description 工作空间描述
+     * Get 工作空间描述, 长度限制 0~255 
+     * @return Description 工作空间描述, 长度限制 0~255
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 工作空间描述
-     * @param Description 工作空间描述
+     * Set 工作空间描述, 长度限制 0~255
+     * @param Description 工作空间描述, 长度限制 0~255
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -128,16 +156,16 @@ public class CreateWorkspaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 工作空间基础镜像名称, 默认会使用 All In One 镜像 
-     * @return Image 工作空间基础镜像名称, 默认会使用 All In One 镜像
+     * Get 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255 
+     * @return Image 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 工作空间基础镜像名称, 默认会使用 All In One 镜像
-     * @param Image 工作空间基础镜像名称, 默认会使用 All In One 镜像
+     * Set 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
+     * @param Image 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
      */
     public void setImage(String Image) {
         this.Image = Image;
@@ -176,16 +204,16 @@ public class CreateWorkspaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 预装插件. 工作空间启动时, 会自动安装这些插件  
-     * @return Extensions 预装插件. 工作空间启动时, 会自动安装这些插件 
+     * Get 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10 
+     * @return Extensions 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
      */
     public String [] getExtensions() {
         return this.Extensions;
     }
 
     /**
-     * Set 预装插件. 工作空间启动时, 会自动安装这些插件 
-     * @param Extensions 预装插件. 工作空间启动时, 会自动安装这些插件 
+     * Set 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
+     * @param Extensions 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
      */
     public void setExtensions(String [] Extensions) {
         this.Extensions = Extensions;
@@ -205,6 +233,70 @@ public class CreateWorkspaceRequest extends AbstractModel {
      */
     public void setLifecycle(LifeCycle Lifecycle) {
         this.Lifecycle = Lifecycle;
+    }
+
+    /**
+     * Get 应用名称 
+     * @return AppId 应用名称
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 应用名称
+     * @param AppId 应用名称
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get 用户UIN 
+     * @return Uin 用户UIN
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 用户UIN
+     * @param Uin 用户UIN
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get VPCID 
+     * @return UniqVpcId VPCID
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set VPCID
+     * @param UniqVpcId VPCID
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get 子网ID 
+     * @return SubnetId 子网ID
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID
+     * @param SubnetId 子网ID
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     public CreateWorkspaceRequest() {
@@ -245,6 +337,18 @@ public class CreateWorkspaceRequest extends AbstractModel {
         if (source.Lifecycle != null) {
             this.Lifecycle = new LifeCycle(source.Lifecycle);
         }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -260,6 +364,10 @@ public class CreateWorkspaceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
         this.setParamArraySimple(map, prefix + "Extensions.", this.Extensions);
         this.setParamObj(map, prefix + "Lifecycle.", this.Lifecycle);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

@@ -361,7 +361,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *删除网络攻击日志
+     *ModifyEventAttackStatus 接口替代
+
+删除网络攻击日志
      * @param req DeleteAttackLogsRequest
      * @return DeleteAttackLogsResponse
      * @throws TencentCloudSDKException
@@ -4280,7 +4282,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *导出网络攻击日志
+     *ExportAttackEvents接口替代
+
+导出网络攻击日志
      * @param req ExportAttackLogsRequest
      * @return ExportAttackLogsResponse
      * @throws TencentCloudSDKException

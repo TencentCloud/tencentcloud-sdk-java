@@ -84,6 +84,14 @@ public class ConsumptionBusinessSummaryDataItem extends AbstractModel {
     private String TransferPayAmount;
 
     /**
+    * 地域名称（仅在地域汇总总展示）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+
+    /**
      * Get 产品名称代码 
      * @return BusinessCode 产品名称代码
      */
@@ -227,6 +235,26 @@ public class ConsumptionBusinessSummaryDataItem extends AbstractModel {
         this.TransferPayAmount = TransferPayAmount;
     }
 
+    /**
+     * Get 地域名称（仅在地域汇总总展示）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionName 地域名称（仅在地域汇总总展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set 地域名称（仅在地域汇总总展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionName 地域名称（仅在地域汇总总展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
+    }
+
     public ConsumptionBusinessSummaryDataItem() {
     }
 
@@ -259,6 +287,9 @@ public class ConsumptionBusinessSummaryDataItem extends AbstractModel {
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
         }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
     }
 
 
@@ -274,6 +305,7 @@ public class ConsumptionBusinessSummaryDataItem extends AbstractModel {
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
 
     }
 }

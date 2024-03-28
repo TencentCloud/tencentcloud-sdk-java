@@ -96,6 +96,46 @@ public class ExportTaskInfo extends AbstractModel {
     private String FilePath;
 
     /**
+    * 是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Expire")
+    @Expose
+    private Long Expire;
+
+    /**
+    * 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceName")
+    @Expose
+    private String DatasourceName;
+
+    /**
+    * 库名+表名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbTableName")
+    @Expose
+    private String DbTableName;
+
+    /**
+    * 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
+    * 规则执行id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleExecId")
+    @Expose
+    private Long RuleExecId;
+
+    /**
      * Get 导出任务id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExportTaskId 导出任务id
@@ -275,6 +315,106 @@ public class ExportTaskInfo extends AbstractModel {
         this.FilePath = FilePath;
     }
 
+    /**
+     * Get 是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Expire 是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExpire() {
+        return this.Expire;
+    }
+
+    /**
+     * Set 是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Expire 是否过期(1.已过期 2.未过期) 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpire(Long Expire) {
+        this.Expire = Expire;
+    }
+
+    /**
+     * Get 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceName() {
+        return this.DatasourceName;
+    }
+
+    /**
+     * Set 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceName(String DatasourceName) {
+        this.DatasourceName = DatasourceName;
+    }
+
+    /**
+     * Get 库名+表名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbTableName 库名+表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbTableName() {
+        return this.DbTableName;
+    }
+
+    /**
+     * Set 库名+表名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbTableName 库名+表名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbTableName(String DbTableName) {
+        this.DbTableName = DbTableName;
+    }
+
+    /**
+     * Get 规则名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleName() {
+        return this.RuleName;
+    }
+
+    /**
+     * Set 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
+    }
+
+    /**
+     * Get 规则执行id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleExecId 规则执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleExecId() {
+        return this.RuleExecId;
+    }
+
+    /**
+     * Set 规则执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleExecId 规则执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleExecId(Long RuleExecId) {
+        this.RuleExecId = RuleExecId;
+    }
+
     public ExportTaskInfo() {
     }
 
@@ -310,6 +450,21 @@ public class ExportTaskInfo extends AbstractModel {
         if (source.FilePath != null) {
             this.FilePath = new String(source.FilePath);
         }
+        if (source.Expire != null) {
+            this.Expire = new Long(source.Expire);
+        }
+        if (source.DatasourceName != null) {
+            this.DatasourceName = new String(source.DatasourceName);
+        }
+        if (source.DbTableName != null) {
+            this.DbTableName = new String(source.DbTableName);
+        }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.RuleExecId != null) {
+            this.RuleExecId = new Long(source.RuleExecId);
+        }
     }
 
 
@@ -326,6 +481,11 @@ public class ExportTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulerTaskId", this.SchedulerTaskId);
         this.setParamSimple(map, prefix + "SchedulerCurRunDate", this.SchedulerCurRunDate);
         this.setParamSimple(map, prefix + "FilePath", this.FilePath);
+        this.setParamSimple(map, prefix + "Expire", this.Expire);
+        this.setParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+        this.setParamSimple(map, prefix + "DbTableName", this.DbTableName);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "RuleExecId", this.RuleExecId);
 
     }
 }

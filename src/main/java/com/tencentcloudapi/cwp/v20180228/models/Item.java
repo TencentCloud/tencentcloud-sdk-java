@@ -38,6 +38,14 @@ public class Item extends AbstractModel {
     private String ItemName;
 
     /**
+    * 自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomItemValues")
+    @Expose
+    private Long [] CustomItemValues;
+
+    /**
      * Get Id 
      * @return ItemId Id
      */
@@ -69,6 +77,26 @@ public class Item extends AbstractModel {
         this.ItemName = ItemName;
     }
 
+    /**
+     * Get 自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomItemValues 自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getCustomItemValues() {
+        return this.CustomItemValues;
+    }
+
+    /**
+     * Set 自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomItemValues 自定义阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomItemValues(Long [] CustomItemValues) {
+        this.CustomItemValues = CustomItemValues;
+    }
+
     public Item() {
     }
 
@@ -83,6 +111,12 @@ public class Item extends AbstractModel {
         if (source.ItemName != null) {
             this.ItemName = new String(source.ItemName);
         }
+        if (source.CustomItemValues != null) {
+            this.CustomItemValues = new Long[source.CustomItemValues.length];
+            for (int i = 0; i < source.CustomItemValues.length; i++) {
+                this.CustomItemValues[i] = new Long(source.CustomItemValues[i]);
+            }
+        }
     }
 
 
@@ -92,6 +126,7 @@ public class Item extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);
         this.setParamSimple(map, prefix + "ItemName", this.ItemName);
+        this.setParamArraySimple(map, prefix + "CustomItemValues.", this.CustomItemValues);
 
     }
 }

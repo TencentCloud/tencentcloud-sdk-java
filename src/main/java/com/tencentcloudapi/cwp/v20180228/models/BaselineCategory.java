@@ -45,6 +45,14 @@ public class BaselineCategory extends AbstractModel {
     private Long ParentCategoryId;
 
     /**
+    * 子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ItemCount")
+    @Expose
+    private Long ItemCount;
+
+    /**
      * Get 分类Id 
      * @return CategoryId 分类Id
      */
@@ -92,6 +100,26 @@ public class BaselineCategory extends AbstractModel {
         this.ParentCategoryId = ParentCategoryId;
     }
 
+    /**
+     * Get 子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ItemCount 子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getItemCount() {
+        return this.ItemCount;
+    }
+
+    /**
+     * Set 子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ItemCount 子分类下检测项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItemCount(Long ItemCount) {
+        this.ItemCount = ItemCount;
+    }
+
     public BaselineCategory() {
     }
 
@@ -109,6 +137,9 @@ public class BaselineCategory extends AbstractModel {
         if (source.ParentCategoryId != null) {
             this.ParentCategoryId = new Long(source.ParentCategoryId);
         }
+        if (source.ItemCount != null) {
+            this.ItemCount = new Long(source.ItemCount);
+        }
     }
 
 
@@ -119,6 +150,7 @@ public class BaselineCategory extends AbstractModel {
         this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
         this.setParamSimple(map, prefix + "CategoryName", this.CategoryName);
         this.setParamSimple(map, prefix + "ParentCategoryId", this.ParentCategoryId);
+        this.setParamSimple(map, prefix + "ItemCount", this.ItemCount);
 
     }
 }

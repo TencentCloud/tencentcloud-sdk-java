@@ -31,6 +31,13 @@ public class CreateSearchTemplateResponse extends AbstractModel {
     private Long Status;
 
     /**
+    * 失败原因
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class CreateSearchTemplateResponse extends AbstractModel {
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 失败原因 
+     * @return Message 失败原因
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 失败原因
+     * @param Message 失败原因
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
@@ -80,6 +103,9 @@ public class CreateSearchTemplateResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class CreateSearchTemplateResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

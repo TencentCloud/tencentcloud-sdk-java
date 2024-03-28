@@ -152,6 +152,22 @@ public class EndpointItem extends AbstractModel {
     private KeyValuePairOption [] ExtraAttr;
 
     /**
+    * 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChildInstanceId")
+    @Expose
+    private String ChildInstanceId;
+
+    /**
+    * 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChildInstanceType")
+    @Expose
+    private String ChildInstanceType;
+
+    /**
      * Get 源库所在地域。如果 AccessType 为 ccn，请填vpc所在地域，因为此时不知道源库在哪个地域。其他接入方式，请填订阅任务所在地域，因为确保订阅任务与源库在同一地域是最优的网络方案。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseRegion 源库所在地域。如果 AccessType 为 ccn，请填vpc所在地域，因为此时不知道源库在哪个地域。其他接入方式，请填订阅任务所在地域，因为确保订阅任务与源库在同一地域是最优的网络方案。
@@ -471,6 +487,46 @@ public class EndpointItem extends AbstractModel {
         this.ExtraAttr = ExtraAttr;
     }
 
+    /**
+     * Get 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChildInstanceId 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChildInstanceId() {
+        return this.ChildInstanceId;
+    }
+
+    /**
+     * Set 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChildInstanceId 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChildInstanceId(String ChildInstanceId) {
+        this.ChildInstanceId = ChildInstanceId;
+    }
+
+    /**
+     * Get 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChildInstanceType 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChildInstanceType() {
+        return this.ChildInstanceType;
+    }
+
+    /**
+     * Set 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChildInstanceType 数据库为cynos、且是cynos集群内的一个子数据库实例时、该参数为该子实例的类型、比如：只读实例传ro、读写实例传rw
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChildInstanceType(String ChildInstanceType) {
+        this.ChildInstanceType = ChildInstanceType;
+    }
+
     public EndpointItem() {
     }
 
@@ -530,6 +586,12 @@ public class EndpointItem extends AbstractModel {
                 this.ExtraAttr[i] = new KeyValuePairOption(source.ExtraAttr[i]);
             }
         }
+        if (source.ChildInstanceId != null) {
+            this.ChildInstanceId = new String(source.ChildInstanceId);
+        }
+        if (source.ChildInstanceType != null) {
+            this.ChildInstanceType = new String(source.ChildInstanceType);
+        }
     }
 
 
@@ -553,6 +615,8 @@ public class EndpointItem extends AbstractModel {
         this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
         this.setParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+        this.setParamSimple(map, prefix + "ChildInstanceId", this.ChildInstanceId);
+        this.setParamSimple(map, prefix + "ChildInstanceType", this.ChildInstanceType);
 
     }
 }
