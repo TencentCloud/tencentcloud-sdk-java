@@ -337,8 +337,8 @@ public abstract class AbstractClient {
     private void trySetHostnameVerifier(HttpConnection conn) {
         HostnameVerifier hostnameVerifier = this.profile.getHttpProfile().getHostnameVerifier();
         if (hostnameVerifier != null) {
-                this.httpConnection.setHostnameVerifier(hostnameVerifier);
-            }
+            this.httpConnection.setHostnameVerifier(hostnameVerifier);
+        }
     }
 
     private void trySetRegionBreaker() {
