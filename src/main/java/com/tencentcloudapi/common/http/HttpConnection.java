@@ -20,6 +20,7 @@ package com.tencentcloudapi.common.http;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import okhttp3.*;
 
+import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
@@ -64,6 +65,10 @@ public class HttpConnection {
 
     public void setSSLSocketFactory(SSLSocketFactory sslSocketFactory, X509TrustManager trustManager) {
         this.client = this.client.newBuilder().sslSocketFactory(sslSocketFactory, trustManager).build();
+    }
+
+    public void setHostnameVerifier(HostnameVerifier hostnameVerifier) {
+        this.client = this.client.newBuilder().hostnameVerifier(hostnameVerifier).build();
     }
 
     public Response doRequest(Request request) throws IOException {
