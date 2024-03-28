@@ -29,6 +29,7 @@ import okhttp3.*;
 import okhttp3.Headers.Builder;
 
 import javax.crypto.Mac;
+import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
@@ -94,6 +95,7 @@ public abstract class AbstractClient {
         this.trySetProxy(this.httpConnection);
         this.trySetSSLSocketFactory(this.httpConnection);
         this.trySetRegionBreaker();
+        this.trySetHostnameVerifier(this.httpConnection);
         warmup();
     }
 
@@ -330,6 +332,13 @@ public abstract class AbstractClient {
                 this.httpConnection.setSSLSocketFactory(sslSocketFactory);
             }
         }
+    }
+
+    private void trySetHostnameVerifier(HttpConnection conn) {
+        HostnameVerifier hostnameVerifier = this.profile.getHttpProfile().getHostnameVerifier();
+        if (hostnameVerifier != null) {
+                this.httpConnection.setHostnameVerifier(hostnameVerifier);
+            }
     }
 
     private void trySetRegionBreaker() {

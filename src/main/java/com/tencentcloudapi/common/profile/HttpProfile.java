@@ -17,6 +17,7 @@
 
 package com.tencentcloudapi.common.profile;
 
+import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 
@@ -90,6 +91,8 @@ public class HttpProfile {
     private SSLSocketFactory sslSocketFactory;
 
     private X509TrustManager trustManager;
+
+    private HostnameVerifier hostnameVerifier;
 
     /**
      * APIGateway endpoint
@@ -253,5 +256,13 @@ public class HttpProfile {
 
     public void setApigwEndpoint(String apigwEndpoint) {
         this.apigwEndpoint = apigwEndpoint;
+    }
+
+    public void setHostnameVerifier(HostnameVerifier hostnameVerifier) {
+        this.hostnameVerifier = hostnameVerifier;
+    }
+
+    public HostnameVerifier getHostnameVerifier() {
+        return hostnameVerifier;
     }
 }
