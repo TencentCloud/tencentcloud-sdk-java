@@ -38,7 +38,7 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     private String VULName;
 
     /**
-    * 风险等级
+    * 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -209,16 +209,16 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     }
 
     /**
-     * Get 风险等级 
-     * @return RiskLevel 风险等级
+     * Get 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。 
+     * @return RiskLevel 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级
-     * @param RiskLevel 风险等级
+     * Set 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
+     * @param RiskLevel 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;

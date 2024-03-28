@@ -287,6 +287,30 @@ CLOSE 关闭
     private String Protocol;
 
     /**
+    * 节点出站访问详细信息
+
+    */
+    @SerializedName("OutboundPublicAcls")
+    @Expose
+    private OutboundPublicAcl [] OutboundPublicAcls;
+
+    /**
+    * 节点出站访问操作
+OPEN 开启
+CLOSE 关闭
+    */
+    @SerializedName("OutboundPublicAccess")
+    @Expose
+    private String OutboundPublicAccess;
+
+    /**
+    * cvm延迟上架参数
+    */
+    @SerializedName("CvmDelayOnlineTime")
+    @Expose
+    private Long CvmDelayOnlineTime;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -918,6 +942,66 @@ CLOSE 关闭
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get 节点出站访问详细信息
+ 
+     * @return OutboundPublicAcls 节点出站访问详细信息
+
+     */
+    public OutboundPublicAcl [] getOutboundPublicAcls() {
+        return this.OutboundPublicAcls;
+    }
+
+    /**
+     * Set 节点出站访问详细信息
+
+     * @param OutboundPublicAcls 节点出站访问详细信息
+
+     */
+    public void setOutboundPublicAcls(OutboundPublicAcl [] OutboundPublicAcls) {
+        this.OutboundPublicAcls = OutboundPublicAcls;
+    }
+
+    /**
+     * Get 节点出站访问操作
+OPEN 开启
+CLOSE 关闭 
+     * @return OutboundPublicAccess 节点出站访问操作
+OPEN 开启
+CLOSE 关闭
+     */
+    public String getOutboundPublicAccess() {
+        return this.OutboundPublicAccess;
+    }
+
+    /**
+     * Set 节点出站访问操作
+OPEN 开启
+CLOSE 关闭
+     * @param OutboundPublicAccess 节点出站访问操作
+OPEN 开启
+CLOSE 关闭
+     */
+    public void setOutboundPublicAccess(String OutboundPublicAccess) {
+        this.OutboundPublicAccess = OutboundPublicAccess;
+    }
+
+    /**
+     * Get cvm延迟上架参数 
+     * @return CvmDelayOnlineTime cvm延迟上架参数
+     */
+    public Long getCvmDelayOnlineTime() {
+        return this.CvmDelayOnlineTime;
+    }
+
+    /**
+     * Set cvm延迟上架参数
+     * @param CvmDelayOnlineTime cvm延迟上架参数
+     */
+    public void setCvmDelayOnlineTime(Long CvmDelayOnlineTime) {
+        this.CvmDelayOnlineTime = CvmDelayOnlineTime;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -1037,6 +1121,18 @@ CLOSE 关闭
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.OutboundPublicAcls != null) {
+            this.OutboundPublicAcls = new OutboundPublicAcl[source.OutboundPublicAcls.length];
+            for (int i = 0; i < source.OutboundPublicAcls.length; i++) {
+                this.OutboundPublicAcls[i] = new OutboundPublicAcl(source.OutboundPublicAcls[i]);
+            }
+        }
+        if (source.OutboundPublicAccess != null) {
+            this.OutboundPublicAccess = new String(source.OutboundPublicAccess);
+        }
+        if (source.CvmDelayOnlineTime != null) {
+            this.CvmDelayOnlineTime = new Long(source.CvmDelayOnlineTime);
+        }
     }
 
 
@@ -1079,6 +1175,9 @@ CLOSE 关闭
         this.setParamSimple(map, prefix + "KibanaPrivateDomain", this.KibanaPrivateDomain);
         this.setParamSimple(map, prefix + "CerebroPrivateDomain", this.CerebroPrivateDomain);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamArrayObj(map, prefix + "OutboundPublicAcls.", this.OutboundPublicAcls);
+        this.setParamSimple(map, prefix + "OutboundPublicAccess", this.OutboundPublicAccess);
+        this.setParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
 
     }
 }

@@ -266,7 +266,9 @@ public class TableBaseInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GovernPolicy 数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public DataGovernPolicy getGovernPolicy() {
         return this.GovernPolicy;
     }
@@ -276,7 +278,9 @@ public class TableBaseInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GovernPolicy 数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setGovernPolicy(DataGovernPolicy GovernPolicy) {
         this.GovernPolicy = GovernPolicy;
     }
@@ -286,7 +290,9 @@ public class TableBaseInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DbGovernPolicyIsDisable 库数据治理是否关闭，关闭：true，开启：false
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getDbGovernPolicyIsDisable() {
         return this.DbGovernPolicyIsDisable;
     }
@@ -296,7 +302,9 @@ public class TableBaseInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DbGovernPolicyIsDisable 库数据治理是否关闭，关闭：true，开启：false
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDbGovernPolicyIsDisable(String DbGovernPolicyIsDisable) {
         this.DbGovernPolicyIsDisable = DbGovernPolicyIsDisable;
     }

@@ -150,6 +150,13 @@ public class NodeView extends AbstractModel {
     private Boolean IsCoordinationNode;
 
     /**
+    * CVM运行状态
+    */
+    @SerializedName("CVMStatus")
+    @Expose
+    private String CVMStatus;
+
+    /**
      * Get 节点ID 
      * @return NodeId 节点ID
      */
@@ -437,6 +444,22 @@ public class NodeView extends AbstractModel {
         this.IsCoordinationNode = IsCoordinationNode;
     }
 
+    /**
+     * Get CVM运行状态 
+     * @return CVMStatus CVM运行状态
+     */
+    public String getCVMStatus() {
+        return this.CVMStatus;
+    }
+
+    /**
+     * Set CVM运行状态
+     * @param CVMStatus CVM运行状态
+     */
+    public void setCVMStatus(String CVMStatus) {
+        this.CVMStatus = CVMStatus;
+    }
+
     public NodeView() {
     }
 
@@ -502,6 +525,9 @@ public class NodeView extends AbstractModel {
         if (source.IsCoordinationNode != null) {
             this.IsCoordinationNode = new Boolean(source.IsCoordinationNode);
         }
+        if (source.CVMStatus != null) {
+            this.CVMStatus = new String(source.CVMStatus);
+        }
     }
 
 
@@ -527,6 +553,7 @@ public class NodeView extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         this.setParamSimple(map, prefix + "Hidden", this.Hidden);
         this.setParamSimple(map, prefix + "IsCoordinationNode", this.IsCoordinationNode);
+        this.setParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
 
     }
 }

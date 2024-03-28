@@ -113,6 +113,7 @@ public class TextToVoiceRequest extends AbstractModel {
 
     /**
     * 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral
     */
     @SerializedName("EmotionCategory")
     @Expose
@@ -124,6 +125,13 @@ public class TextToVoiceRequest extends AbstractModel {
     @SerializedName("EmotionIntensity")
     @Expose
     private Long EmotionIntensity;
+
+    /**
+    * 一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000”
+    */
+    @SerializedName("FastVoiceType")
+    @Expose
+    private String FastVoiceType;
 
     /**
      * Get 合成语音的源文本，按UTF-8编码统一计算。
@@ -334,8 +342,10 @@ public class TextToVoiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo) 
+     * Get 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral 
      * @return EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral
      */
     public String getEmotionCategory() {
         return this.EmotionCategory;
@@ -343,7 +353,9 @@ public class TextToVoiceRequest extends AbstractModel {
 
     /**
      * Set 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral
      * @param EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+示例值：neutral
      */
     public void setEmotionCategory(String EmotionCategory) {
         this.EmotionCategory = EmotionCategory;
@@ -363,6 +375,22 @@ public class TextToVoiceRequest extends AbstractModel {
      */
     public void setEmotionIntensity(Long EmotionIntensity) {
         this.EmotionIntensity = EmotionIntensity;
+    }
+
+    /**
+     * Get 一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000” 
+     * @return FastVoiceType 一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000”
+     */
+    public String getFastVoiceType() {
+        return this.FastVoiceType;
+    }
+
+    /**
+     * Set 一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000”
+     * @param FastVoiceType 一句话复刻音色id，使用一句话复刻音色时需填写。若使用一句话复刻，VoiceType请填入固定值“200000000”
+     */
+    public void setFastVoiceType(String FastVoiceType) {
+        this.FastVoiceType = FastVoiceType;
     }
 
     public TextToVoiceRequest() {
@@ -415,6 +443,9 @@ public class TextToVoiceRequest extends AbstractModel {
         if (source.EmotionIntensity != null) {
             this.EmotionIntensity = new Long(source.EmotionIntensity);
         }
+        if (source.FastVoiceType != null) {
+            this.FastVoiceType = new String(source.FastVoiceType);
+        }
     }
 
 
@@ -436,6 +467,7 @@ public class TextToVoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
         this.setParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
         this.setParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
+        this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
 
     }
 }

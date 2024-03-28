@@ -80,7 +80,7 @@ public class InstanceInfo extends AbstractModel {
     private String SubnetUid;
 
     /**
-    * 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+    * 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
     */
     @SerializedName("Status")
     @Expose
@@ -362,7 +362,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long DeployMode;
 
     /**
-    * ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+    * ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicAccess")
@@ -385,7 +385,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaPrivateUrl;
 
     /**
-    * Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+    * Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaPublicAccess")
@@ -393,7 +393,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String KibanaPublicAccess;
 
     /**
-    * Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+    * Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaPrivateAccess")
@@ -633,7 +633,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Float ProcessPercent;
 
     /**
-    * Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+    * Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KibanaAlteringPublicAccess")
@@ -671,6 +671,22 @@ RENEW_FLAG_DEFAULT：不自动续费
     @SerializedName("CustomKibanaPrivateUrl")
     @Expose
     private String CustomKibanaPrivateUrl;
+
+    /**
+    * 节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutboundPublicAcls")
+    @Expose
+    private OutboundPublicAcl [] OutboundPublicAcls;
+
+    /**
+    * 网络连接方案
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetConnectScheme")
+    @Expose
+    private String NetConnectScheme;
 
     /**
      * Get 实例ID 
@@ -801,16 +817,16 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中 
-     * @return Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+     * Get 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中 
+     * @return Status 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
-     * @param Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+     * Set 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
+     * @param Status 实例状态，0:处理中,1:正常,-1:停止,-2:销毁中,-3:已销毁, -4:隔离中,2:创建集群时初始化中
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -1473,9 +1489,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * Get ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @return PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicAccess() {
@@ -1483,9 +1499,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * Set ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicAccess(String PublicAccess) {
@@ -1529,9 +1545,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * Get Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @return KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaPublicAccess() {
@@ -1539,9 +1555,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * Set Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param KibanaPublicAccess Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaPublicAccess(String KibanaPublicAccess) {
@@ -1549,9 +1565,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * Get Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @return KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaPrivateAccess() {
@@ -1559,9 +1575,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * Set Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param KibanaPrivateAccess Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaPrivateAccess(String KibanaPrivateAccess) {
@@ -2149,9 +2165,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Get Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * Get Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * @return KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKibanaAlteringPublicAccess() {
@@ -2159,9 +2175,9 @@ RENEW_FLAG_DEFAULT：不自动续费
     }
 
     /**
-     * Set Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * Set Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
@@ -2246,6 +2262,46 @@ RENEW_FLAG_DEFAULT：不自动续费
      */
     public void setCustomKibanaPrivateUrl(String CustomKibanaPrivateUrl) {
         this.CustomKibanaPrivateUrl = CustomKibanaPrivateUrl;
+    }
+
+    /**
+     * Get 节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutboundPublicAcls 节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OutboundPublicAcl [] getOutboundPublicAcls() {
+        return this.OutboundPublicAcls;
+    }
+
+    /**
+     * Set 节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutboundPublicAcls 节点出站访问详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutboundPublicAcls(OutboundPublicAcl [] OutboundPublicAcls) {
+        this.OutboundPublicAcls = OutboundPublicAcls;
+    }
+
+    /**
+     * Get 网络连接方案
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetConnectScheme 网络连接方案
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetConnectScheme() {
+        return this.NetConnectScheme;
+    }
+
+    /**
+     * Set 网络连接方案
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetConnectScheme 网络连接方案
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetConnectScheme(String NetConnectScheme) {
+        this.NetConnectScheme = NetConnectScheme;
     }
 
     public InstanceInfo() {
@@ -2529,6 +2585,15 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.CustomKibanaPrivateUrl != null) {
             this.CustomKibanaPrivateUrl = new String(source.CustomKibanaPrivateUrl);
         }
+        if (source.OutboundPublicAcls != null) {
+            this.OutboundPublicAcls = new OutboundPublicAcl[source.OutboundPublicAcls.length];
+            for (int i = 0; i < source.OutboundPublicAcls.length; i++) {
+                this.OutboundPublicAcls[i] = new OutboundPublicAcl(source.OutboundPublicAcls[i]);
+            }
+        }
+        if (source.NetConnectScheme != null) {
+            this.NetConnectScheme = new String(source.NetConnectScheme);
+        }
     }
 
 
@@ -2621,6 +2686,8 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "KibanaPrivateVip", this.KibanaPrivateVip);
         this.setParamSimple(map, prefix + "CustomKibanaPrivateUrl", this.CustomKibanaPrivateUrl);
+        this.setParamArrayObj(map, prefix + "OutboundPublicAcls.", this.OutboundPublicAcls);
+        this.setParamSimple(map, prefix + "NetConnectScheme", this.NetConnectScheme);
 
     }
 }

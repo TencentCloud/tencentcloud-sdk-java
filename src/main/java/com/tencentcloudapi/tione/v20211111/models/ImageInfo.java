@@ -70,6 +70,14 @@ public class ImageInfo extends AbstractModel {
     private String ImageName;
 
     /**
+    * 是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportDataPipeline")
+    @Expose
+    private Boolean SupportDataPipeline;
+
+    /**
      * Get 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像 
      * @return ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
      */
@@ -181,6 +189,26 @@ public class ImageInfo extends AbstractModel {
         this.ImageName = ImageName;
     }
 
+    /**
+     * Get 是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportDataPipeline 是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSupportDataPipeline() {
+        return this.SupportDataPipeline;
+    }
+
+    /**
+     * Set 是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportDataPipeline 是否支持数据构建
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportDataPipeline(Boolean SupportDataPipeline) {
+        this.SupportDataPipeline = SupportDataPipeline;
+    }
+
     public ImageInfo() {
     }
 
@@ -207,6 +235,9 @@ public class ImageInfo extends AbstractModel {
         if (source.ImageName != null) {
             this.ImageName = new String(source.ImageName);
         }
+        if (source.SupportDataPipeline != null) {
+            this.SupportDataPipeline = new Boolean(source.SupportDataPipeline);
+        }
     }
 
 
@@ -220,6 +251,7 @@ public class ImageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "SupportDataPipeline", this.SupportDataPipeline);
 
     }
 }

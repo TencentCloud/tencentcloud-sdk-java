@@ -73,7 +73,7 @@ public class AssetViewCFGRisk extends AbstractModel {
     private String AffectAsset;
 
     /**
-    * 风险等级
+    * 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
     */
     @SerializedName("Level")
     @Expose
@@ -278,16 +278,16 @@ public class AssetViewCFGRisk extends AbstractModel {
     }
 
     /**
-     * Get 风险等级 
-     * @return Level 风险等级
+     * Get 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。 
+     * @return Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 风险等级
-     * @param Level 风险等级
+     * Set 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
+     * @param Level 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      */
     public void setLevel(String Level) {
         this.Level = Level;

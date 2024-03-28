@@ -59,6 +59,13 @@ public class RestartNodesRequest extends AbstractModel {
     private Boolean IsOffline;
 
     /**
+    * cvm延迟上架时间
+    */
+    @SerializedName("CvmDelayOnlineTime")
+    @Expose
+    private Long CvmDelayOnlineTime;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -138,6 +145,22 @@ public class RestartNodesRequest extends AbstractModel {
         this.IsOffline = IsOffline;
     }
 
+    /**
+     * Get cvm延迟上架时间 
+     * @return CvmDelayOnlineTime cvm延迟上架时间
+     */
+    public Long getCvmDelayOnlineTime() {
+        return this.CvmDelayOnlineTime;
+    }
+
+    /**
+     * Set cvm延迟上架时间
+     * @param CvmDelayOnlineTime cvm延迟上架时间
+     */
+    public void setCvmDelayOnlineTime(Long CvmDelayOnlineTime) {
+        this.CvmDelayOnlineTime = CvmDelayOnlineTime;
+    }
+
     public RestartNodesRequest() {
     }
 
@@ -164,6 +187,9 @@ public class RestartNodesRequest extends AbstractModel {
         if (source.IsOffline != null) {
             this.IsOffline = new Boolean(source.IsOffline);
         }
+        if (source.CvmDelayOnlineTime != null) {
+            this.CvmDelayOnlineTime = new Long(source.CvmDelayOnlineTime);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class RestartNodesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         this.setParamSimple(map, prefix + "RestartMode", this.RestartMode);
         this.setParamSimple(map, prefix + "IsOffline", this.IsOffline);
+        this.setParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
 
     }
 }

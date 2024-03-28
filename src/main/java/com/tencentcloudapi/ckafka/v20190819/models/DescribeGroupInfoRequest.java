@@ -31,7 +31,7 @@ public class DescribeGroupInfoRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
+    * Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
     */
     @SerializedName("GroupList")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeGroupInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。 
-     * @return GroupList Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
+     * Get Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"] 
+     * @return GroupList Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
      */
     public String [] getGroupList() {
         return this.GroupList;
     }
 
     /**
-     * Set Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
-     * @param GroupList Kafka 消费分组，Consumer-group，这里是数组形式，格式：GroupList.0=xxx&GroupList.1=yyy。
+     * Set Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
+     * @param GroupList Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
      */
     public void setGroupList(String [] GroupList) {
         this.GroupList = GroupList;

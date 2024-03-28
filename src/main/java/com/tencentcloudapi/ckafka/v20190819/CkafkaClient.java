@@ -226,6 +226,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *添加普罗米修斯监控1
+     * @param req CreatePrometheusRequest
+     * @return CreatePrometheusResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusResponse CreatePrometheus(CreatePrometheusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrometheus", CreatePrometheusResponse.class);
+    }
+
+    /**
      *添加实例路由
      * @param req CreateRouteRequest
      * @return CreateRouteResponse
@@ -619,6 +630,17 @@ public class CkafkaClient extends AbstractClient{
     public DescribeInstancesDetailResponse DescribeInstancesDetail(DescribeInstancesDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstancesDetail", DescribeInstancesDetailResponse.class);
+    }
+
+    /**
+     *获取实例Prometheus信息
+     * @param req DescribePrometheusRequest
+     * @return DescribePrometheusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusResponse DescribePrometheus(DescribePrometheusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrometheus", DescribePrometheusResponse.class);
     }
 
     /**

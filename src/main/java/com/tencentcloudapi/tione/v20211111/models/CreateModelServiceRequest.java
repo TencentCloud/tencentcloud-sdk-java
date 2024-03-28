@@ -257,7 +257,7 @@ HYBRID_PAID:
     private String Command;
 
     /**
-    * 是否开启TIONE内网访问外部
+    * 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
     */
     @SerializedName("ServiceEIP")
     @Expose
@@ -836,16 +836,16 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 是否开启TIONE内网访问外部 
-     * @return ServiceEIP 是否开启TIONE内网访问外部
+     * Get 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。 
+     * @return ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
      */
     public ServiceEIP getServiceEIP() {
         return this.ServiceEIP;
     }
 
     /**
-     * Set 是否开启TIONE内网访问外部
-     * @param ServiceEIP 是否开启TIONE内网访问外部
+     * Set 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
+     * @param ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
      */
     public void setServiceEIP(ServiceEIP ServiceEIP) {
         this.ServiceEIP = ServiceEIP;

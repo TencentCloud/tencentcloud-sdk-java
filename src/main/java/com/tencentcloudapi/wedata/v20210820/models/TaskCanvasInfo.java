@@ -347,6 +347,118 @@ public class TaskCanvasInfo extends AbstractModel {
     private String TenantId;
 
     /**
+    * 自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SelfDepend")
+    @Expose
+    private Long SelfDepend;
+
+    /**
+    * 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorGroupId")
+    @Expose
+    private String ExecutorGroupId;
+
+    /**
+    * 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorGroupName")
+    @Expose
+    private String ExecutorGroupName;
+
+    /**
+    * 优先级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunPriority")
+    @Expose
+    private String RunPriority;
+
+    /**
+    * 可充实次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TryLimit")
+    @Expose
+    private String TryLimit;
+
+    /**
+    * 可充实
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetryAble")
+    @Expose
+    private String RetryAble;
+
+    /**
+    * 重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetryWait")
+    @Expose
+    private String RetryWait;
+
+    /**
+    * 最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastSchedulerCommitTime")
+    @Expose
+    private String LastSchedulerCommitTime;
+
+    /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Notes")
+    @Expose
+    private String Notes;
+
+    /**
+    * 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
+    * 创建人id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateUser")
+    @Expose
+    private String UpdateUser;
+
+    /**
+    * 更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateUserId")
+    @Expose
+    private String UpdateUserId;
+
+    /**
+    * yarn队列
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("YarnQueue")
+    @Expose
+    private String YarnQueue;
+
+    /**
+    * 可执行的timeToLive
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutionTTL")
+    @Expose
+    private Long ExecutionTTL;
+
+    /**
      * Get 任务Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务Id
@@ -1230,6 +1342,286 @@ public class TaskCanvasInfo extends AbstractModel {
         this.TenantId = TenantId;
     }
 
+    /**
+     * Get 自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SelfDepend 自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSelfDepend() {
+        return this.SelfDepend;
+    }
+
+    /**
+     * Set 自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SelfDepend 自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSelfDepend(Long SelfDepend) {
+        this.SelfDepend = SelfDepend;
+    }
+
+    /**
+     * Get 资源组id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutorGroupId() {
+        return this.ExecutorGroupId;
+    }
+
+    /**
+     * Set 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorGroupId(String ExecutorGroupId) {
+        this.ExecutorGroupId = ExecutorGroupId;
+    }
+
+    /**
+     * Get 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutorGroupName() {
+        return this.ExecutorGroupName;
+    }
+
+    /**
+     * Set 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorGroupName(String ExecutorGroupName) {
+        this.ExecutorGroupName = ExecutorGroupName;
+    }
+
+    /**
+     * Get 优先级
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunPriority 优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRunPriority() {
+        return this.RunPriority;
+    }
+
+    /**
+     * Set 优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunPriority 优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunPriority(String RunPriority) {
+        this.RunPriority = RunPriority;
+    }
+
+    /**
+     * Get 可充实次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TryLimit 可充实次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTryLimit() {
+        return this.TryLimit;
+    }
+
+    /**
+     * Set 可充实次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TryLimit 可充实次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTryLimit(String TryLimit) {
+        this.TryLimit = TryLimit;
+    }
+
+    /**
+     * Get 可充实
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetryAble 可充实
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRetryAble() {
+        return this.RetryAble;
+    }
+
+    /**
+     * Set 可充实
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetryAble 可充实
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetryAble(String RetryAble) {
+        this.RetryAble = RetryAble;
+    }
+
+    /**
+     * Get 重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetryWait 重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRetryWait() {
+        return this.RetryWait;
+    }
+
+    /**
+     * Set 重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetryWait 重试等待事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetryWait(String RetryWait) {
+        this.RetryWait = RetryWait;
+    }
+
+    /**
+     * Get 最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastSchedulerCommitTime 最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastSchedulerCommitTime() {
+        return this.LastSchedulerCommitTime;
+    }
+
+    /**
+     * Set 最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastSchedulerCommitTime 最近提交时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastSchedulerCommitTime(String LastSchedulerCommitTime) {
+        this.LastSchedulerCommitTime = LastSchedulerCommitTime;
+    }
+
+    /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Notes 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNotes() {
+        return this.Notes;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Notes 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNotes(String Notes) {
+        this.Notes = Notes;
+    }
+
+    /**
+     * Get 创建人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Creator 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Creator 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
+    /**
+     * Get 创建人id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateUser 创建人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateUser() {
+        return this.UpdateUser;
+    }
+
+    /**
+     * Set 创建人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateUser 创建人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateUser(String UpdateUser) {
+        this.UpdateUser = UpdateUser;
+    }
+
+    /**
+     * Get 更新人id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateUserId 更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateUserId() {
+        return this.UpdateUserId;
+    }
+
+    /**
+     * Set 更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateUserId 更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateUserId(String UpdateUserId) {
+        this.UpdateUserId = UpdateUserId;
+    }
+
+    /**
+     * Get yarn队列
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return YarnQueue yarn队列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getYarnQueue() {
+        return this.YarnQueue;
+    }
+
+    /**
+     * Set yarn队列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param YarnQueue yarn队列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setYarnQueue(String YarnQueue) {
+        this.YarnQueue = YarnQueue;
+    }
+
+    /**
+     * Get 可执行的timeToLive
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutionTTL 可执行的timeToLive
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExecutionTTL() {
+        return this.ExecutionTTL;
+    }
+
+    /**
+     * Set 可执行的timeToLive
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutionTTL 可执行的timeToLive
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutionTTL(Long ExecutionTTL) {
+        this.ExecutionTTL = ExecutionTTL;
+    }
+
     public TaskCanvasInfo() {
     }
 
@@ -1340,6 +1732,48 @@ public class TaskCanvasInfo extends AbstractModel {
         if (source.TenantId != null) {
             this.TenantId = new String(source.TenantId);
         }
+        if (source.SelfDepend != null) {
+            this.SelfDepend = new Long(source.SelfDepend);
+        }
+        if (source.ExecutorGroupId != null) {
+            this.ExecutorGroupId = new String(source.ExecutorGroupId);
+        }
+        if (source.ExecutorGroupName != null) {
+            this.ExecutorGroupName = new String(source.ExecutorGroupName);
+        }
+        if (source.RunPriority != null) {
+            this.RunPriority = new String(source.RunPriority);
+        }
+        if (source.TryLimit != null) {
+            this.TryLimit = new String(source.TryLimit);
+        }
+        if (source.RetryAble != null) {
+            this.RetryAble = new String(source.RetryAble);
+        }
+        if (source.RetryWait != null) {
+            this.RetryWait = new String(source.RetryWait);
+        }
+        if (source.LastSchedulerCommitTime != null) {
+            this.LastSchedulerCommitTime = new String(source.LastSchedulerCommitTime);
+        }
+        if (source.Notes != null) {
+            this.Notes = new String(source.Notes);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
+        if (source.UpdateUser != null) {
+            this.UpdateUser = new String(source.UpdateUser);
+        }
+        if (source.UpdateUserId != null) {
+            this.UpdateUserId = new String(source.UpdateUserId);
+        }
+        if (source.YarnQueue != null) {
+            this.YarnQueue = new String(source.YarnQueue);
+        }
+        if (source.ExecutionTTL != null) {
+            this.ExecutionTTL = new Long(source.ExecutionTTL);
+        }
     }
 
 
@@ -1381,6 +1815,20 @@ public class TaskCanvasInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "OwnerId", this.OwnerId);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
+        this.setParamSimple(map, prefix + "SelfDepend", this.SelfDepend);
+        this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
+        this.setParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
+        this.setParamSimple(map, prefix + "RunPriority", this.RunPriority);
+        this.setParamSimple(map, prefix + "TryLimit", this.TryLimit);
+        this.setParamSimple(map, prefix + "RetryAble", this.RetryAble);
+        this.setParamSimple(map, prefix + "RetryWait", this.RetryWait);
+        this.setParamSimple(map, prefix + "LastSchedulerCommitTime", this.LastSchedulerCommitTime);
+        this.setParamSimple(map, prefix + "Notes", this.Notes);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamSimple(map, prefix + "UpdateUser", this.UpdateUser);
+        this.setParamSimple(map, prefix + "UpdateUserId", this.UpdateUserId);
+        this.setParamSimple(map, prefix + "YarnQueue", this.YarnQueue);
+        this.setParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
 
     }
 }

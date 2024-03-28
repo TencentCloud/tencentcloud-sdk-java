@@ -25,7 +25,6 @@ public class BatchRegisterTargetsResponse extends AbstractModel {
 
     /**
     * 绑定失败的监听器ID，如为空表示全部绑定成功。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailListenerIdSet")
     @Expose
@@ -46,10 +45,8 @@ public class BatchRegisterTargetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 绑定失败的监听器ID，如为空表示全部绑定成功。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定失败的监听器ID，如为空表示全部绑定成功。 
      * @return FailListenerIdSet 绑定失败的监听器ID，如为空表示全部绑定成功。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailListenerIdSet() {
         return this.FailListenerIdSet;
@@ -57,9 +54,7 @@ public class BatchRegisterTargetsResponse extends AbstractModel {
 
     /**
      * Set 绑定失败的监听器ID，如为空表示全部绑定成功。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailListenerIdSet 绑定失败的监听器ID，如为空表示全部绑定成功。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailListenerIdSet(String [] FailListenerIdSet) {
         this.FailListenerIdSet = FailListenerIdSet;

@@ -80,6 +80,13 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private Boolean SkipCheckForceRestart;
 
     /**
+    * cvm延迟上架参数
+    */
+    @SerializedName("CvmDelayOnlineTime")
+    @Expose
+    private Long CvmDelayOnlineTime;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -207,6 +214,22 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.SkipCheckForceRestart = SkipCheckForceRestart;
     }
 
+    /**
+     * Get cvm延迟上架参数 
+     * @return CvmDelayOnlineTime cvm延迟上架参数
+     */
+    public Long getCvmDelayOnlineTime() {
+        return this.CvmDelayOnlineTime;
+    }
+
+    /**
+     * Set cvm延迟上架参数
+     * @param CvmDelayOnlineTime cvm延迟上架参数
+     */
+    public void setCvmDelayOnlineTime(Long CvmDelayOnlineTime) {
+        this.CvmDelayOnlineTime = CvmDelayOnlineTime;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -239,6 +262,9 @@ public class UpgradeInstanceRequest extends AbstractModel {
         if (source.SkipCheckForceRestart != null) {
             this.SkipCheckForceRestart = new Boolean(source.SkipCheckForceRestart);
         }
+        if (source.CvmDelayOnlineTime != null) {
+            this.CvmDelayOnlineTime = new Long(source.CvmDelayOnlineTime);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
         this.setParamSimple(map, prefix + "CosBackup", this.CosBackup);
         this.setParamSimple(map, prefix + "SkipCheckForceRestart", this.SkipCheckForceRestart);
+        this.setParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
 
     }
 }

@@ -66,6 +66,20 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
     private String CosQuotaUnit;
 
     /**
+    * db月解绑次数
+    */
+    @SerializedName("DBUnbindNum")
+    @Expose
+    private Long DBUnbindNum;
+
+    /**
+    * cos月解绑次数
+    */
+    @SerializedName("COSUnbindNum")
+    @Expose
+    private Long COSUnbindNum;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -169,6 +183,38 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get db月解绑次数 
+     * @return DBUnbindNum db月解绑次数
+     */
+    public Long getDBUnbindNum() {
+        return this.DBUnbindNum;
+    }
+
+    /**
+     * Set db月解绑次数
+     * @param DBUnbindNum db月解绑次数
+     */
+    public void setDBUnbindNum(Long DBUnbindNum) {
+        this.DBUnbindNum = DBUnbindNum;
+    }
+
+    /**
+     * Get cos月解绑次数 
+     * @return COSUnbindNum cos月解绑次数
+     */
+    public Long getCOSUnbindNum() {
+        return this.COSUnbindNum;
+    }
+
+    /**
+     * Set cos月解绑次数
+     * @param COSUnbindNum cos月解绑次数
+     */
+    public void setCOSUnbindNum(Long COSUnbindNum) {
+        this.COSUnbindNum = COSUnbindNum;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -210,6 +256,12 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
         if (source.CosQuotaUnit != null) {
             this.CosQuotaUnit = new String(source.CosQuotaUnit);
         }
+        if (source.DBUnbindNum != null) {
+            this.DBUnbindNum = new Long(source.DBUnbindNum);
+        }
+        if (source.COSUnbindNum != null) {
+            this.COSUnbindNum = new Long(source.COSUnbindNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +278,8 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DbRemainQuota", this.DbRemainQuota);
         this.setParamSimple(map, prefix + "CosRemainQuota", this.CosRemainQuota);
         this.setParamSimple(map, prefix + "CosQuotaUnit", this.CosQuotaUnit);
+        this.setParamSimple(map, prefix + "DBUnbindNum", this.DBUnbindNum);
+        this.setParamSimple(map, prefix + "COSUnbindNum", this.COSUnbindNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -127,6 +127,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建公司资质申请（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+     * @param req CreateCompanyApplyRequest
+     * @return CreateCompanyApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCompanyApplyResponse CreateCompanyApply(CreateCompanyApplyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCompanyApply", CreateCompanyApplyResponse.class);
+    }
+
+    /**
      *创建话机账号
      * @param req CreateExtensionRequest
      * @return CreateExtensionResponse
@@ -291,6 +302,17 @@ public class CccClient extends AbstractClient{
     public DescribeChatMessagesResponse DescribeChatMessages(DescribeChatMessagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeChatMessages", DescribeChatMessagesResponse.class);
+    }
+
+    /**
+     *查询公司资质申请列表
+     * @param req DescribeCompanyListRequest
+     * @return DescribeCompanyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCompanyListResponse DescribeCompanyList(DescribeCompanyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCompanyList", DescribeCompanyListResponse.class);
     }
 
     /**
@@ -489,6 +511,17 @@ public class CccClient extends AbstractClient{
     public HangUpCallResponse HangUpCall(HangUpCallRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "HangUpCall", HangUpCallResponse.class);
+    }
+
+    /**
+     *修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模版:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
+     * @param req ModifyCompanyApplyRequest
+     * @return ModifyCompanyApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCompanyApplyResponse ModifyCompanyApply(ModifyCompanyApplyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCompanyApply", ModifyCompanyApplyResponse.class);
     }
 
     /**

@@ -24,33 +24,23 @@ import java.util.HashMap;
 public class CreateCLSLogsetRequest extends AbstractModel {
 
     /**
-    * 日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。
+    * 日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li>
     */
     @SerializedName("CLSRegion")
     @Expose
     private String CLSRegion;
 
     /**
-     * Get 日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。 
-     * @return CLSRegion 日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。
+     * Get 日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li> 
+     * @return CLSRegion 日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li>
      */
     public String getCLSRegion() {
         return this.CLSRegion;
     }
 
     /**
-     * Set 日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。
-     * @param CLSRegion 日志集所属地区：
-ap-guangzhou：广州；
-ap-singapore：新加坡。
+     * Set 日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li>
+     * @param CLSRegion 日志集所属的地域，取值有： <li>ap-guangzhou：广州；</li> <li>ap-beijing：北京；</li> <li>ap-chengdu：成都；</li> <li>ap-chongqing：重庆；</li> <li>ap-nanjing：南京；</li> <li>ap-shanghai：上海；</li> <li>ap-singapore：新加坡。</li>
      */
     public void setCLSRegion(String CLSRegion) {
         this.CLSRegion = CLSRegion;

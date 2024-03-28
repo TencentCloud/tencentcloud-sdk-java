@@ -39,6 +39,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *绑定云存用户
+     * @param req BindCloudStorageUserRequest
+     * @return BindCloudStorageUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindCloudStorageUserResponse BindCloudStorageUser(BindCloudStorageUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindCloudStorageUser", BindCloudStorageUserResponse.class);
+    }
+
+    /**
      *批量绑定子设备
      * @param req BindDevicesRequest
      * @return BindDevicesResponse
@@ -127,6 +138,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *开通云存服务
+     * @param req CreateIotVideoCloudStorageRequest
+     * @return CreateIotVideoCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIotVideoCloudStorageResponse CreateIotVideoCloudStorage(CreateIotVideoCloudStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIotVideoCloudStorage", CreateIotVideoCloudStorageResponse.class);
+    }
+
+    /**
      *创建 LoRa 自定义频点
      * @param req CreateLoRaFrequencyRequest
      * @return CreateLoRaFrequencyResponse
@@ -212,6 +234,17 @@ public class IotexplorerClient extends AbstractClient{
     public CreateTopicRuleResponse CreateTopicRule(CreateTopicRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTopicRule", CreateTopicRuleResponse.class);
+    }
+
+    /**
+     *删除云存事件
+     * @param req DeleteCloudStorageEventRequest
+     * @return DeleteCloudStorageEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudStorageEventResponse DeleteCloudStorageEvent(DeleteCloudStorageEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudStorageEvent", DeleteCloudStorageEventResponse.class);
     }
 
     /**
@@ -358,6 +391,138 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取设备云存服务详情
+     * @param req DescribeCloudStorageRequest
+     * @return DescribeCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageResponse DescribeCloudStorage(DescribeCloudStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorage", DescribeCloudStorageResponse.class);
+    }
+
+    /**
+     *获取具有云存的日期
+     * @param req DescribeCloudStorageDateRequest
+     * @return DescribeCloudStorageDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageDateResponse DescribeCloudStorageDate(DescribeCloudStorageDateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageDate", DescribeCloudStorageDateResponse.class);
+    }
+
+    /**
+     *拉取云存事件列表
+     * @param req DescribeCloudStorageEventsRequest
+     * @return DescribeCloudStorageEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageEventsResponse DescribeCloudStorageEvents(DescribeCloudStorageEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageEvents", DescribeCloudStorageEventsResponse.class);
+    }
+
+    /**
+     *拉取多个云存事件缩略图
+     * @param req DescribeCloudStorageMultiThumbnailRequest
+     * @return DescribeCloudStorageMultiThumbnailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageMultiThumbnailResponse DescribeCloudStorageMultiThumbnail(DescribeCloudStorageMultiThumbnailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageMultiThumbnail", DescribeCloudStorageMultiThumbnailResponse.class);
+    }
+
+    /**
+     *查询云存服务详情
+     * @param req DescribeCloudStorageOrderRequest
+     * @return DescribeCloudStorageOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageOrderResponse DescribeCloudStorageOrder(DescribeCloudStorageOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageOrder", DescribeCloudStorageOrderResponse.class);
+    }
+
+    /**
+     *获取云存套餐包消耗详细记录
+     * @param req DescribeCloudStoragePackageConsumeDetailsRequest
+     * @return DescribeCloudStoragePackageConsumeDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStoragePackageConsumeDetailsResponse DescribeCloudStoragePackageConsumeDetails(DescribeCloudStoragePackageConsumeDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStoragePackageConsumeDetails", DescribeCloudStoragePackageConsumeDetailsResponse.class);
+    }
+
+    /**
+     *获取云存套餐包消耗统计
+     * @param req DescribeCloudStoragePackageConsumeStatsRequest
+     * @return DescribeCloudStoragePackageConsumeStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStoragePackageConsumeStatsResponse DescribeCloudStoragePackageConsumeStats(DescribeCloudStoragePackageConsumeStatsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStoragePackageConsumeStats", DescribeCloudStoragePackageConsumeStatsResponse.class);
+    }
+
+    /**
+     *获取设备图片流数据
+     * @param req DescribeCloudStorageStreamDataRequest
+     * @return DescribeCloudStorageStreamDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageStreamDataResponse DescribeCloudStorageStreamData(DescribeCloudStorageStreamDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageStreamData", DescribeCloudStorageStreamDataResponse.class);
+    }
+
+    /**
+     *拉取云存事件缩略图
+     * @param req DescribeCloudStorageThumbnailRequest
+     * @return DescribeCloudStorageThumbnailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageThumbnailResponse DescribeCloudStorageThumbnail(DescribeCloudStorageThumbnailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageThumbnail", DescribeCloudStorageThumbnailResponse.class);
+    }
+
+    /**
+     *批量拉取云存事件缩略图
+     * @param req DescribeCloudStorageThumbnailListRequest
+     * @return DescribeCloudStorageThumbnailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageThumbnailListResponse DescribeCloudStorageThumbnailList(DescribeCloudStorageThumbnailListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageThumbnailList", DescribeCloudStorageThumbnailListResponse.class);
+    }
+
+    /**
+     *获取某一天云存时间轴
+     * @param req DescribeCloudStorageTimeRequest
+     * @return DescribeCloudStorageTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageTimeResponse DescribeCloudStorageTime(DescribeCloudStorageTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageTime", DescribeCloudStorageTimeResponse.class);
+    }
+
+    /**
+     *拉取云存用户列表
+     * @param req DescribeCloudStorageUsersRequest
+     * @return DescribeCloudStorageUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageUsersResponse DescribeCloudStorageUsers(DescribeCloudStorageUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageUsers", DescribeCloudStorageUsersResponse.class);
+    }
+
+    /**
      *用于查看某个设备的详细信息
      * @param req DescribeDeviceRequest
      * @return DescribeDeviceResponse
@@ -421,6 +586,17 @@ public class IotexplorerClient extends AbstractClient{
     public DescribeDeviceLocationSolveResponse DescribeDeviceLocationSolve(DescribeDeviceLocationSolveRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDeviceLocationSolve", DescribeDeviceLocationSolveResponse.class);
+    }
+
+    /**
+     *根据设备信息拉取有效套餐列表
+     * @param req DescribeDevicePackagesRequest
+     * @return DescribeDevicePackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDevicePackagesResponse DescribeDevicePackages(DescribeDevicePackagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDevicePackages", DescribeDevicePackagesResponse.class);
     }
 
     /**
@@ -534,6 +710,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询套餐消耗记录详情
+     * @param req DescribePackageConsumeTaskRequest
+     * @return DescribePackageConsumeTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePackageConsumeTaskResponse DescribePackageConsumeTask(DescribePackageConsumeTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePackageConsumeTask", DescribePackageConsumeTaskResponse.class);
+    }
+
+    /**
+     *查询套餐消耗记录列表
+     * @param req DescribePackageConsumeTasksRequest
+     * @return DescribePackageConsumeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePackageConsumeTasksResponse DescribePackageConsumeTasks(DescribePackageConsumeTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePackageConsumeTasks", DescribePackageConsumeTasksResponse.class);
+    }
+
+    /**
      *获取围栏列表
      * @param req DescribePositionFenceListRequest
      * @return DescribePositionFenceListResponse
@@ -641,6 +839,17 @@ public class IotexplorerClient extends AbstractClient{
     public GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublic(GenSingleDeviceSignatureOfPublicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GenSingleDeviceSignatureOfPublic", GenSingleDeviceSignatureOfPublicResponse.class);
+    }
+
+    /**
+     *获取视频防盗链播放URL
+     * @param req GenerateSignedVideoURLRequest
+     * @return GenerateSignedVideoURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateSignedVideoURLResponse GenerateSignedVideoURL(GenerateSignedVideoURLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateSignedVideoURL", GenerateSignedVideoURLResponse.class);
     }
 
     /**
@@ -773,6 +982,17 @@ public class IotexplorerClient extends AbstractClient{
     public GetTopicRuleListResponse GetTopicRuleList(GetTopicRuleListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTopicRuleList", GetTopicRuleListResponse.class);
+    }
+
+    /**
+     *继承云存用户
+     * @param req InheritCloudStorageUserRequest
+     * @return InheritCloudStorageUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public InheritCloudStorageUserResponse InheritCloudStorageUser(InheritCloudStorageUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InheritCloudStorageUser", InheritCloudStorageUserResponse.class);
     }
 
     /**
@@ -974,6 +1194,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *重置云存服务
+     * @param req ResetCloudStorageRequest
+     * @return ResetCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetCloudStorageResponse ResetCloudStorage(ResetCloudStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetCloudStorage", ResetCloudStorageResponse.class);
+    }
+
+    /**
+     *重置云存事件
+     * @param req ResetCloudStorageEventRequest
+     * @return ResetCloudStorageEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetCloudStorageEventResponse ResetCloudStorageEvent(ResetCloudStorageEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetCloudStorageEvent", ResetCloudStorageEventResponse.class);
+    }
+
+    /**
      *搜索位置空间
      * @param req SearchPositionSpaceRequest
      * @return SearchPositionSpaceResponse
@@ -1004,6 +1246,17 @@ public class IotexplorerClient extends AbstractClient{
     public SearchTopicRuleResponse SearchTopicRule(SearchTopicRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchTopicRule", SearchTopicRuleResponse.class);
+    }
+
+    /**
+     *转移云存服务
+     * @param req TransferCloudStorageRequest
+     * @return TransferCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferCloudStorageResponse TransferCloudStorage(TransferCloudStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferCloudStorage", TransferCloudStorageResponse.class);
     }
 
     /**

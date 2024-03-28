@@ -80,6 +80,13 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     private Tag Tags;
 
     /**
+    * 版本
+    */
+    @SerializedName("ProductVersion")
+    @Expose
+    private String ProductVersion;
+
+    /**
      * Get 实例名称 
      * @return InstanceName 实例名称
      */
@@ -207,6 +214,22 @@ public class CreateInstanceByApiRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 版本 
+     * @return ProductVersion 版本
+     */
+    public String getProductVersion() {
+        return this.ProductVersion;
+    }
+
+    /**
+     * Set 版本
+     * @param ProductVersion 版本
+     */
+    public void setProductVersion(String ProductVersion) {
+        this.ProductVersion = ProductVersion;
+    }
+
     public CreateInstanceByApiRequest() {
     }
 
@@ -242,6 +265,9 @@ public class CreateInstanceByApiRequest extends AbstractModel {
         if (source.Tags != null) {
             this.Tags = new Tag(source.Tags);
         }
+        if (source.ProductVersion != null) {
+            this.ProductVersion = new String(source.ProductVersion);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class CreateInstanceByApiRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
         this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
         this.setParamObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
 
     }
 }

@@ -117,7 +117,7 @@ public class CreateFlowOption extends AbstractModel {
     */
     @SerializedName("ForbidAddApprover")
     @Expose
-    private String ForbidAddApprover;
+    private Boolean ForbidAddApprover;
 
     /**
     *   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
@@ -125,7 +125,7 @@ public class CreateFlowOption extends AbstractModel {
     */
     @SerializedName("ForbidEditFlowProperties")
     @Expose
-    private String ForbidEditFlowProperties;
+    private Boolean ForbidEditFlowProperties;
 
     /**
     * 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
@@ -450,7 +450,7 @@ public class CreateFlowOption extends AbstractModel {
      * @return ForbidAddApprover   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
      */
-    public String getForbidAddApprover() {
+    public Boolean getForbidAddApprover() {
         return this.ForbidAddApprover;
     }
 
@@ -460,7 +460,7 @@ public class CreateFlowOption extends AbstractModel {
      * @param ForbidAddApprover   禁止添加签署方，若为true则在发起流程的可嵌入页面隐藏“添加签署人按钮”
 
      */
-    public void setForbidAddApprover(String ForbidAddApprover) {
+    public void setForbidAddApprover(Boolean ForbidAddApprover) {
         this.ForbidAddApprover = ForbidAddApprover;
     }
 
@@ -470,7 +470,7 @@ public class CreateFlowOption extends AbstractModel {
      * @return ForbidEditFlowProperties   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
      */
-    public String getForbidEditFlowProperties() {
+    public Boolean getForbidEditFlowProperties() {
         return this.ForbidEditFlowProperties;
     }
 
@@ -480,7 +480,7 @@ public class CreateFlowOption extends AbstractModel {
      * @param ForbidEditFlowProperties   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
      */
-    public void setForbidEditFlowProperties(String ForbidEditFlowProperties) {
+    public void setForbidEditFlowProperties(Boolean ForbidEditFlowProperties) {
         this.ForbidEditFlowProperties = ForbidEditFlowProperties;
     }
 
@@ -776,10 +776,10 @@ public class CreateFlowOption extends AbstractModel {
             this.CustomCreateFlowDescription = new String(source.CustomCreateFlowDescription);
         }
         if (source.ForbidAddApprover != null) {
-            this.ForbidAddApprover = new String(source.ForbidAddApprover);
+            this.ForbidAddApprover = new Boolean(source.ForbidAddApprover);
         }
         if (source.ForbidEditFlowProperties != null) {
-            this.ForbidEditFlowProperties = new String(source.ForbidEditFlowProperties);
+            this.ForbidEditFlowProperties = new Boolean(source.ForbidEditFlowProperties);
         }
         if (source.HideComponentTypes != null) {
             this.HideComponentTypes = new String[source.HideComponentTypes.length];
