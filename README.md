@@ -449,6 +449,40 @@ cpf.getHttpProfile().setSslSocketFactory(new MySSLSocketFactoryImpl());
 cpf.getHttpProfile().setX509TrustManager(new MyX509TrustManagerImpl());
 ```
 
+# 跳过证书校验
+```java
+ClientProfile cpf = new ClientProfile();
+// 创建一个信任所有证书的 TrustManager
+TrustManager[] trustAllCerts = new TrustManager[] {
+        new X509TrustManager() {
+            @Override
+            public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+            }
+
+            @Override
+            public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+            }
+
+            @Override
+            public X509Certificate[] getAcceptedIssuers() {
+                return new X509Certificate[0];
+            }
+        }
+};
+SSLContext sslContext = SSLContext.getInstance("TLS");
+sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
+SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
+httpProfile.setSslSocketFactory(sslSocketFactory);
+httpProfile.setX509TrustManager((X509TrustManager) trustAllCerts[0]);
+httpProfile.setHostnameVerifier(new HostnameVerifier() {
+    @Override
+    //创建一个不进行主机名验证的 HostnameVerifier
+    public boolean verify(String hostname, SSLSession session) {
+        return true;
+    }
+});
+
+```
 # 自定义 Header
 
 ## DescribeInstancesRequest示例
