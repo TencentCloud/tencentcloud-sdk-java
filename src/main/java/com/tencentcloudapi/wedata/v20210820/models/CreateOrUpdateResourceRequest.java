@@ -73,6 +73,13 @@ public class CreateOrUpdateResourceRequest extends AbstractModel {
     private String [] FilesSize;
 
     /**
+    * 必填项，资源的Md5值（COS中的ETag）
+    */
+    @SerializedName("FileMd5")
+    @Expose
+    private String FileMd5;
+
+    /**
      * Get 项目ID，必填项 
      * @return ProjectId 项目ID，必填项
      */
@@ -184,6 +191,22 @@ public class CreateOrUpdateResourceRequest extends AbstractModel {
         this.FilesSize = FilesSize;
     }
 
+    /**
+     * Get 必填项，资源的Md5值（COS中的ETag） 
+     * @return FileMd5 必填项，资源的Md5值（COS中的ETag）
+     */
+    public String getFileMd5() {
+        return this.FileMd5;
+    }
+
+    /**
+     * Set 必填项，资源的Md5值（COS中的ETag）
+     * @param FileMd5 必填项，资源的Md5值（COS中的ETag）
+     */
+    public void setFileMd5(String FileMd5) {
+        this.FileMd5 = FileMd5;
+    }
+
     public CreateOrUpdateResourceRequest() {
     }
 
@@ -219,6 +242,9 @@ public class CreateOrUpdateResourceRequest extends AbstractModel {
                 this.FilesSize[i] = new String(source.FilesSize[i]);
             }
         }
+        if (source.FileMd5 != null) {
+            this.FileMd5 = new String(source.FileMd5);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class CreateOrUpdateResourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "NewFile", this.NewFile);
         this.setParamArraySimple(map, prefix + "FilesSize.", this.FilesSize);
+        this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
 
     }
 }

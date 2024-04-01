@@ -228,7 +228,7 @@ public class FlowApproverInfo extends AbstractModel {
 <li> **2** :签署密码</li>
 <li> **3** :运营商三要素</li></ul>
 
-默认为1(人脸认证 ),2(签署密码)
+默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 
 注: 
 1. 用<font color='red'>模板创建合同场景</font>, 签署人的认证方式需要在配置模板的时候指定, <font color='red'>在创建合同重新指定无效</font>
@@ -894,7 +894,7 @@ public class FlowApproverInfo extends AbstractModel {
 <li> **2** :签署密码</li>
 <li> **3** :运营商三要素</li></ul>
 
-默认为1(人脸认证 ),2(签署密码)
+默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 
 注: 
 1. 用<font color='red'>模板创建合同场景</font>, 签署人的认证方式需要在配置模板的时候指定, <font color='red'>在创建合同重新指定无效</font>
@@ -904,7 +904,7 @@ public class FlowApproverInfo extends AbstractModel {
 <li> **2** :签署密码</li>
 <li> **3** :运营商三要素</li></ul>
 
-默认为1(人脸认证 ),2(签署密码)
+默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 
 注: 
 1. 用<font color='red'>模板创建合同场景</font>, 签署人的认证方式需要在配置模板的时候指定, <font color='red'>在创建合同重新指定无效</font>
@@ -920,7 +920,7 @@ public class FlowApproverInfo extends AbstractModel {
 <li> **2** :签署密码</li>
 <li> **3** :运营商三要素</li></ul>
 
-默认为1(人脸认证 ),2(签署密码)
+默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 
 注: 
 1. 用<font color='red'>模板创建合同场景</font>, 签署人的认证方式需要在配置模板的时候指定, <font color='red'>在创建合同重新指定无效</font>
@@ -930,7 +930,7 @@ public class FlowApproverInfo extends AbstractModel {
 <li> **2** :签署密码</li>
 <li> **3** :运营商三要素</li></ul>
 
-默认为1(人脸认证 ),2(签署密码)
+默认为1(人脸认证 ),2(签署密码),3(运营商三要素)
 
 注: 
 1. 用<font color='red'>模板创建合同场景</font>, 签署人的认证方式需要在配置模板的时候指定, <font color='red'>在创建合同重新指定无效</font>

@@ -25,7 +25,6 @@ public class DescribeWebRecordResponse extends AbstractModel {
 
     /**
     * 1: 正在录制中
-2: 任务不存在
     */
     @SerializedName("Status")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeWebRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1: 正在录制中
-2: 任务不存在 
+     * Get 1: 正在录制中 
      * @return Status 1: 正在录制中
-2: 任务不存在
      */
     public Long getStatus() {
         return this.Status;
@@ -50,9 +47,7 @@ public class DescribeWebRecordResponse extends AbstractModel {
 
     /**
      * Set 1: 正在录制中
-2: 任务不存在
      * @param Status 1: 正在录制中
-2: 任务不存在
      */
     public void setStatus(Long Status) {
         this.Status = Status;

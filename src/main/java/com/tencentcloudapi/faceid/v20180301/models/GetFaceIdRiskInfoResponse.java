@@ -32,7 +32,7 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     private String DeviceInfoTag;
 
     /**
-    * 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+    * 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceInfoLevel")
@@ -48,7 +48,7 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     private String OpenId;
 
     /**
-    * 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+    * 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CameraInfoLevel")
@@ -99,9 +99,9 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+     * Get 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+     * @return DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceInfoLevel() {
@@ -109,9 +109,9 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+     * Set 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+     * @param DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceInfoLevel(Long DeviceInfoLevel) {
@@ -139,9 +139,9 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+     * Get 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+     * @return CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCameraInfoLevel() {
@@ -149,9 +149,9 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+     * Set 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 安全 2 - 低风险 3 - 中风险 4 - 高危 ，-1表示未获取到风险等级
+     * @param CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCameraInfoLevel(Long CameraInfoLevel) {
