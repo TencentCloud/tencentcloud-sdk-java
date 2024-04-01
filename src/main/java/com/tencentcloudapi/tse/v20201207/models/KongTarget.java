@@ -88,6 +88,14 @@ public class KongTarget extends AbstractModel {
     private String CvmInstanceName;
 
     /**
+    * target标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
      * Get Host
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Host Host
@@ -247,6 +255,26 @@ public class KongTarget extends AbstractModel {
         this.CvmInstanceName = CvmInstanceName;
     }
 
+    /**
+     * Get target标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags target标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set target标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags target标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
     public KongTarget() {
     }
 
@@ -279,6 +307,12 @@ public class KongTarget extends AbstractModel {
         if (source.CvmInstanceName != null) {
             this.CvmInstanceName = new String(source.CvmInstanceName);
         }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -294,6 +328,7 @@ public class KongTarget extends AbstractModel {
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
         this.setParamSimple(map, prefix + "CvmInstanceName", this.CvmInstanceName);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
 
     }
 }

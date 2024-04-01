@@ -118,6 +118,20 @@ public class CreateInstanceNewRequest extends AbstractModel {
     private Long CaseSensitive;
 
     /**
+    * 是否开启多可用区
+    */
+    @SerializedName("EnableMultiZones")
+    @Expose
+    private Boolean EnableMultiZones;
+
+    /**
+    * 开启多可用区后，用户的所有可用区和子网信息
+    */
+    @SerializedName("UserMultiZoneInfos")
+    @Expose
+    private NetworkInfo UserMultiZoneInfos;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -337,6 +351,38 @@ public class CreateInstanceNewRequest extends AbstractModel {
         this.CaseSensitive = CaseSensitive;
     }
 
+    /**
+     * Get 是否开启多可用区 
+     * @return EnableMultiZones 是否开启多可用区
+     */
+    public Boolean getEnableMultiZones() {
+        return this.EnableMultiZones;
+    }
+
+    /**
+     * Set 是否开启多可用区
+     * @param EnableMultiZones 是否开启多可用区
+     */
+    public void setEnableMultiZones(Boolean EnableMultiZones) {
+        this.EnableMultiZones = EnableMultiZones;
+    }
+
+    /**
+     * Get 开启多可用区后，用户的所有可用区和子网信息 
+     * @return UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
+     */
+    public NetworkInfo getUserMultiZoneInfos() {
+        return this.UserMultiZoneInfos;
+    }
+
+    /**
+     * Set 开启多可用区后，用户的所有可用区和子网信息
+     * @param UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
+     */
+    public void setUserMultiZoneInfos(NetworkInfo UserMultiZoneInfos) {
+        this.UserMultiZoneInfos = UserMultiZoneInfos;
+    }
+
     public CreateInstanceNewRequest() {
     }
 
@@ -387,6 +433,12 @@ public class CreateInstanceNewRequest extends AbstractModel {
         if (source.CaseSensitive != null) {
             this.CaseSensitive = new Long(source.CaseSensitive);
         }
+        if (source.EnableMultiZones != null) {
+            this.EnableMultiZones = new Boolean(source.EnableMultiZones);
+        }
+        if (source.UserMultiZoneInfos != null) {
+            this.UserMultiZoneInfos = new NetworkInfo(source.UserMultiZoneInfos);
+        }
     }
 
 
@@ -407,6 +459,8 @@ public class CreateInstanceNewRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "HaType", this.HaType);
         this.setParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
+        this.setParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
+        this.setParamObj(map, prefix + "UserMultiZoneInfos.", this.UserMultiZoneInfos);
 
     }
 }

@@ -77,6 +77,41 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     private Long TimeSpan;
 
     /**
+    * 是否用于迁移上云，默认为false
+    */
+    @SerializedName("SupportsMigrateToCloud")
+    @Expose
+    private Boolean SupportsMigrateToCloud;
+
+    /**
+    * 是否开启公网
+    */
+    @SerializedName("EnablePublic")
+    @Expose
+    private Boolean EnablePublic;
+
+    /**
+    * 公网带宽，在开启公网情况下为必传字段
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * 公网白名单
+    */
+    @SerializedName("IpRules")
+    @Expose
+    private PublicAccessRule [] IpRules;
+
+    /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 实例名称 
      * @return Name 实例名称
      */
@@ -204,6 +239,86 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
         this.TimeSpan = TimeSpan;
     }
 
+    /**
+     * Get 是否用于迁移上云，默认为false 
+     * @return SupportsMigrateToCloud 是否用于迁移上云，默认为false
+     */
+    public Boolean getSupportsMigrateToCloud() {
+        return this.SupportsMigrateToCloud;
+    }
+
+    /**
+     * Set 是否用于迁移上云，默认为false
+     * @param SupportsMigrateToCloud 是否用于迁移上云，默认为false
+     */
+    public void setSupportsMigrateToCloud(Boolean SupportsMigrateToCloud) {
+        this.SupportsMigrateToCloud = SupportsMigrateToCloud;
+    }
+
+    /**
+     * Get 是否开启公网 
+     * @return EnablePublic 是否开启公网
+     */
+    public Boolean getEnablePublic() {
+        return this.EnablePublic;
+    }
+
+    /**
+     * Set 是否开启公网
+     * @param EnablePublic 是否开启公网
+     */
+    public void setEnablePublic(Boolean EnablePublic) {
+        this.EnablePublic = EnablePublic;
+    }
+
+    /**
+     * Get 公网带宽，在开启公网情况下为必传字段 
+     * @return Bandwidth 公网带宽，在开启公网情况下为必传字段
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 公网带宽，在开启公网情况下为必传字段
+     * @param Bandwidth 公网带宽，在开启公网情况下为必传字段
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get 公网白名单 
+     * @return IpRules 公网白名单
+     */
+    public PublicAccessRule [] getIpRules() {
+        return this.IpRules;
+    }
+
+    /**
+     * Set 公网白名单
+     * @param IpRules 公网白名单
+     */
+    public void setIpRules(PublicAccessRule [] IpRules) {
+        this.IpRules = IpRules;
+    }
+
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateRocketMQVipInstanceRequest() {
     }
 
@@ -236,6 +351,27 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.SupportsMigrateToCloud != null) {
+            this.SupportsMigrateToCloud = new Boolean(source.SupportsMigrateToCloud);
+        }
+        if (source.EnablePublic != null) {
+            this.EnablePublic = new Boolean(source.EnablePublic);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.IpRules != null) {
+            this.IpRules = new PublicAccessRule[source.IpRules.length];
+            for (int i = 0; i < source.IpRules.length; i++) {
+                this.IpRules[i] = new PublicAccessRule(source.IpRules[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -250,6 +386,11 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "SupportsMigrateToCloud", this.SupportsMigrateToCloud);
+        this.setParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamArrayObj(map, prefix + "IpRules.", this.IpRules);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

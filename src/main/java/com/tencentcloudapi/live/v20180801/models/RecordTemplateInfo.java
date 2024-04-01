@@ -103,6 +103,14 @@ public class RecordTemplateInfo extends AbstractModel {
     private Boolean RemoveWatermark;
 
     /**
+    * 是否存储至cos
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosStore")
+    @Expose
+    private Long CosStore;
+
+    /**
     * FLV 录制定制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -295,6 +303,26 @@ public class RecordTemplateInfo extends AbstractModel {
     }
 
     /**
+     * Get 是否存储至cos
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosStore 是否存储至cos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCosStore() {
+        return this.CosStore;
+    }
+
+    /**
+     * Set 是否存储至cos
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosStore 是否存储至cos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosStore(Long CosStore) {
+        this.CosStore = CosStore;
+    }
+
+    /**
      * Get FLV 录制定制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FlvSpecialParam FLV 录制定制参数。
@@ -355,6 +383,9 @@ public class RecordTemplateInfo extends AbstractModel {
         if (source.RemoveWatermark != null) {
             this.RemoveWatermark = new Boolean(source.RemoveWatermark);
         }
+        if (source.CosStore != null) {
+            this.CosStore = new Long(source.CosStore);
+        }
         if (source.FlvSpecialParam != null) {
             this.FlvSpecialParam = new FlvSpecialParam(source.FlvSpecialParam);
         }
@@ -376,6 +407,7 @@ public class RecordTemplateInfo extends AbstractModel {
         this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         this.setParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
         this.setParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
+        this.setParamSimple(map, prefix + "CosStore", this.CosStore);
         this.setParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
 
     }

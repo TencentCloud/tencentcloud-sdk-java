@@ -86,6 +86,14 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskDelLogoResult DeLogoTask;
 
     /**
+    * 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeadTailTask")
+    @Expose
+    private AiAnalysisTaskHeadTailResult HeadTailTask;
+
+    /**
     * 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -258,6 +266,26 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
+     * Get 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HeadTailTask 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskHeadTailResult getHeadTailTask() {
+        return this.HeadTailTask;
+    }
+
+    /**
+     * Set 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeadTailTask 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeadTailTask(AiAnalysisTaskHeadTailResult HeadTailTask) {
+        this.HeadTailTask = HeadTailTask;
+    }
+
+    /**
      * Get 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DescriptionTask 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
@@ -306,6 +334,9 @@ public class AiAnalysisResult extends AbstractModel {
         if (source.DeLogoTask != null) {
             this.DeLogoTask = new AiAnalysisTaskDelLogoResult(source.DeLogoTask);
         }
+        if (source.HeadTailTask != null) {
+            this.HeadTailTask = new AiAnalysisTaskHeadTailResult(source.HeadTailTask);
+        }
         if (source.DescriptionTask != null) {
             this.DescriptionTask = new AiAnalysisTaskDescriptionResult(source.DescriptionTask);
         }
@@ -323,6 +354,7 @@ public class AiAnalysisResult extends AbstractModel {
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
         this.setParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
         this.setParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
+        this.setParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
         this.setParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
 
     }

@@ -38,39 +38,6 @@ public class CloudNativeAPIGatewayRateLimitDetail extends AbstractModel {
     private QpsThreshold [] QpsThresholds;
 
     /**
-    * 限流依据
-ip service consumer credential path header
-    */
-    @SerializedName("LimitBy")
-    @Expose
-    private String LimitBy;
-
-    /**
-    * 响应策略
-url请求转发
-text 响应配置
-default 直接返回
-
-    */
-    @SerializedName("ResponseType")
-    @Expose
-    private String ResponseType;
-
-    /**
-    * 是否隐藏限流客户端响应头
-    */
-    @SerializedName("HideClientHeaders")
-    @Expose
-    private Boolean HideClientHeaders;
-
-    /**
-    * 是否开启请求排队
-    */
-    @SerializedName("IsDelay")
-    @Expose
-    private Boolean IsDelay;
-
-    /**
     * 需要进行流量控制的请求路径
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -85,6 +52,14 @@ default 直接返回
     @SerializedName("Header")
     @Expose
     private String Header;
+
+    /**
+    * 限流依据
+ip service consumer credential path header
+    */
+    @SerializedName("LimitBy")
+    @Expose
+    private String LimitBy;
 
     /**
     * 外部redis配置
@@ -124,11 +99,52 @@ external_redis 外部redis
     private String RateLimitResponseUrl;
 
     /**
+    * 响应策略
+url请求转发
+text 响应配置
+default 直接返回
+
+    */
+    @SerializedName("ResponseType")
+    @Expose
+    private String ResponseType;
+
+    /**
+    * 是否隐藏限流客户端响应头
+    */
+    @SerializedName("HideClientHeaders")
+    @Expose
+    private Boolean HideClientHeaders;
+
+    /**
     * 排队时间
     */
     @SerializedName("LineUpTime")
     @Expose
     private Long LineUpTime;
+
+    /**
+    * 是否开启请求排队
+    */
+    @SerializedName("IsDelay")
+    @Expose
+    private Boolean IsDelay;
+
+    /**
+    * 基础限流
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BasicLimitQpsThresholds")
+    @Expose
+    private QpsThreshold [] BasicLimitQpsThresholds;
+
+    /**
+    * 参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LimitRules")
+    @Expose
+    private LimitRule [] LimitRules;
 
     /**
      * Get 插件启用状态 
@@ -160,90 +176,6 @@ external_redis 外部redis
      */
     public void setQpsThresholds(QpsThreshold [] QpsThresholds) {
         this.QpsThresholds = QpsThresholds;
-    }
-
-    /**
-     * Get 限流依据
-ip service consumer credential path header 
-     * @return LimitBy 限流依据
-ip service consumer credential path header
-     */
-    public String getLimitBy() {
-        return this.LimitBy;
-    }
-
-    /**
-     * Set 限流依据
-ip service consumer credential path header
-     * @param LimitBy 限流依据
-ip service consumer credential path header
-     */
-    public void setLimitBy(String LimitBy) {
-        this.LimitBy = LimitBy;
-    }
-
-    /**
-     * Get 响应策略
-url请求转发
-text 响应配置
-default 直接返回
- 
-     * @return ResponseType 响应策略
-url请求转发
-text 响应配置
-default 直接返回
-
-     */
-    public String getResponseType() {
-        return this.ResponseType;
-    }
-
-    /**
-     * Set 响应策略
-url请求转发
-text 响应配置
-default 直接返回
-
-     * @param ResponseType 响应策略
-url请求转发
-text 响应配置
-default 直接返回
-
-     */
-    public void setResponseType(String ResponseType) {
-        this.ResponseType = ResponseType;
-    }
-
-    /**
-     * Get 是否隐藏限流客户端响应头 
-     * @return HideClientHeaders 是否隐藏限流客户端响应头
-     */
-    public Boolean getHideClientHeaders() {
-        return this.HideClientHeaders;
-    }
-
-    /**
-     * Set 是否隐藏限流客户端响应头
-     * @param HideClientHeaders 是否隐藏限流客户端响应头
-     */
-    public void setHideClientHeaders(Boolean HideClientHeaders) {
-        this.HideClientHeaders = HideClientHeaders;
-    }
-
-    /**
-     * Get 是否开启请求排队 
-     * @return IsDelay 是否开启请求排队
-     */
-    public Boolean getIsDelay() {
-        return this.IsDelay;
-    }
-
-    /**
-     * Set 是否开启请求排队
-     * @param IsDelay 是否开启请求排队
-     */
-    public void setIsDelay(Boolean IsDelay) {
-        this.IsDelay = IsDelay;
     }
 
     /**
@@ -284,6 +216,26 @@ default 直接返回
      */
     public void setHeader(String Header) {
         this.Header = Header;
+    }
+
+    /**
+     * Get 限流依据
+ip service consumer credential path header 
+     * @return LimitBy 限流依据
+ip service consumer credential path header
+     */
+    public String getLimitBy() {
+        return this.LimitBy;
+    }
+
+    /**
+     * Set 限流依据
+ip service consumer credential path header
+     * @param LimitBy 限流依据
+ip service consumer credential path header
+     */
+    public void setLimitBy(String LimitBy) {
+        this.LimitBy = LimitBy;
     }
 
     /**
@@ -387,6 +339,54 @@ external_redis 外部redis
     }
 
     /**
+     * Get 响应策略
+url请求转发
+text 响应配置
+default 直接返回
+ 
+     * @return ResponseType 响应策略
+url请求转发
+text 响应配置
+default 直接返回
+
+     */
+    public String getResponseType() {
+        return this.ResponseType;
+    }
+
+    /**
+     * Set 响应策略
+url请求转发
+text 响应配置
+default 直接返回
+
+     * @param ResponseType 响应策略
+url请求转发
+text 响应配置
+default 直接返回
+
+     */
+    public void setResponseType(String ResponseType) {
+        this.ResponseType = ResponseType;
+    }
+
+    /**
+     * Get 是否隐藏限流客户端响应头 
+     * @return HideClientHeaders 是否隐藏限流客户端响应头
+     */
+    public Boolean getHideClientHeaders() {
+        return this.HideClientHeaders;
+    }
+
+    /**
+     * Set 是否隐藏限流客户端响应头
+     * @param HideClientHeaders 是否隐藏限流客户端响应头
+     */
+    public void setHideClientHeaders(Boolean HideClientHeaders) {
+        this.HideClientHeaders = HideClientHeaders;
+    }
+
+    /**
      * Get 排队时间 
      * @return LineUpTime 排队时间
      */
@@ -400,6 +400,62 @@ external_redis 外部redis
      */
     public void setLineUpTime(Long LineUpTime) {
         this.LineUpTime = LineUpTime;
+    }
+
+    /**
+     * Get 是否开启请求排队 
+     * @return IsDelay 是否开启请求排队
+     */
+    public Boolean getIsDelay() {
+        return this.IsDelay;
+    }
+
+    /**
+     * Set 是否开启请求排队
+     * @param IsDelay 是否开启请求排队
+     */
+    public void setIsDelay(Boolean IsDelay) {
+        this.IsDelay = IsDelay;
+    }
+
+    /**
+     * Get 基础限流
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BasicLimitQpsThresholds 基础限流
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public QpsThreshold [] getBasicLimitQpsThresholds() {
+        return this.BasicLimitQpsThresholds;
+    }
+
+    /**
+     * Set 基础限流
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BasicLimitQpsThresholds 基础限流
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBasicLimitQpsThresholds(QpsThreshold [] BasicLimitQpsThresholds) {
+        this.BasicLimitQpsThresholds = BasicLimitQpsThresholds;
+    }
+
+    /**
+     * Get 参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LimitRules 参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LimitRule [] getLimitRules() {
+        return this.LimitRules;
+    }
+
+    /**
+     * Set 参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LimitRules 参数限流的规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLimitRules(LimitRule [] LimitRules) {
+        this.LimitRules = LimitRules;
     }
 
     public CloudNativeAPIGatewayRateLimitDetail() {
@@ -419,23 +475,14 @@ external_redis 外部redis
                 this.QpsThresholds[i] = new QpsThreshold(source.QpsThresholds[i]);
             }
         }
-        if (source.LimitBy != null) {
-            this.LimitBy = new String(source.LimitBy);
-        }
-        if (source.ResponseType != null) {
-            this.ResponseType = new String(source.ResponseType);
-        }
-        if (source.HideClientHeaders != null) {
-            this.HideClientHeaders = new Boolean(source.HideClientHeaders);
-        }
-        if (source.IsDelay != null) {
-            this.IsDelay = new Boolean(source.IsDelay);
-        }
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
         if (source.Header != null) {
             this.Header = new String(source.Header);
+        }
+        if (source.LimitBy != null) {
+            this.LimitBy = new String(source.LimitBy);
         }
         if (source.ExternalRedis != null) {
             this.ExternalRedis = new ExternalRedis(source.ExternalRedis);
@@ -449,8 +496,29 @@ external_redis 外部redis
         if (source.RateLimitResponseUrl != null) {
             this.RateLimitResponseUrl = new String(source.RateLimitResponseUrl);
         }
+        if (source.ResponseType != null) {
+            this.ResponseType = new String(source.ResponseType);
+        }
+        if (source.HideClientHeaders != null) {
+            this.HideClientHeaders = new Boolean(source.HideClientHeaders);
+        }
         if (source.LineUpTime != null) {
             this.LineUpTime = new Long(source.LineUpTime);
+        }
+        if (source.IsDelay != null) {
+            this.IsDelay = new Boolean(source.IsDelay);
+        }
+        if (source.BasicLimitQpsThresholds != null) {
+            this.BasicLimitQpsThresholds = new QpsThreshold[source.BasicLimitQpsThresholds.length];
+            for (int i = 0; i < source.BasicLimitQpsThresholds.length; i++) {
+                this.BasicLimitQpsThresholds[i] = new QpsThreshold(source.BasicLimitQpsThresholds[i]);
+            }
+        }
+        if (source.LimitRules != null) {
+            this.LimitRules = new LimitRule[source.LimitRules.length];
+            for (int i = 0; i < source.LimitRules.length; i++) {
+                this.LimitRules[i] = new LimitRule(source.LimitRules[i]);
+            }
         }
     }
 
@@ -461,17 +529,19 @@ external_redis 外部redis
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamArrayObj(map, prefix + "QpsThresholds.", this.QpsThresholds);
-        this.setParamSimple(map, prefix + "LimitBy", this.LimitBy);
-        this.setParamSimple(map, prefix + "ResponseType", this.ResponseType);
-        this.setParamSimple(map, prefix + "HideClientHeaders", this.HideClientHeaders);
-        this.setParamSimple(map, prefix + "IsDelay", this.IsDelay);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "Header", this.Header);
+        this.setParamSimple(map, prefix + "LimitBy", this.LimitBy);
         this.setParamObj(map, prefix + "ExternalRedis.", this.ExternalRedis);
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamObj(map, prefix + "RateLimitResponse.", this.RateLimitResponse);
         this.setParamSimple(map, prefix + "RateLimitResponseUrl", this.RateLimitResponseUrl);
+        this.setParamSimple(map, prefix + "ResponseType", this.ResponseType);
+        this.setParamSimple(map, prefix + "HideClientHeaders", this.HideClientHeaders);
         this.setParamSimple(map, prefix + "LineUpTime", this.LineUpTime);
+        this.setParamSimple(map, prefix + "IsDelay", this.IsDelay);
+        this.setParamArrayObj(map, prefix + "BasicLimitQpsThresholds.", this.BasicLimitQpsThresholds);
+        this.setParamArrayObj(map, prefix + "LimitRules.", this.LimitRules);
 
     }
 }

@@ -38,18 +38,18 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
     private String AudioData;
 
     /**
-    * 音频格式，音频类型(wav,mp3,aac,m4a)
-    */
-    @SerializedName("Codec")
-    @Expose
-    private String Codec;
-
-    /**
     * 1:环境检测 2:音质检测
     */
     @SerializedName("TypeId")
     @Expose
     private Long TypeId;
+
+    /**
+    * 音频格式，音频类型(wav,mp3,aac,m4a)
+    */
+    @SerializedName("Codec")
+    @Expose
+    private String Codec;
 
     /**
     * 音频采样率：
@@ -93,22 +93,6 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
     }
 
     /**
-     * Get 音频格式，音频类型(wav,mp3,aac,m4a) 
-     * @return Codec 音频格式，音频类型(wav,mp3,aac,m4a)
-     */
-    public String getCodec() {
-        return this.Codec;
-    }
-
-    /**
-     * Set 音频格式，音频类型(wav,mp3,aac,m4a)
-     * @param Codec 音频格式，音频类型(wav,mp3,aac,m4a)
-     */
-    public void setCodec(String Codec) {
-        this.Codec = Codec;
-    }
-
-    /**
      * Get 1:环境检测 2:音质检测 
      * @return TypeId 1:环境检测 2:音质检测
      */
@@ -122,6 +106,22 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
+    }
+
+    /**
+     * Get 音频格式，音频类型(wav,mp3,aac,m4a) 
+     * @return Codec 音频格式，音频类型(wav,mp3,aac,m4a)
+     */
+    public String getCodec() {
+        return this.Codec;
+    }
+
+    /**
+     * Set 音频格式，音频类型(wav,mp3,aac,m4a)
+     * @param Codec 音频格式，音频类型(wav,mp3,aac,m4a)
+     */
+    public void setCodec(String Codec) {
+        this.Codec = Codec;
     }
 
     /**
@@ -162,11 +162,11 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
         if (source.AudioData != null) {
             this.AudioData = new String(source.AudioData);
         }
-        if (source.Codec != null) {
-            this.Codec = new String(source.Codec);
-        }
         if (source.TypeId != null) {
             this.TypeId = new Long(source.TypeId);
+        }
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
         }
         if (source.SampleRate != null) {
             this.SampleRate = new Long(source.SampleRate);
@@ -180,8 +180,8 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TextId", this.TextId);
         this.setParamSimple(map, prefix + "AudioData", this.AudioData);
-        this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "TypeId", this.TypeId);
+        this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
 
     }

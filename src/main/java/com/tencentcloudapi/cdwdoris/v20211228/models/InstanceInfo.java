@@ -375,6 +375,22 @@ Modify 集群变更中；
     private String [] BindSGs;
 
     /**
+    * 是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableMultiZones")
+    @Expose
+    private Boolean EnableMultiZones;
+
+    /**
+    * 用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserNetworkInfos")
+    @Expose
+    private String UserNetworkInfos;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1266,6 +1282,46 @@ Modify 集群变更中；
         this.BindSGs = BindSGs;
     }
 
+    /**
+     * Get 是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableMultiZones 是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableMultiZones() {
+        return this.EnableMultiZones;
+    }
+
+    /**
+     * Set 是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableMultiZones 是否为多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableMultiZones(Boolean EnableMultiZones) {
+        this.EnableMultiZones = EnableMultiZones;
+    }
+
+    /**
+     * Get 用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserNetworkInfos 用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserNetworkInfos() {
+        return this.UserNetworkInfos;
+    }
+
+    /**
+     * Set 用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserNetworkInfos 用户可用区和子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserNetworkInfos(String UserNetworkInfos) {
+        this.UserNetworkInfos = UserNetworkInfos;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1412,6 +1468,12 @@ Modify 集群变更中；
                 this.BindSGs[i] = new String(source.BindSGs[i]);
             }
         }
+        if (source.EnableMultiZones != null) {
+            this.EnableMultiZones = new Boolean(source.EnableMultiZones);
+        }
+        if (source.UserNetworkInfos != null) {
+            this.UserNetworkInfos = new String(source.UserNetworkInfos);
+        }
     }
 
 
@@ -1462,6 +1524,8 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
         this.setParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
         this.setParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
+        this.setParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
+        this.setParamSimple(map, prefix + "UserNetworkInfos", this.UserNetworkInfos);
 
     }
 }

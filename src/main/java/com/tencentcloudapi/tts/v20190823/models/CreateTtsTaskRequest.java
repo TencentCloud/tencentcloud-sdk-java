@@ -31,13 +31,6 @@ public class CreateTtsTaskRequest extends AbstractModel {
     private String Text;
 
     /**
-    * 模型类型，1-默认模型。
-    */
-    @SerializedName("ModelType")
-    @Expose
-    private Long ModelType;
-
-    /**
     * 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
     */
     @SerializedName("Volume")
@@ -57,6 +50,13 @@ public class CreateTtsTaskRequest extends AbstractModel {
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * 模型类型，1-默认模型。
+    */
+    @SerializedName("ModelType")
+    @Expose
+    private Long ModelType;
 
     /**
     * 音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
@@ -138,22 +138,6 @@ public class CreateTtsTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 模型类型，1-默认模型。 
-     * @return ModelType 模型类型，1-默认模型。
-     */
-    public Long getModelType() {
-        return this.ModelType;
-    }
-
-    /**
-     * Set 模型类型，1-默认模型。
-     * @param ModelType 模型类型，1-默认模型。
-     */
-    public void setModelType(Long ModelType) {
-        this.ModelType = ModelType;
-    }
-
-    /**
      * Get 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。 
      * @return Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
      */
@@ -199,6 +183,22 @@ public class CreateTtsTaskRequest extends AbstractModel {
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 模型类型，1-默认模型。 
+     * @return ModelType 模型类型，1-默认模型。
+     */
+    public Long getModelType() {
+        return this.ModelType;
+    }
+
+    /**
+     * Set 模型类型，1-默认模型。
+     * @param ModelType 模型类型，1-默认模型。
+     */
+    public void setModelType(Long ModelType) {
+        this.ModelType = ModelType;
     }
 
     /**
@@ -356,9 +356,6 @@ public class CreateTtsTaskRequest extends AbstractModel {
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
-        if (source.ModelType != null) {
-            this.ModelType = new Long(source.ModelType);
-        }
         if (source.Volume != null) {
             this.Volume = new Float(source.Volume);
         }
@@ -367,6 +364,9 @@ public class CreateTtsTaskRequest extends AbstractModel {
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ModelType != null) {
+            this.ModelType = new Long(source.ModelType);
         }
         if (source.VoiceType != null) {
             this.VoiceType = new Long(source.VoiceType);
@@ -403,10 +403,10 @@ public class CreateTtsTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);
-        this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "Speed", this.Speed);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
         this.setParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);

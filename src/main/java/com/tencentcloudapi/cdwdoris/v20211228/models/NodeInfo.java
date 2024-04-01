@@ -40,6 +40,46 @@ public class NodeInfo extends AbstractModel {
     private Long Status;
 
     /**
+    * 节点角色名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * 组件名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComponentName")
+    @Expose
+    private String ComponentName;
+
+    /**
+    * 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeRole")
+    @Expose
+    private String NodeRole;
+
+    /**
+    * 节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastRestartTime")
+    @Expose
+    private String LastRestartTime;
+
+    /**
+    * 节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 用户IP
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ip 用户IP
@@ -79,6 +119,106 @@ public class NodeInfo extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 节点角色名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeName 节点角色名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 节点角色名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeName 节点角色名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get 组件名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ComponentName 组件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComponentName() {
+        return this.ComponentName;
+    }
+
+    /**
+     * Set 组件名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComponentName 组件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComponentName(String ComponentName) {
+        this.ComponentName = ComponentName;
+    }
+
+    /**
+     * Get 节点角色
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeRole 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodeRole() {
+        return this.NodeRole;
+    }
+
+    /**
+     * Set 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeRole 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeRole(String NodeRole) {
+        this.NodeRole = NodeRole;
+    }
+
+    /**
+     * Get 节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastRestartTime 节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastRestartTime() {
+        return this.LastRestartTime;
+    }
+
+    /**
+     * Set 节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastRestartTime 节点上次重启的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastRestartTime(String LastRestartTime) {
+        this.LastRestartTime = LastRestartTime;
+    }
+
+    /**
+     * Get 节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 节点所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public NodeInfo() {
     }
 
@@ -93,6 +233,21 @@ public class NodeInfo extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.ComponentName != null) {
+            this.ComponentName = new String(source.ComponentName);
+        }
+        if (source.NodeRole != null) {
+            this.NodeRole = new String(source.NodeRole);
+        }
+        if (source.LastRestartTime != null) {
+            this.LastRestartTime = new String(source.LastRestartTime);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -102,6 +257,11 @@ public class NodeInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "ComponentName", this.ComponentName);
+        this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
+        this.setParamSimple(map, prefix + "LastRestartTime", this.LastRestartTime);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

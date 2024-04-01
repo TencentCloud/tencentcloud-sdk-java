@@ -48,7 +48,7 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
     private String StatusStr;
 
     /**
-    * 音色id
+    * 音色id。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceType")
@@ -124,9 +124,9 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
     }
 
     /**
-     * Get 音色id
+     * Get 音色id。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VoiceType 音色id
+     * @return VoiceType 音色id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVoiceType() {
@@ -134,9 +134,9 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
     }
 
     /**
-     * Set 音色id
+     * Set 音色id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VoiceType 音色id
+     * @param VoiceType 音色id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceType(Long VoiceType) {

@@ -72,6 +72,71 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
     private String ServiceName;
 
     /**
+    * 灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
+    * 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchType")
+    @Expose
+    private String MatchType;
+
+    /**
+    * 泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
+    * 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LaneId")
+    @Expose
+    private String LaneId;
+
+    /**
+    * 泳道名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LaneName")
+    @Expose
+    private String LaneName;
+
+    /**
+    * 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchMode")
+    @Expose
+    private String MatchMode;
+
+    /**
+    * 泳道标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LaneTag")
+    @Expose
+    private String LaneTag;
+
+    /**
      * Get 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Priority 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
@@ -191,6 +256,170 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
         this.ServiceName = ServiceName;
     }
 
+    /**
+     * Get 灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleType 灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set 灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleType 灰度规则类别
+Standard｜Lane
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
+
+    /**
+     * Get 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchType 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchType() {
+        return this.MatchType;
+    }
+
+    /**
+     * Set 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchType 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchType(String MatchType) {
+        this.MatchType = MatchType;
+    }
+
+    /**
+     * Get 泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 泳道组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupName 泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set 泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupName 泳道组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
+     * Get 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LaneId 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLaneId() {
+        return this.LaneId;
+    }
+
+    /**
+     * Set 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LaneId 泳道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLaneId(String LaneId) {
+        this.LaneId = LaneId;
+    }
+
+    /**
+     * Get 泳道名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LaneName 泳道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLaneName() {
+        return this.LaneName;
+    }
+
+    /**
+     * Set 泳道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LaneName 泳道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLaneName(String LaneName) {
+        this.LaneName = LaneName;
+    }
+
+    /**
+     * Get 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchMode 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchMode() {
+        return this.MatchMode;
+    }
+
+    /**
+     * Set 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchMode 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchMode(String MatchMode) {
+        this.MatchMode = MatchMode;
+    }
+
+    /**
+     * Get 泳道标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LaneTag 泳道标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLaneTag() {
+        return this.LaneTag;
+    }
+
+    /**
+     * Set 泳道标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LaneTag 泳道标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLaneTag(String LaneTag) {
+        this.LaneTag = LaneTag;
+    }
+
     public CloudNativeAPIGatewayCanaryRule() {
     }
 
@@ -223,6 +452,30 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
         if (source.ServiceName != null) {
             this.ServiceName = new String(source.ServiceName);
         }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.MatchType != null) {
+            this.MatchType = new String(source.MatchType);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.LaneId != null) {
+            this.LaneId = new String(source.LaneId);
+        }
+        if (source.LaneName != null) {
+            this.LaneName = new String(source.LaneName);
+        }
+        if (source.MatchMode != null) {
+            this.MatchMode = new String(source.MatchMode);
+        }
+        if (source.LaneTag != null) {
+            this.LaneTag = new String(source.LaneTag);
+        }
     }
 
 
@@ -236,6 +489,14 @@ public class CloudNativeAPIGatewayCanaryRule extends AbstractModel {
         this.setParamArrayObj(map, prefix + "BalancedServiceList.", this.BalancedServiceList);
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "MatchType", this.MatchType);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "LaneId", this.LaneId);
+        this.setParamSimple(map, prefix + "LaneName", this.LaneName);
+        this.setParamSimple(map, prefix + "MatchMode", this.MatchMode);
+        this.setParamSimple(map, prefix + "LaneTag", this.LaneTag);
 
     }
 }

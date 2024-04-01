@@ -38,6 +38,13 @@ public class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractMod
     private String ServiceId;
 
     /**
+    * 灰度规则类别 Standard｜Lane
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
     * 列表数量
     */
     @SerializedName("Limit")
@@ -81,6 +88,22 @@ public class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractMod
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
+    }
+
+    /**
+     * Get 灰度规则类别 Standard｜Lane 
+     * @return RuleType 灰度规则类别 Standard｜Lane
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set 灰度规则类别 Standard｜Lane
+     * @param RuleType 灰度规则类别 Standard｜Lane
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
     }
 
     /**
@@ -129,6 +152,9 @@ public class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractMod
         if (source.ServiceId != null) {
             this.ServiceId = new String(source.ServiceId);
         }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -144,6 +170,7 @@ public class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractMod
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
 
