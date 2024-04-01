@@ -33,7 +33,7 @@ public class ChatStd {
 
             ChatStdResponse resp = client.ChatStd(req);
 
-            Gson gson = new GsonBuilder().create();
+            Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
             for (SSEResponseModel.SSE e : resp) {
                 ChatStdResponse eventModel = gson.fromJson(e.Data, ChatStdResponse.class);
                 Choice[] choices = eventModel.getChoices();
