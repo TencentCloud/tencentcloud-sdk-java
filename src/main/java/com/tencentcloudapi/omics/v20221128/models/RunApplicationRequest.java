@@ -45,13 +45,6 @@ public class RunApplicationRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
-    * 任务输入JSON。需要进行base64编码。
-    */
-    @SerializedName("InputBase64")
-    @Expose
-    private String InputBase64;
-
-    /**
     * 项目ID。（不填使用指定地域下的默认项目）
     */
     @SerializedName("ProjectId")
@@ -64,6 +57,20 @@ public class RunApplicationRequest extends AbstractModel {
     @SerializedName("Description")
     @Expose
     private String Description;
+
+    /**
+    * 任务输入COS地址。（InputBase64和InputCosUri必选其一）
+    */
+    @SerializedName("InputCosUri")
+    @Expose
+    private String InputCosUri;
+
+    /**
+    * 任务输入JSON。需要进行base64编码。（InputBase64和InputCosUri必选其一）
+    */
+    @SerializedName("InputBase64")
+    @Expose
+    private String InputBase64;
 
     /**
     * 批量投递表格ID，不填表示单例投递。
@@ -115,6 +122,15 @@ public class RunApplicationRequest extends AbstractModel {
     private String WorkDir;
 
     /**
+    * 访问模式，不填默认私有。取值范围
+- PRIVATE：私有应用
+- PUBLIC：公共应用
+    */
+    @SerializedName("AccessMode")
+    @Expose
+    private String AccessMode;
+
+    /**
      * Get 应用ID。 
      * @return ApplicationId 应用ID。
      */
@@ -163,22 +179,6 @@ public class RunApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务输入JSON。需要进行base64编码。 
-     * @return InputBase64 任务输入JSON。需要进行base64编码。
-     */
-    public String getInputBase64() {
-        return this.InputBase64;
-    }
-
-    /**
-     * Set 任务输入JSON。需要进行base64编码。
-     * @param InputBase64 任务输入JSON。需要进行base64编码。
-     */
-    public void setInputBase64(String InputBase64) {
-        this.InputBase64 = InputBase64;
-    }
-
-    /**
      * Get 项目ID。（不填使用指定地域下的默认项目） 
      * @return ProjectId 项目ID。（不填使用指定地域下的默认项目）
      */
@@ -208,6 +208,38 @@ public class RunApplicationRequest extends AbstractModel {
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get 任务输入COS地址。（InputBase64和InputCosUri必选其一） 
+     * @return InputCosUri 任务输入COS地址。（InputBase64和InputCosUri必选其一）
+     */
+    public String getInputCosUri() {
+        return this.InputCosUri;
+    }
+
+    /**
+     * Set 任务输入COS地址。（InputBase64和InputCosUri必选其一）
+     * @param InputCosUri 任务输入COS地址。（InputBase64和InputCosUri必选其一）
+     */
+    public void setInputCosUri(String InputCosUri) {
+        this.InputCosUri = InputCosUri;
+    }
+
+    /**
+     * Get 任务输入JSON。需要进行base64编码。（InputBase64和InputCosUri必选其一） 
+     * @return InputBase64 任务输入JSON。需要进行base64编码。（InputBase64和InputCosUri必选其一）
+     */
+    public String getInputBase64() {
+        return this.InputBase64;
+    }
+
+    /**
+     * Set 任务输入JSON。需要进行base64编码。（InputBase64和InputCosUri必选其一）
+     * @param InputBase64 任务输入JSON。需要进行base64编码。（InputBase64和InputCosUri必选其一）
+     */
+    public void setInputBase64(String InputBase64) {
+        this.InputBase64 = InputBase64;
     }
 
     /**
@@ -322,6 +354,30 @@ public class RunApplicationRequest extends AbstractModel {
         this.WorkDir = WorkDir;
     }
 
+    /**
+     * Get 访问模式，不填默认私有。取值范围
+- PRIVATE：私有应用
+- PUBLIC：公共应用 
+     * @return AccessMode 访问模式，不填默认私有。取值范围
+- PRIVATE：私有应用
+- PUBLIC：公共应用
+     */
+    public String getAccessMode() {
+        return this.AccessMode;
+    }
+
+    /**
+     * Set 访问模式，不填默认私有。取值范围
+- PRIVATE：私有应用
+- PUBLIC：公共应用
+     * @param AccessMode 访问模式，不填默认私有。取值范围
+- PRIVATE：私有应用
+- PUBLIC：公共应用
+     */
+    public void setAccessMode(String AccessMode) {
+        this.AccessMode = AccessMode;
+    }
+
     public RunApplicationRequest() {
     }
 
@@ -339,14 +395,17 @@ public class RunApplicationRequest extends AbstractModel {
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
-        if (source.InputBase64 != null) {
-            this.InputBase64 = new String(source.InputBase64);
-        }
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
+        }
+        if (source.InputCosUri != null) {
+            this.InputCosUri = new String(source.InputCosUri);
+        }
+        if (source.InputBase64 != null) {
+            this.InputBase64 = new String(source.InputBase64);
         }
         if (source.TableId != null) {
             this.TableId = new String(source.TableId);
@@ -372,6 +431,9 @@ public class RunApplicationRequest extends AbstractModel {
         if (source.WorkDir != null) {
             this.WorkDir = new String(source.WorkDir);
         }
+        if (source.AccessMode != null) {
+            this.AccessMode = new String(source.AccessMode);
+        }
     }
 
 
@@ -382,9 +444,10 @@ public class RunApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-        this.setParamSimple(map, prefix + "InputBase64", this.InputBase64);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "InputCosUri", this.InputCosUri);
+        this.setParamSimple(map, prefix + "InputBase64", this.InputBase64);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamArraySimple(map, prefix + "TableRowUuids.", this.TableRowUuids);
         this.setParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
@@ -392,6 +455,7 @@ public class RunApplicationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Option.", this.Option);
         this.setParamObj(map, prefix + "NFOption.", this.NFOption);
         this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
+        this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
 
     }
 }

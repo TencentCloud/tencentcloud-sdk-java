@@ -61,6 +61,17 @@ public class WeilingwithClient extends AbstractClient{
     }
 
     /**
+     *批量删除设备
+     * @param req BatchDeleteDeviceRequest
+     * @return BatchDeleteDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteDeviceResponse BatchDeleteDevice(BatchDeleteDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchDeleteDevice", BatchDeleteDeviceResponse.class);
+    }
+
+    /**
      *批量消警
      * @param req BatchKillAlarmRequest
      * @return BatchKillAlarmResponse
@@ -124,6 +135,17 @@ public class WeilingwithClient extends AbstractClient{
     public CreateApplicationTokenResponse CreateApplicationToken(CreateApplicationTokenRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateApplicationToken", CreateApplicationTokenResponse.class);
+    }
+
+    /**
+     *删除设备分组
+     * @param req DeleteDeviceGroupRequest
+     * @return DeleteDeviceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceGroupResponse DeleteDeviceGroup(DeleteDeviceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeviceGroup", DeleteDeviceGroupResponse.class);
     }
 
     /**
@@ -256,6 +278,17 @@ public class WeilingwithClient extends AbstractClient{
     public DescribeCityWorkspaceListResponse DescribeCityWorkspaceList(DescribeCityWorkspaceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCityWorkspaceList", DescribeCityWorkspaceListResponse.class);
+    }
+
+    /**
+     *设备分组列表
+     * @param req DescribeDeviceGroupListRequest
+     * @return DescribeDeviceGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceGroupListResponse DescribeDeviceGroupList(DescribeDeviceGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceGroupList", DescribeDeviceGroupListResponse.class);
     }
 
     /**
@@ -622,6 +655,28 @@ public class WeilingwithClient extends AbstractClient{
     }
 
     /**
+     *批量修改设备自定义字段值
+     * @param req ModifyDeviceFieldRequest
+     * @return ModifyDeviceFieldResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceFieldResponse ModifyDeviceField(ModifyDeviceFieldRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceField", ModifyDeviceFieldResponse.class);
+    }
+
+    /**
+     *批量修改设备组
+     * @param req ModifyDeviceGroupRequest
+     * @return ModifyDeviceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceGroupResponse ModifyDeviceGroup(ModifyDeviceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceGroup", ModifyDeviceGroupResponse.class);
+    }
+
+    /**
      *批量修改设备名字
      * @param req ModifyDeviceNameRequest
      * @return ModifyDeviceNameResponse
@@ -633,6 +688,17 @@ public class WeilingwithClient extends AbstractClient{
     }
 
     /**
+     *批量修改设备标签
+     * @param req ModifyDeviceTagRequest
+     * @return ModifyDeviceTagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceTagResponse ModifyDeviceTag(ModifyDeviceTagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceTag", ModifyDeviceTagResponse.class);
+    }
+
+    /**
      *上报应用消息
      * @param req ReportAppMessageRequest
      * @return ReportAppMessageResponse
@@ -641,6 +707,17 @@ public class WeilingwithClient extends AbstractClient{
     public ReportAppMessageResponse ReportAppMessage(ReportAppMessageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ReportAppMessage", ReportAppMessageResponse.class);
+    }
+
+    /**
+     *设备分组新增/修改
+     * @param req SaveDeviceGroupRequest
+     * @return SaveDeviceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public SaveDeviceGroupResponse SaveDeviceGroup(SaveDeviceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SaveDeviceGroup", SaveDeviceGroupResponse.class);
     }
 
     /**

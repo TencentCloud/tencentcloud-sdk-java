@@ -89,6 +89,13 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
     private RecordParam Mp3Param;
 
     /**
+    * 是否存储至 cos，值为 1 时表示存储至 cos。
+    */
+    @SerializedName("CosStore")
+    @Expose
+    private Long CosStore;
+
+    /**
     * 是否去除水印，类型为慢直播时此参数无效。
 如果为false，则录制水印流或转码流；如果为true，则录制原始流。
     */
@@ -256,6 +263,22 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
     }
 
     /**
+     * Get 是否存储至 cos，值为 1 时表示存储至 cos。 
+     * @return CosStore 是否存储至 cos，值为 1 时表示存储至 cos。
+     */
+    public Long getCosStore() {
+        return this.CosStore;
+    }
+
+    /**
+     * Set 是否存储至 cos，值为 1 时表示存储至 cos。
+     * @param CosStore 是否存储至 cos，值为 1 时表示存储至 cos。
+     */
+    public void setCosStore(Long CosStore) {
+        this.CosStore = CosStore;
+    }
+
+    /**
      * Get 是否去除水印，类型为慢直播时此参数无效。
 如果为false，则录制水印流或转码流；如果为true，则录制原始流。 
      * @return RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
@@ -326,6 +349,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         if (source.Mp3Param != null) {
             this.Mp3Param = new RecordParam(source.Mp3Param);
         }
+        if (source.CosStore != null) {
+            this.CosStore = new Long(source.CosStore);
+        }
         if (source.RemoveWatermark != null) {
             this.RemoveWatermark = new Boolean(source.RemoveWatermark);
         }
@@ -348,6 +374,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         this.setParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
+        this.setParamSimple(map, prefix + "CosStore", this.CosStore);
         this.setParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
         this.setParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
 

@@ -67,6 +67,14 @@ public class DocumentElement extends AbstractModel {
     private Long Level;
 
     /**
+    * 入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InsetImageName")
+    @Expose
+    private String InsetImageName;
+
+    /**
     * 嵌套的文档元素信息，一般包含的是文档内嵌入图片的文字识别结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -187,6 +195,26 @@ public class DocumentElement extends AbstractModel {
     }
 
     /**
+     * Get 入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InsetImageName 入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInsetImageName() {
+        return this.InsetImageName;
+    }
+
+    /**
+     * Set 入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InsetImageName 入参开启EnableInsetImage后返回，表示在InsetImagePackage中的内嵌图片名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInsetImageName(String InsetImageName) {
+        this.InsetImageName = InsetImageName;
+    }
+
+    /**
      * Get 嵌套的文档元素信息，一般包含的是文档内嵌入图片的文字识别结果
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Elements 嵌套的文档元素信息，一般包含的是文档内嵌入图片的文字识别结果
@@ -229,6 +257,9 @@ public class DocumentElement extends AbstractModel {
         if (source.Level != null) {
             this.Level = new Long(source.Level);
         }
+        if (source.InsetImageName != null) {
+            this.InsetImageName = new String(source.InsetImageName);
+        }
         if (source.Elements != null) {
             this.Elements = new DocumentElement[source.Elements.length];
             for (int i = 0; i < source.Elements.length; i++) {
@@ -247,6 +278,7 @@ public class DocumentElement extends AbstractModel {
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamObj(map, prefix + "Polygon.", this.Polygon);
         this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "InsetImageName", this.InsetImageName);
         this.setParamArrayObj(map, prefix + "Elements.", this.Elements);
 
     }

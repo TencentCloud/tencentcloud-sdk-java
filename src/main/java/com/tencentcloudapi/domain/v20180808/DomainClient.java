@@ -303,6 +303,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *用于获取域名注册当前支持注册的后缀
+     * @param req DescribeTldListRequest
+     * @return DescribeTldListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTldListResponse DescribeTldList(DescribeTldListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTldList", DescribeTldListResponse.class);
+    }
+
+    /**
      *修改自定义DNS Host
      * @param req ModifyCustomDnsHostRequest
      * @return ModifyCustomDnsHostResponse

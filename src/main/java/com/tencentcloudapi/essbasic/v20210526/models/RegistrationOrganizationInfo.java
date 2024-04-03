@@ -131,6 +131,13 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     private String BusinessLicense;
 
     /**
+    * 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
+    */
+    @SerializedName("PowerOfAttorneys")
+    @Expose
+    private String [] PowerOfAttorneys;
+
+    /**
      * Get 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。 
@@ -414,6 +421,22 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         this.BusinessLicense = BusinessLicense;
     }
 
+    /**
+     * Get 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 
+     * @return PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
+     */
+    public String [] getPowerOfAttorneys() {
+        return this.PowerOfAttorneys;
+    }
+
+    /**
+     * Set 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
+     * @param PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M
+     */
+    public void setPowerOfAttorneys(String [] PowerOfAttorneys) {
+        this.PowerOfAttorneys = PowerOfAttorneys;
+    }
+
     public RegistrationOrganizationInfo() {
     }
 
@@ -461,6 +484,12 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         if (source.BusinessLicense != null) {
             this.BusinessLicense = new String(source.BusinessLicense);
         }
+        if (source.PowerOfAttorneys != null) {
+            this.PowerOfAttorneys = new String[source.PowerOfAttorneys.length];
+            for (int i = 0; i < source.PowerOfAttorneys.length; i++) {
+                this.PowerOfAttorneys[i] = new String(source.PowerOfAttorneys[i]);
+            }
+        }
     }
 
 
@@ -480,6 +509,7 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AdminIdCardType", this.AdminIdCardType);
         this.setParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
         this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
+        this.setParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
 
     }
 }
