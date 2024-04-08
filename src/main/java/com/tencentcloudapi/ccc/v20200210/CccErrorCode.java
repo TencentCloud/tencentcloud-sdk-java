@@ -24,6 +24,9 @@ public enum CccErrorCode {
     // 坐席处于忙碌状态。
      FAILEDOPERATION_SEATSTATUSBUSY("FailedOperation.SeatStatusBusy"),
      
+    // 上传文件个数超过限制
+     FAILEDOPERATION_UPLOADFILEOVERFLOW("FailedOperation.UploadFileOverflow"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

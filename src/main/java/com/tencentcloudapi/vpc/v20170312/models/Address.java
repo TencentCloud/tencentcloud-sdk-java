@@ -210,6 +210,14 @@ public class Address extends AbstractModel {
     private String RenewFlag;
 
     /**
+    * 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BandwidthPackageId")
+    @Expose
+    private String BandwidthPackageId;
+
+    /**
      * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -665,6 +673,26 @@ public class Address extends AbstractModel {
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BandwidthPackageId 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBandwidthPackageId() {
+        return this.BandwidthPackageId;
+    }
+
+    /**
+     * Set 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BandwidthPackageId 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBandwidthPackageId(String BandwidthPackageId) {
+        this.BandwidthPackageId = BandwidthPackageId;
+    }
+
     public Address() {
     }
 
@@ -748,6 +776,9 @@ public class Address extends AbstractModel {
         if (source.RenewFlag != null) {
             this.RenewFlag = new String(source.RenewFlag);
         }
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
     }
 
 
@@ -779,6 +810,7 @@ public class Address extends AbstractModel {
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
 
     }
 }

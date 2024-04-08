@@ -94,6 +94,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取资产视角的漏洞风险列表
+     * @param req DescribeAssetViewVulRiskListRequest
+     * @return DescribeAssetViewVulRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetViewVulRiskListResponse DescribeAssetViewVulRiskList(DescribeAssetViewVulRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetViewVulRiskList", DescribeAssetViewVulRiskListResponse.class);
+    }
+
+    /**
      *cvm详情
      * @param req DescribeCVMAssetInfoRequest
      * @return DescribeCVMAssetInfoResponse

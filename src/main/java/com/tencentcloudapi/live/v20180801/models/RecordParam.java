@@ -108,6 +108,30 @@ cold：低频存储。
     private Long ClassId;
 
     /**
+    * 存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosBucketName")
+    @Expose
+    private String CosBucketName;
+
+    /**
+    * 存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosBucketRegion")
+    @Expose
+    private String CosBucketRegion;
+
+    /**
+    * 存储至 cos 的 bucket 路径。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosBucketPath")
+    @Expose
+    private String CosBucketPath;
+
+    /**
      * Get 录制间隔。
 单位秒，默认：1800。
 取值范围：30-7200。
@@ -347,6 +371,66 @@ cold：低频存储。
         this.ClassId = ClassId;
     }
 
+    /**
+     * Get 存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosBucketName 存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCosBucketName() {
+        return this.CosBucketName;
+    }
+
+    /**
+     * Set 存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosBucketName 存储至 cos 的 bucket 桶名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosBucketName(String CosBucketName) {
+        this.CosBucketName = CosBucketName;
+    }
+
+    /**
+     * Get 存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosBucketRegion 存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCosBucketRegion() {
+        return this.CosBucketRegion;
+    }
+
+    /**
+     * Set 存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosBucketRegion 存储至 cos 的 bucket 区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosBucketRegion(String CosBucketRegion) {
+        this.CosBucketRegion = CosBucketRegion;
+    }
+
+    /**
+     * Get 存储至 cos 的 bucket 路径。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosBucketPath 存储至 cos 的 bucket 路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCosBucketPath() {
+        return this.CosBucketPath;
+    }
+
+    /**
+     * Set 存储至 cos 的 bucket 路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosBucketPath 存储至 cos 的 bucket 路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosBucketPath(String CosBucketPath) {
+        this.CosBucketPath = CosBucketPath;
+    }
+
     public RecordParam() {
     }
 
@@ -379,6 +463,15 @@ cold：低频存储。
         if (source.ClassId != null) {
             this.ClassId = new Long(source.ClassId);
         }
+        if (source.CosBucketName != null) {
+            this.CosBucketName = new String(source.CosBucketName);
+        }
+        if (source.CosBucketRegion != null) {
+            this.CosBucketRegion = new String(source.CosBucketRegion);
+        }
+        if (source.CosBucketPath != null) {
+            this.CosBucketPath = new String(source.CosBucketPath);
+        }
     }
 
 
@@ -394,6 +487,9 @@ cold：低频存储。
         this.setParamSimple(map, prefix + "Procedure", this.Procedure);
         this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
+        this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+        this.setParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+        this.setParamSimple(map, prefix + "CosBucketPath", this.CosBucketPath);
 
     }
 }

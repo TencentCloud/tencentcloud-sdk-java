@@ -360,6 +360,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *查询IVR音频文件列表信息
+     * @param req DescribeIvrAudioListRequest
+     * @return DescribeIvrAudioListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIvrAudioListResponse DescribeIvrAudioList(DescribeIvrAudioListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIvrAudioList", DescribeIvrAudioListResponse.class);
+    }
+
+    /**
      *查询号码列表
      * @param req DescribeNumbersRequest
      * @return DescribeNumbersResponse
@@ -632,6 +643,17 @@ public class CccClient extends AbstractClient{
     public UpdatePredictiveDialingCampaignResponse UpdatePredictiveDialingCampaign(UpdatePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdatePredictiveDialingCampaign", UpdatePredictiveDialingCampaignResponse.class);
+    }
+
+    /**
+     *上传IVR中使用的音频文件，每日上传文件限制50个。（参数中音频文件Url建议使用腾讯云Cos存储的临时链接）
+     * @param req UploadIvrAudioRequest
+     * @return UploadIvrAudioResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadIvrAudioResponse UploadIvrAudio(UploadIvrAudioRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadIvrAudio", UploadIvrAudioResponse.class);
     }
 
 }
