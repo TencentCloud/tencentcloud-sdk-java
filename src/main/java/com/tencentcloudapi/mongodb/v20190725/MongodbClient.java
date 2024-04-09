@@ -271,6 +271,18 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *该接口用于发起按 Key 闪回任务，依据数据的闪回 Key（默认为 id）对数据进行极速回档，快速恢复业务。
+**说明：按 Key 闪回于2023年09月11日正式进行公测，在此期间，该接口仅对公测用户开放。**
+     * @param req FlashBackDBInstanceRequest
+     * @return FlashBackDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public FlashBackDBInstanceResponse FlashBackDBInstance(FlashBackDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FlashBackDBInstance", FlashBackDBInstanceResponse.class);
+    }
+
+    /**
      *在所有mongos上执行FlushRouterConfig命令
      * @param req FlushInstanceRouterConfigRequest
      * @return FlushInstanceRouterConfigResponse

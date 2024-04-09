@@ -165,6 +165,7 @@ public class RoomInfo extends AbstractModel {
 
     /**
     * 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
     */
     @SerializedName("RoomType")
     @Expose
@@ -540,8 +541,10 @@ public class RoomInfo extends AbstractModel {
     }
 
     /**
-     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展) 
+     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏 
      * @return RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
      */
     public Long getRoomType() {
         return this.RoomType;
@@ -549,7 +552,9 @@ public class RoomInfo extends AbstractModel {
 
     /**
      * Set 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
      * @param RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+注：大班课的布局(layout)只有三分屏
      */
     public void setRoomType(Long RoomType) {
         this.RoomType = RoomType;

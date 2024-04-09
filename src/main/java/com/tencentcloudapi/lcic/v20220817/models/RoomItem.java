@@ -155,6 +155,7 @@ public class RoomItem extends AbstractModel {
 
     /**
     * 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+注：大班课的布局(layout)只有三分屏
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoomType")
@@ -546,8 +547,10 @@ public class RoomItem extends AbstractModel {
 
     /**
      * Get 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+注：大班课的布局(layout)只有三分屏
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RoomType 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+注：大班课的布局(layout)只有三分屏
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoomType() {
@@ -556,8 +559,10 @@ public class RoomItem extends AbstractModel {
 
     /**
      * Set 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+注：大班课的布局(layout)只有三分屏
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RoomType 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+注：大班课的布局(layout)只有三分屏
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoomType(Long RoomType) {

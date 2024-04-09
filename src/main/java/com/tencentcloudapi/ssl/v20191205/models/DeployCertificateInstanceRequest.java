@@ -56,6 +56,13 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
     private Long Status;
 
     /**
+    * 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
+    */
+    @SerializedName("IsCache")
+    @Expose
+    private Long IsCache;
+
+    /**
      * Get 待部署的证书ID 
      * @return CertificateId 待部署的证书ID
      */
@@ -135,6 +142,22 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时 
+     * @return IsCache 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
+     */
+    public Long getIsCache() {
+        return this.IsCache;
+    }
+
+    /**
+     * Set 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
+     * @param IsCache 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
+     */
+    public void setIsCache(Long IsCache) {
+        this.IsCache = IsCache;
+    }
+
     public DeployCertificateInstanceRequest() {
     }
 
@@ -158,6 +181,9 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.IsCache != null) {
+            this.IsCache = new Long(source.IsCache);
+        }
     }
 
 
@@ -169,6 +195,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IsCache", this.IsCache);
 
     }
 }
