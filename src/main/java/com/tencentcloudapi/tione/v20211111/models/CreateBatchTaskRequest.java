@@ -157,6 +157,13 @@ public class CreateBatchTaskRequest extends AbstractModel {
     private String CallbackUrl;
 
     /**
+    * 以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
+    */
+    @SerializedName("StartCmdBase64")
+    @Expose
+    private String StartCmdBase64;
+
+    /**
      * Get 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
      * @return BatchTaskName 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
@@ -359,7 +366,9 @@ public class CreateBatchTaskRequest extends AbstractModel {
     /**
      * Get 启动命令 
      * @return StartCmd 启动命令
+     * @deprecated
      */
+    @Deprecated
     public String getStartCmd() {
         return this.StartCmd;
     }
@@ -367,7 +376,9 @@ public class CreateBatchTaskRequest extends AbstractModel {
     /**
      * Set 启动命令
      * @param StartCmd 启动命令
+     * @deprecated
      */
+    @Deprecated
     public void setStartCmd(String StartCmd) {
         this.StartCmd = StartCmd;
     }
@@ -468,6 +479,22 @@ public class CreateBatchTaskRequest extends AbstractModel {
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。 
+     * @return StartCmdBase64 以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
+     */
+    public String getStartCmdBase64() {
+        return this.StartCmdBase64;
+    }
+
+    /**
+     * Set 以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
+     * @param StartCmdBase64 以Base64方式编码的启动命令。假设启动命令是/app/run.sh，则此处输入参数应该为L2FwcC9ydW4uc2g=。
+     */
+    public void setStartCmdBase64(String StartCmdBase64) {
+        this.StartCmdBase64 = StartCmdBase64;
+    }
+
     public CreateBatchTaskRequest() {
     }
 
@@ -542,6 +569,9 @@ public class CreateBatchTaskRequest extends AbstractModel {
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.StartCmdBase64 != null) {
+            this.StartCmdBase64 = new String(source.StartCmdBase64);
+        }
     }
 
 
@@ -568,6 +598,7 @@ public class CreateBatchTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "StartCmdBase64", this.StartCmdBase64);
 
     }
 }

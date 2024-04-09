@@ -45,7 +45,7 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     private Long [] PermissionIds;
 
     /**
-    * 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+    * 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
     */
     @SerializedName("NodeId")
     @Expose
@@ -142,16 +142,16 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     }
 
     /**
-     * Get 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取 
-     * @return NodeId 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+     * Get 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取 
+     * @return NodeId 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
-     * @param NodeId 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+     * Set 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * @param NodeId 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;

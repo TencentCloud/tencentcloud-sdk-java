@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteOrganizationMembersPolicyRequest extends AbstractModel {
 
     /**
-    * 访问策略ID。
+    * 访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-     * Get 访问策略ID。 
-     * @return PolicyId 访问策略ID。
+     * Get 访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取 
+     * @return PolicyId 访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 访问策略ID。
-     * @param PolicyId 访问策略ID。
+     * Set 访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
+     * @param PolicyId 访问策略ID。可以通过[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

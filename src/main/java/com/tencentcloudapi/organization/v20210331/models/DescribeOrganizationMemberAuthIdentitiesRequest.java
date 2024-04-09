@@ -45,7 +45,7 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
     private Long MemberUin;
 
     /**
-    * 身份ID。入参MemberUin与IdentityId至少填写一个
+    * 身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
     */
     @SerializedName("IdentityId")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeOrganizationMemberAuthIdentitiesRequest extends AbstractMod
     }
 
     /**
-     * Get 身份ID。入参MemberUin与IdentityId至少填写一个 
-     * @return IdentityId 身份ID。入参MemberUin与IdentityId至少填写一个
+     * Get 身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取 
+     * @return IdentityId 身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set 身份ID。入参MemberUin与IdentityId至少填写一个
-     * @param IdentityId 身份ID。入参MemberUin与IdentityId至少填写一个
+     * Set 身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+     * @param IdentityId 身份ID。入参MemberUin与IdentityId至少填写一个, 可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

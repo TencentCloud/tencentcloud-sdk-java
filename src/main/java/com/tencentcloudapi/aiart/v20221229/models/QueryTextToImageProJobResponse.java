@@ -25,8 +25,7 @@ public class QueryTextToImageProJobResponse extends AbstractModel {
 
     /**
     * 当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
-
+1：等待中、2：运行中、4：处理失败、5：处理完成。
     */
     @SerializedName("JobStatusCode")
     @Expose
@@ -81,11 +80,9 @@ public class QueryTextToImageProJobResponse extends AbstractModel {
 
     /**
      * Get 当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
- 
+1：等待中、2：运行中、4：处理失败、5：处理完成。 
      * @return JobStatusCode 当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
-
+1：等待中、2：运行中、4：处理失败、5：处理完成。
      */
     public String getJobStatusCode() {
         return this.JobStatusCode;
@@ -93,11 +90,9 @@ public class QueryTextToImageProJobResponse extends AbstractModel {
 
     /**
      * Set 当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
-
+1：等待中、2：运行中、4：处理失败、5：处理完成。
      * @param JobStatusCode 当前任务状态码：
-1：排队中、3：处理中、5：处理失败、7：处理完成。
-
+1：等待中、2：运行中、4：处理失败、5：处理完成。
      */
     public void setJobStatusCode(String JobStatusCode) {
         this.JobStatusCode = JobStatusCode;

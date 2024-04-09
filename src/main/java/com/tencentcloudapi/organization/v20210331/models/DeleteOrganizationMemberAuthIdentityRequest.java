@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteOrganizationMemberAuthIdentityRequest extends AbstractModel {
 
     /**
-    * 成员uin。
+    * 成员Uin。
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-    * 身份Id。
+    * 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
     */
     @SerializedName("IdentityId")
     @Expose
     private Long IdentityId;
 
     /**
-     * Get 成员uin。 
-     * @return MemberUin 成员uin。
+     * Get 成员Uin。 
+     * @return MemberUin 成员Uin。
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 成员uin。
-     * @param MemberUin 成员uin。
+     * Set 成员Uin。
+     * @param MemberUin 成员Uin。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 身份Id。 
-     * @return IdentityId 身份Id。
+     * Get 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取 
+     * @return IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set 身份Id。
-     * @param IdentityId 身份Id。
+     * Set 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+     * @param IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

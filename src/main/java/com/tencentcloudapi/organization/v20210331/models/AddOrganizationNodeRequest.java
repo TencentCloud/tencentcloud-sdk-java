@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddOrganizationNodeRequest extends AbstractModel {
 
     /**
-    * 父节点ID。可以调用DescribeOrganizationNodes获取
+    * 父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
     */
     @SerializedName("ParentNodeId")
     @Expose
@@ -45,16 +45,16 @@ public class AddOrganizationNodeRequest extends AbstractModel {
     private String Remark;
 
     /**
-     * Get 父节点ID。可以调用DescribeOrganizationNodes获取 
-     * @return ParentNodeId 父节点ID。可以调用DescribeOrganizationNodes获取
+     * Get 父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取 
+     * @return ParentNodeId 父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public Long getParentNodeId() {
         return this.ParentNodeId;
     }
 
     /**
-     * Set 父节点ID。可以调用DescribeOrganizationNodes获取
-     * @param ParentNodeId 父节点ID。可以调用DescribeOrganizationNodes获取
+     * Set 父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * @param ParentNodeId 父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public void setParentNodeId(Long ParentNodeId) {
         this.ParentNodeId = ParentNodeId;

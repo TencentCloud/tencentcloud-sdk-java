@@ -38,7 +38,7 @@ public class CreateOrganizationMembersPolicyRequest extends AbstractModel {
     private String PolicyName;
 
     /**
-    * 成员访问身份ID。
+    * 成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
     */
     @SerializedName("IdentityId")
     @Expose
@@ -84,16 +84,16 @@ public class CreateOrganizationMembersPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 成员访问身份ID。 
-     * @return IdentityId 成员访问身份ID。
+     * Get 成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取 
+     * @return IdentityId 成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set 成员访问身份ID。
-     * @param IdentityId 成员访问身份ID。
+     * Set 成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+     * @param IdentityId 成员访问身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

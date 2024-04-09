@@ -106,7 +106,6 @@ public class OrganizationClient extends AbstractClient{
 
     /**
      *取消组织成员和组织管理员子账号的授权关系
-
      * @param req CancelOrganizationMemberAuthAccountRequest
      * @return CancelOrganizationMemberAuthAccountResponse
      * @throws TencentCloudSDKException

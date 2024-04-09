@@ -34,8 +34,6 @@ public class Component extends AbstractModel {
 
 - 如传入的关键字<font color="red">"^甲方签署^"</font >，则会在PDF文件中有且仅有"甲方签署"关键字的地方（<font color="red">前后不能有其他字符</font >）进行对应操作。
 - 如传入的关键字为<font color="red">"甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前后可以有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"^甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前面不能有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"甲方签署^</font >"，则PDF文件中每个出现关键字的位置（<font color="red">后面不能有其他字符</font >）都会执行相应操作。
 
 
 注：`控件ID可以在一个PDF中不可重复`
@@ -369,8 +367,6 @@ public class Component extends AbstractModel {
 
 - 如传入的关键字<font color="red">"^甲方签署^"</font >，则会在PDF文件中有且仅有"甲方签署"关键字的地方（<font color="red">前后不能有其他字符</font >）进行对应操作。
 - 如传入的关键字为<font color="red">"甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前后可以有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"^甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前面不能有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"甲方签署^</font >"，则PDF文件中每个出现关键字的位置（<font color="red">后面不能有其他字符</font >）都会执行相应操作。
 
 
 注：`控件ID可以在一个PDF中不可重复`
@@ -386,8 +382,6 @@ public class Component extends AbstractModel {
 
 - 如传入的关键字<font color="red">"^甲方签署^"</font >，则会在PDF文件中有且仅有"甲方签署"关键字的地方（<font color="red">前后不能有其他字符</font >）进行对应操作。
 - 如传入的关键字为<font color="red">"甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前后可以有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"^甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前面不能有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"甲方签署^</font >"，则PDF文件中每个出现关键字的位置（<font color="red">后面不能有其他字符</font >）都会执行相应操作。
 
 
 注：`控件ID可以在一个PDF中不可重复`
@@ -409,8 +403,6 @@ public class Component extends AbstractModel {
 
 - 如传入的关键字<font color="red">"^甲方签署^"</font >，则会在PDF文件中有且仅有"甲方签署"关键字的地方（<font color="red">前后不能有其他字符</font >）进行对应操作。
 - 如传入的关键字为<font color="red">"甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前后可以有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"^甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前面不能有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"甲方签署^</font >"，则PDF文件中每个出现关键字的位置（<font color="red">后面不能有其他字符</font >）都会执行相应操作。
 
 
 注：`控件ID可以在一个PDF中不可重复`
@@ -426,8 +418,6 @@ public class Component extends AbstractModel {
 
 - 如传入的关键字<font color="red">"^甲方签署^"</font >，则会在PDF文件中有且仅有"甲方签署"关键字的地方（<font color="red">前后不能有其他字符</font >）进行对应操作。
 - 如传入的关键字为<font color="red">"甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前后可以有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"^甲方签署</font >"，则PDF文件中每个出现关键字的位置（<font color="red">前面不能有其他字符</font >）都会执行相应操作。
-- 如传入的关键字为<font color="red">"甲方签署^</font >"，则PDF文件中每个出现关键字的位置（<font color="red">后面不能有其他字符</font >）都会执行相应操作。
 
 
 注：`控件ID可以在一个PDF中不可重复`

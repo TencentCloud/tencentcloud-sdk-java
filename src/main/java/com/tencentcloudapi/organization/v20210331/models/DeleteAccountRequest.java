@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAccountRequest extends AbstractModel {
 
     /**
-    * 成员uin。
+    * 成员Uin。
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-     * Get 成员uin。 
-     * @return MemberUin 成员uin。
+     * Get 成员Uin。 
+     * @return MemberUin 成员Uin。
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 成员uin。
-     * @param MemberUin 成员uin。
+     * Set 成员Uin。
+     * @param MemberUin 成员Uin。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;

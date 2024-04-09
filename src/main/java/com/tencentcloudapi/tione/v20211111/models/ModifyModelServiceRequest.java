@@ -194,7 +194,7 @@ HYBRID_PAID:
     private Boolean ModelTurboEnable;
 
     /**
-    * 服务的启动命令
+    * 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
     */
     @SerializedName("Command")
     @Expose
@@ -206,6 +206,13 @@ HYBRID_PAID:
     @SerializedName("ServiceEIP")
     @Expose
     private ServiceEIP ServiceEIP;
+
+    /**
+    * 服务的启动命令，以base64格式进行输入
+    */
+    @SerializedName("CommandBase64")
+    @Expose
+    private String CommandBase64;
 
     /**
      * Get 服务id 
@@ -636,16 +643,16 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 服务的启动命令 
-     * @return Command 服务的启动命令
+     * Get 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数 
+     * @return Command 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 服务的启动命令
-     * @param Command 服务的启动命令
+     * Set 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
+     * @param Command 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
      */
     public void setCommand(String Command) {
         this.Command = Command;
@@ -665,6 +672,22 @@ HYBRID_PAID:
      */
     public void setServiceEIP(ServiceEIP ServiceEIP) {
         this.ServiceEIP = ServiceEIP;
+    }
+
+    /**
+     * Get 服务的启动命令，以base64格式进行输入 
+     * @return CommandBase64 服务的启动命令，以base64格式进行输入
+     */
+    public String getCommandBase64() {
+        return this.CommandBase64;
+    }
+
+    /**
+     * Set 服务的启动命令，以base64格式进行输入
+     * @param CommandBase64 服务的启动命令，以base64格式进行输入
+     */
+    public void setCommandBase64(String CommandBase64) {
+        this.CommandBase64 = CommandBase64;
     }
 
     public ModifyModelServiceRequest() {
@@ -750,6 +773,9 @@ HYBRID_PAID:
         if (source.ServiceEIP != null) {
             this.ServiceEIP = new ServiceEIP(source.ServiceEIP);
         }
+        if (source.CommandBase64 != null) {
+            this.CommandBase64 = new String(source.CommandBase64);
+        }
     }
 
 
@@ -780,6 +806,7 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
+        this.setParamSimple(map, prefix + "CommandBase64", this.CommandBase64);
 
     }
 }

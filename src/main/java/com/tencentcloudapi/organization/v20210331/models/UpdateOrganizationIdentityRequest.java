@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UpdateOrganizationIdentityRequest extends AbstractModel {
 
     /**
-    * 身份ID
+    * 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
     */
     @SerializedName("IdentityId")
     @Expose
     private Long IdentityId;
 
     /**
-    * 身份描述
+    * 身份描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 身份策略
+    * 身份策略。
     */
     @SerializedName("IdentityPolicy")
     @Expose
     private IdentityPolicy [] IdentityPolicy;
 
     /**
-     * Get 身份ID 
-     * @return IdentityId 身份ID
+     * Get 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取 
+     * @return IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set 身份ID
-     * @param IdentityId 身份ID
+     * Set 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+     * @param IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;
     }
 
     /**
-     * Get 身份描述 
-     * @return Description 身份描述
+     * Get 身份描述。 
+     * @return Description 身份描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 身份描述
-     * @param Description 身份描述
+     * Set 身份描述。
+     * @param Description 身份描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 身份策略 
-     * @return IdentityPolicy 身份策略
+     * Get 身份策略。 
+     * @return IdentityPolicy 身份策略。
      */
     public IdentityPolicy [] getIdentityPolicy() {
         return this.IdentityPolicy;
     }
 
     /**
-     * Set 身份策略
-     * @param IdentityPolicy 身份策略
+     * Set 身份策略。
+     * @param IdentityPolicy 身份策略。
      */
     public void setIdentityPolicy(IdentityPolicy [] IdentityPolicy) {
         this.IdentityPolicy = IdentityPolicy;

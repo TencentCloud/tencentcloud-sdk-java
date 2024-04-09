@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateOrganizationMemberAuthIdentityRequest extends AbstractModel {
 
     /**
-    * 成员uin列表。最多10个
+    * 成员Uin列表。最多10个
     */
     @SerializedName("MemberUins")
     @Expose
     private Long [] MemberUins;
 
     /**
-    * 身份Id列表。最多5个
+    * 身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
     */
     @SerializedName("IdentityIds")
     @Expose
     private Long [] IdentityIds;
 
     /**
-     * Get 成员uin列表。最多10个 
-     * @return MemberUins 成员uin列表。最多10个
+     * Get 成员Uin列表。最多10个 
+     * @return MemberUins 成员Uin列表。最多10个
      */
     public Long [] getMemberUins() {
         return this.MemberUins;
     }
 
     /**
-     * Set 成员uin列表。最多10个
-     * @param MemberUins 成员uin列表。最多10个
+     * Set 成员Uin列表。最多10个
+     * @param MemberUins 成员Uin列表。最多10个
      */
     public void setMemberUins(Long [] MemberUins) {
         this.MemberUins = MemberUins;
     }
 
     /**
-     * Get 身份Id列表。最多5个 
-     * @return IdentityIds 身份Id列表。最多5个
+     * Get 身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取 
+     * @return IdentityIds 身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public Long [] getIdentityIds() {
         return this.IdentityIds;
     }
 
     /**
-     * Set 身份Id列表。最多5个
-     * @param IdentityIds 身份Id列表。最多5个
+     * Set 身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+     * @param IdentityIds 身份Id列表。最多5个，可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public void setIdentityIds(Long [] IdentityIds) {
         this.IdentityIds = IdentityIds;

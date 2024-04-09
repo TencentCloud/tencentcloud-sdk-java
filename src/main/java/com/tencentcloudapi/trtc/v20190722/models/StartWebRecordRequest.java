@@ -69,6 +69,13 @@ public class StartWebRecordRequest extends AbstractModel {
     private String RecordId;
 
     /**
+    * 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+    */
+    @SerializedName("PublishCdnParams")
+    @Expose
+    private McuPublishCdnParam [] PublishCdnParams;
+
+    /**
      * Get 需要录制的网页URL
  
      * @return RecordUrl 需要录制的网页URL
@@ -176,6 +183,22 @@ public class StartWebRecordRequest extends AbstractModel {
         this.RecordId = RecordId;
     }
 
+    /**
+     * Get 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1 
+     * @return PublishCdnParams 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+     */
+    public McuPublishCdnParam [] getPublishCdnParams() {
+        return this.PublishCdnParams;
+    }
+
+    /**
+     * Set 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+     * @param PublishCdnParams 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+     */
+    public void setPublishCdnParams(McuPublishCdnParam [] PublishCdnParams) {
+        this.PublishCdnParams = PublishCdnParams;
+    }
+
     public StartWebRecordRequest() {
     }
 
@@ -202,6 +225,12 @@ public class StartWebRecordRequest extends AbstractModel {
         if (source.RecordId != null) {
             this.RecordId = new String(source.RecordId);
         }
+        if (source.PublishCdnParams != null) {
+            this.PublishCdnParams = new McuPublishCdnParam[source.PublishCdnParams.length];
+            for (int i = 0; i < source.PublishCdnParams.length; i++) {
+                this.PublishCdnParams[i] = new McuPublishCdnParam(source.PublishCdnParams[i]);
+            }
+        }
     }
 
 
@@ -215,6 +244,7 @@ public class StartWebRecordRequest extends AbstractModel {
         this.setParamObj(map, prefix + "WebRecordVideoParams.", this.WebRecordVideoParams);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
+        this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
 
     }
 }

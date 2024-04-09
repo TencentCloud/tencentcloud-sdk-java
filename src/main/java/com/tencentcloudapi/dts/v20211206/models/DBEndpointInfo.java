@@ -89,6 +89,14 @@ public class DBEndpointInfo extends AbstractModel {
     private String DatabaseNetEnv;
 
     /**
+    * tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConnectType")
+    @Expose
+    private String ConnectType;
+
+    /**
      * Get 实例所在地域
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 实例所在地域
@@ -252,6 +260,26 @@ public class DBEndpointInfo extends AbstractModel {
         this.DatabaseNetEnv = DatabaseNetEnv;
     }
 
+    /**
+     * Get tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConnectType tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConnectType() {
+        return this.ConnectType;
+    }
+
+    /**
+     * Set tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConnectType tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConnectType(String ConnectType) {
+        this.ConnectType = ConnectType;
+    }
+
     public DBEndpointInfo() {
     }
 
@@ -290,6 +318,9 @@ public class DBEndpointInfo extends AbstractModel {
         if (source.DatabaseNetEnv != null) {
             this.DatabaseNetEnv = new String(source.DatabaseNetEnv);
         }
+        if (source.ConnectType != null) {
+            this.ConnectType = new String(source.ConnectType);
+        }
     }
 
 
@@ -305,6 +336,7 @@ public class DBEndpointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Supplier", this.Supplier);
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
         this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
+        this.setParamSimple(map, prefix + "ConnectType", this.ConnectType);
 
     }
 }

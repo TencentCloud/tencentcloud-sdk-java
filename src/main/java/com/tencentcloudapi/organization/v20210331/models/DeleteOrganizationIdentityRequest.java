@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteOrganizationIdentityRequest extends AbstractModel {
 
     /**
-    * 身份ID
+    * 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
     */
     @SerializedName("IdentityId")
     @Expose
     private Long IdentityId;
 
     /**
-     * Get 身份ID 
-     * @return IdentityId 身份ID
+     * Get 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取 
+     * @return IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set 身份ID
-     * @param IdentityId 身份ID
+     * Set 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
+     * @param IdentityId 身份ID。可以通过[ListOrganizationIdentity](https://cloud.tencent.com/document/product/850/82934)获取
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

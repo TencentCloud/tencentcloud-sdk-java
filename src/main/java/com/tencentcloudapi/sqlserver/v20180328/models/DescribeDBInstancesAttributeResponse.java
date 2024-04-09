@@ -101,6 +101,13 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     private DrReadableInfo DrReadableInfo;
 
     /**
+    * 等待回收的IP列表
+    */
+    @SerializedName("OldVipList")
+    @Expose
+    private OldVip [] OldVipList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -284,6 +291,22 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     }
 
     /**
+     * Get 等待回收的IP列表 
+     * @return OldVipList 等待回收的IP列表
+     */
+    public OldVip [] getOldVipList() {
+        return this.OldVipList;
+    }
+
+    /**
+     * Set 等待回收的IP列表
+     * @param OldVipList 等待回收的IP列表
+     */
+    public void setOldVipList(OldVip [] OldVipList) {
+        this.OldVipList = OldVipList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -340,6 +363,12 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         if (source.DrReadableInfo != null) {
             this.DrReadableInfo = new DrReadableInfo(source.DrReadableInfo);
         }
+        if (source.OldVipList != null) {
+            this.OldVipList = new OldVip[source.OldVipList.length];
+            for (int i = 0; i < source.OldVipList.length; i++) {
+                this.OldVipList[i] = new OldVip(source.OldVipList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -361,6 +390,7 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         this.setParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
         this.setParamObj(map, prefix + "SSLConfig.", this.SSLConfig);
         this.setParamObj(map, prefix + "DrReadableInfo.", this.DrReadableInfo);
+        this.setParamArrayObj(map, prefix + "OldVipList.", this.OldVipList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

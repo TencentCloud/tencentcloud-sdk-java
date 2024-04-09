@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
 
     /**
-    * 绑定ID
+    * 绑定ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindId")
@@ -32,7 +32,7 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private Long BindId;
 
     /**
-    * 申请时间
+    * 申请时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyTime")
@@ -40,7 +40,7 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private String ApplyTime;
 
     /**
-    * 邮箱地址
+    * 邮箱地址。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
@@ -48,7 +48,7 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private String Email;
 
     /**
-    * 手机号
+    * 安全手机号。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phone")
@@ -56,7 +56,7 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private String Phone;
 
     /**
-    * 绑定状态    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+    * 绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindStatus")
@@ -64,7 +64,7 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private String BindStatus;
 
     /**
-    * 绑定时间
+    * 绑定时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindTime")
@@ -72,7 +72,7 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private String BindTime;
 
     /**
-    * 失败说明
+    * 失败说明。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -80,7 +80,7 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private String Description;
 
     /**
-    * 安全手机绑定状态  未绑定：0，已绑定：1
+    * 安全手机绑定状态 。 未绑定：0，已绑定：1
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhoneBind")
@@ -88,7 +88,7 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private Long PhoneBind;
 
     /**
-    * 国际区号
+    * 国际区号。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CountryCode")
@@ -103,9 +103,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 绑定ID
+     * Get 绑定ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BindId 绑定ID
+     * @return BindId 绑定ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBindId() {
@@ -113,9 +113,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 绑定ID
+     * Set 绑定ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BindId 绑定ID
+     * @param BindId 绑定ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindId(Long BindId) {
@@ -123,9 +123,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Get 申请时间
+     * Get 申请时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplyTime 申请时间
+     * @return ApplyTime 申请时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplyTime() {
@@ -133,9 +133,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 申请时间
+     * Set 申请时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplyTime 申请时间
+     * @param ApplyTime 申请时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyTime(String ApplyTime) {
@@ -143,9 +143,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Get 邮箱地址
+     * Get 邮箱地址。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Email 邮箱地址
+     * @return Email 邮箱地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
@@ -153,9 +153,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 邮箱地址
+     * Set 邮箱地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Email 邮箱地址
+     * @param Email 邮箱地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
@@ -163,9 +163,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Get 手机号
+     * Get 安全手机号。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Phone 手机号
+     * @return Phone 安全手机号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhone() {
@@ -173,9 +173,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 手机号
+     * Set 安全手机号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Phone 手机号
+     * @param Phone 安全手机号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhone(String Phone) {
@@ -183,9 +183,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Get 绑定状态    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+     * Get 绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BindStatus 绑定状态    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+     * @return BindStatus 绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBindStatus() {
@@ -193,9 +193,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 绑定状态    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+     * Set 绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BindStatus 绑定状态    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+     * @param BindStatus 绑定状态。    未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindStatus(String BindStatus) {
@@ -203,9 +203,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Get 绑定时间
+     * Get 绑定时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BindTime 绑定时间
+     * @return BindTime 绑定时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBindTime() {
@@ -213,9 +213,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 绑定时间
+     * Set 绑定时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BindTime 绑定时间
+     * @param BindTime 绑定时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindTime(String BindTime) {
@@ -223,9 +223,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Get 失败说明
+     * Get 失败说明。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 失败说明
+     * @return Description 失败说明。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -233,9 +233,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 失败说明
+     * Set 失败说明。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 失败说明
+     * @param Description 失败说明。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -243,9 +243,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Get 安全手机绑定状态  未绑定：0，已绑定：1
+     * Get 安全手机绑定状态 。 未绑定：0，已绑定：1
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhoneBind 安全手机绑定状态  未绑定：0，已绑定：1
+     * @return PhoneBind 安全手机绑定状态 。 未绑定：0，已绑定：1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPhoneBind() {
@@ -253,9 +253,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 安全手机绑定状态  未绑定：0，已绑定：1
+     * Set 安全手机绑定状态 。 未绑定：0，已绑定：1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhoneBind 安全手机绑定状态  未绑定：0，已绑定：1
+     * @param PhoneBind 安全手机绑定状态 。 未绑定：0，已绑定：1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhoneBind(Long PhoneBind) {
@@ -263,9 +263,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Get 国际区号
+     * Get 国际区号。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CountryCode 国际区号
+     * @return CountryCode 国际区号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCountryCode() {
@@ -273,9 +273,9 @@ public class DescribeOrganizationMemberEmailBindResponse extends AbstractModel {
     }
 
     /**
-     * Set 国际区号
+     * Set 国际区号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CountryCode 国际区号
+     * @param CountryCode 国际区号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountryCode(String CountryCode) {

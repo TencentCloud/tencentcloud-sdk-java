@@ -32,6 +32,8 @@ public class CheckPhoneAndNameResponse extends AbstractModel {
 -1:查无记录
 -2:引擎未知错误
 -3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法
     */
     @SerializedName("Result")
     @Expose
@@ -59,7 +61,9 @@ public class CheckPhoneAndNameResponse extends AbstractModel {
 不收费结果码：
 -1:查无记录
 -2:引擎未知错误
--3:引擎服务异常 
+-3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法 
      * @return Result 认证结果码，收费情况如下。
 收费结果码：
 0: 验证结果一致
@@ -68,6 +72,8 @@ public class CheckPhoneAndNameResponse extends AbstractModel {
 -1:查无记录
 -2:引擎未知错误
 -3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法
      */
     public String getResult() {
         return this.Result;
@@ -82,6 +88,8 @@ public class CheckPhoneAndNameResponse extends AbstractModel {
 -1:查无记录
 -2:引擎未知错误
 -3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法
      * @param Result 认证结果码，收费情况如下。
 收费结果码：
 0: 验证结果一致
@@ -90,6 +98,8 @@ public class CheckPhoneAndNameResponse extends AbstractModel {
 -1:查无记录
 -2:引擎未知错误
 -3:引擎服务异常
+-4:姓名校验不通过
+-5:手机号码不合法
      */
     public void setResult(String Result) {
         this.Result = Result;

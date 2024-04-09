@@ -59,7 +59,7 @@ public class DescribeShareUnitResourcesRequest extends AbstractModel {
     private String SearchKey;
 
     /**
-    * 共享资源类型。
+    * 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
     */
     @SerializedName("Type")
     @Expose
@@ -146,16 +146,16 @@ public class DescribeShareUnitResourcesRequest extends AbstractModel {
     }
 
     /**
-     * Get 共享资源类型。 
-     * @return Type 共享资源类型。
+     * Get 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489) 
+     * @return Type 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 共享资源类型。
-     * @param Type 共享资源类型。
+     * Set 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
+     * @param Type 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      */
     public void setType(String Type) {
         this.Type = Type;

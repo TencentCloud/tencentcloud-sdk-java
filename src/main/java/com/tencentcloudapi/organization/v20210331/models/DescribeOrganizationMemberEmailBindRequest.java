@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeOrganizationMemberEmailBindRequest extends AbstractModel {
 
     /**
-    * 成员Uin
+    * 成员Uin。
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-     * Get 成员Uin 
-     * @return MemberUin 成员Uin
+     * Get 成员Uin。 
+     * @return MemberUin 成员Uin。
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 成员Uin
-     * @param MemberUin 成员Uin
+     * Set 成员Uin。
+     * @param MemberUin 成员Uin。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;

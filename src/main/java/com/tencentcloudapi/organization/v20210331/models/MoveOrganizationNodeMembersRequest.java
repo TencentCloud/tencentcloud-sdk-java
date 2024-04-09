@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MoveOrganizationNodeMembersRequest extends AbstractModel {
 
     /**
-    * 组织节点ID。
+    * 组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
     */
     @SerializedName("NodeId")
     @Expose
     private Long NodeId;
 
     /**
-    * 成员UIN列表。
+    * 成员Uin列表。
     */
     @SerializedName("MemberUin")
     @Expose
     private Long [] MemberUin;
 
     /**
-     * Get 组织节点ID。 
-     * @return NodeId 组织节点ID。
+     * Get 组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取 
+     * @return NodeId 组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 组织节点ID。
-     * @param NodeId 组织节点ID。
+     * Set 组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * @param NodeId 组织节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 成员UIN列表。 
-     * @return MemberUin 成员UIN列表。
+     * Get 成员Uin列表。 
+     * @return MemberUin 成员Uin列表。
      */
     public Long [] getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 成员UIN列表。
-     * @param MemberUin 成员UIN列表。
+     * Set 成员Uin列表。
+     * @param MemberUin 成员Uin列表。
      */
     public void setMemberUin(Long [] MemberUin) {
         this.MemberUin = MemberUin;

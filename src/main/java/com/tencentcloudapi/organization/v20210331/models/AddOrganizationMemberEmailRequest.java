@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AddOrganizationMemberEmailRequest extends AbstractModel {
 
     /**
-    * 成员Uin
+    * 成员Uin。
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-    * 邮箱地址
+    * 邮箱地址。
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-    * 国际区号
+    * 国际区号。
     */
     @SerializedName("CountryCode")
     @Expose
     private String CountryCode;
 
     /**
-    * 手机号
+    * 手机号。
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-     * Get 成员Uin 
-     * @return MemberUin 成员Uin
+     * Get 成员Uin。 
+     * @return MemberUin 成员Uin。
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set 成员Uin
-     * @param MemberUin 成员Uin
+     * Set 成员Uin。
+     * @param MemberUin 成员Uin。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 邮箱地址 
-     * @return Email 邮箱地址
+     * Get 邮箱地址。 
+     * @return Email 邮箱地址。
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set 邮箱地址
-     * @param Email 邮箱地址
+     * Set 邮箱地址。
+     * @param Email 邮箱地址。
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get 国际区号 
-     * @return CountryCode 国际区号
+     * Get 国际区号。 
+     * @return CountryCode 国际区号。
      */
     public String getCountryCode() {
         return this.CountryCode;
     }
 
     /**
-     * Set 国际区号
-     * @param CountryCode 国际区号
+     * Set 国际区号。
+     * @param CountryCode 国际区号。
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
     }
 
     /**
-     * Get 手机号 
-     * @return Phone 手机号
+     * Get 手机号。 
+     * @return Phone 手机号。
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 手机号
-     * @param Phone 手机号
+     * Set 手机号。
+     * @param Phone 手机号。
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;

@@ -31,7 +31,7 @@ public class DescribeOrganizationNodesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 偏移量。
+    * 偏移量。取值是limit的整数倍。默认值 : 0。
     */
     @SerializedName("Offset")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeOrganizationNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get 偏移量。取值是limit的整数倍。默认值 : 0。 
+     * @return Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @param Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

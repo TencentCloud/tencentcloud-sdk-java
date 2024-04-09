@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateOrganizationNodeRequest extends AbstractModel {
 
     /**
-    * 节点ID。
+    * 节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
     */
     @SerializedName("NodeId")
     @Expose
@@ -45,16 +45,16 @@ public class UpdateOrganizationNodeRequest extends AbstractModel {
     private String Remark;
 
     /**
-     * Get 节点ID。 
-     * @return NodeId 节点ID。
+     * Get 节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取 
+     * @return NodeId 节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 节点ID。
-     * @param NodeId 节点ID。
+     * Set 节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * @param NodeId 节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeShareUnitsRequest extends AbstractModel {
 
     /**
-    * 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+    * 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
     */
     @SerializedName("Area")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeShareUnitsRequest extends AbstractModel {
     private String SearchKey;
 
     /**
-     * Get 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。 
-     * @return Area 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+     * Get 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。 
+     * @return Area 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
-     * @param Area 共享单元地域。可通过接口DescribeShareAreas获取支持共享的地域。
+     * Set 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
+     * @param Area 共享单元地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      */
     public void setArea(String Area) {
         this.Area = Area;

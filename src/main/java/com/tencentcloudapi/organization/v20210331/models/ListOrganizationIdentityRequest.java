@@ -45,7 +45,7 @@ public class ListOrganizationIdentityRequest extends AbstractModel {
     private String SearchKey;
 
     /**
-    * 身份ID搜索。
+    * 身份ID。可以通过身份ID搜索
     */
     @SerializedName("IdentityId")
     @Expose
@@ -107,16 +107,16 @@ public class ListOrganizationIdentityRequest extends AbstractModel {
     }
 
     /**
-     * Get 身份ID搜索。 
-     * @return IdentityId 身份ID搜索。
+     * Get 身份ID。可以通过身份ID搜索 
+     * @return IdentityId 身份ID。可以通过身份ID搜索
      */
     public Long getIdentityId() {
         return this.IdentityId;
     }
 
     /**
-     * Set 身份ID搜索。
-     * @param IdentityId 身份ID搜索。
+     * Set 身份ID。可以通过身份ID搜索
+     * @param IdentityId 身份ID。可以通过身份ID搜索
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

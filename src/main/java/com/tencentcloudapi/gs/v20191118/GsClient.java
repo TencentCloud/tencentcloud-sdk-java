@@ -83,6 +83,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *开始云端推流
+     * @param req StartPublishStreamToCSSRequest
+     * @return StartPublishStreamToCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartPublishStreamToCSSResponse StartPublishStreamToCSS(StartPublishStreamToCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartPublishStreamToCSS", StartPublishStreamToCSSResponse.class);
+    }
+
+    /**
      *强制退出游戏
      * @param req StopGameRequest
      * @return StopGameResponse

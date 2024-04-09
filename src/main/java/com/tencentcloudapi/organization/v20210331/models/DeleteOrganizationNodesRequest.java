@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteOrganizationNodesRequest extends AbstractModel {
 
     /**
-    * 节点ID列表。
+    * 节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
     */
     @SerializedName("NodeId")
     @Expose
     private Long [] NodeId;
 
     /**
-     * Get 节点ID列表。 
-     * @return NodeId 节点ID列表。
+     * Get 节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取 
+     * @return NodeId 节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public Long [] getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 节点ID列表。
-     * @param NodeId 节点ID列表。
+     * Set 节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * @param NodeId 节点ID列表。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      */
     public void setNodeId(Long [] NodeId) {
         this.NodeId = NodeId;

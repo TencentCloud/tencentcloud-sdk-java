@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeOrganizationAuthNodeRequest extends AbstractModel {
 
     /**
-    * 偏移量。
+    * 偏移量。取值是limit的整数倍。默认值 : 0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数目。最大50
+    * 限制数目。取值范围：1~50。默认值：10。
     */
     @SerializedName("Limit")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeOrganizationAuthNodeRequest extends AbstractModel {
     private String AuthName;
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get 偏移量。取值是limit的整数倍。默认值 : 0。 
+     * @return Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @param Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数目。最大50 
-     * @return Limit 限制数目。最大50
+     * Get 限制数目。取值范围：1~50。默认值：10。 
+     * @return Limit 限制数目。取值范围：1~50。默认值：10。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目。最大50
-     * @param Limit 限制数目。最大50
+     * Set 限制数目。取值范围：1~50。默认值：10。
+     * @param Limit 限制数目。取值范围：1~50。默认值：10。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -117,7 +117,6 @@ public class FaceidClient extends AbstractClient{
 
     /**
      *手机号二要素核验接口用于校验手机号和姓名的真实性和一致性，支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
-
      * @param req CheckPhoneAndNameRequest
      * @return CheckPhoneAndNameResponse
      * @throws TencentCloudSDKException

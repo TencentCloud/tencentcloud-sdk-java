@@ -80,6 +80,13 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     private String ExpectRunTime;
 
     /**
+    * 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+    */
+    @SerializedName("SrcConnectType")
+    @Expose
+    private String SrcConnectType;
+
+    /**
     * 源端信息，单节点数据库使用，且SrcNodeType传single
     */
     @SerializedName("SrcInfo")
@@ -264,6 +271,22 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     }
 
     /**
+     * Get 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。 
+     * @return SrcConnectType 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+     */
+    public String getSrcConnectType() {
+        return this.SrcConnectType;
+    }
+
+    /**
+     * Set 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+     * @param SrcConnectType 源端tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，SrcInfos中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+     */
+    public void setSrcConnectType(String SrcConnectType) {
+        this.SrcConnectType = SrcConnectType;
+    }
+
+    /**
      * Get 源端信息，单节点数据库使用，且SrcNodeType传single 
      * @return SrcInfo 源端信息，单节点数据库使用，且SrcNodeType传single
      */
@@ -423,6 +446,9 @@ public class ConfigureSyncJobRequest extends AbstractModel {
         if (source.ExpectRunTime != null) {
             this.ExpectRunTime = new String(source.ExpectRunTime);
         }
+        if (source.SrcConnectType != null) {
+            this.SrcConnectType = new String(source.SrcConnectType);
+        }
         if (source.SrcInfo != null) {
             this.SrcInfo = new Endpoint(source.SrcInfo);
         }
@@ -462,6 +488,7 @@ public class ConfigureSyncJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "JobMode", this.JobMode);
         this.setParamSimple(map, prefix + "RunMode", this.RunMode);
         this.setParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
+        this.setParamSimple(map, prefix + "SrcConnectType", this.SrcConnectType);
         this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
         this.setParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
         this.setParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);

@@ -31,7 +31,7 @@ public class BindOrganizationMemberAuthAccountRequest extends AbstractModel {
     private Long MemberUin;
 
     /**
-    * 策略ID。可以调用DescribeOrganizationMemberPolicies获取
+    * 策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
     */
     @SerializedName("PolicyId")
     @Expose
@@ -61,16 +61,16 @@ public class BindOrganizationMemberAuthAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get 策略ID。可以调用DescribeOrganizationMemberPolicies获取 
-     * @return PolicyId 策略ID。可以调用DescribeOrganizationMemberPolicies获取
+     * Get 策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取 
+     * @return PolicyId 策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略ID。可以调用DescribeOrganizationMemberPolicies获取
-     * @param PolicyId 策略ID。可以调用DescribeOrganizationMemberPolicies获取
+     * Set 策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
+     * @param PolicyId 策略ID。可以调用[DescribeOrganizationMemberPolicies](https://cloud.tencent.com/document/product/850/82935)获取
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
