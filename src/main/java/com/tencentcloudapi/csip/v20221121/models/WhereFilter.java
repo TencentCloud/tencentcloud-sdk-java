@@ -25,6 +25,7 @@ public class WhereFilter extends AbstractModel {
 
     /**
     * 过滤的项
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,6 +33,7 @@ public class WhereFilter extends AbstractModel {
 
     /**
     * 过滤的值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
@@ -42,14 +44,17 @@ public class WhereFilter extends AbstractModel {
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
 
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorType")
     @Expose
     private Long OperatorType;
 
     /**
-     * Get 过滤的项 
+     * Get 过滤的项
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 过滤的项
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -57,15 +62,19 @@ public class WhereFilter extends AbstractModel {
 
     /**
      * Set 过滤的项
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 过滤的项
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 过滤的值 
+     * Get 过滤的值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Values 过滤的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -73,7 +82,9 @@ public class WhereFilter extends AbstractModel {
 
     /**
      * Set 过滤的值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 过滤的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
@@ -83,11 +94,13 @@ public class WhereFilter extends AbstractModel {
      * Get 中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
- 
+
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OperatorType 中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperatorType() {
         return this.OperatorType;
@@ -98,10 +111,12 @@ public class WhereFilter extends AbstractModel {
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
 
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorType 中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
 精确匹配填 7 模糊匹配填9 
 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorType(Long OperatorType) {
         this.OperatorType = OperatorType;

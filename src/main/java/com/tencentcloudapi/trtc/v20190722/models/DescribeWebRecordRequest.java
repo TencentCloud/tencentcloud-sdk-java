@@ -31,6 +31,20 @@ public class DescribeWebRecordRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    * 发起页面录制时传递的SdkAppId
+    */
+    @SerializedName("SdkAppId")
+    @Expose
+    private Long SdkAppId;
+
+    /**
+    * 发起录制时传递的RecordId, 传入此值时需要传递SdkAppId
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private String RecordId;
+
+    /**
      * Get 开始页面录制时返回的任务id 
      * @return TaskId 开始页面录制时返回的任务id
      */
@@ -46,6 +60,38 @@ public class DescribeWebRecordRequest extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 发起页面录制时传递的SdkAppId 
+     * @return SdkAppId 发起页面录制时传递的SdkAppId
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set 发起页面录制时传递的SdkAppId
+     * @param SdkAppId 发起页面录制时传递的SdkAppId
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 发起录制时传递的RecordId, 传入此值时需要传递SdkAppId 
+     * @return RecordId 发起录制时传递的RecordId, 传入此值时需要传递SdkAppId
+     */
+    public String getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set 发起录制时传递的RecordId, 传入此值时需要传递SdkAppId
+     * @param RecordId 发起录制时传递的RecordId, 传入此值时需要传递SdkAppId
+     */
+    public void setRecordId(String RecordId) {
+        this.RecordId = RecordId;
+    }
+
     public DescribeWebRecordRequest() {
     }
 
@@ -57,6 +103,12 @@ public class DescribeWebRecordRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeWebRecordRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
 
     }
 }

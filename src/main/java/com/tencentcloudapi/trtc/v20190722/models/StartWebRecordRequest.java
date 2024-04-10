@@ -32,7 +32,7 @@ public class StartWebRecordRequest extends AbstractModel {
     private String RecordUrl;
 
     /**
-    * 录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+    * 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
     */
     @SerializedName("MaxDurationLimit")
@@ -96,9 +96,9 @@ public class StartWebRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+     * Get 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
  
-     * @return MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+     * @return MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
      */
     public Long getMaxDurationLimit() {
@@ -106,9 +106,9 @@ public class StartWebRecordRequest extends AbstractModel {
     }
 
     /**
-     * Set 录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+     * Set 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
-     * @param MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[0, 36000], 默认 36000s(10 小时)
+     * @param MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
 
      */
     public void setMaxDurationLimit(Long MaxDurationLimit) {

@@ -233,6 +233,22 @@ public class DescribeDeviceData extends AbstractModel {
     private String Manufacturer;
 
     /**
+    * 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioSwitch")
+    @Expose
+    private Long AudioSwitch;
+
+    /**
+    * 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubscribeSwitch")
+    @Expose
+    private Long SubscribeSwitch;
+
+    /**
      * Get 设备ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备ID
@@ -756,6 +772,46 @@ public class DescribeDeviceData extends AbstractModel {
         this.Manufacturer = Manufacturer;
     }
 
+    /**
+     * Get 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioSwitch 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAudioSwitch() {
+        return this.AudioSwitch;
+    }
+
+    /**
+     * Set 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioSwitch 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioSwitch(Long AudioSwitch) {
+        this.AudioSwitch = AudioSwitch;
+    }
+
+    /**
+     * Get 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubscribeSwitch() {
+        return this.SubscribeSwitch;
+    }
+
+    /**
+     * Set 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscribeSwitch(Long SubscribeSwitch) {
+        this.SubscribeSwitch = SubscribeSwitch;
+    }
+
     public DescribeDeviceData() {
     }
 
@@ -842,6 +898,12 @@ public class DescribeDeviceData extends AbstractModel {
         if (source.Manufacturer != null) {
             this.Manufacturer = new String(source.Manufacturer);
         }
+        if (source.AudioSwitch != null) {
+            this.AudioSwitch = new Long(source.AudioSwitch);
+        }
+        if (source.SubscribeSwitch != null) {
+            this.SubscribeSwitch = new Long(source.SubscribeSwitch);
+        }
     }
 
 
@@ -875,6 +937,8 @@ public class DescribeDeviceData extends AbstractModel {
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
+        this.setParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
+        this.setParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
 
     }
 }

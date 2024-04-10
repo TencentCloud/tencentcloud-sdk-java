@@ -87,6 +87,20 @@ public class UpdateUserDeviceRequest extends AbstractModel {
     private Long ProtocolType;
 
     /**
+    * 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+    */
+    @SerializedName("AudioSwitch")
+    @Expose
+    private Long AudioSwitch;
+
+    /**
+    * 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+    */
+    @SerializedName("SubscribeSwitch")
+    @Expose
+    private Long SubscribeSwitch;
+
+    /**
      * Get 设备ID（从获取设备列表接口ListDevices中获取） 
      * @return DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
      */
@@ -230,6 +244,38 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.ProtocolType = ProtocolType;
     }
 
+    /**
+     * Get 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频 
+     * @return AudioSwitch 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+     */
+    public Long getAudioSwitch() {
+        return this.AudioSwitch;
+    }
+
+    /**
+     * Set 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+     * @param AudioSwitch 音频关开（0：关闭；1：开启）默认开启，关闭时丢弃音频
+     */
+    public void setAudioSwitch(Long AudioSwitch) {
+        this.AudioSwitch = AudioSwitch;
+    }
+
+    /**
+     * Get 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效 
+     * @return SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+     */
+    public Long getSubscribeSwitch() {
+        return this.SubscribeSwitch;
+    }
+
+    /**
+     * Set 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+     * @param SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效
+     */
+    public void setSubscribeSwitch(Long SubscribeSwitch) {
+        this.SubscribeSwitch = SubscribeSwitch;
+    }
+
     public UpdateUserDeviceRequest() {
     }
 
@@ -265,6 +311,12 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         if (source.ProtocolType != null) {
             this.ProtocolType = new Long(source.ProtocolType);
         }
+        if (source.AudioSwitch != null) {
+            this.AudioSwitch = new Long(source.AudioSwitch);
+        }
+        if (source.SubscribeSwitch != null) {
+            this.SubscribeSwitch = new Long(source.SubscribeSwitch);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+        this.setParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
+        this.setParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
 
     }
 }

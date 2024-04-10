@@ -1506,17 +1506,6 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *发送自定义消息告警
-     * @param req SendCustomAlarmMsgRequest
-     * @return SendCustomAlarmMsgResponse
-     * @throws TencentCloudSDKException
-     */
-    public SendCustomAlarmMsgResponse SendCustomAlarmMsg(SendCustomAlarmMsgRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SendCustomAlarmMsg", SendCustomAlarmMsgResponse.class);
-    }
-
-    /**
      *设置一个策略为该告警策略类型、该项目的默认告警策略。
 同一项目下相同的告警策略类型，就会被设置为非默认。
      * @param req SetDefaultAlarmPolicyRequest

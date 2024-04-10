@@ -81,7 +81,7 @@ public class TransmitOralProcessRequest extends AbstractModel {
     private String SoeAppId;
 
     /**
-    * 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+    * 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口和TransmitOralProcess接口的IsLongLifeSession均为1时，才可生效。
     */
     @SerializedName("IsLongLifeSession")
     @Expose
@@ -239,16 +239,16 @@ public class TransmitOralProcessRequest extends AbstractModel {
     }
 
     /**
-     * Get 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。 
-     * @return IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+     * Get 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口和TransmitOralProcess接口的IsLongLifeSession均为1时，才可生效。 
+     * @return IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口和TransmitOralProcess接口的IsLongLifeSession均为1时，才可生效。
      */
     public Long getIsLongLifeSession() {
         return this.IsLongLifeSession;
     }
 
     /**
-     * Set 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
-     * @param IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+     * Set 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口和TransmitOralProcess接口的IsLongLifeSession均为1时，才可生效。
+     * @param IsLongLifeSession 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口和TransmitOralProcess接口的IsLongLifeSession均为1时，才可生效。
      */
     public void setIsLongLifeSession(Long IsLongLifeSession) {
         this.IsLongLifeSession = IsLongLifeSession;
