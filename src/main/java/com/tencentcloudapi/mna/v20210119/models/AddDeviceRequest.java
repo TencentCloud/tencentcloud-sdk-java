@@ -63,6 +63,30 @@ public class AddDeviceRequest extends AbstractModel {
     private Long AccessScope;
 
     /**
+    * license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权
+    */
+    @SerializedName("LicensePayMode")
+    @Expose
+    private Long LicensePayMode;
+
+    /**
+    * 设备分组名称，非必选，预留参数，需要分组时传入GroupId
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
+    * 设备分组ID，非必选，如果不填写则默认设备无分组
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 新建设备的名称 
      * @return DeviceName 新建设备的名称
      */
@@ -158,6 +182,66 @@ public class AddDeviceRequest extends AbstractModel {
         this.AccessScope = AccessScope;
     }
 
+    /**
+     * Get license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权 
+     * @return LicensePayMode license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权
+     */
+    public Long getLicensePayMode() {
+        return this.LicensePayMode;
+    }
+
+    /**
+     * Set license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权
+     * @param LicensePayMode license付费方式： 
+0，月度授权 
+1，永久授权 
+若不传则默认为月度授权
+     */
+    public void setLicensePayMode(Long LicensePayMode) {
+        this.LicensePayMode = LicensePayMode;
+    }
+
+    /**
+     * Get 设备分组名称，非必选，预留参数，需要分组时传入GroupId 
+     * @return GroupName 设备分组名称，非必选，预留参数，需要分组时传入GroupId
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set 设备分组名称，非必选，预留参数，需要分组时传入GroupId
+     * @param GroupName 设备分组名称，非必选，预留参数，需要分组时传入GroupId
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
+     * Get 设备分组ID，非必选，如果不填写则默认设备无分组 
+     * @return GroupId 设备分组ID，非必选，如果不填写则默认设备无分组
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 设备分组ID，非必选，如果不填写则默认设备无分组
+     * @param GroupId 设备分组ID，非必选，如果不填写则默认设备无分组
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public AddDeviceRequest() {
     }
 
@@ -181,6 +265,15 @@ public class AddDeviceRequest extends AbstractModel {
         if (source.AccessScope != null) {
             this.AccessScope = new Long(source.AccessScope);
         }
+        if (source.LicensePayMode != null) {
+            this.LicensePayMode = new Long(source.LicensePayMode);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -193,6 +286,9 @@ public class AddDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataKey", this.DataKey);
         this.setParamSimple(map, prefix + "Encrypted", this.Encrypted);
         this.setParamSimple(map, prefix + "AccessScope", this.AccessScope);
+        this.setParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

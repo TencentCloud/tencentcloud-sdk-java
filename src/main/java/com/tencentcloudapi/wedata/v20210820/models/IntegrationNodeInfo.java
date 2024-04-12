@@ -46,14 +46,14 @@ public class IntegrationNodeInfo extends AbstractModel {
     private String Name;
 
     /**
-    * 集成节点类型
+    * 集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 节点数据源类型
+    * 节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
     */
     @SerializedName("DataSourceType")
     @Expose
@@ -108,7 +108,7 @@ public class IntegrationNodeInfo extends AbstractModel {
     private IntegrationNodeMapping NodeMapping;
 
     /**
-    * 应用id
+    * 归属用户AppId,展示字段 非传入
     */
     @SerializedName("AppId")
     @Expose
@@ -122,7 +122,7 @@ public class IntegrationNodeInfo extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 创建人uin
+    * 创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorUin")
@@ -130,7 +130,7 @@ public class IntegrationNodeInfo extends AbstractModel {
     private String CreatorUin;
 
     /**
-    * 操作人uin
+    * 操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorUin")
@@ -138,7 +138,7 @@ public class IntegrationNodeInfo extends AbstractModel {
     private String OperatorUin;
 
     /**
-    * owner uin
+    * owner uin 展示字段 非传入
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -213,32 +213,32 @@ public class IntegrationNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 集成节点类型 
-     * @return NodeType 集成节点类型
+     * Get 集成节点类型,INPUT: 输入节点，OUTPUT:输出节点  
+     * @return NodeType 集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 集成节点类型
-     * @param NodeType 集成节点类型
+     * Set 集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
+     * @param NodeType 集成节点类型,INPUT: 输入节点，OUTPUT:输出节点 
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 节点数据源类型 
-     * @return DataSourceType 节点数据源类型
+     * Get 节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE 
+     * @return DataSourceType 节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
      */
     public String getDataSourceType() {
         return this.DataSourceType;
     }
 
     /**
-     * Set 节点数据源类型
-     * @param DataSourceType 节点数据源类型
+     * Set 节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
+     * @param DataSourceType 节点数据源类型：MYSQL|POSTGRE|ORACLE|SQLSERVER|FTP|HIVE|HDFS|ICEBERG|KAFKA|HBASE|SPARK|VIRTUAL|TBASE|DB2|DM|GAUSSDB|GBASE|IMPALA|ES|S3_DATAINSIGHT|GREENPLUM|PHOENIX|SAP_HANA|SFTP|OCEANBASE|CLICKHOUSE|KUDU|VERTICA|REDIS|COS|DLC|DLCV1|DORIS|CKAFKA|DTS_KAFKA|S3|CDW|LOCAL|TDSQLC|TDSQL|TDSQL_MYSQL|MONGODB|INFORMIX|SYBASE|REST_API|SuperSQL|PRESTO|DR_SUM|TiDB|StarRocks|Trino|Kyuubi|GDB|TCHOUSE_X|TCHOUSE_P|TDSQL_POSTGRE
      */
     public void setDataSourceType(String DataSourceType) {
         this.DataSourceType = DataSourceType;
@@ -365,16 +365,16 @@ public class IntegrationNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用id 
-     * @return AppId 应用id
+     * Get 归属用户AppId,展示字段 非传入 
+     * @return AppId 归属用户AppId,展示字段 非传入
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 应用id
-     * @param AppId 应用id
+     * Set 归属用户AppId,展示字段 非传入
+     * @param AppId 归属用户AppId,展示字段 非传入
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
@@ -397,9 +397,9 @@ public class IntegrationNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建人uin
+     * Get 创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorUin 创建人uin
+     * @return CreatorUin 创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorUin() {
@@ -407,9 +407,9 @@ public class IntegrationNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建人uin
+     * Set 创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorUin 创建人uin
+     * @param CreatorUin 创建人uin,展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorUin(String CreatorUin) {
@@ -417,9 +417,9 @@ public class IntegrationNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 操作人uin
+     * Get 操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorUin 操作人uin
+     * @return OperatorUin 操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorUin() {
@@ -427,9 +427,9 @@ public class IntegrationNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 操作人uin
+     * Set 操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorUin 操作人uin
+     * @param OperatorUin 操作人uin，展示字段 非传入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorUin(String OperatorUin) {
@@ -437,16 +437,16 @@ public class IntegrationNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get owner uin 
-     * @return OwnerUin owner uin
+     * Get owner uin 展示字段 非传入 
+     * @return OwnerUin owner uin 展示字段 非传入
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set owner uin
-     * @param OwnerUin owner uin
+     * Set owner uin 展示字段 非传入
+     * @param OwnerUin owner uin 展示字段 非传入
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;

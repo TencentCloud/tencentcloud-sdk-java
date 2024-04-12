@@ -68,6 +68,20 @@ public class GetStatisticDataRequest extends AbstractModel {
     private Long GatewayType;
 
     /**
+    * 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
+    */
+    @SerializedName("DeviceList")
+    @Expose
+    private String [] DeviceList;
+
+    /**
+    * 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 设备ID。若不指定设备，可传"-1" 
      * @return DeviceId 设备ID。若不指定设备，可传"-1"
      */
@@ -171,6 +185,38 @@ public class GetStatisticDataRequest extends AbstractModel {
         this.GatewayType = GatewayType;
     }
 
+    /**
+     * Get 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1" 
+     * @return DeviceList 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
+     */
+    public String [] getDeviceList() {
+        return this.DeviceList;
+    }
+
+    /**
+     * Set 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
+     * @param DeviceList 设备ID列表，最多10个设备，下载多个设备流量和时使用，此时DeviceId可传"-1"
+     */
+    public void setDeviceList(String [] DeviceList) {
+        this.DeviceList = DeviceList;
+    }
+
+    /**
+     * Get 设备分组ID，若不指定分组则不传，按分组下载数据时使用 
+     * @return GroupId 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+     * @param GroupId 设备分组ID，若不指定分组则不传，按分组下载数据时使用
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public GetStatisticDataRequest() {
     }
 
@@ -197,6 +243,15 @@ public class GetStatisticDataRequest extends AbstractModel {
         if (source.GatewayType != null) {
             this.GatewayType = new Long(source.GatewayType);
         }
+        if (source.DeviceList != null) {
+            this.DeviceList = new String[source.DeviceList.length];
+            for (int i = 0; i < source.DeviceList.length; i++) {
+                this.DeviceList[i] = new String(source.DeviceList[i]);
+            }
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -210,6 +265,8 @@ public class GetStatisticDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeGranularity", this.TimeGranularity);
         this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
+        this.setParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class ChatProResponse extends SSEResponseModel {
 
     /**
-    * unix 时间戳，单位为秒。
+    * Unix 时间戳，单位为秒。
     */
     @SerializedName("Created")
     @Expose
     private Long Created;
 
     /**
-    * token统计信息。
-按照总token数量计费。
+    * Token 统计信息。
+按照总 Token 数量计费。
     */
     @SerializedName("Usage")
     @Expose
@@ -46,7 +46,7 @@ public class ChatProResponse extends SSEResponseModel {
     private String Note;
 
     /**
-    * 本轮对话的id。
+    * 本轮对话的 ID。
     */
     @SerializedName("Id")
     @Expose
@@ -76,36 +76,36 @@ public class ChatProResponse extends SSEResponseModel {
     private String RequestId;
 
     /**
-     * Get unix 时间戳，单位为秒。 
-     * @return Created unix 时间戳，单位为秒。
+     * Get Unix 时间戳，单位为秒。 
+     * @return Created Unix 时间戳，单位为秒。
      */
     public Long getCreated() {
         return this.Created;
     }
 
     /**
-     * Set unix 时间戳，单位为秒。
-     * @param Created unix 时间戳，单位为秒。
+     * Set Unix 时间戳，单位为秒。
+     * @param Created Unix 时间戳，单位为秒。
      */
     public void setCreated(Long Created) {
         this.Created = Created;
     }
 
     /**
-     * Get token统计信息。
-按照总token数量计费。 
-     * @return Usage token统计信息。
-按照总token数量计费。
+     * Get Token 统计信息。
+按照总 Token 数量计费。 
+     * @return Usage Token 统计信息。
+按照总 Token 数量计费。
      */
     public Usage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set token统计信息。
-按照总token数量计费。
-     * @param Usage token统计信息。
-按照总token数量计费。
+     * Set Token 统计信息。
+按照总 Token 数量计费。
+     * @param Usage Token 统计信息。
+按照总 Token 数量计费。
      */
     public void setUsage(Usage Usage) {
         this.Usage = Usage;
@@ -128,16 +128,16 @@ public class ChatProResponse extends SSEResponseModel {
     }
 
     /**
-     * Get 本轮对话的id。 
-     * @return Id 本轮对话的id。
+     * Get 本轮对话的 ID。 
+     * @return Id 本轮对话的 ID。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 本轮对话的id。
-     * @param Id 本轮对话的id。
+     * Set 本轮对话的 ID。
+     * @param Id 本轮对话的 ID。
      */
     public void setId(String Id) {
         this.Id = Id;

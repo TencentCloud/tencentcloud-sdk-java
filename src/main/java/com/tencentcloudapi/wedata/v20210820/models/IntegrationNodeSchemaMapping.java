@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class IntegrationNodeSchemaMapping extends AbstractModel {
 
     /**
-    * 源schema id
+    * 任务节点的源schema id
     */
     @SerializedName("SourceSchemaId")
     @Expose
     private String SourceSchemaId;
 
     /**
-    * 目标schema id
+    * 任务节点目标schema id
     */
     @SerializedName("SinkSchemaId")
     @Expose
     private String SinkSchemaId;
 
     /**
-     * Get 源schema id 
-     * @return SourceSchemaId 源schema id
+     * Get 任务节点的源schema id 
+     * @return SourceSchemaId 任务节点的源schema id
      */
     public String getSourceSchemaId() {
         return this.SourceSchemaId;
     }
 
     /**
-     * Set 源schema id
-     * @param SourceSchemaId 源schema id
+     * Set 任务节点的源schema id
+     * @param SourceSchemaId 任务节点的源schema id
      */
     public void setSourceSchemaId(String SourceSchemaId) {
         this.SourceSchemaId = SourceSchemaId;
     }
 
     /**
-     * Get 目标schema id 
-     * @return SinkSchemaId 目标schema id
+     * Get 任务节点目标schema id 
+     * @return SinkSchemaId 任务节点目标schema id
      */
     public String getSinkSchemaId() {
         return this.SinkSchemaId;
     }
 
     /**
-     * Set 目标schema id
-     * @param SinkSchemaId 目标schema id
+     * Set 任务节点目标schema id
+     * @param SinkSchemaId 任务节点目标schema id
      */
     public void setSinkSchemaId(String SinkSchemaId) {
         this.SinkSchemaId = SinkSchemaId;

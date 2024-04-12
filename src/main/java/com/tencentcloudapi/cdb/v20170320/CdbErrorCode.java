@@ -561,6 +561,9 @@ public enum CdbErrorCode {
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
+    // 未授权操作。
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
     // 认证失败，没有足够权限。
      UNAUTHORIZEDOPERATION_NOTENOUGHPRIVILEGES("UnauthorizedOperation.NotEnoughPrivileges"),
      

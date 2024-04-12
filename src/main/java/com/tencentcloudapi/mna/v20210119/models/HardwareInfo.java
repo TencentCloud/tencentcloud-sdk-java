@@ -73,6 +73,7 @@ public class HardwareInfo extends AbstractModel {
 
     /**
     * license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseChargingMode")
@@ -94,6 +95,42 @@ public class HardwareInfo extends AbstractModel {
     @SerializedName("SN")
     @Expose
     private String SN;
+
+    /**
+    * license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LicensePayMode")
+    @Expose
+    private Long LicensePayMode;
+
+    /**
+    * 付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Payer")
+    @Expose
+    private Long Payer;
+
+    /**
+    * 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
 
     /**
      * Get 设备ID
@@ -217,8 +254,10 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Get license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseChargingMode() {
@@ -227,8 +266,10 @@ public class HardwareInfo extends AbstractModel {
 
     /**
      * Set license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseChargingMode(Long LicenseChargingMode) {
@@ -275,6 +316,102 @@ public class HardwareInfo extends AbstractModel {
         this.SN = SN;
     }
 
+    /**
+     * Get license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LicensePayMode license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLicensePayMode() {
+        return this.LicensePayMode;
+    }
+
+    /**
+     * Set license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LicensePayMode license授权有效期 
+0：月度授权 
+1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLicensePayMode(Long LicensePayMode) {
+        this.LicensePayMode = LicensePayMode;
+    }
+
+    /**
+     * Get 付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Payer 付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPayer() {
+        return this.Payer;
+    }
+
+    /**
+     * Set 付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Payer 付费方 
+0：客户付费 
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayer(Long Payer) {
+        this.Payer = Payer;
+    }
+
+    /**
+     * Get 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupName 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupName 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
     public HardwareInfo() {
     }
 
@@ -310,6 +447,18 @@ public class HardwareInfo extends AbstractModel {
         if (source.SN != null) {
             this.SN = new String(source.SN);
         }
+        if (source.LicensePayMode != null) {
+            this.LicensePayMode = new Long(source.LicensePayMode);
+        }
+        if (source.Payer != null) {
+            this.Payer = new Long(source.Payer);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
     }
 
 
@@ -326,6 +475,10 @@ public class HardwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LicenseChargingMode", this.LicenseChargingMode);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SN", this.SN);
+        this.setParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
+        this.setParamSimple(map, prefix + "Payer", this.Payer);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
 
     }
 }

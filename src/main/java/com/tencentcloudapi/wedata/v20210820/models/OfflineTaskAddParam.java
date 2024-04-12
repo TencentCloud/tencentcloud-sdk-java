@@ -31,49 +31,49 @@ public class OfflineTaskAddParam extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 依赖
+    * 依赖：yes、no
     */
     @SerializedName("DependencyWorkflow")
     @Expose
     private String DependencyWorkflow;
 
     /**
-    * 开始时间
+    * 任务开始数据时间。非空。默认当前时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 任务结束数据时间。非空。默认当前时间
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 周期
+    * 周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
     */
     @SerializedName("CycleType")
     @Expose
     private Long CycleType;
 
     /**
-    * 周期间隔
+    * 间隔，可选，默认1。非空。默认 1
     */
     @SerializedName("CycleStep")
     @Expose
     private Long CycleStep;
 
     /**
-    * 延迟时间
+    * 延时执行时间，单位分钟
     */
     @SerializedName("DelayTime")
     @Expose
     private Long DelayTime;
 
     /**
-    * crontab
+    * 任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrontabExpression")
@@ -125,7 +125,7 @@ public class OfflineTaskAddParam extends AbstractModel {
     private Long SelfDepend;
 
     /**
-    * 周任务：1是周天，2是周1，7是周6 。
+    * 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -158,7 +158,7 @@ public class OfflineTaskAddParam extends AbstractModel {
     private Boolean TaskAutoSubmit;
 
     /**
-    * 实例初始化策略
+    * 实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceInitStrategy")
@@ -182,105 +182,105 @@ public class OfflineTaskAddParam extends AbstractModel {
     }
 
     /**
-     * Get 依赖 
-     * @return DependencyWorkflow 依赖
+     * Get 依赖：yes、no 
+     * @return DependencyWorkflow 依赖：yes、no
      */
     public String getDependencyWorkflow() {
         return this.DependencyWorkflow;
     }
 
     /**
-     * Set 依赖
-     * @param DependencyWorkflow 依赖
+     * Set 依赖：yes、no
+     * @param DependencyWorkflow 依赖：yes、no
      */
     public void setDependencyWorkflow(String DependencyWorkflow) {
         this.DependencyWorkflow = DependencyWorkflow;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 任务开始数据时间。非空。默认当前时间 
+     * @return StartTime 任务开始数据时间。非空。默认当前时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 任务开始数据时间。非空。默认当前时间
+     * @param StartTime 任务开始数据时间。非空。默认当前时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 任务结束数据时间。非空。默认当前时间 
+     * @return EndTime 任务结束数据时间。非空。默认当前时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 任务结束数据时间。非空。默认当前时间
+     * @param EndTime 任务结束数据时间。非空。默认当前时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 周期 
-     * @return CycleType 周期
+     * Get 周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0 
+     * @return CycleType 周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
      */
     public Long getCycleType() {
         return this.CycleType;
     }
 
     /**
-     * Set 周期
-     * @param CycleType 周期
+     * Set 周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
+     * @param CycleType 周期类型。一次性任务:6、分钟任务：1、小时任务：2、天任务：3、周任务：4、月任务：5、crontab任务：0
      */
     public void setCycleType(Long CycleType) {
         this.CycleType = CycleType;
     }
 
     /**
-     * Get 周期间隔 
-     * @return CycleStep 周期间隔
+     * Get 间隔，可选，默认1。非空。默认 1 
+     * @return CycleStep 间隔，可选，默认1。非空。默认 1
      */
     public Long getCycleStep() {
         return this.CycleStep;
     }
 
     /**
-     * Set 周期间隔
-     * @param CycleStep 周期间隔
+     * Set 间隔，可选，默认1。非空。默认 1
+     * @param CycleStep 间隔，可选，默认1。非空。默认 1
      */
     public void setCycleStep(Long CycleStep) {
         this.CycleStep = CycleStep;
     }
 
     /**
-     * Get 延迟时间 
-     * @return DelayTime 延迟时间
+     * Get 延时执行时间，单位分钟 
+     * @return DelayTime 延时执行时间，单位分钟
      */
     public Long getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 延迟时间
-     * @param DelayTime 延迟时间
+     * Set 延时执行时间，单位分钟
+     * @param DelayTime 延时执行时间，单位分钟
      */
     public void setDelayTime(Long DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get crontab
+     * Get 任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrontabExpression crontab
+     * @return CrontabExpression 任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontabExpression() {
@@ -288,9 +288,9 @@ public class OfflineTaskAddParam extends AbstractModel {
     }
 
     /**
-     * Set crontab
+     * Set 任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrontabExpression crontab
+     * @param CrontabExpression 任务cron表达式，仅cron任务使用，其他时候默认为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontabExpression(String CrontabExpression) {
@@ -402,10 +402,10 @@ public class OfflineTaskAddParam extends AbstractModel {
     }
 
     /**
-     * Get 周任务：1是周天，2是周1，7是周6 。
+     * Get 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAction 周任务：1是周天，2是周1，7是周6 。
+     * @return TaskAction 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -414,10 +414,10 @@ public class OfflineTaskAddParam extends AbstractModel {
     }
 
     /**
-     * Set 周任务：1是周天，2是周1，7是周6 。
+     * Set 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAction 周任务：1是周天，2是周1，7是周6 。
+     * @param TaskAction 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 ""
 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -486,9 +486,9 @@ public class OfflineTaskAddParam extends AbstractModel {
     }
 
     /**
-     * Get 实例初始化策略
+     * Get 实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceInitStrategy 实例初始化策略
+     * @return InstanceInitStrategy 实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceInitStrategy() {
@@ -496,9 +496,9 @@ public class OfflineTaskAddParam extends AbstractModel {
     }
 
     /**
-     * Set 实例初始化策略
+     * Set 实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceInitStrategy 实例初始化策略
+     * @param InstanceInitStrategy 实例生成方式，T_PLUS_0 当天任务当天调度 / T_PLUS_1 当天任务后一天调度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceInitStrategy(String InstanceInitStrategy) {

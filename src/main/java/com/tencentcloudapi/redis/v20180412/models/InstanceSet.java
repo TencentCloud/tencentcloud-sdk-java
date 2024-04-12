@@ -426,7 +426,7 @@ public class InstanceSet extends AbstractModel {
     private String CurrentProxyVersion;
 
     /**
-    * 实例当前Cache小版本。
+    * 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentRedisVersion")
@@ -1422,9 +1422,9 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get 实例当前Cache小版本。
+     * Get 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentRedisVersion 实例当前Cache小版本。
+     * @return CurrentRedisVersion 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentRedisVersion() {
@@ -1432,9 +1432,9 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Set 实例当前Cache小版本。
+     * Set 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentRedisVersion 实例当前Cache小版本。
+     * @param CurrentRedisVersion 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentRedisVersion(String CurrentRedisVersion) {

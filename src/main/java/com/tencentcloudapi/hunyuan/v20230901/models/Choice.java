@@ -24,49 +24,82 @@ import java.util.HashMap;
 public class Choice extends AbstractModel {
 
     /**
-    * 流式结束标志位，为 stop 则表示尾包。
+    * 结束标志位，为 stop 则表示尾包。
     */
     @SerializedName("FinishReason")
     @Expose
     private String FinishReason;
 
     /**
-    * 返回值。
+    * 增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Delta")
     @Expose
     private Delta Delta;
 
     /**
-     * Get 流式结束标志位，为 stop 则表示尾包。 
-     * @return FinishReason 流式结束标志位，为 stop 则表示尾包。
+    * 返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Message")
+    @Expose
+    private Message Message;
+
+    /**
+     * Get 结束标志位，为 stop 则表示尾包。 
+     * @return FinishReason 结束标志位，为 stop 则表示尾包。
      */
     public String getFinishReason() {
         return this.FinishReason;
     }
 
     /**
-     * Set 流式结束标志位，为 stop 则表示尾包。
-     * @param FinishReason 流式结束标志位，为 stop 则表示尾包。
+     * Set 结束标志位，为 stop 则表示尾包。
+     * @param FinishReason 结束标志位，为 stop 则表示尾包。
      */
     public void setFinishReason(String FinishReason) {
         this.FinishReason = FinishReason;
     }
 
     /**
-     * Get 返回值。 
-     * @return Delta 返回值。
+     * Get 增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Delta 增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Delta getDelta() {
         return this.Delta;
     }
 
     /**
-     * Set 返回值。
-     * @param Delta 返回值。
+     * Set 增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Delta 增量返回值，流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelta(Delta Delta) {
         this.Delta = Delta;
+    }
+
+    /**
+     * Get 返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Message 返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Message getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 返回值，非流式调用时使用该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessage(Message Message) {
+        this.Message = Message;
     }
 
     public Choice() {
@@ -83,6 +116,9 @@ public class Choice extends AbstractModel {
         if (source.Delta != null) {
             this.Delta = new Delta(source.Delta);
         }
+        if (source.Message != null) {
+            this.Message = new Message(source.Message);
+        }
     }
 
 
@@ -92,6 +128,7 @@ public class Choice extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FinishReason", this.FinishReason);
         this.setParamObj(map, prefix + "Delta.", this.Delta);
+        this.setParamObj(map, prefix + "Message.", this.Message);
 
     }
 }

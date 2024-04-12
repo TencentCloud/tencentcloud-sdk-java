@@ -50,7 +50,7 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     private String [] DeviceList;
 
     /**
-    * 是否自动续费
+    * 是否自动续费，该选项和流量截断冲突，只能开启一个
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -62,6 +62,13 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     @SerializedName("PackageRegion")
     @Expose
     private Long PackageRegion;
+
+    /**
+    * 是否开启流量截断功能，该选项和自动续费冲突
+    */
+    @SerializedName("FlowTruncFlag")
+    @Expose
+    private Boolean FlowTruncFlag;
 
     /**
     * 是否自动选择代金券，默认false。
@@ -160,16 +167,16 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     }
 
     /**
-     * Get 是否自动续费 
-     * @return AutoRenewFlag 是否自动续费
+     * Get 是否自动续费，该选项和流量截断冲突，只能开启一个 
+     * @return AutoRenewFlag 是否自动续费，该选项和流量截断冲突，只能开启一个
      */
     public Boolean getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 是否自动续费
-     * @param AutoRenewFlag 是否自动续费
+     * Set 是否自动续费，该选项和流量截断冲突，只能开启一个
+     * @param AutoRenewFlag 是否自动续费，该选项和流量截断冲突，只能开启一个
      */
     public void setAutoRenewFlag(Boolean AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -189,6 +196,22 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
      */
     public void setPackageRegion(Long PackageRegion) {
         this.PackageRegion = PackageRegion;
+    }
+
+    /**
+     * Get 是否开启流量截断功能，该选项和自动续费冲突 
+     * @return FlowTruncFlag 是否开启流量截断功能，该选项和自动续费冲突
+     */
+    public Boolean getFlowTruncFlag() {
+        return this.FlowTruncFlag;
+    }
+
+    /**
+     * Set 是否开启流量截断功能，该选项和自动续费冲突
+     * @param FlowTruncFlag 是否开启流量截断功能，该选项和自动续费冲突
+     */
+    public void setFlowTruncFlag(Boolean FlowTruncFlag) {
+        this.FlowTruncFlag = FlowTruncFlag;
     }
 
     /**
@@ -254,6 +277,9 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         if (source.PackageRegion != null) {
             this.PackageRegion = new Long(source.PackageRegion);
         }
+        if (source.FlowTruncFlag != null) {
+            this.FlowTruncFlag = new Boolean(source.FlowTruncFlag);
+        }
         if (source.AutoVoucher != null) {
             this.AutoVoucher = new Boolean(source.AutoVoucher);
         }
@@ -274,6 +300,7 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         this.setParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "PackageRegion", this.PackageRegion);
+        this.setParamSimple(map, prefix + "FlowTruncFlag", this.FlowTruncFlag);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
 

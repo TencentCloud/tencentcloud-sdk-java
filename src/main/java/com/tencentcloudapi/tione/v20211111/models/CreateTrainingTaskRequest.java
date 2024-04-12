@@ -95,7 +95,7 @@ POSTPAID_BY_HOUR 按量计费
     private CosPathInfo CodePackagePath;
 
     /**
-    * 启动命令信息，默认为sh start.sh
+    * 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
     */
     @SerializedName("StartCmdInfo")
     @Expose
@@ -184,6 +184,13 @@ POSTPAID_BY_HOUR 按量计费
     @SerializedName("PreTrainModel")
     @Expose
     private PreTrainModel PreTrainModel;
+
+    /**
+    * 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+    */
+    @SerializedName("EncodedStartCmdInfo")
+    @Expose
+    private EncodedStartCmdInfo EncodedStartCmdInfo;
 
     /**
      * Get 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
@@ -350,16 +357,16 @@ POSTPAID_BY_HOUR 按量计费
     }
 
     /**
-     * Get 启动命令信息，默认为sh start.sh 
-     * @return StartCmdInfo 启动命令信息，默认为sh start.sh
+     * Get 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数 
+     * @return StartCmdInfo 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
      */
     public StartCmdInfo getStartCmdInfo() {
         return this.StartCmdInfo;
     }
 
     /**
-     * Set 启动命令信息，默认为sh start.sh
-     * @param StartCmdInfo 启动命令信息，默认为sh start.sh
+     * Set 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
+     * @param StartCmdInfo 任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数
      */
     public void setStartCmdInfo(StartCmdInfo StartCmdInfo) {
         this.StartCmdInfo = StartCmdInfo;
@@ -557,6 +564,22 @@ POSTPAID_BY_HOUR 按量计费
         this.PreTrainModel = PreTrainModel;
     }
 
+    /**
+     * Get 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效 
+     * @return EncodedStartCmdInfo 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+     */
+    public EncodedStartCmdInfo getEncodedStartCmdInfo() {
+        return this.EncodedStartCmdInfo;
+    }
+
+    /**
+     * Set 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+     * @param EncodedStartCmdInfo 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+     */
+    public void setEncodedStartCmdInfo(EncodedStartCmdInfo EncodedStartCmdInfo) {
+        this.EncodedStartCmdInfo = EncodedStartCmdInfo;
+    }
+
     public CreateTrainingTaskRequest() {
     }
 
@@ -643,6 +666,9 @@ POSTPAID_BY_HOUR 按量计费
         if (source.PreTrainModel != null) {
             this.PreTrainModel = new PreTrainModel(source.PreTrainModel);
         }
+        if (source.EncodedStartCmdInfo != null) {
+            this.EncodedStartCmdInfo = new EncodedStartCmdInfo(source.EncodedStartCmdInfo);
+        }
     }
 
 
@@ -673,6 +699,7 @@ POSTPAID_BY_HOUR 按量计费
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "PreTrainModel.", this.PreTrainModel);
+        this.setParamObj(map, prefix + "EncodedStartCmdInfo.", this.EncodedStartCmdInfo);
 
     }
 }

@@ -40,6 +40,13 @@ public class RuleIdConfig extends AbstractModel {
     private Long IntentionType;
 
     /**
+    * 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+    */
+    @SerializedName("MouthOpenRecognition")
+    @Expose
+    private Boolean MouthOpenRecognition;
+
+    /**
      * Get 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。 
      * @return IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
      */
@@ -79,6 +86,22 @@ public class RuleIdConfig extends AbstractModel {
         this.IntentionType = IntentionType;
     }
 
+    /**
+     * Get 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。 
+     * @return MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     */
+    public Boolean getMouthOpenRecognition() {
+        return this.MouthOpenRecognition;
+    }
+
+    /**
+     * Set 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     * @param MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     */
+    public void setMouthOpenRecognition(Boolean MouthOpenRecognition) {
+        this.MouthOpenRecognition = MouthOpenRecognition;
+    }
+
     public RuleIdConfig() {
     }
 
@@ -93,6 +116,9 @@ public class RuleIdConfig extends AbstractModel {
         if (source.IntentionType != null) {
             this.IntentionType = new Long(source.IntentionType);
         }
+        if (source.MouthOpenRecognition != null) {
+            this.MouthOpenRecognition = new Boolean(source.MouthOpenRecognition);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class RuleIdConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
         this.setParamSimple(map, prefix + "IntentionType", this.IntentionType);
+        this.setParamSimple(map, prefix + "MouthOpenRecognition", this.MouthOpenRecognition);
 
     }
 }

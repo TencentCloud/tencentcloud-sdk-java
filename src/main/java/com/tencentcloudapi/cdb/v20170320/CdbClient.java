@@ -105,6 +105,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *高可用实例一键迁移到集群版校验
+     * @param req CheckMigrateClusterRequest
+     * @return CheckMigrateClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckMigrateClusterResponse CheckMigrateCluster(CheckMigrateClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckMigrateCluster", CheckMigrateClusterResponse.class);
+    }
+
+    /**
      *实例关闭审计服务
      * @param req CloseAuditServiceRequest
      * @return CloseAuditServiceResponse
@@ -704,6 +715,17 @@ public class CdbClient extends AbstractClient{
     public DescribeCloneListResponse DescribeCloneList(DescribeCloneListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloneList", DescribeCloneListResponse.class);
+    }
+
+    /**
+     *本接口(DescribeClusterInfo)用于查询集群版实例信息。
+     * @param req DescribeClusterInfoRequest
+     * @return DescribeClusterInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterInfoResponse DescribeClusterInfo(DescribeClusterInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterInfo", DescribeClusterInfoResponse.class);
     }
 
     /**

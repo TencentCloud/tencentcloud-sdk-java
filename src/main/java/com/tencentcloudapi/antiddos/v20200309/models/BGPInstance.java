@@ -202,6 +202,14 @@ public class BGPInstance extends AbstractModel {
     private Long PlanCntFlag;
 
     /**
+    * 是否为超级高防包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SuperPackFlag")
+    @Expose
+    private Long SuperPackFlag;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -637,6 +645,26 @@ public class BGPInstance extends AbstractModel {
         this.PlanCntFlag = PlanCntFlag;
     }
 
+    /**
+     * Get 是否为超级高防包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SuperPackFlag 是否为超级高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSuperPackFlag() {
+        return this.SuperPackFlag;
+    }
+
+    /**
+     * Set 是否为超级高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SuperPackFlag 是否为超级高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSuperPackFlag(Long SuperPackFlag) {
+        this.SuperPackFlag = SuperPackFlag;
+    }
+
     public BGPInstance() {
     }
 
@@ -720,6 +748,9 @@ public class BGPInstance extends AbstractModel {
         if (source.PlanCntFlag != null) {
             this.PlanCntFlag = new Long(source.PlanCntFlag);
         }
+        if (source.SuperPackFlag != null) {
+            this.SuperPackFlag = new Long(source.SuperPackFlag);
+        }
     }
 
 
@@ -750,6 +781,7 @@ public class BGPInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "BasicPlusFlag", this.BasicPlusFlag);
         this.setParamSimple(map, prefix + "PlanCntFlag", this.PlanCntFlag);
+        this.setParamSimple(map, prefix + "SuperPackFlag", this.SuperPackFlag);
 
     }
 }

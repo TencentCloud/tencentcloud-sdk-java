@@ -474,17 +474,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *注册采集器
-     * @param req CreateInLongAgentRequest
-     * @return CreateInLongAgentResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateInLongAgentResponse CreateInLongAgent(CreateInLongAgentRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateInLongAgent", CreateInLongAgentResponse.class);
-    }
-
-    /**
      *创建集成节点
      * @param req CreateIntegrationNodeRequest
      * @return CreateIntegrationNodeResponse
@@ -706,17 +695,6 @@ public class WedataClient extends AbstractClient{
     public DeleteFolderResponse DeleteFolder(DeleteFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteFolder", DeleteFolderResponse.class);
-    }
-
-    /**
-     *删除采集器
-     * @param req DeleteInLongAgentRequest
-     * @return DeleteInLongAgentResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteInLongAgentResponse DeleteInLongAgent(DeleteInLongAgentRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteInLongAgent", DeleteInLongAgentResponse.class);
     }
 
     /**
@@ -1037,17 +1015,6 @@ public class WedataClient extends AbstractClient{
     public DescribeBelongToResponse DescribeBelongTo(DescribeBelongToRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBelongTo", DescribeBelongToResponse.class);
-    }
-
-    /**
-     *获取集群命名空间列表
-     * @param req DescribeClusterNamespaceListRequest
-     * @return DescribeClusterNamespaceListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeClusterNamespaceListResponse DescribeClusterNamespaceList(DescribeClusterNamespaceListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeClusterNamespaceList", DescribeClusterNamespaceListResponse.class);
     }
 
     /**
@@ -1464,50 +1431,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取采集器列表
-     * @param req DescribeInLongAgentListRequest
-     * @return DescribeInLongAgentListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInLongAgentListResponse DescribeInLongAgentList(DescribeInLongAgentListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeInLongAgentList", DescribeInLongAgentListResponse.class);
-    }
-
-    /**
-     *查询采集器关联的任务列表
-     * @param req DescribeInLongAgentTaskListRequest
-     * @return DescribeInLongAgentTaskListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInLongAgentTaskListResponse DescribeInLongAgentTaskList(DescribeInLongAgentTaskListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeInLongAgentTaskList", DescribeInLongAgentTaskListResponse.class);
-    }
-
-    /**
-     *获取采集器所在集群的VPC列表
-     * @param req DescribeInLongAgentVpcListRequest
-     * @return DescribeInLongAgentVpcListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInLongAgentVpcListResponse DescribeInLongAgentVpcList(DescribeInLongAgentVpcListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeInLongAgentVpcList", DescribeInLongAgentVpcListResponse.class);
-    }
-
-    /**
-     *获取TKE集群列表
-     * @param req DescribeInLongTkeClusterListRequest
-     * @return DescribeInLongTkeClusterListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInLongTkeClusterListResponse DescribeInLongTkeClusterList(DescribeInLongTkeClusterListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeInLongTkeClusterList", DescribeInLongTkeClusterListResponse.class);
-    }
-
-    /**
      *根据周期类型查询所有实例
      * @param req DescribeInstanceByCycleRequest
      * @return DescribeInstanceByCycleResponse
@@ -1649,17 +1572,6 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationStatisticsResponse DescribeIntegrationStatistics(DescribeIntegrationStatisticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIntegrationStatistics", DescribeIntegrationStatisticsResponse.class);
-    }
-
-    /**
-     *数据集成大屏采集器状态分布统计
-     * @param req DescribeIntegrationStatisticsAgentStatusRequest
-     * @return DescribeIntegrationStatisticsAgentStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeIntegrationStatisticsAgentStatusResponse DescribeIntegrationStatisticsAgentStatus(DescribeIntegrationStatisticsAgentStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeIntegrationStatisticsAgentStatus", DescribeIntegrationStatisticsAgentStatusResponse.class);
     }
 
     /**
@@ -2301,17 +2213,6 @@ public class WedataClient extends AbstractClient{
     public DescribeSonInstancesResponse DescribeSonInstances(DescribeSonInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSonInstances", DescribeSonInstancesResponse.class);
-    }
-
-    /**
-     *获取数据标准规则详情
-     * @param req DescribeStandardRuleDetailInfoListRequest
-     * @return DescribeStandardRuleDetailInfoListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeStandardRuleDetailInfoListResponse DescribeStandardRuleDetailInfoList(DescribeStandardRuleDetailInfoListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeStandardRuleDetailInfoList", DescribeStandardRuleDetailInfoListResponse.class);
     }
 
     /**
@@ -3294,17 +3195,6 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *重启采集器
-     * @param req RestartInLongAgentRequest
-     * @return RestartInLongAgentResponse
-     * @throws TencentCloudSDKException
-     */
-    public RestartInLongAgentResponse RestartInLongAgent(RestartInLongAgentRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RestartInLongAgent", RestartInLongAgentResponse.class);
-    }
-
-    /**
      *继续集成任务
      * @param req ResumeIntegrationTaskRequest
      * @return ResumeIntegrationTaskResponse
@@ -3549,17 +3439,6 @@ public class WedataClient extends AbstractClient{
     public UnlockIntegrationTaskResponse UnlockIntegrationTask(UnlockIntegrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnlockIntegrationTask", UnlockIntegrationTaskResponse.class);
-    }
-
-    /**
-     *更新采集器
-     * @param req UpdateInLongAgentRequest
-     * @return UpdateInLongAgentResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateInLongAgentResponse UpdateInLongAgent(UpdateInLongAgentRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateInLongAgent", UpdateInLongAgentResponse.class);
     }
 
     /**

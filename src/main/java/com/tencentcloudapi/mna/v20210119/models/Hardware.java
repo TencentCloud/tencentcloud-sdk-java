@@ -33,9 +33,9 @@ public class Hardware extends AbstractModel {
 
     /**
     * license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseChargingMode")
@@ -80,14 +80,14 @@ public class Hardware extends AbstractModel {
 
     /**
      * Get license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LicenseChargingMode license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseChargingMode() {
@@ -96,14 +96,14 @@ public class Hardware extends AbstractModel {
 
     /**
      * Set license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseChargingMode license计费模式：
-1，租户月付费
+1，租户付费
 2，厂商月付费
-3，license永久授权
+3，厂商永久授权
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseChargingMode(Long LicenseChargingMode) {

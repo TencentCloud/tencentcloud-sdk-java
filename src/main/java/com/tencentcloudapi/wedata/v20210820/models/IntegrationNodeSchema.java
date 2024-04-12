@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IntegrationNodeSchema extends AbstractModel {
 
     /**
-    * schema id
+    * schema id 随机唯一
     */
     @SerializedName("Id")
     @Expose
@@ -77,16 +77,16 @@ public class IntegrationNodeSchema extends AbstractModel {
     private String Comment;
 
     /**
-     * Get schema id 
-     * @return Id schema id
+     * Get schema id 随机唯一 
+     * @return Id schema id 随机唯一
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set schema id
-     * @param Id schema id
+     * Set schema id 随机唯一
+     * @param Id schema id 随机唯一
      */
     public void setId(String Id) {
         this.Id = Id;

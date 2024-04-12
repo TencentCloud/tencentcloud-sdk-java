@@ -45,7 +45,7 @@ public class GetMultiFlowStatisticRequest extends AbstractModel {
     private Long EndTime;
 
     /**
-    * 统计流量类型（1：上行流量，2：下行流量）
+    * 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
     */
     @SerializedName("Type")
     @Expose
@@ -121,16 +121,16 @@ public class GetMultiFlowStatisticRequest extends AbstractModel {
     }
 
     /**
-     * Get 统计流量类型（1：上行流量，2：下行流量） 
-     * @return Type 统计流量类型（1：上行流量，2：下行流量）
+     * Get 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和） 
+     * @return Type 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 统计流量类型（1：上行流量，2：下行流量）
-     * @param Type 统计流量类型（1：上行流量，2：下行流量）
+     * Set 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
+     * @param Type 统计流量类型（1：上行流量，2：下行流量， 3: 上下行总和）
      */
     public void setType(Long Type) {
         this.Type = Type;

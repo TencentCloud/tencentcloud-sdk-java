@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OfflineInstance extends AbstractModel {
 
     /**
-    * 创建账号
+    * 创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUin")
@@ -32,7 +32,7 @@ public class OfflineInstance extends AbstractModel {
     private String CreateUin;
 
     /**
-    * 操作账号
+    * 操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorUin")
@@ -85,7 +85,7 @@ public class OfflineInstance extends AbstractModel {
     private String IssueId;
 
     /**
-    * 资源组id
+    * 下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InlongTaskId")
@@ -101,14 +101,14 @@ public class OfflineInstance extends AbstractModel {
     private String ResourceGroup;
 
     /**
-    * 实例类型
+    * 任务类型(1 调试运行,2 调度执行)
     */
     @SerializedName("TaskRunType")
     @Expose
     private Long TaskRunType;
 
     /**
-    * 实例状态
+    * 实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
     */
     @SerializedName("State")
     @Expose
@@ -154,9 +154,9 @@ public class OfflineInstance extends AbstractModel {
     private String InstanceKey;
 
     /**
-     * Get 创建账号
+     * Get 创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUin 创建账号
+     * @return CreateUin 创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUin() {
@@ -164,9 +164,9 @@ public class OfflineInstance extends AbstractModel {
     }
 
     /**
-     * Set 创建账号
+     * Set 创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUin 创建账号
+     * @param CreateUin 创建账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUin(String CreateUin) {
@@ -174,9 +174,9 @@ public class OfflineInstance extends AbstractModel {
     }
 
     /**
-     * Get 操作账号
+     * Get 操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorUin 操作账号
+     * @return OperatorUin 操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorUin() {
@@ -184,9 +184,9 @@ public class OfflineInstance extends AbstractModel {
     }
 
     /**
-     * Set 操作账号
+     * Set 操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorUin 操作账号
+     * @param OperatorUin 操作账号sub uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorUin(String OperatorUin) {
@@ -302,9 +302,9 @@ public class OfflineInstance extends AbstractModel {
     }
 
     /**
-     * Get 资源组id
+     * Get 下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InlongTaskId 资源组id
+     * @return InlongTaskId 下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInlongTaskId() {
@@ -312,9 +312,9 @@ public class OfflineInstance extends AbstractModel {
     }
 
     /**
-     * Set 资源组id
+     * Set 下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InlongTaskId 资源组id
+     * @param InlongTaskId 下发资源组id，非传入项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInlongTaskId(String InlongTaskId) {
@@ -342,32 +342,32 @@ public class OfflineInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例类型 
-     * @return TaskRunType 实例类型
+     * Get 任务类型(1 调试运行,2 调度执行) 
+     * @return TaskRunType 任务类型(1 调试运行,2 调度执行)
      */
     public Long getTaskRunType() {
         return this.TaskRunType;
     }
 
     /**
-     * Set 实例类型
-     * @param TaskRunType 实例类型
+     * Set 任务类型(1 调试运行,2 调度执行)
+     * @param TaskRunType 任务类型(1 调试运行,2 调度执行)
      */
     public void setTaskRunType(Long TaskRunType) {
         this.TaskRunType = TaskRunType;
     }
 
     /**
-     * Get 实例状态 
-     * @return State 实例状态
+     * Get 实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED 
+     * @return State 实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 实例状态
-     * @param State 实例状态
+     * Set 实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
+     * @param State 实例状态 EVENT_LISTENING|DEPENDENCE|BEFORE_ASPECT|ALLOCATED|LAUNCHED|KILL|SNAP_STATE_SAVING|ISSUED|RUNNING|AFTER_ASPECT|PENDING|KILLING|FINAL_STATE_SAVING|FAILED|KILL_FAILED| COMPLETED|EXPIRED|KILL_EXPIRED|DELETED
      */
     public void setState(String State) {
         this.State = State;

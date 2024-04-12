@@ -66,7 +66,7 @@ public class TaskAlarmInfo extends AbstractModel {
     private Long TaskType;
 
     /**
-    * 主键ID
+    * ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -368,9 +368,9 @@ public class TaskAlarmInfo extends AbstractModel {
     }
 
     /**
-     * Get 主键ID
+     * Get ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 主键ID
+     * @return Id ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -378,9 +378,9 @@ public class TaskAlarmInfo extends AbstractModel {
     }
 
     /**
-     * Set 主键ID
+     * Set ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 主键ID
+     * @param Id ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {

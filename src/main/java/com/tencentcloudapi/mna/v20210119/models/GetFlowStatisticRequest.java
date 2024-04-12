@@ -45,7 +45,7 @@ public class GetFlowStatisticRequest extends AbstractModel {
     private Long EndTime;
 
     /**
-    * 流量种类（1：上行流量，2：下行流量）
+    * 流量种类（1：上行流量，2：下行流量，3：上下行总和）
     */
     @SerializedName("Type")
     @Expose
@@ -71,6 +71,13 @@ public class GetFlowStatisticRequest extends AbstractModel {
     @SerializedName("GatewayType")
     @Expose
     private Long GatewayType;
+
+    /**
+    * 设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+    */
+    @SerializedName("DeviceList")
+    @Expose
+    private String [] DeviceList;
 
     /**
      * Get 设备ID 
@@ -121,16 +128,16 @@ public class GetFlowStatisticRequest extends AbstractModel {
     }
 
     /**
-     * Get 流量种类（1：上行流量，2：下行流量） 
-     * @return Type 流量种类（1：上行流量，2：下行流量）
+     * Get 流量种类（1：上行流量，2：下行流量，3：上下行总和） 
+     * @return Type 流量种类（1：上行流量，2：下行流量，3：上下行总和）
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 流量种类（1：上行流量，2：下行流量）
-     * @param Type 流量种类（1：上行流量，2：下行流量）
+     * Set 流量种类（1：上行流量，2：下行流量，3：上下行总和）
+     * @param Type 流量种类（1：上行流量，2：下行流量，3：上下行总和）
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -184,6 +191,22 @@ public class GetFlowStatisticRequest extends AbstractModel {
         this.GatewayType = GatewayType;
     }
 
+    /**
+     * Get 设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1" 
+     * @return DeviceList 设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+     */
+    public String [] getDeviceList() {
+        return this.DeviceList;
+    }
+
+    /**
+     * Set 设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+     * @param DeviceList 设备ID列表，用于查询多设备流量，该字段启用时DeviceId可传"-1"
+     */
+    public void setDeviceList(String [] DeviceList) {
+        this.DeviceList = DeviceList;
+    }
+
     public GetFlowStatisticRequest() {
     }
 
@@ -213,6 +236,12 @@ public class GetFlowStatisticRequest extends AbstractModel {
         if (source.GatewayType != null) {
             this.GatewayType = new Long(source.GatewayType);
         }
+        if (source.DeviceList != null) {
+            this.DeviceList = new String[source.DeviceList.length];
+            for (int i = 0; i < source.DeviceList.length; i++) {
+                this.DeviceList[i] = new String(source.DeviceList[i]);
+            }
+        }
     }
 
 
@@ -227,6 +256,7 @@ public class GetFlowStatisticRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeGranularity", this.TimeGranularity);
         this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
+        this.setParamArraySimple(map, prefix + "DeviceList.", this.DeviceList);
 
     }
 }

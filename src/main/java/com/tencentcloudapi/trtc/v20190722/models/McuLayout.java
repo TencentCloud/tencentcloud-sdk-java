@@ -102,7 +102,7 @@ public class McuLayout extends AbstractModel {
     private McuCustomCrop CustomCrop;
 
     /**
-    * 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+    * 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩，4为自定义渲染。不填默认为3。
     */
     @SerializedName("BackgroundRenderMode")
     @Expose
@@ -115,6 +115,13 @@ public class McuLayout extends AbstractModel {
     @SerializedName("TransparentUrl")
     @Expose
     private String TransparentUrl;
+
+    /**
+    * 子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。
+    */
+    @SerializedName("BackgroundCustomRender")
+    @Expose
+    private McuBackgroundCustomRender BackgroundCustomRender;
 
     /**
      * Get 用户媒体流参数。不填时腾讯云后台按照上行主播的进房顺序自动填充。 
@@ -309,16 +316,16 @@ public class McuLayout extends AbstractModel {
     }
 
     /**
-     * Get 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。 
-     * @return BackgroundRenderMode 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+     * Get 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩，4为自定义渲染。不填默认为3。 
+     * @return BackgroundRenderMode 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩，4为自定义渲染。不填默认为3。
      */
     public Long getBackgroundRenderMode() {
         return this.BackgroundRenderMode;
     }
 
     /**
-     * Set 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
-     * @param BackgroundRenderMode 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+     * Set 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩，4为自定义渲染。不填默认为3。
+     * @param BackgroundRenderMode 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩，4为自定义渲染。不填默认为3。
      */
     public void setBackgroundRenderMode(Long BackgroundRenderMode) {
         this.BackgroundRenderMode = BackgroundRenderMode;
@@ -342,6 +349,22 @@ public class McuLayout extends AbstractModel {
      */
     public void setTransparentUrl(String TransparentUrl) {
         this.TransparentUrl = TransparentUrl;
+    }
+
+    /**
+     * Get 子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。 
+     * @return BackgroundCustomRender 子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。
+     */
+    public McuBackgroundCustomRender getBackgroundCustomRender() {
+        return this.BackgroundCustomRender;
+    }
+
+    /**
+     * Set 子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。
+     * @param BackgroundCustomRender 子背景图的自定义渲染参数，当BackgroundRenderMode为4时必须配置。
+     */
+    public void setBackgroundCustomRender(McuBackgroundCustomRender BackgroundCustomRender) {
+        this.BackgroundCustomRender = BackgroundCustomRender;
     }
 
     public McuLayout() {
@@ -388,6 +411,9 @@ public class McuLayout extends AbstractModel {
         if (source.TransparentUrl != null) {
             this.TransparentUrl = new String(source.TransparentUrl);
         }
+        if (source.BackgroundCustomRender != null) {
+            this.BackgroundCustomRender = new McuBackgroundCustomRender(source.BackgroundCustomRender);
+        }
     }
 
 
@@ -407,6 +433,7 @@ public class McuLayout extends AbstractModel {
         this.setParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
         this.setParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
         this.setParamSimple(map, prefix + "TransparentUrl", this.TransparentUrl);
+        this.setParamObj(map, prefix + "BackgroundCustomRender.", this.BackgroundCustomRender);
 
     }
 }

@@ -117,6 +117,20 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     private Long ModifyStatus;
 
     /**
+    * 流量截断标识。true代表开启流量截断，false代表不开启流量截断
+    */
+    @SerializedName("TruncFlag")
+    @Expose
+    private Boolean TruncFlag;
+
+    /**
+    * 流量包精确余量，单位：MB
+    */
+    @SerializedName("CapacityRemainPrecise")
+    @Expose
+    private Long CapacityRemainPrecise;
+
+    /**
      * Get 流量包的唯一资源ID 
      * @return ResourceId 流量包的唯一资源ID
      */
@@ -344,6 +358,38 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         this.ModifyStatus = ModifyStatus;
     }
 
+    /**
+     * Get 流量截断标识。true代表开启流量截断，false代表不开启流量截断 
+     * @return TruncFlag 流量截断标识。true代表开启流量截断，false代表不开启流量截断
+     */
+    public Boolean getTruncFlag() {
+        return this.TruncFlag;
+    }
+
+    /**
+     * Set 流量截断标识。true代表开启流量截断，false代表不开启流量截断
+     * @param TruncFlag 流量截断标识。true代表开启流量截断，false代表不开启流量截断
+     */
+    public void setTruncFlag(Boolean TruncFlag) {
+        this.TruncFlag = TruncFlag;
+    }
+
+    /**
+     * Get 流量包精确余量，单位：MB 
+     * @return CapacityRemainPrecise 流量包精确余量，单位：MB
+     */
+    public Long getCapacityRemainPrecise() {
+        return this.CapacityRemainPrecise;
+    }
+
+    /**
+     * Set 流量包精确余量，单位：MB
+     * @param CapacityRemainPrecise 流量包精确余量，单位：MB
+     */
+    public void setCapacityRemainPrecise(Long CapacityRemainPrecise) {
+        this.CapacityRemainPrecise = CapacityRemainPrecise;
+    }
+
     public FlowPackageInfo() {
     }
 
@@ -391,6 +437,12 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         if (source.ModifyStatus != null) {
             this.ModifyStatus = new Long(source.ModifyStatus);
         }
+        if (source.TruncFlag != null) {
+            this.TruncFlag = new Boolean(source.TruncFlag);
+        }
+        if (source.CapacityRemainPrecise != null) {
+            this.CapacityRemainPrecise = new Long(source.CapacityRemainPrecise);
+        }
     }
 
 
@@ -410,6 +462,8 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
         this.setParamSimple(map, prefix + "CapacityRemain", this.CapacityRemain);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "ModifyStatus", this.ModifyStatus);
+        this.setParamSimple(map, prefix + "TruncFlag", this.TruncFlag);
+        this.setParamSimple(map, prefix + "CapacityRemainPrecise", this.CapacityRemainPrecise);
 
     }
 }

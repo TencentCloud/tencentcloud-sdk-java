@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RecordField extends AbstractModel {
 
     /**
-    * 字段名称
+    * 字段名称，拓展字段名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 字段值
+    * 字段值，拓展字段值
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 字段名称 
-     * @return Name 字段名称
+     * Get 字段名称，拓展字段名称 
+     * @return Name 字段名称，拓展字段名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 字段名称
-     * @param Name 字段名称
+     * Set 字段名称，拓展字段名称
+     * @param Name 字段名称，拓展字段名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 字段值 
-     * @return Value 字段值
+     * Get 字段值，拓展字段值 
+     * @return Value 字段值，拓展字段值
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 字段值
-     * @param Value 字段值
+     * Set 字段值，拓展字段值
+     * @param Value 字段值，拓展字段值
      */
     public void setValue(String Value) {
         this.Value = Value;

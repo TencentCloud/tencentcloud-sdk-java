@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class CreateServerlessInstanceRequest extends AbstractModel {
 
     /**
+    * 索引名，需以-AppId结尾
+    */
+    @SerializedName("IndexName")
+    @Expose
+    private String IndexName;
+
+    /**
     * 可用区
     */
     @SerializedName("Zone")
@@ -43,13 +50,6 @@ public class CreateServerlessInstanceRequest extends AbstractModel {
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
-
-    /**
-    * 索引名，需以-AppId结尾
-    */
-    @SerializedName("IndexName")
-    @Expose
-    private String IndexName;
 
     /**
     * 创建的索引元数据JSON，如mappings、settings
@@ -108,6 +108,22 @@ public class CreateServerlessInstanceRequest extends AbstractModel {
     private String [] KibanaWhiteIpList;
 
     /**
+     * Get 索引名，需以-AppId结尾 
+     * @return IndexName 索引名，需以-AppId结尾
+     */
+    public String getIndexName() {
+        return this.IndexName;
+    }
+
+    /**
+     * Set 索引名，需以-AppId结尾
+     * @param IndexName 索引名，需以-AppId结尾
+     */
+    public void setIndexName(String IndexName) {
+        this.IndexName = IndexName;
+    }
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -153,22 +169,6 @@ public class CreateServerlessInstanceRequest extends AbstractModel {
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
-    }
-
-    /**
-     * Get 索引名，需以-AppId结尾 
-     * @return IndexName 索引名，需以-AppId结尾
-     */
-    public String getIndexName() {
-        return this.IndexName;
-    }
-
-    /**
-     * Set 索引名，需以-AppId结尾
-     * @param IndexName 索引名，需以-AppId结尾
-     */
-    public void setIndexName(String IndexName) {
-        this.IndexName = IndexName;
     }
 
     /**
@@ -307,6 +307,9 @@ public class CreateServerlessInstanceRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateServerlessInstanceRequest(CreateServerlessInstanceRequest source) {
+        if (source.IndexName != null) {
+            this.IndexName = new String(source.IndexName);
+        }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
@@ -315,9 +318,6 @@ public class CreateServerlessInstanceRequest extends AbstractModel {
         }
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
-        }
-        if (source.IndexName != null) {
-            this.IndexName = new String(source.IndexName);
         }
         if (source.IndexMetaJson != null) {
             this.IndexMetaJson = new String(source.IndexMetaJson);
@@ -356,10 +356,10 @@ public class CreateServerlessInstanceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "IndexName", this.IndexName);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
-        this.setParamSimple(map, prefix + "IndexName", this.IndexName);
         this.setParamSimple(map, prefix + "IndexMetaJson", this.IndexMetaJson);
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
         this.setParamSimple(map, prefix + "Username", this.Username);

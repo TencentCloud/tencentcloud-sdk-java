@@ -66,6 +66,38 @@ public class DeviceBaseInfo extends AbstractModel {
     private Long AccessScope;
 
     /**
+    * license授权有效期 0：月度授权 1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LicensePayMode")
+    @Expose
+    private Long LicensePayMode;
+
+    /**
+    * 付费方 0：厂商付费 1：客户付费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Payer")
+    @Expose
+    private Long Payer;
+
+    /**
+    * 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
      * Get 设备唯一ID 
      * @return DeviceId 设备唯一ID
      */
@@ -161,6 +193,86 @@ public class DeviceBaseInfo extends AbstractModel {
         this.AccessScope = AccessScope;
     }
 
+    /**
+     * Get license授权有效期 0：月度授权 1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LicensePayMode license授权有效期 0：月度授权 1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLicensePayMode() {
+        return this.LicensePayMode;
+    }
+
+    /**
+     * Set license授权有效期 0：月度授权 1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LicensePayMode license授权有效期 0：月度授权 1：永久授权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLicensePayMode(Long LicensePayMode) {
+        this.LicensePayMode = LicensePayMode;
+    }
+
+    /**
+     * Get 付费方 0：厂商付费 1：客户付费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Payer 付费方 0：厂商付费 1：客户付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPayer() {
+        return this.Payer;
+    }
+
+    /**
+     * Set 付费方 0：厂商付费 1：客户付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Payer 付费方 0：厂商付费 1：客户付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayer(Long Payer) {
+        this.Payer = Payer;
+    }
+
+    /**
+     * Get 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 设备分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupName 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupName 设备分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
     public DeviceBaseInfo() {
     }
 
@@ -187,6 +299,18 @@ public class DeviceBaseInfo extends AbstractModel {
         if (source.AccessScope != null) {
             this.AccessScope = new Long(source.AccessScope);
         }
+        if (source.LicensePayMode != null) {
+            this.LicensePayMode = new Long(source.LicensePayMode);
+        }
+        if (source.Payer != null) {
+            this.Payer = new Long(source.Payer);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
     }
 
 
@@ -200,6 +324,10 @@ public class DeviceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LastTime", this.LastTime);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "AccessScope", this.AccessScope);
+        this.setParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
+        this.setParamSimple(map, prefix + "Payer", this.Payer);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
 
     }
 }

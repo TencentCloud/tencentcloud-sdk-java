@@ -81,6 +81,7 @@ public class VendorHardware extends AbstractModel {
 
     /**
     * license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseChargingMode")
@@ -94,6 +95,27 @@ public class VendorHardware extends AbstractModel {
     @SerializedName("LastOnlineTime")
     @Expose
     private String LastOnlineTime;
+
+    /**
+    * license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LicensePayMode")
+    @Expose
+    private Long LicensePayMode;
+
+    /**
+    * 付费方
+0：客户付费
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Payer")
+    @Expose
+    private Long Payer;
 
     /**
      * Get 硬件id
@@ -237,8 +259,10 @@ public class VendorHardware extends AbstractModel {
 
     /**
      * Get license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseChargingMode() {
@@ -247,8 +271,10 @@ public class VendorHardware extends AbstractModel {
 
     /**
      * Set license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseChargingMode license计费模式： 1，租户月付费 2，厂商月付费 3，license永久授权
+注：设备为租户付费且未激活（未选择月付还是永久付费）时，此参数返回1，仅代表租户付费。后续将废弃此参数，新接入请使用LicensePayMode和Payer
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseChargingMode(Long LicenseChargingMode) {
@@ -273,6 +299,66 @@ public class VendorHardware extends AbstractModel {
      */
     public void setLastOnlineTime(String LastOnlineTime) {
         this.LastOnlineTime = LastOnlineTime;
+    }
+
+    /**
+     * Get license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LicensePayMode license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLicensePayMode() {
+        return this.LicensePayMode;
+    }
+
+    /**
+     * Set license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LicensePayMode license授权有效期
+0：月度授权
+1：永久授权
+-1：未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLicensePayMode(Long LicensePayMode) {
+        this.LicensePayMode = LicensePayMode;
+    }
+
+    /**
+     * Get 付费方
+0：客户付费
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Payer 付费方
+0：客户付费
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPayer() {
+        return this.Payer;
+    }
+
+    /**
+     * Set 付费方
+0：客户付费
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Payer 付费方
+0：客户付费
+1：厂商付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayer(Long Payer) {
+        this.Payer = Payer;
     }
 
     public VendorHardware() {
@@ -310,6 +396,12 @@ public class VendorHardware extends AbstractModel {
         if (source.LastOnlineTime != null) {
             this.LastOnlineTime = new String(source.LastOnlineTime);
         }
+        if (source.LicensePayMode != null) {
+            this.LicensePayMode = new Long(source.LicensePayMode);
+        }
+        if (source.Payer != null) {
+            this.Payer = new Long(source.Payer);
+        }
     }
 
 
@@ -326,6 +418,8 @@ public class VendorHardware extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
         this.setParamSimple(map, prefix + "LicenseChargingMode", this.LicenseChargingMode);
         this.setParamSimple(map, prefix + "LastOnlineTime", this.LastOnlineTime);
+        this.setParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
+        this.setParamSimple(map, prefix + "Payer", this.Payer);
 
     }
 }
