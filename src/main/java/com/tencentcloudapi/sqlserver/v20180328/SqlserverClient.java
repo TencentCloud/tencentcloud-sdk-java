@@ -941,6 +941,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeRestoreTimeRange)用于查询按照时间点可回档的时间范围。
+     * @param req DescribeRestoreTimeRangeRequest
+     * @return DescribeRestoreTimeRangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRestoreTimeRangeResponse DescribeRestoreTimeRange(DescribeRestoreTimeRangeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRestoreTimeRange", DescribeRestoreTimeRangeResponse.class);
+    }
+
+    /**
      *本接口（DescribeRollbackTime）用于查询实例可回档时间范围
      * @param req DescribeRollbackTimeRequest
      * @return DescribeRollbackTimeResponse

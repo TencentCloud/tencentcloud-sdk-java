@@ -78,6 +78,15 @@ UserId必须是传入合同（FlowId）中的签署人。
     private String Mobile;
 
     /**
+    * 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数
+    */
+    @SerializedName("RecipientIds")
+    @Expose
+    private String [] RecipientIds;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -221,6 +230,30 @@ UserId必须是传入合同（FlowId）中的签署人。
         this.Mobile = Mobile;
     }
 
+    /**
+     * Get 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数 
+     * @return RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     */
+    public String [] getRecipientIds() {
+        return this.RecipientIds;
+    }
+
+    /**
+     * Set 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     * @param RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
+您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
+若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     */
+    public void setRecipientIds(String [] RecipientIds) {
+        this.RecipientIds = RecipientIds;
+    }
+
     public CreateOrganizationBatchSignUrlRequest() {
     }
 
@@ -250,6 +283,12 @@ UserId必须是传入合同（FlowId）中的签署人。
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
+        if (source.RecipientIds != null) {
+            this.RecipientIds = new String[source.RecipientIds.length];
+            for (int i = 0; i < source.RecipientIds.length; i++) {
+                this.RecipientIds[i] = new String(source.RecipientIds[i]);
+            }
+        }
     }
 
 
@@ -263,6 +302,7 @@ UserId必须是传入合同（FlowId）中的签署人。
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
 
     }
 }

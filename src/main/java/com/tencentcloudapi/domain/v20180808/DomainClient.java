@@ -50,6 +50,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *用户合作商预释放出价
+     * @param req BidPreDomainsRequest
+     * @return BidPreDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BidPreDomainsResponse BidPreDomains(BidPreDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BidPreDomains", BidPreDomainsResponse.class);
+    }
+
+    /**
      *本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
      * @param req CheckBatchStatusRequest
      * @return CheckBatchStatusResponse
@@ -267,6 +278,17 @@ public class DomainClient extends AbstractClient{
     public DescribePreDomainListResponse DescribePreDomainList(DescribePreDomainListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePreDomainList", DescribePreDomainListResponse.class);
+    }
+
+    /**
+     *接口用于获取合作商竞价过程中竞价详情数据
+     * @param req DescribeReservedBidInfoRequest
+     * @return DescribeReservedBidInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedBidInfoResponse DescribeReservedBidInfo(DescribeReservedBidInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReservedBidInfo", DescribeReservedBidInfoResponse.class);
     }
 
     /**

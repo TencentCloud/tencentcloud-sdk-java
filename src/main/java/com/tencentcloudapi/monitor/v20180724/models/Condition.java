@@ -119,6 +119,14 @@ public class Condition extends AbstractModel {
     private String ProductId;
 
     /**
+    * 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HierarchicalValue")
+    @Expose
+    private AlarmHierarchicalValue HierarchicalValue;
+
+    /**
      * Get 告警通知频率 
      * @return AlarmNotifyPeriod 告警通知频率
      */
@@ -342,6 +350,26 @@ public class Condition extends AbstractModel {
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HierarchicalValue 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlarmHierarchicalValue getHierarchicalValue() {
+        return this.HierarchicalValue;
+    }
+
+    /**
+     * Set 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HierarchicalValue 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHierarchicalValue(AlarmHierarchicalValue HierarchicalValue) {
+        this.HierarchicalValue = HierarchicalValue;
+    }
+
     public Condition() {
     }
 
@@ -389,6 +417,9 @@ public class Condition extends AbstractModel {
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
         }
+        if (source.HierarchicalValue != null) {
+            this.HierarchicalValue = new AlarmHierarchicalValue(source.HierarchicalValue);
+        }
     }
 
 
@@ -409,6 +440,7 @@ public class Condition extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
         this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamObj(map, prefix + "HierarchicalValue.", this.HierarchicalValue);
 
     }
 }

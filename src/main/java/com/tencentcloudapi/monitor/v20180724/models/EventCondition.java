@@ -61,6 +61,14 @@ public class EventCondition extends AbstractModel {
     private String RuleID;
 
     /**
+    * 指标名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricName")
+    @Expose
+    private String MetricName;
+
+    /**
      * Get 告警通知频率
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AlarmNotifyPeriod 告警通知频率
@@ -148,6 +156,26 @@ public class EventCondition extends AbstractModel {
         this.RuleID = RuleID;
     }
 
+    /**
+     * Get 指标名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricName 指标名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetricName() {
+        return this.MetricName;
+    }
+
+    /**
+     * Set 指标名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricName 指标名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricName(String MetricName) {
+        this.MetricName = MetricName;
+    }
+
     public EventCondition() {
     }
 
@@ -171,6 +199,9 @@ public class EventCondition extends AbstractModel {
         if (source.RuleID != null) {
             this.RuleID = new String(source.RuleID);
         }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
     }
 
 
@@ -183,6 +214,7 @@ public class EventCondition extends AbstractModel {
         this.setParamSimple(map, prefix + "EventID", this.EventID);
         this.setParamSimple(map, prefix + "EventDisplayName", this.EventDisplayName);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
+        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
 
     }
 }

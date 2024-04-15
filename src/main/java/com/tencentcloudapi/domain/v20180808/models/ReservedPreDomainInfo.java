@@ -78,6 +78,14 @@ public class ReservedPreDomainInfo extends AbstractModel {
     private String ResourceId;
 
     /**
+    * 业务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BusinessId")
+    @Expose
+    private String BusinessId;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -209,6 +217,26 @@ public class ReservedPreDomainInfo extends AbstractModel {
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get 业务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BusinessId 业务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBusinessId() {
+        return this.BusinessId;
+    }
+
+    /**
+     * Set 业务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BusinessId 业务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusinessId(String BusinessId) {
+        this.BusinessId = BusinessId;
+    }
+
     public ReservedPreDomainInfo() {
     }
 
@@ -238,6 +266,9 @@ public class ReservedPreDomainInfo extends AbstractModel {
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.BusinessId != null) {
+            this.BusinessId = new String(source.BusinessId);
+        }
     }
 
 
@@ -252,6 +283,7 @@ public class ReservedPreDomainInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RegTime", this.RegTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "BusinessId", this.BusinessId);
 
     }
 }

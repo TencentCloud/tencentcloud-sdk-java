@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskParams extends AbstractModel {
 
     /**
-    * 下载地址,需要通过cos桶临时秘钥去下载
+    * 下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosPath")
@@ -32,9 +32,9 @@ public class TaskParams extends AbstractModel {
     private String CosPath;
 
     /**
-     * Get 下载地址,需要通过cos桶临时秘钥去下载
+     * Get 下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosPath 下载地址,需要通过cos桶临时秘钥去下载
+     * @return CosPath 下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosPath() {
@@ -42,9 +42,9 @@ public class TaskParams extends AbstractModel {
     }
 
     /**
-     * Set 下载地址,需要通过cos桶临时秘钥去下载
+     * Set 下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosPath 下载地址,需要通过cos桶临时秘钥去下载
+     * @param CosPath 下载地址,需要通过cos桶临时密钥去下载
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosPath(String CosPath) {
