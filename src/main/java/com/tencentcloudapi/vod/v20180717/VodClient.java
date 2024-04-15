@@ -374,7 +374,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *该接口用于创建点播子应用。
+     *该接口用于创建点播应用。
      * @param req CreateSubAppIdRequest
      * @return CreateSubAppIdResponse
      * @throws TencentCloudSDKException
@@ -1311,7 +1311,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *该接口用于获取当前账号的子应用列表，包含主应用。
+     *该接口用于获取当前账号的应用列表。
      * @param req DescribeSubAppIdsRequest
      * @return DescribeSubAppIdsResponse
      * @throws TencentCloudSDKException

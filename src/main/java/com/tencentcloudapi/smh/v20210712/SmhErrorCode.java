@@ -3,9 +3,6 @@ public enum SmhErrorCode {
     // 内部错误。
      INTERNALERROR("InternalError"),
      
-    // 账户余额不足
-     INTERNALERROR_BALANCELESS("InternalError.BalanceLess"),
-     
     // 媒体库资源删除失败
      INTERNALERROR_MODIFYRESOURCESTATUSFAIL("InternalError.ModifyResourceStatusFail"),
      
@@ -80,6 +77,9 @@ public enum SmhErrorCode {
      
     // 短信验证码验证次数超限，请重新发送短信验证码。
      UNAUTHORIZEDOPERATION_SMSCODEEXCEEDED("UnauthorizedOperation.SmsCodeExceeded"),
+     
+    // 账户余额不足
+     UNSUPPORTEDOPERATION_BALANCELESS("UnsupportedOperation.BalanceLess"),
      
     // 指定的目的不受支持。
      UNSUPPORTEDOPERATION_PURPOSE("UnsupportedOperation.Purpose");

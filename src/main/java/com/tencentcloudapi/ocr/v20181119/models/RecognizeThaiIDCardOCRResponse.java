@@ -45,39 +45,39 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private String EnFirstName;
 
     /**
-    * 地址
+    * 英文姓名
     */
-    @SerializedName("Address")
+    @SerializedName("EnLastName")
     @Expose
-    private String Address;
+    private String EnLastName;
 
     /**
-    * 出生日期
-    */
-    @SerializedName("Birthday")
-    @Expose
-    private String Birthday;
-
-    /**
-    * 签发日期
+    * 泰文签发日期
     */
     @SerializedName("IssueDate")
     @Expose
     private String IssueDate;
 
     /**
-    * 到期日期
+    * 泰文到期日期
     */
     @SerializedName("ExpirationDate")
     @Expose
     private String ExpirationDate;
 
     /**
-    * 英文姓名
+    * 泰文出生日期
     */
-    @SerializedName("EnLastName")
+    @SerializedName("Birthday")
     @Expose
-    private String EnLastName;
+    private String Birthday;
+
+    /**
+    * 地址
+    */
+    @SerializedName("Address")
+    @Expose
+    private String Address;
 
     /**
     * 证件人像照片抠取
@@ -142,70 +142,6 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 地址 
-     * @return Address 地址
-     */
-    public String getAddress() {
-        return this.Address;
-    }
-
-    /**
-     * Set 地址
-     * @param Address 地址
-     */
-    public void setAddress(String Address) {
-        this.Address = Address;
-    }
-
-    /**
-     * Get 出生日期 
-     * @return Birthday 出生日期
-     */
-    public String getBirthday() {
-        return this.Birthday;
-    }
-
-    /**
-     * Set 出生日期
-     * @param Birthday 出生日期
-     */
-    public void setBirthday(String Birthday) {
-        this.Birthday = Birthday;
-    }
-
-    /**
-     * Get 签发日期 
-     * @return IssueDate 签发日期
-     */
-    public String getIssueDate() {
-        return this.IssueDate;
-    }
-
-    /**
-     * Set 签发日期
-     * @param IssueDate 签发日期
-     */
-    public void setIssueDate(String IssueDate) {
-        this.IssueDate = IssueDate;
-    }
-
-    /**
-     * Get 到期日期 
-     * @return ExpirationDate 到期日期
-     */
-    public String getExpirationDate() {
-        return this.ExpirationDate;
-    }
-
-    /**
-     * Set 到期日期
-     * @param ExpirationDate 到期日期
-     */
-    public void setExpirationDate(String ExpirationDate) {
-        this.ExpirationDate = ExpirationDate;
-    }
-
-    /**
      * Get 英文姓名 
      * @return EnLastName 英文姓名
      */
@@ -219,6 +155,70 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
      */
     public void setEnLastName(String EnLastName) {
         this.EnLastName = EnLastName;
+    }
+
+    /**
+     * Get 泰文签发日期 
+     * @return IssueDate 泰文签发日期
+     */
+    public String getIssueDate() {
+        return this.IssueDate;
+    }
+
+    /**
+     * Set 泰文签发日期
+     * @param IssueDate 泰文签发日期
+     */
+    public void setIssueDate(String IssueDate) {
+        this.IssueDate = IssueDate;
+    }
+
+    /**
+     * Get 泰文到期日期 
+     * @return ExpirationDate 泰文到期日期
+     */
+    public String getExpirationDate() {
+        return this.ExpirationDate;
+    }
+
+    /**
+     * Set 泰文到期日期
+     * @param ExpirationDate 泰文到期日期
+     */
+    public void setExpirationDate(String ExpirationDate) {
+        this.ExpirationDate = ExpirationDate;
+    }
+
+    /**
+     * Get 泰文出生日期 
+     * @return Birthday 泰文出生日期
+     */
+    public String getBirthday() {
+        return this.Birthday;
+    }
+
+    /**
+     * Set 泰文出生日期
+     * @param Birthday 泰文出生日期
+     */
+    public void setBirthday(String Birthday) {
+        this.Birthday = Birthday;
+    }
+
+    /**
+     * Get 地址 
+     * @return Address 地址
+     */
+    public String getAddress() {
+        return this.Address;
+    }
+
+    /**
+     * Set 地址
+     * @param Address 地址
+     */
+    public void setAddress(String Address) {
+        this.Address = Address;
     }
 
     /**
@@ -270,11 +270,8 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         if (source.EnFirstName != null) {
             this.EnFirstName = new String(source.EnFirstName);
         }
-        if (source.Address != null) {
-            this.Address = new String(source.Address);
-        }
-        if (source.Birthday != null) {
-            this.Birthday = new String(source.Birthday);
+        if (source.EnLastName != null) {
+            this.EnLastName = new String(source.EnLastName);
         }
         if (source.IssueDate != null) {
             this.IssueDate = new String(source.IssueDate);
@@ -282,8 +279,11 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         if (source.ExpirationDate != null) {
             this.ExpirationDate = new String(source.ExpirationDate);
         }
-        if (source.EnLastName != null) {
-            this.EnLastName = new String(source.EnLastName);
+        if (source.Birthday != null) {
+            this.Birthday = new String(source.Birthday);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
         }
         if (source.PortraitImage != null) {
             this.PortraitImage = new String(source.PortraitImage);
@@ -301,11 +301,11 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "ThaiName", this.ThaiName);
         this.setParamSimple(map, prefix + "EnFirstName", this.EnFirstName);
-        this.setParamSimple(map, prefix + "Address", this.Address);
-        this.setParamSimple(map, prefix + "Birthday", this.Birthday);
+        this.setParamSimple(map, prefix + "EnLastName", this.EnLastName);
         this.setParamSimple(map, prefix + "IssueDate", this.IssueDate);
         this.setParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
-        this.setParamSimple(map, prefix + "EnLastName", this.EnLastName);
+        this.setParamSimple(map, prefix + "Birthday", this.Birthday);
+        this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

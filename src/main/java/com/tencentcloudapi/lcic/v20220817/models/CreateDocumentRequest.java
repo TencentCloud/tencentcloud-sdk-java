@@ -97,6 +97,13 @@ public class CreateDocumentRequest extends AbstractModel {
     private Boolean AutoHandleUnsupportedElement;
 
     /**
+    * 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+    */
+    @SerializedName("MinScaleResolution")
+    @Expose
+    private String MinScaleResolution;
+
+    /**
      * Get 低代码互动课堂的SdkAppId。 
      * @return SdkAppId 低代码互动课堂的SdkAppId。
      */
@@ -280,6 +287,22 @@ public class CreateDocumentRequest extends AbstractModel {
         this.AutoHandleUnsupportedElement = AutoHandleUnsupportedElement;
     }
 
+    /**
+     * Get 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x" 
+     * @return MinScaleResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+     */
+    public String getMinScaleResolution() {
+        return this.MinScaleResolution;
+    }
+
+    /**
+     * Set 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+     * @param MinScaleResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+     */
+    public void setMinScaleResolution(String MinScaleResolution) {
+        this.MinScaleResolution = MinScaleResolution;
+    }
+
     public CreateDocumentRequest() {
     }
 
@@ -315,6 +338,9 @@ public class CreateDocumentRequest extends AbstractModel {
         if (source.AutoHandleUnsupportedElement != null) {
             this.AutoHandleUnsupportedElement = new Boolean(source.AutoHandleUnsupportedElement);
         }
+        if (source.MinScaleResolution != null) {
+            this.MinScaleResolution = new String(source.MinScaleResolution);
+        }
     }
 
 
@@ -331,6 +357,7 @@ public class CreateDocumentRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DocumentType", this.DocumentType);
         this.setParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
         this.setParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
+        this.setParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
 
     }
 }

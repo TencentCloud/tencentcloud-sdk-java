@@ -38,8 +38,7 @@ public class DescribeStorageDetailsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -64,7 +63,7 @@ public class DescribeStorageDetailsRequest extends AbstractModel {
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
@@ -120,20 +119,16 @@ public class DescribeStorageDetailsRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b> 
-     * @return SubAppId <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
+     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
-     * @param SubAppId <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -176,7 +171,7 @@ public class DescribeStorageDetailsRequest extends AbstractModel {
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
@@ -192,7 +187,7 @@ public class DescribeStorageDetailsRequest extends AbstractModel {
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
@@ -214,7 +209,7 @@ public class DescribeStorageDetailsRequest extends AbstractModel {
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
@@ -230,7 +225,7 @@ public class DescribeStorageDetailsRequest extends AbstractModel {
 <li>DeepArchiveStorage：深度归档存储。</li>
 <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
 <li>DeletedArchiveStorage：归档提前删除量。</li>
-<li>DeletedDeepArchiveStorage：深度归档提前删除量。
+<li>DeletedDeepArchiveStorage：深度归档提前删除量。</li>
 <li>ArchiveStandardRetrieval：归档标准取回量。</li>
 <li>ArchiveExpeditedRetrieval：归档快速取回量。</li>
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>

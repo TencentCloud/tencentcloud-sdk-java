@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSubAppIdsResponse extends AbstractModel {
 
     /**
-    * 子应用信息集合。
+    * 应用信息集合。
     */
     @SerializedName("SubAppIdInfoSet")
     @Expose
     private SubAppIdInfo [] SubAppIdInfoSet;
 
     /**
-    * 子应用总数量。
+    * 应用总数量。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSubAppIdsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 子应用信息集合。 
-     * @return SubAppIdInfoSet 子应用信息集合。
+     * Get 应用信息集合。 
+     * @return SubAppIdInfoSet 应用信息集合。
      */
     public SubAppIdInfo [] getSubAppIdInfoSet() {
         return this.SubAppIdInfoSet;
     }
 
     /**
-     * Set 子应用信息集合。
-     * @param SubAppIdInfoSet 子应用信息集合。
+     * Set 应用信息集合。
+     * @param SubAppIdInfoSet 应用信息集合。
      */
     public void setSubAppIdInfoSet(SubAppIdInfo [] SubAppIdInfoSet) {
         this.SubAppIdInfoSet = SubAppIdInfoSet;
     }
 
     /**
-     * Get 子应用总数量。 
-     * @return TotalCount 子应用总数量。
+     * Get 应用总数量。 
+     * @return TotalCount 应用总数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 子应用总数量。
-     * @param TotalCount 子应用总数量。
+     * Set 应用总数量。
+     * @param TotalCount 应用总数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -71,6 +71,16 @@ engine2
     private String Engine;
 
     /**
+    * prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+    */
+    @SerializedName("Revise")
+    @Expose
+    private Long Revise;
+
+    /**
      * Get 文本描述。 
 算法将根据输入的文本智能生成与之相关的图像。 
 不能为空，推荐使用中文。最多可传100个 utf-8 字符。 
@@ -198,6 +208,34 @@ engine2
         this.Engine = Engine;
     }
 
+    /**
+     * Get prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。 
+     * @return Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     */
+    public Long getRevise() {
+        return this.Revise;
+    }
+
+    /**
+     * Set prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     * @param Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     */
+    public void setRevise(Long Revise) {
+        this.Revise = Revise;
+    }
+
     public SubmitTextToImageProJobRequest() {
     }
 
@@ -221,6 +259,9 @@ engine2
         if (source.Engine != null) {
             this.Engine = new String(source.Engine);
         }
+        if (source.Revise != null) {
+            this.Revise = new Long(source.Revise);
+        }
     }
 
 
@@ -233,6 +274,7 @@ engine2
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamSimple(map, prefix + "Engine", this.Engine);
+        this.setParamSimple(map, prefix + "Revise", this.Revise);
 
     }
 }

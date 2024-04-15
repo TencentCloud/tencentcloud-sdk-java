@@ -176,6 +176,22 @@ public class DocumentInfo extends AbstractModel {
     private String Preview;
 
     /**
+    * 文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Resolution")
+    @Expose
+    private String Resolution;
+
+    /**
+    * 转码后文档的最小分辨率，和创建文档时传入的参数一致。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinScaleResolution")
+    @Expose
+    private String MinScaleResolution;
+
+    /**
      * Get 文档Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocumentId 文档Id
@@ -555,6 +571,46 @@ public class DocumentInfo extends AbstractModel {
         this.Preview = Preview;
     }
 
+    /**
+     * Get 文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Resolution 文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    /**
+     * Set 文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Resolution 文档的分辨率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
+    }
+
+    /**
+     * Get 转码后文档的最小分辨率，和创建文档时传入的参数一致。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinScaleResolution 转码后文档的最小分辨率，和创建文档时传入的参数一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMinScaleResolution() {
+        return this.MinScaleResolution;
+    }
+
+    /**
+     * Set 转码后文档的最小分辨率，和创建文档时传入的参数一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinScaleResolution 转码后文档的最小分辨率，和创建文档时传入的参数一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinScaleResolution(String MinScaleResolution) {
+        this.MinScaleResolution = MinScaleResolution;
+    }
+
     public DocumentInfo() {
     }
 
@@ -620,6 +676,12 @@ public class DocumentInfo extends AbstractModel {
         if (source.Preview != null) {
             this.Preview = new String(source.Preview);
         }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
+        if (source.MinScaleResolution != null) {
+            this.MinScaleResolution = new String(source.MinScaleResolution);
+        }
     }
 
 
@@ -646,6 +708,8 @@ public class DocumentInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Cover", this.Cover);
         this.setParamSimple(map, prefix + "Preview", this.Preview);
+        this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
 
     }
 }

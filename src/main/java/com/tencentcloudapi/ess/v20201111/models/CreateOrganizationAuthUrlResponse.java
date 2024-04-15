@@ -24,11 +24,77 @@ import java.util.HashMap;
 public class CreateOrganizationAuthUrlResponse extends AbstractModel {
 
     /**
+    * “H5”-H5长连接
+"SHORT_H5"- H5短链
+"APP"-小程序
+"PC"-PC浏览器
+链接有效期统一30天
+    */
+    @SerializedName("AuthUrl")
+    @Expose
+    private String AuthUrl;
+
+    /**
+    * 链接过期时间戳
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private Long ExpiredTime;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get “H5”-H5长连接
+"SHORT_H5"- H5短链
+"APP"-小程序
+"PC"-PC浏览器
+链接有效期统一30天 
+     * @return AuthUrl “H5”-H5长连接
+"SHORT_H5"- H5短链
+"APP"-小程序
+"PC"-PC浏览器
+链接有效期统一30天
+     */
+    public String getAuthUrl() {
+        return this.AuthUrl;
+    }
+
+    /**
+     * Set “H5”-H5长连接
+"SHORT_H5"- H5短链
+"APP"-小程序
+"PC"-PC浏览器
+链接有效期统一30天
+     * @param AuthUrl “H5”-H5长连接
+"SHORT_H5"- H5短链
+"APP"-小程序
+"PC"-PC浏览器
+链接有效期统一30天
+     */
+    public void setAuthUrl(String AuthUrl) {
+        this.AuthUrl = AuthUrl;
+    }
+
+    /**
+     * Get 链接过期时间戳 
+     * @return ExpiredTime 链接过期时间戳
+     */
+    public Long getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set 链接过期时间戳
+     * @param ExpiredTime 链接过期时间戳
+     */
+    public void setExpiredTime(Long ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +120,12 @@ public class CreateOrganizationAuthUrlResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateOrganizationAuthUrlResponse(CreateOrganizationAuthUrlResponse source) {
+        if (source.AuthUrl != null) {
+            this.AuthUrl = new String(source.AuthUrl);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +136,8 @@ public class CreateOrganizationAuthUrlResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AuthUrl", this.AuthUrl);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

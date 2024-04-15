@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateSubAppIdRequest extends AbstractModel {
 
     /**
-    * 子应用名称，长度限制：40个字符。
+    * 应用名称，长度限制：40个字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 子应用简介，长度限制： 300个字符。
+    * 应用简介，长度限制： 300个字符。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 子应用名称，长度限制：40个字符。 
-     * @return Name 子应用名称，长度限制：40个字符。
+     * Get 应用名称，长度限制：40个字符。 
+     * @return Name 应用名称，长度限制：40个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 子应用名称，长度限制：40个字符。
-     * @param Name 子应用名称，长度限制：40个字符。
+     * Set 应用名称，长度限制：40个字符。
+     * @param Name 应用名称，长度限制：40个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 子应用简介，长度限制： 300个字符。 
-     * @return Description 子应用简介，长度限制： 300个字符。
+     * Get 应用简介，长度限制： 300个字符。 
+     * @return Description 应用简介，长度限制： 300个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 子应用简介，长度限制： 300个字符。
-     * @param Description 子应用简介，长度限制： 300个字符。
+     * Set 应用简介，长度限制： 300个字符。
+     * @param Description 应用简介，长度限制： 300个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;

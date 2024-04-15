@@ -1667,6 +1667,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *根据K8S版本获取可选运行时版本
+     * @param req DescribeSupportedRuntimeRequest
+     * @return DescribeSupportedRuntimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupportedRuntimeResponse DescribeSupportedRuntime(DescribeSupportedRuntimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSupportedRuntime", DescribeSupportedRuntimeResponse.class);
+    }
+
+    /**
      *获取边缘计算集群的认证信息
      * @param req DescribeTKEEdgeClusterCredentialRequest
      * @return DescribeTKEEdgeClusterCredentialResponse
@@ -2049,6 +2060,17 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterNodePoolResponse ModifyClusterNodePool(ModifyClusterNodePoolRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterNodePool", ModifyClusterNodePoolResponse.class);
+    }
+
+    /**
+     *修改集群及节点池纬度运行时配置
+     * @param req ModifyClusterRuntimeConfigRequest
+     * @return ModifyClusterRuntimeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(ModifyClusterRuntimeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterRuntimeConfig", ModifyClusterRuntimeConfigResponse.class);
     }
 
     /**

@@ -59,7 +59,7 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     private String Region;
 
     /**
-    * 目录
+    * 文件存储目录
     */
     @SerializedName("FilePath")
     @Expose
@@ -78,6 +78,13 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     @SerializedName("CorpUin")
     @Expose
     private String CorpUin;
+
+    /**
+    * 图片存储目录
+    */
+    @SerializedName("ImagePath")
+    @Expose
+    private String ImagePath;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -167,16 +174,16 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     }
 
     /**
-     * Get 目录 
-     * @return FilePath 目录
+     * Get 文件存储目录 
+     * @return FilePath 文件存储目录
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set 目录
-     * @param FilePath 目录
+     * Set 文件存储目录
+     * @param FilePath 文件存储目录
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
@@ -212,6 +219,22 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
      */
     public void setCorpUin(String CorpUin) {
         this.CorpUin = CorpUin;
+    }
+
+    /**
+     * Get 图片存储目录 
+     * @return ImagePath 图片存储目录
+     */
+    public String getImagePath() {
+        return this.ImagePath;
+    }
+
+    /**
+     * Set 图片存储目录
+     * @param ImagePath 图片存储目录
+     */
+    public void setImagePath(String ImagePath) {
+        this.ImagePath = ImagePath;
     }
 
     /**
@@ -262,6 +285,9 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
         if (source.CorpUin != null) {
             this.CorpUin = new String(source.CorpUin);
         }
+        if (source.ImagePath != null) {
+            this.ImagePath = new String(source.ImagePath);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -280,6 +306,7 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "FilePath", this.FilePath);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CorpUin", this.CorpUin);
+        this.setParamSimple(map, prefix + "ImagePath", this.ImagePath);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

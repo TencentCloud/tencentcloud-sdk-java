@@ -29,7 +29,6 @@ public class OutputManageMarketingRiskValue extends AbstractModel {
 当AccountType为2时，对应微信的OpenId/UnionId。
 当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
-请注意：此字段可能返回null，表示无法获取有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
@@ -123,14 +122,12 @@ reject：高风险，建议拦截
 当AccountType为2时，对应微信的OpenId/UnionId。
 当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
-请注意：此字段可能返回null，表示无法获取有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserId 账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId。
 当AccountType为2时，对应微信的OpenId/UnionId。
 当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
-请注意：此字段可能返回null，表示无法获取有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
@@ -143,14 +140,12 @@ reject：高风险，建议拦截
 当AccountType为2时，对应微信的OpenId/UnionId。
 当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
-请注意：此字段可能返回null，表示无法获取有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 账号ID：对应输入参数。
 当AccountType为1时，对应QQ的OpenId。
 当AccountType为2时，对应微信的OpenId/UnionId。
 当AccountType为8时，对应IMEI、IDFA、IMEIMD5或者IDFAMD5。
 当AccountType为10004时，对应手机号的MD5值。
-请注意：此字段可能返回null，表示无法获取有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {

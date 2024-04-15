@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSubAppIdsRequest extends AbstractModel {
 
     /**
-    * 子应用名称。
+    * 应用名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 标签信息，查询指定标签的子应用列表。
+    * 标签信息，查询指定标签的应用列表。
     */
     @SerializedName("Tags")
     @Expose
@@ -52,32 +52,32 @@ public class DescribeSubAppIdsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 子应用名称。 
-     * @return Name 子应用名称。
+     * Get 应用名称。 
+     * @return Name 应用名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 子应用名称。
-     * @param Name 子应用名称。
+     * Set 应用名称。
+     * @param Name 应用名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 标签信息，查询指定标签的子应用列表。 
-     * @return Tags 标签信息，查询指定标签的子应用列表。
+     * Get 标签信息，查询指定标签的应用列表。 
+     * @return Tags 标签信息，查询指定标签的应用列表。
      */
     public ResourceTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签信息，查询指定标签的子应用列表。
-     * @param Tags 标签信息，查询指定标签的子应用列表。
+     * Set 标签信息，查询指定标签的应用列表。
+     * @param Tags 标签信息，查询指定标签的应用列表。
      */
     public void setTags(ResourceTag [] Tags) {
         this.Tags = Tags;

@@ -55,6 +55,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
 • **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语；
     */
     @SerializedName("EngineModelType")
     @Expose
@@ -315,7 +316,8 @@ public class CreateRecTaskRequest extends AbstractModel {
 • **16k_es：**西班牙语；
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
-• **16k_zh_medical：**中文医疗引擎； 
+• **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语； 
      * @return EngineModelType 引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -347,6 +349,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
 • **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语；
      */
     public String getEngineModelType() {
         return this.EngineModelType;
@@ -384,6 +387,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
 • **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语；
      * @param EngineModelType 引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -415,6 +419,7 @@ public class CreateRecTaskRequest extends AbstractModel {
 • **16k_hi：**印地语；
 • **16k_fr：**法语；
 • **16k_zh_medical：**中文医疗引擎；
+• **16k_de：**德语；
      */
     public void setEngineModelType(String EngineModelType) {
         this.EngineModelType = EngineModelType;

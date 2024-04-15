@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClusterRouteTableRequest extends AbstractModel {
 
     /**
-    * 路由表名称
+    * 路由表名称，一般为集群ID
     */
     @SerializedName("RouteTableName")
     @Expose
@@ -45,23 +45,23 @@ public class CreateClusterRouteTableRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 是否忽略CIDR冲突
+    * 是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
     */
     @SerializedName("IgnoreClusterCidrConflict")
     @Expose
     private Long IgnoreClusterCidrConflict;
 
     /**
-     * Get 路由表名称 
-     * @return RouteTableName 路由表名称
+     * Get 路由表名称，一般为集群ID 
+     * @return RouteTableName 路由表名称，一般为集群ID
      */
     public String getRouteTableName() {
         return this.RouteTableName;
     }
 
     /**
-     * Set 路由表名称
-     * @param RouteTableName 路由表名称
+     * Set 路由表名称，一般为集群ID
+     * @param RouteTableName 路由表名称，一般为集群ID
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;
@@ -100,16 +100,16 @@ public class CreateClusterRouteTableRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否忽略CIDR冲突 
-     * @return IgnoreClusterCidrConflict 是否忽略CIDR冲突
+     * Get 是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略 
+     * @return IgnoreClusterCidrConflict 是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
      */
     public Long getIgnoreClusterCidrConflict() {
         return this.IgnoreClusterCidrConflict;
     }
 
     /**
-     * Set 是否忽略CIDR冲突
-     * @param IgnoreClusterCidrConflict 是否忽略CIDR冲突
+     * Set 是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
+     * @param IgnoreClusterCidrConflict 是否忽略CIDR与 vpc 路由表的冲突， 0 表示不忽略，1表示忽略。默认不忽略
      */
     public void setIgnoreClusterCidrConflict(Long IgnoreClusterCidrConflict) {
         this.IgnoreClusterCidrConflict = IgnoreClusterCidrConflict;
