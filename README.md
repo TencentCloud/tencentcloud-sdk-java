@@ -526,3 +526,18 @@ request.SetHeader(header);
 ## kotlin 问题
 
 部分用户可能使用时遇到报错：`java.lang.NoSuchMethodError: kotlin.collections.ArraysKt.copyInto`。这是因为 kotlin 运行环境版本较低导致，可尝试升级 kotlin 版本解决。
+
+## java.lang.NoSuchMethodError: xxx.setSkipSign 问题
+
+部分用户可能使用时遇到报错：`java.lang.NoSuchMethodError: xxx.setSkipSign`。这是因为 `tencentcloud-sdk-java-common` 包和其他产品（如`tencentcloud-sdk-java-cvm`）的版本不一致导致的。
+
+该问题可能是 pom 中指定的 `common` 包版本有误，也可能是因为引用了其他第三方 sdk 而间接引用了不匹配的 `common` 版本导致的。
+
+解决方式是在 pom.xml 中显式指定相同版本的 `common` 包版本，如
+```
+<dependency>
+    <groupId>com.tencentcloudapi</groupId>
+    <artifactId>tencentcloud-sdk-java-common</artifactId>
+    <version>3.1.1000</version>
+</dependency>
+```
