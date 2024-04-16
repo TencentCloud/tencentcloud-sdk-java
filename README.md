@@ -533,7 +533,7 @@ request.SetHeader(header);
 
 该问题可能是 pom 中指定的 `common` 包版本有误，也可能是因为引用了其他第三方 sdk 而间接引用了不匹配的 `common` 版本导致的。
 
-解决方式是在 pom.xml 中显示指定相同版本的 `common` 包版本，如
+解决方式是在 pom.xml 中显式指定相同版本的 `common` 包版本，如
 ```
 <dependency>
     <groupId>com.tencentcloudapi</groupId>
