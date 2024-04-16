@@ -530,8 +530,10 @@ request.SetHeader(header);
 ## java.lang.NoSuchMethodError: xxx.setSkipSign 问题
 
 部分用户可能使用时遇到报错：`java.lang.NoSuchMethodError: xxx.setSkipSign`。这是因为 `tencentcloud-sdk-java-common` 包和其他产品（如`tencentcloud-sdk-java-cvm`）的版本不一致导致的。
-该问题可能是 pom 中指定的 `tencentcloud-sdk-java-common` 有误，也有可能是因为引用了其他第三方 sdk 而间接引用了不匹配的 `tencentcloud-sdk-java-common` 版本导致的。
-解决方式是在 pom.xml 中显示指定相同版本的 common 包版本，如
+
+该问题可能是 pom 中指定的 `common` 包版本有误，也可能是因为引用了其他第三方 sdk 而间接引用了不匹配的 `common` 版本导致的。
+
+解决方式是在 pom.xml 中显示指定相同版本的 `common` 包版本，如
 ```
 <dependency>
     <groupId>com.tencentcloudapi</groupId>
