@@ -46,13 +46,25 @@ public class DescribePrometheusTargetsTMPRequest extends AbstractModel {
     private String ClusterType;
 
     /**
-    * 过滤条件，当前支持
-Name=state
-Value=up, down, unknown
+    * 过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * targets偏移量，默认为0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * targets返回数量，默认为20，最大值200
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
      * Get 实例id 
@@ -107,27 +119,51 @@ Value=up, down, unknown
     }
 
     /**
-     * Get 过滤条件，当前支持
-Name=state
-Value=up, down, unknown 
-     * @return Filters 过滤条件，当前支持
-Name=state
-Value=up, down, unknown
+     * Get 过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址 
+     * @return Filters 过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，当前支持
-Name=state
-Value=up, down, unknown
-     * @param Filters 过滤条件，当前支持
-Name=state
-Value=up, down, unknown
+     * Set 过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
+     * @param Filters 过滤条件，支持Name=ServiceMonitor/PodMonitor/Probe/RawJob/Job, Value为采集配置名称；Name=Health, Value=up, down, unknown；Name=EndPoint, Value为EndPoint地址
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get targets偏移量，默认为0 
+     * @return Offset targets偏移量，默认为0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set targets偏移量，默认为0
+     * @param Offset targets偏移量，默认为0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get targets返回数量，默认为20，最大值200 
+     * @return Limit targets返回数量，默认为20，最大值200
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set targets返回数量，默认为20，最大值200
+     * @param Limit targets返回数量，默认为20，最大值200
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     public DescribePrometheusTargetsTMPRequest() {
@@ -153,6 +189,12 @@ Value=up, down, unknown
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -164,6 +206,8 @@ Value=up, down, unknown
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

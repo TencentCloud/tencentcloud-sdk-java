@@ -165,6 +165,13 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
     private Long FilterPlanCntFlag;
 
     /**
+    * 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
+    */
+    @SerializedName("FilterTransRegionFlag")
+    @Expose
+    private Long FilterTransRegionFlag;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -488,6 +495,22 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         this.FilterPlanCntFlag = FilterPlanCntFlag;
     }
 
+    /**
+     * Get 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部 
+     * @return FilterTransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
+     */
+    public Long getFilterTransRegionFlag() {
+        return this.FilterTransRegionFlag;
+    }
+
+    /**
+     * Set 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
+     * @param FilterTransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
+     */
+    public void setFilterTransRegionFlag(Long FilterTransRegionFlag) {
+        this.FilterTransRegionFlag = FilterTransRegionFlag;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -562,6 +585,9 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         if (source.FilterPlanCntFlag != null) {
             this.FilterPlanCntFlag = new Long(source.FilterPlanCntFlag);
         }
+        if (source.FilterTransRegionFlag != null) {
+            this.FilterTransRegionFlag = new Long(source.FilterTransRegionFlag);
+        }
     }
 
 
@@ -589,6 +615,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FilterAssetIpList.", this.FilterAssetIpList);
         this.setParamSimple(map, prefix + "FilterBasicPlusFlag", this.FilterBasicPlusFlag);
         this.setParamSimple(map, prefix + "FilterPlanCntFlag", this.FilterPlanCntFlag);
+        this.setParamSimple(map, prefix + "FilterTransRegionFlag", this.FilterTransRegionFlag);
 
     }
 }

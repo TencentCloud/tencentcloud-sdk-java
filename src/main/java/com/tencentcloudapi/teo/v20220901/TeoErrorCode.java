@@ -48,7 +48,7 @@ public enum TeoErrorCode {
     // 创建自定义推送任务认证失败, 请检查推送地址是否正确。
      FAILEDOPERATION_CREATELOGTOPICTASKAUTHFAILURE("FailedOperation.CreateLogTopicTaskAuthFailure"),
      
-    // 账户余额不足
+    // 账户余额不足。
      FAILEDOPERATION_INSUFFICIENTACCOUNTBALANCE("FailedOperation.InsufficientAccountBalance"),
      
     // 站点状态不正确。

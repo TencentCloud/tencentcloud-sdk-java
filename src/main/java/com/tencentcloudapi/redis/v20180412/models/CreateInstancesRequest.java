@@ -229,6 +229,16 @@ public class CreateInstancesRequest extends AbstractModel {
     private String RedisClusterId;
 
     /**
+    * 告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+    */
+    @SerializedName("AlarmPolicyList")
+    @Expose
+    private String [] AlarmPolicyList;
+
+    /**
      * Get 实例类型。
 <ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li></ul> 
      * @return TypeId 实例类型。
@@ -748,6 +758,34 @@ public class CreateInstancesRequest extends AbstractModel {
         this.RedisClusterId = RedisClusterId;
     }
 
+    /**
+     * Get 告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。 
+     * @return AlarmPolicyList 告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+     */
+    public String [] getAlarmPolicyList() {
+        return this.AlarmPolicyList;
+    }
+
+    /**
+     * Set 告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+     * @param AlarmPolicyList 告警策略 ID 数组。
+
+- 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
+- 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+     */
+    public void setAlarmPolicyList(String [] AlarmPolicyList) {
+        this.AlarmPolicyList = AlarmPolicyList;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -840,6 +878,12 @@ public class CreateInstancesRequest extends AbstractModel {
         if (source.RedisClusterId != null) {
             this.RedisClusterId = new String(source.RedisClusterId);
         }
+        if (source.AlarmPolicyList != null) {
+            this.AlarmPolicyList = new String[source.AlarmPolicyList.length];
+            for (int i = 0; i < source.AlarmPolicyList.length; i++) {
+                this.AlarmPolicyList[i] = new String(source.AlarmPolicyList[i]);
+            }
+        }
     }
 
 
@@ -872,6 +916,7 @@ public class CreateInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         this.setParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
+        this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
 
     }
 }

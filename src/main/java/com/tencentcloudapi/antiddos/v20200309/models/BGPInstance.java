@@ -202,6 +202,14 @@ public class BGPInstance extends AbstractModel {
     private Long PlanCntFlag;
 
     /**
+    * 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransRegionFlag")
+    @Expose
+    private Long TransRegionFlag;
+
+    /**
     * 是否为超级高防包
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -646,6 +654,26 @@ public class BGPInstance extends AbstractModel {
     }
 
     /**
+     * Get 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTransRegionFlag() {
+        return this.TransRegionFlag;
+    }
+
+    /**
+     * Set 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransRegionFlag(Long TransRegionFlag) {
+        this.TransRegionFlag = TransRegionFlag;
+    }
+
+    /**
      * Get 是否为超级高防包
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SuperPackFlag 是否为超级高防包
@@ -748,6 +776,9 @@ public class BGPInstance extends AbstractModel {
         if (source.PlanCntFlag != null) {
             this.PlanCntFlag = new Long(source.PlanCntFlag);
         }
+        if (source.TransRegionFlag != null) {
+            this.TransRegionFlag = new Long(source.TransRegionFlag);
+        }
         if (source.SuperPackFlag != null) {
             this.SuperPackFlag = new Long(source.SuperPackFlag);
         }
@@ -781,6 +812,7 @@ public class BGPInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "BasicPlusFlag", this.BasicPlusFlag);
         this.setParamSimple(map, prefix + "PlanCntFlag", this.PlanCntFlag);
+        this.setParamSimple(map, prefix + "TransRegionFlag", this.TransRegionFlag);
         this.setParamSimple(map, prefix + "SuperPackFlag", this.SuperPackFlag);
 
     }

@@ -113,6 +113,13 @@ public class CreateLiveStreamMonitorRequest extends AbstractModel {
     private Long AiFormatDiagnose;
 
     /**
+    * 是否开启内容质检。
+    */
+    @SerializedName("AiQualityControl")
+    @Expose
+    private Long AiQualityControl;
+
+    /**
      * Get 监播任务的输出信息。 
      * @return OutputInfo 监播任务的输出信息。
      */
@@ -324,6 +331,22 @@ public class CreateLiveStreamMonitorRequest extends AbstractModel {
         this.AiFormatDiagnose = AiFormatDiagnose;
     }
 
+    /**
+     * Get 是否开启内容质检。 
+     * @return AiQualityControl 是否开启内容质检。
+     */
+    public Long getAiQualityControl() {
+        return this.AiQualityControl;
+    }
+
+    /**
+     * Set 是否开启内容质检。
+     * @param AiQualityControl 是否开启内容质检。
+     */
+    public void setAiQualityControl(Long AiQualityControl) {
+        this.AiQualityControl = AiQualityControl;
+    }
+
     public CreateLiveStreamMonitorRequest() {
     }
 
@@ -377,6 +400,9 @@ public class CreateLiveStreamMonitorRequest extends AbstractModel {
         if (source.AiFormatDiagnose != null) {
             this.AiFormatDiagnose = new Long(source.AiFormatDiagnose);
         }
+        if (source.AiQualityControl != null) {
+            this.AiQualityControl = new Long(source.AiQualityControl);
+        }
     }
 
 
@@ -396,6 +422,7 @@ public class CreateLiveStreamMonitorRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckStreamLowFrameRate", this.CheckStreamLowFrameRate);
         this.setParamSimple(map, prefix + "AllowMonitorReport", this.AllowMonitorReport);
         this.setParamSimple(map, prefix + "AiFormatDiagnose", this.AiFormatDiagnose);
+        this.setParamSimple(map, prefix + "AiQualityControl", this.AiQualityControl);
 
     }
 }

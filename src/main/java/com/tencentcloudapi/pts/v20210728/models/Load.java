@@ -40,7 +40,7 @@ public class Load extends AbstractModel {
     private VpcLoadDistribution VpcLoadDistribution;
 
     /**
-    * 压力分布
+    * 多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GeoRegionsLoadDistribution")
@@ -88,9 +88,9 @@ public class Load extends AbstractModel {
     }
 
     /**
-     * Get 压力分布
+     * Get 多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GeoRegionsLoadDistribution 压力分布
+     * @return GeoRegionsLoadDistribution 多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GeoRegionsLoadItem [] getGeoRegionsLoadDistribution() {
@@ -98,9 +98,9 @@ public class Load extends AbstractModel {
     }
 
     /**
-     * Set 压力分布
+     * Set 多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GeoRegionsLoadDistribution 压力分布
+     * @param GeoRegionsLoadDistribution 多地域压力分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGeoRegionsLoadDistribution(GeoRegionsLoadItem [] GeoRegionsLoadDistribution) {

@@ -215,6 +215,56 @@ public class VpcFwInstanceInfo extends AbstractModel {
     private String TrafficMode;
 
     /**
+    * 引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReserveTime")
+    @Expose
+    private String ReserveTime;
+
+    /**
+    * 预约引擎升级版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReserveVersion")
+    @Expose
+    private String ReserveVersion;
+
+    /**
+    * 引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReserveVersionState")
+    @Expose
+    private String ReserveVersionState;
+
+    /**
+    * 弹性开关 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElasticSwitch")
+    @Expose
+    private Long ElasticSwitch;
+
+    /**
+    * 弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElasticBandwidth")
+    @Expose
+    private Long ElasticBandwidth;
+
+    /**
+    * 是否首次开通按量付费
+1 是
+0 不是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsFirstAfterPay")
+    @Expose
+    private Long IsFirstAfterPay;
+
+    /**
      * Get VPC防火墙实例名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FwInsName VPC防火墙实例名称
@@ -690,6 +740,134 @@ public class VpcFwInstanceInfo extends AbstractModel {
         this.TrafficMode = TrafficMode;
     }
 
+    /**
+     * Get 引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReserveTime 引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReserveTime() {
+        return this.ReserveTime;
+    }
+
+    /**
+     * Set 引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReserveTime 引擎预约升级时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReserveTime(String ReserveTime) {
+        this.ReserveTime = ReserveTime;
+    }
+
+    /**
+     * Get 预约引擎升级版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReserveVersion 预约引擎升级版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReserveVersion() {
+        return this.ReserveVersion;
+    }
+
+    /**
+     * Set 预约引擎升级版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReserveVersion 预约引擎升级版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReserveVersion(String ReserveVersion) {
+        this.ReserveVersion = ReserveVersion;
+    }
+
+    /**
+     * Get 引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReserveVersionState 引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReserveVersionState() {
+        return this.ReserveVersionState;
+    }
+
+    /**
+     * Set 引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReserveVersionState 引擎预约升级版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReserveVersionState(String ReserveVersionState) {
+        this.ReserveVersionState = ReserveVersionState;
+    }
+
+    /**
+     * Get 弹性开关 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElasticSwitch 弹性开关 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getElasticSwitch() {
+        return this.ElasticSwitch;
+    }
+
+    /**
+     * Set 弹性开关 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElasticSwitch 弹性开关 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElasticSwitch(Long ElasticSwitch) {
+        this.ElasticSwitch = ElasticSwitch;
+    }
+
+    /**
+     * Get 弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElasticBandwidth 弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getElasticBandwidth() {
+        return this.ElasticBandwidth;
+    }
+
+    /**
+     * Set 弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElasticBandwidth 弹性带宽，单位Mbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElasticBandwidth(Long ElasticBandwidth) {
+        this.ElasticBandwidth = ElasticBandwidth;
+    }
+
+    /**
+     * Get 是否首次开通按量付费
+1 是
+0 不是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsFirstAfterPay 是否首次开通按量付费
+1 是
+0 不是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsFirstAfterPay() {
+        return this.IsFirstAfterPay;
+    }
+
+    /**
+     * Set 是否首次开通按量付费
+1 是
+0 不是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsFirstAfterPay 是否首次开通按量付费
+1 是
+0 不是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsFirstAfterPay(Long IsFirstAfterPay) {
+        this.IsFirstAfterPay = IsFirstAfterPay;
+    }
+
     public VpcFwInstanceInfo() {
     }
 
@@ -794,6 +972,24 @@ public class VpcFwInstanceInfo extends AbstractModel {
         if (source.TrafficMode != null) {
             this.TrafficMode = new String(source.TrafficMode);
         }
+        if (source.ReserveTime != null) {
+            this.ReserveTime = new String(source.ReserveTime);
+        }
+        if (source.ReserveVersion != null) {
+            this.ReserveVersion = new String(source.ReserveVersion);
+        }
+        if (source.ReserveVersionState != null) {
+            this.ReserveVersionState = new String(source.ReserveVersionState);
+        }
+        if (source.ElasticSwitch != null) {
+            this.ElasticSwitch = new Long(source.ElasticSwitch);
+        }
+        if (source.ElasticBandwidth != null) {
+            this.ElasticBandwidth = new Long(source.ElasticBandwidth);
+        }
+        if (source.IsFirstAfterPay != null) {
+            this.IsFirstAfterPay = new Long(source.IsFirstAfterPay);
+        }
     }
 
 
@@ -825,6 +1021,12 @@ public class VpcFwInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "UpdateEnable", this.UpdateEnable);
         this.setParamSimple(map, prefix + "TrafficMode", this.TrafficMode);
+        this.setParamSimple(map, prefix + "ReserveTime", this.ReserveTime);
+        this.setParamSimple(map, prefix + "ReserveVersion", this.ReserveVersion);
+        this.setParamSimple(map, prefix + "ReserveVersionState", this.ReserveVersionState);
+        this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
+        this.setParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
+        this.setParamSimple(map, prefix + "IsFirstAfterPay", this.IsFirstAfterPay);
 
     }
 }

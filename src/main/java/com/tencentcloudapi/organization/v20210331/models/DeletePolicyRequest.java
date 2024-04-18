@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeletePolicyRequest extends AbstractModel {
 
     /**
-    * 需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+    * 需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
 
     */
     @SerializedName("PolicyId")
@@ -39,9 +39,9 @@ public class DeletePolicyRequest extends AbstractModel {
     private String Type;
 
     /**
-     * Get 需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+     * Get 需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
  
-     * @return PolicyId 需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+     * @return PolicyId 需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
 
      */
     public Long getPolicyId() {
@@ -49,9 +49,9 @@ public class DeletePolicyRequest extends AbstractModel {
     }
 
     /**
-     * Set 需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+     * Set 需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
 
-     * @param PolicyId 需要删除的策略ID。可以调用[ListPolicies](https://tcloud4api.woa.com/document/product/1128/79356?!preview&!document=1)获取
+     * @param PolicyId 需要删除的策略ID。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
 
      */
     public void setPolicyId(Long PolicyId) {

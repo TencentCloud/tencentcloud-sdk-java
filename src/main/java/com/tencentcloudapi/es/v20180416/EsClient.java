@@ -303,6 +303,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *Serverless获取索引列表
+     * @param req DescribeServerlessInstancesRequest
+     * @return DescribeServerlessInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessInstancesResponse DescribeServerlessInstances(DescribeServerlessInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServerlessInstances", DescribeServerlessInstancesResponse.class);
+    }
+
+    /**
      *查看Serverless空间子用户
      * @param req DescribeServerlessSpaceUserRequest
      * @return DescribeServerlessSpaceUserResponse

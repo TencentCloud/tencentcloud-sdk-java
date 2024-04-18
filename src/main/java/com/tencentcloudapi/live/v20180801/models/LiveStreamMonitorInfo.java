@@ -180,6 +180,14 @@ public class LiveStreamMonitorInfo extends AbstractModel {
     private Long AiFormatDiagnose;
 
     /**
+    * 是否开启内容质检。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AiQualityControl")
+    @Expose
+    private Long AiQualityControl;
+
+    /**
      * Get 监播任务ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MonitorId 监播任务ID。
@@ -575,6 +583,26 @@ public class LiveStreamMonitorInfo extends AbstractModel {
         this.AiFormatDiagnose = AiFormatDiagnose;
     }
 
+    /**
+     * Get 是否开启内容质检。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AiQualityControl 是否开启内容质检。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAiQualityControl() {
+        return this.AiQualityControl;
+    }
+
+    /**
+     * Set 是否开启内容质检。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiQualityControl 是否开启内容质检。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAiQualityControl(Long AiQualityControl) {
+        this.AiQualityControl = AiQualityControl;
+    }
+
     public LiveStreamMonitorInfo() {
     }
 
@@ -652,6 +680,9 @@ public class LiveStreamMonitorInfo extends AbstractModel {
         if (source.AiFormatDiagnose != null) {
             this.AiFormatDiagnose = new Long(source.AiFormatDiagnose);
         }
+        if (source.AiQualityControl != null) {
+            this.AiQualityControl = new Long(source.AiQualityControl);
+        }
     }
 
 
@@ -678,6 +709,7 @@ public class LiveStreamMonitorInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AiOcrInputIndexList.", this.AiOcrInputIndexList);
         this.setParamSimple(map, prefix + "AllowMonitorReport", this.AllowMonitorReport);
         this.setParamSimple(map, prefix + "AiFormatDiagnose", this.AiFormatDiagnose);
+        this.setParamSimple(map, prefix + "AiQualityControl", this.AiQualityControl);
 
     }
 }
