@@ -88,6 +88,14 @@ public class DatabaseInfo extends AbstractModel {
     private String OriginSchemaName;
 
     /**
+    * 0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DsEnvType")
+    @Expose
+    private Long DsEnvType;
+
+    /**
      * Get 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasourceName 数据源名称
@@ -247,6 +255,26 @@ public class DatabaseInfo extends AbstractModel {
         this.OriginSchemaName = OriginSchemaName;
     }
 
+    /**
+     * Get 0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DsEnvType 0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDsEnvType() {
+        return this.DsEnvType;
+    }
+
+    /**
+     * Set 0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DsEnvType 0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDsEnvType(Long DsEnvType) {
+        this.DsEnvType = DsEnvType;
+    }
+
     public DatabaseInfo() {
     }
 
@@ -279,6 +307,9 @@ public class DatabaseInfo extends AbstractModel {
         if (source.OriginSchemaName != null) {
             this.OriginSchemaName = new String(source.OriginSchemaName);
         }
+        if (source.DsEnvType != null) {
+            this.DsEnvType = new Long(source.DsEnvType);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class DatabaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
         this.setParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
         this.setParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
+        this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
 
     }
 }

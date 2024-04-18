@@ -451,17 +451,6 @@ ConsumerGroup，消费组名称过滤
     }
 
     /**
-     *运营端查询topicStata
-     * @param req DescribeTopicStatsOpRequest
-     * @return DescribeTopicStatsOpResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTopicStatsOpResponse DescribeTopicStatsOp(DescribeTopicStatsOpRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTopicStatsOp", DescribeTopicStatsOpResponse.class);
-    }
-
-    /**
      *导入消费者组列表
      * @param req ImportSourceClusterConsumerGroupsRequest
      * @return ImportSourceClusterConsumerGroupsResponse

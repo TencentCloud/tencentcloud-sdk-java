@@ -201,6 +201,14 @@ public class DomainRuleSet extends AbstractModel {
     private Long Http3Supported;
 
     /**
+    * 是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDefaultServer")
+    @Expose
+    private Boolean IsDefaultServer;
+
+    /**
      * Get 转发规则域名。 
      * @return Domain 转发规则域名。
      */
@@ -656,6 +664,26 @@ public class DomainRuleSet extends AbstractModel {
         this.Http3Supported = Http3Supported;
     }
 
+    /**
+     * Get 是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDefaultServer 是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDefaultServer() {
+        return this.IsDefaultServer;
+    }
+
+    /**
+     * Set 是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDefaultServer 是否为默认域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDefaultServer(Boolean IsDefaultServer) {
+        this.IsDefaultServer = IsDefaultServer;
+    }
+
     public DomainRuleSet() {
     }
 
@@ -736,6 +764,9 @@ public class DomainRuleSet extends AbstractModel {
         if (source.Http3Supported != null) {
             this.Http3Supported = new Long(source.Http3Supported);
         }
+        if (source.IsDefaultServer != null) {
+            this.IsDefaultServer = new Boolean(source.IsDefaultServer);
+        }
     }
 
 
@@ -764,6 +795,7 @@ public class DomainRuleSet extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+        this.setParamSimple(map, prefix + "IsDefaultServer", this.IsDefaultServer);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOrganizationalFunctionsResponse extends AbstractModel {
 
     /**
-    * 无
+    * 函数信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
@@ -32,7 +32,7 @@ public class DescribeOrganizationalFunctionsResponse extends AbstractModel {
     private OrganizationalFunction [] Content;
 
     /**
-    * 无
+    * 操作失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
@@ -47,9 +47,9 @@ public class DescribeOrganizationalFunctionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无
+     * Get 函数信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content 无
+     * @return Content 函数信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrganizationalFunction [] getContent() {
@@ -57,9 +57,9 @@ public class DescribeOrganizationalFunctionsResponse extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 函数信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content 无
+     * @param Content 函数信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(OrganizationalFunction [] Content) {
@@ -67,9 +67,9 @@ public class DescribeOrganizationalFunctionsResponse extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 操作失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMessage 无
+     * @return ErrorMessage 操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
@@ -77,9 +77,9 @@ public class DescribeOrganizationalFunctionsResponse extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 操作失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMessage 无
+     * @param ErrorMessage 操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {

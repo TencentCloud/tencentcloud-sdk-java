@@ -186,10 +186,19 @@ polarismesh - STANDARD版本
 
     /**
     * 跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写
     */
     @SerializedName("EngineRegionInfos")
     @Expose
     private EngineRegionInfo [] EngineRegionInfos;
+
+    /**
+    * zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+    */
+    @SerializedName("StorageOption")
+    @Expose
+    private StorageOption [] StorageOption;
 
     /**
      * Get 引擎类型。参考值：
@@ -656,8 +665,10 @@ polarismesh - STANDARD版本
     }
 
     /**
-     * Get 跨地域部署的引擎地域配置详情 
+     * Get 跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写 
      * @return EngineRegionInfos 跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写
      */
     public EngineRegionInfo [] getEngineRegionInfos() {
         return this.EngineRegionInfos;
@@ -665,10 +676,32 @@ polarismesh - STANDARD版本
 
     /**
      * Set 跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写
      * @param EngineRegionInfos 跨地域部署的引擎地域配置详情
+zk标准版没有跨地域部署，请不要填写
      */
     public void setEngineRegionInfos(EngineRegionInfo [] EngineRegionInfos) {
         this.EngineRegionInfos = EngineRegionInfos;
+    }
+
+    /**
+     * Get zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致 
+     * @return StorageOption zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+     */
+    public StorageOption [] getStorageOption() {
+        return this.StorageOption;
+    }
+
+    /**
+     * Set zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+     * @param StorageOption zk专业版至多有两个盘，且磁盘的容量在50-3200之间
+如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
+     */
+    public void setStorageOption(StorageOption [] StorageOption) {
+        this.StorageOption = StorageOption;
     }
 
     public CreateEngineRequest() {
@@ -736,6 +769,12 @@ polarismesh - STANDARD版本
                 this.EngineRegionInfos[i] = new EngineRegionInfo(source.EngineRegionInfos[i]);
             }
         }
+        if (source.StorageOption != null) {
+            this.StorageOption = new StorageOption[source.StorageOption.length];
+            for (int i = 0; i < source.StorageOption.length; i++) {
+                this.StorageOption[i] = new StorageOption(source.StorageOption[i]);
+            }
+        }
     }
 
 
@@ -759,6 +798,7 @@ polarismesh - STANDARD版本
         this.setParamSimple(map, prefix + "PrepaidPeriod", this.PrepaidPeriod);
         this.setParamSimple(map, prefix + "PrepaidRenewFlag", this.PrepaidRenewFlag);
         this.setParamArrayObj(map, prefix + "EngineRegionInfos.", this.EngineRegionInfos);
+        this.setParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
 
     }
 }

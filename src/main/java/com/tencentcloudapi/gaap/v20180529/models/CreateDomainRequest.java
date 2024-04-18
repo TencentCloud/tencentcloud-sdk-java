@@ -71,6 +71,13 @@ public class CreateDomainRequest extends AbstractModel {
     private Long Http3Supported;
 
     /**
+    * 是否作为默认域名，默认为“否”
+    */
+    @SerializedName("IsDefaultServer")
+    @Expose
+    private Boolean IsDefaultServer;
+
+    /**
      * Get 监听器ID。 
      * @return ListenerId 监听器ID。
      */
@@ -186,6 +193,22 @@ public class CreateDomainRequest extends AbstractModel {
         this.Http3Supported = Http3Supported;
     }
 
+    /**
+     * Get 是否作为默认域名，默认为“否” 
+     * @return IsDefaultServer 是否作为默认域名，默认为“否”
+     */
+    public Boolean getIsDefaultServer() {
+        return this.IsDefaultServer;
+    }
+
+    /**
+     * Set 是否作为默认域名，默认为“否”
+     * @param IsDefaultServer 是否作为默认域名，默认为“否”
+     */
+    public void setIsDefaultServer(Boolean IsDefaultServer) {
+        this.IsDefaultServer = IsDefaultServer;
+    }
+
     public CreateDomainRequest() {
     }
 
@@ -215,6 +238,9 @@ public class CreateDomainRequest extends AbstractModel {
         if (source.Http3Supported != null) {
             this.Http3Supported = new Long(source.Http3Supported);
         }
+        if (source.IsDefaultServer != null) {
+            this.IsDefaultServer = new Boolean(source.IsDefaultServer);
+        }
     }
 
 
@@ -228,6 +254,7 @@ public class CreateDomainRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
         this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+        this.setParamSimple(map, prefix + "IsDefaultServer", this.IsDefaultServer);
 
     }
 }

@@ -126,6 +126,14 @@ public class NodePool extends AbstractModel {
     private Long DesiredNodesNum;
 
     /**
+    * 运行时描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuntimeConfig")
+    @Expose
+    private RuntimeConfig RuntimeConfig;
+
+    /**
     * 节点池osName
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -470,6 +478,26 @@ public class NodePool extends AbstractModel {
     }
 
     /**
+     * Get 运行时描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuntimeConfig 运行时描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuntimeConfig getRuntimeConfig() {
+        return this.RuntimeConfig;
+    }
+
+    /**
+     * Set 运行时描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuntimeConfig 运行时描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuntimeConfig(RuntimeConfig RuntimeConfig) {
+        this.RuntimeConfig = RuntimeConfig;
+    }
+
+    /**
      * Get 节点池osName
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NodePoolOs 节点池osName
@@ -788,6 +816,9 @@ public class NodePool extends AbstractModel {
         if (source.DesiredNodesNum != null) {
             this.DesiredNodesNum = new Long(source.DesiredNodesNum);
         }
+        if (source.RuntimeConfig != null) {
+            this.RuntimeConfig = new RuntimeConfig(source.RuntimeConfig);
+        }
         if (source.NodePoolOs != null) {
             this.NodePoolOs = new String(source.NodePoolOs);
         }
@@ -854,6 +885,7 @@ public class NodePool extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);
         this.setParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
         this.setParamSimple(map, prefix + "DesiredNodesNum", this.DesiredNodesNum);
+        this.setParamObj(map, prefix + "RuntimeConfig.", this.RuntimeConfig);
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);

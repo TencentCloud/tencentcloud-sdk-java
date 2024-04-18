@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskLogResponse extends AbstractModel {
 
     /**
-    * 详细日志
+    * 任务详细日志
     */
     @SerializedName("LogContentList")
     @Expose
@@ -38,16 +38,16 @@ public class TaskLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 详细日志 
-     * @return LogContentList 详细日志
+     * Get 任务详细日志 
+     * @return LogContentList 任务详细日志
      */
     public LogContent [] getLogContentList() {
         return this.LogContentList;
     }
 
     /**
-     * Set 详细日志
-     * @param LogContentList 详细日志
+     * Set 任务详细日志
+     * @param LogContentList 任务详细日志
      */
     public void setLogContentList(LogContent [] LogContentList) {
         this.LogContentList = LogContentList;

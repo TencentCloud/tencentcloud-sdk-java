@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class SearchConditionInstanceNew extends AbstractModel {
 
     /**
-    * 执行空间 "DRY_RUN"
+    * 执行空间，可选 
+ "DRY_RUN"
     */
     @SerializedName("ExecutionSpace")
     @Expose
     private String ExecutionSpace;
 
     /**
-    * 产品名称，可选
+    * 业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 资源组
+    * 资源组信息，可选
     */
     @SerializedName("ResourceGroup")
     @Expose
     private String ResourceGroup;
 
     /**
-     * Get 执行空间 "DRY_RUN" 
-     * @return ExecutionSpace 执行空间 "DRY_RUN"
+     * Get 执行空间，可选 
+ "DRY_RUN" 
+     * @return ExecutionSpace 执行空间，可选 
+ "DRY_RUN"
      */
     public String getExecutionSpace() {
         return this.ExecutionSpace;
     }
 
     /**
-     * Set 执行空间 "DRY_RUN"
-     * @param ExecutionSpace 执行空间 "DRY_RUN"
+     * Set 执行空间，可选 
+ "DRY_RUN"
+     * @param ExecutionSpace 执行空间，可选 
+ "DRY_RUN"
      */
     public void setExecutionSpace(String ExecutionSpace) {
         this.ExecutionSpace = ExecutionSpace;
     }
 
     /**
-     * Get 产品名称，可选 
-     * @return ProductName 产品名称，可选
+     * Get 业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目 
+     * @return ProductName 业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 产品名称，可选
-     * @param ProductName 产品名称，可选
+     * Set 业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
+     * @param ProductName 业务产品，可选: <DATA_DEV / DATA_QUALITY / DATA_INTEGRATION，默认DATA_DEV。非空。默认 自身项目
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 资源组 
-     * @return ResourceGroup 资源组
+     * Get 资源组信息，可选 
+     * @return ResourceGroup 资源组信息，可选
      */
     public String getResourceGroup() {
         return this.ResourceGroup;
     }
 
     /**
-     * Set 资源组
-     * @param ResourceGroup 资源组
+     * Set 资源组信息，可选
+     * @param ResourceGroup 资源组信息，可选
      */
     public void setResourceGroup(String ResourceGroup) {
         this.ResourceGroup = ResourceGroup;

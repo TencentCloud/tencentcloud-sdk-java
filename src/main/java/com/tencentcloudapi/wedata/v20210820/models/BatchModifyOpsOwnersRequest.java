@@ -31,7 +31,7 @@ public class BatchModifyOpsOwnersRequest extends AbstractModel {
     private String [] TaskIdList;
 
     /**
-    * 需要更新的责任人
+    * 需要更新的责任人userId信息，多个责任人用;连接
     */
     @SerializedName("Owners")
     @Expose
@@ -61,16 +61,16 @@ public class BatchModifyOpsOwnersRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要更新的责任人 
-     * @return Owners 需要更新的责任人
+     * Get 需要更新的责任人userId信息，多个责任人用;连接 
+     * @return Owners 需要更新的责任人userId信息，多个责任人用;连接
      */
     public String getOwners() {
         return this.Owners;
     }
 
     /**
-     * Set 需要更新的责任人
-     * @param Owners 需要更新的责任人
+     * Set 需要更新的责任人userId信息，多个责任人用;连接
+     * @param Owners 需要更新的责任人userId信息，多个责任人用;连接
      */
     public void setOwners(String Owners) {
         this.Owners = Owners;

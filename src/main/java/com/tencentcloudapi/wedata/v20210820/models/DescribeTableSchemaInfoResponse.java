@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTableSchemaInfoResponse extends AbstractModel {
 
     /**
-    * 123
+    * 查询到的SchemaInfo信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaInfoList")
@@ -39,9 +39,9 @@ public class DescribeTableSchemaInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 123
+     * Get 查询到的SchemaInfo信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchemaInfoList 123
+     * @return SchemaInfoList 查询到的SchemaInfo信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SchemaDetail [] getSchemaInfoList() {
@@ -49,9 +49,9 @@ public class DescribeTableSchemaInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 123
+     * Set 查询到的SchemaInfo信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchemaInfoList 123
+     * @param SchemaInfoList 查询到的SchemaInfo信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaInfoList(SchemaDetail [] SchemaInfoList) {

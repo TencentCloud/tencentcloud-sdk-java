@@ -31,7 +31,7 @@ public class CreateDeliverCloudFunctionRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * 投递的云函数名字
+    * 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
     */
     @SerializedName("FunctionName")
     @Expose
@@ -82,16 +82,16 @@ public class CreateDeliverCloudFunctionRequest extends AbstractModel {
     }
 
     /**
-     * Get 投递的云函数名字 
-     * @return FunctionName 投递的云函数名字
+     * Get 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)） 
+     * @return FunctionName 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set 投递的云函数名字
-     * @param FunctionName 投递的云函数名字
+     * Set 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
+     * @param FunctionName 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;

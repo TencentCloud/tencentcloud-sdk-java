@@ -31,7 +31,7 @@ public class DescribeRealTimeTaskInstanceNodeInfoRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * 工程id
+    * 项目id
     */
     @SerializedName("ProjectId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeRealTimeTaskInstanceNodeInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 工程id 
-     * @return ProjectId 工程id
+     * Get 项目id 
+     * @return ProjectId 项目id
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 工程id
-     * @param ProjectId 工程id
+     * Set 项目id
+     * @param ProjectId 项目id
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

@@ -148,6 +148,13 @@ MONTH_CYCLE:M
     private String ExecEngineType;
 
     /**
+    * 触发场景
+    */
+    @SerializedName("TriggerTypes")
+    @Expose
+    private String [] TriggerTypes;
+
+    /**
      * Get 规则组ID 
      * @return RuleGroupId 规则组ID
      */
@@ -439,6 +446,22 @@ MONTH_CYCLE:M
         this.ExecEngineType = ExecEngineType;
     }
 
+    /**
+     * Get 触发场景 
+     * @return TriggerTypes 触发场景
+     */
+    public String [] getTriggerTypes() {
+        return this.TriggerTypes;
+    }
+
+    /**
+     * Set 触发场景
+     * @param TriggerTypes 触发场景
+     */
+    public void setTriggerTypes(String [] TriggerTypes) {
+        this.TriggerTypes = TriggerTypes;
+    }
+
     public ModifyExecStrategyRequest() {
     }
 
@@ -501,6 +524,12 @@ MONTH_CYCLE:M
         if (source.ExecEngineType != null) {
             this.ExecEngineType = new String(source.ExecEngineType);
         }
+        if (source.TriggerTypes != null) {
+            this.TriggerTypes = new String[source.TriggerTypes.length];
+            for (int i = 0; i < source.TriggerTypes.length; i++) {
+                this.TriggerTypes[i] = new String(source.TriggerTypes[i]);
+            }
+        }
     }
 
 
@@ -525,6 +554,7 @@ MONTH_CYCLE:M
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamSimple(map, prefix + "ExecEngineType", this.ExecEngineType);
+        this.setParamArraySimple(map, prefix + "TriggerTypes.", this.TriggerTypes);
 
     }
 }

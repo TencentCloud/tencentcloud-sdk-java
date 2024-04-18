@@ -66,6 +66,13 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     private DspaCloudResourceMeta [] Items;
 
     /**
+    * 必填，云数据库资源列表。
+    */
+    @SerializedName("CloudResourceItems")
+    @Expose
+    private CloudResourceItem [] CloudResourceItems;
+
+    /**
      * Get DSPA实例ID。 
      * @return DspaId DSPA实例ID。
      */
@@ -100,7 +107,9 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     /**
      * Get 资源所处地域。 
      * @return ResourceRegion 资源所处地域。
+     * @deprecated
      */
+    @Deprecated
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
@@ -108,7 +117,9 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     /**
      * Set 资源所处地域。
      * @param ResourceRegion 资源所处地域。
+     * @deprecated
      */
+    @Deprecated
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
@@ -116,7 +127,9 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     /**
      * Get 用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。 
      * @return UpdateStatus 用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。
+     * @deprecated
      */
+    @Deprecated
     public String getUpdateStatus() {
         return this.UpdateStatus;
     }
@@ -124,7 +137,9 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     /**
      * Set 用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。
      * @param UpdateStatus 用来标记本次更新是否已经是最后一次，可选值：continue（后续还需要更新）、finished（本次是最后一次更新）。
+     * @deprecated
      */
+    @Deprecated
     public void setUpdateStatus(String UpdateStatus) {
         this.UpdateStatus = UpdateStatus;
     }
@@ -132,7 +147,9 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     /**
      * Get 本次更新的ID号，用来标记一次完整的更新过程。 
      * @return UpdateId 本次更新的ID号，用来标记一次完整的更新过程。
+     * @deprecated
      */
+    @Deprecated
     public String getUpdateId() {
         return this.UpdateId;
     }
@@ -140,7 +157,9 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     /**
      * Set 本次更新的ID号，用来标记一次完整的更新过程。
      * @param UpdateId 本次更新的ID号，用来标记一次完整的更新过程。
+     * @deprecated
      */
+    @Deprecated
     public void setUpdateId(String UpdateId) {
         this.UpdateId = UpdateId;
     }
@@ -148,7 +167,9 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     /**
      * Get 云上资源列表。 
      * @return Items 云上资源列表。
+     * @deprecated
      */
+    @Deprecated
     public DspaCloudResourceMeta [] getItems() {
         return this.Items;
     }
@@ -156,9 +177,27 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     /**
      * Set 云上资源列表。
      * @param Items 云上资源列表。
+     * @deprecated
      */
+    @Deprecated
     public void setItems(DspaCloudResourceMeta [] Items) {
         this.Items = Items;
+    }
+
+    /**
+     * Get 必填，云数据库资源列表。 
+     * @return CloudResourceItems 必填，云数据库资源列表。
+     */
+    public CloudResourceItem [] getCloudResourceItems() {
+        return this.CloudResourceItems;
+    }
+
+    /**
+     * Set 必填，云数据库资源列表。
+     * @param CloudResourceItems 必填，云数据库资源列表。
+     */
+    public void setCloudResourceItems(CloudResourceItem [] CloudResourceItems) {
+        this.CloudResourceItems = CloudResourceItems;
     }
 
     public CreateDSPADbMetaResourcesRequest() {
@@ -190,6 +229,12 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
                 this.Items[i] = new DspaCloudResourceMeta(source.Items[i]);
             }
         }
+        if (source.CloudResourceItems != null) {
+            this.CloudResourceItems = new CloudResourceItem[source.CloudResourceItems.length];
+            for (int i = 0; i < source.CloudResourceItems.length; i++) {
+                this.CloudResourceItems[i] = new CloudResourceItem(source.CloudResourceItems[i]);
+            }
+        }
     }
 
 
@@ -203,6 +248,7 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateStatus", this.UpdateStatus);
         this.setParamSimple(map, prefix + "UpdateId", this.UpdateId);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "CloudResourceItems.", this.CloudResourceItems);
 
     }
 }

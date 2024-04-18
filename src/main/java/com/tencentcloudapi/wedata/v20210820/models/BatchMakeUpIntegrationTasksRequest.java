@@ -31,7 +31,7 @@ public class BatchMakeUpIntegrationTasksRequest extends AbstractModel {
     private String [] TaskIds;
 
     /**
-    * 任务类型
+    * 任务类型，201为实时任务，202为离线任务
     */
     @SerializedName("TaskType")
     @Expose
@@ -75,16 +75,16 @@ public class BatchMakeUpIntegrationTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务类型 
-     * @return TaskType 任务类型
+     * Get 任务类型，201为实时任务，202为离线任务 
+     * @return TaskType 任务类型，201为实时任务，202为离线任务
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-     * @param TaskType 任务类型
+     * Set 任务类型，201为实时任务，202为离线任务
+     * @param TaskType 任务类型，201为实时任务，202为离线任务
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;

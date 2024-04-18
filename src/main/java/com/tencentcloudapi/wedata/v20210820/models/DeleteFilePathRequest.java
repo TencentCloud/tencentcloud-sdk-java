@@ -39,6 +39,8 @@ public class DeleteFilePathRequest extends AbstractModel {
 
     /**
     * 使用状态
+- true
+- false
     */
     @SerializedName("UseStatus")
     @Expose
@@ -84,8 +86,12 @@ public class DeleteFilePathRequest extends AbstractModel {
     }
 
     /**
-     * Get 使用状态 
+     * Get 使用状态
+- true
+- false 
      * @return UseStatus 使用状态
+- true
+- false
      */
     public String getUseStatus() {
         return this.UseStatus;
@@ -93,7 +99,11 @@ public class DeleteFilePathRequest extends AbstractModel {
 
     /**
      * Set 使用状态
+- true
+- false
      * @param UseStatus 使用状态
+- true
+- false
      */
     public void setUseStatus(String UseStatus) {
         this.UseStatus = UseStatus;

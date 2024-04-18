@@ -178,6 +178,13 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
     private TaskTag [] TaskTags;
 
     /**
+    * 查询关键字
+    */
+    @SerializedName("KeyWord")
+    @Expose
+    private String KeyWord;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -529,6 +536,22 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.TaskTags = TaskTags;
     }
 
+    /**
+     * Get 查询关键字 
+     * @return KeyWord 查询关键字
+     */
+    public String getKeyWord() {
+        return this.KeyWord;
+    }
+
+    /**
+     * Set 查询关键字
+     * @param KeyWord 查询关键字
+     */
+    public void setKeyWord(String KeyWord) {
+        this.KeyWord = KeyWord;
+    }
+
     public DescribeOperateOpsTasksRequest() {
     }
 
@@ -606,6 +629,9 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
                 this.TaskTags[i] = new TaskTag(source.TaskTags[i]);
             }
         }
+        if (source.KeyWord != null) {
+            this.KeyWord = new String(source.KeyWord);
+        }
     }
 
 
@@ -635,6 +661,7 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmType", this.AlarmType);
         this.setParamSimple(map, prefix + "ExecutorGroupIdList", this.ExecutorGroupIdList);
         this.setParamArrayObj(map, prefix + "TaskTags.", this.TaskTags);
+        this.setParamSimple(map, prefix + "KeyWord", this.KeyWord);
 
     }
 }

@@ -75,6 +75,13 @@ public class ModifyDomainRequest extends AbstractModel {
     private String [] PolyClientCertificateIds;
 
     /**
+    * 是否作为默认域名，默认为“否”
+    */
+    @SerializedName("IsDefaultServer")
+    @Expose
+    private Boolean IsDefaultServer;
+
+    /**
      * Get 7层监听器ID 
      * @return ListenerId 7层监听器ID
      */
@@ -206,6 +213,22 @@ public class ModifyDomainRequest extends AbstractModel {
         this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
+    /**
+     * Get 是否作为默认域名，默认为“否” 
+     * @return IsDefaultServer 是否作为默认域名，默认为“否”
+     */
+    public Boolean getIsDefaultServer() {
+        return this.IsDefaultServer;
+    }
+
+    /**
+     * Set 是否作为默认域名，默认为“否”
+     * @param IsDefaultServer 是否作为默认域名，默认为“否”
+     */
+    public void setIsDefaultServer(Boolean IsDefaultServer) {
+        this.IsDefaultServer = IsDefaultServer;
+    }
+
     public ModifyDomainRequest() {
     }
 
@@ -235,6 +258,9 @@ public class ModifyDomainRequest extends AbstractModel {
                 this.PolyClientCertificateIds[i] = new String(source.PolyClientCertificateIds[i]);
             }
         }
+        if (source.IsDefaultServer != null) {
+            this.IsDefaultServer = new Boolean(source.IsDefaultServer);
+        }
     }
 
 
@@ -248,6 +274,7 @@ public class ModifyDomainRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
         this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
+        this.setParamSimple(map, prefix + "IsDefaultServer", this.IsDefaultServer);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeFunctionTypesResponse extends AbstractModel {
 
     /**
-    * 无
+    * 类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Types")
@@ -32,7 +32,7 @@ public class DescribeFunctionTypesResponse extends AbstractModel {
     private FunctionTypeOrKind [] Types;
 
     /**
-    * 无
+    * 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
@@ -47,9 +47,9 @@ public class DescribeFunctionTypesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无
+     * Get 类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Types 无
+     * @return Types 类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FunctionTypeOrKind [] getTypes() {
@@ -57,9 +57,9 @@ public class DescribeFunctionTypesResponse extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Types 无
+     * @param Types 类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTypes(FunctionTypeOrKind [] Types) {
@@ -67,9 +67,9 @@ public class DescribeFunctionTypesResponse extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 错误信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMessage 无
+     * @return ErrorMessage 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
@@ -77,9 +77,9 @@ public class DescribeFunctionTypesResponse extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMessage 无
+     * @param ErrorMessage 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {

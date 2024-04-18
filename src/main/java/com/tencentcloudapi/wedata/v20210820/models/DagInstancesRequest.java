@@ -66,7 +66,7 @@ public class DagInstancesRequest extends AbstractModel {
     private String SonInstanceType;
 
     /**
-    * 查询条件
+    * 查询条件,当前接口需要把要查询的示例信息放在该字段
     */
     @SerializedName("SearchCondition")
     @Expose
@@ -246,16 +246,16 @@ public class DagInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询条件 
-     * @return SearchCondition 查询条件
+     * Get 查询条件,当前接口需要把要查询的示例信息放在该字段 
+     * @return SearchCondition 查询条件,当前接口需要把要查询的示例信息放在该字段
      */
     public InstanceApiOpsRequest getSearchCondition() {
         return this.SearchCondition;
     }
 
     /**
-     * Set 查询条件
-     * @param SearchCondition 查询条件
+     * Set 查询条件,当前接口需要把要查询的示例信息放在该字段
+     * @param SearchCondition 查询条件,当前接口需要把要查询的示例信息放在该字段
      */
     public void setSearchCondition(InstanceApiOpsRequest SearchCondition) {
         this.SearchCondition = SearchCondition;

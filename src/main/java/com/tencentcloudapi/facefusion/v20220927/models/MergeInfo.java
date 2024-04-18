@@ -52,7 +52,7 @@ public class MergeInfo extends AbstractModel {
     private String TemplateFaceID;
 
     /**
-    * 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
+    * 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
     */
     @SerializedName("TemplateFaceRect")
     @Expose
@@ -123,16 +123,16 @@ public class MergeInfo extends AbstractModel {
     }
 
     /**
-     * Get 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。 
-     * @return TemplateFaceRect 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
+     * Get 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。 
+     * @return TemplateFaceRect 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
      */
     public FaceRect getTemplateFaceRect() {
         return this.TemplateFaceRect;
     }
 
     /**
-     * Set 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
-     * @param TemplateFaceRect 模版中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模版素材场景。
+     * Set 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
+     * @param TemplateFaceRect 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
      */
     public void setTemplateFaceRect(FaceRect TemplateFaceRect) {
         this.TemplateFaceRect = TemplateFaceRect;

@@ -192,6 +192,14 @@ public class RuleGroup extends AbstractModel {
     private Boolean SubscribeConfig;
 
     /**
+    * 数据源环境：0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DsEnvType")
+    @Expose
+    private Long DsEnvType;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -611,6 +619,26 @@ public class RuleGroup extends AbstractModel {
         this.SubscribeConfig = SubscribeConfig;
     }
 
+    /**
+     * Get 数据源环境：0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DsEnvType 数据源环境：0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDsEnvType() {
+        return this.DsEnvType;
+    }
+
+    /**
+     * Set 数据源环境：0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DsEnvType 数据源环境：0或者未返回.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDsEnvType(Long DsEnvType) {
+        this.DsEnvType = DsEnvType;
+    }
+
     public RuleGroup() {
     }
 
@@ -682,6 +710,9 @@ public class RuleGroup extends AbstractModel {
         if (source.SubscribeConfig != null) {
             this.SubscribeConfig = new Boolean(source.SubscribeConfig);
         }
+        if (source.DsEnvType != null) {
+            this.DsEnvType = new Long(source.DsEnvType);
+        }
     }
 
 
@@ -710,6 +741,7 @@ public class RuleGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "StrategyConfig", this.StrategyConfig);
         this.setParamSimple(map, prefix + "SubscribeConfig", this.SubscribeConfig);
+        this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
 
     }
 }

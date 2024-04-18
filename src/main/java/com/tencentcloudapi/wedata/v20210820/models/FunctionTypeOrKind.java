@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class FunctionTypeOrKind extends AbstractModel {
 
     /**
-    * 无
+    * 名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 无
+    * 函数分类英文名
     */
     @SerializedName("ZhName")
     @Expose
     private String ZhName;
 
     /**
-    * 无
+    * 函数分类中文名
     */
     @SerializedName("EnName")
     @Expose
     private String EnName;
 
     /**
-     * Get 无 
-     * @return Name 无
+     * Get 名称 
+     * @return Name 名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 无
-     * @param Name 无
+     * Set 名称
+     * @param Name 名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 无 
-     * @return ZhName 无
+     * Get 函数分类英文名 
+     * @return ZhName 函数分类英文名
      */
     public String getZhName() {
         return this.ZhName;
     }
 
     /**
-     * Set 无
-     * @param ZhName 无
+     * Set 函数分类英文名
+     * @param ZhName 函数分类英文名
      */
     public void setZhName(String ZhName) {
         this.ZhName = ZhName;
     }
 
     /**
-     * Get 无 
-     * @return EnName 无
+     * Get 函数分类中文名 
+     * @return EnName 函数分类中文名
      */
     public String getEnName() {
         return this.EnName;
     }
 
     /**
-     * Set 无
-     * @param EnName 无
+     * Set 函数分类中文名
+     * @param EnName 函数分类中文名
      */
     public void setEnName(String EnName) {
         this.EnName = EnName;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRealTimeTaskSpeedRequest extends AbstractModel {
 
     /**
-    * 无
+    * 任务id
     */
     @SerializedName("TaskId")
     @Expose
@@ -52,23 +52,23 @@ public class DescribeRealTimeTaskSpeedRequest extends AbstractModel {
     private Long Granularity;
 
     /**
-    * 无
+    * 项目id
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get 无 
-     * @return TaskId 无
+     * Get 任务id 
+     * @return TaskId 任务id
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 无
-     * @param TaskId 无
+     * Set 任务id
+     * @param TaskId 任务id
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -123,16 +123,16 @@ public class DescribeRealTimeTaskSpeedRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return ProjectId 无
+     * Get 项目id 
+     * @return ProjectId 项目id
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 无
-     * @param ProjectId 无
+     * Set 项目id
+     * @param ProjectId 项目id
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

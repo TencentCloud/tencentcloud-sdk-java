@@ -220,6 +220,14 @@ public class OrganizationalFunction extends AbstractModel {
     private String SubmitTimestamp;
 
     /**
+    * 函数tag
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -703,6 +711,26 @@ public class OrganizationalFunction extends AbstractModel {
         this.SubmitTimestamp = SubmitTimestamp;
     }
 
+    /**
+     * Get 函数tag
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 函数tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 函数tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 函数tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public OrganizationalFunction() {
     }
 
@@ -795,6 +823,9 @@ public class OrganizationalFunction extends AbstractModel {
         if (source.SubmitTimestamp != null) {
             this.SubmitTimestamp = new String(source.SubmitTimestamp);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -827,6 +858,7 @@ public class OrganizationalFunction extends AbstractModel {
         this.setParamSimple(map, prefix + "CommandFormat", this.CommandFormat);
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
         this.setParamSimple(map, prefix + "SubmitTimestamp", this.SubmitTimestamp);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

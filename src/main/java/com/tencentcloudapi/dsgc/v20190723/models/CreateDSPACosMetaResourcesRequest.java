@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
 
     /**
-    * 资源所处地域。
-    */
-    @SerializedName("ResourceRegion")
-    @Expose
-    private String ResourceRegion;
-
-    /**
     * DSPA实例ID。
     */
     @SerializedName("DspaId")
     @Expose
     private String DspaId;
+
+    /**
+    * 资源所处地域。
+    */
+    @SerializedName("ResourceRegion")
+    @Expose
+    private String ResourceRegion;
 
     /**
     * COS桶列表
@@ -45,20 +45,11 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
     private String [] Buckets;
 
     /**
-     * Get 资源所处地域。 
-     * @return ResourceRegion 资源所处地域。
-     */
-    public String getResourceRegion() {
-        return this.ResourceRegion;
-    }
-
-    /**
-     * Set 资源所处地域。
-     * @param ResourceRegion 资源所处地域。
-     */
-    public void setResourceRegion(String ResourceRegion) {
-        this.ResourceRegion = ResourceRegion;
-    }
+    * 必填，COS资源列表
+    */
+    @SerializedName("CosBucketItems")
+    @Expose
+    private CosBucketItem [] CosBucketItems;
 
     /**
      * Get DSPA实例ID。 
@@ -77,9 +68,31 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
     }
 
     /**
+     * Get 资源所处地域。 
+     * @return ResourceRegion 资源所处地域。
+     * @deprecated
+     */
+    @Deprecated
+    public String getResourceRegion() {
+        return this.ResourceRegion;
+    }
+
+    /**
+     * Set 资源所处地域。
+     * @param ResourceRegion 资源所处地域。
+     * @deprecated
+     */
+    @Deprecated
+    public void setResourceRegion(String ResourceRegion) {
+        this.ResourceRegion = ResourceRegion;
+    }
+
+    /**
      * Get COS桶列表 
      * @return Buckets COS桶列表
+     * @deprecated
      */
+    @Deprecated
     public String [] getBuckets() {
         return this.Buckets;
     }
@@ -87,9 +100,27 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
     /**
      * Set COS桶列表
      * @param Buckets COS桶列表
+     * @deprecated
      */
+    @Deprecated
     public void setBuckets(String [] Buckets) {
         this.Buckets = Buckets;
+    }
+
+    /**
+     * Get 必填，COS资源列表 
+     * @return CosBucketItems 必填，COS资源列表
+     */
+    public CosBucketItem [] getCosBucketItems() {
+        return this.CosBucketItems;
+    }
+
+    /**
+     * Set 必填，COS资源列表
+     * @param CosBucketItems 必填，COS资源列表
+     */
+    public void setCosBucketItems(CosBucketItem [] CosBucketItems) {
+        this.CosBucketItems = CosBucketItems;
     }
 
     public CreateDSPACosMetaResourcesRequest() {
@@ -100,16 +131,22 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateDSPACosMetaResourcesRequest(CreateDSPACosMetaResourcesRequest source) {
-        if (source.ResourceRegion != null) {
-            this.ResourceRegion = new String(source.ResourceRegion);
-        }
         if (source.DspaId != null) {
             this.DspaId = new String(source.DspaId);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
         }
         if (source.Buckets != null) {
             this.Buckets = new String[source.Buckets.length];
             for (int i = 0; i < source.Buckets.length; i++) {
                 this.Buckets[i] = new String(source.Buckets[i]);
+            }
+        }
+        if (source.CosBucketItems != null) {
+            this.CosBucketItems = new CosBucketItem[source.CosBucketItems.length];
+            for (int i = 0; i < source.CosBucketItems.length; i++) {
+                this.CosBucketItems[i] = new CosBucketItem(source.CosBucketItems[i]);
             }
         }
     }
@@ -119,9 +156,10 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
+        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamArraySimple(map, prefix + "Buckets.", this.Buckets);
+        this.setParamArrayObj(map, prefix + "CosBucketItems.", this.CosBucketItems);
 
     }
 }

@@ -94,6 +94,14 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String Version;
 
     /**
+    * 数据源附带参数信息Params json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParamsString")
+    @Expose
+    private String ParamsString;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseNames 若数据源列表为绑定数据库，则为db名称
@@ -265,6 +273,26 @@ public class DatasourceBaseInfo extends AbstractModel {
         this.Version = Version;
     }
 
+    /**
+     * Get 数据源附带参数信息Params json字符串
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParamsString 数据源附带参数信息Params json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParamsString() {
+        return this.ParamsString;
+    }
+
+    /**
+     * Set 数据源附带参数信息Params json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParamsString 数据源附带参数信息Params json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParamsString(String ParamsString) {
+        this.ParamsString = ParamsString;
+    }
+
     public DatasourceBaseInfo() {
     }
 
@@ -303,6 +331,9 @@ public class DatasourceBaseInfo extends AbstractModel {
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.ParamsString != null) {
+            this.ParamsString = new String(source.ParamsString);
+        }
     }
 
 
@@ -319,6 +350,7 @@ public class DatasourceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "ParamsString", this.ParamsString);
 
     }
 }

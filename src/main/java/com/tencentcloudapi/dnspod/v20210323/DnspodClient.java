@@ -449,6 +449,9 @@ public class DnspodClient extends AbstractClient{
 
     /**
      *获取某个域名下的解析记录列表
+备注：
+1. 新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
+2.  API获取的记录总条数会比控制台多2条，原因是： 为了防止用户误操作导致解析服务不可用，对2021-10-29 14:24:26之后添加的域名，在控制台都不显示这2条NS记录。
      * @param req DescribeRecordFilterListRequest
      * @return DescribeRecordFilterListResponse
      * @throws TencentCloudSDKException
@@ -493,7 +496,9 @@ public class DnspodClient extends AbstractClient{
 
     /**
      *获取某个域名下的解析记录列表
-备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
+备注：
+1. 新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
+2.  API获取的记录总条数会比控制台多2条，原因是： 为了防止用户误操作导致解析服务不可用，对2021-10-29 14:24:26之后添加的域名，在控制台都不显示这2条NS记录。
      * @param req DescribeRecordListRequest
      * @return DescribeRecordListResponse
      * @throws TencentCloudSDKException

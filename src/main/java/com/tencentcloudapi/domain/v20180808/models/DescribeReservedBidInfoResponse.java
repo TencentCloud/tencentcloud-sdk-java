@@ -53,6 +53,34 @@ public class DescribeReservedBidInfoResponse extends AbstractModel {
     private ReserveBidInfo [] BidList;
 
     /**
+    * 竞价结束时间
+    */
+    @SerializedName("BidEndTime")
+    @Expose
+    private String BidEndTime;
+
+    /**
+    * 是否领先
+    */
+    @SerializedName("IsUp")
+    @Expose
+    private Boolean IsUp;
+
+    /**
+    * 下次出价金额
+    */
+    @SerializedName("NextPrice")
+    @Expose
+    private Long NextPrice;
+
+    /**
+    * 状态：1. 等待竞价 2.竞价中 3.竞价结束
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -128,6 +156,70 @@ public class DescribeReservedBidInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 竞价结束时间 
+     * @return BidEndTime 竞价结束时间
+     */
+    public String getBidEndTime() {
+        return this.BidEndTime;
+    }
+
+    /**
+     * Set 竞价结束时间
+     * @param BidEndTime 竞价结束时间
+     */
+    public void setBidEndTime(String BidEndTime) {
+        this.BidEndTime = BidEndTime;
+    }
+
+    /**
+     * Get 是否领先 
+     * @return IsUp 是否领先
+     */
+    public Boolean getIsUp() {
+        return this.IsUp;
+    }
+
+    /**
+     * Set 是否领先
+     * @param IsUp 是否领先
+     */
+    public void setIsUp(Boolean IsUp) {
+        this.IsUp = IsUp;
+    }
+
+    /**
+     * Get 下次出价金额 
+     * @return NextPrice 下次出价金额
+     */
+    public Long getNextPrice() {
+        return this.NextPrice;
+    }
+
+    /**
+     * Set 下次出价金额
+     * @param NextPrice 下次出价金额
+     */
+    public void setNextPrice(Long NextPrice) {
+        this.NextPrice = NextPrice;
+    }
+
+    /**
+     * Get 状态：1. 等待竞价 2.竞价中 3.竞价结束 
+     * @return Status 状态：1. 等待竞价 2.竞价中 3.竞价结束
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态：1. 等待竞价 2.竞价中 3.竞价结束
+     * @param Status 状态：1. 等待竞价 2.竞价中 3.竞价结束
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -166,6 +258,18 @@ public class DescribeReservedBidInfoResponse extends AbstractModel {
                 this.BidList[i] = new ReserveBidInfo(source.BidList[i]);
             }
         }
+        if (source.BidEndTime != null) {
+            this.BidEndTime = new String(source.BidEndTime);
+        }
+        if (source.IsUp != null) {
+            this.IsUp = new Boolean(source.IsUp);
+        }
+        if (source.NextPrice != null) {
+            this.NextPrice = new Long(source.NextPrice);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -180,6 +284,10 @@ public class DescribeReservedBidInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "UpUser", this.UpUser);
         this.setParamArrayObj(map, prefix + "BidList.", this.BidList);
+        this.setParamSimple(map, prefix + "BidEndTime", this.BidEndTime);
+        this.setParamSimple(map, prefix + "IsUp", this.IsUp);
+        this.setParamSimple(map, prefix + "NextPrice", this.NextPrice);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -59,14 +59,14 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
     private String EndTime;
 
     /**
-    * 1
+    * 任务类型
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 1
+    * 责任人
     */
     @SerializedName("InCharge")
     @Expose
@@ -174,32 +174,32 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
     }
 
     /**
-     * Get 1 
-     * @return TaskType 1
+     * Get 任务类型 
+     * @return TaskType 任务类型
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 1
-     * @param TaskType 1
+     * Set 任务类型
+     * @param TaskType 任务类型
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 1 
-     * @return InCharge 1
+     * Get 责任人 
+     * @return InCharge 责任人
      */
     public String getInCharge() {
         return this.InCharge;
     }
 
     /**
-     * Set 1
-     * @param InCharge 1
+     * Set 责任人
+     * @param InCharge 责任人
      */
     public void setInCharge(String InCharge) {
         this.InCharge = InCharge;

@@ -152,6 +152,14 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String RuleName;
 
     /**
+    * 触发类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerTypes")
+    @Expose
+    private String [] TriggerTypes;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -471,6 +479,26 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.RuleName = RuleName;
     }
 
+    /**
+     * Get 触发类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerTypes 触发类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTriggerTypes() {
+        return this.TriggerTypes;
+    }
+
+    /**
+     * Set 触发类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerTypes 触发类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerTypes(String [] TriggerTypes) {
+        this.TriggerTypes = TriggerTypes;
+    }
+
     public RuleGroupExecStrategy() {
     }
 
@@ -530,6 +558,12 @@ public class RuleGroupExecStrategy extends AbstractModel {
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
+        if (source.TriggerTypes != null) {
+            this.TriggerTypes = new String[source.TriggerTypes.length];
+            for (int i = 0; i < source.TriggerTypes.length; i++) {
+                this.TriggerTypes[i] = new String(source.TriggerTypes[i]);
+            }
+        }
     }
 
 
@@ -553,6 +587,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecPlan", this.ExecPlan);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamArraySimple(map, prefix + "TriggerTypes.", this.TriggerTypes);
 
     }
 }

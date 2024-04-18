@@ -73,7 +73,7 @@ public class DescribeIntegrationTasksRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 201. stream, 202. offline 默认实时
+    * 201. 实时同步, 202. 离线同步 默认实时
     */
     @SerializedName("TaskType")
     @Expose
@@ -192,16 +192,16 @@ public class DescribeIntegrationTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 201. stream, 202. offline 默认实时 
-     * @return TaskType 201. stream, 202. offline 默认实时
+     * Get 201. 实时同步, 202. 离线同步 默认实时 
+     * @return TaskType 201. 实时同步, 202. 离线同步 默认实时
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 201. stream, 202. offline 默认实时
-     * @param TaskType 201. stream, 202. offline 默认实时
+     * Set 201. 实时同步, 202. 离线同步 默认实时
+     * @param TaskType 201. 实时同步, 202. 离线同步 默认实时
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;

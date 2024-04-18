@@ -999,6 +999,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *通过此接口（DescribeBillUsage）查询该企业的套餐套餐使用情况。
+     * @param req DescribeBillUsageRequest
+     * @return DescribeBillUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillUsageResponse DescribeBillUsage(DescribeBillUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillUsage", DescribeBillUsageResponse.class);
+    }
+
+    /**
      *通过此接口（DescribeBillUsageDetail）查询该企业的套餐消耗详情。
      * @param req DescribeBillUsageDetailRequest
      * @return DescribeBillUsageDetailResponse

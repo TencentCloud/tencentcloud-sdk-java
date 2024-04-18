@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTaskVersionDsResponse extends AbstractModel {
 
     /**
-    * 1
+    * 版本
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class CreateTaskVersionDsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1
+     * Get 版本
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 1
+     * @return Data 版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
@@ -49,9 +49,9 @@ public class CreateTaskVersionDsResponse extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 1
+     * @param Data 版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {

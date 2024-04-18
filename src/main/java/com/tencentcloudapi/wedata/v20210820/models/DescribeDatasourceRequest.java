@@ -31,6 +31,13 @@ public class DescribeDatasourceRequest extends AbstractModel {
     private Long Id;
 
     /**
+    * production：生产，development开发
+    */
+    @SerializedName("Env")
+    @Expose
+    private String Env;
+
+    /**
      * Get 对象唯一ID 
      * @return Id 对象唯一ID
      */
@@ -46,6 +53,22 @@ public class DescribeDatasourceRequest extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get production：生产，development开发 
+     * @return Env production：生产，development开发
+     */
+    public String getEnv() {
+        return this.Env;
+    }
+
+    /**
+     * Set production：生产，development开发
+     * @param Env production：生产，development开发
+     */
+    public void setEnv(String Env) {
+        this.Env = Env;
+    }
+
     public DescribeDatasourceRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeDatasourceRequest extends AbstractModel {
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.Env != null) {
+            this.Env = new String(source.Env);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeDatasourceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Env", this.Env);
 
     }
 }

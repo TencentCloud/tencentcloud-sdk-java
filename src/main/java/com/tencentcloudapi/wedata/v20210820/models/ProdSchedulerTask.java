@@ -48,6 +48,14 @@ public class ProdSchedulerTask extends AbstractModel {
     private String TaskName;
 
     /**
+    * 生产调度任务任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CycleType")
+    @Expose
+    private Long CycleType;
+
+    /**
      * Get 生产调度任务工作流ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId 生产调度任务工作流ID
@@ -107,6 +115,26 @@ public class ProdSchedulerTask extends AbstractModel {
         this.TaskName = TaskName;
     }
 
+    /**
+     * Get 生产调度任务任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CycleType 生产调度任务任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCycleType() {
+        return this.CycleType;
+    }
+
+    /**
+     * Set 生产调度任务任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CycleType 生产调度任务任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCycleType(Long CycleType) {
+        this.CycleType = CycleType;
+    }
+
     public ProdSchedulerTask() {
     }
 
@@ -124,6 +152,9 @@ public class ProdSchedulerTask extends AbstractModel {
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
         }
+        if (source.CycleType != null) {
+            this.CycleType = new Long(source.CycleType);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class ProdSchedulerTask extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
+        this.setParamSimple(map, prefix + "CycleType", this.CycleType);
 
     }
 }

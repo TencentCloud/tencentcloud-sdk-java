@@ -66,28 +66,28 @@ public class DescribeTaskByStatusReportRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 无
+    * 聚合单元，H小时
     */
     @SerializedName("AggregationUnit")
     @Expose
     private String AggregationUnit;
 
     /**
-    * 无
+    * 周期
     */
     @SerializedName("CycleUnit")
     @Expose
     private String CycleUnit;
 
     /**
-    * 无
+    * 状态
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 无
+    * 责任人
     */
     @SerializedName("InCharge")
     @Expose
@@ -197,64 +197,64 @@ public class DescribeTaskByStatusReportRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return AggregationUnit 无
+     * Get 聚合单元，H小时 
+     * @return AggregationUnit 聚合单元，H小时
      */
     public String getAggregationUnit() {
         return this.AggregationUnit;
     }
 
     /**
-     * Set 无
-     * @param AggregationUnit 无
+     * Set 聚合单元，H小时
+     * @param AggregationUnit 聚合单元，H小时
      */
     public void setAggregationUnit(String AggregationUnit) {
         this.AggregationUnit = AggregationUnit;
     }
 
     /**
-     * Get 无 
-     * @return CycleUnit 无
+     * Get 周期 
+     * @return CycleUnit 周期
      */
     public String getCycleUnit() {
         return this.CycleUnit;
     }
 
     /**
-     * Set 无
-     * @param CycleUnit 无
+     * Set 周期
+     * @param CycleUnit 周期
      */
     public void setCycleUnit(String CycleUnit) {
         this.CycleUnit = CycleUnit;
     }
 
     /**
-     * Get 无 
-     * @return Status 无
+     * Get 状态 
+     * @return Status 状态
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 无
-     * @param Status 无
+     * Set 状态
+     * @param Status 状态
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 无 
-     * @return InCharge 无
+     * Get 责任人 
+     * @return InCharge 责任人
      */
     public String getInCharge() {
         return this.InCharge;
     }
 
     /**
-     * Set 无
-     * @param InCharge 无
+     * Set 责任人
+     * @param InCharge 责任人
      */
     public void setInCharge(String InCharge) {
         this.InCharge = InCharge;

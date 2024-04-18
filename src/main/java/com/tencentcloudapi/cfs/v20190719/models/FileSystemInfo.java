@@ -65,7 +65,7 @@ public class FileSystemInfo extends AbstractModel {
     private Long SizeByte;
 
     /**
-    * 文件系统最大空间限制。单位:GiB
+    * 文件系统空间限制。单位:GiB
     */
     @SerializedName("SizeLimit")
     @Expose
@@ -156,7 +156,7 @@ public class FileSystemInfo extends AbstractModel {
     private Float BandwidthLimit;
 
     /**
-    * 文件系统总容量
+    * 文件系统容量规格上限
 单位:GiB
     */
     @SerializedName("Capacity")
@@ -292,16 +292,16 @@ Available:可用
     }
 
     /**
-     * Get 文件系统最大空间限制。单位:GiB 
-     * @return SizeLimit 文件系统最大空间限制。单位:GiB
+     * Get 文件系统空间限制。单位:GiB 
+     * @return SizeLimit 文件系统空间限制。单位:GiB
      */
     public Long getSizeLimit() {
         return this.SizeLimit;
     }
 
     /**
-     * Set 文件系统最大空间限制。单位:GiB
-     * @param SizeLimit 文件系统最大空间限制。单位:GiB
+     * Set 文件系统空间限制。单位:GiB
+     * @param SizeLimit 文件系统空间限制。单位:GiB
      */
     public void setSizeLimit(Long SizeLimit) {
         this.SizeLimit = SizeLimit;
@@ -500,9 +500,9 @@ Available:可用
     }
 
     /**
-     * Get 文件系统总容量
+     * Get 文件系统容量规格上限
 单位:GiB 
-     * @return Capacity 文件系统总容量
+     * @return Capacity 文件系统容量规格上限
 单位:GiB
      */
     public Long getCapacity() {
@@ -510,9 +510,9 @@ Available:可用
     }
 
     /**
-     * Set 文件系统总容量
+     * Set 文件系统容量规格上限
 单位:GiB
-     * @param Capacity 文件系统总容量
+     * @param Capacity 文件系统容量规格上限
 单位:GiB
      */
     public void setCapacity(Long Capacity) {

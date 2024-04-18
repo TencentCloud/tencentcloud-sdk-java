@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DeleteProjectUsersRequest extends AbstractModel {
 
+    /**
+    * 项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+    * 用户ID列表
+    */
+    @SerializedName("UserIds")
+    @Expose
+    private String [] UserIds;
+
+    /**
+     * Get 项目ID 
+     * @return ProjectId 项目ID
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID
+     * @param ProjectId 项目ID
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 用户ID列表 
+     * @return UserIds 用户ID列表
+     */
+    public String [] getUserIds() {
+        return this.UserIds;
+    }
+
+    /**
+     * Set 用户ID列表
+     * @param UserIds 用户ID列表
+     */
+    public void setUserIds(String [] UserIds) {
+        this.UserIds = UserIds;
+    }
+
     public DeleteProjectUsersRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DeleteProjectUsersRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteProjectUsersRequest(DeleteProjectUsersRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.UserIds != null) {
+            this.UserIds = new String[source.UserIds.length];
+            for (int i = 0; i < source.UserIds.length; i++) {
+                this.UserIds[i] = new String(source.UserIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DeleteProjectUsersRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
 
     }
 }

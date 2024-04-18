@@ -25,6 +25,7 @@ public class DescribeDatabaseInfoListResponse extends AbstractModel {
 
     /**
     * 数据库列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseInfo")
     @Expose
@@ -38,8 +39,10 @@ public class DescribeDatabaseInfoListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库列表 
+     * Get 数据库列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseInfo 数据库列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabaseInfo [] getDatabaseInfo() {
         return this.DatabaseInfo;
@@ -47,7 +50,9 @@ public class DescribeDatabaseInfoListResponse extends AbstractModel {
 
     /**
      * Set 数据库列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseInfo 数据库列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseInfo(DatabaseInfo [] DatabaseInfo) {
         this.DatabaseInfo = DatabaseInfo;

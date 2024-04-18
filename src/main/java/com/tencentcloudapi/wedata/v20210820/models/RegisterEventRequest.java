@@ -59,7 +59,7 @@ public class RegisterEventRequest extends AbstractModel {
     private String TimeUnit;
 
     /**
-    * TBDS 事件所属人
+    * 事件所属人
     */
     @SerializedName("Owner")
     @Expose
@@ -174,16 +174,16 @@ public class RegisterEventRequest extends AbstractModel {
     }
 
     /**
-     * Get TBDS 事件所属人 
-     * @return Owner TBDS 事件所属人
+     * Get 事件所属人 
+     * @return Owner 事件所属人
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set TBDS 事件所属人
-     * @param Owner TBDS 事件所属人
+     * Set 事件所属人
+     * @param Owner 事件所属人
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;

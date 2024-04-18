@@ -60,6 +60,34 @@ time.Now().UnixNano()/1e6
     private Long Time;
 
     /**
+    * 事件的地域信息，没有则默认是EB所在的地域信息
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 用于描述事件状态，非必须，默认是""
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 事件的唯一id，用户侧主动上传则需要保证风格一致
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * 标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 事件源的信息,新产品上报必须符合EB的规范 
      * @return Source 事件源的信息,新产品上报必须符合EB的规范
      */
@@ -143,6 +171,70 @@ time.Now().UnixNano()/1e6
         this.Time = Time;
     }
 
+    /**
+     * Get 事件的地域信息，没有则默认是EB所在的地域信息 
+     * @return Region 事件的地域信息，没有则默认是EB所在的地域信息
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 事件的地域信息，没有则默认是EB所在的地域信息
+     * @param Region 事件的地域信息，没有则默认是EB所在的地域信息
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 用于描述事件状态，非必须，默认是"" 
+     * @return Status 用于描述事件状态，非必须，默认是""
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 用于描述事件状态，非必须，默认是""
+     * @param Status 用于描述事件状态，非必须，默认是""
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 事件的唯一id，用户侧主动上传则需要保证风格一致 
+     * @return Id 事件的唯一id，用户侧主动上传则需要保证风格一致
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 事件的唯一id，用户侧主动上传则需要保证风格一致
+     * @param Id 事件的唯一id，用户侧主动上传则需要保证风格一致
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 标签列表 
+     * @return TagList 标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签列表
+     * @param TagList 标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public Event() {
     }
 
@@ -166,6 +258,21 @@ time.Now().UnixNano()/1e6
         if (source.Time != null) {
             this.Time = new Long(source.Time);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -178,6 +285,10 @@ time.Now().UnixNano()/1e6
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Subject", this.Subject);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

@@ -73,6 +73,13 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
     private String AlarmRecipientTypes;
 
     /**
+    * 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+    */
+    @SerializedName("EnableCheckTaskCycleLink")
+    @Expose
+    private Boolean EnableCheckTaskCycleLink;
+
+    /**
      * Get 任务id 
      * @return Task 任务id
      */
@@ -184,6 +191,22 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         this.AlarmRecipientTypes = AlarmRecipientTypes;
     }
 
+    /**
+     * Get 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验 
+     * @return EnableCheckTaskCycleLink 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+     */
+    public Boolean getEnableCheckTaskCycleLink() {
+        return this.EnableCheckTaskCycleLink;
+    }
+
+    /**
+     * Set 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+     * @param EnableCheckTaskCycleLink 是否需要校验循环依赖，默认为 true，如果使用了 CheckTaskCycleLink 和 CheckTaskCycleConfiguration 两个接口校验成功可以传 false，后台服务器不再做校验
+     */
+    public void setEnableCheckTaskCycleLink(Boolean EnableCheckTaskCycleLink) {
+        this.EnableCheckTaskCycleLink = EnableCheckTaskCycleLink;
+    }
+
     public CreateTaskVersionDsRequest() {
     }
 
@@ -213,6 +236,9 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         if (source.AlarmRecipientTypes != null) {
             this.AlarmRecipientTypes = new String(source.AlarmRecipientTypes);
         }
+        if (source.EnableCheckTaskCycleLink != null) {
+            this.EnableCheckTaskCycleLink = new Boolean(source.EnableCheckTaskCycleLink);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         this.setParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
         this.setParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
+        this.setParamSimple(map, prefix + "EnableCheckTaskCycleLink", this.EnableCheckTaskCycleLink);
 
     }
 }

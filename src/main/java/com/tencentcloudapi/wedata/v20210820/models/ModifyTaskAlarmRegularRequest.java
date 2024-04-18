@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyTaskAlarmRegularRequest extends AbstractModel {
 
     /**
-    * 主键ID
+    * 规则ID
     */
     @SerializedName("Id")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyTaskAlarmRegularRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+     * Get 规则ID 
+     * @return Id 规则ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set 规则ID
+     * @param Id 规则ID
      */
     public void setId(String Id) {
         this.Id = Id;

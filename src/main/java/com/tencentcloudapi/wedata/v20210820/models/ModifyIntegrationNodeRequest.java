@@ -38,14 +38,14 @@ public class ModifyIntegrationNodeRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 任务类型
+    * 任务类型 "201. stream, 202. offline"
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 区分画布模式和表单模式
+    * 区分画布模式和表单 "1. 画布, 2. 表单"模式
     */
     @SerializedName("TaskMode")
     @Expose
@@ -84,32 +84,32 @@ public class ModifyIntegrationNodeRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务类型 
-     * @return TaskType 任务类型
+     * Get 任务类型 "201. stream, 202. offline" 
+     * @return TaskType 任务类型 "201. stream, 202. offline"
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-     * @param TaskType 任务类型
+     * Set 任务类型 "201. stream, 202. offline"
+     * @param TaskType 任务类型 "201. stream, 202. offline"
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 区分画布模式和表单模式 
-     * @return TaskMode 区分画布模式和表单模式
+     * Get 区分画布模式和表单 "1. 画布, 2. 表单"模式 
+     * @return TaskMode 区分画布模式和表单 "1. 画布, 2. 表单"模式
      */
     public Long getTaskMode() {
         return this.TaskMode;
     }
 
     /**
-     * Set 区分画布模式和表单模式
-     * @param TaskMode 区分画布模式和表单模式
+     * Set 区分画布模式和表单 "1. 画布, 2. 表单"模式
+     * @param TaskMode 区分画布模式和表单 "1. 画布, 2. 表单"模式
      */
     public void setTaskMode(Long TaskMode) {
         this.TaskMode = TaskMode;

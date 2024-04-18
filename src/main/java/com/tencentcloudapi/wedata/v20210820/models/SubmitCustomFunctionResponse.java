@@ -32,7 +32,7 @@ public class SubmitCustomFunctionResponse extends AbstractModel {
     private String FunctionId;
 
     /**
-    * 无
+    * 错误提示
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
@@ -67,9 +67,9 @@ public class SubmitCustomFunctionResponse extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 错误提示
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMessage 无
+     * @return ErrorMessage 错误提示
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
@@ -77,9 +77,9 @@ public class SubmitCustomFunctionResponse extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 错误提示
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMessage 无
+     * @param ErrorMessage 错误提示
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {

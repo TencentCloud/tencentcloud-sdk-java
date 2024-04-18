@@ -61,7 +61,9 @@ public class CreateDSPADbMetaResourcesResponse extends AbstractModel {
     /**
      * Get 本次更新的ID号，用来标记一次完整的更新过程。 
      * @return UpdateId 本次更新的ID号，用来标记一次完整的更新过程。
+     * @deprecated
      */
+    @Deprecated
     public String getUpdateId() {
         return this.UpdateId;
     }
@@ -69,7 +71,9 @@ public class CreateDSPADbMetaResourcesResponse extends AbstractModel {
     /**
      * Set 本次更新的ID号，用来标记一次完整的更新过程。
      * @param UpdateId 本次更新的ID号，用来标记一次完整的更新过程。
+     * @deprecated
      */
+    @Deprecated
     public void setUpdateId(String UpdateId) {
         this.UpdateId = UpdateId;
     }
@@ -109,7 +113,9 @@ public class CreateDSPADbMetaResourcesResponse extends AbstractModel {
     /**
      * Get 资源所处地域。 
      * @return ResourceRegion 资源所处地域。
+     * @deprecated
      */
+    @Deprecated
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
@@ -117,7 +123,9 @@ public class CreateDSPADbMetaResourcesResponse extends AbstractModel {
     /**
      * Set 资源所处地域。
      * @param ResourceRegion 资源所处地域。
+     * @deprecated
      */
+    @Deprecated
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }

@@ -376,6 +376,14 @@ public class Rule extends AbstractModel {
     private String TriggerCondition;
 
     /**
+    * 0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DsEnvType")
+    @Expose
+    private Long DsEnvType;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -1255,6 +1263,26 @@ public class Rule extends AbstractModel {
         this.TriggerCondition = TriggerCondition;
     }
 
+    /**
+     * Get 0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DsEnvType 0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDsEnvType() {
+        return this.DsEnvType;
+    }
+
+    /**
+     * Set 0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DsEnvType 0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDsEnvType(Long DsEnvType) {
+        this.DsEnvType = DsEnvType;
+    }
+
     public Rule() {
     }
 
@@ -1398,6 +1426,9 @@ public class Rule extends AbstractModel {
         if (source.TriggerCondition != null) {
             this.TriggerCondition = new String(source.TriggerCondition);
         }
+        if (source.DsEnvType != null) {
+            this.DsEnvType = new Long(source.DsEnvType);
+        }
     }
 
 
@@ -1449,6 +1480,7 @@ public class Rule extends AbstractModel {
         this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
         this.setParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
+        this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
 
     }
 }

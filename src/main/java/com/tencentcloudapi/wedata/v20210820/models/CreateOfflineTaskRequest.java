@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateOfflineTaskRequest extends AbstractModel {
 
     /**
-    * 项目/工作
+    * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 1
+    * 间隔，可选，默认1。非空。默认 1
     */
     @SerializedName("CycleStep")
     @Expose
     private Long CycleStep;
 
     /**
-    * 0
+    * 延时执行时间，单位分钟
     */
     @SerializedName("DelayTime")
     @Expose
     private Long DelayTime;
 
     /**
-    * 2099-12-31 00:00:00
+    * 任务结束数据时间。非空。默认当前时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -80,7 +80,7 @@ public class CreateOfflineTaskRequest extends AbstractModel {
     private Long TypeId;
 
     /**
-    * 默认 ""
+    * 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
     */
     @SerializedName("TaskAction")
     @Expose
@@ -94,64 +94,64 @@ public class CreateOfflineTaskRequest extends AbstractModel {
     private String TaskMode;
 
     /**
-     * Get 项目/工作 
-     * @return ProjectId 项目/工作
+     * Get 项目ID 
+     * @return ProjectId 项目ID
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目/工作
-     * @param ProjectId 项目/工作
+     * Set 项目ID
+     * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 1 
-     * @return CycleStep 1
+     * Get 间隔，可选，默认1。非空。默认 1 
+     * @return CycleStep 间隔，可选，默认1。非空。默认 1
      */
     public Long getCycleStep() {
         return this.CycleStep;
     }
 
     /**
-     * Set 1
-     * @param CycleStep 1
+     * Set 间隔，可选，默认1。非空。默认 1
+     * @param CycleStep 间隔，可选，默认1。非空。默认 1
      */
     public void setCycleStep(Long CycleStep) {
         this.CycleStep = CycleStep;
     }
 
     /**
-     * Get 0 
-     * @return DelayTime 0
+     * Get 延时执行时间，单位分钟 
+     * @return DelayTime 延时执行时间，单位分钟
      */
     public Long getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 0
-     * @param DelayTime 0
+     * Set 延时执行时间，单位分钟
+     * @param DelayTime 延时执行时间，单位分钟
      */
     public void setDelayTime(Long DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get 2099-12-31 00:00:00 
-     * @return EndTime 2099-12-31 00:00:00
+     * Get 任务结束数据时间。非空。默认当前时间 
+     * @return EndTime 任务结束数据时间。非空。默认当前时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 2099-12-31 00:00:00
-     * @param EndTime 2099-12-31 00:00:00
+     * Set 任务结束数据时间。非空。默认当前时间
+     * @param EndTime 任务结束数据时间。非空。默认当前时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -222,16 +222,16 @@ public class CreateOfflineTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 默认 "" 
-     * @return TaskAction 默认 ""
+     * Get 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L" 
+     * @return TaskAction 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
      */
     public String getTaskAction() {
         return this.TaskAction;
     }
 
     /**
-     * Set 默认 ""
-     * @param TaskAction 默认 ""
+     * Set 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
+     * @param TaskAction 时间指定，如月任务指定1，3号，则填入 1，3。非空。默认 "" 月任务：如具体1，3号则写 "1,3"，指定月末不可和具体号数一起输入，仅能为 "L"
      */
     public void setTaskAction(String TaskAction) {
         this.TaskAction = TaskAction;

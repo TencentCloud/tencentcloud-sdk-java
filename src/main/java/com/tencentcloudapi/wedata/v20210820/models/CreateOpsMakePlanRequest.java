@@ -160,28 +160,28 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
     private String SourceTaskCycle;
 
     /**
-    * 重新指定的调度资源组ID
+    * 补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
     */
     @SerializedName("SchedulerResourceGroup")
     @Expose
     private String SchedulerResourceGroup;
 
     /**
-    * 重新指定的集成资源组ID
+    * 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
     */
     @SerializedName("IntegrationResourceGroup")
     @Expose
     private String IntegrationResourceGroup;
 
     /**
-    * 重新指定的调度资源组名称
+    * 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
     */
     @SerializedName("SchedulerResourceGroupName")
     @Expose
     private String SchedulerResourceGroupName;
 
     /**
-    * 重新指定的集成资源组名称
+    * 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
     */
     @SerializedName("IntegrationResourceGroupName")
     @Expose
@@ -504,64 +504,64 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
     }
 
     /**
-     * Get 重新指定的调度资源组ID 
-     * @return SchedulerResourceGroup 重新指定的调度资源组ID
+     * Get 补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组 
+     * @return SchedulerResourceGroup 补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
      */
     public String getSchedulerResourceGroup() {
         return this.SchedulerResourceGroup;
     }
 
     /**
-     * Set 重新指定的调度资源组ID
-     * @param SchedulerResourceGroup 重新指定的调度资源组ID
+     * Set 补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
+     * @param SchedulerResourceGroup 补录指定的调度资源组（ID） 为空则表示使用任务原有调度执行资源组
      */
     public void setSchedulerResourceGroup(String SchedulerResourceGroup) {
         this.SchedulerResourceGroup = SchedulerResourceGroup;
     }
 
     /**
-     * Get 重新指定的集成资源组ID 
-     * @return IntegrationResourceGroup 重新指定的集成资源组ID
+     * Get 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组 
+     * @return IntegrationResourceGroup 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
      */
     public String getIntegrationResourceGroup() {
         return this.IntegrationResourceGroup;
     }
 
     /**
-     * Set 重新指定的集成资源组ID
-     * @param IntegrationResourceGroup 重新指定的集成资源组ID
+     * Set 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
+     * @param IntegrationResourceGroup 补录指定的集成资源组（ID） 为空则表示使用任务原有集成执行资源组
      */
     public void setIntegrationResourceGroup(String IntegrationResourceGroup) {
         this.IntegrationResourceGroup = IntegrationResourceGroup;
     }
 
     /**
-     * Get 重新指定的调度资源组名称 
-     * @return SchedulerResourceGroupName 重新指定的调度资源组名称
+     * Get 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组 
+     * @return SchedulerResourceGroupName 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
      */
     public String getSchedulerResourceGroupName() {
         return this.SchedulerResourceGroupName;
     }
 
     /**
-     * Set 重新指定的调度资源组名称
-     * @param SchedulerResourceGroupName 重新指定的调度资源组名称
+     * Set 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
+     * @param SchedulerResourceGroupName 补录指定的调度资源组名称 为空则表示使用任务原有调度执行资源组
      */
     public void setSchedulerResourceGroupName(String SchedulerResourceGroupName) {
         this.SchedulerResourceGroupName = SchedulerResourceGroupName;
     }
 
     /**
-     * Get 重新指定的集成资源组名称 
-     * @return IntegrationResourceGroupName 重新指定的集成资源组名称
+     * Get 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组 
+     * @return IntegrationResourceGroupName 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
      */
     public String getIntegrationResourceGroupName() {
         return this.IntegrationResourceGroupName;
     }
 
     /**
-     * Set 重新指定的集成资源组名称
-     * @param IntegrationResourceGroupName 重新指定的集成资源组名称
+     * Set 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
+     * @param IntegrationResourceGroupName 补录指定的集成资源组名称 为空则表示使用任务原有集成执行资源组
      */
     public void setIntegrationResourceGroupName(String IntegrationResourceGroupName) {
         this.IntegrationResourceGroupName = IntegrationResourceGroupName;

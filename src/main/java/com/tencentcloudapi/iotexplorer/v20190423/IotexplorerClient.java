@@ -402,6 +402,39 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询指定设备的云存 AI 服务开通状态与参数配置
+     * @param req DescribeCloudStorageAIServiceRequest
+     * @return DescribeCloudStorageAIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageAIServiceResponse DescribeCloudStorageAIService(DescribeCloudStorageAIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageAIService", DescribeCloudStorageAIServiceResponse.class);
+    }
+
+    /**
+     *查询云存AI分析回调配置
+     * @param req DescribeCloudStorageAIServiceCallbackRequest
+     * @return DescribeCloudStorageAIServiceCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageAIServiceCallbackResponse DescribeCloudStorageAIServiceCallback(DescribeCloudStorageAIServiceCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageAIServiceCallback", DescribeCloudStorageAIServiceCallbackResponse.class);
+    }
+
+    /**
+     *查询指定设备的云存 AI 分析任务列表
+     * @param req DescribeCloudStorageAIServiceTasksRequest
+     * @return DescribeCloudStorageAIServiceTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageAIServiceTasksResponse DescribeCloudStorageAIServiceTasks(DescribeCloudStorageAIServiceTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageAIServiceTasks", DescribeCloudStorageAIServiceTasksResponse.class);
+    }
+
+    /**
      *获取具有云存的日期
      * @param req DescribeCloudStorageDateRequest
      * @return DescribeCloudStorageDateResponse
@@ -743,6 +776,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询指定产品的云存 AI 服务开通状态
+     * @param req DescribeProductCloudStorageAIServiceRequest
+     * @return DescribeProductCloudStorageAIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductCloudStorageAIServiceResponse DescribeProductCloudStorageAIService(DescribeProductCloudStorageAIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProductCloudStorageAIService", DescribeProductCloudStorageAIServiceResponse.class);
+    }
+
+    /**
      *查询项目详情
      * @param req DescribeProjectRequest
      * @return DescribeProjectResponse
@@ -1029,6 +1073,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *修改指定设备的云存 AI 服务开通状态与参数配置
+     * @param req ModifyCloudStorageAIServiceRequest
+     * @return ModifyCloudStorageAIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudStorageAIServiceResponse ModifyCloudStorageAIService(ModifyCloudStorageAIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudStorageAIService", ModifyCloudStorageAIServiceResponse.class);
+    }
+
+    /**
+     *修改云存AI分析回调配置
+     * @param req ModifyCloudStorageAIServiceCallbackRequest
+     * @return ModifyCloudStorageAIServiceCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudStorageAIServiceCallbackResponse ModifyCloudStorageAIServiceCallback(ModifyCloudStorageAIServiceCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudStorageAIServiceCallback", ModifyCloudStorageAIServiceCallbackResponse.class);
+    }
+
+    /**
      *更新围栏绑定信息
      * @param req ModifyFenceBindRequest
      * @return ModifyFenceBindResponse
@@ -1092,6 +1158,17 @@ public class IotexplorerClient extends AbstractClient{
     public ModifyPositionSpaceResponse ModifyPositionSpace(ModifyPositionSpaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPositionSpace", ModifyPositionSpaceResponse.class);
+    }
+
+    /**
+     *修改指定产品的云存 AI 服务开通状态
+     * @param req ModifyProductCloudStorageAIServiceRequest
+     * @return ModifyProductCloudStorageAIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProductCloudStorageAIServiceResponse ModifyProductCloudStorageAIService(ModifyProductCloudStorageAIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProductCloudStorageAIService", ModifyProductCloudStorageAIServiceResponse.class);
     }
 
     /**

@@ -31,7 +31,7 @@ public class GetIntegrationNodeColumnSchemaRequest extends AbstractModel {
     private String ColumnContent;
 
     /**
-    * 数据源类型
+    * 数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
     */
     @SerializedName("DatasourceType")
     @Expose
@@ -54,16 +54,16 @@ public class GetIntegrationNodeColumnSchemaRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据源类型 
-     * @return DatasourceType 数据源类型
+     * Get 数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM| 
+     * @return DatasourceType 数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
      */
     public String getDatasourceType() {
         return this.DatasourceType;
     }
 
     /**
-     * Set 数据源类型
-     * @param DatasourceType 数据源类型
+     * Set 数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
+     * @param DatasourceType 数据源类型 MYSQL|HIVE|KAFKA|ES|MONGODB|REST_API|SYBASE|TIDB|DORIS|DM|
      */
     public void setDatasourceType(String DatasourceType) {
         this.DatasourceType = DatasourceType;

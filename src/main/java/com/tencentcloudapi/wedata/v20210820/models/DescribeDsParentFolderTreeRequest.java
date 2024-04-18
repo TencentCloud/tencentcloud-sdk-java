@@ -52,7 +52,9 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    *  classification:分类展示  catalog:目录展示
+    * 任务展示形式, 示例取值
+-    classification:分类展示
+-    catalog:目录展示
     */
     @SerializedName("DisplayType")
     @Expose
@@ -123,16 +125,24 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
     }
 
     /**
-     * Get  classification:分类展示  catalog:目录展示 
-     * @return DisplayType  classification:分类展示  catalog:目录展示
+     * Get 任务展示形式, 示例取值
+-    classification:分类展示
+-    catalog:目录展示 
+     * @return DisplayType 任务展示形式, 示例取值
+-    classification:分类展示
+-    catalog:目录展示
      */
     public String getDisplayType() {
         return this.DisplayType;
     }
 
     /**
-     * Set  classification:分类展示  catalog:目录展示
-     * @param DisplayType  classification:分类展示  catalog:目录展示
+     * Set 任务展示形式, 示例取值
+-    classification:分类展示
+-    catalog:目录展示
+     * @param DisplayType 任务展示形式, 示例取值
+-    classification:分类展示
+-    catalog:目录展示
      */
     public void setDisplayType(String DisplayType) {
         this.DisplayType = DisplayType;

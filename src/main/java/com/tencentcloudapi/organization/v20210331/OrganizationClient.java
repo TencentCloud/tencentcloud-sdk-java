@@ -94,6 +94,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *绑定策略
+     * @param req AttachPolicyRequest
+     * @return AttachPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachPolicyResponse AttachPolicy(AttachPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AttachPolicy", AttachPolicyResponse.class);
+    }
+
+    /**
      *绑定组织成员和组织管理员子账号的授权关系
      * @param req BindOrganizationMemberAuthAccountRequest
      * @return BindOrganizationMemberAuthAccountResponse
@@ -193,6 +204,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *创建一个特殊类型的策略，你可以关联到企业组织Root节点、企业单元或者企业的成员账号。
+     * @param req CreatePolicyRequest
+     * @return CreatePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePolicyResponse CreatePolicy(CreatePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePolicy", CreatePolicyResponse.class);
+    }
+
+    /**
      *删除成员账号
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -267,6 +289,17 @@ public class OrganizationClient extends AbstractClient{
     public DeleteOrganizationNodesResponse DeleteOrganizationNodes(DeleteOrganizationNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOrganizationNodes", DeleteOrganizationNodesResponse.class);
+    }
+
+    /**
+     *删除策略
+     * @param req DeletePolicyRequest
+     * @return DeletePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePolicyResponse DeletePolicy(DeletePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePolicy", DeletePolicyResponse.class);
     }
 
     /**
@@ -424,6 +457,28 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribePolicy）可用于查询查看策略详情。
+     * @param req DescribePolicyRequest
+     * @return DescribePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyResponse DescribePolicy(DescribePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicy", DescribePolicyResponse.class);
+    }
+
+    /**
+     *本接口（DescribePolicyConfig）可用于查询企业组织策略配置
+     * @param req DescribePolicyConfigRequest
+     * @return DescribePolicyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyConfigResponse DescribePolicyConfig(DescribePolicyConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicyConfig", DescribePolicyConfigResponse.class);
+    }
+
+    /**
      *获取可共享地域列表
      * @param req DescribeShareAreasRequest
      * @return DescribeShareAreasResponse
@@ -468,6 +523,39 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *解绑策略
+     * @param req DetachPolicyRequest
+     * @return DetachPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachPolicyResponse DetachPolicy(DetachPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetachPolicy", DetachPolicyResponse.class);
+    }
+
+    /**
+     *禁用策略类型
+     * @param req DisablePolicyTypeRequest
+     * @return DisablePolicyTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisablePolicyTypeResponse DisablePolicyType(DisablePolicyTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisablePolicyType", DisablePolicyTypeResponse.class);
+    }
+
+    /**
+     *启用策略类型
+     * @param req EnablePolicyTypeRequest
+     * @return EnablePolicyTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnablePolicyTypeResponse EnablePolicyType(EnablePolicyTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnablePolicyType", EnablePolicyTypeResponse.class);
+    }
+
+    /**
      *获取组织成员访问身份列表
      * @param req ListOrganizationIdentityRequest
      * @return ListOrganizationIdentityResponse
@@ -476,6 +564,39 @@ public class OrganizationClient extends AbstractClient{
     public ListOrganizationIdentityResponse ListOrganizationIdentity(ListOrganizationIdentityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListOrganizationIdentity", ListOrganizationIdentityResponse.class);
+    }
+
+    /**
+     *本接口（ListPolicies）可用于查询查看策略列表数据
+     * @param req ListPoliciesRequest
+     * @return ListPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPoliciesResponse ListPolicies(ListPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListPolicies", ListPoliciesResponse.class);
+    }
+
+    /**
+     *本接口（ListPoliciesForTarget）查询目标关联的策略列表
+     * @param req ListPoliciesForTargetRequest
+     * @return ListPoliciesForTargetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPoliciesForTargetResponse ListPoliciesForTarget(ListPoliciesForTargetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListPoliciesForTarget", ListPoliciesForTargetResponse.class);
+    }
+
+    /**
+     *本接口（ListTargetsForPolicy）查询某个指定策略关联的目标列表
+     * @param req ListTargetsForPolicyRequest
+     * @return ListTargetsForPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTargetsForPolicyResponse ListTargetsForPolicy(ListTargetsForPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTargetsForPolicy", ListTargetsForPolicyResponse.class);
     }
 
     /**
@@ -542,6 +663,17 @@ public class OrganizationClient extends AbstractClient{
     public UpdateOrganizationNodeResponse UpdateOrganizationNode(UpdateOrganizationNodeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOrganizationNode", UpdateOrganizationNodeResponse.class);
+    }
+
+    /**
+     *编辑策略
+     * @param req UpdatePolicyRequest
+     * @return UpdatePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePolicyResponse UpdatePolicy(UpdatePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePolicy", UpdatePolicyResponse.class);
     }
 
     /**

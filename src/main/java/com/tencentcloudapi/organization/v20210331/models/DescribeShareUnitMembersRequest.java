@@ -52,7 +52,7 @@ public class DescribeShareUnitMembersRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 搜索关键字。支持成员uin搜索。
+    * 搜索关键字。支持成员Uin搜索。
     */
     @SerializedName("SearchKey")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeShareUnitMembersRequest extends AbstractModel {
     }
 
     /**
-     * Get 搜索关键字。支持成员uin搜索。 
-     * @return SearchKey 搜索关键字。支持成员uin搜索。
+     * Get 搜索关键字。支持成员Uin搜索。 
+     * @return SearchKey 搜索关键字。支持成员Uin搜索。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键字。支持成员uin搜索。
-     * @param SearchKey 搜索关键字。支持成员uin搜索。
+     * Set 搜索关键字。支持成员Uin搜索。
+     * @param SearchKey 搜索关键字。支持成员Uin搜索。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

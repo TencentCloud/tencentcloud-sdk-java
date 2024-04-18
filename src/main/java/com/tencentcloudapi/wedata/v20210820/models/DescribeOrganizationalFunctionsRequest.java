@@ -52,6 +52,16 @@ public class DescribeOrganizationalFunctionsRequest extends AbstractModel {
     private String DisplayName;
 
     /**
+    * 标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
+
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
      * Get 场景类型：开发、使用 
      * @return Type 场景类型：开发、使用
      */
@@ -115,6 +125,34 @@ public class DescribeOrganizationalFunctionsRequest extends AbstractModel {
         this.DisplayName = DisplayName;
     }
 
+    /**
+     * Get 标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
+ 
+     * @return EnvType 标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
+
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * Set 标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
+
+     * @param EnvType 标准模式开发环境：DEV
+标准模式生产环境：PROD
+简单模式：ALL
+
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
     public DescribeOrganizationalFunctionsRequest() {
     }
 
@@ -135,6 +173,9 @@ public class DescribeOrganizationalFunctionsRequest extends AbstractModel {
         if (source.DisplayName != null) {
             this.DisplayName = new String(source.DisplayName);
         }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
     }
 
 
@@ -146,6 +187,7 @@ public class DescribeOrganizationalFunctionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
 
     }
 }
