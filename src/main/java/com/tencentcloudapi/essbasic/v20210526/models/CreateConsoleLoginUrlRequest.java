@@ -172,6 +172,13 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private String AutoJumpUrl;
 
     /**
+    * 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+    */
+    @SerializedName("TopNavigationStatus")
+    @Expose
+    private String TopNavigationStatus;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
@@ -599,6 +606,22 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.AutoJumpUrl = AutoJumpUrl;
     }
 
+    /**
+     * Get 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。 
+     * @return TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+     */
+    public String getTopNavigationStatus() {
+        return this.TopNavigationStatus;
+    }
+
+    /**
+     * Set 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+     * @param TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+     */
+    public void setTopNavigationStatus(String TopNavigationStatus) {
+        this.TopNavigationStatus = TopNavigationStatus;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -652,6 +675,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         if (source.AutoJumpUrl != null) {
             this.AutoJumpUrl = new String(source.AutoJumpUrl);
         }
+        if (source.TopNavigationStatus != null) {
+            this.TopNavigationStatus = new String(source.TopNavigationStatus);
+        }
     }
 
 
@@ -673,6 +699,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ProxyOperatorIdCardNumber", this.ProxyOperatorIdCardNumber);
         this.setParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
+        this.setParamSimple(map, prefix + "TopNavigationStatus", this.TopNavigationStatus);
 
     }
 }

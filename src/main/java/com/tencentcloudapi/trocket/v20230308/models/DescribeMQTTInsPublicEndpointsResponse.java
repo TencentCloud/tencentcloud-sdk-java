@@ -52,6 +52,18 @@ public class DescribeMQTTInsPublicEndpointsResponse extends AbstractModel {
     private PublicAccessRule [] Rules;
 
     /**
+    * 公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +135,42 @@ public class DescribeMQTTInsPublicEndpointsResponse extends AbstractModel {
     }
 
     /**
+     * Get 公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭 
+     * @return Status 公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭
+     * @param Status 公网状态：
+    NORMAL-正常
+    CLOSING-关闭中
+    MODIFYING-修改中
+    CREATING-开启中
+    CLOSE-关闭
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -164,6 +212,9 @@ public class DescribeMQTTInsPublicEndpointsResponse extends AbstractModel {
                 this.Rules[i] = new PublicAccessRule(source.Rules[i]);
             }
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -178,6 +229,7 @@ public class DescribeMQTTInsPublicEndpointsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

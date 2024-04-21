@@ -72,6 +72,14 @@ public class MQTTEndpointItem extends AbstractModel {
     private Long Port;
 
     /**
+    * 接入点ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ip")
+    @Expose
+    private String Ip;
+
+    /**
      * Get 类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 类型
@@ -191,6 +199,26 @@ public class MQTTEndpointItem extends AbstractModel {
         this.Port = Port;
     }
 
+    /**
+     * Get 接入点ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ip 接入点ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIp() {
+        return this.Ip;
+    }
+
+    /**
+     * Set 接入点ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ip 接入点ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIp(String Ip) {
+        this.Ip = Ip;
+    }
+
     public MQTTEndpointItem() {
     }
 
@@ -217,6 +245,9 @@ public class MQTTEndpointItem extends AbstractModel {
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
     }
 
 
@@ -230,6 +261,7 @@ public class MQTTEndpointItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
 
     }
 }

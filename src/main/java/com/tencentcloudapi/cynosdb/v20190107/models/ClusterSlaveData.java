@@ -56,6 +56,22 @@ public class ClusterSlaveData extends AbstractModel {
     private String [] NewSlaveZone;
 
     /**
+    * 新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewSlaveZoneAttr")
+    @Expose
+    private SlaveZoneAttrItem [] NewSlaveZoneAttr;
+
+    /**
+    * 旧可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OldSlaveZoneAttr")
+    @Expose
+    private SlaveZoneAttrItem [] OldSlaveZoneAttr;
+
+    /**
      * Get 旧主可用区
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OldMasterZone 旧主可用区
@@ -135,6 +151,46 @@ public class ClusterSlaveData extends AbstractModel {
         this.NewSlaveZone = NewSlaveZone;
     }
 
+    /**
+     * Get 新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewSlaveZoneAttr 新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SlaveZoneAttrItem [] getNewSlaveZoneAttr() {
+        return this.NewSlaveZoneAttr;
+    }
+
+    /**
+     * Set 新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewSlaveZoneAttr 新从可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewSlaveZoneAttr(SlaveZoneAttrItem [] NewSlaveZoneAttr) {
+        this.NewSlaveZoneAttr = NewSlaveZoneAttr;
+    }
+
+    /**
+     * Get 旧可用区属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OldSlaveZoneAttr 旧可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SlaveZoneAttrItem [] getOldSlaveZoneAttr() {
+        return this.OldSlaveZoneAttr;
+    }
+
+    /**
+     * Set 旧可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OldSlaveZoneAttr 旧可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOldSlaveZoneAttr(SlaveZoneAttrItem [] OldSlaveZoneAttr) {
+        this.OldSlaveZoneAttr = OldSlaveZoneAttr;
+    }
+
     public ClusterSlaveData() {
     }
 
@@ -161,6 +217,18 @@ public class ClusterSlaveData extends AbstractModel {
                 this.NewSlaveZone[i] = new String(source.NewSlaveZone[i]);
             }
         }
+        if (source.NewSlaveZoneAttr != null) {
+            this.NewSlaveZoneAttr = new SlaveZoneAttrItem[source.NewSlaveZoneAttr.length];
+            for (int i = 0; i < source.NewSlaveZoneAttr.length; i++) {
+                this.NewSlaveZoneAttr[i] = new SlaveZoneAttrItem(source.NewSlaveZoneAttr[i]);
+            }
+        }
+        if (source.OldSlaveZoneAttr != null) {
+            this.OldSlaveZoneAttr = new SlaveZoneAttrItem[source.OldSlaveZoneAttr.length];
+            for (int i = 0; i < source.OldSlaveZoneAttr.length; i++) {
+                this.OldSlaveZoneAttr[i] = new SlaveZoneAttrItem(source.OldSlaveZoneAttr[i]);
+            }
+        }
     }
 
 
@@ -172,6 +240,8 @@ public class ClusterSlaveData extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OldSlaveZone.", this.OldSlaveZone);
         this.setParamSimple(map, prefix + "NewMasterZone", this.NewMasterZone);
         this.setParamArraySimple(map, prefix + "NewSlaveZone.", this.NewSlaveZone);
+        this.setParamArrayObj(map, prefix + "NewSlaveZoneAttr.", this.NewSlaveZoneAttr);
+        this.setParamArrayObj(map, prefix + "OldSlaveZoneAttr.", this.OldSlaveZoneAttr);
 
     }
 }

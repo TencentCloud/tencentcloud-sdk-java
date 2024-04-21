@@ -102,6 +102,14 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PureAudio")
+    @Expose
+    private Long PureAudio;
+
+    /**
      * Get 转自适应码流模板唯一标识。 
      * @return Definition 转自适应码流模板唯一标识。
      */
@@ -293,6 +301,26 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PureAudio 是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPureAudio() {
+        return this.PureAudio;
+    }
+
+    /**
+     * Set 是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PureAudio 是否为纯音频，0表示视频，1表示纯音频
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPureAudio(Long PureAudio) {
+        this.PureAudio = PureAudio;
+    }
+
     public AdaptiveDynamicStreamingTemplate() {
     }
 
@@ -334,6 +362,9 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.PureAudio != null) {
+            this.PureAudio = new Long(source.PureAudio);
+        }
     }
 
 
@@ -351,6 +382,7 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "PureAudio", this.PureAudio);
 
     }
 }

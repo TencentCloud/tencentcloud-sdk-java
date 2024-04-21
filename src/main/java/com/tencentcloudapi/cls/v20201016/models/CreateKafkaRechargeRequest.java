@@ -66,21 +66,21 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-    * 腾讯云CKafka实例ID，KafkaType为0时必填
+    * 腾讯云CKafka实例ID，KafkaType为0时必填。
     */
     @SerializedName("KafkaInstance")
     @Expose
     private String KafkaInstance;
 
     /**
-    * 服务地址，KafkaType为1时必填
+    * 服务地址，KafkaType为1时必填。
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * ServerAddr是否为加密连接，KafkaType为1时必填
+    * ServerAddr是否为加密连接，KafkaType为1时必填。
     */
     @SerializedName("IsEncryptionAddr")
     @Expose
@@ -88,7 +88,7 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
 
     /**
     * 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     */
     @SerializedName("Protocol")
     @Expose
@@ -198,48 +198,48 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
     }
 
     /**
-     * Get 腾讯云CKafka实例ID，KafkaType为0时必填 
-     * @return KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
+     * Get 腾讯云CKafka实例ID，KafkaType为0时必填。 
+     * @return KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set 腾讯云CKafka实例ID，KafkaType为0时必填
-     * @param KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
+     * Set 腾讯云CKafka实例ID，KafkaType为0时必填。
+     * @param KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
     }
 
     /**
-     * Get 服务地址，KafkaType为1时必填 
-     * @return ServerAddr 服务地址，KafkaType为1时必填
+     * Get 服务地址，KafkaType为1时必填。 
+     * @return ServerAddr 服务地址，KafkaType为1时必填。
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 服务地址，KafkaType为1时必填
-     * @param ServerAddr 服务地址，KafkaType为1时必填
+     * Set 服务地址，KafkaType为1时必填。
+     * @param ServerAddr 服务地址，KafkaType为1时必填。
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get ServerAddr是否为加密连接，KafkaType为1时必填 
-     * @return IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填
+     * Get ServerAddr是否为加密连接，KafkaType为1时必填。 
+     * @return IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填。
      */
     public Boolean getIsEncryptionAddr() {
         return this.IsEncryptionAddr;
     }
 
     /**
-     * Set ServerAddr是否为加密连接，KafkaType为1时必填
-     * @param IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填
+     * Set ServerAddr是否为加密连接，KafkaType为1时必填。
+     * @param IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填。
      */
     public void setIsEncryptionAddr(Boolean IsEncryptionAddr) {
         this.IsEncryptionAddr = IsEncryptionAddr;
@@ -247,9 +247,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
 
     /**
      * Get 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填 
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。 
      * @return Protocol 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
@@ -257,9 +257,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
 
     /**
      * Set 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      * @param Protocol 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;

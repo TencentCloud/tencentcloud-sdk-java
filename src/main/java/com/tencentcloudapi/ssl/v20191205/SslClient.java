@@ -270,6 +270,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *查询批量删除任务结果
+     * @param req DescribeDeleteCertificatesTaskResultRequest
+     * @return DescribeDeleteCertificatesTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeleteCertificatesTaskResultResponse DescribeDeleteCertificatesTaskResult(DescribeDeleteCertificatesTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeleteCertificatesTaskResult", DescribeDeleteCertificatesTaskResultResponse.class);
+    }
+
+    /**
      *证书查询关联资源， 最新查询接口请使用CreateCertificateBindResourceSyncTask， 可以查询更多支持的云资源
      * @param req DescribeDeployedResourcesRequest
      * @return DescribeDeployedResourcesResponse

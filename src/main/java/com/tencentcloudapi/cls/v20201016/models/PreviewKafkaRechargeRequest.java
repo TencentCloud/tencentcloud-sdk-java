@@ -24,36 +24,36 @@ import java.util.HashMap;
 public class PreviewKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * 预览类型，1:源数据预览，2:导出结果预览
+    * 预览类型，1：源数据预览；2：导出结果预览。
     */
     @SerializedName("PreviewType")
     @Expose
     private Long PreviewType;
 
     /**
-    * 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+    * 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
     */
     @SerializedName("KafkaType")
     @Expose
     private Long KafkaType;
 
     /**
-    * 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。最多支持100个。
+    * 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+最多支持100个。
     */
     @SerializedName("UserKafkaTopics")
     @Expose
     private String UserKafkaTopics;
 
     /**
-    * 导入数据位置，-2:最早（默认），-1：最晚
+    * 导入数据位置，-2：最早；-1：最晚。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 腾讯云CKafka实例ID。
-KafkaType为0时KafkaInstance必填
+    * 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
     */
     @SerializedName("KafkaInstance")
     @Expose
@@ -61,7 +61,7 @@ KafkaType为0时KafkaInstance必填
 
     /**
     * 服务地址。
-KafkaType为1时ServerAddr必填
+KafkaType为1时ServerAddr必填。
     */
     @SerializedName("ServerAddr")
     @Expose
@@ -77,7 +77,7 @@ KafkaType为1时有效。
 
     /**
     * 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     */
     @SerializedName("Protocol")
     @Expose
@@ -98,84 +98,84 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-     * Get 预览类型，1:源数据预览，2:导出结果预览 
-     * @return PreviewType 预览类型，1:源数据预览，2:导出结果预览
+     * Get 预览类型，1：源数据预览；2：导出结果预览。 
+     * @return PreviewType 预览类型，1：源数据预览；2：导出结果预览。
      */
     public Long getPreviewType() {
         return this.PreviewType;
     }
 
     /**
-     * Set 预览类型，1:源数据预览，2:导出结果预览
-     * @param PreviewType 预览类型，1:源数据预览，2:导出结果预览
+     * Set 预览类型，1：源数据预览；2：导出结果预览。
+     * @param PreviewType 预览类型，1：源数据预览；2：导出结果预览。
      */
     public void setPreviewType(Long PreviewType) {
         this.PreviewType = PreviewType;
     }
 
     /**
-     * Get 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka 
-     * @return KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+     * Get 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。 
+     * @return KafkaType 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
      */
     public Long getKafkaType() {
         return this.KafkaType;
     }
 
     /**
-     * Set 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
-     * @param KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
+     * Set 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
+     * @param KafkaType 导入Kafka类型，0：腾讯云CKafka；1：用户自建Kafka。
      */
     public void setKafkaType(Long KafkaType) {
         this.KafkaType = KafkaType;
     }
 
     /**
-     * Get 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。最多支持100个。 
-     * @return UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。最多支持100个。
+     * Get 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+最多支持100个。 
+     * @return UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+最多支持100个。
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。最多支持100个。
-     * @param UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。最多支持100个。
+     * Set 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+最多支持100个。
+     * @param UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+最多支持100个。
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
     }
 
     /**
-     * Get 导入数据位置，-2:最早（默认），-1：最晚 
-     * @return Offset 导入数据位置，-2:最早（默认），-1：最晚
+     * Get 导入数据位置，-2：最早；-1：最晚。 
+     * @return Offset 导入数据位置，-2：最早；-1：最晚。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 导入数据位置，-2:最早（默认），-1：最晚
-     * @param Offset 导入数据位置，-2:最早（默认），-1：最晚
+     * Set 导入数据位置，-2：最早；-1：最晚。
+     * @param Offset 导入数据位置，-2：最早；-1：最晚。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 腾讯云CKafka实例ID。
-KafkaType为0时KafkaInstance必填 
-     * @return KafkaInstance 腾讯云CKafka实例ID。
-KafkaType为0时KafkaInstance必填
+     * Get 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。 
+     * @return KafkaInstance 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
     }
 
     /**
-     * Set 腾讯云CKafka实例ID。
-KafkaType为0时KafkaInstance必填
-     * @param KafkaInstance 腾讯云CKafka实例ID。
-KafkaType为0时KafkaInstance必填
+     * Set 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
+     * @param KafkaInstance 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
@@ -183,9 +183,9 @@ KafkaType为0时KafkaInstance必填
 
     /**
      * Get 服务地址。
-KafkaType为1时ServerAddr必填 
+KafkaType为1时ServerAddr必填。 
      * @return ServerAddr 服务地址。
-KafkaType为1时ServerAddr必填
+KafkaType为1时ServerAddr必填。
      */
     public String getServerAddr() {
         return this.ServerAddr;
@@ -193,9 +193,9 @@ KafkaType为1时ServerAddr必填
 
     /**
      * Set 服务地址。
-KafkaType为1时ServerAddr必填
+KafkaType为1时ServerAddr必填。
      * @param ServerAddr 服务地址。
-KafkaType为1时ServerAddr必填
+KafkaType为1时ServerAddr必填。
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
@@ -223,9 +223,9 @@ KafkaType为1时有效。
 
     /**
      * Get 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填 
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。 
      * @return Protocol 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      */
     public KafkaProtocolInfo getProtocol() {
         return this.Protocol;
@@ -233,9 +233,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
 
     /**
      * Set 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      * @param Protocol 加密访问协议。
-KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
      */
     public void setProtocol(KafkaProtocolInfo Protocol) {
         this.Protocol = Protocol;

@@ -396,6 +396,14 @@ pausing
     private String NetworkType;
 
     /**
+    * 备可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaveZoneAttr")
+    @Expose
+    private SlaveZoneAttrItem [] SlaveZoneAttr;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -1295,6 +1303,26 @@ pausing
         this.NetworkType = NetworkType;
     }
 
+    /**
+     * Get 备可用区属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaveZoneAttr 备可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SlaveZoneAttrItem [] getSlaveZoneAttr() {
+        return this.SlaveZoneAttr;
+    }
+
+    /**
+     * Set 备可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZoneAttr 备可用区属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaveZoneAttr(SlaveZoneAttrItem [] SlaveZoneAttr) {
+        this.SlaveZoneAttr = SlaveZoneAttr;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1468,6 +1496,12 @@ pausing
         if (source.NetworkType != null) {
             this.NetworkType = new String(source.NetworkType);
         }
+        if (source.SlaveZoneAttr != null) {
+            this.SlaveZoneAttr = new SlaveZoneAttrItem[source.SlaveZoneAttr.length];
+            for (int i = 0; i < source.SlaveZoneAttr.length; i++) {
+                this.SlaveZoneAttr[i] = new SlaveZoneAttrItem(source.SlaveZoneAttr[i]);
+            }
+        }
     }
 
 
@@ -1524,6 +1558,7 @@ pausing
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
 
     }
 }

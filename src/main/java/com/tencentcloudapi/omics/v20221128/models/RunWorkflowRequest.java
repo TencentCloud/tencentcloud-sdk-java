@@ -100,11 +100,18 @@ public class RunWorkflowRequest extends AbstractModel {
     private Long CacheClearDelay;
 
     /**
-    * 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+    * 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
     */
     @SerializedName("WorkDir")
     @Expose
     private String WorkDir;
+
+    /**
+    * 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+    */
+    @SerializedName("VolumeIds")
+    @Expose
+    private String [] VolumeIds;
 
     /**
      * Get 任务批次名称。 
@@ -291,19 +298,35 @@ public class RunWorkflowRequest extends AbstractModel {
     }
 
     /**
-     * Get 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow) 
-     * @return WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     * Get 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。 
+     * @return WorkDir 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
      */
     public String getWorkDir() {
         return this.WorkDir;
     }
 
     /**
-     * Set 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
-     * @param WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     * Set 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
+     * @param WorkDir 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
      */
     public void setWorkDir(String WorkDir) {
         this.WorkDir = WorkDir;
+    }
+
+    /**
+     * Get 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。 
+     * @return VolumeIds 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     */
+    public String [] getVolumeIds() {
+        return this.VolumeIds;
+    }
+
+    /**
+     * Set 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     * @param VolumeIds 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     */
+    public void setVolumeIds(String [] VolumeIds) {
+        this.VolumeIds = VolumeIds;
     }
 
     public RunWorkflowRequest() {
@@ -347,6 +370,12 @@ public class RunWorkflowRequest extends AbstractModel {
         if (source.WorkDir != null) {
             this.WorkDir = new String(source.WorkDir);
         }
+        if (source.VolumeIds != null) {
+            this.VolumeIds = new String[source.VolumeIds.length];
+            for (int i = 0; i < source.VolumeIds.length; i++) {
+                this.VolumeIds[i] = new String(source.VolumeIds[i]);
+            }
+        }
     }
 
 
@@ -365,6 +394,7 @@ public class RunWorkflowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InputCosUri", this.InputCosUri);
         this.setParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
         this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
+        this.setParamArraySimple(map, prefix + "VolumeIds.", this.VolumeIds);
 
     }
 }

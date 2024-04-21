@@ -87,6 +87,27 @@ public class DescribeMQTTClientResponse extends AbstractModel {
     private MQTTClientSubscription [] MQTTClientSubscriptions;
 
     /**
+    * 服务端到客户端的流量统计
+    */
+    @SerializedName("Inbound")
+    @Expose
+    private StatisticsReport Inbound;
+
+    /**
+    * 客户端到服务端的流量统计
+    */
+    @SerializedName("OutBound")
+    @Expose
+    private StatisticsReport OutBound;
+
+    /**
+    * cleansession标志
+    */
+    @SerializedName("CleanSession")
+    @Expose
+    private Boolean CleanSession;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -238,6 +259,54 @@ public class DescribeMQTTClientResponse extends AbstractModel {
     }
 
     /**
+     * Get 服务端到客户端的流量统计 
+     * @return Inbound 服务端到客户端的流量统计
+     */
+    public StatisticsReport getInbound() {
+        return this.Inbound;
+    }
+
+    /**
+     * Set 服务端到客户端的流量统计
+     * @param Inbound 服务端到客户端的流量统计
+     */
+    public void setInbound(StatisticsReport Inbound) {
+        this.Inbound = Inbound;
+    }
+
+    /**
+     * Get 客户端到服务端的流量统计 
+     * @return OutBound 客户端到服务端的流量统计
+     */
+    public StatisticsReport getOutBound() {
+        return this.OutBound;
+    }
+
+    /**
+     * Set 客户端到服务端的流量统计
+     * @param OutBound 客户端到服务端的流量统计
+     */
+    public void setOutBound(StatisticsReport OutBound) {
+        this.OutBound = OutBound;
+    }
+
+    /**
+     * Get cleansession标志 
+     * @return CleanSession cleansession标志
+     */
+    public Boolean getCleanSession() {
+        return this.CleanSession;
+    }
+
+    /**
+     * Set cleansession标志
+     * @param CleanSession cleansession标志
+     */
+    public void setCleanSession(Boolean CleanSession) {
+        this.CleanSession = CleanSession;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -291,6 +360,15 @@ public class DescribeMQTTClientResponse extends AbstractModel {
                 this.MQTTClientSubscriptions[i] = new MQTTClientSubscription(source.MQTTClientSubscriptions[i]);
             }
         }
+        if (source.Inbound != null) {
+            this.Inbound = new StatisticsReport(source.Inbound);
+        }
+        if (source.OutBound != null) {
+            this.OutBound = new StatisticsReport(source.OutBound);
+        }
+        if (source.CleanSession != null) {
+            this.CleanSession = new Boolean(source.CleanSession);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -310,6 +388,9 @@ public class DescribeMQTTClientResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ConnectTime", this.ConnectTime);
         this.setParamSimple(map, prefix + "DisconnectTime", this.DisconnectTime);
         this.setParamArrayObj(map, prefix + "MQTTClientSubscriptions.", this.MQTTClientSubscriptions);
+        this.setParamObj(map, prefix + "Inbound.", this.Inbound);
+        this.setParamObj(map, prefix + "OutBound.", this.OutBound);
+        this.setParamSimple(map, prefix + "CleanSession", this.CleanSession);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

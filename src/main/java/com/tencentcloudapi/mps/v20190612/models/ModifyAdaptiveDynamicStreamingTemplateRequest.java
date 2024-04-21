@@ -80,6 +80,22 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     private String Comment;
 
     /**
+    * 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+    */
+    @SerializedName("PureAudio")
+    @Expose
+    private Long PureAudio;
+
+    /**
      * Get 转自适应码流模板唯一标识。 
      * @return Definition 转自适应码流模板唯一标识。
      */
@@ -219,6 +235,58 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         this.Comment = Comment;
     }
 
+    /**
+     * Get 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null 
+     * @return PureAudio 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+     */
+    public Long getPureAudio() {
+        return this.PureAudio;
+    }
+
+    /**
+     * Set 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+     * @param PureAudio 是否为纯音频，0表示视频模版，1表示纯音频模版
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+
+当值为0：
+
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+     */
+    public void setPureAudio(Long PureAudio) {
+        this.PureAudio = PureAudio;
+    }
+
     public ModifyAdaptiveDynamicStreamingTemplateRequest() {
     }
 
@@ -251,6 +319,9 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.PureAudio != null) {
+            this.PureAudio = new Long(source.PureAudio);
+        }
     }
 
 
@@ -265,6 +336,7 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "PureAudio", this.PureAudio);
 
     }
 }

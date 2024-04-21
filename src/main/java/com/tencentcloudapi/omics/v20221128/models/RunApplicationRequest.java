@@ -115,7 +115,7 @@ public class RunApplicationRequest extends AbstractModel {
     private NFOption NFOption;
 
     /**
-    * 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+    * 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
     */
     @SerializedName("WorkDir")
     @Expose
@@ -129,6 +129,13 @@ public class RunApplicationRequest extends AbstractModel {
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
+
+    /**
+    * 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+    */
+    @SerializedName("VolumeIds")
+    @Expose
+    private String [] VolumeIds;
 
     /**
      * Get 应用ID。 
@@ -339,16 +346,16 @@ public class RunApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow) 
-     * @return WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     * Get 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。 
+     * @return WorkDir 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
      */
     public String getWorkDir() {
         return this.WorkDir;
     }
 
     /**
-     * Set 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
-     * @param WorkDir 工作目录，使用缓存卷内的相对路径 (暂时仅支持Nextflow)
+     * Set 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
+     * @param WorkDir 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
      */
     public void setWorkDir(String WorkDir) {
         this.WorkDir = WorkDir;
@@ -376,6 +383,22 @@ public class RunApplicationRequest extends AbstractModel {
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
+    }
+
+    /**
+     * Get 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。 
+     * @return VolumeIds 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     */
+    public String [] getVolumeIds() {
+        return this.VolumeIds;
+    }
+
+    /**
+     * Set 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     * @param VolumeIds 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     */
+    public void setVolumeIds(String [] VolumeIds) {
+        this.VolumeIds = VolumeIds;
     }
 
     public RunApplicationRequest() {
@@ -434,6 +457,12 @@ public class RunApplicationRequest extends AbstractModel {
         if (source.AccessMode != null) {
             this.AccessMode = new String(source.AccessMode);
         }
+        if (source.VolumeIds != null) {
+            this.VolumeIds = new String[source.VolumeIds.length];
+            for (int i = 0; i < source.VolumeIds.length; i++) {
+                this.VolumeIds[i] = new String(source.VolumeIds[i]);
+            }
+        }
     }
 
 
@@ -456,6 +485,7 @@ public class RunApplicationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "NFOption.", this.NFOption);
         this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamArraySimple(map, prefix + "VolumeIds.", this.VolumeIds);
 
     }
 }

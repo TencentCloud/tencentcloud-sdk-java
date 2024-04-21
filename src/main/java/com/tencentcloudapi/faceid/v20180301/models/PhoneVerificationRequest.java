@@ -45,6 +45,15 @@ public class PhoneVerificationRequest extends AbstractModel {
     private String Phone;
 
     /**
+    * 验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+
+枚举值：0（简版），1（详版）。默认值为0。
+    */
+    @SerializedName("VerifyMode")
+    @Expose
+    private String VerifyMode;
+
+    /**
     * 有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
     */
     @SerializedName("CiphertextBlob")
@@ -114,6 +123,30 @@ public class PhoneVerificationRequest extends AbstractModel {
     }
 
     /**
+     * Get 验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+
+枚举值：0（简版），1（详版）。默认值为0。 
+     * @return VerifyMode 验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+
+枚举值：0（简版），1（详版）。默认值为0。
+     */
+    public String getVerifyMode() {
+        return this.VerifyMode;
+    }
+
+    /**
+     * Set 验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+
+枚举值：0（简版），1（详版）。默认值为0。
+     * @param VerifyMode 验证模式（详版/简版）。简版与详版价格不一致，详见[价格说明](https://cloud.tencent.com/document/product/1007/84321)。
+
+枚举值：0（简版），1（详版）。默认值为0。
+     */
+    public void setVerifyMode(String VerifyMode) {
+        this.VerifyMode = VerifyMode;
+    }
+
+    /**
      * Get 有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。 
      * @return CiphertextBlob 有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
      */
@@ -178,6 +211,9 @@ public class PhoneVerificationRequest extends AbstractModel {
         if (source.Phone != null) {
             this.Phone = new String(source.Phone);
         }
+        if (source.VerifyMode != null) {
+            this.VerifyMode = new String(source.VerifyMode);
+        }
         if (source.CiphertextBlob != null) {
             this.CiphertextBlob = new String(source.CiphertextBlob);
         }
@@ -200,6 +236,7 @@ public class PhoneVerificationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
+        this.setParamSimple(map, prefix + "VerifyMode", this.VerifyMode);
         this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
         this.setParamArraySimple(map, prefix + "EncryptList.", this.EncryptList);
         this.setParamSimple(map, prefix + "Iv", this.Iv);

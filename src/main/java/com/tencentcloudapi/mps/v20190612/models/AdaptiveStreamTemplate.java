@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class AdaptiveStreamTemplate extends AbstractModel {
 
     /**
-    * 视频参数信息。
-    */
-    @SerializedName("Video")
-    @Expose
-    private VideoTemplateInfo Video;
-
-    /**
     * 音频参数信息。
     */
     @SerializedName("Audio")
     @Expose
     private AudioTemplateInfo Audio;
+
+    /**
+    * 视频参数信息。
+    */
+    @SerializedName("Video")
+    @Expose
+    private VideoTemplateInfo Video;
 
     /**
     * 是否移除音频流，取值范围：
@@ -56,22 +56,6 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private Long RemoveVideo;
 
     /**
-     * Get 视频参数信息。 
-     * @return Video 视频参数信息。
-     */
-    public VideoTemplateInfo getVideo() {
-        return this.Video;
-    }
-
-    /**
-     * Set 视频参数信息。
-     * @param Video 视频参数信息。
-     */
-    public void setVideo(VideoTemplateInfo Video) {
-        this.Video = Video;
-    }
-
-    /**
      * Get 音频参数信息。 
      * @return Audio 音频参数信息。
      */
@@ -85,6 +69,22 @@ public class AdaptiveStreamTemplate extends AbstractModel {
      */
     public void setAudio(AudioTemplateInfo Audio) {
         this.Audio = Audio;
+    }
+
+    /**
+     * Get 视频参数信息。 
+     * @return Video 视频参数信息。
+     */
+    public VideoTemplateInfo getVideo() {
+        return this.Video;
+    }
+
+    /**
+     * Set 视频参数信息。
+     * @param Video 视频参数信息。
+     */
+    public void setVideo(VideoTemplateInfo Video) {
+        this.Video = Video;
     }
 
     /**
@@ -143,11 +143,11 @@ public class AdaptiveStreamTemplate extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AdaptiveStreamTemplate(AdaptiveStreamTemplate source) {
-        if (source.Video != null) {
-            this.Video = new VideoTemplateInfo(source.Video);
-        }
         if (source.Audio != null) {
             this.Audio = new AudioTemplateInfo(source.Audio);
+        }
+        if (source.Video != null) {
+            this.Video = new VideoTemplateInfo(source.Video);
         }
         if (source.RemoveAudio != null) {
             this.RemoveAudio = new Long(source.RemoveAudio);
@@ -162,8 +162,8 @@ public class AdaptiveStreamTemplate extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Video.", this.Video);
         this.setParamObj(map, prefix + "Audio.", this.Audio);
+        this.setParamObj(map, prefix + "Video.", this.Video);
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
 

@@ -55,6 +55,25 @@ public class PhoneVerificationResponse extends AbstractModel {
     private String Isp;
 
     /**
+    * 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
+
+枚举值：
+
+手机号码与姓名一致，与身份证号不一致；
+
+手机号码身份证号一致，与姓名不一致；
+
+手机号码与姓名和身份证号均不一致；
+
+姓名和身份证号不一致；
+
+其他不一致。
+    */
+    @SerializedName("ResultDetail")
+    @Expose
+    private String ResultDetail;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -150,6 +169,70 @@ public class PhoneVerificationResponse extends AbstractModel {
     }
 
     /**
+     * Get 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
+
+枚举值：
+
+手机号码与姓名一致，与身份证号不一致；
+
+手机号码身份证号一致，与姓名不一致；
+
+手机号码与姓名和身份证号均不一致；
+
+姓名和身份证号不一致；
+
+其他不一致。 
+     * @return ResultDetail 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
+
+枚举值：
+
+手机号码与姓名一致，与身份证号不一致；
+
+手机号码身份证号一致，与姓名不一致；
+
+手机号码与姓名和身份证号均不一致；
+
+姓名和身份证号不一致；
+
+其他不一致。
+     */
+    public String getResultDetail() {
+        return this.ResultDetail;
+    }
+
+    /**
+     * Set 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
+
+枚举值：
+
+手机号码与姓名一致，与身份证号不一致；
+
+手机号码身份证号一致，与姓名不一致；
+
+手机号码与姓名和身份证号均不一致；
+
+姓名和身份证号不一致；
+
+其他不一致。
+     * @param ResultDetail 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
+
+枚举值：
+
+手机号码与姓名一致，与身份证号不一致；
+
+手机号码身份证号一致，与姓名不一致；
+
+手机号码与姓名和身份证号均不一致；
+
+姓名和身份证号不一致；
+
+其他不一致。
+     */
+    public void setResultDetail(String ResultDetail) {
+        this.ResultDetail = ResultDetail;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -182,6 +265,9 @@ public class PhoneVerificationResponse extends AbstractModel {
         if (source.Isp != null) {
             this.Isp = new String(source.Isp);
         }
+        if (source.ResultDetail != null) {
+            this.ResultDetail = new String(source.ResultDetail);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -195,6 +281,7 @@ public class PhoneVerificationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
+        this.setParamSimple(map, prefix + "ResultDetail", this.ResultDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

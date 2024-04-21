@@ -216,6 +216,13 @@ PullVodPushLive -点播。
     private String BackupToUrl;
 
     /**
+    * 点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
+    */
+    @SerializedName("BackupVodUrl")
+    @Expose
+    private String BackupVodUrl;
+
+    /**
      * Get 任务Id。 
      * @return TaskId 任务Id。
      */
@@ -743,6 +750,22 @@ PullVodPushLive -点播。
         this.BackupToUrl = BackupToUrl;
     }
 
+    /**
+     * Get 点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。 
+     * @return BackupVodUrl 点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
+     */
+    public String getBackupVodUrl() {
+        return this.BackupVodUrl;
+    }
+
+    /**
+     * Set 点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
+     * @param BackupVodUrl 点播垫片文件地址。注意：用于在主源拉不到时自动兜底到垫片文件，切到垫片文件后，每次播完垫片会尝试拉主源，如果主源恢复则自动切回主源。可根据需要的轮询检查时长来传入对应时长的垫片文件。
+     */
+    public void setBackupVodUrl(String BackupVodUrl) {
+        this.BackupVodUrl = BackupVodUrl;
+    }
+
     public ModifyLivePullStreamTaskRequest() {
     }
 
@@ -820,6 +843,9 @@ PullVodPushLive -点播。
         if (source.BackupToUrl != null) {
             this.BackupToUrl = new String(source.BackupToUrl);
         }
+        if (source.BackupVodUrl != null) {
+            this.BackupVodUrl = new String(source.BackupVodUrl);
+        }
     }
 
 
@@ -847,6 +873,7 @@ PullVodPushLive -点播。
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
         this.setParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
+        this.setParamSimple(map, prefix + "BackupVodUrl", this.BackupVodUrl);
 
     }
 }

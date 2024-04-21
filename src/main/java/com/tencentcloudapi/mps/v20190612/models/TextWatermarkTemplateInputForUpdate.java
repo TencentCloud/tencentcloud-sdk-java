@@ -33,7 +33,7 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     private String FontType;
 
     /**
-    * 字体大小，格式：Npx，N 为数值。
+    * 字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096]
     */
     @SerializedName("FontSize")
     @Expose
@@ -54,6 +54,13 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
+
+    /**
+    * 文字内容，长度不超过100个字符。
+    */
+    @SerializedName("TextContent")
+    @Expose
+    private String TextContent;
 
     /**
      * Get 字体类型，目前可以支持两种：
@@ -80,16 +87,16 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
     }
 
     /**
-     * Get 字体大小，格式：Npx，N 为数值。 
-     * @return FontSize 字体大小，格式：Npx，N 为数值。
+     * Get 字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096] 
+     * @return FontSize 字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096]
      */
     public String getFontSize() {
         return this.FontSize;
     }
 
     /**
-     * Set 字体大小，格式：Npx，N 为数值。
-     * @param FontSize 字体大小，格式：Npx，N 为数值。
+     * Set 字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096]
+     * @param FontSize 字体大小，格式：Npx，N 为数值。N的取值范围：[0,1] 和 [8, 4096]
      */
     public void setFontSize(String FontSize) {
         this.FontSize = FontSize;
@@ -135,6 +142,22 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
         this.FontAlpha = FontAlpha;
     }
 
+    /**
+     * Get 文字内容，长度不超过100个字符。 
+     * @return TextContent 文字内容，长度不超过100个字符。
+     */
+    public String getTextContent() {
+        return this.TextContent;
+    }
+
+    /**
+     * Set 文字内容，长度不超过100个字符。
+     * @param TextContent 文字内容，长度不超过100个字符。
+     */
+    public void setTextContent(String TextContent) {
+        this.TextContent = TextContent;
+    }
+
     public TextWatermarkTemplateInputForUpdate() {
     }
 
@@ -155,6 +178,9 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
         if (source.FontAlpha != null) {
             this.FontAlpha = new Float(source.FontAlpha);
         }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
     }
 
 
@@ -166,6 +192,7 @@ public class TextWatermarkTemplateInputForUpdate extends AbstractModel {
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
         this.setParamSimple(map, prefix + "FontAlpha", this.FontAlpha);
+        this.setParamSimple(map, prefix + "TextContent", this.TextContent);
 
     }
 }

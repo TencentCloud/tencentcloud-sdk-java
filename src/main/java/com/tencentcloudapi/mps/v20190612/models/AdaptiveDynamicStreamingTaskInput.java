@@ -90,6 +90,16 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private DrmInfo DrmInfo;
 
     /**
+    * 自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefinitionType")
+    @Expose
+    private String DefinitionType;
+
+    /**
      * Get 转自适应码流模板 ID。 
      * @return Definition 转自适应码流模板 ID。
      */
@@ -257,6 +267,34 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.DrmInfo = DrmInfo;
     }
 
+    /**
+     * Get 自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefinitionType 自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefinitionType() {
+        return this.DefinitionType;
+    }
+
+    /**
+     * Set 自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefinitionType 自适应转码模板类型：
+Common：音视频类型
+PureAudio：纯音频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefinitionType(String DefinitionType) {
+        this.DefinitionType = DefinitionType;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -295,6 +333,9 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         if (source.DrmInfo != null) {
             this.DrmInfo = new DrmInfo(source.DrmInfo);
         }
+        if (source.DefinitionType != null) {
+            this.DefinitionType = new String(source.DefinitionType);
+        }
     }
 
 
@@ -310,6 +351,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
         this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
         this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
+        this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
 
     }
 }

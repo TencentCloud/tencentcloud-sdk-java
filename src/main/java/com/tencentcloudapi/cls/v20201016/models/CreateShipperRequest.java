@@ -31,14 +31,16 @@ public class CreateShipperRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * 创建的投递规则投递的bucket
+    * COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 创建的投递规则投递目录的前缀
+    * 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
     */
     @SerializedName("Prefix")
     @Expose
@@ -101,21 +103,31 @@ public class CreateShipperRequest extends AbstractModel {
     private Long FilenameMode;
 
     /**
-    * 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+    * 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+    * 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * cos桶存储类型
+    * cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
     */
     @SerializedName("StorageType")
     @Expose
@@ -138,32 +150,40 @@ public class CreateShipperRequest extends AbstractModel {
     }
 
     /**
-     * Get 创建的投递规则投递的bucket 
-     * @return Bucket 创建的投递规则投递的bucket
+     * Get COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。 
+     * @return Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 创建的投递规则投递的bucket
-     * @param Bucket 创建的投递规则投递的bucket
+     * Set COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+     * @param Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 创建的投递规则投递目录的前缀 
-     * @return Prefix 创建的投递规则投递目录的前缀
+     * Get 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符 
+     * @return Prefix 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set 创建的投递规则投递目录的前缀
-     * @param Prefix 创建的投递规则投递目录的前缀
+     * Set 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
+     * @param Prefix 投递规则投递的新的目录前缀。
+- 仅支持0-9A-Za-z-_/
+- 最大支持256个字符
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
@@ -298,48 +318,88 @@ public class CreateShipperRequest extends AbstractModel {
     }
 
     /**
-     * Get 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。 
-     * @return StartTime 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+     * Get 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。 
+     * @return StartTime 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
-     * @param StartTime 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+     * Set 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。
+     * @param StartTime 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
+如果用户不填写，默认为用户新建投递任务的时间。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。 
-     * @return EndTime 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+     * Get 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。 
+     * @return EndTime 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
-     * @param EndTime 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+     * Set 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。
+     * @param EndTime 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
+如果用户不填写，默认为持续投递，即无限。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get cos桶存储类型 
-     * @return StorageType cos桶存储类型
+     * Get cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。 
+     * @return StorageType cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set cos桶存储类型
-     * @param StorageType cos桶存储类型
+     * Set cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
+     * @param StorageType cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+
+1. STANDARD_IA：低频存储；
+2. ARCHIVE：归档存储；
+3. DEEP_ARCHIVE：深度归档存储；
+4. STANDARD：标准存储；
+5. MAZ_STANDARD：标准存储（多 AZ）；
+6. MAZ_STANDARD_IA：低频存储（多 AZ）；
+7. INTELLIGENT_TIERING：智能分层存储。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

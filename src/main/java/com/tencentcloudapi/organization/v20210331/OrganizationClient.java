@@ -336,6 +336,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *查询目标关联的有效策略
+     * @param req DescribeEffectivePolicyRequest
+     * @return DescribeEffectivePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEffectivePolicyResponse DescribeEffectivePolicy(DescribeEffectivePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEffectivePolicy", DescribeEffectivePolicyResponse.class);
+    }
+
+    /**
      *获取企业组织信息
      * @param req DescribeOrganizationRequest
      * @return DescribeOrganizationResponse
@@ -553,6 +564,17 @@ public class OrganizationClient extends AbstractClient{
     public EnablePolicyTypeResponse EnablePolicyType(EnablePolicyTypeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnablePolicyType", EnablePolicyTypeResponse.class);
+    }
+
+    /**
+     *获取成员标签检测不合规资源列表
+     * @param req ListNonCompliantResourceRequest
+     * @return ListNonCompliantResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListNonCompliantResourceResponse ListNonCompliantResource(ListNonCompliantResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListNonCompliantResource", ListNonCompliantResourceResponse.class);
     }
 
     /**

@@ -160,7 +160,7 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *删除实例
+     *删除MQTT实例
      * @param req DeleteMQTTInstanceRequest
      * @return DeleteMQTTInstanceResponse
      * @throws TencentCloudSDKException
@@ -171,7 +171,7 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *删除主题
+     *删除MQTT主题
      * @param req DeleteMQTTTopicRequest
      * @return DeleteMQTTTopicResponse
      * @throws TencentCloudSDKException
@@ -362,7 +362,7 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *非对外接口，获取产品售卖规格
+     *获取产品售卖规格
      * @param req DescribeMQTTProductSKUListRequest
      * @return DescribeMQTTProductSKUListResponse
      * @throws TencentCloudSDKException
@@ -495,7 +495,7 @@ ConsumerGroup，消费组名称过滤
     }
 
     /**
-     *为MQTT实例创建公网接入点
+     *更新MQTT实例公网接入点
      * @param req ModifyMQTTInsPublicEndpointRequest
      * @return ModifyMQTTInsPublicEndpointResponse
      * @throws TencentCloudSDKException
