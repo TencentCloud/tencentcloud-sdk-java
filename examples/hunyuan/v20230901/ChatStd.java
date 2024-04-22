@@ -31,15 +31,25 @@ public class ChatStd {
                     msg
             });
 
+            // hunyuan ChatStd/ChatPro 同时支持 stream 和非 stream 的情况
+            req.setStream(true);
+
             ChatStdResponse resp = client.ChatStd(req);
 
-            Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-            for (SSEResponseModel.SSE e : resp) {
-                ChatStdResponse eventModel = gson.fromJson(e.Data, ChatStdResponse.class);
-                Choice[] choices = eventModel.getChoices();
-                if (choices.length > 0) {
-                    System.out.println(choices[0].getDelta().getContent());
+            if (req.getStream()) {
+                // stream 示例
+                Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+                for (SSEResponseModel.SSE e : resp) {
+                    ChatStdResponse eventModel = gson.fromJson(e.Data, ChatStdResponse.class);
+                    Choice[] choices = eventModel.getChoices();
+                    if (choices.length > 0) {
+                        System.out.println(choices[0].getDelta().getContent());
+                    }
                 }
+            } else {
+                // 非 stream 示例
+                // 通过 Stream=false 参数来指定非 stream 协议, 一次性拿到结果
+                System.out.println(resp.getChoices()[0].getMessage().getContent());
             }
         } catch (TencentCloudSDKException e) {
             e.printStackTrace();
