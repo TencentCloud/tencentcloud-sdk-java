@@ -31,6 +31,22 @@ public class DescribeWebRecordResponse extends AbstractModel {
     private Long Status;
 
     /**
+    * 在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+    * 在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private String RecordId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +67,46 @@ public class DescribeWebRecordResponse extends AbstractModel {
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskId 在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskId 在使用RecordId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordId 在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set 在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordId 在使用TaskId查询时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordId(String RecordId) {
+        this.RecordId = RecordId;
     }
 
     /**
@@ -80,6 +136,12 @@ public class DescribeWebRecordResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +153,8 @@ public class DescribeWebRecordResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

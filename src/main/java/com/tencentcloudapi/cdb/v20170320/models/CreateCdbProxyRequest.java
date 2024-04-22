@@ -73,6 +73,13 @@ public class CreateCdbProxyRequest extends AbstractModel {
     private Long ConnectionPoolLimit;
 
     /**
+    * 指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
+    */
+    @SerializedName("ProxyVersion")
+    @Expose
+    private String ProxyVersion;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -184,6 +191,22 @@ public class CreateCdbProxyRequest extends AbstractModel {
         this.ConnectionPoolLimit = ConnectionPoolLimit;
     }
 
+    /**
+     * Get 指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。 
+     * @return ProxyVersion 指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
+     */
+    public String getProxyVersion() {
+        return this.ProxyVersion;
+    }
+
+    /**
+     * Set 指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
+     * @param ProxyVersion 指定要购买的 proxy 内核版本。不填则默认发货最新版本的 proxy。
+     */
+    public void setProxyVersion(String ProxyVersion) {
+        this.ProxyVersion = ProxyVersion;
+    }
+
     public CreateCdbProxyRequest() {
     }
 
@@ -219,6 +242,9 @@ public class CreateCdbProxyRequest extends AbstractModel {
         if (source.ConnectionPoolLimit != null) {
             this.ConnectionPoolLimit = new Long(source.ConnectionPoolLimit);
         }
+        if (source.ProxyVersion != null) {
+            this.ProxyVersion = new String(source.ProxyVersion);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class CreateCdbProxyRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "ConnectionPoolLimit", this.ConnectionPoolLimit);
+        this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
 
     }
 }

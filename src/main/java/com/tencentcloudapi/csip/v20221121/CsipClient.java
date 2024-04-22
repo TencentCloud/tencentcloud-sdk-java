@@ -94,6 +94,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *告警中心全量告警列表接口
+     * @param req DescribeAlertListRequest
+     * @return DescribeAlertListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlertListResponse DescribeAlertList(DescribeAlertListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAlertList", DescribeAlertListResponse.class);
+    }
+
+    /**
      *获取资产视角的漏洞风险列表
      * @param req DescribeAssetViewVulRiskListRequest
      * @return DescribeAssetViewVulRiskListResponse

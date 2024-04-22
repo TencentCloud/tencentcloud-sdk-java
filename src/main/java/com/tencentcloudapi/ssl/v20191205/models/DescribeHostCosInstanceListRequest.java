@@ -31,13 +31,6 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
     private String CertificateId;
 
     /**
-    * 部署资源类型 cos
-    */
-    @SerializedName("ResourceType")
-    @Expose
-    private String ResourceType;
-
-    /**
     * 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
     */
     @SerializedName("IsCache")
@@ -50,6 +43,41 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 部署资源类型 cos
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 原证书ID	
+    */
+    @SerializedName("OldCertificateId")
+    @Expose
+    private String OldCertificateId;
+
+    /**
+    * 分页偏移量，从0开始。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 每页数量，默认10。	
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 是否异步	
+    */
+    @SerializedName("AsyncCache")
+    @Expose
+    private Long AsyncCache;
 
     /**
      * Get 待部署的证书ID 
@@ -65,22 +93,6 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
-    }
-
-    /**
-     * Get 部署资源类型 cos 
-     * @return ResourceType 部署资源类型 cos
-     */
-    public String getResourceType() {
-        return this.ResourceType;
-    }
-
-    /**
-     * Set 部署资源类型 cos
-     * @param ResourceType 部署资源类型 cos
-     */
-    public void setResourceType(String ResourceType) {
-        this.ResourceType = ResourceType;
     }
 
     /**
@@ -115,6 +127,86 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get 部署资源类型 cos 
+     * @return ResourceType 部署资源类型 cos
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 部署资源类型 cos
+     * @param ResourceType 部署资源类型 cos
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get 原证书ID	 
+     * @return OldCertificateId 原证书ID	
+     */
+    public String getOldCertificateId() {
+        return this.OldCertificateId;
+    }
+
+    /**
+     * Set 原证书ID	
+     * @param OldCertificateId 原证书ID	
+     */
+    public void setOldCertificateId(String OldCertificateId) {
+        this.OldCertificateId = OldCertificateId;
+    }
+
+    /**
+     * Get 分页偏移量，从0开始。 
+     * @return Offset 分页偏移量，从0开始。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移量，从0开始。
+     * @param Offset 分页偏移量，从0开始。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 每页数量，默认10。	 
+     * @return Limit 每页数量，默认10。	
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页数量，默认10。	
+     * @param Limit 每页数量，默认10。	
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 是否异步	 
+     * @return AsyncCache 是否异步	
+     */
+    public Long getAsyncCache() {
+        return this.AsyncCache;
+    }
+
+    /**
+     * Set 是否异步	
+     * @param AsyncCache 是否异步	
+     */
+    public void setAsyncCache(Long AsyncCache) {
+        this.AsyncCache = AsyncCache;
+    }
+
     public DescribeHostCosInstanceListRequest() {
     }
 
@@ -126,9 +218,6 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
         if (source.CertificateId != null) {
             this.CertificateId = new String(source.CertificateId);
         }
-        if (source.ResourceType != null) {
-            this.ResourceType = new String(source.ResourceType);
-        }
         if (source.IsCache != null) {
             this.IsCache = new Long(source.IsCache);
         }
@@ -138,6 +227,21 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.OldCertificateId != null) {
+            this.OldCertificateId = new String(source.OldCertificateId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.AsyncCache != null) {
+            this.AsyncCache = new Long(source.AsyncCache);
+        }
     }
 
 
@@ -146,9 +250,13 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
-        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "IsCache", this.IsCache);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "AsyncCache", this.AsyncCache);
 
     }
 }

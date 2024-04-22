@@ -31,6 +31,13 @@ public class QueryRewriteResponse extends AbstractModel {
     private String Content;
 
     /**
+    * 消耗量，返回输入token数，输出token数以及总token数
+    */
+    @SerializedName("Usage")
+    @Expose
+    private Usage Usage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class QueryRewriteResponse extends AbstractModel {
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get 消耗量，返回输入token数，输出token数以及总token数 
+     * @return Usage 消耗量，返回输入token数，输出token数以及总token数
+     */
+    public Usage getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set 消耗量，返回输入token数，输出token数以及总token数
+     * @param Usage 消耗量，返回输入token数，输出token数以及总token数
+     */
+    public void setUsage(Usage Usage) {
+        this.Usage = Usage;
     }
 
     /**
@@ -80,6 +103,9 @@ public class QueryRewriteResponse extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.Usage != null) {
+            this.Usage = new Usage(source.Usage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class QueryRewriteResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -31,6 +31,13 @@ public class GetEmbeddingResponse extends AbstractModel {
     private EmbeddingObject [] Data;
 
     /**
+    * 消耗量，返回TotalToken
+    */
+    @SerializedName("Usage")
+    @Expose
+    private Usage Usage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class GetEmbeddingResponse extends AbstractModel {
      */
     public void setData(EmbeddingObject [] Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 消耗量，返回TotalToken 
+     * @return Usage 消耗量，返回TotalToken
+     */
+    public Usage getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set 消耗量，返回TotalToken
+     * @param Usage 消耗量，返回TotalToken
+     */
+    public void setUsage(Usage Usage) {
+        this.Usage = Usage;
     }
 
     /**
@@ -83,6 +106,9 @@ public class GetEmbeddingResponse extends AbstractModel {
                 this.Data[i] = new EmbeddingObject(source.Data[i]);
             }
         }
+        if (source.Usage != null) {
+            this.Usage = new Usage(source.Usage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class GetEmbeddingResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class Usage extends AbstractModel {
 
     /**
-    * 输入 token 数量。
+    * 输入 Token 数量。
     */
     @SerializedName("PromptTokens")
     @Expose
     private Long PromptTokens;
 
     /**
-    * 输出 token 数量。
+    * 输出 Token 数量。
     */
     @SerializedName("CompletionTokens")
     @Expose
     private Long CompletionTokens;
 
     /**
-    * 总 token 数量。
+    * 总 Token 数量。
     */
     @SerializedName("TotalTokens")
     @Expose
     private Long TotalTokens;
 
     /**
-     * Get 输入 token 数量。 
-     * @return PromptTokens 输入 token 数量。
+     * Get 输入 Token 数量。 
+     * @return PromptTokens 输入 Token 数量。
      */
     public Long getPromptTokens() {
         return this.PromptTokens;
     }
 
     /**
-     * Set 输入 token 数量。
-     * @param PromptTokens 输入 token 数量。
+     * Set 输入 Token 数量。
+     * @param PromptTokens 输入 Token 数量。
      */
     public void setPromptTokens(Long PromptTokens) {
         this.PromptTokens = PromptTokens;
     }
 
     /**
-     * Get 输出 token 数量。 
-     * @return CompletionTokens 输出 token 数量。
+     * Get 输出 Token 数量。 
+     * @return CompletionTokens 输出 Token 数量。
      */
     public Long getCompletionTokens() {
         return this.CompletionTokens;
     }
 
     /**
-     * Set 输出 token 数量。
-     * @param CompletionTokens 输出 token 数量。
+     * Set 输出 Token 数量。
+     * @param CompletionTokens 输出 Token 数量。
      */
     public void setCompletionTokens(Long CompletionTokens) {
         this.CompletionTokens = CompletionTokens;
     }
 
     /**
-     * Get 总 token 数量。 
-     * @return TotalTokens 总 token 数量。
+     * Get 总 Token 数量。 
+     * @return TotalTokens 总 Token 数量。
      */
     public Long getTotalTokens() {
         return this.TotalTokens;
     }
 
     /**
-     * Set 总 token 数量。
-     * @param TotalTokens 总 token 数量。
+     * Set 总 Token 数量。
+     * @param TotalTokens 总 Token 数量。
      */
     public void setTotalTokens(Long TotalTokens) {
         this.TotalTokens = TotalTokens;

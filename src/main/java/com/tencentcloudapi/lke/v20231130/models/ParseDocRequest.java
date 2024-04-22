@@ -52,7 +52,7 @@ public class ParseDocRequest extends AbstractModel {
     private String Policy;
 
     /**
-    * 默认值: split
+    * 默认值: parse
     */
     @SerializedName("Operate")
     @Expose
@@ -123,17 +123,21 @@ public class ParseDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 默认值: split 
-     * @return Operate 默认值: split
+     * Get 默认值: parse 
+     * @return Operate 默认值: parse
+     * @deprecated
      */
+    @Deprecated
     public String getOperate() {
         return this.Operate;
     }
 
     /**
-     * Set 默认值: split
-     * @param Operate 默认值: split
+     * Set 默认值: parse
+     * @param Operate 默认值: parse
+     * @deprecated
      */
+    @Deprecated
     public void setOperate(String Operate) {
         this.Operate = Operate;
     }

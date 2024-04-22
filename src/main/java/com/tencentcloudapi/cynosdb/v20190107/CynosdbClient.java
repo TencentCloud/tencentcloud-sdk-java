@@ -1128,6 +1128,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *修改实例小版本升级限制时间
+     * @param req ModifyInstanceUpgradeLimitDaysRequest
+     * @return ModifyInstanceUpgradeLimitDaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceUpgradeLimitDaysResponse ModifyInstanceUpgradeLimitDays(ModifyInstanceUpgradeLimitDaysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceUpgradeLimitDays", ModifyInstanceUpgradeLimitDaysResponse.class);
+    }
+
+    /**
      *修改维护时间配置
      * @param req ModifyMaintainPeriodConfigRequest
      * @return ModifyMaintainPeriodConfigResponse

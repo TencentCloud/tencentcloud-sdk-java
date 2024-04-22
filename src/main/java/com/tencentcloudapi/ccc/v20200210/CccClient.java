@@ -248,7 +248,7 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *批量查询自动任务外呼
+     *批量查询自动外呼任务
      * @param req DescribeAutoCalloutTasksRequest
      * @return DescribeAutoCalloutTasksResponse
      * @throws TencentCloudSDKException
@@ -555,6 +555,17 @@ public class CccClient extends AbstractClient{
     public ModifyStaffResponse ModifyStaff(ModifyStaffRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyStaff", ModifyStaffResponse.class);
+    }
+
+    /**
+     *修改座席的密码
+     * @param req ModifyStaffPasswordRequest
+     * @return ModifyStaffPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStaffPasswordResponse ModifyStaffPassword(ModifyStaffPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStaffPassword", ModifyStaffPasswordResponse.class);
     }
 
     /**

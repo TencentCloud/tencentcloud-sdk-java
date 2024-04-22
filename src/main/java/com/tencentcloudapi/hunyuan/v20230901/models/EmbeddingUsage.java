@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class EmbeddingUsage extends AbstractModel {
 
     /**
-    * 输入Token数。
+    * 输入 Token 数。
     */
     @SerializedName("PromptTokens")
     @Expose
     private Long PromptTokens;
 
     /**
-    * 总Token数。
+    * 总 Token 数。
     */
     @SerializedName("TotalTokens")
     @Expose
     private Long TotalTokens;
 
     /**
-     * Get 输入Token数。 
-     * @return PromptTokens 输入Token数。
+     * Get 输入 Token 数。 
+     * @return PromptTokens 输入 Token 数。
      */
     public Long getPromptTokens() {
         return this.PromptTokens;
     }
 
     /**
-     * Set 输入Token数。
-     * @param PromptTokens 输入Token数。
+     * Set 输入 Token 数。
+     * @param PromptTokens 输入 Token 数。
      */
     public void setPromptTokens(Long PromptTokens) {
         this.PromptTokens = PromptTokens;
     }
 
     /**
-     * Get 总Token数。 
-     * @return TotalTokens 总Token数。
+     * Get 总 Token 数。 
+     * @return TotalTokens 总 Token 数。
      */
     public Long getTotalTokens() {
         return this.TotalTokens;
     }
 
     /**
-     * Set 总Token数。
-     * @param TotalTokens 总Token数。
+     * Set 总 Token 数。
+     * @param TotalTokens 总 Token 数。
      */
     public void setTotalTokens(Long TotalTokens) {
         this.TotalTokens = TotalTokens;

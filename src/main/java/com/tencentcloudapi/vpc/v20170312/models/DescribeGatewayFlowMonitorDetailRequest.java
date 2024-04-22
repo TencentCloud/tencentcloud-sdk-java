@@ -87,6 +87,13 @@ public class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel {
     private String OrderDirection;
 
     /**
+    * VPC内部IPv4地址，精确匹配
+    */
+    @SerializedName("PrivateIpAddress")
+    @Expose
+    private String PrivateIpAddress;
+
+    /**
      * Get 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。 
      * @return TimePoint 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
      */
@@ -230,6 +237,22 @@ public class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel {
         this.OrderDirection = OrderDirection;
     }
 
+    /**
+     * Get VPC内部IPv4地址，精确匹配 
+     * @return PrivateIpAddress VPC内部IPv4地址，精确匹配
+     */
+    public String getPrivateIpAddress() {
+        return this.PrivateIpAddress;
+    }
+
+    /**
+     * Set VPC内部IPv4地址，精确匹配
+     * @param PrivateIpAddress VPC内部IPv4地址，精确匹配
+     */
+    public void setPrivateIpAddress(String PrivateIpAddress) {
+        this.PrivateIpAddress = PrivateIpAddress;
+    }
+
     public DescribeGatewayFlowMonitorDetailRequest() {
     }
 
@@ -265,6 +288,9 @@ public class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel {
         if (source.OrderDirection != null) {
             this.OrderDirection = new String(source.OrderDirection);
         }
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+        this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
 
     }
 }

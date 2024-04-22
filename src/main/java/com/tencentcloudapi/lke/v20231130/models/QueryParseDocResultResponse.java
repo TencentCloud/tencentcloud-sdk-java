@@ -52,6 +52,13 @@ public class QueryParseDocResultResponse extends AbstractModel {
     private String Reason;
 
     /**
+    * 消耗量，输出页数
+    */
+    @SerializedName("Usage")
+    @Expose
+    private Usage Usage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class QueryParseDocResultResponse extends AbstractModel {
     }
 
     /**
+     * Get 消耗量，输出页数 
+     * @return Usage 消耗量，输出页数
+     */
+    public Usage getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set 消耗量，输出页数
+     * @param Usage 消耗量，输出页数
+     */
+    public void setUsage(Usage Usage) {
+        this.Usage = Usage;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class QueryParseDocResultResponse extends AbstractModel {
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
         }
+        if (source.Usage != null) {
+            this.Usage = new Usage(source.Usage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class QueryParseDocResultResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

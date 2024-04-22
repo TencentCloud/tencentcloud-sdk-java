@@ -61,6 +61,30 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
     private String OutputPath;
 
     /**
+    * 引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseTime")
+    @Expose
+    private Long UseTime;
+
+    /**
+    * 结果条数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AffectRows")
+    @Expose
+    private Long AffectRows;
+
+    /**
+    * 数据扫描量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataAmount")
+    @Expose
+    private Long DataAmount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -156,6 +180,66 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
     }
 
     /**
+     * Get 引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseTime 引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUseTime() {
+        return this.UseTime;
+    }
+
+    /**
+     * Set 引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseTime 引擎计算耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseTime(Long UseTime) {
+        this.UseTime = UseTime;
+    }
+
+    /**
+     * Get 结果条数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AffectRows 结果条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAffectRows() {
+        return this.AffectRows;
+    }
+
+    /**
+     * Set 结果条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AffectRows 结果条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAffectRows(Long AffectRows) {
+        this.AffectRows = AffectRows;
+    }
+
+    /**
+     * Get 数据扫描量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataAmount 数据扫描量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDataAmount() {
+        return this.DataAmount;
+    }
+
+    /**
+     * Set 数据扫描量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataAmount 数据扫描量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataAmount(Long DataAmount) {
+        this.DataAmount = DataAmount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -197,6 +281,15 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
         if (source.OutputPath != null) {
             this.OutputPath = new String(source.OutputPath);
         }
+        if (source.UseTime != null) {
+            this.UseTime = new Long(source.UseTime);
+        }
+        if (source.AffectRows != null) {
+            this.AffectRows = new Long(source.AffectRows);
+        }
+        if (source.DataAmount != null) {
+            this.DataAmount = new Long(source.DataAmount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -212,6 +305,9 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
         this.setParamArrayObj(map, prefix + "ResultSchema.", this.ResultSchema);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "OutputPath", this.OutputPath);
+        this.setParamSimple(map, prefix + "UseTime", this.UseTime);
+        this.setParamSimple(map, prefix + "AffectRows", this.AffectRows);
+        this.setParamSimple(map, prefix + "DataAmount", this.DataAmount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
