@@ -45,6 +45,13 @@ public class ChatStd {
                     if (choices.length > 0) {
                         System.out.println(choices[0].getDelta().getContent());
                     }
+
+                    // 如果希望在任意时刻中止事件流, 使用 resp.close() + break
+                    boolean iWantToCancelNow = false;
+                    if (iWantToCancelNow) {
+                        resp.close();
+                        break;
+                    }
                 }
             } else {
                 // 非 stream 示例
