@@ -21,12 +21,13 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
+import java.io.Closeable;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public abstract class SSEResponseModel extends AbstractModel implements Iterable<SSEResponseModel.SSE> {
+public abstract class SSEResponseModel extends AbstractModel implements Iterable<SSEResponseModel.SSE>, Closeable {
     private Response response;
     private CircuitBreaker.Token token;
 
@@ -127,5 +128,10 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
 
     @Override
     protected void toMap(HashMap<String, String> map, String prefix) {
+    }
+
+    @Override
+    public void close() {
+        this.response.close();
     }
 }
