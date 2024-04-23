@@ -38,6 +38,13 @@ public class SwitchDBInstanceHARequest extends AbstractModel {
     private String Zone;
 
     /**
+    * 指定分片实例id进行切换
+    */
+    @SerializedName("ShardInstanceIds")
+    @Expose
+    private String [] ShardInstanceIds;
+
+    /**
      * Get 实例Id，形如 tdsql-ow728lmc。 
      * @return InstanceId 实例Id，形如 tdsql-ow728lmc。
      */
@@ -69,6 +76,22 @@ public class SwitchDBInstanceHARequest extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get 指定分片实例id进行切换 
+     * @return ShardInstanceIds 指定分片实例id进行切换
+     */
+    public String [] getShardInstanceIds() {
+        return this.ShardInstanceIds;
+    }
+
+    /**
+     * Set 指定分片实例id进行切换
+     * @param ShardInstanceIds 指定分片实例id进行切换
+     */
+    public void setShardInstanceIds(String [] ShardInstanceIds) {
+        this.ShardInstanceIds = ShardInstanceIds;
+    }
+
     public SwitchDBInstanceHARequest() {
     }
 
@@ -83,6 +106,12 @@ public class SwitchDBInstanceHARequest extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.ShardInstanceIds != null) {
+            this.ShardInstanceIds = new String[source.ShardInstanceIds.length];
+            for (int i = 0; i < source.ShardInstanceIds.length; i++) {
+                this.ShardInstanceIds[i] = new String(source.ShardInstanceIds[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class SwitchDBInstanceHARequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArraySimple(map, prefix + "ShardInstanceIds.", this.ShardInstanceIds);
 
     }
 }

@@ -216,6 +216,30 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     private String Node;
 
     /**
+    * 仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeadLetterStrategy")
+    @Expose
+    private String DeadLetterStrategy;
+
+    /**
+    * 仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QueueLeaderLocator")
+    @Expose
+    private String QueueLeaderLocator;
+
+    /**
+    * 仲裁队列的初始副本组大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuorumInitialGroupSize")
+    @Expose
+    private Long QuorumInitialGroupSize;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -703,6 +727,66 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeadLetterStrategy 仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeadLetterStrategy() {
+        return this.DeadLetterStrategy;
+    }
+
+    /**
+     * Set 仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeadLetterStrategy 仲裁队列死信一致性策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeadLetterStrategy(String DeadLetterStrategy) {
+        this.DeadLetterStrategy = DeadLetterStrategy;
+    }
+
+    /**
+     * Get 仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QueueLeaderLocator 仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQueueLeaderLocator() {
+        return this.QueueLeaderLocator;
+    }
+
+    /**
+     * Set 仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QueueLeaderLocator 仲裁队列的领导者选举策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQueueLeaderLocator(String QueueLeaderLocator) {
+        this.QueueLeaderLocator = QueueLeaderLocator;
+    }
+
+    /**
+     * Get 仲裁队列的初始副本组大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuorumInitialGroupSize 仲裁队列的初始副本组大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getQuorumInitialGroupSize() {
+        return this.QuorumInitialGroupSize;
+    }
+
+    /**
+     * Set 仲裁队列的初始副本组大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuorumInitialGroupSize 仲裁队列的初始副本组大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuorumInitialGroupSize(Long QuorumInitialGroupSize) {
+        this.QuorumInitialGroupSize = QuorumInitialGroupSize;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -798,6 +882,15 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
         if (source.Node != null) {
             this.Node = new String(source.Node);
         }
+        if (source.DeadLetterStrategy != null) {
+            this.DeadLetterStrategy = new String(source.DeadLetterStrategy);
+        }
+        if (source.QueueLeaderLocator != null) {
+            this.QueueLeaderLocator = new String(source.QueueLeaderLocator);
+        }
+        if (source.QuorumInitialGroupSize != null) {
+            this.QuorumInitialGroupSize = new Long(source.QuorumInitialGroupSize);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -832,6 +925,9 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxInMemoryBytes", this.MaxInMemoryBytes);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Node", this.Node);
+        this.setParamSimple(map, prefix + "DeadLetterStrategy", this.DeadLetterStrategy);
+        this.setParamSimple(map, prefix + "QueueLeaderLocator", this.QueueLeaderLocator);
+        this.setParamSimple(map, prefix + "QuorumInitialGroupSize", this.QuorumInitialGroupSize);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

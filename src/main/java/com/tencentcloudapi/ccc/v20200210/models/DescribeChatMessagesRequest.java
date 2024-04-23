@@ -66,7 +66,7 @@ public class DescribeChatMessagesRequest extends AbstractModel {
     private Long Order;
 
     /**
-    * 服务记录 SessionID（必填）
+    * 服务记录 SessionID
     */
     @SerializedName("SessionId")
     @Expose
@@ -111,7 +111,9 @@ public class DescribeChatMessagesRequest extends AbstractModel {
     /**
      * Get 服务记录ID（废弃） 
      * @return CdrId 服务记录ID（废弃）
+     * @deprecated
      */
+    @Deprecated
     public String getCdrId() {
         return this.CdrId;
     }
@@ -119,7 +121,9 @@ public class DescribeChatMessagesRequest extends AbstractModel {
     /**
      * Set 服务记录ID（废弃）
      * @param CdrId 服务记录ID（废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setCdrId(String CdrId) {
         this.CdrId = CdrId;
     }
@@ -173,16 +177,16 @@ public class DescribeChatMessagesRequest extends AbstractModel {
     }
 
     /**
-     * Get 服务记录 SessionID（必填） 
-     * @return SessionId 服务记录 SessionID（必填）
+     * Get 服务记录 SessionID 
+     * @return SessionId 服务记录 SessionID
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 服务记录 SessionID（必填）
-     * @param SessionId 服务记录 SessionID（必填）
+     * Set 服务记录 SessionID
+     * @param SessionId 服务记录 SessionID
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

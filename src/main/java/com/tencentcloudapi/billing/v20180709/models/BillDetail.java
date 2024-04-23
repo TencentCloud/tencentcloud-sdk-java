@@ -253,6 +253,30 @@ public class BillDetail extends AbstractModel {
     private String Id;
 
     /**
+    * 国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionType")
+    @Expose
+    private String RegionType;
+
+    /**
+    * 国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionTypeName")
+    @Expose
+    private String RegionTypeName;
+
+    /**
+    * 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReserveDetail")
+    @Expose
+    private String ReserveDetail;
+
+    /**
      * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
      * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
@@ -796,6 +820,66 @@ public class BillDetail extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get 国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionType 国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionType() {
+        return this.RegionType;
+    }
+
+    /**
+     * Set 国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionType 国内国际编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionType(String RegionType) {
+        this.RegionType = RegionType;
+    }
+
+    /**
+     * Get 国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionTypeName 国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionTypeName() {
+        return this.RegionTypeName;
+    }
+
+    /**
+     * Set 国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionTypeName 国内国际：资源所属区域类型（国内、国际）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionTypeName(String RegionTypeName) {
+        this.RegionTypeName = RegionTypeName;
+    }
+
+    /**
+     * Get 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReserveDetail() {
+        return this.ReserveDetail;
+    }
+
+    /**
+     * Set 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReserveDetail(String ReserveDetail) {
+        this.ReserveDetail = ReserveDetail;
+    }
+
     public BillDetail() {
     }
 
@@ -906,6 +990,15 @@ public class BillDetail extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.RegionType != null) {
+            this.RegionType = new String(source.RegionType);
+        }
+        if (source.RegionTypeName != null) {
+            this.RegionTypeName = new String(source.RegionTypeName);
+        }
+        if (source.ReserveDetail != null) {
+            this.ReserveDetail = new String(source.ReserveDetail);
+        }
     }
 
 
@@ -944,6 +1037,9 @@ public class BillDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "BillDay", this.BillDay);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "RegionType", this.RegionType);
+        this.setParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
+        this.setParamSimple(map, prefix + "ReserveDetail", this.ReserveDetail);
 
     }
 }

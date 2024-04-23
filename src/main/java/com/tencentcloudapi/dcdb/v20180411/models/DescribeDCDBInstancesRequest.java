@@ -129,6 +129,13 @@ public class DescribeDCDBInstancesRequest extends AbstractModel {
     private String [] TagKeys;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
     */
     @SerializedName("FilterInstanceType")
@@ -390,6 +397,22 @@ public class DescribeDCDBInstancesRequest extends AbstractModel {
     }
 
     /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔 
      * @return FilterInstanceType 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
      */
@@ -502,6 +525,12 @@ public class DescribeDCDBInstancesRequest extends AbstractModel {
                 this.TagKeys[i] = new String(source.TagKeys[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
         if (source.FilterInstanceType != null) {
             this.FilterInstanceType = new String(source.FilterInstanceType);
         }
@@ -539,6 +568,7 @@ public class DescribeDCDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
         this.setParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamArraySimple(map, prefix + "ExcludeStatus.", this.ExcludeStatus);

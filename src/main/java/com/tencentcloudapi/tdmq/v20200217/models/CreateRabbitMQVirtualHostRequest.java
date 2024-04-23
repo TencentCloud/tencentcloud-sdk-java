@@ -52,6 +52,13 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
     private Boolean TraceFlag;
 
     /**
+    * 是否创建镜像队列策略，默认值 true
+    */
+    @SerializedName("MirrorQueuePolicyFlag")
+    @Expose
+    private Boolean MirrorQueuePolicyFlag;
+
+    /**
      * Get 集群实例Id 
      * @return InstanceId 集群实例Id
      */
@@ -115,6 +122,22 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
         this.TraceFlag = TraceFlag;
     }
 
+    /**
+     * Get 是否创建镜像队列策略，默认值 true 
+     * @return MirrorQueuePolicyFlag 是否创建镜像队列策略，默认值 true
+     */
+    public Boolean getMirrorQueuePolicyFlag() {
+        return this.MirrorQueuePolicyFlag;
+    }
+
+    /**
+     * Set 是否创建镜像队列策略，默认值 true
+     * @param MirrorQueuePolicyFlag 是否创建镜像队列策略，默认值 true
+     */
+    public void setMirrorQueuePolicyFlag(Boolean MirrorQueuePolicyFlag) {
+        this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
+    }
+
     public CreateRabbitMQVirtualHostRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
         if (source.TraceFlag != null) {
             this.TraceFlag = new Boolean(source.TraceFlag);
         }
+        if (source.MirrorQueuePolicyFlag != null) {
+            this.MirrorQueuePolicyFlag = new Boolean(source.MirrorQueuePolicyFlag);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
+        this.setParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
 
     }
 }

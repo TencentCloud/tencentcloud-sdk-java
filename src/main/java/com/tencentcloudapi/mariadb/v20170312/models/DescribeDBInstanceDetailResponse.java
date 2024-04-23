@@ -456,6 +456,13 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private Long IsDcnSwitchSupported;
 
     /**
+    * proxy版本号
+    */
+    @SerializedName("ProxyVersion")
+    @Expose
+    private String ProxyVersion;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1483,6 +1490,22 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get proxy版本号 
+     * @return ProxyVersion proxy版本号
+     */
+    public String getProxyVersion() {
+        return this.ProxyVersion;
+    }
+
+    /**
+     * Set proxy版本号
+     * @param ProxyVersion proxy版本号
+     */
+    public void setProxyVersion(String ProxyVersion) {
+        this.ProxyVersion = ProxyVersion;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1695,6 +1718,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         if (source.IsDcnSwitchSupported != null) {
             this.IsDcnSwitchSupported = new Long(source.IsDcnSwitchSupported);
         }
+        if (source.ProxyVersion != null) {
+            this.ProxyVersion = new String(source.ProxyVersion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1764,6 +1790,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPhysicalReplicationSupported", this.IsPhysicalReplicationSupported);
         this.setParamSimple(map, prefix + "IsDcnStrongSyncSupported", this.IsDcnStrongSyncSupported);
         this.setParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
+        this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
