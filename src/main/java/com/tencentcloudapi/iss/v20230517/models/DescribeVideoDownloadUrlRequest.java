@@ -61,6 +61,13 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
     private Boolean IsRespActualTime;
 
     /**
+    * 是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
+    */
+    @SerializedName("IsInternal")
+    @Expose
+    private Boolean IsInternal;
+
+    /**
      * Get 通道 ID 
      * @return ChannelId 通道 ID
      */
@@ -148,6 +155,22 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
         this.IsRespActualTime = IsRespActualTime;
     }
 
+    /**
+     * Get 是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL 
+     * @return IsInternal 是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
+     */
+    public Boolean getIsInternal() {
+        return this.IsInternal;
+    }
+
+    /**
+     * Set 是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
+     * @param IsInternal 是否返回内网下载URL，默认是false，返回公网下载URL，true则返回内网下载URL
+     */
+    public void setIsInternal(Boolean IsInternal) {
+        this.IsInternal = IsInternal;
+    }
+
     public DescribeVideoDownloadUrlRequest() {
     }
 
@@ -171,6 +194,9 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
         if (source.IsRespActualTime != null) {
             this.IsRespActualTime = new Boolean(source.IsRespActualTime);
         }
+        if (source.IsInternal != null) {
+            this.IsInternal = new Boolean(source.IsInternal);
+        }
     }
 
 
@@ -183,6 +209,7 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "IsRespActualTime", this.IsRespActualTime);
+        this.setParamSimple(map, prefix + "IsInternal", this.IsInternal);
 
     }
 }

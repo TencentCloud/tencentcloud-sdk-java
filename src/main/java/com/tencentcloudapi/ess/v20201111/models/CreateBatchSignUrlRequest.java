@@ -128,6 +128,13 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     private Boolean JumpToDetail;
 
     /**
+    * 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+    */
+    @SerializedName("FlowBatchUrlInfo")
+    @Expose
+    private FlowBatchUrlInfo FlowBatchUrlInfo;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -423,6 +430,22 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.JumpToDetail = JumpToDetail;
     }
 
+    /**
+     * Get 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	 
+     * @return FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public FlowBatchUrlInfo getFlowBatchUrlInfo() {
+        return this.FlowBatchUrlInfo;
+    }
+
+    /**
+     * Set 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     * @param FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public void setFlowBatchUrlInfo(FlowBatchUrlInfo FlowBatchUrlInfo) {
+        this.FlowBatchUrlInfo = FlowBatchUrlInfo;
+    }
+
     public CreateBatchSignUrlRequest() {
     }
 
@@ -464,6 +487,9 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         if (source.JumpToDetail != null) {
             this.JumpToDetail = new Boolean(source.JumpToDetail);
         }
+        if (source.FlowBatchUrlInfo != null) {
+            this.FlowBatchUrlInfo = new FlowBatchUrlInfo(source.FlowBatchUrlInfo);
+        }
     }
 
 
@@ -481,6 +507,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "JumpToDetail", this.JumpToDetail);
+        this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
 
     }
 }

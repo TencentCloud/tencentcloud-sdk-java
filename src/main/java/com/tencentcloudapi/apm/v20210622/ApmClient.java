@@ -72,6 +72,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *查询应用配置信息
+     * @param req DescribeGeneralApmApplicationConfigRequest
+     * @return DescribeGeneralApmApplicationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGeneralApmApplicationConfigResponse DescribeGeneralApmApplicationConfig(DescribeGeneralApmApplicationConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGeneralApmApplicationConfig", DescribeGeneralApmApplicationConfigResponse.class);
+    }
+
+    /**
      *获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
      * @param req DescribeGeneralMetricDataRequest
@@ -117,6 +128,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *根据维度名和过滤条件，查询维度数据.
+     * @param req DescribeTagValuesRequest
+     * @return DescribeTagValuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTagValuesResponse DescribeTagValues(DescribeTagValuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTagValues", DescribeTagValuesResponse.class);
+    }
+
+    /**
      *修改APM实例接口
      * @param req ModifyApmInstanceRequest
      * @return ModifyApmInstanceResponse
@@ -125,6 +147,17 @@ public class ApmClient extends AbstractClient{
     public ModifyApmInstanceResponse ModifyApmInstance(ModifyApmInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApmInstance", ModifyApmInstanceResponse.class);
+    }
+
+    /**
+     *对外开放的openApi，客户可以灵活的指定需要修改的字段，再加入需要修改的服务列表.
+     * @param req ModifyGeneralApmApplicationConfigRequest
+     * @return ModifyGeneralApmApplicationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGeneralApmApplicationConfigResponse ModifyGeneralApmApplicationConfig(ModifyGeneralApmApplicationConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGeneralApmApplicationConfig", ModifyGeneralApmApplicationConfigResponse.class);
     }
 
     /**

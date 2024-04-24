@@ -69,6 +69,14 @@ public class AccelerationDomain extends AbstractModel {
     private String OriginProtocol;
 
     /**
+    * 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Certificate")
+    @Expose
+    private AccelerationDomainCertificate Certificate;
+
+    /**
     * HTTP回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -131,14 +139,6 @@ public class AccelerationDomain extends AbstractModel {
     @SerializedName("OwnershipVerification")
     @Expose
     private OwnershipVerification OwnershipVerification;
-
-    /**
-    * 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Certificate")
-    @Expose
-    private AccelerationDomainCertificate Certificate;
 
     /**
      * Get 站点 ID。 
@@ -258,6 +258,26 @@ public class AccelerationDomain extends AbstractModel {
      */
     public void setOriginProtocol(String OriginProtocol) {
         this.OriginProtocol = OriginProtocol;
+    }
+
+    /**
+     * Get 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Certificate 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccelerationDomainCertificate getCertificate() {
+        return this.Certificate;
+    }
+
+    /**
+     * Set 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Certificate 域名证书信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertificate(AccelerationDomainCertificate Certificate) {
+        this.Certificate = Certificate;
     }
 
     /**
@@ -420,26 +440,6 @@ public class AccelerationDomain extends AbstractModel {
         this.OwnershipVerification = OwnershipVerification;
     }
 
-    /**
-     * Get 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Certificate 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public AccelerationDomainCertificate getCertificate() {
-        return this.Certificate;
-    }
-
-    /**
-     * Set 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Certificate 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCertificate(AccelerationDomainCertificate Certificate) {
-        this.Certificate = Certificate;
-    }
-
     public AccelerationDomain() {
     }
 
@@ -462,6 +462,9 @@ public class AccelerationDomain extends AbstractModel {
         }
         if (source.OriginProtocol != null) {
             this.OriginProtocol = new String(source.OriginProtocol);
+        }
+        if (source.Certificate != null) {
+            this.Certificate = new AccelerationDomainCertificate(source.Certificate);
         }
         if (source.HttpOriginPort != null) {
             this.HttpOriginPort = new Long(source.HttpOriginPort);
@@ -487,9 +490,6 @@ public class AccelerationDomain extends AbstractModel {
         if (source.OwnershipVerification != null) {
             this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
         }
-        if (source.Certificate != null) {
-            this.Certificate = new AccelerationDomainCertificate(source.Certificate);
-        }
     }
 
 
@@ -502,6 +502,7 @@ public class AccelerationDomain extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
         this.setParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
         this.setParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
+        this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
         this.setParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
         this.setParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
@@ -510,7 +511,6 @@ public class AccelerationDomain extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
         this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
-        this.setParamObj(map, prefix + "Certificate.", this.Certificate);
 
     }
 }

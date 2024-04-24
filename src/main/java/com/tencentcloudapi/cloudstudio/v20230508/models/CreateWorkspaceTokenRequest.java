@@ -38,7 +38,7 @@ public class CreateWorkspaceTokenRequest extends AbstractModel {
     private Long TokenExpiredLimitSec;
 
     /**
-    * token 授权策略，可选值为 workspace-run-only, all。默认为 all
+    * token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
     */
     @SerializedName("Policies")
     @Expose
@@ -77,16 +77,16 @@ public class CreateWorkspaceTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get token 授权策略，可选值为 workspace-run-only, all。默认为 all 
-     * @return Policies token 授权策略，可选值为 workspace-run-only, all。默认为 all
+     * Get token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only 
+     * @return Policies token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
      */
     public String [] getPolicies() {
         return this.Policies;
     }
 
     /**
-     * Set token 授权策略，可选值为 workspace-run-only, all。默认为 all
-     * @param Policies token 授权策略，可选值为 workspace-run-only, all。默认为 all
+     * Set token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+     * @param Policies token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
      */
     public void setPolicies(String [] Policies) {
         this.Policies = Policies;

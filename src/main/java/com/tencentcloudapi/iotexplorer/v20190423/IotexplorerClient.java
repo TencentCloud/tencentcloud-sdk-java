@@ -611,6 +611,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取设备当前固件信息
+     * @param req DescribeDeviceFirmwaresRequest
+     * @return DescribeDeviceFirmwaresResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceFirmwaresResponse DescribeDeviceFirmwares(DescribeDeviceFirmwaresRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceFirmwares", DescribeDeviceFirmwaresResponse.class);
+    }
+
+    /**
      *获取实时位置解析
      * @param req DescribeDeviceLocationSolveRequest
      * @return DescribeDeviceLocationSolveResponse

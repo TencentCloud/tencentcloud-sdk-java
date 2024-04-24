@@ -45,6 +45,13 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
     private Long EndTime;
 
     /**
+    * 是否获取内网地址
+    */
+    @SerializedName("IsInternal")
+    @Expose
+    private Boolean IsInternal;
+
+    /**
      * Get 设备通道ID 
      * @return ChannelId 设备通道ID
      */
@@ -92,6 +99,22 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 是否获取内网地址 
+     * @return IsInternal 是否获取内网地址
+     */
+    public Boolean getIsInternal() {
+        return this.IsInternal;
+    }
+
+    /**
+     * Set 是否获取内网地址
+     * @param IsInternal 是否获取内网地址
+     */
+    public void setIsInternal(Boolean IsInternal) {
+        this.IsInternal = IsInternal;
+    }
+
     public DescribeRecordPlaybackUrlRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
         }
+        if (source.IsInternal != null) {
+            this.IsInternal = new Boolean(source.IsInternal);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "IsInternal", this.IsInternal);
 
     }
 }

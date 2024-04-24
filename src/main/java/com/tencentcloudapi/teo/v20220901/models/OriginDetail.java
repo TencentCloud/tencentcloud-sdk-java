@@ -29,7 +29,7 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播（混合云版）；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
     */
@@ -44,7 +44,6 @@ public class OriginDetail extends AbstractModel {
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
-
     */
     @SerializedName("Origin")
     @Expose
@@ -72,10 +71,10 @@ public class OriginDetail extends AbstractModel {
     private String BackOriginGroupName;
 
     /**
-    * 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWS_S3 时会生效，取值有：
+    * 指定是否允许访问私有对象存储源站，该参数仅当源站类型OriginType = COS 或 AWS_S3 时会生效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>
-不填写，默认值为off。
+不填写，默认值为 off。
     */
     @SerializedName("PrivateAccess")
     @Expose
@@ -97,7 +96,7 @@ public class OriginDetail extends AbstractModel {
     private Long VodeoSubAppId;
 
     /**
-    * MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>	
+    * MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
     */
     @SerializedName("VodeoDistributionRange")
     @Expose
@@ -116,7 +115,7 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播（混合云版）；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li> 
      * @return OriginType 源站类型，取值有：
@@ -124,7 +123,7 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播（混合云版）；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
      */
@@ -138,7 +137,7 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播（混合云版）；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
      * @param OriginType 源站类型，取值有：
@@ -146,7 +145,7 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+<li>VODEO：云点播（混合云版）；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
      */
@@ -160,15 +159,13 @@ public class OriginDetail extends AbstractModel {
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
- 
+<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li> 
      * @return Origin 源站地址，根据 OriginType 的取值分为以下情况：
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
-
      */
     public String getOrigin() {
         return this.Origin;
@@ -181,14 +178,12 @@ public class OriginDetail extends AbstractModel {
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
-
      * @param Origin 源站地址，根据 OriginType 的取值分为以下情况：
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
-
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
@@ -243,28 +238,28 @@ public class OriginDetail extends AbstractModel {
     }
 
     /**
-     * Get 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWS_S3 时会生效，取值有：
+     * Get 指定是否允许访问私有对象存储源站，该参数仅当源站类型OriginType = COS 或 AWS_S3 时会生效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>
-不填写，默认值为off。 
-     * @return PrivateAccess 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWS_S3 时会生效，取值有：
+不填写，默认值为 off。 
+     * @return PrivateAccess 指定是否允许访问私有对象存储源站，该参数仅当源站类型OriginType = COS 或 AWS_S3 时会生效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>
-不填写，默认值为off。
+不填写，默认值为 off。
      */
     public String getPrivateAccess() {
         return this.PrivateAccess;
     }
 
     /**
-     * Set 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWS_S3 时会生效，取值有：
+     * Set 指定是否允许访问私有对象存储源站，该参数仅当源站类型OriginType = COS 或 AWS_S3 时会生效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>
-不填写，默认值为off。
-     * @param PrivateAccess 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWS_S3 时会生效，取值有：
+不填写，默认值为 off。
+     * @param PrivateAccess 指定是否允许访问私有对象存储源站，该参数仅当源站类型OriginType = COS 或 AWS_S3 时会生效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>
-不填写，默认值为off。
+不填写，默认值为 off。
      */
     public void setPrivateAccess(String PrivateAccess) {
         this.PrivateAccess = PrivateAccess;
@@ -307,16 +302,16 @@ public class OriginDetail extends AbstractModel {
     }
 
     /**
-     * Get MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>	 
-     * @return VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>	
+     * Get MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li> 
+     * @return VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
      */
     public String getVodeoDistributionRange() {
         return this.VodeoDistributionRange;
     }
 
     /**
-     * Set MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>	
-     * @param VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>	
+     * Set MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     * @param VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
      */
     public void setVodeoDistributionRange(String VodeoDistributionRange) {
         this.VodeoDistributionRange = VodeoDistributionRange;

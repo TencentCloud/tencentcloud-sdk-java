@@ -136,6 +136,13 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     private Boolean JumpToDetail;
 
     /**
+    * 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+    */
+    @SerializedName("FlowBatchUrlInfo")
+    @Expose
+    private FlowBatchUrlInfo FlowBatchUrlInfo;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -463,6 +470,22 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         this.JumpToDetail = JumpToDetail;
     }
 
+    /**
+     * Get 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	 
+     * @return FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public FlowBatchUrlInfo getFlowBatchUrlInfo() {
+        return this.FlowBatchUrlInfo;
+    }
+
+    /**
+     * Set 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     * @param FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public void setFlowBatchUrlInfo(FlowBatchUrlInfo FlowBatchUrlInfo) {
+        this.FlowBatchUrlInfo = FlowBatchUrlInfo;
+    }
+
     public ChannelCreateBatchSignUrlRequest() {
     }
 
@@ -504,6 +527,9 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         if (source.JumpToDetail != null) {
             this.JumpToDetail = new Boolean(source.JumpToDetail);
         }
+        if (source.FlowBatchUrlInfo != null) {
+            this.FlowBatchUrlInfo = new FlowBatchUrlInfo(source.FlowBatchUrlInfo);
+        }
     }
 
 
@@ -521,6 +547,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "JumpToDetail", this.JumpToDetail);
+        this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
 
     }
 }

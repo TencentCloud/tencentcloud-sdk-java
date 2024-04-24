@@ -87,6 +87,14 @@ public class DataConfig extends AbstractModel {
     private CFSTurbo CFSTurboSource;
 
     /**
+    * 来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalDiskSource")
+    @Expose
+    private LocalDisk LocalDiskSource;
+
+    /**
      * Get 映射路径 
      * @return MappingPath 映射路径
      */
@@ -242,6 +250,26 @@ public class DataConfig extends AbstractModel {
         this.CFSTurboSource = CFSTurboSource;
     }
 
+    /**
+     * Get 来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalDiskSource 来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LocalDisk getLocalDiskSource() {
+        return this.LocalDiskSource;
+    }
+
+    /**
+     * Set 来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalDiskSource 来自本地磁盘的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalDiskSource(LocalDisk LocalDiskSource) {
+        this.LocalDiskSource = LocalDiskSource;
+    }
+
     public DataConfig() {
     }
 
@@ -274,6 +302,9 @@ public class DataConfig extends AbstractModel {
         if (source.CFSTurboSource != null) {
             this.CFSTurboSource = new CFSTurbo(source.CFSTurboSource);
         }
+        if (source.LocalDiskSource != null) {
+            this.LocalDiskSource = new LocalDisk(source.LocalDiskSource);
+        }
     }
 
 
@@ -289,6 +320,7 @@ public class DataConfig extends AbstractModel {
         this.setParamObj(map, prefix + "HDFSSource.", this.HDFSSource);
         this.setParamObj(map, prefix + "GooseFSSource.", this.GooseFSSource);
         this.setParamObj(map, prefix + "CFSTurboSource.", this.CFSTurboSource);
+        this.setParamObj(map, prefix + "LocalDiskSource.", this.LocalDiskSource);
 
     }
 }

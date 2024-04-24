@@ -87,6 +87,9 @@ public enum ImsErrorCode {
     // 图片资源错误。
      RESOURCEUNAVAILABLE_INVALIDIMAGECONTENT("ResourceUnavailable.InvalidImageContent"),
      
+    // 模型调用失败，请重试。
+     RESOURCEUNAVAILABLE_MODELCALLFAILED("ResourceUnavailable.ModelCallFailed"),
+     
     // 资源售罄。
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      

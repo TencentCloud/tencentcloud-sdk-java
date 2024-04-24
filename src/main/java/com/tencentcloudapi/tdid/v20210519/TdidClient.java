@@ -182,7 +182,7 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *查询凭证模版内容
+     *查询凭证模板内容
      * @param req QueryCPTRequest
      * @return QueryCPTResponse
      * @throws TencentCloudSDKException
