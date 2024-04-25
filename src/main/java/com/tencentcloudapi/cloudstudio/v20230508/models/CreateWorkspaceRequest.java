@@ -82,30 +82,37 @@ public class CreateWorkspaceRequest extends AbstractModel {
     /**
     * 应用名称
     */
-    @SerializedName("AppId")
+    @SerializedName("TenantAppId")
     @Expose
-    private Long AppId;
+    private Long TenantAppId;
 
     /**
     * 用户UIN
     */
-    @SerializedName("Uin")
+    @SerializedName("TenantUin")
     @Expose
-    private String Uin;
+    private String TenantUin;
 
     /**
     * VPCID
     */
-    @SerializedName("UniqVpcId")
+    @SerializedName("TenantUniqVpcId")
     @Expose
-    private String UniqVpcId;
+    private String TenantUniqVpcId;
 
     /**
     * 子网ID
     */
-    @SerializedName("SubnetId")
+    @SerializedName("TenantSubnetId")
     @Expose
-    private String SubnetId;
+    private String TenantSubnetId;
+
+    /**
+    * 地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
 
     /**
      * Get 工作空间名称, 长度限制 2~64 
@@ -237,66 +244,82 @@ public class CreateWorkspaceRequest extends AbstractModel {
 
     /**
      * Get 应用名称 
-     * @return AppId 应用名称
+     * @return TenantAppId 应用名称
      */
-    public Long getAppId() {
-        return this.AppId;
+    public Long getTenantAppId() {
+        return this.TenantAppId;
     }
 
     /**
      * Set 应用名称
-     * @param AppId 应用名称
+     * @param TenantAppId 应用名称
      */
-    public void setAppId(Long AppId) {
-        this.AppId = AppId;
+    public void setTenantAppId(Long TenantAppId) {
+        this.TenantAppId = TenantAppId;
     }
 
     /**
      * Get 用户UIN 
-     * @return Uin 用户UIN
+     * @return TenantUin 用户UIN
      */
-    public String getUin() {
-        return this.Uin;
+    public String getTenantUin() {
+        return this.TenantUin;
     }
 
     /**
      * Set 用户UIN
-     * @param Uin 用户UIN
+     * @param TenantUin 用户UIN
      */
-    public void setUin(String Uin) {
-        this.Uin = Uin;
+    public void setTenantUin(String TenantUin) {
+        this.TenantUin = TenantUin;
     }
 
     /**
      * Get VPCID 
-     * @return UniqVpcId VPCID
+     * @return TenantUniqVpcId VPCID
      */
-    public String getUniqVpcId() {
-        return this.UniqVpcId;
+    public String getTenantUniqVpcId() {
+        return this.TenantUniqVpcId;
     }
 
     /**
      * Set VPCID
-     * @param UniqVpcId VPCID
+     * @param TenantUniqVpcId VPCID
      */
-    public void setUniqVpcId(String UniqVpcId) {
-        this.UniqVpcId = UniqVpcId;
+    public void setTenantUniqVpcId(String TenantUniqVpcId) {
+        this.TenantUniqVpcId = TenantUniqVpcId;
     }
 
     /**
      * Get 子网ID 
-     * @return SubnetId 子网ID
+     * @return TenantSubnetId 子网ID
      */
-    public String getSubnetId() {
-        return this.SubnetId;
+    public String getTenantSubnetId() {
+        return this.TenantSubnetId;
     }
 
     /**
      * Set 子网ID
-     * @param SubnetId 子网ID
+     * @param TenantSubnetId 子网ID
      */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
+    public void setTenantSubnetId(String TenantSubnetId) {
+        this.TenantSubnetId = TenantSubnetId;
+    }
+
+    /**
+     * Get 地域 
+     * @return Region 地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域
+     * @param Region 地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
     public CreateWorkspaceRequest() {
@@ -337,17 +360,20 @@ public class CreateWorkspaceRequest extends AbstractModel {
         if (source.Lifecycle != null) {
             this.Lifecycle = new LifeCycle(source.Lifecycle);
         }
-        if (source.AppId != null) {
-            this.AppId = new Long(source.AppId);
+        if (source.TenantAppId != null) {
+            this.TenantAppId = new Long(source.TenantAppId);
         }
-        if (source.Uin != null) {
-            this.Uin = new String(source.Uin);
+        if (source.TenantUin != null) {
+            this.TenantUin = new String(source.TenantUin);
         }
-        if (source.UniqVpcId != null) {
-            this.UniqVpcId = new String(source.UniqVpcId);
+        if (source.TenantUniqVpcId != null) {
+            this.TenantUniqVpcId = new String(source.TenantUniqVpcId);
         }
-        if (source.SubnetId != null) {
-            this.SubnetId = new String(source.SubnetId);
+        if (source.TenantSubnetId != null) {
+            this.TenantSubnetId = new String(source.TenantSubnetId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
         }
     }
 
@@ -364,10 +390,11 @@ public class CreateWorkspaceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
         this.setParamArraySimple(map, prefix + "Extensions.", this.Extensions);
         this.setParamObj(map, prefix + "Lifecycle.", this.Lifecycle);
-        this.setParamSimple(map, prefix + "AppId", this.AppId);
-        this.setParamSimple(map, prefix + "Uin", this.Uin);
-        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "TenantAppId", this.TenantAppId);
+        this.setParamSimple(map, prefix + "TenantUin", this.TenantUin);
+        this.setParamSimple(map, prefix + "TenantUniqVpcId", this.TenantUniqVpcId);
+        this.setParamSimple(map, prefix + "TenantSubnetId", this.TenantSubnetId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

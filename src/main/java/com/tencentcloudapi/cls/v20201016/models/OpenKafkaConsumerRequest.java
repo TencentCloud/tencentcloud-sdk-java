@@ -31,7 +31,7 @@ public class OpenKafkaConsumerRequest extends AbstractModel {
     private String FromTopicId;
 
     /**
-    * 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+    * 压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0
     */
     @SerializedName("Compression")
     @Expose
@@ -61,16 +61,16 @@ public class OpenKafkaConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get 压缩方式[0:NONE；2:SNAPPY；3:LZ4] 
-     * @return Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * Get 压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0 
+     * @return Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-     * @param Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * Set 压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0
+     * @param Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;

@@ -145,6 +145,22 @@ public class CosRechargeInfo extends AbstractModel {
     private ExtractRuleInfo ExtractRuleInfo;
 
     /**
+    * COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+    * 元数据。支持 bucket，object。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private String [] Metadata;
+
+    /**
      * Get COS导入配置ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id COS导入配置ID
@@ -448,6 +464,46 @@ public class CosRechargeInfo extends AbstractModel {
         this.ExtractRuleInfo = ExtractRuleInfo;
     }
 
+    /**
+     * Get COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskType COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskType COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 元数据。支持 bucket，object。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metadata 元数据。支持 bucket，object。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 元数据。支持 bucket，object。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metadata 元数据。支持 bucket，object。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetadata(String [] Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public CosRechargeInfo() {
     }
 
@@ -501,6 +557,15 @@ public class CosRechargeInfo extends AbstractModel {
         if (source.ExtractRuleInfo != null) {
             this.ExtractRuleInfo = new ExtractRuleInfo(source.ExtractRuleInfo);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new String[source.Metadata.length];
+            for (int i = 0; i < source.Metadata.length; i++) {
+                this.Metadata[i] = new String(source.Metadata[i]);
+            }
+        }
     }
 
 
@@ -523,6 +588,8 @@ public class CosRechargeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamArraySimple(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

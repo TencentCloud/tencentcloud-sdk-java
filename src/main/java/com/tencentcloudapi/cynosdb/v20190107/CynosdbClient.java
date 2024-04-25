@@ -479,6 +479,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeChangedParamsAfterUpgrade）用于查询升降配运行参数对比
+     * @param req DescribeChangedParamsAfterUpgradeRequest
+     * @return DescribeChangedParamsAfterUpgradeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChangedParamsAfterUpgradeResponse DescribeChangedParamsAfterUpgrade(DescribeChangedParamsAfterUpgradeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeChangedParamsAfterUpgrade", DescribeChangedParamsAfterUpgradeResponse.class);
+    }
+
+    /**
      *获取集群数据库列表
      * @param req DescribeClusterDatabasesRequest
      * @return DescribeClusterDatabasesResponse

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetEmbeddingResponse extends AbstractModel {
 
     /**
-    * 返回的 embedding 信息。
+    * 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
     */
     @SerializedName("Data")
     @Expose
     private EmbeddingData [] Data;
 
     /**
-    * token 使用计数，按照总token数量收费。
+    * Token 使用计数，按照总 Token 数量收费。
     */
     @SerializedName("Usage")
     @Expose
@@ -45,32 +45,32 @@ public class GetEmbeddingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的 embedding 信息。 
-     * @return Data 返回的 embedding 信息。
+     * Get 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。 
+     * @return Data 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
      */
     public EmbeddingData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回的 embedding 信息。
-     * @param Data 返回的 embedding 信息。
+     * Set 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
+     * @param Data 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
      */
     public void setData(EmbeddingData [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get token 使用计数，按照总token数量收费。 
-     * @return Usage token 使用计数，按照总token数量收费。
+     * Get Token 使用计数，按照总 Token 数量收费。 
+     * @return Usage Token 使用计数，按照总 Token 数量收费。
      */
     public EmbeddingUsage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set token 使用计数，按照总token数量收费。
-     * @param Usage token 使用计数，按照总token数量收费。
+     * Set Token 使用计数，按照总 Token 数量收费。
+     * @param Usage Token 使用计数，按照总 Token 数量收费。
      */
     public void setUsage(EmbeddingUsage Usage) {
         this.Usage = Usage;

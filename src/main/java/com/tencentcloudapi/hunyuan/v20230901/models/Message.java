@@ -31,7 +31,7 @@ public class Message extends AbstractModel {
     private String Role;
 
     /**
-    * 消息内容
+    * 文本内容
     */
     @SerializedName("Content")
     @Expose
@@ -54,16 +54,16 @@ public class Message extends AbstractModel {
     }
 
     /**
-     * Get 消息内容 
-     * @return Content 消息内容
+     * Get 文本内容 
+     * @return Content 文本内容
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 消息内容
-     * @param Content 消息内容
+     * Set 文本内容
+     * @param Content 文本内容
      */
     public void setContent(String Content) {
         this.Content = Content;

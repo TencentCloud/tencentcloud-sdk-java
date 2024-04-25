@@ -98,7 +98,9 @@ public class ExtractRuleInfo extends AbstractModel {
     private String UnMatchLogKey;
 
     /**
-    * 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+    * 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Backtracking")
@@ -106,7 +108,9 @@ public class ExtractRuleInfo extends AbstractModel {
     private Long Backtracking;
 
     /**
-    * 是否为Gbk编码.   0: 否, 1: 是
+    * 是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsGBK")
@@ -114,7 +118,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private Long IsGBK;
 
     /**
-    * 是否为标准json.   0: 否, 1: 是
+    * 是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonStandard")
@@ -123,7 +127,9 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
@@ -132,7 +138,9 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
@@ -142,8 +150,10 @@ public class ExtractRuleInfo extends AbstractModel {
     /**
     * rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParseProtocol")
@@ -151,14 +161,19 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     private String ParseProtocol;
 
     /**
-    * 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+    * 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。
     */
     @SerializedName("MetadataType")
     @Expose
     private Long MetadataType;
 
     /**
-    * 采集配置路径正则表达式，MetadataType为3时必填
+    * 采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathRegex")
@@ -166,14 +181,19 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     private String PathRegex;
 
     /**
-    * 用户自定义元数据信息，MetadataType为2时必填
+    * 用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。
     */
     @SerializedName("MetaTags")
     @Expose
     private MetaTagInfo [] MetaTags;
 
     /**
-    * Windows事件日志采集
+    * Windows事件日志采集。
+注意：
+- COS导入不支持此字段。
     */
     @SerializedName("EventLogRules")
     @Expose
@@ -368,9 +388,13 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+     * Get 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+     * @return Backtracking 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBacktracking() {
@@ -378,9 +402,13 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+     * Set 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+     * @param Backtracking 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBacktracking(Long Backtracking) {
@@ -388,9 +416,13 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 是否为Gbk编码.   0: 否, 1: 是
+     * Get 是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsGBK 是否为Gbk编码.   0: 否, 1: 是
+     * @return IsGBK 是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsGBK() {
@@ -398,9 +430,13 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 是否为Gbk编码.   0: 否, 1: 是
+     * Set 是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsGBK 是否为Gbk编码.   0: 否, 1: 是
+     * @param IsGBK 是否为Gbk编码。 0：否；1：是。
+注意：
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsGBK(Long IsGBK) {
@@ -408,9 +444,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 是否为标准json.   0: 否, 1: 是
+     * Get 是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JsonStandard 是否为标准json.   0: 否, 1: 是
+     * @return JsonStandard 是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJsonStandard() {
@@ -418,9 +454,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 是否为标准json.   0: 否, 1: 是
+     * Set 是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JsonStandard 是否为标准json.   0: 否, 1: 是
+     * @param JsonStandard 是否为标准json。  0：否； 1：是。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonStandard(Long JsonStandard) {
@@ -429,10 +465,14 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 
     /**
      * Get syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Protocol syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
@@ -441,10 +481,14 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 
     /**
      * Set syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol syslog传输协议，取值为tcp或者udp。
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
@@ -453,10 +497,14 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 
     /**
      * Get syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
@@ -465,10 +513,14 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 
     /**
      * Set syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
-该字段适用于：创建采集规则配置、修改采集规则配置
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
@@ -478,13 +530,17 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     /**
      * Get rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParseProtocol() {
@@ -494,13 +550,17 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     /**
      * Set rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议
-该字段适用于：创建采集规则配置、修改采集规则配置
+auto：自动匹配rfc3164或者rfc5424其中一种协议。
+注意：
+- 该字段适用于：创建采集规则配置、修改采集规则配置
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParseProtocol(String ParseProtocol) {
@@ -508,25 +568,39 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径， 
-     * @return MetadataType 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+     * Get 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。 
+     * @return MetadataType 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。
      */
     public Long getMetadataType() {
         return this.MetadataType;
     }
 
     /**
-     * Set 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
-     * @param MetadataType 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+     * Set 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。
+     * @param MetadataType 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
+注意：
+- COS导入不支持此字段。
      */
     public void setMetadataType(Long MetadataType) {
         this.MetadataType = MetadataType;
     }
 
     /**
-     * Get 采集配置路径正则表达式，MetadataType为3时必填
+     * Get 采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PathRegex 采集配置路径正则表达式，MetadataType为3时必填
+     * @return PathRegex 采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPathRegex() {
@@ -534,9 +608,15 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 采集配置路径正则表达式，MetadataType为3时必填
+     * Set 采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PathRegex 采集配置路径正则表达式，MetadataType为3时必填
+     * @param PathRegex 采集配置路径正则表达式。
+注意：
+- MetadataType为3时必填。
+- COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathRegex(String PathRegex) {
@@ -544,32 +624,52 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 用户自定义元数据信息，MetadataType为2时必填 
-     * @return MetaTags 用户自定义元数据信息，MetadataType为2时必填
+     * Get 用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。 
+     * @return MetaTags 用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。
      */
     public MetaTagInfo [] getMetaTags() {
         return this.MetaTags;
     }
 
     /**
-     * Set 用户自定义元数据信息，MetadataType为2时必填
-     * @param MetaTags 用户自定义元数据信息，MetadataType为2时必填
+     * Set 用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。
+     * @param MetaTags 用户自定义元数据信息。
+注意：
+- MetadataType为2时必填。
+- COS导入不支持此字段。
      */
     public void setMetaTags(MetaTagInfo [] MetaTags) {
         this.MetaTags = MetaTags;
     }
 
     /**
-     * Get Windows事件日志采集 
-     * @return EventLogRules Windows事件日志采集
+     * Get Windows事件日志采集。
+注意：
+- COS导入不支持此字段。 
+     * @return EventLogRules Windows事件日志采集。
+注意：
+- COS导入不支持此字段。
      */
     public EventLog [] getEventLogRules() {
         return this.EventLogRules;
     }
 
     /**
-     * Set Windows事件日志采集
-     * @param EventLogRules Windows事件日志采集
+     * Set Windows事件日志采集。
+注意：
+- COS导入不支持此字段。
+     * @param EventLogRules Windows事件日志采集。
+注意：
+- COS导入不支持此字段。
      */
     public void setEventLogRules(EventLog [] EventLogRules) {
         this.EventLogRules = EventLogRules;

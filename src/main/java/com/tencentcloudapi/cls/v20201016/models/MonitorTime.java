@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class MonitorTime extends AbstractModel {
 
     /**
-    * 可选值：
-<br><li> Period - 周期执行
-<br><li> Fixed - 定期执行
+    * 执行周期， 可选值：Period；Fixed。
+
+- Period：固定频率
+- Fixed：固定时间
     */
     @SerializedName("Type")
     @Expose
@@ -40,24 +41,28 @@ public class MonitorTime extends AbstractModel {
     private Long Time;
 
     /**
-     * Get 可选值：
-<br><li> Period - 周期执行
-<br><li> Fixed - 定期执行 
-     * @return Type 可选值：
-<br><li> Period - 周期执行
-<br><li> Fixed - 定期执行
+     * Get 执行周期， 可选值：Period；Fixed。
+
+- Period：固定频率
+- Fixed：固定时间 
+     * @return Type 执行周期， 可选值：Period；Fixed。
+
+- Period：固定频率
+- Fixed：固定时间
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 可选值：
-<br><li> Period - 周期执行
-<br><li> Fixed - 定期执行
-     * @param Type 可选值：
-<br><li> Period - 周期执行
-<br><li> Fixed - 定期执行
+     * Set 执行周期， 可选值：Period；Fixed。
+
+- Period：固定频率
+- Fixed：固定时间
+     * @param Type 执行周期， 可选值：Period；Fixed。
+
+- Period：固定频率
+- Fixed：固定时间
      */
     public void setType(String Type) {
         this.Type = Type;

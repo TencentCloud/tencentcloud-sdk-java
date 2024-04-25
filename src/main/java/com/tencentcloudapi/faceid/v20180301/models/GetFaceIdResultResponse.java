@@ -83,13 +83,15 @@ public class GetFaceIdResultResponse extends AbstractModel {
     private String Extra;
 
     /**
-    * 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
-202、5001：设备疑似被Root
-203、5004：设备疑似被注入
-205：设备疑似被Hook
-206：设备疑似虚拟运行环境
-5007、1005：设备疑似摄像头被劫持
-8000：设备疑似存在异常篡改行为
+    * plus版：描述当前请求所在设备的风险标签，详情如下：
+01-设备疑似被Root/设备疑似越狱
+02-设备疑似被注入
+03-设备疑似为模拟器
+04-设备疑似存在风险操作
+05-摄像头疑似被劫持
+06-疑似黑产设备
+null-无设备风险
+增强版：此字段不生效，默认为null
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceInfoTag")
@@ -104,6 +106,43 @@ public class GetFaceIdResultResponse extends AbstractModel {
     @SerializedName("RiskInfoTag")
     @Expose
     private String RiskInfoTag;
+
+    /**
+    * plus版：描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成图片
+05-疑似合成视频
+06-疑似合成动作
+07-疑似黑产模版
+08-疑似存在水印
+09-反光校验未通过
+10-最佳帧校验未通过
+11-人脸质量过差
+12-人脸距离不匹配
+13-疑似对抗样本攻击
+null-无
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LivenessInfoTag")
+    @Expose
+    private String LivenessInfoTag;
+
+    /**
+    * plus版：描述当前请求所在设备的风险等级，共4级，详情如下：
+1 - 安全
+2 - 低风险
+3 - 中风险
+4 - 高危
+null - 未获取到风险等级
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceInfoLevel")
+    @Expose
+    private String DeviceInfoLevel;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -253,21 +292,25 @@ public class GetFaceIdResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
-202、5001：设备疑似被Root
-203、5004：设备疑似被注入
-205：设备疑似被Hook
-206：设备疑似虚拟运行环境
-5007、1005：设备疑似摄像头被劫持
-8000：设备疑似存在异常篡改行为
+     * Get plus版：描述当前请求所在设备的风险标签，详情如下：
+01-设备疑似被Root/设备疑似越狱
+02-设备疑似被注入
+03-设备疑似为模拟器
+04-设备疑似存在风险操作
+05-摄像头疑似被劫持
+06-疑似黑产设备
+null-无设备风险
+增强版：此字段不生效，默认为null
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceInfoTag 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
-202、5001：设备疑似被Root
-203、5004：设备疑似被注入
-205：设备疑似被Hook
-206：设备疑似虚拟运行环境
-5007、1005：设备疑似摄像头被劫持
-8000：设备疑似存在异常篡改行为
+     * @return DeviceInfoTag plus版：描述当前请求所在设备的风险标签，详情如下：
+01-设备疑似被Root/设备疑似越狱
+02-设备疑似被注入
+03-设备疑似为模拟器
+04-设备疑似存在风险操作
+05-摄像头疑似被劫持
+06-疑似黑产设备
+null-无设备风险
+增强版：此字段不生效，默认为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceInfoTag() {
@@ -275,21 +318,25 @@ public class GetFaceIdResultResponse extends AbstractModel {
     }
 
     /**
-     * Set 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
-202、5001：设备疑似被Root
-203、5004：设备疑似被注入
-205：设备疑似被Hook
-206：设备疑似虚拟运行环境
-5007、1005：设备疑似摄像头被劫持
-8000：设备疑似存在异常篡改行为
+     * Set plus版：描述当前请求所在设备的风险标签，详情如下：
+01-设备疑似被Root/设备疑似越狱
+02-设备疑似被注入
+03-设备疑似为模拟器
+04-设备疑似存在风险操作
+05-摄像头疑似被劫持
+06-疑似黑产设备
+null-无设备风险
+增强版：此字段不生效，默认为null
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceInfoTag 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
-202、5001：设备疑似被Root
-203、5004：设备疑似被注入
-205：设备疑似被Hook
-206：设备疑似虚拟运行环境
-5007、1005：设备疑似摄像头被劫持
-8000：设备疑似存在异常篡改行为
+     * @param DeviceInfoTag plus版：描述当前请求所在设备的风险标签，详情如下：
+01-设备疑似被Root/设备疑似越狱
+02-设备疑似被注入
+03-设备疑似为模拟器
+04-设备疑似存在风险操作
+05-摄像头疑似被劫持
+06-疑似黑产设备
+null-无设备风险
+增强版：此字段不生效，默认为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceInfoTag(String DeviceInfoTag) {
@@ -318,6 +365,130 @@ public class GetFaceIdResultResponse extends AbstractModel {
      */
     public void setRiskInfoTag(String RiskInfoTag) {
         this.RiskInfoTag = RiskInfoTag;
+    }
+
+    /**
+     * Get plus版：描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成图片
+05-疑似合成视频
+06-疑似合成动作
+07-疑似黑产模版
+08-疑似存在水印
+09-反光校验未通过
+10-最佳帧校验未通过
+11-人脸质量过差
+12-人脸距离不匹配
+13-疑似对抗样本攻击
+null-无
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LivenessInfoTag plus版：描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成图片
+05-疑似合成视频
+06-疑似合成动作
+07-疑似黑产模版
+08-疑似存在水印
+09-反光校验未通过
+10-最佳帧校验未通过
+11-人脸质量过差
+12-人脸距离不匹配
+13-疑似对抗样本攻击
+null-无
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLivenessInfoTag() {
+        return this.LivenessInfoTag;
+    }
+
+    /**
+     * Set plus版：描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成图片
+05-疑似合成视频
+06-疑似合成动作
+07-疑似黑产模版
+08-疑似存在水印
+09-反光校验未通过
+10-最佳帧校验未通过
+11-人脸质量过差
+12-人脸距离不匹配
+13-疑似对抗样本攻击
+null-无
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LivenessInfoTag plus版：描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成图片
+05-疑似合成视频
+06-疑似合成动作
+07-疑似黑产模版
+08-疑似存在水印
+09-反光校验未通过
+10-最佳帧校验未通过
+11-人脸质量过差
+12-人脸距离不匹配
+13-疑似对抗样本攻击
+null-无
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLivenessInfoTag(String LivenessInfoTag) {
+        this.LivenessInfoTag = LivenessInfoTag;
+    }
+
+    /**
+     * Get plus版：描述当前请求所在设备的风险等级，共4级，详情如下：
+1 - 安全
+2 - 低风险
+3 - 中风险
+4 - 高危
+null - 未获取到风险等级
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceInfoLevel plus版：描述当前请求所在设备的风险等级，共4级，详情如下：
+1 - 安全
+2 - 低风险
+3 - 中风险
+4 - 高危
+null - 未获取到风险等级
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceInfoLevel() {
+        return this.DeviceInfoLevel;
+    }
+
+    /**
+     * Set plus版：描述当前请求所在设备的风险等级，共4级，详情如下：
+1 - 安全
+2 - 低风险
+3 - 中风险
+4 - 高危
+null - 未获取到风险等级
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceInfoLevel plus版：描述当前请求所在设备的风险等级，共4级，详情如下：
+1 - 安全
+2 - 低风险
+3 - 中风险
+4 - 高危
+null - 未获取到风险等级
+增强版：此字段不生效，默认为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceInfoLevel(String DeviceInfoLevel) {
+        this.DeviceInfoLevel = DeviceInfoLevel;
     }
 
     /**
@@ -374,6 +545,12 @@ public class GetFaceIdResultResponse extends AbstractModel {
         if (source.RiskInfoTag != null) {
             this.RiskInfoTag = new String(source.RiskInfoTag);
         }
+        if (source.LivenessInfoTag != null) {
+            this.LivenessInfoTag = new String(source.LivenessInfoTag);
+        }
+        if (source.DeviceInfoLevel != null) {
+            this.DeviceInfoLevel = new String(source.DeviceInfoLevel);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -394,6 +571,8 @@ public class GetFaceIdResultResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "DeviceInfoTag", this.DeviceInfoTag);
         this.setParamSimple(map, prefix + "RiskInfoTag", this.RiskInfoTag);
+        this.setParamSimple(map, prefix + "LivenessInfoTag", this.LivenessInfoTag);
+        this.setParamSimple(map, prefix + "DeviceInfoLevel", this.DeviceInfoLevel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

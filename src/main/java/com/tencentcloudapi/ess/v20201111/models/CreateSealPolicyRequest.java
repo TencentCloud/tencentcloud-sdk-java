@@ -48,7 +48,7 @@ public class CreateSealPolicyRequest extends AbstractModel {
     private String SealId;
 
     /**
-    * 授权有效期。时间戳秒级
+    * 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
     */
     @SerializedName("Expired")
     @Expose
@@ -137,16 +137,16 @@ public class CreateSealPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 授权有效期。时间戳秒级 
-     * @return Expired 授权有效期。时间戳秒级
+     * Get 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。 
+     * @return Expired 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
      */
     public Long getExpired() {
         return this.Expired;
     }
 
     /**
-     * Set 授权有效期。时间戳秒级
-     * @param Expired 授权有效期。时间戳秒级
+     * Set 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
+     * @param Expired 授权有效期，时间戳秒级。可以传0，代表有效期到2099年12月12日23点59分59秒。
      */
     public void setExpired(Long Expired) {
         this.Expired = Expired;

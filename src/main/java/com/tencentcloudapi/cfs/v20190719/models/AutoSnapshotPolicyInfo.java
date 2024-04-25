@@ -87,7 +87,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     private String Status;
 
     /**
-    * 帐号ID
+    * 账号ID
     */
     @SerializedName("AppId")
     @Expose
@@ -282,16 +282,16 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get 帐号ID 
-     * @return AppId 帐号ID
+     * Get 账号ID 
+     * @return AppId 账号ID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 帐号ID
-     * @param AppId 帐号ID
+     * Set 账号ID
+     * @param AppId 账号ID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;

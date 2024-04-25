@@ -91,6 +91,13 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private Long Sample;
 
     /**
+    * 日志投递的输出格式。不填保持原有配置。
+    */
+    @SerializedName("LogFormat")
+    @Expose
+    private LogFormat LogFormat;
+
+    /**
     * 自定义 HTTP 服务的配置信息，不填保持原有配置。 
     */
     @SerializedName("CustomEndpoint")
@@ -265,6 +272,22 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get 日志投递的输出格式。不填保持原有配置。 
+     * @return LogFormat 日志投递的输出格式。不填保持原有配置。
+     */
+    public LogFormat getLogFormat() {
+        return this.LogFormat;
+    }
+
+    /**
+     * Set 日志投递的输出格式。不填保持原有配置。
+     * @param LogFormat 日志投递的输出格式。不填保持原有配置。
+     */
+    public void setLogFormat(LogFormat LogFormat) {
+        this.LogFormat = LogFormat;
+    }
+
+    /**
      * Get 自定义 HTTP 服务的配置信息，不填保持原有配置。  
      * @return CustomEndpoint 自定义 HTTP 服务的配置信息，不填保持原有配置。 
      */
@@ -343,6 +366,9 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
         if (source.Sample != null) {
             this.Sample = new Long(source.Sample);
         }
+        if (source.LogFormat != null) {
+            this.LogFormat = new LogFormat(source.LogFormat);
+        }
         if (source.CustomEndpoint != null) {
             this.CustomEndpoint = new CustomEndpoint(source.CustomEndpoint);
         }
@@ -365,6 +391,7 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
+        this.setParamObj(map, prefix + "LogFormat.", this.LogFormat);
         this.setParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
         this.setParamObj(map, prefix + "S3.", this.S3);
 

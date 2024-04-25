@@ -108,7 +108,7 @@ public class DataTransformTaskInfo extends AbstractModel {
     private DataTransformResouceInfo [] DstResources;
 
     /**
-    * 加工逻辑函数
+    * 加工逻辑函数。
     */
     @SerializedName("EtlContent")
     @Expose
@@ -307,16 +307,16 @@ public class DataTransformTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 加工逻辑函数 
-     * @return EtlContent 加工逻辑函数
+     * Get 加工逻辑函数。 
+     * @return EtlContent 加工逻辑函数。
      */
     public String getEtlContent() {
         return this.EtlContent;
     }
 
     /**
-     * Set 加工逻辑函数
-     * @param EtlContent 加工逻辑函数
+     * Set 加工逻辑函数。
+     * @param EtlContent 加工逻辑函数。
      */
     public void setEtlContent(String EtlContent) {
         this.EtlContent = EtlContent;

@@ -31,13 +31,6 @@ public class Task extends AbstractModel {
     private String JobId;
 
     /**
-    * 状态。
-    */
-    @SerializedName("Status")
-    @Expose
-    private String Status;
-
-    /**
     * 资源。
     */
     @SerializedName("Target")
@@ -50,6 +43,17 @@ public class Task extends AbstractModel {
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
     * 任务创建时间。
@@ -82,22 +86,6 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get 状态。 
-     * @return Status 状态。
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 状态。
-     * @param Status 状态。
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
-
-    /**
      * Get 资源。 
      * @return Target 资源。
      */
@@ -127,6 +115,38 @@ public class Task extends AbstractModel {
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li> 
+     * @return Status 状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li>
+     * @param Status 状态。取值有：
+<li>processing：处理中；</li>
+<li>success：成功；</li>
+<li> failed：失败；</li>
+<li>timeout：超时。</li>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     /**
@@ -172,14 +192,14 @@ public class Task extends AbstractModel {
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
         if (source.Target != null) {
             this.Target = new String(source.Target);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -195,9 +215,9 @@ public class Task extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

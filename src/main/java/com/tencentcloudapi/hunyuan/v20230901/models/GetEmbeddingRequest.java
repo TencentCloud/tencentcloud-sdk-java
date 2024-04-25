@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetEmbeddingRequest extends AbstractModel {
 
     /**
-    * 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
+    * 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-     * Get 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。 
-     * @return Input 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
+     * Get 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。 
+     * @return Input 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
-     * @param Input 输入文本。总长度不超过1024 个token, 超过则会截断最后面的内容。
+     * Set 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
+     * @param Input 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
      */
     public void setInput(String Input) {
         this.Input = Input;

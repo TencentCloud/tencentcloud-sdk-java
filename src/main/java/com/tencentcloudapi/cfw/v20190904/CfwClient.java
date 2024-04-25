@@ -547,7 +547,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *ip防护状态查询
+     *IP防护状态查询
      * @param req DescribeIPStatusListRequest
      * @return DescribeIPStatusListResponse
      * @throws TencentCloudSDKException

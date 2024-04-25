@@ -36,11 +36,11 @@ public enum HunyuanErrorCode {
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 超过配额限制。
-     LIMITEXCEEDED("LimitExceeded"),
+    // 模型不存在。
+     INVALIDPARAMETERVALUE_MODEL("InvalidParameterValue.Model"),
      
-    // 非白名单帐号，请前往控制台申请试用。
-     UNSUPPORTEDOPERATION_NONWHITELISTACCOUNT("UnsupportedOperation.NonWhitelistAccount");
+    // 超过配额限制。
+     LIMITEXCEEDED("LimitExceeded");
      
     private String value;
     private HunyuanErrorCode (String value){

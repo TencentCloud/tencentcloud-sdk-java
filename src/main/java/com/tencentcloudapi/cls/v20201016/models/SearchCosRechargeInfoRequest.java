@@ -66,7 +66,7 @@ public class SearchCosRechargeInfoRequest extends AbstractModel {
     private String Prefix;
 
     /**
-    * 压缩模式:   "", "gzip", "lzop", "snappy”;   默认""
+    * 压缩模式:   "", "gzip", "lzop", "snappy";   默认""
     */
     @SerializedName("Compress")
     @Expose
@@ -169,16 +169,16 @@ public class SearchCosRechargeInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 压缩模式:   "", "gzip", "lzop", "snappy”;   默认"" 
-     * @return Compress 压缩模式:   "", "gzip", "lzop", "snappy”;   默认""
+     * Get 压缩模式:   "", "gzip", "lzop", "snappy";   默认"" 
+     * @return Compress 压缩模式:   "", "gzip", "lzop", "snappy";   默认""
      */
     public String getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set 压缩模式:   "", "gzip", "lzop", "snappy”;   默认""
-     * @param Compress 压缩模式:   "", "gzip", "lzop", "snappy”;   默认""
+     * Set 压缩模式:   "", "gzip", "lzop", "snappy";   默认""
+     * @param Compress 压缩模式:   "", "gzip", "lzop", "snappy";   默认""
      */
     public void setCompress(String Compress) {
         this.Compress = Compress;

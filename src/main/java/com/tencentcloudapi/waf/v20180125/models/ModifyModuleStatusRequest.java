@@ -31,7 +31,7 @@ public class ModifyModuleStatusRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * WEB 安全模块开关，0或1
+    * Web 安全模块开关，0或1
     */
     @SerializedName("WebSecurity")
     @Expose
@@ -96,16 +96,16 @@ public class ModifyModuleStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get WEB 安全模块开关，0或1 
-     * @return WebSecurity WEB 安全模块开关，0或1
+     * Get Web 安全模块开关，0或1 
+     * @return WebSecurity Web 安全模块开关，0或1
      */
     public Long getWebSecurity() {
         return this.WebSecurity;
     }
 
     /**
-     * Set WEB 安全模块开关，0或1
-     * @param WebSecurity WEB 安全模块开关，0或1
+     * Set Web 安全模块开关，0或1
+     * @param WebSecurity Web 安全模块开关，0或1
      */
     public void setWebSecurity(Long WebSecurity) {
         this.WebSecurity = WebSecurity;

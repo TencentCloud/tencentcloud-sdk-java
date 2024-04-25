@@ -107,6 +107,15 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     private Long Sample;
 
     /**
+    * 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+    */
+    @SerializedName("LogFormat")
+    @Expose
+    private LogFormat LogFormat;
+
+    /**
     * CLS 的配置信息。当 TaskType 取值为 cls 时，该参数必填。
     */
     @SerializedName("CLS")
@@ -340,6 +349,30 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。 
+     * @return LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     */
+    public LogFormat getLogFormat() {
+        return this.LogFormat;
+    }
+
+    /**
+     * Set 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     * @param LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+     */
+    public void setLogFormat(LogFormat LogFormat) {
+        this.LogFormat = LogFormat;
+    }
+
+    /**
      * Get CLS 的配置信息。当 TaskType 取值为 cls 时，该参数必填。 
      * @return CLS CLS 的配置信息。当 TaskType 取值为 cls 时，该参数必填。
      */
@@ -437,6 +470,9 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
         if (source.Sample != null) {
             this.Sample = new Long(source.Sample);
         }
+        if (source.LogFormat != null) {
+            this.LogFormat = new LogFormat(source.LogFormat);
+        }
         if (source.CLS != null) {
             this.CLS = new CLSTopic(source.CLS);
         }
@@ -463,6 +499,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
+        this.setParamObj(map, prefix + "LogFormat.", this.LogFormat);
         this.setParamObj(map, prefix + "CLS.", this.CLS);
         this.setParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
         this.setParamObj(map, prefix + "S3.", this.S3);

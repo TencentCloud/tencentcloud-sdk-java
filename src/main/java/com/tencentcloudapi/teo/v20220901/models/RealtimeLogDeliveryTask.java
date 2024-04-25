@@ -101,6 +101,16 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private Long Sample;
 
     /**
+    * 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogFormat")
+    @Expose
+    private LogFormat LogFormat;
+
+    /**
     * CLS 的配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -315,6 +325,34 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
+     * Get 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogFormat 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LogFormat getLogFormat() {
+        return this.LogFormat;
+    }
+
+    /**
+     * Set 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogFormat 日志投递的输出格式。出参为 null 时表示为默认格式，默认格式逻辑如下：
+<li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogFormat(LogFormat LogFormat) {
+        this.LogFormat = LogFormat;
+    }
+
+    /**
      * Get CLS 的配置信息。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CLS CLS 的配置信息。
@@ -459,6 +497,9 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
         if (source.Sample != null) {
             this.Sample = new Long(source.Sample);
         }
+        if (source.LogFormat != null) {
+            this.LogFormat = new LogFormat(source.LogFormat);
+        }
         if (source.CLS != null) {
             this.CLS = new CLSTopic(source.CLS);
         }
@@ -492,6 +533,7 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
+        this.setParamObj(map, prefix + "LogFormat.", this.LogFormat);
         this.setParamObj(map, prefix + "CLS.", this.CLS);
         this.setParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
         this.setParamObj(map, prefix + "S3.", this.S3);

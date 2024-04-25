@@ -59,7 +59,7 @@ public class CreateProxyRequest extends AbstractModel {
     private String UniqueSubnetId;
 
     /**
-    * 数据库代理组节点个数
+    * 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
     */
     @SerializedName("ProxyCount")
     @Expose
@@ -101,7 +101,7 @@ public class CreateProxyRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 数据库节点信息
+    * 数据库节点信息（该参数与ProxyCount需要任选一个输入）
     */
     @SerializedName("ProxyZones")
     @Expose
@@ -188,16 +188,16 @@ public class CreateProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库代理组节点个数 
-     * @return ProxyCount 数据库代理组节点个数
+     * Get 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones) 
+     * @return ProxyCount 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set 数据库代理组节点个数
-     * @param ProxyCount 数据库代理组节点个数
+     * Set 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+     * @param ProxyCount 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
@@ -284,16 +284,16 @@ public class CreateProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库节点信息 
-     * @return ProxyZones 数据库节点信息
+     * Get 数据库节点信息（该参数与ProxyCount需要任选一个输入） 
+     * @return ProxyZones 数据库节点信息（该参数与ProxyCount需要任选一个输入）
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set 数据库节点信息
-     * @param ProxyZones 数据库节点信息
+     * Set 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * @param ProxyZones 数据库节点信息（该参数与ProxyCount需要任选一个输入）
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;

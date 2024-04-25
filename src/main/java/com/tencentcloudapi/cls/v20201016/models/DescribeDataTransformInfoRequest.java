@@ -38,7 +38,7 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 
 必选：否
 
-<br><li> srctopicId
+<br><li> topicId
 
 按照【源topicId】进行过滤。
 类型：String
@@ -94,7 +94,7 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 
 必选：否
 
-<br><li> srctopicId
+<br><li> topicId
 
 按照【源topicId】进行过滤。
 类型：String
@@ -116,7 +116,7 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 
 必选：否
 
-<br><li> srctopicId
+<br><li> topicId
 
 按照【源topicId】进行过滤。
 类型：String
@@ -144,7 +144,7 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 
 必选：否
 
-<br><li> srctopicId
+<br><li> topicId
 
 按照【源topicId】进行过滤。
 类型：String
@@ -166,7 +166,7 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 
 必选：否
 
-<br><li> srctopicId
+<br><li> topicId
 
 按照【源topicId】进行过滤。
 类型：String
