@@ -172,6 +172,6 @@ public abstract class AbstractModel {
     }
 
     public boolean isStream() {
-        return true;
+        return false;
     }
 }
