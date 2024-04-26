@@ -39,6 +39,10 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
         this.response = response;
     }
 
+    public boolean isStream() {
+        return this.response != null;
+    }
+
     public void setToken(CircuitBreaker.Token token) {
         this.token = token;
     }
