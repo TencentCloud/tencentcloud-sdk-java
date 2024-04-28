@@ -170,4 +170,8 @@ public abstract class AbstractModel {
     public void SetHeader(Map<String, String> header) {
         this.header = header;
     }
+
+    public boolean isStream() {
+        return false;
+    }
 }
