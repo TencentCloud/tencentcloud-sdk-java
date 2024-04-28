@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class Choice extends AbstractModel {
 
     /**
-    * 结束标志位，为 stop 则表示尾包。
+    * 结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
     */
     @SerializedName("FinishReason")
     @Expose
@@ -47,16 +48,20 @@ public class Choice extends AbstractModel {
     private Message Message;
 
     /**
-     * Get 结束标志位，为 stop 则表示尾包。 
-     * @return FinishReason 结束标志位，为 stop 则表示尾包。
+     * Get 结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。 
+     * @return FinishReason 结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
      */
     public String getFinishReason() {
         return this.FinishReason;
     }
 
     /**
-     * Set 结束标志位，为 stop 则表示尾包。
-     * @param FinishReason 结束标志位，为 stop 则表示尾包。
+     * Set 结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+     * @param FinishReason 结束标志位，可能为 stop 或 sensitive。
+stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
      */
     public void setFinishReason(String FinishReason) {
         this.FinishReason = FinishReason;

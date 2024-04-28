@@ -32,7 +32,7 @@ public class Options extends AbstractModel {
     private String InitType;
 
     /**
-    * 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+    * 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealOfExistSameTable")
@@ -140,9 +140,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Get 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+     * Get 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+     * @return DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealOfExistSameTable() {
@@ -150,9 +150,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Set 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+     * Set 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
+     * @param DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealOfExistSameTable(String DealOfExistSameTable) {

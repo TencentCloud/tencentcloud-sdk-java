@@ -733,6 +733,28 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *解析拆分文档。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或 [联系客服](https://cloud.tencent.com/act/event/Online_service)  。
+     * @param req ParseDocRequest
+     * @return ParseDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public ParseDocResponse ParseDoc(ParseDocRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ParseDoc", ParseDocResponse.class);
+    }
+
+    /**
+     *查询文档解析结果。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或[联系客服](https://cloud.tencent.com/act/event/Online_service) 。
+     * @param req QueryParseDocResultRequest
+     * @return QueryParseDocResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryParseDocResultResponse QueryParseDocResult(QueryParseDocResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryParseDocResult", QueryParseDocResultResponse.class);
+    }
+
+    /**
      *多轮改写
 本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
      * @param req QueryRewriteRequest

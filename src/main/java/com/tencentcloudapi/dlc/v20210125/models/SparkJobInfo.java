@@ -185,7 +185,7 @@ public class SparkJobInfo extends AbstractModel {
     private String CurrentTaskId;
 
     /**
-    * spark作业最近运行状态
+    * spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
     */
     @SerializedName("JobStatus")
     @Expose
@@ -326,6 +326,14 @@ public class SparkJobInfo extends AbstractModel {
     @SerializedName("IsSessionStarted")
     @Expose
     private Boolean IsSessionStarted;
+
+    /**
+    * 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineTypeDetail")
+    @Expose
+    private String EngineTypeDetail;
 
     /**
      * Get spark作业ID 
@@ -696,16 +704,16 @@ public class SparkJobInfo extends AbstractModel {
     }
 
     /**
-     * Get spark作业最近运行状态 
-     * @return JobStatus spark作业最近运行状态
+     * Get spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5 
+     * @return JobStatus spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
      */
     public Long getJobStatus() {
         return this.JobStatus;
     }
 
     /**
-     * Set spark作业最近运行状态
-     * @param JobStatus spark作业最近运行状态
+     * Set spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
+     * @param JobStatus spark作业最近运行状态，初始化：0，运行中：1，成功：2，数据写入中： 3， 排队中： 4， 失败： -1， 已删除： -3，已过期： -5
      */
     public void setJobStatus(Long JobStatus) {
         this.JobStatus = JobStatus;
@@ -1051,6 +1059,26 @@ public class SparkJobInfo extends AbstractModel {
         this.IsSessionStarted = IsSessionStarted;
     }
 
+    /**
+     * Get 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineTypeDetail 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineTypeDetail() {
+        return this.EngineTypeDetail;
+    }
+
+    /**
+     * Set 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineTypeDetail 引擎详细类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineTypeDetail(String EngineTypeDetail) {
+        this.EngineTypeDetail = EngineTypeDetail;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -1182,6 +1210,9 @@ public class SparkJobInfo extends AbstractModel {
         if (source.IsSessionStarted != null) {
             this.IsSessionStarted = new Boolean(source.IsSessionStarted);
         }
+        if (source.EngineTypeDetail != null) {
+            this.EngineTypeDetail = new String(source.EngineTypeDetail);
+        }
     }
 
 
@@ -1230,6 +1261,7 @@ public class SparkJobInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
         this.setParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
+        this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
 
     }
 }

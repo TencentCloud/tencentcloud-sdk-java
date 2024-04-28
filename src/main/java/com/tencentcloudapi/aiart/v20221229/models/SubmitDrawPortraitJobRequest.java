@@ -34,7 +34,7 @@ public class SubmitDrawPortraitJobRequest extends AbstractModel {
     /**
     * 写真风格模板，支持以下风格：
 zhengjian_female：证件照-长发（女）
-zhengjian_shouthair_female：证件照-短发（女）
+zhengjian_shorthair_female：证件照-短发（女）
 zhengjian_male：证件照（男）
 grey_suit_male：灰色西装（男）
 beige_suit_male：米色西装（男）
@@ -138,7 +138,7 @@ uhd：超清版，分辨率2048:2560
     /**
      * Get 写真风格模板，支持以下风格：
 zhengjian_female：证件照-长发（女）
-zhengjian_shouthair_female：证件照-短发（女）
+zhengjian_shorthair_female：证件照-短发（女）
 zhengjian_male：证件照（男）
 grey_suit_male：灰色西装（男）
 beige_suit_male：米色西装（男）
@@ -177,7 +177,7 @@ labour_female：田野劳作（女）
 simple：简洁风格（通用），一般用于写真模型的封面示意图，每个 ModelId 的生成结果固定，多次生成将返回相同图片 
      * @return StyleId 写真风格模板，支持以下风格：
 zhengjian_female：证件照-长发（女）
-zhengjian_shouthair_female：证件照-短发（女）
+zhengjian_shorthair_female：证件照-短发（女）
 zhengjian_male：证件照（男）
 grey_suit_male：灰色西装（男）
 beige_suit_male：米色西装（男）
@@ -222,7 +222,7 @@ simple：简洁风格（通用），一般用于写真模型的封面示意图�
     /**
      * Set 写真风格模板，支持以下风格：
 zhengjian_female：证件照-长发（女）
-zhengjian_shouthair_female：证件照-短发（女）
+zhengjian_shorthair_female：证件照-短发（女）
 zhengjian_male：证件照（男）
 grey_suit_male：灰色西装（男）
 beige_suit_male：米色西装（男）
@@ -261,7 +261,7 @@ labour_female：田野劳作（女）
 simple：简洁风格（通用），一般用于写真模型的封面示意图，每个 ModelId 的生成结果固定，多次生成将返回相同图片
      * @param StyleId 写真风格模板，支持以下风格：
 zhengjian_female：证件照-长发（女）
-zhengjian_shouthair_female：证件照-短发（女）
+zhengjian_shorthair_female：证件照-短发（女）
 zhengjian_male：证件照（男）
 grey_suit_male：灰色西装（男）
 beige_suit_male：米色西装（男）

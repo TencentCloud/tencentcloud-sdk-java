@@ -38,7 +38,7 @@ public class UpdateUserDataEngineConfigRequest extends AbstractModel {
     private DataEngineConfigPair [] DataEngineConfigPairs;
 
     /**
-    * 作业引擎资源配置模版
+    * 作业引擎资源配置模板
     */
     @SerializedName("SessionResourceTemplate")
     @Expose
@@ -77,16 +77,16 @@ public class UpdateUserDataEngineConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 作业引擎资源配置模版 
-     * @return SessionResourceTemplate 作业引擎资源配置模版
+     * Get 作业引擎资源配置模板 
+     * @return SessionResourceTemplate 作业引擎资源配置模板
      */
     public SessionResourceTemplate getSessionResourceTemplate() {
         return this.SessionResourceTemplate;
     }
 
     /**
-     * Set 作业引擎资源配置模版
-     * @param SessionResourceTemplate 作业引擎资源配置模版
+     * Set 作业引擎资源配置模板
+     * @param SessionResourceTemplate 作业引擎资源配置模板
      */
     public void setSessionResourceTemplate(SessionResourceTemplate SessionResourceTemplate) {
         this.SessionResourceTemplate = SessionResourceTemplate;

@@ -62,8 +62,9 @@ public class SubmitTextToImageProJobRequest extends AbstractModel {
 
     /**
     * 文生图模型，默认使用engine1。
-engine1：文生图（高级版）-混元
-engine2：文生图（高级版）
+取值：
+engine1
+engine2
     */
     @SerializedName("Engine")
     @Expose
@@ -181,11 +182,13 @@ engine2：文生图（高级版）
 
     /**
      * Get 文生图模型，默认使用engine1。
-engine1：文生图（高级版）-混元
-engine2：文生图（高级版） 
+取值：
+engine1
+engine2 
      * @return Engine 文生图模型，默认使用engine1。
-engine1：文生图（高级版）-混元
-engine2：文生图（高级版）
+取值：
+engine1
+engine2
      */
     public String getEngine() {
         return this.Engine;
@@ -193,11 +196,13 @@ engine2：文生图（高级版）
 
     /**
      * Set 文生图模型，默认使用engine1。
-engine1：文生图（高级版）-混元
-engine2：文生图（高级版）
+取值：
+engine1
+engine2
      * @param Engine 文生图模型，默认使用engine1。
-engine1：文生图（高级版）-混元
-engine2：文生图（高级版）
+取值：
+engine1
+engine2
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;

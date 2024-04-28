@@ -31,6 +31,14 @@ public class GetMsgRecordResponse extends AbstractModel {
     private MsgRecord [] Records;
 
     /**
+    * session 清除关联上下文时间, 单位 ms
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionDisassociatedTimestamp")
+    @Expose
+    private String SessionDisassociatedTimestamp;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class GetMsgRecordResponse extends AbstractModel {
      */
     public void setRecords(MsgRecord [] Records) {
         this.Records = Records;
+    }
+
+    /**
+     * Get session 清除关联上下文时间, 单位 ms
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionDisassociatedTimestamp session 清除关联上下文时间, 单位 ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionDisassociatedTimestamp() {
+        return this.SessionDisassociatedTimestamp;
+    }
+
+    /**
+     * Set session 清除关联上下文时间, 单位 ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionDisassociatedTimestamp session 清除关联上下文时间, 单位 ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionDisassociatedTimestamp(String SessionDisassociatedTimestamp) {
+        this.SessionDisassociatedTimestamp = SessionDisassociatedTimestamp;
     }
 
     /**
@@ -83,6 +111,9 @@ public class GetMsgRecordResponse extends AbstractModel {
                 this.Records[i] = new MsgRecord(source.Records[i]);
             }
         }
+        if (source.SessionDisassociatedTimestamp != null) {
+            this.SessionDisassociatedTimestamp = new String(source.SessionDisassociatedTimestamp);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +125,7 @@ public class GetMsgRecordResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Records.", this.Records);
+        this.setParamSimple(map, prefix + "SessionDisassociatedTimestamp", this.SessionDisassociatedTimestamp);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

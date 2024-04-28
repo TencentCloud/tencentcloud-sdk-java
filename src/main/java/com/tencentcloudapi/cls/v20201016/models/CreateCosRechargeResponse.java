@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCosRechargeResponse extends AbstractModel {
 
     /**
-    * cos_recharge记录id
+    * COS导入任务id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -39,9 +39,9 @@ public class CreateCosRechargeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get cos_recharge记录id
+     * Get COS导入任务id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id cos_recharge记录id
+     * @return Id COS导入任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -49,9 +49,9 @@ public class CreateCosRechargeResponse extends AbstractModel {
     }
 
     /**
-     * Set cos_recharge记录id
+     * Set COS导入任务id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id cos_recharge记录id
+     * @param Id COS导入任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {

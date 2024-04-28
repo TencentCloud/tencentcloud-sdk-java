@@ -87,6 +87,13 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     private String ImagePath;
 
     /**
+    * 上传存储目录
+    */
+    @SerializedName("UploadPath")
+    @Expose
+    private String UploadPath;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -238,6 +245,22 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     }
 
     /**
+     * Get 上传存储目录 
+     * @return UploadPath 上传存储目录
+     */
+    public String getUploadPath() {
+        return this.UploadPath;
+    }
+
+    /**
+     * Set 上传存储目录
+     * @param UploadPath 上传存储目录
+     */
+    public void setUploadPath(String UploadPath) {
+        this.UploadPath = UploadPath;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -288,6 +311,9 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
         if (source.ImagePath != null) {
             this.ImagePath = new String(source.ImagePath);
         }
+        if (source.UploadPath != null) {
+            this.UploadPath = new String(source.UploadPath);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -307,6 +333,7 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CorpUin", this.CorpUin);
         this.setParamSimple(map, prefix + "ImagePath", this.ImagePath);
+        this.setParamSimple(map, prefix + "UploadPath", this.UploadPath);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

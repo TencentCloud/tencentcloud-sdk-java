@@ -88,6 +88,20 @@ public class CreateCosRechargeRequest extends AbstractModel {
     private ExtractRuleInfo ExtractRuleInfo;
 
     /**
+    * COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+    * 元数据。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private String [] Metadata;
+
+    /**
      * Get 日志主题 ID 
      * @return TopicId 日志主题 ID
      */
@@ -235,6 +249,38 @@ public class CreateCosRechargeRequest extends AbstractModel {
         this.ExtractRuleInfo = ExtractRuleInfo;
     }
 
+    /**
+     * Get COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务 
+     * @return TaskType COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务
+     * @param TaskType COS导入任务类型。1：一次性导入任务；2：持续性导入任务。默认为1：一次性导入任务
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 元数据。 
+     * @return Metadata 元数据。
+     */
+    public String [] getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 元数据。
+     * @param Metadata 元数据。
+     */
+    public void setMetadata(String [] Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public CreateCosRechargeRequest() {
     }
 
@@ -270,6 +316,15 @@ public class CreateCosRechargeRequest extends AbstractModel {
         if (source.ExtractRuleInfo != null) {
             this.ExtractRuleInfo = new ExtractRuleInfo(source.ExtractRuleInfo);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new String[source.Metadata.length];
+            for (int i = 0; i < source.Metadata.length; i++) {
+                this.Metadata[i] = new String(source.Metadata[i]);
+            }
+        }
     }
 
 
@@ -286,6 +341,8 @@ public class CreateCosRechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamArraySimple(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

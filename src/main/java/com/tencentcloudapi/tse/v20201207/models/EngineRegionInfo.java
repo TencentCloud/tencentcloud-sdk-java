@@ -45,7 +45,8 @@ public class EngineRegionInfo extends AbstractModel {
     private VpcInfo [] VpcInfos;
 
     /**
-    * 是否为主地域
+    * Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域
     */
     @SerializedName("MainRegion")
     @Expose
@@ -107,16 +108,20 @@ public class EngineRegionInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否为主地域 
-     * @return MainRegion 是否为主地域
+     * Get Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域 
+     * @return MainRegion Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域
      */
     public Boolean getMainRegion() {
         return this.MainRegion;
     }
 
     /**
-     * Set 是否为主地域
-     * @param MainRegion 是否为主地域
+     * Set Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域
+     * @param MainRegion Polaris: 是否为主地域
+Zookeeper: 是否为Leader固定地域
      */
     public void setMainRegion(Boolean MainRegion) {
         this.MainRegion = MainRegion;

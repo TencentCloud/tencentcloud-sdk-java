@@ -1106,6 +1106,19 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持多种类型证件有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能。可以应用于各种证件信息有效性校验场景，例如银行开户、用户注册等场景。
+
+默认接口请求频率限制：10次/秒。
+     * @param req RecognizeGeneralTextImageWarnRequest
+     * @return RecognizeGeneralTextImageWarnResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeGeneralTextImageWarnResponse RecognizeGeneralTextImageWarn(RecognizeGeneralTextImageWarnRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeGeneralTextImageWarn", RecognizeGeneralTextImageWarnResponse.class);
+    }
+
+    /**
      *本接口支持北京、上海、广东、江苏、吉林、黑龙江、天津、辽宁、浙江、河南、四川、贵州、山东、安徽、福建、江西、湖北、湖南等省份健康码的识别，包括持码人姓名、持码人身份证号、健康码更新时间、健康码颜色、核酸检测结果、核酸检测间隔时长、核酸检测时间，疫苗接种信息，八个字段的识别结果输出。不同省市健康码显示的字段信息有所不同，上述字段的识别结果可能为空，以图片上具体展示的信息为准。
 
 默认接口请求频率限制：10次/秒。

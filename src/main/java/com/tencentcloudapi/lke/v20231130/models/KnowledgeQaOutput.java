@@ -48,6 +48,30 @@ public class KnowledgeQaOutput extends AbstractModel {
     private String BareAnswer;
 
     /**
+    * 是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShowQuestionClarify")
+    @Expose
+    private Boolean ShowQuestionClarify;
+
+    /**
+    * 是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseQuestionClarify")
+    @Expose
+    private Boolean UseQuestionClarify;
+
+    /**
+    * 问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuestionClarifyKeywords")
+    @Expose
+    private String [] QuestionClarifyKeywords;
+
+    /**
      * Get 输出方式 1：流式 2：非流式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Method 输出方式 1：流式 2：非流式
@@ -107,6 +131,66 @@ public class KnowledgeQaOutput extends AbstractModel {
         this.BareAnswer = BareAnswer;
     }
 
+    /**
+     * Get 是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShowQuestionClarify 是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getShowQuestionClarify() {
+        return this.ShowQuestionClarify;
+    }
+
+    /**
+     * Set 是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShowQuestionClarify 是否展示问题澄清开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShowQuestionClarify(Boolean ShowQuestionClarify) {
+        this.ShowQuestionClarify = ShowQuestionClarify;
+    }
+
+    /**
+     * Get 是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseQuestionClarify 是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseQuestionClarify() {
+        return this.UseQuestionClarify;
+    }
+
+    /**
+     * Set 是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseQuestionClarify 是否打开问题澄清
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseQuestionClarify(Boolean UseQuestionClarify) {
+        this.UseQuestionClarify = UseQuestionClarify;
+    }
+
+    /**
+     * Get 问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuestionClarifyKeywords 问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getQuestionClarifyKeywords() {
+        return this.QuestionClarifyKeywords;
+    }
+
+    /**
+     * Set 问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuestionClarifyKeywords 问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuestionClarifyKeywords(String [] QuestionClarifyKeywords) {
+        this.QuestionClarifyKeywords = QuestionClarifyKeywords;
+    }
+
     public KnowledgeQaOutput() {
     }
 
@@ -124,6 +208,18 @@ public class KnowledgeQaOutput extends AbstractModel {
         if (source.BareAnswer != null) {
             this.BareAnswer = new String(source.BareAnswer);
         }
+        if (source.ShowQuestionClarify != null) {
+            this.ShowQuestionClarify = new Boolean(source.ShowQuestionClarify);
+        }
+        if (source.UseQuestionClarify != null) {
+            this.UseQuestionClarify = new Boolean(source.UseQuestionClarify);
+        }
+        if (source.QuestionClarifyKeywords != null) {
+            this.QuestionClarifyKeywords = new String[source.QuestionClarifyKeywords.length];
+            for (int i = 0; i < source.QuestionClarifyKeywords.length; i++) {
+                this.QuestionClarifyKeywords[i] = new String(source.QuestionClarifyKeywords[i]);
+            }
+        }
     }
 
 
@@ -134,6 +230,9 @@ public class KnowledgeQaOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "UseGeneralKnowledge", this.UseGeneralKnowledge);
         this.setParamSimple(map, prefix + "BareAnswer", this.BareAnswer);
+        this.setParamSimple(map, prefix + "ShowQuestionClarify", this.ShowQuestionClarify);
+        this.setParamSimple(map, prefix + "UseQuestionClarify", this.UseQuestionClarify);
+        this.setParamArraySimple(map, prefix + "QuestionClarifyKeywords.", this.QuestionClarifyKeywords);
 
     }
 }

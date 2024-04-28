@@ -48,6 +48,14 @@ public class LimitRule extends AbstractModel {
     private QpsThreshold [] QpsThresholds;
 
     /**
+    * 精确限流阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccurateQpsThresholds")
+    @Expose
+    private AccurateQpsThreshold [] AccurateQpsThresholds;
+
+    /**
      * Get 请求匹配条件
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Filters 请求匹配条件
@@ -107,6 +115,26 @@ public class LimitRule extends AbstractModel {
         this.QpsThresholds = QpsThresholds;
     }
 
+    /**
+     * Get 精确限流阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccurateQpsThresholds 精确限流阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccurateQpsThreshold [] getAccurateQpsThresholds() {
+        return this.AccurateQpsThresholds;
+    }
+
+    /**
+     * Set 精确限流阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccurateQpsThresholds 精确限流阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccurateQpsThresholds(AccurateQpsThreshold [] AccurateQpsThresholds) {
+        this.AccurateQpsThresholds = AccurateQpsThresholds;
+    }
+
     public LimitRule() {
     }
 
@@ -133,6 +161,12 @@ public class LimitRule extends AbstractModel {
                 this.QpsThresholds[i] = new QpsThreshold(source.QpsThresholds[i]);
             }
         }
+        if (source.AccurateQpsThresholds != null) {
+            this.AccurateQpsThresholds = new AccurateQpsThreshold[source.AccurateQpsThresholds.length];
+            for (int i = 0; i < source.AccurateQpsThresholds.length; i++) {
+                this.AccurateQpsThresholds[i] = new AccurateQpsThreshold(source.AccurateQpsThresholds[i]);
+            }
+        }
     }
 
 
@@ -143,6 +177,7 @@ public class LimitRule extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "LimitBy.", this.LimitBy);
         this.setParamArrayObj(map, prefix + "QpsThresholds.", this.QpsThresholds);
+        this.setParamArrayObj(map, prefix + "AccurateQpsThresholds.", this.AccurateQpsThresholds);
 
     }
 }

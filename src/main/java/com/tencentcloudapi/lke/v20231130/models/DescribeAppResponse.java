@@ -101,6 +101,20 @@ public class DescribeAppResponse extends AbstractModel {
     private String AppKey;
 
     /**
+    * 应用状态，1：未上线，2：运行中，3：停用
+    */
+    @SerializedName("AppStatus")
+    @Expose
+    private Long AppStatus;
+
+    /**
+    * 状态说明
+    */
+    @SerializedName("AppStatusDesc")
+    @Expose
+    private String AppStatusDesc;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -284,6 +298,38 @@ public class DescribeAppResponse extends AbstractModel {
     }
 
     /**
+     * Get 应用状态，1：未上线，2：运行中，3：停用 
+     * @return AppStatus 应用状态，1：未上线，2：运行中，3：停用
+     */
+    public Long getAppStatus() {
+        return this.AppStatus;
+    }
+
+    /**
+     * Set 应用状态，1：未上线，2：运行中，3：停用
+     * @param AppStatus 应用状态，1：未上线，2：运行中，3：停用
+     */
+    public void setAppStatus(Long AppStatus) {
+        this.AppStatus = AppStatus;
+    }
+
+    /**
+     * Get 状态说明 
+     * @return AppStatusDesc 状态说明
+     */
+    public String getAppStatusDesc() {
+        return this.AppStatusDesc;
+    }
+
+    /**
+     * Set 状态说明
+     * @param AppStatusDesc 状态说明
+     */
+    public void setAppStatusDesc(String AppStatusDesc) {
+        this.AppStatusDesc = AppStatusDesc;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -340,6 +386,12 @@ public class DescribeAppResponse extends AbstractModel {
         if (source.AppKey != null) {
             this.AppKey = new String(source.AppKey);
         }
+        if (source.AppStatus != null) {
+            this.AppStatus = new Long(source.AppStatus);
+        }
+        if (source.AppStatusDesc != null) {
+            this.AppStatusDesc = new String(source.AppStatusDesc);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -361,6 +413,8 @@ public class DescribeAppResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "GreetingInAppeal", this.GreetingInAppeal);
         this.setParamSimple(map, prefix + "BareAnswerInAppeal", this.BareAnswerInAppeal);
         this.setParamSimple(map, prefix + "AppKey", this.AppKey);
+        this.setParamSimple(map, prefix + "AppStatus", this.AppStatus);
+        this.setParamSimple(map, prefix + "AppStatusDesc", this.AppStatusDesc);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

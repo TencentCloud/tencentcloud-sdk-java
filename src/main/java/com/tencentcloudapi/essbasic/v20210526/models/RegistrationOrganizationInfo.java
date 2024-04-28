@@ -82,7 +82,7 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     private String AdminName;
 
     /**
-    * 组织机构超管姓名。
+    * 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
     */
     @SerializedName("AdminMobile")
@@ -286,9 +286,9 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     }
 
     /**
-     * Get 组织机构超管姓名。
+     * Get 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。 
-     * @return AdminMobile 组织机构超管姓名。
+     * @return AdminMobile 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
      */
     public String getAdminMobile() {
@@ -296,9 +296,9 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     }
 
     /**
-     * Set 组织机构超管姓名。
+     * Set 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
-     * @param AdminMobile 组织机构超管姓名。
+     * @param AdminMobile 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
      */
     public void setAdminMobile(String AdminMobile) {

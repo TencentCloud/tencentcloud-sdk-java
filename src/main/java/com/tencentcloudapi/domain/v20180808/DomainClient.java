@@ -380,6 +380,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *修改模板信息
+     * @param req ModifyTemplateRequest
+     * @return ModifyTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTemplateResponse ModifyTemplate(ModifyTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTemplate", ModifyTemplateResponse.class);
+    }
+
+    /**
      *本接口 ( RenewDomainBatch ) 用于批量续费域名 。
 
      * @param req RenewDomainBatchRequest

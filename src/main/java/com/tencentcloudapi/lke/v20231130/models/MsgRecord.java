@@ -122,6 +122,21 @@ public class MsgRecord extends AbstractModel {
     private Boolean IsLlmGenerated;
 
     /**
+    * 图片链接，可公有读
+    */
+    @SerializedName("ImageUrls")
+    @Expose
+    private String [] ImageUrls;
+
+    /**
+    * 当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TokenStat")
+    @Expose
+    private TokenStat TokenStat;
+
+    /**
      * Get 内容 
      * @return Content 内容
      */
@@ -345,6 +360,42 @@ public class MsgRecord extends AbstractModel {
         this.IsLlmGenerated = IsLlmGenerated;
     }
 
+    /**
+     * Get 图片链接，可公有读 
+     * @return ImageUrls 图片链接，可公有读
+     */
+    public String [] getImageUrls() {
+        return this.ImageUrls;
+    }
+
+    /**
+     * Set 图片链接，可公有读
+     * @param ImageUrls 图片链接，可公有读
+     */
+    public void setImageUrls(String [] ImageUrls) {
+        this.ImageUrls = ImageUrls;
+    }
+
+    /**
+     * Get 当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TokenStat 当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TokenStat getTokenStat() {
+        return this.TokenStat;
+    }
+
+    /**
+     * Set 当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TokenStat 当次 token 统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTokenStat(TokenStat TokenStat) {
+        this.TokenStat = TokenStat;
+    }
+
     public MsgRecord() {
     }
 
@@ -401,6 +452,15 @@ public class MsgRecord extends AbstractModel {
         if (source.IsLlmGenerated != null) {
             this.IsLlmGenerated = new Boolean(source.IsLlmGenerated);
         }
+        if (source.ImageUrls != null) {
+            this.ImageUrls = new String[source.ImageUrls.length];
+            for (int i = 0; i < source.ImageUrls.length; i++) {
+                this.ImageUrls[i] = new String(source.ImageUrls[i]);
+            }
+        }
+        if (source.TokenStat != null) {
+            this.TokenStat = new TokenStat(source.TokenStat);
+        }
     }
 
 
@@ -422,6 +482,8 @@ public class MsgRecord extends AbstractModel {
         this.setParamArrayObj(map, prefix + "References.", this.References);
         this.setParamArraySimple(map, prefix + "Reasons.", this.Reasons);
         this.setParamSimple(map, prefix + "IsLlmGenerated", this.IsLlmGenerated);
+        this.setParamArraySimple(map, prefix + "ImageUrls.", this.ImageUrls);
+        this.setParamObj(map, prefix + "TokenStat.", this.TokenStat);
 
     }
 }

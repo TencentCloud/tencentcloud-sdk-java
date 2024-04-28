@@ -31,6 +31,13 @@ public class ResetSessionRequest extends AbstractModel {
     private String SessionId;
 
     /**
+    * 是否仅清空会话关联
+    */
+    @SerializedName("IsOnlyEmptyTheDialog")
+    @Expose
+    private Boolean IsOnlyEmptyTheDialog;
+
+    /**
      * Get 会话ID 
      * @return SessionId 会话ID
      */
@@ -46,6 +53,22 @@ public class ResetSessionRequest extends AbstractModel {
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get 是否仅清空会话关联 
+     * @return IsOnlyEmptyTheDialog 是否仅清空会话关联
+     */
+    public Boolean getIsOnlyEmptyTheDialog() {
+        return this.IsOnlyEmptyTheDialog;
+    }
+
+    /**
+     * Set 是否仅清空会话关联
+     * @param IsOnlyEmptyTheDialog 是否仅清空会话关联
+     */
+    public void setIsOnlyEmptyTheDialog(Boolean IsOnlyEmptyTheDialog) {
+        this.IsOnlyEmptyTheDialog = IsOnlyEmptyTheDialog;
+    }
+
     public ResetSessionRequest() {
     }
 
@@ -57,6 +80,9 @@ public class ResetSessionRequest extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.IsOnlyEmptyTheDialog != null) {
+            this.IsOnlyEmptyTheDialog = new Boolean(source.IsOnlyEmptyTheDialog);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ResetSessionRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "IsOnlyEmptyTheDialog", this.IsOnlyEmptyTheDialog);
 
     }
 }

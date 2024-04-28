@@ -201,6 +201,13 @@ zk标准版没有跨地域部署，请不要填写
     private StorageOption [] StorageOption;
 
     /**
+    * ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+    */
+    @SerializedName("AffinityConstraint")
+    @Expose
+    private String AffinityConstraint;
+
+    /**
      * Get 引擎类型。参考值：
 - zookeeper
 - nacos
@@ -704,6 +711,22 @@ zk标准版没有跨地域部署，请不要填写
         this.StorageOption = StorageOption;
     }
 
+    /**
+     * Get ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束 
+     * @return AffinityConstraint ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+     */
+    public String getAffinityConstraint() {
+        return this.AffinityConstraint;
+    }
+
+    /**
+     * Set ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+     * @param AffinityConstraint ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+     */
+    public void setAffinityConstraint(String AffinityConstraint) {
+        this.AffinityConstraint = AffinityConstraint;
+    }
+
     public CreateEngineRequest() {
     }
 
@@ -775,6 +798,9 @@ zk标准版没有跨地域部署，请不要填写
                 this.StorageOption[i] = new StorageOption(source.StorageOption[i]);
             }
         }
+        if (source.AffinityConstraint != null) {
+            this.AffinityConstraint = new String(source.AffinityConstraint);
+        }
     }
 
 
@@ -799,6 +825,7 @@ zk标准版没有跨地域部署，请不要填写
         this.setParamSimple(map, prefix + "PrepaidRenewFlag", this.PrepaidRenewFlag);
         this.setParamArrayObj(map, prefix + "EngineRegionInfos.", this.EngineRegionInfos);
         this.setParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
+        this.setParamSimple(map, prefix + "AffinityConstraint", this.AffinityConstraint);
 
     }
 }

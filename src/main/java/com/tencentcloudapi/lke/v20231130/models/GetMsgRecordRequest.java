@@ -59,6 +59,13 @@ public class GetMsgRecordRequest extends AbstractModel {
     private String BotAppKey;
 
     /**
+    * 场景, 体验: 1; 正式: 2
+    */
+    @SerializedName("Scene")
+    @Expose
+    private Long Scene;
+
+    /**
      * Get 类型 
      * @return Type 类型
      */
@@ -138,6 +145,22 @@ public class GetMsgRecordRequest extends AbstractModel {
         this.BotAppKey = BotAppKey;
     }
 
+    /**
+     * Get 场景, 体验: 1; 正式: 2 
+     * @return Scene 场景, 体验: 1; 正式: 2
+     */
+    public Long getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * Set 场景, 体验: 1; 正式: 2
+     * @param Scene 场景, 体验: 1; 正式: 2
+     */
+    public void setScene(Long Scene) {
+        this.Scene = Scene;
+    }
+
     public GetMsgRecordRequest() {
     }
 
@@ -161,6 +184,9 @@ public class GetMsgRecordRequest extends AbstractModel {
         if (source.BotAppKey != null) {
             this.BotAppKey = new String(source.BotAppKey);
         }
+        if (source.Scene != null) {
+            this.Scene = new Long(source.Scene);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class GetMsgRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
         this.setParamSimple(map, prefix + "BotAppKey", this.BotAppKey);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
 
     }
 }

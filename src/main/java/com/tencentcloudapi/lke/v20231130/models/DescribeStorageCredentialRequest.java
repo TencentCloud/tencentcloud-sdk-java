@@ -31,6 +31,20 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
     private String BotBizId;
 
     /**
+    * 文件类型
+    */
+    @SerializedName("FileType")
+    @Expose
+    private String FileType;
+
+    /**
+    * 权限场景，是否公有权限
+    */
+    @SerializedName("IsPublic")
+    @Expose
+    private Boolean IsPublic;
+
+    /**
      * Get 机器人ID 
      * @return BotBizId 机器人ID
      */
@@ -46,6 +60,38 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
         this.BotBizId = BotBizId;
     }
 
+    /**
+     * Get 文件类型 
+     * @return FileType 文件类型
+     */
+    public String getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set 文件类型
+     * @param FileType 文件类型
+     */
+    public void setFileType(String FileType) {
+        this.FileType = FileType;
+    }
+
+    /**
+     * Get 权限场景，是否公有权限 
+     * @return IsPublic 权限场景，是否公有权限
+     */
+    public Boolean getIsPublic() {
+        return this.IsPublic;
+    }
+
+    /**
+     * Set 权限场景，是否公有权限
+     * @param IsPublic 权限场景，是否公有权限
+     */
+    public void setIsPublic(Boolean IsPublic) {
+        this.IsPublic = IsPublic;
+    }
+
     public DescribeStorageCredentialRequest() {
     }
 
@@ -57,6 +103,12 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
         if (source.BotBizId != null) {
             this.BotBizId = new String(source.BotBizId);
         }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.IsPublic != null) {
+            this.IsPublic = new Boolean(source.IsPublic);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "IsPublic", this.IsPublic);
 
     }
 }

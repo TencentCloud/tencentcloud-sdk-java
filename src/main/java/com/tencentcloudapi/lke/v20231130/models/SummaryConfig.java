@@ -40,6 +40,14 @@ public class SummaryConfig extends AbstractModel {
     private SummaryOutput Output;
 
     /**
+    * 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Greeting")
+    @Expose
+    private String Greeting;
+
+    /**
      * Get 模型配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Model 模型配置
@@ -79,6 +87,26 @@ public class SummaryConfig extends AbstractModel {
         this.Output = Output;
     }
 
+    /**
+     * Get 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Greeting 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGreeting() {
+        return this.Greeting;
+    }
+
+    /**
+     * Set 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Greeting 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGreeting(String Greeting) {
+        this.Greeting = Greeting;
+    }
+
     public SummaryConfig() {
     }
 
@@ -93,6 +121,9 @@ public class SummaryConfig extends AbstractModel {
         if (source.Output != null) {
             this.Output = new SummaryOutput(source.Output);
         }
+        if (source.Greeting != null) {
+            this.Greeting = new String(source.Greeting);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class SummaryConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Model.", this.Model);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Greeting", this.Greeting);
 
     }
 }

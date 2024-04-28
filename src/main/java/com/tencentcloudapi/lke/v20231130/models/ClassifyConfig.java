@@ -40,6 +40,14 @@ public class ClassifyConfig extends AbstractModel {
     private ClassifyLabel [] Labels;
 
     /**
+    * 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Greeting")
+    @Expose
+    private String Greeting;
+
+    /**
      * Get 模型配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Model 模型配置
@@ -79,6 +87,26 @@ public class ClassifyConfig extends AbstractModel {
         this.Labels = Labels;
     }
 
+    /**
+     * Get 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Greeting 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGreeting() {
+        return this.Greeting;
+    }
+
+    /**
+     * Set 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Greeting 欢迎语，200字符以内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGreeting(String Greeting) {
+        this.Greeting = Greeting;
+    }
+
     public ClassifyConfig() {
     }
 
@@ -96,6 +124,9 @@ public class ClassifyConfig extends AbstractModel {
                 this.Labels[i] = new ClassifyLabel(source.Labels[i]);
             }
         }
+        if (source.Greeting != null) {
+            this.Greeting = new String(source.Greeting);
+        }
     }
 
 
@@ -105,6 +136,7 @@ public class ClassifyConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Model.", this.Model);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamSimple(map, prefix + "Greeting", this.Greeting);
 
     }
 }

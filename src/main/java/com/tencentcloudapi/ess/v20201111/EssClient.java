@@ -999,6 +999,21 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口用于获取企业批量认证异步任务的状态及结果。
+
+前提条件：已调用 CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口，并得到了任务Id。
+
+异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间
+     * @param req DescribeBatchOrganizationRegistrationUrlsRequest
+     * @return DescribeBatchOrganizationRegistrationUrlsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchOrganizationRegistrationUrlsResponse DescribeBatchOrganizationRegistrationUrls(DescribeBatchOrganizationRegistrationUrlsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchOrganizationRegistrationUrls", DescribeBatchOrganizationRegistrationUrlsResponse.class);
+    }
+
+    /**
      *通过此接口（DescribeBillUsage）查询该企业的套餐套餐使用情况。
      * @param req DescribeBillUsageRequest
      * @return DescribeBillUsageResponse
