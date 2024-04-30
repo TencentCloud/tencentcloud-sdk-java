@@ -38,7 +38,7 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     private String GroupName;
 
     /**
-    * 机器组类型
+    * 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
     */
     @SerializedName("MachineGroupType")
     @Expose
@@ -80,7 +80,7 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     private Boolean ServiceLogging;
 
     /**
-    * 机器组中机器定期离线清理时间
+    * 机器组中机器定期离线清理时间。单位：天
     */
     @SerializedName("DelayCleanupTime")
     @Expose
@@ -126,16 +126,16 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 机器组类型 
-     * @return MachineGroupType 机器组类型
+     * Get 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。 
+     * @return MachineGroupType 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
      */
     public MachineGroupTypeInfo getMachineGroupType() {
         return this.MachineGroupType;
     }
 
     /**
-     * Set 机器组类型
-     * @param MachineGroupType 机器组类型
+     * Set 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+     * @param MachineGroupType 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
      */
     public void setMachineGroupType(MachineGroupTypeInfo MachineGroupType) {
         this.MachineGroupType = MachineGroupType;
@@ -222,16 +222,16 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 机器组中机器定期离线清理时间 
-     * @return DelayCleanupTime 机器组中机器定期离线清理时间
+     * Get 机器组中机器定期离线清理时间。单位：天 
+     * @return DelayCleanupTime 机器组中机器定期离线清理时间。单位：天
      */
     public Long getDelayCleanupTime() {
         return this.DelayCleanupTime;
     }
 
     /**
-     * Set 机器组中机器定期离线清理时间
-     * @param DelayCleanupTime 机器组中机器定期离线清理时间
+     * Set 机器组中机器定期离线清理时间。单位：天
+     * @param DelayCleanupTime 机器组中机器定期离线清理时间。单位：天
      */
     public void setDelayCleanupTime(Long DelayCleanupTime) {
         this.DelayCleanupTime = DelayCleanupTime;

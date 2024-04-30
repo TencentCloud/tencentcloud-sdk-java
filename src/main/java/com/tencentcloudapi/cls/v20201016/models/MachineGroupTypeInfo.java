@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class MachineGroupTypeInfo extends AbstractModel {
 
     /**
-    * 机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
+    * 机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 机器描述列表
+    * 机器描述列表。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签 
-     * @return Type 机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
+     * Get 机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签 
+     * @return Type 机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
-     * @param Type 机器组类型，ip表示该机器组Values中存的是采集机器的IP地址，label表示该机器组Values中存储的是机器的标签
+     * Set 机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签
+     * @param Type 机器组类型。支持 ip 和 label。
+- ip：表示该机器组Values中存的是采集机器的ip地址
+- label：表示该机器组Values中存储的是机器的标签
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 机器描述列表 
-     * @return Values 机器描述列表
+     * Get 机器描述列表。 
+     * @return Values 机器描述列表。
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 机器描述列表
-     * @param Values 机器描述列表
+     * Set 机器描述列表。
+     * @param Values 机器描述列表。
      */
     public void setValues(String [] Values) {
         this.Values = Values;

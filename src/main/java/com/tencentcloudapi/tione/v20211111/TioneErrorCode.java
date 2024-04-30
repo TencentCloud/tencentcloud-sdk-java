@@ -246,7 +246,7 @@ public enum TioneErrorCode {
     // 查询子网信息失败。
      INTERNALERROR_QUERYSUBNETINFOFAILED("InternalError.QuerySubnetInfoFailed"),
      
-    // 查询用户临时秘钥失败
+    // 查询用户临时密钥失败
      INTERNALERROR_QUERYUSERTMPCREDENTIALFAILED("InternalError.QueryUserTMPCredentialFailed"),
      
     // 查询vpc信息失败

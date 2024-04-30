@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GitSecret extends AbstractModel {
 
     /**
-    * 无秘钥，默认选项
+    * 无密钥，默认选项
     */
     @SerializedName("NoSecret")
     @Expose
@@ -40,16 +40,16 @@ public class GitSecret extends AbstractModel {
     private String Secret;
 
     /**
-     * Get 无秘钥，默认选项 
-     * @return NoSecret 无秘钥，默认选项
+     * Get 无密钥，默认选项 
+     * @return NoSecret 无密钥，默认选项
      */
     public Boolean getNoSecret() {
         return this.NoSecret;
     }
 
     /**
-     * Set 无秘钥，默认选项
-     * @param NoSecret 无秘钥，默认选项
+     * Set 无密钥，默认选项
+     * @param NoSecret 无密钥，默认选项
      */
     public void setNoSecret(Boolean NoSecret) {
         this.NoSecret = NoSecret;

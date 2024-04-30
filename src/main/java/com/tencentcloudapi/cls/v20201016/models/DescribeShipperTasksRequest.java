@@ -31,14 +31,16 @@ public class DescribeShipperTasksRequest extends AbstractModel {
     private String ShipperId;
 
     /**
-    * 查询的开始时间戳，支持最近3天的查询， 毫秒
+    * 查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询的结束时间戳， 毫秒
+    * 查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime
     */
     @SerializedName("EndTime")
     @Expose
@@ -61,32 +63,40 @@ public class DescribeShipperTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询的开始时间戳，支持最近3天的查询， 毫秒 
-     * @return StartTime 查询的开始时间戳，支持最近3天的查询， 毫秒
+     * Get 查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime 
+     * @return StartTime 查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询的开始时间戳，支持最近3天的查询， 毫秒
-     * @param StartTime 查询的开始时间戳，支持最近3天的查询， 毫秒
+     * Set 查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime
+     * @param StartTime 查询的开始时间戳，支持最近3天的查询， 毫秒。
+StartTime必须小于EndTime
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询的结束时间戳， 毫秒 
-     * @return EndTime 查询的结束时间戳， 毫秒
+     * Get 查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime 
+     * @return EndTime 查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询的结束时间戳， 毫秒
-     * @param EndTime 查询的结束时间戳， 毫秒
+     * Set 查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime
+     * @param EndTime 查询的结束时间戳， 毫秒。
+StartTime必须小于EndTime
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

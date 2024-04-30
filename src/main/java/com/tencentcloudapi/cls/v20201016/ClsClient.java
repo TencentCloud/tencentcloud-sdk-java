@@ -171,6 +171,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *此接口用于创建仪表盘订阅
+     * @param req CreateDashboardSubscribeRequest
+     * @return CreateDashboardSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDashboardSubscribeResponse CreateDashboardSubscribe(CreateDashboardSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDashboardSubscribe", CreateDashboardSubscribeResponse.class);
+    }
+
+    /**
      *本接口用于创建数据加工任务。
      * @param req CreateDataTransformRequest
      * @return CreateDataTransformResponse
@@ -355,6 +366,17 @@ public class ClsClient extends AbstractClient{
     public DeleteConsumerResponse DeleteConsumer(DeleteConsumerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteConsumer", DeleteConsumerResponse.class);
+    }
+
+    /**
+     *此接口用于删除仪表盘订阅
+     * @param req DeleteDashboardSubscribeRequest
+     * @return DeleteDashboardSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDashboardSubscribeResponse DeleteDashboardSubscribe(DeleteDashboardSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDashboardSubscribe", DeleteDashboardSubscribeResponse.class);
     }
 
     /**
@@ -564,6 +586,17 @@ public class ClsClient extends AbstractClient{
     public DescribeCosRechargesResponse DescribeCosRecharges(DescribeCosRechargesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCosRecharges", DescribeCosRechargesResponse.class);
+    }
+
+    /**
+     * 本接口用于获取仪表盘订阅列表，支持分页
+     * @param req DescribeDashboardSubscribesRequest
+     * @return DescribeDashboardSubscribesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDashboardSubscribesResponse DescribeDashboardSubscribes(DescribeDashboardSubscribesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDashboardSubscribes", DescribeDashboardSubscribesResponse.class);
     }
 
     /**
@@ -854,6 +887,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *此接口用于修改仪表盘订阅
+     * @param req ModifyDashboardSubscribeRequest
+     * @return ModifyDashboardSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDashboardSubscribeResponse ModifyDashboardSubscribe(ModifyDashboardSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDashboardSubscribe", ModifyDashboardSubscribeResponse.class);
+    }
+
+    /**
      *本接口用于修改数据加工任务
      * @param req ModifyDataTransformRequest
      * @return ModifyDataTransformResponse
@@ -1016,6 +1060,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public SearchCosRechargeInfoResponse SearchCosRechargeInfo(SearchCosRechargeInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchCosRechargeInfo", SearchCosRechargeInfoResponse.class);
+    }
+
+    /**
+     *此接口用于预览仪表盘订阅
+     * @param req SearchDashboardSubscribeRequest
+     * @return SearchDashboardSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchDashboardSubscribeResponse SearchDashboardSubscribe(SearchDashboardSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchDashboardSubscribe", SearchDashboardSubscribeResponse.class);
     }
 
     /**

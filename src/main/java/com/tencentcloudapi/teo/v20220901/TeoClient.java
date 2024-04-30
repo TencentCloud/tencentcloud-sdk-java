@@ -185,6 +185,18 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *若您需要使用 Edgeone 产品，您需要通过此接口创建计费套餐。
+> 创建套餐后，您需要通过 [CreateZone](https://cloud.tencent.com/document/product/1552/80719) 完成创建站点，绑定套餐的流程，Edgeone 才能正常提供服务。
+     * @param req CreatePlanRequest
+     * @return CreatePlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePlanResponse CreatePlan(CreatePlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePlan", CreatePlanResponse.class);
+    }
+
+    /**
      *为未购买套餐的站点购买套餐
      * @param req CreatePlanForZoneRequest
      * @return CreatePlanForZoneResponse
@@ -818,6 +830,24 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *当您需要停止 Edgeone 套餐的计费，可以通过该接口销毁计费套餐。
+> 销毁计费套餐需要满足以下条件：
+    1.套餐已过期（企业版套餐除外）；
+    2.套餐下所有站点均已关闭或删除。
+
+> 站点状态可以通过 [查询站点列表](https://cloud.tencent.com/document/product/1552/80713) 接口进行查询
+停用站点可以通过 [切换站点状态](https://cloud.tencent.com/document/product/1552/80707) 接口将站点切换至关闭状态
+删除站点可以通过 [删除站点](https://cloud.tencent.com/document/product/1552/80717) 接口将站点删除
+     * @param req DestroyPlanRequest
+     * @return DestroyPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPlanResponse DestroyPlan(DestroyPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyPlan", DestroyPlanResponse.class);
+    }
+
+    /**
      *本接口（DownloadL4Logs）用于下载四层离线日志。
      * @param req DownloadL4LogsRequest
      * @return DownloadL4LogsResponse
@@ -848,6 +878,18 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public IdentifyZoneResponse IdentifyZone(IdentifyZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IdentifyZone", IdentifyZoneResponse.class);
+    }
+
+    /**
+     *当您的套餐绑定的站点数，或配置的 Web 防护 - 自定义规则 - 精准匹配策略的规则数，或 Web 防护 - 速率限制 - 精准速率限制模块的规则数达到套餐允许的配额上限，可以通过该接口增购对应配额。
+> 该接口该仅支持企业版套餐。
+     * @param req IncreasePlanQuotaRequest
+     * @return IncreasePlanQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public IncreasePlanQuotaResponse IncreasePlanQuota(IncreasePlanQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IncreasePlanQuota", IncreasePlanQuotaResponse.class);
     }
 
     /**
@@ -1010,6 +1052,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *修改套餐配置。目前仅支持修改预付费套餐的自动续费开关。
+     * @param req ModifyPlanRequest
+     * @return ModifyPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPlanResponse ModifyPlan(ModifyPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPlan", ModifyPlanResponse.class);
+    }
+
+    /**
      *通过本接口修改实时日志投递任务配置。本接口有如下限制：<li>不支持修改实时日志投递任务目的地类型（TaskType）；</li><li>不支持修改数据投递类型（LogType）</li><li>不支持修改数据投递区域（Area）</li><li>当原实时日志投递任务的目的地为腾讯云 CLS 时，不支持修改目的地详细配置，如日志集、日志主题。</li>
      * @param req ModifyRealtimeLogDeliveryTaskRequest
      * @return ModifyRealtimeLogDeliveryTaskResponse
@@ -1084,6 +1137,32 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
+    }
+
+    /**
+     *当您的套餐需要延长有效期，可以通过该接口进行续费。套餐续费仅支持个人版，基础版，标准版套餐。
+> 费用详情可参考 [套餐费用](https://cloud.tencent.com/document/product/1552/94158)
+     * @param req RenewPlanRequest
+     * @return RenewPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewPlanResponse RenewPlan(RenewPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewPlan", RenewPlanResponse.class);
+    }
+
+    /**
+     *当您需要使用高等级套餐才拥有的功能，可以通过本接口升级套餐，仅支持个人版，基础版套餐进行升级。
+> 不同类型 Edgeone 计费套餐区别参考 [Edgeone计费套餐选型对比](https://cloud.tencent.com/document/product/1552/94165)
+计费套餐升级规则以及资费详情参考 [Edgeone计费套餐升配说明](https://cloud.tencent.com/document/product/1552/95291)
+如果需要将套餐升级至企业版，请 [联系我们](https://cloud.tencent.com/online-service)
+     * @param req UpgradePlanRequest
+     * @return UpgradePlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradePlanResponse UpgradePlan(UpgradePlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradePlan", UpgradePlanResponse.class);
     }
 
     /**

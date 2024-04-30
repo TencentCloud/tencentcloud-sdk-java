@@ -45,7 +45,7 @@ public class CreateDataTransformRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 加工语句
+    * 加工语句。[创建加工任务](https://cloud.tencent.com/document/product/614/63940)  [函数总览](https://cloud.tencent.com/document/product/614/70395)
     */
     @SerializedName("EtlContent")
     @Expose
@@ -129,16 +129,16 @@ public class CreateDataTransformRequest extends AbstractModel {
     }
 
     /**
-     * Get 加工语句 
-     * @return EtlContent 加工语句
+     * Get 加工语句。[创建加工任务](https://cloud.tencent.com/document/product/614/63940)  [函数总览](https://cloud.tencent.com/document/product/614/70395) 
+     * @return EtlContent 加工语句。[创建加工任务](https://cloud.tencent.com/document/product/614/63940)  [函数总览](https://cloud.tencent.com/document/product/614/70395)
      */
     public String getEtlContent() {
         return this.EtlContent;
     }
 
     /**
-     * Set 加工语句
-     * @param EtlContent 加工语句
+     * Set 加工语句。[创建加工任务](https://cloud.tencent.com/document/product/614/63940)  [函数总览](https://cloud.tencent.com/document/product/614/70395)
+     * @param EtlContent 加工语句。[创建加工任务](https://cloud.tencent.com/document/product/614/63940)  [函数总览](https://cloud.tencent.com/document/product/614/70395)
      */
     public void setEtlContent(String EtlContent) {
         this.EtlContent = EtlContent;
