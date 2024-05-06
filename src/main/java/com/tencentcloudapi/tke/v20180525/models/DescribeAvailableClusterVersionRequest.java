@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeAvailableClusterVersionRequest extends AbstractModel {
 
     /**
-    * 集群 Id
+    * 集群 Id。若只查询某个集群可升级的版本，需填写此项。
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群 Id 列表
+    * 集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-     * Get 集群 Id 
-     * @return ClusterId 集群 Id
+     * Get 集群 Id。若只查询某个集群可升级的版本，需填写此项。 
+     * @return ClusterId 集群 Id。若只查询某个集群可升级的版本，需填写此项。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 Id
-     * @param ClusterId 集群 Id
+     * Set 集群 Id。若只查询某个集群可升级的版本，需填写此项。
+     * @param ClusterId 集群 Id。若只查询某个集群可升级的版本，需填写此项。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群 Id 列表 
-     * @return ClusterIds 集群 Id 列表
+     * Get 集群 Id 列表。若查询多个集群可升级的版本，需填写此项。 
+     * @return ClusterIds 集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set 集群 Id 列表
-     * @param ClusterIds 集群 Id 列表
+     * Set 集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
+     * @param ClusterIds 集群 Id 列表。若查询多个集群可升级的版本，需填写此项。
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

@@ -27,7 +27,7 @@ public class ImageToImageRequest extends AbstractModel {
     * 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
     */
     @SerializedName("InputImage")
     @Expose
@@ -37,7 +37,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
     * 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
     */
     @SerializedName("InputUrl")
     @Expose
@@ -100,7 +100,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
     * 生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。
     */
     @SerializedName("Strength")
@@ -118,11 +118,11 @@ Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使
      * Get 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。 
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。 
      * @return InputImage 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
      */
     public String getInputImage() {
         return this.InputImage;
@@ -132,11 +132,11 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
      * Set 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
      * @param InputImage 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于 8MB。
      */
     public void setInputImage(String InputImage) {
         this.InputImage = InputImage;
@@ -146,11 +146,11 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
      * Get 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。 
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。 
      * @return InputUrl 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
      */
     public String getInputUrl() {
         return this.InputUrl;
@@ -160,11 +160,11 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
      * Set 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
      * @param InputUrl 输入图 Url。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于8MB。
+图片限制：单边分辨率小于5000且大于50，转成 Base64 字符串后小于8MB。
      */
     public void setInputUrl(String InputUrl) {
         this.InputUrl = InputUrl;
@@ -320,10 +320,10 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
      * Get 生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。 
      * @return Strength 生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。
      */
     public Float getStrength() {
@@ -332,10 +332,10 @@ Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使
 
     /**
      * Set 生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。
      * @param Strength 生成自由度。
-Strength 值越小，生成图和原图越接近，取值范围0 - 1，不传使用模型内置的默认值。
+Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传使用模型内置的默认值。
 推荐的取值范围为0.6 - 0.8。
      */
     public void setStrength(Float Strength) {

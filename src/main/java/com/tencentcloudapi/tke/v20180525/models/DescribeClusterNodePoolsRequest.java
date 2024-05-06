@@ -31,22 +31,17 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * ·  NodePoolsName
+    * · "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
@@ -72,41 +67,31 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     }
 
     /**
-     * Get ·  NodePoolsName
+     * Get · "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否 
-     * @return Filters ·  NodePoolsName
+     * @return Filters · "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
@@ -116,41 +101,31 @@ public class DescribeClusterNodePoolsRequest extends AbstractModel {
     }
 
     /**
-     * Set ·  NodePoolsName
+     * Set · "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-     * @param Filters ·  NodePoolsName
+     * @param Filters · "Name":"NodePoolsName","Values": ["test"]
     按照【节点池名】进行过滤。
     类型：String
     必选：否
 
-·  NodePoolsId
+·  "Name":"NodePoolsId","Values": ["np-d2mb2zb"]
     按照【节点池id】进行过滤。
     类型：String
     必选：否
 
-·  tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
+·  "Name":"Tags","Values": ["abc:1"]
     按照【标签键值对】进行过滤。
     类型：String
     必选：否

@@ -38,7 +38,7 @@ public class CheckInstancesUpgradeAbleRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 升级类型
+    * 升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -98,16 +98,16 @@ public class CheckInstancesUpgradeAbleRequest extends AbstractModel {
     }
 
     /**
-     * Get 升级类型 
-     * @return UpgradeType 升级类型
+     * Get 升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级) 
+     * @return UpgradeType 升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 升级类型
-     * @param UpgradeType 升级类型
+     * Set 升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
+     * @param UpgradeType 升级类型，枚举值：reset(重装升级，支持大版本和小版本)，hot(原地滚动小版本升级)，major(原地滚动大版本升级)
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

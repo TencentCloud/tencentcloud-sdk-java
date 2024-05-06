@@ -46,45 +46,7 @@ public class DescribeClustersRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * ·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
+    * · "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否
     */
     @SerializedName("Filters")
     @Expose
@@ -150,168 +112,16 @@ public class DescribeClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get ·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否 
-     * @return Filters ·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
+     * Get · "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否 
+     * @return Filters · "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set ·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-     * @param Filters ·  ClusterName
-    按照【集群名】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterType
-    按照【集群类型】进行过滤。
-    类型：String
-    必选：否
-
-·  ClusterStatus
-    按照【集群状态】进行过滤。
-    类型：String
-    必选：否
-
-·  Tags
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
-
-·  vpc-id
-    按照【VPC】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-key
-    按照【标签键】进行过滤。
-    类型：String
-    必选：否
-
-·  tag-value
-    按照【标签值】进行过滤。
-    类型：String
-    必选：否
-
-·  tag:tag-key
-    按照【标签键值对】进行过滤。
-    类型：String
-    必选：否
+     * Set · "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否
+     * @param Filters · "Name":"ClusterName","Values": ["test"] 按照【集群名】进行过滤。 类型：String 必选：否 · "Name":"ClusterType","Values": ["MANAGED_CLUSTER"] 按照【集群类型】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"ClusterStatus","Values": ["Running"] 按照【集群状态】进行过滤。 类型：String 必选：否 · "Name":"vpc-id","Values": ["vpc-123qajzs"] 按照【VPC】进行过滤。 类型：String 必选：否 · "Name":"tag-key","Values": ["testKey"] 按照【标签键】进行过滤。 类型：String 必选：否 · "Name":"tag-value","Values": ["testValue"] 按照【标签值】进行过滤。 类型：String 必选：否 · "Name":"Tags","Values": ["abc:1"] 按照【标签键值对】进行过滤。 类型：String 必选：否
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
