@@ -45,7 +45,7 @@ public class DescribeDataReportCountRequest extends AbstractModel {
     private Long ID;
 
     /**
-    * 上报类型
+    * 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
     */
     @SerializedName("ReportType")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeDataReportCountRequest extends AbstractModel {
     }
 
     /**
-     * Get 上报类型 
-     * @return ReportType 上报类型
+     * Get 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals） 
+     * @return ReportType 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
      */
     public String getReportType() {
         return this.ReportType;
     }
 
     /**
-     * Set 上报类型
-     * @param ReportType 上报类型
+     * Set 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
+     * @param ReportType 上报类型（custom，event，log，miniProgramData，performance，pv，speed，webvitals）
      */
     public void setReportType(String ReportType) {
         this.ReportType = ReportType;

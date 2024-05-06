@@ -149,6 +149,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *关闭SSL连接功能。
+     * @param req CloseSSLRequest
+     * @return CloseSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseSSLResponse CloseSSL(CloseSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseSSL", CloseSSLResponse.class);
+    }
+
+    /**
      *本接口(CloseWanService)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问。
      * @param req CloseWanServiceRequest
      * @return CloseWanServiceResponse
@@ -1095,6 +1106,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *查询 SSL 开通情况。如果已经开通 SSL ，会同步返回证书下载链接。
+     * @param req DescribeSSLStatusRequest
+     * @return DescribeSSLStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSSLStatusResponse DescribeSSLStatus(DescribeSSLStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSSLStatus", DescribeSSLStatusResponse.class);
+    }
+
+    /**
      *条件检索实例的慢日志。只允许查看一个月之内的慢日志。
 使用时需要注意：可能存在单条慢日志太大，导致整个http请求的回包太大，进而引发接口超时。一旦发生超时，建议您缩小查询时的Limit参数值，从而降低包的大小，让接口能够及时返回内容。
      * @param req DescribeSlowLogDataRequest
@@ -1618,6 +1640,17 @@ public class CdbClient extends AbstractClient{
     public OpenDBInstanceGTIDResponse OpenDBInstanceGTID(OpenDBInstanceGTIDRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenDBInstanceGTID", OpenDBInstanceGTIDResponse.class);
+    }
+
+    /**
+     *开启SSL连接功能。
+     * @param req OpenSSLRequest
+     * @return OpenSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenSSLResponse OpenSSL(OpenSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenSSL", OpenSSLResponse.class);
     }
 
     /**

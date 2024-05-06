@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel {
 
     /**
-    * 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+    * 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -45,30 +45,30 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel {
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
+    * SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。
     */
     @SerializedName("MaxConnection")
     @Expose
     private Long MaxConnection;
 
     /**
-    * 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
+    * 查询的VPN类型，支持IPSEC、SSL两种类型，为SSL类型时，MaxConnection参数必传。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。 
-     * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。 
+     * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
-     * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * Set 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
+     * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
@@ -107,32 +107,32 @@ public class InquiryPriceCreateVpnGatewayRequest extends AbstractModel {
     }
 
     /**
-     * Get SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。 
-     * @return MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
+     * Get SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。 
+     * @return MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。
      */
     public Long getMaxConnection() {
         return this.MaxConnection;
     }
 
     /**
-     * Set SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
-     * @param MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
+     * Set SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。
+     * @param MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。
      */
     public void setMaxConnection(Long MaxConnection) {
         this.MaxConnection = MaxConnection;
     }
 
     /**
-     * Get 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。 
-     * @return Type 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
+     * Get 查询的VPN类型，支持IPSEC、SSL两种类型，为SSL类型时，MaxConnection参数必传。 
+     * @return Type 查询的VPN类型，支持IPSEC、SSL两种类型，为SSL类型时，MaxConnection参数必传。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
-     * @param Type 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
+     * Set 查询的VPN类型，支持IPSEC、SSL两种类型，为SSL类型时，MaxConnection参数必传。
+     * @param Type 查询的VPN类型，支持IPSEC、SSL两种类型，为SSL类型时，MaxConnection参数必传。
      */
     public void setType(String Type) {
         this.Type = Type;

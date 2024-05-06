@@ -166,6 +166,14 @@ public class SslVpnSever extends AbstractModel {
     private AccessPolicy [] AccessPolicy;
 
     /**
+    * CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpName")
+    @Expose
+    private String SpName;
+
+    /**
      * Get VPC实例ID.
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId VPC实例ID.
@@ -505,6 +513,26 @@ public class SslVpnSever extends AbstractModel {
         this.AccessPolicy = AccessPolicy;
     }
 
+    /**
+     * Get CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpName CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSpName() {
+        return this.SpName;
+    }
+
+    /**
+     * Set CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpName CAM服务提供商Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpName(String SpName) {
+        this.SpName = SpName;
+    }
+
     public SslVpnSever() {
     }
 
@@ -576,6 +604,9 @@ public class SslVpnSever extends AbstractModel {
                 this.AccessPolicy[i] = new AccessPolicy(source.AccessPolicy[i]);
             }
         }
+        if (source.SpName != null) {
+            this.SpName = new String(source.SpName);
+        }
     }
 
 
@@ -602,6 +633,7 @@ public class SslVpnSever extends AbstractModel {
         this.setParamSimple(map, prefix + "EiamApplicationId", this.EiamApplicationId);
         this.setParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
         this.setParamArrayObj(map, prefix + "AccessPolicy.", this.AccessPolicy);
+        this.setParamSimple(map, prefix + "SpName", this.SpName);
 
     }
 }

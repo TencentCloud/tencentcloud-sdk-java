@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteConfigExtraRequest extends AbstractModel {
 
     /**
-    * 采集规则扩展配置ID
+    * 特殊采集规则扩展配置ID
     */
     @SerializedName("ConfigExtraId")
     @Expose
     private String ConfigExtraId;
 
     /**
-     * Get 采集规则扩展配置ID 
-     * @return ConfigExtraId 采集规则扩展配置ID
+     * Get 特殊采集规则扩展配置ID 
+     * @return ConfigExtraId 特殊采集规则扩展配置ID
      */
     public String getConfigExtraId() {
         return this.ConfigExtraId;
     }
 
     /**
-     * Set 采集规则扩展配置ID
-     * @param ConfigExtraId 采集规则扩展配置ID
+     * Set 特殊采集规则扩展配置ID
+     * @param ConfigExtraId 特殊采集规则扩展配置ID
      */
     public void setConfigExtraId(String ConfigExtraId) {
         this.ConfigExtraId = ConfigExtraId;

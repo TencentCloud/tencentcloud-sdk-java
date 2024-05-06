@@ -45,7 +45,7 @@ public class ApplyCertificateRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
+    * 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
     */
     @SerializedName("PackageType")
     @Expose
@@ -66,7 +66,7 @@ public class ApplyCertificateRequest extends AbstractModel {
     private String ContactPhone;
 
     /**
-    * 有效期，默认12个月，目前仅支持12个月。
+    * 有效期，默认3个月，目前仅支持3个月。
     */
     @SerializedName("ValidityPeriod")
     @Expose
@@ -177,16 +177,16 @@ public class ApplyCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。 
-     * @return PackageType 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
+     * Get 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。 
+     * @return PackageType 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
-     * @param PackageType 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
+     * Set 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
+     * @param PackageType 证书类型，目前仅支持类型83。83 = TrustAsia C1 DV Free。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -225,16 +225,16 @@ public class ApplyCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get 有效期，默认12个月，目前仅支持12个月。 
-     * @return ValidityPeriod 有效期，默认12个月，目前仅支持12个月。
+     * Get 有效期，默认3个月，目前仅支持3个月。 
+     * @return ValidityPeriod 有效期，默认3个月，目前仅支持3个月。
      */
     public String getValidityPeriod() {
         return this.ValidityPeriod;
     }
 
     /**
-     * Set 有效期，默认12个月，目前仅支持12个月。
-     * @param ValidityPeriod 有效期，默认12个月，目前仅支持12个月。
+     * Set 有效期，默认3个月，目前仅支持3个月。
+     * @param ValidityPeriod 有效期，默认3个月，目前仅支持3个月。
      */
     public void setValidityPeriod(String ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;

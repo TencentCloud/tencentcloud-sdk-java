@@ -45,6 +45,13 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
     private Long Type;
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
      * Get 风险资产相关数据 
      * @return RiskStatusKeys 风险资产相关数据
      */
@@ -92,6 +99,22 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
     public ModifyRiskCenterRiskStatusRequest() {
     }
 
@@ -112,6 +135,12 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class ModifyRiskCenterRiskStatusRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RiskStatusKeys.", this.RiskStatusKeys);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse extends AbstractModel {
 
     /**
-    * 商品价格。
+    * 商品价格。仅支持未过期的预付费网关。
     */
     @SerializedName("Price")
     @Expose
@@ -38,16 +38,16 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse extends Abs
     private String RequestId;
 
     /**
-     * Get 商品价格。 
-     * @return Price 商品价格。
+     * Get 商品价格。仅支持未过期的预付费网关。 
+     * @return Price 商品价格。仅支持未过期的预付费网关。
      */
     public Price getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 商品价格。
-     * @param Price 商品价格。
+     * Set 商品价格。仅支持未过期的预付费网关。
+     * @param Price 商品价格。仅支持未过期的预付费网关。
      */
     public void setPrice(Price Price) {
         this.Price = Price;

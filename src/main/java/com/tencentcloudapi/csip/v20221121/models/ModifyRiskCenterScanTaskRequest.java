@@ -59,6 +59,13 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * 扫描资产信息列表
     */
     @SerializedName("Assets")
@@ -174,6 +181,22 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
+    /**
      * Get 扫描资产信息列表 
      * @return Assets 扫描资产信息列表
      */
@@ -279,6 +302,12 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Assets != null) {
             this.Assets = new TaskAssetObject[source.Assets.length];
             for (int i = 0; i < source.Assets.length; i++) {
@@ -312,6 +341,7 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ScanItem.", this.ScanItem);
         this.setParamSimple(map, prefix + "ScanPlanType", this.ScanPlanType);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Assets.", this.Assets);
         this.setParamSimple(map, prefix + "ScanPlanContent", this.ScanPlanContent);
         this.setParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);

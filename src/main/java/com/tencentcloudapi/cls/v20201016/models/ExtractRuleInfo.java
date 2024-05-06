@@ -90,7 +90,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private Boolean UnMatchUpLoadSwitch;
 
     /**
-    * 失败日志的key
+    * 失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnMatchLogKey")
@@ -109,7 +109,8 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * 是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -119,6 +120,8 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * 是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonStandard")
@@ -126,7 +129,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private Long JsonStandard;
 
     /**
-    * syslog传输协议，取值为tcp或者udp。
+    * syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -137,7 +140,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private String Protocol;
 
     /**
-    * syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+    * syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -151,6 +154,7 @@ public class ExtractRuleInfo extends AbstractModel {
     * rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -191,9 +195,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     private MetaTagInfo [] MetaTags;
 
     /**
-    * Windows事件日志采集。
-注意：
-- COS导入不支持此字段。
+    * Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
     */
     @SerializedName("EventLogRules")
     @Expose
@@ -368,9 +370,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get 失败日志的key
+     * Get 失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UnMatchLogKey 失败日志的key
+     * @return UnMatchLogKey 失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnMatchLogKey() {
@@ -378,9 +380,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set 失败日志的key
+     * Set 失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnMatchLogKey 失败日志的key
+     * @param UnMatchLogKey 失败日志的key，当UnMatchUpLoadSwitch为true时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnMatchLogKey(String UnMatchLogKey) {
@@ -417,11 +419,13 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Get 是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsGBK 是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -431,11 +435,13 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Set 是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsGBK 是否为Gbk编码。 0：否；1：是。
-注意：
+注意
+- 目前取0值时，表示UTF-8编码
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -445,8 +451,12 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Get 是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JsonStandard 是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJsonStandard() {
@@ -455,8 +465,12 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Set 是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonStandard 是否为标准json。  0：否； 1：是。
+注
+- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonStandard(Long JsonStandard) {
@@ -464,12 +478,12 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get syslog传输协议，取值为tcp或者udp。
+     * Get syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Protocol syslog传输协议，取值为tcp或者udp。
+     * @return Protocol syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -480,12 +494,12 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set syslog传输协议，取值为tcp或者udp。
+     * Set syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Protocol syslog传输协议，取值为tcp或者udp。
+     * @param Protocol syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -496,12 +510,12 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+     * Get syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+     * @return Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -512,12 +526,12 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+     * Set syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+     * @param Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置。
 - COS导入不支持此字段。
@@ -531,6 +545,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * Get rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -538,6 +553,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * @return ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -551,6 +567,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * Set rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -558,6 +575,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
      * @param ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
 rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议。
+只有在LogType为service_syslog时生效，其余类型无需填写。
 注意：
 - 该字段适用于：创建采集规则配置、修改采集规则配置
 - COS导入不支持此字段。
@@ -652,24 +670,16 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get Windows事件日志采集。
-注意：
-- COS导入不支持此字段。 
-     * @return EventLogRules Windows事件日志采集。
-注意：
-- COS导入不支持此字段。
+     * Get Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。 
+     * @return EventLogRules Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
      */
     public EventLog [] getEventLogRules() {
         return this.EventLogRules;
     }
 
     /**
-     * Set Windows事件日志采集。
-注意：
-- COS导入不支持此字段。
-     * @param EventLogRules Windows事件日志采集。
-注意：
-- COS导入不支持此字段。
+     * Set Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
+     * @param EventLogRules Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
      */
     public void setEventLogRules(EventLog [] EventLogRules) {
         this.EventLogRules = EventLogRules;

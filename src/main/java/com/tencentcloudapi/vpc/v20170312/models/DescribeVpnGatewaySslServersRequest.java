@@ -38,7 +38,7 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
+    * SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
     */
     @SerializedName("SslVpnServerIds")
     @Expose
@@ -96,16 +96,16 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel {
     }
 
     /**
-     * Get SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。 
-     * @return SslVpnServerIds SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
+     * Get SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。 
+     * @return SslVpnServerIds SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
      */
     public String [] getSslVpnServerIds() {
         return this.SslVpnServerIds;
     }
 
     /**
-     * Set SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
-     * @param SslVpnServerIds SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
+     * Set SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
+     * @param SslVpnServerIds SSL-VPN-SERVER实例ID。形如：vpns-0p4rj60。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
      */
     public void setSslVpnServerIds(String [] SslVpnServerIds) {
         this.SslVpnServerIds = SslVpnServerIds;

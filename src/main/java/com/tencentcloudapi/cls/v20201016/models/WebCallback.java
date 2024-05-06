@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WebCallback extends AbstractModel {
 
     /**
-    * 回调地址。
+    * 回调地址。最大支持1024个字节数。
     */
     @SerializedName("Url")
     @Expose
@@ -32,8 +32,10 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 回调的类型。可选值：
-<li> WeCom
-<li> Http
+- WeCom
+- Http
+- DingTalk
+- Lark
     */
     @SerializedName("CallbackType")
     @Expose
@@ -41,8 +43,8 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -69,23 +71,25 @@ public class WebCallback extends AbstractModel {
     private String Body;
 
     /**
-    * 序号
+    * 序号。
+- 入参无效。
+- 出参有效。
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-     * Get 回调地址。 
-     * @return Url 回调地址。
+     * Get 回调地址。最大支持1024个字节数。 
+     * @return Url 回调地址。最大支持1024个字节数。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 回调地址。
-     * @param Url 回调地址。
+     * Set 回调地址。最大支持1024个字节数。
+     * @param Url 回调地址。最大支持1024个字节数。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -93,11 +97,15 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Get 回调的类型。可选值：
-<li> WeCom
-<li> Http 
+- WeCom
+- Http
+- DingTalk
+- Lark 
      * @return CallbackType 回调的类型。可选值：
-<li> WeCom
-<li> Http
+- WeCom
+- Http
+- DingTalk
+- Lark
      */
     public String getCallbackType() {
         return this.CallbackType;
@@ -105,11 +113,15 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 回调的类型。可选值：
-<li> WeCom
-<li> Http
+- WeCom
+- Http
+- DingTalk
+- Lark
      * @param CallbackType 回调的类型。可选值：
-<li> WeCom
-<li> Http
+- WeCom
+- Http
+- DingTalk
+- Lark
      */
     public void setCallbackType(String CallbackType) {
         this.CallbackType = CallbackType;
@@ -117,13 +129,13 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Get 回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Method 回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,13 +145,13 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 回调方法。可选值：
-<li> POST
-<li> PUT
+- POST
+- PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -196,16 +208,24 @@ public class WebCallback extends AbstractModel {
     }
 
     /**
-     * Get 序号 
-     * @return Index 序号
+     * Get 序号。
+- 入参无效。
+- 出参有效。 
+     * @return Index 序号。
+- 入参无效。
+- 出参有效。
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 序号
-     * @param Index 序号
+     * Set 序号。
+- 入参无效。
+- 出参有效。
+     * @param Index 序号。
+- 入参无效。
+- 出参有效。
      */
     public void setIndex(Long Index) {
         this.Index = Index;

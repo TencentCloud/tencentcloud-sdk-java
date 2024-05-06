@@ -140,6 +140,13 @@ public class ModifyListenerRequest extends AbstractModel {
     private Long IdleConnectTimeout;
 
     /**
+    * 是否开启SNAT。
+    */
+    @SerializedName("SnatEnable")
+    @Expose
+    private Boolean SnatEnable;
+
+    /**
      * Get 负载均衡实例ID。 
      * @return LoadBalancerId 负载均衡实例ID。
      */
@@ -411,6 +418,22 @@ public class ModifyListenerRequest extends AbstractModel {
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
+    /**
+     * Get 是否开启SNAT。 
+     * @return SnatEnable 是否开启SNAT。
+     */
+    public Boolean getSnatEnable() {
+        return this.SnatEnable;
+    }
+
+    /**
+     * Set 是否开启SNAT。
+     * @param SnatEnable 是否开启SNAT。
+     */
+    public void setSnatEnable(Boolean SnatEnable) {
+        this.SnatEnable = SnatEnable;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -467,6 +490,9 @@ public class ModifyListenerRequest extends AbstractModel {
         if (source.IdleConnectTimeout != null) {
             this.IdleConnectTimeout = new Long(source.IdleConnectTimeout);
         }
+        if (source.SnatEnable != null) {
+            this.SnatEnable = new Boolean(source.SnatEnable);
+        }
     }
 
 
@@ -490,6 +516,7 @@ public class ModifyListenerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+        this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
 
     }
 }

@@ -25,8 +25,8 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
     * 接受者类型。可选值：
-<br><li> Uin - 用户ID
-<br><li> Group - 用户组ID
+-  Uin - 用户ID
+- Group - 用户组ID
 暂不支持其余接收者类型。
     */
     @SerializedName("ReceiverType")
@@ -35,6 +35,8 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
     * 接收者。
+当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
     */
     @SerializedName("ReceiverIds")
     @Expose
@@ -42,10 +44,10 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
     * 通知接收渠道。
-<br><li> Email - 邮件
-<br><li> Sms - 短信
-<br><li> WeChat - 微信
-<br><li> Phone - 电话
+- Email - 邮件
+- Sms - 短信
+- WeChat - 微信
+- Phone - 电话
     */
     @SerializedName("ReceiverChannels")
     @Expose
@@ -66,7 +68,10 @@ public class NoticeReceiver extends AbstractModel {
     private String EndTime;
 
     /**
-    * 位序
+    * 位序。
+
+- 入参无效。
+- 出参时有效。
     */
     @SerializedName("Index")
     @Expose
@@ -74,12 +79,12 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
      * Get 接受者类型。可选值：
-<br><li> Uin - 用户ID
-<br><li> Group - 用户组ID
+-  Uin - 用户ID
+- Group - 用户组ID
 暂不支持其余接收者类型。 
      * @return ReceiverType 接受者类型。可选值：
-<br><li> Uin - 用户ID
-<br><li> Group - 用户组ID
+-  Uin - 用户ID
+- Group - 用户组ID
 暂不支持其余接收者类型。
      */
     public String getReceiverType() {
@@ -88,12 +93,12 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
      * Set 接受者类型。可选值：
-<br><li> Uin - 用户ID
-<br><li> Group - 用户组ID
+-  Uin - 用户ID
+- Group - 用户组ID
 暂不支持其余接收者类型。
      * @param ReceiverType 接受者类型。可选值：
-<br><li> Uin - 用户ID
-<br><li> Group - 用户组ID
+-  Uin - 用户ID
+- Group - 用户组ID
 暂不支持其余接收者类型。
      */
     public void setReceiverType(String ReceiverType) {
@@ -101,8 +106,12 @@ public class NoticeReceiver extends AbstractModel {
     }
 
     /**
-     * Get 接收者。 
+     * Get 接收者。
+当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985) 
      * @return ReceiverIds 接收者。
+当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
      */
     public Long [] getReceiverIds() {
         return this.ReceiverIds;
@@ -110,7 +119,11 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
      * Set 接收者。
+当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
      * @param ReceiverIds 接收者。
+当ReceiverType为Uin时，ReceiverIds的值为用户id。[子用户信息查询](https://cloud.tencent.com/document/product/598/36258)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
      */
     public void setReceiverIds(Long [] ReceiverIds) {
         this.ReceiverIds = ReceiverIds;
@@ -118,15 +131,15 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
      * Get 通知接收渠道。
-<br><li> Email - 邮件
-<br><li> Sms - 短信
-<br><li> WeChat - 微信
-<br><li> Phone - 电话 
+- Email - 邮件
+- Sms - 短信
+- WeChat - 微信
+- Phone - 电话 
      * @return ReceiverChannels 通知接收渠道。
-<br><li> Email - 邮件
-<br><li> Sms - 短信
-<br><li> WeChat - 微信
-<br><li> Phone - 电话
+- Email - 邮件
+- Sms - 短信
+- WeChat - 微信
+- Phone - 电话
      */
     public String [] getReceiverChannels() {
         return this.ReceiverChannels;
@@ -134,15 +147,15 @@ public class NoticeReceiver extends AbstractModel {
 
     /**
      * Set 通知接收渠道。
-<br><li> Email - 邮件
-<br><li> Sms - 短信
-<br><li> WeChat - 微信
-<br><li> Phone - 电话
+- Email - 邮件
+- Sms - 短信
+- WeChat - 微信
+- Phone - 电话
      * @param ReceiverChannels 通知接收渠道。
-<br><li> Email - 邮件
-<br><li> Sms - 短信
-<br><li> WeChat - 微信
-<br><li> Phone - 电话
+- Email - 邮件
+- Sms - 短信
+- WeChat - 微信
+- Phone - 电话
      */
     public void setReceiverChannels(String [] ReceiverChannels) {
         this.ReceiverChannels = ReceiverChannels;
@@ -181,16 +194,28 @@ public class NoticeReceiver extends AbstractModel {
     }
 
     /**
-     * Get 位序 
-     * @return Index 位序
+     * Get 位序。
+
+- 入参无效。
+- 出参时有效。 
+     * @return Index 位序。
+
+- 入参无效。
+- 出参时有效。
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 位序
-     * @param Index 位序
+     * Set 位序。
+
+- 入参无效。
+- 出参时有效。
+     * @param Index 位序。
+
+- 入参无效。
+- 出参时有效。
      */
     public void setIndex(Long Index) {
         this.Index = Index;

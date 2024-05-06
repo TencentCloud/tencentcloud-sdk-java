@@ -312,6 +312,14 @@ public class ClusterV2 extends AbstractModel {
     private String KuberneteNativeSecret;
 
     /**
+    * 是否开启cls日志功能
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableLogCollection")
+    @Expose
+    private Boolean EnableLogCollection;
+
+    /**
      * Get 集群ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
@@ -1031,6 +1039,26 @@ public class ClusterV2 extends AbstractModel {
         this.KuberneteNativeSecret = KuberneteNativeSecret;
     }
 
+    /**
+     * Get 是否开启cls日志功能
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableLogCollection 是否开启cls日志功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableLogCollection() {
+        return this.EnableLogCollection;
+    }
+
+    /**
+     * Set 是否开启cls日志功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableLogCollection 是否开启cls日志功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableLogCollection(Boolean EnableLogCollection) {
+        this.EnableLogCollection = EnableLogCollection;
+    }
+
     public ClusterV2() {
     }
 
@@ -1147,6 +1175,9 @@ public class ClusterV2 extends AbstractModel {
         if (source.KuberneteNativeSecret != null) {
             this.KuberneteNativeSecret = new String(source.KuberneteNativeSecret);
         }
+        if (source.EnableLogCollection != null) {
+            this.EnableLogCollection = new Boolean(source.EnableLogCollection);
+        }
     }
 
 
@@ -1190,6 +1221,7 @@ public class ClusterV2 extends AbstractModel {
         this.setParamSimple(map, prefix + "KuberneteApiServer", this.KuberneteApiServer);
         this.setParamSimple(map, prefix + "KuberneteNativeType", this.KuberneteNativeType);
         this.setParamSimple(map, prefix + "KuberneteNativeSecret", this.KuberneteNativeSecret);
+        this.setParamSimple(map, prefix + "EnableLogCollection", this.EnableLogCollection);
 
     }
 }

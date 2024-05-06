@@ -31,6 +31,13 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
     private TaskIdListKey [] TaskIdList;
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
      * Get 任务id 列表 
      * @return TaskIdList 任务id 列表
      */
@@ -44,6 +51,22 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
      */
     public void setTaskIdList(TaskIdListKey [] TaskIdList) {
         this.TaskIdList = TaskIdList;
+    }
+
+    /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
     public StopRiskCenterTaskRequest() {
@@ -60,6 +83,12 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
                 this.TaskIdList[i] = new TaskIdListKey(source.TaskIdList[i]);
             }
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class StopRiskCenterTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskIdList.", this.TaskIdList);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
 
     }
 }

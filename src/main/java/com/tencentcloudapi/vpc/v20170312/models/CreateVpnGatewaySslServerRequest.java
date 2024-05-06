@@ -80,14 +80,14 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
     private String EncryptAlgorithm;
 
     /**
-    * 是否支持压缩。当前仅支持不支持压缩，默认False。
+    * 是否支持压缩。当前不支持压缩，默认False。
     */
     @SerializedName("Compress")
     @Expose
     private Boolean Compress;
 
     /**
-    * 是否开启SSO认证。默认为False
+    * 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
     */
     @SerializedName("SsoEnabled")
     @Expose
@@ -236,32 +236,32 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否支持压缩。当前仅支持不支持压缩，默认False。 
-     * @return Compress 是否支持压缩。当前仅支持不支持压缩，默认False。
+     * Get 是否支持压缩。当前不支持压缩，默认False。 
+     * @return Compress 是否支持压缩。当前不支持压缩，默认False。
      */
     public Boolean getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set 是否支持压缩。当前仅支持不支持压缩，默认False。
-     * @param Compress 是否支持压缩。当前仅支持不支持压缩，默认False。
+     * Set 是否支持压缩。当前不支持压缩，默认False。
+     * @param Compress 是否支持压缩。当前不支持压缩，默认False。
      */
     public void setCompress(Boolean Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get 是否开启SSO认证。默认为False 
-     * @return SsoEnabled 是否开启SSO认证。默认为False
+     * Get 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。 
+     * @return SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
      */
     public Boolean getSsoEnabled() {
         return this.SsoEnabled;
     }
 
     /**
-     * Set 是否开启SSO认证。默认为False
-     * @param SsoEnabled 是否开启SSO认证。默认为False
+     * Set 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
+     * @param SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
      */
     public void setSsoEnabled(Boolean SsoEnabled) {
         this.SsoEnabled = SsoEnabled;

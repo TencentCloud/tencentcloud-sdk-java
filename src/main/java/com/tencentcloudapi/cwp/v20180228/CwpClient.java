@@ -1386,19 +1386,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *DescribeAttackEventInfo 接口替代
-
-网络攻击日志详情
-     * @param req DescribeAttackLogInfoRequest
-     * @return DescribeAttackLogInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAttackLogInfoResponse DescribeAttackLogInfo(DescribeAttackLogInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAttackLogInfo", DescribeAttackLogInfoResponse.class);
-    }
-
-    /**
      *按分页形式展示网络攻击日志列表
      * @param req DescribeAttackLogsRequest
      * @return DescribeAttackLogsResponse

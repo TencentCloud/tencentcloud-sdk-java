@@ -45,7 +45,7 @@ public class DescribeAuditInstanceListRequest extends AbstractModel {
     private Long AuditMode;
 
     /**
-    * 单次请求返回的数量。默认值为30，最大值为 20000。
+    * 单次请求返回的数量。默认值为30，最大值为 100。
     */
     @SerializedName("Limit")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeAuditInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 单次请求返回的数量。默认值为30，最大值为 20000。 
-     * @return Limit 单次请求返回的数量。默认值为30，最大值为 20000。
+     * Get 单次请求返回的数量。默认值为30，最大值为 100。 
+     * @return Limit 单次请求返回的数量。默认值为30，最大值为 100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量。默认值为30，最大值为 20000。
-     * @param Limit 单次请求返回的数量。默认值为30，最大值为 20000。
+     * Set 单次请求返回的数量。默认值为30，最大值为 100。
+     * @param Limit 单次请求返回的数量。默认值为30，最大值为 100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -31,6 +31,13 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
     private Long Type;
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * 任务报告Id 列表
     */
     @SerializedName("ReportItemKeyList")
@@ -58,6 +65,22 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
      */
     public void setType(Long Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
     /**
@@ -103,6 +126,12 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.ReportItemKeyList != null) {
             this.ReportItemKeyList = new ReportItemKey[source.ReportItemKeyList.length];
             for (int i = 0; i < source.ReportItemKeyList.length; i++) {
@@ -123,6 +152,7 @@ public class DescribeTaskLogURLRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "ReportItemKeyList.", this.ReportItemKeyList);
         this.setParamArrayObj(map, prefix + "ReportTaskIdList.", this.ReportTaskIdList);
 

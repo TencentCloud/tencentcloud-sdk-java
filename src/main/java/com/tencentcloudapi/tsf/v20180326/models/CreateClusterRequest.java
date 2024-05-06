@@ -136,6 +136,13 @@ public class CreateClusterRequest extends AbstractModel {
     private String [] ProgramIdList;
 
     /**
+    * 是否开启cls日志功能
+    */
+    @SerializedName("EnableLogCollection")
+    @Expose
+    private Boolean EnableLogCollection;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -391,6 +398,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.ProgramIdList = ProgramIdList;
     }
 
+    /**
+     * Get 是否开启cls日志功能 
+     * @return EnableLogCollection 是否开启cls日志功能
+     */
+    public Boolean getEnableLogCollection() {
+        return this.EnableLogCollection;
+    }
+
+    /**
+     * Set 是否开启cls日志功能
+     * @param EnableLogCollection 是否开启cls日志功能
+     */
+    public void setEnableLogCollection(Boolean EnableLogCollection) {
+        this.EnableLogCollection = EnableLogCollection;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -450,6 +473,9 @@ public class CreateClusterRequest extends AbstractModel {
                 this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
             }
         }
+        if (source.EnableLogCollection != null) {
+            this.EnableLogCollection = new Boolean(source.EnableLogCollection);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KuberneteNativeType", this.KuberneteNativeType);
         this.setParamSimple(map, prefix + "KuberneteNativeSecret", this.KuberneteNativeSecret);
         this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
+        this.setParamSimple(map, prefix + "EnableLogCollection", this.EnableLogCollection);
 
     }
 }

@@ -38,7 +38,7 @@ public class CreateConfigRequest extends AbstractModel {
     private String Output;
 
     /**
-    * 日志采集路径,包含文件名
+    * 日志采集路径，包含文件名，支持多个路径，多个路径之间英文逗号分隔，文件采集情况下必填
     */
     @SerializedName("Path")
     @Expose
@@ -128,16 +128,16 @@ public class CreateConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志采集路径,包含文件名 
-     * @return Path 日志采集路径,包含文件名
+     * Get 日志采集路径，包含文件名，支持多个路径，多个路径之间英文逗号分隔，文件采集情况下必填 
+     * @return Path 日志采集路径，包含文件名，支持多个路径，多个路径之间英文逗号分隔，文件采集情况下必填
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 日志采集路径,包含文件名
-     * @param Path 日志采集路径,包含文件名
+     * Set 日志采集路径，包含文件名，支持多个路径，多个路径之间英文逗号分隔，文件采集情况下必填
+     * @param Path 日志采集路径，包含文件名，支持多个路径，多个路径之间英文逗号分隔，文件采集情况下必填
      */
     public void setPath(String Path) {
         this.Path = Path;

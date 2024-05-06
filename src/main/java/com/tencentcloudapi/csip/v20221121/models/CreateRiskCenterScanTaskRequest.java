@@ -52,6 +52,13 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     private Long ScanPlanType;
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * 扫描资产信息列表
     */
     @SerializedName("Assets")
@@ -162,6 +169,22 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
      */
     public void setScanPlanType(Long ScanPlanType) {
         this.ScanPlanType = ScanPlanType;
+    }
+
+    /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
     /**
@@ -299,6 +322,12 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         if (source.ScanPlanType != null) {
             this.ScanPlanType = new Long(source.ScanPlanType);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Assets != null) {
             this.Assets = new TaskAssetObject[source.Assets.length];
             for (int i = 0; i < source.Assets.length; i++) {
@@ -337,6 +366,7 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanAssetType", this.ScanAssetType);
         this.setParamArraySimple(map, prefix + "ScanItem.", this.ScanItem);
         this.setParamSimple(map, prefix + "ScanPlanType", this.ScanPlanType);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Assets.", this.Assets);
         this.setParamSimple(map, prefix + "ScanPlanContent", this.ScanPlanContent);
         this.setParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);

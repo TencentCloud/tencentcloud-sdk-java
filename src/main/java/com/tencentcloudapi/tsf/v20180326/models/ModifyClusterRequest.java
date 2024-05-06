@@ -52,6 +52,20 @@ public class ModifyClusterRequest extends AbstractModel {
     private String ClusterRemarkName;
 
     /**
+    * 是否开启cls日志功能
+    */
+    @SerializedName("EnableLogCollection")
+    @Expose
+    private Boolean EnableLogCollection;
+
+    /**
+    * 是否修复cls日志功能
+    */
+    @SerializedName("RepairLog")
+    @Expose
+    private Boolean RepairLog;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -115,6 +129,38 @@ public class ModifyClusterRequest extends AbstractModel {
         this.ClusterRemarkName = ClusterRemarkName;
     }
 
+    /**
+     * Get 是否开启cls日志功能 
+     * @return EnableLogCollection 是否开启cls日志功能
+     */
+    public Boolean getEnableLogCollection() {
+        return this.EnableLogCollection;
+    }
+
+    /**
+     * Set 是否开启cls日志功能
+     * @param EnableLogCollection 是否开启cls日志功能
+     */
+    public void setEnableLogCollection(Boolean EnableLogCollection) {
+        this.EnableLogCollection = EnableLogCollection;
+    }
+
+    /**
+     * Get 是否修复cls日志功能 
+     * @return RepairLog 是否修复cls日志功能
+     */
+    public Boolean getRepairLog() {
+        return this.RepairLog;
+    }
+
+    /**
+     * Set 是否修复cls日志功能
+     * @param RepairLog 是否修复cls日志功能
+     */
+    public void setRepairLog(Boolean RepairLog) {
+        this.RepairLog = RepairLog;
+    }
+
     public ModifyClusterRequest() {
     }
 
@@ -135,6 +181,12 @@ public class ModifyClusterRequest extends AbstractModel {
         if (source.ClusterRemarkName != null) {
             this.ClusterRemarkName = new String(source.ClusterRemarkName);
         }
+        if (source.EnableLogCollection != null) {
+            this.EnableLogCollection = new Boolean(source.EnableLogCollection);
+        }
+        if (source.RepairLog != null) {
+            this.RepairLog = new Boolean(source.RepairLog);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class ModifyClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
         this.setParamSimple(map, prefix + "ClusterRemarkName", this.ClusterRemarkName);
+        this.setParamSimple(map, prefix + "EnableLogCollection", this.EnableLogCollection);
+        this.setParamSimple(map, prefix + "RepairLog", this.RepairLog);
 
     }
 }
