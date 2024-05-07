@@ -138,7 +138,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long ExchangeNumber;
 
     /**
-    * 集群异常。
+    * 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptionInformation")
@@ -167,6 +167,22 @@ public class RabbitMQClusterInfo extends AbstractModel {
     @SerializedName("MirrorQueuePolicyFlag")
     @Expose
     private Long MirrorQueuePolicyFlag;
+
+    /**
+    * 每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MessageConsumeRate")
+    @Expose
+    private Float MessageConsumeRate;
+
+    /**
+    * 集群版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterVersion")
+    @Expose
+    private String ClusterVersion;
 
     /**
      * Get 集群ID 
@@ -433,9 +449,9 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群异常。
+     * Get 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExceptionInformation 集群异常。
+     * @return ExceptionInformation 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExceptionInformation() {
@@ -443,9 +459,9 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Set 集群异常。
+     * Set 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExceptionInformation 集群异常。
+     * @param ExceptionInformation 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptionInformation(String ExceptionInformation) {
@@ -506,6 +522,46 @@ public class RabbitMQClusterInfo extends AbstractModel {
      */
     public void setMirrorQueuePolicyFlag(Long MirrorQueuePolicyFlag) {
         this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
+    }
+
+    /**
+     * Get 每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MessageConsumeRate 每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getMessageConsumeRate() {
+        return this.MessageConsumeRate;
+    }
+
+    /**
+     * Set 每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MessageConsumeRate 每秒消费消息数 单位：条/秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessageConsumeRate(Float MessageConsumeRate) {
+        this.MessageConsumeRate = MessageConsumeRate;
+    }
+
+    /**
+     * Get 集群版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterVersion 集群版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterVersion() {
+        return this.ClusterVersion;
+    }
+
+    /**
+     * Set 集群版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterVersion 集群版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterVersion(String ClusterVersion) {
+        this.ClusterVersion = ClusterVersion;
     }
 
     public RabbitMQClusterInfo() {
@@ -582,6 +638,12 @@ public class RabbitMQClusterInfo extends AbstractModel {
         if (source.MirrorQueuePolicyFlag != null) {
             this.MirrorQueuePolicyFlag = new Long(source.MirrorQueuePolicyFlag);
         }
+        if (source.MessageConsumeRate != null) {
+            this.MessageConsumeRate = new Float(source.MessageConsumeRate);
+        }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
     }
 
 
@@ -609,6 +671,8 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
+        this.setParamSimple(map, prefix + "MessageConsumeRate", this.MessageConsumeRate);
+        this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
 
     }
 }

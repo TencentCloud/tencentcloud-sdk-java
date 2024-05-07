@@ -31,7 +31,7 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
     private Long Timeout;
 
     /**
-    * bucket类型，不填默认web，2:app
+    * bucket类型，不填默认1:web，2:app
     */
     @SerializedName("FileType")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
     }
 
     /**
-     * Get bucket类型，不填默认web，2:app 
-     * @return FileType bucket类型，不填默认web，2:app
+     * Get bucket类型，不填默认1:web，2:app 
+     * @return FileType bucket类型，不填默认1:web，2:app
      */
     public Long getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set bucket类型，不填默认web，2:app
-     * @param FileType bucket类型，不填默认web，2:app
+     * Set bucket类型，不填默认1:web，2:app
+     * @param FileType bucket类型，不填默认1:web，2:app
      */
     public void setFileType(Long FileType) {
         this.FileType = FileType;

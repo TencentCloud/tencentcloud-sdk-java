@@ -31,7 +31,9 @@ public class CreateMachineGroupRequest extends AbstractModel {
     private String GroupName;
 
     /**
-    * 创建机器组类型。Type：ip，Values中为ip字符串列表创建机器组；Type：label，Values中为标签字符串列表创建机器组。
+    * 创建机器组类型。取值如下：
+- Type：ip，Values中为ip字符串列表创建机器组
+- Type：label，Values中为标签字符串列表创建机器组
     */
     @SerializedName("MachineGroupType")
     @Expose
@@ -87,7 +89,9 @@ public class CreateMachineGroupRequest extends AbstractModel {
     private MetaTagInfo [] MetaTags;
 
     /**
-    * 系统类型，默认0，0：Linux，1: Windows
+    * 系统类型，取值如下：
+- 0：Linux （默认值）
+- 1：Windows
     */
     @SerializedName("OSType")
     @Expose
@@ -110,16 +114,24 @@ public class CreateMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 创建机器组类型。Type：ip，Values中为ip字符串列表创建机器组；Type：label，Values中为标签字符串列表创建机器组。 
-     * @return MachineGroupType 创建机器组类型。Type：ip，Values中为ip字符串列表创建机器组；Type：label，Values中为标签字符串列表创建机器组。
+     * Get 创建机器组类型。取值如下：
+- Type：ip，Values中为ip字符串列表创建机器组
+- Type：label，Values中为标签字符串列表创建机器组 
+     * @return MachineGroupType 创建机器组类型。取值如下：
+- Type：ip，Values中为ip字符串列表创建机器组
+- Type：label，Values中为标签字符串列表创建机器组
      */
     public MachineGroupTypeInfo getMachineGroupType() {
         return this.MachineGroupType;
     }
 
     /**
-     * Set 创建机器组类型。Type：ip，Values中为ip字符串列表创建机器组；Type：label，Values中为标签字符串列表创建机器组。
-     * @param MachineGroupType 创建机器组类型。Type：ip，Values中为ip字符串列表创建机器组；Type：label，Values中为标签字符串列表创建机器组。
+     * Set 创建机器组类型。取值如下：
+- Type：ip，Values中为ip字符串列表创建机器组
+- Type：label，Values中为标签字符串列表创建机器组
+     * @param MachineGroupType 创建机器组类型。取值如下：
+- Type：ip，Values中为ip字符串列表创建机器组
+- Type：label，Values中为标签字符串列表创建机器组
      */
     public void setMachineGroupType(MachineGroupTypeInfo MachineGroupType) {
         this.MachineGroupType = MachineGroupType;
@@ -238,16 +250,24 @@ public class CreateMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 系统类型，默认0，0：Linux，1: Windows 
-     * @return OSType 系统类型，默认0，0：Linux，1: Windows
+     * Get 系统类型，取值如下：
+- 0：Linux （默认值）
+- 1：Windows 
+     * @return OSType 系统类型，取值如下：
+- 0：Linux （默认值）
+- 1：Windows
      */
     public Long getOSType() {
         return this.OSType;
     }
 
     /**
-     * Set 系统类型，默认0，0：Linux，1: Windows
-     * @param OSType 系统类型，默认0，0：Linux，1: Windows
+     * Set 系统类型，取值如下：
+- 0：Linux （默认值）
+- 1：Windows
+     * @param OSType 系统类型，取值如下：
+- 0：Linux （默认值）
+- 1：Windows
      */
     public void setOSType(Long OSType) {
         this.OSType = OSType;

@@ -95,6 +95,70 @@ public class RabbitMQQueueListInfo extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * 队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Durable")
+    @Expose
+    private Boolean Durable;
+
+    /**
+    * 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoDelete")
+    @Expose
+    private Boolean AutoDelete;
+
+    /**
+    * 队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VirtualHost")
+    @Expose
+    private String VirtualHost;
+
+    /**
+    * 队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Node")
+    @Expose
+    private String Node;
+
+    /**
+    * 生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Policy")
+    @Expose
+    private String Policy;
+
+    /**
+    * 扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Arguments")
+    @Expose
+    private String Arguments;
+
+    /**
+    * 是否独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Exclusive")
+    @Expose
+    private Boolean Exclusive;
+
+    /**
      * Get 队列名 
      * @return QueueName 队列名
      */
@@ -270,6 +334,166 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Durable 队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDurable() {
+        return this.Durable;
+    }
+
+    /**
+     * Set 队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Durable 队列是否持久化，true 为持久化，false 为非持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDurable(Boolean Durable) {
+        this.Durable = Durable;
+    }
+
+    /**
+     * Get 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoDelete 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoDelete() {
+        return this.AutoDelete;
+    }
+
+    /**
+     * Set 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoDelete 队列是否为自动删除队列，true 为自动删除，false 为非自动删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoDelete(Boolean AutoDelete) {
+        this.AutoDelete = AutoDelete;
+    }
+
+    /**
+     * Get 队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 队列所属实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VirtualHost 队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVirtualHost() {
+        return this.VirtualHost;
+    }
+
+    /**
+     * Set 队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VirtualHost 队列所属虚拟主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVirtualHost(String VirtualHost) {
+        this.VirtualHost = VirtualHost;
+    }
+
+    /**
+     * Get 队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Node 队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNode() {
+        return this.Node;
+    }
+
+    /**
+     * Set 队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Node 队列所在主节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNode(String Node) {
+        this.Node = Node;
+    }
+
+    /**
+     * Get 生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Policy 生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPolicy() {
+        return this.Policy;
+    }
+
+    /**
+     * Set 生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Policy 生效的策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicy(String Policy) {
+        this.Policy = Policy;
+    }
+
+    /**
+     * Get 扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Arguments 扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArguments() {
+        return this.Arguments;
+    }
+
+    /**
+     * Set 扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Arguments 扩展参数 key-value 对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArguments(String Arguments) {
+        this.Arguments = Arguments;
+    }
+
+    /**
+     * Get 是否独占队列
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Exclusive 是否独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getExclusive() {
+        return this.Exclusive;
+    }
+
+    /**
+     * Set 是否独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Exclusive 是否独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusive(Boolean Exclusive) {
+        this.Exclusive = Exclusive;
+    }
+
     public RabbitMQQueueListInfo() {
     }
 
@@ -305,6 +529,30 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.Durable != null) {
+            this.Durable = new Boolean(source.Durable);
+        }
+        if (source.AutoDelete != null) {
+            this.AutoDelete = new Boolean(source.AutoDelete);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.VirtualHost != null) {
+            this.VirtualHost = new String(source.VirtualHost);
+        }
+        if (source.Node != null) {
+            this.Node = new String(source.Node);
+        }
+        if (source.Policy != null) {
+            this.Policy = new String(source.Policy);
+        }
+        if (source.Arguments != null) {
+            this.Arguments = new String(source.Arguments);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Boolean(source.Exclusive);
+        }
     }
 
 
@@ -321,6 +569,14 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "Durable", this.Durable);
+        this.setParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
+        this.setParamSimple(map, prefix + "Node", this.Node);
+        this.setParamSimple(map, prefix + "Policy", this.Policy);
+        this.setParamSimple(map, prefix + "Arguments", this.Arguments);
+        this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
 
     }
 }

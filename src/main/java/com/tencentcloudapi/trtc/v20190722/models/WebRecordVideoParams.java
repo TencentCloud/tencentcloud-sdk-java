@@ -46,6 +46,15 @@ public class WebRecordVideoParams extends AbstractModel {
     private String Format;
 
     /**
+    * 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+示例值：1440
+    */
+    @SerializedName("MaxMediaFileDuration")
+    @Expose
+    private Long MaxMediaFileDuration;
+
+    /**
      * Get 录制画面宽度，默认为1280，取值范围[0, 1920] 
      * @return Width 录制画面宽度，默认为1280，取值范围[0, 1920]
      */
@@ -97,6 +106,30 @@ public class WebRecordVideoParams extends AbstractModel {
         this.Format = Format;
     }
 
+    /**
+     * Get 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+示例值：1440 
+     * @return MaxMediaFileDuration 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+示例值：1440
+     */
+    public Long getMaxMediaFileDuration() {
+        return this.MaxMediaFileDuration;
+    }
+
+    /**
+     * Set 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+示例值：1440
+     * @param MaxMediaFileDuration 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+示例值：1440
+     */
+    public void setMaxMediaFileDuration(Long MaxMediaFileDuration) {
+        this.MaxMediaFileDuration = MaxMediaFileDuration;
+    }
+
     public WebRecordVideoParams() {
     }
 
@@ -114,6 +147,9 @@ public class WebRecordVideoParams extends AbstractModel {
         if (source.Format != null) {
             this.Format = new String(source.Format);
         }
+        if (source.MaxMediaFileDuration != null) {
+            this.MaxMediaFileDuration = new Long(source.MaxMediaFileDuration);
+        }
     }
 
 
@@ -124,6 +160,7 @@ public class WebRecordVideoParams extends AbstractModel {
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
 
     }
 }

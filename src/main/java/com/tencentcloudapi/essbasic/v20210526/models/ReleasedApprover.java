@@ -41,6 +41,14 @@ public class ReleasedApprover extends AbstractModel {
     private String ApproverType;
 
     /**
+    * 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+    */
+    @SerializedName("ReleasedApproverRecipientId")
+    @Expose
+    private String ReleasedApproverRecipientId;
+
+    /**
     * 签署人姓名，最大长度50个字。
     */
     @SerializedName("Name")
@@ -119,6 +127,13 @@ public class ReleasedApprover extends AbstractModel {
     private String ApproverSignRole;
 
     /**
+    * 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+    */
+    @SerializedName("ApproverSignSealId")
+    @Expose
+    private String ApproverSignSealId;
+
+    /**
      * Get 签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。 
      * @return ApproverNumber 签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。
@@ -160,6 +175,26 @@ public class ReleasedApprover extends AbstractModel {
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;
+    }
+
+    /**
+     * Get 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。 
+     * @return ReleasedApproverRecipientId 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+     */
+    public String getReleasedApproverRecipientId() {
+        return this.ReleasedApproverRecipientId;
+    }
+
+    /**
+     * Set 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+     * @param ReleasedApproverRecipientId 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
+**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+     */
+    public void setReleasedApproverRecipientId(String ReleasedApproverRecipientId) {
+        this.ReleasedApproverRecipientId = ReleasedApproverRecipientId;
     }
 
     /**
@@ -366,6 +401,22 @@ public class ReleasedApprover extends AbstractModel {
         this.ApproverSignRole = ApproverSignRole;
     }
 
+    /**
+     * Get 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署 
+     * @return ApproverSignSealId 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     */
+    public String getApproverSignSealId() {
+        return this.ApproverSignSealId;
+    }
+
+    /**
+     * Set 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     * @param ApproverSignSealId 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     */
+    public void setApproverSignSealId(String ApproverSignSealId) {
+        this.ApproverSignSealId = ApproverSignSealId;
+    }
+
     public ReleasedApprover() {
     }
 
@@ -379,6 +430,9 @@ public class ReleasedApprover extends AbstractModel {
         }
         if (source.ApproverType != null) {
             this.ApproverType = new String(source.ApproverType);
+        }
+        if (source.ReleasedApproverRecipientId != null) {
+            this.ReleasedApproverRecipientId = new String(source.ReleasedApproverRecipientId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -407,6 +461,9 @@ public class ReleasedApprover extends AbstractModel {
         if (source.ApproverSignRole != null) {
             this.ApproverSignRole = new String(source.ApproverSignRole);
         }
+        if (source.ApproverSignSealId != null) {
+            this.ApproverSignSealId = new String(source.ApproverSignSealId);
+        }
     }
 
 
@@ -416,6 +473,7 @@ public class ReleasedApprover extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApproverNumber", this.ApproverNumber);
         this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
+        this.setParamSimple(map, prefix + "ReleasedApproverRecipientId", this.ReleasedApproverRecipientId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
@@ -425,6 +483,7 @@ public class ReleasedApprover extends AbstractModel {
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
         this.setParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
+        this.setParamSimple(map, prefix + "ApproverSignSealId", this.ApproverSignSealId);
 
     }
 }

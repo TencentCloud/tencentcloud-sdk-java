@@ -74,6 +74,13 @@ public class ReleasedApprover extends AbstractModel {
     private String ApproverSignRole;
 
     /**
+    * 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+    */
+    @SerializedName("ApproverSignSealId")
+    @Expose
+    private String ApproverSignSealId;
+
+    /**
      * Get 签署人姓名，最大长度50个字。
  
      * @return Name 签署人姓名，最大长度50个字。
@@ -201,6 +208,22 @@ public class ReleasedApprover extends AbstractModel {
         this.ApproverSignRole = ApproverSignRole;
     }
 
+    /**
+     * Get 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署 
+     * @return ApproverSignSealId 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     */
+    public String getApproverSignSealId() {
+        return this.ApproverSignSealId;
+    }
+
+    /**
+     * Set 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     * @param ApproverSignSealId 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     */
+    public void setApproverSignSealId(String ApproverSignSealId) {
+        this.ApproverSignSealId = ApproverSignSealId;
+    }
+
     public ReleasedApprover() {
     }
 
@@ -227,6 +250,9 @@ public class ReleasedApprover extends AbstractModel {
         if (source.ApproverSignRole != null) {
             this.ApproverSignRole = new String(source.ApproverSignRole);
         }
+        if (source.ApproverSignSealId != null) {
+            this.ApproverSignSealId = new String(source.ApproverSignSealId);
+        }
     }
 
 
@@ -240,6 +266,7 @@ public class ReleasedApprover extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
         this.setParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
         this.setParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
+        this.setParamSimple(map, prefix + "ApproverSignSealId", this.ApproverSignSealId);
 
     }
 }

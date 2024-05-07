@@ -153,6 +153,14 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private Long SyntaxRule;
 
     /**
+    * 是否开启投递服务日志。1：关闭，2：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
      * Get ScheduledSql任务id 
      * @return TaskId ScheduledSql任务id
      */
@@ -452,6 +460,26 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         this.SyntaxRule = SyntaxRule;
     }
 
+    /**
+     * Get 是否开启投递服务日志。1：关闭，2：开启。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set 是否开启投递服务日志。1：关闭，2：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
     public ScheduledSqlTaskInfo() {
     }
 
@@ -514,6 +542,9 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
     }
 
 
@@ -539,6 +570,7 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessDelay", this.ProcessDelay);
         this.setParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
 
     }
 }

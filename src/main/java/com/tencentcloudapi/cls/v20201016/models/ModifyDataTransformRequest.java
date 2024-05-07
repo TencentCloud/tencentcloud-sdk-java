@@ -38,7 +38,12 @@ public class ModifyDataTransformRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 加工语句
+    * 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395)
     */
     @SerializedName("EtlContent")
     @Expose
@@ -98,16 +103,36 @@ public class ModifyDataTransformRequest extends AbstractModel {
     }
 
     /**
-     * Get 加工语句 
-     * @return EtlContent 加工语句
+     * Get 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395) 
+     * @return EtlContent 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395)
      */
     public String getEtlContent() {
         return this.EtlContent;
     }
 
     /**
-     * Set 加工语句
-     * @param EtlContent 加工语句
+     * Set 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395)
+     * @param EtlContent 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
+
+其他参考文档：
+
+- [创建加工任务](https://cloud.tencent.com/document/product/614/63940) 
+-  [函数总览](https://cloud.tencent.com/document/product/614/70395)
      */
     public void setEtlContent(String EtlContent) {
         this.EtlContent = EtlContent;

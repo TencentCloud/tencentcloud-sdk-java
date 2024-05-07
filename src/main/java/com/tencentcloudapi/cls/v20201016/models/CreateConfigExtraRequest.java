@@ -38,21 +38,30 @@ public class CreateConfigExtraRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * 类型：container_stdout、container_file、host_file
+    * 日志源类型。支持 container_stdout：容器标准输出；container_file：容器文件路径；host_file：节点文件路径。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
+    * 采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * 采集配置标
+    * 采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+
     */
     @SerializedName("ConfigFlag")
     @Expose
@@ -80,28 +89,30 @@ public class CreateConfigExtraRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * 节点文件配置信息
+    * 节点文件路径类型配置。
     */
     @SerializedName("HostFile")
     @Expose
     private HostFileInfo HostFile;
 
     /**
-    * 容器文件路径信息
+    * 容器文件路径类型配置。
     */
     @SerializedName("ContainerFile")
     @Expose
     private ContainerFileInfo ContainerFile;
 
     /**
-    * 容器标准输出信息
+    * 容器标准输出类型配置。
     */
     @SerializedName("ContainerStdout")
     @Expose
     private ContainerStdoutInfo ContainerStdout;
 
     /**
-    * 日志格式化方式
+    * 日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景
     */
     @SerializedName("LogFormat")
     @Expose
@@ -122,7 +133,9 @@ public class CreateConfigExtraRequest extends AbstractModel {
     private ExcludePathInfo [] ExcludePaths;
 
     /**
-    * 用户自定义采集规则，Json格式序列化的字符串
+    * 组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310)
     */
     @SerializedName("UserDefineRule")
     @Expose
@@ -154,7 +167,8 @@ public class CreateConfigExtraRequest extends AbstractModel {
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
+
     */
     @SerializedName("AdvancedConfig")
     @Expose
@@ -193,48 +207,84 @@ public class CreateConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型：container_stdout、container_file、host_file 
-     * @return Type 类型：container_stdout、container_file、host_file
+     * Get 日志源类型。支持 container_stdout：容器标准输出；container_file：容器文件路径；host_file：节点文件路径。 
+     * @return Type 日志源类型。支持 container_stdout：容器标准输出；container_file：容器文件路径；host_file：节点文件路径。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型：container_stdout、container_file、host_file
-     * @param Type 类型：container_stdout、container_file、host_file
+     * Set 日志源类型。支持 container_stdout：容器标准输出；container_file：容器文件路径；host_file：节点文件路径。
+     * @param Type 日志源类型。支持 container_stdout：容器标准输出；container_file：容器文件路径；host_file：节点文件路径。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log 
-     * @return LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
+     * Get 采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。 
+     * @return LogType 采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
-     * @param LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
+     * Set 采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
+     * @param LogType 采集的日志类型，默认为minimalist_log。支持以下类型：
+- json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
+- delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
+- minimalist_log代表：单行全文-文件日志（详见[使用单行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17421)）；
+- fullregex_log代表：单行完全正则-文件日志（详见[使用单行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52365)）；
+- multiline_log代表：多行全文-文件日志（详见[使用多行全文提取模式采集日志](https://cloud.tencent.com/document/product/614/17422)）；
+- multiline_fullregex_log代表：多行完全正则-文件日志（详见[使用多行-完全正则提取模式采集日志](https://cloud.tencent.com/document/product/614/52366)）；
+- user_define_log代表：组合解析（适用于多格式嵌套的日志，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)）。
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 采集配置标 
-     * @return ConfigFlag 采集配置标
+     * Get 采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+ 
+     * @return ConfigFlag 采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+
      */
     public String getConfigFlag() {
         return this.ConfigFlag;
     }
 
     /**
-     * Set 采集配置标
-     * @param ConfigFlag 采集配置标
+     * Set 采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+
+     * @param ConfigFlag 采集配置标记。
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+
      */
     public void setConfigFlag(String ConfigFlag) {
         this.ConfigFlag = ConfigFlag;
@@ -289,64 +339,72 @@ public class CreateConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点文件配置信息 
-     * @return HostFile 节点文件配置信息
+     * Get 节点文件路径类型配置。 
+     * @return HostFile 节点文件路径类型配置。
      */
     public HostFileInfo getHostFile() {
         return this.HostFile;
     }
 
     /**
-     * Set 节点文件配置信息
-     * @param HostFile 节点文件配置信息
+     * Set 节点文件路径类型配置。
+     * @param HostFile 节点文件路径类型配置。
      */
     public void setHostFile(HostFileInfo HostFile) {
         this.HostFile = HostFile;
     }
 
     /**
-     * Get 容器文件路径信息 
-     * @return ContainerFile 容器文件路径信息
+     * Get 容器文件路径类型配置。 
+     * @return ContainerFile 容器文件路径类型配置。
      */
     public ContainerFileInfo getContainerFile() {
         return this.ContainerFile;
     }
 
     /**
-     * Set 容器文件路径信息
-     * @param ContainerFile 容器文件路径信息
+     * Set 容器文件路径类型配置。
+     * @param ContainerFile 容器文件路径类型配置。
      */
     public void setContainerFile(ContainerFileInfo ContainerFile) {
         this.ContainerFile = ContainerFile;
     }
 
     /**
-     * Get 容器标准输出信息 
-     * @return ContainerStdout 容器标准输出信息
+     * Get 容器标准输出类型配置。 
+     * @return ContainerStdout 容器标准输出类型配置。
      */
     public ContainerStdoutInfo getContainerStdout() {
         return this.ContainerStdout;
     }
 
     /**
-     * Set 容器标准输出信息
-     * @param ContainerStdout 容器标准输出信息
+     * Set 容器标准输出类型配置。
+     * @param ContainerStdout 容器标准输出类型配置。
      */
     public void setContainerStdout(ContainerStdoutInfo ContainerStdout) {
         this.ContainerStdout = ContainerStdout;
     }
 
     /**
-     * Get 日志格式化方式 
-     * @return LogFormat 日志格式化方式
+     * Get 日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景 
+     * @return LogFormat 日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景
      */
     public String getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set 日志格式化方式
-     * @param LogFormat 日志格式化方式
+     * Set 日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景
+     * @param LogFormat 日志格式化方式，用于容器采集场景。
+- stdout-docker-json：用于docker容器采集场景
+- stdout-containerd：用于containerd容器采集场景
      */
     public void setLogFormat(String LogFormat) {
         this.LogFormat = LogFormat;
@@ -385,16 +443,24 @@ public class CreateConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户自定义采集规则，Json格式序列化的字符串 
-     * @return UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
+     * Get 组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310) 
+     * @return UserDefineRule 组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310)
      */
     public String getUserDefineRule() {
         return this.UserDefineRule;
     }
 
     /**
-     * Set 用户自定义采集规则，Json格式序列化的字符串
-     * @param UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
+     * Set 组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310)
+     * @param UserDefineRule 组合解析采集规则，用于复杂场景下的日志采集。
+- 取值参考：[使用组合解析提取模式采集日志
+](https://cloud.tencent.com/document/product/614/61310)
      */
     public void setUserDefineRule(String UserDefineRule) {
         this.UserDefineRule = UserDefineRule;
@@ -453,12 +519,14 @@ public class CreateConfigExtraRequest extends AbstractModel {
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true} 
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
+ 
      * @return AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
+
      */
     public String getAdvancedConfig() {
         return this.AdvancedConfig;
@@ -469,12 +537,14 @@ public class CreateConfigExtraRequest extends AbstractModel {
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
+
      * @param AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
 - ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
-样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+- ClsAgentDefault(自定义默认值，无特殊含义，用于清空其他选项)，建议取值0
+
      */
     public void setAdvancedConfig(String AdvancedConfig) {
         this.AdvancedConfig = AdvancedConfig;

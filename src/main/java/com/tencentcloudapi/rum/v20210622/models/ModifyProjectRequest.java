@@ -31,7 +31,7 @@ public class ModifyProjectRequest extends AbstractModel {
     private Long ID;
 
     /**
-    * 项目名(可选，不为空且最长为 200)
+    * 应用名称(可选，不为空且最长为 200字符)
     */
     @SerializedName("Name")
     @Expose
@@ -80,7 +80,7 @@ public class ModifyProjectRequest extends AbstractModel {
     private String Type;
 
     /**
-    * 项目描述(可选，最长为 1000)
+    * 应用描述(可选，最长为 1000字符)
     */
     @SerializedName("Desc")
     @Expose
@@ -103,16 +103,16 @@ public class ModifyProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目名(可选，不为空且最长为 200) 
-     * @return Name 项目名(可选，不为空且最长为 200)
+     * Get 应用名称(可选，不为空且最长为 200字符) 
+     * @return Name 应用名称(可选，不为空且最长为 200字符)
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 项目名(可选，不为空且最长为 200)
-     * @param Name 项目名(可选，不为空且最长为 200)
+     * Set 应用名称(可选，不为空且最长为 200字符)
+     * @param Name 应用名称(可选，不为空且最长为 200字符)
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -215,16 +215,16 @@ public class ModifyProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目描述(可选，最长为 1000) 
-     * @return Desc 项目描述(可选，最长为 1000)
+     * Get 应用描述(可选，最长为 1000字符) 
+     * @return Desc 应用描述(可选，最长为 1000字符)
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 项目描述(可选，最长为 1000)
-     * @param Desc 项目描述(可选，最长为 1000)
+     * Set 应用描述(可选，最长为 1000字符)
+     * @param Desc 应用描述(可选，最长为 1000字符)
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;

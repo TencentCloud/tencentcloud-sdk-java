@@ -77,14 +77,14 @@ public class CreateCloudRecordingRequest extends AbstractModel {
     private Long RoomIdType;
 
     /**
-    * 混流的转码参数，录制模式为混流的时候可以设置。
+    * 合流的转码参数，录制模式为合流的时候可以设置。
     */
     @SerializedName("MixTranscodeParams")
     @Expose
     private MixTranscodeParams MixTranscodeParams;
 
     /**
-    * 混流的布局参数，录制模式为混流的时候可以设置。
+    * 合流的布局参数，录制模式为合流的时候可以设置。
     */
     @SerializedName("MixLayoutParams")
     @Expose
@@ -233,32 +233,32 @@ public class CreateCloudRecordingRequest extends AbstractModel {
     }
 
     /**
-     * Get 混流的转码参数，录制模式为混流的时候可以设置。 
-     * @return MixTranscodeParams 混流的转码参数，录制模式为混流的时候可以设置。
+     * Get 合流的转码参数，录制模式为合流的时候可以设置。 
+     * @return MixTranscodeParams 合流的转码参数，录制模式为合流的时候可以设置。
      */
     public MixTranscodeParams getMixTranscodeParams() {
         return this.MixTranscodeParams;
     }
 
     /**
-     * Set 混流的转码参数，录制模式为混流的时候可以设置。
-     * @param MixTranscodeParams 混流的转码参数，录制模式为混流的时候可以设置。
+     * Set 合流的转码参数，录制模式为合流的时候可以设置。
+     * @param MixTranscodeParams 合流的转码参数，录制模式为合流的时候可以设置。
      */
     public void setMixTranscodeParams(MixTranscodeParams MixTranscodeParams) {
         this.MixTranscodeParams = MixTranscodeParams;
     }
 
     /**
-     * Get 混流的布局参数，录制模式为混流的时候可以设置。 
-     * @return MixLayoutParams 混流的布局参数，录制模式为混流的时候可以设置。
+     * Get 合流的布局参数，录制模式为合流的时候可以设置。 
+     * @return MixLayoutParams 合流的布局参数，录制模式为合流的时候可以设置。
      */
     public MixLayoutParams getMixLayoutParams() {
         return this.MixLayoutParams;
     }
 
     /**
-     * Set 混流的布局参数，录制模式为混流的时候可以设置。
-     * @param MixLayoutParams 混流的布局参数，录制模式为混流的时候可以设置。
+     * Set 合流的布局参数，录制模式为合流的时候可以设置。
+     * @param MixLayoutParams 合流的布局参数，录制模式为合流的时候可以设置。
      */
     public void setMixLayoutParams(MixLayoutParams MixLayoutParams) {
         this.MixLayoutParams = MixLayoutParams;

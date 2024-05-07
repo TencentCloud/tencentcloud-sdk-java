@@ -110,6 +110,14 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
     private Float MessageRateOut;
 
     /**
+    * 是否存在镜像队列策略，true 为存在，false 为不存
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MirrorQueuePolicyFlag")
+    @Expose
+    private Boolean MirrorQueuePolicyFlag;
+
+    /**
      * Get 集群实例Id 
      * @return InstanceId 集群实例Id
      */
@@ -321,6 +329,26 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         this.MessageRateOut = MessageRateOut;
     }
 
+    /**
+     * Get 是否存在镜像队列策略，true 为存在，false 为不存
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MirrorQueuePolicyFlag 是否存在镜像队列策略，true 为存在，false 为不存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getMirrorQueuePolicyFlag() {
+        return this.MirrorQueuePolicyFlag;
+    }
+
+    /**
+     * Set 是否存在镜像队列策略，true 为存在，false 为不存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MirrorQueuePolicyFlag 是否存在镜像队列策略，true 为存在，false 为不存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMirrorQueuePolicyFlag(Boolean MirrorQueuePolicyFlag) {
+        this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
+    }
+
     public RabbitMQVirtualHostInfo() {
     }
 
@@ -365,6 +393,9 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         if (source.MessageRateOut != null) {
             this.MessageRateOut = new Float(source.MessageRateOut);
         }
+        if (source.MirrorQueuePolicyFlag != null) {
+            this.MirrorQueuePolicyFlag = new Boolean(source.MirrorQueuePolicyFlag);
+        }
     }
 
 
@@ -383,6 +414,7 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
         this.setParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
         this.setParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
+        this.setParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
 
     }
 }

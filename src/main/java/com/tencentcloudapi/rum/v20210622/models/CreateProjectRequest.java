@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateProjectRequest extends AbstractModel {
 
     /**
-    * 创建的项目名(不为空且最长为 200)
+    * 应用名称(不为空且最长为 200)
     */
     @SerializedName("Name")
     @Expose
@@ -73,23 +73,23 @@ public class CreateProjectRequest extends AbstractModel {
     private String URL;
 
     /**
-    * 创建的项目描述(可选，最长为 1000)
+    * 应用描述(可选，最长为 1000)
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-     * Get 创建的项目名(不为空且最长为 200) 
-     * @return Name 创建的项目名(不为空且最长为 200)
+     * Get 应用名称(不为空且最长为 200) 
+     * @return Name 应用名称(不为空且最长为 200)
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 创建的项目名(不为空且最长为 200)
-     * @param Name 创建的项目名(不为空且最长为 200)
+     * Set 应用名称(不为空且最长为 200)
+     * @param Name 应用名称(不为空且最长为 200)
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -192,16 +192,16 @@ public class CreateProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 创建的项目描述(可选，最长为 1000) 
-     * @return Desc 创建的项目描述(可选，最长为 1000)
+     * Get 应用描述(可选，最长为 1000) 
+     * @return Desc 应用描述(可选，最长为 1000)
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 创建的项目描述(可选，最长为 1000)
-     * @param Desc 创建的项目描述(可选，最长为 1000)
+     * Set 应用描述(可选，最长为 1000)
+     * @param Desc 应用描述(可选，最长为 1000)
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;

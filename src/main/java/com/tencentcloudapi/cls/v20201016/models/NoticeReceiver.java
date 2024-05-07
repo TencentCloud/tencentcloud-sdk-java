@@ -54,14 +54,14 @@ public class NoticeReceiver extends AbstractModel {
     private String [] ReceiverChannels;
 
     /**
-    * 允许接收信息的开始时间。
+    * 允许接收信息的开始时间。格式：`15:04:05`，必填。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 允许接收信息的结束时间。
+    * 允许接收信息的结束时间。格式：`15:04:05`，必填。
     */
     @SerializedName("EndTime")
     @Expose
@@ -70,7 +70,7 @@ public class NoticeReceiver extends AbstractModel {
     /**
     * 位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。
     */
     @SerializedName("Index")
@@ -162,32 +162,32 @@ public class NoticeReceiver extends AbstractModel {
     }
 
     /**
-     * Get 允许接收信息的开始时间。 
-     * @return StartTime 允许接收信息的开始时间。
+     * Get 允许接收信息的开始时间。格式：`15:04:05`，必填。 
+     * @return StartTime 允许接收信息的开始时间。格式：`15:04:05`，必填。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 允许接收信息的开始时间。
-     * @param StartTime 允许接收信息的开始时间。
+     * Set 允许接收信息的开始时间。格式：`15:04:05`，必填。
+     * @param StartTime 允许接收信息的开始时间。格式：`15:04:05`，必填。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 允许接收信息的结束时间。 
-     * @return EndTime 允许接收信息的结束时间。
+     * Get 允许接收信息的结束时间。格式：`15:04:05`，必填。 
+     * @return EndTime 允许接收信息的结束时间。格式：`15:04:05`，必填。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 允许接收信息的结束时间。
-     * @param EndTime 允许接收信息的结束时间。
+     * Set 允许接收信息的结束时间。格式：`15:04:05`，必填。
+     * @param EndTime 允许接收信息的结束时间。格式：`15:04:05`，必填。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -196,11 +196,11 @@ public class NoticeReceiver extends AbstractModel {
     /**
      * Get 位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。 
      * @return Index 位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。
      */
     public Long getIndex() {
@@ -210,11 +210,11 @@ public class NoticeReceiver extends AbstractModel {
     /**
      * Set 位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。
      * @param Index 位序。
 
-- 入参无效。
+- 入参时无效。
 - 出参时有效。
      */
     public void setIndex(Long Index) {

@@ -31,7 +31,7 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     private String Region;
 
     /**
-    * 集群类型
+    * 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
     */
     @SerializedName("ClusterType")
     @Expose
@@ -103,16 +103,16 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群 
+     * @return ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
+     * @param ClusterType 集群类型。可填入tke、eks、tkeedge、tdcc，分别代表标准集群、弹性集群、边缘集群、注册集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

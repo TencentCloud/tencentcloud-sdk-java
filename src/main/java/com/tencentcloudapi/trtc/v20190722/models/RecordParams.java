@@ -26,7 +26,7 @@ public class RecordParams extends AbstractModel {
     /**
     * 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
     */
     @SerializedName("RecordMode")
     @Expose
@@ -66,7 +66,7 @@ public class RecordParams extends AbstractModel {
     private Long OutputFormat;
 
     /**
-    * 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+    * 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
     */
     @SerializedName("AvMerge")
     @Expose
@@ -88,12 +88,19 @@ Hls 格式录制此参数不生效。
     private Long MediaId;
 
     /**
+    * 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+    */
+    @SerializedName("FillType")
+    @Expose
+    private Long FillType;
+
+    /**
      * Get 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储； 
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储； 
      * @return RecordMode 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
      */
     public Long getRecordMode() {
         return this.RecordMode;
@@ -102,10 +109,10 @@ Hls 格式录制此参数不生效。
     /**
      * Set 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
      * @param RecordMode 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
-2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
+2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
      */
     public void setRecordMode(Long RecordMode) {
         this.RecordMode = RecordMode;
@@ -196,16 +203,16 @@ Hls 格式录制此参数不生效。
     }
 
     /**
-     * Get 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。 
-     * @return AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+     * Get 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。 
+     * @return AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
      */
     public Long getAvMerge() {
         return this.AvMerge;
     }
 
     /**
-     * Set 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
-     * @param AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+     * Set 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
+     * @param AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。合流录制此参数无需设置，默认音视频合并。
      */
     public void setAvMerge(Long AvMerge) {
         this.AvMerge = AvMerge;
@@ -247,6 +254,22 @@ Hls 格式录制此参数不生效。
         this.MediaId = MediaId;
     }
 
+    /**
+     * Get 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧 
+     * @return FillType 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+     */
+    public Long getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+     * @param FillType 上行视频停止时，录制的补帧类型，0：补最后一帧 1：补黑帧
+     */
+    public void setFillType(Long FillType) {
+        this.FillType = FillType;
+    }
+
     public RecordParams() {
     }
 
@@ -279,6 +302,9 @@ Hls 格式录制此参数不生效。
         if (source.MediaId != null) {
             this.MediaId = new Long(source.MediaId);
         }
+        if (source.FillType != null) {
+            this.FillType = new Long(source.FillType);
+        }
     }
 
 
@@ -294,6 +320,7 @@ Hls 格式录制此参数不生效。
         this.setParamSimple(map, prefix + "AvMerge", this.AvMerge);
         this.setParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
         this.setParamSimple(map, prefix + "MediaId", this.MediaId);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
 
     }
 }

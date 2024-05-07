@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ModifyPrometheusInstanceAttributesRequest extends AbstractModel {
 
     /**
-    * 实例名称
-    */
-    @SerializedName("InstanceName")
-    @Expose
-    private String InstanceName;
-
-    /**
     * 实例 ID
     */
     @SerializedName("InstanceId")
@@ -38,27 +31,18 @@ public class ModifyPrometheusInstanceAttributesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 实例名称
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
     * 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
     */
     @SerializedName("DataRetentionTime")
     @Expose
     private Long DataRetentionTime;
-
-    /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
-     */
-    public String getInstanceName() {
-        return this.InstanceName;
-    }
-
-    /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
-     */
-    public void setInstanceName(String InstanceName) {
-        this.InstanceName = InstanceName;
-    }
 
     /**
      * Get 实例 ID 
@@ -74,6 +58,22 @@ public class ModifyPrometheusInstanceAttributesRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 实例名称 
+     * @return InstanceName 实例名称
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 实例名称
+     * @param InstanceName 实例名称
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
     }
 
     /**
@@ -100,11 +100,11 @@ public class ModifyPrometheusInstanceAttributesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyPrometheusInstanceAttributesRequest(ModifyPrometheusInstanceAttributesRequest source) {
-        if (source.InstanceName != null) {
-            this.InstanceName = new String(source.InstanceName);
-        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
         }
         if (source.DataRetentionTime != null) {
             this.DataRetentionTime = new Long(source.DataRetentionTime);
@@ -116,8 +116,8 @@ public class ModifyPrometheusInstanceAttributesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "DataRetentionTime", this.DataRetentionTime);
 
     }
