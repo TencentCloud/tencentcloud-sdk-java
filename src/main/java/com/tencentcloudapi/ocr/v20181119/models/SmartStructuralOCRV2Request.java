@@ -91,6 +91,7 @@ PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
 CarInsurance -- 车险保单
+MultiRealEstateCertificate -- 房产证、不动产证、产权证等材料合一模板
     */
     @SerializedName("ConfigId")
     @Expose
@@ -257,7 +258,8 @@ OnboardingDocuments -- 入职材料识别
 PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
-CarInsurance -- 车险保单 
+CarInsurance -- 车险保单
+MultiRealEstateCertificate -- 房产证、不动产证、产权证等材料合一模板 
      * @return ConfigId 配置id支持：
 General -- 通用场景
 OnlineTaxiItinerary -- 网约车行程单
@@ -272,6 +274,7 @@ PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
 CarInsurance -- 车险保单
+MultiRealEstateCertificate -- 房产证、不动产证、产权证等材料合一模板
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -292,6 +295,7 @@ PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
 CarInsurance -- 车险保单
+MultiRealEstateCertificate -- 房产证、不动产证、产权证等材料合一模板
      * @param ConfigId 配置id支持：
 General -- 通用场景
 OnlineTaxiItinerary -- 网约车行程单
@@ -306,6 +310,7 @@ PropertyOwnershipCertificate -- 房产证识别
 RealEstateCertificate --不动产权证识别
 HouseEncumbranceCertificate -- 他权证识别
 CarInsurance -- 车险保单
+MultiRealEstateCertificate -- 房产证、不动产证、产权证等材料合一模板
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

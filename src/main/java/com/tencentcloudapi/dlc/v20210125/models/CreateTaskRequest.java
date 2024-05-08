@@ -52,6 +52,13 @@ public class CreateTaskRequest extends AbstractModel {
     private String DataEngineName;
 
     /**
+    * 标准spark执行任务resourceGroupName
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get 计算任务，该参数中包含任务类型及其相关配置信息 
      * @return Task 计算任务，该参数中包含任务类型及其相关配置信息
      */
@@ -115,6 +122,22 @@ public class CreateTaskRequest extends AbstractModel {
         this.DataEngineName = DataEngineName;
     }
 
+    /**
+     * Get 标准spark执行任务resourceGroupName 
+     * @return ResourceGroupName 标准spark执行任务resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set 标准spark执行任务resourceGroupName
+     * @param ResourceGroupName 标准spark执行任务resourceGroupName
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public CreateTaskRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateTaskRequest extends AbstractModel {
         if (source.DataEngineName != null) {
             this.DataEngineName = new String(source.DataEngineName);
         }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

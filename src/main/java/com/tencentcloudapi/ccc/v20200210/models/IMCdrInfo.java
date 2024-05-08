@@ -47,6 +47,7 @@ public class IMCdrInfo extends AbstractModel {
 101 座席手动转接
 102 IVR阶段放弃
 108 用户超时自动结束
+109 用户主动结束
     */
     @SerializedName("EndStatus")
     @Expose
@@ -153,7 +154,8 @@ public class IMCdrInfo extends AbstractModel {
 100 黑名单
 101 座席手动转接
 102 IVR阶段放弃
-108 用户超时自动结束 
+108 用户超时自动结束
+109 用户主动结束 
      * @return EndStatus 结束状态
 0 异常结束
 1 正常结束
@@ -163,6 +165,7 @@ public class IMCdrInfo extends AbstractModel {
 101 座席手动转接
 102 IVR阶段放弃
 108 用户超时自动结束
+109 用户主动结束
      */
     public Long getEndStatus() {
         return this.EndStatus;
@@ -178,6 +181,7 @@ public class IMCdrInfo extends AbstractModel {
 101 座席手动转接
 102 IVR阶段放弃
 108 用户超时自动结束
+109 用户主动结束
      * @param EndStatus 结束状态
 0 异常结束
 1 正常结束
@@ -187,6 +191,7 @@ public class IMCdrInfo extends AbstractModel {
 101 座席手动转接
 102 IVR阶段放弃
 108 用户超时自动结束
+109 用户主动结束
      */
     public void setEndStatus(Long EndStatus) {
         this.EndStatus = EndStatus;

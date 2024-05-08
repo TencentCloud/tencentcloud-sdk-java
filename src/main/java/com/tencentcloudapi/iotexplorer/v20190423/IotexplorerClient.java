@@ -215,6 +215,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建TRTC通话参数
+     * @param req CreateTRTCSignaturesWithRoomIdRequest
+     * @return CreateTRTCSignaturesWithRoomIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(CreateTRTCSignaturesWithRoomIdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTRTCSignaturesWithRoomId", CreateTRTCSignaturesWithRoomIdResponse.class);
+    }
+
+    /**
      *本接口（CreateTopicPolicy）用于创建一个Topic 
      * @param req CreateTopicPolicyRequest
      * @return CreateTopicPolicyResponse
@@ -421,6 +432,17 @@ public class IotexplorerClient extends AbstractClient{
     public DescribeCloudStorageAIServiceCallbackResponse DescribeCloudStorageAIServiceCallback(DescribeCloudStorageAIServiceCallbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudStorageAIServiceCallback", DescribeCloudStorageAIServiceCallbackResponse.class);
+    }
+
+    /**
+     *查询指定的云存 AI 分析任务
+     * @param req DescribeCloudStorageAIServiceTaskRequest
+     * @return DescribeCloudStorageAIServiceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudStorageAIServiceTaskResponse DescribeCloudStorageAIServiceTask(DescribeCloudStorageAIServiceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudStorageAIServiceTask", DescribeCloudStorageAIServiceTaskResponse.class);
     }
 
     /**
@@ -875,6 +897,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *解散TRTC房间
+     * @param req DismissRoomByStrRoomIdFromTRTCRequest
+     * @return DismissRoomByStrRoomIdFromTRTCResponse
+     * @throws TencentCloudSDKException
+     */
+    public DismissRoomByStrRoomIdFromTRTCResponse DismissRoomByStrRoomIdFromTRTC(DismissRoomByStrRoomIdFromTRTCRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DismissRoomByStrRoomIdFromTRTC", DismissRoomByStrRoomIdFromTRTCResponse.class);
+    }
+
+    /**
      *启用规则
      * @param req EnableTopicRuleRequest
      * @return EnableTopicRuleResponse
@@ -894,6 +927,17 @@ public class IotexplorerClient extends AbstractClient{
     public GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublic(GenSingleDeviceSignatureOfPublicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GenSingleDeviceSignatureOfPublic", GenSingleDeviceSignatureOfPublicResponse.class);
+    }
+
+    /**
+     *获取云存 AI 分析任务输出文件的下载地址
+     * @param req GenerateCloudStorageAIServiceTaskFileURLRequest
+     * @return GenerateCloudStorageAIServiceTaskFileURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateCloudStorageAIServiceTaskFileURLResponse GenerateCloudStorageAIServiceTaskFileURL(GenerateCloudStorageAIServiceTaskFileURLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateCloudStorageAIServiceTaskFileURL", GenerateCloudStorageAIServiceTaskFileURLResponse.class);
     }
 
     /**
@@ -1279,6 +1323,17 @@ public class IotexplorerClient extends AbstractClient{
     public ReleaseStudioProductResponse ReleaseStudioProduct(ReleaseStudioProductRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ReleaseStudioProduct", ReleaseStudioProductResponse.class);
+    }
+
+    /**
+     *TRTC操作，将用户从房间移出
+     * @param req RemoveUserByRoomIdFromTRTCRequest
+     * @return RemoveUserByRoomIdFromTRTCResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveUserByRoomIdFromTRTCResponse RemoveUserByRoomIdFromTRTC(RemoveUserByRoomIdFromTRTCRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveUserByRoomIdFromTRTC", RemoveUserByRoomIdFromTRTCResponse.class);
     }
 
     /**

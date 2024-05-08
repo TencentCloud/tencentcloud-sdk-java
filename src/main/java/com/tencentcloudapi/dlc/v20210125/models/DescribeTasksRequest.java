@@ -85,6 +85,13 @@ task-kind - string （任务类型过滤）
     private String DataEngineName;
 
     /**
+    * spark引擎资源组名称
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get 返回数量，默认为10，最大值为100。 
      * @return Limit 返回数量，默认为10，最大值为100。
      */
@@ -232,6 +239,22 @@ task-kind - string （任务类型过滤）
         this.DataEngineName = DataEngineName;
     }
 
+    /**
+     * Get spark引擎资源组名称 
+     * @return ResourceGroupName spark引擎资源组名称
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set spark引擎资源组名称
+     * @param ResourceGroupName spark引擎资源组名称
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public DescribeTasksRequest() {
     }
 
@@ -267,6 +290,9 @@ task-kind - string （任务类型过滤）
         if (source.DataEngineName != null) {
             this.DataEngineName = new String(source.DataEngineName);
         }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -282,6 +308,7 @@ task-kind - string （任务类型过滤）
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

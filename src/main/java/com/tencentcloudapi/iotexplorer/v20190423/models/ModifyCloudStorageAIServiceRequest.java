@@ -38,7 +38,9 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
     private String DeviceName;
 
     /**
-    * 云存 AI 服务类型。可选值：PackageDetect
+    * 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
     */
     @SerializedName("ServiceType")
     @Expose
@@ -57,6 +59,13 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
     @SerializedName("ROI")
     @Expose
     private String ROI;
+
+    /**
+    * 云存 AI 服务的配置参数
+    */
+    @SerializedName("Config")
+    @Expose
+    private String Config;
 
     /**
      * Get 产品ID 
@@ -91,16 +100,24 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 云存 AI 服务类型。可选值：PackageDetect 
-     * @return ServiceType 云存 AI 服务类型。可选值：PackageDetect
+     * Get 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩 
+     * @return ServiceType 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 云存 AI 服务类型。可选值：PackageDetect
-     * @param ServiceType 云存 AI 服务类型。可选值：PackageDetect
+     * Set 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+     * @param ServiceType 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -138,6 +155,22 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
         this.ROI = ROI;
     }
 
+    /**
+     * Get 云存 AI 服务的配置参数 
+     * @return Config 云存 AI 服务的配置参数
+     */
+    public String getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set 云存 AI 服务的配置参数
+     * @param Config 云存 AI 服务的配置参数
+     */
+    public void setConfig(String Config) {
+        this.Config = Config;
+    }
+
     public ModifyCloudStorageAIServiceRequest() {
     }
 
@@ -161,6 +194,9 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
         if (source.ROI != null) {
             this.ROI = new String(source.ROI);
         }
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
     }
 
 
@@ -173,6 +209,7 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "ROI", this.ROI);
+        this.setParamSimple(map, prefix + "Config", this.Config);
 
     }
 }

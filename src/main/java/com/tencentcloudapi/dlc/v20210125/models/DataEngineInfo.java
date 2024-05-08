@@ -403,6 +403,22 @@ public class DataEngineInfo extends AbstractModel {
     private String EngineNetworkId;
 
     /**
+    * 标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineResourceGroupCount")
+    @Expose
+    private Long EngineResourceGroupCount;
+
+    /**
+    * 引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineResourceUsedCU")
+    @Expose
+    private Long EngineResourceUsedCU;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1330,6 +1346,46 @@ public class DataEngineInfo extends AbstractModel {
         this.EngineNetworkId = EngineNetworkId;
     }
 
+    /**
+     * Get 标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineResourceGroupCount 标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEngineResourceGroupCount() {
+        return this.EngineResourceGroupCount;
+    }
+
+    /**
+     * Set 标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineResourceGroupCount 标准引擎关联的资源组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineResourceGroupCount(Long EngineResourceGroupCount) {
+        this.EngineResourceGroupCount = EngineResourceGroupCount;
+    }
+
+    /**
+     * Get 引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineResourceUsedCU 引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEngineResourceUsedCU() {
+        return this.EngineResourceUsedCU;
+    }
+
+    /**
+     * Set 引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineResourceUsedCU 引擎当前使用量（Cu）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineResourceUsedCU(Long EngineResourceUsedCU) {
+        this.EngineResourceUsedCU = EngineResourceUsedCU;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1494,6 +1550,12 @@ public class DataEngineInfo extends AbstractModel {
         if (source.EngineNetworkId != null) {
             this.EngineNetworkId = new String(source.EngineNetworkId);
         }
+        if (source.EngineResourceGroupCount != null) {
+            this.EngineResourceGroupCount = new Long(source.EngineResourceGroupCount);
+        }
+        if (source.EngineResourceUsedCU != null) {
+            this.EngineResourceUsedCU = new Long(source.EngineResourceUsedCU);
+        }
     }
 
 
@@ -1550,6 +1612,8 @@ public class DataEngineInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
         this.setParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
+        this.setParamSimple(map, prefix + "EngineResourceGroupCount", this.EngineResourceGroupCount);
+        this.setParamSimple(map, prefix + "EngineResourceUsedCU", this.EngineResourceUsedCU);
 
     }
 }

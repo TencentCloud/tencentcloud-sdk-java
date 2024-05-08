@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDiskDiscountRequest extends AbstractModel {
 
     /**
-    * 云硬盘类型, 取值: "CLOUD_PREMIUM"。
+    * 云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
     */
     @SerializedName("DiskType")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeDiskDiscountRequest extends AbstractModel {
     private Long DiskBackupQuota;
 
     /**
-     * Get 云硬盘类型, 取值: "CLOUD_PREMIUM"。 
-     * @return DiskType 云硬盘类型, 取值: "CLOUD_PREMIUM"。
+     * Get 云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘 
+     * @return DiskType 云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 云硬盘类型, 取值: "CLOUD_PREMIUM"。
-     * @param DiskType 云硬盘类型, 取值: "CLOUD_PREMIUM"。
+     * Set 云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
+     * @param DiskType 云硬盘类型, 取值范围: CLOUD_PREMIUM: 高性能云硬盘，CLOUD_SSD: SSD云硬盘
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

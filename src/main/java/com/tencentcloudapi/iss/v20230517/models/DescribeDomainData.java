@@ -80,6 +80,14 @@ public class DescribeDomainData extends AbstractModel {
     private Long AppId;
 
     /**
+    * 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertId")
+    @Expose
+    private String CertId;
+
+    /**
      * Get 域名ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 域名ID
@@ -219,6 +227,26 @@ public class DescribeDomainData extends AbstractModel {
         this.AppId = AppId;
     }
 
+    /**
+     * Get 证书ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertId 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCertId() {
+        return this.CertId;
+    }
+
+    /**
+     * Set 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertId 证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertId(String CertId) {
+        this.CertId = CertId;
+    }
+
     public DescribeDomainData() {
     }
 
@@ -248,6 +276,9 @@ public class DescribeDomainData extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
     }
 
 
@@ -262,6 +293,7 @@ public class DescribeDomainData extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "CertId", this.CertId);
 
     }
 }

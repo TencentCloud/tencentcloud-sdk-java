@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rce.v20201103.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskTrendsResponse extends AbstractModel {
-
-    /**
-    * 业务出参
-    */
-    @SerializedName("Data")
-    @Expose
-    private OutputFrontRiskData Data;
+public class DismissRoomByStrRoomIdFromTRTCResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class DescribeRiskTrendsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 业务出参 
-     * @return Data 业务出参
-     */
-    public OutputFrontRiskData getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 业务出参
-     * @param Data 业务出参
-     */
-    public void setData(OutputFrontRiskData Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class DescribeRiskTrendsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeRiskTrendsResponse() {
+    public DismissRoomByStrRoomIdFromTRTCResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskTrendsResponse(DescribeRiskTrendsResponse source) {
-        if (source.Data != null) {
-            this.Data = new OutputFrontRiskData(source.Data);
-        }
+    public DismissRoomByStrRoomIdFromTRTCResponse(DismissRoomByStrRoomIdFromTRTCResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class DescribeRiskTrendsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

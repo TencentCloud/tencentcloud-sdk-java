@@ -38,7 +38,9 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
     private String DeviceName;
 
     /**
-    * 云存 AI 服务类型。可选值：PackageDetect
+    * 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
     */
     @SerializedName("ServiceType")
     @Expose
@@ -59,11 +61,30 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；不传则查询全部状态的任务）
+    * 任务状态。可选值：
+- （不传）：查询全部状态的任务
+- `1`：失败
+- `2`：成功但结果为空
+- `3`：成功且结果非空
+- `4`：执行中
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
+
+    /**
+    * 用户ID
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
+    * 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
 
     /**
      * Get 产品 ID 
@@ -98,16 +119,24 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 云存 AI 服务类型。可选值：PackageDetect 
-     * @return ServiceType 云存 AI 服务类型。可选值：PackageDetect
+     * Get 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩 
+     * @return ServiceType 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 云存 AI 服务类型。可选值：PackageDetect
-     * @param ServiceType 云存 AI 服务类型。可选值：PackageDetect
+     * Set 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+     * @param ServiceType 云存 AI 服务类型。可选值：
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -146,19 +175,71 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；不传则查询全部状态的任务） 
-     * @return Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；不传则查询全部状态的任务）
+     * Get 任务状态。可选值：
+- （不传）：查询全部状态的任务
+- `1`：失败
+- `2`：成功但结果为空
+- `3`：成功且结果非空
+- `4`：执行中 
+     * @return Status 任务状态。可选值：
+- （不传）：查询全部状态的任务
+- `1`：失败
+- `2`：成功但结果为空
+- `3`：成功且结果非空
+- `4`：执行中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；不传则查询全部状态的任务）
-     * @param Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；不传则查询全部状态的任务）
+     * Set 任务状态。可选值：
+- （不传）：查询全部状态的任务
+- `1`：失败
+- `2`：成功但结果为空
+- `3`：成功且结果非空
+- `4`：执行中
+     * @param Status 任务状态。可选值：
+- （不传）：查询全部状态的任务
+- `1`：失败
+- `2`：成功但结果为空
+- `3`：成功且结果非空
+- `4`：执行中
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 用户ID 
+     * @return UserId 用户ID
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户ID
+     * @param UserId 用户ID
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
+     * Get 通道ID 非NVR设备则不填 NVR设备则必填 默认为无 
+     * @return ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * @param ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
     }
 
     public DescribeCloudStorageAIServiceTasksRequest() {
@@ -187,6 +268,12 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
     }
 
 
@@ -200,6 +287,8 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

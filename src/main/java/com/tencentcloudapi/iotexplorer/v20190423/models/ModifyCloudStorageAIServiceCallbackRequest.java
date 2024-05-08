@@ -31,7 +31,8 @@ public class ModifyCloudStorageAIServiceCallbackRequest extends AbstractModel {
     private String ProductId;
 
     /**
-    * 推送类型。http：HTTP 回调
+    * 推送类型。可选值：
+- `http`：HTTP 回调
     */
     @SerializedName("Type")
     @Expose
@@ -68,16 +69,20 @@ public class ModifyCloudStorageAIServiceCallbackRequest extends AbstractModel {
     }
 
     /**
-     * Get 推送类型。http：HTTP 回调 
-     * @return Type 推送类型。http：HTTP 回调
+     * Get 推送类型。可选值：
+- `http`：HTTP 回调 
+     * @return Type 推送类型。可选值：
+- `http`：HTTP 回调
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 推送类型。http：HTTP 回调
-     * @param Type 推送类型。http：HTTP 回调
+     * Set 推送类型。可选值：
+- `http`：HTTP 回调
+     * @param Type 推送类型。可选值：
+- `http`：HTTP 回调
      */
     public void setType(String Type) {
         this.Type = Type;

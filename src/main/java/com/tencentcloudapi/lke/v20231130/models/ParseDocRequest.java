@@ -31,7 +31,7 @@ public class ParseDocRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
+    * 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
     */
     @SerializedName("Url")
     @Expose
@@ -75,16 +75,16 @@ public class ParseDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf) 
-     * @return Url 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
+     * Get 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问 
+     * @return Url 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
-     * @param Url 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf)
+     * Set 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
+     * @param Url 文件下载链接 (支持的文件类型: docx, txt, markdown, pdf), 该地址需要外网可以直接无状态访问
      */
     public void setUrl(String Url) {
         this.Url = Url;

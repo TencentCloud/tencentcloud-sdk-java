@@ -46,6 +46,7 @@ public class CreateEngineRequest extends AbstractModel {
     /**
     * 引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -187,6 +188,9 @@ polarismesh - STANDARD版本
     /**
     * 跨地域部署的引擎地域配置详情
 zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
     */
     @SerializedName("EngineRegionInfos")
     @Expose
@@ -266,6 +270,7 @@ zk标准版没有跨地域部署，请不要填写
     /**
      * Get 引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -282,6 +287,7 @@ polarismesh - STANDARD版本
 兼容原spec-xxxxxx形式的规格ID 
      * @return EngineProductVersion 引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -304,6 +310,7 @@ polarismesh - STANDARD版本
     /**
      * Set 引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -320,6 +327,7 @@ polarismesh - STANDARD版本
 兼容原spec-xxxxxx形式的规格ID
      * @param EngineProductVersion 引擎的产品版本。参考值：
 - STANDARD： 标准版
+- PROFESSIONAL: 专业版（Zookeeper）/企业版（PolarisMesh）
 
 引擎各版本及可选择的规格、节点数说明：
 apollo - STANDARD版本
@@ -673,9 +681,15 @@ polarismesh - STANDARD版本
 
     /**
      * Get 跨地域部署的引擎地域配置详情
-zk标准版没有跨地域部署，请不要填写 
+zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4 
      * @return EngineRegionInfos 跨地域部署的引擎地域配置详情
 zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
      */
     public EngineRegionInfo [] getEngineRegionInfos() {
         return this.EngineRegionInfos;
@@ -684,8 +698,14 @@ zk标准版没有跨地域部署，请不要填写
     /**
      * Set 跨地域部署的引擎地域配置详情
 zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
      * @param EngineRegionInfos 跨地域部署的引擎地域配置详情
 zk标准版没有跨地域部署，请不要填写
+zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下条件
+- 固定Leader所在地域当前仅支持跨两个地域
+- leader地域的副本数必须是3/2 + 1，5/2+1，7/2+1，也就是 2，3，4
      */
     public void setEngineRegionInfos(EngineRegionInfo [] EngineRegionInfos) {
         this.EngineRegionInfos = EngineRegionInfos;

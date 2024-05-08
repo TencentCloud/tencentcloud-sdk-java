@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rce.v20201103.models;
+package com.tencentcloudapi.mrs.v20200910.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,77 +21,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputFrontRiskValue extends AbstractModel {
+public class ChemicalProductInfoGeriatricUse extends AbstractModel {
 
     /**
-    * 请求次数
+    * 文本
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Requests")
+    @SerializedName("Text")
     @Expose
-    private Long Requests;
+    private String Text;
 
     /**
-    * 日期标签
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Index")
-    @Expose
-    private String Index;
-
-    /**
-     * Get 请求次数
+     * Get 文本
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Requests 请求次数
+     * @return Text 文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getRequests() {
-        return this.Requests;
+    public String getText() {
+        return this.Text;
     }
 
     /**
-     * Set 请求次数
+     * Set 文本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Requests 请求次数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRequests(Long Requests) {
-        this.Requests = Requests;
-    }
-
-    /**
-     * Get 日期标签
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Index 日期标签
+     * @param Text 文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getIndex() {
-        return this.Index;
+    public void setText(String Text) {
+        this.Text = Text;
     }
 
-    /**
-     * Set 日期标签
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Index 日期标签
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setIndex(String Index) {
-        this.Index = Index;
-    }
-
-    public OutputFrontRiskValue() {
+    public ChemicalProductInfoGeriatricUse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OutputFrontRiskValue(OutputFrontRiskValue source) {
-        if (source.Requests != null) {
-            this.Requests = new Long(source.Requests);
-        }
-        if (source.Index != null) {
-            this.Index = new String(source.Index);
+    public ChemicalProductInfoGeriatricUse(ChemicalProductInfoGeriatricUse source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
         }
     }
 
@@ -100,8 +69,7 @@ public class OutputFrontRiskValue extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Requests", this.Requests);
-        this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "Text", this.Text);
 
     }
 }

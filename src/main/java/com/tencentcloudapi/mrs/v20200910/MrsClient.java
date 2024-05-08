@@ -39,6 +39,17 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
+     *药品说明书PDF文件结构化
+     * @param req DrugInstructionObjectRequest
+     * @return DrugInstructionObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DrugInstructionObjectResponse DrugInstructionObject(DrugInstructionObjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DrugInstructionObject", DrugInstructionObjectResponse.class);
+    }
+
+    /**
      *医疗报告图片脱敏接口
      * @param req ImageMaskRequest
      * @return ImageMaskResponse

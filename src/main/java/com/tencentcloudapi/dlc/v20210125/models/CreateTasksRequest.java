@@ -52,6 +52,13 @@ public class CreateTasksRequest extends AbstractModel {
     private String DataEngineName;
 
     /**
+    * spark集群资源组名称
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。 
      * @return DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      */
@@ -115,6 +122,22 @@ public class CreateTasksRequest extends AbstractModel {
         this.DataEngineName = DataEngineName;
     }
 
+    /**
+     * Get spark集群资源组名称 
+     * @return ResourceGroupName spark集群资源组名称
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set spark集群资源组名称
+     * @param ResourceGroupName spark集群资源组名称
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public CreateTasksRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateTasksRequest extends AbstractModel {
         if (source.DataEngineName != null) {
             this.DataEngineName = new String(source.DataEngineName);
         }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateTasksRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

@@ -240,6 +240,30 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     private Long QuorumInitialGroupSize;
 
     /**
+    * 是否为独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Exclusive")
+    @Expose
+    private Boolean Exclusive;
+
+    /**
+    * 生效的策略名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Policy")
+    @Expose
+    private String Policy;
+
+    /**
+    * 扩展参数 key-value
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Arguments")
+    @Expose
+    private String Arguments;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -787,6 +811,66 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否为独占队列
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Exclusive 是否为独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getExclusive() {
+        return this.Exclusive;
+    }
+
+    /**
+     * Set 是否为独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Exclusive 是否为独占队列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusive(Boolean Exclusive) {
+        this.Exclusive = Exclusive;
+    }
+
+    /**
+     * Get 生效的策略名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Policy 生效的策略名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPolicy() {
+        return this.Policy;
+    }
+
+    /**
+     * Set 生效的策略名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Policy 生效的策略名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicy(String Policy) {
+        this.Policy = Policy;
+    }
+
+    /**
+     * Get 扩展参数 key-value
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Arguments 扩展参数 key-value
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArguments() {
+        return this.Arguments;
+    }
+
+    /**
+     * Set 扩展参数 key-value
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Arguments 扩展参数 key-value
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArguments(String Arguments) {
+        this.Arguments = Arguments;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -891,6 +975,15 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
         if (source.QuorumInitialGroupSize != null) {
             this.QuorumInitialGroupSize = new Long(source.QuorumInitialGroupSize);
         }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Boolean(source.Exclusive);
+        }
+        if (source.Policy != null) {
+            this.Policy = new String(source.Policy);
+        }
+        if (source.Arguments != null) {
+            this.Arguments = new String(source.Arguments);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -928,6 +1021,9 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DeadLetterStrategy", this.DeadLetterStrategy);
         this.setParamSimple(map, prefix + "QueueLeaderLocator", this.QueueLeaderLocator);
         this.setParamSimple(map, prefix + "QuorumInitialGroupSize", this.QuorumInitialGroupSize);
+        this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
+        this.setParamSimple(map, prefix + "Policy", this.Policy);
+        this.setParamSimple(map, prefix + "Arguments", this.Arguments);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

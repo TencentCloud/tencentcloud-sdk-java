@@ -149,6 +149,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *Waf IP黑白名单新增接口
+     * @param req CreateIpAccessControlRequest
+     * @return CreateIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIpAccessControlResponse CreateIpAccessControl(CreateIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIpAccessControl", CreateIpAccessControlResponse.class);
+    }
+
+    /**
      *本接口用于删除访问日志导出
      * @param req DeleteAccessExportRequest
      * @return DeleteAccessExportResponse
@@ -280,6 +291,17 @@ public class WafClient extends AbstractClient{
     public DeleteIpAccessControlResponse DeleteIpAccessControl(DeleteIpAccessControlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteIpAccessControl", DeleteIpAccessControlResponse.class);
+    }
+
+    /**
+     *Waf IP黑白名单最新版本删除接口
+     * @param req DeleteIpAccessControlV2Request
+     * @return DeleteIpAccessControlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIpAccessControlV2Response DeleteIpAccessControlV2(DeleteIpAccessControlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteIpAccessControlV2", DeleteIpAccessControlV2Response.class);
     }
 
     /**
@@ -1002,6 +1024,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *导入IP黑白名单
+     * @param req ImportIpAccessControlRequest
+     * @return ImportIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportIpAccessControlResponse ImportIpAccessControl(ImportIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportIpAccessControl", ImportIpAccessControlResponse.class);
+    }
+
+    /**
      *本接口用于修改访问日志保存期限等字段信息
      * @param req ModifyAccessPeriodRequest
      * @return ModifyAccessPeriodResponse
@@ -1286,6 +1319,17 @@ public class WafClient extends AbstractClient{
     public ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(ModifyInstanceRenewFlagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceRenewFlag", ModifyInstanceRenewFlagResponse.class);
+    }
+
+    /**
+     *Waf IP黑白名单编辑接口
+     * @param req ModifyIpAccessControlRequest
+     * @return ModifyIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIpAccessControlResponse ModifyIpAccessControl(ModifyIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIpAccessControl", ModifyIpAccessControlResponse.class);
     }
 
     /**

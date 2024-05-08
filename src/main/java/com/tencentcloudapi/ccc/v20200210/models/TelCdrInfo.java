@@ -104,6 +104,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -117,7 +125,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -234,6 +242,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -247,7 +263,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -547,6 +563,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -560,7 +584,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -593,6 +617,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -606,7 +638,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -645,6 +677,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -658,7 +698,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -691,6 +731,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -704,7 +752,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -935,6 +983,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -948,7 +1004,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -982,6 +1038,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -995,7 +1059,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -1035,6 +1099,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -1048,7 +1120,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 
@@ -1082,6 +1154,14 @@ public class TelCdrInfo extends AbstractModel {
 电话呼入	            100	      blackList 呼入黑名单 
 
 电话呼出               2	              unconnected	未接通
+
+电话呼出             108	        restrictedCallee	被叫因高风险受限
+
+电话呼出             109	        tooManyRequest	    超频
+
+电话呼出             110	        restrictedArea	    外呼盲区
+
+电话呼出             111	        restrictedTime	外呼时间限制
                          
 电话呼出             201            unknown	未知状态
 
@@ -1095,7 +1175,7 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼出	         206	           busy	通话中
 
-电话呼出   	 207	           outOfCredit	欠费
+电话呼出   	        207	           outOfCredit	欠费
 
 电话呼出	         208	           operatorError	运营商线路异常
 

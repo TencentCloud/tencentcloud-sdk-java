@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDataEngineImageVersionsRequest extends AbstractModel {
 
     /**
-    * 引擎类型：SQL、SparkBatch
+    * 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-     * Get 引擎类型：SQL、SparkBatch 
-     * @return EngineType 引擎类型：SQL、SparkBatch
+     * Get 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto 
+     * @return EngineType 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set 引擎类型：SQL、SparkBatch
-     * @param EngineType 引擎类型：SQL、SparkBatch
+     * Set 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
+     * @param EngineType 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

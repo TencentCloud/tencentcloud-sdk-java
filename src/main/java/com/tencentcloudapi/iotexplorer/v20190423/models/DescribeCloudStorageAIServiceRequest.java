@@ -38,7 +38,10 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
     private String DeviceName;
 
     /**
-    * 云存 AI 服务类型。可选值：PackageDetect
+    * 云存 AI 服务类型。可选值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
     */
     @SerializedName("ServiceType")
     @Expose
@@ -77,16 +80,28 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 云存 AI 服务类型。可选值：PackageDetect 
-     * @return ServiceType 云存 AI 服务类型。可选值：PackageDetect
+     * Get 云存 AI 服务类型。可选值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩 
+     * @return ServiceType 云存 AI 服务类型。可选值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 云存 AI 服务类型。可选值：PackageDetect
-     * @param ServiceType 云存 AI 服务类型。可选值：PackageDetect
+     * Set 云存 AI 服务类型。可选值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+     * @param ServiceType 云存 AI 服务类型。可选值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;

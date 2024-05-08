@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rce.v20201103.models;
+package com.tencentcloudapi.mrs.v20200910.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskTrendsRequest extends AbstractModel {
+public class ChemicalProductInfoContraindications extends AbstractModel {
 
     /**
-    * 业务入参
+    * 文本
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("BusinessSecurityData")
+    @SerializedName("Text")
     @Expose
-    private InputFrontRisk BusinessSecurityData;
+    private String Text;
 
     /**
-     * Get 业务入参 
-     * @return BusinessSecurityData 业务入参
+     * Get 文本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Text 文本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public InputFrontRisk getBusinessSecurityData() {
-        return this.BusinessSecurityData;
+    public String getText() {
+        return this.Text;
     }
 
     /**
-     * Set 业务入参
-     * @param BusinessSecurityData 业务入参
+     * Set 文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Text 文本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBusinessSecurityData(InputFrontRisk BusinessSecurityData) {
-        this.BusinessSecurityData = BusinessSecurityData;
+    public void setText(String Text) {
+        this.Text = Text;
     }
 
-    public DescribeRiskTrendsRequest() {
+    public ChemicalProductInfoContraindications() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskTrendsRequest(DescribeRiskTrendsRequest source) {
-        if (source.BusinessSecurityData != null) {
-            this.BusinessSecurityData = new InputFrontRisk(source.BusinessSecurityData);
+    public ChemicalProductInfoContraindications(ChemicalProductInfoContraindications source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
         }
     }
 
@@ -64,7 +69,7 @@ public class DescribeRiskTrendsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
+        this.setParamSimple(map, prefix + "Text", this.Text);
 
     }
 }

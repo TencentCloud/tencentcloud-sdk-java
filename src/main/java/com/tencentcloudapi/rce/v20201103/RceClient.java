@@ -50,17 +50,6 @@ public class RceClient extends AbstractClient{
     }
 
     /**
-     *以图表形式展示三种请求状态的趋势变化
-     * @param req DescribeRiskTrendsRequest
-     * @return DescribeRiskTrendsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRiskTrendsResponse DescribeRiskTrends(DescribeRiskTrendsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRiskTrends", DescribeRiskTrendsResponse.class);
-    }
-
-    /**
      *全栈式风控引擎（RiskControlEngine，RCE）是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
      * @param req ManageMarketingRiskRequest
      * @return ManageMarketingRiskResponse

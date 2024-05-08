@@ -337,6 +337,22 @@ public class TaskResponseInfo extends AbstractModel {
     private String ResultFormat;
 
     /**
+    * 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineTypeDetail")
+    @Expose
+    private String EngineTypeDetail;
+
+    /**
+    * spark引擎资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -1096,6 +1112,46 @@ public class TaskResponseInfo extends AbstractModel {
         this.ResultFormat = ResultFormat;
     }
 
+    /**
+     * Get 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineTypeDetail 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineTypeDetail() {
+        return this.EngineTypeDetail;
+    }
+
+    /**
+     * Set 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineTypeDetail 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineTypeDetail(String EngineTypeDetail) {
+        this.EngineTypeDetail = EngineTypeDetail;
+    }
+
+    /**
+     * Get spark引擎资源组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupName spark引擎资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set spark引擎资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupName spark引擎资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -1227,6 +1283,12 @@ public class TaskResponseInfo extends AbstractModel {
         if (source.ResultFormat != null) {
             this.ResultFormat = new String(source.ResultFormat);
         }
+        if (source.EngineTypeDetail != null) {
+            this.EngineTypeDetail = new String(source.EngineTypeDetail);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -1275,6 +1337,8 @@ public class TaskResponseInfo extends AbstractModel {
         this.setParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
         this.setParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
         this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
+        this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

@@ -52,6 +52,16 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     private Long ChannelId;
 
     /**
+    * 云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
     * 对应云存视频的起始时间
     */
     @SerializedName("StartTime")
@@ -66,7 +76,7 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     private Long EndTime;
 
     /**
-    * 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+    * 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
     */
     @SerializedName("Status")
     @Expose
@@ -80,16 +90,14 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     private String Result;
 
     /**
-    * 云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+    * 任务输出文件列表
     */
-    @SerializedName("ServiceType")
+    @SerializedName("Files")
     @Expose
-    private String ServiceType;
+    private String [] Files;
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -97,7 +105,6 @@ public class CloudStorageAIServiceTask extends AbstractModel {
 
     /**
     * 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -168,6 +175,34 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     }
 
     /**
+     * Get 云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩 
+     * @return ServiceType 云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set 云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+     * @param ServiceType 云存 AI 服务类型。可能取值：
+
+- `PackageDetect`：包裹检测
+- `Highlight`：视频浓缩
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
+    }
+
+    /**
      * Get 对应云存视频的起始时间 
      * @return StartTime 对应云存视频的起始时间
      */
@@ -200,16 +235,16 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     }
 
     /**
-     * Get 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空） 
-     * @return Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+     * Get 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中） 
+     * @return Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
-     * @param Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+     * Set 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
+     * @param Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -232,30 +267,24 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     }
 
     /**
-     * Get 云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceType 云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务输出文件列表 
+     * @return Files 任务输出文件列表
      */
-    public String getServiceType() {
-        return this.ServiceType;
+    public String [] getFiles() {
+        return this.Files;
     }
 
     /**
-     * Set 云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceType 云存 AI 服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 任务输出文件列表
+     * @param Files 任务输出文件列表
      */
-    public void setServiceType(String ServiceType) {
-        this.ServiceType = ServiceType;
+    public void setFiles(String [] Files) {
+        this.Files = Files;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -263,19 +292,15 @@ public class CloudStorageAIServiceTask extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后更新时间 
      * @return UpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
@@ -283,9 +308,7 @@ public class CloudStorageAIServiceTask extends AbstractModel {
 
     /**
      * Set 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -311,6 +334,9 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
         }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
         }
@@ -323,8 +349,11 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         if (source.Result != null) {
             this.Result = new String(source.Result);
         }
-        if (source.ServiceType != null) {
-            this.ServiceType = new String(source.ServiceType);
+        if (source.Files != null) {
+            this.Files = new String[source.Files.length];
+            for (int i = 0; i < source.Files.length; i++) {
+                this.Files[i] = new String(source.Files[i]);
+            }
         }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
@@ -343,11 +372,12 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Result", this.Result);
-        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamArraySimple(map, prefix + "Files.", this.Files);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
