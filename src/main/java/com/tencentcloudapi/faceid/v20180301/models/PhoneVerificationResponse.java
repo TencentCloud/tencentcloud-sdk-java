@@ -56,18 +56,12 @@ public class PhoneVerificationResponse extends AbstractModel {
 
     /**
     * 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-
 枚举值：
-
-手机号码与姓名一致，与身份证号不一致；
-
-手机号码身份证号一致，与姓名不一致；
-
-手机号码与姓名和身份证号均不一致；
-
-姓名和身份证号不一致；
-
-其他不一致。
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
+NameIdCardMismatch：姓名和身份证号不一致；
+OtherMismatch：其他不一致；
     */
     @SerializedName("ResultDetail")
     @Expose
@@ -170,31 +164,19 @@ public class PhoneVerificationResponse extends AbstractModel {
 
     /**
      * Get 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-
 枚举值：
-
-手机号码与姓名一致，与身份证号不一致；
-
-手机号码身份证号一致，与姓名不一致；
-
-手机号码与姓名和身份证号均不一致；
-
-姓名和身份证号不一致；
-
-其他不一致。 
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
+NameIdCardMismatch：姓名和身份证号不一致；
+OtherMismatch：其他不一致； 
      * @return ResultDetail 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-
 枚举值：
-
-手机号码与姓名一致，与身份证号不一致；
-
-手机号码身份证号一致，与姓名不一致；
-
-手机号码与姓名和身份证号均不一致；
-
-姓名和身份证号不一致；
-
-其他不一致。
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
+NameIdCardMismatch：姓名和身份证号不一致；
+OtherMismatch：其他不一致；
      */
     public String getResultDetail() {
         return this.ResultDetail;
@@ -202,31 +184,19 @@ public class PhoneVerificationResponse extends AbstractModel {
 
     /**
      * Set 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-
 枚举值：
-
-手机号码与姓名一致，与身份证号不一致；
-
-手机号码身份证号一致，与姓名不一致；
-
-手机号码与姓名和身份证号均不一致；
-
-姓名和身份证号不一致；
-
-其他不一致。
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
+NameIdCardMismatch：姓名和身份证号不一致；
+OtherMismatch：其他不一致；
      * @param ResultDetail 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-
 枚举值：
-
-手机号码与姓名一致，与身份证号不一致；
-
-手机号码身份证号一致，与姓名不一致；
-
-手机号码与姓名和身份证号均不一致；
-
-姓名和身份证号不一致；
-
-其他不一致。
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
+NameIdCardMismatch：姓名和身份证号不一致；
+OtherMismatch：其他不一致；
      */
     public void setResultDetail(String ResultDetail) {
         this.ResultDetail = ResultDetail;

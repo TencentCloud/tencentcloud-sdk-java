@@ -40,6 +40,22 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
     private OrganizationUserInfo [] Data;
 
     /**
+    * 加入方式枚举
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JoinTypeLst")
+    @Expose
+    private FilterDataObject [] JoinTypeLst;
+
+    /**
+    * 云厂商枚举
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudTypeLst")
+    @Expose
+    private FilterDataObject [] CloudTypeLst;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -87,6 +103,46 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 加入方式枚举
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JoinTypeLst 加入方式枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FilterDataObject [] getJoinTypeLst() {
+        return this.JoinTypeLst;
+    }
+
+    /**
+     * Set 加入方式枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JoinTypeLst 加入方式枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJoinTypeLst(FilterDataObject [] JoinTypeLst) {
+        this.JoinTypeLst = JoinTypeLst;
+    }
+
+    /**
+     * Get 云厂商枚举
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudTypeLst 云厂商枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FilterDataObject [] getCloudTypeLst() {
+        return this.CloudTypeLst;
+    }
+
+    /**
+     * Set 云厂商枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudTypeLst 云厂商枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudTypeLst(FilterDataObject [] CloudTypeLst) {
+        this.CloudTypeLst = CloudTypeLst;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -119,6 +175,18 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
                 this.Data[i] = new OrganizationUserInfo(source.Data[i]);
             }
         }
+        if (source.JoinTypeLst != null) {
+            this.JoinTypeLst = new FilterDataObject[source.JoinTypeLst.length];
+            for (int i = 0; i < source.JoinTypeLst.length; i++) {
+                this.JoinTypeLst[i] = new FilterDataObject(source.JoinTypeLst[i]);
+            }
+        }
+        if (source.CloudTypeLst != null) {
+            this.CloudTypeLst = new FilterDataObject[source.CloudTypeLst.length];
+            for (int i = 0; i < source.CloudTypeLst.length; i++) {
+                this.CloudTypeLst[i] = new FilterDataObject(source.CloudTypeLst[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -131,6 +199,8 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "JoinTypeLst.", this.JoinTypeLst);
+        this.setParamArrayObj(map, prefix + "CloudTypeLst.", this.CloudTypeLst);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

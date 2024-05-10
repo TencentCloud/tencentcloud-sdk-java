@@ -202,6 +202,22 @@ public class OrganizationUserInfo extends AbstractModel {
     private Long TcMemberType;
 
     /**
+    * 子账号数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubUserCount")
+    @Expose
+    private Long SubUserCount;
+
+    /**
+    * 加入方式详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JoinTypeInfo")
+    @Expose
+    private String JoinTypeInfo;
+
+    /**
      * Get 成员账号Uin
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uin 成员账号Uin
@@ -649,6 +665,46 @@ public class OrganizationUserInfo extends AbstractModel {
         this.TcMemberType = TcMemberType;
     }
 
+    /**
+     * Get 子账号数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubUserCount 子账号数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubUserCount() {
+        return this.SubUserCount;
+    }
+
+    /**
+     * Set 子账号数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubUserCount 子账号数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubUserCount(Long SubUserCount) {
+        this.SubUserCount = SubUserCount;
+    }
+
+    /**
+     * Get 加入方式详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JoinTypeInfo 加入方式详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJoinTypeInfo() {
+        return this.JoinTypeInfo;
+    }
+
+    /**
+     * Set 加入方式详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JoinTypeInfo 加入方式详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJoinTypeInfo(String JoinTypeInfo) {
+        this.JoinTypeInfo = JoinTypeInfo;
+    }
+
     public OrganizationUserInfo() {
     }
 
@@ -726,6 +782,12 @@ public class OrganizationUserInfo extends AbstractModel {
         if (source.TcMemberType != null) {
             this.TcMemberType = new Long(source.TcMemberType);
         }
+        if (source.SubUserCount != null) {
+            this.SubUserCount = new Long(source.SubUserCount);
+        }
+        if (source.JoinTypeInfo != null) {
+            this.JoinTypeInfo = new String(source.JoinTypeInfo);
+        }
     }
 
 
@@ -755,6 +817,8 @@ public class OrganizationUserInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PermissionList.", this.PermissionList);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "TcMemberType", this.TcMemberType);
+        this.setParamSimple(map, prefix + "SubUserCount", this.SubUserCount);
+        this.setParamSimple(map, prefix + "JoinTypeInfo", this.JoinTypeInfo);
 
     }
 }

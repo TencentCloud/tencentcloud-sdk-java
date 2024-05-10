@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeOrganizationUserInfoRequest extends AbstractModel {
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * 过滤内容
     */
     @SerializedName("Filter")
@@ -36,6 +43,22 @@ public class DescribeOrganizationUserInfoRequest extends AbstractModel {
     @SerializedName("NotSupportCloud")
     @Expose
     private Boolean NotSupportCloud;
+
+    /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
 
     /**
      * Get 过滤内容 
@@ -77,6 +100,12 @@ public class DescribeOrganizationUserInfoRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeOrganizationUserInfoRequest(DescribeOrganizationUserInfoRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
@@ -90,6 +119,7 @@ public class DescribeOrganizationUserInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamSimple(map, prefix + "NotSupportCloud", this.NotSupportCloud);
 

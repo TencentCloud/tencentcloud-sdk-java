@@ -31,7 +31,7 @@ public class DescribeDiskDiscountRequest extends AbstractModel {
     private String DiskType;
 
     /**
-    * 云硬盘大小。
+    * 云硬盘大小, 单位: GB。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeDiskDiscountRequest extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘大小。 
-     * @return DiskSize 云硬盘大小。
+     * Get 云硬盘大小, 单位: GB。 
+     * @return DiskSize 云硬盘大小, 单位: GB。
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 云硬盘大小。
-     * @param DiskSize 云硬盘大小。
+     * Set 云硬盘大小, 单位: GB。
+     * @param DiskSize 云硬盘大小, 单位: GB。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;

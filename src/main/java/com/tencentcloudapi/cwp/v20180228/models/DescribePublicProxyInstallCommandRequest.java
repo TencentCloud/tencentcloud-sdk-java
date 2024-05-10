@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribePublicProxyInstallCommandRequest extends AbstractModel {
 
     /**
-    * nginx主机ip列表，逗号分隔
+    * nginx主机IP列表，逗号分隔
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-     * Get nginx主机ip列表，逗号分隔 
-     * @return Ip nginx主机ip列表，逗号分隔
+     * Get nginx主机IP列表，逗号分隔 
+     * @return Ip nginx主机IP列表，逗号分隔
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set nginx主机ip列表，逗号分隔
-     * @param Ip nginx主机ip列表，逗号分隔
+     * Set nginx主机IP列表，逗号分隔
+     * @param Ip nginx主机IP列表，逗号分隔
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

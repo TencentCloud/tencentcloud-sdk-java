@@ -46,6 +46,14 @@ public class Item extends AbstractModel {
     private Long [] CustomItemValues;
 
     /**
+    * 检测项所属分类
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CategoryId")
+    @Expose
+    private Long CategoryId;
+
+    /**
      * Get Id 
      * @return ItemId Id
      */
@@ -97,6 +105,26 @@ public class Item extends AbstractModel {
         this.CustomItemValues = CustomItemValues;
     }
 
+    /**
+     * Get 检测项所属分类
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CategoryId 检测项所属分类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCategoryId() {
+        return this.CategoryId;
+    }
+
+    /**
+     * Set 检测项所属分类
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CategoryId 检测项所属分类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCategoryId(Long CategoryId) {
+        this.CategoryId = CategoryId;
+    }
+
     public Item() {
     }
 
@@ -117,6 +145,9 @@ public class Item extends AbstractModel {
                 this.CustomItemValues[i] = new Long(source.CustomItemValues[i]);
             }
         }
+        if (source.CategoryId != null) {
+            this.CategoryId = new Long(source.CategoryId);
+        }
     }
 
 
@@ -127,6 +158,7 @@ public class Item extends AbstractModel {
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);
         this.setParamSimple(map, prefix + "ItemName", this.ItemName);
         this.setParamArraySimple(map, prefix + "CustomItemValues.", this.CustomItemValues);
+        this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
 
     }
 }

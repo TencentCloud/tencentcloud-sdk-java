@@ -65,6 +65,13 @@ public class CreatePurgeTaskRequest extends AbstractModel {
     private Boolean EncodeUrl;
 
     /**
+    * 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+    */
+    @SerializedName("CacheTag")
+    @Expose
+    private CacheTag CacheTag;
+
+    /**
      * Get 站点 ID。 
      * @return ZoneId 站点 ID。
      */
@@ -172,6 +179,22 @@ public class CreatePurgeTaskRequest extends AbstractModel {
         this.EncodeUrl = EncodeUrl;
     }
 
+    /**
+     * Get 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。 
+     * @return CacheTag 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+     */
+    public CacheTag getCacheTag() {
+        return this.CacheTag;
+    }
+
+    /**
+     * Set 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+     * @param CacheTag 节点缓存清除类型取值为 purge_cache_tag 时附带的信息。
+     */
+    public void setCacheTag(CacheTag CacheTag) {
+        this.CacheTag = CacheTag;
+    }
+
     public CreatePurgeTaskRequest() {
     }
 
@@ -198,6 +221,9 @@ public class CreatePurgeTaskRequest extends AbstractModel {
         if (source.EncodeUrl != null) {
             this.EncodeUrl = new Boolean(source.EncodeUrl);
         }
+        if (source.CacheTag != null) {
+            this.CacheTag = new CacheTag(source.CacheTag);
+        }
     }
 
 
@@ -210,6 +236,7 @@ public class CreatePurgeTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamArraySimple(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
+        this.setParamObj(map, prefix + "CacheTag.", this.CacheTag);
 
     }
 }

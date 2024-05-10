@@ -26,7 +26,7 @@ public class ExportFileTamperRulesRequest extends AbstractModel {
     /**
     * 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -35,10 +35,10 @@ public class ExportFileTamperRulesRequest extends AbstractModel {
     /**
      * Get 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li> 
+<li>Name- String - 规则名称</li> 
      * @return Filters 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
      */
     public Filters [] getFilters() {
         return this.Filters;
@@ -47,10 +47,10 @@ public class ExportFileTamperRulesRequest extends AbstractModel {
     /**
      * Set 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
      * @param Filters 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

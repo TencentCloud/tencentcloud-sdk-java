@@ -72,6 +72,14 @@ public class DescribeDbAssetsResponse extends AbstractModel {
     private FilterDataObject [] AppIdList;
 
     /**
+    * 公网内网枚举
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicPrivateAttr")
+    @Expose
+    private FilterDataObject [] PublicPrivateAttr;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -199,6 +207,26 @@ public class DescribeDbAssetsResponse extends AbstractModel {
     }
 
     /**
+     * Get 公网内网枚举
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicPrivateAttr 公网内网枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FilterDataObject [] getPublicPrivateAttr() {
+        return this.PublicPrivateAttr;
+    }
+
+    /**
+     * Set 公网内网枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicPrivateAttr 公网内网枚举
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicPrivateAttr(FilterDataObject [] PublicPrivateAttr) {
+        this.PublicPrivateAttr = PublicPrivateAttr;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -255,6 +283,12 @@ public class DescribeDbAssetsResponse extends AbstractModel {
                 this.AppIdList[i] = new FilterDataObject(source.AppIdList[i]);
             }
         }
+        if (source.PublicPrivateAttr != null) {
+            this.PublicPrivateAttr = new FilterDataObject[source.PublicPrivateAttr.length];
+            for (int i = 0; i < source.PublicPrivateAttr.length; i++) {
+                this.PublicPrivateAttr[i] = new FilterDataObject(source.PublicPrivateAttr[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -271,6 +305,7 @@ public class DescribeDbAssetsResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AssetTypeList.", this.AssetTypeList);
         this.setParamArrayObj(map, prefix + "VpcList.", this.VpcList);
         this.setParamArrayObj(map, prefix + "AppIdList.", this.AppIdList);
+        this.setParamArrayObj(map, prefix + "PublicPrivateAttr.", this.PublicPrivateAttr);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

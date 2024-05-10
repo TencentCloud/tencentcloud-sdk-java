@@ -45,6 +45,16 @@ public class Task extends AbstractModel {
     private String Type;
 
     /**
+    * 节点缓存清除方法，取值有：
+<li>invalidate：标记过期，用户请求时触发回源校验，即发送带有 If-None-Match 和 If-Modified-Since 头部的 HTTP 条件请求。若源站响应 200，则节点会回源拉取新的资源并更新缓存；若源站响应 304，则节点不会更新缓存；</li>
+<li>delete：直接删除节点缓存，用户请求时触发回源拉取资源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Method")
+    @Expose
+    private String Method;
+
+    /**
     * 状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
@@ -115,6 +125,34 @@ public class Task extends AbstractModel {
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 节点缓存清除方法，取值有：
+<li>invalidate：标记过期，用户请求时触发回源校验，即发送带有 If-None-Match 和 If-Modified-Since 头部的 HTTP 条件请求。若源站响应 200，则节点会回源拉取新的资源并更新缓存；若源站响应 304，则节点不会更新缓存；</li>
+<li>delete：直接删除节点缓存，用户请求时触发回源拉取资源。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Method 节点缓存清除方法，取值有：
+<li>invalidate：标记过期，用户请求时触发回源校验，即发送带有 If-None-Match 和 If-Modified-Since 头部的 HTTP 条件请求。若源站响应 200，则节点会回源拉取新的资源并更新缓存；若源站响应 304，则节点不会更新缓存；</li>
+<li>delete：直接删除节点缓存，用户请求时触发回源拉取资源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set 节点缓存清除方法，取值有：
+<li>invalidate：标记过期，用户请求时触发回源校验，即发送带有 If-None-Match 和 If-Modified-Since 头部的 HTTP 条件请求。若源站响应 200，则节点会回源拉取新的资源并更新缓存；若源站响应 304，则节点不会更新缓存；</li>
+<li>delete：直接删除节点缓存，用户请求时触发回源拉取资源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Method 节点缓存清除方法，取值有：
+<li>invalidate：标记过期，用户请求时触发回源校验，即发送带有 If-None-Match 和 If-Modified-Since 头部的 HTTP 条件请求。若源站响应 200，则节点会回源拉取新的资源并更新缓存；若源站响应 304，则节点不会更新缓存；</li>
+<li>delete：直接删除节点缓存，用户请求时触发回源拉取资源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMethod(String Method) {
+        this.Method = Method;
     }
 
     /**
@@ -198,6 +236,9 @@ public class Task extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -217,6 +258,7 @@ public class Task extends AbstractModel {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

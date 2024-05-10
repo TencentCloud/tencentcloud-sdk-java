@@ -31,7 +31,7 @@ public class DescribeGeneralApmApplicationConfigRequest extends AbstractModel {
     private String ServiceName;
 
     /**
-    * 实例Id
+    * 业务系统ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeGeneralApmApplicationConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 业务系统ID 
+     * @return InstanceId 业务系统ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 业务系统ID
+     * @param InstanceId 业务系统ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

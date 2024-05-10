@@ -41,6 +41,14 @@ DISK：存储资源包
     private String PackageType;
 
     /**
+    * 当前资源包绑定在当前实例下的抵扣优先级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeductionPriority")
+    @Expose
+    private Long DeductionPriority;
+
+    /**
      * Get 资源包的唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PackageId 资源包的唯一ID
@@ -84,6 +92,26 @@ DISK：存储资源包
         this.PackageType = PackageType;
     }
 
+    /**
+     * Get 当前资源包绑定在当前实例下的抵扣优先级
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeductionPriority 当前资源包绑定在当前实例下的抵扣优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeductionPriority() {
+        return this.DeductionPriority;
+    }
+
+    /**
+     * Set 当前资源包绑定在当前实例下的抵扣优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeductionPriority 当前资源包绑定在当前实例下的抵扣优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeductionPriority(Long DeductionPriority) {
+        this.DeductionPriority = DeductionPriority;
+    }
+
     public ResourcePackage() {
     }
 
@@ -98,6 +126,9 @@ DISK：存储资源包
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.DeductionPriority != null) {
+            this.DeductionPriority = new Long(source.DeductionPriority);
+        }
     }
 
 
@@ -107,6 +138,7 @@ DISK：存储资源包
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "DeductionPriority", this.DeductionPriority);
 
     }
 }

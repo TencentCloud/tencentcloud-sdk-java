@@ -913,6 +913,21 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *客户可以主动调用生成实名链接去做C端用户实名，会对实名的用户进行打标记为调用链接客户的用户
+使用场景：
+用户集成场景
+使用限制：
+此接口需要购买单独的实名套餐包方可调用，如有需求请联系对接人员评估
+     * @param req CreateUserVerifyUrlRequest
+     * @return CreateUserVerifyUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserVerifyUrlResponse CreateUserVerifyUrl(CreateUserVerifyUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserVerifyUrl", CreateUserVerifyUrlResponse.class);
+    }
+
+    /**
      *用来设置本企业嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），设置后获取的web签署界面都会使用此配置进行展示。
 
 如果多次调用，会以最后一次的配置为准
