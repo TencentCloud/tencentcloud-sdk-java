@@ -186,7 +186,8 @@ public class Component extends AbstractModel {
 <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
 
 <font color="red">ComponentType为SIGN_SIGNATURE类型时</font>，可以**ComponentTypeLimit**参数控制签署方式
-<ul><li> <b>HANDWRITE</b> : 手写签名</li>
+<ul><li> <b>HANDWRITE</b> :  需要实时手写的手写签名</li>
+<li> <b>HANDWRITTEN_ESIGN</b> : 长效手写签名， 是使用保存到个人中心的印章列表的手写签名(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> : AI智能识别手写签名</li>
 <li> <b>ESIGN</b> : 个人印章类型</li>
 <li> <b>SYSTEM_ESIGN</b> : 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）</li>
@@ -796,7 +797,8 @@ public class Component extends AbstractModel {
 <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
 
 <font color="red">ComponentType为SIGN_SIGNATURE类型时</font>，可以**ComponentTypeLimit**参数控制签署方式
-<ul><li> <b>HANDWRITE</b> : 手写签名</li>
+<ul><li> <b>HANDWRITE</b> :  需要实时手写的手写签名</li>
+<li> <b>HANDWRITTEN_ESIGN</b> : 长效手写签名， 是使用保存到个人中心的印章列表的手写签名(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> : AI智能识别手写签名</li>
 <li> <b>ESIGN</b> : 个人印章类型</li>
 <li> <b>SYSTEM_ESIGN</b> : 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）</li>
@@ -843,7 +845,8 @@ public class Component extends AbstractModel {
 <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
 
 <font color="red">ComponentType为SIGN_SIGNATURE类型时</font>，可以**ComponentTypeLimit**参数控制签署方式
-<ul><li> <b>HANDWRITE</b> : 手写签名</li>
+<ul><li> <b>HANDWRITE</b> :  需要实时手写的手写签名</li>
+<li> <b>HANDWRITTEN_ESIGN</b> : 长效手写签名， 是使用保存到个人中心的印章列表的手写签名(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> : AI智能识别手写签名</li>
 <li> <b>ESIGN</b> : 个人印章类型</li>
 <li> <b>SYSTEM_ESIGN</b> : 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）</li>
@@ -896,7 +899,8 @@ public class Component extends AbstractModel {
 <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
 
 <font color="red">ComponentType为SIGN_SIGNATURE类型时</font>，可以**ComponentTypeLimit**参数控制签署方式
-<ul><li> <b>HANDWRITE</b> : 手写签名</li>
+<ul><li> <b>HANDWRITE</b> :  需要实时手写的手写签名</li>
+<li> <b>HANDWRITTEN_ESIGN</b> : 长效手写签名， 是使用保存到个人中心的印章列表的手写签名(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> : AI智能识别手写签名</li>
 <li> <b>ESIGN</b> : 个人印章类型</li>
 <li> <b>SYSTEM_ESIGN</b> : 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）</li>
@@ -943,7 +947,8 @@ public class Component extends AbstractModel {
 <li> <b>FillMethod</b> : int. 填充方式。0-铺满（默认）；1-等比例缩放</li></ul>
 
 <font color="red">ComponentType为SIGN_SIGNATURE类型时</font>，可以**ComponentTypeLimit**参数控制签署方式
-<ul><li> <b>HANDWRITE</b> : 手写签名</li>
+<ul><li> <b>HANDWRITE</b> :  需要实时手写的手写签名</li>
+<li> <b>HANDWRITTEN_ESIGN</b> : 长效手写签名， 是使用保存到个人中心的印章列表的手写签名(并且包含HANDWRITE)</li>
 <li> <b>OCR_ESIGN</b> : AI智能识别手写签名</li>
 <li> <b>ESIGN</b> : 个人印章类型</li>
 <li> <b>SYSTEM_ESIGN</b> : 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）</li>

@@ -70,6 +70,8 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP
     */
     @SerializedName("Endpoint")
     @Expose
@@ -182,7 +184,9 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 跳转电子签小程序的http_url,短信通知或者H5跳转适合此类型，此时返回短链
 
 - APP：
-第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型 
+第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP 
      * @return Endpoint 要跳转的链接类型
 
 - HTTP：
@@ -193,6 +197,8 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP
      */
     public String getEndpoint() {
         return this.Endpoint;
@@ -209,6 +215,8 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP
      * @param Endpoint 要跳转的链接类型
 
 - HTTP：
@@ -219,6 +227,8 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
+
+如果不传递，默认值是 APP
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;

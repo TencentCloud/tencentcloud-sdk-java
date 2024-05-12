@@ -78,6 +78,9 @@ public enum CynosdbErrorCode {
     // 查询数据库失败。
      INTERNALERROR_DBOPERATIONFAILED("InternalError.DbOperationFailed"),
      
+    // 客户未授权
+     INTERNALERROR_GETROLEERROR("InternalError.GetRoleError"),
+     
     // 获取安全组信息失败。
      INTERNALERROR_GETSECURITYGROUPDETAILFAILED("InternalError.GetSecurityGroupDetailFailed"),
      

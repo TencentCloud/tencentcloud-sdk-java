@@ -31,6 +31,14 @@ public class MsgRecord extends AbstractModel {
     private String Content;
 
     /**
+    * 当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
     * 记录ID
     */
     @SerializedName("RecordId")
@@ -94,6 +102,14 @@ public class MsgRecord extends AbstractModel {
     private Boolean CanRating;
 
     /**
+    * 是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanFeedback")
+    @Expose
+    private Boolean CanFeedback;
+
+    /**
     * 记录类型
     */
     @SerializedName("Type")
@@ -137,6 +153,30 @@ public class MsgRecord extends AbstractModel {
     private TokenStat TokenStat;
 
     /**
+    * 回复方式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplyMethod")
+    @Expose
+    private Long ReplyMethod;
+
+    /**
+    * 选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OptionCards")
+    @Expose
+    private String [] OptionCards;
+
+    /**
+    * 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskFlow")
+    @Expose
+    private TaskFlowInfo TaskFlow;
+
+    /**
      * Get 内容 
      * @return Content 内容
      */
@@ -150,6 +190,26 @@ public class MsgRecord extends AbstractModel {
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get 当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionId 当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId 当前记录所对应的 Session ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
     }
 
     /**
@@ -297,6 +357,26 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
+     * Get 是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanFeedback 是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanFeedback() {
+        return this.CanFeedback;
+    }
+
+    /**
+     * Set 是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanFeedback 是否展示反馈按钮
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanFeedback(Boolean CanFeedback) {
+        this.CanFeedback = CanFeedback;
+    }
+
+    /**
      * Get 记录类型 
      * @return Type 记录类型
      */
@@ -396,6 +476,66 @@ public class MsgRecord extends AbstractModel {
         this.TokenStat = TokenStat;
     }
 
+    /**
+     * Get 回复方式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplyMethod 回复方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReplyMethod() {
+        return this.ReplyMethod;
+    }
+
+    /**
+     * Set 回复方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplyMethod 回复方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplyMethod(Long ReplyMethod) {
+        this.ReplyMethod = ReplyMethod;
+    }
+
+    /**
+     * Get 选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OptionCards 选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOptionCards() {
+        return this.OptionCards;
+    }
+
+    /**
+     * Set 选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OptionCards 选项卡, 用于多轮对话
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOptionCards(String [] OptionCards) {
+        this.OptionCards = OptionCards;
+    }
+
+    /**
+     * Get 任务信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskFlow 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskFlowInfo getTaskFlow() {
+        return this.TaskFlow;
+    }
+
+    /**
+     * Set 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskFlow 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskFlow(TaskFlowInfo TaskFlow) {
+        this.TaskFlow = TaskFlow;
+    }
+
     public MsgRecord() {
     }
 
@@ -406,6 +546,9 @@ public class MsgRecord extends AbstractModel {
     public MsgRecord(MsgRecord source) {
         if (source.Content != null) {
             this.Content = new String(source.Content);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
         }
         if (source.RecordId != null) {
             this.RecordId = new String(source.RecordId);
@@ -434,6 +577,9 @@ public class MsgRecord extends AbstractModel {
         if (source.CanRating != null) {
             this.CanRating = new Boolean(source.CanRating);
         }
+        if (source.CanFeedback != null) {
+            this.CanFeedback = new Boolean(source.CanFeedback);
+        }
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
@@ -461,6 +607,18 @@ public class MsgRecord extends AbstractModel {
         if (source.TokenStat != null) {
             this.TokenStat = new TokenStat(source.TokenStat);
         }
+        if (source.ReplyMethod != null) {
+            this.ReplyMethod = new Long(source.ReplyMethod);
+        }
+        if (source.OptionCards != null) {
+            this.OptionCards = new String[source.OptionCards.length];
+            for (int i = 0; i < source.OptionCards.length; i++) {
+                this.OptionCards[i] = new String(source.OptionCards[i]);
+            }
+        }
+        if (source.TaskFlow != null) {
+            this.TaskFlow = new TaskFlowInfo(source.TaskFlow);
+        }
     }
 
 
@@ -469,6 +627,7 @@ public class MsgRecord extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "RelatedRecordId", this.RelatedRecordId);
         this.setParamSimple(map, prefix + "IsFromSelf", this.IsFromSelf);
@@ -478,12 +637,16 @@ public class MsgRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "HasRead", this.HasRead);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "CanRating", this.CanRating);
+        this.setParamSimple(map, prefix + "CanFeedback", this.CanFeedback);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "References.", this.References);
         this.setParamArraySimple(map, prefix + "Reasons.", this.Reasons);
         this.setParamSimple(map, prefix + "IsLlmGenerated", this.IsLlmGenerated);
         this.setParamArraySimple(map, prefix + "ImageUrls.", this.ImageUrls);
         this.setParamObj(map, prefix + "TokenStat.", this.TokenStat);
+        this.setParamSimple(map, prefix + "ReplyMethod", this.ReplyMethod);
+        this.setParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
+        this.setParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
 
     }
 }

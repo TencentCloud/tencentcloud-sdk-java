@@ -161,6 +161,14 @@ FAILED：表示操作失败
     private String LatestOperationRequestId;
 
     /**
+    * 实例最新操作的开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestOperationStartedTime")
+    @Expose
+    private String LatestOperationStartedTime;
+
+    /**
     * 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -570,6 +578,26 @@ FAILED：表示操作失败
     }
 
     /**
+     * Get 实例最新操作的开始时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestOperationStartedTime 实例最新操作的开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestOperationStartedTime() {
+        return this.LatestOperationStartedTime;
+    }
+
+    /**
+     * Set 实例最新操作的开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestOperationStartedTime 实例最新操作的开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestOperationStartedTime(String LatestOperationStartedTime) {
+        this.LatestOperationStartedTime = LatestOperationStartedTime;
+    }
+
+    /**
      * Get 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -825,6 +853,9 @@ FAILED：表示操作失败
         if (source.LatestOperationRequestId != null) {
             this.LatestOperationRequestId = new String(source.LatestOperationRequestId);
         }
+        if (source.LatestOperationStartedTime != null) {
+            this.LatestOperationStartedTime = new String(source.LatestOperationStartedTime);
+        }
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new String(source.IsolatedTime);
         }
@@ -883,6 +914,7 @@ FAILED：表示操作失败
         this.setParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
+        this.setParamSimple(map, prefix + "LatestOperationStartedTime", this.LatestOperationStartedTime);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);

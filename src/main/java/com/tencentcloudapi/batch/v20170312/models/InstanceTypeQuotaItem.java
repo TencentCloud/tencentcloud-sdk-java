@@ -180,7 +180,11 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     private String Frequency;
 
     /**
-    * 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br></li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br></li> WithoutStock：表示对应库存已经售罄
+    * 描述库存情况。取值范围：
+<li> EnoughStock：表示对应库存非常充足</li> 
+<li>NormalStock：表示对应库存供应有保障</li>
+<li> UnderStock：表示对应库存即将售罄</li> 
+<li>WithoutStock：表示对应库存已经售罄</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusCategory")
@@ -548,9 +552,17 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     }
 
     /**
-     * Get 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br></li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br></li> WithoutStock：表示对应库存已经售罄
+     * Get 描述库存情况。取值范围：
+<li> EnoughStock：表示对应库存非常充足</li> 
+<li>NormalStock：表示对应库存供应有保障</li>
+<li> UnderStock：表示对应库存即将售罄</li> 
+<li>WithoutStock：表示对应库存已经售罄</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusCategory 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br></li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br></li> WithoutStock：表示对应库存已经售罄
+     * @return StatusCategory 描述库存情况。取值范围：
+<li> EnoughStock：表示对应库存非常充足</li> 
+<li>NormalStock：表示对应库存供应有保障</li>
+<li> UnderStock：表示对应库存即将售罄</li> 
+<li>WithoutStock：表示对应库存已经售罄</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusCategory() {
@@ -558,9 +570,17 @@ public class InstanceTypeQuotaItem extends AbstractModel {
     }
 
     /**
-     * Set 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br></li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br></li> WithoutStock：表示对应库存已经售罄
+     * Set 描述库存情况。取值范围：
+<li> EnoughStock：表示对应库存非常充足</li> 
+<li>NormalStock：表示对应库存供应有保障</li>
+<li> UnderStock：表示对应库存即将售罄</li> 
+<li>WithoutStock：表示对应库存已经售罄</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusCategory 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br></li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br></li> WithoutStock：表示对应库存已经售罄
+     * @param StatusCategory 描述库存情况。取值范围：
+<li> EnoughStock：表示对应库存非常充足</li> 
+<li>NormalStock：表示对应库存供应有保障</li>
+<li> UnderStock：表示对应库存即将售罄</li> 
+<li>WithoutStock：表示对应库存已经售罄</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusCategory(String StatusCategory) {

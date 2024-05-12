@@ -549,7 +549,7 @@ public class AllocationDetail extends AbstractModel {
     * 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
--1 - 未分配
+2 - 未分配
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllocationType")
@@ -1876,12 +1876,12 @@ public class AllocationDetail extends AbstractModel {
      * Get 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
--1 - 未分配
+2 - 未分配
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
--1 - 未分配
+2 - 未分配
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAllocationType() {
@@ -1892,12 +1892,12 @@ public class AllocationDetail extends AbstractModel {
      * Set 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
--1 - 未分配
+2 - 未分配
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AllocationType 费用归集类型：费用来源类型，分摊、归集、未分配
 0 - 分摊
 1 - 归集
--1 - 未分配
+2 - 未分配
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllocationType(Long AllocationType) {

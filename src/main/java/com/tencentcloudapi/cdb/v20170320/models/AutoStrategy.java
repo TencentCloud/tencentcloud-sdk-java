@@ -31,7 +31,7 @@ public class AutoStrategy extends AbstractModel {
     private Long ExpandThreshold;
 
     /**
-    * 自动扩容观测周期，单位s，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
+    * 自动扩容观测周期，单位是分钟，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
     */
     @SerializedName("ExpandPeriod")
     @Expose
@@ -45,7 +45,7 @@ public class AutoStrategy extends AbstractModel {
     private Long ShrinkThreshold;
 
     /**
-    * 自动缩容观测周期，单位s，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
+    * 自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
     */
     @SerializedName("ShrinkPeriod")
     @Expose
@@ -68,16 +68,16 @@ public class AutoStrategy extends AbstractModel {
     }
 
     /**
-     * Get 自动扩容观测周期，单位s，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。 
-     * @return ExpandPeriod 自动扩容观测周期，单位s，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
+     * Get 自动扩容观测周期，单位是分钟，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。 
+     * @return ExpandPeriod 自动扩容观测周期，单位是分钟，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
      */
     public Long getExpandPeriod() {
         return this.ExpandPeriod;
     }
 
     /**
-     * Set 自动扩容观测周期，单位s，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
-     * @param ExpandPeriod 自动扩容观测周期，单位s，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
+     * Set 自动扩容观测周期，单位是分钟，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
+     * @param ExpandPeriod 自动扩容观测周期，单位是分钟，可选值1、3、5、10、15、30。后台会按照配置的周期进行扩容判断。
      */
     public void setExpandPeriod(Long ExpandPeriod) {
         this.ExpandPeriod = ExpandPeriod;
@@ -100,16 +100,16 @@ public class AutoStrategy extends AbstractModel {
     }
 
     /**
-     * Get 自动缩容观测周期，单位s，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。 
-     * @return ShrinkPeriod 自动缩容观测周期，单位s，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
+     * Get 自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。 
+     * @return ShrinkPeriod 自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
      */
     public Long getShrinkPeriod() {
         return this.ShrinkPeriod;
     }
 
     /**
-     * Set 自动缩容观测周期，单位s，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
-     * @param ShrinkPeriod 自动缩容观测周期，单位s，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
+     * Set 自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
+     * @param ShrinkPeriod 自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
      */
     public void setShrinkPeriod(Long ShrinkPeriod) {
         this.ShrinkPeriod = ShrinkPeriod;

@@ -31,7 +31,7 @@ public class DescribeBillDownloadUrlResponse extends AbstractModel {
     private Long Ready;
 
     /**
-    * 账单文件下载链接，有效时长为一小时
+    * 账单文件下载链接，有效时长为一天
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
@@ -62,9 +62,9 @@ public class DescribeBillDownloadUrlResponse extends AbstractModel {
     }
 
     /**
-     * Get 账单文件下载链接，有效时长为一小时
+     * Get 账单文件下载链接，有效时长为一天
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DownloadUrl 账单文件下载链接，有效时长为一小时
+     * @return DownloadUrl 账单文件下载链接，有效时长为一天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
@@ -72,9 +72,9 @@ public class DescribeBillDownloadUrlResponse extends AbstractModel {
     }
 
     /**
-     * Set 账单文件下载链接，有效时长为一小时
+     * Set 账单文件下载链接，有效时长为一天
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownloadUrl 账单文件下载链接，有效时长为一小时
+     * @param DownloadUrl 账单文件下载链接，有效时长为一天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {

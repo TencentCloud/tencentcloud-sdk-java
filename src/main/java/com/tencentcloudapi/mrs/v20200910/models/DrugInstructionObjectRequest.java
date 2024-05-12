@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DrugInstructionObjectRequest extends AbstractModel {
 
     /**
-    * 药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+    * 药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64).
     */
     @SerializedName("PdfInfo")
     @Expose
     private PdfInfo PdfInfo;
 
     /**
-     * Get 药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64) 
-     * @return PdfInfo 药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+     * Get 药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64). 
+     * @return PdfInfo 药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64).
      */
     public PdfInfo getPdfInfo() {
         return this.PdfInfo;
     }
 
     /**
-     * Set 药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
-     * @param PdfInfo 药品说明书PDF文件信息(目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+     * Set 药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64).
+     * @param PdfInfo 药品说明书PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64).
      */
     public void setPdfInfo(PdfInfo PdfInfo) {
         this.PdfInfo = PdfInfo;

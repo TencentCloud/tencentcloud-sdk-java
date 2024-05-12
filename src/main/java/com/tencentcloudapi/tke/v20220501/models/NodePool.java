@@ -38,6 +38,14 @@ public class NodePool extends AbstractModel {
     private String NodePoolId;
 
     /**
+    * 节点标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagSpecification [] Tags;
+
+    /**
     * 节点污点
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -52,6 +60,14 @@ public class NodePool extends AbstractModel {
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
+
+    /**
+    * 节点是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Unschedulable")
+    @Expose
+    private Boolean Unschedulable;
 
     /**
     * 节点池类型
@@ -162,6 +178,26 @@ public class NodePool extends AbstractModel {
     }
 
     /**
+     * Get 节点标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 节点标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagSpecification [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 节点标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 节点标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(TagSpecification [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 节点污点
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Taints 节点污点
@@ -199,6 +235,26 @@ public class NodePool extends AbstractModel {
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
+     * Get 节点是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Unschedulable 节点是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUnschedulable() {
+        return this.Unschedulable;
+    }
+
+    /**
+     * Set 节点是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Unschedulable 节点是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnschedulable(Boolean Unschedulable) {
+        this.Unschedulable = Unschedulable;
     }
 
     /**
@@ -399,6 +455,12 @@ public class NodePool extends AbstractModel {
         if (source.NodePoolId != null) {
             this.NodePoolId = new String(source.NodePoolId);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagSpecification[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagSpecification(source.Tags[i]);
+            }
+        }
         if (source.Taints != null) {
             this.Taints = new Taint[source.Taints.length];
             for (int i = 0; i < source.Taints.length; i++) {
@@ -407,6 +469,9 @@ public class NodePool extends AbstractModel {
         }
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
+        if (source.Unschedulable != null) {
+            this.Unschedulable = new Boolean(source.Unschedulable);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
@@ -453,8 +518,10 @@ public class NodePool extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "LifeState", this.LifeState);

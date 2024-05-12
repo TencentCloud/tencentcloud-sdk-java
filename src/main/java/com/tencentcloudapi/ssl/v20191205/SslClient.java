@@ -292,6 +292,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *获取下载证书链接
+     * @param req DescribeDownloadCertificateUrlRequest
+     * @return DescribeDownloadCertificateUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDownloadCertificateUrlResponse DescribeDownloadCertificateUrl(DescribeDownloadCertificateUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDownloadCertificateUrl", DescribeDownloadCertificateUrlResponse.class);
+    }
+
+    /**
      *查询证书apiGateway云资源部署实例列表
      * @param req DescribeHostApiGatewayInstanceListRequest
      * @return DescribeHostApiGatewayInstanceListResponse

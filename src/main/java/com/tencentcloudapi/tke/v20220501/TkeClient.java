@@ -39,6 +39,28 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建 TKE 节点池
+     * @param req CreateNodePoolRequest
+     * @return CreateNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNodePoolResponse CreateNodePool(CreateNodePoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNodePool", CreateNodePoolResponse.class);
+    }
+
+    /**
+     *删除 TKE 节点池
+     * @param req DeleteNodePoolRequest
+     * @return DeleteNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNodePoolResponse DeleteNodePool(DeleteNodePoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNodePool", DeleteNodePoolResponse.class);
+    }
+
+    /**
      *查询集群下节点实例信息
      * @param req DescribeClusterInstancesRequest
      * @return DescribeClusterInstancesResponse
@@ -58,6 +80,17 @@ public class TkeClient extends AbstractClient{
     public DescribeNodePoolsResponse DescribeNodePools(DescribeNodePoolsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNodePools", DescribeNodePoolsResponse.class);
+    }
+
+    /**
+     *更新 TKE 节点池
+     * @param req ModifyNodePoolRequest
+     * @return ModifyNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNodePoolResponse ModifyNodePool(ModifyNodePoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNodePool", ModifyNodePoolResponse.class);
     }
 
 }

@@ -402,8 +402,8 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *获取特征向量
-本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
+     *本接口（GetEmbedding）调用文本表示模型，将文本转化为用数值表示的向量形式，可用于文本检索、信息推荐、知识挖掘等场景。
+本接口（GetEmbedding）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
      * @param req GetEmbeddingRequest
      * @return GetEmbeddingResponse
      * @throws TencentCloudSDKException
@@ -755,8 +755,8 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *多轮改写
-本接口有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
+     *多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
+本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
      * @param req QueryRewriteRequest
      * @return QueryRewriteResponse
      * @throws TencentCloudSDKException

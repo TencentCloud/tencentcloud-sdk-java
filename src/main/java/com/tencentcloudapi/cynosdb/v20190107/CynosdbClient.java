@@ -193,6 +193,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *创建日志投递
+     * @param req CreateCLSDeliveryRequest
+     * @return CreateCLSDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSDeliveryResponse CreateCLSDelivery(CreateCLSDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSDelivery", CreateCLSDeliveryResponse.class);
+    }
+
+    /**
      *创建数据库
      * @param req CreateClusterDatabaseRequest
      * @return CreateClusterDatabaseResponse
@@ -300,6 +311,17 @@ public class CynosdbClient extends AbstractClient{
     public DeleteBackupResponse DeleteBackup(DeleteBackupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBackup", DeleteBackupResponse.class);
+    }
+
+    /**
+     *删除日志投递
+     * @param req DeleteCLSDeliveryRequest
+     * @return DeleteCLSDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCLSDeliveryResponse DeleteCLSDelivery(DeleteCLSDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCLSDelivery", DeleteCLSDeliveryResponse.class);
     }
 
     /**
@@ -608,6 +630,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFlow", DescribeFlowResponse.class);
+    }
+
+    /**
+     *查询实例日志投递信息
+     * @param req DescribeInstanceCLSLogDeliveryRequest
+     * @return DescribeInstanceCLSLogDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceCLSLogDeliveryResponse DescribeInstanceCLSLogDelivery(DescribeInstanceCLSLogDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceCLSLogDelivery", DescribeInstanceCLSLogDeliveryResponse.class);
     }
 
     /**
@@ -1444,6 +1477,28 @@ public class CynosdbClient extends AbstractClient{
     public SetRenewFlagResponse SetRenewFlag(SetRenewFlagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetRenewFlag", SetRenewFlagResponse.class);
+    }
+
+    /**
+     *开启日志投递
+     * @param req StartCLSDeliveryRequest
+     * @return StartCLSDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartCLSDeliveryResponse StartCLSDelivery(StartCLSDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartCLSDelivery", StartCLSDeliveryResponse.class);
+    }
+
+    /**
+     *停止日志投递
+     * @param req StopCLSDeliveryRequest
+     * @return StopCLSDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCLSDeliveryResponse StopCLSDelivery(StopCLSDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopCLSDelivery", StopCLSDeliveryResponse.class);
     }
 
     /**

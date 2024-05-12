@@ -175,7 +175,7 @@ FAILED：表示操作失败
     private String CreateTime;
 
     /**
-    * 公网出带宽上限，默认5Mbps
+    * 公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxOutBandwidth")
@@ -615,9 +615,9 @@ FAILED：表示操作失败
     }
 
     /**
-     * Get 公网出带宽上限，默认5Mbps
+     * Get 公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxOutBandwidth 公网出带宽上限，默认5Mbps
+     * @return MaxOutBandwidth 公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxOutBandwidth() {
@@ -625,9 +625,9 @@ FAILED：表示操作失败
     }
 
     /**
-     * Set 公网出带宽上限，默认5Mbps
+     * Set 公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxOutBandwidth 公网出带宽上限，默认5Mbps
+     * @param MaxOutBandwidth 公网出带宽上限，默认10Mbps
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxOutBandwidth(String MaxOutBandwidth) {
