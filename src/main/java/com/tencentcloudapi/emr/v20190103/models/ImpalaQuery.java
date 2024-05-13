@@ -216,6 +216,30 @@ public class ImpalaQuery extends AbstractModel {
     private Long PerNodePeakMemoryBytesSum;
 
     /**
+    * 后端个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackendsCount")
+    @Expose
+    private Long BackendsCount;
+
+    /**
+    * fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FragmentInstancesCount")
+    @Expose
+    private Long FragmentInstancesCount;
+
+    /**
+    * 剩余未完成Fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemainingFragmentCount")
+    @Expose
+    private Long RemainingFragmentCount;
+
+    /**
      * Get 执行语句
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Statement 执行语句
@@ -695,6 +719,66 @@ public class ImpalaQuery extends AbstractModel {
         this.PerNodePeakMemoryBytesSum = PerNodePeakMemoryBytesSum;
     }
 
+    /**
+     * Get 后端个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackendsCount 后端个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackendsCount() {
+        return this.BackendsCount;
+    }
+
+    /**
+     * Set 后端个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackendsCount 后端个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackendsCount(Long BackendsCount) {
+        this.BackendsCount = BackendsCount;
+    }
+
+    /**
+     * Get fragment数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FragmentInstancesCount fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFragmentInstancesCount() {
+        return this.FragmentInstancesCount;
+    }
+
+    /**
+     * Set fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FragmentInstancesCount fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFragmentInstancesCount(Long FragmentInstancesCount) {
+        this.FragmentInstancesCount = FragmentInstancesCount;
+    }
+
+    /**
+     * Get 剩余未完成Fragment数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemainingFragmentCount 剩余未完成Fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRemainingFragmentCount() {
+        return this.RemainingFragmentCount;
+    }
+
+    /**
+     * Set 剩余未完成Fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemainingFragmentCount 剩余未完成Fragment数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemainingFragmentCount(Long RemainingFragmentCount) {
+        this.RemainingFragmentCount = RemainingFragmentCount;
+    }
+
     public ImpalaQuery() {
     }
 
@@ -775,6 +859,15 @@ public class ImpalaQuery extends AbstractModel {
         if (source.PerNodePeakMemoryBytesSum != null) {
             this.PerNodePeakMemoryBytesSum = new Long(source.PerNodePeakMemoryBytesSum);
         }
+        if (source.BackendsCount != null) {
+            this.BackendsCount = new Long(source.BackendsCount);
+        }
+        if (source.FragmentInstancesCount != null) {
+            this.FragmentInstancesCount = new Long(source.FragmentInstancesCount);
+        }
+        if (source.RemainingFragmentCount != null) {
+            this.RemainingFragmentCount = new Long(source.RemainingFragmentCount);
+        }
     }
 
 
@@ -806,6 +899,9 @@ public class ImpalaQuery extends AbstractModel {
         this.setParamSimple(map, prefix + "NumRowsFetchedFromCache", this.NumRowsFetchedFromCache);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "PerNodePeakMemoryBytesSum", this.PerNodePeakMemoryBytesSum);
+        this.setParamSimple(map, prefix + "BackendsCount", this.BackendsCount);
+        this.setParamSimple(map, prefix + "FragmentInstancesCount", this.FragmentInstancesCount);
+        this.setParamSimple(map, prefix + "RemainingFragmentCount", this.RemainingFragmentCount);
 
     }
 }

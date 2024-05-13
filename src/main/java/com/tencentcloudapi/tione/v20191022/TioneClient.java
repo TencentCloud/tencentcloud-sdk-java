@@ -280,15 +280,4 @@ public class TioneClient extends AbstractClient{
         return this.internalRequest(req, "UpdateNotebookInstance", UpdateNotebookInstanceResponse.class);
     }
 
-    /**
-     *更新notebook生命周期脚本
-     * @param req UpdateNotebookLifecycleScriptRequest
-     * @return UpdateNotebookLifecycleScriptResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateNotebookLifecycleScriptResponse UpdateNotebookLifecycleScript(UpdateNotebookLifecycleScriptRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateNotebookLifecycleScript", UpdateNotebookLifecycleScriptResponse.class);
-    }
-
 }

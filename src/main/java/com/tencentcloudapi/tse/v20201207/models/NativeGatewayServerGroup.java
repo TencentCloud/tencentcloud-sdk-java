@@ -115,6 +115,14 @@ public class NativeGatewayServerGroup extends AbstractModel {
     private String SubnetIds;
 
     /**
+    * 分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultWeight")
+    @Expose
+    private Long DefaultWeight;
+
+    /**
      * Get 云原生网关分组唯一id 
      * @return GroupId 云原生网关分组唯一id
      */
@@ -334,6 +342,26 @@ public class NativeGatewayServerGroup extends AbstractModel {
         this.SubnetIds = SubnetIds;
     }
 
+    /**
+     * Get 分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultWeight 分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefaultWeight() {
+        return this.DefaultWeight;
+    }
+
+    /**
+     * Set 分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultWeight 分组默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultWeight(Long DefaultWeight) {
+        this.DefaultWeight = DefaultWeight;
+    }
+
     public NativeGatewayServerGroup() {
     }
 
@@ -378,6 +406,9 @@ public class NativeGatewayServerGroup extends AbstractModel {
         if (source.SubnetIds != null) {
             this.SubnetIds = new String(source.SubnetIds);
         }
+        if (source.DefaultWeight != null) {
+            this.DefaultWeight = new Long(source.DefaultWeight);
+        }
     }
 
 
@@ -397,6 +428,7 @@ public class NativeGatewayServerGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
+        this.setParamSimple(map, prefix + "DefaultWeight", this.DefaultWeight);
 
     }
 }

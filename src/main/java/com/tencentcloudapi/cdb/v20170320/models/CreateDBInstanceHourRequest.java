@@ -206,7 +206,8 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String DeviceType;
 
     /**
-    * 参数模板id。
+    * 参数模板 id。
+备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。
     */
     @SerializedName("ParamTemplateId")
     @Expose
@@ -249,6 +250,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
     * 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
+备注：如您需使用云数据库 MySQL 默认参数模板，请设置 ParamTemplateType。
     */
     @SerializedName("ParamTemplateType")
     @Expose
@@ -699,16 +701,20 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
-     * Get 参数模板id。 
-     * @return ParamTemplateId 参数模板id。
+     * Get 参数模板 id。
+备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。 
+     * @return ParamTemplateId 参数模板 id。
+备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 参数模板id。
-     * @param ParamTemplateId 参数模板id。
+     * Set 参数模板 id。
+备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。
+     * @param ParamTemplateId 参数模板 id。
+备注：如您使用自定义参数模板 id，可传入自定义参数模板 id；如您计划使用默认参数模板，该参数模板 id 传入 id 无效，需设置 ParamTemplateType。
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
@@ -795,8 +801,10 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
-     * Get 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。 
+     * Get 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
+备注：如您需使用云数据库 MySQL 默认参数模板，请设置 ParamTemplateType。 
      * @return ParamTemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
+备注：如您需使用云数据库 MySQL 默认参数模板，请设置 ParamTemplateType。
      */
     public String getParamTemplateType() {
         return this.ParamTemplateType;
@@ -804,7 +812,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
      * Set 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
+备注：如您需使用云数据库 MySQL 默认参数模板，请设置 ParamTemplateType。
      * @param ParamTemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
+备注：如您需使用云数据库 MySQL 默认参数模板，请设置 ParamTemplateType。
      */
     public void setParamTemplateType(String ParamTemplateType) {
         this.ParamTemplateType = ParamTemplateType;

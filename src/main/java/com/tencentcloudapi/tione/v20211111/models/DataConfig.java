@@ -95,6 +95,14 @@ public class DataConfig extends AbstractModel {
     private LocalDisk LocalDiskSource;
 
     /**
+    * CBS配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CBSSource")
+    @Expose
+    private CBSConfig CBSSource;
+
+    /**
      * Get 映射路径 
      * @return MappingPath 映射路径
      */
@@ -270,6 +278,26 @@ public class DataConfig extends AbstractModel {
         this.LocalDiskSource = LocalDiskSource;
     }
 
+    /**
+     * Get CBS配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CBSSource CBS配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CBSConfig getCBSSource() {
+        return this.CBSSource;
+    }
+
+    /**
+     * Set CBS配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CBSSource CBS配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCBSSource(CBSConfig CBSSource) {
+        this.CBSSource = CBSSource;
+    }
+
     public DataConfig() {
     }
 
@@ -305,6 +333,9 @@ public class DataConfig extends AbstractModel {
         if (source.LocalDiskSource != null) {
             this.LocalDiskSource = new LocalDisk(source.LocalDiskSource);
         }
+        if (source.CBSSource != null) {
+            this.CBSSource = new CBSConfig(source.CBSSource);
+        }
     }
 
 
@@ -321,6 +352,7 @@ public class DataConfig extends AbstractModel {
         this.setParamObj(map, prefix + "GooseFSSource.", this.GooseFSSource);
         this.setParamObj(map, prefix + "CFSTurboSource.", this.CFSTurboSource);
         this.setParamObj(map, prefix + "LocalDiskSource.", this.LocalDiskSource);
+        this.setParamObj(map, prefix + "CBSSource.", this.CBSSource);
 
     }
 }

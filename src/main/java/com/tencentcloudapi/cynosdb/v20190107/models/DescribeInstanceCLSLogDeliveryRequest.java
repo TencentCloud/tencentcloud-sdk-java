@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
 
+    /**
+    * 实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get 实例id 
+     * @return InstanceId 实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceId 实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public DescribeInstanceCLSLogDeliveryRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceCLSLogDeliveryRequest(DescribeInstanceCLSLogDeliveryRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

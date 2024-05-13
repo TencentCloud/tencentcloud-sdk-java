@@ -52,6 +52,13 @@ public class TargetGroupAssociation extends AbstractModel {
     private String LocationId;
 
     /**
+    * 目标组权重，范围[0, 100]。仅绑定v2目标组时生效，如果不存在，则默认为10。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
      * Get 负载均衡ID 
      * @return LoadBalancerId 负载均衡ID
      */
@@ -115,6 +122,22 @@ public class TargetGroupAssociation extends AbstractModel {
         this.LocationId = LocationId;
     }
 
+    /**
+     * Get 目标组权重，范围[0, 100]。仅绑定v2目标组时生效，如果不存在，则默认为10。 
+     * @return Weight 目标组权重，范围[0, 100]。仅绑定v2目标组时生效，如果不存在，则默认为10。
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 目标组权重，范围[0, 100]。仅绑定v2目标组时生效，如果不存在，则默认为10。
+     * @param Weight 目标组权重，范围[0, 100]。仅绑定v2目标组时生效，如果不存在，则默认为10。
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
     public TargetGroupAssociation() {
     }
 
@@ -135,6 +158,9 @@ public class TargetGroupAssociation extends AbstractModel {
         if (source.LocationId != null) {
             this.LocationId = new String(source.LocationId);
         }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class TargetGroupAssociation extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

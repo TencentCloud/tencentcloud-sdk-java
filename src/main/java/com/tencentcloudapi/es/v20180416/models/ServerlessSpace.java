@@ -155,6 +155,14 @@ public class ServerlessSpace extends AbstractModel {
     private Long AppId;
 
     /**
+    * //默认en， 可选zh-CN
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KibanaLanguage")
+    @Expose
+    private String KibanaLanguage;
+
+    /**
      * Get Serverless索引空间ID 
      * @return SpaceId Serverless索引空间ID
      */
@@ -474,6 +482,26 @@ public class ServerlessSpace extends AbstractModel {
         this.AppId = AppId;
     }
 
+    /**
+     * Get //默认en， 可选zh-CN
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KibanaLanguage //默认en， 可选zh-CN
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKibanaLanguage() {
+        return this.KibanaLanguage;
+    }
+
+    /**
+     * Set //默认en， 可选zh-CN
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaLanguage //默认en， 可选zh-CN
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKibanaLanguage(String KibanaLanguage) {
+        this.KibanaLanguage = KibanaLanguage;
+    }
+
     public ServerlessSpace() {
     }
 
@@ -536,6 +564,9 @@ public class ServerlessSpace extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
+        if (source.KibanaLanguage != null) {
+            this.KibanaLanguage = new String(source.KibanaLanguage);
+        }
     }
 
 
@@ -560,6 +591,7 @@ public class ServerlessSpace extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableKibanaPublicAccess", this.EnableKibanaPublicAccess);
         this.setParamSimple(map, prefix + "EnableKibanaPrivateAccess", this.EnableKibanaPrivateAccess);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "KibanaLanguage", this.KibanaLanguage);
 
     }
 }

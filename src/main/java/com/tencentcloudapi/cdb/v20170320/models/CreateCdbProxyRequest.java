@@ -46,6 +46,13 @@ public class CreateCdbProxyRequest extends AbstractModel {
 
     /**
     * 节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数。
+Region：节点地域。
+Zone：节点可用区。
+Cpu：单个代理节点核数（单位：核）。
+Mem：单个代理节点内存数（单位：MB）。
     */
     @SerializedName("ProxyNodeCustom")
     @Expose
@@ -67,6 +74,7 @@ public class CreateCdbProxyRequest extends AbstractModel {
 
     /**
     * 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
     */
     @SerializedName("ConnectionPoolLimit")
     @Expose
@@ -128,8 +136,22 @@ public class CreateCdbProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点规格配置 
+     * Get 节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数。
+Region：节点地域。
+Zone：节点可用区。
+Cpu：单个代理节点核数（单位：核）。
+Mem：单个代理节点内存数（单位：MB）。 
      * @return ProxyNodeCustom 节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数。
+Region：节点地域。
+Zone：节点可用区。
+Cpu：单个代理节点核数（单位：核）。
+Mem：单个代理节点内存数（单位：MB）。
      */
     public ProxyNodeCustom [] getProxyNodeCustom() {
         return this.ProxyNodeCustom;
@@ -137,7 +159,21 @@ public class CreateCdbProxyRequest extends AbstractModel {
 
     /**
      * Set 节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数。
+Region：节点地域。
+Zone：节点可用区。
+Cpu：单个代理节点核数（单位：核）。
+Mem：单个代理节点内存数（单位：MB）。
      * @param ProxyNodeCustom 节点规格配置
+备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+示例中参数说明：
+NodeCount：节点个数。
+Region：节点地域。
+Zone：节点可用区。
+Cpu：单个代理节点核数（单位：核）。
+Mem：单个代理节点内存数（单位：MB）。
      */
     public void setProxyNodeCustom(ProxyNodeCustom [] ProxyNodeCustom) {
         this.ProxyNodeCustom = ProxyNodeCustom;
@@ -176,8 +212,10 @@ public class CreateCdbProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get 连接池阈值 
+     * Get 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。 
      * @return ConnectionPoolLimit 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public Long getConnectionPoolLimit() {
         return this.ConnectionPoolLimit;
@@ -185,7 +223,9 @@ public class CreateCdbProxyRequest extends AbstractModel {
 
     /**
      * Set 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      * @param ConnectionPoolLimit 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public void setConnectionPoolLimit(Long ConnectionPoolLimit) {
         this.ConnectionPoolLimit = ConnectionPoolLimit;

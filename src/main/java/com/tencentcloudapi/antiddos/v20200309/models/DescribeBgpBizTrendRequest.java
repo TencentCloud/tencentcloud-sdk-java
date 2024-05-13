@@ -31,14 +31,14 @@ public class DescribeBgpBizTrendRequest extends AbstractModel {
     private String Business;
 
     /**
-    * 统计开始时间。 例：“2020-09-22 00:00:00”
+    * 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 统计结束时间。 例：“2020-09-22 00:00:00”
+    * 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
     */
     @SerializedName("EndTime")
     @Expose
@@ -82,32 +82,32 @@ public class DescribeBgpBizTrendRequest extends AbstractModel {
     }
 
     /**
-     * Get 统计开始时间。 例：“2020-09-22 00:00:00” 
-     * @return StartTime 统计开始时间。 例：“2020-09-22 00:00:00”
+     * Get 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数 
+     * @return StartTime 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 统计开始时间。 例：“2020-09-22 00:00:00”
-     * @param StartTime 统计开始时间。 例：“2020-09-22 00:00:00”
+     * Set 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
+     * @param StartTime 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 统计结束时间。 例：“2020-09-22 00:00:00” 
-     * @return EndTime 统计结束时间。 例：“2020-09-22 00:00:00”
+     * Get 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数 
+     * @return EndTime 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 统计结束时间。 例：“2020-09-22 00:00:00”
-     * @param EndTime 统计结束时间。 例：“2020-09-22 00:00:00”
+     * Set 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
+     * @param EndTime 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

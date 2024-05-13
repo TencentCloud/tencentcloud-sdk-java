@@ -94,6 +94,13 @@ public class McuWaterMarkText extends AbstractModel {
     private Long ZOrder;
 
     /**
+    * 水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
+    */
+    @SerializedName("Font")
+    @Expose
+    private String Font;
+
+    /**
      * Get 文字水印内容。 
      * @return Text 文字水印内容。
      */
@@ -253,6 +260,22 @@ public class McuWaterMarkText extends AbstractModel {
         this.ZOrder = ZOrder;
     }
 
+    /**
+     * Get 水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans 
+     * @return Font 水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
+     */
+    public String getFont() {
+        return this.Font;
+    }
+
+    /**
+     * Set 水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
+     * @param Font 水印字体，不填默认为Tencent。支持设置以下值： Tencent （默认） SourceHanSans
+     */
+    public void setFont(String Font) {
+        this.Font = Font;
+    }
+
     public McuWaterMarkText() {
     }
 
@@ -291,6 +314,9 @@ public class McuWaterMarkText extends AbstractModel {
         if (source.ZOrder != null) {
             this.ZOrder = new Long(source.ZOrder);
         }
+        if (source.Font != null) {
+            this.Font = new String(source.Font);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class McuWaterMarkText extends AbstractModel {
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
         this.setParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
         this.setParamSimple(map, prefix + "ZOrder", this.ZOrder);
+        this.setParamSimple(map, prefix + "Font", this.Font);
 
     }
 }

@@ -39,6 +39,7 @@ public class ModifyCdbProxyParamRequest extends AbstractModel {
 
     /**
     * 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
     */
     @SerializedName("ConnectionPoolLimit")
     @Expose
@@ -77,8 +78,10 @@ public class ModifyCdbProxyParamRequest extends AbstractModel {
     }
 
     /**
-     * Get 连接池阈值 
+     * Get 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。 
      * @return ConnectionPoolLimit 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public Long getConnectionPoolLimit() {
         return this.ConnectionPoolLimit;
@@ -86,7 +89,9 @@ public class ModifyCdbProxyParamRequest extends AbstractModel {
 
     /**
      * Set 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      * @param ConnectionPoolLimit 连接池阈值
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public void setConnectionPoolLimit(Long ConnectionPoolLimit) {
         this.ConnectionPoolLimit = ConnectionPoolLimit;

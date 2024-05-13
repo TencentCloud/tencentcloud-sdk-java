@@ -62,7 +62,7 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
     private String ResourceRegion;
 
     /**
-    * 无
+    * 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceType")
@@ -162,9 +162,9 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSourceType 无
+     * @return DataSourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceType() {
@@ -172,9 +172,9 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceType 无
+     * @param DataSourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceType(String DataSourceType) {

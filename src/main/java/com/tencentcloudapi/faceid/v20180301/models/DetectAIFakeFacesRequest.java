@@ -33,6 +33,8 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 视频的Base64值：
 Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+视频时长最大支持20s，建议时长2～5s。
+建议视频分辨率为480x640，帧率在25fps~30fps之间。
     */
     @SerializedName("FaceInput")
     @Expose
@@ -57,7 +59,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 
 视频的Base64值：
 Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。 
+请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+视频时长最大支持20s，建议时长2～5s。
+建议视频分辨率为480x640，帧率在25fps~30fps之间。 
      * @return FaceInput 传入需要进行检测的带有人脸的图片或视频，使用base64编码的形式。
 
 图片的Base64值：
@@ -67,6 +71,8 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 视频的Base64值：
 Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+视频时长最大支持20s，建议时长2～5s。
+建议视频分辨率为480x640，帧率在25fps~30fps之间。
      */
     public String getFaceInput() {
         return this.FaceInput;
@@ -82,6 +88,8 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 视频的Base64值：
 Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+视频时长最大支持20s，建议时长2～5s。
+建议视频分辨率为480x640，帧率在25fps~30fps之间。
      * @param FaceInput 传入需要进行检测的带有人脸的图片或视频，使用base64编码的形式。
 
 图片的Base64值：
@@ -91,6 +99,8 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 视频的Base64值：
 Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+视频时长最大支持20s，建议时长2～5s。
+建议视频分辨率为480x640，帧率在25fps~30fps之间。
      */
     public void setFaceInput(String FaceInput) {
         this.FaceInput = FaceInput;

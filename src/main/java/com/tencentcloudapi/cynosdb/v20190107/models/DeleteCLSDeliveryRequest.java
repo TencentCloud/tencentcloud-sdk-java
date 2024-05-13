@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DeleteCLSDeliveryRequest extends AbstractModel {
 
+    /**
+    * 实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 日志主题id
+    */
+    @SerializedName("CLSTopicIds")
+    @Expose
+    private String [] CLSTopicIds;
+
+    /**
+     * Get 实例id 
+     * @return InstanceId 实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceId 实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 日志主题id 
+     * @return CLSTopicIds 日志主题id
+     */
+    public String [] getCLSTopicIds() {
+        return this.CLSTopicIds;
+    }
+
+    /**
+     * Set 日志主题id
+     * @param CLSTopicIds 日志主题id
+     */
+    public void setCLSTopicIds(String [] CLSTopicIds) {
+        this.CLSTopicIds = CLSTopicIds;
+    }
+
     public DeleteCLSDeliveryRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DeleteCLSDeliveryRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteCLSDeliveryRequest(DeleteCLSDeliveryRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CLSTopicIds != null) {
+            this.CLSTopicIds = new String[source.CLSTopicIds.length];
+            for (int i = 0; i < source.CLSTopicIds.length; i++) {
+                this.CLSTopicIds[i] = new String(source.CLSTopicIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DeleteCLSDeliveryRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArraySimple(map, prefix + "CLSTopicIds.", this.CLSTopicIds);
 
     }
 }

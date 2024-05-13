@@ -78,6 +78,22 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
     private String Status;
 
     /**
+    * 节点权重
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
+    * 是否默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDefaultWeight")
+    @Expose
+    private Boolean IsDefaultWeight;
+
+    /**
      * Get 云原生网关节点 id 
      * @return NodeId 云原生网关节点 id
      */
@@ -209,6 +225,46 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 节点权重
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Weight 节点权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 节点权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Weight 节点权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
+    /**
+     * Get 是否默认权重
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDefaultWeight 是否默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDefaultWeight() {
+        return this.IsDefaultWeight;
+    }
+
+    /**
+     * Set 是否默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDefaultWeight 是否默认权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDefaultWeight(Boolean IsDefaultWeight) {
+        this.IsDefaultWeight = IsDefaultWeight;
+    }
+
     public CloudNativeAPIGatewayNode() {
     }
 
@@ -238,6 +294,12 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.IsDefaultWeight != null) {
+            this.IsDefaultWeight = new Boolean(source.IsDefaultWeight);
+        }
     }
 
 
@@ -252,6 +314,8 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "IsDefaultWeight", this.IsDefaultWeight);
 
     }
 }

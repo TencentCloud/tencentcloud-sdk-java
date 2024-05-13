@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Encryption extends AbstractModel {
 
     /**
-    * 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅数据加密 文档。
+    * 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅[敏感数据加密指引](https://cloud.tencent.com/document/product/866/106048)文档。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CiphertextBlob")
@@ -64,9 +64,9 @@ public class Encryption extends AbstractModel {
     private String [] EncryptList;
 
     /**
-     * Get 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅数据加密 文档。
+     * Get 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅[敏感数据加密指引](https://cloud.tencent.com/document/product/866/106048)文档。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅数据加密 文档。
+     * @return CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅[敏感数据加密指引](https://cloud.tencent.com/document/product/866/106048)文档。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCiphertextBlob() {
@@ -74,9 +74,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Set 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅数据加密 文档。
+     * Set 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅[敏感数据加密指引](https://cloud.tencent.com/document/product/866/106048)文档。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅数据加密 文档。
+     * @param CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅[敏感数据加密指引](https://cloud.tencent.com/document/product/866/106048)文档。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCiphertextBlob(String CiphertextBlob) {

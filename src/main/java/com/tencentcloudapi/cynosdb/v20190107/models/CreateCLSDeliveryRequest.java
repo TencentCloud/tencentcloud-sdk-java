@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class CreateCLSDeliveryRequest extends AbstractModel {
 
+    /**
+    * 实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 日志投递配置
+    */
+    @SerializedName("CLSInfoList")
+    @Expose
+    private CLSInfo [] CLSInfoList;
+
+    /**
+     * Get 实例id 
+     * @return InstanceId 实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceId 实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 日志投递配置 
+     * @return CLSInfoList 日志投递配置
+     */
+    public CLSInfo [] getCLSInfoList() {
+        return this.CLSInfoList;
+    }
+
+    /**
+     * Set 日志投递配置
+     * @param CLSInfoList 日志投递配置
+     */
+    public void setCLSInfoList(CLSInfo [] CLSInfoList) {
+        this.CLSInfoList = CLSInfoList;
+    }
+
     public CreateCLSDeliveryRequest() {
     }
 
@@ -31,6 +77,15 @@ public class CreateCLSDeliveryRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateCLSDeliveryRequest(CreateCLSDeliveryRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CLSInfoList != null) {
+            this.CLSInfoList = new CLSInfo[source.CLSInfoList.length];
+            for (int i = 0; i < source.CLSInfoList.length; i++) {
+                this.CLSInfoList[i] = new CLSInfo(source.CLSInfoList[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class CreateCLSDeliveryRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "CLSInfoList.", this.CLSInfoList);
 
     }
 }
