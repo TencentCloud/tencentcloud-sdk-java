@@ -197,6 +197,21 @@ zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下
     private EngineRegionInfo [] EngineRegionInfos;
 
     /**
+    * zk标准版请填CLOUD_PREMIUM，zk标准版无法选择磁盘类型和磁盘容量，默认为CLOUD_PREMIUM
+zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
+    * zk标准版请填50，zk标准版无法选择磁盘类型和磁盘容量，磁盘容量默认为50
+    */
+    @SerializedName("StorageCapacity")
+    @Expose
+    private Long StorageCapacity;
+
+    /**
     * zk专业版至多有两个盘，且磁盘的容量在50-3200之间
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
     */
@@ -712,6 +727,42 @@ zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下
     }
 
     /**
+     * Get zk标准版请填CLOUD_PREMIUM，zk标准版无法选择磁盘类型和磁盘容量，默认为CLOUD_PREMIUM
+zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM 
+     * @return StorageType zk标准版请填CLOUD_PREMIUM，zk标准版无法选择磁盘类型和磁盘容量，默认为CLOUD_PREMIUM
+zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set zk标准版请填CLOUD_PREMIUM，zk标准版无法选择磁盘类型和磁盘容量，默认为CLOUD_PREMIUM
+zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
+     * @param StorageType zk标准版请填CLOUD_PREMIUM，zk标准版无法选择磁盘类型和磁盘容量，默认为CLOUD_PREMIUM
+zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
+    /**
+     * Get zk标准版请填50，zk标准版无法选择磁盘类型和磁盘容量，磁盘容量默认为50 
+     * @return StorageCapacity zk标准版请填50，zk标准版无法选择磁盘类型和磁盘容量，磁盘容量默认为50
+     */
+    public Long getStorageCapacity() {
+        return this.StorageCapacity;
+    }
+
+    /**
+     * Set zk标准版请填50，zk标准版无法选择磁盘类型和磁盘容量，磁盘容量默认为50
+     * @param StorageCapacity zk标准版请填50，zk标准版无法选择磁盘类型和磁盘容量，磁盘容量默认为50
+     */
+    public void setStorageCapacity(Long StorageCapacity) {
+        this.StorageCapacity = StorageCapacity;
+    }
+
+    /**
      * Get zk专业版至多有两个盘，且磁盘的容量在50-3200之间
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致 
      * @return StorageOption zk专业版至多有两个盘，且磁盘的容量在50-3200之间
@@ -812,6 +863,12 @@ zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下
                 this.EngineRegionInfos[i] = new EngineRegionInfo(source.EngineRegionInfos[i]);
             }
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
+        if (source.StorageCapacity != null) {
+            this.StorageCapacity = new Long(source.StorageCapacity);
+        }
         if (source.StorageOption != null) {
             this.StorageOption = new StorageOption[source.StorageOption.length];
             for (int i = 0; i < source.StorageOption.length; i++) {
@@ -844,6 +901,8 @@ zk专业版跨地域部署开启了固定Leader所在地域，需要满足以下
         this.setParamSimple(map, prefix + "PrepaidPeriod", this.PrepaidPeriod);
         this.setParamSimple(map, prefix + "PrepaidRenewFlag", this.PrepaidRenewFlag);
         this.setParamArrayObj(map, prefix + "EngineRegionInfos.", this.EngineRegionInfos);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "StorageCapacity", this.StorageCapacity);
         this.setParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
         this.setParamSimple(map, prefix + "AffinityConstraint", this.AffinityConstraint);
 

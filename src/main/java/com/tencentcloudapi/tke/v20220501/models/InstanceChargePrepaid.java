@@ -34,7 +34,7 @@ public class InstanceChargePrepaid extends AbstractModel {
     /**
     * 预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
 
     */
@@ -65,12 +65,12 @@ public class InstanceChargePrepaid extends AbstractModel {
     /**
      * Get 预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
  
      * @return RenewFlag 预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
 
      */
@@ -81,12 +81,12 @@ public class InstanceChargePrepaid extends AbstractModel {
     /**
      * Set 预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
 
      * @param RenewFlag 预付费续费方式：
 - NOTIFY_AND_AUTO_RENEW：通知用户过期，且自动续费 (默认）
-- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不不自动续费
+- NOTIFY_AND_MANUAL_RENEW：通知用户过期，但不自动续费
 - DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知用户过期，也不自动续费
 
      */

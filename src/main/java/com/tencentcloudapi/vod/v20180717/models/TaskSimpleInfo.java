@@ -31,7 +31,7 @@ public class TaskSimpleInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+    * 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
     */
     @SerializedName("Status")
     @Expose
@@ -114,16 +114,16 @@ public class TaskSimpleInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。 
-     * @return Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * Get 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。 
+     * @return Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
-     * @param Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * Set 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
+     * @param Status 任务状态。取值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）、ABORTED（已终止）。
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -50,7 +50,8 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     * 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+<li>FINISH：已完成；</li>
+<li>ABORTED：已终止。</li>
     */
     @SerializedName("Status")
     @Expose
@@ -336,11 +337,13 @@ public class DescribeTaskDetailResponse extends AbstractModel {
      * Get 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li> 
+<li>FINISH：已完成；</li>
+<li>ABORTED：已终止。</li> 
      * @return Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+<li>FINISH：已完成；</li>
+<li>ABORTED：已终止。</li>
      */
     public String getStatus() {
         return this.Status;
@@ -350,11 +353,13 @@ public class DescribeTaskDetailResponse extends AbstractModel {
      * Set 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+<li>FINISH：已完成；</li>
+<li>ABORTED：已终止。</li>
      * @param Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+<li>FINISH：已完成；</li>
+<li>ABORTED：已终止。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

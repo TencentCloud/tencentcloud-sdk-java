@@ -94,6 +94,34 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
     private String [] CatalogName;
 
     /**
+    * sql名
+    */
+    @SerializedName("Sql")
+    @Expose
+    private String Sql;
+
+    /**
+    * ReadRows排序字段
+    */
+    @SerializedName("ReadRows")
+    @Expose
+    private String ReadRows;
+
+    /**
+    * ResultBytes排序字段
+    */
+    @SerializedName("ResultBytes")
+    @Expose
+    private String ResultBytes;
+
+    /**
+    * MemoryUsage排序字段
+    */
+    @SerializedName("MemoryUsage")
+    @Expose
+    private String MemoryUsage;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -253,6 +281,70 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
         this.CatalogName = CatalogName;
     }
 
+    /**
+     * Get sql名 
+     * @return Sql sql名
+     */
+    public String getSql() {
+        return this.Sql;
+    }
+
+    /**
+     * Set sql名
+     * @param Sql sql名
+     */
+    public void setSql(String Sql) {
+        this.Sql = Sql;
+    }
+
+    /**
+     * Get ReadRows排序字段 
+     * @return ReadRows ReadRows排序字段
+     */
+    public String getReadRows() {
+        return this.ReadRows;
+    }
+
+    /**
+     * Set ReadRows排序字段
+     * @param ReadRows ReadRows排序字段
+     */
+    public void setReadRows(String ReadRows) {
+        this.ReadRows = ReadRows;
+    }
+
+    /**
+     * Get ResultBytes排序字段 
+     * @return ResultBytes ResultBytes排序字段
+     */
+    public String getResultBytes() {
+        return this.ResultBytes;
+    }
+
+    /**
+     * Set ResultBytes排序字段
+     * @param ResultBytes ResultBytes排序字段
+     */
+    public void setResultBytes(String ResultBytes) {
+        this.ResultBytes = ResultBytes;
+    }
+
+    /**
+     * Get MemoryUsage排序字段 
+     * @return MemoryUsage MemoryUsage排序字段
+     */
+    public String getMemoryUsage() {
+        return this.MemoryUsage;
+    }
+
+    /**
+     * Set MemoryUsage排序字段
+     * @param MemoryUsage MemoryUsage排序字段
+     */
+    public void setMemoryUsage(String MemoryUsage) {
+        this.MemoryUsage = MemoryUsage;
+    }
+
     public DescribeSlowQueryRecordsRequest() {
     }
 
@@ -297,6 +389,18 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
                 this.CatalogName[i] = new String(source.CatalogName[i]);
             }
         }
+        if (source.Sql != null) {
+            this.Sql = new String(source.Sql);
+        }
+        if (source.ReadRows != null) {
+            this.ReadRows = new String(source.ReadRows);
+        }
+        if (source.ResultBytes != null) {
+            this.ResultBytes = new String(source.ResultBytes);
+        }
+        if (source.MemoryUsage != null) {
+            this.MemoryUsage = new String(source.MemoryUsage);
+        }
     }
 
 
@@ -314,6 +418,10 @@ public class DescribeSlowQueryRecordsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DbName.", this.DbName);
         this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
         this.setParamArraySimple(map, prefix + "CatalogName.", this.CatalogName);
+        this.setParamSimple(map, prefix + "Sql", this.Sql);
+        this.setParamSimple(map, prefix + "ReadRows", this.ReadRows);
+        this.setParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
+        this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
 
     }
 }

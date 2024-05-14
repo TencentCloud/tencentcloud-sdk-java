@@ -59,6 +59,34 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
     private String DurationMs;
 
     /**
+    * 查询sql
+    */
+    @SerializedName("Sql")
+    @Expose
+    private String Sql;
+
+    /**
+    * 排序参数
+    */
+    @SerializedName("ReadRows")
+    @Expose
+    private String ReadRows;
+
+    /**
+    * 排序参数
+    */
+    @SerializedName("ResultBytes")
+    @Expose
+    private String ResultBytes;
+
+    /**
+    * 排序参数
+    */
+    @SerializedName("MemoryUsage")
+    @Expose
+    private String MemoryUsage;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -138,6 +166,70 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         this.DurationMs = DurationMs;
     }
 
+    /**
+     * Get 查询sql 
+     * @return Sql 查询sql
+     */
+    public String getSql() {
+        return this.Sql;
+    }
+
+    /**
+     * Set 查询sql
+     * @param Sql 查询sql
+     */
+    public void setSql(String Sql) {
+        this.Sql = Sql;
+    }
+
+    /**
+     * Get 排序参数 
+     * @return ReadRows 排序参数
+     */
+    public String getReadRows() {
+        return this.ReadRows;
+    }
+
+    /**
+     * Set 排序参数
+     * @param ReadRows 排序参数
+     */
+    public void setReadRows(String ReadRows) {
+        this.ReadRows = ReadRows;
+    }
+
+    /**
+     * Get 排序参数 
+     * @return ResultBytes 排序参数
+     */
+    public String getResultBytes() {
+        return this.ResultBytes;
+    }
+
+    /**
+     * Set 排序参数
+     * @param ResultBytes 排序参数
+     */
+    public void setResultBytes(String ResultBytes) {
+        this.ResultBytes = ResultBytes;
+    }
+
+    /**
+     * Get 排序参数 
+     * @return MemoryUsage 排序参数
+     */
+    public String getMemoryUsage() {
+        return this.MemoryUsage;
+    }
+
+    /**
+     * Set 排序参数
+     * @param MemoryUsage 排序参数
+     */
+    public void setMemoryUsage(String MemoryUsage) {
+        this.MemoryUsage = MemoryUsage;
+    }
+
     public DescribeSlowQueryRecordsDownloadRequest() {
     }
 
@@ -161,6 +253,18 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         if (source.DurationMs != null) {
             this.DurationMs = new String(source.DurationMs);
         }
+        if (source.Sql != null) {
+            this.Sql = new String(source.Sql);
+        }
+        if (source.ReadRows != null) {
+            this.ReadRows = new String(source.ReadRows);
+        }
+        if (source.ResultBytes != null) {
+            this.ResultBytes = new String(source.ResultBytes);
+        }
+        if (source.MemoryUsage != null) {
+            this.MemoryUsage = new String(source.MemoryUsage);
+        }
     }
 
 
@@ -173,6 +277,10 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "DurationMs", this.DurationMs);
+        this.setParamSimple(map, prefix + "Sql", this.Sql);
+        this.setParamSimple(map, prefix + "ReadRows", this.ReadRows);
+        this.setParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
+        this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
 
     }
 }
