@@ -467,4 +467,15 @@ public class CsipClient extends AbstractClient{
         return this.internalRequest(req, "StopRiskCenterTask", StopRiskCenterTaskResponse.class);
     }
 
+    /**
+     *批量告警状态处理接口
+     * @param req UpdateAlertStatusListRequest
+     * @return UpdateAlertStatusListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAlertStatusListResponse UpdateAlertStatusList(UpdateAlertStatusListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAlertStatusList", UpdateAlertStatusListResponse.class);
+    }
+
 }

@@ -31,7 +31,7 @@ public class DescribeLogContextRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+    * 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
     */
     @SerializedName("BTime")
     @Expose
@@ -83,16 +83,16 @@ SearchLog接口返回信息中Results结构中的PkgLogId。
     }
 
     /**
-     * Get 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF 
-     * @return BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+     * Get 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。 
+     * @return BTime 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
      */
     public String getBTime() {
         return this.BTime;
     }
 
     /**
-     * Set 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
-     * @param BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+     * Set 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * @param BTime 日志时间,  需按照 UTC+8 时区将日志中的Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
      */
     public void setBTime(String BTime) {
         this.BTime = BTime;

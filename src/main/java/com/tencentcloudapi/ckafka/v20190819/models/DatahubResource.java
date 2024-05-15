@@ -159,6 +159,14 @@ public class DatahubResource extends AbstractModel {
     private ScfParam ScfParam;
 
     /**
+    * MQTT配置，Type为 MQTT 时必填
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MqttParam")
+    @Expose
+    private MqttParam MqttParam;
+
+    /**
      * Get 资源类型 
      * @return Type 资源类型
      */
@@ -494,6 +502,26 @@ public class DatahubResource extends AbstractModel {
         this.ScfParam = ScfParam;
     }
 
+    /**
+     * Get MQTT配置，Type为 MQTT 时必填
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MqttParam MQTT配置，Type为 MQTT 时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MqttParam getMqttParam() {
+        return this.MqttParam;
+    }
+
+    /**
+     * Set MQTT配置，Type为 MQTT 时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MqttParam MQTT配置，Type为 MQTT 时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMqttParam(MqttParam MqttParam) {
+        this.MqttParam = MqttParam;
+    }
+
     public DatahubResource() {
     }
 
@@ -553,6 +581,9 @@ public class DatahubResource extends AbstractModel {
         if (source.ScfParam != null) {
             this.ScfParam = new ScfParam(source.ScfParam);
         }
+        if (source.MqttParam != null) {
+            this.MqttParam = new MqttParam(source.MqttParam);
+        }
     }
 
 
@@ -577,6 +608,7 @@ public class DatahubResource extends AbstractModel {
         this.setParamObj(map, prefix + "SQLServerParam.", this.SQLServerParam);
         this.setParamObj(map, prefix + "CtsdbParam.", this.CtsdbParam);
         this.setParamObj(map, prefix + "ScfParam.", this.ScfParam);
+        this.setParamObj(map, prefix + "MqttParam.", this.MqttParam);
 
     }
 }

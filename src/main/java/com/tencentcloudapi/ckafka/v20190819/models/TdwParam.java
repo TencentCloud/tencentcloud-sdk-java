@@ -25,6 +25,7 @@ public class TdwParam extends AbstractModel {
 
     /**
     * Tdw的bid
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bid")
     @Expose
@@ -32,6 +33,7 @@ public class TdwParam extends AbstractModel {
 
     /**
     * Tdw的tid
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tid")
     @Expose
@@ -39,6 +41,7 @@ public class TdwParam extends AbstractModel {
 
     /**
     * 默认true
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDomestic")
     @Expose
@@ -46,6 +49,7 @@ public class TdwParam extends AbstractModel {
 
     /**
     * TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TdwHost")
     @Expose
@@ -53,14 +57,17 @@ public class TdwParam extends AbstractModel {
 
     /**
     * TDW端口，默认8099
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TdwPort")
     @Expose
     private Long TdwPort;
 
     /**
-     * Get Tdw的bid 
+     * Get Tdw的bid
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bid Tdw的bid
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBid() {
         return this.Bid;
@@ -68,15 +75,19 @@ public class TdwParam extends AbstractModel {
 
     /**
      * Set Tdw的bid
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Bid Tdw的bid
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBid(String Bid) {
         this.Bid = Bid;
     }
 
     /**
-     * Get Tdw的tid 
+     * Get Tdw的tid
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tid Tdw的tid
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTid() {
         return this.Tid;
@@ -84,15 +95,19 @@ public class TdwParam extends AbstractModel {
 
     /**
      * Set Tdw的tid
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tid Tdw的tid
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTid(String Tid) {
         this.Tid = Tid;
     }
 
     /**
-     * Get 默认true 
+     * Get 默认true
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsDomestic 默认true
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDomestic() {
         return this.IsDomestic;
@@ -100,15 +115,19 @@ public class TdwParam extends AbstractModel {
 
     /**
      * Set 默认true
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDomestic 默认true
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDomestic(Boolean IsDomestic) {
         this.IsDomestic = IsDomestic;
     }
 
     /**
-     * Get TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com 
+     * Get TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TdwHost TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTdwHost() {
         return this.TdwHost;
@@ -116,15 +135,19 @@ public class TdwParam extends AbstractModel {
 
     /**
      * Set TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TdwHost TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTdwHost(String TdwHost) {
         this.TdwHost = TdwHost;
     }
 
     /**
-     * Get TDW端口，默认8099 
+     * Get TDW端口，默认8099
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TdwPort TDW端口，默认8099
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTdwPort() {
         return this.TdwPort;
@@ -132,7 +155,9 @@ public class TdwParam extends AbstractModel {
 
     /**
      * Set TDW端口，默认8099
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TdwPort TDW端口，默认8099
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTdwPort(Long TdwPort) {
         this.TdwPort = TdwPort;

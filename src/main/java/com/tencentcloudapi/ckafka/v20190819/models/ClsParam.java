@@ -25,6 +25,7 @@ public class ClsParam extends AbstractModel {
 
     /**
     * 生产的信息是否为json格式
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DecodeJson")
     @Expose
@@ -32,6 +33,7 @@ public class ClsParam extends AbstractModel {
 
     /**
     * cls日志主题id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -39,6 +41,7 @@ public class ClsParam extends AbstractModel {
 
     /**
     * cls日志集id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSet")
     @Expose
@@ -46,6 +49,7 @@ public class ClsParam extends AbstractModel {
 
     /**
     * 当DecodeJson为false时必填
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContentKey")
     @Expose
@@ -54,14 +58,17 @@ public class ClsParam extends AbstractModel {
     /**
     * 指定消息中的某字段内容作为cls日志的时间。
 字段内容格式需要是秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeField")
     @Expose
     private String TimeField;
 
     /**
-     * Get 生产的信息是否为json格式 
+     * Get 生产的信息是否为json格式
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DecodeJson 生产的信息是否为json格式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDecodeJson() {
         return this.DecodeJson;
@@ -69,15 +76,19 @@ public class ClsParam extends AbstractModel {
 
     /**
      * Set 生产的信息是否为json格式
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DecodeJson 生产的信息是否为json格式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDecodeJson(Boolean DecodeJson) {
         this.DecodeJson = DecodeJson;
     }
 
     /**
-     * Get cls日志主题id 
+     * Get cls日志主题id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Resource cls日志主题id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -85,15 +96,19 @@ public class ClsParam extends AbstractModel {
 
     /**
      * Set cls日志主题id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource cls日志主题id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get cls日志集id 
+     * Get cls日志集id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogSet cls日志集id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSet() {
         return this.LogSet;
@@ -101,15 +116,19 @@ public class ClsParam extends AbstractModel {
 
     /**
      * Set cls日志集id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSet cls日志集id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get 当DecodeJson为false时必填 
+     * Get 当DecodeJson为false时必填
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ContentKey 当DecodeJson为false时必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContentKey() {
         return this.ContentKey;
@@ -117,7 +136,9 @@ public class ClsParam extends AbstractModel {
 
     /**
      * Set 当DecodeJson为false时必填
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ContentKey 当DecodeJson为false时必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContentKey(String ContentKey) {
         this.ContentKey = ContentKey;
@@ -125,9 +146,11 @@ public class ClsParam extends AbstractModel {
 
     /**
      * Get 指定消息中的某字段内容作为cls日志的时间。
-字段内容格式需要是秒级时间戳 
+字段内容格式需要是秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeField 指定消息中的某字段内容作为cls日志的时间。
 字段内容格式需要是秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeField() {
         return this.TimeField;
@@ -136,8 +159,10 @@ public class ClsParam extends AbstractModel {
     /**
      * Set 指定消息中的某字段内容作为cls日志的时间。
 字段内容格式需要是秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeField 指定消息中的某字段内容作为cls日志的时间。
 字段内容格式需要是秒级时间戳
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeField(String TimeField) {
         this.TimeField = TimeField;

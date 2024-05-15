@@ -25,6 +25,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * MongoDB的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -32,6 +33,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * MongoDB的集群
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Collection")
     @Expose
@@ -39,6 +41,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * 是否复制存量数据，默认传参true
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CopyExisting")
     @Expose
@@ -46,6 +49,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * 实例资源
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -53,6 +57,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * MongoDB的连接ip
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -60,6 +65,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * MongoDB的连接port
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -67,6 +73,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * MongoDB数据库用户名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -74,6 +81,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * MongoDB数据库密码
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -81,6 +89,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * 监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListeningEvent")
     @Expose
@@ -88,6 +97,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * 主从优先级，默认主节点
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadPreference")
     @Expose
@@ -95,6 +105,7 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * 聚合管道
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pipeline")
     @Expose
@@ -102,14 +113,17 @@ public class MongoDBParam extends AbstractModel {
 
     /**
     * 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfBuilt")
     @Expose
     private Boolean SelfBuilt;
 
     /**
-     * Get MongoDB的数据库名称 
+     * Get MongoDB的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Database MongoDB的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -117,15 +131,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set MongoDB的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Database MongoDB的数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get MongoDB的集群 
+     * Get MongoDB的集群
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Collection MongoDB的集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCollection() {
         return this.Collection;
@@ -133,15 +151,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set MongoDB的集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Collection MongoDB的集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCollection(String Collection) {
         this.Collection = Collection;
     }
 
     /**
-     * Get 是否复制存量数据，默认传参true 
+     * Get 是否复制存量数据，默认传参true
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CopyExisting 是否复制存量数据，默认传参true
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCopyExisting() {
         return this.CopyExisting;
@@ -149,15 +171,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set 是否复制存量数据，默认传参true
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CopyExisting 是否复制存量数据，默认传参true
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCopyExisting(Boolean CopyExisting) {
         this.CopyExisting = CopyExisting;
     }
 
     /**
-     * Get 实例资源 
+     * Get 实例资源
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Resource 实例资源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -165,15 +191,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set 实例资源
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 实例资源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get MongoDB的连接ip 
+     * Get MongoDB的连接ip
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ip MongoDB的连接ip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -181,15 +211,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set MongoDB的连接ip
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip MongoDB的连接ip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get MongoDB的连接port 
+     * Get MongoDB的连接port
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Port MongoDB的连接port
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -197,15 +231,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set MongoDB的连接port
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Port MongoDB的连接port
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get MongoDB数据库用户名 
+     * Get MongoDB数据库用户名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserName MongoDB数据库用户名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -213,15 +251,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set MongoDB数据库用户名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName MongoDB数据库用户名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get MongoDB数据库密码 
+     * Get MongoDB数据库密码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Password MongoDB数据库密码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -229,15 +271,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set MongoDB数据库密码
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Password MongoDB数据库密码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔 
+     * Get 监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListeningEvent 监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListeningEvent() {
         return this.ListeningEvent;
@@ -245,15 +291,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set 监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ListeningEvent 监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListeningEvent(String ListeningEvent) {
         this.ListeningEvent = ListeningEvent;
     }
 
     /**
-     * Get 主从优先级，默认主节点 
+     * Get 主从优先级，默认主节点
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReadPreference 主从优先级，默认主节点
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReadPreference() {
         return this.ReadPreference;
@@ -261,15 +311,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set 主从优先级，默认主节点
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadPreference 主从优先级，默认主节点
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadPreference(String ReadPreference) {
         this.ReadPreference = ReadPreference;
     }
 
     /**
-     * Get 聚合管道 
+     * Get 聚合管道
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Pipeline 聚合管道
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPipeline() {
         return this.Pipeline;
@@ -277,15 +331,19 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set 聚合管道
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Pipeline 聚合管道
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPipeline(String Pipeline) {
         this.Pipeline = Pipeline;
     }
 
     /**
-     * Get 是否为自建集群 
+     * Get 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SelfBuilt 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
@@ -293,7 +351,9 @@ public class MongoDBParam extends AbstractModel {
 
     /**
      * Set 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SelfBuilt 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;

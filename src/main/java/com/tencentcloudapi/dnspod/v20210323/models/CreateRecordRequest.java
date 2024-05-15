@@ -80,7 +80,7 @@ public class CreateRecordRequest extends AbstractModel {
     private Long MX;
 
     /**
-    * TTL，范围1-604800，不同等级域名最小值不同。
+    * TTL，范围1-604800，不同套餐域名最小值不同。
     */
     @SerializedName("TTL")
     @Expose
@@ -243,16 +243,16 @@ public class CreateRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get TTL，范围1-604800，不同等级域名最小值不同。 
-     * @return TTL TTL，范围1-604800，不同等级域名最小值不同。
+     * Get TTL，范围1-604800，不同套餐域名最小值不同。 
+     * @return TTL TTL，范围1-604800，不同套餐域名最小值不同。
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set TTL，范围1-604800，不同等级域名最小值不同。
-     * @param TTL TTL，范围1-604800，不同等级域名最小值不同。
+     * Set TTL，范围1-604800，不同套餐域名最小值不同。
+     * @param TTL TTL，范围1-604800，不同套餐域名最小值不同。
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;

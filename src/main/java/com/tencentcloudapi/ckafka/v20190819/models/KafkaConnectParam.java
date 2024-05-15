@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KafkaConnectParam extends AbstractModel {
 
     /**
-    * Kafka连接源的实例资源, 非自建时必填
+    * Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
@@ -48,7 +48,7 @@ public class KafkaConnectParam extends AbstractModel {
     private Boolean IsUpdate;
 
     /**
-    * Kafka连接的broker地址, 自建时必填
+    * Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BrokerAddress")
@@ -64,9 +64,9 @@ public class KafkaConnectParam extends AbstractModel {
     private String Region;
 
     /**
-     * Get Kafka连接源的实例资源, 非自建时必填
+     * Get Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resource Kafka连接源的实例资源, 非自建时必填
+     * @return Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
@@ -74,9 +74,9 @@ public class KafkaConnectParam extends AbstractModel {
     }
 
     /**
-     * Set Kafka连接源的实例资源, 非自建时必填
+     * Set Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resource Kafka连接源的实例资源, 非自建时必填
+     * @param Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
@@ -124,9 +124,9 @@ public class KafkaConnectParam extends AbstractModel {
     }
 
     /**
-     * Get Kafka连接的broker地址, 自建时必填
+     * Get Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BrokerAddress Kafka连接的broker地址, 自建时必填
+     * @return BrokerAddress Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBrokerAddress() {
@@ -134,9 +134,9 @@ public class KafkaConnectParam extends AbstractModel {
     }
 
     /**
-     * Set Kafka连接的broker地址, 自建时必填
+     * Set Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BrokerAddress Kafka连接的broker地址, 自建时必填
+     * @param BrokerAddress Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrokerAddress(String BrokerAddress) {

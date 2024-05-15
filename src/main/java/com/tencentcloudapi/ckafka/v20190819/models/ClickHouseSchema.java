@@ -25,6 +25,7 @@ public class ClickHouseSchema extends AbstractModel {
 
     /**
     * 表的列名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColumnName")
     @Expose
@@ -32,6 +33,7 @@ public class ClickHouseSchema extends AbstractModel {
 
     /**
     * 该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonKey")
     @Expose
@@ -39,6 +41,7 @@ public class ClickHouseSchema extends AbstractModel {
 
     /**
     * 表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -46,14 +49,17 @@ public class ClickHouseSchema extends AbstractModel {
 
     /**
     * 列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowNull")
     @Expose
     private Boolean AllowNull;
 
     /**
-     * Get 表的列名 
+     * Get 表的列名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ColumnName 表的列名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColumnName() {
         return this.ColumnName;
@@ -61,15 +67,19 @@ public class ClickHouseSchema extends AbstractModel {
 
     /**
      * Set 表的列名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ColumnName 表的列名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumnName(String ColumnName) {
         this.ColumnName = ColumnName;
     }
 
     /**
-     * Get 该列对应的jsonKey名 
+     * Get 该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return JsonKey 该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJsonKey() {
         return this.JsonKey;
@@ -77,15 +87,19 @@ public class ClickHouseSchema extends AbstractModel {
 
     /**
      * Set 该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonKey 该列对应的jsonKey名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonKey(String JsonKey) {
         this.JsonKey = JsonKey;
     }
 
     /**
-     * Get 表列项的类型 
+     * Get 表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -93,15 +107,19 @@ public class ClickHouseSchema extends AbstractModel {
 
     /**
      * Set 表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 表列项的类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 列项是否允许为空 
+     * Get 列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AllowNull 列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAllowNull() {
         return this.AllowNull;
@@ -109,7 +127,9 @@ public class ClickHouseSchema extends AbstractModel {
 
     /**
      * Set 列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AllowNull 列项是否允许为空
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowNull(Boolean AllowNull) {
         this.AllowNull = AllowNull;

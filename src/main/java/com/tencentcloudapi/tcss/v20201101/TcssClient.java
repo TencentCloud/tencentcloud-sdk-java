@@ -1857,6 +1857,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *DescribeRiskContainerImageList查询风险容器镜像列表
+     * @param req DescribeEventEscapeImageListRequest
+     * @return DescribeEventEscapeImageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventEscapeImageListResponse DescribeEventEscapeImageList(DescribeEventEscapeImageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEventEscapeImageList", DescribeEventEscapeImageListResponse.class);
+    }
+
+    /**
      *查询导出任务下载URL
      * @param req DescribeExportJobDownloadURLRequest
      * @return DescribeExportJobDownloadURLResponse

@@ -51,7 +51,7 @@ import java.util.*;
 public abstract class AbstractClient {
 
     public static final int HTTP_RSP_OK = 200;
-    public static final String SDK_VERSION = "SDK_JAVA_3.1.1019";
+    public static final String SDK_VERSION = "SDK_JAVA_3.1.1020";
     public Gson gson;
     private Credential credential;
     private ClientProfile profile;
