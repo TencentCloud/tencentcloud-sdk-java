@@ -38,7 +38,7 @@ public class SendCmqMsgRequest extends AbstractModel {
     private String MsgContent;
 
     /**
-    * 延迟时间
+    * 延迟时间。单位为秒，默认值为0秒，最大不能超过队列配置的消息最长未确认时间。
     */
     @SerializedName("DelaySeconds")
     @Expose
@@ -77,16 +77,16 @@ public class SendCmqMsgRequest extends AbstractModel {
     }
 
     /**
-     * Get 延迟时间 
-     * @return DelaySeconds 延迟时间
+     * Get 延迟时间。单位为秒，默认值为0秒，最大不能超过队列配置的消息最长未确认时间。 
+     * @return DelaySeconds 延迟时间。单位为秒，默认值为0秒，最大不能超过队列配置的消息最长未确认时间。
      */
     public Long getDelaySeconds() {
         return this.DelaySeconds;
     }
 
     /**
-     * Set 延迟时间
-     * @param DelaySeconds 延迟时间
+     * Set 延迟时间。单位为秒，默认值为0秒，最大不能超过队列配置的消息最长未确认时间。
+     * @param DelaySeconds 延迟时间。单位为秒，默认值为0秒，最大不能超过队列配置的消息最长未确认时间。
      */
     public void setDelaySeconds(Long DelaySeconds) {
         this.DelaySeconds = DelaySeconds;

@@ -31,13 +31,6 @@ public class CreateOIDCConfigRequest extends AbstractModel {
     private String IdentityUrl;
 
     /**
-    * 签名公钥，需要base64
-    */
-    @SerializedName("IdentityKey")
-    @Expose
-    private String IdentityKey;
-
-    /**
     * 客户端ID
     */
     @SerializedName("ClientId")
@@ -50,6 +43,13 @@ public class CreateOIDCConfigRequest extends AbstractModel {
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+    * 签名公钥，需要base64
+    */
+    @SerializedName("IdentityKey")
+    @Expose
+    private String IdentityKey;
 
     /**
     * 描述
@@ -72,22 +72,6 @@ public class CreateOIDCConfigRequest extends AbstractModel {
      */
     public void setIdentityUrl(String IdentityUrl) {
         this.IdentityUrl = IdentityUrl;
-    }
-
-    /**
-     * Get 签名公钥，需要base64 
-     * @return IdentityKey 签名公钥，需要base64
-     */
-    public String getIdentityKey() {
-        return this.IdentityKey;
-    }
-
-    /**
-     * Set 签名公钥，需要base64
-     * @param IdentityKey 签名公钥，需要base64
-     */
-    public void setIdentityKey(String IdentityKey) {
-        this.IdentityKey = IdentityKey;
     }
 
     /**
@@ -123,6 +107,22 @@ public class CreateOIDCConfigRequest extends AbstractModel {
     }
 
     /**
+     * Get 签名公钥，需要base64 
+     * @return IdentityKey 签名公钥，需要base64
+     */
+    public String getIdentityKey() {
+        return this.IdentityKey;
+    }
+
+    /**
+     * Set 签名公钥，需要base64
+     * @param IdentityKey 签名公钥，需要base64
+     */
+    public void setIdentityKey(String IdentityKey) {
+        this.IdentityKey = IdentityKey;
+    }
+
+    /**
      * Get 描述 
      * @return Description 描述
      */
@@ -149,9 +149,6 @@ public class CreateOIDCConfigRequest extends AbstractModel {
         if (source.IdentityUrl != null) {
             this.IdentityUrl = new String(source.IdentityUrl);
         }
-        if (source.IdentityKey != null) {
-            this.IdentityKey = new String(source.IdentityKey);
-        }
         if (source.ClientId != null) {
             this.ClientId = new String[source.ClientId.length];
             for (int i = 0; i < source.ClientId.length; i++) {
@@ -160,6 +157,9 @@ public class CreateOIDCConfigRequest extends AbstractModel {
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.IdentityKey != null) {
+            this.IdentityKey = new String(source.IdentityKey);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -172,9 +172,9 @@ public class CreateOIDCConfigRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdentityUrl", this.IdentityUrl);
-        this.setParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
         this.setParamArraySimple(map, prefix + "ClientId.", this.ClientId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

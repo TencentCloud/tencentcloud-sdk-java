@@ -101,6 +101,20 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
     private Long MasterCount;
 
     /**
+    * 类型为ComputeResource和EMR以及默认，默认为EMR
+    */
+    @SerializedName("ResourceBaseType")
+    @Expose
+    private String ResourceBaseType;
+
+    /**
+    * 计算资源id
+    */
+    @SerializedName("ComputeResourceId")
+    @Expose
+    private String ComputeResourceId;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -288,6 +302,38 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         this.MasterCount = MasterCount;
     }
 
+    /**
+     * Get 类型为ComputeResource和EMR以及默认，默认为EMR 
+     * @return ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR
+     */
+    public String getResourceBaseType() {
+        return this.ResourceBaseType;
+    }
+
+    /**
+     * Set 类型为ComputeResource和EMR以及默认，默认为EMR
+     * @param ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR
+     */
+    public void setResourceBaseType(String ResourceBaseType) {
+        this.ResourceBaseType = ResourceBaseType;
+    }
+
+    /**
+     * Get 计算资源id 
+     * @return ComputeResourceId 计算资源id
+     */
+    public String getComputeResourceId() {
+        return this.ComputeResourceId;
+    }
+
+    /**
+     * Set 计算资源id
+     * @param ComputeResourceId 计算资源id
+     */
+    public void setComputeResourceId(String ComputeResourceId) {
+        this.ComputeResourceId = ComputeResourceId;
+    }
+
     public InquiryPriceScaleOutInstanceRequest() {
     }
 
@@ -326,6 +372,12 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         if (source.MasterCount != null) {
             this.MasterCount = new Long(source.MasterCount);
         }
+        if (source.ResourceBaseType != null) {
+            this.ResourceBaseType = new String(source.ResourceBaseType);
+        }
+        if (source.ComputeResourceId != null) {
+            this.ComputeResourceId = new String(source.ComputeResourceId);
+        }
     }
 
 
@@ -343,6 +395,8 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "RouterCount", this.RouterCount);
         this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
+        this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+        this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
 
     }
 }

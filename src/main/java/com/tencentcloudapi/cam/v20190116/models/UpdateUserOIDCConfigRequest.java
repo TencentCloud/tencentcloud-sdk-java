@@ -32,13 +32,6 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
     private String IdentityUrl;
 
     /**
-    * RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
-    */
-    @SerializedName("IdentityKey")
-    @Expose
-    private String IdentityKey;
-
-    /**
     * 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。
     */
     @SerializedName("ClientId")
@@ -67,11 +60,18 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
     private String ResponseMode;
 
     /**
-    * 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
+    * 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数字、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
     */
     @SerializedName("MappingFiled")
     @Expose
     private String MappingFiled;
+
+    /**
+    * RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+    */
+    @SerializedName("IdentityKey")
+    @Expose
+    private String IdentityKey;
 
     /**
     * 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
@@ -105,22 +105,6 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
      */
     public void setIdentityUrl(String IdentityUrl) {
         this.IdentityUrl = IdentityUrl;
-    }
-
-    /**
-     * Get RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。 
-     * @return IdentityKey RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
-     */
-    public String getIdentityKey() {
-        return this.IdentityKey;
-    }
-
-    /**
-     * Set RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
-     * @param IdentityKey RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
-     */
-    public void setIdentityKey(String IdentityKey) {
-        this.IdentityKey = IdentityKey;
     }
 
     /**
@@ -188,19 +172,35 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符 
-     * @return MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
+     * Get 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数字、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符 
+     * @return MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数字、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
      */
     public String getMappingFiled() {
         return this.MappingFiled;
     }
 
     /**
-     * Set 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
-     * @param MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
+     * Set 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数字、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
+     * @param MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数字、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
      */
     public void setMappingFiled(String MappingFiled) {
         this.MappingFiled = MappingFiled;
+    }
+
+    /**
+     * Get RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。 
+     * @return IdentityKey RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+     */
+    public String getIdentityKey() {
+        return this.IdentityKey;
+    }
+
+    /**
+     * Set RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+     * @param IdentityKey RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+     */
+    public void setIdentityKey(String IdentityKey) {
+        this.IdentityKey = IdentityKey;
     }
 
     /**
@@ -246,9 +246,6 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
         if (source.IdentityUrl != null) {
             this.IdentityUrl = new String(source.IdentityUrl);
         }
-        if (source.IdentityKey != null) {
-            this.IdentityKey = new String(source.IdentityKey);
-        }
         if (source.ClientId != null) {
             this.ClientId = new String(source.ClientId);
         }
@@ -263,6 +260,9 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
         }
         if (source.MappingFiled != null) {
             this.MappingFiled = new String(source.MappingFiled);
+        }
+        if (source.IdentityKey != null) {
+            this.IdentityKey = new String(source.IdentityKey);
         }
         if (source.Scope != null) {
             this.Scope = new String[source.Scope.length];
@@ -281,12 +281,12 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdentityUrl", this.IdentityUrl);
-        this.setParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
         this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "AuthorizationEndpoint", this.AuthorizationEndpoint);
         this.setParamSimple(map, prefix + "ResponseType", this.ResponseType);
         this.setParamSimple(map, prefix + "ResponseMode", this.ResponseMode);
         this.setParamSimple(map, prefix + "MappingFiled", this.MappingFiled);
+        this.setParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
         this.setParamArraySimple(map, prefix + "Scope.", this.Scope);
         this.setParamSimple(map, prefix + "Description", this.Description);
 

@@ -96,6 +96,13 @@ public class SimpleHlsClipRequest extends AbstractModel {
     private String SessionContext;
 
     /**
+    * 保留字段，特殊用途时使用。 示例值：""
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get 需要裁剪的腾讯云点播 HLS 视频 URL。 
      * @return Url 需要裁剪的腾讯云点播 HLS 视频 URL。
      */
@@ -263,6 +270,22 @@ public class SimpleHlsClipRequest extends AbstractModel {
         this.SessionContext = SessionContext;
     }
 
+    /**
+     * Get 保留字段，特殊用途时使用。 示例值："" 
+     * @return ExtInfo 保留字段，特殊用途时使用。 示例值：""
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 保留字段，特殊用途时使用。 示例值：""
+     * @param ExtInfo 保留字段，特殊用途时使用。 示例值：""
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public SimpleHlsClipRequest() {
     }
 
@@ -301,6 +324,9 @@ public class SimpleHlsClipRequest extends AbstractModel {
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -318,6 +344,7 @@ public class SimpleHlsClipRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

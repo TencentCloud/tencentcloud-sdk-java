@@ -32,13 +32,6 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
     private String IdentityUrl;
 
     /**
-    * 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
-    */
-    @SerializedName("IdentityKey")
-    @Expose
-    private String IdentityKey;
-
-    /**
     * 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
     */
     @SerializedName("ClientId")
@@ -74,6 +67,13 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
     private String MappingFiled;
 
     /**
+    * 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+    */
+    @SerializedName("IdentityKey")
+    @Expose
+    private String IdentityKey;
+
+    /**
     * 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
     */
     @SerializedName("Scope")
@@ -105,22 +105,6 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
      */
     public void setIdentityUrl(String IdentityUrl) {
         this.IdentityUrl = IdentityUrl;
-    }
-
-    /**
-     * Get 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。 
-     * @return IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
-     */
-    public String getIdentityKey() {
-        return this.IdentityKey;
-    }
-
-    /**
-     * Set 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
-     * @param IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
-     */
-    public void setIdentityKey(String IdentityKey) {
-        this.IdentityKey = IdentityKey;
     }
 
     /**
@@ -204,6 +188,22 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
     }
 
     /**
+     * Get 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。 
+     * @return IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+     */
+    public String getIdentityKey() {
+        return this.IdentityKey;
+    }
+
+    /**
+     * Set 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+     * @param IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+     */
+    public void setIdentityKey(String IdentityKey) {
+        this.IdentityKey = IdentityKey;
+    }
+
+    /**
      * Get 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。 
      * @return Scope 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
      */
@@ -246,9 +246,6 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
         if (source.IdentityUrl != null) {
             this.IdentityUrl = new String(source.IdentityUrl);
         }
-        if (source.IdentityKey != null) {
-            this.IdentityKey = new String(source.IdentityKey);
-        }
         if (source.ClientId != null) {
             this.ClientId = new String(source.ClientId);
         }
@@ -263,6 +260,9 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
         }
         if (source.MappingFiled != null) {
             this.MappingFiled = new String(source.MappingFiled);
+        }
+        if (source.IdentityKey != null) {
+            this.IdentityKey = new String(source.IdentityKey);
         }
         if (source.Scope != null) {
             this.Scope = new String[source.Scope.length];
@@ -281,12 +281,12 @@ public class CreateUserOIDCConfigRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdentityUrl", this.IdentityUrl);
-        this.setParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
         this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "AuthorizationEndpoint", this.AuthorizationEndpoint);
         this.setParamSimple(map, prefix + "ResponseType", this.ResponseType);
         this.setParamSimple(map, prefix + "ResponseMode", this.ResponseMode);
         this.setParamSimple(map, prefix + "MappingFiled", this.MappingFiled);
+        this.setParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
         this.setParamArraySimple(map, prefix + "Scope.", this.Scope);
         this.setParamSimple(map, prefix + "Description", this.Description);
 

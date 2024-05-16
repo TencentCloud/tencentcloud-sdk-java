@@ -59,19 +59,19 @@ public class CreateCosRechargeRequest extends AbstractModel {
     private String BucketRegion;
 
     /**
-    * COS文件所在文件夹的前缀
-    */
-    @SerializedName("Prefix")
-    @Expose
-    private String Prefix;
-
-    /**
     * 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
+
+    /**
+    * COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
+    */
+    @SerializedName("Prefix")
+    @Expose
+    private String Prefix;
 
     /**
     * supported: "", "gzip", "lzop", "snappy"; 默认空
@@ -182,22 +182,6 @@ public class CreateCosRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get COS文件所在文件夹的前缀 
-     * @return Prefix COS文件所在文件夹的前缀
-     */
-    public String getPrefix() {
-        return this.Prefix;
-    }
-
-    /**
-     * Set COS文件所在文件夹的前缀
-     * @param Prefix COS文件所在文件夹的前缀
-     */
-    public void setPrefix(String Prefix) {
-        this.Prefix = Prefix;
-    }
-
-    /**
      * Get 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log 
      * @return LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
@@ -215,6 +199,22 @@ public class CreateCosRechargeRequest extends AbstractModel {
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
+    }
+
+    /**
+     * Get COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。 
+     * @return Prefix COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
+     */
+    public String getPrefix() {
+        return this.Prefix;
+    }
+
+    /**
+     * Set COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
+     * @param Prefix COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
+     */
+    public void setPrefix(String Prefix) {
+        this.Prefix = Prefix;
     }
 
     /**
@@ -304,11 +304,11 @@ public class CreateCosRechargeRequest extends AbstractModel {
         if (source.BucketRegion != null) {
             this.BucketRegion = new String(source.BucketRegion);
         }
-        if (source.Prefix != null) {
-            this.Prefix = new String(source.Prefix);
-        }
         if (source.LogType != null) {
             this.LogType = new String(source.LogType);
+        }
+        if (source.Prefix != null) {
+            this.Prefix = new String(source.Prefix);
         }
         if (source.Compress != null) {
             this.Compress = new String(source.Compress);
@@ -337,8 +337,8 @@ public class CreateCosRechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
         this.setParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
-        this.setParamSimple(map, prefix + "Prefix", this.Prefix);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
+        this.setParamSimple(map, prefix + "Prefix", this.Prefix);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);

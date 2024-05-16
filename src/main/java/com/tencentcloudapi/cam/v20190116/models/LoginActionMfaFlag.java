@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class LoginActionMfaFlag extends AbstractModel {
 
     /**
-    * 是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+    * 是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
     */
     @SerializedName("Phone")
     @Expose
     private Long Phone;
 
     /**
-    * 是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+    * 是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
     */
     @SerializedName("Stoken")
     @Expose
     private Long Stoken;
 
     /**
-    * 是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+    * 是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
     */
     @SerializedName("Wechat")
     @Expose
     private Long Wechat;
 
     /**
-     * Get 是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置 
-     * @return Phone 是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * Get 是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置 
+     * @return Phone 是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public Long getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
-     * @param Phone 是否设置手机号为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * Set 是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @param Phone 是否设置手机号为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public void setPhone(Long Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置 
-     * @return Stoken 是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * Get 是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置 
+     * @return Stoken 是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public Long getStoken() {
         return this.Stoken;
     }
 
     /**
-     * Set 是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
-     * @param Stoken 是否设置软token为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * Set 是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @param Stoken 是否设置软token为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public void setStoken(Long Stoken) {
         this.Stoken = Stoken;
     }
 
     /**
-     * Get 是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置 
-     * @return Wechat 是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * Get 是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置 
+     * @return Wechat 是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public Long getWechat() {
         return this.Wechat;
     }
 
     /**
-     * Set 是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
-     * @param Wechat 是否设置微信为登陆和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * Set 是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
+     * @param Wechat 是否设置微信为登录和敏感操作安全校验方式， 1: 设置，0: 不设置
      */
     public void setWechat(Long Wechat) {
         this.Wechat = Wechat;

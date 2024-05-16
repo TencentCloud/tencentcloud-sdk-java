@@ -115,6 +115,13 @@ public class CreateConnectResourceRequest extends AbstractModel {
     private KafkaConnectParam KafkaConnectParam;
 
     /**
+    * MQTT配置，Type为 MQTT 时必填
+    */
+    @SerializedName("MqttConnectParam")
+    @Expose
+    private MqttConnectParam MqttConnectParam;
+
+    /**
      * Get 连接源名称 
      * @return ResourceName 连接源名称
      */
@@ -322,6 +329,22 @@ public class CreateConnectResourceRequest extends AbstractModel {
         this.KafkaConnectParam = KafkaConnectParam;
     }
 
+    /**
+     * Get MQTT配置，Type为 MQTT 时必填 
+     * @return MqttConnectParam MQTT配置，Type为 MQTT 时必填
+     */
+    public MqttConnectParam getMqttConnectParam() {
+        return this.MqttConnectParam;
+    }
+
+    /**
+     * Set MQTT配置，Type为 MQTT 时必填
+     * @param MqttConnectParam MQTT配置，Type为 MQTT 时必填
+     */
+    public void setMqttConnectParam(MqttConnectParam MqttConnectParam) {
+        this.MqttConnectParam = MqttConnectParam;
+    }
+
     public CreateConnectResourceRequest() {
     }
 
@@ -369,6 +392,9 @@ public class CreateConnectResourceRequest extends AbstractModel {
         if (source.KafkaConnectParam != null) {
             this.KafkaConnectParam = new KafkaConnectParam(source.KafkaConnectParam);
         }
+        if (source.MqttConnectParam != null) {
+            this.MqttConnectParam = new MqttConnectParam(source.MqttConnectParam);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class CreateConnectResourceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
         this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
         this.setParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
+        this.setParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
 
     }
 }

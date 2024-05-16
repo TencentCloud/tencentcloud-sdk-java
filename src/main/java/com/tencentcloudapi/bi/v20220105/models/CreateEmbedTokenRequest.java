@@ -80,6 +80,52 @@ public class CreateEmbedTokenRequest extends AbstractModel {
     private Long TicketNum;
 
     /**
+    * 全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
+
+    */
+    @SerializedName("GlobalParam")
+    @Expose
+    private String GlobalParam;
+
+    /**
      * Get 分享项目id 
      * @return ProjectId 分享项目id
      */
@@ -207,6 +253,178 @@ public class CreateEmbedTokenRequest extends AbstractModel {
         this.TicketNum = TicketNum;
     }
 
+    /**
+     * Get 全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
+ 
+     * @return GlobalParam 全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
+
+     */
+    public String getGlobalParam() {
+        return this.GlobalParam;
+    }
+
+    /**
+     * Set 全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
+
+     * @param GlobalParam 全局筛选参数 报表过滤条件的全局参数。 格式为JSON格式的字符串
+**目前仅支持字符类型页面参数绑定到全局参数
+**
+[
+    {
+        "ParamKey": "name",  //页面参数名称
+        "JoinType": "AND",     // 连接方式,目前仅支持AND
+        "WhereList": [
+            {
+                "Operator": "-neq",   // 操作符，参考以下说明
+                "Value": [                   //操作值，单值数组只传一个值
+                    "zZWJMD",
+                    "ZzVGHX",
+                    "湖南省",
+                    "河北省"
+                ]
+            }
+        ]
+    },
+    {
+        "ParamKey": "genderParam",
+        "JoinType": "AND",
+        "WhereList": [
+            {
+                "Operator": "-neq",
+                "Value": [
+                    "男"
+                ]
+            }
+        ]
+    }
+]
+
+
+
+Operator 目前支持
+-neq  不等于!=操作符
+-eq  等于=操作符
+-is     in操作符
+
+     */
+    public void setGlobalParam(String GlobalParam) {
+        this.GlobalParam = GlobalParam;
+    }
+
     public CreateEmbedTokenRequest() {
     }
 
@@ -239,6 +457,9 @@ public class CreateEmbedTokenRequest extends AbstractModel {
         if (source.TicketNum != null) {
             this.TicketNum = new Long(source.TicketNum);
         }
+        if (source.GlobalParam != null) {
+            this.GlobalParam = new String(source.GlobalParam);
+        }
     }
 
 
@@ -254,6 +475,7 @@ public class CreateEmbedTokenRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserCorpId", this.UserCorpId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "TicketNum", this.TicketNum);
+        this.setParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
 
     }
 }

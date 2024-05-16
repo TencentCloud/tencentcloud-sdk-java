@@ -217,6 +217,20 @@ public class ScaleOutInstanceRequest extends AbstractModel {
     private Long AutoRenew;
 
     /**
+    * 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+    */
+    @SerializedName("ResourceBaseType")
+    @Expose
+    private String ResourceBaseType;
+
+    /**
+    * 计算资源id
+    */
+    @SerializedName("ComputeResourceId")
+    @Expose
+    private String ComputeResourceId;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -676,6 +690,38 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.AutoRenew = AutoRenew;
     }
 
+    /**
+     * Get 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识 
+     * @return ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     */
+    public String getResourceBaseType() {
+        return this.ResourceBaseType;
+    }
+
+    /**
+     * Set 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     * @param ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     */
+    public void setResourceBaseType(String ResourceBaseType) {
+        this.ResourceBaseType = ResourceBaseType;
+    }
+
+    /**
+     * Get 计算资源id 
+     * @return ComputeResourceId 计算资源id
+     */
+    public String getComputeResourceId() {
+        return this.ComputeResourceId;
+    }
+
+    /**
+     * Set 计算资源id
+     * @param ComputeResourceId 计算资源id
+     */
+    public void setComputeResourceId(String ComputeResourceId) {
+        this.ComputeResourceId = ComputeResourceId;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -780,6 +826,12 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         if (source.AutoRenew != null) {
             this.AutoRenew = new Long(source.AutoRenew);
         }
+        if (source.ResourceBaseType != null) {
+            this.ResourceBaseType = new String(source.ResourceBaseType);
+        }
+        if (source.ComputeResourceId != null) {
+            this.ComputeResourceId = new String(source.ComputeResourceId);
+        }
     }
 
 
@@ -813,6 +865,8 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ScaleOutServiceConfAssign", this.ScaleOutServiceConfAssign);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+        this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
 
     }
 }

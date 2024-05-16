@@ -172,6 +172,28 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询监控概览页指标数据
+     * @param req DescribeEmrOverviewMetricsRequest
+     * @return DescribeEmrOverviewMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetrics(DescribeEmrOverviewMetricsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEmrOverviewMetrics", DescribeEmrOverviewMetricsResponse.class);
+    }
+
+    /**
+     *获取Hbase表级监控数据概览接口
+     * @param req DescribeHBaseTableOverviewRequest
+     * @return DescribeHBaseTableOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHBaseTableOverviewResponse DescribeHBaseTableOverview(DescribeHBaseTableOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHBaseTableOverview", DescribeHBaseTableOverviewResponse.class);
+    }
+
+    /**
      *获取hive查询信息
      * @param req DescribeHiveQueriesRequest
      * @return DescribeHiveQueriesResponse

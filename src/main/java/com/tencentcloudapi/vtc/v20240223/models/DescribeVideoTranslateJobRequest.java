@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rce.v20201103.models;
+package com.tencentcloudapi.vtc.v20240223.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,16 +21,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskAssessmentRequest extends AbstractModel {
+public class DescribeVideoTranslateJobRequest extends AbstractModel {
 
-    public DescribeRiskAssessmentRequest() {
+    /**
+    * JobId。
+    */
+    @SerializedName("JobId")
+    @Expose
+    private String JobId;
+
+    /**
+     * Get JobId。 
+     * @return JobId JobId。
+     */
+    public String getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * Set JobId。
+     * @param JobId JobId。
+     */
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
+    }
+
+    public DescribeVideoTranslateJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskAssessmentRequest(DescribeRiskAssessmentRequest source) {
+    public DescribeVideoTranslateJobRequest(DescribeVideoTranslateJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeRiskAssessmentRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

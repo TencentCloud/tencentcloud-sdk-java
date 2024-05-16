@@ -52,7 +52,7 @@ public class CreateCmqQueueRequest extends AbstractModel {
     private Long VisibilityTimeout;
 
     /**
-    * 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+    * 消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
     */
     @SerializedName("MaxMsgSize")
     @Expose
@@ -207,16 +207,16 @@ public class CreateCmqQueueRequest extends AbstractModel {
     }
 
     /**
-     * Get 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。 
-     * @return MaxMsgSize 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+     * Get 消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。 
+     * @return MaxMsgSize 消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
     }
 
     /**
-     * Set 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
-     * @param MaxMsgSize 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+     * Set 消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
+     * @param MaxMsgSize 消息最大长度。取值范围 1024-1048576 Byte（即1-1024K），默认值 1048576。
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;

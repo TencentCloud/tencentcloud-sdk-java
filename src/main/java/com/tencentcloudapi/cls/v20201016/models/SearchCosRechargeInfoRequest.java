@@ -59,7 +59,7 @@ public class SearchCosRechargeInfoRequest extends AbstractModel {
     private String BucketRegion;
 
     /**
-    * cos文件所在文件夹的前缀
+    * COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
     */
     @SerializedName("Prefix")
     @Expose
@@ -153,16 +153,16 @@ public class SearchCosRechargeInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get cos文件所在文件夹的前缀 
-     * @return Prefix cos文件所在文件夹的前缀
+     * Get COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。 
+     * @return Prefix COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set cos文件所在文件夹的前缀
-     * @param Prefix cos文件所在文件夹的前缀
+     * Set COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
+     * @param Prefix COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;

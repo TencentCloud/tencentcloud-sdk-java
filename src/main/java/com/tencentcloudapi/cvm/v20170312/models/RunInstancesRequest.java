@@ -185,6 +185,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Boolean DryRun;
 
     /**
+    * 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+    */
+    @SerializedName("CpuTopology")
+    @Expose
+    private CpuTopology CpuTopology;
+
+    /**
     * CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
     */
     @SerializedName("CamRoleName")
@@ -607,6 +614,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
+     * Get 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。 
+     * @return CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+     */
+    public CpuTopology getCpuTopology() {
+        return this.CpuTopology;
+    }
+
+    /**
+     * Set 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+     * @param CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+     */
+    public void setCpuTopology(CpuTopology CpuTopology) {
+        this.CpuTopology = CpuTopology;
+    }
+
+    /**
      * Get CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。 
      * @return CamRoleName CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
      */
@@ -788,6 +811,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.CpuTopology != null) {
+            this.CpuTopology = new CpuTopology(source.CpuTopology);
+        }
         if (source.CamRoleName != null) {
             this.CamRoleName = new String(source.CamRoleName);
         }
@@ -838,6 +864,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);

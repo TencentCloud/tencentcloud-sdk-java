@@ -62,11 +62,11 @@ public class StartStreamIngestRequest extends AbstractModel {
     private String UserSig;
 
     /**
-    * 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
+    * 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
     */
-    @SerializedName("SourceUrl")
+    @SerializedName("StreamUrl")
     @Expose
-    private String [] SourceUrl;
+    private String StreamUrl;
 
     /**
     * TRTC房间权限加密串，只有在TRTC控制台启用了高级权限控制的时候需要携带，在TRTC控制台如果开启高级权限控制后，TRTC 的后台服务系统会校验一个叫做 [PrivateMapKey] 的“权限票据”，权限票据中包含了一个加密后的 RoomId 和一个加密后的“权限位列表”。由于 PrivateMapKey 中包含 RoomId，所以只提供了 UserSig 没有提供 PrivateMapKey 时，并不能进入指定的房间。
@@ -90,11 +90,18 @@ public class StartStreamIngestRequest extends AbstractModel {
     private AudioEncodeParams AudioEncodeParams;
 
     /**
-    * 源流URL。历史原因本字段【必填】。
+    * 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
     */
-    @SerializedName("StreamUrl")
+    @SerializedName("SourceUrl")
     @Expose
-    private String StreamUrl;
+    private String [] SourceUrl;
+
+    /**
+    * 指定视频从某个秒时间戳播放
+    */
+    @SerializedName("SeekSecond")
+    @Expose
+    private Long SeekSecond;
 
     /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。 
@@ -189,19 +196,19 @@ public class StartStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。 
-     * @return SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
+     * Get 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。 
+     * @return StreamUrl 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
      */
-    public String [] getSourceUrl() {
-        return this.SourceUrl;
+    public String getStreamUrl() {
+        return this.StreamUrl;
     }
 
     /**
-     * Set 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
-     * @param SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
+     * Set 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
+     * @param StreamUrl 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
      */
-    public void setSourceUrl(String [] SourceUrl) {
-        this.SourceUrl = SourceUrl;
+    public void setStreamUrl(String StreamUrl) {
+        this.StreamUrl = StreamUrl;
     }
 
     /**
@@ -253,19 +260,35 @@ public class StartStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 源流URL。历史原因本字段【必填】。 
-     * @return StreamUrl 源流URL。历史原因本字段【必填】。
+     * Get 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。 
+     * @return SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
      */
-    public String getStreamUrl() {
-        return this.StreamUrl;
+    public String [] getSourceUrl() {
+        return this.SourceUrl;
     }
 
     /**
-     * Set 源流URL。历史原因本字段【必填】。
-     * @param StreamUrl 源流URL。历史原因本字段【必填】。
+     * Set 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
+     * @param SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
      */
-    public void setStreamUrl(String StreamUrl) {
-        this.StreamUrl = StreamUrl;
+    public void setSourceUrl(String [] SourceUrl) {
+        this.SourceUrl = SourceUrl;
+    }
+
+    /**
+     * Get 指定视频从某个秒时间戳播放 
+     * @return SeekSecond 指定视频从某个秒时间戳播放
+     */
+    public Long getSeekSecond() {
+        return this.SeekSecond;
+    }
+
+    /**
+     * Set 指定视频从某个秒时间戳播放
+     * @param SeekSecond 指定视频从某个秒时间戳播放
+     */
+    public void setSeekSecond(Long SeekSecond) {
+        this.SeekSecond = SeekSecond;
     }
 
     public StartStreamIngestRequest() {
@@ -291,11 +314,8 @@ public class StartStreamIngestRequest extends AbstractModel {
         if (source.UserSig != null) {
             this.UserSig = new String(source.UserSig);
         }
-        if (source.SourceUrl != null) {
-            this.SourceUrl = new String[source.SourceUrl.length];
-            for (int i = 0; i < source.SourceUrl.length; i++) {
-                this.SourceUrl[i] = new String(source.SourceUrl[i]);
-            }
+        if (source.StreamUrl != null) {
+            this.StreamUrl = new String(source.StreamUrl);
         }
         if (source.PrivateMapKey != null) {
             this.PrivateMapKey = new String(source.PrivateMapKey);
@@ -306,8 +326,14 @@ public class StartStreamIngestRequest extends AbstractModel {
         if (source.AudioEncodeParams != null) {
             this.AudioEncodeParams = new AudioEncodeParams(source.AudioEncodeParams);
         }
-        if (source.StreamUrl != null) {
-            this.StreamUrl = new String(source.StreamUrl);
+        if (source.SourceUrl != null) {
+            this.SourceUrl = new String[source.SourceUrl.length];
+            for (int i = 0; i < source.SourceUrl.length; i++) {
+                this.SourceUrl[i] = new String(source.SourceUrl[i]);
+            }
+        }
+        if (source.SeekSecond != null) {
+            this.SeekSecond = new Long(source.SeekSecond);
         }
     }
 
@@ -321,11 +347,12 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "UserSig", this.UserSig);
-        this.setParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
+        this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
         this.setParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
         this.setParamObj(map, prefix + "VideoEncodeParams.", this.VideoEncodeParams);
         this.setParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
-        this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
+        this.setParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
+        this.setParamSimple(map, prefix + "SeekSecond", this.SeekSecond);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIPStatusListResponse extends AbstractModel {
 
     /**
-    * ip状态信息
+    * IP状态信息
     */
     @SerializedName("StatusList")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeIPStatusListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ip状态信息 
-     * @return StatusList ip状态信息
+     * Get IP状态信息 
+     * @return StatusList IP状态信息
      */
     public IPDefendStatus [] getStatusList() {
         return this.StatusList;
     }
 
     /**
-     * Set ip状态信息
-     * @param StatusList ip状态信息
+     * Set IP状态信息
+     * @param StatusList IP状态信息
      */
     public void setStatusList(IPDefendStatus [] StatusList) {
         this.StatusList = StatusList;

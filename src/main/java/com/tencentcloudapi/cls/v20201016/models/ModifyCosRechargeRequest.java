@@ -66,7 +66,7 @@ public class ModifyCosRechargeRequest extends AbstractModel {
     private String BucketRegion;
 
     /**
-    * COS文件所在文件夹的前缀
+    * COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。
     */
     @SerializedName("Prefix")
     @Expose
@@ -204,16 +204,16 @@ public class ModifyCosRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get COS文件所在文件夹的前缀 
-     * @return Prefix COS文件所在文件夹的前缀
+     * Get COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。 
+     * @return Prefix COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set COS文件所在文件夹的前缀
-     * @param Prefix COS文件所在文件夹的前缀
+     * Set COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。
+     * @param Prefix COS文件所在文件夹的前缀。为空串时投递存储桶下所有的文件。
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;

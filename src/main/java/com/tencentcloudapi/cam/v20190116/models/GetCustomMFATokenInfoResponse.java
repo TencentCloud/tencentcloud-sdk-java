@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetCustomMFATokenInfoResponse extends AbstractModel {
 
     /**
-    * 自定义多因子验证Token对应的帐号Id
+    * 自定义多因子验证Token对应的账号Id
     */
     @SerializedName("Uin")
     @Expose
@@ -38,16 +38,16 @@ public class GetCustomMFATokenInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 自定义多因子验证Token对应的帐号Id 
-     * @return Uin 自定义多因子验证Token对应的帐号Id
+     * Get 自定义多因子验证Token对应的账号Id 
+     * @return Uin 自定义多因子验证Token对应的账号Id
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 自定义多因子验证Token对应的帐号Id
-     * @param Uin 自定义多因子验证Token对应的帐号Id
+     * Set 自定义多因子验证Token对应的账号Id
+     * @param Uin 自定义多因子验证Token对应的账号Id
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
