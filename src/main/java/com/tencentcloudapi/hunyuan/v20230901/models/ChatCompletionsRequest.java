@@ -99,6 +99,18 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Float Temperature;
 
     /**
+    * 功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。
+    */
+    @SerializedName("EnableEnhancement")
+    @Expose
+    private Boolean EnableEnhancement;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -326,6 +338,42 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.Temperature = Temperature;
     }
 
+    /**
+     * Get 功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。 
+     * @return EnableEnhancement 功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。
+     */
+    public Boolean getEnableEnhancement() {
+        return this.EnableEnhancement;
+    }
+
+    /**
+     * Set 功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。
+     * @param EnableEnhancement 功能增强（如搜索）开关。
+说明：
+1. 仅 hunyuan-pro 模型可用，其它版本不生效。
+2. 未传值时默认打开开关。
+3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
+4. 安全审核能力不属于功能增强范围，不受此字段影响。
+     */
+    public void setEnableEnhancement(Boolean EnableEnhancement) {
+        this.EnableEnhancement = EnableEnhancement;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -355,6 +403,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.Temperature != null) {
             this.Temperature = new Float(source.Temperature);
         }
+        if (source.EnableEnhancement != null) {
+            this.EnableEnhancement = new Boolean(source.EnableEnhancement);
+        }
     }
 
 
@@ -368,6 +419,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StreamModeration", this.StreamModeration);
         this.setParamSimple(map, prefix + "TopP", this.TopP);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
+        this.setParamSimple(map, prefix + "EnableEnhancement", this.EnableEnhancement);
 
     }
 }

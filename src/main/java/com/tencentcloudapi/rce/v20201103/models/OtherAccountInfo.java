@@ -25,11 +25,9 @@ public class OtherAccountInfo extends AbstractModel {
 
     /**
     * 其他账号信息；
-AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
-MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+MD5手机号加密方式，使用中国大陆11位手机号进行MD5加密，加密后取32位小写值。
     */
     @SerializedName("AccountId")
     @Expose
@@ -44,8 +42,7 @@ MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后
     private String MobilePhone;
 
     /**
-    * 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+    * 用户设备号（已不推荐使用）。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -53,17 +50,13 @@ MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后
 
     /**
      * Get 其他账号信息；
-AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
-MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。 
+MD5手机号加密方式，使用中国大陆11位手机号进行MD5加密，加密后取32位小写值。 
      * @return AccountId 其他账号信息；
-AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
-MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+MD5手机号加密方式，使用中国大陆11位手机号进行MD5加密，加密后取32位小写值。
      */
     public String getAccountId() {
         return this.AccountId;
@@ -71,17 +64,13 @@ MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后
 
     /**
      * Set 其他账号信息；
-AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
-MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+MD5手机号加密方式，使用中国大陆11位手机号进行MD5加密，加密后取32位小写值。
      * @param AccountId 其他账号信息；
-AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
-MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+MD5手机号加密方式，使用中国大陆11位手机号进行MD5加密，加密后取32位小写值。
      */
     public void setAccountId(String AccountId) {
         this.AccountId = AccountId;
@@ -108,20 +97,16 @@ MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后
     }
 
     /**
-     * Get 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。 
-     * @return DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+     * Get 用户设备号（已不推荐使用）。 
+     * @return DeviceId 用户设备号（已不推荐使用）。
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
-     * @param DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5。
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+     * Set 用户设备号（已不推荐使用）。
+     * @param DeviceId 用户设备号（已不推荐使用）。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;

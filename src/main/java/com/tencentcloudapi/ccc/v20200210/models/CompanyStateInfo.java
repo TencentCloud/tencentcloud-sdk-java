@@ -79,6 +79,14 @@ public class CompanyStateInfo extends AbstractModel {
     private String BusinessId;
 
     /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private Long ModifyTime;
+
+    /**
      * Get 申请单ID 
      * @return Id 申请单ID
      */
@@ -214,6 +222,26 @@ public class CompanyStateInfo extends AbstractModel {
         this.BusinessId = BusinessId;
     }
 
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyTime(Long ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
     public CompanyStateInfo() {
     }
 
@@ -243,6 +271,9 @@ public class CompanyStateInfo extends AbstractModel {
         if (source.BusinessId != null) {
             this.BusinessId = new String(source.BusinessId);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new Long(source.ModifyTime);
+        }
     }
 
 
@@ -257,6 +288,7 @@ public class CompanyStateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckMsg", this.CheckMsg);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "BusinessId", this.BusinessId);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

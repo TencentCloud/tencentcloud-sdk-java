@@ -27,7 +27,6 @@ public class InputManageMarketingRisk extends AbstractModel {
     * 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
     */
     @SerializedName("Account")
@@ -153,11 +152,7 @@ public class InputManageMarketingRisk extends AbstractModel {
     private String VendorId;
 
     /**
-    * 设备类型，账号类型（AccountType）为8时填写。
-1:IMEI；国际移动设备识别号（15-17位数字）；
-2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:IDFA；
-4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
+    * 设备类型(已不推荐使用)。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -199,12 +194,10 @@ public class InputManageMarketingRisk extends AbstractModel {
      * Get 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。 
      * @return Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      */
     public AccountInfo getAccount() {
@@ -215,12 +208,10 @@ public class InputManageMarketingRisk extends AbstractModel {
      * Set 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      * @param Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
 10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      */
     public void setAccount(AccountInfo Account) {
@@ -508,32 +499,16 @@ public class InputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Get 设备类型，账号类型（AccountType）为8时填写。
-1:IMEI；国际移动设备识别号（15-17位数字）；
-2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:IDFA；
-4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。 
-     * @return DeviceType 设备类型，账号类型（AccountType）为8时填写。
-1:IMEI；国际移动设备识别号（15-17位数字）；
-2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:IDFA；
-4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
+     * Get 设备类型(已不推荐使用)。 
+     * @return DeviceType 设备类型(已不推荐使用)。
      */
     public Long getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 设备类型，账号类型（AccountType）为8时填写。
-1:IMEI；国际移动设备识别号（15-17位数字）；
-2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:IDFA；
-4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
-     * @param DeviceType 设备类型，账号类型（AccountType）为8时填写。
-1:IMEI；国际移动设备识别号（15-17位数字）；
-2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:IDFA；
-4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
+     * Set 设备类型(已不推荐使用)。
+     * @param DeviceType 设备类型(已不推荐使用)。
      */
     public void setDeviceType(Long DeviceType) {
         this.DeviceType = DeviceType;

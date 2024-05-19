@@ -80,12 +80,52 @@ public class CompanyApplyInfo extends AbstractModel {
     private String CorporationIdPicUrl;
 
     /**
-    * 业务经营范围
+    * 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("BusinessScope")
+    @SerializedName("NetworkCommitmentPicUrl")
     @Expose
-    private String BusinessScope;
+    private String NetworkCommitmentPicUrl;
+
+    /**
+    * 是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsEqualTencentCloud")
+    @Expose
+    private Long IsEqualTencentCloud;
+
+    /**
+    * 法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CorporationMobile")
+    @Expose
+    private String CorporationMobile;
+
+    /**
+    * 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CorporationMobilePicUrl")
+    @Expose
+    private String CorporationMobilePicUrl;
+
+    /**
+    * 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseDescribeFileUrl")
+    @Expose
+    private String UseDescribeFileUrl;
+
+    /**
+    * 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CompanyAuthLetterPicUrl")
+    @Expose
+    private String CompanyAuthLetterPicUrl;
 
     /**
     * 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
@@ -94,14 +134,6 @@ public class CompanyApplyInfo extends AbstractModel {
     @SerializedName("AcceptPicUrl")
     @Expose
     private String AcceptPicUrl;
-
-    /**
-    * 电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("NetworkCommitmentPicUrl")
-    @Expose
-    private String NetworkCommitmentPicUrl;
 
     /**
     * 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
@@ -150,6 +182,30 @@ public class CompanyApplyInfo extends AbstractModel {
     @SerializedName("CommissionPicUrl")
     @Expose
     private String CommissionPicUrl;
+
+    /**
+    * 经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperatorMobile")
+    @Expose
+    private String OperatorMobile;
+
+    /**
+    * 经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperatorEmail")
+    @Expose
+    private String OperatorEmail;
+
+    /**
+    * 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperatorMobilePicUrl")
+    @Expose
+    private String OperatorMobilePicUrl;
 
     /**
      * Get 申请人身份，0-公司法定代表人，1-经办人（受法定代表人委托）
@@ -292,23 +348,123 @@ public class CompanyApplyInfo extends AbstractModel {
     }
 
     /**
-     * Get 业务经营范围
+     * Get 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BusinessScope 业务经营范围
+     * @return NetworkCommitmentPicUrl 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getBusinessScope() {
-        return this.BusinessScope;
+    public String getNetworkCommitmentPicUrl() {
+        return this.NetworkCommitmentPicUrl;
     }
 
     /**
-     * Set 业务经营范围
+     * Set 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BusinessScope 业务经营范围
+     * @param NetworkCommitmentPicUrl 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBusinessScope(String BusinessScope) {
-        this.BusinessScope = BusinessScope;
+    public void setNetworkCommitmentPicUrl(String NetworkCommitmentPicUrl) {
+        this.NetworkCommitmentPicUrl = NetworkCommitmentPicUrl;
+    }
+
+    /**
+     * Get 是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsEqualTencentCloud 是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsEqualTencentCloud() {
+        return this.IsEqualTencentCloud;
+    }
+
+    /**
+     * Set 是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsEqualTencentCloud 是否与腾讯云账号的资质一致,0-不一致,1-一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsEqualTencentCloud(Long IsEqualTencentCloud) {
+        this.IsEqualTencentCloud = IsEqualTencentCloud;
+    }
+
+    /**
+     * Get 法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CorporationMobile 法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCorporationMobile() {
+        return this.CorporationMobile;
+    }
+
+    /**
+     * Set 法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CorporationMobile 法定代表人手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCorporationMobile(String CorporationMobile) {
+        this.CorporationMobile = CorporationMobile;
+    }
+
+    /**
+     * Get 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CorporationMobilePicUrl 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCorporationMobilePicUrl() {
+        return this.CorporationMobilePicUrl;
+    }
+
+    /**
+     * Set 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CorporationMobilePicUrl 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCorporationMobilePicUrl(String CorporationMobilePicUrl) {
+        this.CorporationMobilePicUrl = CorporationMobilePicUrl;
+    }
+
+    /**
+     * Get 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseDescribeFileUrl 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUseDescribeFileUrl() {
+        return this.UseDescribeFileUrl;
+    }
+
+    /**
+     * Set 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseDescribeFileUrl 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseDescribeFileUrl(String UseDescribeFileUrl) {
+        this.UseDescribeFileUrl = UseDescribeFileUrl;
+    }
+
+    /**
+     * Get 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CompanyAuthLetterPicUrl 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCompanyAuthLetterPicUrl() {
+        return this.CompanyAuthLetterPicUrl;
+    }
+
+    /**
+     * Set 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompanyAuthLetterPicUrl 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompanyAuthLetterPicUrl(String CompanyAuthLetterPicUrl) {
+        this.CompanyAuthLetterPicUrl = CompanyAuthLetterPicUrl;
     }
 
     /**
@@ -329,26 +485,6 @@ public class CompanyApplyInfo extends AbstractModel {
      */
     public void setAcceptPicUrl(String AcceptPicUrl) {
         this.AcceptPicUrl = AcceptPicUrl;
-    }
-
-    /**
-     * Get 电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetworkCommitmentPicUrl 电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getNetworkCommitmentPicUrl() {
-        return this.NetworkCommitmentPicUrl;
-    }
-
-    /**
-     * Set 电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetworkCommitmentPicUrl 电信入网承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setNetworkCommitmentPicUrl(String NetworkCommitmentPicUrl) {
-        this.NetworkCommitmentPicUrl = NetworkCommitmentPicUrl;
     }
 
     /**
@@ -471,6 +607,66 @@ public class CompanyApplyInfo extends AbstractModel {
         this.CommissionPicUrl = CommissionPicUrl;
     }
 
+    /**
+     * Get 经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperatorMobile 经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperatorMobile() {
+        return this.OperatorMobile;
+    }
+
+    /**
+     * Set 经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperatorMobile 经办人手机号，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperatorMobile(String OperatorMobile) {
+        this.OperatorMobile = OperatorMobile;
+    }
+
+    /**
+     * Get 经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperatorEmail 经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperatorEmail() {
+        return this.OperatorEmail;
+    }
+
+    /**
+     * Set 经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperatorEmail 经办人邮箱，申请人类型为经办人时必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperatorEmail(String OperatorEmail) {
+        this.OperatorEmail = OperatorEmail;
+    }
+
+    /**
+     * Get 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperatorMobilePicUrl 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperatorMobilePicUrl() {
+        return this.OperatorMobilePicUrl;
+    }
+
+    /**
+     * Set 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperatorMobilePicUrl 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperatorMobilePicUrl(String OperatorMobilePicUrl) {
+        this.OperatorMobilePicUrl = OperatorMobilePicUrl;
+    }
+
     public CompanyApplyInfo() {
     }
 
@@ -500,14 +696,26 @@ public class CompanyApplyInfo extends AbstractModel {
         if (source.CorporationIdPicUrl != null) {
             this.CorporationIdPicUrl = new String(source.CorporationIdPicUrl);
         }
-        if (source.BusinessScope != null) {
-            this.BusinessScope = new String(source.BusinessScope);
+        if (source.NetworkCommitmentPicUrl != null) {
+            this.NetworkCommitmentPicUrl = new String(source.NetworkCommitmentPicUrl);
+        }
+        if (source.IsEqualTencentCloud != null) {
+            this.IsEqualTencentCloud = new Long(source.IsEqualTencentCloud);
+        }
+        if (source.CorporationMobile != null) {
+            this.CorporationMobile = new String(source.CorporationMobile);
+        }
+        if (source.CorporationMobilePicUrl != null) {
+            this.CorporationMobilePicUrl = new String(source.CorporationMobilePicUrl);
+        }
+        if (source.UseDescribeFileUrl != null) {
+            this.UseDescribeFileUrl = new String(source.UseDescribeFileUrl);
+        }
+        if (source.CompanyAuthLetterPicUrl != null) {
+            this.CompanyAuthLetterPicUrl = new String(source.CompanyAuthLetterPicUrl);
         }
         if (source.AcceptPicUrl != null) {
             this.AcceptPicUrl = new String(source.AcceptPicUrl);
-        }
-        if (source.NetworkCommitmentPicUrl != null) {
-            this.NetworkCommitmentPicUrl = new String(source.NetworkCommitmentPicUrl);
         }
         if (source.CorporationHoldingOnIdPicUrl != null) {
             this.CorporationHoldingOnIdPicUrl = new String(source.CorporationHoldingOnIdPicUrl);
@@ -527,6 +735,15 @@ public class CompanyApplyInfo extends AbstractModel {
         if (source.CommissionPicUrl != null) {
             this.CommissionPicUrl = new String(source.CommissionPicUrl);
         }
+        if (source.OperatorMobile != null) {
+            this.OperatorMobile = new String(source.OperatorMobile);
+        }
+        if (source.OperatorEmail != null) {
+            this.OperatorEmail = new String(source.OperatorEmail);
+        }
+        if (source.OperatorMobilePicUrl != null) {
+            this.OperatorMobilePicUrl = new String(source.OperatorMobilePicUrl);
+        }
     }
 
 
@@ -541,15 +758,22 @@ public class CompanyApplyInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CorporationName", this.CorporationName);
         this.setParamSimple(map, prefix + "CorporationId", this.CorporationId);
         this.setParamSimple(map, prefix + "CorporationIdPicUrl", this.CorporationIdPicUrl);
-        this.setParamSimple(map, prefix + "BusinessScope", this.BusinessScope);
-        this.setParamSimple(map, prefix + "AcceptPicUrl", this.AcceptPicUrl);
         this.setParamSimple(map, prefix + "NetworkCommitmentPicUrl", this.NetworkCommitmentPicUrl);
+        this.setParamSimple(map, prefix + "IsEqualTencentCloud", this.IsEqualTencentCloud);
+        this.setParamSimple(map, prefix + "CorporationMobile", this.CorporationMobile);
+        this.setParamSimple(map, prefix + "CorporationMobilePicUrl", this.CorporationMobilePicUrl);
+        this.setParamSimple(map, prefix + "UseDescribeFileUrl", this.UseDescribeFileUrl);
+        this.setParamSimple(map, prefix + "CompanyAuthLetterPicUrl", this.CompanyAuthLetterPicUrl);
+        this.setParamSimple(map, prefix + "AcceptPicUrl", this.AcceptPicUrl);
         this.setParamSimple(map, prefix + "CorporationHoldingOnIdPicUrl", this.CorporationHoldingOnIdPicUrl);
         this.setParamSimple(map, prefix + "OperatorName", this.OperatorName);
         this.setParamSimple(map, prefix + "OperatorId", this.OperatorId);
         this.setParamSimple(map, prefix + "OperatorIdPicUrl", this.OperatorIdPicUrl);
         this.setParamSimple(map, prefix + "OperatorHoldingOnIdPicUrl", this.OperatorHoldingOnIdPicUrl);
         this.setParamSimple(map, prefix + "CommissionPicUrl", this.CommissionPicUrl);
+        this.setParamSimple(map, prefix + "OperatorMobile", this.OperatorMobile);
+        this.setParamSimple(map, prefix + "OperatorEmail", this.OperatorEmail);
+        this.setParamSimple(map, prefix + "OperatorMobilePicUrl", this.OperatorMobilePicUrl);
 
     }
 }

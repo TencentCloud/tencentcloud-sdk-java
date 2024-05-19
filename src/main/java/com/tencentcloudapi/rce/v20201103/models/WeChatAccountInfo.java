@@ -70,8 +70,7 @@ public class WeChatAccountInfo extends AbstractModel {
     private String MobilePhone;
 
     /**
-    * 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+    * 用户设备号（已不推荐使用）。
     */
     @SerializedName("DeviceId")
     @Expose
@@ -190,20 +189,16 @@ public class WeChatAccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。 
-     * @return DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+     * Get 用户设备号（已不推荐使用）。 
+     * @return DeviceId 用户设备号（已不推荐使用）。
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
-     * @param DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
-注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+     * Set 用户设备号（已不推荐使用）。
+     * @param DeviceId 用户设备号（已不推荐使用）。
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
