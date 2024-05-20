@@ -66,11 +66,46 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private String ExpirationDate;
 
     /**
+    * 英文签发日期
+    */
+    @SerializedName("EnIssueDate")
+    @Expose
+    private String EnIssueDate;
+
+    /**
+    * 英文到期日期
+    */
+    @SerializedName("EnExpirationDate")
+    @Expose
+    private String EnExpirationDate;
+
+    /**
     * 泰文出生日期
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
+
+    /**
+    * 英文出生日期
+    */
+    @SerializedName("EnBirthday")
+    @Expose
+    private String EnBirthday;
+
+    /**
+    * 宗教信仰
+    */
+    @SerializedName("Religion")
+    @Expose
+    private String Religion;
+
+    /**
+    * 序列号
+    */
+    @SerializedName("SerialNumber")
+    @Expose
+    private String SerialNumber;
 
     /**
     * 地址
@@ -203,6 +238,38 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 英文签发日期 
+     * @return EnIssueDate 英文签发日期
+     */
+    public String getEnIssueDate() {
+        return this.EnIssueDate;
+    }
+
+    /**
+     * Set 英文签发日期
+     * @param EnIssueDate 英文签发日期
+     */
+    public void setEnIssueDate(String EnIssueDate) {
+        this.EnIssueDate = EnIssueDate;
+    }
+
+    /**
+     * Get 英文到期日期 
+     * @return EnExpirationDate 英文到期日期
+     */
+    public String getEnExpirationDate() {
+        return this.EnExpirationDate;
+    }
+
+    /**
+     * Set 英文到期日期
+     * @param EnExpirationDate 英文到期日期
+     */
+    public void setEnExpirationDate(String EnExpirationDate) {
+        this.EnExpirationDate = EnExpirationDate;
+    }
+
+    /**
      * Get 泰文出生日期 
      * @return Birthday 泰文出生日期
      */
@@ -216,6 +283,54 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
+    }
+
+    /**
+     * Get 英文出生日期 
+     * @return EnBirthday 英文出生日期
+     */
+    public String getEnBirthday() {
+        return this.EnBirthday;
+    }
+
+    /**
+     * Set 英文出生日期
+     * @param EnBirthday 英文出生日期
+     */
+    public void setEnBirthday(String EnBirthday) {
+        this.EnBirthday = EnBirthday;
+    }
+
+    /**
+     * Get 宗教信仰 
+     * @return Religion 宗教信仰
+     */
+    public String getReligion() {
+        return this.Religion;
+    }
+
+    /**
+     * Set 宗教信仰
+     * @param Religion 宗教信仰
+     */
+    public void setReligion(String Religion) {
+        this.Religion = Religion;
+    }
+
+    /**
+     * Get 序列号 
+     * @return SerialNumber 序列号
+     */
+    public String getSerialNumber() {
+        return this.SerialNumber;
+    }
+
+    /**
+     * Set 序列号
+     * @param SerialNumber 序列号
+     */
+    public void setSerialNumber(String SerialNumber) {
+        this.SerialNumber = SerialNumber;
     }
 
     /**
@@ -332,8 +447,23 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         if (source.ExpirationDate != null) {
             this.ExpirationDate = new String(source.ExpirationDate);
         }
+        if (source.EnIssueDate != null) {
+            this.EnIssueDate = new String(source.EnIssueDate);
+        }
+        if (source.EnExpirationDate != null) {
+            this.EnExpirationDate = new String(source.EnExpirationDate);
+        }
         if (source.Birthday != null) {
             this.Birthday = new String(source.Birthday);
+        }
+        if (source.EnBirthday != null) {
+            this.EnBirthday = new String(source.EnBirthday);
+        }
+        if (source.Religion != null) {
+            this.Religion = new String(source.Religion);
+        }
+        if (source.SerialNumber != null) {
+            this.SerialNumber = new String(source.SerialNumber);
         }
         if (source.Address != null) {
             this.Address = new String(source.Address);
@@ -363,7 +493,12 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "EnLastName", this.EnLastName);
         this.setParamSimple(map, prefix + "IssueDate", this.IssueDate);
         this.setParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
+        this.setParamSimple(map, prefix + "EnIssueDate", this.EnIssueDate);
+        this.setParamSimple(map, prefix + "EnExpirationDate", this.EnExpirationDate);
         this.setParamSimple(map, prefix + "Birthday", this.Birthday);
+        this.setParamSimple(map, prefix + "EnBirthday", this.EnBirthday);
+        this.setParamSimple(map, prefix + "Religion", this.Religion);
+        this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);

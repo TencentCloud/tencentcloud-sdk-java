@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskDelLogoInput extends AbstractModel {
 
     /**
-    * 视频智能去水印模板 ID。
+    * 视频智能擦除模板 ID。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get 视频智能去水印模板 ID。 
-     * @return Definition 视频智能去水印模板 ID。
+     * Get 视频智能擦除模板 ID。 
+     * @return Definition 视频智能擦除模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 视频智能去水印模板 ID。
-     * @param Definition 视频智能去水印模板 ID。
+     * Set 视频智能擦除模板 ID。
+     * @param Definition 视频智能擦除模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

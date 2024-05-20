@@ -30,7 +30,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
     */
     @SerializedName("Type")
@@ -78,7 +78,7 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskHighlightResult HighlightTask;
 
     /**
-    * 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+    * 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeLogoTask")
@@ -108,7 +108,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
@@ -116,7 +116,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
      */
     public String getType() {
@@ -130,7 +130,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
@@ -138,7 +138,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
-<li>DeLogo：智能去水印</li>
+<li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
      */
     public void setType(String Type) {
@@ -246,9 +246,9 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Get 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+     * Get 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeLogoTask 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+     * @return DeLogoTask 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskDelLogoResult getDeLogoTask() {
@@ -256,9 +256,9 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Set 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+     * Set 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeLogoTask 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+     * @param DeLogoTask 视频内容分析智能擦除任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeLogoTask(AiAnalysisTaskDelLogoResult DeLogoTask) {

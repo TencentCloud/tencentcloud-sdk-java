@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
 
     /**
-    * 去水印后文件的路径。
+    * 擦除后文件的路径。
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 去水印后文件的存储位置。
+    * 擦除后文件的存储位置。
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get 去水印后文件的路径。 
-     * @return Path 去水印后文件的路径。
+     * Get 擦除后文件的路径。 
+     * @return Path 擦除后文件的路径。
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 去水印后文件的路径。
-     * @param Path 去水印后文件的路径。
+     * Set 擦除后文件的路径。
+     * @param Path 擦除后文件的路径。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 去水印后文件的存储位置。 
-     * @return OutputStorage 去水印后文件的存储位置。
+     * Get 擦除后文件的存储位置。 
+     * @return OutputStorage 擦除后文件的存储位置。
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 去水印后文件的存储位置。
-     * @param OutputStorage 去水印后文件的存储位置。
+     * Set 擦除后文件的存储位置。
+     * @param OutputStorage 擦除后文件的存储位置。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

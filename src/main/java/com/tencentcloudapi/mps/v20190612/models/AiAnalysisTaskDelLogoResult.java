@@ -45,14 +45,14 @@ public class AiAnalysisTaskDelLogoResult extends AbstractModel {
     private String Message;
 
     /**
-    * 智能去水印任务输入。
+    * 智能擦除任务输入。
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskDelLogoInput Input;
 
     /**
-    * 智能去水印任务输出。
+    * 智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -108,25 +108,25 @@ public class AiAnalysisTaskDelLogoResult extends AbstractModel {
     }
 
     /**
-     * Get 智能去水印任务输入。 
-     * @return Input 智能去水印任务输入。
+     * Get 智能擦除任务输入。 
+     * @return Input 智能擦除任务输入。
      */
     public AiAnalysisTaskDelLogoInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 智能去水印任务输入。
-     * @param Input 智能去水印任务输入。
+     * Set 智能擦除任务输入。
+     * @param Input 智能擦除任务输入。
      */
     public void setInput(AiAnalysisTaskDelLogoInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 智能去水印任务输出。
+     * Get 智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 智能去水印任务输出。
+     * @return Output 智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskDelLogoOutput getOutput() {
@@ -134,9 +134,9 @@ public class AiAnalysisTaskDelLogoResult extends AbstractModel {
     }
 
     /**
-     * Set 智能去水印任务输出。
+     * Set 智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 智能去水印任务输出。
+     * @param Output 智能擦除任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiAnalysisTaskDelLogoOutput Output) {

@@ -94,6 +94,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询AI转录状态
+     * @param req DescribeAITranscriptionRequest
+     * @return DescribeAITranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAITranscriptionResponse DescribeAITranscription(DescribeAITranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAITranscription", DescribeAITranscriptionResponse.class);
+    }
+
+    /**
      *查询指定时间内的用户列表及用户通话质量数据，最大可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。（同老接口DescribeCallDetail）
 **注意**：
 1.该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
@@ -538,6 +549,17 @@ xa0
     }
 
     /**
+     *这个接口调用后，后台会启动机器人，实时进行语音识别并下发字幕和会议记录。
+     * @param req StartAITranscriptionRequest
+     * @return StartAITranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartAITranscriptionResponse StartAITranscription(StartAITranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartAITranscription", StartAITranscriptionResponse.class);
+    }
+
+    /**
      *接口说明：启动云端混流，并指定混流画面中各路画面的布局位置。
 
 TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过此 API 接口，通知腾讯云服务端将多路视频画面合成一路，并指定每一路画面的位置，同时将多路声音进行混音，最终形成一路音视频流，以便用于录制和直播观看。房间销毁后混流自动结束。
@@ -731,6 +753,17 @@ ver：可以忽略。
     }
 
     /**
+     *停止AI转录
+     * @param req StopAITranscriptionRequest
+     * @return StopAITranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopAITranscriptionResponse StopAITranscription(StopAITranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopAITranscription", StopAITranscriptionResponse.class);
+    }
+
+    /**
      *接口说明：结束云端混流
      * @param req StopMCUMixTranscodeRequest
      * @return StopMCUMixTranscodeResponse
@@ -783,6 +816,17 @@ ver：可以忽略。
     public StopWebRecordResponse StopWebRecord(StopWebRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopWebRecord", StopWebRecordResponse.class);
+    }
+
+    /**
+     *对转录的文本进行总结
+     * @param req SummarizeTranscriptionRequest
+     * @return SummarizeTranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SummarizeTranscriptionResponse SummarizeTranscription(SummarizeTranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SummarizeTranscription", SummarizeTranscriptionResponse.class);
     }
 
     /**

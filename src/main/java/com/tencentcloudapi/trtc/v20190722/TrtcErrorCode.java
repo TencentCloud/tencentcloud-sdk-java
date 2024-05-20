@@ -39,6 +39,9 @@ public enum TrtcErrorCode {
     // 房间不存在。
      FAILEDOPERATION_ROOMNOTEXIST("FailedOperation.RoomNotExist"),
      
+    // 该sdkappid没有开通AITranscription能力
+     FAILEDOPERATION_SDKAPPIDNOTAITRANSCRIPTIONABILITY("FailedOperation.SdkAppIdNotAITranscriptionAbility"),
+     
     // 应用ID不存在。
      FAILEDOPERATION_SDKAPPIDNOTEXIST("FailedOperation.SdkAppIdNotExist"),
      

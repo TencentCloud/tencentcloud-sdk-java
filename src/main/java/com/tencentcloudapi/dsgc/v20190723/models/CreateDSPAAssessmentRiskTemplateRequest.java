@@ -31,7 +31,7 @@ public class CreateDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     private String DspaId;
 
     /**
-    * 模版名称
+    * 模板名称
     */
     @SerializedName("TemplateName")
     @Expose
@@ -52,7 +52,7 @@ public class CreateDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     private Long [] RiskIdList;
 
     /**
-    * 模版描述
+    * 模板描述
     */
     @SerializedName("TemplateDescription")
     @Expose
@@ -75,16 +75,16 @@ public class CreateDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 模版名称 
-     * @return TemplateName 模版名称
+     * Get 模板名称 
+     * @return TemplateName 模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模版名称
-     * @param TemplateName 模版名称
+     * Set 模板名称
+     * @param TemplateName 模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -123,16 +123,16 @@ public class CreateDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 模版描述 
-     * @return TemplateDescription 模版描述
+     * Get 模板描述 
+     * @return TemplateDescription 模板描述
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
     }
 
     /**
-     * Set 模版描述
-     * @param TemplateDescription 模版描述
+     * Set 模板描述
+     * @param TemplateDescription 模板描述
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;
